@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>TUTORIAL: Creating A Rounded Corner, Transparent CSS3 Link For IE 6 Through 8 With CSS3 Pie</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #mastehead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="#">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul>
+    </nav> <!-- #site-navigation -->
+    
+    <div id="post">
+  <h1></h1>
+
+<p><em>NOTE: <a href="https://github.com/kaidez/Files-For-kaidez-CSS3-PIE-Rollover-Tutorial">Grab the finished code for this tutorial over at GitHub</a> if you don’t want to read the whole thing.</em></p>
+
+<p><a href="http://jquery.com/"><img src="http://jquery.com/" alt="Logo Courtesy Of CSS3 Pie" /></a>With all the talk about fancy JavaScript libraries like <a href="http://jquery.com/">jQuery</a> and <a href="http://www.modernizr.com/">Modernizr</a>, Jason Johnston’s <a href="http://css3pie.com/">CSS3 PIE</a> gets overlooked. Its features may not be as extensive as the other two, but it’s still good at what it does.</p>
+
+<p>Internet Explorer 9 provides wide CSS3 support while the previous versions of IE don’t support it at all. But CSS3 PIE is a lightweight library (32kb as of this post) that allows developers to apply a limited amount of CSS3 features to Internet Explorer versions 6 through 8. Let’s take a peek at these features by creating a link with rounded corners and transparency.</p>
+
+<p>This tutorial will first create code that’s not friendly for older versions of IE, progressively adding the CSS3 PIE code so you get a before-and-after view of things. I’ll be using both Internet Explorer 8 and Google Chrome to test my code.</p>
+
+<ul>
+<li>Create a new folder on your Desktop, naming it “PIETest” (without the quotes, of course).</li>
+<li>Download the most recent version of CSS3 PIE by <a href="http://css3pie.com/">going to their site</a> and clicking the “Download” button in the far right column. It should download as a .zip file.</li>
+<li>Unzip the PIE files.</li>
+<li>Open your “PIETest” folder and create another folder called “PIEFiles.” Find the “PIE.htc” file and place it into this new “PIEFIles” folder.</li>
+<li>Using the web editor of your choice, create an html file called “PIEpage.html” and save it to your main “PIETest” folder.</li>
+<li><p>Copy and paste the code below into “PIEpage.html” :</p>
+
+<pre><code>    A CSS3 Rollover for Internet Explorer 6 thru 8
+
+
+     body {
+        background-color:#f43a3a;
+     }
+
+        a.links {
+            padding: 5px 10px;
+            color:#fff;
+            background: rgba(58, 101, 241, 0.4);
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -o-border-radius: 14px;
+            border-radius: 14px;
+            }
+
+        a.links:hover {
+            background: rgba(0, 0, 0, 0.4); 
+            }
+
+
+
+
+    Test Link
+</code></pre></li>
+<li><p>Let’s take a moment to review the stuff in between the  tags:
+    body {
+            background-color:#f43a3a;
+         }</p>
+
+<p>We’re giving the page an orange-ish red background so we can see the transparencies we’re about to create.</p>
+
+<pre><code>a.links {
+            padding: 5px 10px;
+            color:#fff;
+            background: rgba(58, 101, 241, 0.4);
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -o-border-radius: 14px;
+            border-radius: 14px;
+            }
+</code></pre>
+
+<p>Any page link with a class name of “links” will have 5 pixels of space on the top and bottom and have 10 pixels of space on the left and right. The link’s text color will be white.</p>
+
+<p>We’re now going to create a transparent background using the rgba property which is new in CSS3. The first three numbers represent the RGB values of a color, a muted purple in this case, and an alpha property of .04, giving it a fair amount of transparency.</p>
+
+<p>Then we have to add the rounded corners for the background by styling the browser’s border-radius property. You can only do this if you target each browser by its <em>vendor prefix</em> in the CSS code. So…</p>
+
+<ul>
+<li>the -webkit- vendor prefix targets Webkit browsers (Chrome, Safari, Rockmelt, etc.).</li>
+<li>the -moz- vendor prefix targets Mozilla-based browsers (Firefox).</li>
+<li>the -o- vendor prefix targets the Opera browser.</li>
+<li>no vendor prefix mentioned as it appears in line 8 is meant to target the other browsers. In this case, it refers to Internet Explorer.
+a.links:hover {
+            background: rgba(0, 0, 0, 0.4);
+            }</li>
+</ul>
+
+
+<p>Any time a link with a class of “links” gets a mouseover, it should shift to the rgba settings we created. In this case, it should be black and have same transparency value as the non-hover CSS class above.</p>
+
+<ul>
+<li><p>Now let’s look at the only code inside of the  tag:
+    Test Link</p>
+
+<p>We create a link with a class name of “links” so it responds based on the CSS code above when rolled over as well as rolled off.</p>
+
+<ul>
+<li><p>If you review PIEpage.html in Chrome, it should look like this:
+<img src="http://kaidez.com/wp-content/uploads/2011/03/nonIE.png" title="nonIE" alt="" /></p>
+
+<p>But if you review it in Internet Explorer 8 or lower, it should look like this:</p>
+
+<p><img src="http://kaidez.com/wp-content/uploads/2011/03/IE.png" title="IE" alt="" /></p>
+
+<p>CSS3 PIE will neaten things up for us.</p>
+
+<ul>
+<li><p>Add code to the a.links class so it looks like this:
+    a.links {
+                padding: 5px 10px;
+                color:#fff;
+                background: rgba(58, 101, 241, 0.4);
+                -pie-background: rgba(58, 101, 241, 0.4);
+                -webkit-border-radius: 14px;
+                -moz-border-radius: 14px;
+                -o-border-radius: 14px;
+                border-radius: 14px;
+                behavior: url(PIEFiles/PIE.htc);<br/>
+                }</p>
+
+<p>The first line of code adds the -pie- prefix to the background, allowing the CSS3 PIE code to attach our CSS3 rgba values to the background when viewed in older versions of IE.</p>
+
+<p>The second line of code attaches the CSS3 PIE library to our page, giving the page CSS3 functionality. It also forces the rounded corners to appear in IE.</p>
+
+<ul>
+<li><p>Now, we add the -pie- prefix to the background of our hover class, allowing the CSS3 PIE code to attach our CSS3 rgba values to the background when viewed in older versions of IE.
+    a.links:hover {
+                background: rgba(0, 0, 0, 0.4);
+                -pie-background: rgba(0, 0, 0, 0.4); <br/>
+                }</p></li>
+<li><p>So our final code should look like this:</p>
+
+<pre><code>    A CSS3 Rollover for Internet Explorer 6 thru 8
+
+
+     body {
+        background-color:#f43a3a;
+     }
+
+        a.links {
+            padding: 5px 10px;
+            color:#fff;
+            background: rgba(58, 101, 241, 0.4);
+            -pie-background: rgba(58, 101, 241, 0.4);
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -o-border-radius: 14px;
+            border-radius: 14px;
+            behavior: url(PIEFiles/PIE.htc);
+            }
+
+        a.links:hover {
+            background: rgba(0, 0, 0, 0.4);
+            -pie-background: rgba(0, 0, 0, 0.4);
+            }
+
+
+
+
+    Test Link
+</code></pre>
+
+<p>And with that, everything works in all browsers, including IE8, IE7, and yes, IE6. <br/>
+That’s it but let me make a few points…</p>
+
+<ul>
+<li>CSS3 PIE is in beta as of this article and still in its growing period, so you should keep yourself up to date in terms of its development. <a href="http://twitter.com/css3pie">Following them on Twitter</a> is a great idea!</li>
+<li>Since IE9 currently supports all the CSS3 features that CSS3 PIE currently supports, CSS3 PIE is disabled in IE9. At least, for now.</li>
+<li>Remember that CSS3 PIE targets IE only. Older versions of Firefox and the Webkit browsers have their own issues in terms of rendering rounded corners and transparencies…this tutorial won’t fix any of them.</li>
+<li><p>In <a href="http://kaidez.com/html5-project-update-january-21-2011/">a previous post about my HTML5 Project</a>, I said that I may or may not use CSS3 PIE in the project as it may conflict with Modernizr, which I’ll definitely be using. There was a point in developing this tutorial where I used both CSS3 PIE and Modernizr-the latter was obviously removed in the end but I did perform some browser checks before getting rid of it.</p>
+
+<p>In the scope of this tutorial, creating a rounded corner link with transparency, there were no issues. There may be other instances where using these two libraries together causes issues, but the final code result created in this tutorial isn’t one of them.</p></li>
+</ul>
+
+
+<p>Please help me get better at explaining things…feel free to let me know if I’m not clear on something. And, again, <a href="https://github.com/kaidez/Files-For-kaidez-CSS3-PIE-Rollover-Tutorial">feel free to grab the completed code for this tutorial over at GitHub</a>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+
+  
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

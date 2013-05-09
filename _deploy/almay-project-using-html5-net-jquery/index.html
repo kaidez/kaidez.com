@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>New Almay Project I Worked On</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #mastehead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="#">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul>
+    </nav> <!-- #site-navigation -->
+    
+    <div id="post">
+  <h1></h1>
+
+<p><a href="http://almay.com/">Almay</a>, which is wholly-owned by <a href="http://revlon.com/">my employer</a>, launched four new products this week:</p>
+
+<ul>
+<li><a href="http://www.almay.com/microsites/WakeUpMakeup/Default.aspx">almay wake-up™ makeup</a></li>
+<li><a href="http://www.almay.com/microsites/IICSmokyIKit/Default.aspx">almay intense i-color smoky-i™ kit</a></li>
+<li><a href="http://www.almay.com/microsites/SmartShadeBalance/Default.aspx">almay smart shade smart balance™ powder</a></li>
+<li><a href="http://www.almay.com/microsites/GetUp/Default.aspx">almay one coat get up and grow™ mascara</a></li>
+</ul>
+
+
+<p>Each product required a unique micro-site: the other web designer mocked them up in PhotoShop, I then converted the design to page code with CSS, .NET, jQuery and HTML5. Visual Studio 2008 was my development environment.</p>
+
+<p>Breaking down my code…</p>
+
+<h3>CSS</h3>
+
+<p>All the microsites shared the same skeletal layout so I created a global CSS template for this in about two hours.</p>
+
+<h3>.NET</h3>
+
+<p>For each individual micro-site, almost all of their pages shared the same header and product shot: I dumped this into a user control.</p>
+
+<h3>jQuery</h3>
+
+<p>The client wanted a fade-in/fade-out animation on each micro-site home page so I used (surprise!) the fadeIn() and fadeOut() functions embedded in jQuery. I also used jQuery to create a much more effective rollover for all the micro-site navigations.</p>
+
+<h3>HTML5</h3>
+
+<p>Some micro-site pages displayed video and the client requested that it display on mobile phones. This gave me an opportunity to use the  tag in my work. This was…interesting.</p>
+
+<p>Working with .NET was very rewarding. I’ve been working in Visual Studio for a little over five years now and am comfortable doing so, but it was the first time that I created user controls from the ground up. I had figure out how to place them on the page and how to tweak their various CodeBehinds, so I got a really good feel for how .NET works as a whole.</p>
+
+<p>Working with HTML5 video was just as rewarding and I’m glad I did it, but it was definitely a learning experience. The client requested that videos display on as many mobile devices as possible, so I had to figure out a lot of things on the fly. It was frustrating at times but I’m glad I went through the process.</p>
+
+<p>Starting next week, I’ll be posting tutorials for my jQuery code, which was very easy. I’ll also be discussing my HTML5 video findings, which were…interesting.</p>
+
+</div>
+
+  
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

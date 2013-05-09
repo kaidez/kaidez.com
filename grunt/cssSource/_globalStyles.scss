@@ -1,0 +1,384 @@
+
+/* Overides extra padding that bootstrap.css puts on <body> */
+body {
+  background-color: white;
+  padding:0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.containing-element {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  width: auto
+}
+
+// <header> tag
+.site-header {
+  background-color: $header-color;
+  text-align: left;
+  width: auto;
+}
+
+// logo-based <h1> tag
+.site-title {
+  background: url('../img/siteLogo.png') no-repeat;
+  height: 44px;
+  width: 138px;
+  float: left;
+  margin:0 0 0 10px;
+  text-indent: -999px;
+}
+
+// homepage article elements
+.homepage-posts {
+  border-bottom: 1px solid #999;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+#home {
+  @include full-height;
+  margin:0 10px;
+  text-align: left;
+}
+
+// inner element for posts
+#primary {
+  @include full-height;
+}
+
+// apply the Google font to all <header> tags  
+.wf-loading h1, .wf-inactive h1,
+.wf-loading h2, .wf-inactive h2,
+.wf-loading h3, .wf-inactive h3,
+.wf-loading h4, .wf-inactive h4,
+.wf-loading h5, .wf-inactive h5,
+.wf-loading h6, .wf-inactive h6, {
+  font-family: $srf;
+}
+
+/*
+ * apply the Google font to all <header> tags,
+ * except the Mobile First post tag
+ */
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6 {
+  @include fonts($robo);
+  font-size: 1.0rem;
+}
+
+/*
+ * Clearfix: contain floats (borrowed forom HTML5 Boilerplate)
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+@media only screen and (min-width: 700px) {
+
+  /* Medium screen, non-retina */
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 700px),
+only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 700px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 700px),
+only screen and (min-device-pixel-ratio: 2) and (min-width: 700px),
+only screen and (min-resolution: 192dpi) and (min-width: 700px),
+only screen and (min-resolution: 2dppx) and (min-width: 700px) { 
+
+  /* Medium screen, retina, stuff to override above media query */
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+  /* Large screen, non-retina */
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
+only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px),
+only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px),
+only screen and (min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+  /* Large screen, retina, stuff to override above media query */
+
+}
+
+// <nav> tag
+#site-navigation {
+  width: auto;
+  border-top: 1px solid #000;
+  -webkit-box-shadow: 0 8px 18px -8px #000;
+     -moz-box-shadow: 0 8px 18px -8px #000;
+          box-shadow: 0 8px 18px -8px #000;
+}
+
+
+// Navigation styles start
+
+// Hide links until Google font loads
+.wf-loading .site-navigation-list-link {
+  font-family: serif;
+  visibility: hidden;
+}
+
+// Show links after Google font loads
+.wf-active .site-navigation-list-link a:link,
+.wf-active .site-navigation-list-link a:visited { 
+  visibility: visible;
+  @include fonts($robo);
+  @include master-center;
+  text-decoration: none;
+  font-size: 20px;
+  float: none;
+  padding: 9px 0;
+  height: 31px;
+  display: block;
+  color: #FFF;
+  border-bottom: 1px solid #195676;
+  background-color: $nav-color;
+}
+
+// hover class for man nav links
+.wf-active .site-navigation-list-link a:hover {
+  background-color: $link-color;
+}
+
+// Navigation styles end
+
+
+
+// Single post styles start
+
+  /* 
+  * Pad the bottom header and main content area.
+  * Also, let the copy out a bit.
+  */
+.entry-content {
+  @include allElementPadding;
+  line-height: 2;
+}
+
+/*
+ * all text links (except for post meta info)
+ * have a blue color but no underline.
+ */
+a:link,
+a:visited { 
+  color: $link-color;
+  text-decoration: none;
+}
+
+// all text links have an underline
+a:hover { 
+  text-decoration: underline;
+}
+
+// Category & meta info at the end of a single post.
+.category-date-information {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  margin: 0px auto;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: $nav-color;
+  padding:7px;
+}
+
+// meta info text links are white(except for post meta info)
+
+.category-date-information a:link,
+.category-date-information a:visited { 
+  color: #fff;
+  text-decoration: underline;
+}
+
+// all text links have an underline
+.category-date-information a:hover { 
+  text-decoration: none;
+}
+
+// Social networking stuff starts
+
+#social-network-container {
+  clear: both;
+  margin-top: 34px;
+  border-top: 1px solid $nav-color;
+  border-bottom: 1px solid $nav-color;
+}
+
+#social-network-list {
+  padding: 0;
+  margin:0px auto;
+  text-align: center;
+  width: 287px;
+}
+
+.social-network-list-item {
+  list-style-type: none;
+  padding-right: 10px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+#social-network-list-post {
+  padding: 0;
+  width: 287px;
+}
+
+.kaidez-social-network-link {
+  height: 56px;
+  width: 56px;
+  display: block;
+}
+
+
+// Hack to override fb style setting on fb share link
+.fb {
+  padding-right: 10px;
+}
+
+// Social networking stuff ends
+
+
+
+// Single post styles end
+
+
+ 
+// Search box-related styles start
+
+#searchbox {
+  position: relative;
+}
+
+#s {
+  font-style: italic;
+  height: 27px;
+  padding-left: 10px;
+}
+
+// Search box-related styles end
+
+
+// Related comments styles start
+
+// allowed <code> tags text for comments
+.form-allowed-tags {
+  line-height: 1.5;
+  font-size:15px;
+}
+
+.form-titles {
+  @include hide-element;
+}
+/*
+ * Float the avatars to the right so
+ * they align well in the mobile layout
+ */
+.avatar {
+  float:right;
+}
+
+.comment-date {
+  margin-bottom: 3px;
+}
+
+
+// hidden header tags for commenter name & post comments
+.commenter-name, .comment-text {
+  @include hide-element;
+}
+
+// Submit button for comments
+#submit {
+  color: #fff;
+  background-color: $link-color;
+  @include fonts($robo);
+  -webkit-border-radius: 10px; 
+  -moz-border-radius: 10px; 
+  border-radius: 10px; 
+}
+
+// added this since it's removed from the widgets
+.recentcomments a {
+  display:inline !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+
+
+// Footer contact form styles start
+
+#contact-form-fields {
+  border: none;
+}
+
+// Footer contact form styles end
+
+
+// Footer styles start
+
+// <footer> tag styles
+
+// Google font-powered footer <h3> tags
+
+#colophon {
+  background-color: $footer-color;
+  height: auto;
+  width: auto;
+  padding:1px 10px;
+}
+
+.wf-loading .footer-header {
+  font-family: serif;
+  visibility: hidden;
+}
+
+.wf-active .footer-header {
+  font-size: 23px;
+  border-bottom: 2px dotted #000;
+}
+
+#author-image {
+  float:left;
+  padding:0 10px 4px 0;
+}
+
+// Footer styles end
+
+

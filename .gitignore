@@ -1,0 +1,70 @@
+# General all-around files
+# ------------------------
+
+*.DS_Store
+*Thumbs.db
+*.zip
+*.pot
+*.png
+*.gif
+*.jpg
+*.jpeg
+*.svg
+*.localized
+*.psd
+*.ai
+*.eps
+*backwpup
+
+
+# ignore all .txt files...
+*.txt
+
+# ...except for wpDeployment.txt
+!wpDeployment.txt
+
+#image file
+*img/
+
+*.htaccess
+
+*.log
+
+sitemap.xml.gz
+license.txt
+readme.html
+*.ftppass
+
+
+
+
+# Sass-related files
+# ------------------
+*.sass-cache
+
+
+
+# Grunt/Node-related files
+# ------------------------
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+node_modules
+pids
+logs
+results
+npm-debug.log
+tmp
+
+#image files in Grunt
+# -------------------
+grunt/imgSource/
+
+
+
+

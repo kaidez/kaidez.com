@@ -1,0 +1,64 @@
+@media only screen and (min-width: 769px) {
+
+  /*
+   * Handhelds and tablets get the helvetica-type
+   * Google font. Too many fonts applied to handhelds
+   * will slow down their page load.
+   */
+  body {
+    @include fonts($helv);
+    padding:0;
+  }
+
+  // Menu
+  #site-navigation-list, #searchform {
+    @include show-menu;
+    @include master-center;
+  }
+
+  .site-description { //h2 tag
+    display: block;
+    position: static;
+  }
+
+   /*
+   * Hide 'mobile first' menu & search
+   * boxes on tablets
+   */
+  #menu, #search {
+    @include hide-element;
+  }
+  
+  .site-navigation-list-link {
+	  float:left;
+  }
+
+  // apply the Google font to all <header> tags  
+  .wf-active h1,
+  .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    @include fonts($robo);
+    font-size: 1.7rem;
+  }
+
+  // Search box-related styles start
+
+  #s {
+    font-size: 1em;
+  }
+
+  // Search box-related styles end
+
+  /* Font styles for tablets & desktops. Google
+   * font doesn't load on mobile.
+   */
+  .social-network-link {
+    font-size:16px;
+    line-height: 1;
+    @include fonts($helv);
+  }
+
+}

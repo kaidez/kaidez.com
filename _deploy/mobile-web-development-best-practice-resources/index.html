@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>5 Mobile Web Development Best Practice Resources</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #mastehead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="#">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul>
+    </nav> <!-- #site-navigation -->
+    
+    <div id="post">
+  <h1></h1>
+
+<p>My last batch of articles have discussed which mobile web development best practices I’ve adopted. I obviously can’t claim them as my own creation and should share my resources for these practices.</p>
+
+<p>Some are more mobile-specific then others but all focus on optimizing sites for speed: the number one mobile web development best practice:</p>
+
+<h2>1) Steve Souders</h2>
+
+<p>The one that really showed developers the way in terms of creating fast-loading sites. Formerly at Yahoo! and now at Google, <a href="http://stevesouders.com/">Steve Souders</a> is <em>the</em> speed site guru mostly on the strength of his two books: <a href="http://www.amazon.com/gp/product/0596529309?ie=UTF8&amp;tag=stevsoud-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596529309"><em>High Performance Web Sites</em></a> and <a href="http://www.amazon.com/gp/product/0596522304?ie=UTF8&amp;tag=stevsoud-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596522304"><em>Even Faster Websites</em></a>. Paul Irish took the best tips from both of these books and applied them to the <a href="http://html5boilerplate.com/docs/#Build-script">HTML5 Boilerplate build script</a>.</p>
+
+<h2>2) PPK</h2>
+
+<p>Web developer Peter-Paul Koch, also known as PPK, is next on the speed guru list. He’s well-known for performing tons of mobile device/browser tests, displaying the results on <a href="http://www.quirksmode.org/mobile/">the mobile section of his Quirksmode blog</a>…spend some reading the Compatibility table on this page.</p>
+
+<p>As he lives in Amsterdam, PPK can perform thorough tests on the <a href="http://symbian.nokia.com/">Symbian</a> browser, which not only gets heavy usage in Europe, but is also the world’s most popular mobile web browser. So…American-based web developers need to read his Symbiam results on his <a href="http://www.quirksmode.org/">Quirksmode blog</a> because they will have to code for it sooner than later.</p>
+
+<h2>3) Yahoo’s YUI and YDN blogs</h2>
+
+<p>Right now, Yahoo! is to site optimization what Google is to SEO: a well-respected authority in their area of expertise. Nowhere is this more clear than within <a href="http://www.yuiblog.com/blog/category/performance/">the Performance category of their Yahoo! User Interface Blog (or just the YUIBlog)</a>. All of these posts offer great site speed tips, particularly the ones by <a href="http://www.phpied.com/">Stoyan Stefanov</a>.</p>
+
+<p>Yahoo! also maintains the Yahoo! Developer Network blog (YDN), which doesn’t have the depth of site speed advice that YUI does, but is still good. Their “<a href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a>” article is pretty much required reading for any web developer right now, plus, YDN maintains the awesome Steve Souders-created <a href="http://developer.yahoo.com/yslow/">YSlow browser plugin</a>, used for testing a web page’s optimization.</p>
+
+<p>*(A related side-note: Yahoo released a <a href="http://developer.yahoo.com/blogs/ydn/posts/2011/06/yslowmobile/">beta version of YSlow for Mobile</a> the day before this article’s posting. I downloaded it and believe me when I say that you should too). *</p>
+
+<h2>4) YayQuery podcast with John Resig</h2>
+
+<p><a href="http://yayquery.com/">YayQuery</a> is an excellent jQuery podcast hosted by four jQuery experts: Paul Irish, Rebecca Murphey, Adam J. Sontag and Alex Sexton. jQuery creator John Resig appeared on the show in mid-2010, mostly discussing <a href="http://jquerymobile.com/">jQuery Mobile</a>.</p>
+
+<p>Prior to jQ Mobile’s release, Resig did a boatload of mobile device research, all of it interesting, quite a bit of it surprising. He shared his findings during this podcast…it’s a must-watch.</p>
+
+<h2>5) HTML5 Boilerplate Build Script</h2>
+
+<p><a href="http://kaidez.com/html5-boilerplate-version-1/">I’ve mentioned this before</a> but let me be crystal clear right now: HTML5 Boilerplate’s build script does an incredible job of optimizing site files. With a simple command line prompt (or Windows batch file), you can run all your site files through YUI Compresser, optipng, jpegtran and many other applications to dramatically reduce their file size. The end-result is a faster-loading site.</p>
+
+<p>Watch the Boilerplate how-to video..it’s well worth 28 minutes of your time:</p>
+
+<p>Those are my biggies…feel free to share what you think are good mobile web development best practices because I can’t name them all!</p>
+
+</div>
+
+  
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

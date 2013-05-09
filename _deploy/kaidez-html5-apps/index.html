@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>My HTML5 Applications</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #mastehead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="#">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul>
+    </nav> <!-- #site-navigation -->
+    
+    <div id="post">
+  <h1></h1>
+
+<p>As mentioned, <a href="http://kaidez.com/html5-project/">The HTML5 Project</a> is basically me creating a (hopefully) pure HTML5 and CSS3 website, the end result being my getting my head around both technologies. I still have to work out things like wireframes and SEO but I’ve just about narrowed down what applications and code frameworks I’ll be using.</p>
+
+<h2>Adobe Dreamweaver CS5</h2>
+
+<p>I’m committing a web developer sin here by endorsing this product since most serious web developers hate it, but it’s not that bad for HTML5 development. Adobe’s Dreamweaver CS5 11.0.3 Updater contains an extension that allows for HTML5 code hinting, resulting in less coding errors (get it <a href="http://www.adobe.com/support/dreamweaver/downloads_updaters.html#dwcs5">here</a>). I’ve tested it and works well, so I’m using it.</p>
+
+<h2>Modernizr</h2>
+
+<p>With this JavaScript framework, developers can create code bits for browsers that do and do not support HTML5 and CSS3. They can then add Modernizr which will first detect which browser’s being used, then load in the proper code bits. More importantly, it configures your site’s HTML5 elements to look good in Internet Explorer versions 8 and lower. I think the documentation is so-so but it’s still good and I’m gonna use it. Check it out <a href="http://www.modernizr.com/">here</a>.</p>
+
+<h2>Video For Everybody</h2>
+
+<p>I don’t know if I’ll be using HTML5 video on the site, but I’ll be referring to <a href="http://camendesign.com/code/video_for_everybody">Camen Design’s brilliant “Video For Everybody”</a> if I do. It’s simple code that checks to see if a browser can play HTML5 video. If it can, that’s what it plays. If it can’t, it plays another video format, like Flash. Unlike Modernizr, all the browser checking is done without JavaScript. Best of all, the link above provides detailed documentation on <em>everything</em> you need to know about HTML5 video. For me, this is the ultimate HTML5 must-read, so much so, that I recently added it to the Coding Favorites section on my sidebar.</p>
+
+<h2>Firefogg</h2>
+
+<p>HTML5 uses the open source .oog/.ogv video format. In order to convert video files to one of those formats, I’ll be using the <a href="http://firefogg.org/">Firefogg plug-in for Firefox</a> to do so if I end up using video.</p>
+
+<p>Those are the “must-haves”…here are the “maybes”:</p>
+
+<ul>
+<li>Adobe Fireworks (I may give this image editor a spin and see if it’s really better than PhotoShop for web stuff).</li>
+<li>WordPress (will most-likely go with this in the end, but I have looked at Drupal).</li>
+</ul>
+
+
+<p>Please let me know if I’m missing something.</p>
+
+</div>
+
+  
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

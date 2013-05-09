@@ -1,0 +1,209 @@
+/*
+ * Pure 'Mobile First' styles start. When the
+ * site loads on a mobile device, these
+ * styles will load only...no desktop styles
+ * will load.
+ */
+
+
+//hide the h2 tag in the <header>
+.site-description {
+  @include hide-element;
+}
+
+.site-header {
+  height: 70px;
+  padding-top: 10px;
+}
+
+// Nav styles start
+
+/*
+ * Mobile-first code so the menu and search box
+ * gets hidden immediately
+ */
+#site-navigation-list, #searchform {
+  display:none;
+  margin:0;
+  padding:0;
+}
+
+//hide menu heading on mobile phones
+#menu-heading {
+  @include hide-element;
+}
+
+// Nav styles end
+
+
+
+// Mobile First post styles start
+
+// Styles for post <h1> tag
+.wf-active h1.entry-title {
+  font-size: 24px;
+  margin:0;
+}
+
+// Mobile First post styles start
+
+
+
+// Contact (aside) styles
+#footer-contact-fieldset {
+  border: none;
+}
+.footer-contact-fields {
+  width:152px;
+}
+
+
+/* Contact (aside) styles end */
+
+
+
+/* Font styles for tablets & desktops. Google
+ * font doesn't load on mobile.
+ */
+  .social-network-link {
+    font-size:16px;
+    line-height: 1;
+  }
+
+// Footer styles start
+
+.footer-sections {
+  width:300px;
+}
+
+.footer-paragraph {
+  font-size:15px;
+}
+
+
+/*
+ * Media queries used to load retina and/or non-retina
+ * versions of the social networking icon sprite. The retina
+ * sprite ('snSprite@2x.png') will load on retina-based devices,
+ * the regular sprite ('snSprite.png') will load on other
+ * devices.
+ *
+ * Based on Chris Coyier's post: using the "global proof" version;
+ * http://css-tricks.com/snippets/css/retina-display-media-query/
+ */
+
+// Non-retina social icon mobile-first styles
+#twitter {
+  @include sprite-images('../img/snSprite.png', -1px -2px, 64px, 64px);
+}
+
+#google-plus {
+  @include sprite-images('../img/snSprite.png', -76px -2px, 64px, 64px);
+}
+
+#github {
+  @include sprite-images('../img/snSprite.png', -147px -2px, 64px, 64px);
+}
+
+#youtube {
+  @include sprite-images('../img/snSprite.png', -219px -2px, 64px, 64px);
+  float: left;
+  list-style-type: none;
+}
+
+.kaidez-social-network-list-item {
+  float: left;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+/*
+ * Menu-related media query code for both the
+ * menu button and search button
+ */
+
+// Non-retina menu mobile-first styles
+
+// menu icon
+#menu {
+  @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
+  display: block;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+// search icon
+#search {
+  display: block;
+  float: right;
+  margin-right:10px;
+  cursor: pointer;
+  @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
+}
+
+// search button
+.btnSearch {
+  border: none;
+  text-indent: -999px;
+  @include sprite-images('../img/snSprite.png', -80px -69px, 44px, 44px);
+}
+
+// Retina social icon mobile-first styles
+@media #{$mobile-retina} { 
+
+  #twitter {
+    @include sprite-images('../img/snSprite@2x.png', -1px -2px, 64px, 64px);
+  }
+
+  #google-plus {
+    @include sprite-images('../img/snSprite@2x.png', -76px -2px, 64px, 64px);
+  }
+
+  #github {
+    @include sprite-images('../img/snSprite@2x.png', -147px -2px, 64px, 64px);
+  }
+
+  #youtube {
+    @include sprite-images('../img/snSprite@2x.png', -219px -2px, 64px, 64px);
+    float: left;
+    list-style-type: none;
+  }
+
+  .kaidez-social-network-list-item {
+    float: left;
+    list-style-type: none;
+    margin-right: 5px;
+  }
+
+  // Retina menu mobile-first styles
+
+  // menu icon
+  #menu {
+    @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  // search icon
+  #search {
+    display: block;
+    float: right;
+    margin-right:10px;
+    cursor: pointer;
+    @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
+  }
+
+  // search button
+  .btnSearch {
+    border: none;
+    text-indent: -999px;
+    @include sprite-images('../img/snSprite@2x.png', -80px -69px, 44px, 44px);
+  }
+}
+
+// Footer styles end
+
+

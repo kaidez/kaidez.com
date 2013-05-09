@@ -1,0 +1,127 @@
+  /*
+ * =========
+ * Variables
+ * =========
+ */
+
+  // Colors
+  $header-color: #6AB0D4;
+  $nav-color: #306885;
+  $link-color: #2455C3;
+  $motto-logo-button-color: $nav-color;
+  $footer-color: #9C0013;
+  $h-num-color: $nav-color;
+
+  // Fonts
+  $helv: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  $robo: "Roboto Condensed";
+  $srf: serif;
+
+  // Media Queries
+
+  /*
+   * Mix-in for social-networking sprite,
+   * retina as well as non-retina version.
+   */
+
+  $mobile-size: 320px;
+  $tablet-small-size: 481px;
+  $table-large-size: 768px;
+  $desktop-size: 769px;
+  
+  // 'background-size' values for sprites
+  $bg-size: 289px 120px; 
+  
+  // may never use this since styles are loading mobile firest
+  $mobile: "only screen and (max-width : $mobile-size)";
+
+  $mobile-retina:   
+    "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+    only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px),
+    only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px),
+    only screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+    only screen and (min-resolution: 192dpi) and (min-width: 320px),
+    only screen and (min-resolution: 2dppx) and (min-width: 320px)";
+// $tablet: "only screen and (min-width:$tablet-small-size) and (max-width:$table-large-size)";
+
+/*
+  @media only screen and (min-width:$tab-small) and (max-width:$tab-large) {
+
+  }
+
+  @media screen and (min-width:$desktop-size) {
+
+  }
+}*/
+ 
+/*
+ * =======
+ * Mix-ins
+ * =======
+ */
+
+  /*
+   * Loads whatever Google Font the $font variable is set
+   * to based on the font variables above. 
+   */
+
+  @mixin fonts($font) {
+    font-family: $font;
+  }
+
+  // Centers whatever is applied to it
+  @mixin master-center {
+    margin: 0px auto; 
+    text-align: center;
+  }
+
+  // All of the main page elements need a padding of 10px
+  @mixin allElementPadding {
+    padding: 10px;
+  }
+
+  // All of the main page elements need a padding of 10px
+  @mixin comment-meta-font {
+    font-size: 12px;
+  }
+
+
+  // Certain elements need this to ensure 100% height
+  @mixin full-height {
+    position: relative;
+    height: auto;
+    min-height: 100%;
+  }
+ 
+  /* 
+   * When possible, A better way accessibilty-wise to
+   * hidepage elements than display:none or negative
+   * text indents.
+   *
+   * Yahoo! Accessibilty Blog:
+   * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
+   */
+  @mixin hide-element {
+    position:absolute;
+    clip:rect(1px 1px 1px 1px);
+  }
+
+  @mixin show-menu {
+    display: block;
+    padding:2px 0;
+    min-height: 21px;
+    width: 454px;
+    font-size: 12px;
+  }
+
+  /*
+   * Mix-in to load up sprite & display:
+   *  - menu icons.
+   *  - social networking icons.
+   */
+  @mixin sprite-images ($img, $pos, $height,$width) {
+    background: url($img) no-repeat $pos;
+    background-size: $bg-size;
+    height: $height;
+    width: $width;
+  }

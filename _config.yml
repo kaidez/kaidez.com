@@ -1,0 +1,5 @@
+markdown: rdiscount
+permalink: /:title
+destination: ./_deploy
+paginate: 5
+include: .htaccess

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>HTML5 Project: Boilerplate WordPress Theme</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #mastehead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="#">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul>
+    </nav> <!-- #site-navigation -->
+    
+    <div id="post">
+  <h1></h1>
+
+<p><em>IMPORTANT: This article discusses <a href="http://html5boilerplate.com/">the HTML5 Boilerplate template</a> and assumes that you have, at least, a basic understanding of its page layout. I will discuss the layout in a very roundabout way, not in depth. I STRONGLY suggest that you not only <a href="https://github.com/paulirish/html5-boilerplate/wiki">read the HTML5 Boilerplate documentation</a>, but also <a href="http://kaidez.com/html5-boilerplate-video/">watch the really good 40 minute walk-through video of the code</a>.</em></p>
+
+<p>With <a href="http://kaidez.com/html5-project-update-completed-wireframes/">the wireframes</a> completed for the portfolio site for <a href="http://kaidez.com/html5-project/">my HTML5 Project</a>, I’ve been researching the best way to use HTML5 page tags while developing within WordPress.</p>
+
+<p>My initial plan was to duplicate the default TwentyTen theme that comes with WordPress, then convert it to HTML5. I REALLY didn’t want to use a pre-built WP HTML5 theme, preferring to instead convert the  tags to HTML5 myself, learning things as I go. In other words, I wanted to figure out the answers to the test myself instead of copying off of someone else’s paper.</p>
+
+<p>I was going to use <a href="http://html5boilerplate.com/">the excellent HTML5 Boilerplate</a> as a coding guide to hack TwentyTen up until I found <a href="http://wordpress.org/extend/themes/boilerplate">Aaron T. Grogg’s awesome Boilerplate Theme for WordPress</a>. Based on HTML5 Boilerplate’s structure and another WP theme called <a href="http://starkerstheme.com/">Starkers</a>, it does everything I need. It correctly inserts all the Boilerplate CSS and JavaScript files while providing a bare page code layout that forces me to figure things out on my own while coding.</p>
+
+<p>The theme uses the same layout and external file structure that made HTML5 Boilerplate famous. Most notably…</p>
+
+<ul>
+<li>the <a href="http://www.modernizr.com/">Modernizr</a> JavaScript library for HTML5 &amp; CSS3 feature detection</li>
+<li>the JavaScript file for <a href="http://developer.yahoo.com/yui/profiler/">YUI Profiler</a> to test page loads</li>
+<li>the empty “script.js” file to be used for your own JavaScript code</li>
+<li>the “plugin.js” file to be used to safely store third-party plugin code</li>
+<li>the <a href="http://html5doctor.com/html-5-reset-stylesheet/">HTML5 Reset Stylesheet</a> for CSS cross-browser compatibility</li>
+<li>the two CSS files for both mobile and print layouts</li>
+<li>the “viewport” meta tag which has many uses, including use within a <a href="http://www.alistapart.com/articles/responsive-web-design/">responsive web design</a> setup</li>
+<li>the functionality that force-loads the most-recent IE rendering engine and Google Chrome Frame when needed</li>
+<li>the conditional browser detection statements for loading the proper  tag and its respective classes</li>
+</ul>
+
+
+<p>Best of all, the Boilerplate theme installs a really good Admin panel under the appearance tab in WordPress. With this, you can pick and choose which files and functionality you want to include on your site. You don’t want to use Modernizr on your site? Un-check a box in the admin panel. Prefer to install and update jQuery core file on your own instead of the theme auto-installing it for you? Un-check a box in the admin panel.</p>
+
+<p><a href="http://kaidez.com/wp-content/uploads/2011/03/boilerplate.png">View a screenshot of the Boilerplate Admin panel</a>.</p>
+
+<p>Boilerplate theme is really bare-bones, suiting all my development needs. This may be my main starter them for WordPress development from here on in.</p>
+
+<p>WordPress research is done…<strong><em>on to site mockups!!!!!</em></strong></p>
+
+<p><em>One final note: if I was still going to recode the TwentyTen theme into HTML5, I would follow the info in <a href="http://www.smashingmagazine.com/2011/02/22/using-html5-to-transform-wordpress-twentyten-theme/">Richard Shepard’s wonderful Smashing Magazine article on this topic</a>. I left a very polite comment that Boilerplate is already HTML5-ready and saves you the time…it got deleted. Glean from it what you will.</em> Update: March 7th, 2011: It’s since been put back.</p>
+
+</div>
+
+  
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>
