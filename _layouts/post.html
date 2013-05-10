@@ -8,6 +8,7 @@
    <title>{{ page.title }} &laquo; {{ page.category-name }} &laquo; kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="{{ page.url | canonical }}" />
    <script>
     WebFontConfig = {
       google: { families: [
@@ -48,7 +49,8 @@
       </ul> <!-- #site-navigation-list -->
     </nav> <!-- #site-navigation -->
     
-    <div id="post">
+    <main id="content">
+    	<h1 class="post-title">{{ page.title }}</h1>
     	{{ content }}
     </div>
 

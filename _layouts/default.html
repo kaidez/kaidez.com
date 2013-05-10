@@ -8,6 +8,7 @@
    <title>{{ page.title }}</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="{{ page.url | canonical }}" />
    <script>
     WebFontConfig = {
       google: { families: [
@@ -48,7 +49,9 @@
       </ul>
     </nav> <!-- #site-navigation -->
     
-    {{ content }}
+    <main id="content">
+      {{ content }}
+    </div>
   
     <footer id="colophon" class="clearfix" role="contentinfo">
 
