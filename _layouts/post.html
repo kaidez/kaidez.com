@@ -49,10 +49,14 @@
       </ul> <!-- #site-navigation-list -->
     </nav> <!-- #site-navigation -->
     
-    <main id="content">
+    <div id="breadcrumbs">
+     <a href="/">Home &raquo;</a> <a href="/{{ page.categories }}/">{{ page.cat-name }}</a> &raquo; {{ page.title }}
+    </div>
+
+    <main id="content" role="main">
     	<h1 class="post-title">{{ page.title }}</h1>
     	{{ content }}
-    </div>
+    </div> <!-- #content -->
 
     <footer id="colophon" class="clearfix" role="contentinfo">
 
