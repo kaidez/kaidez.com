@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>10 WordPress Tips For Web Designers &laquo;  &laquo; kaidez</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="http://kaidez.com/10-wordpress-tips-12-01-10/" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #masthead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul> <!-- #site-navigation-list -->
+    </nav> <!-- #site-navigation -->
+    
+    <div id="breadcrumbs">
+     <a href="/">Home</a> &raquo; <a href="/wordpress/"></a> &raquo; 10 WordPress Tips For Web Designers
+    </div>
+
+    <main id="content" role="main">
+    	<h1 class="post-title">10 WordPress Tips For Web Designers</h1>
+    	<h1></h1>
+
+<p>When I developed this blog, it marked the third time that I hacked a WordPress theme to meet my design needs. I’ve learned something new each time and will be applying all that I learned to future WP projects. Here are ten things that I learned, mostly centered around customizing WordPress:</p>
+
+<h2>1. Security First</h2>
+
+<p>Securing your WordPress site should be Task #1. Simple things like a properly formatted robots.txt file and using strong passwords will let you sleep at night. Plugins like <a href="http://www.bad-neighborhood.com/login-lockdown.html">Login Lockdown</a> and <a href="http://www.wp-secure.net/">WP-Secure Remove WordPress Version </a> do good WP security work. <a href="http://www.noupe.com/how-tos/wordpress-security-tips-and-hacks.html">This Noupe article</a> is a bit dated but a good place to start when securing WordPress and there are a ton of other good plugins to help you. Speaking of which…</p>
+
+<h2>2. Only Use Quality Plugins</h2>
+
+<p>This is <em>not</em> a matter of opinion: some plugins <em>are</em> better than others.</p>
+
+<p><a href="http://wordpress.org/extend/"><img src="http://wordpress.org/extend/" alt="" /></a>A quality plugin is one that’s updated often enough so that it keeps up with the most recent version and build of WordPress. When you review a new plugin either on the Plugins screen of your WP Dashboard or over at <a href="http://wordpress.org/extend/">the wordpress.org Extend section</a>, you’ll see this info. If a plugin was updated 60 days or less from the day you found it, you know that the developer is diligently keeping their code in sync with the WordPress update cycle, and will probably continue to do so…this is a quality plugin.</p>
+
+<p>If it’s older than that, ignore the plugin unless it does <em>exactly</em> what you need it to.</p>
+
+<h2>3. Learn To Create Child Themes</h2>
+
+<p>People download a WordPress theme and then change its look to meet their needs. But if they ever update the theme, lots of their changes will get over-written. This is a common WordPress newbie error.</p>
+
+<p>You avoid this by creating a child theme. This is done by duplicating the theme’s main stylesheet, usually style.css, and placing it in a brand new folder within the wp-content/themes folder. You can then make changes to the theme’s CSS code without worrying about overwriting things if you update the theme.</p>
+
+<p>I’m only lightly touching on this subject so please <a href="http://codex.wordpress.org/Child_Themes">read more about child themes over at the WordPress Codex</a>.</p>
+
+<h2>4. Learn To Create Page Templates</h2>
+
+<p>This builds on the previous tip: page templates are theme files you duplicate for customization, such as index.php and footer.php. There’s more to this then I’m talking about here as well so please <a href="http://codex.wordpress.org/Pages#Page_Templates">read more about page templates over at the WordPress Codex</a>.</p>
+
+<h2>5. You Don’t <em>Have</em> To Know PHP, But It Helps</h2>
+
+<p>PHP is an object-oriented programming language and WordPress is almost made up almost entirely of .php files. You’re fine if you don’t know PHP but since you’ll have to tweak quite a bit of it when customizing the look and feel for your WP site, knowing even a little is helpful. Knowing what PHP includes are and how they’re used to construct a web page is a plus. The <a href="http://codex.wordpress.org/">Codex</a> will help you tweak any PHP you need.</p>
+
+<p>In my case, I knew enough PHP to comfortably change functions and write a few custom includes. But I used the Codex for many, <em>many</em> other things.</p>
+
+<h2>6. You <em>Have</em> To Know CSS Beyond Changing Typfeace</h2>
+
+<p>No escaping this one if you’re customizing. Adding, removing and changing CSS is going to be a big part of your job so you should be as much of a CSS guru as you possibly can, particularly in the area of positioning page elements.<br/>
+<a href="http://code.google.com/p/support/wiki/FAQ"><img src="http://code.google.com/p/support/wiki/FAQ" alt="CSS tutorials" /></a></p>
+
+<h2>7. Use Some Sort Of Source Code Control Setup</h2>
+
+<p>If you’re going to change all these files, you need to back them up in case you make a mistake. Source code control backs up previous versions of the files you change, allowing you to go back to older versions if you make mistakes. <a href="http://code.google.com/p/support/wiki/FAQ">The Subversion setup on Google Project Hosting</a> should do you fine.</p>
+
+<h2>8. WordPress is HTML5 Ready!</h2>
+
+<p>I can’t have a pro-HTML5 blog and not mention this. Starting with Version 3.0, WordPress includes the TwentyTen theme template, which has a proper HTML5 doctype and character set reference.</p>
+
+<h2>9. The Codex is Awesome</h2>
+
+<p>To quote the Notorious B.I.G., “Number 9 shoulda been Number 1 to me.” I included all those Codex links above for a good reason: along with <a href="http://docs.jquery.com/Main_Page">jQuery</a>, WordPress is one of the best documented pieces of open-source software in the world, thanks to the Codex There are very few WP problems that you cannot solve by doing a Codex search.</p>
+
+<h2>10. Have A Plan For Restoring Your WordPress Site</h2>
+
+<p>Website databases disappear, become corrupted and get hacked. Backing up your WordPress site’s database <strong>offline</strong> and having a plan to restore it if needed is a great idea! There are multiple plugins to help you here. If you also know MySQL, you’re in good shape here.</p>
+
+<p>I back mine up weekly and have no idea how to restore it, but have someone that will do it for me if needed. A goal of mine is learning how to restore a WP database myself within the next six months.</p>
+
+<p>That’s it! Feel free to add more WordPress tips!</p>
+
+    	<div id="related-posts">
+    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<ul>
+    			
+    		</ul>
+      </div> <!-- #related-posts -->
+    </div> <!-- #content -->
+
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

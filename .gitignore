@@ -16,8 +16,6 @@
 *.eps
 *backwpup
 
-_site/
-
 # ignore all .txt files...
 *.txt
 

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries &laquo;  &laquo; kaidez</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="http://kaidez.com/html5-project-update-responsive-web-design/" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #masthead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul> <!-- #site-navigation-list -->
+    </nav> <!-- #site-navigation -->
+    
+    <div id="breadcrumbs">
+     <a href="/">Home</a> &raquo; <a href="/the html5 project/"></a> &raquo; HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries
+    </div>
+
+    <main id="content" role="main">
+    	<h1 class="post-title">HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries</h1>
+    	<h1></h1>
+
+<p>In 2005, Jesse James Garrett wrote <a href="http://www.adaptivepath.com/ideas/essays/archives/000385.php">an excellent article describing and coining the term “Ajax.”</a> He demonstrated Ajax as a method of using multiple web programming languages to neatly load content onto a web page <em>without</em> actually refreshing the page.</p>
+
+<p>It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually <em>visualize</em> this functionality in action (although <a href="http://kaidez.com/ajax-jquery-html5-work-together/4/">this page will help you</a>). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.</p>
+
+<p>Google has given us the most widely-used Ajax applications: Gmail, Maps and their <a href="http://en.wikipedia.org/wiki/List_of_Google_products#Suggest">Suggest functionality</a>, just to name a few. And many others besides Google have given us great Ajax applications as well but the point is, Garrett’s article got the creative juices flowing for lots of designers and developers. By showing them what was possible, he made them rethink their entire creative process.</p>
+
+<p>What Jesse James Garrett was to Ajax, <a href="http://ethanmarcotte.com/">Ethan Marcotte</a> may end up being to <em>responsive web design</em>. The title of <a href="http://www.alistapart.com/articles/responsive-web-design/">his widely-cited <em>A List Apart</em> article</a>, responsive web design is a big buzz phrase among the early adopter segment of the design/development body politic. And although there are concerns about its implementation, many of them valid, <strong>responsive web design is an unquestionably forward-thinking concept</strong>.</p>
+
+<p>Inspired by modern architectural theory, responsive web design uses CSS3 to detect the width of a device…a web browser, a tablet, a smartphone…whatever. Combine this detection process with traditional CSS techniques for positioning page elements, and <strong>you’re able to create <em>one</em> website that neatly displays on <em>all</em> devices.</strong></p>
+
+<p>I’d like to present this as an opportunity to our team at work, but I need to develop and test out code on my own first. So I may adjust the portfolio for <a href="http://kaidez.com/html5-project/">my HTML5 Project</a> to accommodate a responsive web design. Doing this requires my understanding of the process….here’s what I’ve learned so far.</p>
+
+<h3>Setting Up CSS For Responsive Web Design</h3>
+
+<p><em>Media queries</em>, a part of the new CSS3 specification, are the linchpin of responsive web design. They’re set up when you link stylesheets to your web page and look somewhat like this:</p>
+
+<p>With this code in mind, let’s look at the following scenario:</p>
+
+<ul>
+<li>you want a wide desktop web browser to load the “large.css” file, which displays a certain text block on your site with a left-aligned, 14 point font</li>
+<li>you want a skinny iPhone web browser to load the “smartPhone.css” file, which displays the same text block on your site with a right-aligned, 6 point font</li>
+<li>you want a semi-wide iPad web browser to load the “tablet.css” file, which displays the same text block on your site with a center-aligned, 10 point font</li>
+<li>no problem for either bullet point…the previously-mentioned coding method will detect the device’s width, then apply the device’s proper CSS file</li>
+</ul>
+
+
+<h3>Browser Detection</h3>
+
+<p>Before we discuss how all this works, let’s look at responsive web design in action. Since not every browser supports this functionality, I need to check out your browser first…</p>
+
+<p><strong>It looks like you’re not using Internet Explorer 8 or lower</strong> so you should be able to view this demo with no issues. But if you’re using a really old version of either Firefox, Safari, Opera Mobile or Opera Mini, you may need to update it.</p>
+
+<h3>Sample Site</h3>
+
+<p>There are quite a few sites supporting a responsive web design, but I really like what web developer Chris Pederick has done with his site. So <a href="http://chrispederick.com/">let’s open that site up in a separate browser</a>.</p>
+
+<p>Now spend a few seconds clicking-and-dragging the bottom right corner of your browser to resize it. Notice how the page elements reformat themselves so that they neatly display on the page…regardless of its height and width.</p>
+
+<p>Set your browser dimensions up so that it’s vertical like a skyscraper. Notice how the elements neatly adjust to fit on the page. You’ve just previewed how this site would look on an iPhone or Android.</p>
+
+<p>Welcome to responsive web design!!!</p>
+
+<h3>How Responsive Web Design Works</h3>
+
+<p>As I see it, responsive web design must utilize the following:</p>
+
+<ul>
+<li><h4>Media Queries</h4>
+
+<p>Repeating myself here…a part of the new CSS3 specification that handles both the device detection process and the proper CSS file-loading based on that detection.</p>
+
+<ul>
+<li><h4>Fluid Grids</h4>
+
+<p>Referring to <a href="http://www.alistapart.com/articles/fluidgrids/">another Marcotte article over on <em>ALA</em></a>, fluid grids teach you how to apply 8th grade algebra to create CSS that neatly readjusts page elements, making things more responsive.</p>
+
+<ul>
+<li><h4>Fluid Images</h4>
+
+<p>Marcotte whipped up some spiffy JavaScript code to properly resize images on responsive design sites. <a href="http://unstoppablerobotninja.com/entry/fluid-images/">Read about it on his Unstoppable Robot Ninja site.</a></p>
+
+<h4>The Viewport Meta Tag</h4>
+
+<p>Needed when creating a site for any iOS device, i.e., the iPad and the Phone. It looks like this…</p>
+
+<p>It’s good to know how the Viewport meta tag works so <a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">read up on it over at the Apple Developer site</a>.</p>
+
+<ul>
+<li><strong><em>Added Bonus:</em></strong>
+
+<h4>Marcotte’s Responsive Images JavaScript Library</h4>
+
+<p>Another way to make images more responsive. It’s part of a project that Marcotte did for Filament Group and performs the same functionality as the code over at Unstoppable Robot Ninja, but does so with an external JavaScript library. <a href="https://github.com/filamentgroup/Responsive-Images">Check it out over at GitHub</a>.</p>
+
+<p>This method doesn’t work on all browsers as of this article and also requires tweaking the .htaccess file, something I’ve never felt comfortable doing. But <a href="http://filamentgroup.com/examples/responsive-images/">the demo</a> shows that it works well in the browsers that it does support.</p>
+
+<h3>Responsive Design Issues</h3>
+
+<p>But as I said earlier, there are issues, the main one being site optimization.</p>
+
+<p>Let’s look at my previous code, without the viewport meta tag:</p>
+
+<p>The code above will detect a device’s width, then apply the proper CSS file. But while it will apply only one CSS file, it loads all three at once. The fact that you don’t use these files doesn’t matter-they will still load onto your computer. So your computer is loading resources it doesn’t need and won’t use, making things a little sluggish.</p>
+
+<p>Also, while either of the fluid image above techniques seem to work well, there’s a chance that you’ll want to load individual images for each stylesheet. Again, depending on which stylesheet is applied, you’re loading things that you don’t need.</p>
+
+<p>This loading of extra, unused resources may not be a big deal if you’re browsing a responsive-designed site on a ethernet cable-connected computer; however, a wireless device (especially one on a public network) will probably have issues.</p>
+
+<p>A simple Google search brings up quite a few articles against issues with responsive web design, <a href="http://www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/">the biggest one coming from web developer Jason Grigsby</a>. My suggestion is to read the negative articles on the subject as well as the positive ones, the Grigsby one at least.</p>
+
+<p>Despite the articles showcasing the problems, there are quite a few articles providing workarounds to the problems. For starters, Amsterdam-based developer Peter-Paul Koch (aka PPK) counters Grigsby’s article quite nicely with <a href="http://www.quirksmode.org/blog/archives/2010/08/combining_media.html">this article at his Quirksmode blog</a>. And let’s remember that Marcotte supplied both the fluid image code snippet and responsive image JavaScript library mentioned above: when these are applied properly, there’s no need to use multiple images per device. Plus, <a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">Kayla Knight’s responsive web design guideline article over at Smashing Magazine</a> provides some techniques for dealing with the multiple CSS file calls.</p>
+
+<h3>Conclusion</h3>
+
+<p>So, yes, the responsive web design concept is new. REALLY new. I do see its promise but am not ready to recommend as “development best practice” at work until I get my hands dirty with it on my own first.</p>
+
+<p>So, again, I’m now researching the possibility redoing <a href="http://kaidez.com/html5-project-update-completed-wireframes/">my HTML5 Project wireframes</a> to fit a responsive design so I can fully understand this concept. This will take time but I’m will to work as long as possible to get this done.</p>
+
+<h3>Resources</h3>
+
+<p>There are tons of responsive design resources…here’s a complete list of ones that have helped me. Some of these resources have already been mentioned:</p>
+
+<ul>
+<li><a href="http://www.alistapart.com/articles/responsive-web-design/">Ethan Marcotte’s original “Responsive Web Design” article at A List Apart</a></li>
+<li><a href="http://www.alistapart.com/articles/fluidgrids/">Marcotte’s “Fluid Grid” article, also over at A List Apart</a></li>
+<li><a href="http://unstoppablerobotninja.com/entry/fluid-images/">Marcotte’s great fluid image JavaScript code over at his Unstoppable Robot Ninja site</a></li>
+<li><a href="https://github.com/filamentgroup/Responsive-Images">Marcotte’s responsive image JavaScript library over at GitHub</a></li>
+<li><a href="http://5by5.tv/bigwebshow/9">“Responsive Web Design” episode at “The Big Web Show,” featuring Ethan Marcotte</a></li>
+<li><a href="http://vimeo.com/15986231">Stephen Hay’s “Real-world Responsive Design” lecture at the 2010 Fronteers conference</a></li>
+<li><a href="http://www.quirksmode.org/blog/archives/2010/08/combining_media.html">PPK’s “Combining media queries and JavaScript” over at his blog</a></li>
+<li><a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">Viewport meta tag documentation for iOS on the Safari Web Content Guide</a>
+
+<ul>
+<li><a href="http://www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/">Jason Grigsby’s “CSS Media Query for Mobile is Fool’s Gold” article over at his blog – an argument against responsive web design</a></li>
+<li><a href="http://www.lynda.com/CSS-training/css3-first-look/73288-2C.html"><em>CSS3 First Look</em> course over at lynda.com, which includes a GREAT chapter on media queries</a></li>
+<li><a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">Kayla Knight’s “Responsive Web Design: What It Is and How To Use It” article over at Smashing Magazine</a></li>
+<li><a href="http://www.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">Rachel Andrew’s “How To Use CSS3 Media Queries To Create a Mobile Version of Your Website” article, also over at Smashing Magazine</a></li>
+<li><a href="http://lessframework.com/">The LESS framework-a pre-built template for creating responsive web design sites</a></li>
+<li><a href="http://mediaqueri.es/">mediaqueri.es – a GREAT gallery of responsive web design sites</a>
+<strong>Extra:</strong> As of this article, Ethan Marcotte is set to release a book entitled (surprise!) <a href="http://books.alistapart.com/products/responsive-web-design">“Responsive Web Design” via A Book Apart</a> in a few months. It will be an extension of his two ALA articles along with new content. To be alerted when it’s released, either sign up for their newsletter at the previously-mentioned link or <a href="http://twitter.com/#!/abookapart">follow A Book Apart on Twitter</a>.</li>
+</ul>
+
+
+<p>Feel free to share any responsive web design resources that you like…and your comments!!!! Responsive web design is new so the more info that goes around, the better for all of us.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    	<div id="related-posts">
+    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<ul>
+    			
+    		</ul>
+      </div> <!-- #related-posts -->
+    </div> <!-- #content -->
+
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

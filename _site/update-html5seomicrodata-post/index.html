@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>Update to My HTML5/SEO/Microdata Post &laquo;  &laquo; kaidez</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="http://kaidez.com/update-html5seomicrodata-post/" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #masthead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul> <!-- #site-navigation-list -->
+    </nav> <!-- #site-navigation -->
+    
+    <div id="breadcrumbs">
+     <a href="/">Home</a> &raquo; <a href="/html5/"></a> &raquo; Update to My HTML5/SEO/Microdata Post
+    </div>
+
+    <main id="content" role="main">
+    	<h1 class="post-title">Update to My HTML5/SEO/Microdata Post</h1>
+    	<h1></h1>
+
+<p>I published a well-read article entitled “<a href="http://kaidez.com/html5-seo-microdata/">“HTML5, SEO and Microdata”</a>” on January 28, 2011. <a href="http://twitter.com/boblet">Oli Studholme</a> from <a href="http://html5doctor.com/">HTML5 Doctor</a> helped me understand and adjust the code.</p>
+
+<p>He recently alerted me to some things that were incorrect: some were huge and some were small. The big thing that came out of this was that <strong>I can’t say that Microdata helps with search rankings. Google certainly uses it, but not in their search algorithm</strong>. So much so, that I renamed the post <strong><em>“HTML5, SEO and Microdata”</em></strong></p>
+
+<p>As embarrassing as it may be, <strong><em>I’m a big believer in HTML5 semantics</em></strong> and believe that every single solitary web developer should follow its rules. And if I have to take it on the chin to help that happen, so be it.</p>
+
+<p>I changed the example code on that article as per his comments…here are some other semantical things that he suggested:</p>
+
+<ul>
+<li><blockquote><p>“itemscope tells the browser that everything within the<br/>
+ tags is microdata and should be treated as such.”</p></blockquote>
+
+<p>-> “…is a microdata item” (I don’t understand what you mean by “should be treated as such”)</p></li>
+<li><blockquote><p>“itemtype attaches the microdata to the “Person” vocabulary library stored at data-vocabulary.org.”</p></blockquote>
+
+<p>-> “itemtype indicates the microdata item uses the “Person” vocabulary” — there’s no requirement for anything to be at itemtype URLs, they’re just acting as unique names. If browsers accessed itemtype URLs it’d be a DDOS <img src="http://localhost:8888/wp-includes/images/smilies/icon_wink.gif" alt=";)" /></p></li>
+<li><blockquote><p>“But RDFa needs to be written in XHTML, which is headed for W3C deprecation”</p></blockquote>
+
+<p>not true -> <a href="http://dev.w3.org/html5/rdfa/" title="HTML RDFa 1.1">http://dev.w3.org/html5/rdfa/</a> and I think it’s a little early for “headed for W3C depreciation” just yet <img src="http://localhost:8888/wp-includes/images/smilies/icon_wink.gif" alt=";)" /></p></li>
+<li><blockquote><p>“microformats don’t really work without CSS”</p></blockquote>
+
+<p>also not true. microformats don’t require a stylesheet at all, and class names are not solely for CSS</p></li>
+<li><blockquote><p>“It’s due to the fact that Twenty Ten, which is HTML5-ready, uses a lot of the same CSS classes as the ones used by the ‘hatom’ feed format”</p></blockquote>
+
+<p>-> no they <em>are</em> using the hatom microformat — that’s why they have those classes.</p></li>
+<li><blockquote><p>“hatom classes like entry-title and entry-content, the presence of these classes is forcing the Snippet tool to look for hatom feed content in my About page”</p></blockquote>
+
+<p>-> no the classes that trigger this behaviour are “hfeed” and “hentry”. without them this on’t occur even if you do use “entry-title” etc</p></li>
+<li><blockquote><p>“If you want to get a feel of how much microdata is out there, check out the Operator plug-in for Firefox”</p></blockquote>
+
+<p>Operator currently doesn’t support microdata, unless you have an unreleased version <img src="http://localhost:8888/wp-includes/images/smilies/icon_wink.gif" alt=";)" /> You can check on: <a href="http://html5doctor.com/microdata/" title="Extending HTML5 — Microdata | HTML5 Doctor">http://html5doctor.com/microdata/</a> The only things that show up are microformats in the default template (author profile and tags)</p></li>
+<li><blockquote><p>“Microdata only works if placed into a page with the bare minimum of HTML5 formatting”</p></blockquote>
+
+<p>-> not true. while they won’t be valid you can use them on any page, including HTML4 and XHTML1. I don’t understand what you mean by HTML5 formatting</p></li>
+<li><blockquote><p>“If you try to hide microdata on your page (i.e. putting it into a page tag set to display:none), Google will totally ignore it”</p></blockquote>
+
+<p>and</p>
+
+<blockquote><p>“Microdata must be placed in the main content of your web page; if you place it among header or footer content, Google will totally ignore it”</p></blockquote>
+
+<p>-> not true — you can put microdata in attributes via (with some caveats), and adding author microdata in  makes a lot of sense <a href="http://html5doctor.com/microdata/#meta" title="Extending HTML5 — Microdata | HTML5 Doctor">http://html5doctor.com/microdata/#meta</a></p></li>
+<li><blockquote><p>“Commit the info in Google’s Webmaster Tools documentation to memory”</p></blockquote>
+
+<p>Google have a dedicated SEO guide too, that you might enjoy:</p></li>
+</ul>
+
+
+    	<div id="related-posts">
+    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<ul>
+    			
+    		</ul>
+      </div> <!-- #related-posts -->
+    </div> <!-- #content -->
+
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

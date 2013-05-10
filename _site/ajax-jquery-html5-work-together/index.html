@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>TUTORIAL: How AJAX, jQuery and HTML5 Work Together &laquo;  &laquo; kaidez</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="http://kaidez.com/ajax-jquery-html5-work-together/" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #masthead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul> <!-- #site-navigation-list -->
+    </nav> <!-- #site-navigation -->
+    
+    <div id="breadcrumbs">
+     <a href="/">Home</a> &raquo; <a href="/tutorials/"></a> &raquo; TUTORIAL: How AJAX, jQuery and HTML5 Work Together
+    </div>
+
+    <main id="content" role="main">
+    	<h1 class="post-title">TUTORIAL: How AJAX, jQuery and HTML5 Work Together</h1>
+    	<h1></h1>
+
+<p>AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays. While getting these web technologies to work together is exciting, the programming required to do this isn’t new.</p>
+
+<p>AJAX, jQuery and HTML5 work together through the use of <em>page tags, page IDs</em> and <em>page classes</em> that exist between the two  tags of a web page. The JavaScript functionality embedded in jQuery and AJAX finds these tags , IDs and classes (which we’ll now call <em>page elements</em>) and “does” something to them; maybe it changes their background color, maybe it’s loading copy into them. Either way, it’s doing <em>something</em> to them.</p>
+
+<p>This process of “finding and doing something” to these page elements with JavaScript is more commonly known as <em>“traversing the DOM”</em>. Simply put, <strong><em>traversing the DOM is the key to getting AJAX, jQuery and HTML5 to work together</em></strong>.</p>
+
+<p>Web developers have used DOM traversal for years so, again, there really isn’t that much new programming involved when it comes to syncing up AJAX, jQuery and HTML5. Still, a layman’s description of how all this works may be required, so I’ll give it a try.</p>
+
+<p><a href="http://kaidez.com/ajax-jquery-html5-work-together/2/"><strong><em>Next: Traversing the DOM The Old School Way With JavaScript »</em></strong></a></p>
+
+<p> </p>
+
+<h2>Traversing the DOM The Old School Way With JavaScript</h2>
+
+<p>DOM stands for <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel. All the page elements live within the DOM, which is built into a web page. You find the elements by traversing the DOM with JavaScript, mostly through the use of the getElementById() function.</p>
+
+<p>Here’s some HTML5-ready page code that uses it:</p>
+
+<p>Load Text Into An ID Using JavaScript</p>
+
+<p>function loadText() {<br/>
+document.getElementById(‘words’).innerHTML = ‘Hello World!’;<br/>
+}</p>
+
+<p>Let’s look at the code and translate it…</p>
+
+<p><strong>The  tag</strong></p>
+
+<p>function loadText() {<br/>
+document.getElementById(‘words’).innerHTML = ‘Hello World!’;<br/>
+}</p>
+
+<p>TRANSLATION: create a JavaScript function called loadText(). When this function runs, it should find a page element with an id of ‘words’ and place some text inside of it that says <em>Hello World!</em></p>
+
+<p><strong>The  tag</strong></p>
+
+<p>TRANSLATION: Whenever this button is clicked, run the loadText() function. This will load that <em>Hello World!</em> copy into that page element with an id of ‘words’.</p>
+
+<p><strong>The  tag</strong></p>
+
+<p>TRANSLATION: This empty  tag is the page element with an id of ‘words,’ so this is what’s affected when the loadText() function runs. Therefore, this is where the <em>Hello World!</em> text will be placed into when the button is clicked.</p>
+
+<p>An ID must be unique on a web page so in our example, there can only be one page element with an ID of “words.” If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it’s best if you look for tags using the getElementsByTagName() function:</p>
+
+<p>Load Text Into Multiple Tags Using JavaScript</p>
+
+<p>function loadText() {<br/>
+var topDiv=document.getElementsByTagName(“p”)[0].innerHTML = “Hello World”;<br/>
+var bottomDiv=document.getElementsByTagName(“p”)<a href="http://kaidez.com/ajax-jquery-html5-work-together/2/">1</a>.innerHTML = “Goodbye World”;<br/>
+}</p>
+
+<p>The function now creates two variables: one that looks for the first  tag on the page and one that looks for the second one. And since computers start counting at 0, each  tag is named [0] and <a href="http://kaidez.com/ajax-jquery-html5-work-together/2/">1</a>, respectively. Just as before, the function executes when the button is clicked; when that happens, text gets loaded into each  tag.</p>
+
+<p>It would be easier if you could find page elements with class names instead of tag names And you can traverse the DOM with getElementsByClassName(), but it doesn’t always work when using JavaScript.</p>
+
+<p>It would be great if all of this could be made easier…jQuery does just that.</p>
+
+<p><a href="http://kaidez.com/ajax-jquery-html5-work-together/3/"><strong><em>Next: Traversing the DOM The New School Way With jQuery »</em></strong></a></p>
+
+<p> </p>
+
+<h2>Traversing the DOM The New School Way With jQuery</h2>
+
+<p>jQuery is an extensive JavaScript library that, when attached to a web page, makes it easier for developers to write JavaScript. Its rise in popularity is mostly due to the neat effects it can produce: demos of effects like the accordion widget can be viewed at <a href="http://jqueryui.com/demos/">the jQuery UI demo page</a>.</p>
+
+<p>As cool as these effects are, the fact that <strong><em>jQuery makes DOM traversal easier</em></strong> is, I believe, its best feature. Let’s load the phrase “Hello World!” into a  tag with an ID like we did in our previous example, but with jQuery instead of JavaScript:</p>
+
+<p>Load Text Into An ID Using jQuery</p>
+
+<p><strong>$(document).ready(function(){<br/>
+$(“input”).click(function () {<br/>
+$(‘#words’).html(“Hello World”);<br/>
+});<br/>
+});</strong></p>
+
+<p>We attached the jQuery library stored at Google Libraries to our web page:</p>
+
+<p>Then we use the jQuery code in bold to create a function that traverses the DOM to find the  tag and loads text into it when it’s clicked. We just did this in JavaScript and now did it with jQuery, and used a little less code in the process.</p>
+
+<p>Also with jQuery, we can now traverse the DOM with ease to locate classes, even if we have to locate more than one:</p>
+
+<p>Load Text Into Multiple Classes Using jQuery</p>
+
+<p><strong>$(document).ready(function(){<br/>
+$(“input”).click(function () {<br/>
+$(‘.words’).html(“Hello World”);<br/>
+});<br/>
+});</strong></p>
+
+<p>And yes, jQuery lets us traverse the DOM to locate tags, multiple ones if we need to:</p>
+
+<p>Load Text Into A Tag With jQuery</p>
+
+<p><strong>$(document).ready(function(){<br/>
+$(“input”).click(function () {<br/>
+$(‘p’).html(“Hello World”);<br/>
+});<br/>
+});</strong></p>
+
+<p>This was easy so let’s do something more advanced and add AJAX to our discussion.</p>
+
+<p><a href="http://kaidez.com/ajax-jquery-html5-work-together/4/"><strong><em>Next: Start Using AJAX With jQuery »</em></strong></a></p>
+
+<p> </p>
+
+<h2>Start Using AJAX With jQuery</h2>
+
+<p>AJAX is an acronym for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML. It is not a programming <em>language</em> but a programming <em>concept</em>. More specifically, AJAX is a set of unofficial rules for getting the following web technologies to work together on a website:</p>
+
+<ul>
+<li>JavaScript</li>
+<li>XML</li>
+<li>HTML</li>
+<li>The DOM</li>
+</ul>
+
+
+<p>AJAX can do a lot but its main purpose in life is to load and unload page content without actually reloading the page. A good example of this is <a href="http://www.w3schools.com/ajax/ajax_example.asp">the AJAX Example at W3 Schools</a>. Click the “Change Content” button while looking at any banners on the page. Notice that the example content refreshed while the banners (i.e. the page) did not. Now refresh your browser page while looking at the banners: notice that they, along with the content, refreshed this time.</p>
+
+<p>[![Grow your brain.][7]][7]JavaScript is what really brings AJAX together but the XMLHttpRequest object that’s embedded in “almost” all web browsers plays an important role here as well.</p>
+
+<p>As I said, “almost” all browsers contain XMLHttpRequest. Not surprisingly, Internet Explorer 6 doesn’t. It can still perform AJAX: it just needs the ActiveXObject to do it instead of XMLHttpRequest. So you <em>always</em> need to detect the browser before you use AJAX.</p>
+
+<p>The following code detects the browser, determines which version of AJAX to use based on the detection, then creates a JavaScript function that uses AJAX to load a text file that’s stored on the server called ajaxCopy.txt <strong>(NOTE: you can only test this code if you upload it to your website)</strong>:</p>
+
+<p>AJAX Detection And Data Loading With JavaScript</p>
+
+<p>var xhrObject = false;</p>
+
+<p>if (window.XMLHttpRequest) {<br/>
+xhrObject = new XMLHttpRequest();</p>
+
+<p>} else if (window.ActiveXObject) {<br/>
+xhrObject = new ActiveXObject(“Microsoft.XMLHTTP”);<br/>
+}</p>
+
+<p>function loadCopy(externalTextFile, externalTextDiv) {</p>
+
+<p>if(xhrObject) {</p>
+
+<p>var pageText = document.getElementById(externalTextDiv);</p>
+
+<p>xhrObject.open(“GET”,externalTextFile);</p>
+
+<p>xhrObject.onreadystatechange = function () {<br/>
+if(xhrObject.readyState == 4 &amp;&amp; xhrObject.status == 200) {<br/>
+pageText.innerHTML = xhrObject.responseText; } }</p>
+
+<p>xhrObject.send(null);<br/>
+}<br/>
+}</p>
+
+    	<div id="related-posts">
+    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<ul>
+    			
+    		</ul>
+      </div> <!-- #related-posts -->
+    </div> <!-- #content -->
+
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <title>Media Queries Are Important &laquo;  &laquo; kaidez</title>
+   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+   <link rel="canonical" href="http://kaidez.com/media-queries-important/" />
+   <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+  <div id="container" class="containing-element">
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h2 class="site-description">coding and sharing what I learn</h2>
+    </header> <!-- #masthead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+      </ul> <!-- #site-navigation-list -->
+    </nav> <!-- #site-navigation -->
+    
+    <div id="breadcrumbs">
+     <a href="/">Home</a> &raquo; <a href="/coding best practices/"></a> &raquo; Media Queries Are Important
+    </div>
+
+    <main id="content" role="main">
+    	<h1 class="post-title">Media Queries Are Important</h1>
+    	<p>CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design, which <a href="http://kaidez.com/html5-project-update-responsive-web-design/">I’ve previously written about</a>. This popularity is set to increase even more thanks to recent actions by Google and the W3C.</p>
+
+<p>On June 6, 2012 via their <a href="http://googlewebmastercentral.blogspot.com/2012/06/recommendations-for-building-smartphone.html">Webmaster Central Blog</a>, Google stated that sites well-optimized for mobile have “the best chance of performing well in Google’s search results,” making it clear that using media queries is the ideal way to optimize things. Thirteen days later, <a href="http://www.w3.org/TR/css3-mediaqueries/">the World Wide Web Consortium (W3C) formally recommended media queries as a web standard</a>.</p>
+
+<p>To be clear about Google’s statement: <strong>they have given absolutely NO indication that building your site with media queries will make it rank higher in Google’s search results, it just gives your site a better chance of that happening</strong>. I’ll discuss this in-depth later but don’t let this keep you from using them on your site, because <strong>these recent moves by Google and the W3C have placed a high premium on media queries as they pertain to proper web development</strong>.</p>
+
+<p>Let’s discuss the W3C’s actions first and they need to be placed in their proper context…</p>
+
+<h2>The W3C &amp; Media Queries</h2>
+
+<p>The W3C is the web standards watchdog, doing its best to enforce them globally. A potential standard goes through five phases of approval: “Working Draft,” “Last Call Working Draft,” “Candidate Recommendation,” “Proposed Recommendation” and “Recommendation.” There is some variation among the various standards committees but they all share these five phases.</p>
+
+<p>Nothing reaches Recommendation status until all of its features are 100% implemented in at least two web browsers and if you’re familiar with the <a href="http://en.wikipedia.org/wiki/Browser_wars">Browser Wars</a>, you know that’s an uphill battle. Case in point: the CSS2 specification was released in 1996 but didn’t reach Recommendation status until 2011.</p>
+
+<p>The W3C wanted CSS3 to gain Recommendation status at a faster pace than earlier versions so <a href="http://www.w3.org/Style/2011/CSS-process">they decided to break CSS3 into separate modules</a>. This meant that instead of the world waiting for the entire spec to go to Reco, the modules could reach the status on their own. The decision was a smart one and allowed media queries to go to Recommendation quickly.</p>
+
+<p>By being defined as a web standard, media queries are now seen as a key component in making your site widely accessible. The more accessible it is, the more end-users who can access it on a variety of devices. People can view your site on smartphones, laptops, desktops, e-readers, gaming consoles, etc…yes, <a href="http://www.alistapart.com/articles/testing-websites-in-game-console-browsers/">people do browse sites on gaming consoles</a>. Making sure that <em>anyone</em> can view your site on <em>any device</em> is a good goal for you to have as a site owner.</p>
+
+<p>In truth, this was a no-brainer move for the W3C. Layout-based media queries have been an immediate hit with developers, mostly due to <a href="http://www.alistapart.com/authors/m/emarcotte">Ethan Marcotte’s set of ALA articles</a>. Their rise in popularity <a href="http://caniuse.com/css-mediaqueries">caused most modern browsers to support them</a> before the spec even went to Reco.</p>
+
+<p>It was Google’s move that was a surprise but, if you look some of their recent actions, not a big one.</p>
+
+<h2>Google &amp; Media Queries</h2>
+
+<p>The primary thing that helps your site achieve high rankings in Google’s search results is to produce high quality content and, in all fairness, the process by which Google determines content as high quality is pretty fair. The second thing, which most ignore, is to make the content as easy for Google to find and understand as possible.</p>
+
+<p>If you have both a desktop and mobile version of your site, Google must crawl both versions, parse them, then decide how to properly index each site if they ever need to list the sites in their search results. It takes Google more time to do this for two sites than it would for one site.</p>
+
+<p>A responsive website built with media queries keeps both the desktop and mobile versions under one URL, reducing the amount of time it takes Google to find and parse content. And if you make it easy for them, they’ll <em>try</em> help you as best as they can.</p>
+
+<p>This action falls in line with Google’s growing love affair with fast-loading sites. They’ve invested heavily in their <a href="https://developers.google.com/speed/pagespeed/">PageSpeed suite of site optimization tools for web developers</a> and grabbed site speed guru <a href="http://stevesouders.com/">Steve Souders</a> from Yahoo. Plus, they announced in 2010 that <a href="http://googlewebmastercentral.blogspot.com/2010/04/using-site-speed-in-web-search-ranking.html">a fast-loading site <em>can</em> get a higher search rank</a>. While it carries a low weight and affects less than 1% of sites, the sum is greater than the parts. Because site speed matters so much to mobile devices, Google is paying strict attention to it at a much higher level than their competitors.</p>
+
+<p>Media queries are part of that sum but I’ll say it again: don’t take this to mean that a media query-enabled site guarantees you high search engine rankings. The link above where Google praises media queries also states that they understand that “it may not be possible or appropriate to use responsive web design” in certain situations. They offer site optimization tips for just such situations, which they wouldn’t do if they wanted to penalize sites for not using media queries.</p>
+
+<h2>This is all a big deal</h2>
+
+<p>A web dev-based blog post like this is basically a time capsule: a snapshot of what’s going on at a certain period of time. If this post survives the test of time and is still on the interwebs 20 years from now, people will look at it then and say, “how quaint.”</p>
+
+<p>So why create this post? Because the actions of Google and the W3C just made media queries a big deal <em>right now</em> and that needs to be screamed from the rooftops. The W3C has deemed it that MQs make can make sites more accessible. An accessible site makes Google’s job easier, so much so that they’ve flat-out told us that they care about the accessibility potential of media queries and want us to use them. We have been given a clear roadmap to making better websites with these statements…I’m skeptical that enough people are on the right path.</p>
+
+<p>I don’t think building, or rebuilding a site with media queries is easy. To the contrary: it’s incredibly tough! But some good reasons have just come up why you should at least consider using them, even if it means rebuilding your site from the ground up.</p>
+
+<p>Of course, you may do some research and decide that a media query-enabled website is not for you, and that’s perfectly fine. Not using media queries is not a sin: not realizing their importance is.</p>
+
+    	<div id="related-posts">
+    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<ul>
+    			
+    		</ul>
+      </div> <!-- #related-posts -->
+    </div> <!-- #content -->
+
+    <footer id="colophon" class="clearfix" role="contentinfo">
+
+      <section id="about" class="footer-sections">
+        <h3 class="footer-header">ABOUT ME</h3>
+        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+        </p>
+      </section> <!-- #about -->
+
+      <section id="social-networking" class="footer-sections">
+        <h3 class="footer-header">CONNECT WITH ME</h3>
+        <ul id="social-network-list">
+          <li id="twitter" class="kaidez-social-network-list-item">
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="google-plus" class="kaidez-social-network-list-item">
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          </li>
+          <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
+          <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
+        </ul>
+      </section> <!-- #social-networking -->
+
+      <section id="contact-form" class="footer-sections">
+        <h3 class="footer-header">CONTACT</h3>
+        <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
+        <form id="contact" method="post">
+          <fieldset id="footer-contact-fieldset">
+            <p class="footer-contact-fields">
+              <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
+            </p>
+            <p class="footer-contact-fields">
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            </p>
+            <p class="footer-contact-fields">
+              <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
+            </p>
+          </fieldset>
+          <input type="submit" value="Send Your Message" name="submit" class="button">
+        </form>
+      </section> <!-- #contact-form -->
+
+      <p id="copyright">
+        Copyright &copy; 2008-2013 Kai Gittens
+      </p> <!-- #copyright -->
+
+    </footer> <!-- #colophon -->
+  </div> <!-- #container -->
+  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
+
+</body>
+</html>
