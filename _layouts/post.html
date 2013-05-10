@@ -56,6 +56,14 @@
     <main id="content" role="main">
     	<h1 class="post-title">{{ page.title }}</h1>
     	{{ content }}
+    	<div id="related-posts">
+    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<ul>
+    			{% for post in site.related_posts limit:3 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+    		</ul>
+      </div> <!-- #related-posts -->
     </div> <!-- #content -->
 
     <footer id="colophon" class="clearfix" role="contentinfo">
