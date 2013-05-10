@@ -1,24 +1,12 @@
 ---
-title: 'Mobile Web Development Best Practices &#8211; Starting Tips'
+title: Mobile Web Development Best Practices &#8211; Starting Tips
 author: Kai Gittens
-layout: post
+excerpt: Excellent best practices you should embed in your workflow when coding for mobile.
 permalink: /mobile-web-development-best-practices-starting-tips/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-categories:
-  - Coding Best Practices
+layout: post
+categories: coding-best-practices
+category-name: "Coding Best Practices"
 ---
-# 
 
 My last two articles, reviewing my work for both [the Almay/Facebook project][1] and [the new Mitchum site][2], have tried to drive the same point home: **it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.** This article expands on that point.  
   
