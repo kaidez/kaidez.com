@@ -8,7 +8,7 @@
    <title>{{ page.title }} &laquo; {{ page.category-name }} &laquo; kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
-   <link rel="canonical" href="{{ page.url | canonical }}" />
+   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
    <script>
     WebFontConfig = {
       google: { families: [
@@ -60,7 +60,7 @@
     		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
     		<ul>
     			{% for post in site.related_posts limit:3 %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <li><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
           {% endfor %}
     		</ul>
       </div> <!-- #related-posts -->
