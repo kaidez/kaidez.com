@@ -200,33 +200,14 @@ a:hover {
   text-decoration: underline;
 }
 
-// Category & meta info at the end of a single post.
-.category-date-information {
-  font-size: 14px;
-  font-style: italic;
-  color: #fff;
-  text-align: center;
-  margin: 0px auto;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  background-color: $nav-color;
-  padding:7px;
+
+#related-posts {
+  padding: 10px;
+  margin: 40px 0;
+  background-color: #E1F5F6;
+  border: 1px solid #6AB0D4;
+  clear: both
 }
-
-// meta info text links are white(except for post meta info)
-
-.category-date-information a:link,
-.category-date-information a:visited { 
-  color: #fff;
-  text-decoration: underline;
-}
-
-// all text links have an underline
-.category-date-information a:hover { 
-  text-decoration: none;
-}
-
 // Social networking stuff starts
 
 #social-network-container {

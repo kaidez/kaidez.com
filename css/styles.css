@@ -629,25 +629,12 @@ a:visited {
 a:hover {
   text-decoration: underline; }
 
-.category-date-information {
-  font-size: 14px;
-  font-style: italic;
-  color: #fff;
-  text-align: center;
-  margin: 0px auto;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  background-color: #306885;
-  padding: 7px; }
-
-.category-date-information a:link,
-.category-date-information a:visited {
-  color: #fff;
-  text-decoration: underline; }
-
-.category-date-information a:hover {
-  text-decoration: none; }
+#related-posts {
+  padding: 10px;
+  margin: 40px 0;
+  background-color: #E1F5F6;
+  border: 1px solid #6ab0d4;
+  clear: both; }
 
 #social-network-container {
   clear: both;
