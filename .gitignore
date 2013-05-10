@@ -16,7 +16,7 @@
 *.eps
 *backwpup
 
-*_deploy/
+_deploy/
 
 # ignore all .txt files...
 *.txt
