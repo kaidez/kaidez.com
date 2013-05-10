@@ -1,0 +1,5 @@
+{
+  "title"    : "{{ post.title }}",
+  "category" : "{{ post.categories }}",
+  "href"     : "{{ post.url }}"
+}

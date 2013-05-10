@@ -1,0 +1,8 @@
+---
+---
+[
+{% for item in site.categories %}
+  {% include post.json %}
+{% endfor %}
+false
+]
