@@ -521,7 +521,7 @@ html, body {
   margin-bottom: 30px;
   padding-bottom: 30px; }
 
-#home {
+#content {
   position: relative;
   height: auto;
   min-height: 100%;
@@ -1028,7 +1028,7 @@ a:hover {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
-.wf-active h1.entry-title {
+.wf-active h1.post-title {
   font-size: 24px;
   margin: 0; }
 
