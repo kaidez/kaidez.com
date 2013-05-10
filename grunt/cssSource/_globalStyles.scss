@@ -44,11 +44,7 @@ html, body {
   @include full-height;
   margin:0 10px;
   text-align: left;
-}
-
-// inner element for posts
-#primary {
-  @include full-height;
+  line-height: 1.7;
 }
 
 // apply the Google font to all <header> tags  

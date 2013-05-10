@@ -80,12 +80,6 @@
     padding: 10px;
   }
 
-  // All of the main page elements need a padding of 10px
-  @mixin comment-meta-font {
-    font-size: 12px;
-  }
-
-
   // Certain elements need this to ensure 100% height
   @mixin full-height {
     position: relative;
