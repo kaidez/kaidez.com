@@ -6,7 +6,7 @@ permalink: /almay-project-using-html5-net-jquery/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - My Work
 ---
 # 

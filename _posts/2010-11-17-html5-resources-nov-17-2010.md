@@ -6,7 +6,7 @@ permalink: /html5-resources-nov-17-2010/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Coolsites
 ---
 # 

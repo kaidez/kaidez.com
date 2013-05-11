@@ -6,7 +6,7 @@ permalink: /easy-to-read-html5-spec/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - HTML5
 ---
 # 

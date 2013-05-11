@@ -6,7 +6,7 @@ permalink: /jquery-tshirt-geek-gift/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Personal
 ---
 # 

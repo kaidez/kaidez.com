@@ -3,7 +3,7 @@ title: 5 Mobile Web Development Best Practice Resources
 author: Kai Gittens
 permalink: /mobile-web-development-best-practice-resources/
 layout: post
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 ---
 # 

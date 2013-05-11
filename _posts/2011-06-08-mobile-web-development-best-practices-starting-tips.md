@@ -4,7 +4,7 @@ author: Kai Gittens
 excerpt: Excellent best practices you should embed in your workflow when coding for mobile.
 permalink: /mobile-web-development-best-practices-starting-tips/
 layout: post
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 ---
 

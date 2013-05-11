@@ -3,8 +3,8 @@ title: 'TUTORIAL: Create The Building Blocks For An HTML5 Page'
 author: Kai Gittens
 layout: post
 permalink: /create-html5-page/
-categories: Tutorial
-tags: [tutorial, HTML%]
+category: Tutorial
+tags: [tutorial, HTML5]
 ---
 # 
 

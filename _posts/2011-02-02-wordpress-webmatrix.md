@@ -6,7 +6,7 @@ permalink: /wordpress-webmatrix/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - WordPress
 ---
 # 

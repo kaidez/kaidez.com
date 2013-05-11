@@ -6,7 +6,7 @@ permalink: /html5-article-roundup/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - HTML5
 ---
 # 

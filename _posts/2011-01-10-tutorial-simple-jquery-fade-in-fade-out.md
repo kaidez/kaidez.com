@@ -15,7 +15,7 @@ has_been_twittered:
 twitter_failure_code:
   - 400
   - 400
-categories:
+category:
   - Tutorials
 ---
 # 

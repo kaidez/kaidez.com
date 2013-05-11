@@ -6,7 +6,7 @@ permalink: /kaidez-html5-apps/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - The HTML5 Project
 ---
 # 

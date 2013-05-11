@@ -6,7 +6,7 @@ permalink: /kai-gittens-article-inspired-magazine/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - My Writing
 ---
 # 

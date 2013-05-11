@@ -6,7 +6,7 @@ permalink: /html5-project-boilerplate-theme-wordpress/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - The HTML5 Project
   - WordPress
 ---

@@ -10,7 +10,7 @@ permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Reviews
 ---
 # 

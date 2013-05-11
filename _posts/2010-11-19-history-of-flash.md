@@ -6,7 +6,7 @@ permalink: /history-of-flash/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Flash
 ---
 # 

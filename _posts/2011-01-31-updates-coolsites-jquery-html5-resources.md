@@ -15,7 +15,7 @@ twitter_failure_code:
 twitter_failure_reason:
   - Settings do not permit the auto-tweeting of old posts
   - Settings do not permit the auto-tweeting of old posts
-categories:
+category:
   - Coolsites
 ---
 # 

@@ -6,7 +6,7 @@ permalink: /social-media-week-follow-up/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Reviews
 ---
 # 

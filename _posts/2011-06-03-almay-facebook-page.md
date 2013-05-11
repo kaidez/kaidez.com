@@ -19,7 +19,7 @@ twitter_failure_code:
 twitter_failure_reason:
   - 
   - 
-categories:
+category:
   - My Work
 ---
 # 

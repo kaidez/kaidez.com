@@ -2,21 +2,11 @@
 title: A Simple Explanation of HTML5
 author: Kai Gittens
 layout: post
+excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.
 permalink: /simple-html5-explanation/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-categories:
-  - HTML5
+category: coding-best-practices
+cat-name: "Coding Best Practices"
+tags: [html5, best practice]
 ---
 # 
 

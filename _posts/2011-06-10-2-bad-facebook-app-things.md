@@ -3,7 +3,7 @@ title: 2 Bad Things About the Facebook App Setup
 author: Kai Gittens
 permalink: /2-bad-facebook-app-things/
 layout: post
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 ---
 # 

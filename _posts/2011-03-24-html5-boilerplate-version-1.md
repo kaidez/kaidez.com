@@ -9,7 +9,7 @@ custom_post_template:
 has_been_twittered:
   - yes
   - yes
-categories:
+category:
   - HTML5
 ---
 # 

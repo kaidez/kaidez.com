@@ -6,7 +6,7 @@ permalink: /html5-project-update-january-21-2011/
 custom_post_template:
   - chitikaPost.php
   - chitikaPost.php
-categories:
+category:
   - The HTML5 Project
 ---
 # 

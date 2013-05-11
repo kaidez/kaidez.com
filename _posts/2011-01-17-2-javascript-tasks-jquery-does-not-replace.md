@@ -15,7 +15,7 @@ has_been_twittered:
 twitter_failure_reason:
   - Settings do not permit the auto-tweeting of old posts
   - Settings do not permit the auto-tweeting of old posts
-categories:
+category:
   - jQuery
 ---
 # 

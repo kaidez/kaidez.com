@@ -6,7 +6,7 @@ permalink: /review-pro-html5-programming/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Books
   - Reviews
 ---

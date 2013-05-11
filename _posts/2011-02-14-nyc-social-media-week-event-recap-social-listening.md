@@ -11,7 +11,7 @@ permalink: /nyc-social-media-week-event-recap-social-listening/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Reviews
 ---
 # 

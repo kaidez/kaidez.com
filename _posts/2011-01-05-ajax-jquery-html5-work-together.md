@@ -8,7 +8,7 @@ permalink: /ajax-jquery-html5-work-together/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Tutorials
 ---
 # 

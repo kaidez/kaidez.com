@@ -6,7 +6,7 @@ permalink: /learning-microsoft-dot-net-c-sharp/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Personal
 ---
 # 

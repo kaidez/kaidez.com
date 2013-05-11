@@ -6,7 +6,7 @@ permalink: /coolsite-html5-readiness/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - Coolsites
 ---
 # 

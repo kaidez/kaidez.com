@@ -6,7 +6,7 @@ permalink: /html5-project-series-1-homepage-wireframe/
 custom_post_template:
   - chitikaPost.php
   - chitikaPost.php
-categories:
+category:
   - The HTML5 Project
 ---
 # 

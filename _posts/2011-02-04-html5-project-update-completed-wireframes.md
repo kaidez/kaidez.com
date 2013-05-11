@@ -6,7 +6,7 @@ permalink: /html5-project-update-completed-wireframes/
 custom_post_template:
   - googlePost.php
   - googlePost.php
-categories:
+category:
   - The HTML5 Project
 ---
 # 
@@ -41,7 +41,7 @@ Due to these rules, the wireframes below detail not only the layout of the conte
 The pages are broken down as follows:
 
 *   **Home Page** – this is self-explanatory
-*   **Work Page** – the main category page for all my work broken down to three subcategories: Experiments, Freelance, and Day Job
+*   **Work Page** – the main category page for all my work broken down to three subcategory: Experiments, Freelance, and Day Job
 *   **Work/Experiments Page** – I listed this first because this will probably be the most active Work subcategory. I’m happily using my free time to focus on my son Niko and not doing that much freelance right now. And there’s only so much Revlon work I can show for legal reasons, so I’ll practice some HTML5, CSS3 and jQuery development, then dump this content into this Experiments section.
 *   **Work/Freelance Page** – this is self-explanatory
 *   **Work/Day Job Page** – this is also self-explanatory

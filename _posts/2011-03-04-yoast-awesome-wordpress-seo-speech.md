@@ -15,7 +15,7 @@ twitter_failure_code:
 has_been_twittered:
   - failed
   - failed
-categories:
+category:
   - WordPress
 ---
 # 
