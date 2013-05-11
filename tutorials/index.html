@@ -1,0 +1,16 @@
+---
+layout: categories
+title: Tutorials
+---
+
+<main id="home">
+
+  <h2>{{ page.title }}</h2>
+  {% for post in site.categories.tutorials %}
+    <article class="homepage-posts">
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      {{ post.excerpt }} <a href="{{ post.url }}">Read post &raquo;</a> 
+    </article> <!-- .homepage-posts -->
+  {% endfor %}
+
+</main> <!-- #home -->
