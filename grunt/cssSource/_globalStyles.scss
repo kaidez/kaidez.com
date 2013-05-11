@@ -9,11 +9,18 @@ html, body {
   height: 100%;
 }
 
+
 .containing-element {
   position: relative;
   height: auto;
   min-height: 100%;
   width: auto
+}
+
+
+// Logo link
+.homepage-link {
+  display: block;
 }
 
 // <header> tag

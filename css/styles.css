@@ -503,6 +503,9 @@ html, body {
   min-height: 100%;
   width: auto; }
 
+.homepage-link {
+  display: block; }
+
 .site-header {
   background-color: #6ab0d4;
   text-align: left;
@@ -990,13 +993,22 @@ a:hover {
  * styles will load only...no desktop styles
  * will load.
  */
+.homepage-link {
+  width: 136px;
+  height: 39px; }
+
 .site-description {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
-.site-header {
-  height: 70px;
-  padding-top: 10px; }
+.site-title {
+  background: url("../img/siteLogo.png") no-repeat;
+  height: 49px;
+  width: 200px;
+  float: left;
+  margin: 0 0 0 10px;
+  text-indent: -999px;
+  display: block; }
 
 /*
  * Mobile-first code so the menu and search box

@@ -5,15 +5,27 @@
  * will load.
  */
 
+// Logo link
+.homepage-link {
+  width: 136px;
+  height: 39px;
+}
 
 //hide the h2 tag in the <header>
 .site-description {
   @include hide-element;
 }
 
-.site-header {
-  height: 70px;
-  padding-top: 10px;
+
+// logo-based <h1> tag
+.site-title {
+  background: url('../img/siteLogo.png') no-repeat;
+  height: 49px;
+  width: 200px;
+  float: left;
+  margin:0 0 0 10px;
+  text-indent: -999px;
+  display: block;
 }
 
 // Nav styles start
