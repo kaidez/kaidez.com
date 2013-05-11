@@ -3,11 +3,7 @@ title: 2 HTML5 Resources I Like
 author: Kai Gittens
 layout: post
 permalink: /html5-resources-nov-17-2010/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Coolsites
+categories: Coolsites
 ---
 # 
 

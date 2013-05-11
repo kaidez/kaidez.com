@@ -3,11 +3,7 @@ title: 'REVIEW: jQuery: Visual Quickstart Guide'
 author: Kai Gittens
 layout: post
 permalink: /review-jquery-visual-quickstart-guide/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Reviews
+categories: Reviews
 ---
 # 
 

@@ -3,20 +3,7 @@ title: New Mitchum Project I Worked On
 author: Kai Gittens
 layout: post
 permalink: /mitchum-html5-site/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-category:
-  - My Work
+categories: My Work
 ---
 # 
 

@@ -3,11 +3,7 @@ title: HTML5 Recent Article Roundup
 author: Kai Gittens
 layout: post
 permalink: /html5-article-roundup/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - HTML5
+categories: HTML5
 ---
 # 
 

@@ -3,11 +3,7 @@ title: 'HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-1-homepage-wireframe/
-custom_post_template:
-  - chitikaPost.php
-  - chitikaPost.php
-category:
-  - The HTML5 Project
+categories: The HTML5 Project
 ---
 # 
 

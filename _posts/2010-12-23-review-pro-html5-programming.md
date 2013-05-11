@@ -3,12 +3,7 @@ title: 'REVIEW: Pro HTML5 Programming'
 author: Kai Gittens
 layout: post
 permalink: /review-pro-html5-programming/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Books
-  - Reviews
+categories: Reviews
 ---
 # 
 

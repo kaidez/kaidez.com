@@ -3,8 +3,10 @@ title: The Two Best Books On The Dot-com Rush
 author: Kai Gittens
 layout: post
 permalink: /books-dotcom-rush/
+categories: reviews
+cat-name: "Reviews"
+tags: [review]
 ---
-# 
 
 Facebook, Twitter and Apple play a huge role in our daily routines nowadays, and cloud computing seems poised to do the same. But we should remember that none of this would be so had the Dot-com Rush never happened.
 

@@ -3,14 +3,7 @@ title: HTML5 Boilerplate Goes To Version 1.0
 author: Kai Gittens
 layout: post
 permalink: /html5-boilerplate-version-1/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - yes
-  - yes
-category:
-  - HTML5
+categories: HTML5
 ---
 # 
 

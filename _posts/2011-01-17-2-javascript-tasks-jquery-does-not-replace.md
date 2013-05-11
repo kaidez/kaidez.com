@@ -3,20 +3,7 @@ title: 2 JavaScript Tasks That jQuery Does Not Replace
 author: Kai Gittens
 layout: post
 permalink: /2-javascript-tasks-jquery-does-not-replace/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-twitter_failure_code:
-  - 400
-  - 400
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-category:
-  - jQuery
+categories: jQuery
 ---
 # 
 

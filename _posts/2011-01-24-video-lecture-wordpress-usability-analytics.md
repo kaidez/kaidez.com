@@ -3,20 +3,7 @@ title: 'Great Video Lecture on WordPress Usability &#038; Analytics'
 author: Kai Gittens
 layout: post
 permalink: /video-lecture-wordpress-usability-analytics/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 400
-  - 400
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-category:
-  - WordPress
+categories: WordPress
 ---
 # 
 

@@ -3,7 +3,7 @@ title: Welcome Back!!!!!!!!
 author: Kai Gittens
 layout: post
 permalink: /welcome-back/
-category: Personal
+categories: Personal
 tags: [personal]
 ---
 

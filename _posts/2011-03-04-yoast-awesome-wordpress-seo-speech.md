@@ -3,20 +3,7 @@ title: 'Yoast&#8217;s Awesome WordPress SEO Speech'
 author: Kai Gittens
 layout: post
 permalink: /yoast-awesome-wordpress-seo-speech/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-twitter_failure_code:
-  - 400
-  - 400
-has_been_twittered:
-  - failed
-  - failed
-category:
-  - WordPress
+categories: WordPress
 ---
 # 
 

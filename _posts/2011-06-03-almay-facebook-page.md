@@ -1,26 +1,12 @@
 ---
 title: New Almay Facebook Page I Worked On
 author: Kai Gittens
-excerpt: |
-  On June 2, 2011, Almay, which is wholly owned by <a href="http://www.revlon.com/">my employer</a>, updated the<a href="http://www.facebook.com/almay"> What's New section of its Facebook page</a>, which I coded up. I spent four days developing it under the new Facebook app rules and another two dealing with an Internet Explorer bug. 
-   
-  The debugging couldn't be avoided but truthfully, the development time could have been cut in half. Instead, I gave myself extra
+excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: post
 permalink: /almay-facebook-page/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-category:
-  - My Work
+categories: personal
+cat-name: "Personal"
+tags: [mobile, almay, html5, facebook, kai]
 ---
 # 
 

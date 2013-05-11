@@ -3,11 +3,7 @@ title: Easy-To-Read Version of The HTML5 Specification
 author: Kai Gittens
 layout: post
 permalink: /easy-to-read-html5-spec/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - HTML5
+categories: HTML5
 ---
 # 
 

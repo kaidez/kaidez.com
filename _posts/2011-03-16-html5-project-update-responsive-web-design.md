@@ -3,11 +3,7 @@ title: 'HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Med
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-responsive-web-design/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - The HTML5 Project
+categories: The HTML5 Project
 ---
 # 
 

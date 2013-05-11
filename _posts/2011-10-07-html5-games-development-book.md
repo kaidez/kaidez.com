@@ -3,20 +3,11 @@ title: 'REVIEW: HTML5 Games Development by Example: Beginner’s Guide'
 author: Kai Gittens
 layout: post
 permalink: /html5-games-development-book/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-category:
-  - Reviews
+excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
+permalink: /javascript-for-loop-creates-jquery-fade/
+categories: reviews
+cat-name: "Review"
+tags: [book, review, beginner]
 ---
 # 
 

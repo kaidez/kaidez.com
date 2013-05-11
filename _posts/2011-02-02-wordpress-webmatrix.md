@@ -3,13 +3,8 @@ title: 'WordPress &#038; WebMatrix'
 author: Kai Gittens
 layout: post
 permalink: /wordpress-webmatrix/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - WordPress
+categories: WordPress
 ---
-# 
 
 HAPPY GROUNDHOG DAY!!!!!!!!!!!!!
 

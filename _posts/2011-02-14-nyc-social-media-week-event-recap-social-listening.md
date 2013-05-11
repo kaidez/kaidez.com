@@ -8,11 +8,7 @@ excerpt: |
     This was the main point of the <strong>"Pay Attention! Social Listening Done Right"</strong> panel discussion at the NYC Social Media Week event. Read the entire article for more of the nitty gritty details...
 layout: post
 permalink: /nyc-social-media-week-event-recap-social-listening/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Reviews
+categories: Reviews
 ---
 # 
 

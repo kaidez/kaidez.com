@@ -3,23 +3,7 @@ title: HTML5, SEO and Microdata
 author: Kai Gittens
 layout: post
 permalink: /html5-seo-microdata/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-description:
-  - "Using HTML5's microdata is a good SEO tactic, but the article tag may be important in the future and you should still use older SEO techniques"
-  - "Using HTML5's microdata is a good SEO tactic, but the article tag may be important in the future and you should still use older SEO techniques"
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 400
-  - 400
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-category:
-  - HTML5
+categories: HTML5
 ---
 # 
 

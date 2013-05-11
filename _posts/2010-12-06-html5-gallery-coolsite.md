@@ -3,20 +3,7 @@ title: 'HTML5 Gallery: NEW COOLSITE!'
 author: Kai Gittens
 layout: post
 permalink: /html5-gallery-coolsite/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 400
-  - 400
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-category:
-  - Coolsites
+categories: Coolsites
 ---
 # 
 

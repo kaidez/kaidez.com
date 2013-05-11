@@ -3,11 +3,7 @@ title: New Almay Project I Worked On
 author: Kai Gittens
 layout: post
 permalink: /almay-project-using-html5-net-jquery/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - My Work
+categories: My Work
 ---
 # 
 

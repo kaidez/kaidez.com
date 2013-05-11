@@ -3,7 +3,7 @@ title: 'REVIEW: lynda.com'
 author: Kai Gittens
 layout: post
 permalink: /lynda-dot-com-review/
-category: reviews
+categories: reviews
 cat-name: "Reviews"
 tags: [review]
 ---

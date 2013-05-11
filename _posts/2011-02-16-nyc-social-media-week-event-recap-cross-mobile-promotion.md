@@ -7,11 +7,7 @@ excerpt: |
   This sums up the <strong>Cross-Mobile Brand Strategy</strong> conference that went on during NYC Social Media Week.  Please read on to get the full monty...
 layout: post
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Reviews
+categories: Reviews
 ---
 # 
 

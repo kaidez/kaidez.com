@@ -3,11 +3,7 @@ title: 'HTML5 Project Update: 1/21/11'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-january-21-2011/
-custom_post_template:
-  - chitikaPost.php
-  - chitikaPost.php
-category:
-  - The HTML5 Project
+categories: The HTML5 Project
 ---
 # 
 

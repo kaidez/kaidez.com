@@ -3,20 +3,7 @@ title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&#8217;S PLAYLIS
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 400
-  - 400
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-category:
-  - The HTML5 Project
+categories: The HTML5 Project
 ---
 # 
 

@@ -3,11 +3,7 @@ title: 'Social Media Week Follow-Up &#038; A Word From Panelist Kristin Volk'
 author: Kai Gittens
 layout: post
 permalink: /social-media-week-follow-up/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Reviews
+categories: Reviews
 ---
 # 
 

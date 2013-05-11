@@ -2,21 +2,11 @@
 title: Remembering Steve Jobs
 author: Kai Gittens
 layout: post
+excerpt: kaidez recalls the best about Steve Jobs
 permalink: /remembering-steve-jobs/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-category:
-  - Personal
+categories: personal
+cat-name: "Personal"
+tags: [rant, kai]
 ---
 # 
 

@@ -3,11 +3,7 @@ title: A Short History of Flash (how I saw it)
 author: Kai Gittens
 layout: post
 permalink: /history-of-flash/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - Flash
+categories: Flash
 ---
 # 
 

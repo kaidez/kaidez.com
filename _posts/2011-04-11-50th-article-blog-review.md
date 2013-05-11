@@ -3,20 +3,7 @@ title: 'My 50th Article &#8211; A Retrospective!'
 author: Kai Gittens
 layout: post
 permalink: /50th-article-blog-review/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-category:
-  - Personal
+categories: Personal
 ---
 # 
 

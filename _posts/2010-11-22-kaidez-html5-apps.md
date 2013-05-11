@@ -3,11 +3,7 @@ title: My HTML5 Applications
 author: Kai Gittens
 layout: post
 permalink: /kaidez-html5-apps/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - The HTML5 Project
+categories: The HTML5 Project
 ---
 # 
 

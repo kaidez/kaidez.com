@@ -3,12 +3,7 @@ title: 'HTML5 Project: Boilerplate WordPress Theme'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-boilerplate-theme-wordpress/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-category:
-  - The HTML5 Project
-  - WordPress
+categories: The HTML5 Project
 ---
 # 
 

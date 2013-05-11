@@ -3,20 +3,7 @@ title: 'TUTORIAL: A Simple jQuery Image Fade In/Fade Out With A Delay'
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 400
-  - 400
-category:
-  - Tutorials
+categories: Tutorials
 ---
 # 
 

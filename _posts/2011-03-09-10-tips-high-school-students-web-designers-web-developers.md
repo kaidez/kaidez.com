@@ -3,8 +3,7 @@ title: 10 Tips For High Schoolers Wanting To Be Web Designers Or Developers
 author: Kai Gittens
 layout: post
 permalink: /10-tips-high-school-students-web-designers-web-developers/
-category:
-  - Personal
+categories: Personal
 ---
 # 
 

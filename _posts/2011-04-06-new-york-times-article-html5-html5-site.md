@@ -3,20 +3,7 @@ title: 'New York Times Article On HTML5 &#038; Their New HTML5 Site'
 author: Kai Gittens
 layout: post
 permalink: /new-york-times-article-html5-html5-site/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-category:
-  - HTML5
+categories: HTML5
 ---
 # 
 
