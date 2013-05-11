@@ -4,7 +4,9 @@ author: Kai Gittens
 layout: post
 excerpt: CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design.
 permalink: /media-queries-important/
-categories: Coding Best Practices
+categories: coding-best-practices
+cat-name: "Coding Best Practices"
+tags: [css3, media queries, best practices]
 ---
 
 CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design, which [I’ve previously written about][1]. This popularity is set to increase even more thanks to recent actions by Google and the W3C.

@@ -2,11 +2,13 @@
 title: 'SCREENCAST TUTORIAL: Using JavaScript Off-DOM'
 author: Kai Gittens
 layout: post
+excerpt: Using JavaScript methods like createDoucmentFragment() and appendChild() is an efficient to manipulate page content outside of the DOM
 permalink: /javascript-off-dom/
-categories:
-  - Tutorials
+categories: tutorials
+cat-name: "Tutorials"
+tags: [javascript, tute]
 ---
-
+  
 Using JavaScript off-DOM is an efficient way to manipulate web page content. By “work off-DOM,” I mean “work inside of the browser memory instead of on a web page.”
 
 A simple web search will display lots of good reasons for doing off-DOM JS. In my case, I was working on a personal project where it looked like I would need to do it so I could set my page up in a specific way. I may not need to do this anymore but still gained knowledge on doing off-DOM JavaScript and want to share what I learned.

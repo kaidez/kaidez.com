@@ -4,8 +4,9 @@ author: Kai Gittens
 excerpt: Learn how to remove files from GitHub, how GitHub works with Git to manage repos, and some UNIX commands. Learning resource list at the end.
 layout: post
 permalink: /remove-files-from-github/
-categories:
-  - Tutorials
+categories: tutorials
+cat-name: "Tutorials"
+tags: [git, github, tute]
 ---
 
 If you’ve every tried to remove files from a [GitHub][1] repository by dragging them to your Trash or Recycle Bin and then doing a `git push`, you know that this doesn’t work.
@@ -192,25 +193,26 @@ The process for removing directories is the same as files, except for one differ
         Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.  
         *   ### [Try Git »][40]
             
-            If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.  
-            *   ### [GitHub Training »][42]
+        If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.  
+        *   ### [GitHub Training »][42]
                 
-                One of the reasons that GitHub has become popular is the same reason that [Chris Coyier][43] and [Paul Irish][44] have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources][45] section as well as their [Online Training][46] and [Events][47] sections. For the last two, some things are free and some are not, but I think they’re reasonably priced.  
+        One of the reasons that GitHub has become popular is the same reason that [Chris Coyier][43] and [Paul Irish][44] have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources][45] section as well as their [Online Training][46] and [Events][47] sections. For the last two, some things are free and some are not, but I think they’re reasonably priced.  
                 *   ### [Common Git Commands »][48]
                     
-                    UK-based developer [Kerry Gallagher][49] put together a really useful list of Git commands. Print it out and tape it to the wall by your computer. 
-                    *   ### [“Git Is Simpler Than You Think” by Nick Farina »][50]
+        UK-based developer [Kerry Gallagher][49] put together a really useful list of Git commands. Print it out and tape it to the wall by your computer. 
+                *   ### [“Git Is Simpler Than You Think” by Nick Farina »][50]
                         
-                        If you *really* want to know how Git works, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
-                        *   ### [“What is Version Control: Centralized vs. DVCS” by Giancarlo Lionetti »][51]
+        If you *really* want to know how Git works, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
+                *   ### [“What is Version Control: Centralized vs. DVCS” by Giancarlo Lionetti »][51]
                             
-                            I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It’s the part that makes sharing code via GitHub a snap and, let’s be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.  
-                            *   ### [*Pro Git* by Scott Chacon »][52]
+         I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It’s the part that makes sharing code via GitHub a snap and, let’s be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.  
+                *   ### [*Pro Git* by Scott Chacon »][52]
                                 
-                                *The* Git Book, and it’s free! It’s a little dense and doesn’t flow as easily as these other resources…I’ll admit that I haven’t read all of it. But I have read enough of it to know that it’s an important Git resource.   
-                                ## Conclusion
+        *The* Git Book, and it’s free! It’s a little dense and doesn’t flow as easily as these other resources…I’ll admit that I haven’t read all of it. But I have read enough of it to know that it’s an important Git resource.   
+                
+            ## Conclusion
                                 
-                                I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you’ve come to realize that the title of Farina’s post is correct: Git *is* simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you’ll discover how bloody useful Git can be, along with a ton of other things.
+              I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you’ve come to realize that the title of Farina’s post is correct: Git *is* simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you’ll discover how bloody useful Git can be, along with a ton of other things.
 
  [30]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo5.png
  [31]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot14.png

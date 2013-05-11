@@ -3,26 +3,9 @@ title: 'REVIEW: lynda.com'
 author: Kai Gittens
 layout: post
 permalink: /lynda-dot-com-review/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-sbg_selected_sidebar:
-  - 'a:5:{i:0;s:1:"0";i:1;s:19:"Primary Widget Area";i:2;s:21:"Secondary Widget Area";i:3;s:1:"0";i:4;s:1:"0";}'
-  - 'a:5:{i:0;s:1:"0";i:1;s:19:"Primary Widget Area";i:2;s:21:"Secondary Widget Area";i:3;s:1:"0";i:4;s:1:"0";}'
-sbg_selected_sidebar_replacement:
-  - 'a:5:{i:0;s:6:"Books2";i:1;s:6:"Books2";i:2;s:6:"Books2";i:3;s:6:"Books2";i:4;s:6:"Books2";}'
-  - 'a:5:{i:0;s:6:"Books2";i:1;s:6:"Books2";i:2;s:6:"Books2";i:3;s:6:"Books2";i:4;s:6:"Books2";}'
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 400
-  - 400
-twitter_failure_reason:
-  - Settings do not permit the auto-tweeting of old posts
-  - Settings do not permit the auto-tweeting of old posts
-categories:
-  - Reviews
+categories: reviews
+cat-name: "Reviews"
+tags: [review]
 ---
 # 
 
