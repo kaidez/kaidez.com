@@ -3,12 +3,6 @@ title: 'TUTORIAL: How AJAX, jQuery and HTML5 Work Together'
 author: Kai Gittens
 excerpt: |
   AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays.  While getting these web technologies to work together is exciting, the programming required to do this isn't new.
-  <br />
-  AJAX, jQuery and HTML5 work together through the use of <em>page tags, page IDs</em> and <em>page classes</em> that exist between the two <span class="codeFont"><body></body></span> tags of a web page.  The JavaScript functionality embedded in jQuery and AJAX finds these tags , IDs and classes (which we'll now call <em>page elements</em>) and "does" something to them; maybe it changes their background color, maybe it's loading copy into them.  Either way, it's doing <em>something</em> to them.
-  <br />
-  This process of "finding and doing something" to these page elements with JavaScript is more commonly known as <em>"traversing the DOM"</em>.  Simply put, <strong><em>traversing the DOM is the key to getting AJAX, jQuery and HTML5 to work together</em></strong>.
-  <br />
-  Web developers have used DOM traversal for years so, again, there really isn't that much new programming involved when it comes to syncing up AJAX, jQuery and HTML5.   Still, a layman's description of how all this works may be required, so I'll give it a try.
 layout: post
 permalink: /ajax-jquery-html5-work-together/
 custom_post_template:

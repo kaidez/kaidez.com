@@ -1,22 +1,10 @@
 ---
 title: 2 Bad Things About the Facebook App Setup
 author: Kai Gittens
-layout: post
 permalink: /2-bad-facebook-app-things/
-custom_post_template:
-  - googlePost.php
-  - googlePost.php
-has_been_twittered:
-  - failed
-  - failed
-twitter_failure_code:
-  - 
-  - 
-twitter_failure_reason:
-  - 
-  - 
-categories:
-  - Coding Best Practices
+layout: post
+categories: coding-best-practices
+cat-name: "Coding Best Practices"
 ---
 # 
 

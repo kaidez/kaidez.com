@@ -1,10 +1,10 @@
 ---
 title: 5 Reasons Why You Need To Learn To Use JavaScript Before jQuery
 author: Kai Gittens
-layout: post
 permalink: /learn-javascript-before-jquery/
-categories:
-  - Coding Best Practices
+layout: post
+categories: coding-best-practices
+cat-name: "Coding Best Practices"
 ---
 
 A project came up at work involving [Node][1], the software system that allows JavaScript to run server-side instead of client-side. I wasn’t involved in the project but wanted to play with the code once it landed in production and wanted to be ready if ever asked to support it. So I set Node up on my Mac laptop, read parts of its documentation and found some beginning Node learning resources online.
