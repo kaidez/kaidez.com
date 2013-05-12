@@ -5,7 +5,7 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-   <meta name="description" content="{{ page.excerpt }}" />
+   <meta name="description" content="{{ page.meta-excerpt }}" />
    <title>{{ page.title }} &laquo; {{ page.category-name }} &laquo; kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
@@ -45,8 +45,8 @@
       <ul id="site-navigation-list">
         <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
         <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul> <!-- #site-navigation-list -->
     </nav> <!-- #site-navigation -->
     
@@ -58,10 +58,10 @@
     	<h1 class="post-title">{{ page.title }}</h1>
     	{{ content }}
     	<div id="related-posts">
-    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<h3 class="related-posts-header">MORE POSTS LIKE THIS...</h3>
     		<ul>
     			{% for post in site.related_posts limit:3 %}
-            <li><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
+            <li class="related-posts-link"><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
           {% endfor %}
     		</ul>
       </div> <!-- #related-posts -->
