@@ -2,7 +2,7 @@
 title: Remembering Steve Jobs
 author: Kai Gittens
 layout: post
-excerpt: kaidez recalls the best about Steve Jobs
+meta-excerpt: kaidez recalls the best about Steve Jobs
 permalink: /remembering-steve-jobs/
 categories: personal
 cat-name: "Personal"

@@ -3,8 +3,10 @@ title: Welcome Back!!!!!!!!
 author: Kai Gittens
 layout: post
 permalink: /welcome-back/
-categories: Personal
-tags: [personal]
+meta-excerpt: kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.
+categories: personal
+cat-name: "Personal"
+tags: [kai]
 ---
 
 After an insanely long hiatus, I am back to blogging…and quite reinvigorated about it! Coming back took a lot of soul searching on my part, requiring me to determine exactly what I wanted to accomplish here, but I’ve created a clear path for myself and am excited about what I’m about to do within this space.

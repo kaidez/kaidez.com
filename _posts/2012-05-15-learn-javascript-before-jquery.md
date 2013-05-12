@@ -3,7 +3,7 @@ title: 5 Reasons Why You Need To Learn To Use JavaScript Before jQuery
 author: Kai Gittens
 permalink: /learn-javascript-before-jquery/
 layout: post
-excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
+meta-excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
 categories: coding-best-practices
 cat-name: "Coding Best Practices"
 tags: [javascript, beginner, jquery, best practice]

@@ -2,8 +2,11 @@
 title: HTML5 Boilerplate Goes To Version 1.0
 author: Kai Gittens
 layout: post
+meta-excerpt: A quick review of HTML5 Boilerplate version 1.0, discussing the new build script for site optimization and custom site template build
 permalink: /html5-boilerplate-version-1/
-categories: HTML5
+categories: coding-best-practices
+cat-name: "Coding Best Practices"
+tags: [html5]
 ---
 # 
 

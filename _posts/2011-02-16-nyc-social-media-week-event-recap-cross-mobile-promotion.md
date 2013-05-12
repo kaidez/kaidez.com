@@ -1,7 +1,7 @@
 ---
 title: Social Media Week/NYC Recap – MOBILE PROMOTION PANEL
 author: Kai Gittens
-excerpt: |
+meta-excerpt: |
   "iPhones and Androids provide a great user experience and we should care about the new functionality that they provide.  But when it comes to effective product and brand promotion, they under-perform when compared to both text messaging and the mobile web, at least, for now.  Whatever your mobile strategy though, it should "play a role" in your promotional campaign, not "be" your promotional campaign, Plus, it needs to interact with good, desirable content.  Because content is, indeed, king."
   
   This sums up the <strong>Cross-Mobile Brand Strategy</strong> conference that went on during NYC Social Media Week.  Please read on to get the full monty...

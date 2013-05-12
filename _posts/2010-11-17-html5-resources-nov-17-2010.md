@@ -2,8 +2,11 @@
 title: 2 HTML5 Resources I Like
 author: Kai Gittens
 layout: post
+meta-excerpt: Great HTML5 learning resources
 permalink: /html5-resources-nov-17-2010/
-categories: Coolsites
+categories: coding-best-practices
+cat-name: "Coding Best Practices"
+tags: [html5, html5 video]
 ---
 # 
 

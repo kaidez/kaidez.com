@@ -1,7 +1,7 @@
 ---
 title: New Almay Facebook Page I Worked On
 author: Kai Gittens
-excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
+meta-excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: post
 permalink: /almay-facebook-page/
 categories: personal

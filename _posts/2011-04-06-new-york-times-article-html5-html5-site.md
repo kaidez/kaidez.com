@@ -2,8 +2,11 @@
 title: 'New York Times Article On HTML5 &#038; Their New HTML5 Site'
 author: Kai Gittens
 layout: post
+meta-excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
 permalink: /new-york-times-article-html5-html5-site/
-categories: HTML5
+categories: coding-best-practices
+cat-name: "Coding Best Practices"
+tags: [html5, kai]
 ---
 # 
 
@@ -23,7 +26,7 @@ Still, I think HTML5 will go far. Too many in the open source community, includi
 
  [5]: http://html5doctor.com/
  [6]: http://paulirish.com/
- [7]: http://kaidez.com/html5-article-roundup/
+ [7]: /html5-article-roundup/
 
 The article also announced the launch of their HTML5-driven [Skimmer site][8], which provides a scannable layout of snippets of their just published articles. It appears to be implementing a responsive web design, but I couldn’t find any media queries when I checked the CSS code. They could be there and I just didn’t see them…will keep looking.
 

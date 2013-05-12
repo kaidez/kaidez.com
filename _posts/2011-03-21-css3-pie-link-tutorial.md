@@ -3,7 +3,9 @@ title: 'TUTORIAL: Creating A Rounded Corner, Transparent CSS3 Link For IE 6 Thro
 author: Kai Gittens
 layout: post
 permalink: /css3-pie-link-tutorial/
-categories: Tutorials
+categories: tutorials
+cat-name: "Tutorials"
+tags: [css, tute]
 ---
 # 
 

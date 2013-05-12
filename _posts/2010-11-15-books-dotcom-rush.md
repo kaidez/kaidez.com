@@ -3,9 +3,10 @@ title: The Two Best Books On The Dot-com Rush
 author: Kai Gittens
 layout: post
 permalink: /books-dotcom-rush/
+meta-excerpt: Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.
 categories: reviews
 cat-name: "Reviews"
-tags: [review]
+tags: [book, review]
 ---
 
 Facebook, Twitter and Apple play a huge role in our daily routines nowadays, and cloud computing seems poised to do the same. But we should remember that none of this would be so had the Dot-com Rush never happened.

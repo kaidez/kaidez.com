@@ -1,7 +1,7 @@
 ---
 title: 'TUTORIAL: Remove Files From GitHub'
 author: Kai Gittens
-excerpt: Learn how to remove files from GitHub, how GitHub works with Git to manage repos, and some UNIX commands. Learning resource list at the end.
+meta-excerpt: Learn how to remove files from GitHub, how GitHub works with Git to manage repos, and some UNIX commands. Learning resource list at the end.
 layout: post
 permalink: /remove-files-from-github/
 categories: tutorials

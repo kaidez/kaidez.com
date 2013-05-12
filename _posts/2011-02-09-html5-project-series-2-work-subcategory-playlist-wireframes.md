@@ -9,9 +9,9 @@ categories: The HTML5 Project
 
 ***Read the entire “Wirefame Series” [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
- [1]: http://kaidez.com/html5-project-update-completed-wireframes/
- [2]: http://kaidez.com/html5-project-series-1-homepage-wireframe/
- [3]: http://kaidez.com/html5-project-series-3-about-contact-wireframes/
+ [1]: /html5-project-update-completed-wireframes/
+ [2]: /html5-project-series-1-homepage-wireframe/
+ [3]: /html5-project-series-3-about-contact-wireframes/
 
 [Continuing the “portfolio wireframe” series][1] for my [HTML5 Project][4], we’ll be reviewing the main Work page, the three Work subcategory pages and the Niko’s Playlist page. Discussion will focus on the proper use of the  tag.
 

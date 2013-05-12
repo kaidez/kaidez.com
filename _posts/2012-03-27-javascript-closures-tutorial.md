@@ -2,7 +2,7 @@
 title: 'TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures'
 author: Kai Gittens
 layout: post
-excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.
+meta-excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.
 permalink: /javascript-closures-tutorial/
 categories: tutorials
 cat-name: "Tutorials"
@@ -302,9 +302,9 @@ Another excellent article by this California-based developer. His closure exampl
 
 Hilarious presentation from this UK-based developer.
 
-### [Excerpt from John Resig’s Upcoming Book, *Secrets of the JavaScript Ninja* »][7]
+### [meta-excerpt from John Resig’s Upcoming Book, *Secrets of the JavaScript Ninja* »][7]
 
- [7]: http://www.manning.com/free/excerpt_resig.html
+ [7]: http://www.manning.com/free/meta-excerpt_resig.html
 
 jQuery creator John Resig has written extensively on JavaScript closures. This sample content about closures from his upcoming book is, I think, his most in-depth article on the subject. It’s probably the toughest read on this list, but a great read nonetheless. Registration is required.
 

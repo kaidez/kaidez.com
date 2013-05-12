@@ -2,8 +2,11 @@
 title: 'My 50th Article &#8211; A Retrospective!'
 author: Kai Gittens
 layout: post
+meta-excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
 permalink: /50th-article-blog-review/
-categories: Personal
+categories: personal
+cat-name: "Personal"
+tags: [css, html5, seo, kai]
 ---
 # 
 

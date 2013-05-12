@@ -1,7 +1,7 @@
- s---
+---
 title: "REVIEW: Eloquent JavaScript"
 author: Kai Gittens
-excerpt: Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.
+meta-excerpt: Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.
 layout: post
 permalink: /eloquent-javascript-review/
 categories: reviews

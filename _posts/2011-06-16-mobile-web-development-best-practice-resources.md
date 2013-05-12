@@ -3,7 +3,7 @@ title: 5 Mobile Web Development Best Practice Resources
 author: Kai Gittens
 permalink: /mobile-web-development-best-practice-resources/
 layout: post
-excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig
+meta-excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig
 categories: coding-best-practices
 cat-name: "Coding Best Practices"
 tags: [mobile, html5, jquery, steve souders, practice]
