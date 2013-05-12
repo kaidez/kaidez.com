@@ -23,7 +23,7 @@
   height: 49px;
   width: 200px;
   float: left;
-  margin:0 0 0 10px;
+  margin:10px 0 10px 10px;
   text-indent: -999px;
   display: block;
 }
@@ -65,9 +65,18 @@
 
 // Mobile First post styles end
 
+// Related post links
+.related-posts-header {
+  @include master-center;
+}
 
+.related-posts-link {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
 
-// Contact (aside) styles
+// footer element styles
 #footer-contact-fieldset {
   border: none;
 }

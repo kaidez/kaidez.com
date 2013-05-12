@@ -511,14 +511,6 @@ html, body {
   text-align: left;
   width: auto; }
 
-.site-title {
-  background: url("../img/siteLogo.png") no-repeat;
-  height: 44px;
-  width: 138px;
-  float: left;
-  margin: 0 0 0 10px;
-  text-indent: -999px; }
-
 .homepage-posts {
   border-bottom: 1px solid #999999;
   margin-bottom: 30px;
@@ -669,7 +661,8 @@ a:hover {
 .fb {
   padding-right: 10px; }
 
-#searchbox {
+.no-js #site-navigation-list, .no-js #searchform {
+  display: block;
   position: relative; }
 
 #s {
@@ -1006,7 +999,7 @@ a:hover {
   height: 49px;
   width: 200px;
   float: left;
-  margin: 0 0 0 10px;
+  margin: 10px 0 10px 10px;
   text-indent: -999px;
   display: block; }
 
@@ -1031,6 +1024,15 @@ a:hover {
 #breadcrumbs {
   font-size: 14px;
   padding: 20px 10px 35px 10px; }
+
+.related-posts-header {
+  margin: 0px auto;
+  text-align: center; }
+
+.related-posts-link {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px; }
 
 #footer-contact-fieldset {
   border: none; }
@@ -1246,15 +1248,6 @@ a:hover {
   body {
     font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
     padding: 0; }
-
-  #site-navigation-list, #searchform {
-    display: block;
-    padding: 2px 0;
-    min-height: 21px;
-    width: 454px;
-    font-size: 12px;
-    margin: 0px auto;
-    text-align: center; }
 
   .site-description {
     display: block;

@@ -18,6 +18,8 @@ html, body {
 }
 
 
+
+
 // Logo link
 .homepage-link {
   display: block;
@@ -32,12 +34,7 @@ html, body {
 
 // logo-based <h1> tag
 .site-title {
-  background: url('../img/siteLogo.png') no-repeat;
-  height: 44px;
-  width: 138px;
-  float: left;
-  margin:0 0 0 10px;
-  text-indent: -999px;
+  // may need it later
 }
 
 // homepage article elements
@@ -265,7 +262,8 @@ a:hover {
  
 // Search box-related styles start
 
-#searchbox {
+.no-js #site-navigation-list, .no-js #searchform {
+  display: block;
   position: relative;
 }
 
