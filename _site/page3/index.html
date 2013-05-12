@@ -5,6 +5,7 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <meta name="description" content="" />
    <title>Web development tutorials for beginners, book reviews and more from kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
@@ -31,23 +32,30 @@
 <body>
   <div id="container" class="containing-element">
     <header id="masthead" class="site-header clearfix" role="banner">
-      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
       <h2 class="site-description">coding and sharing what I learn</h2>
     </header> <!-- #masthead -->
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
-
       <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
-
       <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
         
       <ul id="site-navigation-list">
-        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
         <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
+
+    <div id="searchbox">
+      <form id="searchform" method="get" action="http://www.google.com/search">
+        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
+        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
+        <input type="hidden" name="sitesearch" value="kaidez.com" />
+      </form> <!-- #searchform -->
+    </div> <!-- #searchbox -->
+
     
     <main id="content">
       <main id="home">
@@ -55,63 +63,28 @@
   <!-- This loops through the paginated posts -->
   
     <article class="homepage-posts">
-      <h1><a href="/html5-boilerplate-version-1/">HTML5 Boilerplate Goes To Version 1.0</a></h1>
-      <h1></h1>
- <a href="/html5-boilerplate-version-1/">Read post &raquo;</a> 
+      <h1><a href="/javascript-for-loop-creates-jquery-fade/">REVIEW: HTML5 Games Development by Example: Beginner’s Guide</a></h1>
+      Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more! <a href="/javascript-for-loop-creates-jquery-fade/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/css3-pie-link-tutorial/">TUTORIAL: Creating A Rounded Corner, Transparent CSS3 Link For IE 6 Through 8 With CSS3 Pie</a></h1>
-      <h1></h1>
- <a href="/css3-pie-link-tutorial/">Read post &raquo;</a> 
+      <h1><a href="/remembering-steve-jobs/">Remembering Steve Jobs</a></h1>
+      kaidez recalls the best about Steve Jobs <a href="/remembering-steve-jobs/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/html5-project-update-responsive-web-design/">HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries</a></h1>
-      <h1></h1>
- <a href="/html5-project-update-responsive-web-design/">Read post &raquo;</a> 
+      <h1><a href="/mobile-web-development-best-practice-resources/">5 Mobile Web Development Best Practice Resources</a></h1>
+      Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig <a href="/mobile-web-development-best-practice-resources/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/review-jquery-visual-quickstart-guide/">REVIEW: jQuery: Visual Quickstart Guide</a></h1>
-      <h1></h1>
- <a href="/review-jquery-visual-quickstart-guide/">Read post &raquo;</a> 
+      <h1><a href="/2-bad-facebook-app-things/">2 Bad Things About the Facebook App Setup</a></h1>
+      Creating a Facebook app is easy but doing so generates CSS expressions and creates page reflows, all of which reduce page optimization <a href="/2-bad-facebook-app-things/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/easy-to-read-html5-spec/">Easy-To-Read Version of The HTML5 Specification</a></h1>
-      <h1></h1>
- <a href="/easy-to-read-html5-spec/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/10-tips-high-school-students-web-designers-web-developers/">10 Tips For High Schoolers Wanting To Be Web Designers Or Developers</a></h1>
-      <h1></h1>
- <a href="/10-tips-high-school-students-web-designers-web-developers/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/html5-project-boilerplate-theme-wordpress/">HTML5 Project: Boilerplate WordPress Theme</a></h1>
-      <h1></h1>
- <a href="/html5-project-boilerplate-theme-wordpress/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/yoast-awesome-wordpress-seo-speech/">Yoast&#8217;s Awesome WordPress SEO Speech</a></h1>
-      <h1></h1>
- <a href="/yoast-awesome-wordpress-seo-speech/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/mix11/">I&#8217;m Going To Mix11/Las Vegas!</a></h1>
-      <h1></h1>
- <a href="/mix11/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/html5-boilerplate-video/">The HTML5 Boilerplate Video is AWESOME!!!!!!</a></h1>
-      <h1></h1>
- <a href="/html5-boilerplate-video/">Read post &raquo;</a> 
+      <h1><a href="/mobile-web-development-best-practices-starting-tips/">Mobile Web Development Best Practices &#8211; Starting Tips</a></h1>
+      Starter mobile web development best practices including YSlow & Page Speed tests and minifying pages with HTML5 Boilerplate's build script <a href="/mobile-web-development-best-practices-starting-tips/">Read post &raquo;</a> 
     </article>
   
 
@@ -166,6 +139,48 @@
         <li class="page">
           
             <a href="/page7">7</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page8">8</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page9">9</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page10">10</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page11">11</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page12">12</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page13">13</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page14">14</a>
           
         </li>
       

@@ -5,6 +5,7 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <meta name="description" content="" />
    <title>Web development tutorials for beginners, book reviews and more from kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
@@ -31,23 +32,30 @@
 <body>
   <div id="container" class="containing-element">
     <header id="masthead" class="site-header clearfix" role="banner">
-      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
       <h2 class="site-description">coding and sharing what I learn</h2>
     </header> <!-- #masthead -->
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
-
       <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
-
       <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
         
       <ul id="site-navigation-list">
-        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
         <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
+
+    <div id="searchbox">
+      <form id="searchform" method="get" action="http://www.google.com/search">
+        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
+        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
+        <input type="hidden" name="sitesearch" value="kaidez.com" />
+      </form> <!-- #searchform -->
+    </div> <!-- #searchbox -->
+
     
     <main id="content">
       <main id="home">
@@ -55,64 +63,28 @@
   <!-- This loops through the paginated posts -->
   
     <article class="homepage-posts">
-      <h1><a href="/html5-games-development-book/">REVIEW: HTML5 Games Development by Example: Beginner’s Guide</a></h1>
-      <h1></h1>
- <a href="/html5-games-development-book/">Read post &raquo;</a> 
+      <h1><a href="/learn-javascript-before-jquery/">5 Reasons Why You Need To Learn To Use JavaScript Before jQuery</a></h1>
+      A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started. <a href="/learn-javascript-before-jquery/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/remembering-steve-jobs/">Remembering Steve Jobs</a></h1>
-      <h1></h1>
- <a href="/remembering-steve-jobs/">Read post &raquo;</a> 
+      <h1><a href="/useful-javascript-books/">5 Useful JavaScript Books</a></h1>
+      Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov. <a href="/useful-javascript-books/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/mobile-web-development-best-practice-resources/">5 Mobile Web Development Best Practice Resources</a></h1>
-      <h1></h1>
- <a href="/mobile-web-development-best-practice-resources/">Read post &raquo;</a> 
+      <h1><a href="/javascript-closures-tutorial/">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a></h1>
+      JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list. <a href="/javascript-closures-tutorial/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/2-bad-facebook-app-things/">2 Bad Things About the Facebook App Setup</a></h1>
-      <h1></h1>
- <a href="/2-bad-facebook-app-things/">Read post &raquo;</a> 
+      <h1><a href="/simple-html5-explanation/">A Simple Explanation of HTML5</a></h1>
+      A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used. <a href="/simple-html5-explanation/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
-      <h1><a href="/mobile-web-development-best-practices-starting-tips/">Mobile Web Development Best Practices &#8211; Starting Tips</a></h1>
-      Excellent best practices you should embed in your workflow when coding for mobile. <a href="/mobile-web-development-best-practices-starting-tips/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/almay-facebook-page/">New Almay Facebook Page I Worked On</a></h1>
-      On June 2, 2011, Almay, which is wholly owned by <a href="http://www.revlon.com/">my employer</a>, updated the<a href="http://www.facebook.com/almay"> What's New section of its Facebook page</a>, which I coded up. I spent four days developing it under the new Facebook app rules and another two dealing with an Internet Explorer bug. 
- 
-The debugging couldn't be avoided but truthfully, the development time could have been cut in half. Instead, I gave myself extra
- <a href="/almay-facebook-page/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/mitchum-html5-site/">New Mitchum Project I Worked On</a></h1>
-      <h1></h1>
- <a href="/mitchum-html5-site/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/50th-article-blog-review/">My 50th Article &#8211; A Retrospective!</a></h1>
-      <h1></h1>
- <a href="/50th-article-blog-review/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/at-mix11/">Off I Go To MIX11/Las Vegas!</a></h1>
-      <h1></h1>
- <a href="/at-mix11/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/new-york-times-article-html5-html5-site/">New York Times Article On HTML5 &#038; Their New HTML5 Site</a></h1>
-      <h1></h1>
- <a href="/new-york-times-article-html5-html5-site/">Read post &raquo;</a> 
+      <h1><a href="/javascript-for-loop-creates-jquery-fade/">SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out</a></h1>
+      JavaScript for loop dynamically creates a jQuery fade in/fade out effect with a delay; includes a demo, code sample and screencast tutorial. <a href="/javascript-for-loop-creates-jquery-fade/">Read post &raquo;</a> 
     </article>
   
 
@@ -167,6 +139,48 @@ The debugging couldn't be avoided but truthfully, the development time could hav
         <li class="page">
           
             <a href="/page7">7</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page8">8</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page9">9</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page10">10</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page11">11</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page12">12</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page13">13</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page14">14</a>
           
         </li>
       

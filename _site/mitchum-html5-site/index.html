@@ -5,6 +5,7 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <meta name="description" content="The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery" />
    <title>New Mitchum Project I Worked On &laquo;  &laquo; kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
@@ -31,7 +32,7 @@
 <body>
   <div id="container" class="containing-element">
     <header id="masthead" class="site-header clearfix" role="banner">
-      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
       <h2 class="site-description">coding and sharing what I learn</h2>
     </header> <!-- #masthead -->
 
@@ -42,15 +43,15 @@
       <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
         
       <ul id="site-navigation-list">
-        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
         <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul> <!-- #site-navigation-list -->
     </nav> <!-- #site-navigation -->
     
     <div id="breadcrumbs">
-      <a href="/">Home</a> &raquo; <a href="/my work/"></a> &raquo; New Mitchum Project I Worked On
+      <a href="/">Home</a> &raquo; <a href="/personal/">Personal</a> &raquo; New Mitchum Project I Worked On
     </div>
 
     <main id="content" role="main">
@@ -116,9 +117,15 @@ As far as how I’ve been “thinking” like a developer, I have to jump back t
 
 
     	<div id="related-posts">
-    		<h3>IF YOU LIKED THIS POST, YOU MAY ALSO LIKE:</h3>
+    		<h3 class="related-posts-header">MORE POSTS LIKE THIS...</h3>
     		<ul>
     			
+            <li class="related-posts-link"><a href="/50th-article-blog-review/">My 50th Article &#8211; A Retrospective! &raquo;</a></li>
+          
+            <li class="related-posts-link"><a href="/mobile-web-development-best-practice-resources/">5 Mobile Web Development Best Practice Resources &raquo;</a></li>
+          
+            <li class="related-posts-link"><a href="/learn-javascript-before-jquery/">5 Reasons Why You Need To Learn To Use JavaScript Before jQuery &raquo;</a></li>
+          
     		</ul>
       </div> <!-- #related-posts -->
     </div> <!-- #content -->

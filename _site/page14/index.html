@@ -5,6 +5,7 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <meta name="description" content="" />
    <title>Web development tutorials for beginners, book reviews and more from kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
@@ -31,23 +32,30 @@
 <body>
   <div id="container" class="containing-element">
     <header id="masthead" class="site-header clearfix" role="banner">
-      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
       <h2 class="site-description">coding and sharing what I learn</h2>
-    </header> <!-- #mastehead -->
+    </header> <!-- #masthead -->
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
-
       <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
-
       <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
         
       <ul id="site-navigation-list">
-        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
         <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
+
+    <div id="searchbox">
+      <form id="searchform" method="get" action="http://www.google.com/search">
+        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
+        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
+        <input type="hidden" name="sitesearch" value="kaidez.com" />
+      </form> <!-- #searchform -->
+    </div> <!-- #searchbox -->
+
     
     <main id="content">
       <main id="home">
@@ -56,14 +64,12 @@
   
     <article class="homepage-posts">
       <h1><a href="/create-html5-page/">TUTORIAL: Create The Building Blocks For An HTML5 Page</a></h1>
-      <h1></h1>
- <a href="/create-html5-page/">Read post &raquo;</a> 
+      Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page. <a href="/create-html5-page/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
       <h1><a href="/welcome-back/">Welcome Back!!!!!!!!</a></h1>
-      <p>After an insanely long hiatus, I am back to blogging…and quite reinvigorated about it! Coming back took a lot of soul searching on my part, requiring me to determine exactly what I wanted to accomplish here, but I’ve created a clear path for myself and am excited about what I’m about to do within this space.</p>
- <a href="/welcome-back/">Read post &raquo;</a> 
+      kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development. <a href="/welcome-back/">Read post &raquo;</a> 
     </article>
   
 

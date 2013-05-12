@@ -5,6 +5,7 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   <meta name="description" content="" />
    <title>Web development tutorials for beginners, book reviews and more from kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
@@ -31,23 +32,30 @@
 <body>
   <div id="container" class="containing-element">
     <header id="masthead" class="site-header clearfix" role="banner">
-      <h1 id="main-site-header" class="site-title">kaidez</h1>
+      <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
       <h2 class="site-description">coding and sharing what I learn</h2>
     </header> <!-- #masthead -->
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
-
       <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
-
       <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
         
       <ul id="site-navigation-list">
-        <li class="site-navigation-list-link"><a href="#">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
         <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="#">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="#">RANTS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
+
+    <div id="searchbox">
+      <form id="searchform" method="get" action="http://www.google.com/search">
+        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
+        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
+        <input type="hidden" name="sitesearch" value="kaidez.com" />
+      </form> <!-- #searchform -->
+    </div> <!-- #searchbox -->
+
     
     <main id="content">
       <main id="home">
@@ -56,7 +64,7 @@
   
     <article class="homepage-posts">
       <h1><a href="/media-queries-important/">Media Queries Are Important</a></h1>
-      CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design. <a href="/media-queries-important/">Read post &raquo;</a> 
+      CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard. <a href="/media-queries-important/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
@@ -66,49 +74,17 @@
   
     <article class="homepage-posts">
       <h1><a href="/eloquent-javascript-review/">REVIEW: Eloquent JavaScript</a></h1>
-      Marijn Haverbeke's book is one of the best fundamental JS books I've ever read. <a href="/eloquent-javascript-review/">Read post &raquo;</a> 
+      Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites. <a href="/eloquent-javascript-review/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
       <h1><a href="/javascript-off-dom/">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a></h1>
-      <p>Using JavaScript off-DOM is an efficient way to manipulate web page content. By “work off-DOM,” I mean “work inside of the browser memory instead of on a web page.”</p>
- <a href="/javascript-off-dom/">Read post &raquo;</a> 
+      How to create/change page elements off-DOM with JavaScript. Discusses createDocumentFragment, cloneNode, appendChild, jQuery .attr() & more. <a href="/javascript-off-dom/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
       <h1><a href="/fluent-2012/">The kaidez JavaScript Conference Tour: Leg 1: Fluent 2012/San Francisco</a></h1>
-      <p>I was hoping to attend at least <em>one</em> JavaScript conference this year…luckily, I’m going to <em>two</em>! First up is O’Reilly’s three-day [Fluent Conference in San Francisco][2] (with June’s [TXJS 2012][3] in Austin being the second one). Conference dates are May 29th through the 31st: premium training sessions on the first day, keynotes and public sessions during the other two days.</p>
- <a href="/fluent-2012/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/learn-javascript-before-jquery/">5 Reasons Why You Need To Learn To Use JavaScript Before jQuery</a></h1>
-      <p>A project came up at work involving [Node][1], the software system that allows JavaScript to run server-side instead of client-side. I wasn’t involved in the project but wanted to play with the code once it landed in production and wanted to be ready if ever asked to support it. So I set Node up on my Mac laptop, read parts of its documentation and found some beginning Node learning resources online.</p>
- <a href="/learn-javascript-before-jquery/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/useful-javascript-books/">5 Useful JavaScript Books</a></h1>
-      <h1></h1>
- <a href="/useful-javascript-books/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/javascript-closures-tutorial/">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a></h1>
-      <h1></h1>
- <a href="/javascript-closures-tutorial/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/simple-html5-explanation/">A Simple Explanation of HTML5</a></h1>
-      <h1></h1>
- <a href="/simple-html5-explanation/">Read post &raquo;</a> 
-    </article>
-  
-    <article class="homepage-posts">
-      <h1><a href="/javascript-for-loop-creates-jquery-fade/">SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out</a></h1>
-      <h1></h1>
- <a href="/javascript-for-loop-creates-jquery-fade/">Read post &raquo;</a> 
+      Kai discusses what courses and sessions he'll be checking out at the 2012 Fluent JavaScript Conference. Node, and Jasmine are a few of them. <a href="/fluent-2012/">Read post &raquo;</a> 
     </article>
   
 
@@ -161,6 +137,48 @@
         <li class="page">
           
             <a href="/page7">7</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page8">8</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page9">9</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page10">10</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page11">11</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page12">12</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page13">13</a>
+          
+        </li>
+      
+        <li class="page">
+          
+            <a href="/page14">14</a>
           
         </li>
       

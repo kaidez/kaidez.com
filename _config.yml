@@ -1,5 +1,6 @@
 markdown: rdiscount
 permalink: /:title
+destination: ./_site
 paginate: 5
 exclude: [grunt]
 #include: .htaccess
