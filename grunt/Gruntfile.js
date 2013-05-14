@@ -100,6 +100,16 @@ module.exports = function(grunt) {
         }
       },
       all: ['Gruntfile.js', 'package.json']
+    },
+    uglify: {
+      options: {
+        mangle: false
+      },
+      my_target: {
+        files: {
+          '../js/main.min.js': ['../js/vendor/lunr.min.js','../js/vendor/lunr.min.js', '../js/vendor/mustache.js', '../js/vendor/date.format.js', '../js/vendor/URI.min.js', '../js/vendor/jquery.lunr.search.js']
+        }
+      }
     }
   });
   
@@ -109,6 +119,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-modernizr');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
