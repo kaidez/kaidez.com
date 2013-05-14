@@ -3,7 +3,7 @@ title: 'Great Video Lecture on WordPress Usability &#038; Analytics'
 author: Kai Gittens
 layout: post
 permalink: /video-lecture-wordpress-usability-analytics/
-categories: WordPress
+category: WordPress
 ---
 # 
 

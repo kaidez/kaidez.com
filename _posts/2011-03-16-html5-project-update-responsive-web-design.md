@@ -2,8 +2,11 @@
 title: 'HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries'
 author: Kai Gittens
 layout: post
+meta-excerpt: An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end
 permalink: /html5-project-update-responsive-web-design/
-categories: The HTML5 Project
+category: Coding Best Practices
+cat-name: "coding-best-practices"
+tags: [rwd, html5, media queries]
 ---
 # 
 

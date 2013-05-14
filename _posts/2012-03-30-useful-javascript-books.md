@@ -4,11 +4,10 @@ author: Kai Gittens
 layout: post
 meta-excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.
 permalink: /useful-javascript-books/
-categories: books
+category: books
 cat-name: "Books"
 tags: [javascript, beginner, book]
 ---
-# 
 
 *Disclaimer: because of my affiliate relationships, you will make me money if you click on any of the book links below, then buy a book.*
 

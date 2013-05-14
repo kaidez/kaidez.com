@@ -3,7 +3,7 @@ title: Read My Article At Inspired Magazine!!!
 author: Kai Gittens
 layout: post
 permalink: /kai-gittens-article-inspired-magazine/
-categories: My Writing
+category: My Writing
 ---
 # 
 

@@ -1,14 +1,10 @@
 ---
 title: 'Social Media Week/NYC Recap &#8211; SOCIAL LISTENING PANEL'
 author: Kai Gittens
-meta-excerpt: |
-  |
-    "Large corporations actively use social media to promote and sell products and have the resources to effectively track its return-on-investment (ROI). By their own admittance, however, they don’t know each and every social media trick and are learning something new every day. But the learning process doesn’t scare them, it excites them."
-    
-    This was the main point of the <strong>"Pay Attention! Social Listening Done Right"</strong> panel discussion at the NYC Social Media Week event. Read the entire article for more of the nitty gritty details...
+meta-excerpt: bam
 layout: post
 permalink: /nyc-social-media-week-event-recap-social-listening/
-categories: Reviews
+category: Reviews
 ---
 # 
 

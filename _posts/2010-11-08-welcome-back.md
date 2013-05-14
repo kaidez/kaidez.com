@@ -4,7 +4,7 @@ author: Kai Gittens
 layout: post
 permalink: /welcome-back/
 meta-excerpt: kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.
-categories: personal
+category: personal
 cat-name: "Personal"
 tags: [kai]
 ---

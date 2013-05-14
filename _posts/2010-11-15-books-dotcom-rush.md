@@ -4,7 +4,7 @@ author: Kai Gittens
 layout: post
 permalink: /books-dotcom-rush/
 meta-excerpt: Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.
-categories: reviews
+category: reviews
 cat-name: "Reviews"
 tags: [book, review]
 ---

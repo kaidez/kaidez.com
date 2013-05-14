@@ -4,11 +4,10 @@ author: Kai Gittens
 layout: post
 meta-excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.
 permalink: /simple-html5-explanation/
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 tags: [html5, best practice]
 ---
-# 
 
 HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.
 

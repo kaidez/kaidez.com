@@ -1,16 +1,11 @@
 ---
 title: Social Media Week/NYC Recap – MOBILE PROMOTION PANEL
 author: Kai Gittens
-meta-excerpt: |
-  "iPhones and Androids provide a great user experience and we should care about the new functionality that they provide.  But when it comes to effective product and brand promotion, they under-perform when compared to both text messaging and the mobile web, at least, for now.  Whatever your mobile strategy though, it should "play a role" in your promotional campaign, not "be" your promotional campaign, Plus, it needs to interact with good, desirable content.  Because content is, indeed, king."
-  
-  This sums up the <strong>Cross-Mobile Brand Strategy</strong> conference that went on during NYC Social Media Week.  Please read on to get the full monty...
+meta-excerpt: Kai
 layout: post
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
-categories: Reviews
+category: Reviews
 ---
-# 
-
 *Correction: In a previous version of this article, Farrah Bostic was incorrectly identified as Kristin Volk in a photo caption, and vice versa. All of the opening statistics, starting with “only 30% of the mobile users have a smartphone,” were incorrectly attributed to coming from Kristen Volk only).*
 
 As mentioned in my last post, a friend at JWT got me into the top two panels for [NYC Social Media Week 2011][1]: the social listening one, titled **“Pay Attention! Social Listening Done Right;” **and the mobile promotion one, titled **Cross-Mobile Brand Strategy**. 

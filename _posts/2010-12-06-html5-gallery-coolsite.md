@@ -3,7 +3,7 @@ title: 'HTML5 Gallery: NEW COOLSITE!'
 author: Kai Gittens
 layout: post
 permalink: /html5-gallery-coolsite/
-categories: Coolsites
+category: Coolsites
 ---
 # 
 

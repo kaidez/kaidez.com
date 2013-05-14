@@ -4,11 +4,10 @@ author: Kai Gittens
 meta-excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: post
 permalink: /almay-facebook-page/
-categories: personal
+category: personal
 cat-name: "Personal"
 tags: [mobile, almay, html5, facebook, kai]
 ---
-# 
 
 On June 2, 2011, Almay, which is wholly owned by [my employer][1], updated the[ What’s New section of its Facebook page][2], which I coded up. I spent four days developing it under the new Facebook app rules and another two dealing with an Internet Explorer bug. 
 

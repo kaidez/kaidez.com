@@ -1111,7 +1111,6 @@ a:hover {
 
 #search {
   display: block;
-  float: right;
   margin-right: 10px;
   cursor: pointer;
   background: url("../img/snSprite.png") no-repeat -41px -69px;
@@ -1171,7 +1170,6 @@ a:hover {
 
   #search {
     display: block;
-    float: right;
     margin-right: 10px;
     cursor: pointer;
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;

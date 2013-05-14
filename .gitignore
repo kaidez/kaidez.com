@@ -19,6 +19,11 @@ _site
 *.eps
 *backwpup
 
+*mustache.js
+*lunr.min.js
+*date.format.js
+URI.min.js
+
 # ignore all .txt files...
 *.txt
 

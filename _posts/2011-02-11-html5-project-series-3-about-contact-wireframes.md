@@ -3,7 +3,7 @@ title: 'HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-3-about-contact-wireframes/
-categories: The HTML5 Project
+category: The HTML5 Project
 ---
 # 
 

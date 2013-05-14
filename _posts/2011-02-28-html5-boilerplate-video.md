@@ -3,7 +3,7 @@ title: The HTML5 Boilerplate Video is AWESOME!!!!!!
 author: Kai Gittens
 permalink: /html5-boilerplate-video/
 layout: post
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 ---
 # 

@@ -4,7 +4,7 @@ author: Kai Gittens
 layout: post
 meta-excerpt: kaidez recalls the best about Steve Jobs
 permalink: /remembering-steve-jobs/
-categories: personal
+category: personal
 cat-name: "Personal"
 tags: [rant, kai]
 ---

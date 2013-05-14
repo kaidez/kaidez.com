@@ -4,7 +4,7 @@ author: Kai Gittens
 layout: post
 meta-excerpt: A quick review of HTML5 Boilerplate version 1.0, discussing the new build script for site optimization and custom site template build
 permalink: /html5-boilerplate-version-1/
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 tags: [html5]
 ---

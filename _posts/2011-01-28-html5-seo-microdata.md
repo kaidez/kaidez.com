@@ -3,7 +3,7 @@ title: HTML5, SEO and Microdata
 author: Kai Gittens
 layout: post
 permalink: /html5-seo-microdata/
-categories: HTML5
+category: HTML5
 ---
 # 
 

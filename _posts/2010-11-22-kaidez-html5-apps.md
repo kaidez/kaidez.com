@@ -3,7 +3,7 @@ title: My HTML5 Applications
 author: Kai Gittens
 layout: post
 permalink: /kaidez-html5-apps/
-categories: The HTML5 Project
+category: The HTML5 Project
 ---
 # 
 

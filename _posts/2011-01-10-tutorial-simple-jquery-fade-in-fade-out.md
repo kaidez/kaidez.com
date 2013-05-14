@@ -3,7 +3,7 @@ title: 'TUTORIAL: A Simple jQuery Image Fade In/Fade Out With A Delay'
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
-categories: Tutorials
+category: Tutorials
 ---
 # 
 

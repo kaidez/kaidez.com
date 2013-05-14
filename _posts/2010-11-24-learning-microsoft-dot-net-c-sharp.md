@@ -3,7 +3,7 @@ title: 'I&#8217;m Focusing On .NET C#'
 author: Kai Gittens
 layout: post
 permalink: /learning-microsoft-dot-net-c-sharp/
-categories: Personal
+category: Personal
 ---
 # 
 

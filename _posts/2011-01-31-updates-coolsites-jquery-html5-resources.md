@@ -3,7 +3,7 @@ title: Updates To Coolsites and HTML5/jQuery Resources
 author: Kai Gittens
 layout: post
 permalink: /updates-coolsites-jquery-html5-resources/
-categories: Coolsites
+category: Coolsites
 ---
 # 
 

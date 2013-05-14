@@ -4,11 +4,10 @@ author: Kai Gittens
 layout: post
 meta-excerpt: JavaScript for loop dynamically creates a jQuery fade in/fade out effect with a delay; includes a demo, code sample and screencast tutorial.
 permalink: /javascript-for-loop-creates-jquery-fade/
-categories: tutorials
+category: tutorials
 cat-name: "Tutorials"
 tags: [javascript, screencast, tute]
 ---
-# 
 
 [VIEW THE DEMO FIRST »][1]
 

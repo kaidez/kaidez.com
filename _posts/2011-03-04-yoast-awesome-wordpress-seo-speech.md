@@ -3,7 +3,7 @@ title: 'Yoast&#8217;s Awesome WordPress SEO Speech'
 author: Kai Gittens
 layout: post
 permalink: /yoast-awesome-wordpress-seo-speech/
-categories: WordPress
+category: WordPress
 ---
 # 
 

@@ -4,7 +4,7 @@ author: Kai Gittens
 layout: post
 meta-excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
-categories: personal
+category: personal
 cat-name: "personal"
 tags: [flash, me]
 ---

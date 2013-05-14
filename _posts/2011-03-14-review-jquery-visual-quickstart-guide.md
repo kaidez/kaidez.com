@@ -2,15 +2,16 @@
 title: 'REVIEW: jQuery: Visual Quickstart Guide'
 author: Kai Gittens
 layout: post
+meta-excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great"
 permalink: /review-jquery-visual-quickstart-guide/
-categories: Reviews
+category: Reviews
+cat-name: "reviews"
+tags: [jquery, review, book]
 ---
 # 
 
 [![jQuery: Visual Quickstart Guide Book from peachpit Press][2]][2]  
 An unspoken rule of mine is to NOT give any products a bad review. I’ve tried to adopt an attitude of, “If you don’t have anything nice to say, don’t say anything at all.” But in the case of ***Peachpit Press’s jQuery: Visual Quickstart Guide***, I have to make an unfortunate exception.
-
- []: http://gan.doubleclick.net/gan_click?lid=41000000012871747&pid=9780321647498&adurl=http://search.barnesandnoble.com/JQuery/Steven-Holzner/e/9780321647498&usg=AFHzDLuLbxBk2YSqHF0kRwvEmWs5iGZehA&pubid=21000000000317732
 
 Since I’m about to beat this book up, let me quantify why I think it’s OK for me to do this…
 

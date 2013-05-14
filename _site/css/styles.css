@@ -503,18 +503,13 @@ html, body {
   min-height: 100%;
   width: auto; }
 
+.homepage-link {
+  display: block; }
+
 .site-header {
   background-color: #6ab0d4;
   text-align: left;
   width: auto; }
-
-.site-title {
-  background: url("../img/siteLogo.png") no-repeat;
-  height: 44px;
-  width: 138px;
-  float: left;
-  margin: 0 0 0 10px;
-  text-indent: -999px; }
 
 .homepage-posts {
   border-bottom: 1px solid #999999;
@@ -666,7 +661,8 @@ a:hover {
 .fb {
   padding-right: 10px; }
 
-#searchbox {
+.no-js #site-navigation-list, .no-js #searchform {
+  display: block;
   position: relative; }
 
 #s {
@@ -990,13 +986,22 @@ a:hover {
  * styles will load only...no desktop styles
  * will load.
  */
+.homepage-link {
+  width: 136px;
+  height: 39px; }
+
 .site-description {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
-.site-header {
-  height: 70px;
-  padding-top: 10px; }
+.site-title {
+  background: url("../img/siteLogo.png") no-repeat;
+  height: 49px;
+  width: 200px;
+  float: left;
+  margin: 10px 0 10px 10px;
+  text-indent: -999px;
+  display: block; }
 
 /*
  * Mobile-first code so the menu and search box
@@ -1019,6 +1024,15 @@ a:hover {
 #breadcrumbs {
   font-size: 14px;
   padding: 20px 10px 35px 10px; }
+
+.related-posts-header {
+  margin: 0px auto;
+  text-align: center; }
+
+.related-posts-link {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px; }
 
 #footer-contact-fieldset {
   border: none; }
@@ -1097,7 +1111,6 @@ a:hover {
 
 #search {
   display: block;
-  float: right;
   margin-right: 10px;
   cursor: pointer;
   background: url("../img/snSprite.png") no-repeat -41px -69px;
@@ -1157,7 +1170,6 @@ a:hover {
 
   #search {
     display: block;
-    float: right;
     margin-right: 10px;
     cursor: pointer;
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
@@ -1234,15 +1246,6 @@ a:hover {
   body {
     font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
     padding: 0; }
-
-  #site-navigation-list, #searchform {
-    display: block;
-    padding: 2px 0;
-    min-height: 21px;
-    width: 454px;
-    font-size: 12px;
-    margin: 0px auto;
-    text-align: center; }
 
   .site-description {
     display: block;

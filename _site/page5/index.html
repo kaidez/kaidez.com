@@ -47,16 +47,26 @@
         <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
-
-    <div id="searchbox">
-      <form id="searchform" method="get" action="http://www.google.com/search">
-        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
-        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
-        <input type="hidden" name="sitesearch" value="kaidez.com" />
-      </form> <!-- #searchform -->
-    </div> <!-- #searchbox -->
-
+    <div id="search">
+      <form action="/" method="get">
+        <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
+      </form>
+    </div>
+    <section id="search-results">
+      <div class="entries"></div>
+    </section>
     
+    <script id="search-results-template" type="text/mustache">
+      {{#entries}}
+        <article>
+          <h3>
+            {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+            <a href="{{url}}">{{title}}</a></h3>
+        </article>
+      {{/entries}}
+    </script>
+    
+
     <main id="content">
       <main id="home">
   
@@ -69,22 +79,22 @@
   
     <article class="homepage-posts">
       <h1><a href="/css3-pie-link-tutorial/">TUTORIAL: Creating A Rounded Corner, Transparent CSS3 Link For IE 6 Through 8 With CSS3 Pie</a></h1>
-       <a href="/css3-pie-link-tutorial/">Read post &raquo;</a> 
+      A tutorial on creating a rounded corner, transparent CSS3 link in Internet Explorer 6 through 8 with CSS3 PIE <a href="/css3-pie-link-tutorial/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
       <h1><a href="/html5-project-update-responsive-web-design/">HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries</a></h1>
-       <a href="/html5-project-update-responsive-web-design/">Read post &raquo;</a> 
+      An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end <a href="/html5-project-update-responsive-web-design/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
       <h1><a href="/review-jquery-visual-quickstart-guide/">REVIEW: jQuery: Visual Quickstart Guide</a></h1>
-       <a href="/review-jquery-visual-quickstart-guide/">Read post &raquo;</a> 
+      A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great <a href="/review-jquery-visual-quickstart-guide/">Read post &raquo;</a> 
     </article>
   
     <article class="homepage-posts">
       <h1><a href="/easy-to-read-html5-spec/">Easy-To-Read Version of The HTML5 Specification</a></h1>
-       <a href="/easy-to-read-html5-spec/">Read post &raquo;</a> 
+      Ben Schwarz gives us "HTML5-A technical specification for Web developers," translating WHATWG's HTML5 arduous spec into layman's terms <a href="/easy-to-read-html5-spec/">Read post &raquo;</a> 
     </article>
   
 
@@ -244,7 +254,7 @@
 
     </footer> <!-- #colophon -->
   </div> <!-- #container -->
-  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
-
+  <script src="/js/require.js" data-main="/js/config.js"></script>
+   
 </body>
 </html>

@@ -4,7 +4,7 @@ author: Kai Gittens
 permalink: /mobile-web-development-best-practices-starting-tips/
 layout: post
 meta-excerpt: Starter mobile web development best practices including YSlow & Page Speed tests and minifying pages with HTML5 Boilerplate's build script
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 tags: [mobile, almay, html5, facebook, practice]
 ---

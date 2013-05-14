@@ -3,7 +3,7 @@ title: 'HTML5 Project Update: 1/21/11'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-january-21-2011/
-categories: The HTML5 Project
+category: The HTML5 Project
 ---
 # 
 

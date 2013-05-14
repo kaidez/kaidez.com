@@ -4,11 +4,10 @@ author: Kai Gittens
 layout: post
 meta-excerpt: The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery
 permalink: /mitchum-html5-site/
-categories: personal
+category: personal
 cat-name: "Personal"
 tags: [css, jquery, mitchum, html5, microsoft, kai]
 ---
-# 
 
 It has been INSANELY busy at work lately, hence, no blog posts in over a month. One of the projects that has literally kept me up late is the new Mitchum deodorant website. And yes, HTML5 was used.
 

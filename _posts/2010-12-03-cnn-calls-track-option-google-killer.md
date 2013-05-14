@@ -3,7 +3,7 @@ title: 'CNN calls the do not track option a &#8220;Google killer&#8221;'
 author: Kai Gittens
 layout: post
 permalink: /cnn-calls-track-option-google-killer/
-categories: Blogging
+category: Blogging
 ---
 # 
 

@@ -3,7 +3,7 @@ title: 'REVIEW: Pro HTML5 Programming'
 author: Kai Gittens
 layout: post
 permalink: /review-pro-html5-programming/
-categories: Reviews
+category: Reviews
 ---
 # 
 

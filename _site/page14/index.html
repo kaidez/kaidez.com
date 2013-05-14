@@ -47,16 +47,26 @@
         <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
-
-    <div id="searchbox">
-      <form id="searchform" method="get" action="http://www.google.com/search">
-        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
-        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
-        <input type="hidden" name="sitesearch" value="kaidez.com" />
-      </form> <!-- #searchform -->
-    </div> <!-- #searchbox -->
-
+    <div id="search">
+      <form action="/" method="get">
+        <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
+      </form>
+    </div>
+    <section id="search-results">
+      <div class="entries"></div>
+    </section>
     
+    <script id="search-results-template" type="text/mustache">
+      {{#entries}}
+        <article>
+          <h3>
+            {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+            <a href="{{url}}">{{title}}</a></h3>
+        </article>
+      {{/entries}}
+    </script>
+    
+
     <main id="content">
       <main id="home">
   
@@ -229,7 +239,7 @@
 
     </footer> <!-- #colophon -->
   </div> <!-- #container -->
-  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
-
+  <script src="/js/require.js" data-main="/js/config.js"></script>
+   
 </body>
 </html>

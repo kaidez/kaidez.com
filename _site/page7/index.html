@@ -47,16 +47,26 @@
         <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
-
-    <div id="searchbox">
-      <form id="searchform" method="get" action="http://www.google.com/search">
-        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
-        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
-        <input type="hidden" name="sitesearch" value="kaidez.com" />
-      </form> <!-- #searchform -->
-    </div> <!-- #searchbox -->
-
+    <div id="search">
+      <form action="/" method="get">
+        <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
+      </form>
+    </div>
+    <section id="search-results">
+      <div class="entries"></div>
+    </section>
     
+    <script id="search-results-template" type="text/mustache">
+      {{#entries}}
+        <article>
+          <h3>
+            {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+            <a href="{{url}}">{{title}}</a></h3>
+        </article>
+      {{/entries}}
+    </script>
+    
+
     <main id="content">
       <main id="home">
   
@@ -84,10 +94,7 @@
   
     <article class="homepage-posts">
       <h1><a href="/nyc-social-media-week-event-recap-cross-mobile-promotion/">Social Media Week/NYC Recap – MOBILE PROMOTION PANEL</a></h1>
-      "iPhones and Androids provide a great user experience and we should care about the new functionality that they provide.  But when it comes to effective product and brand promotion, they under-perform when compared to both text messaging and the mobile web, at least, for now.  Whatever your mobile strategy though, it should "play a role" in your promotional campaign, not "be" your promotional campaign, Plus, it needs to interact with good, desirable content.  Because content is, indeed, king."
-
-This sums up the <strong>Cross-Mobile Brand Strategy</strong> conference that went on during NYC Social Media Week.  Please read on to get the full monty...
- <a href="/nyc-social-media-week-event-recap-cross-mobile-promotion/">Read post &raquo;</a> 
+      Kai <a href="/nyc-social-media-week-event-recap-cross-mobile-promotion/">Read post &raquo;</a> 
     </article>
   
 
@@ -247,7 +254,7 @@ This sums up the <strong>Cross-Mobile Brand Strategy</strong> conference that we
 
     </footer> <!-- #colophon -->
   </div> <!-- #container -->
-  <script src="/js/vendor/require.js" data-main="/js/config.js"></script>
-
+  <script src="/js/require.js" data-main="/js/config.js"></script>
+   
 </body>
 </html>

@@ -4,11 +4,10 @@ author: Kai Gittens
 layout: post
 meta-excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.
 permalink: /javascript-closures-tutorial/
-categories: tutorials
+category: tutorials
 cat-name: "Tutorials"
 tags: [javascript, beginner, tute]
 ---
-# 
 
 [VIEW THE DEMO FIRST »][1]
 

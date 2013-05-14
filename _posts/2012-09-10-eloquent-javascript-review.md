@@ -4,7 +4,7 @@ author: Kai Gittens
 meta-excerpt: Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.
 layout: post
 permalink: /eloquent-javascript-review/
-categories: reviews
+category: reviews
 cat-name: "Reviews"
 tags: [javascript, review]
 ---

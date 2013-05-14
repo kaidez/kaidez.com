@@ -3,7 +3,7 @@ title: 'HTML5 Readiness: NEW COOLSITE!'
 author: Kai Gittens
 layout: post
 permalink: /coolsite-html5-readiness/
-categories: Coolsites
+category: Coolsites
 ---
 # 
 

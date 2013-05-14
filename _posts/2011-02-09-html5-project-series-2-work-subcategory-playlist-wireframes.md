@@ -3,7 +3,7 @@ title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&#8217;S PLAYLIS
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
-categories: The HTML5 Project
+category: The HTML5 Project
 ---
 # 
 

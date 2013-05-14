@@ -3,7 +3,7 @@ title: Update to My HTML5/SEO/Microdata Post
 author: Kai Gittens
 layout: post
 permalink: /update-html5seomicrodata-post/
-categories: HTML5
+category: HTML5
 ---
 # 
 

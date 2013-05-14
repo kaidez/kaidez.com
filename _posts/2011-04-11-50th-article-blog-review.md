@@ -4,11 +4,10 @@ author: Kai Gittens
 layout: post
 meta-excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
 permalink: /50th-article-blog-review/
-categories: personal
+category: personal
 cat-name: "Personal"
 tags: [css, html5, seo, kai]
 ---
-# 
 
 Maintaining a blog to the point that it contains 50 posts (I call them articles) is a milestone. As I just hit the 50 mark, it’s time to review how things are going.
 

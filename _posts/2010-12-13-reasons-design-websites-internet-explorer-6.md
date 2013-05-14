@@ -3,7 +3,7 @@ title: 5 Reasons To Design Websites For Internet Explorer 6
 author: Kai Gittens
 permalink: /reasons-design-websites-internet-explorer-6/
 layout: post
-categories: coding-best-practices
+category: coding-best-practices
 cat-name: "Coding Best Practices"
 ---
 # 

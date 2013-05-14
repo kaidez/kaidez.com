@@ -47,23 +47,11 @@
         <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
-
     <div id="search">
       <form action="/" method="get">
         <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
       </form>
     </div>
-
-     <!--
-      <div id="searchbox">
--      <form id="searchform" method="get" action="http://www.google.com/search">
--        <input type="text" name="q" size="31" maxlength="255" value="" placeholder="Search for jQuery, HTML5, etc" />
--        <input type="submit" value="Go" class="btnSearch" id="searchsubmit" />
--        <input type="hidden" name="sitesearch" value="kaidez.com" />
--      </form> #searchform
--    </div> #searchbox
-  -->
-  
     <section id="search-results">
       <div class="entries"></div>
     </section>
@@ -131,25 +119,7 @@
 
     </footer> <!-- #colophon -->
   </div> <!-- #container -->
-<!--  // <script src="/js/vendor/require.js" data-main="/js/config.js"></script>-->
-
-<script src="/js/vendor/jquery.js"></script>
-<script src="/js/vendor/lunr.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/mustache.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/date.format.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/URI.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
-
+  <script src="/js/require.js" data-main="/js/config.js"></script>
    
-<script>
-  $(function() {
-    $('#search-query').lunrSearch({
-      indexUrl: '/search.json', // URL of the `search.json` index data for your site
-      results:  '#search-results', // jQuery selector for the search results container
-      entries:  '.entries', // jQuery selector for the element to contain the results list, must be a child of the results element above.
-      template: '#search-results-template' // jQuery selector for the Mustache.js template
-    });
-  });
-</script>
 </body>
 </html>

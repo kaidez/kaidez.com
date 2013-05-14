@@ -3,7 +3,7 @@ title: 2 JavaScript Tasks That jQuery Does Not Replace
 author: Kai Gittens
 layout: post
 permalink: /2-javascript-tasks-jquery-does-not-replace/
-categories: jQuery
+category: jQuery
 ---
 # 
 
