@@ -1,5 +1,8 @@
+//Stack Overflow
 // http://stackoverflow.com/questions/10122291/loading-mustache-using-requirejs
 
+
+// Req docs
 requirejs.config({
   baseUrl: "/js",
 
