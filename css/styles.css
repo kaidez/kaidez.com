@@ -1113,6 +1113,7 @@ a:hover {
   display: block;
   margin-right: 10px;
   cursor: pointer;
+  float: right;
   background: url("../img/snSprite.png") no-repeat -41px -69px;
   background-size: 289px 120px;
   height: 44px;
@@ -1172,6 +1173,7 @@ a:hover {
     display: block;
     margin-right: 10px;
     cursor: pointer;
+    float: right;
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
     background-size: 289px 120px;
     height: 44px;
