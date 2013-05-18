@@ -10,11 +10,7 @@
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
    <link rel="canonical" href="{{ page.url | canonical }}" />
-   
    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/jquery-ui.custom.js"></script>
-
 
    <script>
     WebFontConfig = {
@@ -54,25 +50,11 @@
         <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
-    <input type="text" id="searchbox" />
-<!-- 
-<script>
- $("#autocomplete").autocomplete({
-            source: function(req, res){
-                $.getJSON(
-                    "search.json",
-                    {term : req.term},
-                    function(data){
-                        res(data);//you can also modify your results before you call res()
-                    });
-            },
-            select: function(event, ui) {
-            $('#kai').val(ui.item.labe);
-          }
-);
-</script>
--->
- 
+
+    <div id="searchbox">
+      <input type="text" id="searchbox" />
+    </div>
+
     <main id="content">
       {{ content }}
     </div>
@@ -126,28 +108,6 @@
     </footer> <!-- #colophon -->
   </div> <!-- #container -->
 
-<script>
-    $("#searchbox").autocomplete({
-      source: function( request, response ) {
-        $.ajax({
-          url: "search.json",
-          dataType: "json",
-          data: {term: request.term},
-          success: function(data) {
-            response($.map(data, function(item) {
-              return {
-                label: item.title
-              };
-
-            }));
-          }
-        });
-      },
-      minLength: 2,
-      select: function(event, ui) {
-        console.log(item);
-      }
-    });
-</script>
+<script data-main="/js/config.js" src="/js/require.js" ></script>
 </body>
 </html>

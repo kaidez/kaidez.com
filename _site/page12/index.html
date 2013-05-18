@@ -10,6 +10,8 @@
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
    <link rel="canonical" href="/page12/index.html" />
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
    <script>
     WebFontConfig = {
       google: { families: [
@@ -27,7 +29,8 @@
       s.parentNode.insertBefore(wf, s);
      })();
   </script>
-  <script src="/js/vendor/modernizr.min.js"></script>
+
+<script src="/js/vendor/modernizr.min.js"></script>
 </head>
 <body>
   <div id="container" class="containing-element">
@@ -47,25 +50,10 @@
         <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
       </ul>
     </nav> <!-- #site-navigation -->
-    <div id="search">
-      <form action="/" method="get">
-        <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
-      </form>
+
+    <div id="searchbox">
+      <input type="text" id="searchbox" />
     </div>
-    <section id="search-results">
-      <div class="entries"></div>
-    </section>
-    
-    <script id="search-results-template" type="text/mustache">
-      {{#entries}}
-        <article>
-          <h3>
-            {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
-            <a href="{{url}}">{{title}}</a></h3>
-        </article>
-      {{/entries}}
-    </script>
-    
 
     <main id="content">
       <main id="home">
@@ -254,7 +242,7 @@
 
     </footer> <!-- #colophon -->
   </div> <!-- #container -->
-  <script src="/js/require.js" data-main="/js/config.js"></script>
-   
+
+<script data-main="/js/config.js" src="/js/require.js" ></script>
 </body>
 </html>
