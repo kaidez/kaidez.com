@@ -1,8 +1,5 @@
 ---
 ---
-var data = [
-  {% for post in site.posts %}
-    {% include post.json %},
-  {% endfor %}
-  null
-]
+[{% for post in site.posts %}
+  {% include post.json %},
+{% endfor %}]
