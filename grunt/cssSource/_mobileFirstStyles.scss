@@ -34,7 +34,7 @@
  * Mobile-first code so the menu and search box
  * gets hidden immediately
  */
-#site-navigation-list, #searchform {
+#site-navigation-list {
   display:none;
   margin:0;
   padding:0;
@@ -46,6 +46,22 @@
 }
 
 // Nav styles end
+
+
+
+// Search box styles start
+
+// the div that contains the search box
+.searchbox-style {
+  display:none;
+  padding: 15px 0 15px 15px;
+  @include master-center;
+}
+
+.searchfield-style {
+  width: 260px;
+}
+// Search box styles end
 
 
 

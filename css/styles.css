@@ -1007,7 +1007,7 @@ a:hover {
  * Mobile-first code so the menu and search box
  * gets hidden immediately
  */
-#site-navigation-list, #searchform {
+#site-navigation-list {
   display: none;
   margin: 0;
   padding: 0; }
@@ -1015,6 +1015,15 @@ a:hover {
 #menu-heading {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
+
+.searchbox-style {
+  display: none;
+  padding: 15px 0 15px 15px;
+  margin: 0px auto;
+  text-align: center; }
+
+.searchfield-style {
+  width: 260px; }
 
 .wf-active h1.post-title {
   font-size: 24px;

@@ -15,7 +15,7 @@
 define("menu", ["jquery"], function($) {
   var header = document.getElementById("masthead"),
     $navMenu = $("#site-navigation-list"),
-    $searchBox = $("#searchform"),
+    $searchBox = $("#searchbox"),
     menuButton = document.createElement("div"),
     searchButton = document.createElement("div"),
     showMenus;
