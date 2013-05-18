@@ -1,3 +1,8 @@
+/*
+ * http://developmentseed.org/search.json
+ */
+
+
 // Start RequireJS code
 
 define("search", ["jquery","jqui"], function($, jqui) {
