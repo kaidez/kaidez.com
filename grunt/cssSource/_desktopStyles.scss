@@ -10,6 +10,12 @@
     padding:0;
   }
 
+  // Menu
+  #site-navigation-list {
+    @include show-menu;
+    @include master-center;
+  }
+
   .site-description { //h2 tag
     display: block;
     position: static;

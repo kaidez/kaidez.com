@@ -1260,6 +1260,15 @@ a:hover {
     font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
     padding: 0; }
 
+  #site-navigation-list {
+    display: block;
+    padding: 2px 0;
+    min-height: 21px;
+    width: 454px;
+    font-size: 12px;
+    margin: 0px auto;
+    text-align: center; }
+
   .site-description {
     display: block;
     position: static; }
