@@ -52,17 +52,19 @@
 // Search box styles start
 
 // the div that contains the search box
+
+#searchbox {
+  display: none;
+}
+
 .searchbox-style {
-  display:none;
-  padding: 15px 0 15px 15px;
   @include master-center;
+  padding:15px 0;
 }
 
 .searchfield-style {
   width: 260px;
 }
-// Search box styles end
-
 
 
 // Mobile First post styles start
@@ -248,5 +250,3 @@
 }
 
 // Footer styles end
-
-

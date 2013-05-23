@@ -1016,11 +1016,13 @@ a:hover {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
+#searchbox {
+  display: none; }
+
 .searchbox-style {
-  display: none;
-  padding: 15px 0 15px 15px;
   margin: 0px auto;
-  text-align: center; }
+  text-align: center;
+  padding: 15px 0; }
 
 .searchfield-style {
   width: 260px; }
