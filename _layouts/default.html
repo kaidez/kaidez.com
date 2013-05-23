@@ -11,9 +11,7 @@
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
    <link rel="canonical" href="{{ page.url | canonical }}" />
    <link href="tipuesearch/tipuesearch.css" rel="stylesheet">
-
-  
-
+   
    <script>
     WebFontConfig = {
       google: { families: [
@@ -58,12 +56,10 @@
         <div style="float: left;"><input type="text" name="q" id="tipue_search_input"></div>
         <div style="float: left; margin-left: 13px;"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div>
      </form>
-    </div> --> <!-- #searchbox -->
+    </div> #searchbox -->
 
-    <div style="float: left;">
+    <div id="searchbox" class="searchbox-style">
       <input type="text" id="tipue_search_input">
-    </div>
-    <div id="searchbox">
       <input type="button" id="tipue_search_button">
       <div id="tipue_search_content"></div>
     </div> <!-- #searchbox -->
