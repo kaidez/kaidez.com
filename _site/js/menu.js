@@ -15,7 +15,7 @@
 define("menu", ["jquery"], function($) {
   var header = document.getElementById("masthead"),
     $navMenu = $("#site-navigation-list"),
-    $searchBox = $("#searchform"),
+    $searchBox = $("#searchbox"),
     menuButton = document.createElement("div"),
     searchButton = document.createElement("div"),
     showMenus;
@@ -34,9 +34,9 @@ define("menu", ["jquery"], function($) {
             $(this).css("display","");
           }
         });
-       } else {
-         el.slideDown();
-       }
+      } else {
+        el.slideDown();
+      }
     });
   };
 

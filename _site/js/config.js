@@ -5,19 +5,29 @@ requirejs.config({
 
   paths: {
     jquery: "../js/vendor/jquery",
-    jqui: "../js/vendor/jquery-ui.custom",
-    val: "../js/vendor/validate"
+    jqueryMigrate: "../js/vendor/jquery-migrate",
+    val: "../js/vendor/validate",
+    tipue: "../js/vendor/tipuesearch.min",
+    tipueset: "../js/vendor/tipuesearch_set"
   },
 
   shim: { 
     jquery: {
       exports: 'jquery'
     },
-    jqui: {
+    jqueryMigrate: {
       deps: ['jquery'],
       exports: 'jquery'
     },
     val: {
+      deps: ['jquery'],
+      exports: 'jquery'
+    },
+    tipue: {
+      deps: ['jquery'],
+      exports: 'jquery'
+    },
+    tipueset: {
       deps: ['jquery'],
       exports: 'jquery'
     }
