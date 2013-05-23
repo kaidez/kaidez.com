@@ -6,9 +6,8 @@ requirejs.config({
   paths: {
     jquery: "../js/vendor/jquery",
     jqueryMigrate: "../js/vendor/jquery-migrate",
-    migrate: "../js/vendor/migrate",
     val: "../js/vendor/validate",
-    tipue: "../js/vendor/tipuesearch",
+    tipue: "../js/vendor/tipuesearch.min",
     tipueset: "../js/vendor/tipuesearch_set"
   },
 
@@ -17,10 +16,6 @@ requirejs.config({
       exports: 'jquery'
     },
     jqueryMigrate: {
-      deps: ['jquery'],
-      exports: 'jquery'
-    },
-    migrate: {
       deps: ['jquery'],
       exports: 'jquery'
     },
