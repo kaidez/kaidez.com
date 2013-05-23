@@ -1,29 +1,10 @@
-/*
- * http://developmentseed.org/search.json
- */
+ 
+define("search", ["jquery","jqueryMigrate","migrate", "tipue","tipueset"], function($, jqueryMigrate, migrate, tipue, tipueset) {
 
+  
 
-// Start RequireJS code
-
-define("search", ["jquery","jqui"], function($, jqui) {
-  $("#searchbox").autocomplete({
-    source: function( request, response ) {
-      $.ajax({
-        url: "search.json",
-        dataType: "json",
-        data: {term: request.term},
-        success: function(data) {
-          response($.map(data, function(item) {
-            return {
-              label: item.title
-            };
-          }));
-        }
-      });
-    },
-    minLength: 2,
-    select: function(event, ui) {
-      console.log(item);
-    }
+  $('#tipue_search_input').tipuesearch({
+    'mode': 'json',
+    'contentLocation': '../tipuesearch/tipuesearch_content.json'
   });
 });
