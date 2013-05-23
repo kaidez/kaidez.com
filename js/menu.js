@@ -34,9 +34,9 @@ define("menu", ["jquery"], function($) {
             $(this).css("display","");
           }
         });
-       } else {
-         el.slideDown();
-       }
+      } else {
+        el.slideDown();
+      }
     });
   };
 
