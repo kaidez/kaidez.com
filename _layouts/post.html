@@ -58,15 +58,7 @@
 
     </nav> <!-- #site-navigation -->
 
-    <div id="searchbox" class="searchbox-style">
-      <form action="/search.html">
-        <div style="float: left;">
-          <input type="text" name="q" id="tipue_search_input">
-        </div>
-        <div style="float: left; margin-left: 13px;"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div>
-      </form>
-      <div style="clear: both"></div>
-    </div> <!-- #searchbox -->
+    {% include searchbox_partial.html %}
     
     <div id="breadcrumbs">
       <a href="/">Home</a> &raquo; <a href="/{{ page.categories }}/">{{ page.cat-name }}</a> &raquo; {{ page.title }}
