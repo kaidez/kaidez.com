@@ -1,1 +1,1 @@
-{"title": "{{ post.title }}", "text": "{{ post.meta-excerpt }}", "tags": "{{ post.tags }}", "loc": "{{ post.pemalink }}"}
+{"title": "{{ post.title }}", "text": "{{ post.meta-excerpt }}", "tags": "hello world", "loc": "{{ post.permalink }}"}
