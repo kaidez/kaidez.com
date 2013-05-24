@@ -9,10 +9,6 @@ tipuesearch/
 *Thumbs.db
 *.zip
 *.pot
-*.png
-*.gif
-*.jpg
-*.jpeg
 *.svg
 *.localized
 *.psd
@@ -27,7 +23,6 @@ tipuesearch/
 !wpDeployment.txt
 
 #image file
-*img/
 
 *.htaccess
 
