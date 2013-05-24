@@ -7,6 +7,7 @@ requirejs.config({
     jquery: "../js/vendor/jquery",
     jqueryMigrate: "../js/vendor/jquery-migrate",
     val: "../js/vendor/validate",
+    tipuesetContent: "../js/vendor/tipuesearch_content",
     tipueset: "../js/vendor/tipuesearch_set",
     tipue: "../js/vendor/tipuesearch.min" 
   },
@@ -20,6 +21,10 @@ requirejs.config({
       exports: 'jquery'
     },
     val: {
+      deps: ['jquery'],
+      exports: 'jquery'
+    },
+    tipuesetContent: {
       deps: ['jquery'],
       exports: 'jquery'
     },

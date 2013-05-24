@@ -9,7 +9,7 @@
    <title>Web development tutorials for beginners, book reviews and more from kaidez</title>
    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
    <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
-   <link href="/css/tipuesearch.css" rel="stylesheet">
+   <link rel="stylesheet" href="/css/tipuesearch.css" media="all" />
    <link rel="canonical" href="/page13/index.html" />
 
    <script>
@@ -50,13 +50,15 @@
       </ul>
     </nav> <!-- #site-navigation -->
 
-        <div id="searchbox" class="searchbox-style">
-      <div style="float: left;">
-        <input type="text" id="tipue_search_input"></div>
-      <div style="float: left; margin-left: 13px;">
-      	<input type="button" id="tipue_search_button">
-      </div>
-      <div id="tipue_search_content"></div>
+        <div id="searchbox" class="searchbox-style clearfix">
+      <form action="search.html">
+        <div style="float: left;">
+          <input type="text" name="q" id="tipue_search_input">
+        </div>
+        <div style="float: left; margin-left: 13px;">
+          <input type="submit" id="tipue_search_button">
+        </div>
+      </form>
     </div> <!-- #searchbox -->
     
     <main id="content" role="main">
