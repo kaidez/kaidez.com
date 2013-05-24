@@ -2,7 +2,6 @@ _site
 ./_site
 tipuesearch/
 
-
 # General all-around files
 # ------------------------
 
@@ -20,11 +19,6 @@ tipuesearch/
 *.ai
 *.eps
 *backwpup
-
-*mustache.js
-*lunr.min.js
-*date.format.js
-URI.min.js
 
 # ignore all .txt files...
 *.txt
