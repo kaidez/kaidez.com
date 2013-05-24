@@ -1,8 +1,6 @@
  
-define("search", ["jquery","jqueryMigrate","tipue","tipueset"], function($, jqueryMigrate, tipue, tipueset) {
+define("search", ["jquery","jqueryMigrate","tipueContent","tipueset","tipue"], function($, jqueryMigrate, tipueContent, tipueset, tipue) {
 
-  $('#tipue_search_input').tipuesearch({
-    'mode': 'json',
-    'contentLocation': '../tipuesearch/tipuesearch_content.json'
-  });
+  $('#tipue_search_input').tipuesearch();
+
 });

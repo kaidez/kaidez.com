@@ -7,8 +7,9 @@ requirejs.config({
     jquery: "../js/vendor/jquery",
     jqueryMigrate: "../js/vendor/jquery-migrate",
     val: "../js/vendor/validate",
-    tipue: "../js/vendor/tipuesearch.min",
-    tipueset: "../js/vendor/tipuesearch_set"
+    tipueContent: "../js/tipuesearch_content",
+    tipueset: "../js/vendor/tipuesearch_set",
+    tipue: "../js/vendor/tipuesearch.min" 
   },
 
   shim: { 
@@ -23,7 +24,7 @@ requirejs.config({
       deps: ['jquery'],
       exports: 'jquery'
     },
-    tipue: {
+    tipueContent: {
       deps: ['jquery'],
       exports: 'jquery'
     },
@@ -31,7 +32,9 @@ requirejs.config({
       deps: ['jquery'],
       exports: 'jquery'
     }
-  },
-
-  waitSeconds: 20
+    tipue: {
+      deps: ['jquery'],
+      exports: 'jquery'
+    }
+  }
 });
