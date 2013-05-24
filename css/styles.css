@@ -670,6 +670,9 @@ a:hover {
   height: 27px;
   padding-left: 10px; }
 
+.search-highlight {
+  font-weight: 400; }
+
 .form-allowed-tags {
   line-height: 1.5;
   font-size: 15px; }
@@ -1026,6 +1029,11 @@ a:hover {
 
 .searchfield-style {
   width: 260px; }
+
+.tipue_search_content_text {
+  color: #111;
+  padding: 13px 0;
+  line-height: 1; }
 
 .wf-active h1.post-title {
   font-size: 24px;

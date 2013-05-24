@@ -52,7 +52,6 @@
 // Search box styles start
 
 // the div that contains the search box
-
 #searchbox {
   display: none;
 }
@@ -66,6 +65,11 @@
   width: 260px;
 }
 
+.tipue_search_content_text {
+  color: #111;
+  padding: 13px 0;
+  line-height: 1;
+}
 
 // Mobile First post styles start
 
