@@ -52,6 +52,21 @@
       </ul> <!-- #site-navigation-list -->
 
     </nav> <!-- #site-navigation -->
+
+    <!-- <div id="searchbox" class="searchbox-style">
+      <form action="tipuesearch/search.html">
+        <div style="float: left;"><input type="text" name="q" id="tipue_search_input"></div>
+        <div style="float: left; margin-left: 13px;"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div>
+     </form>
+    </div> #searchbox -->
+
+    <div id="searchbox" class="searchbox-style">
+      <form action="">
+        <input type="text" id="tipue_search_input">
+      <input type="button" id="tipue_search_button">
+      </form>
+      <div id="tipue_search_content"></div>
+    </div> <!-- #searchbox -->
     
     <div id="breadcrumbs">
       <a href="/">Home</a> &raquo; <a href="/{{ page.categories }}/">{{ page.cat-name }}</a> &raquo; {{ page.title }}
