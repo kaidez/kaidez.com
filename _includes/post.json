@@ -1,4 +1,1 @@
-{
-  "title":"{{ post.title }}",
-  "url":"{{ post.url }}"
-}
+{"title": "{{ post.title }}", "text": "{{ post.meta-excerpt }}", "tags": "{{ post.tags }}", "loc": "{{ post.pemalink }}"}
