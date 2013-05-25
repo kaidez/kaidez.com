@@ -7,9 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
    <meta name="description" content="{{ page.meta-excerpt }}" />
    <title>{{ page.title }} &laquo; {{ page.category-name }} &laquo; kaidez</title>
-   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
-   <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
-   <link href="/css/tipuesearch.css" rel="stylesheet" media="all">
+   {% include stylesheet_partial.html %}
    <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
 
    <script>
