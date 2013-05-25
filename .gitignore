@@ -69,6 +69,13 @@ grunt/imgSource/
 # --------------------------
 styles.css
 
+# Password file for grunt-sftp-deploy
+# -----------------------------------
+.ftppass
+
+
+robots.txt
+
 
 
 
