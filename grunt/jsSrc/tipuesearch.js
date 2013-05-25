@@ -349,7 +349,13 @@ http://www.tipue.com/search
                          }
                          else
                          {
-                              out += '<div id="tipue_search_warning_head">Nothing found</div>'; 
+                              out += '<div id="tipue_search_warning_head">Nothing found...would you like to try again?
+                                   <div id="not-found-searchbox" class="searchbox-style clearfix">
+                                   <form action="/search.html">
+                                   <input type="text" name="q" id="tipue_search_input" placeholder="Search for JavaScript, HTML5, etc">
+                                  <input type="submit" id="tipue_search_button" value="Go!">
+                                  </form>
+                                  </div></div>'; 
                          }
                     }
                     else
