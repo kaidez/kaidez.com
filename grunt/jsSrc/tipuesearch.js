@@ -204,7 +204,7 @@ http://www.tipue.com/search
                                         {
                                              var patr = new RegExp('(' + d_w[f] + ')', 'i');
                                         }
-                                        s_t = s_t.replace(patr, "<em>$1</em>");
+                                        s_t = s_t.replace(patr, "<strong>$1</strong>");
                                    }
                                                                       
                                    if (tipuesearch_in.pages[i].tags.search(pat) != -1)

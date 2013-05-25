@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         tasks: ['sassbuild']
       },
       scripts :{
-        files: '*.js',
+        files: 'jsSrc/*.js',
         tasks: ['jshint','uglify']
       }
     },
