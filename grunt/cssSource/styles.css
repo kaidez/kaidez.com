@@ -1129,6 +1129,9 @@ a:hover {
 #searchbox {
   display: none; }
 
+#not-found-searchbox {
+  display: block; }
+
 .searchbox-style {
   margin: 0px auto;
   text-align: center;

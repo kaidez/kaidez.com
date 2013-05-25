@@ -56,6 +56,10 @@
   display: none;
 }
 
+#not-found-searchbox {
+  display: block
+}
+
 .searchbox-style {
   @include master-center;
   padding:15px 0;
@@ -70,7 +74,6 @@
   padding: 13px 0;
   line-height: 1.7;
 }
-
 
 // Search box styles end
 
