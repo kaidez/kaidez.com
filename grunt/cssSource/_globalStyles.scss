@@ -18,8 +18,6 @@ html, body {
 }
 
 
-
-
 // Logo link
 .homepage-link {
   display: block;
@@ -276,6 +274,95 @@ a:hover {
 .search-highlight {
   font-weight: bolder;
   font-style: none;
+}
+
+// Search box
+#tipue_search_input{
+  font: 13px/1.5 'open sans', sans-serif;
+  color: #333;
+  padding: 7px;
+  margin: 0;
+  width: 250px;
+  border: 1px solid #d3d3d3;
+  outline: none;
+}
+
+#tipue_search_input:focus {
+     border-color: #c3c3c3;   
+}
+
+#tipue_search_button {
+  width: 60px;
+  height: 33px;
+  margin-top: 1px;
+  border: 1px solid #dcdcdc;
+  background: #f1f1f1 url('../img/search.gif') no-repeat center;
+  outline: none;
+}
+
+#tipue_search_button:hover {
+  border: 1px solid #c3c3c3;
+}
+
+#tipue_search_foot {
+  margin: 47px 0 31px 0;
+}
+
+#tipue_search_foot_boxes {
+  padding: 0;
+  margin: 0;
+  font: 12px/1 'open sans', sans-serif;
+}
+
+#tipue_search_foot_boxes li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#tipue_search_foot_boxes li a {
+  padding: 7px 10px 8px 10px;
+  background-color: #f5f5f5;
+  background: -webkit-linear-gradient(top, #f7f7f7, #f1f1f1);
+  background: -moz-linear-gradient(top, #f7f7f7, #f1f1f1);
+  background: -ms-linear-gradient(top, #f7f7f7, #f1f1f1);
+  background: -o-linear-gradient(top, #f7f7f7, #f1f1f1);
+  background: linear-gradient(top, #f7f7f7, #f1f1f1);
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  color: #333;
+  margin-right: 7px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#tipue_search_foot_boxes li.current {
+  padding: 7px 10px 8px 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  color: #333;
+  margin-right: 7px;
+  text-align: center;
+}
+
+#tipue_search_foot_boxes li a:hover {
+  border: 1px solid #c3c3c3;
+  box-shadow: 1px 1px 2px #e3e3e3;
+}
+
+.tipue_search_content_title {
+     font: 300 19px/1.5 'open sans', sans-serif;
+  margin-top: 31px;
+}
+.tipue_search_content_title a {
+     color: #36c;
+     text-decoration: none;
+}
+
+.tipue_search_content_title a:hover {
+     color: #333;    
 }
 
 // Search box-related styles end
