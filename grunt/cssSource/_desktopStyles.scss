@@ -50,6 +50,25 @@
     font-size: 1em;
   }
 
+// Search box
+#tipue_search_input{
+  font: 13px/1.5 'open sans', sans-serif;
+  color: #333;
+  padding: 7px;
+  margin: 0;
+  width: 250px;
+  border: 1px solid #d3d3d3;
+  border-radius: 2px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+ 
+#tipue_search_input:focus {
+  border-color: #c3c3c3;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);     
+}
+
   // Search box-related styles end
 
   /* Font styles for tablets & desktops. Google

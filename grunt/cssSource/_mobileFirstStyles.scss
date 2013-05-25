@@ -71,6 +71,21 @@
   line-height: 1;
 }
 
+// Search box
+#tipue_search_input{
+  font: 13px/1.5 'open sans', sans-serif;
+  color: #333;
+  padding: 7px;
+  margin: 0;
+  width: 250px;
+  border: 1px solid #d3d3d3;
+  outline: none;
+}
+
+#tipue_search_input:focus {
+     border-color: #c3c3c3;   
+}
+
 // Mobile First post styles start
 
 // Styles for post <h1> tag

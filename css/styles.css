@@ -1035,6 +1035,18 @@ a:hover {
   padding: 13px 0;
   line-height: 1; }
 
+#tipue_search_input {
+  font: 13px/1.5 "open sans", sans-serif;
+  color: #333;
+  padding: 7px;
+  margin: 0;
+  width: 250px;
+  border: 1px solid lightgrey;
+  outline: none; }
+
+#tipue_search_input:focus {
+  border-color: #c3c3c3; }
+
 .wf-active h1.post-title {
   font-size: 24px;
   margin: 0;
@@ -1251,6 +1263,22 @@ a:hover {
   #s {
     font-size: 1em; }
 
+  #tipue_search_input {
+    font: 13px/1.5 "open sans", sans-serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none; }
+
+  #tipue_search_input:focus {
+    border-color: #c3c3c3;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
   /* Font styles for tablets & desktops. Google
    * font doesn't load on mobile.
    */
@@ -1303,6 +1331,22 @@ a:hover {
 
   #s {
     font-size: 1em; }
+
+  #tipue_search_input {
+    font: 13px/1.5 "open sans", sans-serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none; }
+
+  #tipue_search_input:focus {
+    border-color: #c3c3c3;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
 
   /* Font styles for tablets & desktops. Google
    * font doesn't load on mobile.
