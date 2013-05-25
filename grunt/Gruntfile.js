@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
       scripts :{
         files: '*.js',
-        tasks: ['jshint']
+        tasks: ['jshint','uglify']
       }
     },
 
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          '../js/main.min.js': ['../js/vendor/lunr.min.js','../js/vendor/lunr.min.js', '../js/vendor/mustache.js', '../js/vendor/date.format.js', '../js/vendor/URI.min.js', '../js/vendor/jquery.lunr.search.js']
+          '../js/vendor/tipuesearch.min.js': ['jsSrc/tipuesearch.js']
         }
       }
     }
