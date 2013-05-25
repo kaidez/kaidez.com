@@ -365,6 +365,44 @@ a:hover {
      color: #333;    
 }
 
+#tipue_search_content {
+     clear: left;
+     max-width: 650px;
+  padding: 25px 0 13px 0;
+  margin: 0;
+}
+
+#tipue_search_loading {
+     padding-top: 60px;     
+     background: #fff url('../img/loader.gif') no-repeat left;
+}
+
+#tipue_search_warning_head {
+     font: 14px/1.5 'open sans', sans-serif;
+  color: #333;
+}
+
+#tipue_search_warning {
+     font: 300 14px/1.5 sans-serif;
+  color: #111;
+  margin: 13px 0;
+}
+
+#tipue_search_warning a
+{
+     color: #36c;
+     text-decoration: none;
+}
+
+#tipue_search_warning a:hover {
+     color: #111;     
+}
+
+#tipue_search_results_count {
+     font: 300 14px/1.5 sans-serif;
+  color: #111;
+}
+
 // Search box-related styles end
 
 
