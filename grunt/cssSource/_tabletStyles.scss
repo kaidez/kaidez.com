@@ -69,6 +69,23 @@
   box-shadow: 0 0 3px rgba(0,0,0,.2);     
 }
 
+#tipue_search_button {
+  width: 60px;
+  height: 33px;
+  margin-top: 1px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  background: #f1f1f1 url('img/search.gif') no-repeat center;
+  outline: none;
+}
+
+#tipue_search_button:hover {
+  border: 1px solid #c3c3c3;
+  -moz-box-shadow: 1px 1px 2px #e3e3e3;
+  -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+  box-shadow: 1px 1px 2px #e3e3e3;
+}
+
   // Search box-related styles end
 
   /* Font styles for tablets & desktops. Google

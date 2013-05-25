@@ -7,47 +7,6 @@ http://www.tipue.com/search
 */
 
 
-em
-{
-     font: inherit; 
-     font-weight: 400;   
-}
-#tipue_search_input
-{
-     font: 13px/1.5 'open sans', sans-serif;
-	color: #333;
-	padding: 7px;
-	margin: 0;
-	width: 160px;
-	border: 1px solid #d3d3d3;
-	border-radius: 2px;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	outline: none;
-}
-#tipue_search_input:focus
-{
-     border-color: #c3c3c3;
-     box-shadow: 0 0 3px rgba(0,0,0,.2);     
-}
-#tipue_search_button
-{
-     width: 60px;
-     height: 33px;
-     margin-top: 1px;
-     border: 1px solid #dcdcdc;
-     border-radius: 2px;
-     background: #f1f1f1 url('img/search.gif') no-repeat center;
-	outline: none;
-}
-#tipue_search_button:hover
-{
-	border: 1px solid #c3c3c3;
-	-moz-box-shadow: 1px 1px 2px #e3e3e3;
-	-webkit-box-shadow: 1px 1px 2px #e3e3e3;
-	box-shadow: 1px 1px 2px #e3e3e3;
-}
-
 #tipue_search_content
 {
      clear: left;
@@ -68,7 +27,7 @@ em
 }
 #tipue_search_warning
 {
-     font: 300 14px/1.5 lato, sans-serif;
+     font: 300 14px/1.5 sans-serif;
 	color: #111;
 	margin: 13px 0;
 }
@@ -84,7 +43,7 @@ em
 
 #tipue_search_results_count
 {
-     font: 300 14px/1.5 lato, sans-serif;
+     font: 300 14px/1.5 sans-serif;
 	color: #111;
 }
 
@@ -116,69 +75,11 @@ em
      height: auto;
      outline: none;
      cursor: pointer;
-}       
-#tipue_lightbox
-{
-     display: none;
-     position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255, 255, 255, .9);
-}
-#tipue_lightbox_content
-{
-     margin: 37px auto;
-     background-color: #fff;
-     padding: 30px;
-     border: 1px solid #ccc;
-     width: 250px;
-     text-align: center;
-     box-shadow: 0 1px 2px #eee;
-}
-#tipue_lightbox img
-{
-     max-width: 200px;
-     height: auto;
-}
-#tipue_lightbox_content_title
-{
-     font: 300 14px/1.7 lato, sans-serif;
-	color: #111;
-	padding: 17px 25px 0 25px;
-	width: 200px;  
-}
-#tipue_lightbox_content_link
-{
-     float: left;
-     width: 30px;
-     height: 30px;
-     margin-top: 17px;
-     background: #fff url('img/link.png') no-repeat center;
-}
-#tipue_lightbox_content_expand
-{
-     float: left;
-     width: 30px;
-     height: 30px;
-     margin: 17px 0 0 3px;
-     background: #fff url('img/expand.png') no-repeat center;
-}
-#tipue_lightbox_content_link:hover, #tipue_lightbox_content_expand:hover
-{
-     background-color: #f3f3f3;
-}
+}      
 
-.tipue_search_content_text
-{
-     font: 300 14px/1.7 lato, sans-serif;
-	color: #111;
-	padding: 13px 0;
-}
 .tipue_search_content_loc
 {
-     font: 300 14px/1.5 lato, sans-serif;
+     font: 300 14px/1.5 sans-serif;
 	color: #111;
 }
 .tipue_search_content_loc a
