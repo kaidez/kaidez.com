@@ -692,7 +692,8 @@ a:hover {
   margin-top: 1px;
   border: 1px solid gainsboro;
   background: #f1f1f1 url("../img/search.gif") no-repeat center;
-  outline: none; }
+  outline: none;
+  text-indent: -9999px; }
 
 #tipue_search_button:hover {
   border: 1px solid #c3c3c3; }
@@ -750,6 +751,13 @@ a:hover {
 .tipue_search_content_title a:hover {
   color: #333; }
 
+.wf-loading .search-result-font,
+.wf-inactive .search-result-font {
+  font-family: serif; }
+
+.wf-active .search-result-font {
+  font-family: "Roboto Condensed"; }
+
 #tipue_search_content {
   clear: left;
   max-width: 650px;
@@ -762,7 +770,8 @@ a:hover {
 
 #tipue_search_warning_head {
   font: 14px/1.5 "open sans", sans-serif;
-  color: #333; }
+  color: #333;
+  text-align: center; }
 
 #tipue_search_warning {
   font: 300 14px/1.5 sans-serif;
