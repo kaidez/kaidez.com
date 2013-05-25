@@ -110,8 +110,23 @@ module.exports = function(grunt) {
           '../js/vendor/tipuesearch.min.js': ['jsSrc/tipuesearch.js']
         }
       }
+    },
+
+    // don't keep passwords in source control
+   'sftp-deploy': {
+    build: {
+      auth: {
+        host: 's46798.gridserver.com',
+        port: 22,
+        authKey: 'key1'
+      },
+      src: '../_site',
+      dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
+      }
     }
   });
+
+
   
   // Use 'loadNpmTasks' to enable plugins
   grunt.loadNpmTasks('grunt-css');
@@ -120,12 +135,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-sftp-deploy');
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('cssp', ['sassbuild', 'push']);
   grunt.registerTask('md', ['modernizr']);
+  grunt.registerTask('devpush', ['sftp-deploy']);
   
-
 };
