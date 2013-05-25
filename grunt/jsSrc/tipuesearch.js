@@ -249,7 +249,7 @@ http://www.tipue.com/search
                                    var fo = found[i].split('^');
                                    if (l_o >= start && l_o < set.show + start)
                                    {
-                                        out += '<div class="tipue_search_content_title"><a href="' + fo[3] + '"' + tipue_search_w + '>' +  fo[1] + '</a></div>';
+                                        out += '<div class="tipue_search_content_title search-result-font"><a href="' + fo[3] + '"' + tipue_search_w + '>' +  fo[1] + '</a></div>';
                                         
                                         if (set.mode == 'static-images')
                                         {
