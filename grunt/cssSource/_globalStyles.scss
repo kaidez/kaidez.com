@@ -265,6 +265,10 @@ a:hover {
   position: relative;
 }
 
+.js #no-js-searchbox {
+  @include hide-element;
+}
+
 #s {
   font-style: italic;
   height: 27px;
