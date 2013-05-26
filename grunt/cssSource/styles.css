@@ -665,6 +665,10 @@ a:hover {
   display: block;
   position: relative; }
 
+.js #no-js-searchbox {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
 #s {
   font-style: italic;
   height: 27px;
