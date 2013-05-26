@@ -52,11 +52,16 @@
     </nav> <!-- #site-navigation -->
 
         <div id="searchbox" class="searchbox-style clearfix">
-      <form action="/search.html">
-        <input type="text" name="q" id="tipue_search_input" placeholder="Search for JavaScript, HTML5, etc">
-        <input type="submit" id="tipue_search_button" value="Search">
-      </form>
+
     </div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <form action="http://google.com/search" method="get" id="no-js-searchbox">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:kaidez.com"/>
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form> <!-- #js-searchbox -->
     
     <div id="breadcrumbs">
       <a href="/">Home</a> &raquo; <a href="/coding-best-practices/">Coding Best Practices</a> &raquo; A Simple Explanation of HTML5
