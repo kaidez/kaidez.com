@@ -1113,10 +1113,6 @@ a:hover {
   width: 136px;
   height: 39px; }
 
-.site-description {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
 .site-title {
   background: url("../img/siteLogo.png") no-repeat;
   height: 49px;
@@ -1125,6 +1121,10 @@ a:hover {
   margin: 10px 0 10px 10px;
   text-indent: -999px;
   display: block; }
+
+.site-description {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
 
 /*
  * Mobile-first code so the menu and search box
@@ -1157,6 +1157,23 @@ a:hover {
   color: #111;
   padding: 13px 0;
   line-height: 1.7; }
+
+/*
+  =========================================
+  <h1> tags for all pages EXCEPT post pages
+  =========================================  
+ */
+.wf-loading h1, .wf-inactive h1 {
+  font-family: serif;
+  font-size: 1.3rem; }
+
+/*
+ * apply the Google font to all <header> tags,
+ * except the Mobile First post tag
+ */
+.wf-active h1 {
+  font-family: "Roboto Condensed";
+  font-size: 1.3rem; }
 
 .wf-active h1.post-title {
   font-size: 24px;

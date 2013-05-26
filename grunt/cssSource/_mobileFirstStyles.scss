@@ -5,17 +5,14 @@
  * will load.
  */
 
-// Logo link
+
+
+
+// Logo link...provides a large enough space for a click area
 .homepage-link {
   width: 136px;
   height: 39px;
 }
-
-//hide the h2 tag in the <header>
-.site-description {
-  @include hide-element;
-}
-
 
 // logo-based <h1> tag
 .site-title {
@@ -26,6 +23,11 @@
   margin:10px 0 10px 10px;
   text-indent: -999px;
   display: block;
+}
+
+//hide the h2 tag in the <header>
+.site-description {
+  @include hide-element;
 }
 
 // Nav styles start
@@ -76,6 +78,29 @@
 }
 
 // Search box styles end
+
+
+/*
+  =========================================
+  <h1> tags for all pages EXCEPT post pages
+  =========================================  
+ */ 
+.wf-loading h1, .wf-inactive h1{
+  font-family: $srf;
+  font-size: 1.3rem;
+}
+
+/*
+ * apply the Google font to all <header> tags,
+ * except the Mobile First post tag
+ */
+.wf-active h1 {
+  @include fonts($robo);
+  font-size: 1.3rem;
+}
+
+
+
 
 // Mobile First post styles start
 
