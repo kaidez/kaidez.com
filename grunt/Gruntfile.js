@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         tasks: ['sassbuild']
       },
       scripts :{
-        files: 'jsSrc/*.js',
+        files: ['jsSrc/*.js', '../js/vendor/*/js'],
         tasks: ['jshint','uglify']
       }
     },
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 
       // When parseFiles = true, this task will crawl all *.js, *.css, *.scss files.
       // You can override this by defining a "files" array below.
-      "files" : ["../css/styles.min.css", "../wp-content/themes/kaidez-2012/scripts/scripts.js"],
+      "files" : ["../css/styles.min.css"],
 
       // When parseFiles = true, matchCommunityTests = true will attempt to
       // match user-contributed tests.
