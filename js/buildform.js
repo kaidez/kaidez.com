@@ -79,7 +79,11 @@ define(function() {
    * to 'false', CSS is enabled in the browser so it's safe to run loadMenu()
    * function and display our fancy search box. But 'cssdisabled' is set to
    * 'true', CSS is NOT enabled so don't run the loadMenu() function but return
-   * a value of 'false' as it's a best practice in this case. The Google
+   * a value of 'false' as it's a best practice in this case. We've set it up * so that if either inline CSS is disable or stylesheets or disabled, our
+   * Google searchbox will show up.  All this means that a searchbox will
+   * appear on our page regardless of whether or not either CSS or JS is 
+   * available in the browser.
+
    *  
    *  Attribution for this trick goes to Kethinov who discussed it over at:
    *  http://bit.ly/11iKpZh
