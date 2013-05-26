@@ -42,4 +42,5 @@ define("menu", ["jquery"], function($) {
 
   showMenus(menuButton, $navMenu);
   showMenus(searchButton, $searchBox);
+  
 });

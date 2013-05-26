@@ -1,11 +1,10 @@
 requirejs.config({
   baseUrl: "../js",
 
-  deps: ["menu","form","search"],
+  deps: ["buildform","menu","form","search"],
 
   paths: {
     jquery: "../js/vendor/jquery",
-    jqueryMigrate: "../js/vendor/jquery-migrate",
     val: "../js/vendor/validate",
     tipuesetContent: "../js/vendor/tipuesearch_content",
     tipueset: "../js/vendor/tipuesearch_set",
@@ -14,10 +13,6 @@ requirejs.config({
 
   shim: { 
     jquery: {
-      exports: 'jquery'
-    },
-    jqueryMigrate: {
-      deps: ['jquery'],
       exports: 'jquery'
     },
     val: {
@@ -36,5 +31,6 @@ requirejs.config({
       deps: ['jquery'],
       exports: 'jquery'
     }
-  } 
+  }
+
 });
