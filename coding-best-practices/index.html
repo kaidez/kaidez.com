@@ -8,9 +8,9 @@ meta-excerpt: Code Tips posts on kaidez.com discuss tips for certain web develop
   	<p>
   		"Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
   	</p>
-  </div><!-- #about-description -->
+  </div> <!-- #about-description -->
 
-  {% for post in site.categories.coding-best-practices%}
+  {% for post in site.categories.coding-best-practices %}
     <article class="homepage-posts">
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }} <a href="{{ post.url }}">Read post &raquo;</a> 
