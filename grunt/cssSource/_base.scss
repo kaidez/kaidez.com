@@ -1,7 +1,7 @@
   /*
- * =========
- * Variables
- * =========
+   ===============
+   Variables start
+   ===============
  */
 
   // Colors
@@ -11,6 +11,7 @@
   $motto-logo-button-color: $nav-color;
   $footer-color: #9C0013;
   $h-num-color: $nav-color;
+  $site-grey: #999;
 
   // Fonts
   $helv: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -53,11 +54,22 @@
 
   }
 }*/
- 
+
+
 /*
- * =======
- * Mix-ins
- * =======
+   =============
+   Variables end
+   =============
+ */
+
+
+
+
+
+/*
+   =======
+   Mix-ins
+   =======
  */
 
   /*
@@ -118,4 +130,13 @@
     background-size: $bg-size;
     height: $height;
     width: $width;
+  }
+
+/*
+   ===================
+   Post-related mixins
+   ===================
+ */
+  @mixin bottomBorder ($color) {
+    border-bottom: 1px solid $color;
   }

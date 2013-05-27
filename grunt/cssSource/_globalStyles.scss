@@ -37,7 +37,7 @@ html, body {
 
 // homepage article elements
 .homepage-posts {
-  border-bottom: 1px solid #999;
+  @include bottomBorder($site-grey);
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
