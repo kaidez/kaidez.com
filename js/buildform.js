@@ -44,7 +44,7 @@ define(function() {
     // Load arranged elements into document fragment
     frag.appendChild(form);
 
-    // Load document fragment into #searchbox
+    // Load document fragment into #searchbox, which is already on the page
     loadBox.appendChild(frag);
   }
 
