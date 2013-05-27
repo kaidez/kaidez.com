@@ -2,8 +2,11 @@
 title: 'Yoast&#8217;s Awesome WordPress SEO Speech'
 author: Kai Gittens
 layout: post
+meta-excerpt: A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing
 permalink: /yoast-awesome-wordpress-seo-speech/
-category: WordPress
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [wordpress, seo]
 ---
 # 
 

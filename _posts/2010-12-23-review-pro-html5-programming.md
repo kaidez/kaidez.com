@@ -3,7 +3,10 @@ title: 'REVIEW: Pro HTML5 Programming'
 author: Kai Gittens
 layout: post
 permalink: /review-pro-html5-programming/
-category: Reviews
+meta-excerpt: A review of the Pro HTML5 Programming by Apress
+category: reviews
+cat-name: "Reviews"
+tags: [javascript, review]
 ---
 # 
 

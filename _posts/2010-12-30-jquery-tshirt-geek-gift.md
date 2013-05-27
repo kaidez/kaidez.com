@@ -3,7 +3,10 @@ title: 'jQuery T-shirt &#8211; Geek Gift To Myself'
 author: Kai Gittens
 layout: post
 permalink: /jquery-tshirt-geek-gift/
-category: Personal
+meta-excerpt: My cool jQuery t-shirt
+category: personal
+cat-name: "Personal"
+tags: [javascript, conference, kai]
 ---
 
 [![][2]][2]
