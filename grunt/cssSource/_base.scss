@@ -145,24 +145,52 @@
    ============================================================================
    Homepage pagination mixins
   
-  These mixins are styles that are for the most part, copied from the pagination styles that are part of the Tipue search plugin. For clarity and site-speed optimaztion, it was easier to do this rather than apply the Tipue classnames.
+   These mixins are styles that are for the most part, copied from the pagination styles that are part of the Tipue search plugin. For clarity and site-speed optimaztion, it was easier to do this rather than apply the Tipue class names.
    ============================================================================
  */
 
- // Individual list item
-  @mixin floatListItem {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
+// Containing pagination box
+@mixin pagBox {
+  margin: 47px 0 31px 0;
 }
 
-@mixin pagButtonItem ($radius) {
-  padding: 7px 10px 8px 10px;
-  background: #fff;
+// Individual list item in search results
+@mixin pagUL {
+  padding: 0;
+  margin: 0;
+  font: 12px/1 'open sans', sans-serif;
+}
+
+// Individual list item in search results
+@mixin floatListItem {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+// Individual button in search results
+@mixin pagButtonItem {
+  background: #9C0033;
   border: 1px solid #dcdcdc;
-  border-radius: $radius;
-  color: #333;
+  color: #fff;
   margin-right: 7px;
+  padding: 7px 10px 8px;
+}
+
+@mixin pagButtonInner {
+  padding: 7px 10px 8px;
+  background-color: $header-color;
+  // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: -ms-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: -o-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: linear-gradient(top,#F7F7F7,#F1F1F1);
+  // border: 1px solid #DCDCDC;
+  // border-radius: 2px;
+  color: #fff;
+  margin-right: 7px;
+  text-decoration: none;
   text-align: center;
 }
+

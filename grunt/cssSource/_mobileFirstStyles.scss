@@ -321,10 +321,22 @@
  =================================
 */
 
+// Unordered lists
+.pages {
+  @include pagUL
+}
+
+// Individual list item
 .page {
   @include floatListItem;
-  @include pagButtonItem(0px);
+  @include pagButtonItem;
 }
+
+// Inner part of the lpagination button
+a.pagination-link {
+  @include pagButtonInner
+}
+
 
 /*
  ===============================

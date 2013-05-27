@@ -97,21 +97,22 @@
     @include fonts($helv);
   }
 
-}
 
-/*
- =================================
- Home page pagination styles start
- =================================
-*/
 
-.page {
-  @include floatListItem;
-  @include pagButtonItem(3px);
-}
+  /*
+   =================================
+   Home page pagination styles start
+   =================================
+  */
 
-/*
- ===============================
- Home page pagination styles end
- ===============================
- */
+  .page {
+    @include floatListItem;
+    @include pagButtonItem;
+  }
+
+  /*
+   ===============================
+   Home page pagination styles end
+   ===============================
+   */
+ }
