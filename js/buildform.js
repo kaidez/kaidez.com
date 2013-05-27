@@ -2,12 +2,9 @@
  * 
  */
 
-// Start RequireJS code
-
 define(function() {
   
-  
-  var loadMenu, cssdisabled, currstyle; // 3 variables global to this RequireJS module only. 
+  var loadMenu, cssdisabled, testcss, currstyle; // 4 variables global to this RequireJS module only. 
 
   /*  
    *  Dynamically create a form that looks like this:
@@ -20,35 +17,35 @@ define(function() {
    */
   loadMenu = function() {
     var loadBox = document.getElementById("searchbox"),
-    frag = document.createDocumentFragment(),
-    form = document.createElement("form"),
-    searchTextBox = document.createElement("input"),
-    searchButton = document.createElement("input");
+      frag = document.createDocumentFragment(),
+      form = document.createElement("form"),
+      searchTextBox = document.createElement("input"),
+      searchButton = document.createElement("input");
     
-  // set attributes for form
-  form.action = "/search.html";
-  form.id = "js-searchbox";
+    // set attributes for form
+    form.action = "/search.html";
+    form.id = "js-searchbox";
 
-  // set attributes for Search text box
-  searchTextBox.type = "text";
-  searchTextBox.name = "q";
-  searchTextBox.id = "tipue_search_input";
-  searchTextBox.placeholder = "Search for JavaScript, HTML5, etc";
+    // set attributes for Search text box
+    searchTextBox.type = "text";
+    searchTextBox.name = "q";
+    searchTextBox.id = "tipue_search_input";
+    searchTextBox.placeholder = "Search for JavaScript, HTML5, etc";
 
-  // set attributes for Submit button
-  searchButton.type = "submit";
-  searchButton.id = "tipue_search_button";
-  searchButton.value = "Go";
+    // set attributes for Submit button
+    searchButton.type = "submit";
+    searchButton.id = "tipue_search_button";
+    searchButton.value = "Go";
 
-  // Arrange elements
-  form.appendChild(searchTextBox);
-  form.appendChild(searchButton);
+    // Arrange elements
+    form.appendChild(searchTextBox);
+    form.appendChild(searchButton);
 
-  // Load arranged elements into document fragment
-  frag.appendChild(form);
+    // Load arranged elements into document fragment
+    frag.appendChild(form);
 
-  // Load document fragment into #searchbox
-  loadBox.appendChild(frag);
+    // Load document fragment into #searchbox
+    loadBox.appendChild(frag);
   }
 
   /*  
@@ -89,15 +86,15 @@ define(function() {
    *  http://bit.ly/11iKpZh
    */
 
-  cssdisabled = false, // must be proven otherwise
-    testcss = document.createElement('div');
+  cssdisabled = false; // must be proven otherwise
+  testcss = document.createElement('div');
 
   testcss.style.position = 'absolute';
 
   document.getElementsByTagName('body')[0].appendChild(testcss);
 
   if (testcss.currentStyle) {
-    var currstyle = testcss.currentStyle['position'];
+    currstyle = testcss.currentStyle['position'];
   }
 
   else if (window.getComputedStyle) {
