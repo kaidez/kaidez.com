@@ -18,7 +18,7 @@ title: Web development tutorials for beginners, product reviews, rants and more 
         {% if paginator.page == 1 %}
           <span class="current-page">1</span>
         {% else %}
-          <a href="/">1</a>
+          <a href="/" class="pagination-link">1</a>
         {% endif %}
       </li>
 
@@ -27,7 +27,7 @@ title: Web development tutorials for beginners, product reviews, rants and more 
           {% if count == paginator.page %}
             <span class="current-page">{{ count }}</span>
           {% else %}
-            <a href="/page{{ count }}">{{ count }}</a>
+            <a href="/page{{ count }}" class="pagination-link">{{ count }}</a>
           {% endif %}
         </li>
       {% endfor %}
