@@ -9,15 +9,6 @@ html, body {
   height: 100%;
 }
 
-
-.containing-element {
-  position: relative;
-  height: auto;
-  min-height: 100%;
-  width: auto
-}
-
-
 // Logo link
 .homepage-link {
   display: block;
@@ -323,9 +314,13 @@ a:hover {
 }
 
 #tipue_search_foot_boxes li.current {
-  @include pagButtonItem;
+  @include pagButtonCurrent;
 }
 
+
+.current-page {
+  @include pagButtonCurrent;
+}
 #tipue_search_foot_boxes li a:hover {
   border: 1px solid #c3c3c3;
   box-shadow: 1px 1px 2px #e3e3e3;

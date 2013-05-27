@@ -517,12 +517,6 @@ body {
 html, body {
   height: 100%; }
 
-.containing-element {
-  position: relative;
-  height: auto;
-  min-height: 100%;
-  width: auto; }
-
 .homepage-link {
   display: block; }
 
@@ -735,18 +729,27 @@ a:hover {
 
 #tipue_search_foot_boxes li a {
   padding: 7px 10px 8px;
-  background-color: #6ab0d4;
+  background-color: #2455C3;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
   text-align: center; }
 
 #tipue_search_foot_boxes li.current {
-  background: #9C0033;
-  border: 1px solid gainsboro;
+  padding: 7px 10px 8px;
+  background-color: #6ab0d4;
   color: #fff;
   margin-right: 7px;
-  padding: 7px 10px 8px; }
+  text-decoration: none;
+  text-align: center; }
+
+.current-page {
+  padding: 7px 10px 8px;
+  background-color: #6ab0d4;
+  color: #fff;
+  margin-right: 7px;
+  text-decoration: none;
+  text-align: center; }
 
 #tipue_search_foot_boxes li a:hover {
   border: 1px solid #c3c3c3;
@@ -1354,15 +1357,12 @@ a:hover {
   margin: 0;
   padding: 0;
   display: inline;
-  background: #9C0033;
-  border: 1px solid gainsboro;
   color: #fff;
-  margin-right: 7px;
-  padding: 7px 10px 8px; }
+  margin-right: 7px; }
 
 a.pagination-link {
   padding: 7px 10px 8px;
-  background-color: #6ab0d4;
+  background-color: #2455C3;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -1468,11 +1468,8 @@ a.pagination-link {
     margin: 0;
     padding: 0;
     display: inline;
-    background: #9C0033;
-    border: 1px solid gainsboro;
     color: #fff;
-    margin-right: 7px;
-    padding: 7px 10px 8px; }
+    margin-right: 7px; }
 
   /*
    ===============================
@@ -1574,11 +1571,8 @@ a.pagination-link {
     margin: 0;
     padding: 0;
     display: inline;
-    background: #9C0033;
-    border: 1px solid gainsboro;
     color: #fff;
-    margin-right: 7px;
-    padding: 7px 10px 8px; }
+    margin-right: 7px; }
 
   /*
    ===============================

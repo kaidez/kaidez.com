@@ -171,14 +171,30 @@
 
 // Individual button in search results
 @mixin pagButtonItem {
-  background: #9C0033;
-  border: 1px solid #dcdcdc;
+  // background: #9C0033;
+  // border: 1px solid #dcdcdc;
   color: #fff;
   margin-right: 7px;
-  padding: 7px 10px 8px;
+  // padding: 7px 10px 8px;
 }
 
 @mixin pagButtonInner {
+  padding: 7px 10px 8px;
+  background-color: #2455C3;
+  // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: -ms-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: -o-linear-gradient(top,#F7F7F7,#F1F1F1);
+  // background: linear-gradient(top,#F7F7F7,#F1F1F1);
+  // border: 1px solid #DCDCDC;
+  // border-radius: 2px;
+  color: #fff;
+  margin-right: 7px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@mixin pagButtonCurrent {
   padding: 7px 10px 8px;
   background-color: $header-color;
   // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
@@ -193,4 +209,3 @@
   text-decoration: none;
   text-align: center;
 }
-
