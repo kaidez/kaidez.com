@@ -88,7 +88,8 @@ module.exports = function(grunt) {
       // Files added here will be excluded when looking for Modernizr refs.
       "excludeFiles" : "Gruntfile.js"
     },
-
+    
+    // 'jshint' task
     jshint: {
       options: {
         curly: true,
@@ -101,6 +102,8 @@ module.exports = function(grunt) {
       },
       all: ['Gruntfile.js', 'package.json']
     },
+
+    // 'uglify' task
     uglify: {
       options: {
         mangle: false
@@ -112,7 +115,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // don't keep passwords in source control
+    // 'sftp-deploy'...don't keep passwords in source control
    'sftp-deploy': {
     build: {
       auth: {
