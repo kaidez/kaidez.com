@@ -576,10 +576,7 @@ html, body {
   /* Large screen, retina, stuff to override above media query */ }
 #site-navigation {
   width: auto;
-  border-top: 1px solid black;
-  -webkit-box-shadow: 0 8px 18px -8px black;
-  -moz-box-shadow: 0 8px 18px -8px black;
-  box-shadow: 0 8px 18px -8px black; }
+  border-top: 1px solid black; }
 
 .wf-loading .site-navigation-list-link {
   font-family: serif;
