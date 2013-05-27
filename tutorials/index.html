@@ -1,16 +1,18 @@
 ---
 layout: categories
 title: Tutorials
+meta-excerpt: Tutorials on kaidez.com are detailed posts that walk the reader through a particular web development task.
 ---
 
-<main id="home">
+  <div id="tutorials-description" class="category-description-page">
+  	<p>
+  		Tutorials on kaidez.com are detailed posts that walk the reader through a particular web development task.
+  	</p>
+  </div> <!-- #tutorials-description -->
 
-  <h2>{{ page.title }}</h2>
-  {% for post in site.categories.tutorials %}
+  {% for post in site.categories.tutorials%}
     <article class="homepage-posts">
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }} <a href="{{ post.url }}">Read post &raquo;</a> 
     </article> <!-- .homepage-posts -->
   {% endfor %}
-
-</main> <!-- #home -->

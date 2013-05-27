@@ -1,16 +1,18 @@
 ---
 layout: categories
 title: Reviews
+meta-excerpt: Reviews posts on kaidez.com review web development based books, events and websites.
 ---
 
-<main id="home">
+  <div id="reviews-description" class="category-description-page">
+  	<p>
+  		Reviews posts on kaidez.com review web development based books, events and websites. Almost all the reviews are positive as the site is interested in suggestively highlighting good work. 
+  	</p>
+  </div> <!-- #reviews-description -->
 
-  <h2>{{ page.title }}</h2>
-  {% for post in site.categories.reviews %}
+  {% for post in site.categories.reviews%}
     <article class="homepage-posts">
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }} <a href="{{ post.url }}">Read post &raquo;</a> 
     </article> <!-- .homepage-posts -->
   {% endfor %}
-
-</main> <!-- #home -->
