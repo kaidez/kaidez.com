@@ -5,7 +5,7 @@ layout: post
 meta-excerpt: Great HTML5 learning resources
 permalink: /html5-resources-nov-17-2010/
 category: coding-best-practices
-cat-name: "Coding Best Practices"
+cat-name: "Code Tips"
 tags: [html5, html5 video]
 ---
 # 

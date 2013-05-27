@@ -4,7 +4,7 @@ author: Kai Gittens
 permalink: /reasons-design-websites-internet-explorer-6/
 layout: post
 category: coding-best-practices
-cat-name: "Coding Best Practices"
+cat-name: "Code Tips"
 ---
 # 
 

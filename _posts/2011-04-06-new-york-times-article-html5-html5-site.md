@@ -5,7 +5,7 @@ layout: post
 meta-excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
 permalink: /new-york-times-article-html5-html5-site/
 category: coding-best-practices
-cat-name: "Coding Best Practices"
+cat-name: "Code Tips"
 tags: [html5, kai]
 ---
 

@@ -5,7 +5,7 @@ layout: post
 meta-excerpt: CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.
 permalink: /media-queries-important/
 category: coding-best-practices
-cat-name: "Coding Best Practices"
+cat-name: "Code Tips"
 tags: [css3, media queries, best practice]
 ---
 

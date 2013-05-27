@@ -4,7 +4,7 @@ author: Kai Gittens
 permalink: /html5-boilerplate-video/
 layout: post
 category: coding-best-practices
-cat-name: "Coding Best Practices"
+cat-name: "Code Tips"
 ---
 # 
 

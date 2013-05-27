@@ -2,8 +2,11 @@
 title: 'Great Video Lecture on WordPress Usability &#038; Analytics'
 author: Kai Gittens
 layout: post
+meta-excerpt: Stefanos Kofopoulos from pestaola.gr shares some excellent usability & analytics tips that he applied to his Wordpress-based blog.
 permalink: /video-lecture-wordpress-usability-analytics/
-category: WordPress
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [wordpress]
 ---
 # 
 

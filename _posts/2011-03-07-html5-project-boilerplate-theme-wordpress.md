@@ -3,7 +3,10 @@ title: 'HTML5 Project: Boilerplate WordPress Theme'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-boilerplate-theme-wordpress/
-category: The HTML5 Project
+meta-excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [html5, wordpress]
 ---
 # 
 
