@@ -13,20 +13,6 @@ title: Web development tutorials for beginners, product reviews, rants and more 
 
   <!-- Pagination links -->
   <div id="post-pagination" class="pagination">
-    {% if paginator.previous_page %}
-      <p class="previous">
-        {% if paginator.previous_page == 1 %}
-          <a href="/">Previous</a>
-        {% else %}
-          <a href="{{ paginator.previous_page_path }}">Previous</a>
-        {% endif %}
-      </p>
-    {% else %}
-    <p class="previous disabled">
-      <span>Previous</span>
-    </p>
-    {% endif %}
-  
     <ul class="pages">
       <li class="page">
         {% if paginator.page == 1 %}
@@ -49,7 +35,7 @@ title: Web development tutorials for beginners, product reviews, rants and more 
 
     {% if paginator.next_page %}
       <p class="next">
-        <a href="{{ paginator.next_page_path }}">Next</a>
+        <a href="{{ paginator.next_page_path }}">Next &raquo;</a>
       </p>
     {% else %}
       <p class="next disabled">
