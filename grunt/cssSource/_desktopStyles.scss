@@ -98,3 +98,20 @@
   }
 
 }
+
+/*
+ =================================
+ Home page pagination styles start
+ =================================
+*/
+
+.page {
+  @include floatListItem;
+  @include pagButtonItem(3px);
+}
+
+/*
+ ===============================
+ Home page pagination styles end
+ ===============================
+ */

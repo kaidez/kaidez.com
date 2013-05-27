@@ -288,7 +288,7 @@ a:hover {
 }
 
 #tipue_search_input:focus {
-     border-color: #c3c3c3;   
+  border-color: #c3c3c3;   
 }
 
 #tipue_search_button {
@@ -316,10 +316,7 @@ a:hover {
 }
 
 #tipue_search_foot_boxes li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
+  @include floatListItem;
 }
 
 #tipue_search_foot_boxes li a {
@@ -339,13 +336,7 @@ a:hover {
 }
 
 #tipue_search_foot_boxes li.current {
-  padding: 7px 10px 8px 10px;
-  background: #fff;
-  border: 1px solid #dcdcdc;
-  border-radius: 2px;
-  color: #333;
-  margin-right: 7px;
-  text-align: center;
+  @include pagButtonItem(0px);
 }
 
 #tipue_search_foot_boxes li a:hover {
@@ -382,11 +373,6 @@ a:hover {
   max-width: 650px;
   padding: 25px 0 13px 0;
   margin: 0;
-}
-
-#tipue_search_loading {
-  padding-top: 60px;     
-  background: #fff url('../img/loader.gif') no-repeat left;
 }
 
 #tipue_search_warning_head {
@@ -459,5 +445,3 @@ a:hover {
 }
 
 // Footer styles end
-
-

@@ -62,9 +62,9 @@
    =============
  */
 
-
-
-
+/*
+=========================================================================
+ */
 
 /*
    =======
@@ -140,3 +140,29 @@
   @mixin bottomBorder ($color) {
     border-bottom: 1px solid $color;
   }
+
+/*
+   ============================================================================
+   Homepage pagination mixins
+  
+  These mixins are styles that are for the most part, copied from the pagination styles that are part of the Tipue search plugin. For clarity and site-speed optimaztion, it was easier to do this rather than apply the Tipue classnames.
+   ============================================================================
+ */
+
+ // Individual list item
+  @mixin floatListItem {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+@mixin pagButtonItem ($radius) {
+  padding: 7px 10px 8px 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: $radius;
+  color: #333;
+  margin-right: 7px;
+  text-align: center;
+}

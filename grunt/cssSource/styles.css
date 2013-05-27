@@ -22,6 +22,9 @@
    =============
  */
 /*
+=========================================================================
+ */
+/*
    =======
    Mix-ins
    =======
@@ -47,6 +50,13 @@
    ===================
    Post-related mixins
    ===================
+ */
+/*
+   ============================================================================
+   Homepage pagination mixins
+  
+  These mixins are styles that are for the most part, copied from the pagination styles that are part of the Tipue search plugin. For clarity and site-speed optimaztion, it was easier to do this rather than apply the Tipue classnames.
+   ============================================================================
  */
 /* normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -742,7 +752,7 @@ a:hover {
   padding: 7px 10px 8px 10px;
   background: #fff;
   border: 1px solid gainsboro;
-  border-radius: 2px;
+  border-radius: 0px;
   color: #333;
   margin-right: 7px;
   text-align: center; }
@@ -774,10 +784,6 @@ a:hover {
   max-width: 650px;
   padding: 25px 0 13px 0;
   margin: 0; }
-
-#tipue_search_loading {
-  padding-top: 60px;
-  background: white url("../img/loader.gif") no-repeat left; }
 
 #tipue_search_warning_head {
   font: 14px/1.5 "open sans", sans-serif;
@@ -1342,6 +1348,29 @@ a:hover {
     background-size: 289px 120px;
     height: 44px;
     width: 44px; } }
+/*
+ =================================
+ Home page pagination styles start
+ =================================
+*/
+.page {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  padding: 7px 10px 8px 10px;
+  background: #fff;
+  border: 1px solid gainsboro;
+  border-radius: 0px;
+  color: #333;
+  margin-right: 7px;
+  text-align: center; }
+
+/*
+ ===============================
+ Home page pagination styles end
+ ===============================
+*/
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   /*
    * Handhelds and tablets get the helvetica-type
@@ -1426,6 +1455,29 @@ a:hover {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; } }
+/*
+ =================================
+ Home page pagination styles start
+ =================================
+*/
+.page {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  padding: 7px 10px 8px 10px;
+  background: #fff;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  color: #333;
+  margin-right: 7px;
+  text-align: center; }
+
+/*
+ ===============================
+ Home page pagination styles end
+ ===============================
+ */
 @media only screen and (min-width: 769px) {
   /*
    * Handhelds and tablets get the helvetica-type
@@ -1510,6 +1562,29 @@ a:hover {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; } }
+/*
+ =================================
+ Home page pagination styles start
+ =================================
+*/
+.page {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  padding: 7px 10px 8px 10px;
+  background: #fff;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  color: #333;
+  margin-right: 7px;
+  text-align: center; }
+
+/*
+ ===============================
+ Home page pagination styles end
+ ===============================
+ */
 /* Assistive text */
 .assistive-text,
 .site .screen-reader-text {

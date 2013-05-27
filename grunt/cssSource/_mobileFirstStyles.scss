@@ -314,3 +314,20 @@
 }
 
 // Footer styles end
+
+/*
+ =================================
+ Home page pagination styles start
+ =================================
+*/
+
+.page {
+  @include floatListItem;
+  @include pagButtonItem(0px);
+}
+
+/*
+ ===============================
+ Home page pagination styles end
+ ===============================
+*/
