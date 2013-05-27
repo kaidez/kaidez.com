@@ -800,41 +800,6 @@ a:hover {
   font: 300 14px/1.5 sans-serif;
   color: #111; }
 
-.form-allowed-tags {
-  line-height: 1.5;
-  font-size: 15px; }
-
-.form-titles {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
-/*
- * Float the avatars to the right so
- * they align well in the mobile layout
- */
-.avatar {
-  float: right; }
-
-.comment-date {
-  margin-bottom: 3px; }
-
-.commenter-name, .comment-text {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
-#submit {
-  color: #fff;
-  background-color: #2455c3;
-  font-family: "Roboto Condensed";
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px; }
-
-.recentcomments a {
-  display: inline !important;
-  padding: 0 !important;
-  margin: 0 !important; }
-
 #contact-form-fields {
   border: none; }
 

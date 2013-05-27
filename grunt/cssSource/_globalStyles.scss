@@ -420,51 +420,6 @@ a:hover {
 
 // Related comments styles start
 
-// allowed <code> tags text for comments
-.form-allowed-tags {
-  line-height: 1.5;
-  font-size:15px;
-}
-
-.form-titles {
-  @include hide-element;
-}
-/*
- * Float the avatars to the right so
- * they align well in the mobile layout
- */
-.avatar {
-  float:right;
-}
-
-.comment-date {
-  margin-bottom: 3px;
-}
-
-
-// hidden header tags for commenter name & post comments
-.commenter-name, .comment-text {
-  @include hide-element;
-}
-
-// Submit button for comments
-#submit {
-  color: #fff;
-  background-color: $link-color;
-  @include fonts($robo);
-  -webkit-border-radius: 10px; 
-  -moz-border-radius: 10px; 
-  border-radius: 10px; 
-}
-
-// added this since it's removed from the widgets
-.recentcomments a {
-  display:inline !important;
-  padding:0 !important;
-  margin:0 !important;
-}
-
-
 
 // Footer contact form styles start
 
