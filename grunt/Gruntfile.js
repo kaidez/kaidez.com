@@ -88,7 +88,7 @@ module.exports = function(grunt) {
       // Files added here will be excluded when looking for Modernizr refs.
       "excludeFiles" : "Gruntfile.js"
     },
-    
+
     // 'jshint' task
     jshint: {
       options: {
@@ -129,8 +129,6 @@ module.exports = function(grunt) {
     }
   });
 
-
-  
   // Use 'loadNpmTasks' to enable plugins
   grunt.loadNpmTasks('grunt-css');
   grunt.loadNpmTasks('grunt-contrib-sass');
