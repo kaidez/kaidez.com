@@ -87,6 +87,7 @@ define(function() {
    */
 
   cssdisabled = false; // must be proven otherwise
+  
   testcss = document.createElement('div');
 
   testcss.style.position = 'absolute';
