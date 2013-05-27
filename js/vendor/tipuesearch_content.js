@@ -65,5 +65,5 @@ var tipuesearch = {"pages": [
   {"title": "The Two Best Books On The Dot-com Rush", "text": "Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.", "tags": "bookreview", "loc": "/books-dotcom-rush/"},
   {"title": "REVIEW: lynda.com", "text": "A mostly positive review of lynda.com and its courses, front-end development and PhotoShop are discussed.", "tags": "review", "loc": "/lynda-dot-com-review/"},
   {"title": "TUTORIAL: Create The Building Blocks For An HTML5 Page", "text": "Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.", "tags": "tutorialhtml5", "loc": "/create-html5-page/"},
-  {"title": "Welcome Back!!!!!!!!", "text": "kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.", "tags": "kai", "loc": "/welcome-back/"},
+  {"title": "Welcome Back!!!!!!!!", "text": "kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.", "tags": "kai", "loc": "/welcome-back/"}
 ]};
