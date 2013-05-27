@@ -2,6 +2,5 @@ markdown: rdiscount
 permalink: /:title
 destination: ./_site
 paginate: 5
-lunr_excludes: [rss.xml, atom.xml, index.html, 404.html]
 exclude: [grunt, robots.txt]
 #include: .htaccess
