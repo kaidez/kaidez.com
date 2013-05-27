@@ -65,7 +65,7 @@ define(function() {
    * property inside of the 'currstyle' variable.
    *
    * Now that the <div>'s postion value is stored in 'currstyle' regardless of 
-   * what browser we're in, use a ternary operation to check it's value. If
+   * what browser we're in, use a ternary operation to check its value. If
    * the value is 'static', CSS is disabled so the value of our 'cssdisabled'
    * variable remains 'false'. But if the value is anything else (specifically
    * the 'absolute' value we set earlier), CSS is enabled so the value of our
