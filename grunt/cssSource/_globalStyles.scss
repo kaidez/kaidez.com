@@ -26,8 +26,8 @@ html, body {
   // may need it later
 }
 
-// homepage article elements
-.homepage-posts {
+// post snippet that displays on both the home page and search results
+.post-snippet {
   @include bottomBorder($site-grey);
   margin-bottom: 30px;
   padding-bottom: 30px;
