@@ -8,8 +8,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, wordpress]
 ---
-# 
-
 *IMPORTANT: This article discusses [the HTML5 Boilerplate template][1] and assumes that you have, at least, a basic understanding of its page layout. I will discuss the layout in a very roundabout way, not in depth. I STRONGLY suggest that you not only [read the HTML5 Boilerplate documentation][2], but also [watch the really good 40 minute walk-through video of the code][3].*
 
  [1]: http://html5boilerplate.com/

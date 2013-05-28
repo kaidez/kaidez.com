@@ -1,10 +1,12 @@
 ---
 title: Social Media Week/NYC Recap – MOBILE PROMOTION PANEL
 author: Kai Gittens
-meta-excerpt: Kai
 layout: post
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
-category: Reviews
+meta-excerpt: The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products
+category: reviews
+cat-name: "Reviews"
+tags: [mobile, review]
 ---
 *Correction: In a previous version of this article, Farrah Bostic was incorrectly identified as Kristin Volk in a photo caption, and vice versa. All of the opening statistics, starting with “only 30% of the mobile users have a smartphone,” were incorrectly attributed to coming from Kristen Volk only).*
 

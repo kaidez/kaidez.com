@@ -8,8 +8,6 @@ category: Coding Best Practices
 cat-name: "coding-best-practices"
 tags: [html5]
 ---
-# 
-
 Lots of thanks and praises to Australian web developer, [Ben Schwarz][1] for creating [HTML5-A technical specification for Web developers][2]. It takes the somewhat rigorously-written [HTML5-A technical specification for Web developers][3]and rewords it in a very easy-to-read format.
 
 

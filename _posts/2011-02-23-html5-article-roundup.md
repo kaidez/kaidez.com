@@ -3,9 +3,11 @@ title: HTML5 Recent Article Roundup
 author: Kai Gittens
 layout: post
 permalink: /html5-article-roundup/
-category: HTML5
+meta-excerpt: A list of great HTML5 articles compiled by kaidez
+category: review
+cat-name: "Reviews"
+tags: [html5, review]
 ---
-# 
 
 I wanted to deliver as much original content as possible when I started blogging again and didn’t want to do article roundups. I certainly didn’t want to do an HTML5-based round up as those articles and blog posts are a dime a dozen right now.
 

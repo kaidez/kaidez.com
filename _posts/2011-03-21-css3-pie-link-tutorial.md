@@ -8,8 +8,6 @@ category: tutorials
 cat-name: "Tutorials"
 tags: [css, tute]
 ---
-# 
-
 *NOTE: [Grab the finished code for this tutorial over at GitHub][1] if you don’t want to read the whole thing.*
 
  [1]: https://github.com/kaidez/Files-For-kaidez-CSS3-PIE-Rollover-Tutorial

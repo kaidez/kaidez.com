@@ -3,7 +3,10 @@ title: 'WordPress &#038; WebMatrix'
 author: Kai Gittens
 layout: post
 permalink: /wordpress-webmatrix/
-category: WordPress
+meta-excerpt: Using WebMatrix to create a WordPress development site
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [wordpress]
 ---
 
 HAPPY GROUNDHOG DAY!!!!!!!!!!!!!
@@ -12,7 +15,7 @@ This post actually started off as a referral to [a great WordPress.tv video on h
 
  [1]: http://wordpress.tv/2010/12/22/wordpress-on-windows-server/
 
-WebMatrix is Microsoft’s recently-released open source web development application (yes, you read that right: Microsoft released an open source web dev app). Along with supporting the obvious MS applications like IIS and .NET, it also supports PHP and MySQL…meaning it can support a WordPress development environment without Linux.
+WebMatrix is Microsoft’s recently-released open source web development application (yes, you read that right: Microsoft released an open source web dev app). Along with supporting the obvious MS applications like IIS and .NET, it also supports PHP and MySQL...meaning it can support a WordPress development environment without Linux.
 
 It’s already possible to run a local WordPress development site without Linux, as well as a live site. WAMP packages can be downloaded to your PC to create a localhost setup that runs PHP, Apache and MySQL. And hosting companies like GoDaddy already offer WordPress hosting via one of their Windows packages.
 

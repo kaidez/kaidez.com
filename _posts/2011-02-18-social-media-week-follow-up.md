@@ -3,9 +3,11 @@ title: 'Social Media Week Follow-Up &#038; A Word From Panelist Kristin Volk'
 author: Kai Gittens
 layout: post
 permalink: /social-media-week-follow-up/
-category: Reviews
+meta-excerpt: Kristin Volk of MediaVest added some extra information to my recap of the Cross-Mobile Promotion panel at the 2011 NYC Social Media Week
+category: reviews
+cat-name: "Reviews"
+tags: [social media, review]
 ---
-# 
 
 Both of my NYC Social Media Week panel recaps, [the social listening one][1] and [the mobile promotion one][2], are now ***my most-visited articles!!!*** I’m grateful to EVERYONE for the overwhelming response and feedback, and MUST thank those who emailed them to friends and co-workers as well as shared them on Facebook and Twitter!!! 
 

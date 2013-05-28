@@ -2,10 +2,12 @@
 title: 10 Things To Remember About HTML5 Video
 author: Kai Gittens
 layout: post
-permalink: /html5-video-tips-january-2011/
-category: HTML5
+permalink: /2-javascript-tasks-jquery-does-not-replace/
+meta-excerpt: HTML5 Video Tips from kaidez
+category: coding-best-practices
+cat-name: "Coding Tips"
+tags: [html5, mobile]
 ---
-# 
 
 Setting up HTML5 video for [my recent Almay project][1] was certainly a learning experience (thanks to Max at [image0][2] for the help during this part of the project). Here’s what I learned…and will *never* forget:
 

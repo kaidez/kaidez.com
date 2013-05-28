@@ -1,13 +1,13 @@
 ---
 title: The HTML5 Boilerplate Video is AWESOME!!!!!!
 author: Kai Gittens
-permalink: /html5-boilerplate-video/
 layout: post
+permalink: /html5-boilerplate-video/
+meta-excerpt: Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices
 category: coding-best-practices
 cat-name: "Code Tips"
+tags: [html5]
 ---
-# 
-
 Most HTML5 fans know about [HTML5 Boilerplate][1], the open-source web page template that’s fully-stocked with lots of cool front-end web development hacks. But I have a feeling that many people simply go to the site, cut-and-paste *parts * of the code, then leave the site without fully absorbing all the site content.
 
  [1]: http://html5boilerplate.com/

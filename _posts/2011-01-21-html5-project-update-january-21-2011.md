@@ -3,9 +3,11 @@ title: 'HTML5 Project Update: 1/21/11'
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-january-21-2011/
-category: The HTML5 Project
+meta-excerpt: My HTML5 Project will use HTML5, CSS3, jQuery, Modernizr, maybe CSS PIE, and will be a portfolio of my work and experiments.
+category: personal
+cat-name: "Personal"
+tags: [html5, jQuery, modernizr]
 ---
-# 
 
 My [HTML5 Project][1] is a centerpiece of this blog. I’ve been slacking on it but I’ve now made some decisions:
 

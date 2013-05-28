@@ -8,8 +8,6 @@ category: Coding Best Practices
 cat-name: "coding-best-practices"
 tags: [rwd, html5, media queries]
 ---
-# 
-
 In 2005, Jesse James Garrett wrote [an excellent article describing and coining the term “Ajax.”][1] He demonstrated Ajax as a method of using multiple web programming languages to neatly load content onto a web page *without* actually refreshing the page.
 
  [1]: http://www.adaptivepath.com/ideas/essays/archives/000385.php

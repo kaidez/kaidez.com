@@ -2,8 +2,11 @@
 title: 'I&#8217;m Focusing On .NET C#'
 author: Kai Gittens
 layout: post
+meta-excerpt: kaidez lays out a plan on how he;ll slearn .NET/C#.
 permalink: /learning-microsoft-dot-net-c-sharp/
-category: Personal
+category: personal
+cat-name: "Personal"
+tags: [kai, C#, .NET]
 ---
 # 
 

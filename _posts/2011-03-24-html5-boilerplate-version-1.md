@@ -8,8 +8,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---
-# 
-
 [![HTML5 Boilerplate][2]][2]As if it wasn’t awesome already, the [HTML5 Boilerplate][2] just got awesome-er.
 
  []: http://kaidez.com/wp-content/uploads/2011/03/boilerplateLogo.png

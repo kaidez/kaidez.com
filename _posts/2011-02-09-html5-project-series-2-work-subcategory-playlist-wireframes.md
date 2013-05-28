@@ -3,9 +3,11 @@ title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&#8217;S PLAYLIS
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
-category: The HTML5 Project
+meta-excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
+category: personal
+cat-name: "Personal"
+tags: [html5]
 ---
-# 
 
 ***Read the entire “Wirefame Series” [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 

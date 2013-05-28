@@ -3,9 +3,11 @@ title: 'TUTORIAL: A Simple jQuery Image Fade In/Fade Out With A Delay'
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
-category: Tutorials
+meta-excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
+category: tutorials
+cat-name: "Tutorials"
+tags: [ajax, jquery, html5]
 ---
-# 
 
 *Update: March 3rd, 2012: the code below is simple and will do the job. But if you’re looking for something more dynamic, [please see this code’s update][1]. It still uses jQuery, but uses a for() loop to make things dynamic. A detailed screencast tutorial on how to create a JavaScript for() loop is included as well!*
 

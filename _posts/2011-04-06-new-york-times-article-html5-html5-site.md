@@ -8,7 +8,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, kai]
 ---
-
 The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and [their new Skimmer site][2].
 
  [1]: http://www.nytimes.com/2011/03/27/business/27unboxed.html

@@ -3,8 +3,10 @@ title: 5 Reasons To Design Websites For Internet Explorer 6
 author: Kai Gittens
 permalink: /reasons-design-websites-internet-explorer-6/
 layout: post
+meta-excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 category: coding-best-practices
 cat-name: "Code Tips"
+tags: [Internet Explorer]
 ---
 # 
 

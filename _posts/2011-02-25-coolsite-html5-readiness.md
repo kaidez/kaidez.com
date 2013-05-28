@@ -3,10 +3,11 @@ title: 'HTML5 Readiness: NEW COOLSITE!'
 author: Kai Gittens
 layout: post
 permalink: /coolsite-html5-readiness/
-category: Coolsites
+meta-excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [html5, css3]
 ---
-# 
-
 EXTREMELY cool, scannable info-graphic displaying up-to-date data on which browsers support which HTML5/CSS3 features. Created by [Divya Manian][1], [Paul Irish][2], and others. As an FYI, Manian and Irish as a team, created [HTML5 Boilerplate][3]…another Coolsite of mine.
 
  [1]: http://nimbu.in/

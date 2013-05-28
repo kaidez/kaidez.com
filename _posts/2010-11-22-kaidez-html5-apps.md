@@ -2,8 +2,11 @@
 title: My HTML5 Applications
 author: Kai Gittens
 layout: post
+meta-excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
 permalink: /kaidez-html5-apps/
-category: The HTML5 Project
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [html5]
 ---
 # 
 

@@ -8,8 +8,6 @@ category: Reviews
 cat-name: "reviews"
 tags: [jquery, review, book]
 ---
-# 
-
 [![jQuery: Visual Quickstart Guide Book from peachpit Press][2]][2]  
 An unspoken rule of mine is to NOT give any products a bad review. I’ve tried to adopt an attitude of, “If you don’t have anything nice to say, don’t say anything at all.” But in the case of ***Peachpit Press’s jQuery: Visual Quickstart Guide***, I have to make an unfortunate exception.
 

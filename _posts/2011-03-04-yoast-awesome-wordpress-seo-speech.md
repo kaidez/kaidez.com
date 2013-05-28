@@ -8,8 +8,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [wordpress, seo]
 ---
-# 
-
 Quite possibly, *the* most inspirational speech in existence on not only WordPress search engine optimization but blogging itself. Given by Joost de Valk, AKA Yoast; owner of the awesome [site of the same name][1].
 
  [1]: http://yoast.com/

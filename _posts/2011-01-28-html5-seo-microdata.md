@@ -3,9 +3,11 @@ title: HTML5, SEO and Microdata
 author: Kai Gittens
 layout: post
 permalink: /html5-seo-microdata/
-category: HTML5
+meta-excerpt: HTML5's Microdata feature is a good tactic if properly formatted
+category: coding-best-practices
+cat-name: "Code Tips"
+tags: [html5]
 ---
-# 
 
 *MUCH thanks to at [Oli Studholme][1] at [HTML5 Doctor][2] for helping me understand this!!!!*
 

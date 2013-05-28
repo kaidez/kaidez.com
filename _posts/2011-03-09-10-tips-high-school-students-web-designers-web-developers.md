@@ -2,15 +2,12 @@
 title: 10 Tips For High Schoolers Wanting To Be Web Designers Or Developers
 author: Kai Gittens
 layout: post
-category: Personal
 meta-excerpt: An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday
 permalink: /10-tips-high-school-students-web-designers-web-developers/
 category: personal
 cat-name: "Personal"
 tags: [javascript, conference, kai]
 ---
-# 
-
 I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now. 
 
 In turn, my son *might* follow my lead and strive for a career in web design and development, but I’m fine if he doesn’t. Ask any parent what they want for their kid and most will answer, “I want them to be happy and healthy.” I’ve heartily adopted this philosophy and while I’ll make sure that he’s afforded every opportunity to succeed, my son could be a janitor for all I care, just so long as he possesses those two characteristics.

@@ -6,7 +6,7 @@ permalink: /jquery-tshirt-geek-gift/
 meta-excerpt: My cool jQuery t-shirt
 category: personal
 cat-name: "Personal"
-tags: [javascript, conference, kai]
+tags: [kai]
 ---
 
 [![][2]][2]

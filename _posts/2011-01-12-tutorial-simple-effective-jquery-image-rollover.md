@@ -3,9 +3,11 @@ title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover'
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-effective-jquery-image-rollover/
-category: Tutorials
+meta-excerpt: A very popular, cross-browser complaint jQuery image rollover
+category: tutorials
+cat-name: "Tutorials"
+tags: [ajax, jquery, html5]
 ---
-# 
 
 I used the following code to create the image rollovers for [the recent Almay project I worked on][1].
 
