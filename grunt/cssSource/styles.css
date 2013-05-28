@@ -509,7 +509,19 @@ table {
 /* ==========================================================================
    Normalize ends...
    ========================================================================== */
-/* Overides extra padding that bootstrap.css puts on <body> */
+/*
+ ===========================================
+ Global styles start:
+
+ These are styles which should appear on all
+ devices, regardless of screen dimension or
+ computer resolution.
+ ===========================================
+ */
+/*
+ ==============================================================
+ */
+/* Overides extra padding that bootstrap.css puts on <body>---may be redundant */
 body {
   background-color: white;
   padding: 0; }
@@ -546,10 +558,6 @@ html, body {
 .wf-loading h6, .wf-inactive h6 {
   font-family: serif; }
 
-/*
- * apply the Google font to all <header> tags,
- * except the Mobile First post tag
- */
 .wf-active h1,
 .wf-active h2,
 .wf-active h3,
@@ -560,7 +568,7 @@ html, body {
   font-size: 1.0rem; }
 
 /*
- * Clearfix: contain floats (borrowed forom HTML5 Boilerplate)
+ * Clearfix: contain floats (borrowed from HTML5 Boilerplate)
  *
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -588,6 +596,11 @@ html, body {
   /* Large screen, non-retina */ }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min-resolution: 192dpi) and (min-width: 1300px), only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
   /* Large screen, retina, stuff to override above media query */ }
+/*
+ =======================
+ Navigation styles start
+ =======================
+ */
 #site-navigation {
   width: auto;
   border-top: 1px solid black; }
@@ -615,14 +628,16 @@ html, body {
 .wf-active .site-navigation-list-link a:hover {
   background-color: #2455c3; }
 
-/* 
-* Pad the bottom header and main content area.
-* Also, let the copy out a bit.
-*/
-.entry-content {
-  padding: 10px;
-  line-height: 2; }
-
+/*
+ =====================
+ Navigation styles end
+ =====================
+ */
+/*
+ ========================
+ Single post styles start
+ ========================
+ */
 /*
  * all text links (except for post meta info)
  * have a blue color but no underline.
@@ -672,31 +687,44 @@ a:hover {
 .fb {
   padding-right: 10px; }
 
+/*
+ =====================
+ Navigation styles end
+ =====================
+ */
+/*
+ ===============================
+ Search box-related styles start
+ ===============================
+ */
 .no-js #site-navigation-list, .no-js #searchform {
   display: block;
   position: relative; }
 
+/*
+ * '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
+ * browsers with JavaScript turned off
+ */
 .js #no-js-searchbox {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
-#s {
-  font-style: italic;
-  height: 27px;
-  padding-left: 10px; }
-
-.search-highlight {
-  font-weight: bolder;
-  font-style: none; }
-
+/*
+ * jQuery-powered searchbof courtesy of Tipue (need link). Set to appear on
+ * browsers with JavaScript turned on.
+ */
 #tipue_search_input {
-  font: 13px/1.5 "open sans", sans-serif;
+  font: 13px/1.5 "open sans", serif;
   color: #333;
   padding: 7px;
   margin: 0;
   width: 205px;
   border: 1px solid lightgrey;
   outline: none; }
+
+.search-highlight {
+  font-weight: bolder;
+  font-style: none; }
 
 #tipue_search_input:focus {
   border-color: #c3c3c3; }
@@ -756,7 +784,7 @@ a:hover {
   box-shadow: 1px 1px 2px #e3e3e3; }
 
 .tipue_search_content_title {
-  font: 300 19px/1.5 "open sans", sans-serif;
+  font: 300 19px/1.5 "open sans", serif;
   margin-top: 31px; }
 
 .tipue_search_content_title a {
@@ -780,12 +808,12 @@ a:hover {
   margin: 0; }
 
 #tipue_search_warning_head {
-  font: 14px/1.5 "open sans", sans-serif;
+  font: 14px/1.5 "open sans", serif;
   color: #333;
   text-align: center; }
 
 #tipue_search_warning {
-  font: 300 14px/1.5 sans-serif;
+  font: 300 14px/1.5 serif;
   color: #111;
   margin: 13px 0; }
 
@@ -797,13 +825,20 @@ a:hover {
   color: #111; }
 
 #tipue_search_results_count {
-  font: 300 14px/1.5 sans-serif;
+  font: 300 14px/1.5 serif;
   color: #111; }
 
-#contact-form-fields {
-  border: none; }
-
-#colophon {
+/*
+ ===============================
+ Search box-related styles end
+ ===============================
+ */
+/*
+ ===========================
+ Footer-related styles start
+ ===========================
+ */
+#footer {
   background-color: #9c0013;
   height: auto;
   width: auto;
@@ -821,6 +856,22 @@ a:hover {
   float: left;
   padding: 0 10px 4px 0; }
 
+#contact-form-fields {
+  border: none; }
+
+/*
+ =========================
+ Footer-related styles end
+ =========================
+ */
+/*
+ ==============================================================
+ */
+/*
+ =================
+ Global styles end
+ =================
+ */
 .highlight {
   background: #ffffff; }
 
@@ -1135,16 +1186,11 @@ a:hover {
   <h1> tags for all pages EXCEPT post pages
   =========================================  
  */
-.wf-loading h1, .wf-inactive h1 {
-  font-family: serif;
-  font-size: 1.3rem; }
-
 /*
  * apply the Google font to all <header> tags,
  * except the Mobile First post tag
  */
 .wf-active h1 {
-  font-family: "Roboto Condensed";
   font-size: 1.3rem; }
 
 .wf-active h1.post-title {

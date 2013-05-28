@@ -85,21 +85,14 @@
   <h1> tags for all pages EXCEPT post pages
   =========================================  
  */ 
-.wf-loading h1, .wf-inactive h1{
-  font-family: $srf;
-  font-size: 1.3rem;
-}
 
 /*
  * apply the Google font to all <header> tags,
  * except the Mobile First post tag
  */
 .wf-active h1 {
-  @include fonts($robo);
   font-size: 1.3rem;
 }
-
-
 
 
 // Mobile First post styles start
