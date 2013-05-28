@@ -729,7 +729,7 @@ a:hover {
 
 #tipue_search_foot_boxes li a {
   padding: 7px 10px 8px;
-  background-color: #2455C3;
+  background-color: #2455c3;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -1357,12 +1357,11 @@ a:hover {
   margin: 0;
   padding: 0;
   display: inline;
-  color: #fff;
-  margin-right: 7px; }
+  color: #fff; }
 
 a.pagination-link {
   padding: 7px 10px 8px;
-  background-color: #2455C3;
+  background-color: #2455c3;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -1468,8 +1467,7 @@ a.pagination-link {
     margin: 0;
     padding: 0;
     display: inline;
-    color: #fff;
-    margin-right: 7px; }
+    color: #fff; }
 
   /*
    ===============================
@@ -1571,8 +1569,7 @@ a.pagination-link {
     margin: 0;
     padding: 0;
     display: inline;
-    color: #fff;
-    margin-right: 7px; }
+    color: #fff; }
 
   /*
    ===============================

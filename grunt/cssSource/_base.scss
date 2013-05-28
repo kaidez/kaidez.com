@@ -174,13 +174,13 @@
   // background: #9C0033;
   // border: 1px solid #dcdcdc;
   color: #fff;
-  margin-right: 7px;
+  //margin-right: 7px;
   // padding: 7px 10px 8px;
 }
 
 @mixin pagButtonInner {
   padding: 7px 10px 8px;
-  background-color: #2455C3;
+  background-color: $link-color;
   // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
   // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
   // background: -ms-linear-gradient(top,#F7F7F7,#F1F1F1);
