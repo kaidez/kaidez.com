@@ -698,9 +698,9 @@ a:hover {
   padding-right: 10px; }
 
 /*
- =====================
- Navigation styles end
- =====================
+ ======================
+ Single post styles end
+ ======================
  */
 /*
  ===============================
@@ -839,9 +839,9 @@ a:hover {
   color: #111; }
 
 /*
- ===============================
+ =============================
  Search box-related styles end
- ===============================
+ =============================
  */
 /*
  ===========================
@@ -1137,11 +1137,19 @@ a:hover {
 
 /* Literal.Number.Integer.Long */
 /*
- * Pure 'Mobile First' styles start. When the
- * site loads on a mobile device, these
- * styles will load only...no desktop styles
- * will load.
+ * ========================================
+ * 'Mobile First' styles start:
+ *
+ * These are styles which should appear on
+ * mobile devices only on page load.
+ * ========================================
  */
+/*
+ ==============================================================
+ */
+.wf-active h1 {
+  font-size: 1.3rem; }
+
 .homepage-link {
   width: 136px;
   height: 39px; }
@@ -1160,41 +1168,28 @@ a:hover {
   clip: rect(1px 1px 1px 1px); }
 
 /*
- * Mobile-first code so the menu and search box
- * gets hidden immediately
+ =======================
+ Navigation styles start
+ =======================
  */
+#menu-heading {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
 #site-navigation-list {
   display: none;
   margin: 0;
   padding: 0; }
 
-#menu-heading {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
-#searchbox {
-  display: none; }
-
-#not-found-searchbox {
-  display: block; }
-
-.searchbox-style {
-  margin: 0px auto;
-  text-align: center;
-  padding: 15px 0; }
-
-.searchfield-style {
-  width: 260px; }
-
-.tipue_search_content_text {
-  color: #111;
-  padding: 13px 0;
-  line-height: 1.7; }
-
 /*
-  =========================================
-  <h1> tags for all pages EXCEPT post pages
-  =========================================  
+ =====================
+ Navigation styles end
+ =====================
+ */
+/*
+ ========================
+ Single post styles start
+ ========================
  */
 /*
  * apply the Google font to all <header> tags,
@@ -1222,6 +1217,40 @@ a:hover {
   margin-bottom: 20px; }
 
 /*
+ ======================
+ Single post styles end
+ ======================
+ */
+/*
+ ===============================
+ Search box-related styles start
+ ===============================
+ */
+#searchbox {
+  display: none; }
+
+#not-found-searchbox {
+  display: block; }
+
+.searchbox-style {
+  margin: 0px auto;
+  text-align: center;
+  padding: 15px 0; }
+
+.searchfield-style {
+  width: 260px; }
+
+.tipue_search_content_text {
+  color: #111;
+  padding: 13px 0;
+  line-height: 1.7; }
+
+/*
+ =============================
+ Search box-related styles end
+ =============================
+ */
+/*
  ==========================
  Category page styles start
  ==========================
@@ -1246,16 +1275,17 @@ a:hover {
  Category page styles end
  ========================
 */
+/*
+ ===========================
+ Footer-related styles start
+ ===========================
+ */
 #footer-contact-fieldset {
   border: none; }
 
 .footer-contact-fields {
   width: 152px; }
 
-/* Contact (aside) styles end */
-/* Font styles for tablets & desktops. Google
- * font doesn't load on mobile.
- */
 .social-network-link {
   font-size: 16px;
   line-height: 1; }
@@ -1398,6 +1428,11 @@ a:hover {
     background-size: 289px 120px;
     height: 44px;
     width: 44px; } }
+/*
+ =========================
+ Footer-related styles end
+ =========================
+ */
 /*
  =================================
  Home page pagination styles start

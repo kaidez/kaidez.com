@@ -1,12 +1,20 @@
 /*
- * Pure 'Mobile First' styles start. When the
- * site loads on a mobile device, these
- * styles will load only...no desktop styles
- * will load.
+ * ========================================
+ * 'Mobile First' styles start:
+ *
+ * These are styles which should appear on
+ * mobile devices only on page load.
+ * ========================================
  */
 
+/*
+ ==============================================================
+ */
 
-
+.wf-active h1 {
+  // font: $helv; // may go
+  font-size: 1.3rem;
+}
 
 // Logo link...provides a large enough space for a click area
 .homepage-link {
@@ -25,77 +33,53 @@
   display: block;
 }
 
-//hide the h2 tag in the <header>
+// hide the <h2> tag in the <header> on page load
 .site-description {
   @include hide-element;
 }
 
-// Nav styles start
-
 /*
- * Mobile-first code so the menu and search box
- * gets hidden immediately
+ =======================
+ Navigation styles start
+ =======================
  */
+
+// Hide menu heading on mobile phones
+#menu-heading {
+  @include hide-element;
+}
+
 #site-navigation-list {
   display:none;
   margin:0;
   padding:0;
 }
 
-//hide menu heading on mobile phones
-#menu-heading {
-  @include hide-element;
-}
-
-// Nav styles end
-
+/*
+ =====================
+ Navigation styles end
+ =====================
+ */
 
 
-// Search box styles start
 
-// the div that contains the search box
-#searchbox {
-  display: none;
-}
-
-#not-found-searchbox {
-  display: block
-}
-
-.searchbox-style {
-  @include master-center;
-  padding:15px 0;
-}
-
-.searchfield-style {
-  width: 260px;
-}
-
-.tipue_search_content_text {
-  color: #111;
-  padding: 13px 0;
-  line-height: 1.7;
-}
-
-// Search box styles end
 
 
 /*
-  =========================================
-  <h1> tags for all pages EXCEPT post pages
-  =========================================  
- */ 
+ ========================
+ Single post styles start
+ ========================
+ */
 
 /*
  * apply the Google font to all <header> tags,
  * except the Mobile First post tag
  */
 .wf-active h1 {
+  // font: $helv; // may go
   font-size: 1.3rem;
 }
 
-
-// Mobile First post styles start
 
 // Styles for post <h1> tag
 .wf-active h1.post-title {
@@ -121,6 +105,56 @@
   font-size: 14px;
   margin-bottom: 20px;
 }
+
+/*
+ ======================
+ Single post styles end
+ ======================
+ */
+
+
+
+
+
+/*
+ ===============================
+ Search box-related styles start
+ ===============================
+ */
+
+// the div that contains the search box
+#searchbox {
+  display: none;
+}
+
+#not-found-searchbox {
+  display: block
+}
+
+.searchbox-style {
+  @include master-center;
+  padding:15px 0;
+}
+
+.searchfield-style {
+  width: 260px;
+}
+
+.tipue_search_content_text {
+  color: #111;
+  padding: 13px 0;
+  line-height: 1.7;
+}
+
+/*
+ =============================
+ Search box-related styles end
+ =============================
+ */
+
+
+
+
 
 /*
  ==========================
@@ -151,7 +185,16 @@
  Category page styles end
  ========================
 */
-// footer element styles
+
+
+
+
+
+/*
+ ===========================
+ Footer-related styles start
+ ===========================
+ */
 #footer-contact-fieldset {
   border: none;
 }
@@ -159,18 +202,10 @@
   width:152px;
 }
 
-
-/* Contact (aside) styles end */
-
-
-
-/* Font styles for tablets & desktops. Google
- * font doesn't load on mobile.
- */
-  .social-network-link {
-    font-size:16px;
-    line-height: 1;
-  }
+.social-network-link {
+  font-size:16px;
+  line-height: 1;
+}
 
 // Footer styles start
 
@@ -244,7 +279,7 @@
   @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
 }
 
-// search button
+// search button //this may go
 .btnSearch {
   border: none;
   text-indent: -999px;
@@ -278,8 +313,6 @@
     margin-right: 5px;
   }
 
-  // Retina menu mobile-first styles
-
   // menu icon
   #menu {
     @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
@@ -304,9 +337,17 @@
     text-indent: -999px;
     @include sprite-images('../img/snSprite@2x.png', -80px -69px, 44px, 44px);
   }
-}
+} // End @media #{$mobile-retina} (i.e., the retina media query)
 
-// Footer styles end
+/*
+ =========================
+ Footer-related styles end
+ =========================
+ */
+
+
+
+
 
 /*
  =================================
