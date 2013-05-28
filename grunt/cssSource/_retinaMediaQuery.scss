@@ -1,0 +1,166 @@
+
+
+
+
+
+ /*
+  * ======================================================
+  * The entire retina/non-retina media query styles start:
+  *
+  * Menu-related media query code for both the menu button
+  * and search button is here. It may have been better to
+  * break it out into <header> related and <footer>
+  * related styles, but combining both under one media
+  * query seemed the better way to go. This may change in
+  * the future.
+  *
+  * In this code, non retina styles are placed outside of
+  * the media query as that seems to be the fastest way to
+  * load things. But as retina and similar setups is
+  * available on more and more mobile devices, it may be
+  * better to cater to them so that content loads faster
+  * on these device.
+  * ======================================================
+ */
+
+/*
+  =======================
+  Non-retina media starts
+  =======================
+*/
+
+// Non-retina social icons
+#twitter {
+  @include sprite-images('../img/snSprite.png', -1px -2px, 64px, 64px);
+}
+
+#google-plus {
+  @include sprite-images('../img/snSprite.png', -76px -2px, 64px, 64px);
+}
+
+#github {
+  @include sprite-images('../img/snSprite.png', -147px -2px, 64px, 64px);
+}
+
+#youtube {
+  @include sprite-images('../img/snSprite.png', -219px -2px, 64px, 64px);
+  float: left;
+  list-style-type: none;
+}
+
+.kaidez-social-network-list-item {
+  float: left;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+// Non-retina menu icons
+
+// Menu
+#menu {
+  @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
+  display: block;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+// Search icon
+#search {
+  @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
+  display: block;
+  margin-right:10px;
+  cursor: pointer;
+  float: right;
+}
+
+// Search button //this may go
+.btnSearch {
+  @include sprite-images('../img/snSprite.png', -80px -69px, 44px, 44px);
+  border: none;
+  text-indent: -999px;
+}
+
+ /*
+   =====================
+   Non-retina media ends
+   =====================
+  */
+
+ /*
+   ===================
+   Retina media starts
+   ===================
+  */
+
+@media #{$mobile-retina} { 
+
+  // Retina social icons
+  #twitter {
+    @include sprite-images('../img/snSprite@2x.png', -1px -2px, 64px, 64px);
+  }
+
+  #google-plus {
+    @include sprite-images('../img/snSprite@2x.png', -76px -2px, 64px, 64px);
+  }
+
+  #github {
+    @include sprite-images('../img/snSprite@2x.png', -147px -2px, 64px, 64px);
+  }
+
+  #youtube {
+    @include sprite-images('../img/snSprite@2x.png', -219px -2px, 64px, 64px);
+    float: left;
+    list-style-type: none;
+  }
+
+  .kaidez-social-network-list-item {
+    float: left;
+    list-style-type: none;
+    margin-right: 5px;
+  }
+
+  // Retina menu icons
+
+  //Menu
+  #menu {
+    @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  // Search icon
+  #search {
+    @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
+    display: block;
+    margin-right:10px;
+    cursor: pointer;
+    float: right;
+  }
+
+  // Search button
+  .btnSearch {
+    @include sprite-images('../img/snSprite@2x.png', -80px -69px, 44px, 44px);
+    border: none;
+    text-indent: -999px;
+  }
+} 
+
+/*
+  =====================
+  Retina media ends
+  =====================
+ */
+
+ /*
+  * =============================================
+  * The entire retina/non-retina media query ends
+  * =============================================
+  */
+
+
+
+
+

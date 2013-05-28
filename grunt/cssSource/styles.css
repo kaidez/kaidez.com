@@ -1297,15 +1297,34 @@ a:hover {
   font-size: 15px; }
 
 /*
- * Media queries used to load retina and/or non-retina
- * versions of the social networking icon sprite. The retina
- * sprite ('snSprite@2x.png') will load on retina-based devices,
- * the regular sprite ('snSprite.png') will load on other
- * devices.
- *
- * Based on Chris Coyier's post: using the "global proof" version;
- * http://css-tricks.com/snippets/css/retina-display-media-query/
+ =========================
+ Footer-related styles end
+ =========================
  */
+/*
+ * ======================================================
+ * The entire retina/non-retina media query styles start:
+ *
+ * Menu-related media query code for both the menu button
+ * and search button is here. It may have been better to
+ * break it out into <header> related and <footer>
+ * related styles, but combining both under one media
+ * query seemed the better way to go. This may change in
+ * the future.
+ *
+ * In this code, non retina styles are placed outside of
+ * the media query as that seems to be the fastest way to
+ * load things. But as retina and similar setups is
+ * available on more and more mobile devices, it may be
+ * better to cater to them so that content loads faster
+ * on these device.
+ * ======================================================
+*/
+/*
+  =======================
+  Non-retina media starts
+  =======================
+*/
 #twitter {
   background: url("../img/snSprite.png") no-repeat -1px -2px;
   background-size: 289px 120px;
@@ -1337,10 +1356,6 @@ a:hover {
   list-style-type: none;
   margin-right: 10px; }
 
-/*
- * Menu-related media query code for both the
- * menu button and search button
- */
 #menu {
   background: url("../img/snSprite.png") no-repeat -2px -68px;
   background-size: 289px 120px;
@@ -1352,23 +1367,33 @@ a:hover {
   cursor: pointer; }
 
 #search {
-  display: block;
-  margin-right: 10px;
-  cursor: pointer;
-  float: right;
   background: url("../img/snSprite.png") no-repeat -41px -69px;
   background-size: 289px 120px;
   height: 44px;
-  width: 44px; }
+  width: 44px;
+  display: block;
+  margin-right: 10px;
+  cursor: pointer;
+  float: right; }
 
 .btnSearch {
-  border: none;
-  text-indent: -999px;
   background: url("../img/snSprite.png") no-repeat -80px -69px;
   background-size: 289px 120px;
   height: 44px;
-  width: 44px; }
+  width: 44px;
+  border: none;
+  text-indent: -999px; }
 
+/*
+  =====================
+  Non-retina media ends
+  =====================
+ */
+/*
+  ===================
+  Retina media starts
+  ===================
+ */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
@@ -1412,26 +1437,31 @@ a:hover {
     cursor: pointer; }
 
   #search {
-    display: block;
-    margin-right: 10px;
-    cursor: pointer;
-    float: right;
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
     background-size: 289px 120px;
     height: 44px;
-    width: 44px; }
+    width: 44px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right; }
 
   .btnSearch {
-    border: none;
-    text-indent: -999px;
     background: url("../img/snSprite@2x.png") no-repeat -80px -69px;
     background-size: 289px 120px;
     height: 44px;
-    width: 44px; } }
+    width: 44px;
+    border: none;
+    text-indent: -999px; } }
 /*
- =========================
- Footer-related styles end
- =========================
+  =====================
+  Retina media ends
+  =====================
+ */
+/*
+ * =============================================
+ * The entire retina/non-retina media query ends
+ * =============================================
  */
 /*
  =================================
