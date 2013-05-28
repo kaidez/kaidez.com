@@ -1,49 +1,58 @@
-  /*
-   ===============
-   Variables start
-   ===============
- */
+/*
+  * =================================================================
+  * _base.css:
 
-  // Colors
-  $header-color: #6AB0D4;
-  $nav-color: #306885;
-  $link-color: #2455C3;
-  $motto-logo-button-color: $nav-color;
-  $footer-color: #9C0013;
-  $h-num-color: $nav-color;
-  $site-grey: #999;
+  * Contains only variables and mixins that will be applied to the
+  * production-ready 'styles.min.css'.  That's it...no more, no less.
+  * =================================================================
+*/
 
-  // Fonts
-  $helv: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
-  $robo: "Roboto Condensed";
-  $srf: serif;
 
-  // Media Queries
+/*
+  ===============
+  Variables start
+  ===============
+*/
 
-  /*
-   * Mix-in for social-networking sprite,
-   * retina as well as non-retina version.
-   */
+// Color variables
+$header-color: #6AB0D4;
+$nav-color: #306885;
+$link-color: #2455C3;
+$motto-logo-button-color: $nav-color;
+$footer-color: #9C0013;
+$h-num-color: $nav-color;
+$site-grey: #999;
 
-  $mobile-size: 320px;
-  $tablet-small-size: 481px;
-  $table-large-size: 768px;
-  $desktop-size: 769px;
+// Font variables
+$helv: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+$robo: "Roboto Condensed";
+$srf: serif;
+
+// Media Query variables
+
+/*
+ * Used in mix-in for social-networking sprite,retina as well
+ * as non-retina version.
+*/
+$mobile-size: 320px;
+$tablet-small-size: 481px;
+$table-large-size: 768px;
+$desktop-size: 769px;
   
-  // 'background-size' values for sprites
-  $bg-size: 289px 120px; 
+// 'background-size' variables...values for sprites
+$bg-size: 289px 120px; 
   
-  // may never use this since styles are loading mobile firest
-  $mobile: "only screen and (max-width : $mobile-size)";
+// may never use this since styles are loading mobile firest
+$mobile: "only screen and (max-width : $mobile-size)";
 
-  $mobile-retina:   
-    "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
-    only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px),
-    only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px),
-    only screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
-    only screen and (min-resolution: 192dpi) and (min-width: 320px),
-    only screen and (min-resolution: 2dppx) and (min-width: 320px)";
-// $tablet: "only screen and (min-width:$tablet-small-size) and (max-width:$table-large-size)";
+$mobile-retina:   
+  "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px),
+  only screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (min-resolution: 192dpi) and (min-width: 320px),
+  only screen and (min-resolution: 2dppx) and (min-width: 320px)";
+  // $tablet: "only screen and (min-width:$tablet-small-size) and (max-width:$table-large-size)";
 
 /*
   @media only screen and (min-width:$tab-small) and (max-width:$tab-large) {
@@ -57,9 +66,9 @@
 
 
 /*
-   =============
-   Variables end
-   =============
+ * =============
+ * Variables end
+ * =============
  */
 
 /*
@@ -67,86 +76,84 @@
  */
 
 /*
-   =======
-   Mix-ins
-   =======
+ * =============
+ * Mix-ins start
+ * =============
  */
 
-  /*
-   * Loads whatever Google Font the $font variable is set
-   * to based on the font variables above. 
-   */
+/*
+ * Loads whatever font the '$font' variable is set
+ * to based on the font variables list above. 
+ */
+@mixin fonts($font) {
+  font-family: $font;
+}
 
-  @mixin fonts($font) {
-    font-family: $font;
-  }
+// Centers whatever is applied to it
+@mixin master-center {
+  margin: 0px auto; 
+  text-align: center;
+}
 
-  // Centers whatever is applied to it
-  @mixin master-center {
-    margin: 0px auto; 
-    text-align: center;
-  }
+// All of the main page elements need a padding of 10px
+@mixin allElementPadding {
+  padding: 10px;
+}
 
-  // All of the main page elements need a padding of 10px
-  @mixin allElementPadding {
-    padding: 10px;
-  }
-
-  // Certain elements need this to ensure 100% height
-  @mixin full-height {
-    position: relative;
-    height: auto;
-    min-height: 100%;
-  }
+// Certain elements need this to ensure 100% height
+@mixin full-height {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+}
  
-  /* 
-   * When possible, A better way accessibilty-wise to
-   * hidepage elements than display:none or negative
-   * text indents.
-   *
-   * Yahoo! Accessibilty Blog:
-   * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
-   */
-  @mixin hide-element {
-    position:absolute;
-    clip:rect(1px 1px 1px 1px);
-  }
-
-  @mixin show-menu {
-    display: block;
-    padding:2px 0;
-    min-height: 21px;
-    width: 454px;
-    font-size: 12px;
-  }
-
-  /*
-   * Mix-in to load up sprite & display:
-   *  - menu icons.
-   *  - social networking icons.
-   */
-  @mixin sprite-images ($img, $pos, $height,$width) {
-    background: url($img) no-repeat $pos;
-    background-size: $bg-size;
-    height: $height;
-    width: $width;
-  }
-
-/*
-   ===================
-   Post-related mixins
-   ===================
+/* 
+ * When possible, A better way accessibilty-wise to
+ * hidepage elements than display:none or negative
+ * text indents.
+ *
+ * Yahoo! Accessibilty Blog:
+ * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
  */
-  @mixin bottomBorder ($color) {
-    border-bottom: 1px solid $color;
-  }
+@mixin hide-element {
+  position:absolute;
+  clip:rect(1px 1px 1px 1px);
+}
+
+// Shows menu on tablet and desktop page load
+@mixin show-menu {
+  display: block;
+  padding:2px 0;
+  min-height: 21px;
+  width: 454px;
+  font-size: 12px;
+}
 
 /*
-   ============================================================================
-   Homepage pagination mixins
-  
-   These mixins are styles that are for the most part, copied from the pagination styles that are part of the Tipue search plugin. For clarity and site-speed optimaztion, it was easier to do this rather than apply the Tipue class names.
-   ============================================================================
+ * Mix-in to load up sprite & display:
+ *  - menu icons.
+ *  - social networking icons.
+ */
+@mixin sprite-images ($img, $pos, $height,$width) {
+  background: url($img) no-repeat $pos;
+  background-size: $bg-size;
+  height: $height;
+  width: $width;
+}
+
+// Applies border to post snippets on home page and search results.
+@mixin bottomBorder ($color) {
+  border-bottom: 1px solid $color;
+}
+
+/*
+ * ============================================================================
+ * Pagination mixins
+ *
+ * These mixins are styles that are for the most part, copied from the 
+ * pagination styles that are part of the Tipue search plugin. For clarity and * site-speed optimaztion, it was easier to do this rather than apply the
+ * Tipue class names.
+ * ============================================================================
  */
 
 // Containing pagination box
@@ -154,14 +161,14 @@
   margin: 47px 0 31px 0;
 }
 
-// Individual list item in search results
+// <ul> item in search results
 @mixin pagUL {
   padding: 0;
   margin: 0;
   font: 12px/1 'open sans', sans-serif;
 }
 
-// Individual list item in search results
+// Individual <li> in search results
 @mixin floatListItem {
   list-style: none;
   margin: 0;
@@ -178,8 +185,9 @@
   // padding: 7px 10px 8px;
 }
 
+// Inner part of the individual button...makes it a hit area for the link
 @mixin pagButtonInner {
-  padding: 7px 10px 8px;
+  padding: 7px 10px 8px; //break outinto a variable
   background-color: $link-color;
   // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
   // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
@@ -194,6 +202,7 @@
   text-align: center;
 }
 
+// Inner part of the 'selected' button...makes it a hit area for the link
 @mixin pagButtonCurrent {
   padding: 7px 10px 8px;
   background-color: $header-color;
@@ -209,3 +218,9 @@
   text-decoration: none;
   text-align: center;
 }
+
+/*
+   ===========
+   Mix-ins end
+   ===========
+ */
