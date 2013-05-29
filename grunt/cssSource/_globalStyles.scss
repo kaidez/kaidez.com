@@ -47,9 +47,10 @@ html, body {
 }
 
 // All unique page content...appears inside the page's single <main> element
-#content {
+.page-content {
   @include full-height;
-  margin:0 10px;
+  padding: 10px;
+  width: auto;
   text-align: left;
   line-height: 1.7;
 }
@@ -285,10 +286,9 @@ a:hover {
 }
 
 /*
- * jQuery-powered searchbof courtesy of Tipue (need link). Set to appear on
- * browsers with JavaScript turned on.
+ * jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/). * Set to appear on browsers with JavaScript turned on.
  */
-#tipue_search_input{
+#tipue_search_input {
   font: 13px/1.5 'open sans', $srf;
   color: #333;
   padding: 7px;
