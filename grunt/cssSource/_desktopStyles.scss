@@ -116,9 +116,6 @@
    * Hide 'mobile first' menu & search
    * boxes on tablets
    */
-  #search {
-    @include hide-element;
-  }
   
   .site-navigation-list-link {
 	  float:left;
