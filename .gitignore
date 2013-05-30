@@ -2,6 +2,11 @@ _site
 ./_site
 tipuesearch/
 
+# Site assets
+#------------
+
+assets/
+
 # General all-around files
 # ------------------------
 
