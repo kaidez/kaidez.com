@@ -3,7 +3,9 @@
  * 'Mobile First' styles start:
  *
  * These are styles which should appear on
- * mobile devices only on page load.
+ * mobile devices only on page load. Some
+ * styles will cascade down to tablets and
+ * desktops.
  * ========================================
  */
 
@@ -11,6 +13,11 @@
  ==============================================================
  */
 
+/*
+ ===================
+ Header styles start
+ ===================
+ */
 .wf-active h1 {
   // font: $helv; // may go
   font-size: 1.3rem;
@@ -37,6 +44,16 @@
 .site-description {
   @include hide-element;
 }
+
+/*
+ =================
+ Header styles end
+ =================
+ */
+
+
+
+
 
 /*
  =======================
@@ -157,6 +174,27 @@
 
 
 /*
+ ====================
+ Content styles start
+ ====================
+ */
+  
+// For the main element
+.page-content {
+  @include content-width($mobile-width)
+}
+
+/*
+==================
+Content styles end
+==================
+*/
+
+
+
+
+
+/*
  ==========================
  Category page styles start
  ==========================
@@ -223,7 +261,7 @@
  =========================
  */
 
-@import "retinaMediaQuery";
+@import "_retinaMediaQuery";
 
 /*
  =================================

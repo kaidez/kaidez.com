@@ -1,11 +1,12 @@
 /*
-  * =================================================================
-  * _base.css:
-
-  * Contains only variables and mixins that will be applied to the
-  * production-ready 'styles.min.css'.  That's it...no more, no less.
-  * =================================================================
-*/
+ * =================================================================
+ * _base.css:
+ * 
+ * This file contains only variables and mixins that will be applied
+ * to the production-ready 'styles.min.css'.  That's it...no more,
+ * no less.
+ * =================================================================
+ */
 /*
   ===============
   Variables start
@@ -14,7 +15,13 @@
 /*
  * Used in mix-in for social-networking sprite,retina as well
  * as non-retina version.
-*/
+ */
+/*
+ * Define width for the <header>, <main> and <footer> elements by applying
+ * this mixin to a class that's applied to the element. The '$dimension'
+ * variable defines the width value and the values are determined by the
+ * "Width variables" directly below the mixin.
+ */
 /*
   @media only screen and (min-width:$tab-small) and (max-width:$tab-large) {
 
@@ -552,11 +559,12 @@ html, body {
   margin-bottom: 30px;
   padding-bottom: 30px; }
 
-#content {
+.page-content {
   position: relative;
   height: auto;
   min-height: 100%;
-  margin: 0 10px;
+  padding: 10px;
+  width: auto;
   text-align: left;
   line-height: 1.7; }
 
@@ -720,11 +728,11 @@ a:hover {
   clip: rect(1px 1px 1px 1px); }
 
 /*
- * jQuery-powered searchbof courtesy of Tipue (need link). Set to appear on
- * browsers with JavaScript turned on.
+ * jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/). * Set to appear on browsers with JavaScript turned on.
  */
 #tipue_search_input {
   font: 13px/1.5 "open sans", serif;
+  font-style: italic;
   color: #333;
   padding: 7px;
   margin: 0;
@@ -1141,11 +1149,18 @@ a:hover {
  * 'Mobile First' styles start:
  *
  * These are styles which should appear on
- * mobile devices only on page load.
+ * mobile devices only on page load. Some
+ * styles will cascade down to tablets and
+ * desktops.
  * ========================================
  */
 /*
  ==============================================================
+ */
+/*
+ ===================
+ Header styles start
+ ===================
  */
 .wf-active h1 {
   font-size: 1.3rem; }
@@ -1167,6 +1182,11 @@ a:hover {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
+/*
+ =================
+ Header styles end
+ =================
+ */
 /*
  =======================
  Navigation styles start
@@ -1250,6 +1270,21 @@ a:hover {
  Search box-related styles end
  =============================
  */
+/*
+ ====================
+ Content styles start
+ ====================
+ */
+.page-content {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+/*
+==================
+Content styles end
+==================
+*/
 /*
  ==========================
  Category page styles start
@@ -1500,9 +1535,31 @@ a.pagination-link {
    * will slow down their page load.
    */
   body {
-    font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
-    padding: 0; }
+    font-family: "Lato"; }
 
+  .wf-active h1,
+  .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    font-family: "Roboto Condensed";
+    font-size: 1.7rem; }
+
+  /*
+   ===================
+   Header styles start
+   ===================
+   */
+  .site-description {
+    display: block;
+    position: static; }
+
+  /*
+   =================
+   Header styles end
+   =================
+   */
   #site-navigation-list {
     display: block;
     padding: 2px 0;
@@ -1527,20 +1584,14 @@ a.pagination-link {
   .site-navigation-list-link {
     float: left; }
 
-  .wf-active h1,
-  .wf-active h2,
-  .wf-active h3,
-  .wf-active h4,
-  .wf-active h5,
-  .wf-active h6 {
-    font-family: "Roboto Condensed";
-    font-size: 1.7rem; }
+  #searchbox {
+    display: block; }
 
   #s {
     font-size: 1em; }
 
   #tipue_search_input {
-    font: 13px/1.5 "open sans", sans-serif;
+    font: 13px/1.5 "open sans", serif;
     color: #333;
     padding: 7px;
     margin: 0;
@@ -1561,7 +1612,7 @@ a.pagination-link {
     margin-top: 1px;
     border: 1px solid gainsboro;
     border-radius: 2px;
-    background: #f1f1f1 url("img/search.gif") no-repeat center;
+    background: #f1f1f1 url("../img/search.gif") no-repeat center;
     outline: none; }
 
   #tipue_search_button:hover {
@@ -1576,35 +1627,81 @@ a.pagination-link {
   .social-network-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    font-family: "Lato"; }
 
   /*
-   =================================
-   Home page pagination styles start
-   =================================
-  */
-  .page {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    color: #fff; }
-
-  /*
-   ===============================
-   Home page pagination styles end
-   ===============================
-   */ }
-@media only screen and (min-width: 769px) {
-  /*
-   * Handhelds and tablets get the helvetica-type
-   * Google font. Too many fonts applied to handhelds
-   * will slow down their page load.
+   ===================
+   Header styles start
+   ===================
    */
-  body {
-    font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
-    padding: 0; }
+  .site-title {
+    margin: 0;
+    float: left; }
 
+  .site-description {
+    margin: 0;
+    float: right; }
+
+  /*
+   =================
+   Header styles end
+   =================
+   */
+  /*
+   ====================
+   Content styles start
+   ====================
+   */
+  .page-content {
+    max-width: 481px;
+    margin: 0 auto;
+    padding: 0 10px; }
+
+  /*
+   ==================
+   Content styles end
+   ==================
+  */ }
+/*
+ ===========================================
+ Desktop styles start:
+
+ These should appear on desktop browsers.
+ They probably are set up in a way that they
+ require a respectable amount of bandwidth
+ to render.
+ ===========================================
+ */
+/*
+ ==============================================================
+ */
+@media only screen and (min-width: 769px) {
+  body {
+    font-family: "Lato"; }
+
+  /*
+   ===================
+   Header styles start
+   ===================
+   */
+  .site-title {
+    margin: 0;
+    float: left; }
+
+  .site-description {
+    margin: 0;
+    float: right; }
+
+  /*
+   =================
+   Header styles end
+   =================
+   */
+  /*
+    =======================
+    Navigation styles start
+    =======================
+    */
   #site-navigation-list {
     display: block;
     padding: 2px 0;
@@ -1614,6 +1711,15 @@ a.pagination-link {
     margin: 0px auto;
     text-align: center; }
 
+  #menu, #search {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); }
+
+  /*
+   =====================
+   Navigation styles end
+   =====================
+   */
   .site-description {
     display: block;
     position: static; }
@@ -1622,7 +1728,7 @@ a.pagination-link {
   * Hide 'mobile first' menu & search
   * boxes on tablets
   */
-  #menu, #search {
+  #search {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
 
@@ -1641,6 +1747,9 @@ a.pagination-link {
   #s {
     font-size: 1em; }
 
+  #searchbox {
+    display: block; }
+
   #tipue_search_input {
     font: 13px/1.5 "open sans", sans-serif;
     color: #333;
@@ -1663,7 +1772,7 @@ a.pagination-link {
     margin-top: 1px;
     border: 1px solid gainsboro;
     border-radius: 2px;
-    background: #f1f1f1 url("img/search.gif") no-repeat center;
+    background: #f1f1f1 url("../ximg/search.gif") no-repeat center;
     outline: none; }
 
   #tipue_search_button:hover {
@@ -1678,19 +1787,32 @@ a.pagination-link {
   .social-network-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    font-family: "Lato"; }
 
+  /*
+   ====================
+   Content styles start
+   ====================
+   */
+  .page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px; }
+
+  /*
+   ==================
+   Content styles end
+   ==================
+   */
   /*
    =================================
    Home page pagination styles start
    =================================
   */
-  .page {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    color: #fff; }
+  .control-section-width {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px; }
 
   /*
    ===============================

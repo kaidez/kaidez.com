@@ -1,11 +1,12 @@
 /*
-  * =================================================================
-  * _base.css:
-
-  * Contains only variables and mixins that will be applied to the
-  * production-ready 'styles.min.css'.  That's it...no more, no less.
-  * =================================================================
-*/
+ * =================================================================
+ * _base.css:
+ * 
+ * This file contains only variables and mixins that will be applied
+ * to the production-ready 'styles.min.css'.  That's it...no more,
+ * no less.
+ * =================================================================
+ */
 
 
 /*
@@ -24,7 +25,7 @@ $h-num-color: $nav-color;
 $site-grey: #999;
 
 // Font variables
-$helv: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+$helv: "Lato";
 $robo: "Roboto Condensed";
 $srf: serif;
 
@@ -33,11 +34,28 @@ $srf: serif;
 /*
  * Used in mix-in for social-networking sprite,retina as well
  * as non-retina version.
-*/
+ */
 $mobile-size: 320px;
 $tablet-small-size: 481px;
 $table-large-size: 768px;
 $desktop-size: 769px;
+
+/*
+ * Define width for the <header>, <main> and <footer> elements by applying
+ * this mixin to a class that's applied to the element. The '$dimension'
+ * variable defines the width value and the values are determined by the
+ * "Width variables" directly below the mixin.
+ */
+@mixin content-width($dimension) {
+  max-width: $dimension;
+  margin: 0 auto;
+  padding:0 10px;
+}
+
+// Width varibles
+$dt-width: 900px; // Desktop
+$tab-width: 481px; // Tablet
+$mobile-width: 300px; // Mobile
   
 // 'background-size' variables...values for sprites...may change if logo's added to the sprite.
 $bg-size: 289px 120px; 

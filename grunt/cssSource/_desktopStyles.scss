@@ -1,20 +1,68 @@
-@media only screen and (min-width: 769px) {
+/*
+ ===========================================
+ Desktop styles start:
 
-  /*
-   * Handhelds and tablets get the helvetica-type
-   * Google font. Too many fonts applied to handhelds
-   * will slow down their page load.
-   */
+ These should appear on desktop browsers.
+ They probably are set up in a way that they
+ require a respectable amount of bandwidth
+ to render.
+ ===========================================
+ */
+
+/*
+ ==============================================================
+ */
+
+ @media only screen and (min-width: 769px) {
+
+ 
   body {
     @include fonts($helv);
-    padding:0;
   }
+
+/*
+ ===================
+ Header styles start
+ ===================
+ */
+
+.site-title {
+  margin:0;
+  float: left;
+}
+
+.site-description {
+  margin:0;
+  float: right;
+}
+
+/*
+ =================
+ Header styles end
+ =================
+ */
+
+/*
+  =======================
+  Navigation styles start
+  =======================
+  */
 
   // Menu
   #site-navigation-list {
     @include show-menu;
     @include master-center;
   }
+
+    #menu, #search {
+      @include hide-element;
+    }
+
+  /*
+   =====================
+   Navigation styles end
+   =====================
+   */
 
   .site-description { //h2 tag
     display: block;
@@ -25,7 +73,7 @@
    * Hide 'mobile first' menu & search
    * boxes on tablets
    */
-  #menu, #search {
+  #search {
     @include hide-element;
   }
   
@@ -51,6 +99,11 @@
   }
 
 // Search box
+
+  #searchbox {
+    display: block;
+  }
+
 #tipue_search_input{
   font: 13px/1.5 'open sans', sans-serif;
   color: #333;
@@ -75,7 +128,7 @@
   margin-top: 1px;
   border: 1px solid #dcdcdc;
   border-radius: 2px;
-  background: #f1f1f1 url('img/search.gif') no-repeat center;
+  background: #f1f1f1 url('../ximg/search.gif') no-repeat center;
   outline: none;
 }
 
@@ -98,6 +151,21 @@
   }
 
 
+  /*
+   ====================
+   Content styles start
+   ====================
+   */
+  
+  .page-content {
+    @include content-width($dt-width);
+  }
+
+  /*
+   ==================
+   Content styles end
+   ==================
+   */
 
   /*
    =================================
@@ -105,9 +173,8 @@
    =================================
   */
 
-  .page {
-    @include floatListItem;
-    @include pagButtonItem;
+  .control-section-width {
+    @include content-width($dt-width);
   }
 
   /*
