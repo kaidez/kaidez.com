@@ -256,7 +256,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em; }
 
 /**
@@ -375,7 +375,7 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -621,7 +621,7 @@ html, body {
  */
 #site-navigation {
   width: auto;
-  border-top: 1px solid black; }
+  border-top: 1px solid #000; }
 
 .wf-loading .site-navigation-list-link {
   font-family: serif;
@@ -672,7 +672,7 @@ a:hover {
   padding: 10px;
   margin: 40px 0;
   background-color: #E1F5F6;
-  border: 1px solid #6ab0d4;
+  border: 1px solid #6AB0D4;
   clear: both; }
 
 #social-network-container {
@@ -737,7 +737,7 @@ a:hover {
   padding: 7px;
   margin: 0;
   width: 205px;
-  border: 1px solid lightgrey;
+  border: 1px solid #d3d3d3;
   outline: none; }
 
 .search-highlight {
@@ -751,7 +751,7 @@ a:hover {
   width: 60px;
   height: 33px;
   margin-top: 1px;
-  border: 1px solid gainsboro;
+  border: 1px solid #dcdcdc;
   background: #f1f1f1 url("../img/search.gif") no-repeat center;
   outline: none;
   text-indent: -9999px; }
@@ -765,7 +765,7 @@ a:hover {
 #tipue_search_foot_boxes {
   padding: 0;
   margin: 0;
-  font: 12px/1 "open sans", sans-serif; }
+  font: 12px/1 'open sans', sans-serif; }
 
 #tipue_search_foot_boxes li {
   list-style: none;
@@ -868,7 +868,7 @@ a:hover {
 
 .wf-active .footer-header {
   font-size: 23px;
-  border-bottom: 2px dotted black; }
+  border-bottom: 2px dotted #000; }
 
 #author-image {
   float: left;
@@ -1181,6 +1181,9 @@ a:hover {
 .site-description {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
+
+.header-pic-class {
+  display: none; }
 
 /*
  =================
@@ -1506,7 +1509,7 @@ Content styles end
 .pages {
   padding: 0;
   margin: 0;
-  font: 12px/1 "open sans", sans-serif; }
+  font: 12px/1 'open sans', sans-serif; }
 
 .page {
   list-style: none;
@@ -1555,6 +1558,10 @@ a.pagination-link {
     display: block;
     position: static; }
 
+  .header-pic-class {
+    float: left;
+    display: block; }
+
   /*
    =================
    Header styles end
@@ -1596,7 +1603,7 @@ a.pagination-link {
     padding: 7px;
     margin: 0;
     width: 250px;
-    border: 1px solid lightgrey;
+    border: 1px solid #d3d3d3;
     border-radius: 2px;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1610,7 +1617,7 @@ a.pagination-link {
     width: 60px;
     height: 33px;
     margin-top: 1px;
-    border: 1px solid gainsboro;
+    border: 1px solid #dcdcdc;
     border-radius: 2px;
     background: #f1f1f1 url("../img/search.gif") no-repeat center;
     outline: none; }
@@ -1679,18 +1686,32 @@ a.pagination-link {
   body {
     font-family: "Lato"; }
 
+  .wf-active h1,
+  .js .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    font-family: "Roboto Condensed";
+    font-size: 1.7rem; }
+
   /*
    ===================
    Header styles start
    ===================
    */
   .site-title {
-    margin: 0;
-    float: left; }
+    margin: 0; }
 
   .site-description {
-    margin: 0;
-    float: right; }
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0; }
+
+  .header-pic-class {
+    float: left;
+    display: block; }
 
   /*
    =================
@@ -1717,7 +1738,7 @@ a.pagination-link {
 
   #site-navigation {
     width: auto;
-    border-top: 1px solid black; }
+    border-top: 1px solid #000; }
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
@@ -1739,10 +1760,6 @@ a.pagination-link {
    Navigation styles end
    =====================
    */
-  .site-description {
-    display: block;
-    position: static; }
-
   /*
   * Hide 'mobile first' menu & search
   * boxes on tablets
@@ -1754,15 +1771,6 @@ a.pagination-link {
   .site-navigation-list-link {
     float: left; }
 
-  .wf-active h1,
-  .wf-active h2,
-  .wf-active h3,
-  .wf-active h4,
-  .wf-active h5,
-  .wf-active h6 {
-    font-family: "Roboto Condensed";
-    font-size: 1.7rem; }
-
   #s {
     font-size: 1em; }
 
@@ -1770,12 +1778,12 @@ a.pagination-link {
     display: block; }
 
   #tipue_search_input {
-    font: 13px/1.5 "open sans", sans-serif;
+    font: 13px/1.5 'open sans', sans-serif;
     color: #333;
     padding: 7px;
     margin: 0;
     width: 250px;
-    border: 1px solid lightgrey;
+    border: 1px solid #d3d3d3;
     border-radius: 2px;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1789,7 +1797,7 @@ a.pagination-link {
     width: 60px;
     height: 33px;
     margin-top: 1px;
-    border: 1px solid gainsboro;
+    border: 1px solid #dcdcdc;
     border-radius: 2px;
     background: #f1f1f1 url("../img/search.gif") no-repeat center;
     outline: none; }
@@ -1831,7 +1839,8 @@ a.pagination-link {
   .control-section-width {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 10px; }
+    padding: 0 10px;
+    float: left; }
 
   /*
    ===============================
@@ -1848,7 +1857,7 @@ a.pagination-link {
 .main-navigation .assistive-text:active,
 .main-navigation .assistive-text:focus {
   background: #fff;
-  border: 2px solid #333333;
+  border: 2px solid #333;
   border-radius: 3px;
   clip: auto !important;
   color: #000;

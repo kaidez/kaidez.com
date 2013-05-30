@@ -20,21 +20,38 @@
     @include fonts($helv);
   }
 
-/*
- ===================
- Header styles start
- ===================
- */
+  // apply the Google font to all <header> tags  
+  .wf-active h1,
+  .js .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    @include fonts($robo);
+    font-size: 1.7rem;
+  }
 
-.site-title {
-  margin:0;
-  float: left;
-}
+  /*
+   ===================
+   Header styles start
+   ===================
+   */
 
-.site-description {
-  margin:0;
-  float: right;
-}
+  .site-title {
+    margin:0;
+  }
+
+  .site-description { //h2 tag
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .header-pic-class {
+    float: left;
+    display: block;
+  }
 
 /*
  =================
@@ -94,10 +111,6 @@
  =====================
  */
 
-  .site-description { //h2 tag
-    display: block;
-    position: static;
-  }
 
    /*
    * Hide 'mobile first' menu & search
@@ -111,16 +124,7 @@
 	  float:left;
   }
 
-  // apply the Google font to all <header> tags  
-  .wf-active h1,
-  .wf-active h2,
-  .wf-active h3,
-  .wf-active h4,
-  .wf-active h5,
-  .wf-active h6 {
-    @include fonts($robo);
-    font-size: 1.7rem;
-  }
+
 
   // Search box-related styles start
 
@@ -205,6 +209,7 @@
 
   .control-section-width {
     @include content-width($dt-width);
+    float: left;
   }
 
   /*
