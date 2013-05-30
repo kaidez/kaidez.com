@@ -54,16 +54,16 @@
 
     {% include category_breadcrumbs_partial.html %}
 
-    <main id="content" role="main">
+    <main id="content" role="main" class="containing-element">
       <h1 class="category-header">Category: {{ page.title }}</h1>
       {{ content }}
     </main> <!-- #content -->
   
-    <footer id="footer" class="clearfix" role="contentinfo">
+    <footer id="footer" class="clearfix containing-element" role="contentinfo">
 
       <section id="about" class="footer-sections">
         <h3 class="footer-header">ABOUT ME</h3>
-        <img src="http://livetest.kaidez.com/wp-content/themes/kaidez-2012/img/placeholder.png" id="author-image" alt="The Author">
+        <img src="../img/profilepic.jpg" id="author-image" alt="The Author">
         <p class="footer-paragraph">I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
         </p>
       </section> <!-- #about -->
