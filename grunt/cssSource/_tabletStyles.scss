@@ -42,8 +42,8 @@
    =================
    */
 
-  // Menu
-  #site-navigation-list {
+  // <nav>
+  .main-navigation-list {
   	@include show-menu;
   	@include master-center;
   }

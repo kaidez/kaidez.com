@@ -76,7 +76,7 @@
 }
 
 // <nav> tag
-#site-navigation {
+.main-navigation {
   width: auto;
   border-top: 1px solid #000;
 }
@@ -194,7 +194,6 @@
   .page-content {
     @include content-width($dt-width);
   }
-
   /*
    ==================
    Content styles end

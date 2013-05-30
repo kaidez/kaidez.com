@@ -619,7 +619,7 @@ html, body {
  Navigation styles start
  =======================
  */
-#site-navigation {
+.main-navigation {
   width: auto;
   border-top: 1px solid #000; }
 
@@ -1567,7 +1567,7 @@ a.pagination-link {
    Header styles end
    =================
    */
-  #site-navigation-list {
+  .main-navigation-list {
     display: block;
     padding: 2px 0;
     min-height: 21px;
@@ -1736,7 +1736,7 @@ a.pagination-link {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
 
-  #site-navigation {
+  .main-navigation {
     width: auto;
     border-top: 1px solid #000; }
 
