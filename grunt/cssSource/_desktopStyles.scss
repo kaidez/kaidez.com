@@ -53,6 +53,11 @@
     display: block;
   }
 
+  .site-header {
+    width: 450px;
+    float: left;
+  }
+
 /*
  =================
  Header styles end
@@ -77,8 +82,9 @@
 
 // <nav> tag
 .main-navigation {
-  width: auto;
-  border-top: 1px solid #000;
+  width: 450px;
+  float: right;
+  border: none;
 }
 
 // Hide the Google font on all <nav> links before page load
@@ -98,6 +104,11 @@
   background-color: transparent;
   border: none;
   padding:0;
+}
+
+.top-level-header-wrapper {
+  width:900px;
+  margin: 0 auto;
 }
 
 // hover class for man nav links

@@ -1713,6 +1713,10 @@ a.pagination-link {
     float: left;
     display: block; }
 
+  .site-header {
+    width: 450px;
+    float: left; }
+
   /*
    =================
    Header styles end
@@ -1737,8 +1741,9 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   .main-navigation {
-    width: auto;
-    border-top: 1px solid #000; }
+    width: 450px;
+    float: right;
+    border: none; }
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
@@ -1755,6 +1760,10 @@ a.pagination-link {
     border: none;
     padding: 0; }
 
+  .top-level-header-wrapper {
+    width: 900px;
+    margin: 0 auto; }
+
   /*
    =====================
    Navigation styles end
@@ -1764,10 +1773,6 @@ a.pagination-link {
   * Hide 'mobile first' menu & search
   * boxes on tablets
   */
-  #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); }
-
   .site-navigation-list-link {
     float: left; }
 
