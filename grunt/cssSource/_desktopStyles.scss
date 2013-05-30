@@ -43,26 +43,56 @@
  */
 
 /*
-  =======================
-  Navigation styles start
-  =======================
-  */
+ =======================
+ Navigation styles start
+ =======================
+ */
 
-  // Menu
-  #site-navigation-list {
-    @include show-menu;
-    @include master-center;
-  }
+// Menu
+#site-navigation-list {
+  @include show-menu;
+  @include master-center;
+}
 
-    #menu, #search {
-      @include hide-element;
-    }
+#menu, #search {
+  @include hide-element;
+}
 
-  /*
-   =====================
-   Navigation styles end
-   =====================
-   */
+// <nav> tag
+#site-navigation {
+  width: auto;
+  border-top: 1px solid #000;
+}
+
+// Hide the Google font on all <nav> links before page load
+.wf-loading .site-navigation-list-link {
+  font-family: $srf;
+  visibility: hidden;
+}
+
+// Apply the Google font to all <nav> links after page load
+.wf-active .site-navigation-list-link a:link,
+.wf-active .site-navigation-list-link a:visited { 
+  @include fonts($helv);
+  text-decoration: none;
+  font-size: 14px;
+  float: none;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  padding:0;
+}
+
+// hover class for man nav links
+.wf-active .site-navigation-list-link a:hover {
+
+}
+
+/*
+ =====================
+ Navigation styles end
+ =====================
+ */
 
   .site-description { //h2 tag
     display: block;
@@ -128,7 +158,7 @@
   margin-top: 1px;
   border: 1px solid #dcdcdc;
   border-radius: 2px;
-  background: #f1f1f1 url('../ximg/search.gif') no-repeat center;
+  background: #f1f1f1 url('../img/search.gif') no-repeat center;
   outline: none;
 }
 

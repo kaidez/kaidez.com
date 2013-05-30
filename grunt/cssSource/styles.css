@@ -1698,10 +1698,10 @@ a.pagination-link {
    =================
    */
   /*
-    =======================
-    Navigation styles start
-    =======================
-    */
+   =======================
+   Navigation styles start
+   =======================
+   */
   #site-navigation-list {
     display: block;
     padding: 2px 0;
@@ -1714,6 +1714,25 @@ a.pagination-link {
   #menu, #search {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
+
+  #site-navigation {
+    width: auto;
+    border-top: 1px solid black; }
+
+  .wf-loading .site-navigation-list-link {
+    font-family: serif;
+    visibility: hidden; }
+
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited {
+    font-family: "Lato";
+    text-decoration: none;
+    font-size: 14px;
+    float: none;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    padding: 0; }
 
   /*
    =====================
@@ -1772,7 +1791,7 @@ a.pagination-link {
     margin-top: 1px;
     border: 1px solid gainsboro;
     border-radius: 2px;
-    background: #f1f1f1 url("../ximg/search.gif") no-repeat center;
+    background: #f1f1f1 url("../img/search.gif") no-repeat center;
     outline: none; }
 
   #tipue_search_button:hover {
