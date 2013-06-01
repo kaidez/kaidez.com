@@ -94,41 +94,6 @@ html, body {
   clear: both;
 }
 
-@media only screen and (min-width: 700px) {
-
-  /* Medium screen, non-retina */
-
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 700px),
-only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 700px),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 700px),
-only screen and (min-device-pixel-ratio: 2) and (min-width: 700px),
-only screen and (min-resolution: 192dpi) and (min-width: 700px),
-only screen and (min-resolution: 2dppx) and (min-width: 700px) { 
-
-  /* Medium screen, retina, stuff to override above media query */
-
-}
-
-@media only screen and (min-width: 1300px) {
-
-  /* Large screen, non-retina */
-
-}
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
-only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px),
-only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px),
-only screen and (min-resolution: 192dpi) and (min-width: 1300px),
-only screen and (min-resolution: 2dppx)  and (min-width: 1300px) { 
-
-  /* Large screen, retina, stuff to override above media query */
-
-}
-
 /*
  =======================
  Navigation styles start
@@ -450,7 +415,14 @@ a:hover {
 // Footer contact form fields
 #contact-form-fields {
   border: none;
-}    
+}
+
+.kaidez-social-network-list-item {
+  list-style-type: none;
+  float: left;
+  margin-right: 10px;
+}
+
 
 /*
  =========================
@@ -467,4 +439,3 @@ a:hover {
  Global styles end
  =================
  */
-
