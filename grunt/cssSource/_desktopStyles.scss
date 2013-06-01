@@ -36,16 +36,17 @@
    Header styles start
    ===================
    */
+  
 
-  .site-title {
-    margin:0;
-  }
+  
 
-  .site-description { //h2 tag
+  // <h2> tag...the 'closing tags...wrapping functions text'
+  .site-description {
     display: block;
     position: static;
     font-size: 14px;
     margin: 0;
+    clear: both;
   }
 
   .header-pic-class {

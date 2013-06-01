@@ -5,7 +5,11 @@
 @import "globalStyles";
 @import "syntax";
 
-// Mobile First styles start...'_retinaMediaQuery.scss' is within this file
+// Retina media query code starts
+@import "retinaMediaQuery";
+// Retina media query code end
+
+// Mobile First styles start
 @import "mobileFirstStyles";
 // Mobile First styles end
 

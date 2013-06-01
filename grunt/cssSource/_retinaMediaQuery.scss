@@ -3,30 +3,60 @@
 
 
 
- /*
-  * ======================================================
-  * The entire retina/non-retina media query styles start:
-  *
-  * Menu-related media query code for both the menu button
-  * and search button is here. It may have been better to
-  * break it out into <header> related and <footer>
-  * related styles, but combining both under one media
-  * query seemed the better way to go. This may change in
-  * the future.
-  *
-  * In this code, non retina styles are placed outside of
-  * the media query as that seems to be the fastest way to
-  * load things. But as retina and similar setups is
-  * available on more and more mobile devices, it may be
-  * better to cater to them so that content loads faster
-  * on these device.
-  * ======================================================
+/*
+ * ======================================================
+ * The entire retina/non-retina media query styles start
+ *
+ *   ====================
+ *   HOW THIS STUFF WORKS
+ *   ====================
+ *
+ * kaidez.com uses a sprite which contains images for:
+ *
+ *   -the site logo
+ *   -the menu image in the header on mobile
+ *   -the search icon in the header on mobile devices
+ *   -the search icon that appears in the search bar
+ *   -all four social networking icons in the site
+ *    footer
+ *
+ * There are two versions of this sprite:
+ *
+ *   -'snSprite.png': the non-retina device version.
+ *   -'snSprite@2x.png': the retina device version.
+ *
+ * The layout for the social netowking icons is
+ * consistent across all devices and resolutions. The logo
+ * and the two mobile-based images appear differently
+ * across all devices and resolutions. Everything takes a
+ * 'mobile first' approach by looking for loading in the
+ * non-retina mobile layout first and foremost. As more
+ * and more mobile devices are released with hi-resolution,
+ * it may be better to load the retina mobile layout first
+ * and foremost. Maybe in the future?
+ *
+ * If the viewer isn't viewing the site in a 'non-retina
+ * mobile' way, the sprite loads using one of the following
+ * methods:
+ *
+ *   -'$retina' loads all the sprite layouts to
+ *     retina tablets and desktops
+ *   -'$desktop' loads the logo-layout only to the
+ *    non-retina tablets and desktops (again, the social
+ *    networking sprite layout is consistent across all
+ *    devices and resolutions)
+ *   -'$mobile-retina' loads the logo-layout only to retina
+ *    mobile devices (one more time: the social
+ *    networking sprite layout is consistent across all
+ *    devices and resolutions)
+ * 
+ * ======================================================
  */
 
 /*
-  =======================
-  Non-retina media starts
-  =======================
+  ================================================
+  Non-retina media starts for tablets and desktops
+  ================================================
 */
 
 // Non-retina social icons
@@ -48,12 +78,6 @@
   list-style-type: none;
 }
 
-.kaidez-social-network-list-item {
-  float: left;
-  list-style-type: none;
-  margin-right: 10px;
-}
-
 // Non-retina menu icons
 
 // Menu
@@ -65,7 +89,7 @@
   cursor: pointer;
 }
 
-// Search icon
+// Search icon in the header
 #search {
   @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
   display: block;
@@ -74,26 +98,34 @@
   float: right;
 }
 
-// Search button //this may go
+// Search button by the search field //this may go
 .btnSearch {
   @include sprite-images('../img/snSprite.png', -80px -69px, 44px, 44px);
   border: none;
   text-indent: -999px;
 }
 
+
+// <h1> tag in the <header>...MOBILE, NON-RETINA VERSION
+.site-title {
+  @include sprite-images('../img/snSprite.png', -202px -80px, 60px, 176px);
+  @include desktop-logo-sprite-add-on;
+}
+
  /*
-   =====================
-   Non-retina media ends
-   =====================
+   ======================
+   Non-retina stuff ends
+   ======================
   */
 
  /*
-   ===================
-   Retina media starts
-   ===================
+   ====================
+   Retina stuff starts
+   ====================
   */
 
-@media #{$mobile-retina} { 
+//Desktop retina:
+@media #{$retina} { 
 
   // Retina social icons
   #twitter {
@@ -114,14 +146,8 @@
     list-style-type: none;
   }
 
-  .kaidez-social-network-list-item {
-    float: left;
-    list-style-type: none;
-    margin-right: 5px;
-  }
-
   // Retina menu icons
-
+  
   //Menu
   #menu {
     @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
@@ -146,7 +172,41 @@
     border: none;
     text-indent: -999px;
   }
-} 
+
+  // <h1> tag in the <header>...DESKTOP ONLY!!!!!!!!!!!
+  .site-title {
+    @include sprite-images('../img/snSprite@2x.png', -125px -80px, 60px, 221px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+}
+
+
+// Mobile: if the screen is no wider than 480px:
+@media #{$desktop} { 
+
+  // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('../img/snSprite.png', -125px -80px, 60px, 221px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+}
+
+
+// Mobile retina: if the screen is no wider than 480px:
+@media #{$mobile-retina} { 
+
+  // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('../img/snSprite@2x.png', -202px -80px, 60px, 176px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+}
 
 /*
   =====================
@@ -155,9 +215,9 @@
  */
 
  /*
-  * =============================================
-  * The entire retina/non-retina media query ends
-  * =============================================
+  * ===================================================
+  * The entire retina/non-retina media query style ends
+  * ===================================================
   */
 
 

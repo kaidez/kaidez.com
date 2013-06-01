@@ -29,6 +29,7 @@
   .site-description {
     display: block;
     position: static;
+    clear: both;
   }
 
   .header-pic-class {
@@ -129,10 +130,7 @@
    ===================
    */
 
-  .site-title {
-    margin:0;
-    float: left;
-  }
+
 
   .site-description {
     margin:0;

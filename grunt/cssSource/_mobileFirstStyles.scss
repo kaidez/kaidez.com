@@ -29,17 +29,6 @@
   height: 39px;
 }
 
-// logo-based <h1> tag
-.site-title {
-  background: url('../img/siteLogo.png') no-repeat;
-  height: 49px;
-  width: 200px;
-  float: left;
-  margin:10px 0 10px 10px;
-  text-indent: -999px;
-  display: block;
-}
-
 // hide the <h2> tag in the <header> on page load
 .site-description {
   @include hide-element;
@@ -48,6 +37,7 @@
 .header-pic-class {
   display: none;
 }
+
 
 /*
  =================
@@ -265,7 +255,8 @@ Content styles end
  =========================
  */
 
-@import "_retinaMediaQuery";
+
+
 
 /*
  =================================

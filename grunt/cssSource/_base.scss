@@ -29,58 +29,46 @@ $helv: "Lato";
 $robo: "Roboto Condensed";
 $srf: serif;
 
-// Media Query variables
-
-/*
- * Used in mix-in for social-networking sprite,retina as well
- * as non-retina version.
- */
-$mobile-size: 320px;
-$tablet-small-size: 481px;
-$table-large-size: 768px;
-$desktop-size: 769px;
-
-/*
- * Define width for the <header>, <main> and <footer> elements by applying
- * this mixin to a class that's applied to the element. The '$dimension'
- * variable defines the width value and the values are determined by the
- * "Width variables" directly below the mixin.
- */
-@mixin content-width($dimension) {
-  max-width: $dimension;
-  margin: 0 auto;
-  padding:0 10px;
-}
-
 // Width varibles
 $dt-width: 900px; // Desktop
 $tab-width: 481px; // Tablet
 $mobile-width: 300px; // Mobile
   
-// 'background-size' variables...values for sprites...may change if logo's added to the sprite.
-$bg-size: 289px 120px; 
-  
-// may never use this since styles are loading mobile firest
-$mobile: "only screen and (max-width : $mobile-size)";
-
-$mobile-retina:   
-  "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
-  only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px),
-  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px),
-  only screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
-  only screen and (min-resolution: 192dpi) and (min-width: 320px),
-  only screen and (min-resolution: 2dppx) and (min-width: 320px)";
-  // $tablet: "only screen and (min-width:$tablet-small-size) and (max-width:$table-large-size)";
-
 /*
-  @media only screen and (min-width:$tab-small) and (max-width:$tab-large) {
+ * 'background-size' variable...you have to do this is you're doubling the  
+ * size of your image for retina purposes.
+ */
+$bg-size: 350px 150px; 
+  
+// Mobile: if the screen is no wider than 480px:
+// $mobile: "only screen and (max-width : 480px)";
 
-  }
+// Tablet/Desktop: if the screen retina based AND is at least 481px wide:
+$retina:   
+  "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 481px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 481px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 481px),
+  only screen and (min-device-pixel-ratio: 2) and (min-width: 481px),
+  only screen and (min-resolution: 192dpi) and (min-width: 481px),
+  only screen and (min-resolution: 2dppx) and (min-width: 481px)";
 
-  @media screen and (min-width:$desktop-size) {
+// Tablet/Desktop non-retina: if the screen retina based AND is at least 481px wide:
+$desktop:   
+  "only screen and (min-width: 481px),
+  only screen and (min-width: 481px),
+  only screen and (min-width: 481px),
+  only screen and (min-width: 481px),
+  only screen and (min-width: 481px),
+  only screen and (min-width: 481px)";
 
-  }
-}*/
+// Mobile: if the screen is retina-based AND is no wider than 480px:
+$mobile-retina:   
+  "only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 480px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 480px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 480px),
+  only screen and (min-device-pixel-ratio: 2) and (max-width: 480px),
+  only screen and (min-resolution: 192dpi) and (max-width: 480px),
+  only screen and (min-resolution: 2dppx) and (max-width: 480px)";
 
 
 /*
@@ -147,19 +135,36 @@ $mobile-retina:
   font-size: 12px;
 }
 
-/*
- * Mix-in to load up sprite & display:
- *  - menu icons.
- *  - social networking icons.
+ /*
+ * Define width for the <header>, <main> and <footer> elements by applying
+ * this mixin to a class that's applied to the element. The '$dimension'
+ * variable defines the width value and the values are determined by the
+ * "Width variables" directly below the mixin.
  */
-@mixin sprite-images ($img, $pos, $height,$width) {
+@mixin content-width($dimension) {
+  max-width: $dimension;
+  margin: 0 auto;
+  padding:0 10px;
+}
+@mixin sprite-images ($img, $pos, $height, $width) {
   background: url($img) no-repeat $pos;
   background-size: $bg-size;
   height: $height;
   width: $width;
 }
 
-// Applies border to post snippets on home page and search results.
+/*
+  * Unique styles for the 'site-title' class in the
+  * desktop styles...add this to sprite mixin code
+  */
+@mixin desktop-logo-sprite-add-on {
+  float: left;
+  margin: 0;
+  text-indent: -999px;
+  display: block;
+}
+
+ // Applies border to post snippets on home page and search results.
 @mixin bottomBorder ($color) {
   border-bottom: 1px solid $color;
 }
@@ -199,7 +204,7 @@ $mobile-retina:
   // background: #9C0033;
   // border: 1px solid #dcdcdc;
   color: #fff;
-  //margin-right: 7px;
+  // margin-right: 7px;
   // padding: 7px 10px 8px;
 }
 

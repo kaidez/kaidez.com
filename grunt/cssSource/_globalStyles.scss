@@ -34,10 +34,6 @@ html, body {
   width: auto;
 }
 
-// Logo-based <h1> tag
-.site-title {
-  // may need it later
-}
 
 // Post snippet that displays on both the home page and search results
 .post-snippet {
@@ -90,12 +86,12 @@ html, body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 @media only screen and (min-width: 700px) {
@@ -454,7 +450,7 @@ a:hover {
 // Footer contact form fields
 #contact-form-fields {
   border: none;
-}
+}    
 
 /*
  =========================
@@ -471,3 +467,4 @@ a:hover {
  Global styles end
  =================
  */
+
