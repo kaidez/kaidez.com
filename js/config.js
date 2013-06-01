@@ -1,14 +1,14 @@
 requirejs.config({
-  baseUrl: "../js",
+  baseUrl: "/js",
 
   deps: ["buildform","menu","form","search"],
 
   paths: {
-    jquery: "../js/vendor/jquery",
-    val: "../js/vendor/validate",
-    tipuesetContent: "../js/vendor/tipuesearch_content",
-    tipueset: "../js/vendor/tipuesearch_set",
-    tipue: "../js/vendor/tipuesearch.min" 
+    jquery: "vendor/jquery",
+    val: "vendor/validate",
+    tipuesetContent: "vendor/tipuesearch_content",
+    tipueset: "vendor/tipuesearch_set",
+    tipue: "vendor/tipuesearch.min" 
   },
 
   shim: { 
