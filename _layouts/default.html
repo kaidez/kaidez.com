@@ -31,28 +31,28 @@
 </head>
 <body>
   <div id="container" class="containing-element">
-    <div id="header-nav-wrapper" class="site-header">
-      <header id="masthead" class="clearfix" role="banner">
-        <div id="header-nav-wrapper" class="top-level-header-wrapper">
-          <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
-          <h2 class="site-description">closing tags...wrapping functions</h2>
-        </div> <!-- #header-nav-wrapper -->
-      </header> <!-- #masthead -->
-
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-        <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
-        <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
-        
-        <ul id="site-navigation-list">
-          <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
-          <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-          <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
-          <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
-        </ul>
-      </nav> <!-- #site-navigation -->
     
-      {% include searchbox_partial.html %}
-  </div>
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <div id="header-nav-wrapper" class="top-level-header-wrapper">
+        <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
+        <h2 class="site-description">closing tags...wrapping functions</h2>
+      </div> <!-- #header-nav-wrapper -->
+    </header> <!-- #masthead -->
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+      <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+        
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
+      </ul>
+    </nav> <!-- #site-navigation -->
+
+    {% include searchbox_partial.html %}
+    
     <main id="content" class="page-content" role="main">
       {{ content }}
     </main> <!-- #content -->
@@ -70,10 +70,10 @@
         <h3 class="footer-header">CONNECT WITH ME</h3>
         <ul id="social-network-list">
           <li id="twitter" class="kaidez-social-network-list-item">
-            <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
+          <a href="http://twitter.com/kaidez" class="kaidez-social-network-link"></a>
           </li>
           <li id="google-plus" class="kaidez-social-network-list-item">
-              <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
+          <a href="https://plus.google.com/115509037875239263451/posts" class="kaidez-social-network-link"></a>
           </li>
           <li id="github" class="kaidez-social-network-list-item"><a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
           <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
@@ -89,11 +89,11 @@
               <input name="form-name" id="form-name" type="text" placeholder="Name" required> 
             </p>
             <p class="footer-contact-fields">
-              <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
+            <input name="form-email" id="form-email" type="email" placeholder="Email" required>  
             </p>
             <p class="footer-contact-fields">
               <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder" name="message" id="message" required></textarea>
-              </p>
+            </p>
           </fieldset>
           <input type="submit" value="Send Your Message" name="submit" class="button">
         </form>

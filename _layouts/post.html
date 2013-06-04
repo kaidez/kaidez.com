@@ -31,40 +31,42 @@
 </head>
 <body>
   <div id="container" class="containing-element">
-    <div id="header-nav-wrapper" class="site-header">
-      <header id="masthead" class="clearfix" role="banner">
-        <div id="header-nav-wrapper" class="top-level-header-wrapper">
-          <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
-          <h2 class="site-description">closing tags...wrapping functions</h2>
-        </div> <!-- #header-nav-wrapper -->
-      </header> <!-- #masthead -->
+    <header id="masthead" class="site-header clearfix" role="banner">
+      <div id="header-nav-wrapper" class="top-level-header-wrapper">
+        <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
+        <h2 class="site-description">closing tags...wrapping functions</h2>
+      </div> <!-- #header-nav-wrapper -->
+    </header> <!-- #masthead -->
 
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-        <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
-        <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+
+      <a class="assistive-text" href="#home" title="Skip to content">Skip to content</a>
         
-        <ul id="site-navigation-list">
-          <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
-          <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-          <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
-          <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
-        </ul>
-      </nav> <!-- #site-navigation -->
+      <ul id="site-navigation-list">
+        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
+        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
+      </ul> <!-- #site-navigation-list -->
+
+    </nav> <!-- #site-navigation -->
+
+    {% include searchbox_partial.html %}
     
-      {% include searchbox_partial.html %}
-    </div>
-    
-    <main id="content" class="page-content" role="main">
-      {% include post_breadcrumbs_partial.html %}
-    	<h1 class="post-title">{{ page.title }}</h1>
-    	{{ content }}
-    	<div id="related-posts">
-    		<h3 class="related-posts-header">MORE POSTS LIKE THIS...</h3>
-    		<ul>
-    			{% for post in site.related_posts limit:3 %}
+    {% include post_breadcrumbs_partial.html %}
+
+    <main id="content" role="main">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {{ content }}
+      <div id="related-posts">
+        <h3 class="related-posts-header">MORE POSTS LIKE THIS...</h3>
+        <ul>
+          {% for post in site.related_posts limit:3 %}
             <li class="related-posts-link"><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
           {% endfor %}
-    		</ul>
+        </ul>
       </div> <!-- #related-posts -->
     </main> <!-- #content -->
 
