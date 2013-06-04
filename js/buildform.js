@@ -69,7 +69,7 @@ define(function() {
    * the value is 'static', CSS is disabled so the value of our 'cssdisabled'
    * variable remains 'false'. But if the value is anything else (specifically
    * the 'absolute' value we set earlier), CSS is enabled so the value of our
-   *'cssdisabled' variable switches over to 'true'. Our test is sone so remove
+   *'cssdisabled' variable switches over to 'true'. Our test is done so remove
    * the <div> tag from the page.
    *
    * 'cssdisabled' is still available to our module's namespace so if it's set
@@ -99,7 +99,7 @@ define(function() {
   }
 
   else if (window.getComputedStyle) {
-  currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
+    currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
   } 
 
   cssdisabled = (currstyle === 'static') ? true : false;
