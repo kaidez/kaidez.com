@@ -54,9 +54,10 @@
     display: block;
   }
 
-  .site-header {
-    width: 450px;
-    float: left;
+  // wraps <header> and <footer>
+  #header-nav-wrapper {
+    width: 900px;
+    margin: 0 auto;
   }
 
 /*
@@ -145,6 +146,7 @@
 
   #searchbox {
     display: block;
+    background: $header-color;
   }
 
 #tipue_search_input{
