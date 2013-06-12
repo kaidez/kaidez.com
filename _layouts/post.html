@@ -11,7 +11,7 @@
    <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
    
   {% include google_webfont_partial.html %}
-  
+
   <script src="/js/vendor/modernizr.min.js"></script>
 </head>
 <body>
@@ -46,6 +46,15 @@
       {% include post_breadcrumbs_partial.html %}
       <h1 class="post-title">{{ page.title }}</h1>
       {{ content }}
+      <div id="share-post-container" class="postSharing">
+        <a href="https://twitter.com/share">Tweet</a>
+
+        <div class="g-plusone" data-size="medium" data-count="true"></div>
+
+        <div id="fb-root"></div>
+        <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false" data-action="recommend"></div>
+      </div> <!-- #share-post-container -->
+
       <div id="related-posts">
         <h3 class="related-posts-header">MORE POSTS LIKE THIS...</h3>
         <ul>
