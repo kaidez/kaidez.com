@@ -1569,7 +1569,7 @@ a.pagination-link {
  Home page pagination styles end
  ===============================
 */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 569px) and (max-width: 768px) {
   /*
    * Handhelds and tablets get the helvetica-type
    * Google font. Too many fonts applied to handhelds
