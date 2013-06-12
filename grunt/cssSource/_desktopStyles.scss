@@ -65,13 +65,10 @@
     margin: 15px auto 0 auto;
   }
 
-  #header-tag-wrapper {
-
-  }
-
   .searchbox-style {
-    position: absolute;
-    padding: 0;
+    position: static;
+    text-align: auto;
+    float: right;
   }
 
 /*
@@ -215,8 +212,8 @@
    */
   
 
-  // Styles for post <h1> tag
-  .wf-active h1.post-title {
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
     @include master-center;
     font-size: 40px;
   }
