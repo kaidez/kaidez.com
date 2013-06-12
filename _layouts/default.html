@@ -38,7 +38,7 @@
         <div id="header-tag-wrapper" class="top-level-header-wrapper">
           <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
           <h2 class="site-description">closing tags...wrapping functions</h2>
-        </div> <!-- #header-nav-wrapper -->
+        </div> <!-- #header-tag-wrapper -->
       </header> <!-- #masthead -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -55,7 +55,7 @@
 
       {% include searchbox_partial.html %}
     
-      </div>
+      </div> <!-- #header-nav-wrapper -->
       <main id="content" class="page-content" role="main">
         {{ content }}
       </main> <!-- #content -->
@@ -69,7 +69,7 @@
           </p>
         </section> <!-- #about -->
 
-      <section id="social-networking" class="footer-sections">
+        <section id="social-networking" class="footer-sections">
         <h3 class="footer-header">CONNECT WITH ME</h3>
         <ul id="social-network-list">
           <li id="twitter" class="kaidez-social-network-list-item">
@@ -82,9 +82,9 @@
             <a href="http://github.com/kaidez/" class="kaidez-social-network-link"></a></li>
           <li id="youtube"><a href="http://www.youtube.com/user/kaidezblog" class="kaidez-social-network-link"></a></li>
         </ul>
-      </section> <!-- #social-networking -->
+        </section> <!-- #social-networking -->
 
-      <section id="contact-form" class="footer-sections">
+        <section id="contact-form" class="footer-sections">
         <h3 class="footer-header">CONTACT</h3>
         <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
         <form id="contact" method="post">
@@ -101,14 +101,14 @@
           </fieldset>
           <input type="submit" value="Send Your Message" name="submit" class="button">
         </form>
-      </section> <!-- #contact-form -->
+        </section> <!-- #contact-form -->
 
-      <p id="copyright">
-        Copyright &copy; 2008-2013 Kai Gittens
-      </p> <!-- #copyright -->
+        <p id="copyright">
+          Copyright &copy; 2008-2013 Kai Gittens
+        </p> <!-- #copyright -->
 
-    </footer> <!-- #footer -->
-  </div> <!-- #container -->
+      </footer> <!-- #footer -->
+    </div> <!-- #container -->
 
   <script data-main="/js/config.js" src="/js/require.js"></script>
 
