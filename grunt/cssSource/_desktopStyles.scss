@@ -107,19 +107,20 @@
 .wf-loading .site-navigation-list-link {
   font-family: $srf;
   visibility: hidden;
+  text-decoration: none;
+  font-size: 18px;
+  float: none;
+  padding:0;
 }
 
 // Apply the Google font to all <nav> links after page load
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited { 
   @include fonts($helv);
-  text-decoration: none;
-  font-size: 14px;
-  float: none;
-  color: #000;
   background-color: transparent;
+  color: #000;
   border: none;
-  padding:0;
+  margin-right: 12px;
 }
 
 .top-level-header-wrapper {
