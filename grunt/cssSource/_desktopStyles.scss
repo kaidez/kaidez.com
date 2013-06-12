@@ -214,8 +214,23 @@
    ====================
    */
   
+
+  // Styles for post <h1> tag
+  .wf-active h1.post-title {
+    @include master-center;
+    font-size: 40px;
+  }
+
   .page-content {
     @include content-width($dt-width);
+    font-size: 18px;
+    line-height: 36px;
+    padding-top:40px;
+  }
+
+  .breadcrumbStyles {
+    font-size: 16px;
+    padding: 20px 0 35px;
   }
   /*
    ==================
