@@ -46,7 +46,12 @@
     position: static;
     font-size: 14px;
     margin: 0;
-    clear: both;
+    width: 245px;
+  }
+
+  .site-header {
+    max-width: 450px;
+    float: left;
   }
 
   .header-pic-class {
@@ -55,9 +60,18 @@
   }
 
   // wraps <header> and <footer>
-  #header-nav-wrapper {
+  .wrapperHeaderNav {
     width: 900px;
-    margin: 0 auto;
+    margin: 15px auto 0 auto;
+  }
+
+  #header-tag-wrapper {
+
+  }
+
+  .searchbox-style {
+    position: absolute;
+    padding: 0;
   }
 
 /*
@@ -109,8 +123,7 @@
 }
 
 .top-level-header-wrapper {
-  width:900px;
-  margin: 0 auto;
+
 }
 
 // hover class for man nav links
@@ -134,8 +147,6 @@
 	  float:left;
   }
 
-
-
   // Search box-related styles start
 
   #s {
@@ -146,7 +157,6 @@
 
   #searchbox {
     display: block;
-    background: $header-color;
   }
 
 #tipue_search_input{
