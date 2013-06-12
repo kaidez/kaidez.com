@@ -1424,7 +1424,7 @@ a:hover {
   margin: 0;
   line-height: 1.3; }
 
-#breadcrumbs {
+.breadcrumbStyles {
   font-size: 14px;
   padding: 20px 10px 35px 10px; }
 
@@ -1775,7 +1775,8 @@ a.pagination-link {
     width: 454px;
     font-size: 12px;
     margin: 0px auto;
-    text-align: center; }
+    text-align: center;
+    padding: 0; }
 
   #menu, #search {
     position: absolute;
@@ -1788,17 +1789,18 @@ a.pagination-link {
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
-    visibility: hidden; }
+    visibility: hidden;
+    text-decoration: none;
+    font-size: 18px;
+    float: none; }
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited {
     font-family: "Lato";
-    text-decoration: none;
-    font-size: 14px;
-    float: none;
-    color: #000;
     background-color: transparent;
+    color: #000;
     border: none;
+    margin-right: 12px;
     padding: 0; }
 
   /*
@@ -1863,10 +1865,22 @@ a.pagination-link {
    Content styles start
    ====================
    */
+  .wf-active h1.post-title {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 40px; }
+
   .page-content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 10px; }
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 36px;
+    padding-top: 40px; }
+
+  .breadcrumbStyles {
+    font-size: 16px;
+    padding: 20px 0 35px; }
 
   /*
    ==================
