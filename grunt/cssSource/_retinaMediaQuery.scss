@@ -108,7 +108,7 @@
 
 // <h1> tag in the <header>...MOBILE, NON-RETINA VERSION
 .site-title {
-  @include sprite-images('../img/snSprite.png', -202px -80px, 60px, 176px);
+  @include sprite-images('../img/snSprite.png', -117px -149px, 60px, 176px);
   @include desktop-logo-sprite-add-on;
 }
 
@@ -175,7 +175,7 @@
 
   // <h1> tag in the <header>...DESKTOP ONLY!!!!!!!!!!!
   .site-title {
-    @include sprite-images('../img/snSprite@2x.png', -125px -80px, 60px, 221px);
+    @include sprite-images('../img/snSprite@2x.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -188,7 +188,7 @@
 
   // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/snSprite.png', -125px -80px, 60px, 221px);
+    @include sprite-images('../img/snSprite.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -201,7 +201,7 @@
 
   // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/snSprite@2x.png', -202px -80px, 60px, 176px);
+    @include sprite-images('../img/snSprite@2x.png', -117px -149px, 60px, 176px);
     text-indent: -999px;
     margin: 0;
     float: left;
