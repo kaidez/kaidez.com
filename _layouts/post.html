@@ -54,10 +54,9 @@
     </nav> <!-- #site-navigation -->
 
     {% include searchbox_partial.html %}
-    
-    {% include post_breadcrumbs_partial.html %}
 
     <main id="content" role="main">
+      {% include post_breadcrumbs_partial.html %}
       <h1 class="post-title">{{ page.title }}</h1>
       {{ content }}
       <div id="related-posts">
