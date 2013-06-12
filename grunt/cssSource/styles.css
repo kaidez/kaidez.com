@@ -540,9 +540,7 @@ html, body {
   display: block; }
 
 .site-header {
-  background-color: #6ab0d4;
-  text-align: left;
-  width: auto; }
+  text-align: left; }
 
 .post-snippet {
   border-bottom: 1px solid #999999;
@@ -1187,25 +1185,25 @@ a:hover {
 */
 #twitter {
   background: url("../img/snSprite.png") no-repeat -1px -2px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 64px;
   width: 64px; }
 
 #google-plus {
   background: url("../img/snSprite.png") no-repeat -76px -2px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 64px;
   width: 64px; }
 
 #github {
   background: url("../img/snSprite.png") no-repeat -147px -2px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 64px;
   width: 64px; }
 
 #youtube {
   background: url("../img/snSprite.png") no-repeat -219px -2px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 64px;
   width: 64px;
   float: left;
@@ -1213,7 +1211,7 @@ a:hover {
 
 #menu {
   background: url("../img/snSprite.png") no-repeat -2px -68px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 44px;
   width: 44px;
   display: block;
@@ -1223,7 +1221,7 @@ a:hover {
 
 #search {
   background: url("../img/snSprite.png") no-repeat -41px -69px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 44px;
   width: 44px;
   display: block;
@@ -1233,15 +1231,15 @@ a:hover {
 
 .btnSearch {
   background: url("../img/snSprite.png") no-repeat -80px -69px;
-  background-size: 350px 150px;
+  background-size: 350px 210px;
   height: 44px;
   width: 44px;
   border: none;
   text-indent: -999px; }
 
 .site-title {
-  background: url("../img/snSprite.png") no-repeat -202px -80px;
-  background-size: 350px 150px;
+  background: url("../img/snSprite.png") no-repeat -117px -149px;
+  background-size: 350px 210px;
   height: 60px;
   width: 176px;
   float: left;
@@ -1262,25 +1260,25 @@ a:hover {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 481px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 481px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 481px), only screen and (min-device-pixel-ratio: 2) and (min-width: 481px), only screen and (min-resolution: 192dpi) and (min-width: 481px), only screen and (min-resolution: 2dppx) and (min-width: 481px) {
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 64px;
     width: 64px; }
 
   #google-plus {
     background: url("../img/snSprite@2x.png") no-repeat -76px -2px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 64px;
     width: 64px; }
 
   #github {
     background: url("../img/snSprite@2x.png") no-repeat -147px -2px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 64px;
     width: 64px; }
 
   #youtube {
     background: url("../img/snSprite@2x.png") no-repeat -219px -2px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 64px;
     width: 64px;
     float: left;
@@ -1288,7 +1286,7 @@ a:hover {
 
   #menu {
     background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 44px;
     width: 44px;
     display: block;
@@ -1298,7 +1296,7 @@ a:hover {
 
   #search {
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 44px;
     width: 44px;
     display: block;
@@ -1308,7 +1306,7 @@ a:hover {
 
   .btnSearch {
     background: url("../img/snSprite@2x.png") no-repeat -80px -69px;
-    background-size: 350px 150px;
+    background-size: 350px 210px;
     height: 44px;
     width: 44px;
     border: none;
@@ -1316,8 +1314,8 @@ a:hover {
 
   .site-title {
     background: url("../img/snSprite@2x.png") no-repeat -125px -80px;
-    background-size: 350px 150px;
-    height: 60px;
+    background-size: 350px 210px;
+    height: 62px;
     width: 221px;
     text-indent: -999px;
     margin: 0;
@@ -1325,16 +1323,16 @@ a:hover {
 @media only screen and (min-width: 481px), only screen and (min-width: 481px), only screen and (min-width: 481px), only screen and (min-width: 481px), only screen and (min-width: 481px), only screen and (min-width: 481px) {
   .site-title {
     background: url("../img/snSprite.png") no-repeat -125px -80px;
-    background-size: 350px 150px;
-    height: 60px;
+    background-size: 350px 210px;
+    height: 62px;
     width: 221px;
     text-indent: -999px;
     margin: 0;
     float: left; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 480px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 480px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 480px), only screen and (min-device-pixel-ratio: 2) and (max-width: 480px), only screen and (min-resolution: 192dpi) and (max-width: 480px), only screen and (min-resolution: 2dppx) and (max-width: 480px) {
   .site-title {
-    background: url("../img/snSprite@2x.png") no-repeat -202px -80px;
-    background-size: 350px 150px;
+    background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
+    background-size: 350px 210px;
     height: 60px;
     width: 176px;
     text-indent: -999px;
@@ -1381,6 +1379,9 @@ a:hover {
 
 .header-pic-class {
   display: none; }
+
+.site-header {
+  width: auto; }
 
 /*
  =================
@@ -1456,7 +1457,8 @@ a:hover {
 .searchbox-style {
   margin: 0px auto;
   text-align: center;
-  padding: 15px 0; }
+  padding: 15px 0;
+  position: static; }
 
 .searchfield-style {
   width: 260px; }
@@ -1738,15 +1740,23 @@ a.pagination-link {
     position: static;
     font-size: 14px;
     margin: 0;
-    clear: both; }
+    width: 245px; }
+
+  .site-header {
+    max-width: 450px;
+    float: left; }
 
   .header-pic-class {
     float: left;
     display: block; }
 
-  #header-nav-wrapper {
+  .wrapperHeaderNav {
     width: 900px;
-    margin: 0 auto; }
+    margin: 15px auto 0 auto; }
+
+  .searchbox-style {
+    position: absolute;
+    padding: 0; }
 
   /*
    =================
@@ -1791,10 +1801,6 @@ a.pagination-link {
     border: none;
     padding: 0; }
 
-  .top-level-header-wrapper {
-    width: 900px;
-    margin: 0 auto; }
-
   /*
    =====================
    Navigation styles end
@@ -1811,8 +1817,7 @@ a.pagination-link {
     font-size: 1em; }
 
   #searchbox {
-    display: block;
-    background: #6ab0d4; }
+    display: block; }
 
   #tipue_search_input {
     font: 13px/1.5 'open sans', sans-serif;
