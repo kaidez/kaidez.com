@@ -64,11 +64,18 @@
     width: 900px;
     margin: 15px auto 0 auto;
   }
-
+  
+  // searchbox
   .searchbox-style {
     position: static;
     text-align: auto;
     float: right;
+  }
+  
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    width: 209px;
+    height: 65px;
   }
 
 /*
