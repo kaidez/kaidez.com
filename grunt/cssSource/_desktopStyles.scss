@@ -90,6 +90,7 @@
 #site-navigation-list {
   @include show-menu;
   @include master-center;
+  padding: 0;
 }
 
 #menu, #search {
@@ -110,7 +111,6 @@
   text-decoration: none;
   font-size: 18px;
   float: none;
-  padding:0;
 }
 
 // Apply the Google font to all <nav> links after page load
@@ -121,6 +121,7 @@
   color: #000;
   border: none;
   margin-right: 12px;
+  padding:0;
 }
 
 .top-level-header-wrapper {
