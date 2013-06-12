@@ -38,6 +38,9 @@
   display: none;
 }
 
+.site-header {
+  width: auto;
+}
 
 /*
  =================
@@ -146,6 +149,7 @@
 .searchbox-style {
   @include master-center;
   padding:15px 0;
+  position: static;
 }
 
 .searchfield-style {
