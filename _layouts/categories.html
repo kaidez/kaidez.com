@@ -31,32 +31,34 @@
 </head>
 <body>
   <div id="container" class="containing-element">
-    <header id="masthead" class="site-header clearfix" role="banner">
-      <div id="header-nav-wrapper" class="top-level-header-wrapper">
-        <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
-        <h2 class="site-description">closing tags...wrapping functions</h2>
-      </div> <!-- #header-nav-wrapper -->
-    </header> <!-- #masthead -->
-    
-    <nav id="site-navigation" class="main-navigation" role="navigation">
 
-      <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+    <div id="header-nav-wrapper" class="wrapperHeaderNav clearfix">
 
-      <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+      <header id="masthead" class="site-header clearfix" role="banner">
+        <div id="header-tag-wrapper" class="top-level-header-wrapper">
+          <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
+          <h2 class="site-description">closing tags...wrapping functions</h2>
+        </div> <!-- #header-tag-wrapper -->
+      </header> <!-- #masthead -->
+
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <h3 id="menu-heading" class="menu-toggle">Main Navigation</h3>
+        <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
         
-      <ul id="site-navigation-list">
-        <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
-        <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
-        <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
-        <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
-      </ul>
-    </nav> <!-- #site-navigation -->
+        <ul id="site-navigation-list">
+          <li class="site-navigation-list-link"><a href="/tutorials/">TUTORIALS</a></li>  
+          <li class="site-navigation-list-link"><a href="/coding-best-practices/">CODE TIPS</a></li>
+          <li class="site-navigation-list-link"><a href="/reviews/">REVIEWS</a></li>
+          <li class="site-navigation-list-link"><a href="/personal/">PERSONAL</a></li>
+        </ul>
+      </nav> <!-- #site-navigation -->
     
     {% include searchbox_partial.html %}
 
-    {% include category_breadcrumbs_partial.html %}
+    </div> <!-- #header-nav-wrapper -->
 
-    <main id="content" role="main" class="containing-element">
+    <main id="content" class="page-content" role="main">
+      {% include category_breadcrumbs_partial.html %}
       <h1 class="category-header">Category: {{ page.title }}</h1>
       {{ content }}
     </main> <!-- #content -->
