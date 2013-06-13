@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
 <head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-   <meta name="description" content="{{ page.meta-excerpt }}" />
-   <title>{{ page.title }} &laquo; {{ page.cat-name }} &laquo; kaidez</title>
-   <link rel="stylesheet" href="/css/styles.min.css" media="all" />
-   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="{{ page.meta-excerpt }}" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:creator" content="@kaidez">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.meta-excerpt }}">
+  <title>{{ page.title }} &laquo; {{ page.cat-name }} &laquo; kaidez</title>
+  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+  <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
+  <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
    
   {% include google_webfont_partial.html %}
 
@@ -47,12 +53,12 @@
       <h1 class="post-title">{{ page.title }}</h1>
       {{ content }}
       <div id="share-post-container" class="postSharing">
-        <a href="https://twitter.com/share">Tweet</a>
 
-        <div class="g-plusone" data-size="medium" data-count="true"></div>
-
-        <div id="fb-root"></div>
-        <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false" data-action="recommend"></div>
+        <ul id="social-network-list-post">
+          <li class="social-network-list-item"><a href="https://twitter.com/share" target="blank" class="social-network-link">Twitter</a></li>
+          <li id="fb-root" class="social-network-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com{{ page.permalink }}&t={{ page.title }}" class="social-network-link fb" target="blank">Facebook</a></li>
+          <li class="social-network-list-item"><a href="https://plus.google.com/share?url=http://dev.kaidez.com{{ page.permalink }}" target="blank" class="social-network-link">Google+</a></li>
+        </ul> <!-- #social-network-list-post -->
       </div> <!-- #share-post-container -->
 
       <div id="related-posts">
