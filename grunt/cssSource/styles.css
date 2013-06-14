@@ -544,6 +544,9 @@ html, body {
 .site-header {
   text-align: left; }
 
+.wrapperHeaderNav {
+  background-color: #ffdc69; }
+
 .post-snippet {
   border-bottom: 1px solid #999999;
   margin-bottom: 30px;
@@ -1970,9 +1973,8 @@ a.pagination-link {
     display: block; }
 
   .wrapperHeaderNav {
-    width: 900px;
-    margin: 15px auto 0 auto;
-    background-color: #ffdc69; }
+    width: auto;
+    padding: 21px; }
 
   .searchbox-style {
     position: static;

@@ -61,9 +61,9 @@
 
   // wraps <header> and <footer>
   .wrapperHeaderNav {
-    width: 900px;
-    margin: 15px auto 0 auto;
-    background-color: $header-color;
+    width: auto;
+    // background-color: $header-color;
+    padding: 21px;
   }
   
   // searchbox

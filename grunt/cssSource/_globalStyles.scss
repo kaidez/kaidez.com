@@ -34,6 +34,11 @@ html, body {
   text-align: left;
 }
 
+// wraps <header> and <footer>
+.wrapperHeaderNav {
+  background-color: $header-color;
+}
+
 
 // Post snippet that displays on both the home page and search results
 .post-snippet {
