@@ -1837,6 +1837,20 @@ a.pagination-link {
   .site-navigation-list-link {
     float: left; }
 
+  #site-navigation-list {
+    display: block;
+    margin: 0;
+    padding: 0; }
+
+  .wf-active .site-navigation-list-link a:link, .wf-active .site-navigation-list-link a:visited {
+    display: block;
+    font-family: Lato;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+    border: 0;
+    margin-right: 12px;
+    padding: 0; }
+
   #searchbox {
     display: block; }
 
