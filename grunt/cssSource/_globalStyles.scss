@@ -34,8 +34,8 @@ html, body {
   text-align: left;
 }
 
-// wraps <header> and <footer>
-.wrapperHeaderNav {
+// the outer wrapper for the <header> and <footer>. Width is set to auto.
+.outerWrapperNavHeader {
   background-color: $header-color;
 }
 

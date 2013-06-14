@@ -59,13 +59,20 @@
     display: block;
   }
 
-  // wraps <header> and <footer>
-  .wrapperHeaderNav {
+  // the outer wrapper for the <header> and <footer>. Width is set to auto.
+  .outerWrapperNavHeader {
     width: auto;
-    // background-color: $header-color;
     padding: 21px;
   }
+
+    // the inner wrapper for the <header> and <footer>. Width is set to 900px.
+  .innerWrapperNavHeader {
+    width: $dt-width;
+    margin: 0 auto;
+  }
   
+
+
   // searchbox
   .searchbox-style {
     position: static;
