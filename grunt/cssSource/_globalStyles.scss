@@ -135,7 +135,7 @@ html, body {
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #195676;
+  border-bottom: 1px solid #fff;
 }
 
 // hover class for main nav links
@@ -413,7 +413,7 @@ a:hover {
 // Apply the Google font to all <h3> tags in the footer after page load
 .wf-active .footer-header {
   font-size: 23px;
-  border-bottom: 2px dotted #000;
+  border-bottom: 2px dotted $header-footer-border;
 }
 
 // Style related to a picture of me

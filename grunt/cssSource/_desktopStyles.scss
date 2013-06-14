@@ -59,13 +59,13 @@
     display: block;
   }
 
-  // the outer wrapper for the <header> and <footer>. Width is set to auto.
+  // the outer wrapper for the <header>. Width is set to auto.
   .outerWrapperNavHeader {
     width: auto;
     padding: 21px;
   }
 
-    // the inner wrapper for the <header> and <footer>. Width is set to 900px.
+  // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavHeader {
     width: $dt-width;
     margin: 0 auto;
@@ -265,5 +265,28 @@
    ===============================
    Home page pagination styles end
    ===============================
+   */
+
+  /*
+   ===================
+   Footer styles start
+   ===================
+   */
+
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .innerWrapperNavFooter {
+    width: $dt-width;
+    margin: 0 auto;
+  }
+
+  .footer-sections {
+    width: 300px;
+    float: left;
+  }
+
+  /*
+   ===================
+   Footer styles start
+   ===================
    */
  }
