@@ -99,6 +99,9 @@ html, body {
   clear: both;
 }
 
+.breadcrumbLinks {
+  font-weight: bolder;
+}
 /*
  =======================
  Navigation styles start
@@ -115,15 +118,17 @@ html, body {
 .wf-loading .site-navigation-list-link {
   font-family: $srf;
   visibility: hidden;
+  font-size: 20px;
 }
 
 // Apply the Google font to all <nav> links after page load
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited { 
-  visibility: visible;
   @include fonts($robo);
   @include master-center;
+  background-color: $nav-color;
   text-decoration: none;
+  visibility: visible;
   font-size: 20px;
   float: none;
   padding: 9px 0;
@@ -131,12 +136,11 @@ html, body {
   display: block;
   color: #FFF;
   border-bottom: 1px solid #195676;
-  background-color: $nav-color;
 }
 
-// hover class for man nav links
+// hover class for main nav links
 .wf-active .site-navigation-list-link a:hover {
-  background-color: $link-color;
+  color: link-tint($footer-color);
 }
 
 /*
@@ -392,8 +396,9 @@ a:hover {
  */
 
 // Primary footer element
-#footer {
+.containingElementFooter {
   background-color: $footer-color;
+  color: $footer-color-text;
   height: auto;
   width: auto;
   padding:1px 10px;
