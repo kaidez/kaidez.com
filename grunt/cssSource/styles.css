@@ -530,7 +530,7 @@ table {
  */
 /* Overides extra padding that bootstrap.css puts on <body>---may be redundant */
 body {
-  background-color: #fff0d4;
+  background-color: #dcc7b4;
   padding: 0; }
 
 html, body {
@@ -545,7 +545,7 @@ html, body {
   text-align: left; }
 
 .outerWrapperNavHeader {
-  background-color: #ffdc69; }
+  background-color: #c7bdb3; }
 
 .post-snippet {
   border-bottom: 1px solid #999999;
@@ -599,6 +599,9 @@ html, body {
 .clearfix:after {
   clear: both; }
 
+.breadcrumbLinks {
+  font-weight: bolder; }
+
 /*
  =======================
  Navigation styles start
@@ -610,26 +613,27 @@ html, body {
 
 .wf-loading .site-navigation-list-link {
   font-family: serif;
-  visibility: hidden; }
+  visibility: hidden;
+  font-size: 20px; }
 
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited {
-  visibility: visible;
   font-family: "Roboto Condensed";
   margin: 0px auto;
   text-align: center;
+  background-color: #306885;
   text-decoration: none;
+  visibility: visible;
   font-size: 20px;
   float: none;
   padding: 9px 0;
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #195676;
-  background-color: #306885; }
+  border-bottom: 1px solid #195676; }
 
 .wf-active .site-navigation-list-link a:hover {
-  background-color: #c86507; }
+  color: link-tint(#2d1d2a); }
 
 /*
  =====================
@@ -647,7 +651,7 @@ html, body {
  */
 a:link,
 a:visited {
-  color: #c86507;
+  color: #3e126d;
   text-decoration: none; }
 
 a:hover {
@@ -760,7 +764,7 @@ a:hover {
 
 #tipue_search_foot_boxes li a {
   padding: 7px 10px 8px;
-  background-color: #c86507;
+  background-color: #3e126d;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -768,7 +772,7 @@ a:hover {
 
 #tipue_search_foot_boxes li.current {
   padding: 7px 10px 8px;
-  background-color: #ffdc69;
+  background-color: #c7bdb3;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -776,7 +780,7 @@ a:hover {
 
 .current-page {
   padding: 7px 10px 8px;
-  background-color: #ffdc69;
+  background-color: #c7bdb3;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -841,8 +845,9 @@ a:hover {
  Footer-related styles start
  ===========================
  */
-#footer {
-  background-color: #4e1f01;
+.containingElementFooter {
+  background-color: #2d1d2a;
+  color: #b99388;
   height: auto;
   width: auto;
   padding: 1px 10px; }
@@ -1558,7 +1563,7 @@ Content styles end
 
 a.pagination-link {
   padding: 7px 10px 8px;
-  background-color: #c86507;
+  background-color: #3e126d;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -1766,7 +1771,7 @@ a.pagination-link {
 
   a.pagination-link {
     padding: 7px 10px 8px;
-    background-color: #c86507;
+    background-color: #3e126d;
     color: #fff;
     margin-right: 7px;
     text-decoration: none;
@@ -2107,11 +2112,11 @@ a.pagination-link {
     padding: 0 10px;
     font-size: 18px;
     line-height: 36px;
-    padding-top: 40px; }
+    padding-top: 21px; }
 
   .breadcrumbStyles {
     font-size: 16px;
-    padding: 20px 0 35px; }
+    padding: 0px 0 54px; }
 
   /*
    ==================
