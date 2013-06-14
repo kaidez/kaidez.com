@@ -14,7 +14,7 @@
 
 /* Overides extra padding that bootstrap.css puts on <body>---may be redundant */
 body {
-  background-color: white;
+  background-color: $bg-color;
   padding:0;
 }
 

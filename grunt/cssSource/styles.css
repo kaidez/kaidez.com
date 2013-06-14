@@ -530,7 +530,7 @@ table {
  */
 /* Overides extra padding that bootstrap.css puts on <body>---may be redundant */
 body {
-  background-color: white;
+  background-color: #fff0d4;
   padding: 0; }
 
 html, body {
@@ -626,7 +626,7 @@ html, body {
   background-color: #306885; }
 
 .wf-active .site-navigation-list-link a:hover {
-  background-color: #2455c3; }
+  background-color: #c86507; }
 
 /*
  =====================
@@ -644,7 +644,7 @@ html, body {
  */
 a:link,
 a:visited {
-  color: #2455c3;
+  color: #c86507;
   text-decoration: none; }
 
 a:hover {
@@ -757,7 +757,7 @@ a:hover {
 
 #tipue_search_foot_boxes li a {
   padding: 7px 10px 8px;
-  background-color: #2455c3;
+  background-color: #c86507;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -765,7 +765,7 @@ a:hover {
 
 #tipue_search_foot_boxes li.current {
   padding: 7px 10px 8px;
-  background-color: #6ab0d4;
+  background-color: #ffdc69;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -773,7 +773,7 @@ a:hover {
 
 .current-page {
   padding: 7px 10px 8px;
-  background-color: #6ab0d4;
+  background-color: #ffdc69;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -839,7 +839,7 @@ a:hover {
  ===========================
  */
 #footer {
-  background-color: #9c0013;
+  background-color: #4e1f01;
   height: auto;
   width: auto;
   padding: 1px 10px; }
@@ -1446,8 +1446,7 @@ a:hover {
  ===============================
  */
 #searchbox {
-  display: none;
-  background: #fff; }
+  display: none; }
 
 #not-found-searchbox {
   display: block; }
@@ -1556,7 +1555,7 @@ Content styles end
 
 a.pagination-link {
   padding: 7px 10px 8px;
-  background-color: #2455c3;
+  background-color: #c86507;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -1655,8 +1654,7 @@ a.pagination-link {
    ===============================
    */
   #searchbox {
-    display: none;
-    background: #fff; }
+    display: none; }
 
   #not-found-searchbox {
     display: block; }
@@ -1765,7 +1763,7 @@ a.pagination-link {
 
   a.pagination-link {
     padding: 7px 10px 8px;
-    background-color: #2455c3;
+    background-color: #c86507;
     color: #fff;
     margin-right: 7px;
     text-decoration: none;
@@ -1973,7 +1971,8 @@ a.pagination-link {
 
   .wrapperHeaderNav {
     width: 900px;
-    margin: 15px auto 0 auto; }
+    margin: 15px auto 0 auto;
+    background-color: #ffdc69; }
 
   .searchbox-style {
     position: static;
