@@ -621,7 +621,7 @@ html, body {
   font-family: "Roboto Condensed";
   margin: 0px auto;
   text-align: center;
-  background-color: #306885;
+  background-color: #413736;
   text-decoration: none;
   visibility: visible;
   font-size: 20px;
@@ -630,7 +630,7 @@ html, body {
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #195676; }
+  border-bottom: 1px solid #fff; }
 
 .wf-active .site-navigation-list-link a:hover {
   color: link-tint(#2d1d2a); }
@@ -667,8 +667,8 @@ a:hover {
 #social-network-container {
   clear: both;
   margin-top: 34px;
-  border-top: 1px solid #306885;
-  border-bottom: 1px solid #306885; }
+  border-top: 1px solid #413736;
+  border-bottom: 1px solid #413736; }
 
 #social-network-list {
   padding: 0;
@@ -689,7 +689,8 @@ a:hover {
 .kaidez-social-network-link {
   height: 56px;
   width: 56px;
-  display: block; }
+  display: block;
+  text-indent: -9999px; }
 
 .fb {
   padding-right: 10px; }
@@ -845,7 +846,7 @@ a:hover {
  Footer-related styles start
  ===========================
  */
-.containingElementFooter {
+.outerWrapperNavFooter {
   background-color: #2d1d2a;
   color: #b99388;
   height: auto;
@@ -858,7 +859,7 @@ a:hover {
 
 .wf-active .footer-header {
   font-size: 23px;
-  border-bottom: 2px dotted #000; }
+  border-bottom: 2px dotted #b99388; }
 
 #author-image {
   float: left;
@@ -2137,6 +2138,33 @@ a.pagination-link {
    ===============================
    Home page pagination styles end
    ===============================
+   */
+  /*
+   ===================
+   Footer styles start
+   ===================
+   */
+  .innerWrapperNavFooter {
+    width: 900px;
+    margin: 0 auto; }
+
+  .footer-sections {
+    width: 250px;
+    float: left; }
+
+  .midFooterSection {
+    margin: 0 75px; }
+
+  .copyrightStyle {
+    clear: both; }
+
+  .outerWrapperNavFooter {
+    background: #2d1d2a url("../img/footer-bg.png") no-repeat right; }
+
+  /*
+   ===================
+   Footer styles start
+   ===================
    */ }
 /* Assistive text */
 .assistive-text,
