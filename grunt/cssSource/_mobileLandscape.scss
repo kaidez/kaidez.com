@@ -266,9 +266,15 @@ Content styles end
   @include pagButtonItem;
 }
 
-// Inner part of the lpagination button
+// Inner part of the pagination button
 a.pagination-link {
-  @include pagButtonInner
+  padding: 7px 10px 8px;
+  background-color: $link-color;
+  color: #fff;
+  margin-right: 7px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #DCDCDC;
 }
 
 
