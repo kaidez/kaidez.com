@@ -58,13 +58,19 @@ $srf: serif;
 
 // Width varibles
 $mobile-portrait-width: 300px; // Mobile
-$mobile-landscape-width: 548px; // Mobile
+$mobile-landscape-width: 548px; // Mobile Landscape
 $tablet-width: 481px; // Tablet
 $inner-content-width: 900px; // Desktop
+
+/*
+ * This variable may be repetitive but it clarifies the function that defines * the footer colum width and gutter.
+ */
+$inner-footer-width: $inner-content-width;
   
 /*
- * 'background-size' variable...you have to do this is you're doubling the  
- * size of your image for retina purposes.
+ * 'background-size' variable for any and all CSS classes that reference the
+ * sprites. You HAVE to do this is you're doubling the size of your image for 
+ * retina purposes or the image will look wierd.
  */
 $bg-size: 350px 210px; 
 
