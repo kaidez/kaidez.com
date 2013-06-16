@@ -171,7 +171,7 @@
   
   // For the main element
   .page-content {
-    @include content-width($tab-width);
+    @include content-width($tablet-width);
   }
 
   /*
