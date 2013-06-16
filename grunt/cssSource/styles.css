@@ -1942,19 +1942,23 @@ a.pagination-link {
     float: right; }
 
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   /*
-   ====================
-   Content styles start
-   ====================
+   * ====================
+   * Content styles start
+   * ====================
    */
   .page-content {
     max-width: 481px;
     margin: 0 auto;
     padding: 0 10px; }
+
+  .post-snipper-header-link {
+    color: #ca9d5d;
+    text-shadow: 0px 2px 3px #f7f1e8; }
 
   /*
    ==================
@@ -2155,6 +2159,10 @@ a.pagination-link {
    Content styles end
    ==================
    */
+  .post-snipper-header-link {
+    color: #ca9d5d;
+    text-shadow: 0px 2px 3px #f7f1e8; }
+
   /*
    =================================
    Home page pagination styles start
@@ -2177,10 +2185,10 @@ a.pagination-link {
    */
   .innerWrapperNavFooter {
     width: 900px;
-    margin: 0 auto; }
+    margin: 0 auto 53px; }
 
   .footer-header {
-    color: #2e3a42;
+    color: #2a353c;
     text-shadow: 0px 2px 3px #7a93a3;
     border-bottom: 2px dotted #2e3a42; }
 
@@ -2195,7 +2203,7 @@ a.pagination-link {
     clear: both; }
 
   .outerWrapperNavFooter {
-    background: #627c8d url("../img/footer-bg.png") no-repeat right; }
+    background: #627c8d url("../img/footer-bg.png") no-repeat left; }
 
   /*
    ===================
