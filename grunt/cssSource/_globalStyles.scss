@@ -111,7 +111,7 @@ html, body {
 // <nav> tag
 .main-navigation {
   width: auto;
-  border-top: 1px solid #000;
+  border-top: 1px solid $base-link-color;
 }
 
 // Hide the Google font on all <nav> links before page load
