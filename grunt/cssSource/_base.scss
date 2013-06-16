@@ -65,7 +65,8 @@ $inner-content-width: 900px; // Desktop
 /*
  * This variable may be repetitive but it clarifies the function that defines * the footer colum width and gutter.
  */
-$inner-footer-width: $inner-content-width;
+$inner-footer-width-desktop: $inner-content-width;
+
   
 /*
  * 'background-size' variable for any and all CSS classes that reference the
@@ -278,4 +279,24 @@ $mobile-retina:
    ===========
    Mix-ins end
    ===========
+ */
+
+/*
+=========================================================================
+ */
+
+/*
+ * ===============
+ * Functions start
+ * ===============
+ */
+
+@function calculate-footer($gutter-width) {
+ @return ($inner-footer-width-desktop)
+}
+
+/*
+ * =============
+ * Functions end
+ * =============
  */
