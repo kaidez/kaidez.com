@@ -18,8 +18,10 @@
  * these colors will affect other parts of the site, as noted below.
  */
 /*
- * Base color for nav links. Font color for desktops/laptops...background
- * color for big, fat buttons that appear in the "mobile first" layout.
+ * Base color for nav links. Affects the font color for desktops/laptops,
+ * background, color for big fat buttons that appear in the "mobile first"
+ * layout, bottom border color for the desktop/laptop header and top border 
+ * for the main navigation.
  */
 /*
  * Base color for page links in post content. Also effects the color of any
@@ -644,7 +646,7 @@ html, body {
  */
 .main-navigation {
   width: auto;
-  border-top: 1px solid #000; }
+  border-top: 1px solid #310818; }
 
 .wf-loading .site-navigation-list-link {
   font-family: serif;
@@ -2008,7 +2010,8 @@ a.pagination-link {
 
   .outerWrapperNavHeader {
     width: auto;
-    padding: 21px; }
+    padding: 21px;
+    border-bottom: 3px solid #310818; }
 
   .innerWrapperNavHeader {
     width: 900px;
