@@ -261,10 +261,11 @@ $mobile-retina:
   text-align: center;
 }
 
-@mixin textShadow {
-  color: $darken-the-footer-color;
-  changeTextShadow: 0px 2px 3px lighten($footer-color, 9);
-  border-bottom: 2px dotted $darken-the-footer-color;
+@mixin makeTextShadow($base-color) {
+  $changedBaseColor: darken($base-color, 25);
+  color: $changedBaseColor;
+  text-shadow: 0px 2px 3px lighten($base-color, 9);
+  border-bottom: 2px dotted $changedBaseColor;
 }
 
 /*
