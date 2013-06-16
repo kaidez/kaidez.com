@@ -128,37 +128,34 @@
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited { 
   @include fonts($helv);
-  background-color: rgba(0, 0, 0, 0);
-  color: $base-link-color;
-  border: 0;
-  margin-left: 12px;
-  padding:0;
-}
+    color: $base-link-color;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    margin-left: 12px;
+    padding:0;
+  }
 
-/*
- =====================
- Navigation styles end
- =====================
- */
+  /*
+   =====================
+   Navigation styles end
+   =====================
+   */
 
 
   /*
    * Hide 'mobile first' menu & search
    * boxes on tablets
    */
-  
   .site-navigation-list-link {
 	  float:left;
   }
 
   // Search box-related styles start
-
   #s {
     font-size: 1em;
   }
 
-// Search box
-
+  // Search box
   #searchbox {
     display: block;
   }
@@ -270,7 +267,7 @@
   }
   
   .footer-header {
-    @include textShadow;
+    @include makeTextShadow($footer-color);
   }
 
   .footer-sections {
