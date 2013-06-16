@@ -135,13 +135,13 @@ html, body {
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid $footer-color-text;
 }
 
 // hover class for main nav links
-.wf-active .site-navigation-list-link a:hover {
-  color: link-tint($footer-color);
-}
+// .wf-active .site-navigation-list-link a:hover {
+  
+// }
 
 /*
  =====================
@@ -165,13 +165,14 @@ html, body {
  */
 a:link,
 a:visited { 
-  color: $link-color;
+  color: darken($link-color, 4);
   text-decoration: none;
 }
 
 // all text links have an underline
 a:hover { 
   text-decoration: underline;
+  color: darken($link-color, 1);
 }
 
 // Related posts styles that appear on single post pages
