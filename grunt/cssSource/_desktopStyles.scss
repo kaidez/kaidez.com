@@ -67,7 +67,7 @@
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavHeader {
-    width: $dt-width;
+    width: $inner-content-width;
     margin: 0 auto;
   }
   
@@ -234,7 +234,7 @@
   }
 
   .page-content {
-    @include content-width($dt-width);
+    @include content-width($inner-content-width);
     font-size: 18px;
     line-height: 36px;
     padding-top:21px;
@@ -258,7 +258,7 @@
   */
 
   .control-section-width {
-    @include content-width($dt-width);
+    @include content-width($inner-content-width);
   }
 
   /*
@@ -275,7 +275,7 @@
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavFooter {
-    width: $dt-width;
+    width: $inner-content-width;
     margin: 0 auto;
   }
 
