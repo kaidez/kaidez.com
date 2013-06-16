@@ -262,10 +262,9 @@ $mobile-retina:
 }
 
 @mixin makeTextShadow($base-color) {
-  $changedBaseColor: darken($base-color, 25);
+  $changedBaseColor: darken($base-color, 27);
   color: $changedBaseColor;
   text-shadow: 0px 2px 3px lighten($base-color, 9);
-  border-bottom: 2px dotted $changedBaseColor;
 }
 
 /*

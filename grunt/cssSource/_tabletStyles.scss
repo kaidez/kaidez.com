@@ -154,9 +154,9 @@
   }
 
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
 
 
@@ -164,14 +164,19 @@
 
 
   /*
-   ====================
-   Content styles start
-   ====================
+   * ====================
+   * Content styles start
+   * ====================
    */
   
   // For the main element
   .page-content {
     @include content-width($tablet-width);
+  }
+
+  // Add "letterpress" effect to header links for home page post snippet.
+  .post-snipper-header-link {
+    @include makeTextShadow($background-color)
   }
 
   /*
