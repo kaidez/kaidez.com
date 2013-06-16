@@ -42,7 +42,7 @@ html, body {
 
 // Post snippet that displays on both the home page and search results
 .post-snippet {
-  @include bottomBorder($site-grey);
+  @include bottomBorder($darken-the-footer-color);
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
@@ -126,7 +126,7 @@ html, body {
 .wf-active .site-navigation-list-link a:visited { 
   @include fonts($robo);
   @include master-center;
-  background-color: $nav-color;
+  background-color: $base-link-color;
   text-decoration: none;
   visibility: visible;
   font-size: 20px;
@@ -135,7 +135,7 @@ html, body {
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid $footer-color-text;
+  border-bottom: 1px solid lighten(saturate($base-link-color, 28), 6);
 }
 
 // hover class for main nav links
@@ -182,14 +182,6 @@ a:hover {
   background-color: #E1F5F6;
   border: 1px solid #6AB0D4;
   clear: both
-}
-
-// Social networking stuff starts
-#social-network-container {
-  clear: both;
-  margin-top: 34px;
-  border-top: 1px solid $nav-color;
-  border-bottom: 1px solid $nav-color;
 }
 
 #social-network-list {
@@ -400,7 +392,7 @@ a:hover {
 // Primary footer element
 .outerWrapperNavFooter {
   background-color: $footer-color;
-  color: $footer-color-text;
+  color: $darken-the-footer-color;
   height: auto;
   width: auto;
   padding:1px 10px;
@@ -410,12 +402,12 @@ a:hover {
 .wf-loading .footer-header {
   font-family: $srf;
   visibility: hidden;
+  font-size: 23px;
 }
 
 // Apply the Google font to all <h3> tags in the footer after page load
 .wf-active .footer-header {
   font-size: 23px;
-  border-bottom: 2px dotted $header-footer-border;
 }
 
 // Style related to a picture of me

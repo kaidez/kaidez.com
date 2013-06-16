@@ -10,45 +10,47 @@
 
 
 /*
-  ===============
-  Variables start
-  ===============
-*/
+ * ===============
+ * Variables start
+ * ===============
+ */
+
 // Color variables
 
-// http://www.colourlovers.com/palette/2899829/1779
+/*
+ * PRIMARY COLOR PALETTE for kaidez.com, as defined by the Shiba color
+ * palette at http://www.colourlovers.com/palette/2901472/shiba. Changing 
+ * these colors will affect other parts of the site, as noted below.
+ */
 
-$site-grey: #999;
-
-// $background-color: #DCC7B4;
-// $header-color: #C7BDB3;
-// $nav-color: #413736;
-// $link-color: #3E126D;
-// $footer-color: #2D1D2A;
-// $footer-color-text: #B99388;
-// $header-footer-border: $footer-color-text;
-
-// http://www.colourlovers.com/palette/2901426/undervalued
-// $background-color: #CBC0AA;
-// $header-color: #D49A8C;
-// $nav-color: #310818;
-// $link-color: #9F3849;
-// $footer-color: #5E0C34;
-
-// $mobile-nav-border-color: $background-color;
-// $footer-color-text: $background-color;
-// $header-footer-border: $footer-color-text;
-
-// http://www.colourlovers.com/palette/2901472/shiba
+// Site background color
 $background-color: #ECDCC5;
+
+// Site header color
 $header-color: #CFBBA0;
-$nav-color: #310818;
+
+/*
+ * Base color for nav links. Font color for desktops/laptops...background
+ * color for big, fat buttons that appear in the "mobile first" layout.
+ */
+$base-link-color: #310818;
+
+/*
+ * Base color for page links in post content. Also effects the color of any
+ * and all pagination buttons.
+ */
 $link-color: #716B5B;
+
+// Site footer color
 $footer-color: #627C8D;
 
-$mobile-nav-border-color: $background-color;
-$footer-color-text: $background-color;
-$header-footer-border: $background-color;
+// PRIMARY COLOR PALETTE ends
+
+/*
+ * Darken the footer color: effects the all copy in the footer and the bottom
+ * border of the post snippets.
+ */
+$darken-the-footer-color: darken($footer-color, 25);
 
 
 // Font variables
@@ -56,18 +58,16 @@ $helv: "Lato";
 $robo: "Roboto Condensed";
 $srf: serif;
 
-// Width varibles
+// Width varibles...affects the width of the "inner" containers on the page.
 $mobile-portrait-width: 300px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $tablet-width: 481px; // Tablet
 $inner-content-width: 900px; // Desktop
 
 /*
- * This variable may be repetitive but it clarifies the function that defines * the footer colunm width and gutter.
+ * The width of the 'footer-sections': this is applied to the
+ * 'getGutterWidth()' function below.
  */
-$inner-footer-width-desktop: $inner-content-width;
-
-
 $footer-column-width-desktop: 250px; 
 
   
@@ -189,11 +189,11 @@ $mobile-retina:
   width: $width;
 }
 
-/*
+ /*
   * Unique styles for the 'site-title' class in the
   * desktop styles...add this to sprite mixin code
   */
-@mixin desktop-logo-sprite-add-on {
+ @mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
   text-indent: -999px;
@@ -201,9 +201,9 @@ $mobile-retina:
 }
 
  // Applies border to post snippets on home page and search results.
-@mixin bottomBorder ($color) {
-  border-bottom: 1px solid $color;
-}
+ @mixin bottomBorder ($color) {
+   border-bottom: 1px solid $color;
+ }
 
 /*
  * ============================================================================
@@ -237,25 +237,14 @@ $mobile-retina:
 
 // Individual button in search results
 @mixin pagButtonItem {
-  // background: #9C0033;
-  // border: 1px solid #dcdcdc;
   color: #fff;
-  // margin-right: 7px;
-  // padding: 7px 10px 8px;
 }
 
 // Inner part of the individual button...makes it a hit area for the link
 @mixin pagButtonInner {
-  padding: 7px 10px 8px; //break out into a variable
   background-color: $link-color;
-  // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: -ms-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: -o-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: linear-gradient(top,#F7F7F7,#F1F1F1);
-  // border: 1px solid #DCDCDC;
-  // border-radius: 2px;
   color: #fff;
+  padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center;
@@ -263,19 +252,17 @@ $mobile-retina:
 
 // Inner part of the 'selected' button...makes it a hit area for the link
 @mixin pagButtonCurrent {
-  padding: 7px 10px 8px;
   background-color: $header-color;
-  // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: -ms-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: -o-linear-gradient(top,#F7F7F7,#F1F1F1);
-  // background: linear-gradient(top,#F7F7F7,#F1F1F1);
-  // border: 1px solid #DCDCDC;
-  // border-radius: 2px;
-  // color: #fff;
+  padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center;
+}
+
+@mixin textShadow {
+  color: $darken-the-footer-color;
+  text-shadow: 0px 2px 3px lighten($footer-color, 9);
+  border-bottom: 2px dotted $darken-the-footer-color;
 }
 
 /*
@@ -294,10 +281,11 @@ $mobile-retina:
  * ===============
  */
 
-@function getGutterWidth($gutter-width) {
- $getDoubleGutterWidth: $inner-content-width - ($footer-column-width-desktop*3);
- $gutter-width: $getDoubleGutterWidth/2;
- @return $gutter-width;
+// Function that determines the gutter width the footer columns 
+@function getGutterWidth($base-width) {
+  $gutter-widthx2: $base-width - ($footer-column-width-desktop*3);
+  $gutter-width: $gutter-widthx2/2;
+  @return $gutter-width;
 }
 
 /*

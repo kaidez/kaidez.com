@@ -3,9 +3,10 @@
  Desktop styles start:
 
  These should appear on desktop browsers.
- They probably are set up in a way that they
+ They are set up in a way that they
  require a respectable amount of bandwidth
- to render.
+ to render when compared to the
+ "mobile first" styles.
  ===========================================
  */
 
@@ -14,7 +15,6 @@
  */
 
  @media only screen and (min-width: 769px) {
-
 
   body {
     @include fonts($helv);
@@ -71,8 +71,6 @@
     margin: 0 auto;
   }
   
-
-
   // searchbox
   .searchbox-style {
     position: static;
@@ -129,21 +127,12 @@
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited { 
   @include fonts($helv);
-  background-color: transparent;
-  color: #000;
-  border: none;
-  margin-right: 12px;
+  background-color: rgba(0, 0, 0, 0);
+  color: $base-link-color;
+  border: 0;
+  margin-left: 12px;
   padding:0;
 }
-
-.top-level-header-wrapper {
-
-}
-
-// hover class for man nav links
-// .wf-active .site-navigation-list-link a:hover {
-
-// }
 
 /*
  =====================
@@ -152,7 +141,7 @@
  */
 
 
-   /*
+  /*
    * Hide 'mobile first' menu & search
    * boxes on tablets
    */
@@ -277,6 +266,10 @@
   .innerWrapperNavFooter {
     width: $inner-content-width;
     margin: 0 auto;
+  }
+  
+  .footer-header {
+    @include textShadow;
   }
 
   .footer-sections {

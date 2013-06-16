@@ -72,11 +72,11 @@
     padding: 0;
   }
 
-  .wf-active .site-navigation-list-link a:link, .wf-active .site-navigation-list-link a:visited {
-    display: block;
-    font-family: Lato;
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited {
+    @include fonts($helv);
     background-color: rgba(0, 0, 0, 0);
-    color: #000;
+    color: $base-link-color;
     border: 0;
     margin-right: 12px;
     padding: 0;

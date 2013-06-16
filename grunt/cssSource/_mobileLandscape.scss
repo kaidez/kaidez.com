@@ -1,14 +1,15 @@
 @media only screen and (min-width: 321px) and (max-width:568px) {
 
 /*
- ===================
- Header styles start
- ===================
+ * ===================
+ * Header styles start
+ * ===================
  */
-.wf-active h1 {
-  // font: $helv; // may go
-  font-size: 1.3rem;
-}
+ 
+  .wf-active h1 {
+    // font: $helv; // may go
+    font-size: 1.3rem;
+  }
 
 // Logo link...provides a large enough space for a click area
  .homepage-link {
@@ -266,15 +267,9 @@ Content styles end
   @include pagButtonItem;
 }
 
-// Inner part of the pagination button
+// Inner part of the lpagination button
 a.pagination-link {
-  padding: 7px 10px 8px;
-  background-color: $link-color;
-  color: #fff;
-  margin-right: 7px;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid #DCDCDC;
+  @include pagButtonInner
 }
 
 

@@ -8,13 +8,35 @@
  * =================================================================
  */
 /*
-  ===============
-  Variables start
-  ===============
-*/
+ * ===============
+ * Variables start
+ * ===============
+ */
 /*
- * 'background-size' variable...you have to do this is you're doubling the  
- * size of your image for retina purposes.
+ * PRIMARY COLOR PALETTE for kaidez.com, as defined by the Shiba color
+ * palette at http://www.colourlovers.com/palette/2901472/shiba. Changing 
+ * these colors will affect other parts of the site, as noted below.
+ */
+/*
+ * Base color for nav links. Font color for desktops/laptops...background
+ * color for big, fat buttons that appear in the "mobile first" layout.
+ */
+/*
+ * Base color for page links in post content. Also effects the color of any
+ * and all pagination buttons.
+ */
+/*
+ * Darken the footer color: effects the all copy in the footer and the bottom
+ * border of the post snippets.
+ */
+/*
+ * The width of the 'footer-sections': this is applied to the
+ * 'getGutterWidth()' function below.
+ */
+/*
+ * 'background-size' variable for any and all CSS classes that reference the
+ * sprites. You HAVE to do this is you're doubling the size of your image for 
+ * retina purposes or the image will look wierd.
  */
 /*
  * =============
@@ -48,9 +70,9 @@
 * "Width variables" directly below the mixin.
 */
 /*
-  * Unique styles for the 'site-title' class in the
-  * desktop styles...add this to sprite mixin code
-  */
+ * Unique styles for the 'site-title' class in the
+ * desktop styles...add this to sprite mixin code
+ */
 /*
  * ============================================================================
  * Pagination mixins
@@ -64,6 +86,19 @@
    ===========
    Mix-ins end
    ===========
+ */
+/*
+=========================================================================
+ */
+/*
+ * ===============
+ * Functions start
+ * ===============
+ */
+/*
+ * =============
+ * Functions end
+ * =============
  */
 /* normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -548,7 +583,7 @@ html, body {
   background-color: #cfbba0; }
 
 .post-snippet {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #2e3a42;
   margin-bottom: 30px;
   padding-bottom: 30px; }
 
@@ -630,7 +665,7 @@ html, body {
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #ecdcc5; }
+  border-bottom: 1px solid #580022; }
 
 /*
  =====================
@@ -661,12 +696,6 @@ a:hover {
   background-color: #E1F5F6;
   border: 1px solid #6AB0D4;
   clear: both; }
-
-#social-network-container {
-  clear: both;
-  margin-top: 34px;
-  border-top: 1px solid #310818;
-  border-bottom: 1px solid #310818; }
 
 #social-network-list {
   padding: 0;
@@ -762,25 +791,23 @@ a:hover {
   display: inline; }
 
 #tipue_search_foot_boxes li a {
-  padding: 7px 10px 8px;
   background-color: #716b5b;
   color: #fff;
+  padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center; }
 
 #tipue_search_foot_boxes li.current {
-  padding: 7px 10px 8px;
   background-color: #cfbba0;
-  color: #fff;
+  padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center; }
 
 .current-page {
-  padding: 7px 10px 8px;
   background-color: #cfbba0;
-  color: #fff;
+  padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center; }
@@ -846,18 +873,18 @@ a:hover {
  */
 .outerWrapperNavFooter {
   background-color: #627c8d;
-  color: #ecdcc5;
+  color: #2e3a42;
   height: auto;
   width: auto;
   padding: 1px 10px; }
 
 .wf-loading .footer-header {
   font-family: serif;
-  visibility: hidden; }
+  visibility: hidden;
+  font-size: 23px; }
 
 .wf-active .footer-header {
-  font-size: 23px;
-  border-bottom: 2px dotted #ecdcc5; }
+  font-size: 23px; }
 
 #author-image {
   float: left;
@@ -1176,10 +1203,12 @@ a:hover {
  *
  *   -'$retina' loads all the sprite layouts to
  *     retina tablets and desktops
+ *
  *   -'$desktop' loads the logo-layout only to the
  *    non-retina tablets and desktops (again, the social
  *    networking sprite layout is consistent across all
  *    devices and resolutions)
+ *x
  *   -'$mobile-retina' loads the logo-layout only to retina
  *    mobile devices (one more time: the social
  *    networking sprite layout is consistent across all
@@ -1561,9 +1590,9 @@ Content styles end
   color: #fff; }
 
 a.pagination-link {
-  padding: 7px 10px 8px;
   background-color: #716b5b;
   color: #fff;
+  padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center; }
@@ -1575,9 +1604,9 @@ a.pagination-link {
 */
 @media only screen and (min-width: 321px) and (max-width: 568px) {
   /*
-   ===================
-   Header styles start
-   ===================
+   * ===================
+   * Header styles start
+   * ===================
    */
   .wf-active h1 {
     font-size: 1.3rem; }
@@ -1769,9 +1798,9 @@ a.pagination-link {
     color: #fff; }
 
   a.pagination-link {
-    padding: 7px 10px 8px;
     background-color: #716b5b;
     color: #fff;
+    padding: 7px 10px 8px;
     margin-right: 7px;
     text-decoration: none;
     text-align: center; }
@@ -1847,11 +1876,11 @@ a.pagination-link {
     margin: 0;
     padding: 0; }
 
-  .wf-active .site-navigation-list-link a:link, .wf-active .site-navigation-list-link a:visited {
-    display: block;
-    font-family: Lato;
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited {
+    font-family: "Lato";
     background-color: rgba(0, 0, 0, 0);
-    color: #000;
+    color: #310818;
     border: 0;
     margin-right: 12px;
     padding: 0; }
@@ -1935,9 +1964,10 @@ a.pagination-link {
  Desktop styles start:
 
  These should appear on desktop browsers.
- They probably are set up in a way that they
+ They are set up in a way that they
  require a respectable amount of bandwidth
- to render.
+ to render when compared to the
+ "mobile first" styles.
  ===========================================
  */
 /*
@@ -2032,10 +2062,10 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited {
     font-family: "Lato";
-    background-color: transparent;
-    color: #000;
-    border: none;
-    margin-right: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #310818;
+    border: 0;
+    margin-left: 12px;
     padding: 0; }
 
   /*
@@ -2044,9 +2074,9 @@ a.pagination-link {
    =====================
    */
   /*
-  * Hide 'mobile first' menu & search
-  * boxes on tablets
-  */
+   * Hide 'mobile first' menu & search
+   * boxes on tablets
+   */
   .site-navigation-list-link {
     float: left; }
 
@@ -2145,6 +2175,11 @@ a.pagination-link {
   .innerWrapperNavFooter {
     width: 900px;
     margin: 0 auto; }
+
+  .footer-header {
+    color: #2e3a42;
+    text-shadow: 0px 2px 3px #7a93a3;
+    border-bottom: 2px dotted #2e3a42; }
 
   .footer-sections {
     width: 250px;
