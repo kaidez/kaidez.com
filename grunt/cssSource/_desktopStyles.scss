@@ -239,7 +239,7 @@
    */
   
   .post-snipper-header-link {
-    @include makeTextShadow($background-color)
+    @include makeTextShadow($background-color);
   }
 
   /*
@@ -267,7 +267,8 @@
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavFooter {
     width: $inner-content-width;
-    margin: 0 auto;
+
+    margin: 0 auto 53px;
   }
   
   .footer-header {
@@ -289,7 +290,7 @@
   }
 
   .outerWrapperNavFooter {
-    background: $footer-color url('../img/footer-bg.png') no-repeat right;
+    background: $footer-color url('../img/footer-bg.png') no-repeat left;
   }
 
   /*
