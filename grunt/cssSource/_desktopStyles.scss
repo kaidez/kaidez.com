@@ -63,6 +63,7 @@
   .outerWrapperNavHeader {
     width: auto;
     padding: 21px;
+    border-bottom: 3px solid $base-link-color;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
@@ -70,7 +71,7 @@
     width: $inner-content-width;
     margin: 0 auto;
   }
-  
+    
   // searchbox
   .searchbox-style {
     position: static;
