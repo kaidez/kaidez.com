@@ -57,19 +57,17 @@ $robo: "Roboto Condensed";
 $srf: serif;
 
 // Width varibles
-$inner-content-width: 900px; // Desktop
-$tablet-width: 481px; // Tablet
 $mobile-portrait-width: 300px; // Mobile
 $mobile-landscape-width: 548px; // Mobile
+$tablet-width: 481px; // Tablet
+$inner-content-width: 900px; // Desktop
   
 /*
  * 'background-size' variable...you have to do this is you're doubling the  
  * size of your image for retina purposes.
  */
 $bg-size: 350px 210px; 
-  
-// Mobile: if the screen is no wider than 480px:
-// $mobile: "only screen and (max-width : 480px)";
+
 
 // Tablet/Desktop: if the screen retina based AND is at least 569px wide:
 $retina:   
@@ -80,7 +78,7 @@ $retina:
   only screen and (min-resolution: 192dpi) and (min-width: 569px),
   only screen and (min-resolution: 2dppx) and (min-width: 569px)";
 
-// Tablet/Desktop non-retina: if the screen retina based AND is at least 481px wide:
+// Tablet/Desktop non-retina: if the screen retina based AND is at least 569px wide:
 $desktop:   
   "only screen and (min-width: 569px),
   only screen and (min-width: 569px),
@@ -89,7 +87,7 @@ $desktop:
   only screen and (min-width: 569px),
   only screen and (min-width: 569px)";
 
-// Mobile: if the screen is retina-based AND is no wider than 480px:
+// Mobile: if the screen is retina-based AND is no wider than 568px:
 $mobile-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px),
   only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px),
