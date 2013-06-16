@@ -263,7 +263,7 @@ $mobile-retina:
 
 @mixin textShadow {
   color: $darken-the-footer-color;
-  text-shadow: 0px 2px 3px lighten($footer-color, 9);
+  changeTextShadow: 0px 2px 3px lighten($footer-color, 9);
   border-bottom: 2px dotted $darken-the-footer-color;
 }
 

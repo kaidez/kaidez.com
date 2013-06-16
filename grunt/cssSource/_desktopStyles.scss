@@ -85,24 +85,24 @@
     height: 65px;
   }
 
-/*
- =================
- Header styles end
- =================
- */
+  /*
+   =================
+   Header styles end
+   =================
+   */
 
-/*
- =======================
- Navigation styles start
- =======================
- */
+  /*
+   =======================
+   Navigation styles start
+   =======================
+   */
 
-// Menu
-#site-navigation-list {
-  @include show-menu;
-  @include master-center;
-  padding: 0;
-}
+  // Menu
+  #site-navigation-list {
+    @include show-menu;
+    @include master-center;
+    padding: 0;
+  }
 
 #menu, #search {
   @include hide-element;
