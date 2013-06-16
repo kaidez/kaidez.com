@@ -63,9 +63,12 @@ $tablet-width: 481px; // Tablet
 $inner-content-width: 900px; // Desktop
 
 /*
- * This variable may be repetitive but it clarifies the function that defines * the footer colum width and gutter.
+ * This variable may be repetitive but it clarifies the function that defines * the footer colunm width and gutter.
  */
 $inner-footer-width-desktop: $inner-content-width;
+
+
+$footer-column-width-desktop: 250px; 
 
   
 /*
@@ -243,7 +246,7 @@ $mobile-retina:
 
 // Inner part of the individual button...makes it a hit area for the link
 @mixin pagButtonInner {
-  padding: 7px 10px 8px; //break outinto a variable
+  padding: 7px 10px 8px; //break out into a variable
   background-color: $link-color;
   // background: -webkit-linear-gradient(top,#F7F7F7,#F1F1F1);
   // background: -moz-linear-gradient(top,#F7F7F7,#F1F1F1);
@@ -269,7 +272,7 @@ $mobile-retina:
   // background: linear-gradient(top,#F7F7F7,#F1F1F1);
   // border: 1px solid #DCDCDC;
   // border-radius: 2px;
-  color: #fff;
+  // color: #fff;
   margin-right: 7px;
   text-decoration: none;
   text-align: center;
@@ -291,8 +294,10 @@ $mobile-retina:
  * ===============
  */
 
-@function calculate-footer($gutter-width) {
- @return ($inner-footer-width-desktop)
+@function getGutterWidth($gutter-width) {
+ $getDoubleGutterWidth: $inner-content-width - ($footer-column-width-desktop*3);
+ $gutter-width: $getDoubleGutterWidth/2;
+ @return $gutter-width;
 }
 
 /*

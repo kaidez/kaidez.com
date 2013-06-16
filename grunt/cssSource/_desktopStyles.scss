@@ -15,7 +15,7 @@
 
  @media only screen and (min-width: 769px) {
 
- 
+
   body {
     @include fonts($helv);
   }
@@ -280,12 +280,12 @@
   }
 
   .footer-sections {
-    width: 250px;
+    width: $footer-column-width-desktop;
     float: left;
   }
 
   .midFooterSection {
-    margin:0 75px;
+    margin:0 getGutterWidth($inner-content-width);
   }
 
   .copyrightStyle {
