@@ -530,7 +530,7 @@ table {
  */
 /* Overides extra padding that bootstrap.css puts on <body>---may be redundant */
 body {
-  background-color: #dcc7b4;
+  background-color: #ecdcc5;
   padding: 0; }
 
 html, body {
@@ -545,7 +545,7 @@ html, body {
   text-align: left; }
 
 .outerWrapperNavHeader {
-  background-color: #c7bdb3; }
+  background-color: #cfbba0; }
 
 .post-snippet {
   border-bottom: 1px solid #999999;
@@ -621,7 +621,7 @@ html, body {
   font-family: "Roboto Condensed";
   margin: 0px auto;
   text-align: center;
-  background-color: #413736;
+  background-color: #310818;
   text-decoration: none;
   visibility: visible;
   font-size: 20px;
@@ -630,10 +630,7 @@ html, body {
   height: 31px;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #fff; }
-
-.wf-active .site-navigation-list-link a:hover {
-  color: link-tint(#2d1d2a); }
+  border-bottom: 1px solid #ecdcc5; }
 
 /*
  =====================
@@ -651,11 +648,12 @@ html, body {
  */
 a:link,
 a:visited {
-  color: #3e126d;
+  color: #666052;
   text-decoration: none; }
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+  color: #6e6859; }
 
 #related-posts {
   padding: 10px;
@@ -667,8 +665,8 @@ a:hover {
 #social-network-container {
   clear: both;
   margin-top: 34px;
-  border-top: 1px solid #413736;
-  border-bottom: 1px solid #413736; }
+  border-top: 1px solid #310818;
+  border-bottom: 1px solid #310818; }
 
 #social-network-list {
   padding: 0;
@@ -765,7 +763,7 @@ a:hover {
 
 #tipue_search_foot_boxes li a {
   padding: 7px 10px 8px;
-  background-color: #3e126d;
+  background-color: #716b5b;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -773,7 +771,7 @@ a:hover {
 
 #tipue_search_foot_boxes li.current {
   padding: 7px 10px 8px;
-  background-color: #c7bdb3;
+  background-color: #cfbba0;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -781,7 +779,7 @@ a:hover {
 
 .current-page {
   padding: 7px 10px 8px;
-  background-color: #c7bdb3;
+  background-color: #cfbba0;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -847,8 +845,8 @@ a:hover {
  ===========================
  */
 .outerWrapperNavFooter {
-  background-color: #2d1d2a;
-  color: #b99388;
+  background-color: #627c8d;
+  color: #ecdcc5;
   height: auto;
   width: auto;
   padding: 1px 10px; }
@@ -859,7 +857,7 @@ a:hover {
 
 .wf-active .footer-header {
   font-size: 23px;
-  border-bottom: 2px dotted #b99388; }
+  border-bottom: 2px dotted #ecdcc5; }
 
 #author-image {
   float: left;
@@ -1564,7 +1562,7 @@ Content styles end
 
 a.pagination-link {
   padding: 7px 10px 8px;
-  background-color: #3e126d;
+  background-color: #716b5b;
   color: #fff;
   margin-right: 7px;
   text-decoration: none;
@@ -1772,7 +1770,7 @@ a.pagination-link {
 
   a.pagination-link {
     padding: 7px 10px 8px;
-    background-color: #3e126d;
+    background-color: #716b5b;
     color: #fff;
     margin-right: 7px;
     text-decoration: none;
@@ -2159,7 +2157,7 @@ a.pagination-link {
     clear: both; }
 
   .outerWrapperNavFooter {
-    background: #2d1d2a url("../img/footer-bg.png") no-repeat right; }
+    background: #627c8d url("../img/footer-bg.png") no-repeat right; }
 
   /*
    ===================
