@@ -104,35 +104,39 @@
     padding: 0;
   }
 
-#menu, #search {
-  @include hide-element;
-}
+  #menu, #search {
+    @include hide-element;
+  }
 
-// <nav> tag
-.main-navigation {
-  width: 450px;
-  float: right;
-  border: none;
-}
+  // <nav> tag
+  .main-navigation {
+    border: none;
+  }
 
-// Hide the Google font on all <nav> links before page load
-.wf-loading .site-navigation-list-link {
-  font-family: $srf;
-  visibility: hidden;
-  text-decoration: none;
-  font-size: 18px;
-  float: none;
-}
+  // Hide the Google font on all <nav> links before page load
+  .wf-loading .site-navigation-list-link {
+    font-family: $srf;
+    visibility: hidden;
+    text-decoration: none;
+    font-size: 18px;
+    float: none;
+  }
 
-// Apply the Google font to all <nav> links after page load
-.wf-active .site-navigation-list-link a:link,
-.wf-active .site-navigation-list-link a:visited { 
-  @include fonts($helv);
-    color: $base-link-color;
+  // Apply the Google font to all <nav> links after page load
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited { 
+    @include fonts($helv);
+    border: 1px solid $footer-color;
+    color: #fff;
+    font-size: 14px;
+    float: left;
     background-color: rgba(0, 0, 0, 0);
-    border: 0;
     margin-left: 12px;
-    padding:0;
+    padding: 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #310818;
   }
 
   /*
@@ -142,13 +146,7 @@
    */
 
 
-  /*
-   * Hide 'mobile first' menu & search
-   * boxes on tablets
-   */
-  .site-navigation-list-link {
-	  float:left;
-  }
+
 
   // Search box-related styles start
   #s {
