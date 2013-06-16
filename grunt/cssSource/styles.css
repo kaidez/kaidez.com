@@ -2065,8 +2065,8 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited {
     font-family: "Lato";
-    background-color: rgba(0, 0, 0, 0);
     color: #310818;
+    background-color: rgba(0, 0, 0, 0);
     border: 0;
     margin-left: 12px;
     padding: 0; }
