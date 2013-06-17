@@ -127,15 +127,14 @@
   .wf-active .site-navigation-list-link a:visited { 
     @include fonts($helv);
     border: 1px solid $footer-color;
-    color: #fff;
-    font-size: 14px;
-    float: left;
-    background-color: rgba(0, 0, 0, 0);
-    margin-left: 12px;
-    padding: 6px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    margin-left: 12px;
+    padding: 6px;
     background-color: #310818;
   }
 
