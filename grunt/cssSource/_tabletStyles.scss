@@ -25,16 +25,56 @@
    Header styles start
    ===================
    */
+  
 
+  
+
+  // <h2> tag...the 'closing tags...wrapping functions text'
   .site-description {
     display: block;
     position: static;
-    clear: both;
+    font-size: 14px;
+    margin: 0;
+    width: 245px;
+  }
+
+  .site-header {
+    max-width: 450px;
+    float: left;
   }
 
   .header-pic-class {
     float: left;
     display: block;
+  }
+
+  // the outer wrapper for the <header>. Width is set to auto.
+  .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid $base-link-color;
+  }
+
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .innerWrapperNavHeader {
+    width: $inner-content-width;
+    margin: 0 auto;
+  }
+    
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+    padding:20px 0 0 0;
+  }
+  
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    width: 209px;
+    height: 65px;
+  }
+
+  .header-element-margin {
+    margin-left: 100px;  
   }
 
   /*
