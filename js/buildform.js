@@ -34,7 +34,7 @@ define(function() {
 
     // set attributes for Submit button
     searchButton.type = "submit";
-    searchButton.id = "tipue_search_button";
+    searchButton.setAttribute("class",  "btnSearch");
     searchButton.value = "Go";
 
     // Arrange elements
