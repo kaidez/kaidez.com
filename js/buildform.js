@@ -34,7 +34,7 @@ define(function() {
 
     // set attributes for Submit button
     searchButton.type = "submit";
-    searchButton.setAttribute("class",  "btnSearch");
+    searchButton.setAttribute("class", "btnSearch");
     searchButton.value = "Go";
 
     // Arrange elements
@@ -80,7 +80,6 @@ define(function() {
    * Google searchbox will show up.  All this means that a searchbox will
    * appear on our page regardless of whether or not either CSS or JS is 
    * available in the browser.
-
    *  
    *  Attribution for this trick goes to Kethinov who discussed it over at:
    *  http://bit.ly/11iKpZh
