@@ -664,7 +664,6 @@ html, body {
   font-size: 20px;
   float: none;
   padding: 9px 0;
-  height: 31px;
   display: block;
   color: #FFF;
   border-bottom: 1px solid #580022; }
@@ -1274,8 +1273,12 @@ a:hover {
   background-size: 350px 210px;
   height: 44px;
   width: 44px;
-  border: none;
-  text-indent: -999px; }
+  border: 0;
+  text-indent: -999px;
+  padding: 0;
+  position: relative;
+  left: -42px;
+  top: -3px; }
 
 .site-title {
   background: url("../img/snSprite.png") no-repeat -117px -149px;
@@ -1349,8 +1352,12 @@ a:hover {
     background-size: 350px 210px;
     height: 44px;
     width: 44px;
-    border: none;
-    text-indent: -999px; }
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px; }
 
   .site-title {
     background: url("../img/snSprite@2x.png") no-repeat -125px -80px;
@@ -1838,11 +1845,37 @@ a.pagination-link {
   .site-description {
     display: block;
     position: static;
-    clear: both; }
+    font-size: 14px;
+    margin: 0;
+    width: 245px; }
+
+  .site-header {
+    max-width: 450px;
+    float: left; }
 
   .header-pic-class {
     float: left;
     display: block; }
+
+  .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid #310818; }
+
+  .innerWrapperNavHeader {
+    width: 900px;
+    margin: 0 auto; }
+
+  .searchbox-style {
+    text-align: left;
+    padding: 20px 0 0 0; }
+
+  .homepage-link {
+    width: 209px;
+    height: 65px; }
+
+  .header-element-margin {
+    margin-left: 100px; }
 
   /*
    =================
@@ -1851,9 +1884,7 @@ a.pagination-link {
    */
   .main-navigation-list {
     display: block;
-    padding: 2px 0;
     min-height: 21px;
-    width: 454px;
     font-size: 12px;
     margin: 0px auto;
     text-align: center; }
@@ -2022,13 +2053,17 @@ a.pagination-link {
     margin: 0 auto; }
 
   .searchbox-style {
-    position: static;
-    text-align: auto;
-    float: right; }
+    text-align: left;
+    padding: 20px 0 0 0; }
 
   .homepage-link {
     width: 209px;
     height: 65px; }
+
+  .header-element-margin {
+    margin-left: 100px;
+    position: relative;
+    left: 200px; }
 
   /*
    =================
@@ -2042,9 +2077,7 @@ a.pagination-link {
    */
   #site-navigation-list {
     display: block;
-    padding: 2px 0;
     min-height: 21px;
-    width: 454px;
     font-size: 12px;
     margin: 0px auto;
     text-align: center;
@@ -2055,38 +2088,34 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   .main-navigation {
-    width: 450px;
-    float: right;
     border: none; }
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
     visibility: hidden;
     text-decoration: none;
-    font-size: 18px;
-    float: none; }
+    font-size: 14px;
+    float: left; }
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited {
     font-family: "Lato";
-    color: #310818;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    margin-left: 12px;
-    padding: 0; }
+    border: 1px solid #627c8d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    margin-right: 12px;
+    padding: 6px;
+    background-color: #310818; }
 
   /*
    =====================
    Navigation styles end
    =====================
    */
-  /*
-   * Hide 'mobile first' menu & search
-   * boxes on tablets
-   */
-  .site-navigation-list-link {
-    float: left; }
-
   #s {
     font-size: 1em; }
 
@@ -2100,7 +2129,9 @@ a.pagination-link {
     margin: 0;
     width: 250px;
     border: 1px solid #d3d3d3;
-    border-radius: 2px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none; }
