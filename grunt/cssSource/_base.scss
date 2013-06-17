@@ -167,7 +167,6 @@ $mobile-retina:
 // Shows menu on tablet and desktop page load
 @mixin show-menu {
   display: block;
-  padding:2px 0;
   min-height: 21px;
   font-size: 12px;
 }
