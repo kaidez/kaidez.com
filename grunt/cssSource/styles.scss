@@ -13,13 +13,13 @@
 @import "mobileFirstStyles";
 // Mobile First styles end
 
-// oldIE styles start
-@import "oldIE";
-// oldIE styles end
-
 // Mobile landscape styles start
 @import "mobileLandscape";
 // Mobile landscape styles end
+
+// oldIE styles start
+@import "oldIE";
+// oldIE styles end
 
 // Tablet styles start
 @import "tabletStyles";
