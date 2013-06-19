@@ -19,7 +19,7 @@
   body {
     @include fonts($helv);
   }
-
+  
   // apply the Google font to all <header> tags
   // MOVE OVER TO "_baseIE8Desktop.scss"?
   .wf-active h1,
@@ -31,7 +31,7 @@
     @include fonts($robo);
     font-size: 1.7rem;
   }
-
+   
   /*
    ===================
    Header styles start
@@ -42,6 +42,7 @@
   
 
   // <h2> tag...the 'closing tags...wrapping functions text'
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .site-description {
     display: block;
     position: static;
@@ -84,11 +85,14 @@
   }
   
   // Logo link...provides a large enough space for a click area
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .homepage-link {
     width: 209px;
     height: 65px;
   }
 
+  // class for <nav> tag and "#searchbox" element
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .header-element-margin {
     margin-left: 100px;
     position: relative;

@@ -36,6 +36,15 @@
    * ===================
    */
 
+  // <h2> tag...the 'closing tags...wrapping functions text'
+  .site-description {
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0;
+    width: 245px;
+  }
+
   // the main class for the <header> tag
   .site-header {
     max-width: 450px;
@@ -66,6 +75,13 @@
     float: left;
   }
 
+  // class for <nav> tag and "#searchbox" element
+  .header-element-margin {
+    margin-left: 100px;
+    position: relative;
+    left:200px;  
+  }
+
   /*
    * =================
    * Header styles end
@@ -85,6 +101,12 @@
   // Hide moble menu and search icons on all devices EXCEPT hand-helds
   #menu, #search {
     @include hide-element;
+  }
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    width: 209px;
+    height: 65px;
   }
 
   /*
