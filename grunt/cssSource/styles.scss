@@ -1,17 +1,29 @@
+
 // Variables & mixins
 @import "base";
 
+// Variables & mixins for Desktop and IE8 & lower
+@import "baseIE8Desktop";
+
+// normalize.css starts
 @import "normalize";
+// normalize.css ends
+
+// Global device styles start
 @import "globalStyles";
+// Global device styles end
+
+// Syntax highlighting styles start
 @import "syntax";
+// Syntax highlighting styles end
 
 // Retina media query code starts
 @import "retinaMediaQuery";
 // Retina media query code end
 
-// Mobile First styles start
+// "Mobile first" styles start
 @import "mobileFirstStyles";
-// Mobile First styles end
+// "Mobile first" styles end
 
 // Mobile landscape styles start
 @import "mobileLandscape";
@@ -29,4 +41,6 @@
 @import "desktopStyles";
 // Desktop styles styles end
 
+// assistive CSS styles start
 @import "assistive";
+// assistive CSS styles end
