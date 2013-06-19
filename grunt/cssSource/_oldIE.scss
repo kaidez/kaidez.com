@@ -1,17 +1,32 @@
 /*
- ===========================================
- Global styles start:
-
- These are styles which should appear on all
- devices, regardless of screen dimension or
- computer resolution.
- ===========================================
+ * ============================================================================
+ * oldIE  styles start:
+ *
+* The 'mobile first' styles load first because they're not inside of a 
+* '@media' call.  has a result, they are the styles that will render in IE8 
+* and lower, which we don't want: the desktop styles should load first.  Therefore, 'oldIE.scss' is created to to hold styles that should render in these browsers and load after the "mobileLandscape" styles.
+ ============================================================================
  */
 
-/*
- ==============================================================
- */
 
 .lt-ie9 {
+
+  // Loads Lato Google Font
+  body {
+    @include fonts($helv);
+  }
+  
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .innerWrapperNavHeader {
+    width: $inner-content-width;
+    margin: 0 auto;
+  }
+
+    // the outer wrapper for the <header>. Width is set to auto.
+  .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid $base-link-color;
+  }
 
 }
