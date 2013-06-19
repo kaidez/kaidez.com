@@ -167,7 +167,41 @@
 
 
 
+  // Search box-related styles start
+  #s {
+    font-size: 1em;
+  }
 
+  // Search box
+  #searchbox {
+    display: block;
+    float: left;
+  }
 
+  /*
+   ====================
+   Content styles start
+   ====================
+   */
+  
 
+  .page-content {
+    width: $inner-content-width;
+    max-width: $inner-content-width;
+    font-size: 18px;
+    line-height: 36px;
+    padding-top:21px;
+    margin:0 auto;
+  }
+
+  .breadcrumbStyles {
+    font-size: 16px;
+    padding: 0px 0 54px;
+  }
+
+  /*
+   ==================
+   Content styles end
+   ==================
+   */
 
