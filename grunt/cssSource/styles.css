@@ -124,6 +124,150 @@ body {
   padding: 21px;
   border-bottom: 3px solid #310818; }
 
+ /*
+===================
+Header styles start
+===================
+*/
+.site-description {
+  display: block;
+  position: static;
+  font-size: 14px;
+  margin: 0;
+  width: 245px; }
+
+.site-header {
+  max-width: 450px;
+  float: left; }
+
+.header-pic-class {
+  float: left;
+  display: block; }
+
+.outerWrapperNavHeader {
+  width: auto;
+  padding: 21px;
+  border-bottom: 3px solid #310818; }
+
+.innerWrapperNavHeader {
+  width: 900px;
+  margin: 0 auto; }
+
+.searchbox-style {
+  text-align: left;
+  padding: 20px 0 0 0; }
+
+.homepage-link {
+  width: 209px;
+  height: 65px; }
+
+.header-element-margin {
+  margin-left: 100px;
+  position: relative;
+  left: 200px; }
+
+/*
+ =================
+ Header styles end
+ =================
+ */
+ /*
+=======================
+Navigation styles start
+=======================
+*/
+#site-navigation-list {
+  display: block;
+  min-height: 21px;
+  font-size: 12px;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0; }
+
+#menu, #search {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
+.main-navigation {
+  border: none; }
+
+.wf-loading .site-navigation-list-link {
+  font-family: serif;
+  visibility: hidden;
+  text-decoration: none;
+  font-size: 14px;
+  float: left; }
+
+.wf-active .site-navigation-list-link a:link,
+.wf-active .site-navigation-list-link a:visited {
+  font-family: "Lato";
+  border: 1px solid #627c8d;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  float: left;
+  margin-right: 12px;
+  padding: 6px;
+  background-color: #310818;
+  width: 60px;
+  height: 17px; }
+
+/*
+ =====================
+ Navigation styles end
+ =====================
+ */
+/*
+ * ===================
+ * Search styles start
+ * ===================
+ */
+#s {
+  font-size: 1em; }
+
+#searchbox {
+  display: block; }
+
+#tipue_search_input {
+  font: 13px/1.5 'open sans', sans-serif;
+  color: #333;
+  padding: 7px;
+  margin: 0;
+  width: 250px;
+  border: 1px solid #d3d3d3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none; }
+
+#tipue_search_input:focus {
+  border-color: #c3c3c3;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
+#tipue_search_button {
+  width: 60px;
+  height: 33px;
+  margin-top: 1px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  background: #f1f1f1 url("../img/search.gif") no-repeat center;
+  outline: none; }
+
+#tipue_search_button:hover {
+  border: 1px solid #c3c3c3;
+  -moz-box-shadow: 1px 1px 2px #e3e3e3;
+  -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+  box-shadow: 1px 1px 2px #e3e3e3; }
+
+/*
+ * =================
+ * Search styles end
+ * =================
+ */
 /* normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -1850,15 +1994,159 @@ a.pagination-link {
  * these browsers and load after the "mobileLandscape" styles.
  * ==========================================================================
  */
-.lt-ie9 body {
-  font-family: "Lato"; }
-.lt-ie9 .innerWrapperNavHeader {
-  width: 900px;
-  margin: 0 auto; }
-.lt-ie9 .outerWrapperNavHeader {
-  width: auto;
-  padding: 21px;
-  border-bottom: 3px solid #310818; }
+.lt-ie9 {
+  /*
+   * ==========================================================================
+   * Desktop and IE and lower styles start:
+   *
+   * Master mixin to be shared among "_baseIE8Desktop.scss" and "_desktopStyles.
+   * scss." This may change before the final site build.  Read
+   * https://github.com/nex3/sass/issues/408 to see why, specifically check out
+   * what Chris Epstein says.
+   * ==========================================================================
+   */
+ /*
+===================
+Header styles start
+===================
+*/
+  /*
+   =================
+   Header styles end
+   =================
+   */
+ /*
+=======================
+Navigation styles start
+=======================
+*/
+  /*
+   =====================
+   Navigation styles end
+   =====================
+   */
+  /*
+   * ===================
+   * Search styles start
+   * ===================
+   */
+  /*
+   * =================
+   * Search styles end
+   * =================
+   */ }
+  .lt-ie9 body {
+    font-family: "Lato"; }
+  .lt-ie9 .innerWrapperNavHeader {
+    width: 900px;
+    margin: 0 auto; }
+  .lt-ie9 .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid #310818; }
+  .lt-ie9 .site-description {
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0;
+    width: 245px; }
+  .lt-ie9 .site-header {
+    max-width: 450px;
+    float: left; }
+  .lt-ie9 .header-pic-class {
+    float: left;
+    display: block; }
+  .lt-ie9 .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid #310818; }
+  .lt-ie9 .innerWrapperNavHeader {
+    width: 900px;
+    margin: 0 auto; }
+  .lt-ie9 .searchbox-style {
+    text-align: left;
+    padding: 20px 0 0 0; }
+  .lt-ie9 .homepage-link {
+    width: 209px;
+    height: 65px; }
+  .lt-ie9 .header-element-margin {
+    margin-left: 100px;
+    position: relative;
+    left: 200px; }
+  .lt-ie9 #site-navigation-list {
+    display: block;
+    min-height: 21px;
+    font-size: 12px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0; }
+  .lt-ie9 #menu, .lt-ie9 #search {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); }
+  .lt-ie9 .main-navigation {
+    border: none; }
+  .lt-ie9 .wf-loading .site-navigation-list-link {
+    font-family: serif;
+    visibility: hidden;
+    text-decoration: none;
+    font-size: 14px;
+    float: left; }
+  .lt-ie9 .wf-active .site-navigation-list-link a:link,
+  .lt-ie9 .wf-active .site-navigation-list-link a:visited {
+    font-family: "Lato";
+    border: 1px solid #627c8d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    margin-right: 12px;
+    padding: 6px;
+    background-color: #310818;
+    width: 60px;
+    height: 17px; }
+  .lt-ie9 #s {
+    font-size: 1em; }
+  .lt-ie9 #searchbox {
+    display: block; }
+  .lt-ie9 #tipue_search_input {
+    font: 13px/1.5 'open sans', sans-serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none; }
+  .lt-ie9 #tipue_search_input:focus {
+    border-color: #c3c3c3;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  .lt-ie9 #tipue_search_button {
+    width: 60px;
+    height: 33px;
+    margin-top: 1px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    background: #f1f1f1 url("../img/search.gif") no-repeat center;
+    outline: none; }
+  .lt-ie9 #tipue_search_button:hover {
+    border: 1px solid #c3c3c3;
+    -moz-box-shadow: 1px 1px 2px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+    box-shadow: 1px 1px 2px #e3e3e3; }
+  .lt-ie9 .site-title {
+    background: url(../img/snSprite.png) no-repeat -125px -80px;
+    background-size: 350px 210px;
+    height: 62px;
+    width: 221px;
+    text-indent: -999px;
+    margin: 0;
+    float: left; }
 
 @media only screen and (min-width: 569px) and (max-width: 768px) {
   /*
