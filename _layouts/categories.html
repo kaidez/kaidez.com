@@ -42,11 +42,11 @@
 
     </div> <!-- #header-nav-wrapper-outer -->
 
-    <main id="content" class="page-content" role="main">
+    <div role="main" id="content" class="page-content">  
       {% include category_breadcrumbs_partial.html %}
       <h1 class="category-title">Category: {{ page.title }}</h1>
       {{ content }}
-    </main> <!-- #content -->
+    </div> <!-- #content -->
     
     {% include footer_partial.html %}
 
