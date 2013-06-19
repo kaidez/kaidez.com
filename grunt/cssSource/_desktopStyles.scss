@@ -20,7 +20,8 @@
     @include fonts($helv);
   }
 
-  // apply the Google font to all <header> tags  
+  // apply the Google font to all <header> tags
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .wf-active h1,
   .js .wf-active h2,
   .wf-active h3,
@@ -49,6 +50,8 @@
     width: 245px;
   }
 
+  // the main class for the <header> tag
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .site-header {
     max-width: 450px;
     float: left;
@@ -60,6 +63,7 @@
   }
 
   // the outer wrapper for the <header>. Width is set to auto.
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .outerWrapperNavHeader {
     width: auto;
     padding: 21px;
@@ -67,6 +71,7 @@
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .innerWrapperNavHeader {
     width: $inner-content-width;
     margin: 0 auto;
@@ -97,9 +102,9 @@
    */
 
   /*
-   =======================
-   Navigation styles start
-   =======================
+   * =======================
+   * Navigation styles start
+   * =======================
    */
 
   // Menu
@@ -109,6 +114,8 @@
     padding: 0;
   }
 
+  // Hide moble menu and search icons on all devices EXCEPT hand-helds
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
   #menu, #search {
     @include hide-element;
   }
