@@ -26,3 +26,123 @@
     padding: 21px;
     border-bottom: 3px solid $base-link-color;
   }
+
+    /*
+   ===================
+   Header styles start
+   ===================
+   */
+  
+
+  
+
+  // <h2> tag...the 'closing tags...wrapping functions text'
+  .site-description {
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0;
+    width: 245px;
+  }
+
+  .site-header {
+    max-width: 450px;
+    float: left;
+  }
+
+  .header-pic-class {
+    float: left;
+    display: block;
+  }
+
+  // the outer wrapper for the <header>. Width is set to auto.
+  .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid $base-link-color;
+  }
+
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .innerWrapperNavHeader {
+    width: $inner-content-width;
+    margin: 0 auto;
+  }
+    
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+    padding:20px 0 0 0;
+  }
+  
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    width: 209px;
+    height: 65px;
+  }
+
+  .header-element-margin {
+    margin-left: 100px;
+    position: relative;
+    left:200px;  
+  }
+
+  /*
+   =================
+   Header styles end
+   =================
+   */
+
+
+    /*
+   =======================
+   Navigation styles start
+   =======================
+   */
+
+  // Menu
+  #site-navigation-list {
+    @include show-menu;
+    @include master-center;
+    padding: 0;
+  }
+
+  #menu, #search {
+    @include hide-element;
+  }
+
+  // <nav> tag
+  .main-navigation {
+    border: none;
+  }
+
+  // Hide the Google font on all <nav> links before page load
+  .wf-loading .site-navigation-list-link {
+    font-family: $srf;
+    visibility: hidden;
+    text-decoration: none;
+    font-size: 14px;
+    float: left;
+  }
+
+  // Apply the Google font to all <nav> links after page load
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited { 
+    @include fonts($helv);
+    border: 1px solid $footer-color;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    margin-right: 12px;
+    padding: 6px;
+    background-color: #310818;
+  }
+
+
+  /*
+   =====================
+   Navigation styles end
+   =====================
+   */

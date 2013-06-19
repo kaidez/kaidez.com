@@ -13,22 +13,16 @@
 
 .lt-ie9 {
 
-  // Loads Lato Google Font
-  body {
-    @include fonts($helv);
-  }
-  
-  // the inner wrapper for the <header>. Width is set to 900px.
-  .innerWrapperNavHeader {
-    width: $inner-content-width;
-    margin: 0 auto;
-  }
+  @import "baseIE8Desktop";
 
-    // the outer wrapper for the <header>. Width is set to auto.
-  .outerWrapperNavHeader {
-    width: auto;
-    padding: 21px;
-    border-bottom: 3px solid $base-link-color;
+  .site-title {
+    background: url(../img/snSprite.png) no-repeat -125px -80px;
+    background-size: 350px 210px;
+    height: 62px;
+    width: 221px;
+    text-indent: -999px;
+    margin: 0;
+    float: left;
   }
 
 }
