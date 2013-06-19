@@ -92,7 +92,6 @@
   }
 
   // class for <nav> tag and "#searchbox" element
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .header-element-margin {
     margin-left: 100px;
     position: relative;
@@ -116,6 +115,7 @@
     @include show-menu;
     @include master-center;
     padding: 0;
+    width: auto;
   }
 
   // Hide moble menu and search icons on all devices EXCEPT hand-helds

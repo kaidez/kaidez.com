@@ -98,6 +98,15 @@
    * =======================
    */
 
+  // Menu
+  #site-navigation-list {
+    @include show-menu;
+    @include master-center;
+    padding: 0;
+    width: 500px;
+    height: 17px;
+  }
+
   // Hide moble menu and search icons on all devices EXCEPT hand-helds
   #menu, #search {
     @include hide-element;
@@ -107,6 +116,45 @@
   .homepage-link {
     width: 209px;
     height: 65px;
+  }
+
+    // <nav> tag
+  // MOVE OVER TO "_baseIE8Desktop.scss"?
+  .main-navigation {
+    border: none;
+  }
+
+  // Hide the Google font on all <nav> links before page load: 
+  .wf-loading .site-navigation-list-link {
+    font-family: $srf;
+    visibility: hidden;
+    text-decoration: none;
+    font-size: 14px;
+    float: left;
+  }
+
+  .site-navigation-list-link {
+    float: left;
+    display: inline;
+    padding: 6px;
+    margin-right: 12px;
+  }
+
+  // Apply the Google font to all <nav> links after page load
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover { 
+    @include fonts($helv);
+    border: 1px solid $footer-color;
+    width: 90px;
+    height: 17px;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    
+    padding: 6px;
+    background-color: #310818;
+    display: inline;
   }
 
   /*
