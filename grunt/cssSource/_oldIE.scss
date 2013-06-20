@@ -13,6 +13,182 @@
 
 .lt-ie9 {
 
-  @import "baseIE8Desktop";
+  .wf-loading h1,
+  .wf-inactive h1,
+  .wf-loading h2,
+  .wf-inactive h2,
+  .wf-loading h3,
+  .wf-inactive h3,
+  .wf-loading h4,
+  .wf-inactive h4,
+  .wf-loading h5,
+  .wf-inactive h5,
+  .wf-loading h6,
+  .wf-inactive h6 {
+    font-family: $srf;
+  }
 
+  .wf-active h1,
+  .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    @include fonts($robo);
+    font-size: 1.0rem;
+  }
+
+
+  .site-description {
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0;
+    width: 245px;
+  }
+
+
+  .site-header {
+    max-width: 450px;
+    float: left;
+  }
+  
+
+  .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid $base-link-color;
+  }
+
+
+  .innerWrapperNavHeader {
+    width: $inner-content-width;
+    margin: 0 auto;
+  }
+
+
+
+  .site-title {
+    @include sprite-images('../img/snSprite.png', -125px -80px, 62px, 221px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+
+  .header-element-margin {
+    margin-left: 100px;
+    position: relative;
+    left:200px;  
+  }
+
+
+  #site-navigation-list {
+    @include show-menu;
+    @include master-center;
+    padding: 0;
+    width: 500px;
+    height: 17px;
+  }
+
+  #menu, #search {
+    @include hide-element;
+  }
+
+  .homepage-link {
+    width: 209px;
+    height: 65px;
+  }
+
+
+  .main-navigation {
+    border: none;
+  }
+
+
+  .wf-loading .site-navigation-list-link {
+    font-family: $srf;
+    visibility: hidden;
+    text-decoration: none;
+    font-size: 14px;
+    float: left;
+  }
+
+  .site-navigation-list-link {
+    float: left;
+    display: inline;
+    padding: 6px;
+    margin-right: 12px;
+  }
+
+
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover { 
+    @include fonts($helv);
+    border: 1px solid $footer-color;
+    width: 90px;
+    height: 17px;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    padding: 6px;
+    background-color: #310818;
+    display: inline;
+  }
+
+  #s {
+    font-size: 1em;
+  }
+
+  #searchbox {
+    display: block;
+    float: left;
+  }
+
+  
+
+  .page-content {
+    width: $inner-content-width;
+    max-width: $inner-content-width;
+    font-size: 18px;
+    line-height: 36px;
+    padding-top:21px;
+    margin:0 auto;
+  }
+
+  .breadcrumbStyles {
+    font-size: 16px;
+    padding: 0px 0 54px;
+  }
+
+
+
+  .footer-header {
+    @include makeTextShadow($footer-color);
+    border-bottom: 2px dotted darken($footer-color, 25);
+  }
+
+  .footer-sections {
+    width: $footer-column-width-desktop;
+    float: left;
+  }
+
+  .midFooterSection {
+    margin:0 getGutterWidth($inner-content-width);
+  }
+
+  .copyrightStyle {
+    clear: both;  
+  }
+
+
+  .innerWrapperNavFooter {
+    width: $inner-content-width;
+    margin: 0 auto 53px;
+  }
+
+  .outerWrapperNavFooter {
+    background: $footer-color url('../img/footer-bg.png') no-repeat left;
+  }
 }
+/* oldIE styles end*/
