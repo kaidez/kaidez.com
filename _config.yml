@@ -2,5 +2,5 @@ markdown: rdiscount
 permalink: /:title
 destination: ./_site
 paginate: 10
-exclude: [grunt, robots.txt, css/styles.css]
+exclude: [grunt, robots.txt, css/styles.css, assets]
 #include: .htaccess
