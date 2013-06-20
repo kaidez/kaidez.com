@@ -200,8 +200,52 @@
   }
 
   /*
-   ==================
-   Content styles end
-   ==================
+   * ==================
+   * Content styles end
+   * ==================
+   */
+
+
+
+
+
+  /*
+   * ===================
+   * Footer styles start
+   * ===================
+   */
+
+  .footer-header {
+    @include makeTextShadow($footer-color);
+    border-bottom: 2px dotted darken($footer-color, 25);
+  }
+
+  .footer-sections {
+    width: $footer-column-width-desktop;
+    float: left;
+  }
+
+  .midFooterSection {
+    margin:0 getGutterWidth($inner-content-width);
+  }
+
+  .copyrightStyle {
+    clear: both;
+  }
+
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .innerWrapperNavFooter {
+    width: $inner-content-width;
+    margin: 0 auto 53px;
+  }
+
+  .outerWrapperNavFooter {
+    background: $footer-color url('../img/footer-bg.png') no-repeat left;
+  }
+
+  /*
+   * ===================
+   * Footer styles ends
+   * ===================
    */
 
