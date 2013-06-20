@@ -140,7 +140,8 @@
 
   // Apply the Google font to all <nav> links after page load
   .wf-active .site-navigation-list-link a:link,
-  .wf-active .site-navigation-list-link a:visited { 
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover { 
     @include fonts($helv);
     border: 1px solid $footer-color;
     -webkit-border-radius: 4px;
@@ -151,7 +152,7 @@
     float: left;
     margin-right: 12px;
     padding: 6px;
-    background-color: #310818;
+    background-color: #B8E4F6;
   }
 
   /*
