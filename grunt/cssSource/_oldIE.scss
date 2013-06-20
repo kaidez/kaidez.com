@@ -125,14 +125,14 @@
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
     @include fonts($helv);
-    border: 1px solid $footer-color;
+    border: 0;
     width: 90px;
     height: 17px;
     color: #fff;
     font-size: 14px;
     float: left;
     padding: 6px;
-    background-color: #310818;
+    background-color: $footer-color;
     display: inline;
   }
 
