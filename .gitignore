@@ -64,15 +64,8 @@ results
 npm-debug.log
 tmp
 
-#image files in Grunt
-# -------------------
-grunt/imgSource/
 
 
-
-# Dev copy of the styles.css
-# --------------------------
-styles.css
 
 # Password file for grunt-sftp-deploy
 # -----------------------------------
