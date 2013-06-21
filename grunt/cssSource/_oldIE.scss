@@ -101,7 +101,7 @@
 
 
   .main-navigation {
-    border: none;
+    @include main-nav;
   }
 
 

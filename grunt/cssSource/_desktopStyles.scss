@@ -126,7 +126,7 @@
 
   // <nav> tag
   .main-navigation {
-    border: none;
+    @include main-nav;
   }
 
   // Hide the Google font on all <nav> links before page load

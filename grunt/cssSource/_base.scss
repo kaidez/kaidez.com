@@ -293,3 +293,27 @@ $mobile-retina:
  * Functions end
  * =============
  */
+
+
+
+
+
+/*
+ * ==========================================================================
+ * Desktop/oldIE shared code starts:
+ * 
+ * Both the "_desktopStyles.scss" and _oldIE.scss share many CSS code blocks,
+ * so these blocks have been condensed into shared mixins.
+ * ==========================================================================
+ */
+
+@mixin main-nav {
+  border: none;
+  margin-bottom: 20px;
+}
+
+/*
+ * ==============================
+ * Desktop/oldIE shared code ends
+ * ==============================
+ */
