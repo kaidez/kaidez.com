@@ -126,7 +126,7 @@ html, body {
 .wf-active .site-navigation-list-link a:visited { 
   @include fonts($robo);
   @include master-center;
-  background-color: $base-link-color;
+  background-color: $footer-color;
   text-decoration: none;
   visibility: visible;
   font-size: 20px;
