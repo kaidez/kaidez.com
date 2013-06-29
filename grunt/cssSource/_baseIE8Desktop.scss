@@ -30,6 +30,16 @@
     font-size: 1.0rem;
   }
 
+  .clearfix:before,
+  .clearfix:after {
+    content: none;
+    display: block;
+  }
+
+  .clearfix:after {
+    clear: none;
+  } 
+
   /*
    * ===================
    * Header styles start

@@ -77,8 +77,8 @@
   // MOVE OVER TO "_baseIE8Desktop.scss"?
   .outerWrapperNavHeader {
     width: auto;
-    padding: 21px;
     border-bottom: 3px solid $base-link-color;
+    min-height: 70px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
@@ -91,7 +91,9 @@
   // searchbox
   .searchbox-style {
     text-align: left;
-    padding:20px 0 0 0;
+    padding: 0;
+    margin: 0;
+    float: right;
   }
   
   // Logo link...provides a large enough space for a click area

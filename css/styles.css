@@ -2199,8 +2199,8 @@ a.pagination-link {
 
   .outerWrapperNavHeader {
     width: auto;
-    padding: 21px;
-    border-bottom: 3px solid #0c5e7e; }
+    border-bottom: 3px solid #0c5e7e;
+    min-height: 70px; }
 
   .innerWrapperNavHeader {
     width: 900px;
@@ -2208,7 +2208,9 @@ a.pagination-link {
 
   .searchbox-style {
     text-align: left;
-    padding: 20px 0 0 0; }
+    padding: 0;
+    margin: 0;
+    float: right; }
 
   .homepage-link {
     width: 209px;
