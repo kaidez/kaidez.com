@@ -31,6 +31,16 @@
     @include fonts($robo);
     font-size: 1.7rem;
   }
+
+  .clearfix:before,
+  .clearfix:after {
+    content: none;
+    display: block;
+  }
+
+.clearfix:after {
+  clear: none;
+}
    
   /*
    ===================
@@ -92,11 +102,11 @@
   }
 
   // class for <nav> tag and "#searchbox" element
-  .header-element-margin {
-    margin-left: 100px;
-    position: relative;
-    left:200px;  
-  }
+  // .header-element-margin {
+  //   margin-left: 100px;
+  //   position: relative;
+  //   left:200px;  
+  // }
 
   /*
    =================
@@ -126,7 +136,11 @@
 
   // <nav> tag
   .main-navigation {
-    @include main-nav;
+    // @include main-nav;
+    position: absolute;
+    float: left;
+    width: 373px;
+    border: 0;
   }
 
   // Hide the Google font on all <nav> links before page load

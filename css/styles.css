@@ -2169,6 +2169,14 @@ a.pagination-link {
     font-family: "Roboto Condensed";
     font-size: 1.7rem; }
 
+  .clearfix:before,
+  .clearfix:after {
+    content: none;
+    display: block; }
+
+  .clearfix:after {
+    clear: none; }
+
   /*
    ===================
    Header styles start
@@ -2206,11 +2214,6 @@ a.pagination-link {
     width: 209px;
     height: 65px; }
 
-  .header-element-margin {
-    margin-left: 100px;
-    position: relative;
-    left: 200px; }
-
   /*
    =================
    Header styles end
@@ -2235,8 +2238,10 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   .main-navigation {
-    border: none;
-    margin-bottom: 20px; }
+    position: absolute;
+    float: left;
+    width: 373px;
+    border: 0; }
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
