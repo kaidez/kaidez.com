@@ -74,6 +74,14 @@
     margin: 0 auto;
   }
 
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+    padding: 0;
+    margin: 10px 0 0 0;
+    float: right;
+  }
+
 
   // <h1> tag in the <header>...DESKTOP ONLY!!!!!!!!!!!
   // If u break this .scss file out to _baseIE8Desktop, this code stays in
