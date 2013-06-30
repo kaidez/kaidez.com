@@ -57,8 +57,7 @@
 
   // the main class for the <header> tag
   .site-header {
-    max-width: 450px;
-    float: left;
+    @include site-header;
   }
   
   // the outer wrapper for the <header>. Width is set to auto.
@@ -66,6 +65,7 @@
     width: auto;
     padding: 21px;
     border-bottom: 3px solid $base-link-color;
+    min-height: 90px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
@@ -119,11 +119,12 @@
   // Menu
   #site-navigation-list {
     @include show-menu;
-    margin: 14px auto 0 auto;
+    margin: 11px auto 0 auto;
     padding: 0;
     width: 500px;
     height: 17px;
   }
+
 
   // Hide moble menu and search icons on all devices EXCEPT hand-helds
   #menu, #search {

@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          '../css/styles.css': 'cssSource/styles.scss'
+          'cssSource/styles.css': 'cssSource/styles.scss'
         }
       }
     },
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     // 'cssmin' task
     cssmin: {
       my_target: {
-        src: '../css/styles.css',
+        src: 'cssSource/styles.css',
         dest: '../css/styles.min.css'
       }
     },

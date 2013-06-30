@@ -1907,7 +1907,8 @@ a.pagination-link {
   height: 65px; }
 .lt-ie9 .main-navigation {
   border: none;
-  margin-bottom: 20px; }
+  margin: 0 0 20px 20px;
+  width: 445px; }
 .lt-ie9 .wf-loading .site-navigation-list-link {
   font-family: serif;
   visibility: hidden;
@@ -2190,26 +2191,28 @@ a.pagination-link {
     width: 245px; }
 
   .site-header {
-    width: 209px;
-    margin: 0 auto; }
+    width: 209px; }
 
   .header-pic-class {
     float: left;
     display: block; }
 
   .outerWrapperNavHeader {
-    width: auto;
     border-bottom: 3px solid #0c5e7e;
-    min-height: 70px; }
+    width: auto;
+    min-height: 90px; }
 
   .innerWrapperNavHeader {
     width: 900px;
     margin: 0 auto; }
 
+  .top-level-header-wrapper {
+    padding-top: 12px; }
+
   .searchbox-style {
     text-align: left;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0 0;
     float: right; }
 
   .homepage-link {
@@ -2230,8 +2233,7 @@ a.pagination-link {
     display: block;
     min-height: 21px;
     font-size: 12px;
-    margin: 0px auto;
-    text-align: center;
+    margin: 11px auto 0 auto;
     padding: 0;
     width: auto; }
 
@@ -2240,10 +2242,11 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   .main-navigation {
+    border: none;
+    margin: 0 0 20px 20px;
+    width: 445px;
     position: absolute;
-    float: left;
-    width: 373px;
-    border: 0; }
+    float: left; }
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
@@ -2256,16 +2259,14 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
+    color: #277291;
+    text-shadow: 0px 2px 3px #8ec9e1;
+    color: #0c5e7e;
     border: 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     float: left;
-    margin-right: 12px;
-    padding: 6px;
-    background-color: #0c5e7e; }
+    margin-right: 18px;
+    background-color: transparent; }
 
   /*
    =====================
@@ -2283,18 +2284,24 @@ a.pagination-link {
     color: #333;
     padding: 7px;
     margin: 0;
-    width: 250px;
+    width: 200px;
     border: 1px solid #d3d3d3;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -moz-appearance: none;
     -webkit-appearance: none;
-    outline: none; }
+    outline: none;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 0.4s ease;
+    -ms-transition: width 0.4s ease;
+    transition: width 0.4s ease; }
 
   #tipue_search_input:focus {
     border-color: #c3c3c3;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    width: 200px; }
 
   #tipue_search_button {
     width: 60px;

@@ -324,6 +324,10 @@ $mobile-retina:
   background-color: transparent;
 }
 
+@mixin site-header {
+  width:209px;
+}
+
 /*
  * ==============================
  * Desktop/oldIE shared code ends
