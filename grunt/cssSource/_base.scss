@@ -309,7 +309,19 @@ $mobile-retina:
 
 @mixin main-nav {
   border: none;
-  margin-bottom: 20px;
+  margin: 0 0 20px 20px;
+  width: 445px;
+}
+
+@mixin link-styles {
+  @include fonts($helv);
+  @include makeTextShadow($header-color);
+  color: $footer-color;
+  border: 0;
+  font-size: 18px;
+  float: left;
+  margin-right: 18px; 
+  background-color: transparent;
 }
 
 /*

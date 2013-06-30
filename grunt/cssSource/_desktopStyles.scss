@@ -125,7 +125,7 @@
   // Menu
   #site-navigation-list {
     @include show-menu;
-    @include master-center;
+    margin: 14px auto 0 auto;
     padding: 0;
     width: auto;
   }
@@ -138,11 +138,9 @@
 
   // <nav> tag
   .main-navigation {
-    // @include main-nav;
+    @include main-nav;
     position: absolute;
     float: left;
-    width: 373px;
-    border: 0;
   }
 
   // Hide the Google font on all <nav> links before page load
@@ -158,17 +156,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include fonts($helv);
-    border: 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    float: left;
-    margin-right: 12px;
-    padding: 6px;
-    background-color: $footer-color;
+    @include link-styles
   }
 
   /*
