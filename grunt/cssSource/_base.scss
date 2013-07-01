@@ -309,8 +309,9 @@ $mobile-retina:
 
 @mixin main-nav {
   border: none;
-  margin: 0 0 20px 20px;
   width: 445px;
+  right: 378px;
+  position: absolute;
 }
 
 @mixin link-styles {
@@ -326,6 +327,7 @@ $mobile-retina:
 
 @mixin site-header {
   width:209px;
+  float: left;
 }
 
 /*

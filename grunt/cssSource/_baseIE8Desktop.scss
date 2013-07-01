@@ -57,7 +57,7 @@
 
   // the main class for the <header> tag
   .site-header {
-    @include site-header;
+    @include site-header
   }
   
   // the outer wrapper for the <header>. Width is set to auto.
@@ -65,7 +65,7 @@
     width: auto;
     padding: 21px;
     border-bottom: 3px solid $base-link-color;
-    min-height: 90px;
+    min-height: 100px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.

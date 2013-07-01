@@ -11,7 +11,7 @@ define(function() {
    *
    *  <form action="/search.html" id="js-searchbox">
    *    <input type="text" name="q" id="tipue_search_input"
-   *     placeholder="Search for JavaScript, HTML5, etc">
+   *     placeholder="Search...">
    *    <input type="submit" id="tipue_search_button" value="Search">
    *  </form>
    */
@@ -25,21 +25,22 @@ define(function() {
     // set attributes for form
     form.action = "/search.html";
     form.id = "js-searchbox";
+    form.setAttribute("class", "form");
 
     // set attributes for Search text box
     searchTextBox.type = "text";
     searchTextBox.name = "q";
     searchTextBox.id = "tipue_search_input";
-    searchTextBox.placeholder = "Search for JavaScript, HTML5, etc";
+    searchTextBox.placeholder = "Search...";
 
     // set attributes for Submit button
-    searchButton.type = "submit";
-    searchButton.setAttribute("class", "btnSearch");
-    searchButton.value = "Go";
+    // searchButton.type = "submit";
+    // searchButton.setAttribute("class", "btnSearch");
+    // searchButton.value = "Go";
 
     // Arrange elements
     form.appendChild(searchTextBox);
-    form.appendChild(searchButton);
+    // form.appendChild(searchButton);
 
     // Load arranged elements into document fragment
     frag.appendChild(form);
