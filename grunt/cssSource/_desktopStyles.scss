@@ -59,6 +59,7 @@
     font-size: 14px;
     margin: 0;
     width: 245px;
+    line-height: 2.5;
   }
 
   // the main class for the <header> tag
@@ -76,7 +77,7 @@
   .outerWrapperNavHeader {
     border-bottom: 3px solid $base-link-color;
     width: auto;
-    min-height: 100px;
+    min-height: 130px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
@@ -169,6 +170,7 @@
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
+    margin-top: 13px;
   }
 
   // Search box-related styles start

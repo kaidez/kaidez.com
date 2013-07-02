@@ -2189,7 +2189,8 @@ a.pagination-link {
     position: static;
     font-size: 14px;
     margin: 0;
-    width: 245px; }
+    width: 245px;
+    line-height: 2.5; }
 
   .site-header {
     width: 209px;
@@ -2202,7 +2203,7 @@ a.pagination-link {
   .outerWrapperNavHeader {
     border-bottom: 3px solid #0c5e7e;
     width: auto;
-    min-height: 100px; }
+    min-height: 130px; }
 
   .innerWrapperNavHeader {
     width: 900px;
@@ -2277,7 +2278,8 @@ a.pagination-link {
   .form {
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
-    border-radius: 25px; }
+    border-radius: 25px;
+    margin-top: 13px; }
 
   #s {
     font-size: 1em; }
