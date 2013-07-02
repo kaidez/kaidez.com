@@ -34,13 +34,13 @@ define(function() {
     searchTextBox.placeholder = "Search...";
 
     // set attributes for Submit button
-    // searchButton.type = "submit";
-    // searchButton.setAttribute("class", "btnSearch");
-    // searchButton.value = "Go";
+    searchButton.type = "submit";
+    searchButton.setAttribute("class", "btnSearch");
+    searchButton.value = "Go";
 
     // Arrange elements
     form.appendChild(searchTextBox);
-    // form.appendChild(searchButton);
+    form.appendChild(searchButton);
 
     // Load arranged elements into document fragment
     frag.appendChild(form);
