@@ -94,8 +94,8 @@
   .searchbox-style {
     text-align: left;
     padding: 0;
-    margin: 48px 20px 0 0;
-    float: right;
+    margin: 54px 0px 0 256px;
+    float: left;
   }
 
   // Logo link...provides a large enough space for a click area
@@ -166,12 +166,11 @@
    */
 
   .form {
-    background-color:red;
-    padding-left: 32px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
   }
+
   // Search box-related styles start
   #s {
     font-size: 1em;
@@ -187,25 +186,22 @@
     color: #333;
     padding: 7px;
     margin: 0;
-    width: 50px;
-    border: 1px solid #d3d3d3;
+    width: 250px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
-    -webkit-transition: width 0.4s ease;
-    -moz-transition: width 0.4s ease;
-    -o-transition: width 0.4s ease;
-    -ms-transition: width 0.4s ease;
-    transition: width 0.4s ease;
+    transition : background-color 200ms ease-out; 
+    -webkit-transition : background-color 200ms ease-out; 
+    -moz-transition : background-color 200ms ease-out;
+    -o-transition : background-color 200ms ease-out;    
   }
  
 #tipue_search_input:focus {
-  border-color: #c3c3c3;
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
-  width: 250px;   
+  border-color: green;
+  background-color: #f3f3f3; 
 }
 
 #tipue_search_button {
