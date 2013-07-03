@@ -1907,9 +1907,7 @@ a.pagination-link {
   height: 65px; }
 .lt-ie9 .main-navigation {
   border: none;
-  width: 445px;
-  right: 363px;
-  position: absolute; }
+  width: 445px; }
 .lt-ie9 .wf-loading .site-navigation-list-link {
   font-family: serif;
   visibility: hidden;
@@ -2193,8 +2191,7 @@ a.pagination-link {
     line-height: 2.5; }
 
   .site-header {
-    width: 209px;
-    float: left; }
+    width: 209px; }
 
   .header-pic-class {
     float: left;
@@ -2214,9 +2211,7 @@ a.pagination-link {
 
   .searchbox-style {
     text-align: left;
-    padding: 0;
-    margin: 54px 0px 0 256px;
-    float: left; }
+    padding: 0; }
 
   .homepage-link {
     width: 209px;
@@ -2246,9 +2241,7 @@ a.pagination-link {
 
   .main-navigation {
     border: none;
-    width: 445px;
-    right: 363px;
-    position: absolute; }
+    width: 445px; }
 
   .wf-loading .site-navigation-list-link {
     font-family: serif;
