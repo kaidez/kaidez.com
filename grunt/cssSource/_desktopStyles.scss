@@ -20,6 +20,10 @@
     @include fonts($helv);
   }
   
+  #nav-search {
+    @include nav-search
+  }
+  
   // apply the Google font to all <header> tags
   // MOVE OVER TO "_baseIE8Desktop.scss"?
   .wf-active h1,

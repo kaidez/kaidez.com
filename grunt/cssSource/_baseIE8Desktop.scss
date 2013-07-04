@@ -201,6 +201,10 @@
    */
   
 
+  #nav-search {
+    @include nav-search
+  }
+
   .page-content {
     width: $inner-content-width;
     max-width: $inner-content-width;
