@@ -115,7 +115,7 @@
  * Desktop/oldIE shared code ends
  * ==============================
  */
-/* normalize.css v1.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -2058,7 +2058,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited {
     font-family: "Lato";
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     color: #0c5e7e;
     border: 0;
     margin-right: 12px;
@@ -2160,6 +2160,10 @@ a.pagination-link {
   body {
     font-family: "Lato"; }
 
+  #nav-search {
+    float: left;
+    margin-left: 200px; }
+
   .wf-active h1,
   .js .wf-active h2,
   .wf-active h3,
@@ -2191,7 +2195,8 @@ a.pagination-link {
     line-height: 2.5; }
 
   .site-header {
-    width: 209px; }
+    width: 209px;
+    float: left; }
 
   .header-pic-class {
     float: left;
