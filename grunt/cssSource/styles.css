@@ -2196,7 +2196,8 @@ a.pagination-link {
 
   .site-header {
     width: 209px;
-    float: left; }
+    float: left;
+    margin-left: 10px; }
 
   .header-pic-class {
     float: left;
