@@ -326,6 +326,7 @@ $mobile-retina:
 @mixin site-header {
   width:209px;
   float: left;
+  margin-left: 10px;
 }
 
 @mixin nav-search {
