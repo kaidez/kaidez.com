@@ -23,22 +23,23 @@
 <body>
   <div id="container" class="containing-element">
 
-    <div id="header-nav-wrapper-outer" class="outerWrapperNavHeader clearfix">
-      
+    <div id="header-nav-wrapper-outer" class="outerWrapperNavHeader">
       <div id="header-nav-wrapper-inner" class="innerWrapperNavHeader">
-        
         <header id="masthead" class="site-header clearfix" role="banner">
           <div id="header-tag-wrapper" class="top-level-header-wrapper">
             <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
             <h2 class="site-description">closing tags...wrapping functions</h2>
-          </div> <!-- #header-nav-wrapper-outer -->
         </header> <!-- #masthead -->
 
-        {% include navigation_partial.html %}
+        <div id="nav-search">
 
-        {% include searchbox_partial.html %}
+          {% include navigation_partial.html %}
 
-      </div> <!-- #header-nav-wrapper-inner -->
+          {% include searchbox_partial.html %}
+          
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
 
     </div> <!-- #header-nav-wrapper-outer -->
 
