@@ -924,7 +924,10 @@ a:hover {
  =================
  */
 .highlight {
-  background: #ffffff; }
+  background: #E9E9E9;
+  line-height: 1.6;
+  font-size: 14px;
+  padding: 2px 10px; }
 
 .highlight .c {
   color: #999988;
