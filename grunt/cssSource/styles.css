@@ -1362,7 +1362,7 @@ a:hover {
     float: right; }
 
   .btnSearch {
-    background: url("../img/snSprite@2x.png") no-repeat -87px -78px;
+    background: url("../img/snSprite@2x.png") no-repeat -79px -78px;
     background-size: 350px 210px;
     height: 27px;
     width: 44px;
@@ -2012,7 +2012,7 @@ a.pagination-link {
     border-bottom: 3px solid #0c5e7e; }
 
   .innerWrapperNavHeader {
-    width: 900px;
+    width: 768px;
     margin: 0 auto; }
 
   .searchbox-style {
@@ -2164,8 +2164,7 @@ a.pagination-link {
     font-family: "Lato"; }
 
   #nav-search {
-    float: left;
-    margin-left: 200px; }
+    float: right; }
 
   .wf-active h1,
   .js .wf-active h2,
