@@ -1971,7 +1971,7 @@ a.pagination-link {
   background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
 /* oldIE styles end*/
-@media only screen and (min-width: 569px) and (max-width: 1023px) {
+@media only screen and (min-width: 569px) and (max-width: 1024px) {
   /*
    * Handhelds and tablets get the helvetica-type
    * Google font. Too many fonts applied to handhelds
@@ -2073,19 +2073,14 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    font-family: "Lato";
     color: #277291;
     text-shadow: 0px 2px 3px #8ec9e1;
-    color: #0c5e7e;
-    border: 0;
+    margin-right: 23px;
     font-size: 19px;
     float: left;
-    margin-right: 23px;
-    background-color: transparent;
-    background-color: transparent;
-    color: #0c5e7e;
     border: 0;
-    padding: 0; }
+    padding: 0;
+    background-color: transparent; }
 
   #searchbox {
     display: block; }
@@ -2285,11 +2280,11 @@ a.pagination-link {
     font-family: "Lato";
     color: #277291;
     text-shadow: 0px 2px 3px #8ec9e1;
-    color: #0c5e7e;
-    border: 0;
+    margin-right: 18px;
     font-size: 18px;
     float: left;
-    margin-right: 18px;
+    border: 0;
+    padding: 0;
     background-color: transparent; }
 
   /*
