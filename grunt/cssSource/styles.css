@@ -1181,6 +1181,225 @@ a:hover {
 
 /* Literal.Number.Integer.Long */
 /*
+ * ========================================
+ * 'Mobile First' styles start:
+ *
+ * These are styles which should appear on
+ * mobile devices only on page load. Some
+ * styles will cascade down to tablets and
+ * desktops.
+ * ========================================
+ */
+/*
+ ==============================================================
+ */
+/*
+ ===================
+ Header styles start
+ ===================
+ */
+.wf-active h1 {
+  font-size: 1.3rem; }
+
+.site-description {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
+.header-pic-class {
+  display: none; }
+
+.site-header {
+  width: auto; }
+
+/*
+ =================
+ Header styles end
+ =================
+ */
+/*
+ =======================
+ Navigation styles start
+ =======================
+ */
+#menu-heading {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
+#site-navigation-list {
+  display: none;
+  margin: 0;
+  padding: 0; }
+
+/*
+ =====================
+ Navigation styles end
+ =====================
+ */
+/*
+ ========================
+ Single post styles start
+ ========================
+ */
+/*
+ * apply the Google font to all <header> tags,
+ * except the Mobile First post tag
+ */
+.wf-active h1 {
+  font-size: 1.3rem; }
+
+.wf-active h1.post-title {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.3; }
+
+.breadcrumbStyles {
+  font-size: 14px;
+  padding: 20px 10px 35px 10px; }
+
+.related-posts-header {
+  margin: 0px auto;
+  text-align: center; }
+
+.related-posts-link {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px; }
+
+/*
+ ======================
+ Single post styles end
+ ======================
+ */
+/*
+ ===============================
+ Search box-related styles start
+ ===============================
+ */
+#searchbox {
+  display: none; }
+
+#not-found-searchbox {
+  display: block; }
+
+.searchbox-style {
+  margin: 0px auto;
+  text-align: center;
+  padding: 15px 0;
+  position: static; }
+
+.searchfield-style {
+  width: 260px; }
+
+.tipue_search_content_text {
+  color: #111;
+  padding: 13px 0;
+  line-height: 1.7; }
+
+/*
+ =============================
+ Search box-related styles end
+ =============================
+ */
+/*
+ ====================
+ Content styles start
+ ====================
+ */
+.page-content {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.containing-element {
+  width: auto; }
+
+/*
+==================
+Content styles end
+==================
+*/
+/*
+ ==========================
+ Category page styles start
+ ==========================
+*/
+.wf-loading .category-header,
+.wf-inactive .category-header {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-family: serif; }
+
+.wf-active .category-header {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-family: "Roboto Condensed"; }
+
+.category-description-page {
+  padding: 12px;
+  margin-bottom: 35px; }
+
+/*
+ ========================
+ Category page styles end
+ ========================
+*/
+/*
+ ===========================
+ Footer-related styles start
+ ===========================
+ */
+#footer-contact-fieldset {
+  border: none; }
+
+.footer-contact-fields {
+  width: 152px; }
+
+.social-network-link {
+  font-size: 16px;
+  line-height: 1; }
+
+.footer-sections {
+  width: 300px; }
+
+.footer-paragraph {
+  font-size: 15px; }
+
+/*
+ =========================
+ Footer-related styles end
+ =========================
+ */
+/*
+ =================================
+ Home page pagination styles start
+ =================================
+*/
+.pages {
+  padding: 0;
+  margin: 0;
+  font: 12px/1 'open sans', sans-serif; }
+
+.page {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  color: #fff; }
+
+a.pagination-link {
+  background-color: #3285a5;
+  color: #fff;
+  padding: 7px 10px 8px;
+  margin-right: 7px;
+  text-decoration: none;
+  text-align: center; }
+
+/*
+ ===============================
+ Home page pagination styles end
+ ===============================
+*/
+/*
  * ======================================================
  * The entire retina/non-retina media query styles start
  *
@@ -1409,222 +1628,6 @@ a:hover {
  * The entire retina/non-retina media query style ends
  * ===================================================
  */
-/*
- * ========================================
- * 'Mobile First' styles start:
- *
- * These are styles which should appear on
- * mobile devices only on page load. Some
- * styles will cascade down to tablets and
- * desktops.
- * ========================================
- */
-/*
- ==============================================================
- */
-/*
- ===================
- Header styles start
- ===================
- */
-.wf-active h1 {
-  font-size: 1.3rem; }
-
-.site-description {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
-.header-pic-class {
-  display: none; }
-
-.site-header {
-  width: auto; }
-
-/*
- =================
- Header styles end
- =================
- */
-/*
- =======================
- Navigation styles start
- =======================
- */
-#menu-heading {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
-#site-navigation-list {
-  display: none;
-  margin: 0;
-  padding: 0; }
-
-/*
- =====================
- Navigation styles end
- =====================
- */
-/*
- ========================
- Single post styles start
- ========================
- */
-/*
- * apply the Google font to all <header> tags,
- * except the Mobile First post tag
- */
-.wf-active h1 {
-  font-size: 1.3rem; }
-
-.wf-active h1.post-title {
-  font-size: 24px;
-  margin: 0;
-  line-height: 1.3; }
-
-.breadcrumbStyles {
-  font-size: 14px;
-  padding: 20px 10px 35px 10px; }
-
-.related-posts-header {
-  margin: 0px auto;
-  text-align: center; }
-
-.related-posts-link {
-  line-height: 1.4;
-  font-size: 14px;
-  margin-bottom: 20px; }
-
-/*
- ======================
- Single post styles end
- ======================
- */
-/*
- ===============================
- Search box-related styles start
- ===============================
- */
-#searchbox {
-  display: none; }
-
-#not-found-searchbox {
-  display: block; }
-
-.searchbox-style {
-  margin: 0px auto;
-  text-align: center;
-  padding: 15px 0;
-  position: static; }
-
-.searchfield-style {
-  width: 260px; }
-
-.tipue_search_content_text {
-  color: #111;
-  padding: 13px 0;
-  line-height: 1.7; }
-
-/*
- =============================
- Search box-related styles end
- =============================
- */
-/*
- ====================
- Content styles start
- ====================
- */
-.page-content {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 0 10px; }
-
-/*
-==================
-Content styles end
-==================
-*/
-/*
- ==========================
- Category page styles start
- ==========================
-*/
-.wf-loading .category-header,
-.wf-inactive .category-header {
-  font-size: 1.5rem;
-  margin-top: 0;
-  font-family: serif; }
-
-.wf-active .category-header {
-  font-size: 1.5rem;
-  margin-top: 0;
-  font-family: "Roboto Condensed"; }
-
-.category-description-page {
-  padding: 12px;
-  margin-bottom: 35px; }
-
-/*
- ========================
- Category page styles end
- ========================
-*/
-/*
- ===========================
- Footer-related styles start
- ===========================
- */
-#footer-contact-fieldset {
-  border: none; }
-
-.footer-contact-fields {
-  width: 152px; }
-
-.social-network-link {
-  font-size: 16px;
-  line-height: 1; }
-
-.footer-sections {
-  width: 300px; }
-
-.footer-paragraph {
-  font-size: 15px; }
-
-/*
- =========================
- Footer-related styles end
- =========================
- */
-/*
- =================================
- Home page pagination styles start
- =================================
-*/
-.pages {
-  padding: 0;
-  margin: 0;
-  font: 12px/1 'open sans', sans-serif; }
-
-.page {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
-  color: #fff; }
-
-a.pagination-link {
-  background-color: #3285a5;
-  color: #fff;
-  padding: 7px 10px 8px;
-  margin-right: 7px;
-  text-decoration: none;
-  text-align: center; }
-
-/*
- ===============================
- Home page pagination styles end
- ===============================
-*/
 @media only screen and (min-width: 321px) and (max-width: 568px) {
   /*
    * ===================
@@ -1968,14 +1971,15 @@ a.pagination-link {
   background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
 /* oldIE styles end*/
-@media only screen and (min-width: 569px) and (max-width: 768px) {
+@media only screen and (min-width: 569px) and (max-width: 1023px) {
   /*
    * Handhelds and tablets get the helvetica-type
    * Google font. Too many fonts applied to handhelds
    * will slow down their page load.
    */
   body {
-    font-family: "Lato"; }
+    font-family: "Lato";
+    max-width: 100%; }
 
   .wf-active h1,
   .wf-active h2,
@@ -2007,7 +2011,7 @@ a.pagination-link {
     display: block; }
 
   .outerWrapperNavHeader {
-    width: auto;
+    width: 100%;
     padding: 21px;
     border-bottom: 3px solid #0c5e7e;
     height: 92px; }
@@ -2176,7 +2180,7 @@ a.pagination-link {
 /*
  ==============================================================
  */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
   body {
     font-family: "Lato"; }
 
