@@ -159,7 +159,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles
+        @include link-styles(18px, 18px);
   }
 
   /*

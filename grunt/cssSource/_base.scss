@@ -313,14 +313,14 @@ $mobile-retina:
   width: 445px;
 }
 
-@mixin link-styles {
+@mixin link-styles($font-size, $margin-right) {
   @include fonts($helv);
   @include makeTextShadow($header-color);
   color: $footer-color;
   border: 0;
-  font-size: 18px;
+  font-size: $font-size;
   float: left;
-  margin-right: 18px; 
+  margin-right: $margin-right; 
   background-color: transparent;
 }
 

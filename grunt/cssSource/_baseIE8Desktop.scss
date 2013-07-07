@@ -162,10 +162,10 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
+    @include link-styles(18px, 18px);
     width: 90px;
     height: 17px;
     display: inline;
-    @include link-styles;
   }
 
   /*

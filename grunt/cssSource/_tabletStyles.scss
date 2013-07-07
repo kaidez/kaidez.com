@@ -17,7 +17,7 @@
   .wf-active h5,
   .wf-active h6 {
     @include fonts($robo);
-    font-size: 1.7rem;
+    font-size: 1.1rem;
   }
 
   /*
@@ -53,11 +53,12 @@
     width: auto;
     padding: 21px;
     border-bottom: 3px solid $base-link-color;
+    height: 92px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavHeader {
-    width: $inner-content-width;
+    width: $tablet-landscape-width;
     margin: 0 auto;
   }
     
@@ -82,8 +83,15 @@
    Header styles end
    =================
    */
+  
+// <nav>
+  .main-navigation {
+    width: auto;
+    border-top: none;
+  }
 
-  // <nav>
+  
+  // <nav> list items
   .main-navigation-list {
   	@include show-menu;
   	@include master-center;
@@ -92,6 +100,8 @@
   .site-description { //h2 tag
 	  display: block;
 	  position: static;
+    width: auto;
+    clear: both;
   }
   
   /*
@@ -113,12 +123,13 @@
   }
 
   .wf-active .site-navigation-list-link a:link,
-  .wf-active .site-navigation-list-link a:visited {
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover { 
     @include fonts($helv);
+    @include link-styles(19px, 23px);
     background-color: rgba(0, 0, 0, 0);
     color: $base-link-color;
     border: 0;
-    margin-right: 12px;
     padding: 0;
   }
 
@@ -212,6 +223,7 @@
   // For the main element
   .page-content {
     @include content-width($tablet-width);
+    min-width: $tablet-landscape-width;
   }
 
   // Add "letterpress" effect to header links for home page post snippet.
