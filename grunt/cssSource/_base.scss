@@ -260,6 +260,7 @@ $mobile-retina:
   text-align: center;
 }
 
+// Text shadow for nav links on desktops and laptops
 @mixin makeTextShadow($base-color) {
   $changedBaseColor: darken($base-color, 27);
   color: $changedBaseColor;

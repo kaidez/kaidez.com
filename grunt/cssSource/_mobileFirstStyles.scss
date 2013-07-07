@@ -182,6 +182,10 @@
   @include content-width($mobile-portrait-width)
 }
 
+.containing-element {
+  width: auto;
+}
+
 /*
 ==================
 Content styles end

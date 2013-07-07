@@ -1,4 +1,4 @@
-@media only screen and (min-width: 569px) and (max-width:768px) {
+@media only screen and (min-width: 569px) and (max-width:1023px) {
 
   /*
    * Handhelds and tablets get the helvetica-type
@@ -7,6 +7,7 @@
    */
   body {
     @include fonts($helv);
+    max-width: 100%;
   }
 
   // apply the Google font to all <header> tags  
@@ -50,7 +51,7 @@
 
   // the outer wrapper for the <header>. Width is set to auto.
   .outerWrapperNavHeader {
-    width: auto;
+    width: 100%;
     padding: 21px;
     border-bottom: 3px solid $base-link-color;
     height: 92px;

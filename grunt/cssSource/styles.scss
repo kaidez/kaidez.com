@@ -14,13 +14,13 @@
 @import "syntax";
 // Syntax highlighting styles end
 
-// Retina media query code starts
-@import "retinaMediaQuery";
-// Retina media query code end
-
 // "Mobile first" styles start
 @import "mobileFirstStyles";
 // "Mobile first" styles end
+
+// Retina media query code starts
+@import "retinaMediaQuery";
+// Retina media query code end
 
 // Mobile landscape styles start
 @import "mobileLandscape";
