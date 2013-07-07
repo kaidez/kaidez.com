@@ -17,7 +17,7 @@ Steve said this at a time when it looked like the iPhone would rule the smartpho
 
 This isn't all because of Apple's lack of Flash support for its products, but it's partially due to it.  They may know this and the fact [the Flash-ready Sky Fire web browser][1] the Flash-ready Sky Fire web browser can be installed on the iPhone and iPod Touch could be a sign that they're rethinking their position.
 
-[1]: http://www.skyfire.com/product/iphone
+[1]: http://www.skyfire.com/en/for-consumers
 
 Flash is how I got into this business so it will always be close to my heart.  The Apple stuff made think about how far Flash has come and from my point of view, it's come a long way.
 

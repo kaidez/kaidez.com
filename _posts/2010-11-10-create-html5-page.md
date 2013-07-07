@@ -14,16 +14,18 @@ This is a very simple tutorial. It won’t teach you how to use ,  or any other 
 Cut-and-paste the code below into your favorite web editor:
 
  
-
-****  
-  
-  
-Your First HTML5 Page  
-****  
-  
-  
-Your content goes here.  
-  
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Your First HTML5 Page</title>
+   <meta charset=”UTF-8″ />
+  </head>
+  <body>
+     Your content goes here.
+  </body>
+</html> 
+{% endhighlight %}
  
 
  

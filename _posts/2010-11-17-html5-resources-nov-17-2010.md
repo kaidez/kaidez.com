@@ -24,4 +24,4 @@ Lots great tutorials and code snippets. Also includes a update of [Eric Meyer’
  [3]: http://html5doctor.com/html-5-reset-stylesheet/
  [4]: http://html5doctor.com/
 
-Both sites have been added to the “Coding Sites” section on my sidebar.
+~~Both sites have been added to the “Coding Sites” section on my sidebar.~~ This section as been removed.

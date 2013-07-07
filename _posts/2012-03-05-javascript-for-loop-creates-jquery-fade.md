@@ -55,6 +55,8 @@ As I saw how people were using the tutorial’s code, a need to make it dynamic 
 
 ## JavaScript (fadeCode.js)
 
+    
+    {% highlight javascript %}
     $(function (){
     	
          var yourFade = 1, // the amount of time in seconds that the elements will fade in AND fade out
@@ -78,7 +80,7 @@ As I saw how people were using the tutorial’s code, a need to make it dynamic 
     	}
          }
     });
-    
+    {% endhighlight %}
 
 What's happening here:
 

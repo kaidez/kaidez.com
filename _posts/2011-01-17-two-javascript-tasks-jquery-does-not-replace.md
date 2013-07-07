@@ -2,7 +2,7 @@
 title: 2 JavaScript Tasks That jQuery Does Not Replace
 author: Kai Gittens
 layout: post
-permalink: /2-javascript-tasks-jquery-does-not-replace/
+permalink: /two-javascript-tasks-jquery-does-not-replace/
 meta-excerpt: Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent
 category: coding-best-practices
 cat-name: "Coding Tips"
