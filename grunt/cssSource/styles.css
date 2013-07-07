@@ -2066,13 +2066,21 @@ a.pagination-link {
     padding: 0; }
 
   .wf-active .site-navigation-list-link a:link,
-  .wf-active .site-navigation-list-link a:visited {
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
+    font-family: "Lato";
+    color: #277291;
+    text-shadow: 0px 2px 3px #8ec9e1;
+    color: #0c5e7e;
+    border: 0;
     font-size: 19px;
+    float: left;
+    margin-right: 23px;
+    background-color: transparent;
     background-color: transparent;
     color: #0c5e7e;
     border: 0;
-    margin-right: 23px;
     padding: 0; }
 
   #searchbox {
