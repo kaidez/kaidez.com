@@ -1984,7 +1984,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
-    font-size: 1.7rem; }
+    font-size: 1.1rem; }
 
   /*
    ===================
@@ -2009,7 +2009,8 @@ a.pagination-link {
   .outerWrapperNavHeader {
     width: auto;
     padding: 21px;
-    border-bottom: 3px solid #0c5e7e; }
+    border-bottom: 3px solid #0c5e7e;
+    height: 92px; }
 
   .innerWrapperNavHeader {
     width: 768px;
@@ -2031,6 +2032,10 @@ a.pagination-link {
    Header styles end
    =================
    */
+  .main-navigation {
+    width: auto;
+    border-top: none; }
+
   .main-navigation-list {
     display: block;
     min-height: 21px;
@@ -2040,7 +2045,9 @@ a.pagination-link {
 
   .site-description {
     display: block;
-    position: static; }
+    position: static;
+    width: auto;
+    clear: both; }
 
   /*
    * Hide 'mobile first' menu & search
@@ -2061,10 +2068,11 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited {
     font-family: "Lato";
+    font-size: 19px;
     background-color: transparent;
     color: #0c5e7e;
     border: 0;
-    margin-right: 12px;
+    margin-right: 23px;
     padding: 0; }
 
   #searchbox {
@@ -2134,7 +2142,8 @@ a.pagination-link {
   .page-content {
     max-width: 481px;
     margin: 0 auto;
-    padding: 0 10px; }
+    padding: 0 10px;
+    min-width: 768px; }
 
   .post-snipper-header-link {
     color: #bababa;
