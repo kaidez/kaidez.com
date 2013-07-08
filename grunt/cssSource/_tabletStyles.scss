@@ -116,7 +116,12 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(17px, 33px);
+    @include link-styles(13px, 29px);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding:5px;
+    background-color: #fff;
   }
 
   // Search box-related styles start
