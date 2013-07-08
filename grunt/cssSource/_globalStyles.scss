@@ -15,6 +15,7 @@
 
 body {
   background-color: $background-color;
+  max-width: 100%;
    // padding:0; maybe put it back after ie testing
 }
 
@@ -39,7 +40,9 @@ html, body {
   background-color: $header-color;
 }
 
-
+.containing-element {
+  max-width: 100%;
+}
 // Post snippet that displays on both the home page and search results
 .post-snippet {
   @include bottomBorder($darken-the-footer-color);

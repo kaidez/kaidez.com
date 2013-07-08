@@ -65,7 +65,7 @@ $mobile-portrait-width: 300px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $tablet-width: 481px; // Tablet Portrait
 $tablet-landscape-width: 768px; // Tablet Portrait
-$inner-content-width: 900px; // Desktop
+$inner-content-width: 1024px; // Desktop
 
 /*
  * The width of the 'footer-sections': this is applied to the
@@ -317,11 +317,11 @@ $mobile-retina:
 @mixin link-styles($font-size, $margin-right) {
   @include fonts($helv);
   @include makeTextShadow($header-color);
-  color: $footer-color;
-  border: 0;
+  margin-right: $margin-right; 
   font-size: $font-size;
   float: left;
-  margin-right: $margin-right; 
+  border: 0;
+  padding: 0;
   background-color: transparent;
 }
 

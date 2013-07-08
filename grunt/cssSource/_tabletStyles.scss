@@ -1,4 +1,4 @@
-@media only screen and (min-width: 569px) and (max-width:1023px) {
+@media only screen and (min-width: 569px) and (max-width:1024px) {
 
   /*
    * Handhelds and tablets get the helvetica-type
@@ -7,7 +7,6 @@
    */
   body {
     @include fonts($helv);
-    max-width: 100%;
   }
 
   // apply the Google font to all <header> tags  
@@ -52,15 +51,13 @@
   // the outer wrapper for the <header>. Width is set to auto.
   .outerWrapperNavHeader {
     width: 100%;
-    padding: 21px;
     border-bottom: 3px solid $base-link-color;
-    height: 92px;
+    height: 140px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavHeader {
-    width: $tablet-landscape-width;
-    margin: 0 auto;
+    padding: 21px;
   }
     
   // searchbox
@@ -97,13 +94,6 @@
   	@include show-menu;
   	@include master-center;
   }
-
-  .site-description { //h2 tag
-	  display: block;
-	  position: static;
-    width: auto;
-    clear: both;
-  }
   
   /*
    * Hide 'mobile first' menu & search
@@ -126,12 +116,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include fonts($helv);
-    @include link-styles(19px, 23px);
-    background-color: rgba(0, 0, 0, 0);
-    color: $base-link-color;
-    border: 0;
-    padding: 0;
+    @include link-styles(17px, 33px);
   }
 
   // Search box-related styles start
@@ -192,18 +177,7 @@
   }
 
 
-  /*
-   ===================
-   Header styles start
-   ===================
-   */
 
-
-
-  .site-description {
-    margin:0;
-    float: right;
-  }
 
   /*
    * =================
@@ -223,8 +197,7 @@
   
   // For the main element
   .page-content {
-    @include content-width($tablet-width);
-    min-width: $tablet-landscape-width;
+    @include content-width($inner-content-width);
   }
 
   // Add "letterpress" effect to header links for home page post snippet.
