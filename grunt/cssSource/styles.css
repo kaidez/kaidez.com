@@ -1234,6 +1234,9 @@ a:hover {
   margin: 0;
   padding: 0; }
 
+.nav-search-style {
+  float: none; }
+
 /*
  =====================
  Navigation styles end
@@ -1677,6 +1680,9 @@ a.pagination-link {
     margin: 0;
     padding: 0; }
 
+  .nav-search-style {
+    float: none; }
+
   /*
    =====================
    Navigation styles end
@@ -2051,6 +2057,9 @@ a.pagination-link {
     margin: 0px auto;
     text-align: center; }
 
+  .nav-search-style {
+    float: right; }
+
   /*
    * Hide 'mobile first' menu & search
    * boxes on tablets
@@ -2268,6 +2277,9 @@ a.pagination-link {
     text-decoration: none;
     font-size: 14px;
     float: left; }
+
+  .nav-search-style {
+    float: none; }
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
