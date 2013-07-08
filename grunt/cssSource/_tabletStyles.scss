@@ -94,6 +94,10 @@
   	@include show-menu;
   	@include master-center;
   }
+
+  .nav-search-style {
+    float: right;
+  }
   
   /*
    * Hide 'mobile first' menu & search

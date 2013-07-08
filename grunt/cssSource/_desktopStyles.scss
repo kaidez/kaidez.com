@@ -155,6 +155,10 @@
     float: left;
   }
 
+  .nav-search-style {
+    float: none;
+  }
+
   // Apply the Google font to all <nav> links after page load
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,

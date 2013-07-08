@@ -142,6 +142,10 @@
     @include main-nav
   }
 
+  .nav-search-style {
+    float: none;
+  }
+
   // Hide the Google font on all <nav> links before page load: 
   .wf-loading .site-navigation-list-link {
     font-family: $srf;
