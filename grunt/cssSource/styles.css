@@ -2026,7 +2026,7 @@ a.pagination-link {
 
   .searchbox-style {
     text-align: left;
-    padding: 20px 0 0 0; }
+    padding: 40px 0 0 0; }
 
   .homepage-link {
     width: 209px;
@@ -2093,7 +2093,9 @@ a.pagination-link {
     margin: 0;
     width: 250px;
     border: 1px solid #d3d3d3;
-    border-radius: 2px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none; }
@@ -2298,9 +2300,6 @@ a.pagination-link {
     padding: 7px;
     margin: 0;
     width: 250px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
