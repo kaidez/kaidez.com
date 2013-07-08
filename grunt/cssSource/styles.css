@@ -579,7 +579,8 @@ table {
  ==============================================================
  */
 body {
-  background-color: white; }
+  background-color: white;
+  max-width: 100%; }
 
 html, body {
   height: 100%; }
@@ -594,6 +595,9 @@ html, body {
 
 .outerWrapperNavHeader {
   background-color: #6ab8d7; }
+
+.containing-element {
+  max-width: 100%; }
 
 .post-snippet {
   border-bottom: 1px solid #01070a;
@@ -1343,6 +1347,9 @@ Content styles end
  Category page styles end
  ========================
 */
+.outerWrapperNavHeader {
+  width: 100%; }
+
 /*
  ===========================
  Footer-related styles start
@@ -1882,7 +1889,7 @@ a.pagination-link {
   padding: 21px;
   border-bottom: 3px solid #0c5e7e; }
 .lt-ie9 .innerWrapperNavHeader {
-  width: 900px;
+  width: 1024px;
   margin: 0 auto; }
 .lt-ie9 .site-title {
   background: url("../img/snSprite.png") no-repeat -125px -80px;
@@ -1944,8 +1951,8 @@ a.pagination-link {
   display: block;
   float: left; }
 .lt-ie9 .page-content {
-  width: 900px;
-  max-width: 900px;
+  width: 1024px;
+  max-width: 1024px;
   font-size: 18px;
   line-height: 36px;
   padding-top: 21px;
@@ -1961,11 +1968,11 @@ a.pagination-link {
   width: 250px;
   float: left; }
 .lt-ie9 .midFooterSection {
-  margin: 0 75px; }
+  margin: 0 137px; }
 .lt-ie9 .copyrightStyle {
   clear: both; }
 .lt-ie9 .innerWrapperNavFooter {
-  width: 900px;
+  width: 1024px;
   margin: 0 auto 53px; }
 .lt-ie9 .outerWrapperNavFooter {
   background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
@@ -1978,8 +1985,7 @@ a.pagination-link {
    * will slow down their page load.
    */
   body {
-    font-family: "Lato";
-    max-width: 100%; }
+    font-family: "Lato"; }
 
   .wf-active h1,
   .wf-active h2,
@@ -2012,13 +2018,11 @@ a.pagination-link {
 
   .outerWrapperNavHeader {
     width: 100%;
-    padding: 21px;
     border-bottom: 3px solid #0c5e7e;
-    height: 92px; }
+    height: 140px; }
 
   .innerWrapperNavHeader {
-    width: 768px;
-    margin: 0 auto; }
+    padding: 21px; }
 
   .searchbox-style {
     text-align: left;
@@ -2047,12 +2051,6 @@ a.pagination-link {
     margin: 0px auto;
     text-align: center; }
 
-  .site-description {
-    display: block;
-    position: static;
-    width: auto;
-    clear: both; }
-
   /*
    * Hide 'mobile first' menu & search
    * boxes on tablets
@@ -2075,8 +2073,8 @@ a.pagination-link {
     font-family: "Lato";
     color: #277291;
     text-shadow: 0px 2px 3px #8ec9e1;
-    margin-right: 23px;
-    font-size: 19px;
+    margin-right: 33px;
+    font-size: 17px;
     float: left;
     border: 0;
     padding: 0;
@@ -2128,15 +2126,6 @@ a.pagination-link {
     font-family: "Lato"; }
 
   /*
-   ===================
-   Header styles start
-   ===================
-   */
-  .site-description {
-    margin: 0;
-    float: right; }
-
-  /*
    * =================
    * Header styles end
    * =================
@@ -2147,10 +2136,9 @@ a.pagination-link {
    * ====================
    */
   .page-content {
-    max-width: 481px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 0 10px;
-    min-width: 768px; }
+    padding: 0 10px; }
 
   .post-snipper-header-link {
     color: #bababa;
@@ -2209,7 +2197,7 @@ a.pagination-link {
     position: static;
     font-size: 14px;
     margin: 0;
-    width: 245px;
+    width: 270px;
     line-height: 2.5; }
 
   .site-header {
@@ -2227,7 +2215,7 @@ a.pagination-link {
     min-height: 130px; }
 
   .innerWrapperNavHeader {
-    width: 900px;
+    width: 1024px;
     margin: 0 auto; }
 
   .top-level-header-wrapper {
@@ -2359,7 +2347,7 @@ a.pagination-link {
     font-size: 40px; }
 
   .page-content {
-    max-width: 900px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 0 10px;
     font-size: 18px;
@@ -2385,7 +2373,7 @@ a.pagination-link {
    =================================
   */
   .control-section-width {
-    max-width: 900px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 0 10px; }
 
@@ -2400,7 +2388,7 @@ a.pagination-link {
    ===================
    */
   .innerWrapperNavFooter {
-    width: 900px;
+    width: 1024px;
     margin: 0 auto 53px; }
 
   .footer-header {
@@ -2413,7 +2401,7 @@ a.pagination-link {
     float: left; }
 
   .midFooterSection {
-    margin: 0 75px; }
+    margin: 0 137px; }
 
   .copyrightStyle {
     clear: both; }
