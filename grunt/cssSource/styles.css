@@ -2000,7 +2000,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
-    font-size: 1.1rem; }
+    font-size: 1.7rem; }
 
   /*
    ===================
@@ -2012,7 +2012,7 @@ a.pagination-link {
     position: static;
     font-size: 14px;
     margin: 0;
-    width: 245px; }
+    width: 270px; }
 
   .site-header {
     max-width: 450px;
@@ -2323,7 +2323,10 @@ a.pagination-link {
     transition: background-color 200ms ease-out;
     -webkit-transition: background-color 200ms ease-out;
     -moz-transition: background-color 200ms ease-out;
-    -o-transition: background-color 200ms ease-out; }
+    -o-transition: background-color 200ms ease-out;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; }
 
   #tipue_search_input:focus {
     border-color: green;
