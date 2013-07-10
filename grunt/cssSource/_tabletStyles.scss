@@ -1,4 +1,4 @@
-@media only screen and (min-width: 569px) and (max-width:1024px) {
+@media only screen and (min-width: 729px) and (max-width:1024px) {
 
   /*
    * Handhelds and tablets get the helvetica-type
@@ -33,14 +33,18 @@
   .site-description {
     display: block;
     position: static;
-    font-size: 14px;
     margin: 0;
     width: 270px;
+    clear: both;
   }
 
   .site-header {
     max-width: 450px;
     float: left;
+  }
+
+  #site-desc {
+    font-size: 15px;
   }
 
   .header-pic-class {
@@ -73,7 +77,7 @@
   }
 
   .header-element-margin {
-    margin-left: 100px;  
+    margin: 0;  
   }
 
   /*
@@ -126,6 +130,8 @@
     border-radius: 25px;
     padding:5px;
     background-color: #fff;
+    // overides text-shadow created in the makeTextShadow mixin
+    text-shadow: 0 4px 3px #FFF;
   }
 
   // Search box-related styles start
