@@ -1543,7 +1543,7 @@ a.pagination-link {
   Retina stuff starts
   ====================
  */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 569px), only screen and (min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (min-resolution: 192dpi) and (min-width: 569px), only screen and (min-resolution: 2dppx) and (min-width: 569px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (min-resolution: 192dpi) and (min-width: 1024px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
     background-size: 350px 210px;
@@ -1610,7 +1610,7 @@ a.pagination-link {
     text-indent: -999px;
     margin: 0;
     float: left; } }
-@media only screen and (min-width: 569px), only screen and (min-width: 569px), only screen and (min-width: 569px), only screen and (min-width: 569px), only screen and (min-width: 569px), only screen and (min-width: 569px) {
+@media only screen and (min-width: 1024px) {
   .site-title {
     background: url("../img/snSprite.png") no-repeat -125px -80px;
     background-size: 350px 210px;
