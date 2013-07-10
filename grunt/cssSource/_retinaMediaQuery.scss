@@ -61,7 +61,7 @@
   ================================================
 */
 
-// Non-retina social icons
+// Non-retina social icons start
 #twitter {
   @include sprite-images('../img/snSprite.png', -1px -2px, 64px, 64px);
 }
@@ -80,9 +80,9 @@
   list-style-type: none;
 }
 
-// Non-retina menu icons
+// Non-retina social icons end
 
-// Menu
+// Menu bg image for mobile
 #menu {
   @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
   display: block;
@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-// Search icon in the header
+// Search bg image for mobile
 #search {
   @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
   display: block;
@@ -131,7 +131,7 @@
   */
 
 //Desktop retina:
-@media #{$retina} { 
+@media #{$desktop-retina} { 
 
   // Retina social icons
   #twitter {
