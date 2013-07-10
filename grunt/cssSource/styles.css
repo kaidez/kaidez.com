@@ -1984,7 +1984,7 @@ a.pagination-link {
   background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
 /* oldIE styles end*/
-@media only screen and (min-width: 569px) and (max-width: 1024px) {
+@media only screen and (min-width: 729px) and (max-width: 1024px) {
   /*
    * Handhelds and tablets get the helvetica-type
    * Google font. Too many fonts applied to handhelds
@@ -2095,7 +2095,193 @@ a.pagination-link {
     -moz-border-radius: 25px;
     border-radius: 25px;
     padding: 5px;
-    background-color: #fff; }
+    background-color: #fff;
+    text-shadow: 0 4px 3px #FFF; }
+
+  #searchbox {
+    display: block; }
+
+  #s {
+    font-size: 1em; }
+
+  #tipue_search_input {
+    font: 13px/1.5 "open sans", serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none; }
+
+  #tipue_search_input:focus {
+    border-color: #c3c3c3;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
+  #tipue_search_button {
+    width: 60px;
+    height: 33px;
+    margin-top: 1px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    background: #f1f1f1 url("../img/search.gif") no-repeat center;
+    outline: none; }
+
+  #tipue_search_button:hover {
+    border: 1px solid #c3c3c3;
+    -moz-box-shadow: 1px 1px 2px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+    box-shadow: 1px 1px 2px #e3e3e3; }
+
+  /* Font styles for tablets & desktops. Google
+   * font doesn't load on mobile.
+   */
+  .social-network-link {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Lato"; }
+
+  /*
+   * =================
+   * Header styles end
+   * =================
+   */
+  /*
+   * ====================
+   * Content styles start
+   * ====================
+   */
+  .page-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px; }
+
+  .post-snipper-header-link {
+    color: #bababa;
+    text-shadow: 0px 2px 3px white; }
+
+  /*
+   ==================
+   Content styles end
+   ==================
+  */ }
+@media only screen and (min-width: 569px) and (max-width: 728px) {
+  /*
+   * Handhelds and tablets get the helvetica-type
+   * Google font. Too many fonts applied to handhelds
+   * will slow down their page load.
+   */
+  body {
+    font-family: "Lato"; }
+
+  .wf-active h1,
+  .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    font-family: "Roboto Condensed";
+    font-size: 1.7rem; }
+
+  /*
+   ===================
+   Header styles start
+   ===================
+   */
+  .site-description {
+    display: block;
+    position: static;
+    margin: 0;
+    width: 270px;
+    clear: both; }
+
+  .site-header {
+    max-width: 450px;
+    float: left; }
+
+  #site-desc {
+    font-size: 15px; }
+
+  .header-pic-class {
+    float: left;
+    display: block; }
+
+  .outerWrapperNavHeader {
+    width: 100%;
+    border-bottom: 3px solid #0c5e7e;
+    height: 140px; }
+
+  .innerWrapperNavHeader {
+    padding: 21px; }
+
+  .searchbox-style {
+    text-align: left;
+    padding: 40px 0 0 0; }
+
+  .homepage-link {
+    width: 209px;
+    height: 65px; }
+
+  .header-element-margin {
+    margin: 0; }
+
+  /*
+   =================
+   Header styles end
+   =================
+   */
+  .main-navigation {
+    width: auto;
+    border-top: none; }
+
+  .main-navigation-list {
+    display: block;
+    min-height: 21px;
+    font-size: 12px;
+    margin: 0px auto;
+    text-align: center; }
+
+  .nav-search-style {
+    float: right; }
+
+  /*
+   * Hide 'mobile first' menu & search
+   * boxes on tablets
+   */
+  #menu, #search {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); }
+
+  .site-navigation-list-link {
+    float: left; }
+
+  #site-navigation-list {
+    display: block;
+    margin: 0;
+    padding: 0; }
+
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover {
+    font-family: "Lato";
+    color: #277291;
+    text-shadow: 0px 2px 3px #8ec9e1;
+    margin-right: 29px;
+    font-size: 13px;
+    float: left;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #fff;
+    text-shadow: 0 4px 3px #FFF; }
 
   #searchbox {
     display: block; }
