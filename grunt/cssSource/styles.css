@@ -2011,7 +2011,8 @@ a.pagination-link {
     display: block;
     position: static;
     margin: 0;
-    width: 270px; }
+    width: 270px;
+    clear: both; }
 
   .site-header {
     max-width: 450px;
@@ -2041,7 +2042,7 @@ a.pagination-link {
     height: 65px; }
 
   .header-element-margin {
-    margin-left: 100px; }
+    margin: 0; }
 
   /*
    =================
