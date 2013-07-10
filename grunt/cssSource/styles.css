@@ -2010,13 +2010,15 @@ a.pagination-link {
   .site-description {
     display: block;
     position: static;
-    font-size: 14px;
     margin: 0;
     width: 270px; }
 
   .site-header {
     max-width: 450px;
     float: left; }
+
+  #site-desc {
+    font-size: 15px; }
 
   .header-pic-class {
     float: left;
