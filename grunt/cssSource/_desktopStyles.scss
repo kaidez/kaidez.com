@@ -1,13 +1,11 @@
 /*
- ===========================================
- Desktop styles start:
-
- These should appear on desktop browsers.
- They are set up in a way that they
- require a respectable amount of bandwidth
- to render when compared to the
- "mobile first" styles.
- ===========================================
+ * =====================
+ * Desktop styles start:
+ *
+ * These should appear on desktop browsers. They are sorta/kinda set up in a 
+ * way that they require a respectable amount of bandwidth to render when
+ * compared to the "mobile first" styles.
+ * =====================
  */
 
 /*
@@ -47,13 +45,32 @@
   }
    
   /*
-   ===================
-   Header styles start
-   ===================
+   * ===================
+   * Header styles start
+   * ===================
    */
-  
 
-  
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outerWrapperNavHeader {
+    border-bottom: 3px solid $base-link-color;
+    width: auto;
+    min-height: 130px;
+  }
+
+  // the inner wrapper for the <header>
+  .innerWrapperNavHeader {
+    @include inner-wrapper-nav-header;
+  }
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link;
+  }
+
+  // <header> tag
+  .site-header {
+    @include site-header;
+  }
 
   // <h2> tag...the 'closing tags...wrapping functions text'
   // MOVE OVER TO "_baseIE8Desktop.scss"?
@@ -66,29 +83,9 @@
     line-height: 2.5;
   }
 
-  // the main class for the <header> tag
-  .site-header {
-    @include site-header;
-  }
-
   .header-pic-class {
     float: left;
     display: block;
-  }
-
-  // the outer wrapper for the <header>. Width is set to auto.
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
-  .outerWrapperNavHeader {
-    border-bottom: 3px solid $base-link-color;
-    width: auto;
-    min-height: 130px;
-  }
-
-  // the inner wrapper for the <header>. Width is set to 900px.
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
-  .innerWrapperNavHeader {
-    width: $inner-content-width;
-    margin: 0 auto;
   }
 
   .top-level-header-wrapper {
@@ -101,19 +98,7 @@
     padding: 0;
   }
 
-  // Logo link...provides a large enough space for a click area
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
-  .homepage-link {
-    width: 209px;
-    height: 65px;
-  }
 
-  // class for <nav> tag and "#searchbox" element
-  // .header-element-margin {
-  //   margin-left: 100px;
-  //   position: relative;
-  //   left:200px;  
-  // }
 
   /*
    =================
@@ -163,7 +148,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-        @include link-styles(18px, 18px);
+    @include link-styles(18px, 18px);
   }
 
   /*

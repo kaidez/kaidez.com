@@ -11,24 +11,25 @@
     font-size: 1.3rem;
   }
 
-// Logo link...provides a large enough space for a click area
+  // Logo link...provides a large enough space for a click area
  .homepage-link {
    width: 136px;
    height: 39px;
- }
+  }
+  
+  // <header> tag
+  .site-header {
+    width: auto;
+  }
 
-// hide the <h2> tag in the <header> on page load
-.site-description {
-  @include hide-element;
-}
+  // hide the <h2> tag in the <header> on page load
+  .site-description {
+    @include hide-element;
+  }
 
-.header-pic-class {
-  display: none;
-}
-
-.site-header {
-  width: auto;
-}
+  .header-pic-class {
+    display: none;
+  }
 
 /*
  =================

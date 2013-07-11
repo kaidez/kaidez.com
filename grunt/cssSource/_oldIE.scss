@@ -38,6 +38,34 @@
     font-size: 1.0rem;
   }
 
+/*
+ * ===================
+ * Header styles start
+ * ===================
+ */
+
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outerWrapperNavHeader {
+    width: auto;
+    padding: 21px;
+    border-bottom: 3px solid $base-link-color;
+  }
+
+  // the inner wrapper for the <header>
+  .innerWrapperNavHeader {
+    @include inner-wrapper-nav-header;
+  }
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link 
+  }  
+
+  // <header> tag
+  .site-header {
+    max-width: 450px;
+    float: left;
+  }
 
   .site-description {
     display: block;
@@ -48,23 +76,12 @@
   }
 
 
-  .site-header {
-    max-width: 450px;
-    float: left;
-  }
   
 
-  .outerWrapperNavHeader {
-    width: auto;
-    padding: 21px;
-    border-bottom: 3px solid $base-link-color;
-  }
 
 
-  .innerWrapperNavHeader {
-    width: $inner-content-width;
-    margin: 0 auto;
-  }
+
+
 
 
 
@@ -93,12 +110,6 @@
   #menu, #search {
     @include hide-element;
   }
-
-  .homepage-link {
-    width: 209px;
-    height: 65px;
-  }
-
 
   .main-navigation {
     @include main-nav;

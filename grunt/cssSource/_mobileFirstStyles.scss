@@ -1,12 +1,15 @@
 /*
- * ========================================
+ * ============================
  * 'Mobile First' styles start:
  *
- * These are styles which should appear on
- * mobile devices only on page load. Some
- * styles will cascade down to tablets and
- * desktops.
- * ========================================
+ * These are styles which should appear on mobile devices only. They are 
+ * placed outside of a media query, meaning that they are the first styles to 
+ * be called on page load: i.e. "mobile first." oldIE does not support media
+ * queries so it can only read code outside of them...link this code. We don't 
+ * want this so we've taken care of this by creating '_oldIE.scss' which
+ * contains CSS that works in IE 8...kaidez.com doesn't care about IE7 and
+ * older.
+ * ============================
  */
 
 /*
@@ -14,20 +17,25 @@
  */
 
 /*
- ===================
- Header styles start
- ===================
+ * ===================
+ * Header styles start
+ * ===================
  */
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+.outerWrapperNavHeader {
+  width: 100%;
+}
+
+// may be useless...check
 .wf-active h1 {
-  // font: $helv; // may go
   font-size: 1.3rem;
 }
 
-// Logo link...provides a large enough space for a click area
-// .homepage-link {
-//   width: 136px;
-//   height: 39px;
-// }
+ // <header> tag
+.site-header {
+  width: auto;
+}
 
 // hide the <h2> tag in the <header> on page load
 .site-description {
@@ -38,14 +46,10 @@
   display: none;
 }
 
-.site-header {
-  width: auto;
-}
-
 /*
- =================
- Header styles end
- =================
+ * =================
+ * Header styles end
+ * =================
  */
 
 
@@ -53,9 +57,9 @@
 
 
 /*
- =======================
- Navigation styles start
- =======================
+ * =======================
+ * Navigation styles start
+ * =======================
  */
 
 // Hide menu heading on mobile phones
@@ -230,9 +234,7 @@ Content styles end
  ========================
 */
 
-.outerWrapperNavHeader {
-  width: 100%;
-}
+
 
 
 

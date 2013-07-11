@@ -124,6 +124,13 @@ $mobile-retina:
  * Loads whatever font the '$font' variable is set
  * to based on the font variables list above. 
  */
+
+// homepage link hit area..LARGE. Do one for the small versions
+@mixin homepage-link {
+  width: 209px;
+  height: 65px;
+}
+
 @mixin fonts($font) {
   font-family: $font;
 }
@@ -209,6 +216,7 @@ $mobile-retina:
  * Tipue class names.
  * ============================================================================
  */
+
 
 // Containing pagination box
 @mixin pagBox {
@@ -303,11 +311,21 @@ $mobile-retina:
  * ==========================================================================
  */
 
+
+
+// <nav> tag
 @mixin main-nav {
   border: none;
   width: 445px;
 }
 
+// the inner wrapper for the <header>
+@mixin inner-wrapper-nav-header {
+    width: $inner-content-width;
+    margin: 0 auto;
+  }
+
+// link styles
 @mixin link-styles($font-size, $margin-right) {
   @include fonts($helv);
   @include makeTextShadow($header-color);

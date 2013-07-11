@@ -21,14 +21,34 @@
   }
 
   /*
-   ===================
-   Header styles start
-   ===================
+   * ===================
+   * Header styles start
+   * ===================
    */
-  
 
-  
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outerWrapperNavHeader {
+    width: 100%;
+    border-bottom: 3px solid $base-link-color;
+    height: 140px;
+  }
 
+  // the inner wrapper for the <header>
+  .innerWrapperNavHeader {
+    padding: 21px;
+  }
+  
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link;
+  }
+
+  // <header> tag
+  .site-header {
+    max-width: 450px;
+    float: left;
+  }
+  
   // <h2> tag...the 'closing tags...wrapping functions text'
   .site-description {
     display: block;
@@ -38,10 +58,6 @@
     clear: both;
   }
 
-  .site-header {
-    max-width: 450px;
-    float: left;
-  }
 
   #site-desc {
     font-size: 15px;
@@ -51,18 +67,6 @@
     float: left;
     display: block;
   }
-
-  // the outer wrapper for the <header>. Width is set to auto.
-  .outerWrapperNavHeader {
-    width: 100%;
-    border-bottom: 3px solid $base-link-color;
-    height: 140px;
-  }
-
-  // the inner wrapper for the <header>. Width is set to 900px.
-  .innerWrapperNavHeader {
-    padding: 21px;
-  }
     
   // searchbox
   .searchbox-style {
@@ -70,11 +74,7 @@
     padding:40px 0 0 0;
   }
   
-  // Logo link...provides a large enough space for a click area
-  .homepage-link {
-    width: 209px;
-    height: 65px;
-  }
+
 
   .header-element-margin {
     margin: 0;  

@@ -21,13 +21,25 @@
   }
 
   /*
-   ===================
-   Header styles start
-   ===================
+   * ===================
+   * Header styles start
+   * ===================
    */
   
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outerWrapperNavHeader {
+    border-bottom: 3px solid $base-link-color;
+  }
 
-  
+  // the inner wrapper for the <header>
+  .innerWrapperNavHeader {
+    padding: 8px 15px 15px 15px;
+  }
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link 
+  }
 
   // <h2> tag...the 'closing tags...wrapping functions text'
   .site-description {
@@ -48,28 +60,16 @@
     display: block;
   }
 
-  // the outer wrapper for the <header>. Width is set to auto.
-  .outerWrapperNavHeader {
-    width: 100%;
-    border-bottom: 3px solid $base-link-color;
-    height: 164px;
-  }
 
-  // the inner wrapper for the <header>. Width is set to 900px.
-  .innerWrapperNavHeader {
-    padding: 8px 15px 15px 15px;
-  }
+
+
     
   // searchbox
   .searchbox-style {
     padding: 19px 0 0 0;
   }
   
-  // Logo link...provides a large enough space for a click area
-  .homepage-link {
-    width: 209px;
-    height: 65px;
-  }
+
 
   .header-element-margin {
     margin: 0;  

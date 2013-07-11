@@ -1,11 +1,10 @@
 /*
- ===========================================
- Global styles start:
-
- These are styles which should appear on all
- devices, regardless of screen dimension or
- computer resolution.
- ===========================================
+ * ====================
+ * Global styles start:
+ *
+ * These are styles which should appear on all devices, regardless of screen 
+ * dimension or computer resolution.
+ * ====================
  */
 
 /*
@@ -16,14 +15,23 @@
 body {
   background-color: $background-color;
   max-width: 100%;
-   // padding:0; maybe put it back after ie testing
 }
 
 html, body {
   height: 100%;
 }
+/*
+ * ===================
+ * Header styles start
+ * ===================
+ */
 
-// Logo link
+// outer wrapper for the <header> which wraps the link, nav & search elements
+.outerWrapperNavHeader {
+  background-color: $header-color;
+}
+
+// Logo link...provides a large enough space for a click area
 .homepage-link {
   display: block;
   width: 164px;
@@ -33,11 +41,6 @@ html, body {
 // <header> tag
 .site-header {
   text-align: left;
-}
-
-// the outer wrapper for the <header> and <footer>. Width is set to auto.
-.outerWrapperNavHeader {
-  background-color: $header-color;
 }
 
 .containing-element {
@@ -140,10 +143,6 @@ html, body {
   border-bottom: 1px solid lighten(saturate($base-link-color, 28), 6);
 }
 
-// hover class for main nav links
-// .wf-active .site-navigation-list-link a:hover {
-  
-// }
 
 /*
  =====================
