@@ -203,7 +203,7 @@ $mobile-retina:
 
 // <ul> container for the main nav  
 @mixin site-navigation-list {
-  display: block;
+  display: none;
   margin: 0;
   padding: 0;
 }

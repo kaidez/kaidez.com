@@ -50,6 +50,12 @@ html, body {
  * =================
  */
 
+
+// Hide menu heading on mobile phones
+#menu-heading {
+  @include hide-element;
+}
+
 .containing-element {
   max-width: 100%;
 }

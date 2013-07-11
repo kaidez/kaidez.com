@@ -168,7 +168,6 @@
     padding: 0px 0 54px;
   }
 
-
   .footer-header {
     @include makeTextShadow($footer-color);
     border-bottom: 2px dotted darken($footer-color, 25);
