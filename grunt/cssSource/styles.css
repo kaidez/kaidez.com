@@ -861,6 +861,10 @@ html, body {
  * Header styles end
  * =================
  */
+#menu-heading {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
 .containing-element {
   max-width: 100%; }
 
@@ -1241,7 +1245,7 @@ a:hover {
   clip: rect(1px 1px 1px 1px); }
 
 #site-navigation-list {
-  display: block;
+  display: none;
   margin: 0;
   padding: 0; }
 
@@ -1681,7 +1685,7 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   #site-navigation-list {
-    display: block;
+    display: none;
     margin: 0;
     padding: 0; }
 
@@ -2081,7 +2085,7 @@ a.pagination-link {
     float: left; }
 
   #site-navigation-list {
-    display: block;
+    display: none;
     margin: 0;
     padding: 0; }
 
@@ -2254,7 +2258,7 @@ a.pagination-link {
     float: left; }
 
   #site-navigation-list {
-    display: block;
+    display: none;
     margin: 0;
     padding: 0; }
 
