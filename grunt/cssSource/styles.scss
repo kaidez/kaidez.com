@@ -6,13 +6,13 @@
 @import "normalize";
 // normalize.css ends
 
-// Global device styles start
-@import "globalStyles";
-// Global device styles end
-
 // Syntax highlighting styles start
 @import "syntax";
 // Syntax highlighting styles end
+
+// Global device styles start
+@import "globalStyles";
+// Global device styles end
 
 // "Mobile first" styles start
 @import "mobileFirstStyles";
