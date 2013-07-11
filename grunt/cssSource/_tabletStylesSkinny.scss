@@ -31,16 +31,12 @@
 
   // <h2> tag...the 'closing tags...wrapping functions text'
   .site-description {
-    display: block;
-    position: static;
-    margin: 0;
-    width: 270px;
-    clear: both;
+    @include hide-element;
   }
 
-  .site-header {
-    max-width: 450px;
-    float: left;
+  .site-title {
+    margin: 0 auto;
+    float: none;
   }
 
   #site-desc {
@@ -56,18 +52,17 @@
   .outerWrapperNavHeader {
     width: 100%;
     border-bottom: 3px solid $base-link-color;
-    height: 140px;
+    height: 164px;
   }
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavHeader {
-    padding: 21px;
+    padding: 8px 15px 15px 15px;
   }
     
   // searchbox
   .searchbox-style {
-    text-align: left;
-    padding:40px 0 0 0;
+    padding: 19px 0 0 0;
   }
   
   // Logo link...provides a large enough space for a click area
@@ -88,8 +83,9 @@
   
 // <nav>
   .main-navigation {
-    width: auto;
     border-top: none;
+    margin: 0 auto;
+    display: table;
   }
 
   
@@ -100,7 +96,7 @@
   }
 
   .nav-search-style {
-    float: right;
+    margin-top: 7px;
   }
   
   /*
@@ -124,7 +120,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(13px, 29px);
+    @include link-styles(13px, 34px);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
