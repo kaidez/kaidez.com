@@ -1898,7 +1898,7 @@ a.pagination-link {
     width: auto;
     padding: 21px;
     border-bottom: 3px solid #0c5e7e; }
-  .lt-ie9 .innerWrapperNavHeader {
+  .lt-ie9 .inner-wrapper-nav-header {
     width: 1024px;
     margin: 0 auto; }
   .lt-ie9 .homepage-link {
@@ -2025,7 +2025,7 @@ a.pagination-link {
     border-bottom: 3px solid #0c5e7e;
     height: 140px; }
 
-  .innerWrapperNavHeader {
+  .inner-wrapper-nav-header {
     padding: 21px; }
 
   .homepage-link {
@@ -2208,7 +2208,7 @@ a.pagination-link {
   .outerWrapperNavHeader {
     border-bottom: 3px solid #0c5e7e; }
 
-  .innerWrapperNavHeader {
+  .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px; }
 
   .homepage-link {
@@ -2408,7 +2408,7 @@ a.pagination-link {
     width: auto;
     min-height: 130px; }
 
-  .innerWrapperNavHeader {
+  .inner-wrapper-nav-header {
     width: 1024px;
     margin: 0 auto; }
 
@@ -2441,9 +2441,9 @@ a.pagination-link {
     padding: 0; }
 
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   /*
    * =======================
@@ -2624,9 +2624,9 @@ a.pagination-link {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
   /*
-   ===================
-   Footer styles ends
-   ===================
+   * ===================
+   * Footer styles ends
+   * ===================
    */ }
 /* Assistive text */
 .assistive-text,
