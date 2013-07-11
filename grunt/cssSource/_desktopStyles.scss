@@ -58,7 +58,7 @@
   }
 
   // the inner wrapper for the <header>
-  .innerWrapperNavHeader {
+  .inner-wrapper-nav-header {
     @include inner-wrapper-nav-header;
   }
 
@@ -72,8 +72,12 @@
     @include site-header;
   }
 
-  // <h2> tag...the 'closing tags...wrapping functions text'
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
+  // wrap header elements 
+  .top-level-header-wrapper {
+    @include top-level-header-wrapper
+  }
+
+  // <h2> tag...the "closing tags...wrapping functions" text
   .site-description {
     display: block;
     position: static;
@@ -82,15 +86,6 @@
     width: 270px;
     line-height: 2.5;
   }
-
-  .header-pic-class {
-    float: left;
-    display: block;
-  }
-
-  .top-level-header-wrapper {
-    padding-top: 12px;
-  }
     
   // searchbox
   .searchbox-style {
@@ -98,13 +93,15 @@
     padding: 0;
   }
 
-
-
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
+
+
+
+
 
   /*
    * =======================
@@ -121,7 +118,6 @@
   }
 
   // Hide moble menu and search icons on all devices EXCEPT hand-helds
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
   #menu, #search {
     @include hide-element;
   }
@@ -152,9 +148,9 @@
   }
 
   /*
-   =====================
-   Navigation styles end
-   =====================
+   * =====================
+   * Navigation styles end
+   * =====================
    */
 
   .form {
@@ -312,8 +308,8 @@
   }
 
   /*
-   ===================
-   Footer styles ends
-   ===================
+   * ===================
+   * Footer styles ends
+   * ===================
    */
  }

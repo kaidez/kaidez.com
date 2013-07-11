@@ -27,14 +27,10 @@
     @include hide-element;
   }
 
-  .header-pic-class {
-    display: none;
-  }
-
 /*
- =================
- Header styles end
- =================
+ * =================
+ * Header styles end
+ * =================
  */
 
 
@@ -53,9 +49,7 @@
 }
 
 #site-navigation-list {
-  display:none;
-  margin:0;
-  padding:0;
+  @include site-navigation-list;
 }
 
 .nav-search-style {

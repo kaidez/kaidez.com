@@ -32,7 +32,7 @@
   }
 
   // the inner wrapper for the <header>
-  .innerWrapperNavHeader {
+  .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px;
   }
 
@@ -50,35 +50,21 @@
     margin: 0 auto;
     float: none;
   }
-
-  #site-desc {
-    font-size: 15px;
-  }
-
-  .header-pic-class {
-    float: left;
-    display: block;
-  }
-
-
-
-
     
   // searchbox
   .searchbox-style {
     padding: 19px 0 0 0;
   }
   
-
-
+  // Shared class for nav and searchbox elements
   .header-element-margin {
-    margin: 0;  
+    @include header-element-margin-tablet  
   }
 
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   
 // <nav>
@@ -110,11 +96,10 @@
   .site-navigation-list-link {
 	  float:left;
   }
-  
+
+  // <ul> container for the main nav  
   #site-navigation-list {
-    display: block;
-    margin: 0;
-    padding: 0;
+    @include site-navigation-list
   }
 
   .wf-active .site-navigation-list-link a:link,

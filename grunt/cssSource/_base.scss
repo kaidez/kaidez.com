@@ -174,11 +174,11 @@ $mobile-retina:
 }
 
  /*
- * Define width for the <header>, <main> and <footer> elements by applying
- * this mixin to a class that's applied to the element. The '$dimension'
- * variable defines the width value and the values are determined by the
- * "Width variables" directly below the mixin.
- */
+  * Define width for the <header>, <main> and <footer> elements by applying
+  * this mixin to a class that's applied to the element. The '$dimension'
+  * variable defines the width value and the values are determined by the
+  * "Width variables" directly below the mixin.
+  */
 @mixin content-width($dimension) {
   max-width: $dimension;
   margin: 0 auto;
@@ -192,14 +192,20 @@ $mobile-retina:
 }
 
  /*
-  * Unique styles for the 'site-title' class in the
-  * desktop styles...add this to sprite mixin code
+  * Unique styles for the 'site-title' class in the desktop styles...add this * to sprite mixin code
   */
  @mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
   text-indent: -999px;
   display: block;
+}
+
+// <ul> container for the main nav  
+@mixin site-navigation-list {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
  // Applies border to post snippets on home page and search results.
@@ -269,10 +275,12 @@ $mobile-retina:
   text-shadow: 0px 2px 3px lighten($base-color, 9);
 }
 
+
+
 /*
-   ===========
-   Mix-ins end
-   ===========
+ * ===========
+ *  Mix-ins end
+ * ===========
  */
 
 /*
@@ -341,6 +349,16 @@ $mobile-retina:
   width:209px;
   float: left;
   margin-left: 10px;
+}
+
+// wrap header elements 
+@mixin top-level-header-wrapper {
+  padding-top: 12px;
+}
+
+// Shared class for nav and searchbox elements on tablets
+@mixin header-element-margin-tablet {
+  margin: 0;  
 }
 
 @mixin nav-search {

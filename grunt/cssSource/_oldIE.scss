@@ -52,7 +52,7 @@
   }
 
   // the inner wrapper for the <header>
-  .innerWrapperNavHeader {
+  .inner-wrapper-nav-header  {
     @include inner-wrapper-nav-header;
   }
 
@@ -67,6 +67,11 @@
     float: left;
   }
 
+  // wrap header elements 
+  .top-level-header-wrapper {
+    @include top-level-header-wrapper
+  }
+
   .site-description {
     display: block;
     position: static;
@@ -75,23 +80,14 @@
     width: 245px;
   }
 
-
-  
-
-
-
-
-
-
-
-
   .site-title {
     @include sprite-images('../img/snSprite.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
   }
-
+  
+  // Shared class for nav and searchbox elements
   .header-element-margin {
     margin-left: 100px;
     position: relative;
@@ -107,6 +103,7 @@
     height: 17px;
   }
 
+  // Hide moble menu and search icons on all devices EXCEPT hand-helds
   #menu, #search {
     @include hide-element;
   }
@@ -114,7 +111,6 @@
   .main-navigation {
     @include main-nav;
   }
-
 
   .wf-loading .site-navigation-list-link {
     font-family: $srf;
@@ -171,7 +167,6 @@
     font-size: 16px;
     padding: 0px 0 54px;
   }
-
 
 
   .footer-header {
