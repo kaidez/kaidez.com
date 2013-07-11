@@ -66,14 +66,13 @@
  * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
  */
 /*
-* Define width for the <header>, <main> and <footer> elements by applying
-* this mixin to a class that's applied to the element. The '$dimension'
-* variable defines the width value and the values are determined by the
-* "Width variables" directly below the mixin.
-*/
+ * Define width for the <header>, <main> and <footer> elements by applying
+ * this mixin to a class that's applied to the element. The '$dimension'
+ * variable defines the width value and the values are determined by the
+ * "Width variables" directly below the mixin.
+ */
 /*
- * Unique styles for the 'site-title' class in the
- * desktop styles...add this to sprite mixin code
+ * Unique styles for the 'site-title' class in the desktop styles...add this * to sprite mixin code
  */
 /*
  * ============================================================================
@@ -85,9 +84,9 @@
  * ============================================================================
  */
 /*
-   ===========
-   Mix-ins end
-   ===========
+ * ===========
+ *  Mix-ins end
+ * ===========
  */
 /*
 =========================================================================
@@ -857,6 +856,11 @@ html, body {
 .site-header {
   text-align: left; }
 
+/*
+ * =================
+ * Header styles end
+ * =================
+ */
 .containing-element {
   max-width: 100%; }
 
@@ -1222,9 +1226,6 @@ a:hover {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
-.header-pic-class {
-  display: none; }
-
 /*
  * =================
  * Header styles end
@@ -1240,7 +1241,7 @@ a:hover {
   clip: rect(1px 1px 1px 1px); }
 
 #site-navigation-list {
-  display: none;
+  display: block;
   margin: 0;
   padding: 0; }
 
@@ -1665,13 +1666,10 @@ a.pagination-link {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
 
-  .header-pic-class {
-    display: none; }
-
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   /*
    =======================
@@ -1683,7 +1681,7 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   #site-navigation-list {
-    display: none;
+    display: block;
     margin: 0;
     padding: 0; }
 
@@ -1907,6 +1905,8 @@ a.pagination-link {
   .lt-ie9 .site-header {
     max-width: 450px;
     float: left; }
+  .lt-ie9 .top-level-header-wrapper {
+    padding-top: 12px; }
   .lt-ie9 .site-description {
     display: block;
     position: static;
@@ -2043,19 +2043,12 @@ a.pagination-link {
     width: 270px;
     clear: both; }
 
-  #site-desc {
-    font-size: 15px; }
-
-  .header-pic-class {
-    float: left;
-    display: block; }
+  .header-element-margin {
+    margin: 0; }
 
   .searchbox-style {
     text-align: left;
     padding: 40px 0 0 0; }
-
-  .header-element-margin {
-    margin: 0; }
 
   /*
    =================
@@ -2223,13 +2216,6 @@ a.pagination-link {
     margin: 0 auto;
     float: none; }
 
-  #site-desc {
-    font-size: 15px; }
-
-  .header-pic-class {
-    float: left;
-    display: block; }
-
   .searchbox-style {
     padding: 19px 0 0 0; }
 
@@ -2237,9 +2223,9 @@ a.pagination-link {
     margin: 0; }
 
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   .main-navigation {
     border-top: none;
@@ -2421,6 +2407,9 @@ a.pagination-link {
     float: left;
     margin-left: 10px; }
 
+  .top-level-header-wrapper {
+    padding-top: 12px; }
+
   .site-description {
     display: block;
     position: static;
@@ -2428,13 +2417,6 @@ a.pagination-link {
     margin: 0;
     width: 270px;
     line-height: 2.5; }
-
-  .header-pic-class {
-    float: left;
-    display: block; }
-
-  .top-level-header-wrapper {
-    padding-top: 12px; }
 
   .searchbox-style {
     text-align: left;
@@ -2490,9 +2472,9 @@ a.pagination-link {
     background-color: transparent; }
 
   /*
-   =====================
-   Navigation styles end
-   =====================
+   * =====================
+   * Navigation styles end
+   * =====================
    */
   .form {
     -webkit-border-radius: 25px;
