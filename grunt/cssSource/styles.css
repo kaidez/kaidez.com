@@ -1534,14 +1534,14 @@ a.pagination-link {
   display: block; }
 
 /*
-  ======================
-  Non-retina stuff ends
-  ======================
+ * ======================
+ * Non-retina stuff ends
+ * ======================
  */
 /*
-  ====================
-  Retina stuff starts
-  ====================
+ * ====================
+ * Retina stuff starts
+ * ====================
  */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (min-resolution: 192dpi) and (min-width: 1024px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
   #twitter {
@@ -1629,9 +1629,9 @@ a.pagination-link {
     margin: 0;
     float: left; } }
 /*
-  =====================
-  Retina media ends
-  =====================
+ * =====================
+ * Retina media ends
+ * =====================
  */
 /*
  * ===================================================
@@ -2193,15 +2193,12 @@ a.pagination-link {
    ===================
    */
   .site-description {
-    display: block;
-    position: static;
-    margin: 0;
-    width: 270px;
-    clear: both; }
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); }
 
-  .site-header {
-    max-width: 450px;
-    float: left; }
+  .site-title {
+    margin: 0 auto;
+    float: none; }
 
   #site-desc {
     font-size: 15px; }
@@ -2213,14 +2210,13 @@ a.pagination-link {
   .outerWrapperNavHeader {
     width: 100%;
     border-bottom: 3px solid #0c5e7e;
-    height: 140px; }
+    height: 164px; }
 
   .innerWrapperNavHeader {
-    padding: 21px; }
+    padding: 8px 15px 15px 15px; }
 
   .searchbox-style {
-    text-align: left;
-    padding: 40px 0 0 0; }
+    padding: 19px 0 0 0; }
 
   .homepage-link {
     width: 209px;
@@ -2235,8 +2231,9 @@ a.pagination-link {
    =================
    */
   .main-navigation {
-    width: auto;
-    border-top: none; }
+    border-top: none;
+    margin: 0 auto;
+    display: table; }
 
   .main-navigation-list {
     display: block;
@@ -2246,7 +2243,7 @@ a.pagination-link {
     text-align: center; }
 
   .nav-search-style {
-    float: right; }
+    margin-top: 7px; }
 
   /*
    * Hide 'mobile first' menu & search
@@ -2270,7 +2267,7 @@ a.pagination-link {
     font-family: "Lato";
     color: #277291;
     text-shadow: 0px 2px 3px #8ec9e1;
-    margin-right: 29px;
+    margin-right: 34px;
     font-size: 13px;
     float: left;
     border: 0;
