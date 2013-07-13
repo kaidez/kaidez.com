@@ -56,10 +56,10 @@
  */
 
 /*
-  ================================================
-  Non-retina media starts for tablets and desktops
-  ================================================
-*/
+ * ==================================================
+ * Non-retina media starts for desktops and handhelds
+ * ==================================================
+ */
 
 // Non-retina social icons start
 #twitter {
@@ -130,7 +130,7 @@
   * ====================
   */
 
-// Desktop retina:
+// Desktop and tablet retina:
 @media #{$desktop-tablet-retina} { 
 
   // Retina social icons
@@ -193,7 +193,7 @@
 }
 
 
-// Mobile: if the screen is no wider than 480px:
+// Desktop and tablet non-retina:
 @media #{$desktop-tablet} { 
 
   // <h1> tag in the <header>
@@ -206,7 +206,7 @@
 }
 
 
-// Mobile retina: if the screen is no wider than 480px:
+// Mobile retina:
 @media #{$mobile-retina} { 
 
   // <h1> tag in the <header>
