@@ -1993,7 +1993,7 @@ a.pagination-link {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
 /* oldIE styles end*/
-@media only screen and (min-width: 729px) and (max-width: 1024px) {
+@media only screen and (min-width: 729px) and (max-width: 1023px) {
   /*
    * Handhelds and tablets get the helvetica-type
    * Google font. Too many fonts applied to handhelds
@@ -2009,7 +2009,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
-    font-size: 1.7rem; }
+    font-size: 1.1rem; }
 
   /*
    * ===================
