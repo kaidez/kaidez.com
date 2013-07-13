@@ -131,7 +131,7 @@
   */
 
 // Desktop retina:
-@media #{$desktop-retina} { 
+@media #{$desktop-tablet-retina} { 
 
   // Retina social icons
   #twitter {
@@ -194,7 +194,7 @@
 
 
 // Mobile: if the screen is no wider than 480px:
-@media #{$desktop} { 
+@media #{$desktop-tablet} { 
 
   // <h1> tag in the <header>
   .site-title {

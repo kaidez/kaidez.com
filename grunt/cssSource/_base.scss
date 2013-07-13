@@ -94,7 +94,7 @@ $bg-size: 350px 210px;
 
 
 // Tablet/Desktop: if the screen retina based AND is at least 569px wide:
-$desktop-retina:   
+$desktop-tablet-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px),
   only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px),
   only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 569px),
@@ -103,7 +103,7 @@ $desktop-retina:
   only screen and (min-resolution: 2dppx) and (min-width: 569px)";
 
 // Tablet/Desktop non-retina: if the screen retina based AND is at least 1024px wide:
-$desktop: "only screen and (min-width: 569px)";
+$desktop-tablet: "only screen and (min-width: 569px)";
 
 // Mobile: if the screen is retina-based AND is no wider than 568px:
 $mobile-retina:   
