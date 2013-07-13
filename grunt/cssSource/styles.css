@@ -1240,10 +1240,6 @@ a:hover {
  * Navigation styles start
  * =======================
  */
-#menu-heading {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
 #site-navigation-list {
   display: none;
   margin: 0;
@@ -1676,14 +1672,10 @@ a.pagination-link {
    * =================
    */
   /*
-   =======================
-   Navigation styles start
-   =======================
+   * =======================
+   * Navigation styles start
+   * =======================
    */
-  #menu-heading {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); }
-
   #site-navigation-list {
     display: none;
     margin: 0;
@@ -2063,15 +2055,20 @@ a.pagination-link {
     width: auto;
     border-top: none; }
 
+  #site-navigation-list {
+    display: block;
+    margin: 0;
+    padding: 0; }
+
+  .nav-search-style {
+    float: right; }
+
   .main-navigation-list {
     display: block;
     min-height: 21px;
     font-size: 12px;
     margin: 0px auto;
     text-align: center; }
-
-  .nav-search-style {
-    float: right; }
 
   /*
    * Hide 'mobile first' menu & search
@@ -2083,11 +2080,6 @@ a.pagination-link {
 
   .site-navigation-list-link {
     float: left; }
-
-  #site-navigation-list {
-    display: none;
-    margin: 0;
-    padding: 0; }
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
@@ -2258,7 +2250,7 @@ a.pagination-link {
     float: left; }
 
   #site-navigation-list {
-    display: none;
+    display: block;
     margin: 0;
     padding: 0; }
 
