@@ -254,7 +254,7 @@
    */
   
   .post-snipper-header-link {
-    @include makeTextShadow($background-color);
+    @include makeTextShadow($site-background-color);
   }
 
   /*

@@ -208,7 +208,7 @@
 
   // Add "letterpress" effect to header links for home page post snippet.
   .post-snipper-header-link {
-    @include makeTextShadow($background-color)
+    @include makeTextShadow($site-background-color)
   }
 
   /*
