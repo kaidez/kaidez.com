@@ -41,7 +41,7 @@ $base-link-color: #0C5E7E;
  * Base color for page links in post content. Also effects the color of any
  * and all pagination buttons.
  */
-$link-color: #3285A5;
+$post-link-color: #3285A5;
 
 // Site footer color
 $footer-color: #0C5E7E;
@@ -249,7 +249,7 @@ $mobile-retina:
 
 // Inner part of the individual button...makes it a hit area for the link
 @mixin pagButtonInner {
-  background-color: $link-color;
+  background-color: $post-link-color;
   color: #fff;
   padding: 7px 10px 8px;
   margin-right: 7px;

@@ -178,14 +178,14 @@ html, body {
  */
 a:link,
 a:visited { 
-  color: darken($link-color, 4);
+  color: darken($post-link-color, 4);
   text-decoration: none;
 }
 
 // all text links have an underline
 a:hover { 
   text-decoration: underline;
-  color: darken($link-color, 1);
+  color: darken($post-link-color, 1);
 }
 
 // Related posts styles that appear on single post pages
