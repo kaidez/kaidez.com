@@ -10,12 +10,18 @@
   
 
 /*
- * ===============
- * Variables start
- * ===============
+ * =============
+ * ALL VARIABLES
+ * =============
  */
 
-// Color variables
+
+
+
+
+// START COLOR VARIABLES
+
+
 
 /*
  * PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea color
@@ -55,12 +61,19 @@ $footer-color: #0C5E7E;
 $darken-the-footer-color: darken($footer-color, 25);
 
 
-// Font variables
+
+// END COLOR VARIABLES
+
+
+
+
+
+// FONT VARIABLES
 $helv: "Lato";
 $robo: "Roboto Condensed";
 $srf: serif;
 
-// Width varibles...affects the width of the "inner" containers on the page.
+// Width varibles...affects the width of the "inner" containers on all pages.
 $mobile-portrait-width: 300px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $inner-content-width: 1024px; // Desktop
