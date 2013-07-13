@@ -2164,7 +2164,8 @@ a.pagination-link {
 
   .post-snipper-header-link {
     color: #bababa;
-    text-shadow: 0px 2px 3px white; }
+    text-shadow: 0px 2px 3px white;
+    font-size: 1.7rem; }
 
   /*
    ==================
@@ -2337,7 +2338,8 @@ a.pagination-link {
 
   .post-snipper-header-link {
     color: #bababa;
-    text-shadow: 0px 2px 3px white; }
+    text-shadow: 0px 2px 3px white;
+    font-size: 1.7rem; }
 
   /*
    ==================
