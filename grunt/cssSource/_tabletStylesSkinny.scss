@@ -67,7 +67,7 @@
    * =================
    */
   
-// <nav>
+  // <nav>
   .main-navigation {
     border-top: none;
     margin: 0 auto;
@@ -99,7 +99,7 @@
 
   // <ul> container for the main nav  
   #site-navigation-list {
-    @include site-navigation-list
+    @include site-navigation-list(block);
   }
 
   .wf-active .site-navigation-list-link a:link,

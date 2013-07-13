@@ -202,8 +202,8 @@ $mobile-retina:
 }
 
 // <ul> container for the main nav  
-@mixin site-navigation-list {
-  display: none;
+@mixin site-navigation-list($display) {
+  display: $display;
   margin: 0;
   padding: 0;
 }

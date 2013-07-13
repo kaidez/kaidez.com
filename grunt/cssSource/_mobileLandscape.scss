@@ -38,18 +38,13 @@
 
 
 /*
- =======================
- Navigation styles start
- =======================
+ * =======================
+ * Navigation styles start
+ * =======================
  */
 
-// Hide menu heading on mobile phones
-#menu-heading {
-  @include hide-element;
-}
-
 #site-navigation-list {
-  @include site-navigation-list;
+  @include site-navigation-list(none);
 }
 
 .nav-search-style {

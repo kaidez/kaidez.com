@@ -75,22 +75,26 @@
    =================
    */
   
-// <nav>
+  // <nav>
   .main-navigation {
     width: auto;
     border-top: none;
   }
 
-  
+  #site-navigation-list {
+    @include site-navigation-list(block);
+  }
+
+  .nav-search-style {
+    float: right;
+  }
+
   // <nav> list items
   .main-navigation-list {
   	@include show-menu;
   	@include master-center;
   }
 
-  .nav-search-style {
-    float: right;
-  }
   
   /*
    * Hide 'mobile first' menu & search
@@ -104,9 +108,7 @@
 	  float:left;
   }
   
-  #site-navigation-list {
-    @include site-navigation-list;
-  }
+
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
