@@ -8,9 +8,9 @@
  * =================================================================
  */
 /*
- * ===============
- * Variables start
- * ===============
+ * =============
+ * ALL VARIABLES
+ * =============
  */
 /*
  * PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea color
@@ -1551,7 +1551,7 @@ a.pagination-link {
  * Retina stuff starts
  * ====================
  */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px), only screen and (min-resolution: 192dpi) and (min-width: 1024px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 569px), only screen and (min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (min-resolution: 192dpi) and (min-width: 569px), only screen and (min-resolution: 2dppx) and (min-width: 569px) {
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
     background-size: 350px 210px;
@@ -1618,7 +1618,7 @@ a.pagination-link {
     text-indent: -999px;
     margin: 0;
     float: left; } }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 569px) {
   .site-title {
     background: url("../img/snSprite.png") no-repeat -125px -80px;
     background-size: 350px 210px;
@@ -1855,7 +1855,7 @@ a.pagination-link {
  * oldIE styles start:
  *
  * The 'mobile first' styles load first because they're not inside of a 
- * '@media' call.  has a result, they are the styles that will render in IE8 
+ * '@media' call.  As a result, they are the styles that will render in IE8 
  * and lower, which we don't want: the desktop styles should load first.  
  * Therefore, 'oldIE.scss' is created to to hold styles that should render in 
  * these browsers and load after the "mobileLandscape" styles.
@@ -2626,5 +2626,4 @@ a.pagination-link {
   position: absolute;
   top: 5px;
   left: 5px;
-  z-index: 100000;
-  /* Above WP toolbar */ }
+  z-index: 100000; }
