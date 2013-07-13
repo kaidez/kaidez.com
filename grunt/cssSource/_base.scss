@@ -68,13 +68,10 @@ $darken-the-footer-color: darken($footer-color, 25);
 
 
 
-// FONT VARIABLES
+// Font variables
 $helv: "Lato";
 $robo: "Roboto Condensed";
 $srf: serif;
-
-// Media query height/width variables
-
 
 // Width varibles...affects the width of the "inner" containers on all pages.
 $mobile-portrait-width: 300px; // Mobile
@@ -98,15 +95,15 @@ $bg-size: 350px 210px;
 
 // Tablet/Desktop: if the screen retina based AND is at least 1024px wide:
 $desktop-retina:   
-  "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
-  only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 1024px),
-  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
-  only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
-  only screen and (min-resolution: 192dpi) and (min-width: 1024px),
-  only screen and (min-resolution: 2dppx) and (min-width: 1024px)";
+  "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px),
+  only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 569px),
+  only screen and (min-device-pixel-ratio: 2) and (min-width: 569px),
+  only screen and (min-resolution: 192dpi) and (min-width: 569px),
+  only screen and (min-resolution: 2dppx) and (min-width: 569px)";
 
 // Tablet/Desktop non-retina: if the screen retina based AND is at least 1024px wide:
-$desktop: "only screen and (min-width: 1024px)";
+$desktop: "only screen and (min-width: 569px)";
 
 // Mobile: if the screen is retina-based AND is no wider than 568px:
 $mobile-retina:   
