@@ -232,6 +232,10 @@
     font-size: 40px;
   }
 
+  #content h2 {
+    @include content-h2(27px);
+  }
+
   .page-content {
     @include content-width($inner-content-width);
     font-size: 18px;
@@ -253,6 +257,9 @@
   .post-snipper-header-link {
     // @include makeTextShadow($site-background-color);
   }
+
+
+
 
   /*
    =================================

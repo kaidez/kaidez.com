@@ -211,7 +211,7 @@ $mobile-retina:
  /*
   * Unique styles for the 'site-title' class in the desktop styles...add this * to sprite mixin code
   */
- @mixin desktop-logo-sprite-add-on {
+@mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
   text-indent: -999px;
@@ -225,10 +225,15 @@ $mobile-retina:
   padding: 0;
 }
 
- // Applies border to post snippets on home page and search results.
- @mixin bottomBorder ($color) {
-   border-bottom: 1px solid $color;
+// Applies border to post snippets on home page and search results.
+@mixin bottomBorder ($color) {
+  border-bottom: 1px solid $color;
  }
+
+
+@mixin content-h2($font-size) {
+  font-size: ($font-size);
+}
 
 /*
  * ============================================================================
