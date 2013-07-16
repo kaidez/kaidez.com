@@ -139,7 +139,9 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(18px, 18px, 5px, $base-link-color);
+    @include link-styles(18px, 22px, 5px, $base-link-color); // margin-right, font-size, padding, color
+    background-color: transparent;
+    text-shadow: 1px 1px 0 lighten($header-color, 20);
   }
 
   /*

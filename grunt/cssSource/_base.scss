@@ -41,7 +41,7 @@ $header-color: #67CDDC;
  * layout, bottom border color for the desktop/laptop header and top border 
  * for the main navigation.
  */
-$base-link-color: #938e8e;
+$base-link-color: #262841;
 
 /*
  * Base color for page links in post content. Also effects the color of any
@@ -334,7 +334,7 @@ $mobile-retina:
 // <nav> tag
 @mixin main-nav {
   border: none;
-  width: 473px;
+  width: 555px;
 }
 
 // the inner wrapper for the <header>
@@ -350,13 +350,8 @@ $mobile-retina:
   font-size: $font-size;
   padding: $padding;
   color: $base-color;
-  background-color: lighten($base-color, 15);
   float: left;
   border: 0;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  text-shadow: 1px 1px 0 lighten($base-color, 27);
 }
 
 @mixin site-header {
