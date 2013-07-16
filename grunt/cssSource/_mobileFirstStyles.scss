@@ -99,7 +99,7 @@
   line-height: 1.3;
 }
 
-.breadcrumbStyles {
+.breadcrumb-styles {
   font-size: 14px;
   padding: 20px 10px 35px 10px;
 }
@@ -181,6 +181,11 @@
 
 .containing-element {
   width: auto;
+}
+
+.breadcrumb-styles {
+  @include breadcrumb-styles(14px);
+  padding-bottom: 10px;
 }
 
 /*

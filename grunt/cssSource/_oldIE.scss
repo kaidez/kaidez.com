@@ -168,10 +168,10 @@
     margin:0 auto;
   }
 
-  .breadcrumbStyles {
-    font-size: 16px;
-    padding: 0px 0 54px;
-  }
+.breadcrumb-styles {
+  @include breadcrumb-styles(16px);
+  padding-top: 10px;
+}
 
   .footer-header {
     @include makeTextShadow($footer-color);

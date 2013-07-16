@@ -184,6 +184,12 @@ $mobile-retina:
   font-size: 12px;
 }
 
+
+@mixin breadcrumb-styles($font-size) {
+  font-size: $font-size;
+  padding: 0px 0 54px;
+}
+
  /*
   * Define width for the <header>, <main> and <footer> elements by applying
   * this mixin to a class that's applied to the element. The '$dimension'

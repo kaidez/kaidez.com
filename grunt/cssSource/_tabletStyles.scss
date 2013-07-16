@@ -208,6 +208,11 @@
     font-size: 1.7rem;
   }
 
+  .breadcrumb-styles {
+    @include breadcrumb-styles(16px);
+    padding-top: 10px;
+  }
+
   /*
    ==================
    Content styles end

@@ -239,9 +239,9 @@
     padding-top:21px;
   }
 
-  .breadcrumbStyles {
-    font-size: 16px;
-    padding: 0px 0 54px;
+  .breadcrumb-styles {
+    @include breadcrumb-styles(16px);
+    padding-top: 10px;
   }
 
   /*
