@@ -41,6 +41,11 @@
     @include homepage-link 
   }
 
+  // <header> tag
+  .site-header {
+    margin-bottom: 37px;
+  }
+
   // <h2> tag...the 'closing tags...wrapping functions text'
   .site-description {
     @include hide-element;
