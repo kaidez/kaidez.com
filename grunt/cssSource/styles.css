@@ -2552,6 +2552,9 @@ a.pagination-link {
     text-align: center;
     font-size: 40px; }
 
+  #content h2 {
+    font-size: 27px; }
+
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
