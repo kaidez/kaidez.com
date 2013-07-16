@@ -409,6 +409,7 @@ a:hover {
   height: auto;
   width: auto;
   padding:1px 10px;
+  background: $footer-color url('../img/footer-bg.png') no-repeat left;
 }
 
 // Hide the Google font on all <h3> tags in the footer before page load

@@ -1161,7 +1161,8 @@ a:hover {
   color: #01070a;
   height: auto;
   width: auto;
-  padding: 1px 10px; }
+  padding: 1px 10px;
+  background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
 .wf-loading .footer-header {
   font-family: serif;
@@ -2582,9 +2583,6 @@ a.pagination-link {
 
   .copyrightStyle {
     clear: both; }
-
-  .outerWrapperNavFooter {
-    background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
   /*
    * ===================
