@@ -33,7 +33,7 @@
 $site-background-color: #fff;
 
 // header background color
-$header-color: #6AB8D7;
+$header-color: #67CDDC;
 
 /*
  * Base color for nav links. Affects the font color for desktops/laptops,
@@ -41,7 +41,7 @@ $header-color: #6AB8D7;
  * layout, bottom border color for the desktop/laptop header and top border 
  * for the main navigation.
  */
-$base-link-color: #0C5E7E;
+$base-link-color: #938e8e;
 
 /*
  * Base color for page links in post content. Also effects the color of any
@@ -279,10 +279,9 @@ $mobile-retina:
   text-align: center;
 }
 
-// Text shadow for nav links on desktops and laptops
+//Text shadow for nav links on desktops and laptops
 @mixin makeTextShadow($base-color) {
-  $changedBaseColor: darken($base-color, 27);
-  color: $changedBaseColor;
+  color: darken($base-color, 27);
   text-shadow: 0px 2px 3px lighten($base-color, 9);
 }
 
@@ -335,25 +334,29 @@ $mobile-retina:
 // <nav> tag
 @mixin main-nav {
   border: none;
-  width: 445px;
+  width: 473px;
 }
 
 // the inner wrapper for the <header>
 @mixin inner-wrapper-nav-header {
-    width: $inner-content-width;
-    margin: 0 auto;
-  }
+  width: $inner-content-width;
+  margin: 0 auto;
+}
 
 // link styles
-@mixin link-styles($font-size, $margin-right) {
+@mixin link-styles($margin-right, $font-size, $padding, $base-color) {
   @include fonts($helv);
-  @include makeTextShadow($header-color);
   margin-right: $margin-right; 
   font-size: $font-size;
+  padding: $padding;
+  color: $base-color;
+  background-color: lighten($base-color, 15);
   float: left;
   border: 0;
-  padding: 0;
-  background-color: transparent;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 0 lighten($base-color, 27);
 }
 
 @mixin site-header {

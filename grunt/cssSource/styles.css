@@ -846,7 +846,7 @@ html, body {
  * ===================
  */
 .outerWrapperNavHeader {
-  background-color: #6ab8d7; }
+  background-color: #67cddc; }
 
 .homepage-link {
   display: block;
@@ -930,7 +930,7 @@ html, body {
  */
 .main-navigation {
   width: auto;
-  border-top: 1px solid #0c5e7e; }
+  border-top: 1px solid #938e8e; }
 
 .wf-loading .site-navigation-list-link {
   font-family: serif;
@@ -950,7 +950,7 @@ html, body {
   padding: 9px 0;
   display: block;
   color: #FFF;
-  border-bottom: 1px solid #0079a9; }
+  border-bottom: 1px solid #bd8383; }
 
 /*
  =====================
@@ -1084,14 +1084,14 @@ a:hover {
   text-align: center; }
 
 #tipue_search_foot_boxes li.current {
-  background-color: #6ab8d7;
+  background-color: #67cddc;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
   text-align: center; }
 
 .current-page {
-  background-color: #6ab8d7;
+  background-color: #67cddc;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
@@ -1460,7 +1460,7 @@ a.pagination-link {
  *    non-retina tablets and desktops (again, the social
  *    networking sprite layout is consistent across all
  *    devices and resolutions)
- *x
+ *
  *   -'$mobile-retina' loads the logo-layout only to retina
  *    mobile devices (one more time: the social
  *    networking sprite layout is consistent across all
@@ -1469,10 +1469,10 @@ a.pagination-link {
  * ======================================================
  */
 /*
-  ================================================
-  Non-retina media starts for tablets and desktops
-  ================================================
-*/
+ * ==================================================
+ * Non-retina media starts for desktops and handhelds
+ * ==================================================
+ */
 #twitter {
   background: url("../img/snSprite.png") no-repeat -1px -2px;
   background-size: 350px 210px;
@@ -1891,7 +1891,7 @@ a.pagination-link {
   .lt-ie9 .outerWrapperNavHeader {
     width: auto;
     padding: 21px;
-    border-bottom: 3px solid #0c5e7e; }
+    border-bottom: 3px solid #938e8e; }
   .lt-ie9 .inner-wrapper-nav-header {
     width: 1024px;
     margin: 0 auto; }
@@ -1909,6 +1909,8 @@ a.pagination-link {
     font-size: 14px;
     margin: 0;
     width: 245px; }
+  .lt-ie9 .searchbox-style {
+    text-align: left; }
   .lt-ie9 .site-title {
     background: url("../img/snSprite.png") no-repeat -125px -80px;
     background-size: 350px 210px;
@@ -1935,7 +1937,7 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
   .lt-ie9 .main-navigation {
     border: none;
-    width: 445px; }
+    width: 473px; }
   .lt-ie9 .wf-loading .site-navigation-list-link {
     font-family: serif;
     visibility: hidden;
@@ -2018,7 +2020,7 @@ a.pagination-link {
    */
   .outerWrapperNavHeader {
     width: 100%;
-    border-bottom: 3px solid #0c5e7e;
+    border-bottom: 3px solid #938e8e;
     height: 140px; }
 
   .inner-wrapper-nav-header {
@@ -2085,20 +2087,17 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    color: #277291;
-    text-shadow: 0px 2px 3px #8ec9e1;
     margin-right: 29px;
     font-size: 13px;
+    padding: 5px;
+    color: #67cddc;
+    background-color: #a5e1ea;
     float: left;
     border: 0;
-    padding: 0;
-    background-color: transparent;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    padding: 5px;
-    background-color: #fff;
-    text-shadow: 0 4px 3px #FFF; }
+    text-shadow: 1px 1px 0 #d7f2f6; }
 
   #searchbox {
     display: block; }
@@ -2196,7 +2195,7 @@ a.pagination-link {
    * ===================
    */
   .outerWrapperNavHeader {
-    border-bottom: 3px solid #0c5e7e; }
+    border-bottom: 3px solid #938e8e; }
 
   .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px; }
@@ -2259,20 +2258,17 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    color: #277291;
-    text-shadow: 0px 2px 3px #8ec9e1;
-    margin-right: 34px;
+    margin-right: 29px;
     font-size: 13px;
+    padding: 5px;
+    color: #67cddc;
+    background-color: #a5e1ea;
     float: left;
     border: 0;
-    padding: 0;
-    background-color: transparent;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    padding: 5px;
-    background-color: #fff;
-    text-shadow: 0 4px 3px #FFF; }
+    text-shadow: 1px 1px 0 #d7f2f6; }
 
   #searchbox {
     display: block; }
@@ -2388,7 +2384,7 @@ a.pagination-link {
    * ===================
    */
   .outerWrapperNavHeader {
-    border-bottom: 3px solid #0c5e7e;
+    border-bottom: 3px solid #938e8e;
     width: auto;
     min-height: 130px; }
 
@@ -2417,8 +2413,7 @@ a.pagination-link {
     line-height: 2.5; }
 
   .searchbox-style {
-    text-align: left;
-    padding: 0; }
+    text-align: left; }
 
   /*
    * =================
@@ -2444,14 +2439,10 @@ a.pagination-link {
 
   .main-navigation {
     border: none;
-    width: 445px; }
+    width: 473px; }
 
   .wf-loading .site-navigation-list-link {
-    font-family: serif;
-    visibility: hidden;
-    text-decoration: none;
-    font-size: 14px;
-    float: left; }
+    font-family: serif; }
 
   .nav-search-style {
     float: none; }
@@ -2460,14 +2451,17 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    color: #277291;
-    text-shadow: 0px 2px 3px #8ec9e1;
     margin-right: 18px;
     font-size: 18px;
+    padding: 5px;
+    color: #938e8e;
+    background-color: #b8b5b5;
     float: left;
     border: 0;
-    padding: 0;
-    background-color: transparent; }
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 0 #d6d4d4; }
 
   /*
    * =====================
@@ -2499,9 +2493,9 @@ a.pagination-link {
     -webkit-transition: background-color 200ms ease-out;
     -moz-transition: background-color 200ms ease-out;
     -o-transition: background-color 200ms ease-out;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px; }
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
 
   #tipue_search_input:focus {
     border-color: green;
@@ -2557,10 +2551,6 @@ a.pagination-link {
    Content styles end
    ==================
    */
-  .post-snipper-header-link {
-    color: #bababa;
-    text-shadow: 0px 2px 3px white; }
-
   /*
    =================================
    Home page pagination styles start

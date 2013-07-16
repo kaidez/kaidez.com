@@ -113,14 +113,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(13px, 29px);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    padding:5px;
-    background-color: #fff;
-    // overides text-shadow created in the makeTextShadow mixin
-    text-shadow: 0 4px 3px #FFF;
+    @include link-styles(29px, 13px, 5px, $header-color);
   }
 
   // Search box-related styles start

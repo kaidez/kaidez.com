@@ -90,7 +90,6 @@
   // searchbox
   .searchbox-style {
     text-align: left;
-    padding: 0;
   }
 
   /*
@@ -130,10 +129,6 @@
   // Hide the Google font on all <nav> links before page load
   .wf-loading .site-navigation-list-link {
     font-family: $srf;
-    visibility: hidden;
-    text-decoration: none;
-    font-size: 14px;
-    float: left;
   }
 
   .nav-search-style {
@@ -144,7 +139,7 @@
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(18px, 18px);
+    @include link-styles(18px, 18px, 5px, $base-link-color);
   }
 
   /*
@@ -183,9 +178,9 @@
     -webkit-transition : background-color 200ms ease-out; 
     -moz-transition : background-color 200ms ease-out;
     -o-transition : background-color 200ms ease-out;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
   }
  
 #tipue_search_input:focus {
@@ -254,7 +249,7 @@
    */
   
   .post-snipper-header-link {
-    @include makeTextShadow($site-background-color);
+    // @include makeTextShadow($site-background-color);
   }
 
   /*

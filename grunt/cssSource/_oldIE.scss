@@ -80,6 +80,11 @@
     width: 245px;
   }
 
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+  }
+
   .site-title {
     @include sprite-images('../img/snSprite.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
