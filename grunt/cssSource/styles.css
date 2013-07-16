@@ -2042,6 +2042,8 @@ a.pagination-link {
     height: 65px; }
 
   .site-header {
+    max-width: 450px;
+    float: left;
     margin-bottom: 37px; }
 
   .site-description {
