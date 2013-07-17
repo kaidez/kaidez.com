@@ -2434,12 +2434,12 @@ a.pagination-link {
     text-align: left; }
 
   .read-post-link {
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     padding: 5px;
-    color: #fff;
-    background-color: red; }
+    background-color: #999;
+    margin-left: 9px; }
 
   /*
    * =================
@@ -2492,9 +2492,9 @@ a.pagination-link {
    * =====================
    */
   .form {
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     margin-top: 13px; }
 
   #s {
