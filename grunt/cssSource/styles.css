@@ -2001,6 +2001,10 @@ a.pagination-link {
     margin: 0 auto 53px; }
   .lt-ie9 .outerWrapperNavFooter {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
+  .lt-ie9 .read-post-link {
+    padding: 5px;
+    background-color: #999;
+    margin-left: 9px; }
 
 /* oldIE styles end*/
 @media only screen and (min-width: 729px) and (max-width: 1023px) {
@@ -2396,6 +2400,14 @@ a.pagination-link {
   .clearfix:after {
     clear: none; }
 
+  .read-post-link {
+    padding: 5px;
+    background-color: #999;
+    margin-left: 9px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+
   /*
    * ===================
    * Header styles start
@@ -2432,14 +2444,6 @@ a.pagination-link {
 
   .searchbox-style {
     text-align: left; }
-
-  .read-post-link {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: #999;
-    margin-left: 9px; }
 
   /*
    * =================
@@ -2529,7 +2533,7 @@ a.pagination-link {
     height: 33px;
     margin-top: 1px;
     border: 1px solid #dcdcdc;
-    border-radius: 2px;
+    border-radius: 10px;
     background: #f1f1f1 url("../img/search.gif") no-repeat center;
     outline: none; }
 
