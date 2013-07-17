@@ -1,10 +1,15 @@
 @media only screen and (min-width: 321px) and (max-width:568px) {
 
-/*
- * ===================
- * Header styles start
- * ===================
- */
+  // the "Read post" link on the home, category and search pages
+  .read-post-link {
+    @include read-post-link($master-border-radius);
+  }
+
+  /*
+   * ===================
+   * Header styles start
+   * ===================
+   */
  
   .wf-active h1 {
     // font: $helv; // may go

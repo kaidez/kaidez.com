@@ -392,14 +392,15 @@ $mobile-retina:
 }
 
 @mixin read-post-link($border-radius: blank) {
-  padding:5px;
-  background-color: #999;
-  margin-left: 9px;
   @if $border-radius != blank {
     -webkit-border-radius: $border-radius;
     -moz-border-radius: $border-radius;
     border-radius: $border-radius;
   }
+  display: inline;
+  padding:5px;
+  background-color: #999;
+  margin-left: 9px;
 }
 
 /*

@@ -20,6 +20,11 @@
     font-size: 1.1rem;
   }
 
+  // the "Read post" link on the home, category and search pages
+  .read-post-link {
+    @include read-post-link($master-border-radius);
+  }
+
   /*
    * ===================
    * Header styles start
