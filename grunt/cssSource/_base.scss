@@ -82,7 +82,10 @@ $inner-content-width: 1024px; // Desktop
  * The width of the 'footer-sections': this is applied to the
  * 'getGutterWidth()' function below.
  */
-$footer-column-width-desktop: 250px; 
+$footer-column-width-desktop: 250px;
+
+// master border-radius for the entire site
+$master-border-radius: 10px;
 
   
 /*

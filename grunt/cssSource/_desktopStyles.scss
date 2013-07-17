@@ -93,12 +93,12 @@
   }
 
   .read-post-link {
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
     padding:5px;
-    color: #fff;
-    background-color: red;
+    background-color: #999;
+    margin-left: 9px;
   }
 
   /*
@@ -160,9 +160,9 @@
    */
 
   .form {
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
     margin-top: 13px;
   }
 
