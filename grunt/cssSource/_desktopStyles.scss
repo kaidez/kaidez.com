@@ -43,6 +43,15 @@
   .clearfix:after {
     clear: none;
   }
+
+  .read-post-link {
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+    padding:5px;
+    background-color: #999;
+    margin-left: 9px;
+  }
    
   /*
    * ===================
@@ -90,15 +99,6 @@
   // searchbox
   .searchbox-style {
     text-align: left;
-  }
-
-  .read-post-link {
-    -webkit-border-radius: $master-border-radius;
-    -moz-border-radius: $master-border-radius;
-    border-radius: $master-border-radius;
-    padding:5px;
-    background-color: #999;
-    margin-left: 9px;
   }
 
   /*
