@@ -45,7 +45,7 @@
   }
   
   // the "Read post" link on the home, category and search pages
-  .read-post-link {
+  a.read-post-link {
     @include read-post-link($master-border-radius);
   }
    

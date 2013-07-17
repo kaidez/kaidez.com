@@ -397,10 +397,13 @@ $mobile-retina:
     -moz-border-radius: $border-radius;
     border-radius: $border-radius;
   }
-  display: inline;
+  color: #fff;
+  display: block;
   padding:5px;
-  background-color: #999;
-  margin-left: 9px;
+  background-color: $post-link-color;
+  min-width: 120px;
+  float: right;
+  text-align:center;
 }
 
 /*
