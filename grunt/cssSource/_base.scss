@@ -145,6 +145,7 @@ $mobile-retina:
   height: 65px;
 }
 
+// applies a font
 @mixin fonts($font) {
   font-family: $font;
 }
@@ -187,7 +188,7 @@ $mobile-retina:
   font-size: 12px;
 }
 
-
+// style breadcrumbs
 @mixin breadcrumb-styles($font-size) {
   font-size: $font-size;
   padding: 0px 0 54px;
@@ -233,7 +234,7 @@ $mobile-retina:
   border-bottom: 1px solid $color;
  }
 
-
+// style <h2> tags that appear in post snippets
 @mixin content-h2($font-size) {
   font-size: ($font-size);
 }
@@ -368,6 +369,7 @@ $mobile-retina:
   border: 0;
 }
 
+// style <header> tag but it's only in one place right now and can go (maybe)
 @mixin site-header {
   width:209px;
   float: left;
@@ -384,6 +386,7 @@ $mobile-retina:
   margin: 0;  
 }
 
+// style wrapper for nav & search but it's only in one place right now and can go (maybe)
 @mixin nav-search {
   float: right;
 }
