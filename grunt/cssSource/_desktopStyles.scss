@@ -43,14 +43,10 @@
   .clearfix:after {
     clear: none;
   }
-
+  
+  // the "Read post" link on the home, category and search pages
   .read-post-link {
-    -webkit-border-radius: $master-border-radius;
-    -moz-border-radius: $master-border-radius;
-    border-radius: $master-border-radius;
-    padding:5px;
-    background-color: #999;
-    margin-left: 9px;
+    @include read-post-link($master-border-radius);
   }
    
   /*
