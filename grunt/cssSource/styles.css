@@ -921,9 +921,9 @@ html, body {
   clear: both; }
 
 /*
- =======================
- Navigation styles start
- =======================
+ * =======================
+ * Navigation styles start
+ * =======================
  */
 .main-navigation {
   width: auto;
@@ -2432,6 +2432,14 @@ a.pagination-link {
 
   .searchbox-style {
     text-align: left; }
+
+  .read-post-link {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding: 5px;
+    color: #fff;
+    background-color: red; }
 
   /*
    * =================
