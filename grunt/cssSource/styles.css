@@ -920,9 +920,6 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.breadcrumbLinks {
-  font-weight: bolder; }
-
 /*
  =======================
  Navigation styles start
