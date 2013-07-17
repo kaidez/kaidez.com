@@ -204,7 +204,7 @@
   height: 33px;
   margin-top: 1px;
   border: 1px solid #dcdcdc;
-  border-radius: 2px;
+  border-radius: $master-border-radius;
   background: #f1f1f1 url('../img/search.gif') no-repeat center;
   outline: none;
 }
