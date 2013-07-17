@@ -1210,6 +1210,15 @@ a:hover {
 /*
  ==============================================================
  */
+.read-post-link {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  display: inline;
+  padding: 5px;
+  background-color: #999;
+  margin-left: 9px; }
+
 /*
  * ===================
  * Header styles start
@@ -1649,6 +1658,15 @@ a.pagination-link {
  * ===================================================
  */
 @media only screen and (min-width: 321px) and (max-width: 568px) {
+  .read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: inline;
+    padding: 5px;
+    background-color: #999;
+    margin-left: 9px; }
+
   /*
    * ===================
    * Header styles start
@@ -2002,6 +2020,7 @@ a.pagination-link {
   .lt-ie9 .outerWrapperNavFooter {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
   .lt-ie9 .read-post-link {
+    display: inline;
     padding: 5px;
     background-color: #999;
     margin-left: 9px; }
@@ -2024,6 +2043,15 @@ a.pagination-link {
   .wf-active h6 {
     font-family: "Roboto Condensed";
     font-size: 1.1rem; }
+
+  .read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: inline;
+    padding: 5px;
+    background-color: #999;
+    margin-left: 9px; }
 
   /*
    * ===================
@@ -2204,6 +2232,15 @@ a.pagination-link {
   .wf-active h6 {
     font-family: "Roboto Condensed";
     font-size: 1.7rem; }
+
+  .read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: inline;
+    padding: 5px;
+    background-color: #999;
+    margin-left: 9px; }
 
   /*
    * ===================
@@ -2401,12 +2438,13 @@ a.pagination-link {
     clear: none; }
 
   .read-post-link {
-    padding: 5px;
-    background-color: #999;
-    margin-left: 9px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    display: inline;
+    padding: 5px;
+    background-color: #999;
+    margin-left: 9px; }
 
   /*
    * ===================
