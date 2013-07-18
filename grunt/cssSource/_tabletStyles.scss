@@ -1,24 +1,22 @@
 @media only screen and (min-width: 729px) and (max-width:1023px) {
 
   /*
-   * Handhelds and tablets get the helvetica-type
-   * Google font. Too many fonts applied to handhelds
-   * will slow down their page load.
+   * ==========================================================================
+   * Start "all-around" styles that should affect the entire page and not one 
+   * specfic section (i.e., <header>, <footer>, <content>, etc.)
+   * ==========================================================================
+   */
+
+
+  /*
+   * Handhelds and tablets get the helvetica-type Google font. Too many fonts 
+   * applied to handhelds will slow down their page load.
    */
   body {
     @include fonts($helv);
   }
 
-  // apply the Google font to all <header> tags  
-  .wf-active h1,
-  .wf-active h2,
-  .wf-active h3,
-  .wf-active h4,
-  .wf-active h5,
-  .wf-active h6 {
-    @include fonts($robo);
-    font-size: 1.1rem;
-  }
+
 
   // the "Read post" link on the home, category and search pages
   a.read-post-link {
@@ -30,6 +28,29 @@
    * Header styles start
    * ===================
    */
+
+  // Show Google 'Roboto' font on all <header> tags before page load
+  .wf-active h1,
+  .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    @include fonts($robo);
+    font-size: 1.1rem;
+  }
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link;
+  }
+
+  // <header> tag
+  .site-header {
+    max-width: 450px;
+    float: left;
+    margin-bottom: 37px;
+  }
 
   // outer wrapper for the <header> which wraps the link, nav & search elements
   .outerWrapperNavHeader {
@@ -43,17 +64,6 @@
     padding: 21px;
   }
   
-  // Logo link...provides a large enough space for a click area
-  .homepage-link {
-    @include homepage-link;
-  }
-
-  // <header> tag
-  .site-header {
-    max-width: 450px;
-    float: left;
-    margin-bottom: 37px;
-  }
   
   // <h2> tag...the "closing tags...wrapping functions" copy
   .site-description {

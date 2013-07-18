@@ -16,10 +16,9 @@
  ==============================================================
  */
 
-  // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
+
+
+
 
 /*
  * ===================
@@ -42,7 +41,7 @@
   width: 100%;
 }
 
-// hide the <h2> tag in the <header> on page load
+// hide the <h2> tag in <header> on page load
 .site-description {
   @include hide-element;
 }
@@ -54,7 +53,10 @@
  */
 
 
-
+  // the "Read post" link on the home, category and search pages
+  a.read-post-link {
+    @include read-post-link($master-border-radius);
+  }
 
 
 /*

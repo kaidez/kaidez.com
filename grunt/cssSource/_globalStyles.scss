@@ -3,14 +3,22 @@
  * Global styles start:
  *
  * These are styles which should appear on all devices, regardless of screen 
- * dimension or computer resolution.
+ * dimension or computer resolution. There may be other references to these
+ * classes and ids in other .scss files, but they should only add to the
+ * properties and not override them.
  * ============================================================================
  */
 
-/*
- ==============================================================
- */
 
+
+
+
+/*
+ * ===========================================================================
+ * Start "all-around" styles that should affect the entire page and not one 
+ * specfic section (i.e., <header>, <footer>, <content>, etc.)
+ * ===========================================================================
+ */
 
 body {
   background-color: $site-background-color;
@@ -44,12 +52,22 @@ html, body {
 }
 
 /*
- * ===================
- * Header styles start
- * ===================
+ * ===========================================================================
+ * End "all-around" styles
+ * ===========================================================================
  */
 
-// Hide the Google font on all <header> tags before page load
+
+
+
+
+/*
+ * ===========================================================================
+ * Header styles start
+ * ===========================================================================
+ */
+
+// Hide Google 'Roboto' font on all <header> tags before page load
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
@@ -59,7 +77,7 @@ html, body {
   font-family: $srf;
 }
 
-// Apply the Google font to all <header> tags after page load.
+// Apply Google 'Roboto' font to all <header> tags after page load.
 .wf-active h1,
 .wf-active h2,
 .wf-active h3,
@@ -87,17 +105,15 @@ html, body {
   background-color: $header-color;
 }
 
-
-
 // Hide menu heading on mobile phones
 #menu-heading {
   @include hide-element;
 }
 
 /*
- * =================
+ * ===========================================================================
  * Header styles end
- * =================
+ * ===========================================================================
  */
 
 .containing-element {
