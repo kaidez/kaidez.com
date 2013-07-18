@@ -34,13 +34,4 @@ title: Web development tutorials for beginners, product reviews, rants and more 
       {% endfor %}
     </ul> <!-- .pages -->
 
-    {% if paginator.next_page %}
-      <p class="next">
-        <a href="{{ paginator.next_page_path }}">Next &raquo;</a>
-      </p>
-    {% else %}
-      <p class="next disabled">
-        <span>Next</span>
-      </p>
-    {% endif %}
   </div>  <!-- #post-pagination -->
