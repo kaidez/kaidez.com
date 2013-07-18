@@ -16,13 +16,6 @@
     @include fonts($helv);
   }
 
-
-
-  // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
-
   /*
    * ===================
    * Header styles start
@@ -40,16 +33,19 @@
     font-size: 1.1rem;
   }
 
+    // Shared class for nav and searchbox elements
+  .header-element-margin {
+    @include header-element-margin-tablet 
+  }
+
   // Logo link...provides a large enough space for a click area
   .homepage-link {
     @include homepage-link;
   }
 
-  // <header> tag
-  .site-header {
-    max-width: 450px;
-    float: left;
-    margin-bottom: 37px;
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    padding: 21px;
   }
 
   // outer wrapper for the <header> which wraps the link, nav & search elements
@@ -59,12 +55,12 @@
     height: 140px;
   }
 
-  // the inner wrapper for the <header>
-  .inner-wrapper-nav-header {
-    padding: 21px;
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+    padding:40px 0 0 0;
   }
-  
-  
+
   // <h2> tag...the "closing tags...wrapping functions" copy
   .site-description {
     display: block;
@@ -73,24 +69,25 @@
     width: 270px;
     clear: both;
   }
-  
-  // Shared class for nav and searchbox elements
-  .header-element-margin {
-    @include header-element-margin-tablet 
-  }
-    
-  // searchbox
-  .searchbox-style {
-    text-align: left;
-    padding:40px 0 0 0;
+
+  // <header> tag
+  .site-header {
+    max-width: 450px;
+    float: left;
+    margin-bottom: 37px;
   }
   
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   
+
+    // the "Read post" link on the home, category and search pages
+  a.read-post-link {
+    @include read-post-link($master-border-radius);
+  }
   // <nav>
   .main-navigation {
     width: auto;
@@ -112,10 +109,7 @@
   }
 
   
-  /*
-   * Hide 'mobile first' menu & search
-   * boxes on tablets
-   */
+  // Hide 'mobile first' menu & search boxes on tablets
   #menu, #search {
     @include hide-element;
   }
@@ -124,8 +118,6 @@
 	  float:left;
   }
   
-
-
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
@@ -136,6 +128,7 @@
   }
 
   // Search box-related styles start
+  
   // the div that contains the search box
   #searchbox {
     display: block;
@@ -193,15 +186,6 @@
     line-height: 1;
     @include fonts($helv);
   }
-
-
-
-
-  /*
-   * =================
-   * Header styles end
-   * =================
-   */
 
 
 

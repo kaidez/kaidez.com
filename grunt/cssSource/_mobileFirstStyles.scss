@@ -1,5 +1,5 @@
 /*
- * ============================
+ * ============================================================================
  * 'Mobile First' styles start:
  *
  * These are styles which should appear on mobile devices only. They are 
@@ -9,11 +9,7 @@
  * want this so we've taken care of this by creating '_oldIE.scss' which
  * contains CSS that works in IE 8...kaidez.com doesn't care about IE7 and
  * older.
- * ============================
- */
-
-/*
- ==============================================================
+ * ============================================================================
  */
 
 
@@ -31,11 +27,6 @@
   font-size: 1.3rem;
 }
 
- // <header> tag
-.site-header {
-  width: auto;
-}
-
 // outer wrapper for the <header> which wraps the link, nav & search elements
 .outerWrapperNavHeader {
   width: 100%;
@@ -44,6 +35,11 @@
 // hide the <h2> tag in <header> on page load
 .site-description {
   @include hide-element;
+}
+
+ // <header> tag
+.site-header {
+  width: auto;
 }
 
 /*

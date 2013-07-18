@@ -23,7 +23,6 @@
   }
   
   // apply the Google font to all <header> tags
-  // MOVE OVER TO "_baseIE8Desktop.scss"?
   .wf-active h1,
   .js .wf-active h2,
   .wf-active h3,
@@ -55,11 +54,9 @@
    * ===================
    */
 
-  // outer wrapper for the <header> which wraps the link, nav & search elements
-  .outerWrapperNavHeader {
-    border-bottom: 3px solid $base-link-color;
-    width: auto;
-    min-height: 130px;
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link;
   }
 
   // the inner wrapper for the <header>
@@ -67,19 +64,21 @@
     @include inner-wrapper-nav-header;
   }
 
-  // Logo link...provides a large enough space for a click area
-  .homepage-link {
-    @include homepage-link;
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outerWrapperNavHeader {
+    border-bottom: 3px solid $base-link-color;
+    width: auto;
+    min-height: 130px;
+  }
+
+  // searchbox
+  .searchbox-style {
+    text-align: left;
   }
 
   // <header> tag
   .site-header {
     @include site-header;
-  }
-
-  // wrap header elements 
-  .top-level-header-wrapper {
-    @include top-level-header-wrapper
   }
 
   // <h2> tag...the "closing tags...wrapping functions" text
@@ -91,10 +90,10 @@
     width: 270px;
     line-height: 2.5;
   }
-    
-  // searchbox
-  .searchbox-style {
-    text-align: left;
+
+  // wrap header elements 
+  .top-level-header-wrapper {
+    @include top-level-header-wrapper
   }
 
   /*

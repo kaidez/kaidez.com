@@ -31,14 +31,9 @@
    * ===================
    */
   
-  // outer wrapper for the <header> which wraps the link, nav & search elements
-  .outerWrapperNavHeader {
-    border-bottom: 3px solid $base-link-color;
-  }
-
-  // the inner wrapper for the <header>
-  .inner-wrapper-nav-header {
-    padding: 8px 15px 15px 15px;
+  // Shared class for nav and searchbox elements
+  .header-element-margin {
+    @include header-element-margin-tablet  
   }
 
   // Logo link...provides a large enough space for a click area
@@ -46,9 +41,19 @@
     @include homepage-link 
   }
 
-  // <header> tag
-  .site-header {
-    margin-bottom: 37px;
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    padding: 8px 15px 15px 15px;
+  }
+
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outerWrapperNavHeader {
+    border-bottom: 3px solid $base-link-color;
+  }
+
+  // searchbox
+  .searchbox-style {
+    padding: 19px 0 0 0;
   }
 
   // <h2> tag...the 'closing tags...wrapping functions text'
@@ -56,19 +61,14 @@
     @include hide-element;
   }
 
+  // <header> tag
+  .site-header {
+    margin-bottom: 37px;
+  }
+
   .site-title {
     margin: 0 auto;
     float: none;
-  }
-    
-  // searchbox
-  .searchbox-style {
-    padding: 19px 0 0 0;
-  }
-  
-  // Shared class for nav and searchbox elements
-  .header-element-margin {
-    @include header-element-margin-tablet  
   }
 
   /*

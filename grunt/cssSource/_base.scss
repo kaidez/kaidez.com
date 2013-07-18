@@ -15,18 +15,10 @@
  * =============
  */
 
-
-
-
-
-// START COLOR VARIABLES
-
-
-
 /*
- * PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea color
- * palette at http://www.colourlovers.com/palette/2892492/azure_sea. Changing 
- * these colors will affect other parts of the site, as noted below.
+ * START PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea 
+ * color palette at http://www.colourlovers.com/palette/2892492/azure_sea.
+ * Changing these colors will affect other parts of the site, as noted below.
  */
 
 // Site background color
@@ -60,9 +52,7 @@ $footer-color: #0C5E7E;
  */
 $darken-the-footer-color: darken($footer-color, 25);
 
-
-
-// END COLOR VARIABLES
+// End color variables
 
 
 
@@ -134,20 +124,16 @@ $mobile-retina:
  * =============
  */
 
-/*
- * Loads whatever font the '$font' variable is set
- * to based on the font variables list above. 
- */
-
 // homepage logo link hit area..LARGE. Do one for the small versions
 @mixin homepage-link {
   width: 209px;
   height: 65px;
 }
 
-// applies a font
+// applies a font and makes visible on load
 @mixin fonts($font) {
   font-family: $font;
+  visibility: visible;
 }
 
 // Centers whatever is applied to it
@@ -169,11 +155,10 @@ $mobile-retina:
 }
  
 /* 
- * When possible, A better way accessibilty-wise to
- * hidepage elements than display:none or negative
- * text indents.
+ * When possible, A better way accessibilty-wise to hidepage elements than
+ * display:none or negative text indents.
  *
- * Yahoo! Accessibilty Blog:
+ * Read more over at Yahoo! Accessibilty Blog:
  * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
  */
 @mixin hide-element {

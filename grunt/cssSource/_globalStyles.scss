@@ -75,6 +75,7 @@ html, body {
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6, {
   font-family: $srf;
+  visibility: hidden;
 }
 
 // Apply Google 'Roboto' font to all <header> tags after page load.
@@ -86,6 +87,7 @@ html, body {
 .wf-active h6 {
   @include fonts($robo);
   font-size: 1.0rem;
+  visibility: visible;
 }
 
 // Logo link...provides a large enough space for a click area
@@ -95,9 +97,9 @@ html, body {
   height: 44px;
 }
 
-// <header> tag
-.site-header {
-  text-align: left;
+// Hide menu heading on mobile phones
+#menu-heading {
+  @include hide-element;
 }
 
 // outer wrapper for the <header> which wraps the link, nav & search elements
@@ -105,9 +107,9 @@ html, body {
   background-color: $header-color;
 }
 
-// Hide menu heading on mobile phones
-#menu-heading {
-  @include hide-element;
+// <header> tag
+.site-header {
+  text-align: left;
 }
 
 /*
@@ -360,6 +362,7 @@ a:hover {
 .wf-loading .search-result-font,
 .wf-inactive .search-result-font {
   font-family: $srf;
+  visibility: hidden;
 }
 
 // Apply the Google font to all search result links after page load
