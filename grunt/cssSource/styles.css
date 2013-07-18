@@ -1099,11 +1099,11 @@ a:hover {
   box-shadow: 1px 1px 2px #e3e3e3; }
 
 .tipue_search_content_title {
-  font: 300 19px/1.5 "open sans", serif;
+  font: 27px "Roboto Condensed";
   margin-top: 31px; }
 
 .tipue_search_content_title a {
-  color: #36c;
+  color: #2d7895;
   text-decoration: none; }
 
 .tipue_search_content_title a:hover {
@@ -1117,8 +1117,6 @@ a:hover {
   font-family: "Roboto Condensed"; }
 
 #tipue_search_content {
-  clear: left;
-  max-width: 650px;
   padding: 25px 0 13px 0;
   margin: 0; }
 
@@ -1211,6 +1209,9 @@ a:hover {
  ==============================================================
  */
 a.read-post-link {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   color: #fff;
   display: block;
   padding: 2px;
@@ -1318,7 +1319,7 @@ a.read-post-link {
 .tipue_search_content_text {
   color: #111;
   padding: 13px 0;
-  line-height: 1.7; }
+  line-height: 36px; }
 
 /*
  =============================
@@ -1659,6 +1660,9 @@ a.pagination-link {
  */
 @media only screen and (min-width: 321px) and (max-width: 568px) {
   a.read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     color: #fff;
     display: block;
     padding: 2px;
@@ -2048,6 +2052,9 @@ a.pagination-link {
     font-size: 1.1rem; }
 
   a.read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     color: #fff;
     display: block;
     padding: 2px;
@@ -2237,6 +2244,9 @@ a.pagination-link {
     font-size: 1.7rem; }
 
   a.read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     color: #fff;
     display: block;
     padding: 2px;
@@ -2441,6 +2451,9 @@ a.pagination-link {
     clear: none; }
 
   a.read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     color: #fff;
     display: block;
     padding: 2px;
