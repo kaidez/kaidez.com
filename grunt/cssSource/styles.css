@@ -1078,21 +1078,26 @@ a:hover {
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  font-size: 12px; }
 
 #tipue_search_foot_boxes li.current {
   background-color: #67cddc;
+  color: #fff;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  font-size: 12px; }
 
 .current-page {
   background-color: #67cddc;
+  color: #fff;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  font-size: 12px; }
 
 #tipue_search_foot_boxes li a:hover {
   box-shadow: 1px 1px 2px #e3e3e3; }
@@ -1421,7 +1426,8 @@ a.pagination-link {
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  font-size: 12px; }
 
 /*
  ===============================
@@ -1871,7 +1877,8 @@ a.pagination-link {
     padding: 7px 10px 8px;
     margin-right: 7px;
     text-decoration: none;
-    text-align: center; }
+    text-align: center;
+    font-size: 12px; }
 
   /*
    ===============================
