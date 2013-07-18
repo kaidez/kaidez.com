@@ -327,11 +327,11 @@ a:hover {
 }
 
 .tipue_search_content_title {
-  font: 300 19px/1.5 'open sans', $srf;
+  font: 27px $robo;
   margin-top: 31px;
 }
 .tipue_search_content_title a {
-  color: #36c;
+  color: darken($post-link-color, 4);
   text-decoration: none;
 }
 
@@ -351,8 +351,6 @@ a:hover {
 }
 
 #tipue_search_content {
-  clear: left;
-  max-width: 650px;
   padding: 25px 0 13px 0;
   margin: 0;
 }

@@ -391,7 +391,7 @@ $mobile-retina:
   float: right;
 }
 
-@mixin read-post-link($padding: blank, $border-radius: blank) {
+@mixin read-post-link($border-radius: blank) {
   @if $border-radius != blank {
     -webkit-border-radius: $border-radius;
     -moz-border-radius: $border-radius;
