@@ -823,12 +823,12 @@ table {
 
 /* Literal.Number.Integer.Long */
 /*
- * ====================
+ * ============================================================================
  * Global styles start:
  *
  * These are styles which should appear on all devices, regardless of screen 
  * dimension or computer resolution.
- * ====================
+ * ============================================================================
  */
 /*
  ==============================================================
@@ -839,65 +839,6 @@ body {
 
 html, body {
   height: 100%; }
-
-/*
- * ===================
- * Header styles start
- * ===================
- */
-.outerWrapperNavHeader {
-  background-color: #67cddc; }
-
-.homepage-link {
-  display: block;
-  width: 164px;
-  height: 44px; }
-
-.site-header {
-  text-align: left; }
-
-/*
- * =================
- * Header styles end
- * =================
- */
-#menu-heading {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
-
-.containing-element {
-  max-width: 100%; }
-
-.post-snippet {
-  border-bottom: 1px solid #01070a;
-  margin-bottom: 30px;
-  padding-bottom: 30px; }
-
-.page-content {
-  position: relative;
-  height: auto;
-  min-height: 100%;
-  padding: 10px;
-  width: auto;
-  text-align: left;
-  line-height: 1.7; }
-
-.wf-loading h1, .wf-inactive h1,
-.wf-loading h2, .wf-inactive h2,
-.wf-loading h3, .wf-inactive h3,
-.wf-loading h4, .wf-inactive h4,
-.wf-loading h5, .wf-inactive h5,
-.wf-loading h6, .wf-inactive h6 {
-  font-family: serif; }
-
-.wf-active h1,
-.wf-active h2,
-.wf-active h3,
-.wf-active h4,
-.wf-active h5,
-.wf-active h6 {
-  font-family: "Roboto Condensed";
-  font-size: 1.0rem; }
 
 /*
  * Clearfix: contain floats (borrowed from HTML5 Boilerplate)
@@ -919,6 +860,65 @@ html, body {
 
 .clearfix:after {
   clear: both; }
+
+/*
+ * ===================
+ * Header styles start
+ * ===================
+ */
+.wf-loading h1, .wf-inactive h1,
+.wf-loading h2, .wf-inactive h2,
+.wf-loading h3, .wf-inactive h3,
+.wf-loading h4, .wf-inactive h4,
+.wf-loading h5, .wf-inactive h5,
+.wf-loading h6, .wf-inactive h6 {
+  font-family: serif; }
+
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6 {
+  font-family: "Roboto Condensed";
+  font-size: 1.0rem; }
+
+.homepage-link {
+  display: block;
+  width: 164px;
+  height: 44px; }
+
+.site-header {
+  text-align: left; }
+
+.outerWrapperNavHeader {
+  background-color: #67cddc; }
+
+#menu-heading {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
+
+/*
+ * =================
+ * Header styles end
+ * =================
+ */
+.containing-element {
+  max-width: 100%; }
+
+.post-snippet {
+  border-bottom: 1px solid #01070a;
+  margin-bottom: 30px;
+  padding-bottom: 30px; }
+
+.page-content {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  padding: 10px;
+  width: auto;
+  text-align: left;
+  line-height: 1.7; }
 
 /*
  * =======================
@@ -1224,14 +1224,14 @@ a.read-post-link {
  * Header styles start
  * ===================
  */
-.outerWrapperNavHeader {
-  width: 100%; }
-
 .wf-active h1 {
   font-size: 1.3rem; }
 
 .site-header {
   width: auto; }
+
+.outerWrapperNavHeader {
+  width: 100%; }
 
 .site-description {
   position: absolute;
@@ -1261,17 +1261,10 @@ a.read-post-link {
  =====================
  */
 /*
- ========================
- Single post styles start
- ========================
+ * ========================
+ * Single post styles start
+ * ========================
  */
-/*
- * apply the Google font to all <header> tags,
- * except the Mobile First post tag
- */
-.wf-active h1 {
-  font-size: 1.3rem; }
-
 .wf-active h1.post-title {
   font-size: 24px;
   margin: 0;
