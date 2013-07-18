@@ -13,9 +13,9 @@
  * =============
  */
 /*
- * PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea color
- * palette at http://www.colourlovers.com/palette/2892492/azure_sea. Changing 
- * these colors will affect other parts of the site, as noted below.
+ * START PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea 
+ * color palette at http://www.colourlovers.com/palette/2892492/azure_sea.
+ * Changing these colors will affect other parts of the site, as noted below.
  */
 /*
  * Base color for nav links. Affects the font color for desktops/laptops,
@@ -53,16 +53,11 @@
  * Mix-ins start
  * =============
  */
-/*
- * Loads whatever font the '$font' variable is set
- * to based on the font variables list above. 
- */
 /* 
- * When possible, A better way accessibilty-wise to
- * hidepage elements than display:none or negative
- * text indents.
+ * When possible, A better way accessibilty-wise to hidepage elements than
+ * display:none or negative text indents.
  *
- * Yahoo! Accessibilty Blog:
+ * Read more over at Yahoo! Accessibilty Blog:
  * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
  */
 /*
@@ -901,15 +896,15 @@ html, body {
   width: 164px;
   height: 44px; }
 
-.site-header {
-  text-align: left; }
+#menu-heading {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); }
 
 .outerWrapperNavHeader {
   background-color: #67cddc; }
 
-#menu-heading {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); }
+.site-header {
+  text-align: left; }
 
 /*
  * ===========================================================================
@@ -1231,15 +1226,15 @@ a:hover {
 .wf-active h1 {
   font-size: 1.3rem; }
 
-.site-header {
-  width: auto; }
-
 .outerWrapperNavHeader {
   width: 100%; }
 
 .site-description {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
+
+.site-header {
+  width: auto; }
 
 /*
  * =================
@@ -2082,22 +2077,25 @@ a.pagination-link {
     visibility: visible;
     font-size: 1.1rem; }
 
+  .header-element-margin {
+    margin: 0; }
+
   .homepage-link {
     width: 209px;
     height: 65px; }
 
-  .site-header {
-    max-width: 450px;
-    float: left;
-    margin-bottom: 37px; }
+  .inner-wrapper-nav-header {
+    padding: 21px; }
 
   .outerWrapperNavHeader {
     border-bottom: 3px solid #262841;
     width: 100%;
     height: 140px; }
 
-  .inner-wrapper-nav-header {
-    padding: 21px; }
+  .site-header {
+    max-width: 450px;
+    float: left;
+    margin-bottom: 37px; }
 
   .site-description {
     display: block;
@@ -2106,17 +2104,14 @@ a.pagination-link {
     width: 270px;
     clear: both; }
 
-  .header-element-margin {
-    margin: 0; }
-
   .searchbox-style {
     text-align: left;
     padding: 40px 0 0 0; }
 
   /*
-   =================
-   Header styles end
-   =================
+   * =================
+   * Header styles end
+   * =================
    */
   .main-navigation {
     width: auto;
@@ -2212,11 +2207,6 @@ a.pagination-link {
     visibility: visible; }
 
   /*
-   * =================
-   * Header styles end
-   * =================
-   */
-  /*
    * ====================
    * Content styles start
    * ====================
@@ -2278,32 +2268,32 @@ a.pagination-link {
    * Header styles start
    * ===================
    */
-  .outerWrapperNavHeader {
-    border-bottom: 3px solid #262841; }
-
-  .inner-wrapper-nav-header {
-    padding: 8px 15px 15px 15px; }
+  .header-element-margin {
+    margin: 0; }
 
   .homepage-link {
     width: 209px;
     height: 65px; }
 
-  .site-header {
-    margin-bottom: 37px; }
+  .inner-wrapper-nav-header {
+    padding: 8px 15px 15px 15px; }
+
+  .outerWrapperNavHeader {
+    border-bottom: 3px solid #262841; }
+
+  .searchbox-style {
+    padding: 19px 0 0 0; }
 
   .site-description {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
 
+  .site-header {
+    margin-bottom: 37px; }
+
   .site-title {
     margin: 0 auto;
     float: none; }
-
-  .searchbox-style {
-    padding: 19px 0 0 0; }
-
-  .header-element-margin {
-    margin: 0; }
 
   /*
    * =================
