@@ -146,7 +146,7 @@
   .wf-active .site-navigation-list-link a:hover { 
     @include link-styles(18px, 22px, 5px, $base-link-color); // margin-right, font-size, padding, color
     background-color: transparent;
-    text-shadow: 1px 1px 0 lighten($header-color, 20);
+    text-shadow: 1px 1px 0 lighten($header-color, 15);
   }
 
   /*
@@ -258,10 +258,7 @@
    Content styles end
    ==================
    */
-  
-  .post-snipper-header-link {
-    // @include makeTextShadow($site-background-color);
-  }
+
 
 
 
