@@ -882,7 +882,8 @@ html, body {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6 {
-  font-family: serif; }
+  font-family: serif;
+  visibility: hidden; }
 
 .wf-active h1,
 .wf-active h2,
@@ -891,7 +892,9 @@ html, body {
 .wf-active h5,
 .wf-active h6 {
   font-family: "Roboto Condensed";
-  font-size: 1.0rem; }
+  visibility: visible;
+  font-size: 1.0rem;
+  visibility: visible; }
 
 .homepage-link {
   display: block;
@@ -947,6 +950,7 @@ html, body {
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited {
   font-family: "Roboto Condensed";
+  visibility: visible;
   margin: 0px auto;
   text-align: center;
   background-color: #0c5e7e;
@@ -1120,10 +1124,12 @@ a:hover {
 
 .wf-loading .search-result-font,
 .wf-inactive .search-result-font {
-  font-family: serif; }
+  font-family: serif;
+  visibility: hidden; }
 
 .wf-active .search-result-font {
-  font-family: "Roboto Condensed"; }
+  font-family: "Roboto Condensed";
+  visibility: visible; }
 
 #tipue_search_content {
   padding: 25px 0 13px 0;
@@ -1359,12 +1365,14 @@ Content styles end
 .wf-inactive .category-header {
   font-size: 1.5rem;
   margin-top: 0;
-  font-family: serif; }
+  font-family: serif;
+  visibility: visible; }
 
 .wf-active .category-header {
   font-size: 1.5rem;
   margin-top: 0;
-  font-family: "Roboto Condensed"; }
+  font-family: "Roboto Condensed";
+  visibility: visible; }
 
 .category-description-page {
   padding: 12px;
@@ -1802,12 +1810,14 @@ a.pagination-link {
   .wf-inactive .category-header {
     font-size: 1.5rem;
     margin-top: 0;
-    font-family: serif; }
+    font-family: serif;
+    visibility: visible; }
 
   .wf-active .category-header {
     font-size: 1.5rem;
     margin-top: 0;
-    font-family: "Roboto Condensed"; }
+    font-family: "Roboto Condensed";
+    visibility: visible; }
 
   .category-description-page {
     padding: 12px;
@@ -1911,6 +1921,7 @@ a.pagination-link {
   .lt-ie9 .wf-active h5,
   .lt-ie9 .wf-active h6 {
     font-family: "Roboto Condensed";
+    visibility: visible;
     font-size: 1.0rem; }
   .lt-ie9 .outerWrapperNavHeader {
     width: auto;
@@ -1977,6 +1988,7 @@ a.pagination-link {
   .lt-ie9 .wf-active .site-navigation-list-link a:visited,
   .lt-ie9 .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
+    visibility: visible;
     border: 0;
     width: 90px;
     height: 17px;
@@ -2040,7 +2052,8 @@ a.pagination-link {
    * applied to handhelds will slow down their page load.
    */
   body {
-    font-family: "Lato"; }
+    font-family: "Lato";
+    visibility: visible; }
 
   a.read-post-link {
     -webkit-border-radius: 10px;
@@ -2066,6 +2079,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
+    visibility: visible;
     font-size: 1.1rem; }
 
   .homepage-link {
@@ -2138,6 +2152,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
+    visibility: visible;
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -2193,7 +2208,8 @@ a.pagination-link {
   .social-network-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato"; }
+    font-family: "Lato";
+    visibility: visible; }
 
   /*
    * =================
@@ -2232,7 +2248,8 @@ a.pagination-link {
    * will slow down their page load.
    */
   body {
-    font-family: "Lato"; }
+    font-family: "Lato";
+    visibility: visible; }
 
   .wf-active h1,
   .wf-active h2,
@@ -2241,6 +2258,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
+    visibility: visible;
     font-size: 1.7rem; }
 
   a.read-post-link {
@@ -2327,6 +2345,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
+    visibility: visible;
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -2382,7 +2401,8 @@ a.pagination-link {
   .social-network-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato"; }
+    font-family: "Lato";
+    visibility: visible; }
 
   /*
    * =================
@@ -2428,7 +2448,8 @@ a.pagination-link {
  */
 @media only screen and (min-width: 1024px) {
   body {
-    font-family: "Lato"; }
+    font-family: "Lato";
+    visibility: visible; }
 
   #nav-search {
     float: right; }
@@ -2440,6 +2461,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
+    visibility: visible;
     font-size: 1.7rem; }
 
   .clearfix:before,
@@ -2535,6 +2557,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
+    visibility: visible;
     margin-right: 18px;
     font-size: 22px;
     padding: 5px;
@@ -2603,7 +2626,8 @@ a.pagination-link {
   .social-network-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato"; }
+    font-family: "Lato";
+    visibility: visible; }
 
   /*
    ====================
