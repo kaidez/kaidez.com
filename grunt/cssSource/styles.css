@@ -1095,7 +1095,6 @@ a:hover {
   text-align: center; }
 
 #tipue_search_foot_boxes li a:hover {
-  border: 1px solid #c3c3c3;
   box-shadow: 1px 1px 2px #e3e3e3; }
 
 .tipue_search_content_title {
@@ -1138,7 +1137,7 @@ a:hover {
   color: #111; }
 
 #tipue_search_results_count {
-  font: 300 14px/1.5 serif;
+  font: italic 25px "Roboto Condensed";
   color: #111; }
 
 /*
