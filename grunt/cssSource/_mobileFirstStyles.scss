@@ -27,12 +27,7 @@
  * ===================
  */
 
-// outer wrapper for the <header> which wraps the link, nav & search elements
-.outerWrapperNavHeader {
-  width: 100%;
-}
-
-// may be useless...check
+// apply the Google font to all <header> tags, except the Mobile First post tag
 .wf-active h1 {
   font-size: 1.3rem;
 }
@@ -40,6 +35,11 @@
  // <header> tag
 .site-header {
   width: auto;
+}
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+.outerWrapperNavHeader {
+  width: 100%;
 }
 
 // hide the <h2> tag in the <header> on page load
@@ -82,19 +82,12 @@
 
 
 /*
- ========================
- Single post styles start
- ========================
+ * ========================
+ * Single post styles start
+ * ========================
  */
 
-/*
- * apply the Google font to all <header> tags,
- * except the Mobile First post tag
- */
-.wf-active h1 {
-  // font: $helv; // may go
-  font-size: 1.3rem;
-}
+
 
 
 // Styles for post <h1> tag

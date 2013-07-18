@@ -1,10 +1,10 @@
 /*
- * ====================
+ * ============================================================================
  * Global styles start:
  *
  * These are styles which should appear on all devices, regardless of screen 
  * dimension or computer resolution.
- * ====================
+ * ============================================================================
  */
 
 /*
@@ -19,80 +19,6 @@ body {
 
 html, body {
   height: 100%;
-}
-
-/*
- * ===================
- * Header styles start
- * ===================
- */
-
-// outer wrapper for the <header> which wraps the link, nav & search elements
-.outerWrapperNavHeader {
-  background-color: $header-color;
-}
-
-// Logo link...provides a large enough space for a click area
-.homepage-link {
-  display: block;
-  width: 164px;
-  height: 44px;
-}
-
-// <header> tag
-.site-header {
-  text-align: left;
-}
-
-/*
- * =================
- * Header styles end
- * =================
- */
-
-// Hide menu heading on mobile phones
-#menu-heading {
-  @include hide-element;
-}
-
-.containing-element {
-  max-width: 100%;
-}
-// Post snippet that displays on both the home page and search results
-.post-snippet {
-  @include bottomBorder($darken-the-footer-color);
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-}
-
-// All unique page content...appears inside the page's single <main> element
-.page-content {
-  @include full-height;
-  padding: 10px;
-  width: auto;
-  text-align: left;
-  line-height: 1.7;
-}
-
-// Hide the Google font on all <header> tags before page load
-.wf-loading h1, .wf-inactive h1,
-.wf-loading h2, .wf-inactive h2,
-.wf-loading h3, .wf-inactive h3,
-.wf-loading h4, .wf-inactive h4,
-.wf-loading h5, .wf-inactive h5,
-.wf-loading h6, .wf-inactive h6, {
-  font-family: $srf;
-}
-
-// Apply the Google font to all <header> tags after page load.
-.wf-active h1,
-.wf-active h2,
-.wf-active h3,
-.wf-active h4,
-.wf-active h5,
-.wf-active h6 {
-  @include fonts($robo);
-  font-size: 1.0rem;
 }
 
 /*
@@ -115,6 +41,82 @@ html, body {
 
 .clearfix:after {
   clear: both;
+}
+
+/*
+ * ===================
+ * Header styles start
+ * ===================
+ */
+
+// Hide the Google font on all <header> tags before page load
+.wf-loading h1, .wf-inactive h1,
+.wf-loading h2, .wf-inactive h2,
+.wf-loading h3, .wf-inactive h3,
+.wf-loading h4, .wf-inactive h4,
+.wf-loading h5, .wf-inactive h5,
+.wf-loading h6, .wf-inactive h6, {
+  font-family: $srf;
+}
+
+// Apply the Google font to all <header> tags after page load.
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6 {
+  @include fonts($robo);
+  font-size: 1.0rem;
+}
+
+// Logo link...provides a large enough space for a click area
+.homepage-link {
+  display: block;
+  width: 164px;
+  height: 44px;
+}
+
+// <header> tag
+.site-header {
+  text-align: left;
+}
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+.outerWrapperNavHeader {
+  background-color: $header-color;
+}
+
+
+
+// Hide menu heading on mobile phones
+#menu-heading {
+  @include hide-element;
+}
+
+/*
+ * =================
+ * Header styles end
+ * =================
+ */
+
+.containing-element {
+  max-width: 100%;
+}
+// Post snippet that displays on both the home page and search results
+.post-snippet {
+  @include bottomBorder($darken-the-footer-color);
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+// All unique page content...appears inside the page's single <main> element
+.page-content {
+  @include full-height;
+  padding: 10px;
+  width: auto;
+  text-align: left;
+  line-height: 1.7;
 }
 
 /*
