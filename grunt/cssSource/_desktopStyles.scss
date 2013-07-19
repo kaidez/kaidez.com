@@ -193,27 +193,27 @@
     border-radius: $master-border-radius;
   }
  
-#tipue_search_input:focus {
-  border-color: green;
-  background-color: #f3f3f3; 
-}
+  #tipue_search_input:focus {
+    border-color: green;
+    background-color: #f3f3f3; 
+  }
 
-#tipue_search_button {
-  width: 60px;
-  height: 33px;
-  margin-top: 1px;
-  border: 1px solid #dcdcdc;
-  border-radius: $master-border-radius;
-  background: #f1f1f1 url('../img/search.gif') no-repeat center;
-  outline: none;
-}
+  #tipue_search_button {
+    width: 60px;
+    height: 33px;
+    margin-top: 1px;
+    border: 1px solid #dcdcdc;
+    border-radius: $master-border-radius;
+    background: #f1f1f1 url('../img/search.gif') no-repeat center;
+    outline: none;
+  }
 
-#tipue_search_button:hover {
-  border: 1px solid #c3c3c3;
-  -moz-box-shadow: 1px 1px 2px #e3e3e3;
-  -webkit-box-shadow: 1px 1px 2px #e3e3e3;
-  box-shadow: 1px 1px 2px #e3e3e3;
-}
+  #tipue_search_button:hover {
+    border: 1px solid #c3c3c3;
+    -moz-box-shadow: 1px 1px 2px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+    box-shadow: 1px 1px 2px #e3e3e3;
+  }
 
   /*
    * ===========================================================================
