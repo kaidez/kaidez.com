@@ -13,43 +13,82 @@
 
 .lt-ie9 {
 
+ body {
+    @include fonts($helv);
+  }
+  
+  // apply the Google font to all <header> tags
   .wf-active h1,
-  .wf-active h2,
+  .js .wf-active h2,
   .wf-active h3,
   .wf-active h4,
   .wf-active h5,
   .wf-active h6 {
     @include fonts($robo);
-    font-size: 1.0rem;
+    font-size: 1.7rem;
   }
 
-/*
- * ===================
- * Header styles start
- * ===================
- */
-
-  // outer wrapper for the <header> which wraps the link, nav & search elements
-  .outerWrapperNavHeader {
-    width: auto;
-    padding: 21px;
-    border-bottom: 3px solid $base-link-color;
+  .clearfix:before,
+  .clearfix:after {
+    content: none;
+    display: block;
   }
 
-  // the inner wrapper for the <header>
-  .inner-wrapper-nav-header  {
-    @include inner-wrapper-nav-header;
+  .clearfix:after {
+    clear: none;
   }
+
+   
+
+
+
+
+  /*
+   * =========================================================================
+   * Header styles start
+   * =========================================================================
+   */
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
-    @include homepage-link(65px, 209px);
-  }  
+    @include homepage-link(209px, 65px);
+  }
+
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    @include inner-wrapper-nav-header;
+  }
+
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outer-wrapper-nav-header {
+    @include outer-wrapper-nav-header;
+    max-height: 130px;
+  }
+
+  /*
+   * =========================================================================
+   * Header styles end
+   * =========================================================================
+   */
+
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+  }
 
   // <header> tag
   .site-header {
-    max-width: 450px;
-    float: left;
+    @include site-header;
+  }
+
+  // <h2> tag...the "closing tags...wrapping functions" text
+  .site-description {
+    display: block;
+    position: static;
+    font-size: 14px;
+    margin: 0;
+    width: 270px;
+    line-height: 2.5;
   }
 
   // wrap header elements 
@@ -57,39 +96,25 @@
     @include top-level-header-wrapper
   }
 
-  .site-description {
-    display: block;
-    position: static;
-    font-size: 14px;
-    margin: 0;
-    width: 245px;
-  }
+  /*
+   * =========================================================================
+   * Header styles end
+   * =========================================================================
+   */
 
-  // searchbox
-  .searchbox-style {
-    text-align: left;
-  }
 
-  .site-title {
-    @include sprite-images('../img/snSprite.png', -125px -80px, 62px, 221px);
-    text-indent: -999px;
-    margin: 0;
-    float: left;
-  }
-  
-  // Shared class for nav and searchbox elements
-  .header-element-margin {
-    margin-left: 100px;
-    position: relative;
-    left:200px;  
-  }
 
-  #site-navigation-list {
-    @include show-menu;
-    @include master-center;
-    padding: 0;
-    width: 500px;
-    height: 17px;
+
+
+  /*
+   * =========================================================================
+   * Navigation styles start
+   * =========================================================================
+   */
+
+  // <nav> tag
+  .main-navigation {
+    @include main-navigation;
   }
 
   // Hide moble menu and search icons on all devices EXCEPT hand-helds
@@ -97,59 +122,197 @@
     @include hide-element;
   }
 
-  .main-navigation {
-    @include main-navigation;
+  .nav-search-style {
+    float: none;
   }
 
-  .site-navigation-list-link {
-    float: left;
-    display: inline;
-    padding: 6px;
-    margin-right: 12px;
+  #nav-search {
+    @include nav-search
   }
 
-
-  .wf-active .site-navigation-list-link a:link,
-  .wf-active .site-navigation-list-link a:visited,
-  .wf-active .site-navigation-list-link a:hover { 
-    @include fonts($helv);
-    border: 0;
-    width: 90px;
-    height: 17px;
-    color: #fff;
-    font-size: 14px;
-    float: left;
-    padding: 6px;
-    background-color: $footer-color;
-    display: inline;
+  // <ul> tag
+  #site-navigation-list {
+    @include show-menu;
+    padding: 0;
+    width: 150px;
+    background-color: transparent;
   }
 
+// Hide the Google font on all <nav> links before page load
+.site-navigation-list-link {
+  font-family: $srf;
+  visibility: hidden;
+  font-size: 20px;
+}
+
+// Apply the Google font to all <nav> links after page load
+.site-navigation-list-link a:link,
+.site-navigation-list-link a:visited { 
+  @include fonts($robo);
+  @include master-center;
+  background-color: none;
+  text-decoration: none;
+  visibility: visible;
+  font-size: 20px;
+  float: left;
+  padding: 9px 0;
+  display: block;
+  color: #FFF;
+}
+
+  /*
+   * =========================================================================
+   * Navigation styles end
+   * =========================================================================
+   */
+
+
+
+
+
+  /*
+   * ===========================================================================
+   * Search box-related styles start
+   * ===========================================================================
+   */
+
+  .form {
+    margin-top: 13px;
+  }
+
+  // Search box-related styles start
   #s {
     font-size: 1em;
   }
 
+  // Search box
   #searchbox {
     display: block;
-    float: left;
+  }
+
+  #tipue_search_input {
+    font: 13px/1.5 'open sans', sans-serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    transition : background-color 200ms ease-out; 
+    -webkit-transition : background-color 200ms ease-out; 
+    -moz-transition : background-color 200ms ease-out;
+    -o-transition : background-color 200ms ease-out;
+  }
+ 
+#tipue_search_input:focus {
+  border-color: green;
+  background-color: #f3f3f3; 
+}
+
+#tipue_search_button {
+  width: 60px;
+  height: 33px;
+  margin-top: 1px;
+  border: 1px solid #dcdcdc;
+  background: #f1f1f1 url('../img/search.gif') no-repeat center;
+  outline: none;
+}
+
+#tipue_search_button:hover {
+  border: 1px solid #c3c3c3;
+  -moz-box-shadow: 1px 1px 2px #e3e3e3;
+  -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+  box-shadow: 1px 1px 2px #e3e3e3;
+}
+
+  /*
+   * ===========================================================================
+   * Search box-related styles end
+   * ===========================================================================
+   */
+
+
+
+
+
+  /*
+   * ===========================================================================
+   * Page content styles start
+   * ===========================================================================
+   */
+
+  
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
+    @include master-center;
+    font-size: 40px;
+  }
+
+  #content h2 {
+    @include content-h2(27px);
   }
 
   .page-content {
-    width: $inner-content-width;
-    max-width: $inner-content-width;
+    @include content-width($inner-content-width);
     font-size: 18px;
     line-height: 36px;
     padding-top:21px;
-    margin:0 auto;
+  }
+  
+
+  // breadcrumbs
+  .breadcrumb-styles {
+    @include breadcrumb-styles(16px);
+    padding-top: 10px;
   }
 
-.breadcrumb-styles {
-  @include breadcrumb-styles(16px);
-  padding-top: 10px;
-}
 
+  // the "Read post" link on the home, category and search pages
+  a.read-post-link {
+    @include read-post-link;
+  }
+
+  /*
+   * ===========================================================================
+   * Page content styles end
+   * ===========================================================================
+   */
+
+
+
+
+
+  /*
+   * =================================
+   * Home page pagination styles start
+   * =================================
+   */
+
+  .control-section-width {
+    @include content-width($inner-content-width);
+  }
+
+  /*
+   * ===============================
+   * Home page pagination styles end
+   * ===============================
+   */
+
+  /*
+   * ===================
+   * Footer styles start
+   * ===================
+   */
+
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .innerWrapperNavFooter {
+    width: $inner-content-width;
+    margin: 0 auto 53px;
+  }
+  
   .footer-header {
-    @include makeTextShadow($footer-color);
-    border-bottom: 2px dotted darken($footer-color, 25);
+    @include footer-header;
   }
 
   .footer-sections {
@@ -162,22 +325,23 @@
   }
 
   .copyrightStyle {
-    clear: both;  
+    clear: both;
   }
 
-  .innerWrapperNavFooter {
-    width: $inner-content-width;
-    margin: 0 auto 53px;
+  /* Font styles for tablets & desktops. Google
+   * font doesn't load on mobile.
+   */
+  .share-post-link {
+    font-size:16px;
+    line-height: 1;
+    @include fonts($helv);
   }
 
-  .outerWrapperNavFooter {
-    background: $footer-color url('../img/footer-bg.png') no-repeat left;
-  }
-  
-  // the "Read post" link on the home, category and search pages
-  .read-post-link {
-    @include read-post-link;
-  }
+  /*
+   * ===================
+   * Footer styles ends
+   * ===================
+   */
 }
 /* oldIE styles end */
 

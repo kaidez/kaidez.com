@@ -228,6 +228,66 @@ $mobile-retina:
   font-size: ($font-size);
 }
 
+@mixin read-post-link($border-radius: blank) {
+  @if $border-radius != blank {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+  }
+  color: #fff;
+  display: block;
+  padding:2px;
+  background-color: $post-link-color;
+  max-width: 120px;
+  float: none;
+  text-align:center;
+}
+
+// the inner wrapper for the <header>
+@mixin inner-wrapper-nav-header {
+  width: $inner-content-width;
+  margin: 0 auto;
+}
+
+// style <header> tag but it's only in one place right now and can go (maybe)
+@mixin site-header {
+  width:209px;
+  float: left;
+  margin-left: 10px;
+}
+
+// wrap header elements 
+@mixin top-level-header-wrapper {
+  padding-top: 12px;
+}
+
+// <nav> tag
+@mixin main-navigation {
+  border: none;
+  width: 555px;
+}
+
+// style wrapper for nav & search but it's only in one place right now and can go (maybe)
+@mixin nav-search {
+  float: right;
+}
+
+// link styles
+@mixin link-styles($margin-right, $font-size, $padding, $base-color) {
+  @include fonts($helv);
+  margin-right: $margin-right; 
+  font-size: $font-size;
+  padding: $padding;
+  color: $base-color;
+  float: left;
+  border: 0;
+}
+
+// Shared class for nav and searchbox elements on tablets
+@mixin header-element-margin-tablet {
+  margin: 0;  
+}
+
 /*
  * ============================================================================
  * Pagination mixins
@@ -326,81 +386,13 @@ $mobile-retina:
 
 
 
-
-
-/*
- * ==========================================================================
- * Desktop/oldIE shared code starts:
- * 
- * Both the "_desktopStyles.scss" and _oldIE.scss share many CSS code blocks,
- * so these blocks have been condensed into shared mixins.
- * ==========================================================================
- */
-
-
-
-// <nav> tag
-@mixin main-navigation {
-  border: none;
-  width: 555px;
+// outer wrapper for the <header> which wraps the link, nav & search elements
+@mixin outer-wrapper-nav-header {
+  border-bottom: 3px solid $base-link-color;
+  width: auto;
 }
 
-// the inner wrapper for the <header>
-@mixin inner-wrapper-nav-header {
-  width: $inner-content-width;
-  margin: 0 auto;
+// Logo link...provides a large enough space for a click area
+.homepage-link {
+  @include homepage-link(65px, 209px);
 }
-
-// link styles
-@mixin link-styles($margin-right, $font-size, $padding, $base-color) {
-  @include fonts($helv);
-  margin-right: $margin-right; 
-  font-size: $font-size;
-  padding: $padding;
-  color: $base-color;
-  float: left;
-  border: 0;
-}
-
-// style <header> tag but it's only in one place right now and can go (maybe)
-@mixin site-header {
-  width:209px;
-  float: left;
-  margin-left: 10px;
-}
-
-// wrap header elements 
-@mixin top-level-header-wrapper {
-  padding-top: 12px;
-}
-
-// Shared class for nav and searchbox elements on tablets
-@mixin header-element-margin-tablet {
-  margin: 0;  
-}
-
-// style wrapper for nav & search but it's only in one place right now and can go (maybe)
-@mixin nav-search {
-  float: right;
-}
-
-@mixin read-post-link($border-radius: blank) {
-  @if $border-radius != blank {
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
-    border-radius: $border-radius;
-  }
-  color: #fff;
-  display: block;
-  padding:2px;
-  background-color: $post-link-color;
-  max-width: 120px;
-  float: none;
-  text-align:center;
-}
-
-/*
- * ==============================
- * Desktop/oldIE shared code ends
- * ==============================
- */
