@@ -204,6 +204,13 @@ a:hover {
   line-height: 1.7;
 }
 
+
+// Related posts
+#related-posts .related-posts-header {
+  @include related-posts-header(20px);
+  @include master-center;
+}
+
 // Related posts styles that appear on single post pages
 .related-posts-style {
   padding: 10px;

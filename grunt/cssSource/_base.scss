@@ -214,6 +214,10 @@ $mobile-retina:
   padding: 0;
 }
 
+@mixin related-posts-header($font-size) {
+  font-size: $font-size
+}
+
 // Applies border to post snippets on home page and search results.
 @mixin bottomBorder ($color) {
   border-bottom: 1px solid $color;

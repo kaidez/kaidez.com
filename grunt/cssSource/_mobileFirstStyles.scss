@@ -110,11 +110,6 @@ a.read-post-link {
   @include read-post-link($master-border-radius);
 }
 
-// Related post links
-.related-posts-header {
-  @include master-center;
-}
-
 .related-posts-link {
   line-height: 1.4;
   font-size: 14px;

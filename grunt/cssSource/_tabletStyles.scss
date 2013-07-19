@@ -225,6 +225,11 @@
     padding-top: 10px;
   }
 
+  // Related post links
+  .related-posts-header {
+    @include related-posts-header(17px);
+  }
+
   /*
    ==================
    Content styles end
