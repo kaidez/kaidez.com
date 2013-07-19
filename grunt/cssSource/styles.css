@@ -911,27 +911,10 @@ html, body {
  * Header styles end
  * ===========================================================================
  */
-.containing-element {
-  max-width: 100%; }
-
-.post-snippet {
-  border-bottom: 1px solid #01070a;
-  margin-bottom: 30px;
-  padding-bottom: 30px; }
-
-.page-content {
-  position: relative;
-  height: auto;
-  min-height: 100%;
-  padding: 10px;
-  width: auto;
-  text-align: left;
-  line-height: 1.7; }
-
 /*
- * =======================
+ * ===========================================================================
  * Navigation styles start
- * =======================
+ * ===========================================================================
  */
 .main-navigation {
   width: auto;
@@ -959,21 +942,33 @@ html, body {
   border-bottom: 1px solid #1f2467; }
 
 /*
- =====================
- Navigation styles end
- =====================
+ * ===========================================================================
+ * Navigation styles end
+ * ===========================================================================
  */
 /*
- ========================
- Single post styles start
- ========================
+ * ===========================================================================
+ * Page content styles start
+ * ===========================================================================
  */
-/*
- * all text links (except for post meta info)
- * have a blue color but no underline.
- */
-a:link,
-a:visited {
+.containing-element {
+  max-width: 100%; }
+
+.post-snippet {
+  border-bottom: 1px solid #01070a;
+  margin-bottom: 30px;
+  padding-bottom: 30px; }
+
+.page-content {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  padding: 10px;
+  width: auto;
+  text-align: left;
+  line-height: 1.7; }
+
+a:link, a:visited {
   color: #2d7895;
   text-decoration: none; }
 
@@ -1010,18 +1005,15 @@ a:hover {
   display: block;
   text-indent: -9999px; }
 
-.fb {
-  padding-right: 10px; }
-
 /*
- ======================
- Single post styles end
- ======================
+ * ===========================================================================
+ * Page content styles end
+ * ===========================================================================
  */
 /*
- ===============================
- Search box-related styles start
- ===============================
+ * ===============================
+ * Search box-related styles start
+ * ===============================
  */
 .no-js #site-navigation-list, .no-js #searchform {
   display: block;
@@ -1216,9 +1208,9 @@ a:hover {
  * ============================================================================
  */
 /*
- * ===================
+ * ============================================================================
  * Header styles start
- * ===================
+ * ============================================================================
  */
 .wf-active h1 {
   font-size: 1.3rem; }
@@ -1234,9 +1226,9 @@ a:hover {
   width: auto; }
 
 /*
- * =================
+ * ============================================================================
  * Header styles end
- * =================
+ * ============================================================================
  */
 a.read-post-link {
   -webkit-border-radius: 10px;
@@ -1251,22 +1243,23 @@ a.read-post-link {
   text-align: center; }
 
 /*
- * =======================
- * Navigation styles start
- * =======================
+ * ============================================================================
+ * Navigation styles start...these styles will also be applied to the 
+ * '_mobileLandscape' view.
+ * ============================================================================
  */
+.nav-search-style {
+  float: none; }
+
 #site-navigation-list {
   display: none;
   margin: 0;
   padding: 0; }
 
-.nav-search-style {
-  float: none; }
-
 /*
- =====================
- Navigation styles end
- =====================
+ * ============================================================================
+ * Navigation styles end
+ * ============================================================================
  */
 /*
  * ========================
@@ -1335,9 +1328,6 @@ a.read-post-link {
   max-width: 300px;
   margin: 0 auto;
   padding: 0 10px; }
-
-.containing-element {
-  width: auto; }
 
 .breadcrumb-styles {
   font-size: 14px;
@@ -1681,9 +1671,14 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   /*
-   * =================
+   * ==========================================================================
    * Header styles end
-   * =================
+   * ==========================================================================
+   */
+  /*
+   * ========================
+   * Single post styles start
+   * ========================
    */
   a.read-post-link {
     -webkit-border-radius: 10px;
@@ -1697,29 +1692,6 @@ a.pagination-link {
     float: none;
     text-align: center; }
 
-  /*
-   * =======================
-   * Navigation styles start
-   * =======================
-   */
-  #site-navigation-list {
-    display: none;
-    margin: 0;
-    padding: 0; }
-
-  .nav-search-style {
-    float: none; }
-
-  /*
-   =====================
-   Navigation styles end
-   =====================
-   */
-  /*
-   ========================
-   Single post styles start
-   ========================
-   */
   .wf-active h1.post-title {
     font-size: 24px;
     margin: 0;
@@ -1893,19 +1865,6 @@ a.pagination-link {
    * Header styles start
    * ===================
    */ }
-  .lt-ie9 .wf-loading h1,
-  .lt-ie9 .wf-inactive h1,
-  .lt-ie9 .wf-loading h2,
-  .lt-ie9 .wf-inactive h2,
-  .lt-ie9 .wf-loading h3,
-  .lt-ie9 .wf-inactive h3,
-  .lt-ie9 .wf-loading h4,
-  .lt-ie9 .wf-inactive h4,
-  .lt-ie9 .wf-loading h5,
-  .lt-ie9 .wf-inactive h5,
-  .lt-ie9 .wf-loading h6,
-  .lt-ie9 .wf-inactive h6 {
-    font-family: serif; }
   .lt-ie9 .wf-active h1,
   .lt-ie9 .wf-active h2,
   .lt-ie9 .wf-active h3,
@@ -1965,12 +1924,6 @@ a.pagination-link {
   .lt-ie9 .main-navigation {
     border: none;
     width: 555px; }
-  .lt-ie9 .wf-loading .site-navigation-list-link {
-    font-family: serif;
-    visibility: hidden;
-    text-decoration: none;
-    font-size: 14px;
-    float: left; }
   .lt-ie9 .site-navigation-list-link {
     float: left;
     display: inline;
@@ -2048,9 +2001,9 @@ a.pagination-link {
     visibility: visible; }
 
   /*
-   * ===================
+   * ==========================================================================
    * Header styles start
-   * ===================
+   * ==========================================================================
    */
   .wf-active h1,
   .wf-active h2,
@@ -2094,33 +2047,18 @@ a.pagination-link {
     margin-bottom: 37px; }
 
   /*
-   * =================
+   * ==========================================================================
    * Header styles end
-   * =================
+   * ==========================================================================
    */
-  a.read-post-link {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    color: #fff;
-    display: block;
-    padding: 2px;
-    background-color: #3285a5;
-    max-width: 120px;
-    float: none;
-    text-align: center; }
-
+  /*
+   * =========================================================================
+   * Navigation styles start
+   * =========================================================================
+   */
   .main-navigation {
     width: auto;
     border-top: none; }
-
-  #site-navigation-list {
-    display: block;
-    margin: 0;
-    padding: 0; }
-
-  .nav-search-style {
-    float: right; }
 
   .main-navigation-list {
     display: block;
@@ -2132,6 +2070,14 @@ a.pagination-link {
   #menu, #search {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
+
+  .nav-search-style {
+    float: right; }
+
+  #site-navigation-list {
+    display: block;
+    margin: 0;
+    padding: 0; }
 
   .site-navigation-list-link {
     float: left; }
@@ -2150,6 +2096,23 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px; }
+
+  /*
+   * =========================================================================
+   * Navigation styles end
+   * =========================================================================
+   */
+  a.read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    padding: 2px;
+    background-color: #3285a5;
+    max-width: 120px;
+    float: none;
+    text-align: center; }
 
   #searchbox {
     display: block; }
@@ -2208,11 +2171,6 @@ a.pagination-link {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 10px; }
-
-  .post-snipper-header-link {
-    color: #bababa;
-    text-shadow: 0px 2px 3px white;
-    font-size: 1.7rem; }
 
   .breadcrumb-styles {
     font-size: 16px;
@@ -2293,6 +2251,11 @@ a.pagination-link {
    * Header styles end
    * =================
    */
+  /*
+   * =========================================================================
+   * Navigation styles start
+   * =========================================================================
+   */
   .main-navigation {
     border-top: none;
     margin: 0 auto;
@@ -2305,9 +2268,6 @@ a.pagination-link {
     margin: 0px auto;
     text-align: center; }
 
-  .nav-search-style {
-    margin-top: 7px; }
-
   /*
    * Hide 'mobile first' menu & search
    * boxes on tablets
@@ -2316,13 +2276,16 @@ a.pagination-link {
     position: absolute;
     clip: rect(1px 1px 1px 1px); }
 
-  .site-navigation-list-link {
-    float: left; }
+  .nav-search-style {
+    margin-top: 7px; }
 
   #site-navigation-list {
     display: block;
     margin: 0;
     padding: 0; }
+
+  .site-navigation-list-link {
+    float: left; }
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
@@ -2339,6 +2302,11 @@ a.pagination-link {
     -moz-border-radius: 10px;
     border-radius: 10px; }
 
+  /*
+   * =========================================================================
+   * Navigation styles end
+   * =========================================================================
+   */
   #searchbox {
     display: block; }
 
@@ -2402,21 +2370,16 @@ a.pagination-link {
     margin: 0 auto;
     padding: 0 10px; }
 
-  .post-snipper-header-link {
-    color: #bababa;
-    text-shadow: 0px 2px 3px white;
-    font-size: 1.7rem; }
-
   .breadcrumb-styles {
     font-size: 16px;
     padding: 0px 0 54px;
     padding-top: 10px; }
 
   /*
-   ==================
-   Content styles end
-   ==================
-  */ }
+   * ==================
+   * Content styles end
+   * ==================
+   */ }
 /*
  * =====================
  * Desktop styles start:
@@ -2505,15 +2468,26 @@ a.pagination-link {
     padding-top: 12px; }
 
   /*
-   * =================
+   * =========================================================================
    * Header styles end
-   * =================
+   * =========================================================================
    */
   /*
-   * =======================
+   * =========================================================================
    * Navigation styles start
-   * =======================
+   * =========================================================================
    */
+  .main-navigation {
+    border: none;
+    width: 555px; }
+
+  #menu, #search {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); }
+
+  .nav-search-style {
+    float: none; }
+
   #site-navigation-list {
     display: block;
     min-height: 21px;
@@ -2521,20 +2495,6 @@ a.pagination-link {
     margin: 11px auto 0 auto;
     padding: 0;
     width: auto; }
-
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); }
-
-  .main-navigation {
-    border: none;
-    width: 555px; }
-
-  .wf-loading .site-navigation-list-link {
-    font-family: serif; }
-
-  .nav-search-style {
-    float: none; }
 
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
@@ -2551,9 +2511,9 @@ a.pagination-link {
     text-shadow: 1px 1px 0 #a5e1ea; }
 
   /*
-   * =====================
+   * =========================================================================
    * Navigation styles end
-   * =====================
+   * =========================================================================
    */
   .form {
     -webkit-border-radius: 10px;
@@ -2644,9 +2604,9 @@ a.pagination-link {
    ==================
    */
   /*
-   =================================
-   Home page pagination styles start
-   =================================
+   * =================================
+   * Home page pagination styles start
+   * =================================
   */
   .control-section-width {
     max-width: 1024px;
@@ -2654,14 +2614,14 @@ a.pagination-link {
     padding: 0 10px; }
 
   /*
-   ===============================
-   Home page pagination styles end
-   ===============================
+   * ===============================
+   * Home page pagination styles end
+   * ===============================
    */
   /*
-   ===================
-   Footer styles start
-   ===================
+   * ===================
+   * Footer styles start
+   * ===================
    */
   .innerWrapperNavFooter {
     width: 1024px;
