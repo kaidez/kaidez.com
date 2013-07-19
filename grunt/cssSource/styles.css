@@ -96,19 +96,10 @@
  * Functions end
  * =============
  */
-/*
- * ==========================================================================
- * Desktop/oldIE shared code starts:
- * 
- * Both the "_desktopStyles.scss" and _oldIE.scss share many CSS code blocks,
- * so these blocks have been condensed into shared mixins.
- * ==========================================================================
- */
-/*
- * ==============================
- * Desktop/oldIE shared code ends
- * ==============================
- */
+.homepage-link {
+  height: 65px;
+  width: 209px; }
+
 /* normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -898,7 +889,7 @@ html, body {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
-.outerWrapperNavHeader {
+.outer-wrapper-nav-header {
   background-color: #67cddc; }
 
 .site-header {
@@ -1225,7 +1216,7 @@ a:hover {
   height: 44px;
   width: 166px; }
 
-.outerWrapperNavHeader {
+.outer-wrapper-nav-header {
   width: 100%; }
 
 .site-description {
@@ -1651,143 +1642,6 @@ a.pagination-link {
    * Page content styles end
    * ===========================================================================
    */ }
-/*
- * ==========================================================================
- * oldIE styles start:
- *
- * The 'mobile first' styles load first because they're not inside of a 
- * '@media' call.  As a result, they are the styles that will render in IE8 
- * and lower, which we don't want: the desktop styles should load first.  
- * Therefore, 'oldIE.scss' is created to to hold styles that should render in 
- * these browsers and load after the "mobileLandscape" styles.
- * ==========================================================================
- */
-.lt-ie9 {
-  /*
-   * ===================
-   * Header styles start
-   * ===================
-   */ }
-  .lt-ie9 .wf-active h1,
-  .lt-ie9 .wf-active h2,
-  .lt-ie9 .wf-active h3,
-  .lt-ie9 .wf-active h4,
-  .lt-ie9 .wf-active h5,
-  .lt-ie9 .wf-active h6 {
-    font-family: "Roboto Condensed";
-    visibility: visible;
-    font-size: 1.0rem; }
-  .lt-ie9 .outerWrapperNavHeader {
-    width: auto;
-    padding: 21px;
-    border-bottom: 3px solid #262841; }
-  .lt-ie9 .inner-wrapper-nav-header {
-    width: 1024px;
-    margin: 0 auto; }
-  .lt-ie9 .homepage-link {
-    height: 65px;
-    width: 209px; }
-  .lt-ie9 .site-header {
-    max-width: 450px;
-    float: left; }
-  .lt-ie9 .top-level-header-wrapper {
-    padding-top: 12px; }
-  .lt-ie9 .site-description {
-    display: block;
-    position: static;
-    font-size: 14px;
-    margin: 0;
-    width: 245px; }
-  .lt-ie9 .searchbox-style {
-    text-align: left; }
-  .lt-ie9 .site-title {
-    background: url("../img/snSprite.png") no-repeat -125px -80px;
-    background-size: 350px 210px;
-    height: 62px;
-    width: 221px;
-    text-indent: -999px;
-    margin: 0;
-    float: left; }
-  .lt-ie9 .header-element-margin {
-    margin-left: 100px;
-    position: relative;
-    left: 200px; }
-  .lt-ie9 #site-navigation-list {
-    display: block;
-    min-height: 21px;
-    font-size: 12px;
-    margin: 0px auto;
-    text-align: center;
-    padding: 0;
-    width: 500px;
-    height: 17px; }
-  .lt-ie9 #menu, .lt-ie9 #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); }
-  .lt-ie9 .main-navigation {
-    border: none;
-    width: 555px; }
-  .lt-ie9 .site-navigation-list-link {
-    float: left;
-    display: inline;
-    padding: 6px;
-    margin-right: 12px; }
-  .lt-ie9 .wf-active .site-navigation-list-link a:link,
-  .lt-ie9 .wf-active .site-navigation-list-link a:visited,
-  .lt-ie9 .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
-    visibility: visible;
-    border: 0;
-    width: 90px;
-    height: 17px;
-    color: #fff;
-    font-size: 14px;
-    float: left;
-    padding: 6px;
-    background-color: #0c5e7e;
-    display: inline; }
-  .lt-ie9 #s {
-    font-size: 1em; }
-  .lt-ie9 #searchbox {
-    display: block;
-    float: left; }
-  .lt-ie9 .page-content {
-    width: 1024px;
-    max-width: 1024px;
-    font-size: 18px;
-    line-height: 36px;
-    padding-top: 21px;
-    margin: 0 auto; }
-  .lt-ie9 .breadcrumb-styles {
-    font-size: 16px;
-    padding: 0px 0 54px;
-    padding-top: 10px; }
-  .lt-ie9 .footer-header {
-    color: black;
-    text-shadow: 0px 2px 3px #107da8;
-    border-bottom: 2px dotted #01070a; }
-  .lt-ie9 .footer-sections {
-    width: 250px;
-    float: left; }
-  .lt-ie9 .midFooterSection {
-    margin: 0 137px; }
-  .lt-ie9 .copyrightStyle {
-    clear: both; }
-  .lt-ie9 .innerWrapperNavFooter {
-    width: 1024px;
-    margin: 0 auto 53px; }
-  .lt-ie9 .outerWrapperNavFooter {
-    background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
-  .lt-ie9 .read-post-link {
-    color: #fff;
-    display: block;
-    padding: 2px;
-    background-color: #3285a5;
-    max-width: 120px;
-    float: none;
-    text-align: center; }
-
-/* oldIE styles end */
 @media only screen and (min-width: 729px) and (max-width: 1023px) {
   /*
    * ==========================================================================
@@ -1822,13 +1676,13 @@ a.pagination-link {
     margin: 0; }
 
   .homepage-link {
-    height: 209px;
-    width: 65px; }
+    height: 65px;
+    width: 209px; }
 
   .inner-wrapper-nav-header {
     padding: 21px; }
 
-  .outerWrapperNavHeader {
+  .outer-wrapper-nav-header {
     border-bottom: 3px solid #262841;
     width: 100%;
     height: 140px; }
@@ -2050,7 +1904,7 @@ a.pagination-link {
   .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px; }
 
-  .outerWrapperNavHeader {
+  .outer-wrapper-nav-header {
     border-bottom: 3px solid #262841; }
 
   .searchbox-style {
@@ -2253,7 +2107,7 @@ a.pagination-link {
     width: 1024px;
     margin: 0 auto; }
 
-  .outerWrapperNavHeader {
+  .outer-wrapper-nav-header {
     border-bottom: 3px solid #262841;
     width: auto;
     min-height: 130px; }
