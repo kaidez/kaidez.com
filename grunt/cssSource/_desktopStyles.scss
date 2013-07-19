@@ -61,9 +61,8 @@
   }
 
   // outer wrapper for the <header> which wraps the link, nav & search elements
-  .outerWrapperNavHeader {
-    border-bottom: 3px solid $base-link-color;
-    width: auto;
+  .outer-wrapper-nav-header {
+    @include outer-wrapper-nav-header;
     min-height: 130px;
   }
 

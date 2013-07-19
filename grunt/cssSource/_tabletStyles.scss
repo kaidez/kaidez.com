@@ -40,7 +40,7 @@
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
-    @include homepage-link(209px, 65px);
+    @include homepage-link(65px, 209px);
   }
 
   // the inner wrapper for the <header>
@@ -49,7 +49,7 @@
   }
 
   // outer wrapper for the <header> which wraps the link, nav & search elements
-  .outerWrapperNavHeader {
+  .outer-wrapper-nav-header {
     border-bottom: 3px solid $base-link-color;
     width: 100%;
     height: 140px;
