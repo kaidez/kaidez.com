@@ -423,12 +423,12 @@ a:hover {
 
 // Primary footer element
 .outerWrapperNavFooter {
-  background-color: $footer-color;
   color: $darken-the-footer-color;
   height: auto;
   width: auto;
   padding:1px 10px;
   background: $footer-color url('../img/footer-bg.png') no-repeat left;
+  box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
 // Hide the Google font on all <h3> tags in the footer before page load
