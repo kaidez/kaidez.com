@@ -974,6 +974,11 @@ a:hover {
   text-align: left;
   line-height: 1.7; }
 
+#related-posts .related-posts-header {
+  font-size: 20px;
+  margin: 0px auto;
+  text-align: center; }
+
 .related-posts-style {
   padding: 10px;
   margin: 40px 0;
@@ -1281,10 +1286,6 @@ a.read-post-link {
   background-color: #3285a5;
   max-width: 120px;
   float: none;
-  text-align: center; }
-
-.related-posts-header {
-  margin: 0px auto;
   text-align: center; }
 
 .related-posts-link {
@@ -2138,6 +2139,9 @@ a.pagination-link {
     font-size: 16px;
     padding: 0px 0 54px;
     padding-top: 10px; }
+
+  .related-posts-header {
+    font-size: 17px; }
 
   /*
    ==================
