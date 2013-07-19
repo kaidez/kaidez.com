@@ -824,13 +824,13 @@ table {
  * These are styles which should appear on all devices, regardless of screen 
  * dimension or computer resolution. There may be other references to these
  * classes and ids in other .scss files, but they should only add to the
- * properties and not override them.
+ * list of properties and not override already-existing properties.
  * ============================================================================
  */
 /*
  * ===========================================================================
  * Start "all-around" styles that should affect the entire page and not one 
- * specfic section (i.e., <header>, <footer>, <content>, etc.)
+ * specfic page region section (i.e., headers, footers, etc.)
  * ===========================================================================
  */
 body {
@@ -878,6 +878,7 @@ html, body {
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6 {
   font-family: serif;
+  visibility: visible;
   visibility: hidden; }
 
 .wf-active h1,
@@ -887,14 +888,11 @@ html, body {
 .wf-active h5,
 .wf-active h6 {
   font-family: "Roboto Condensed";
-  visibility: visible;
   font-size: 1.0rem;
   visibility: visible; }
 
 .homepage-link {
-  display: block;
-  width: 164px;
-  height: 44px; }
+  display: block; }
 
 #menu-heading {
   position: absolute;
@@ -951,6 +949,14 @@ html, body {
  * Page content styles start
  * ===========================================================================
  */
+a:link, a:visited {
+  color: #2d7895;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline;
+  color: #3182a1; }
+
 .containing-element {
   max-width: 100%; }
 
@@ -968,15 +974,7 @@ html, body {
   text-align: left;
   line-height: 1.7; }
 
-a:link, a:visited {
-  color: #2d7895;
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline;
-  color: #3182a1; }
-
-#related-posts {
+.related-posts-style {
   padding: 10px;
   margin: 40px 0;
   background-color: #E1F5F6;
@@ -1021,7 +1019,7 @@ a:hover {
 
 /*
  * '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
- * browsers with JavaScript turned off
+ * browsers with JavaScript and/or CSS turned off
  */
 .js #no-js-searchbox {
   position: absolute;
@@ -1149,9 +1147,9 @@ a:hover {
  =============================
  */
 /*
- ===========================
- Footer-related styles start
- ===========================
+ * ===========================================================================
+ * Footer-related styles start
+ * ===========================================================================
  */
 .outerWrapperNavFooter {
   background-color: #0c5e7e;
@@ -1163,11 +1161,11 @@ a:hover {
 
 .wf-loading .footer-header {
   font-family: serif;
-  visibility: hidden;
-  font-size: 23px; }
+  visibility: visible; }
 
 .wf-active .footer-header {
-  font-size: 23px; }
+  font-size: 23px;
+  visibility: visible; }
 
 #author-image {
   float: left;
@@ -1182,17 +1180,17 @@ a:hover {
   margin-right: 10px; }
 
 /*
- =========================
- Footer-related styles end
- =========================
+ * ===========================================================================
+ * Footer-related styles end
+ * ===========================================================================
  */
 /*
  ==============================================================
  */
 /*
- =================
- Global styles end
- =================
+ * ===========================================================================
+ * Global styles end
+ * ===========================================================================
  */
 /*
  * ============================================================================
@@ -1215,6 +1213,16 @@ a:hover {
 .wf-active h1 {
   font-size: 1.3rem; }
 
+/*
+ * ============================================================================
+ * Logo link :provides a large enough space for a click area. These styles
+ * will also be applied to the '_mobileLandscape' view.
+ * ============================================================================
+ */
+.homepage-link {
+  height: 44px;
+  width: 166px; }
+
 .outerWrapperNavHeader {
   width: 100%; }
 
@@ -1230,18 +1238,6 @@ a:hover {
  * Header styles end
  * ============================================================================
  */
-a.read-post-link {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  color: #fff;
-  display: block;
-  padding: 2px;
-  background-color: #3285a5;
-  max-width: 120px;
-  float: none;
-  text-align: center; }
-
 /*
  * ============================================================================
  * Navigation styles start...these styles will also be applied to the 
@@ -1262,9 +1258,9 @@ a.read-post-link {
  * ============================================================================
  */
 /*
- * ========================
- * Single post styles start
- * ========================
+ * ============================================================================
+ * Content styles start
+ * ============================================================================
  */
 .wf-active h1.post-title {
   font-size: 24px;
@@ -1275,6 +1271,18 @@ a.read-post-link {
   font-size: 14px;
   padding: 20px 10px 35px 10px; }
 
+a.read-post-link {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  padding: 2px;
+  background-color: #3285a5;
+  max-width: 120px;
+  float: none;
+  text-align: center; }
+
 .related-posts-header {
   margin: 0px auto;
   text-align: center; }
@@ -1284,16 +1292,6 @@ a.read-post-link {
   font-size: 14px;
   margin-bottom: 20px; }
 
-/*
- ======================
- Single post styles end
- ======================
- */
-/*
- ===============================
- Search box-related styles start
- ===============================
- */
 #searchbox {
   display: none; }
 
@@ -1314,16 +1312,6 @@ a.read-post-link {
   padding: 13px 0;
   line-height: 36px; }
 
-/*
- =============================
- Search box-related styles end
- =============================
- */
-/*
- ====================
- Content styles start
- ====================
- */
 .page-content {
   max-width: 300px;
   margin: 0 auto;
@@ -1333,42 +1321,29 @@ a.read-post-link {
   font-size: 14px;
   padding: 0px 0 54px; }
 
-/*
-==================
-Content styles end
-==================
-*/
-/*
- ==========================
- Category page styles start
- ==========================
-*/
 .wf-loading .category-header,
 .wf-inactive .category-header {
-  font-size: 1.5rem;
-  margin-top: 0;
   font-family: serif;
   visibility: visible; }
 
 .wf-active .category-header {
-  font-size: 1.5rem;
-  margin-top: 0;
   font-family: "Roboto Condensed";
-  visibility: visible; }
+  font-size: 1.5rem;
+  margin-top: 0; }
 
 .category-description-page {
   padding: 12px;
   margin-bottom: 35px; }
 
 /*
- ========================
- Category page styles end
- ========================
-*/
+ * ============================================================================
+ * Various page content styles end
+ * ============================================================================
+ */
 /*
- ===========================
- Footer-related styles start
- ===========================
+ * ===========================================================================
+ * Footer-related styles start
+ * ===========================================================================
  */
 #footer-contact-fieldset {
   border: none; }
@@ -1659,10 +1634,6 @@ a.pagination-link {
   .wf-active h1 {
     font-size: 1.3rem; }
 
-  .homepage-link {
-    width: 136px;
-    height: 39px; }
-
   .site-header {
     width: auto; }
 
@@ -1700,15 +1671,6 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 14px;
     padding: 20px 10px 35px 10px; }
-
-  .related-posts-header {
-    margin: 0px auto;
-    text-align: center; }
-
-  .related-posts-link {
-    line-height: 1.4;
-    font-size: 14px;
-    margin-bottom: 20px; }
 
   /*
    ======================
@@ -1882,8 +1844,8 @@ a.pagination-link {
     width: 1024px;
     margin: 0 auto; }
   .lt-ie9 .homepage-link {
-    width: 209px;
-    height: 65px; }
+    height: 65px;
+    width: 209px; }
   .lt-ie9 .site-header {
     max-width: 450px;
     float: left; }
@@ -1984,7 +1946,7 @@ a.pagination-link {
     float: none;
     text-align: center; }
 
-/* oldIE styles end*/
+/* oldIE styles end */
 @media only screen and (min-width: 729px) and (max-width: 1023px) {
   /*
    * ==========================================================================
@@ -2019,8 +1981,8 @@ a.pagination-link {
     margin: 0; }
 
   .homepage-link {
-    width: 209px;
-    height: 65px; }
+    height: 209px;
+    width: 65px; }
 
   .inner-wrapper-nav-header {
     padding: 21px; }
@@ -2181,7 +2143,11 @@ a.pagination-link {
    ==================
    Content styles end
    ==================
-  */ }
+  */
+  .footer-header {
+    color: black;
+    text-shadow: 0px 2px 3px #107da8;
+    border-bottom: 2px dotted #01070a; } }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   /*
    * Handhelds and tablets get the helvetica-type
@@ -2223,8 +2189,8 @@ a.pagination-link {
     margin: 0; }
 
   .homepage-link {
-    width: 209px;
-    height: 65px; }
+    height: 65px;
+    width: 209px; }
 
   .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px; }
@@ -2379,7 +2345,11 @@ a.pagination-link {
    * ==================
    * Content styles end
    * ==================
-   */ }
+   */
+  .footer-header {
+    color: black;
+    text-shadow: 0px 2px 3px #107da8;
+    border-bottom: 2px dotted #01070a; } }
 /*
  * =====================
  * Desktop styles start:
@@ -2436,8 +2406,8 @@ a.pagination-link {
    * ===================
    */
   .homepage-link {
-    width: 209px;
-    height: 65px; }
+    height: 65px;
+    width: 209px; }
 
   .inner-wrapper-nav-header {
     width: 1024px;
@@ -2607,7 +2577,7 @@ a.pagination-link {
    * =================================
    * Home page pagination styles start
    * =================================
-  */
+   */
   .control-section-width {
     max-width: 1024px;
     margin: 0 auto;
