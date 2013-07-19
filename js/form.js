@@ -20,7 +20,7 @@ define("form", ["jquery"], function($) {
 
     $.ajax({
       type: "POST",
-      url: "http://livetest.kaidez.com/wp-content/themes/kaidez-2012/email.php",
+      url: "/email.php",
       data: dataString,
       success: function(){
         $("#contact").fadeOut(100);
