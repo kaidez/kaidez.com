@@ -109,7 +109,7 @@
  * Desktop/oldIE shared code ends
  * ==============================
  */
-/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
+/* normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -960,11 +960,6 @@ a:hover {
 .containing-element {
   max-width: 100%; }
 
-.post-snippet {
-  border-bottom: 1px solid #01070a;
-  margin-bottom: 30px;
-  padding-bottom: 30px; }
-
 .page-content {
   position: relative;
   height: auto;
@@ -973,6 +968,11 @@ a:hover {
   width: auto;
   text-align: left;
   line-height: 1.7; }
+
+.post-snippet {
+  border-bottom: 1px solid #01070a;
+  margin-bottom: 70px;
+  padding-bottom: 30px; }
 
 #related-posts .related-posts-header {
   font-size: 20px;
@@ -1153,7 +1153,7 @@ a:hover {
  */
 /*
  * ===========================================================================
- * Footer-related styles start
+ * Footer styles start
  * ===========================================================================
  */
 .outerWrapperNavFooter {
@@ -1186,7 +1186,7 @@ a:hover {
 
 /*
  * ===========================================================================
- * Footer-related styles end
+ * Footer styles end
  * ===========================================================================
  */
 /*
@@ -1263,14 +1263,19 @@ a:hover {
  * ============================================================================
  */
 /*
- * ============================================================================
- * Content styles start
- * ============================================================================
+ * ===========================================================================
+ * Page content styles start
+ * ===========================================================================
  */
 .wf-active h1.post-title {
   font-size: 24px;
   margin: 0;
   line-height: 1.3; }
+
+.page-content {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 10px; }
 
 .breadcrumb-styles {
   font-size: 14px;
@@ -1313,15 +1318,6 @@ a.read-post-link {
   padding: 13px 0;
   line-height: 36px; }
 
-.page-content {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 0 10px; }
-
-.breadcrumb-styles {
-  font-size: 14px;
-  padding: 0px 0 54px; }
-
 .wf-loading .category-header,
 .wf-inactive .category-header {
   font-family: serif;
@@ -1337,13 +1333,13 @@ a.read-post-link {
   margin-bottom: 35px; }
 
 /*
- * ============================================================================
- * Various page content styles end
- * ============================================================================
+ * ===========================================================================
+ * Page content styles end
+ * ===========================================================================
  */
 /*
  * ===========================================================================
- * Footer-related styles start
+ * Footer styles start
  * ===========================================================================
  */
 #footer-contact-fieldset {
@@ -1648,6 +1644,26 @@ a.pagination-link {
    * ==========================================================================
    */
   /*
+   * ===========================================================================
+   * Page content styles start
+   * ===========================================================================
+   */
+  .page-content {
+    max-width: 548px;
+    margin: 0 auto;
+    padding: 0 10px; }
+
+  .breadcrumb-styles {
+    font-size: 14px;
+    padding: 0px 0 54px;
+    padding-top: 10px; }
+
+  /*
+   * ===========================================================================
+   * Page content styles end
+   * ===========================================================================
+   */
+  /*
    * ========================
    * Single post styles start
    * ========================
@@ -1708,26 +1724,6 @@ a.pagination-link {
    Search box-related styles end
    =============================
    */
-  /*
-   ====================
-   Content styles start
-   ====================
-   */
-  .page-content {
-    max-width: 548px;
-    margin: 0 auto;
-    padding: 0 10px; }
-
-  .breadcrumb-styles {
-    font-size: 14px;
-    padding: 0px 0 54px;
-    padding-top: 10px; }
-
-  /*
-  ==================
-  Content styles end
-  ==================
-  */
   /*
    ==========================
    Category page styles start
@@ -2126,9 +2122,9 @@ a.pagination-link {
     visibility: visible; }
 
   /*
-   * ====================
-   * Content styles start
-   * ====================
+   * ===========================================================================
+   * Page content styles start
+   * ===========================================================================
    */
   .page-content {
     max-width: 1024px;
@@ -2144,14 +2140,25 @@ a.pagination-link {
     font-size: 17px; }
 
   /*
-   ==================
-   Content styles end
-   ==================
-  */
+   * ===========================================================================
+   * Footer styles start
+   * ===========================================================================
+   */
+  /*
+   * ===========================================================================
+   * Footer content styles start
+   * ===========================================================================
+   */
   .footer-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
-    border-bottom: 2px dotted #01070a; } }
+    border-bottom: 2px dotted #01070a; }
+
+  /*
+   * ===========================================================================
+   * Footer styles end
+   * ===========================================================================
+   */ }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   /*
    * Handhelds and tablets get the helvetica-type
@@ -2331,10 +2338,10 @@ a.pagination-link {
    * =================
    */
   /*
-   * ====================
-   * Content styles start
-   * ====================
-   */
+  * ===========================================================================
+  * Page content styles start
+  * ===========================================================================
+  */
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
@@ -2346,10 +2353,10 @@ a.pagination-link {
     padding-top: 10px; }
 
   /*
-   * ==================
-   * Content styles end
-   * ==================
-   */
+  * ===========================================================================
+  * Page content styles end
+  * ===========================================================================
+  */
   .footer-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
@@ -2547,9 +2554,9 @@ a.pagination-link {
     visibility: visible; }
 
   /*
-   ====================
-   Content styles start
-   ====================
+   * ===========================================================================
+   * Page content styles start
+   * ===========================================================================
    */
   .wf-active h1.post-title, .wf-active h1.category-title {
     margin: 0px auto;
@@ -2573,9 +2580,9 @@ a.pagination-link {
     padding-top: 10px; }
 
   /*
-   ==================
-   Content styles end
-   ==================
+   * ===========================================================================
+   * Page content styles end
+   * ===========================================================================
    */
   /*
    * =================================
