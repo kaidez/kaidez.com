@@ -51,7 +51,7 @@
 
 
 
-   
+
   /*
    * ===================
    * Header styles start
@@ -60,7 +60,7 @@
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
-    @include homepage-link;
+    @include homepage-link(65px, 209px);
   }
 
   // the inner wrapper for the <header>
@@ -187,9 +187,9 @@
     -webkit-transition : background-color 200ms ease-out; 
     -moz-transition : background-color 200ms ease-out;
     -o-transition : background-color 200ms ease-out;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
   }
  
 #tipue_search_input:focus {
@@ -269,7 +269,7 @@
    * =================================
    * Home page pagination styles start
    * =================================
-  */
+   */
 
   .control-section-width {
     @include content-width($inner-content-width);
@@ -294,8 +294,7 @@
   }
   
   .footer-header {
-    @include makeTextShadow($footer-color);
-    border-bottom: 2px dotted darken($footer-color, 25);
+    @include footer-header;
   }
 
   .footer-sections {

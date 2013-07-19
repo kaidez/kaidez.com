@@ -40,7 +40,7 @@
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
-    @include homepage-link;
+    @include homepage-link(209px, 65px);
   }
 
   // the inner wrapper for the <header>
@@ -230,4 +230,8 @@
    Content styles end
    ==================
   */
+
+  .footer-header {
+    @include footer-header;
+  }
 }

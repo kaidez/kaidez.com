@@ -43,7 +43,7 @@
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
-    @include homepage-link 
+    @include homepage-link(65px, 209px);
   }  
 
   // <header> tag
@@ -179,4 +179,6 @@
     @include read-post-link;
   }
 }
-/* oldIE styles end*/
+/* oldIE styles end */
+
+

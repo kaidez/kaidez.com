@@ -9,12 +9,6 @@
   .wf-active h1 {
     font-size: 1.3rem;
   }
-
-  // Logo link...provides a large enough space for a click area
- .homepage-link {
-   width: 136px;
-   height: 39px;
-  }
   
   // <header> tag
   .site-header {
@@ -57,19 +51,6 @@
     font-size: 14px;
     padding: 20px 10px 35px 10px;
   }
-
-// Mobile First post styles end
-
-// Related post links
-.related-posts-header {
-  @include master-center;
-}
-
-.related-posts-link {
-  line-height: 1.4;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
 
 /*
  ======================

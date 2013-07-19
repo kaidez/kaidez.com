@@ -5,7 +5,7 @@
  * These are styles which should appear on all devices, regardless of screen 
  * dimension or computer resolution. There may be other references to these
  * classes and ids in other .scss files, but they should only add to the
- * properties and not override them.
+ * list of properties and not override already-existing properties.
  * ============================================================================
  */
 
@@ -16,7 +16,7 @@
 /*
  * ===========================================================================
  * Start "all-around" styles that should affect the entire page and not one 
- * specfic section (i.e., <header>, <footer>, <content>, etc.)
+ * specfic page region section (i.e., headers, footers, etc.)
  * ===========================================================================
  */
 
@@ -74,7 +74,7 @@ html, body {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6, {
-  font-family: $srf;
+  @include fonts($srf);
   visibility: hidden;
 }
 
@@ -85,7 +85,7 @@ html, body {
 .wf-active h4,
 .wf-active h5,
 .wf-active h6 {
-  @include fonts($robo);
+  font-family: $robo;
   font-size: 1.0rem;
   visibility: visible;
 }
@@ -93,8 +93,6 @@ html, body {
 // Logo link...provides a large enough space for a click area
 .homepage-link {
   display: block;
-  width: 164px;
-  height: 44px;
 }
 
 // Hide menu heading on mobile phones
@@ -173,19 +171,31 @@ html, body {
  * ===========================================================================
  */
 
-// wraps all the page content
+// All text links (except for post meta info) are blue but have no underline.
+a:link, a:visited { 
+  color: darken($post-link-color, 4);
+  text-decoration: none;
+}
+
+// All text links have an underline on hover.
+a:hover { 
+  text-decoration: underline;
+  color: darken($post-link-color, 1);
+}
+
+// Wraps all the page content, <header>, <nav>, <footer>, etc.
 .containing-element {
   max-width: 100%;
 }
 
-// Post snippet that displays on both the home page and search results
+// Post snippet that displays on both the home page and search results.
 .post-snippet {
   @include bottomBorder($darken-the-footer-color);
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
 
-// All unique page content
+// Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
   padding: 10px;
@@ -194,20 +204,8 @@ html, body {
   line-height: 1.7;
 }
 
-// all text links (except for post meta info) are blue but have no underline
-a:link, a:visited { 
-  color: darken($post-link-color, 4);
-  text-decoration: none;
-}
-
-// all text links have an underline on hover
-a:hover { 
-  text-decoration: underline;
-  color: darken($post-link-color, 1);
-}
-
 // Related posts styles that appear on single post pages
-#related-posts {
+.related-posts-style {
   padding: 10px;
   margin: 40px 0;
   background-color: #E1F5F6;
@@ -268,7 +266,7 @@ a:hover {
 
 /*
  * '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
- * browsers with JavaScript turned off
+ * browsers with JavaScript and/or CSS turned off
  */
 .js #no-js-searchbox {
   @include hide-element;
@@ -406,9 +404,9 @@ a:hover {
 
 
 /*
- ===========================
- Footer-related styles start
- ===========================
+ * ===========================================================================
+ * Footer-related styles start
+ * ===========================================================================
  */
 
 // Primary footer element
@@ -423,19 +421,18 @@ a:hover {
 
 // Hide the Google font on all <h3> tags in the footer before page load
 .wf-loading .footer-header {
-  font-family: $srf;
-  visibility: hidden;
-  font-size: 23px;
+  @include fonts($srf);
 }
 
 // Apply the Google font to all <h3> tags in the footer after page load
 .wf-active .footer-header {
   font-size: 23px;
+  visibility: visible;
 }
 
 // Style related to a picture of me
 #author-image {
-  float:left;
+  float: left;
   padding:0 10px 4px 0;
 }
 
@@ -451,9 +448,9 @@ a:hover {
 }
 
 /*
- =========================
- Footer-related styles end
- =========================
+ * ===========================================================================
+ * Footer-related styles end
+ * ===========================================================================
  */
 
 /*
@@ -461,7 +458,7 @@ a:hover {
  */
 
 /*
- =================
- Global styles end
- =================
+ * ===========================================================================
+ * Global styles end
+ * ===========================================================================
  */
