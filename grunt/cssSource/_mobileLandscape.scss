@@ -29,6 +29,33 @@
 
 
 
+
+
+  /*
+   * ===========================================================================
+   * Page content styles start
+   * ===========================================================================
+   */
+    
+  // For the main element
+  .page-content {
+    @include content-width($mobile-landscape-width);
+  }
+
+  .breadcrumb-styles {
+    @include breadcrumb-styles(14px);
+    padding-top: 10px;
+  }
+
+  /*
+   * ===========================================================================
+   * Page content styles end
+   * ===========================================================================
+   */
+
+
+
+
   /*
    * ========================
    * Single post styles start
@@ -99,31 +126,6 @@
  =============================
  */
 
-
-
-
-
-/*
- ====================
- Content styles start
- ====================
- */
-  
-// For the main element
-.page-content {
-  @include content-width($mobile-landscape-width);
-}
-
-.breadcrumb-styles {
-  @include breadcrumb-styles(14px);
-  padding-top: 10px;
-}
-
-/*
-==================
-Content styles end
-==================
-*/
 
 
 

@@ -188,13 +188,6 @@ a:hover {
   max-width: 100%;
 }
 
-// Post snippet that displays on both the home page and search results.
-.post-snippet {
-  @include bottomBorder($darken-the-footer-color);
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-}
-
 // Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
@@ -202,6 +195,13 @@ a:hover {
   width: auto;
   text-align: left;
   line-height: 1.7;
+}
+
+// Post snippet that displays on both the home page and search results.
+.post-snippet {
+  @include bottomBorder($darken-the-footer-color);
+  margin-bottom: 70px;
+  padding-bottom: 30px;
 }
 
 
@@ -245,8 +245,6 @@ a:hover {
   display: block;
   text-indent: -9999px;
 }
-
-// Social networking stuff ends
 
 /*
  * ===========================================================================
@@ -412,7 +410,7 @@ a:hover {
 
 /*
  * ===========================================================================
- * Footer-related styles start
+ * Footer styles start
  * ===========================================================================
  */
 
@@ -456,7 +454,7 @@ a:hover {
 
 /*
  * ===========================================================================
- * Footer-related styles end
+ * Footer styles end
  * ===========================================================================
  */
 
