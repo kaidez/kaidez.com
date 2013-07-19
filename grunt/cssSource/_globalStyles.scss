@@ -167,99 +167,8 @@ html, body {
 
 /*
  * ===========================================================================
- * Page content styles start
- * ===========================================================================
- */
-
-// All text links (except for post meta info) are blue but have no underline.
-a:link, a:visited { 
-  color: darken($post-link-color, 4);
-  text-decoration: none;
-}
-
-// All text links have an underline on hover.
-a:hover { 
-  text-decoration: underline;
-  color: darken($post-link-color, 1);
-}
-
-// Wraps all the page content, <header>, <nav>, <footer>, etc.
-.containing-element {
-  max-width: 100%;
-}
-
-// Container for all unique page content: blog post copy, search results, etc.
-.page-content {
-  @include full-height;
-  padding: 10px;
-  width: auto;
-  text-align: left;
-  line-height: 1.7;
-}
-
-// Post snippet that displays on both the home page and search results.
-.post-snippet {
-  @include bottomBorder($darken-the-footer-color);
-  margin-bottom: 70px;
-  padding-bottom: 30px;
-}
-
-
-// Related posts
-#related-posts .related-posts-header {
-  @include related-posts-header(20px);
-  @include master-center;
-}
-
-// Related posts styles that appear on single post pages
-.related-posts-style {
-  padding: 10px;
-  margin: 40px 0;
-  background-color: #E1F5F6;
-  border: 1px solid #6AB0D4;
-  clear: both
-}
-
-#social-network-list {
-  padding: 0;
-  margin:0px auto;
-  text-align: center;
-  width: 287px;
-}
-
-.social-network-list-item {
-  list-style-type: none;
-  padding-right: 10px;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-
-#social-network-list-post {
-  padding: 0;
-  width: 287px;
-}
-
-.kaidez-social-network-link {
-  height: 56px;
-  width: 56px;
-  display: block;
-  text-indent: -9999px;
-}
-
-/*
- * ===========================================================================
- * Page content styles end
- * ===========================================================================
- */
-
-
-
-
- 
-/*
- * ===============================
  * Search box-related styles start
- * ===============================
+ * ===========================================================================
  */
 
 
@@ -358,13 +267,14 @@ a:hover {
 // Hide the Google font on all search result links before page load
 .wf-loading .search-result-font,
 .wf-inactive .search-result-font {
-  font-family: $srf;
-  visibility: hidden;
+
+  @include fonts($srf);
 }
 
 // Apply the Google font to all search result links after page load
 .wf-active .search-result-font {
-  @include fonts($robo);
+  font-family: $robo;
+  visibility: visible;
 }
 
 #tipue_search_content {
@@ -399,10 +309,107 @@ a:hover {
 }
 
 /*
- =============================
- Search box-related styles end
- =============================
+ * ===========================================================================
+ * Search box-related styles end
+ * ===========================================================================
  */
+
+
+
+
+
+/*
+ * ===========================================================================
+ * Page content styles start
+ * ===========================================================================
+ */
+
+// All text links (except for post meta info) are blue but have no underline.
+a:link, a:visited { 
+  color: darken($post-link-color, 4);
+  text-decoration: none;
+}
+
+// All text links have an underline on hover.
+a:hover {  
+  color: darken($post-link-color, 1);
+  text-decoration: underline;
+}
+
+// Wraps all the page content, <header>, <nav>, <footer>, etc.
+.containing-element {
+  max-width: 100%;
+}
+
+// Container for all unique page content: blog post copy, search results, etc.
+.page-content {
+  @include full-height;
+  padding: 10px;
+  width: auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+// Post snippet that displays on both the home page and search results.
+.post-snippet {
+  @include bottomBorder($darken-the-footer-color);
+  margin-bottom: 70px;
+  padding-bottom: 30px;
+}
+
+
+// Related posts
+#related-posts .related-posts-header {
+  @include related-posts-header(20px);
+  @include master-center;
+}
+
+// Related posts styles that appear on single post pages
+.related-posts-style {
+  padding: 10px;
+  margin: 40px 0;
+  background-color: #E1F5F6;
+  border: 1px solid #6AB0D4;
+  clear: both
+}
+
+#social-network-list {
+  padding: 0;
+  margin:0px auto;
+  text-align: center;
+  width: 287px;
+}
+
+.social-network-list-item {
+  list-style-type: none;
+  padding-right: 10px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+#social-network-list-post {
+  padding: 0;
+  width: 287px;
+}
+
+.kaidez-share-post-link {
+  height: 56px;
+  width: 56px;
+  display: block;
+  text-indent: -9999px;
+}
+
+/*
+ * ===========================================================================
+ * Page content styles end
+ * ===========================================================================
+ */
+
+
+
+
+ 
+
 
 
 
@@ -441,11 +448,6 @@ a:hover {
   padding:0 10px 4px 0;
 }
 
-// Footer contact form fields
-#contact-form-fields {
-  border: none;
-}
-
 .kaidez-social-network-list-item {
   list-style-type: none;
   float: left;
@@ -459,7 +461,7 @@ a:hover {
  */
 
 /*
- ==============================================================
+ * ===========================================================================
  */
 
 /*

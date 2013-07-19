@@ -5,7 +5,7 @@
  * These are styles which should appear on mobile devices only. They are 
  * placed outside of a media query, meaning that they are the first styles to 
  * be called on page load: i.e. "mobile first." oldIE does not support media
- * queries so it can only read code outside of them...link this code. We don't 
+ * queries so it can only read code outside of them...like this code. We don't 
  * want this so we've taken care of this by creating '_oldIE.scss' which
  * contains CSS that works in IE 8...kaidez.com doesn't care about IE7 and
  * older.
@@ -89,6 +89,47 @@
 
 /*
  * ===========================================================================
+ * Search box-related styles start
+ * ===========================================================================
+ */
+
+// the div that contains the search box
+#searchbox {
+  display: none;
+}
+
+#not-found-searchbox {
+  display: block
+}
+
+.searchbox-style {
+  @include master-center;
+  padding:15px 0;
+  position: static;
+}
+
+.searchfield-style {
+  width: 260px;
+}
+
+.tipue_search_content_text {
+  color: #111;
+  padding: 13px 0;
+  line-height: 36px;
+}
+
+/*
+ * ===========================================================================
+ * Search box-related styles end
+ * ===========================================================================
+ */
+
+
+
+
+
+/*
+ * ===========================================================================
  * Page content styles start
  * ===========================================================================
  */
@@ -123,45 +164,20 @@ a.read-post-link {
   margin-bottom: 20px;
 }
 
-// the div that contains the search box
-#searchbox {
-  display: none;
-}
-
-#not-found-searchbox {
-  display: block
-}
-
-.searchbox-style {
-  @include master-center;
-  padding:15px 0;
-  position: static;
-}
-
-.searchfield-style {
-  width: 260px;
-}
-
-.tipue_search_content_text {
-  color: #111;
-  padding: 13px 0;
-  line-height: 36px;
-}
-
-// <h1> title on the category page...hides the 'Roboto' font on load.
+// <h1> title on the category page...hides the 'Roboto' font on load. These styles will also be applied to the '_mobileLandscape' view.
 .wf-loading .category-header,
 .wf-inactive .category-header {
   @include fonts($srf);
 }
 
-// <h1> title on the category page...loads the 'Roboto'.
+// <h1> title on the category page...loads the 'Roboto'. These styles will also be applied to the '_mobileLandscape' view.
 .wf-active .category-header {
   font-family: $robo;
   font-size: 1.5rem;
   margin-top: 0;
 }
 
-// <h1> title on the category page...loads the 'Roboto'.
+// <h1> title on the category page.These styles will also be applied to the '_mobileLandscape' view.
 .category-description-page {
   padding:12px;
   margin-bottom: 35px;
@@ -177,47 +193,11 @@ a.read-post-link {
 
 
 
- /*
-  * ===========================================================================
-  * Footer styles start
-  * ===========================================================================
-  */
-#footer-contact-fieldset {
-  border: none;
-}
-.footer-contact-fields {
-  width:152px;
-}
-
-.social-network-link {
-  font-size:16px;
-  line-height: 1;
-}
-
-// Footer styles start
-
-.footer-sections {
-  width:300px;
-}
-
-.footer-paragraph {
-  font-size:15px;
-}
-
 /*
- =========================
- Footer-related styles end
- =========================
+ * ===========================================================================
+ * Home page pagination styles start
+ * ===========================================================================
  */
-
-
-
-
-/*
- =================================
- Home page pagination styles start
- =================================
-*/
 
 // Unordered lists
 .pages {
@@ -237,7 +217,50 @@ a.pagination-link {
 
 
 /*
- ===============================
- Home page pagination styles end
- ===============================
-*/
+ * ===========================================================================
+ * Home page pagination styles end
+ * ===========================================================================
+ */
+
+
+
+
+
+/*
+ * ===========================================================================
+ * Footer styles start...These styles will also be applied to the
+ * '_mobileLandscape' view.
+ * ===========================================================================
+ */
+ 
+#footer-contact-fieldset {
+  border: none;
+}
+.footer-contact-fields {
+  width:152px;
+}
+
+.share-post-link {
+  font-size:16px;
+  line-height: 1;
+}
+
+// Footer styles start
+
+.footer-sections {
+  width:300px;
+}
+
+.footer-paragraph {
+  font-size:15px;
+}
+
+/*
+ * ===========================================================================
+ * Footer styles end
+ * ===========================================================================
+ */
+
+
+
+
