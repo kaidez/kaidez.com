@@ -17,9 +17,9 @@
 
 
 /*
- * ===================
+ * ============================================================================
  * Header styles start
- * ===================
+ * ============================================================================
  */
 
 // apply the Google font to all <header> tags, except the Mobile First post tag
@@ -43,9 +43,9 @@
 }
 
 /*
- * =================
+ * ============================================================================
  * Header styles end
- * =================
+ * ============================================================================
  */
 
 
@@ -56,23 +56,24 @@
 
 
 /*
- * =======================
- * Navigation styles start
- * =======================
+ * ============================================================================
+ * Navigation styles start...these styles will also be applied to the 
+ * '_mobileLandscape' view.
+ * ============================================================================
  */
-
-#site-navigation-list {
-  @include site-navigation-list(none);
-}
 
 .nav-search-style {
   float: none;
 }
 
+#site-navigation-list {
+  @include site-navigation-list(none);
+}
+
 /*
- =====================
- Navigation styles end
- =====================
+ * ============================================================================
+ * Navigation styles end
+ * ============================================================================
  */
 
 
@@ -84,9 +85,6 @@
  * Single post styles start
  * ========================
  */
-
-
-
 
 // Styles for post <h1> tag
 .wf-active h1.post-title {
@@ -175,8 +173,9 @@
   @include content-width($mobile-portrait-width)
 }
 
+// can this be deleted in full? Test om iPad and see if things still scale neatly.
 .containing-element {
-  width: auto;
+  // width: auto;
 }
 
 .breadcrumb-styles {

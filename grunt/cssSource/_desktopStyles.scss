@@ -48,6 +48,10 @@
     @include read-post-link($master-border-radius);
   }
    
+
+
+
+   
   /*
    * ===================
    * Header styles start
@@ -97,9 +101,9 @@
   }
 
   /*
-   * =================
+   * =========================================================================
    * Header styles end
-   * =================
+   * =========================================================================
    */
 
 
@@ -107,17 +111,14 @@
 
 
   /*
-   * =======================
+   * =========================================================================
    * Navigation styles start
-   * =======================
+   * =========================================================================
    */
 
-  // Menu
-  #site-navigation-list {
-    @include show-menu;
-    margin: 11px auto 0 auto;
-    padding: 0;
-    width: auto;
+  // <nav> tag
+  .main-navigation {
+    @include main-navigation;
   }
 
   // Hide moble menu and search icons on all devices EXCEPT hand-helds
@@ -125,18 +126,16 @@
     @include hide-element;
   }
 
-  // <nav> tag
-  .main-navigation {
-    @include main-nav;
-  }
-
-  // Hide the Google font on all <nav> links before page load
-  .wf-loading .site-navigation-list-link {
-    font-family: $srf;
-  }
-
   .nav-search-style {
     float: none;
+  }
+
+  // <ul> tag
+  #site-navigation-list {
+    @include show-menu;
+    margin: 11px auto 0 auto;
+    padding: 0;
+    width: auto;
   }
 
   // Apply the Google font to all <nav> links after page load
@@ -149,10 +148,14 @@
   }
 
   /*
-   * =====================
+   * =========================================================================
    * Navigation styles end
-   * =====================
+   * =========================================================================
    */
+
+
+
+
 
   .form {
     -webkit-border-radius: $master-border-radius;
@@ -263,9 +266,9 @@
 
 
   /*
-   =================================
-   Home page pagination styles start
-   =================================
+   * =================================
+   * Home page pagination styles start
+   * =================================
   */
 
   .control-section-width {
@@ -273,15 +276,15 @@
   }
 
   /*
-   ===============================
-   Home page pagination styles end
-   ===============================
+   * ===============================
+   * Home page pagination styles end
+   * ===============================
    */
 
   /*
-   ===================
-   Footer styles start
-   ===================
+   * ===================
+   * Footer styles start
+   * ===================
    */
 
   // the inner wrapper for the <header>. Width is set to 900px.

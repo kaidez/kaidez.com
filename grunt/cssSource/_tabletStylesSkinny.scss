@@ -76,6 +76,16 @@
    * Header styles end
    * =================
    */
+
+
+
+
+
+  /*
+   * =========================================================================
+   * Navigation styles start
+   * =========================================================================
+   */
   
   // <nav>
   .main-navigation {
@@ -83,16 +93,11 @@
     margin: 0 auto;
     display: table;
   }
-
   
   // <nav> list items
   .main-navigation-list {
   	@include show-menu;
   	@include master-center;
-  }
-
-  .nav-search-style {
-    margin-top: 7px;
   }
   
   /*
@@ -103,23 +108,35 @@
     @include hide-element;
   }
 
-  .site-navigation-list-link {
-	  float:left;
+  .nav-search-style {
+    margin-top: 7px;
   }
 
   // <ul> container for the main nav  
   #site-navigation-list {
     @include site-navigation-list(block);
   }
+  
+  // for the <li> tag that contains the links
+  .site-navigation-list-link {
+    float:left;
+  }
 
+  // for the link in the above-mentioned <li> tag...can these two styles be combined at a later date?
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
     @include link-styles(29px, 13px, 5px, $header-color);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
   }
+
+  /*
+   * =========================================================================
+   * Navigation styles end
+   * =========================================================================
+   */
 
   // Search box-related styles start
   // the div that contains the search box
@@ -139,9 +156,9 @@
     margin: 0;
     width: 199px;
     border: 1px solid #d3d3d3;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -180,9 +197,6 @@
     @include fonts($helv);
   }
 
-
-
-
   /*
    * =================
    * Header styles end
@@ -199,26 +213,20 @@
    * ====================
    */
   
-  // For the main element
+  // For the "main" id element
   .page-content {
     @include content-width($inner-content-width);
   }
-
-  // Add "letterpress" effect to header links for home page post snippet.
-  .post-snipper-header-link {
-    @include makeTextShadow($site-background-color);
-    font-size: 1.7rem;
-  }
-
+  
+  // breadcrumbs
   .breadcrumb-styles {
     @include breadcrumb-styles(16px);
     padding-top: 10px;
   }
 
-
   /*
-   ==================
-   Content styles end
-   ==================
-  */
+   * ==================
+   * Content styles end
+   * ==================
+   */
 }

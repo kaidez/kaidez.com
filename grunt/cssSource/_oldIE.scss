@@ -13,21 +13,6 @@
 
 .lt-ie9 {
 
-  .wf-loading h1,
-  .wf-inactive h1,
-  .wf-loading h2,
-  .wf-inactive h2,
-  .wf-loading h3,
-  .wf-inactive h3,
-  .wf-loading h4,
-  .wf-inactive h4,
-  .wf-loading h5,
-  .wf-inactive h5,
-  .wf-loading h6,
-  .wf-inactive h6 {
-    font-family: $srf;
-  }
-
   .wf-active h1,
   .wf-active h2,
   .wf-active h3,
@@ -99,7 +84,6 @@
     left:200px;  
   }
 
-
   #site-navigation-list {
     @include show-menu;
     @include master-center;
@@ -114,15 +98,7 @@
   }
 
   .main-navigation {
-    @include main-nav;
-  }
-
-  .wf-loading .site-navigation-list-link {
-    font-family: $srf;
-    visibility: hidden;
-    text-decoration: none;
-    font-size: 14px;
-    float: left;
+    @include main-navigation;
   }
 
   .site-navigation-list-link {
@@ -188,7 +164,6 @@
   .copyrightStyle {
     clear: both;  
   }
-
 
   .innerWrapperNavFooter {
     width: $inner-content-width;

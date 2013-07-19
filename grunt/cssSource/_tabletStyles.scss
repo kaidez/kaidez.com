@@ -17,9 +17,9 @@
   }
 
   /*
-   * ===================
+   * ==========================================================================
    * Header styles start
-   * ===================
+   * ==========================================================================
    */
 
   // Show Google 'Roboto' font on all <header> tags before page load
@@ -78,40 +78,45 @@
   }
   
   /*
-   * =================
+   * ==========================================================================
    * Header styles end
-   * =================
+   * ==========================================================================
    */
-  
 
-    // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
-  // <nav>
+
+
+
+
+   /*
+    * =========================================================================
+    * Navigation styles start
+    * =========================================================================
+    */
+
+  // <nav> tag
   .main-navigation {
     width: auto;
     border-top: none;
   }
 
-  #site-navigation-list {
-    @include site-navigation-list(block);
+  // <nav> list items
+  .main-navigation-list {
+    @include show-menu;
+    @include master-center;
+  }
+
+  // Hide 'mobile first' menu & search boxes on tablets
+  #menu, #search {
+    @include hide-element;
   }
 
   .nav-search-style {
     float: right;
   }
 
-  // <nav> list items
-  .main-navigation-list {
-  	@include show-menu;
-  	@include master-center;
-  }
-
-  
-  // Hide 'mobile first' menu & search boxes on tablets
-  #menu, #search {
-    @include hide-element;
+  // <ul> tag
+  #site-navigation-list {
+    @include site-navigation-list(block);
   }
 
   .site-navigation-list-link {
@@ -122,13 +127,26 @@
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
     @include link-styles(29px, 13px, 5px, $header-color);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
   }
 
+  /*
+   * =========================================================================
+   * Navigation styles end
+   * =========================================================================
+   */
+
+  // the "Read post" link on the home, category and search pages
+  a.read-post-link {
+    @include read-post-link($master-border-radius);
+  }
+
+
+
   // Search box-related styles start
-  
+
   // the div that contains the search box
   #searchbox {
     display: block;
@@ -146,9 +164,9 @@
     margin: 0;
     width: 250px;
     border: 1px solid #d3d3d3;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -200,12 +218,6 @@
   // For the main element
   .page-content {
     @include content-width($inner-content-width);
-  }
-
-  // Add "letterpress" effect to header links for home page post snippet.
-  .post-snipper-header-link {
-    @include makeTextShadow($site-background-color);
-    font-size: 1.7rem;
   }
 
   .breadcrumb-styles {

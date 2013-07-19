@@ -118,29 +118,14 @@ html, body {
  * ===========================================================================
  */
 
-.containing-element {
-  max-width: 100%;
-}
-// Post snippet that displays on both the home page and search results
-.post-snippet {
-  @include bottomBorder($darken-the-footer-color);
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-}
 
-// All unique page content...appears inside the page's single <main> element
-.page-content {
-  @include full-height;
-  padding: 10px;
-  width: auto;
-  text-align: left;
-  line-height: 1.7;
-}
+
+
 
 /*
- * =======================
+ * ===========================================================================
  * Navigation styles start
- * =======================
+ * ===========================================================================
  */
 
 // <nav> tag
@@ -172,11 +157,10 @@ html, body {
   border-bottom: 1px solid lighten(saturate($base-link-color, 28), 6);
 }
 
-
 /*
- =====================
- Navigation styles end
- =====================
+ * ===========================================================================
+ * Navigation styles end
+ * ===========================================================================
  */
 
 
@@ -184,22 +168,39 @@ html, body {
 
 
 /*
- ========================
- Single post styles start
- ========================
+ * ===========================================================================
+ * Page content styles start
+ * ===========================================================================
  */
 
-/*
- * all text links (except for post meta info)
- * have a blue color but no underline.
- */
-a:link,
-a:visited { 
+// wraps all the page content
+.containing-element {
+  max-width: 100%;
+}
+
+// Post snippet that displays on both the home page and search results
+.post-snippet {
+  @include bottomBorder($darken-the-footer-color);
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+// All unique page content
+.page-content {
+  @include full-height;
+  padding: 10px;
+  width: auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+// all text links (except for post meta info) are blue but have no underline
+a:link, a:visited { 
   color: darken($post-link-color, 4);
   text-decoration: none;
 }
 
-// all text links have an underline
+// all text links have an underline on hover
 a:hover { 
   text-decoration: underline;
   color: darken($post-link-color, 1);
@@ -240,18 +241,12 @@ a:hover {
   text-indent: -9999px;
 }
 
-
-// Hack to override fb style setting on fb share link
-.fb {
-  padding-right: 10px;
-}
-
 // Social networking stuff ends
 
 /*
- ======================
- Single post styles end
- ======================
+ * ===========================================================================
+ * Page content styles end
+ * ===========================================================================
  */
 
 
@@ -259,9 +254,9 @@ a:hover {
 
  
 /*
- ===============================
- Search box-related styles start
- ===============================
+ * ===============================
+ * Search box-related styles start
+ * ===============================
  */
 
 
@@ -336,7 +331,6 @@ a:hover {
 #tipue_search_foot_boxes li.current {
   @include pagButtonCurrent;
 }
-
 
 .current-page {
   @include pagButtonCurrent;
@@ -455,7 +449,6 @@ a:hover {
   float: left;
   margin-right: 10px;
 }
-
 
 /*
  =========================
