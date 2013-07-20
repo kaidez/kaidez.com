@@ -78,6 +78,10 @@
 // Mobile retina:
 @media #{$mobile-retina} { 
 
+  body {
+    background: url(../img/white_carbon_@2X.png);
+  }
+
   // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite@2x.png', -117px -149px, 60px, 176px);
@@ -92,18 +96,26 @@
 // Non-retina social icons start
 @media #{$mobile-non-retina} {
 
+  body {
+    background: url(../img/white_carbon.png);
+  }
+
+  // Twitter footer icon
   #twitter {
     @include sprite-images('../img/snSprite.png', -1px -2px, 64px, 64px);
   }
-
+ 
+  // Google+ footer icon
   #google-plus {
     @include sprite-images('../img/snSprite.png', -76px -2px, 64px, 64px);
   }
 
+  // GitHub footer icon
   #github {
     @include sprite-images('../img/snSprite.png', -147px -2px, 64px, 64px);
   }
-
+  
+  // YouTube footer icon
   #youtube {
     @include sprite-images('../img/snSprite.png', -219px -2px, 64px, 64px);
     float: left;
@@ -154,26 +166,30 @@
    body {
     background: url(../img/white_carbon_@2X.png);
   }
-  // Retina social icons
+
+  // Twitter footer icon
   #twitter {
     @include sprite-images('../img/snSprite@2x.png', -1px -2px, 64px, 64px);
   }
 
+ // Google+ footer icon
   #google-plus {
     @include sprite-images('../img/snSprite@2x.png', -76px -2px, 64px, 64px);
   }
-
+  
+  // GitHub footer icon
   #github {
     @include sprite-images('../img/snSprite@2x.png', -147px -2px, 64px, 64px);
   }
-
+  
+  // YouTube footer icon
   #youtube {
     @include sprite-images('../img/snSprite@2x.png', -219px -2px, 64px, 64px);
     float: left;
     list-style-type: none;
   }
   
-  //Menu
+  // Menu bg image for mobile
   #menu {
     @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
     display: block;
@@ -182,7 +198,7 @@
     cursor: pointer;
   }
 
-  // Search icon
+  // Search bg image for mobile
   #search {
     @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
     display: block;
@@ -191,7 +207,7 @@
     float: right;
   }
 
-  // Search button
+  // Search button by the search field
   .btnSearch {
     @include sprite-images('../img/snSprite@2x.png', -79px -78px, 27px, 44px);
     border: 0;
@@ -202,7 +218,7 @@
     top: -3px;
   }
 
-  // <h1> tag in the <header>...DESKTOP ONLY!!!!!!!!!!!
+  // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite@2x.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
