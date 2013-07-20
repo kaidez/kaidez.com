@@ -2280,6 +2280,9 @@ a.pagination-link {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 10px;
+    -webkit-box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
     font-size: 18px;
     line-height: 36px;
     padding-top: 21px; }
