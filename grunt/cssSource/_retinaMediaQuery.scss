@@ -57,7 +57,7 @@
 
 /*
  * ==================================================
- * Non-retina media starts for desktops and handhelds
+ * Retina media handhelds/mobiles start
  * ==================================================
  */
 
@@ -194,7 +194,7 @@
 
 
 // Desktop and tablet non-retina:
-@media #{$desktop-tablet} { 
+@media #{$desktop-tablet-non-retina} { 
 
   // <h1> tag in the <header>
   .site-title {
