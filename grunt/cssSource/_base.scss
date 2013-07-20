@@ -189,7 +189,7 @@ $mobile-retina:
 @mixin content-width($dimension) {
   max-width: $dimension;
   margin: 0 auto;
-  padding:0 10px;
+  padding-bottom: 58px;
 }
 @mixin sprite-images ($img, $pos, $height, $width) {
   background: url($img) no-repeat $pos;
