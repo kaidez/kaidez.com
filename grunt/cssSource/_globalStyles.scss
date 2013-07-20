@@ -353,8 +353,8 @@ a:hover {
 // Post snippet that displays on both the home page and search results.
 .post-snippet {
   @include bottomBorder($darken-the-footer-color);
-  margin-bottom: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 48px;
+  margin: 0 40px 59px 40px;
 }
 
 
