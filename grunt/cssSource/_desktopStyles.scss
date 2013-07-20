@@ -304,6 +304,10 @@
     @include footer-header;
   }
 
+  .contact-form-field {
+    @include contact-form-field;
+  }
+
   .footer-sections {
     width: $footer-column-width-desktop;
     float: left;

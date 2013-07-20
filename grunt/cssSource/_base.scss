@@ -198,7 +198,7 @@ $mobile-retina:
 }
 
  /*
-  * Unique styles for the 'site-title' class in the desktop styles...add this * to sprite mixin code
+  * Unique styles for the 'site-title' class in the desktop styles...add this * to sprite mixin code.
   */
 @mixin desktop-logo-sprite-add-on {
   float: left;
@@ -226,6 +226,12 @@ $mobile-retina:
 // style <h2> tags that appear in post snippets
 @mixin content-h2($font-size) {
   font-size: ($font-size);
+}
+
+@mixin contact-form-field {
+  -webkit-border-radius: $master-border-radius - 5;
+  -moz-border-radius: $master-border-radius - 5;
+  border-radius: $master-border-radius - 5;
 }
 
 @mixin read-post-link($border-radius: blank) {
