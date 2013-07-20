@@ -1285,7 +1285,9 @@ a:hover {
  * Page content styles start
  * ===========================================================================
  */
-.wf-active h1.post-title {
+.wf-active h1.post-title, .wf-active h1.category-title {
+  margin: 0px auto;
+  text-align: center;
   font-size: 24px;
   margin: 0;
   line-height: 1.3; }
@@ -1770,6 +1772,11 @@ a.pagination-link {
     float: none;
     text-align: center; }
 
+  .wf-active h1.post-title, .wf-active h1.category-title {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 40px; }
+
   #searchbox {
     display: block; }
 
@@ -2036,6 +2043,11 @@ a.pagination-link {
   * Page content styles start
   * ===========================================================================
   */
+  .wf-active h1.post-title, .wf-active h1.category-title {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 40px; }
+
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
@@ -2252,9 +2264,9 @@ a.pagination-link {
    * ===========================================================================
    */
   /*
-   * ===========================================================================
+   * ==========================================================================
    * Page content styles start
-   * ===========================================================================
+   * ==========================================================================
    */
   .wf-active h1.post-title, .wf-active h1.category-title {
     margin: 0px auto;
@@ -2290,9 +2302,9 @@ a.pagination-link {
     text-align: center; }
 
   /*
-   * ===========================================================================
+   * ==========================================================================
    * Page content styles end
-   * ===========================================================================
+   * ==========================================================================
    */
   /*
    * =================================
