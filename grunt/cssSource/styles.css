@@ -1468,6 +1468,9 @@ a.pagination-link {
  * ====================
  */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 568px), only screen and (min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min-resolution: 192dpi) and (max-width: 568px), only screen and (min-resolution: 2dppx) and (max-width: 568px) {
+  body {
+    background: url(../img/white_carbon_@2X.png); }
+
   .site-title {
     background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
     background-size: 350px 210px;
@@ -1477,6 +1480,9 @@ a.pagination-link {
     margin: 0;
     float: left; } }
 @media only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px) {
+  body {
+    background: url(../img/white_carbon.png); }
+
   #twitter {
     background: url("../img/snSprite.png") no-repeat -1px -2px;
     background-size: 350px 210px;
