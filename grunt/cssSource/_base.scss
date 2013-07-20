@@ -294,6 +294,11 @@ $mobile-retina:
   margin: 0;  
 }
 
+// Styles for post and category <h1> tags
+@mixin post-category-title($font-size) {
+  @include master-center;
+  font-size: $font-size;
+}
 /*
  * ============================================================================
  * Pagination mixins
