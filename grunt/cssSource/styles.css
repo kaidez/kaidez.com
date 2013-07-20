@@ -1469,7 +1469,7 @@ a.pagination-link {
  */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 568px), only screen and (min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min-resolution: 192dpi) and (max-width: 568px), only screen and (min-resolution: 2dppx) and (max-width: 568px) {
   body {
-    background: url(../img/white_carbon_@2X.png); }
+    background: url(../img/white_carbon_@2x.png); }
 
   .site-title {
     background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
@@ -1478,10 +1478,88 @@ a.pagination-link {
     width: 176px;
     text-indent: -999px;
     margin: 0;
-    float: left; } }
+    float: left; }
+
+  #twitter {
+    background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px; }
+
+  #google-plus {
+    background: url("../img/snSprite@2x.png") no-repeat -76px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px; }
+
+  #github {
+    background: url("../img/snSprite@2x.png") no-repeat -147px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px; }
+
+  #youtube {
+    background: url("../img/snSprite@2x.png") no-repeat -219px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px;
+    float: left;
+    list-style-type: none; }
+
+  #menu {
+    background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
+    background-size: 350px 210px;
+    height: 44px;
+    width: 44px;
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer; }
+
+  #search {
+    background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
+    background-size: 350px 210px;
+    height: 44px;
+    width: 44px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right; }
+
+  .btnSearch {
+    background: url("../img/snSprite@2x.png") no-repeat -87px -78px;
+    background-size: 350px 210px;
+    height: 27px;
+    width: 28px;
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px; }
+
+  .site-title {
+    background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
+    background-size: 350px 210px;
+    height: 60px;
+    width: 176px;
+    float: left;
+    margin: 0;
+    text-indent: -999px;
+    display: block; } }
 @media only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px) {
   body {
     background: url(../img/white_carbon.png); }
+
+  .site-title {
+    background: url("../img/snSprite.png") no-repeat -117px -149px;
+    background-size: 350px 210px;
+    height: 60px;
+    width: 176px;
+    float: left;
+    margin: 0;
+    text-indent: -999px;
+    display: block; }
 
   #twitter {
     background: url("../img/snSprite.png") no-repeat -1px -2px;
@@ -1539,20 +1617,19 @@ a.pagination-link {
     padding: 0;
     position: relative;
     left: -42px;
-    top: -3px; }
-
-  .site-title {
-    background: url("../img/snSprite.png") no-repeat -117px -149px;
-    background-size: 350px 210px;
-    height: 60px;
-    width: 176px;
-    float: left;
-    margin: 0;
-    text-indent: -999px;
-    display: block; } }
+    top: -3px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 569px), only screen and (min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (min-resolution: 192dpi) and (min-width: 569px), only screen and (min-resolution: 2dppx) and (min-width: 569px) {
   body {
-    background: url(../img/white_carbon_@2X.png); }
+    background: url(../img/white_carbon_@2x.png); }
+
+  .site-title {
+    background: url("../img/snSprite@2x.png") no-repeat -125px -80px;
+    background-size: 350px 210px;
+    height: 62px;
+    width: 221px;
+    text-indent: -999px;
+    margin: 0;
+    float: left; }
 
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
@@ -1610,16 +1687,7 @@ a.pagination-link {
     padding: 0;
     position: relative;
     left: -42px;
-    top: -3px; }
-
-  .site-title {
-    background: url("../img/snSprite@2x.png") no-repeat -125px -80px;
-    background-size: 350px 210px;
-    height: 62px;
-    width: 221px;
-    text-indent: -999px;
-    margin: 0;
-    float: left; } }
+    top: -3px; } }
 @media only screen and (min-width: 569px) {
   body {
     background: url(../img/white_carbon.png); }
