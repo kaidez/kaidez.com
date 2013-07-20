@@ -3,5 +3,5 @@ pygments: true
 permalink: /:title
 destination: ./_site
 paginate: 10
-exclude: [grunt, robots.txt, css/styles.css, assets]
-#include: .htaccess
+exclude: [grunt, robots.txt, css/styles.css, assets, _plugins/related_posts.rb]
+include: [.htaccess]
