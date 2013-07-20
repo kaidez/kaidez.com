@@ -1090,6 +1090,7 @@ a:hover {
   position: relative;
   height: auto;
   min-height: 100%;
+  background-color: #fff;
   padding: 10px;
   width: auto;
   text-align: left;
