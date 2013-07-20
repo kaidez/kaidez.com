@@ -79,7 +79,7 @@
 @media #{$mobile-retina} { 
 
   body {
-    background: url(../img/white_carbon_@2X.png);
+    background: url(../img/white_carbon_@2x.png);
   }
 
   // <h1> tag in the <header>
@@ -89,15 +89,78 @@
     margin: 0;
     float: left;
   }
+  
+  // Twitter footer icon
+  #twitter {
+    @include sprite-images('../img/snSprite@2x.png', -1px -2px, 64px, 64px);
+  }
+ 
+  // Google+ footer icon
+  #google-plus {
+    @include sprite-images('../img/snSprite@2x.png', -76px -2px, 64px, 64px);
+  }
+
+  // GitHub footer icon
+  #github {
+    @include sprite-images('../img/snSprite@2x.png', -147px -2px, 64px, 64px);
+  }
+  
+  // YouTube footer icon
+  #youtube {
+    @include sprite-images('../img/snSprite@2x.png', -219px -2px, 64px, 64px);
+    float: left;
+    list-style-type: none;
+  }
+
+  // Menu bg image for mobile
+  #menu {
+    @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  // Search bg image for mobile
+  #search {
+    @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
+    display: block;
+    margin-right:10px;
+    cursor: pointer;
+    float: right;
+  }
+
+  // Search button by the search field
+  .btnSearch {
+    @include sprite-images('../img/snSprite@2x.png', -87px -78px, 27px, 28px);
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px;
+  }
+
+  // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('../img/snSprite@2x.png', -117px -149px, 60px, 176px);
+    @include desktop-logo-sprite-add-on;
+  }
 }
 
 
 
-// Non-retina social icons start
+
 @media #{$mobile-non-retina} {
 
   body {
     background: url(../img/white_carbon.png);
+  }
+
+  // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('../img/snSprite.png', -117px -149px, 60px, 176px);
+    @include desktop-logo-sprite-add-on;
   }
 
   // Twitter footer icon
@@ -150,12 +213,6 @@
     left: -42px;
     top: -3px;
   }
-
-  // <h1> tag in the <header>
-  .site-title {
-    @include sprite-images('../img/snSprite.png', -117px -149px, 60px, 176px);
-    @include desktop-logo-sprite-add-on;
-  }
 }
 
 
@@ -163,8 +220,16 @@
 // Desktop and tablet retina:
 @media #{$desktop-tablet-retina} { 
 
-   body {
-    background: url(../img/white_carbon_@2X.png);
+  body {
+    background: url(../img/white_carbon_@2x.png);
+  }
+
+  // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('../img/snSprite@2x.png', -125px -80px, 62px, 221px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
   }
 
   // Twitter footer icon
@@ -216,14 +281,6 @@
     position: relative;
     left: -42px;
     top: -3px;
-  }
-
-  // <h1> tag in the <header>
-  .site-title {
-    @include sprite-images('../img/snSprite@2x.png', -125px -80px, 62px, 221px);
-    text-indent: -999px;
-    margin: 0;
-    float: left;
   }
 }
 
