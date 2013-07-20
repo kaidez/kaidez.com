@@ -79,15 +79,41 @@ $master-border-radius: 10px;
 
 // master shadow for the site's content element (i.e.: ".page-content")
 $master-page-content-shadow: 1px 5px 7px 2px rgba(0,0,0,0.2); 
+
+
+
+
+
+
 /*
- * 'background-size' variable for any and all CSS classes that reference the
- * sprites. You HAVE to do this is you're doubling the size of your image for 
- * retina purposes or the image will look wierd.
+ * Mobile Retina: if the screen is retina-based AND is no wider than 568px.
+ * Targets mobiles and handhelds.
  */
-$bg-size: 350px 210px; 
+$mobile-retina:   
+  "only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 568px),
+  only screen and (min-device-pixel-ratio: 2) and (max-width: 568px),
+  only screen and (min-resolution: 192dpi) and (max-width: 568px),
+  only screen and (min-resolution: 2dppx) and (max-width: 568px)";
+
+/*
+ * Mobile Non Retina: if the screen is no wider than 568px. Targets mobiles
+ * and handhelds.
+ */
+$mobile-non-retina:   
+  "only screen and (max-width: 568px),
+  only screen and (max-width: 568px),
+  only screen and (max-width: 568px),
+  only screen and (max-width: 568px),
+  only screen and (max-width: 568px),
+  only screen and (max-width: 568px)";
 
 
-// Tablet/Desktop: if the screen retina based AND is at least 569px wide:
+/*
+ * Tablet/Desktop Retina: if the screen retina based AND is at least 569px
+ * wide. Targeting tablets and desktops.
+ */
 $desktop-tablet-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px),
   only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px),
@@ -96,18 +122,19 @@ $desktop-tablet-retina:
   only screen and (min-resolution: 192dpi) and (min-width: 569px),
   only screen and (min-resolution: 2dppx) and (min-width: 569px)";
 
-// Tablet/Desktop non-retina: if the screen retina based AND is at least 1024px wide:
-$desktop-tablet: "only screen and (min-width: 569px)";
+/*
+ * Tablet/Desktop: if the screen retina based AND is at least 569px wide. 
+ * Targeting tablets and desktops.
+ */
+$desktop-tablet-non-retina: "only screen and (min-width: 569px)";
 
-// Mobile: if the screen is retina-based AND is no wider than 568px:
-$mobile-retina:   
-  "only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px),
-  only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px),
-  only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 568px),
-  only screen and (min-device-pixel-ratio: 2) and (max-width: 568px),
-  only screen and (min-resolution: 192dpi) and (max-width: 568px),
-  only screen and (min-resolution: 2dppx) and (max-width: 568px)";
- 
+
+/*
+ * 'background-size' variable for any and all CSS classes that reference the
+ * sprites. You HAVE to do this is you're doubling the size of your image for 
+ * retina purposes or the image will look wierd.
+ */
+$bg-size: 350px 210px;
 
 /*
  * =============
