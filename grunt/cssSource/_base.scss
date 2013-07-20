@@ -394,7 +394,6 @@ $mobile-retina:
 
 // outer wrapper for the <header> which wraps the link, nav & search elements
 @mixin outer-wrapper-nav-header {
-  border-bottom: 3px solid $base-link-color;
   width: auto;
 }
 
