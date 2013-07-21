@@ -27,16 +27,6 @@
   font-size: 1.3rem;
 }
 
-/*
- * ============================================================================
- * Logo link :provides a large enough space for a click area. These styles
- * will also be applied to the '_mobileLandscape' view.
- * ============================================================================
- */
-.homepage-link {
-  @include homepage-link(44px, 166px);
-}
-
 // outer wrapper for the <header> which wraps the link, nav & search elements
 .outer-wrapper-nav-header {
   width: 100%;

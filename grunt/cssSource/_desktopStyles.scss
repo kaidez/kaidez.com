@@ -39,11 +39,6 @@
    * =========================================================================
    */
 
-  // Logo link...provides a large enough space for a click area
-  .homepage-link {
-    @include homepage-link(65px, 209px);
-  }
-
   // the inner wrapper for the <header>
   .inner-wrapper-nav-header {
     @include inner-wrapper-nav-header;
