@@ -32,7 +32,7 @@
     @include fonts($robo);
   }
 
-    // Shared class for nav and searchbox elements
+  // Shared class for nav and searchbox elements
   .header-element-margin {
     @include header-element-margin-tablet 
   }
@@ -142,8 +142,9 @@
     @include read-post-link($master-border-radius);
   }
 
-    .post-snippet-title {
-    font-size: 20px;
+  // Post snippet that displays on both the home page and search results.
+  .post-snippet-title {
+    font-size: 27px;
   }
 
   // Styles for post and category <h1> tags

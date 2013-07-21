@@ -216,6 +216,11 @@
   .page-content {
     @include content-width($inner-content-width);
   }
+
+  // Post snippet that displays on both the home page and search results.
+  .post-snippet-title {
+    font-size: 24px;
+  }
   
   // breadcrumbs
   .breadcrumb-styles {
