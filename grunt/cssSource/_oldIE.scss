@@ -254,7 +254,7 @@
   }
 
   .page-content {
-    @include content-width($inner-content-width);
+    @include page-content($inner-content-width);
     font-size: 18px;
     line-height: 36px;
     padding-top:21px;
@@ -290,7 +290,7 @@
    */
 
   .control-section-width {
-    @include content-width($inner-content-width);
+    @include page-content($inner-content-width);
   }
 
   /*

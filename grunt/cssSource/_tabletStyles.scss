@@ -217,8 +217,7 @@
   
   // For the main element
   .page-content {
-    @include content-width($inner-content-width);
-    font-size: 18px;
+    @include page-content($inner-content-width);
   }
 
   .breadcrumb-styles {

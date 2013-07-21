@@ -64,7 +64,7 @@ $robo: "Roboto Condensed";
 $srf: serif;
 
 // Width varibles...affects the width of the "inner" containers on all pages.
-$mobile-portrait-width: 300px; // Mobile
+$mobile-portrait-width: 290px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $inner-content-width: 1024px; // Desktop
 
@@ -213,13 +213,19 @@ $bg-size: 350px 210px;
   * variable defines the width value and the values are determined by the
   * "Width variables" directly below the mixin.
   */
-@mixin content-width($dimension) {
+@mixin page-content($dimension) {
   max-width: $dimension;
   margin: 0 auto;
   padding-bottom: 58px;
   font-size: 18px;
   line-height: 28px;
+  @include full-height;
+  background-color: #fff;
+  padding: 15px;
+  width: auto;
+  text-align: left;
 }
+
 @mixin sprite-images ($img, $position, $height, $width) {
   background: url($img) no-repeat $position;
   background-size: $bg-size;

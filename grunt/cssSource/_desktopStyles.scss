@@ -235,10 +235,8 @@
   }
 
   .page-content {
-    @include content-width($inner-content-width);
+    @include page-content($inner-content-width);
     @include page-content-box-shadow($master-page-content-shadow);
-    font-size: 18px;
-    line-height: 36px;
   }
 
   .post-snippet-title {
@@ -274,7 +272,7 @@
    */
 
   .control-section-width {
-    @include content-width($inner-content-width);
+    @include page-content($inner-content-width);
   }
 
   /*
