@@ -36,12 +36,12 @@
  * 'getGutterWidth()' function below.
  */
 /*
- * Mobile Retina: if the screen is retina-based AND is no wider than 568px.
- * Targets mobiles and handhelds.
+ * Mobile Retina: if the screen is retina-based AND is at least 320px. Targets
+ * mobiles and handhelds.
  */
 /*
- * Mobile Non Retina: if the screen is no wider than 568px. Targets mobiles
- * and handhelds.
+ * Mobile Non Retina: if the screen is not retina AND at least 320px. Targets 
+ * mobiles and handhelds.
  */
 /*
  * Tablet/Desktop Retina: if the screen retina based AND is at least 569px
@@ -1407,99 +1407,94 @@ a.pagination-link {
  * ===========================================================================
  */
 /*
- * ======================================================
+ * ============================================================================
  * The entire retina/non-retina media query styles start
+ * ============================================================================
  *
  *   ====================
  *   HOW THIS STUFF WORKS
  *   ====================
  *
- * kaidez.com uses a sprite which contains images for:
+ * There is a background image attached to the <body> tag and a sprite that's
+ * used throughout the site. For these two images, there is both a 
+ * retina and non-retina version....four images altogether. Here are there
+ * filenames:
  *
- *   -the site logo
- *   -the menu image in the header on mobile
- *   -the search icon in the header on mobile devices
- *   -the search icon that appears in the search bar
- *   -all four social networking icons in the site
- *    footer
+ *    THE BACKGROUND IMAGE
+ *    ====================
+ *     -'white_carbon@2x.png': the retina version.
+ *     -'white_carbon.png': the non-retina version.
  *
- * There are two versions of this sprite:
- *
- *   -'snSprite.png': the non-retina device version.
- *   -'snSprite@2x.png': the retina device version.
- *
- * The layout for the social netowking icons is
- * consistent across all devices and resolutions. The logo
- * and the two mobile-based images appear differently
- * across all devices and resolutions. Everything takes a
- * 'mobile first' approach by looking for loading in the
- * non-retina mobile layout first and foremost. As more
- * and more mobile devices are released with hi-resolution,
- * it may be better to load the retina mobile layout first
- * and foremost. Maybe in the future?
- *
- * If the viewer isn't viewing the site in a 'non-retina
- * mobile' way, the sprite loads using one of the following
- * methods:
- *
- *   -'$retina' loads all the sprite layouts to
- *     retina tablets and desktops
- *
- *   -'$desktop' loads the logo-layout only to the
- *    non-retina tablets and desktops (again, the social
- *    networking sprite layout is consistent across all
- *    devices and resolutions)
- *
- *   -'$mobile-retina' loads the logo-layout only to retina
- *    mobile devices (one more time: the social
- *    networking sprite layout is consistent across all
- *    devices and resolutions)
+ *    THE SPRITE
+ *    ==========
+ *     -'snSprite@2x.png': the retina version.
+ *     -'snSprite.png': the non-retina version.
  * 
- * ======================================================
+ * Media queries ensure that the right versions load based on screen 
+ * dimension & resolution. The values of the media queries are defined by
+ * variables whose values are defined in '_base.scss'.
+ *
+ *   -$desktop-tablet-non-retina: (non-retina-based devices w/ a 569px
+ *    min-width).
+ *
+ *   -$mobile-non-retina: (non-retina-based devices w/ a 320px min-width).
+ *
+ *   -$desktop-tablet-retina: (retina-based devices w/ a 569px min-width).
+ *
+ *   -$mobile-retina: (retina-based devices w/ a 320px min-width).
+ *
+ * The retina media queries are placed below the non-retina media queries to 
+ * ensure that the retina code isn't over-written by the CSS cascade.  
+ * 
+ * More info on the sprite...In terms what images it contains, they are:
+ *
+ *     -the site logo
+ *     -the menu image in the header on mobile
+ *     -the search icon in the header on mobile devices
+ *     -the search icon that appears in the search bar
+ *     -all four social networking icons in the sitefooter
+ *
+ *  The layout for the social netowking icons is consistent across all devices * and resolutions. The logo and the two mobile-based images appear 
+ * differently across all devices and resolutions.
+ *
+ * ============================================================================
  */
 /*
- * ==================================================
- * Retina media handhelds/mobiles start
- * ==================================================
+ * Desktop/tablet non-retina media query.
  */
-/*
- * ====================
- * Retina stuff starts
- * ====================
- */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 568px), only screen and (min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min-resolution: 192dpi) and (max-width: 568px), only screen and (min-resolution: 2dppx) and (max-width: 568px) {
+@media only screen and (min-width: 569px) {
   body {
-    background: url(../img/white_carbon_@2x.png); }
+    background: url(../img/white_carbon.png); }
 
   .site-title {
-    background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
+    background: url("../img/snSprite.png") no-repeat -125px -80px;
     background-size: 350px 210px;
-    height: 60px;
-    width: 176px;
+    height: 62px;
+    width: 221px;
     text-indent: -999px;
     margin: 0;
     float: left; }
 
   #twitter {
-    background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
+    background: url("../img/snSprite.png") no-repeat -1px -2px;
     background-size: 350px 210px;
     height: 64px;
     width: 64px; }
 
   #google-plus {
-    background: url("../img/snSprite@2x.png") no-repeat -76px -2px;
+    background: url("../img/snSprite.png") no-repeat -76px -2px;
     background-size: 350px 210px;
     height: 64px;
     width: 64px; }
 
   #github {
-    background: url("../img/snSprite@2x.png") no-repeat -147px -2px;
+    background: url("../img/snSprite.png") no-repeat -147px -2px;
     background-size: 350px 210px;
     height: 64px;
     width: 64px; }
 
   #youtube {
-    background: url("../img/snSprite@2x.png") no-repeat -219px -2px;
+    background: url("../img/snSprite.png") no-repeat -219px -2px;
     background-size: 350px 210px;
     height: 64px;
     width: 64px;
@@ -1507,7 +1502,7 @@ a.pagination-link {
     list-style-type: none; }
 
   #menu {
-    background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
+    background: url("../img/snSprite.png") no-repeat -2px -68px;
     background-size: 350px 210px;
     height: 44px;
     width: 44px;
@@ -1517,7 +1512,7 @@ a.pagination-link {
     cursor: pointer; }
 
   #search {
-    background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
+    background: url("../img/snSprite.png") no-repeat -41px -69px;
     background-size: 350px 210px;
     height: 44px;
     width: 44px;
@@ -1527,26 +1522,19 @@ a.pagination-link {
     float: right; }
 
   .btnSearch {
-    background: url("../img/snSprite@2x.png") no-repeat -87px -78px;
+    background: url("../img/snSprite.png") no-repeat -79px -78px;
     background-size: 350px 210px;
     height: 27px;
-    width: 28px;
+    width: 44px;
     border: 0;
     text-indent: -999px;
     padding: 0;
     position: relative;
     left: -42px;
-    top: -3px; }
-
-  .site-title {
-    background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
-    background-size: 350px 210px;
-    height: 60px;
-    width: 176px;
-    float: left;
-    margin: 0;
-    text-indent: -999px;
-    display: block; } }
+    top: -3px; } }
+/*
+ * Mobile non-retina media query
+ */
 @media only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px) {
   body {
     background: url(../img/white_carbon.png); }
@@ -1618,6 +1606,9 @@ a.pagination-link {
     position: relative;
     left: -42px;
     top: -3px; } }
+/*
+ * Desktop/tablet retina media query.
+ */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 569px), only screen and (min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (min-resolution: 192dpi) and (min-width: 569px), only screen and (min-resolution: 2dppx) and (min-width: 569px) {
   body {
     background: url(../img/white_carbon_@2x.png); }
@@ -1688,32 +1679,84 @@ a.pagination-link {
     position: relative;
     left: -42px;
     top: -3px; } }
-@media only screen and (min-width: 569px) {
+/*
+ * Mobile retina media query: needs to be placed last or it gets over-ridden 
+ * by the non-retina version on some retina-enabled handhelds.
+ */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 568px), only screen and (min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min-resolution: 192dpi) and (max-width: 568px), only screen and (min-resolution: 2dppx) and (max-width: 568px) {
   body {
-    background: url(../img/white_carbon.png); }
+    background: url(../img/white_carbon_@2x.png); }
 
   .site-title {
-    background: url("../img/snSprite.png") no-repeat -125px -80px;
+    background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
     background-size: 350px 210px;
-    height: 62px;
-    width: 221px;
+    height: 60px;
+    width: 176px;
     text-indent: -999px;
     margin: 0;
-    float: left; } }
+    float: left; }
+
+  #twitter {
+    background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px; }
+
+  #google-plus {
+    background: url("../img/snSprite@2x.png") no-repeat -76px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px; }
+
+  #github {
+    background: url("../img/snSprite@2x.png") no-repeat -147px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px; }
+
+  #youtube {
+    background: url("../img/snSprite@2x.png") no-repeat -219px -2px;
+    background-size: 350px 210px;
+    height: 64px;
+    width: 64px;
+    float: left;
+    list-style-type: none; }
+
+  #menu {
+    background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
+    background-size: 350px 210px;
+    height: 44px;
+    width: 44px;
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer; }
+
+  #search {
+    background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
+    background-size: 350px 210px;
+    height: 44px;
+    width: 44px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right; }
+
+  .btnSearch {
+    background: url("../img/snSprite@2x.png") no-repeat -87px -78px;
+    background-size: 350px 210px;
+    height: 27px;
+    width: 28px;
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px; } }
 /*
- * ======================
- * Non-retina stuff ends
- * ======================
- */
-/*
- * =====================
- * Retina media ends
- * =====================
- */
-/*
- * ===================================================
- * The entire retina/non-retina media query style ends
- * ===================================================
+ * ============================================================================
+ * The entire retina/non-retina media query styles ends
+ * ============================================================================
  */
 @media only screen and (min-width: 321px) and (max-width: 568px) {
   /*
