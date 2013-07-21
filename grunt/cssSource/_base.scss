@@ -294,7 +294,6 @@ $bg-size: 350px 210px;
 @mixin site-header {
   width:209px;
   float: left;
-  margin-left: 10px;
 }
 
 // wrap header elements 
@@ -444,6 +443,8 @@ $bg-size: 350px 210px;
 // outer wrapper for the <header> which wraps the link, nav & search elements
 @mixin outer-wrapper-nav-header {
   width: auto;
+  padding: 15px 45px 0;
+  margin: 0 auto;
 }
 
 // Logo link...provides a large enough space for a click area
