@@ -904,6 +904,9 @@ html, body {
   position: absolute;
   clip: rect(1px 1px 1px 1px); }
 
+.top-level-header-wrapper {
+  padding-top: 12px; }
+
 .outer-wrapper-nav-header {
   background-color: #67cddc; }
 
@@ -1313,7 +1316,7 @@ a:hover {
 .page-content {
   max-width: 290px;
   margin: 0 auto;
-  padding: 15px 45px 58px;
+  padding: 15px 15px 58px;
   font-size: 18px;
   line-height: 30px;
   position: relative;
@@ -1780,16 +1783,7 @@ a.pagination-link {
    */
   .page-content {
     max-width: 548px;
-    margin: 0 auto;
-    padding: 15px 45px 58px;
-    font-size: 18px;
-    line-height: 30px;
-    position: relative;
-    height: auto;
-    min-height: 100%;
-    background-color: #fff;
-    width: auto;
-    text-align: left; }
+    padding: 15px 15px 58px; }
 
   .breadcrumb-styles {
     font-size: 14px;
@@ -2317,9 +2311,6 @@ a.pagination-link {
     margin: 0;
     width: 270px;
     line-height: 2.5; }
-
-  .top-level-header-wrapper {
-    padding-top: 12px; }
 
   /*
    * =========================================================================
