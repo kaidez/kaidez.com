@@ -215,6 +215,7 @@
   // For the "main" id element
   .page-content {
     @include content-width($inner-content-width);
+    font-size: 18px;
   }
 
   // Post snippet that displays on both the home page and search results.
