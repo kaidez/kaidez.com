@@ -75,11 +75,6 @@
     line-height: 2.5;
   }
 
-  // wrap header elements 
-  .top-level-header-wrapper {
-    @include top-level-header-wrapper
-  }
-
   /*
    * =========================================================================
    * Header styles end
@@ -233,7 +228,7 @@
   #content h2 {
     @include content-h2(27px);
   }
- 
+
   // title tag for post snippets
   .post-snippet-title {
     font-size: 34px;
