@@ -37,14 +37,15 @@
     @include header-element-margin-tablet 
   }
 
-  // the inner wrapper for the <header>
+    // the inner wrapper for the <header>
   .inner-wrapper-nav-header {
-    padding: 21px;
+    @include inner-wrapper-nav-header;
   }
 
   // outer wrapper for the <header> which wraps the link, nav & search elements
   .outer-wrapper-nav-header {
-    height: 140px;
+    @include outer-wrapper-nav-header;
+    min-height: 130px;
   }
 
   // searchbox
@@ -57,17 +58,15 @@
   .site-description {
     display: block;
     position: static;
+    font-size: 16px;
     margin: 0;
     width: 270px;
-    clear: both;
-    font-size: 16px;
+    line-height: 2.5;
   }
 
   // <header> tag
   .site-header {
-    max-width: 450px;
-    float: left;
-    margin-bottom: 37px;
+    @include site-header;
   }
   
   /*
