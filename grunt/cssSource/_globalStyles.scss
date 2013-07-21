@@ -99,6 +99,10 @@ html, body {
   @include hide-element;
 }
 
+.top-level-header-wrapper {
+  @include top-level-header-wrapper
+}
+
 // outer wrapper for the <header> which wraps the link, nav & search elements
 .outer-wrapper-nav-header {
   background-color: $header-color;
