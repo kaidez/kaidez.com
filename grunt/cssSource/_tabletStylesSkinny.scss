@@ -35,6 +35,11 @@
     @include header-element-margin-tablet  
   }
 
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link(65px, 209px);
+  }
+
   // the inner wrapper for the <header>
   .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px;
