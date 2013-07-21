@@ -895,7 +895,6 @@ html, body {
 .wf-active h5,
 .wf-active h6 {
   font-family: "Roboto Condensed";
-  font-size: 1.0rem;
   visibility: visible; }
 
 .homepage-link {
@@ -1806,8 +1805,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
-    visibility: visible;
-    font-size: 1.1rem; }
+    visibility: visible; }
 
   .header-element-margin {
     margin: 0; }
@@ -2018,8 +2016,7 @@ a.pagination-link {
   .wf-active h5,
   .wf-active h6 {
     font-family: "Roboto Condensed";
-    visibility: visible;
-    font-size: 1.7rem; }
+    visibility: visible; }
 
   a.read-post-link {
     -webkit-border-radius: 10px;
