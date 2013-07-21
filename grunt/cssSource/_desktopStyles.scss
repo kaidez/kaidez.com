@@ -233,14 +233,15 @@
   #content h2 {
     @include content-h2(27px);
   }
+ 
+  // title tag for post snippets
+  .post-snippet-title {
+    font-size: 34px;
+  }
 
   .page-content {
     @include page-content($inner-content-width);
     @include page-content-box-shadow($master-page-content-shadow);
-  }
-
-  .post-snippet-title {
-    font-size: 32px;
   }
   
   // breadcrumbs
