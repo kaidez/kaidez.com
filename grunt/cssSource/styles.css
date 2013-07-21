@@ -1036,7 +1036,7 @@ html, body {
   box-shadow: 1px 1px 2px #e3e3e3; }
 
 .tipue_search_content_title {
-  font: 27px "Roboto Condensed";
+  font-family: "Roboto Condensed";
   margin-top: 31px; }
 
 .tipue_search_content_title a {
@@ -1214,7 +1214,7 @@ a:hover {
  * Header styles start
  * ============================================================================
  */
-.wf-active h1 {
+.post-snippet-title {
   font-size: 1.3rem; }
 
 /*
@@ -1285,6 +1285,9 @@ a:hover {
   color: #111;
   padding: 13px 0;
   line-height: 36px; }
+
+.tipue_search_content_title {
+  font-size: 21px; }
 
 /*
  * ===========================================================================
@@ -1830,7 +1833,8 @@ a.pagination-link {
     position: static;
     margin: 0;
     width: 270px;
-    clear: both; }
+    clear: both;
+    font-size: 16px; }
 
   .site-header {
     max-width: 450px;
@@ -1906,7 +1910,7 @@ a.pagination-link {
     text-align: center; }
 
   .post-snippet-title {
-    font-size: 20px; }
+    font-size: 27px; }
 
   .wf-active h1.post-title, .wf-active h1.category-title {
     margin: 0px auto;
@@ -2188,6 +2192,9 @@ a.pagination-link {
     margin: 0 auto;
     padding-bottom: 58px; }
 
+  .post-snippet-title {
+    font-size: 24px; }
+
   .breadcrumb-styles {
     font-size: 16px;
     padding: 0px 0 54px;
@@ -2235,16 +2242,6 @@ a.pagination-link {
     font-family: "Lato";
     visibility: visible; }
 
-  .wf-active h1,
-  .js .wf-active h2,
-  .wf-active h3,
-  .wf-active h4,
-  .wf-active h5,
-  .wf-active h6 {
-    font-family: "Roboto Condensed";
-    visibility: visible;
-    font-size: 1.7rem; }
-
   .clearfix:before,
   .clearfix:after {
     content: none;
@@ -2281,7 +2278,7 @@ a.pagination-link {
   .site-description {
     display: block;
     position: static;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
     width: 270px;
     line-height: 2.5; }
@@ -2490,9 +2487,6 @@ a.pagination-link {
   .copyrightStyle {
     clear: both; }
 
-  /* Font styles for tablets & desktops. Google
-   * font doesn't load on mobile.
-   */
   .share-post-link {
     font-size: 16px;
     line-height: 1;
