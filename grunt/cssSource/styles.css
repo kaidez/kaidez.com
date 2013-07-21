@@ -910,6 +910,9 @@ html, body {
 .site-header {
   text-align: left; }
 
+.site-description {
+  clear: both; }
+
 /*
  * ===========================================================================
  * Header styles end
@@ -1216,6 +1219,16 @@ a:hover {
  */
 .post-snippet-title {
   font-size: 1.3rem; }
+
+/*
+ * ============================================================================
+ * Logo link :provides a large enough space for a click area. These styles
+ * will also be applied to the '_mobileLandscape' view.
+ * ============================================================================
+ */
+.homepage-link {
+  height: 44px;
+  width: 166px; }
 
 .outer-wrapper-nav-header {
   width: 100%; }
@@ -2028,6 +2041,10 @@ a.pagination-link {
   .header-element-margin {
     margin: 0; }
 
+  .homepage-link {
+    height: 65px;
+    width: 209px; }
+
   .inner-wrapper-nav-header {
     padding: 8px 15px 15px 15px; }
 
@@ -2237,6 +2254,10 @@ a.pagination-link {
    * Header styles start
    * =========================================================================
    */
+  .homepage-link {
+    height: 65px;
+    width: 209px; }
+
   .inner-wrapper-nav-header {
     width: 1024px;
     margin: 0 auto; }
@@ -2378,6 +2399,9 @@ a.pagination-link {
    * Page content styles start
    * ==========================================================================
    */
+  .tipue_search_content_title {
+    font-size: 32px; }
+
   .wf-active h1.post-title, .wf-active h1.category-title {
     margin: 0px auto;
     text-align: center;
@@ -2397,7 +2421,7 @@ a.pagination-link {
     line-height: 36px; }
 
   .post-snippet-title {
-    font-size: 27px; }
+    font-size: 32px; }
 
   .breadcrumb-styles {
     font-size: 16px;
