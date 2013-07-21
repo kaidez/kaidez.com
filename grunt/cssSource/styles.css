@@ -1112,7 +1112,7 @@ a:hover {
   padding: 10px;
   width: auto;
   text-align: left;
-  line-height: 1.7; }
+  line-height: 36px; }
 
 .post-snippet {
   border-bottom: 1px solid #01070a;
@@ -1312,7 +1312,8 @@ a:hover {
 .page-content {
   max-width: 300px;
   margin: 0 auto;
-  padding-bottom: 58px; }
+  padding-bottom: 58px;
+  line-height: 28px; }
 
 .breadcrumb-styles {
   font-size: 14px;
@@ -1972,7 +1973,8 @@ a.pagination-link {
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding-bottom: 58px; }
+    padding-bottom: 58px;
+    font-size: 18px; }
 
   .breadcrumb-styles {
     font-size: 16px;
@@ -2189,7 +2191,8 @@ a.pagination-link {
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding-bottom: 58px; }
+    padding-bottom: 58px;
+    font-size: 18px; }
 
   .post-snippet-title {
     font-size: 24px; }
