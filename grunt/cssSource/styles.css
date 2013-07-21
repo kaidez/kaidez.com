@@ -1002,6 +1002,9 @@ html, body {
 #tipue_search_button:hover {
   border: 1px solid #c3c3c3; }
 
+.pagination, #tipue_search_foot {
+  margin: 60px 0 21px; }
+
 #tipue_search_foot_boxes {
   padding: 0;
   margin: 0;
@@ -1115,8 +1118,7 @@ a:hover {
 
 .post-snippet {
   border-bottom: 1px solid #01070a;
-  padding-bottom: 48px;
-  margin: 0 40px 59px 40px; }
+  padding-bottom: 48px; }
 
 #related-posts .related-posts-header {
   font-size: 20px;
@@ -1289,7 +1291,7 @@ a:hover {
   line-height: 36px; }
 
 .tipue_search_content_title {
-  font-size: 21px; }
+  font-size: 32px; }
 
 /*
  * ===========================================================================
@@ -1311,14 +1313,13 @@ a:hover {
 .page-content {
   max-width: 290px;
   margin: 0 auto;
-  padding-bottom: 58px;
+  padding: 15px 45px 58px;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 30px;
   position: relative;
   height: auto;
   min-height: 100%;
   background-color: #fff;
-  padding: 15px;
   width: auto;
   text-align: left; }
 
@@ -1780,14 +1781,13 @@ a.pagination-link {
   .page-content {
     max-width: 548px;
     margin: 0 auto;
-    padding-bottom: 58px;
+    padding: 15px 45px 58px;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: #fff;
-    padding: 15px;
     width: auto;
     text-align: left; }
 
@@ -1986,17 +1986,19 @@ a.pagination-link {
    * Page content styles start
    * ==========================================================================
    */
+  .post-snippet-title {
+    font-size: 34px; }
+
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding-bottom: 58px;
+    padding: 15px 45px 58px;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: #fff;
-    padding: 15px;
     width: auto;
     text-align: left; }
 
@@ -2212,22 +2214,21 @@ a.pagination-link {
     text-align: center;
     font-size: 40px; }
 
+  .post-snippet-title {
+    font-size: 34px; }
+
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding-bottom: 58px;
+    padding: 15px 45px 58px;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: #fff;
-    padding: 15px;
     width: auto;
     text-align: left; }
-
-  .post-snippet-title {
-    font-size: 24px; }
 
   .breadcrumb-styles {
     font-size: 16px;
@@ -2445,25 +2446,24 @@ a.pagination-link {
   #content h2 {
     font-size: 27px; }
 
+  .post-snippet-title {
+    font-size: 34px; }
+
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding-bottom: 58px;
+    padding: 15px 45px 58px;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: #fff;
-    padding: 15px;
     width: auto;
     text-align: left;
     -webkit-box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2); }
-
-  .post-snippet-title {
-    font-size: 32px; }
 
   .breadcrumb-styles {
     font-size: 16px;
@@ -2495,14 +2495,13 @@ a.pagination-link {
   .control-section-width {
     max-width: 1024px;
     margin: 0 auto;
-    padding-bottom: 58px;
+    padding: 15px 45px 58px;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: #fff;
-    padding: 15px;
     width: auto;
     text-align: left; }
 
