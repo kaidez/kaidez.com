@@ -40,10 +40,10 @@
  *
  *   -$mobile-retina: (retina-based devices w/ a 320px min-width).
  *
- * The retina media queries are placed below the non-retina media queries to 
- * ensure that the retina code isn't over-written by the CSS cascade.  
+ * The retina media queries are placed below the non-retina media queries. If * this isn't done, the non-retina code MIGHT overwrite the retina code by the 
+ * CSS cascade on SOME devices.  
  * 
- * More info on the sprite...In terms what images it contains, they are:
+ * More info on the sprite...in terms what images it contains, they are:
  *
  *     -the site logo
  *     -the menu image in the header on mobile
