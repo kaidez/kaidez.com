@@ -233,7 +233,7 @@
   }
 
   .post-snippet-title {
-    font-size: 27px;
+    font-size: 36px;
   }
   
 
@@ -242,7 +242,6 @@
     @include breadcrumb-styles(16px);
     padding-top: 10px;
   }
-
 
   // the "Read post" link on the home, category and search pages
   a.read-post-link {
