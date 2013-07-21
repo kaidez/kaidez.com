@@ -217,6 +217,8 @@ $bg-size: 350px 210px;
   max-width: $dimension;
   margin: 0 auto;
   padding-bottom: 58px;
+  font-size: 18px;
+  line-height: 28px;
 }
 @mixin sprite-images ($img, $position, $height, $width) {
   background: url($img) no-repeat $position;
