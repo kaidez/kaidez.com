@@ -251,14 +251,14 @@
     color: darken($header-color, 20);
   }
 
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(10px);
+  }
 
   // the "Read post" link on the home, category and search pages
   a.read-post-link {
     @include read-post-link($master-border-radius);
-  }
-
-  .breadcrumb-separator {
-    padding:0 10px;
   }
 
   /*

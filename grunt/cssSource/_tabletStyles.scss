@@ -230,6 +230,11 @@
     @include breadcrumb-styles(16px);
   }
 
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(10px);
+  }
+
   // Related post links
   .related-posts-header {
     @include related-posts-header(17px);

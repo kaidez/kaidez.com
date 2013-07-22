@@ -228,6 +228,11 @@
     padding-top: 10px;
   }
 
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(10px);
+  }
+
  /*
   * ===========================================================================
   * Page content styles end

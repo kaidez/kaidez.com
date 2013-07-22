@@ -159,6 +159,11 @@
   padding: 20px 10px 35px 10px;
 }
 
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(2px, 14px);
+  }
+
 // the "Read post" link on the home, category and search pages
 a.read-post-link {
   @include read-post-link($master-border-radius);
