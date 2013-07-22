@@ -108,6 +108,7 @@
 
   .nav-search-style {
      @include nav-search-style;
+     margin-top: 18px;
   }
   // <ul> tag
   #site-navigation-list {
