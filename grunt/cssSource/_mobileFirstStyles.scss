@@ -157,13 +157,15 @@
   .breadcrumb-styles {
     @include breadcrumb-styles(14px, 19px);
   }
-
+  
+  // breadcrumb link
   .breadcrumb-styles a:link,
   .breadcrumb-styles a:visited  {
     text-decoration: underline;
     color: darken($header-color, 20);
   }
-
+  
+  // hover class for breadcrumb link
   .breadcrumb-styles a:hover  {
     text-decoration: none;
     color: darken($header-color, 20);
