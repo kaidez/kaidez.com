@@ -2483,6 +2483,13 @@ a.pagination-link {
     margin: 0 auto;
     padding: 8px 45px; }
 
+  .breadcrumb-styles a:link,
+  .breadcrumb-styles a:visited {
+    text-decoration: underline; }
+
+  .breadcrumb-styles a:hover {
+    text-decoration: none; }
+
   a.read-post-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
