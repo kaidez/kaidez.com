@@ -153,28 +153,33 @@
   text-align: left;
 }
 
-  // breadcrumbs
-  .breadcrumb-styles {
-    @include breadcrumb-styles(14px, 19px);
-  }
+// breadcrumbs
+.breadcrumb-styles {
+  @include breadcrumb-styles(14px, 19px);
+}
   
-  // breadcrumb link
-  .breadcrumb-styles a:link,
-  .breadcrumb-styles a:visited  {
-    text-decoration: underline;
-    color: darken($header-color, 20);
-  }
+// breadcrumb link
+.breadcrumb-styles a:link,
+.breadcrumb-styles a:visited  {
+  text-decoration: underline;
+  color: darken($header-color, 20);
+}
   
-  // hover class for breadcrumb link
-  .breadcrumb-styles a:hover  {
-    text-decoration: none;
-    color: darken($header-color, 20);
-  }
+// hover class for breadcrumb link
+.breadcrumb-styles a:hover  {
+  text-decoration: none;
+  color: darken($header-color, 20);
+}
 
-  // the breadcrumb-separator
-  .breadcrumb-separator {
-    @include breadcrumb-separator(2px, 14px);
-  }
+// the breadcrumb-separator
+.breadcrumb-separator {
+  @include breadcrumb-separator(2px, 14px);
+}
+
+// hide the page title value and &raqou; with this class on single post page's breadcrumb.
+.breadcrumb-last {
+  display:none
+}
 
 // the "Read post" link on the home, category and search pages
 a.read-post-link {

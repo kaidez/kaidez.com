@@ -257,6 +257,12 @@
     @include breadcrumb-separator(10px);
   }
 
+  // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
+  
+.breadcrumb-last {
+    display:inline;
+  }
+
   // the "Read post" link on the home, category and search pages
   a.read-post-link {
     @include read-post-link($master-border-radius);

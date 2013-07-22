@@ -235,6 +235,12 @@
     @include breadcrumb-separator(10px);
   }
 
+  // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
+  
+.breadcrumb-last {
+    display:inline;
+  }
+
   // Related post links
   .related-posts-header {
     @include related-posts-header(17px);
