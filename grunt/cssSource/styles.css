@@ -986,6 +986,11 @@ html, body {
   border: 1px solid #d3d3d3;
   outline: none; }
 
+.tipue_search_content_text {
+  color: #111;
+  padding: 16px 0;
+  line-height: 36px; }
+
 .search-highlight {
   font-weight: bolder;
   font-style: none; }
@@ -1222,7 +1227,8 @@ a:hover {
  * ============================================================================
  */
 .post-snippet-title {
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  line-height: 1.4; }
 
 /*
  * ============================================================================
@@ -1288,11 +1294,6 @@ a:hover {
 .searchfield-style {
   width: 260px; }
 
-.tipue_search_content_text {
-  color: #111;
-  padding: 13px 0;
-  line-height: 36px; }
-
 .tipue_search_content_title {
   font-size: 32px; }
 
@@ -1337,6 +1338,7 @@ a.read-post-link {
   color: #fff;
   display: block;
   padding: 2px;
+  margin-top: 14px;
   background-color: #3285a5;
   max-width: 120px;
   float: none;
@@ -1916,6 +1918,7 @@ a.pagination-link {
     color: #fff;
     display: block;
     padding: 2px;
+    margin-top: 14px;
     background-color: #3285a5;
     max-width: 120px;
     float: none;
@@ -2052,6 +2055,7 @@ a.pagination-link {
     color: #fff;
     display: block;
     padding: 2px;
+    margin-top: 14px;
     background-color: #3285a5;
     max-width: 120px;
     float: none;
@@ -2468,6 +2472,7 @@ a.pagination-link {
     color: #fff;
     display: block;
     padding: 2px;
+    margin-top: 14px;
     background-color: #3285a5;
     max-width: 120px;
     float: none;
