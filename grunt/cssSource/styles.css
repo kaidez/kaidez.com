@@ -1789,7 +1789,11 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 14px;
-    padding: 0px 0 54px;
+    background-color: #90dbe6;
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 45px;
     padding-top: 10px; }
 
   /*
@@ -2007,8 +2011,11 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 16px;
-    padding: 0px 0 54px;
-    padding-top: 10px; }
+    background-color: #90dbe6;
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 45px; }
 
   .related-posts-header {
     font-size: 17px; }
@@ -2236,7 +2243,11 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 16px;
-    padding: 0px 0 54px;
+    background-color: #90dbe6;
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 45px;
     padding-top: 10px; }
 
   /*
@@ -2466,8 +2477,11 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 16px;
-    padding: 0px 0 54px;
-    padding-top: 10px; }
+    background-color: #90dbe6;
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 45px; }
 
   a.read-post-link {
     -webkit-border-radius: 10px;
