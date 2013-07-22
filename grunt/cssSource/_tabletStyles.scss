@@ -227,7 +227,7 @@
   }
 
   .breadcrumb-styles {
-    @include breadcrumb-styles(16px);
+    @include breadcrumb-styles(16px, 45px);
   }
 
   // the breadcrumb-separator
