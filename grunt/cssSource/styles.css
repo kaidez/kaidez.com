@@ -1855,6 +1855,10 @@ a.pagination-link {
     width: 209px;
     float: left; }
 
+  .homepage-link {
+    height: 63px;
+    width: 211px; }
+
   /*
    * ==========================================================================
    * Header styles end
