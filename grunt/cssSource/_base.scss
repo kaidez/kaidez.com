@@ -286,7 +286,7 @@ $bg-size: 350px 210px;
 
 // the inner wrapper for the <header>
 @mixin inner-wrapper-nav-header {
-  width: $inner-content-width;
+  max-width: $inner-content-width;
   margin: 0 auto;
 }
 
@@ -308,7 +308,7 @@ $bg-size: 350px 210px;
 }
 
 // style wrapper for nav & search but it's only in one place right now and can go (maybe)
-@mixin nav-search {
+@mixin nav-search-style {
   float: right;
 }
 
