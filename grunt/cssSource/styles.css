@@ -1828,10 +1828,14 @@ a.pagination-link {
     margin: 0; }
 
   .inner-wrapper-nav-header {
-    padding: 21px; }
+    max-width: 1024px;
+    margin: 0 auto; }
 
   .outer-wrapper-nav-header {
-    height: 140px; }
+    width: auto;
+    padding: 15px 45px 0;
+    margin: 0 auto;
+    min-height: 130px; }
 
   .searchbox-style {
     text-align: left;
@@ -1840,15 +1844,14 @@ a.pagination-link {
   .site-description {
     display: block;
     position: static;
+    font-size: 16px;
     margin: 0;
     width: 270px;
-    clear: both;
-    font-size: 16px; }
+    line-height: 2.5; }
 
   .site-header {
-    max-width: 450px;
-    float: left;
-    margin-bottom: 37px; }
+    width: 209px;
+    float: left; }
 
   /*
    * ==========================================================================
@@ -2288,7 +2291,7 @@ a.pagination-link {
     width: 209px; }
 
   .inner-wrapper-nav-header {
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto; }
 
   .outer-wrapper-nav-header {
@@ -2331,9 +2334,6 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   .nav-search-style {
-    float: none; }
-
-  #nav-search {
     float: right; }
 
   #site-navigation-list {
