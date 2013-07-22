@@ -1789,7 +1789,8 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 14px;
-    background-color: #90dbe6;
+    font-weight: 900;
+    background-color: #d7f2f6;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -2011,7 +2012,8 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 16px;
-    background-color: #90dbe6;
+    font-weight: 900;
+    background-color: #d7f2f6;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -2243,7 +2245,8 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 16px;
-    background-color: #90dbe6;
+    font-weight: 900;
+    background-color: #d7f2f6;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -2477,7 +2480,8 @@ a.pagination-link {
 
   .breadcrumb-styles {
     font-size: 16px;
-    background-color: #90dbe6;
+    font-weight: 900;
+    background-color: #d7f2f6;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -2485,10 +2489,12 @@ a.pagination-link {
 
   .breadcrumb-styles a:link,
   .breadcrumb-styles a:visited {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #29a2b4; }
 
   .breadcrumb-styles a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #29a2b4; }
 
   a.read-post-link {
     -webkit-border-radius: 10px;
@@ -2502,6 +2508,9 @@ a.pagination-link {
     max-width: 120px;
     float: none;
     text-align: center; }
+
+  .breadcrumb-separator {
+    padding: 0 10px; }
 
   /*
    * ==========================================================================
