@@ -1331,6 +1331,10 @@ a:hover {
   font-size: 14px;
   padding: 20px 10px 35px 10px; }
 
+.breadcrumb-separator {
+  padding: 0 2px;
+  font-size: 14px; }
+
 a.read-post-link {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2019,6 +2023,9 @@ a.pagination-link {
     margin: 0 auto;
     padding: 8px 45px; }
 
+  .breadcrumb-separator {
+    padding: 0 10px; }
+
   .related-posts-header {
     font-size: 17px; }
 
@@ -2252,6 +2259,9 @@ a.pagination-link {
     margin: 0 auto;
     padding: 8px 45px;
     padding-top: 10px; }
+
+  .breadcrumb-separator {
+    padding: 0 10px; }
 
   /*
    * ===========================================================================
@@ -2496,6 +2506,9 @@ a.pagination-link {
     text-decoration: none;
     color: #29a2b4; }
 
+  .breadcrumb-separator {
+    padding: 0 10px; }
+
   a.read-post-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -2508,9 +2521,6 @@ a.pagination-link {
     max-width: 120px;
     float: none;
     text-align: center; }
-
-  .breadcrumb-separator {
-    padding: 0 10px; }
 
   /*
    * ==========================================================================
