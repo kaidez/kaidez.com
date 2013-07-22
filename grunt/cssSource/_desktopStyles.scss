@@ -243,10 +243,12 @@
   .breadcrumb-styles a:link,
   .breadcrumb-styles a:visited  {
     text-decoration: underline;
+    color: darken($header-color, 20);
   }
 
   .breadcrumb-styles a:hover  {
     text-decoration: none;
+    color: darken($header-color, 20);
   }
 
 
