@@ -351,13 +351,13 @@ $bg-size: 350px 210px;
 }
 
 // Add box-shadow to the site's content element (i.e.: ".page-content")
-@mixin page-content-box-shadow ($shadow: blank) {
-  @if $shadow != blank {
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    box-shadow: $shadow;
-  }
+@mixin create-box-shadow ($y-axis) {
+    -webkit-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
 }
+
+
 /*
  * ============================================================================
  * Pagination mixins

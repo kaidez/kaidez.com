@@ -232,12 +232,13 @@
 
   .page-content {
     @include page-content($inner-content-width);
-    @include page-content-box-shadow($master-page-content-shadow);
+    @include create-box-shadow(8px);
   }
   
   // breadcrumbs
   .breadcrumb-styles {
     @include breadcrumb-styles(16px, 45px);
+    @include create-box-shadow(5px);
   }
 
   .breadcrumb-styles a:link,
