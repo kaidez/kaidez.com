@@ -240,6 +240,15 @@
     @include breadcrumb-styles(16px);
   }
 
+  .breadcrumb-styles a:link,
+  .breadcrumb-styles a:visited  {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-styles a:hover  {
+    text-decoration: none;
+  }
+
 
   // the "Read post" link on the home, category and search pages
   a.read-post-link {
