@@ -68,6 +68,10 @@
   .site-header {
     @include site-header;
   }
+
+  .homepage-link {
+     @include homepage-link(63px, 211px);
+   }
   
   /*
    * ==========================================================================
