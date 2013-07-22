@@ -1911,7 +1911,8 @@ a.pagination-link {
     clip: rect(1px 1px 1px 1px); }
 
   .nav-search-style {
-    float: right; }
+    float: right;
+    margin-top: 18px; }
 
   #site-navigation-list {
     display: block;
