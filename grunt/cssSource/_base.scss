@@ -212,6 +212,13 @@ $bg-size: 350px 210px;
   padding: 8px 45px;
 }
 
+  @mixin breadcrumb-separator($side-padding, $font-size: blank) {
+    padding:0 $side-padding;
+    @if $font-size != blank {
+      font-size: $font-size;
+    }
+  }
+
  /*
   * Define width for the <header>, <main> and <footer> elements by applying
   * this mixin to a class that's applied to the element. The '$dimension'
