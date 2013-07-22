@@ -153,11 +153,21 @@
   text-align: left;
 }
 
-// breadcrumbs
-.breadcrumb-styles {
-  font-size: 14px;
-  padding: 20px 10px 35px 10px;
-}
+  // breadcrumbs
+  .breadcrumb-styles {
+    @include breadcrumb-styles(14px, 19px);
+  }
+
+  .breadcrumb-styles a:link,
+  .breadcrumb-styles a:visited  {
+    text-decoration: underline;
+    color: darken($header-color, 20);
+  }
+
+  .breadcrumb-styles a:hover  {
+    text-decoration: none;
+    color: darken($header-color, 20);
+  }
 
   // the breadcrumb-separator
   .breadcrumb-separator {

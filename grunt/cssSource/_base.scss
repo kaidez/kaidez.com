@@ -202,14 +202,14 @@ $bg-size: 350px 210px;
 }
  
 // style breadcrumbs
-@mixin breadcrumb-styles($font-size) {
+@mixin breadcrumb-styles($font-size, $side-padding) {
   font-size: $font-size;
   font-weight: 900;
   background-color: lighten($header-color, 27);
   max-width: $inner-content-width;
   position: relative;
   margin: 0 auto;
-  padding: 8px 45px;
+  padding: 8px $side-padding;
 }
 
   @mixin breadcrumb-separator($side-padding, $font-size: blank) {

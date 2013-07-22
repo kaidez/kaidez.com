@@ -1329,7 +1329,21 @@ a:hover {
 
 .breadcrumb-styles {
   font-size: 14px;
-  padding: 20px 10px 35px 10px; }
+  font-weight: 900;
+  background-color: #d7f2f6;
+  max-width: 1024px;
+  position: relative;
+  margin: 0 auto;
+  padding: 8px 19px; }
+
+.breadcrumb-styles a:link,
+.breadcrumb-styles a:visited {
+  text-decoration: underline;
+  color: #29a2b4; }
+
+.breadcrumb-styles a:hover {
+  text-decoration: none;
+  color: #29a2b4; }
 
 .breadcrumb-separator {
   padding: 0 2px;
@@ -1798,7 +1812,7 @@ a.pagination-link {
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
-    padding: 8px 45px;
+    padding: 8px 19px;
     padding-top: 10px; }
 
   /*

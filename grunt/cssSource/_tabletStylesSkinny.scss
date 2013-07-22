@@ -224,7 +224,7 @@
   
   // breadcrumbs
   .breadcrumb-styles {
-    @include breadcrumb-styles(16px);
+    @include breadcrumb-styles(16px, 45px);
     padding-top: 10px;
   }
 
