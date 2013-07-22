@@ -257,6 +257,10 @@
     @include read-post-link($master-border-radius);
   }
 
+  .breadcrumb-separator {
+    padding:0 10px;
+  }
+
   /*
    * ==========================================================================
    * Page content styles end
