@@ -102,11 +102,7 @@
   }
 
   .nav-search-style {
-    float: none;
-  }
-
-  #nav-search {
-    @include nav-search
+     @include nav-search-style;
   }
 
   // <ul> tag

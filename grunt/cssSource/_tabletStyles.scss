@@ -103,9 +103,8 @@
   }
 
   .nav-search-style {
-    float: right;
+     @include nav-search-style;
   }
-
   // <ul> tag
   #site-navigation-list {
     @include site-navigation-list(block);
