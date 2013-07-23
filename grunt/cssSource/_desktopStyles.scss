@@ -289,6 +289,7 @@
   // apply background image to the footer
   .outerWrapperNavFooter {
     background: $footer-color url('../img/footer-bg.png') no-repeat left;
+    padding: 35px 10px;
   }
   
   .footer-header {
@@ -311,16 +312,22 @@
     @include fonts($helv);
   }
 
+  .footer-header {
+    width: 300px;
+  }
+
   .footer-column {
     width: 300px;
   }
 
   .footer-column-one-class {
-    margin-left:70px;
+    margin-left: 100px;
+    float: left;
   }
 
   .footer-column-two-class {
-    margin-right:70px;
+    margin-right: 100px;
+    float: right;
   }
 
   // =========================================================================

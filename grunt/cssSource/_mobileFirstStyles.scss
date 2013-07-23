@@ -229,7 +229,7 @@ a.pagination-link {
 // Footer styles start...These styles will also be applied to the
 // '_mobileLandscape' view.
 // ===========================================================================
- 
+
 #footer-contact-fieldset {
   border: none;
 }
@@ -245,6 +245,24 @@ a.pagination-link {
 
 .footer-paragraph {
   font-size:15px;
+}
+
+.footer-column {
+  width: 250px;
+}
+
+.footer-header {
+  width: 300px;
+}
+
+.footer-column-one-class {
+  margin: 0 auto;
+  float: none;
+}
+
+.footer-column-two-class {
+  margin: 0 auto;
+  float: none;
 }
 
 // ===========================================================================

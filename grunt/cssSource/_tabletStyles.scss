@@ -260,9 +260,27 @@
   .contact-form-field {
     @include contact-form-field;
   }
+
+  .footer-column {
+    width: 250px;
+  }
+
+  .footer-header {
+    width: 250px;
+  }
+
+  .footer-column-one-class {
+    margin-left: 70px;
+    float: left;
+  }
+
+  .footer-column-two-class {
+    margin-right: 70px;
+    float: right;
+  }
   
-   // =========================================================================
-   // Footer styles end
-   // =========================================================================
+  // =========================================================================
+  // Footer styles end
+  // =========================================================================
    
 }

@@ -59,10 +59,6 @@ $mobile-portrait-width: 290px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $inner-content-width: 1024px; // Desktop
 
-// The width of the 'footer-sections': this is applied to the
-// 'getGutterWidth()' function below.
-$footer-column-width-desktop: 250px;
-
 // master border-radius for the entire site
 $master-border-radius: 10px;
 
@@ -390,28 +386,14 @@ $bg-size: 350px 210px;
   @include makeTextShadow($footer-color);
 }
 
+@mixin footer-column-margins($margin-pos, $margin) {
+  $margin-pos: $margin;
+}
 
 // ============
 //  Mix-ins end
 // ============
 
-
-
-
- // ===============
- // Functions start
- // ===============
-
-// Function that determines the gutter width the footer columns 
-@function getGutterWidth($base-width) {
-  $gutter-widthx2: $base-width - ($footer-column-width-desktop*3);
-  $gutter-width: $gutter-widthx2/2;
-  @return $gutter-width;
-}
-
-// =============
-// Functions end
-// =============
 
 
 

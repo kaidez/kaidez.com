@@ -46,14 +46,6 @@ html, body {
   clear: both;
 }
 
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
 // ===========================================================================
 // End "all-around" styles
 // ===========================================================================
@@ -408,7 +400,6 @@ a:hover {
 //all header tags in the footer should have a black dotted bottom border
 .footer-header {
   border-bottom: 2px dotted #01070A;
-  min-width: 300px;
 }
 
 // Primary footer element

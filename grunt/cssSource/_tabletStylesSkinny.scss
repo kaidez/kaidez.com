@@ -258,6 +258,20 @@
     @include contact-form-field;
   }
 
+  .footer-column {
+    width: 300px;
+  }
+
+  .footer-column-one-class {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .footer-column-two-class {
+    margin: 0 auto;
+    float: none;
+  }
+
   // ==========================================================================
   // Footer styles end
   // ==========================================================================
