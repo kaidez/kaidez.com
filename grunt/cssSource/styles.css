@@ -451,6 +451,12 @@ html, body {
 .clearfix:after {
   clear: both; }
 
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
@@ -725,7 +731,8 @@ a:hover {
   margin-right: 14px; }
 
 .copyright-style {
-  display: block; }
+  display: block;
+  clear: both; }
 
 .post-snippet-title {
   font-size: 1.3rem;
@@ -1790,11 +1797,7 @@ a.pagination-link {
     border-radius: 5px; }
 
   .footer-sections {
-    width: 250px;
     float: left; }
-
-  .midFooterSection {
-    margin: 0 137px; }
 
   .copyrightStyle {
     clear: both; }
@@ -1803,7 +1806,10 @@ a.pagination-link {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato";
-    visibility: visible; } }
+    visibility: visible; }
+
+  .footer-column {
+    width: 250px; } }
 .assistive-text,
 .site .screen-reader-text {
   position: absolute !important;
