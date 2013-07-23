@@ -49,7 +49,8 @@ define(function() {
     loadBox.appendChild(frag);
   }
 
-  /*  
+  /* IS CSS DISABLED ON PAGE-LOAD?
+   *
    * A very clever way to test if CSS is enabled in the browser. First, create
    * a Boolean-type variable called 'cssdisabled' and set its value to 'false'.
    * Then create a <div> with an inline style of 'position:absolute' and place
