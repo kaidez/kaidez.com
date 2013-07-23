@@ -408,6 +408,7 @@ a:hover {
 //all header tags in the footer should have a black dotted bottom border
 .footer-header {
   border-bottom: 2px dotted #01070A;
+  min-width: 300px;
 }
 
 // Primary footer element
@@ -446,6 +447,9 @@ a:hover {
 .copyright-style {
   display:block;
   clear: both;
+  width: 1024px;
+  padding: 59px 0;
+  margin: 0 auto;
 }
 
 // ===========================================================================

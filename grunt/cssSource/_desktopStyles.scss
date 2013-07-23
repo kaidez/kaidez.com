@@ -300,23 +300,27 @@
   }
 
   .footer-sections {
-    width: $footer-column-width-desktop;
     float: left;
   }
 
-  .midFooterSection {
-    margin:0 getGutterWidth($inner-content-width);
-  }
-
-  .copyrightStyle {
-    clear: both;
-  }
 
   // Font styles for tablets & desktops. Google font doesn't load on mobile.
   .share-post-link {
     font-size:16px;
     line-height: 1;
     @include fonts($helv);
+  }
+
+  .footer-column {
+    width: 300px;
+  }
+
+  .footer-column-one-class {
+    margin-left:70px;
+  }
+
+  .footer-column-two-class {
+    margin-right:70px;
   }
 
   // =========================================================================
