@@ -397,6 +397,11 @@ a:hover {
 // Footer styles start
 // ===========================================================================
 
+//all header tags in the footer should have a black dotted bottom border
+.footer-header {
+  border-bottom: 2px dotted #01070A;
+}
+
 // Primary footer element
 .outerWrapperNavFooter {
   color: $darken-the-footer-color;
