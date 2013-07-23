@@ -703,7 +703,8 @@ a:hover {
   text-indent: -9999px; }
 
 .footer-header {
-  border-bottom: 2px dotted #01070A; }
+  border-bottom: 2px dotted #01070A;
+  min-width: 300px; }
 
 .outerWrapperNavFooter {
   color: #01070a;
@@ -732,7 +733,10 @@ a:hover {
 
 .copyright-style {
   display: block;
-  clear: both; }
+  clear: both;
+  width: 1024px;
+  padding: 59px 0;
+  margin: 0 auto; }
 
 .post-snippet-title {
   font-size: 1.3rem;
@@ -884,9 +888,6 @@ a.pagination-link {
 .share-post-link {
   font-size: 16px;
   line-height: 1; }
-
-.footer-sections {
-  width: 300px; }
 
 .footer-paragraph {
   font-size: 15px; }
@@ -1799,9 +1800,6 @@ a.pagination-link {
   .footer-sections {
     float: left; }
 
-  .copyrightStyle {
-    clear: both; }
-
   .share-post-link {
     font-size: 16px;
     line-height: 1;
@@ -1809,7 +1807,13 @@ a.pagination-link {
     visibility: visible; }
 
   .footer-column {
-    width: 250px; } }
+    width: 300px; }
+
+  .footer-column-one-class {
+    margin-left: 70px; }
+
+  .footer-column-two-class {
+    margin-right: 70px; } }
 .assistive-text,
 .site .screen-reader-text {
   position: absolute !important;
