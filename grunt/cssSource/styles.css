@@ -719,7 +719,7 @@ a:hover {
 .kaidez-social-network-list-item {
   list-style-type: none;
   float: left;
-  margin-right: 10px; }
+  margin-right: 14px; }
 
 .post-snippet-title {
   font-size: 1.3rem;
@@ -894,26 +894,26 @@ a.pagination-link {
   #twitter {
     background: url("../img/snSprite.png") no-repeat -1px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #google-plus {
-    background: url("../img/snSprite.png") no-repeat -76px -2px;
+    background: url("../img/snSprite.png") no-repeat -59px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #github {
-    background: url("../img/snSprite.png") no-repeat -147px -2px;
+    background: url("../img/snSprite.png") no-repeat -118px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #youtube {
-    background: url("../img/snSprite.png") no-repeat -219px -2px;
+    background: url("../img/snSprite.png") no-repeat -173px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px;
+    height: 51px;
+    width: 51px;
     float: left;
     list-style-type: none; }
 
@@ -965,26 +965,26 @@ a.pagination-link {
   #twitter {
     background: url("../img/snSprite.png") no-repeat -1px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #google-plus {
-    background: url("../img/snSprite.png") no-repeat -76px -2px;
+    background: url("../img/snSprite.png") no-repeat -59px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #github {
-    background: url("../img/snSprite.png") no-repeat -147px -2px;
+    background: url("../img/snSprite.png") no-repeat -118px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #youtube {
-    background: url("../img/snSprite.png") no-repeat -219px -2px;
+    background: url("../img/snSprite.png") no-repeat -173px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px;
+    height: 51px;
+    width: 51px;
     float: left;
     list-style-type: none; }
 
@@ -1035,26 +1035,26 @@ a.pagination-link {
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #google-plus {
-    background: url("../img/snSprite@2x.png") no-repeat -76px -2px;
+    background: url("../img/snSprite@2x.png") no-repeat -59px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #github {
-    background: url("../img/snSprite@2x.png") no-repeat -147px -2px;
+    background: url("../img/snSprite@2x.png") no-repeat -118px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #youtube {
-    background: url("../img/snSprite@2x.png") no-repeat -219px -2px;
+    background: url("../img/snSprite@2x.png") no-repeat -173px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px;
+    height: 51px;
+    width: 51px;
     float: left;
     list-style-type: none; }
 
@@ -1105,26 +1105,26 @@ a.pagination-link {
   #twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #google-plus {
-    background: url("../img/snSprite@2x.png") no-repeat -76px -2px;
+    background: url("../img/snSprite@2x.png") no-repeat -59px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #github {
-    background: url("../img/snSprite@2x.png") no-repeat -147px -2px;
+    background: url("../img/snSprite@2x.png") no-repeat -118px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px; }
+    height: 51px;
+    width: 51px; }
 
   #youtube {
-    background: url("../img/snSprite@2x.png") no-repeat -219px -2px;
+    background: url("../img/snSprite@2x.png") no-repeat -173px -2px;
     background-size: 350px 210px;
-    height: 64px;
-    width: 64px;
+    height: 51px;
+    width: 51px;
     float: left;
     list-style-type: none; }
 
