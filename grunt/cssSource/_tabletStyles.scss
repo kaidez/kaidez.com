@@ -248,7 +248,10 @@
   // Footer styles start
   // =========================================================================
    
-
+  // apply background image to the footer
+  .outerWrapperNavFooter {
+    background: $footer-color url('../img/footer-bg.png') no-repeat left;
+  }
 
   .footer-header {
     @include footer-header;
@@ -257,7 +260,6 @@
   .contact-form-field {
     @include contact-form-field;
   }
-
   
    // =========================================================================
    // Footer styles end

@@ -285,6 +285,12 @@
     margin: 0 auto 53px;
   }
   
+
+  // apply background image to the footer
+  .outerWrapperNavFooter {
+    background: $footer-color url('../img/footer-bg.png') no-repeat left;
+  }
+  
   .footer-header {
     @include footer-header;
   }
