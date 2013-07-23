@@ -43,7 +43,7 @@
     
     {% include post_breadcrumbs_partial.html %}
 
-    <div role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
       
       <h1 class="post-title">{{ page.title }}</h1>
       {{ content }}
@@ -64,7 +64,7 @@
           {% endfor %}
         </ul>
       </div> <!-- #related-posts -->
-    </div> <!-- #content -->
+    </main> <!-- #content -->
 
     {% include footer_partial.html %}
 
