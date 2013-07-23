@@ -1366,6 +1366,9 @@ a.pagination-link {
   .related-posts-header {
     font-size: 17px; }
 
+  .outerWrapperNavFooter {
+    background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
+
   .footer-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8; }
@@ -1548,6 +1551,9 @@ a.pagination-link {
 
   .breadcrumb-last {
     display: inline; }
+
+  .outerWrapperNavFooter {
+    background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
   .footer-header {
     color: black;
@@ -1767,6 +1773,9 @@ a.pagination-link {
   .innerWrapperNavFooter {
     width: 1024px;
     margin: 0 auto 53px; }
+
+  .outerWrapperNavFooter {
+    background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
 
   .footer-header {
     color: black;
