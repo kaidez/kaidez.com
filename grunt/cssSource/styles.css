@@ -451,12 +451,6 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
-
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
@@ -703,8 +697,7 @@ a:hover {
   text-indent: -9999px; }
 
 .footer-header {
-  border-bottom: 2px dotted #01070A;
-  min-width: 300px; }
+  border-bottom: 2px dotted #01070A; }
 
 .outerWrapperNavFooter {
   color: #01070a;
@@ -891,6 +884,20 @@ a.pagination-link {
 
 .footer-paragraph {
   font-size: 15px; }
+
+.footer-column {
+  width: 250px; }
+
+.footer-header {
+  width: 300px; }
+
+.footer-column-one-class {
+  margin: 0 auto;
+  float: none; }
+
+.footer-column-two-class {
+  margin: 0 auto;
+  float: none; }
 
 @media only screen and (min-width: 569px) {
   body {
@@ -1387,7 +1394,21 @@ a.pagination-link {
   .contact-form-field {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px; } }
+    border-radius: 5px; }
+
+  .footer-column {
+    width: 250px; }
+
+  .footer-header {
+    width: 250px; }
+
+  .footer-column-one-class {
+    margin-left: 70px;
+    float: left; }
+
+  .footer-column-two-class {
+    margin-right: 70px;
+    float: right; } }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   body {
     font-family: "Lato";
@@ -1573,7 +1594,18 @@ a.pagination-link {
   .contact-form-field {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px; } }
+    border-radius: 5px; }
+
+  .footer-column {
+    width: 300px; }
+
+  .footer-column-one-class {
+    margin: 0 auto;
+    float: none; }
+
+  .footer-column-two-class {
+    margin: 0 auto;
+    float: none; } }
 @media only screen and (min-width: 1025px) {
   body {
     font-family: "Lato";
@@ -1786,7 +1818,8 @@ a.pagination-link {
     margin: 0 auto 53px; }
 
   .outerWrapperNavFooter {
-    background: #0c5e7e url("../img/footer-bg.png") no-repeat left; }
+    background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
+    padding: 35px 10px; }
 
   .footer-header {
     color: black;
@@ -1806,14 +1839,19 @@ a.pagination-link {
     font-family: "Lato";
     visibility: visible; }
 
+  .footer-header {
+    width: 300px; }
+
   .footer-column {
     width: 300px; }
 
   .footer-column-one-class {
-    margin-left: 70px; }
+    margin-left: 100px;
+    float: left; }
 
   .footer-column-two-class {
-    margin-right: 70px; } }
+    margin-right: 100px;
+    float: right; } }
 .assistive-text,
 .site .screen-reader-text {
   position: absolute !important;
