@@ -45,8 +45,12 @@
 
     <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
       
-      <h1 class="post-title">{{ page.title }}</h1>
-      {{ content }}
+
+      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <h1 class="post-title" class="entry-title">{{ page.title }}</h1>
+        {{ content }}
+      </article>
+
       <div id="share-post-container" class="postSharing">
 
         <ul id="social-network-list-post">
