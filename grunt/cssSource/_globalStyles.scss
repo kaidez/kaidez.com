@@ -1,24 +1,21 @@
-/*
- * ============================================================================
- * Global styles start:
- *
- * These are styles which should appear on all devices, regardless of screen 
- * dimension or computer resolution. There may be other references to these
- * classes and ids in other .scss files, but they should only add to the
- * list of properties and not override already-existing properties.
- * ============================================================================
- */
+
+// ============================================================================
+// Global styles start:
+//
+// These are styles which should appear on all devices, regardless of screen 
+// dimension or computer resolution. There may be other references to these
+// classes and ids in other .scss files, but they should only add to the
+// list of properties and not override already-existing properties.
+// ============================================================================
 
 
 
 
 
-/*
- * ===========================================================================
- * Start "all-around" styles that should affect the entire page and not one 
- * specfic page region section (i.e., headers, footers, etc.)
- * ===========================================================================
- */
+// ===========================================================================
+// Start "all-around" styles that should affect the entire page and not one 
+// specfic page region section (i.e., headers, footers, etc.)
+// ===========================================================================
 
 body {
   background-color: $site-background-color;
@@ -29,43 +26,37 @@ html, body {
   height: 100%;
 }
 
-/*
- * Clearfix: contain floats (borrowed from HTML5 Boilerplate)
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+// Clearfix: contain floats (borrowed from HTML5 Boilerplate)
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    `contenteditable` attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that receive the `clearfix` class.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
 
 .clearfix:before,
 .clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+  content: " "; //  1 // 
+  display: table; //  2 // 
 }
 
 .clearfix:after {
   clear: both;
 }
 
-/*
- * ===========================================================================
- * End "all-around" styles
- * ===========================================================================
- */
+// ===========================================================================
+// End "all-around" styles
+// ===========================================================================
 
 
 
 
 
-/*
- * ===========================================================================
- * Header styles start
- * ===========================================================================
- */
+// ===========================================================================
+// Header styles start
+// ===========================================================================
 
 // Hide Google 'Roboto' font on all <header> tags before page load
 .wf-loading h1, .wf-inactive h1,
@@ -118,21 +109,17 @@ html, body {
   clear: both;
 }
 
-/*
- * ===========================================================================
- * Header styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Header styles end
+// ===========================================================================
 
 
 
 
 
-/*
- * ===========================================================================
- * Navigation styles start
- * ===========================================================================
- */
+// ===========================================================================
+// Navigation styles start
+// ===========================================================================
 
 // <nav> tag
 .main-navigation {
@@ -163,22 +150,17 @@ html, body {
   border-bottom: 1px solid lighten(saturate($base-link-color, 28), 6);
 }
 
-/*
- * ===========================================================================
- * Navigation styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Navigation styles end
+// ===========================================================================
 
 
 
 
 
-/*
- * ===========================================================================
- * Search box-related styles start
- * ===========================================================================
- */
-
+// ===========================================================================
+// Search box-related styles start
+// ===========================================================================
 
 // may be redundant
 .no-js #site-navigation-list, .no-js #searchform {
@@ -186,17 +168,15 @@ html, body {
   position: relative;
 }
 
-/*
- * '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
- * browsers with JavaScript and/or CSS turned off
- */
+// '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
+// browsers with JavaScript and/or CSS turned off
+
 .js #no-js-searchbox {
   @include hide-element;
 }
 
-/*
- * jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/). * Set to appear on browsers with JavaScript turned on.
- */
+// jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
+
 #tipue_search_input {
   font: 13px/1.5 'open sans', $srf;
   font-style: italic;
@@ -207,7 +187,6 @@ html, body {
   border: 1px solid #d3d3d3;
   outline: none;
 }
-
 
 .tipue_search_content_text {
   color: #111;
@@ -323,21 +302,17 @@ html, body {
   color: #111;
 }
 
-/*
- * ===========================================================================
- * Search box-related styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Search box-related styles end
+// ===========================================================================
 
 
 
 
-
-/*
- * ===========================================================================
- * Page content styles start
- * ===========================================================================
- */
+ 
+// ===========================================================================
+// Page content styles start
+// ===========================================================================
 
 // All text links (except for post meta info) are blue but have no underline.
 a:link, a:visited { 
@@ -411,27 +386,16 @@ a:hover {
   text-indent: -9999px;
 }
 
-/*
- * ===========================================================================
- * Page content styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Page content styles end
+// ===========================================================================
 
 
 
 
- 
-
-
-
-
-
-
-/*
- * ===========================================================================
- * Footer styles start
- * ===========================================================================
- */
+// ===========================================================================
+// Footer styles start
+// ===========================================================================
 
 // Primary footer element
 .outerWrapperNavFooter {
@@ -466,18 +430,11 @@ a:hover {
   margin-right: 10px;
 }
 
-/*
- * ===========================================================================
- * Footer styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Footer styles end
+// ===========================================================================
 
-/*
- * ===========================================================================
- */
 
-/*
- * ===========================================================================
- * Global styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Global styles end
+// ===========================================================================

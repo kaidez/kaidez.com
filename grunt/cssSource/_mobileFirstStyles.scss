@@ -1,26 +1,22 @@
-/*
- * ============================================================================
- * 'Mobile First' styles start:
- *
- * These are styles which should appear on mobile devices only. They are 
- * placed outside of a media query, meaning that they are the first styles to 
- * be called on page load: i.e. "mobile first." oldIE does not support media
- * queries so it can only read code outside of them...like this code. We don't 
- * want this so we've taken care of this by creating '_oldIE.scss' which
- * contains CSS that works in IE 8...kaidez.com doesn't care about IE7 and
- * older.
- * ============================================================================
- */
+
+// ============================================================================
+// 'Mobile First' styles start:
+//
+// These are styles which should appear on mobile devices only. They are 
+// placed outside of a media query, meaning that they are the first styles to 
+// be called on page load: i.e. "mobile first." oldIE does not support media
+// queries so it can only read code outside of them...like this code. We don't 
+// want this so we've taken care of this by creating '_oldIE.scss' which
+// contains CSS that works in IE 8...kaidez.com doesn't care about IE7 and
+// older.
+// ============================================================================
 
 
 
 
-
-/*
- * ============================================================================
- * Header styles start
- * ============================================================================
- */
+// ============================================================================
+// Header styles start
+// ============================================================================
 
 // Post snippet that displays on both the home page and search results.
 .post-snippet-title {
@@ -28,12 +24,11 @@
   line-height: 1.4;
 }
 
-/*
- * ============================================================================
- * Logo link :provides a large enough space for a click area. These styles
- * will also be applied to the '_mobileLandscape' view.
- * ============================================================================
- */
+// ============================================================================
+// Logo link :provides a large enough space for a click area. These styles
+// will also be applied to the '_mobileLandscape' view.
+// ============================================================================
+
 .homepage-link {
   @include homepage-link(44px, 166px);
 }
@@ -48,27 +43,22 @@
   @include hide-element;
 }
 
- // <header> tag
+// <header> tag
 .site-header {
   width: auto;
 }
 
-/*
- * ============================================================================
- * Header styles end
- * ============================================================================
- */
+// ============================================================================
+// Header styles end
+// ============================================================================
 
 
 
 
-
-/*
- * ============================================================================
- * Navigation styles start...these styles will also be applied to the 
- * '_mobileLandscape' view.
- * ============================================================================
- */
+// ============================================================================
+// Navigation styles start...these styles will also be applied to the 
+// '_mobileLandscape' view.
+// ============================================================================
 
 .nav-search-style {
   float: none;
@@ -78,21 +68,16 @@
   @include site-navigation-list(none);
 }
 
-/*
- * ============================================================================
- * Navigation styles end
- * ============================================================================
- */
+// ============================================================================
+// Navigation styles end
+// ============================================================================
+ 
 
 
 
-
-
-/*
- * ===========================================================================
- * Search box-related styles start
- * ===========================================================================
- */
+// ===========================================================================
+// Search box-related styles start
+// ===========================================================================
 
 // the div that contains the search box
 #searchbox {
@@ -116,22 +101,17 @@
 .tipue_search_content_title {
   font-size: 32px;
 }
-
-/*
- * ===========================================================================
- * Search box-related styles end
- * ===========================================================================
- */
+ 
+// ===========================================================================
+// Search box-related styles end
+// ===========================================================================
 
 
 
 
-
-/*
- * ===========================================================================
- * Page content styles start
- * ===========================================================================
- */
+// ===========================================================================
+// Page content styles start
+// ===========================================================================
 
 // Styles for post and category <h1> tags
 .wf-active h1.post-title, .wf-active h1.category-title  {
@@ -211,21 +191,16 @@ a.read-post-link {
   margin-bottom: 35px;
 }
 
-/*
- * ===========================================================================
- * Page content styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Page content styles end
+// ===========================================================================
 
 
 
 
-
-/*
- * ===========================================================================
- * Home page pagination styles start
- * ===========================================================================
- */
+// ===========================================================================
+// Home page pagination styles start
+// ===========================================================================
 
 // Unordered lists
 .pages {
@@ -243,27 +218,22 @@ a.pagination-link {
   @include pagButtonInner
 }
 
-
-/*
- * ===========================================================================
- * Home page pagination styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Home page pagination styles end
+// ===========================================================================
 
 
 
 
-
-/*
- * ===========================================================================
- * Footer styles start...These styles will also be applied to the
- * '_mobileLandscape' view.
- * ===========================================================================
- */
+// ===========================================================================
+// Footer styles start...These styles will also be applied to the
+// '_mobileLandscape' view.
+// ===========================================================================
  
 #footer-contact-fieldset {
   border: none;
 }
+
 .footer-contact-fields {
   width:152px;
 }
@@ -274,7 +244,6 @@ a.pagination-link {
 }
 
 // Footer styles start
-
 .footer-sections {
   width:300px;
 }
@@ -283,11 +252,10 @@ a.pagination-link {
   font-size:15px;
 }
 
-/*
- * ===========================================================================
- * Footer styles end
- * ===========================================================================
- */
+// ===========================================================================
+// Footer styles end
+// ===========================================================================
+
 
 
 

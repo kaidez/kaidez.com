@@ -3,70 +3,71 @@
 
 
 
-/*
- * ============================================================================
- * The entire retina/non-retina media query styles start
- * ============================================================================
- *
- *   ====================
- *   HOW THIS STUFF WORKS
- *   ====================
- *
- * There is a background image attached to the <body> tag and a sprite that's
- * used throughout the site. For these two images, there is both a 
- * retina and non-retina version....four images altogether. Here are there
- * filenames:
- *
- *    THE BACKGROUND IMAGE
- *    ====================
- *     -'white_carbon@2x.png': the retina version.
- *     -'white_carbon.png': the non-retina version.
- *
- *    THE SPRITE
- *    ==========
- *     -'snSprite@2x.png': the retina version.
- *     -'snSprite.png': the non-retina version.
- * 
- * Media queries ensure that the right versions load based on screen 
- * dimension & resolution. The values of the media queries are defined by
- * variables whose values are defined in '_base.scss'.
- *
- *   -$desktop-tablet-non-retina: (non-retina-based devices w/ a 569px
- *    min-width).
- *
- *   -$mobile-non-retina: (non-retina-based devices w/ a 320px min-width).
- *
- *   -$desktop-tablet-retina: (retina-based devices w/ a 569px min-width).
- *
- *   -$mobile-retina: (retina-based devices w/ a 320px min-width).
- *
- * The retina media queries are placed below the non-retina media queries. If * this isn't done, the non-retina code MIGHT overwrite the retina code by the 
- * CSS cascade on SOME devices.  
- * 
- * More info on the sprite...in terms what images it contains, they are:
- *
- *     -the site logo
- *     -the menu image in the header on mobile
- *     -the search icon in the header on mobile devices
- *     -the search icon that appears in the search bar
- *     -all four social networking icons in the sitefooter
- *
- *  The layout for the social netowking icons is consistent across all devices * and resolutions. The logo and the two mobile-based images appear 
- * differently across all devices and resolutions.
- *
- * ============================================================================
- */
 
-/*
- * Desktop/tablet non-retina media query.
- */
+// ===========================================================================
+// The entire retina/non-retina media query styles start
+// ===========================================================================
+//
+//   ====================
+//   HOW THIS STUFF WORKS
+//   ====================
+//
+// There is a background image attached to the <body> tag and a sprite that's
+// used throughout the site. For these two images, there is both a 
+// retina and non-retina version....four images altogether. Here are there
+// filenames:
+//
+//    THE BACKGROUND IMAGE
+//    ====================
+//     -'white_carbon@2x.png': the retina version.
+//     -'white_carbon.png': the non-retina version.
+// 
+//    THE SPRITE
+//    ==========
+//     -'snSprite@2x.png': the retina version.
+//     -'snSprite.png': the non-retina version.
+// 
+// Media queries ensure that the right versions load based on screen 
+// dimension & resolution. The values of the media queries are defined by
+// variables whose values are defined in '_base.scss'.
+// 
+//   -$desktop-tablet-non-retina: (non-retina-based devices w/ a 569px
+//    min-width).
+// 
+//   -$mobile-non-retina: (non-retina-based devices w/ a 320px min-width).
+// 
+//   -$desktop-tablet-retina: (retina-based devices w/ a 569px min-width).
+// 
+//   -$mobile-retina: (retina-based devices w/ a 320px min-width).
+// 
+// The retina media queries are placed below the non-retina media queries. 
+// If this isn't done, the non-retina code MIGHT overwrite the retina code by 
+// the CSS cascade on SOME devices.  
+// 
+// More info on the sprite...in terms what images it contains, they are:
+// 
+//     -the site logo
+//     -the menu image in the header on mobile
+//     -the search icon in the header on mobile devices
+//     -the search icon that appears in the search bar
+//     -all four social networking icons in the sitefooter
+// 
+// The layout for the social netowking icons is consistent across all devices // and resolutions. The logo and the two mobile-based images appear 
+// differently across all devices and resolutions.
+// 
+// ============================================================================
+ 
+
+
+// Desktop/tablet non-retina media query.
+ 
 @media #{$desktop-tablet-non-retina} { 
 
   body {
     background: url(../img/white_carbon.png);
   }
 
-  // <h1> tag in the <header>
+ // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
@@ -74,29 +75,29 @@
     float: left;
   }
 
-  // Twitter footer icon
+ // Twitter footer icon
   #twitter {
     @include sprite-images('../img/snSprite.png', -1px -2px, 64px, 64px);
   }
 
- // Google+ footer icon
+// Google+ footer icon
   #google-plus {
     @include sprite-images('../img/snSprite.png', -76px -2px, 64px, 64px);
   }
   
-  // GitHub footer icon
+ // GitHub footer icon
   #github {
     @include sprite-images('../img/snSprite.png', -147px -2px, 64px, 64px);
   }
   
-  // YouTube footer icon
+ // YouTube footer icon
   #youtube {
     @include sprite-images('../img/snSprite.png', -219px -2px, 64px, 64px);
     float: left;
     list-style-type: none;
   }
   
-  // Menu bg image for mobile
+ // Menu bg image for mobile
   #menu {
     @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
     display: block;
@@ -105,7 +106,7 @@
     cursor: pointer;
   }
 
-  // Search bg image for mobile
+ // Search bg image for mobile
   #search {
     @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
     display: block;
@@ -114,7 +115,7 @@
     float: right;
   }
 
-  // Search button by the search field
+ // Search button by the search field
   .btnSearch {
     @include sprite-images('../img/snSprite.png', -79px -78px, 27px, 44px);
     border: 0;
@@ -130,44 +131,44 @@
 
 
 
-/*
- * Mobile non-retina media query
- */
+
+// Mobile non-retina media query
+ 
 @media #{$mobile-non-retina} {
 
   body {
     background: url(../img/white_carbon.png);
   }
 
-  // <h1> tag in the <header>
+ // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite.png', -117px -149px, 60px, 176px);
     @include desktop-logo-sprite-add-on;
   }
 
-  // Twitter footer icon
+ // Twitter footer icon
   #twitter {
     @include sprite-images('../img/snSprite.png', -1px -2px, 64px, 64px);
   }
  
-  // Google+ footer icon
+ // Google+ footer icon
   #google-plus {
     @include sprite-images('../img/snSprite.png', -76px -2px, 64px, 64px);
   }
 
-  // GitHub footer icon
+ // GitHub footer icon
   #github {
     @include sprite-images('../img/snSprite.png', -147px -2px, 64px, 64px);
   }
   
-  // YouTube footer icon
+ // YouTube footer icon
   #youtube {
     @include sprite-images('../img/snSprite.png', -219px -2px, 64px, 64px);
     float: left;
     list-style-type: none;
   }
 
-  // Menu bg image for mobile
+ // Menu bg image for mobile
   #menu {
     @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
     display: block;
@@ -176,7 +177,7 @@
     cursor: pointer;
   }
 
-  // Search bg image for mobile
+ // Search bg image for mobile
   #search {
     @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
     display: block;
@@ -185,7 +186,7 @@
     float: right;
   }
 
-  // Search button by the search field
+ // Search button by the search field
   .btnSearch {
     @include sprite-images('../img/snSprite.png', -87px -78px, 27px, 28px);
     border: 0;
@@ -201,16 +202,16 @@
 
 
 
-/*
- * Desktop/tablet retina media query.
- */
+
+// Desktop/tablet retina media query.
+ 
 @media #{$desktop-tablet-retina} { 
 
   body {
     background: url(../img/white_carbon_@2x.png);
   }
 
-  // <h1> tag in the <header>
+ // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite@2x.png', -125px -80px, 62px, 221px);
     text-indent: -999px;
@@ -218,29 +219,29 @@
     float: left;
   }
 
-  // Twitter footer icon
+ // Twitter footer icon
   #twitter {
     @include sprite-images('../img/snSprite@2x.png', -1px -2px, 64px, 64px);
   }
 
- // Google+ footer icon
+// Google+ footer icon
   #google-plus {
     @include sprite-images('../img/snSprite@2x.png', -76px -2px, 64px, 64px);
   }
   
-  // GitHub footer icon
+ // GitHub footer icon
   #github {
     @include sprite-images('../img/snSprite@2x.png', -147px -2px, 64px, 64px);
   }
   
-  // YouTube footer icon
+ // YouTube footer icon
   #youtube {
     @include sprite-images('../img/snSprite@2x.png', -219px -2px, 64px, 64px);
     float: left;
     list-style-type: none;
   }
   
-  // Menu bg image for mobile
+ // Menu bg image for mobile
   #menu {
     @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
     display: block;
@@ -249,7 +250,7 @@
     cursor: pointer;
   }
 
-  // Search bg image for mobile
+ // Search bg image for mobile
   #search {
     @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
     display: block;
@@ -258,7 +259,7 @@
     float: right;
   }
 
-  // Search button by the search field
+ // Search button by the search field
   .btnSearch {
     @include sprite-images('../img/snSprite@2x.png', -79px -78px, 27px, 44px);
     border: 0;
@@ -274,17 +275,17 @@
 
 
 
-/*
- * Mobile retina media query: needs to be placed last or it gets over-ridden 
- * by the non-retina version on some retina-enabled handhelds.
- */
+
+// Mobile retina media query: needs to be placed last or it gets over-ridden 
+// by the non-retina version on some retina-enabled handhelds.
+ 
 @media #{$mobile-retina} { 
 
   body {
     background: url(../img/white_carbon_@2x.png);
   }
 
-  // <h1> tag in the <header>
+ // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite@2x.png', -117px -149px, 60px, 176px);
     text-indent: -999px;
@@ -292,29 +293,29 @@
     float: left;
   }
   
-  // Twitter footer icon
+ // Twitter footer icon
   #twitter {
     @include sprite-images('../img/snSprite@2x.png', -1px -2px, 64px, 64px);
   }
  
-  // Google+ footer icon
+ // Google+ footer icon
   #google-plus {
     @include sprite-images('../img/snSprite@2x.png', -76px -2px, 64px, 64px);
   }
 
-  // GitHub footer icon
+ // GitHub footer icon
   #github {
     @include sprite-images('../img/snSprite@2x.png', -147px -2px, 64px, 64px);
   }
   
-  // YouTube footer icon
+ // YouTube footer icon
   #youtube {
     @include sprite-images('../img/snSprite@2x.png', -219px -2px, 64px, 64px);
     float: left;
     list-style-type: none;
   }
 
-  // Menu bg image for mobile
+ // Menu bg image for mobile
   #menu {
     @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
     display: block;
@@ -323,7 +324,7 @@
     cursor: pointer;
   }
 
-  // Search bg image for mobile
+ // Search bg image for mobile
   #search {
     @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
     display: block;
@@ -332,7 +333,7 @@
     float: right;
   }
 
-  // Search button by the search field
+ // Search button by the search field
   .btnSearch {
     @include sprite-images('../img/snSprite@2x.png', -87px -78px, 27px, 28px);
     border: 0;
@@ -344,11 +345,11 @@
   }
 }
 
-/*
- * ============================================================================
- * The entire retina/non-retina media query styles ends
- * ============================================================================
- */
+
+// ============================================================================
+// The entire retina/non-retina media query styles ends
+// ============================================================================
+ 
 
 
 

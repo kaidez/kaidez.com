@@ -1,25 +1,21 @@
-/*
- * =================================================================
- * _base.css:
- * 
- * This file contains only variables and mixins that will be applied
- * to the production-ready 'styles.min.css'.  That's it...no more,
- * no less.
- * =================================================================
- */
+//=================================================================
+// _base.css:
+// 
+// This file contains only variables and mixins that will be applied
+// to the production-ready 'styles.min.css'.  That's it...no more,
+// no less.
+// =================================================================
+
   
 
-/*
- * =============
- * ALL VARIABLES
- * =============
- */
+// =============
+// ALL VARIABLES
+// =============
 
-/*
- * START PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea 
- * color palette at http://www.colourlovers.com/palette/2892492/azure_sea.
- * Changing these colors will affect other parts of the site, as noted below.
- */
+// START PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea 
+// color palette at http://www.colourlovers.com/palette/2892492/azure_sea.
+// Changing these colors will affect other parts of the site, as noted below.
+
 
 // Site background color
 $site-background-color: #fff;
@@ -27,18 +23,14 @@ $site-background-color: #fff;
 // header background color
 $header-color: #67CDDC;
 
-/*
- * Base color for nav links. Affects the font color for desktops/laptops,
- * background, color for big fat buttons that appear in the "mobile first"
- * layout, bottom border color for the desktop/laptop header and top border 
- * for the main navigation.
- */
+// Base color for nav links. Affects the font color for desktops/laptops,
+// background, color for big fat buttons that appear in the "mobile first"
+// layout, bottom border color for the desktop/laptop header and top border 
+// for the main navigation.
 $base-link-color: #262841;
 
-/*
- * Base color for page links in post content. Also effects the color of any
- * and all pagination buttons.
- */
+// Base color for page links in post content. Also effects the color of any and all pagination buttons.
+
 $post-link-color: #3285A5;
 
 // footer background color
@@ -46,10 +38,9 @@ $footer-color: #0C5E7E;
 
 // PRIMARY COLOR PALETTE ends
 
-/*
- * Darken the footer color: effects the all copy in the footer and the bottom
- * border of the post snippets.
- */
+// Darken the footer color: effects the all copy in the footer and the bottom
+// border of the post snippets.
+
 $darken-the-footer-color: darken($footer-color, 25);
 
 // End color variables
@@ -68,10 +59,8 @@ $mobile-portrait-width: 290px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $inner-content-width: 1024px; // Desktop
 
-/*
- * The width of the 'footer-sections': this is applied to the
- * 'getGutterWidth()' function below.
- */
+// The width of the 'footer-sections': this is applied to the
+// 'getGutterWidth()' function below.
 $footer-column-width-desktop: 250px;
 
 // master border-radius for the entire site
@@ -84,11 +73,8 @@ $master-page-content-shadow: 1px 5px 7px 2px rgba(0,0,0,0.2);
 
 
 
+// Mobile Retina: if the screen is retina-based AND is at least 320px. Targets mobiles and handhelds.
 
-/*
- * Mobile Retina: if the screen is retina-based AND is at least 320px. Targets
- * mobiles and handhelds.
- */
 $mobile-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px),
   only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px),
@@ -97,10 +83,8 @@ $mobile-retina:
   only screen and (min-resolution: 192dpi) and (max-width: 568px),
   only screen and (min-resolution: 2dppx) and (max-width: 568px)";
 
-/*
- * Mobile Non Retina: if the screen is not retina AND at least 320px. Targets 
- * mobiles and handhelds.
- */
+// Mobile Non Retina: if the screen is not retina AND at least 320px. Targets mobiles and handhelds.
+
 $mobile-non-retina:   
   "only screen and (max-width: 568px),
   only screen and (max-width: 568px),
@@ -109,11 +93,8 @@ $mobile-non-retina:
   only screen and (max-width: 568px),
   only screen and (max-width: 568px)";
 
+// Tablet/Desktop Retina: if the screen retina based AND is at least 569px wide. Targeting tablets and desktops.
 
-/*
- * Tablet/Desktop Retina: if the screen retina based AND is at least 569px
- * wide. Targeting tablets and desktops.
- */
 $desktop-tablet-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px),
   only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px),
@@ -122,35 +103,25 @@ $desktop-tablet-retina:
   only screen and (min-resolution: 192dpi) and (min-width: 569px),
   only screen and (min-resolution: 2dppx) and (min-width: 569px)";
 
-/*
- * Tablet/Desktop: if the screen retina based AND is at least 569px wide. 
- * Targeting tablets and desktops.
- */
+// Tablet/Desktop: if the screen retina based AND is at least 569px wide. Targeting tablets and desktops.
+ 
 $desktop-tablet-non-retina: "only screen and (min-width: 569px)";
 
+// 'background-size' variable for any and all CSS classes that reference the sprites. You HAVE to do this is you're doubling the size of your image for retina purposes or the image will look weird.
 
-/*
- * 'background-size' variable for any and all CSS classes that reference the
- * sprites. You HAVE to do this is you're doubling the size of your image for 
- * retina purposes or the image will look wierd.
- */
 $bg-size: 350px 210px;
 
-/*
- * =============
- * Variables end
- * =============
- */
+// =============
+// Variables end
+// =============
 
-/*
-=========================================================================
- */
 
-/*
- * =============
- * Mix-ins start
- * =============
- */
+
+
+
+// =============
+// Mix-ins start
+// =============
 
 // homepage logo link hit area..LARGE. Do one for the small versions
 @mixin homepage-link($height, $width) {
@@ -182,13 +153,11 @@ $bg-size: 350px 210px;
   min-height: 100%;
 }
  
-/* 
- * When possible, A better way accessibilty-wise to hidepage elements than
- * display:none or negative text indents.
- *
- * Read more over at Yahoo! Accessibilty Blog:
- * http://yaccessibilityblog.com/library/css-clip-hidden-content.html
- */
+// When possible, A better way accessibilty-wise to hidepage elements than display:none or negative text indents.
+
+// Read more over at Yahoo! Accessibilty Blog: 
+// http://yaccessibilityblog.com/library/css-clip-hidden-content.html
+
 @mixin hide-element {
   position:absolute;
   clip:rect(1px 1px 1px 1px);
@@ -219,12 +188,11 @@ $bg-size: 350px 210px;
     }
   }
 
- /*
-  * Define width for the <header>, <main> and <footer> elements by applying
-  * this mixin to a class that's applied to the element. The '$dimension'
-  * variable defines the width value and the values are determined by the
-  * "Width variables" directly below the mixin.
-  */
+// Define width for the <header>, <main> and <footer> elements by applying
+// this mixin to a class that's applied to the element. The '$dimension'
+// variable defines the width value and the values are determined by the
+// "Width variables" directly below the mixin.
+
 @mixin page-content($dimension) {
   max-width: $dimension;
   margin: 0 auto;
@@ -244,9 +212,7 @@ $bg-size: 350px 210px;
   width: $width;
 }
 
- /*
-  * Unique styles for the 'site-title' class in the desktop styles...add this * to sprite mixin code.
-  */
+ // Unique styles for the 'site-title' class in the desktop styles...add this to sprite mixin code.
 @mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
@@ -358,15 +324,15 @@ $bg-size: 350px 210px;
 }
 
 
-/*
- * ============================================================================
- * Pagination mixins
- *
- * These mixins are styles that are for the most part, copied from the 
- * pagination styles that are part of the Tipue search plugin. For clarity and * site-speed optimaztion, it was easier to do this rather than apply the
- * Tipue class names.
- * ============================================================================
- */
+// ============================================================================
+// Pagination mixins
+
+// These mixins are styles that are for the most part, copied from the 
+// pagination styles that are part of the Tipue search plugin. For clarity 
+// site-speed optimaztion, it was easier to do this rather than apply the
+// Tipue class names.
+// ===========================================================================
+
 
 
 // Containing pagination box
@@ -425,21 +391,17 @@ $bg-size: 350px 210px;
   border-bottom: 2px dotted darken($footer-color, 25);
 }
 
-/*
- * ============
- *  Mix-ins end
- * ============
- */
 
-/*
-=========================================================================
- */
+// ============
+//  Mix-ins end
+// ============
 
-/*
- * ===============
- * Functions start
- * ===============
- */
+
+
+
+ // ===============
+ // Functions start
+ // ===============
 
 // Function that determines the gutter width the footer columns 
 @function getGutterWidth($base-width) {
@@ -448,11 +410,11 @@ $bg-size: 350px 210px;
   @return $gutter-width;
 }
 
-/*
- * =============
- * Functions end
- * =============
- */
+// =============
+// Functions end
+// =============
+
+
 
 
 
@@ -461,9 +423,4 @@ $bg-size: 350px 210px;
   width: auto;
   padding: 15px 45px 0;
   margin: 0 auto;
-}
-
-// Logo link...provides a large enough space for a click area
-.homepage-link {
-  @include homepage-link(65px, 209px);
 }

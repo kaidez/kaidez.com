@@ -1,10 +1,9 @@
 @media only screen and (min-width: 569px) and (max-width:728px) {
-
-  /*
-   * Handhelds and tablets get the helvetica-type
-   * Google font. Too many fonts applied to handhelds
-   * will slow down their page load.
-   */
+  
+   // Handhelds and tablets get the helvetica-type
+   // Google font. Too many fonts applied to handhelds
+   // will slow down their page load.
+   
   body {
     @include fonts($helv);
   }
@@ -24,11 +23,11 @@
     @include read-post-link($master-border-radius);
   }
 
-  /*
-   * ===================
-   * Header styles start
-   * ===================
-   */
+  
+   // ===================
+   // Header styles start
+   // ===================
+   
   
   // Shared class for nav and searchbox elements
   .header-element-margin {
@@ -65,21 +64,18 @@
     float: none;
   }
 
-  /*
-   * =================
-   * Header styles end
-   * =================
-   */
+   // =================
+   // Header styles end
+   // =================
+   
 
 
 
-
-
-  /*
-   * =========================================================================
-   * Navigation styles start
-   * =========================================================================
-   */
+  
+   // =========================================================================
+   // Navigation styles start
+   // =========================================================================
+   
   
   // <nav>
   .main-navigation {
@@ -94,10 +90,9 @@
   	@include master-center;
   }
   
-  /*
-   * Hide 'mobile first' menu & search
-   * boxes on tablets
-   */
+   // Hide 'mobile first' menu & search
+   // boxes on tablets
+   
   #menu, #search {
     @include hide-element;
   }
@@ -126,12 +121,11 @@
     border-radius: $master-border-radius;
   }
 
-  /*
-   * =========================================================================
-   * Navigation styles end
-   * =========================================================================
-   */
-
+  
+   // =========================================================================
+   // Navigation styles end
+   // =========================================================================
+   
   // Search box-related styles start
   // the div that contains the search box
   #searchbox {
@@ -182,30 +176,29 @@
 
   // Search box-related styles end
 
-  /* Font styles for tablets & desktops. Google
-   * font doesn't load on mobile.
-   */
+  //Font styles for tablets & desktops. Google font doesn't load on mobile.
+   
   .share-post-link {
     font-size:16px;
     line-height: 1;
     @include fonts($helv);
   }
 
-  /*
-   * =================
-   * Header styles end
-   * =================
-   */
+  
+   // =================
+   // Header styles end
+   // =================
+   
 
 
 
 
 
- /*
- * ===========================================================================
- * Page content styles start
- * ===========================================================================
- */
+ 
+ // ===========================================================================
+ // Page content styles start
+ // ===========================================================================
+ 
 
   // Styles for post and category <h1> tags
   .wf-active h1.post-title, .wf-active h1.category-title  {
@@ -239,22 +232,19 @@
     display:inline;
   }
 
- /*
-  * ===========================================================================
-  * Page content styles end
-  * ===========================================================================
-  */
+ 
+  // ==========================================================================
+  // Page content styles end
+  // ==========================================================================
+  
 
 
 
-
-
- /*
-  * ===========================================================================
-  * Footer styles start
-  * ===========================================================================
-  */
-
+ 
+  // ==========================================================================
+  // Footer styles start
+  // ==========================================================================
+  
   .footer-header {
     @include footer-header;
   }
@@ -263,9 +253,8 @@
     @include contact-form-field;
   }
 
- /*
-  * ===========================================================================
-  * Footer styles end
-  * ===========================================================================
-  */
+  // ==========================================================================
+  // Footer styles end
+  // ==========================================================================
+  
 }
