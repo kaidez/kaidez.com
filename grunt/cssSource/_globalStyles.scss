@@ -46,6 +46,23 @@ html, body {
   clear: both;
 }
 
+p code {
+  display: inline-block;
+  white-space: no-wrap;
+  background: #FFF;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #555;
+  border: 1px solid #DDD;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  padding: 0 .3em;
+  margin: -1px 0;
+}
+
 // ===========================================================================
 // End "all-around" styles
 // ===========================================================================
