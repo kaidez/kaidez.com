@@ -5,7 +5,7 @@ title: Web development tutorials for beginners, product reviews, rants and more 
     
   <!-- This loops through the paginated posts -->
   {% for post in paginator.posts %}
-    <article class="post-snippet">
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }}
       <a href="{{ post.url }}" class="read-post-link">Read post &raquo;</a>
