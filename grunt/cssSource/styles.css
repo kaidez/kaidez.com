@@ -724,6 +724,9 @@ a:hover {
   float: left;
   margin-right: 14px; }
 
+.copyright-style {
+  display: block; }
+
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.4; }
