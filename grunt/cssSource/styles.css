@@ -363,6 +363,9 @@ p code, li code {
   padding: 0 .1em;
   margin: 0 2px 0; }
 
+.post-pic {
+  float: left; }
+
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
