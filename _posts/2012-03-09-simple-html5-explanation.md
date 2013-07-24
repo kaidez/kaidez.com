@@ -12,12 +12,11 @@ tags: [html5, best practice]
 HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.
 
 This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.
+<img src="http://kaidez.com/wp-content/uploads/2012/03/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic">
 
-As awesome as this is, I’ve had a few conversations with non-developers who think HTML5 is a magic bullet. Most talk about it as something that they *should* be doing without fully understanding *what it actually is*.  
-![HTML5 Logo][1]  
+As awesome as this is, I’ve had a few conversations with non-developers who think HTML5 is a magic bullet. Most talk about it as something that they *should* be doing without fully understanding *what it actually is*.
+
 While some web developers may be frustrated by the misunderstanding, part of their job is to explain to clients and employers what’s good and bad about new technologies, and without a lot of tech terms. So I’m going to take a stab at providing a simple HTML5 explanation.
-
- [1]: http://kaidez.com/wp-content/uploads/2012/03/HTML5_Logo.png
 
 And for the record: I think we should be using HTML5 when creating sites, but only in a way that helps us carry through our content strategy.
 
@@ -39,11 +38,13 @@ Here are the topics for this article:
  [6]: #Mobile-Web-Development
  [7]: #Making-The-Site-Look-Pretty
  [8]: #How-Is-HTML5-Being-Used-As-of-This-Article
- [9]: #How-Can-Businesses-Use-HTML5-TML5-Related-Technologies-Right-Now
+ [9]: #How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now
 
-### What Is HTML5 *Exactly*?
+<h2 id="What-Is-HTML5">What Is HTML5 <i>Exactly</i>?</h2>
 
-The 25-word answer is: ***“HTML5 is a major update to HTML that brings excellent new features to both websites and web applications, but also highlights an important older feature.”***
+The 25-word answer is:
+
+> ***“HTML5 is a major update to HTML that brings excellent new features to both websites and web applications, but also highlights an important older feature.”***
 
 Expanding on this definition, the four key things to know about HTML5 are:
 
@@ -52,7 +53,7 @@ Expanding on this definition, the four key things to know about HTML5 are:
 *   it allows for top-notch *mobile web development.*
 *   creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.
 
-### Where Did HTML5 Come From?
+<h2 id="Where-Did-HTML5-Come-From">Where Did HTML5 Come From?</h2>
 
 Created in 1990, HTML has always been a programming language that creates a website’s basic structure. To build a website, HTML “frames” it first, then things like copy and images are added to complete the job.
 
@@ -66,13 +67,14 @@ In 2007, the W3C agreed with WHATWG’s point of view. The two groups remained s
 
 The two groups are still working together as the HTML5 specification isn’t finalized as of this article, but it’s still possible to use it to create websites and web applications…as many do. 
 
-### Semantic Markup
+<h2 id="Semantic-Markup">Semantic Markup</h2>
 
 Semantic markup is HTML written in a way that gives site content specific meaning. Semantic markup is *not* a new a concept: it existed well before HTML5.
 
 HTML5 does create excellent semantic markup though…better than earlier HTML versions. Metaphorically speaking, the semantic markup of earlier versions tells the world, “this is some site content” while HTML5 semantic markup tells the world, “this is some site content, now let me give you some detailed information about it.”
 
-Sites written with semantic markup are easier to read on a multitude of devices: desktops, laptops, smartphones, screen-readers for the disabled, gaming consoles, just to name a few. But search engines also like semantic markup…so much so that web designer [Jeffrey Zeldman said it best in 2009:][12] *“Client who saves $5,000 buying cut-rate non-semantic HTML will later spend $25,000 on SEO consultant to compensate”*
+Sites written with semantic markup are easier to read on a multitude of devices: desktops, laptops, smartphones, screen-readers for the disabled, gaming consoles, just to name a few. But search engines also like semantic markup…so much so that web designer [Jeffrey Zeldman said it best in 2009:][12]
+> *“Client who saves $5,000 buying cut-rate non-semantic HTML will later spend $25,000 on SEO consultant to compensate”*
 
 Correct! Site content wrapped in non-semantic markup is tough for search engines to understand; therefore, it’s tough for search engines to rank and list in their search results.
 
@@ -84,7 +86,7 @@ Think of site content as a pirate’s treasure chest full of gold. Semantic mark
 
 One last note on the subject: sites written with semantic markup are said to be “following web standards.” Web developers have been coding with web standards for years, but too many haven’t. A push for *all* developers to use web standards has always existed, but HTML5 has strengthened this push more than ever before.
 
-### Web Applications
+<h2 id="Web-Applications">Web Applications</H2>
 
 A *website* is a site that gives people information, but doesn’t offer a lot in terms of interaction. People may be able to fill out a form of some sort while visiting the site, but the interaction won’t go much beyond that.
 
@@ -123,7 +125,7 @@ For the sake of easy explanations, I called these things “HTML5-related techno
 
 Many don’t care about this the proper term usage but do not be surprised if a real stickler comments on this article, telling me that calling these things “HTML5-related” is a no-no. If you want the techie details on this, visit [MDN’s HTML5 page][13] and take note of the section called “[Technologies often called part of HTML5 that aren’t][14].”
 
-### Mobile Web Development
+<h2 id="Mobile-Web-Development">Mobile Web Development</h2>
 
 The web browsers pre-installed in the majority of mobile devices released in the past two years support HTML5: both websites and web applications.
 
@@ -145,7 +147,7 @@ Best of all mobile web browsers support many HTML5 features already. Non-mobile 
 
 Because of their offline functionality and early adoption rate among mobile devices, lots of web developers are promoting HTML5 mobile web apps as a viable alternative to native apps. Mobile web apps will need to be able access things like the camera if they expect to beat the native guys, but I believe they’ll have access to many of these things eventually.
 
-### Making The Site Look Pretty
+<h2 id="Making-The-Site-Look-Pretty">Making The Site Look Pretty</h2>
 
 There are some HTML5 things that can make sites look good, but very little. And again, these things don’t work in many desktop browsers, which are still used more than mobile browsers.
 
@@ -157,7 +159,7 @@ So to make a site look good in as many browsers as possible, these three things 
 
 These things are not HTML5, but you will see them used in both HTML5 websites and web applications.
 
-### How Is HTML5 Being Used As of This Article?
+<h2 id="How-Is-HTML5-Being-Used-As-of-This-Article">How Is HTML5 Being Used As of This Article?</h2>
 
 In many ways…
 
@@ -166,7 +168,7 @@ In many ways…
 *   Web applications are popping up everywhere. One of my favorites is [TweetDeck Web][20].
 *   There are a few mobile web apps out there. Some use a lot of HTML5 and its related technologies, some use just a little of it. [jQuery Mobile Gallery][21] is site that uses a fair amount of HTML5 stuff; the sites they display use HTML5 to varying degrees.
 
-### How Can Businesses Use HTML5 & HTML5 Related-Technologies Right Now?
+<h2 id="How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now">How Can Businesses Use HTML5 & HTML5 Related-Technologies Right Now?</h2>
 
 I can’t stress the importance of web standard semantic markup enough. Businesses that don’t have it in their sites need to get it in there sooner, not later. They should either edit their current site and add the markup, or plan a site redesign that will include such markup.
 

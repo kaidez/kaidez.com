@@ -68,8 +68,10 @@ Let’s start with small examples that will build up to the big one. I’ll be r
 
 Cut-and-paste the code below in to the Console and run it:
 
-{% prism bash %}  var GLine = "You have connected to the G line!";
-alert(GLine); //alert popup appears!{% endprism %}
+{% prism javascript %}
+var GLine = "You have connected to the G line!";
+alert(GLine); //alert popup appears!
+{% endprism %}
 
 
 All works fine...we get an alert popup that says “You have connected to the G line!”
@@ -88,17 +90,17 @@ The console now returns a message that the `GLine` is not defined. This because 
 
 A closure named `connectingLine` can help us here. **Open up a new tab again** and run this code in the console.
 
+{% prism javascript %} 
 function brooklyn() {
-var GLine = "You have connected to the G line!";
-return function() {
-alert(GLine);
+  var GLine = "You have connected to the G line!";
+  return function() {
+    alert(GLine);
   };
 }
 
-
 var connectingLine = brooklyn();
 connectingLine(); //alert popup appears!
-
+{% endprism %} 
 
 And with that, the alert now pops up…let’s break down why:
 
@@ -123,56 +125,53 @@ We started with alerts for the sake of easy explanation-now let’s create somet
 [2]: # Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
 
 ### JavaScript for the difficult closure example (scripts.js)
-
+{% prism javascript %}
 (function() {
+
+  var brooklyn, connectWithETrain, connectWithFTrain, connectWithNTrain;
     
-    var brooklyn,
-     connectWithETrain,
-     connectWithFTrain,
-     connectWithNTrain;
-    
-    brooklyn = function() {
-     var GLine = 'G line!';
-     function howToGetThere(trainLine,startingStation,endingStation) {
-        $('#myRoute').html('Catch the '   trainLine   ' at the '   startingStation   ' station. Take it to '   endingStation   ' station and get off to catch the '   GLine);
+  brooklyn = function() {
+    var GLine = 'G line!';
+    function howToGetThere(trainLine,startingStation,endingStation) {
+      $('#myRoute').html('Catch the ' + trainLine + ' at the ' +   startingStation  + ' station. Take it to ' + endingStation + ' station   and get off to catch the ' + GLine);
+    }
+    return {
+      ETrain: function() {
+        howToGetThere('E train','14th Street, Manhattan','Court Square');
+      },
+      FTrain: function() {
+        howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
+      },
+      NTrain: function() {
+        howToGetThere('N train','34th Street Manhattan','4th Avenue');
       }
-          return {
-        ETrain: function() {
-          howToGetThere('E train','14th Street, Manhattan','Court Square');
-        },
-        FTrain: function() {
-          howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
-        },
-        NTrain: function() {
-          howToGetThere('N train','34th Street Manhattan','4th Avenue');
-        }
-      };
     };
+  };
     
-    connectWithETrain = brooklyn();
-    connectWithFTrain = brooklyn();
-    connectWithNTrain = brooklyn();
+  connectWithETrain = brooklyn();
+  connectWithFTrain = brooklyn();
+  connectWithNTrain = brooklyn();
     
-    $('#eTrain').click(function () {
-      return connectWithETrain.ETrain();
-    });
+  $('#eTrain').click(function () {
+    return connectWithETrain.ETrain();
+  });
     
-    $('#fTrain').click(function () {
-      return connectWithFTrain.FTrain();
-    });
+  $('#fTrain').click(function () {
+    return connectWithFTrain.FTrain();
+  });
     
-    $('#nTrain').click(function () {
-      return connectWithNTrain.NTrain();
-    });
-    })();
-    
+  $('#nTrain').click(function () {
+    return connectWithNTrain.NTrain();
+  });
+})(); 
+{% endprism %}
 
 Let’s break this code down:
-
-    (function() {
-    ...
-    })();
-    
+{% prism javascript %}  
+(function() {
+...
+})();
+{% endprism %}    
 
 This is a lot of code and we don’t want it in the global space as that can screw things up, so we’re wrapping it in a *self-executing anonymous function* (it has other names, but I like this one).
 
@@ -180,30 +179,28 @@ This means that we wrap all this code up in an unnamed function: note that there
 
 And a little piece of trivia: the code for the jQuery core library is wrapped up in a self-executing anonymous function. This type of function has been around for a while, but jQuery’s usage of it has increased its popularity with developers.
 
-    var brooklyn,
-     connectWithETrain,
-     connectWithFTrain,
-     connectWithNTrain;
-    
+{% prism javascript %} 
+var brooklyn, connectWithETrain, connectWithFTrain, connectWithNTrain;
+{% endprism %}
 
 These are variables that we’re going to use at some point in our code. We’re naming them but not initializing them by giving them a value (although you should if possible).
 
 We’re creating them using the *single var pattern*, meaning that we group all of our variables together with one `var` keyword and comma-separate them. This keeps our variables organized and easy to find, and since ***JavaScript moves variables to the top of functions anyway***, we might as well do it ourselves.
-
-    brooklyn = function() {
-    ...
-    };
-    
+{% prism javascript %} 
+brooklyn = function() {
+  ...
+};
+{% endprism %}   
 
 Our `brooklyn` function has returned…only this time, it’s not a function. Remember, we declared it as a variable in the beginning.
 
 This `brooklyn` variable is now equal to another anonymous function that encapsulates a lot of code.
-
-    var GLine = 'G line!';
-     function howToGetThere(trainLine,startingStation,endingStation) {
-        $('#myRoute').html('Catch the '   trainLine   ' at the '   startingStation   ' station. Take it to '   endingStation   ' station and get off to catch the '   GLine);
-      }
-    
+{% prism javascript %}  
+var GLine = 'G line!';
+function howToGetThere(trainLine,startingStation,endingStation) {
+  $('#myRoute').html('Catch the ' + trainLine + ' at the ' +   startingStation  + ' station. Take it to ' + endingStation + ' station   and get off to catch the ' + GLine);
+}
+{% endprism %}  
 
 Our `GLine` private variable is still here and it’s still a text string, but it’s shorter than the earlier versions. `GLine` is joined by a private method called `howToGetThere()`.
 
@@ -215,17 +212,16 @@ The `howToGetThere` method also has parameters that will be passed into the text
 
 The `howToGetThere` private method is going to run when a link is clicked, but we have a few more things to do first, code-wise.
 
-    return {
-      ETrain: function() {
-        howToGetThere('E train','14th Street, Manhattan','Court Square');
-      },
-      FTrain: function() {
-        howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
-      },
-      NTrain: function() {
-        howToGetThere('N train','34th Street Manhattan','4th Avenue');
-      }
-    }
+return {
+ETrain: function() {
+  howToGetThere('E train','14th Street, Manhattan','Court Square');
+},
+FTrain: function() {
+  howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
+},
+NTrain: function() {
+  howToGetThere('N train','34th Street Manhattan','4th Avenue');
+}
     
 
 Here are three public methods: `ETrain`, `FTrain` and `NTrain`. They all have access to the `howToGetThere` private method and are written out using something called the *[module pattern][3]*.
@@ -234,26 +230,30 @@ Here are three public methods: `ETrain`, `FTrain` and `NTrain`. They all have ac
 
 Each of these methods runs the `howToGetThere` private method, returning the parameters we discussed earlier. Again, `howToGetThere` will run when a page link is clicked but before we talk about that, we have to set up our closures first.
 
-    connectWithETrain = brooklyn();
-    connectWithFTrain = brooklyn();
-    connectWithNTrain = brooklyn();
+{% prism javascript %} 
+connectWithETrain = brooklyn();
+connectWithFTrain = brooklyn();
+connectWithNTrain = brooklyn();
+{% endprism %}
     
 
 Here are the closures. They’re actually the variable names we created at the top of our code with the single var pattern-we’ve just now given them a value.
 
 The value of each closure is the `brooklyn()` function, meaning it can access the public methods. It will do this with links, which we’ll now set up.
 
-    $('#eTrain').click(function () {
-      return connectWithETrain.ETrain();
-    });
+{% prism javascript %}
+$('#eTrain').click(function () {
+  return connectWithETrain.ETrain();
+});
     
-    $('#fTrain').click(function () {
-      return connectWithFTrain.FTrain();
-    });
+$('#fTrain').click(function () {
+  return connectWithFTrain.FTrain();
+});
     
-    $('#nTrain').click(function () {
-      return connectWithNTrain.NTrain();
-    });
+$('#nTrain').click(function () {
+  return connectWithNTrain.NTrain();
+});
+{% endprism %}
     
 
 Every time one of our three page links is clicked, jQuery’s `.click()` method runs a callback function. This function then runs one of our three public methods, which in turn, runs the `howToGetThere()` private method.
