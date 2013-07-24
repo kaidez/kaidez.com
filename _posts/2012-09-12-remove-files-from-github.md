@@ -74,9 +74,13 @@ The sequence for *deleting* files is the same, except for one change: you replac
 
 So if you wanted to remove “myFile.html” from your repo, the sequence would look something like this:
 
-*   `git rm 'myFile.html'`
-*   `git commit -m 'removed myFile.html'`
-*   `git push`
+{% prism bash %}
+
+git rm 'myFile.html'
+git commit -m 'removed myFile.html'
+git push
+
+{% endprism %}
 
 Why is all this necessary? Because Git views adding and removing things from your repo as a “change.” And while Git can detect these changes, it has absolutely no idea what to do with them: it’s your job to *tell* Git what to do with them.
 
