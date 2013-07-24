@@ -1,5 +1,4 @@
 markdown: rdiscount
-pygments: true
 permalink: /:title
 destination: ./_site
 paginate: 10
