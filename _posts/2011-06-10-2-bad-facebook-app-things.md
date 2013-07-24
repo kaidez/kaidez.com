@@ -26,7 +26,7 @@ And it all points back to a JavaScript file named “all.js” that needs to be 
 
 According to my app page’s [YSlow][3] report, this “all.js” file is capable of inserting three inline CSS expressions on to the page. Affecting Internet Explorer 8 and lower only, CSS expressions are CSS selectors that are updated and manipulated with JavaScript. Here’s the CSS expression example from [YDN page][4]:  
   
- background-color: expression( (new Date()).getHours()%2 ? “#B8D4FF” : “#F08A00″ );  
+ {% prism css %}background-color: expression( (new Date()).getHours()%2 ? “#B8D4FF” : “#F08A00″ );{% endprism %}
   
 Basically, this code updates the background color ever hour; however, it runs much more frequently then that. Simple things like scrolling and mouse movements can fire this code off, which slows down the page overall.
 
@@ -39,12 +39,12 @@ This sucks, but no where NEAR as bad as…
 
 According to Safari’s Activity Monitor, the “all.js” dynamically adjusts lots of DOM properties when scrolling the page. One simple scroll changed the following DOM properties on the fly:
 
-*   clientWidth
-*   clientHeight
-*   scrollLeft
-*   scrollTop
-*   offsetLeft
-*   offsetTop
+*   `clientWidth`
+*   `clientHeight`
+*   `scrollLeft`
+*   `scrollTop`
+*   `offsetLeft`
+*   `offsetTop`
 
 Changing properties like this triggers a render tree reflow, the recalculation of a web page’s layout and geometry. All of this takes time and browser resources, meaning all of this slows down a page…no good.
 

@@ -17,10 +17,10 @@ While I’m trying to earn an income from this blog, its primary purpose is to h
 
 The good news is that I learned a lot:
 
-*   **HTML5** – I’ve made it clear that this was the main thing I wanted to learn and I’m giving myself an A- in this category. I’m about 85% well-versed in HTML5 page structure, understand how to implement it across multiple browsers and have read quite a bit of [the HTML5 spec][1]. I’ve also implemented it into [a small Almay project][2] and plan to implement it into a few personal projects as well as two more work ones. I’ve yet to make a 100% HTML5 site though. That may come soon though.
+***HTML5** – I’ve made it clear that this was the main thing I wanted to learn and I’m giving myself an A- in this category. I’m about 85% well-versed in HTML5 page structure, understand how to implement it across multiple browsers and have read quite a bit of [the HTML5 spec][1]. I’ve also implemented it into [a small Almay project][2] and plan to implement it into a few personal projects as well as two more work ones. I’ve yet to make a 100% HTML5 site though. That may come soon though.
 *   **CSS3** – Unfortunately, I can only give myself a B- in this category. I’ve spent so much time with HTML5 that I neglected CSS3, but I’m catching up. I’ve gone through a decent CSS3 book and [the *CSS3: First Look* course at lynda.com][3]. I also wrote [a pretty good CSS3 Pie tutorial][4] and have also played around with media queries.  
       
-    I’d give myself a higher grade had I implemented any CSS3 in any projects. I think I will pretty soon though.
+I’d give myself a higher grade had I implemented any CSS3 in any projects. I think I will pretty soon though.
 *   **.NET** – I get a C here, which is better than I expected. I created user controls for the Almay project mentioned above, understand the role of the solution and the .dll file and understand why .NET does what it does from an OOP level. But I need to move forward on this and take things to the next level.
 *   **jQuery** – I earned a B. I’ve done some small projects here and there and also wrote [a well-trafficked jQuery tutorial][5]. Furthermore, I’m utilizing jQuery more and more while not having to look up answers to jQuery problems on the web.
 
