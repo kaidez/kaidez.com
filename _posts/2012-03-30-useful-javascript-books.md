@@ -42,12 +42,7 @@ Regardless of its limited coverage of JavaScript’s OOP possibilities, *Visual 
 
 ## [2. *Object-Oriented JavaScript* by Stoyan Stefanov][5]![][6]
 
- [5]: http://www.amazon.com/gp/product/1847194141/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1847194141
- [6]: http://www.assoc-amazon.com/e/ir?t=kaidez-20&l=as2&o=1&a=1847194141
-
-[![][8]][8]![][6]I’ll get straight to the point: this is an *excellent* book!
-
- []: http://www.amazon.com/gp/product/1847194141/ref=as_li_tf_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1847194141
+<img src="http://ecx.images-amazon.com/images/I/41BIxA3nsNL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg" alt="Object-Oriented JavaScript by Stoyan Stefanov" class="post-pic ">I’ll get straight to the point: this is an *excellent* book!
 
 Embellishing a bit more, Yahoo developer Stefanov does an awesome job of teaching the reader how to treat JavaScript as a full-on object-oriented language. He also does an awesome job of explaining the “hows” and “whys” job of the code exercises. 
 
@@ -96,7 +91,7 @@ As with *JavaScript Patterns*, the Crockford book is not for beginners…REALLY 
  [16]: http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1590597273
  [17]: http://www.assoc-amazon.com/e/ir?t=kaidez-20&l=as2&o=1&a=1590597273
 
-[![][19]][19]![][17]I’ll be completely upfront here: I’ve read most of this book, but not all of it. Plus, I haven’t implemented a lot of the new stuff I learned from it.
+I’ll be completely upfront here: I’ve read most of this book, but not all of it. Plus, I haven’t implemented a lot of the new stuff I learned from it.
 
  []: http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1590597273
 

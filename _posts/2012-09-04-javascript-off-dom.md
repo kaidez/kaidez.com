@@ -44,11 +44,10 @@ And, of course, the tutorial’s final code on GitHub is [here][5].
 ENJOY!!!
 
 ### Part 1
-
-
+<iframe width="560" height="315" src="//www.youtube.com/embed/WhQbz1Zn72Y" frameborder="0" allowfullscreen></iframe>
 
 ### Part 2
-
-
+<iframe width="560" height="315" src="//www.youtube.com/embed/dGC-YAxD4pw" frameborder="0" allowfullscreen></iframe>
 
 ### Part 3
+<iframe width="560" height="315" src="//www.youtube.com/embed/MUvnKrXHwwk" frameborder="0" allowfullscreen></iframe>

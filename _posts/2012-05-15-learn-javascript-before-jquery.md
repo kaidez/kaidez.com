@@ -135,16 +135,16 @@ I’ll toot my own horn here and mention my last post on [great JavaScript books
 
  [31]: http://kaidez.com/useful-javascript-books/
 
-*   ### [Codecademy][32] »
-    
-    Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications. Most importantly, [Mozilla Developer Network lists Codecademy as an excellent introductory level learning resource][33], which is a ringing endorsement.  
-    *   ### [jQuery Fundamentals »][34]
-        
-        Written by [ Rebecca Murphey][35] who is, hands down, my favorite web developer right now. *jQuery Fundamentals* teaches you jQuery the right way: by teaching you the JavaScript basics and best practices first.  
-        *   ### [10 Things I Learned from the jQuery Source »][36]
-            
-            Paul Irish walks you through the core JavaScript code behind the jQuery library, highlighting things like anonymous functions, robust module patterns and why they were written the way they were written.   
-            Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! I know what it looks like.
+### [Codecademy »][32] 
+Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications. Most importantly, [Mozilla Developer Network lists Codecademy as an excellent introductory level learning resource][33], which is a ringing endorsement.  
+
+### [jQuery Fundamentals »][34]
+Written by [Rebecca Murphey][35] who is, hands down, my favorite web developer right now. *jQuery Fundamentals* teaches you jQuery the right way: by teaching you the JavaScript basics and best practices first.
+
+### [10 Things I Learned from the jQuery Source »][36]
+Paul Irish walks you through the core JavaScript code behind the jQuery library, highlighting things like anonymous functions, robust module patterns and why they were written the way they were written.
+
+Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! I know what it looks like.
 
  [32]: http://www.codecademy.com/
  [33]: https://developer.mozilla.org/en-US/learn/javascript

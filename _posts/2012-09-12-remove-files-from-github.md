@@ -66,9 +66,11 @@ If you’re only Git education up to this point is doing what GitHub tells you t
 
 So if you have a file called “myFile.html” that you’ve just created or changed and you want to upload it to GitHub, the sequence would look something like this:
 
-*   `git add 'myFile.html'`
-*   `git commit -m 'added myFile.html'`
-*   `git push`
+{% prism bash %}
+git add 'myFile.html'
+git commit -m 'added myFile.html'
+git push
+{% endprism %}
 
 The sequence for *deleting* files is the same, except for one change: you replace `add` with `rm`, which is the UNIX command for removing things.
 
@@ -165,58 +167,56 @@ The process for removing directories is the same as files, except for one differ
 2.  Let’s delete that “someFolder” directory but let’s see what’s inside of it first. 
     As we can see, “someFolder” contains a file called “somePage.html.” This is important because if you want Git to delete directories at the command line level with `rm`, they need to contain content…I’ll admit that I’m not sure why this is.  
     ![Remove files from GitHub tutorial][30]  
-    *   So to delete “someFolder” from our local repo, we need to “remove it, but forcibly and recursively (i.e., also get rid of everything inside of it).” In the UNIX world, that means we need type `git rm -rf someFolder` into Terminal and hit Enter. Terminal send us message that this is what happened, *directly* referencing the file inside of `someFolder`.  
+3.  So to delete “someFolder” from our local repo, we need to “remove it, but forcibly and recursively (i.e., also get rid of everything inside of it).” In the UNIX world, that means we need type `git rm -rf someFolder` into Terminal and hit Enter. Terminal send us message that this is what happened, *directly* referencing the file inside of `someFolder`.  
         ![Remove files from GitHub tutorial][31] 
-    *   Now comes the commit…type `git commit -m 'delete someFolder'` and hit Enter.  
+4.  Now comes the commit…type `git commit -m 'delete someFolder'` and hit Enter.  
         ![Remove files from GitHub tutorial][32] 
-    *   Now we do a `git push`, hit Enter and check our repo. The “someFolder” directory is now gone.  
-        ![Remove files from GitHub tutorial][33]  
-    ## What to do if you’ve already deleted files from your machine and pushed things to GitHub
+5.  Now we do a `git push`, hit Enter and check our repo. The “someFolder” directory is now gone.  
+        ![Remove files from GitHub tutorial][33]
+
+## What to do if you’ve already deleted files from your machine and pushed things to GitHub
+   
+This is a newbie mistake that I’ve made more times than I can remember. But it’s an easy fix.
     
-    This is a newbie mistake that I’ve made more times than I can remember. But it’s an easy fix.
-    
-    1.  Let’s see what the “status” of our repo is by typing `git status` into Terminal and hitting Enter. Since we’ve pushed everything, we get a message that there’s nothing to commit for an upload to GitHub.  
+1.  Let’s see what the “status” of our repo is by typing `git status` into Terminal and hitting Enter. Since we’ve pushed everything, we get a message that there’s nothing to commit for an upload to GitHub.  
         ![Remove files from GitHub tutorial][34] 
-    2.  Now let’s drag “page2.html” to the Trash, then do another `git status` check. We didn’t send out any Git commands, but Git is tracking the file anyway (side note: if you didn’t do [the .gitignore part previously mentioned][5], you may see a reference to “.DS_Store” now).  
+2.  Now let’s drag “page2.html” to the Trash, then do another `git status` check. We didn’t send out any Git commands, but Git is tracking the file anyway (side note: if you didn’t do [the .gitignore part previously mentioned][5], you may see a reference to “.DS_Store” now).  
         ![Remove files from GitHub tutorial][35] 
-    3.  We need to “tell” Git that this file needs to be removed, and can do so by sending out a “remove” command again. Type in `git rm page2.html`, then hit Enter. We get another message that page2.html has been removed like we did in a previous example.  
+3.  We need to “tell” Git that this file needs to be removed, and can do so by sending out a “remove” command again. Type in `git rm page2.html`, then hit Enter. We get another message that page2.html has been removed like we did in a previous example.  
         ![Remove files from GitHub tutorial][36] 
-    4.  And when we do `git status` again, we’re told that the file is ready to be committed.  
+4.  And when we do `git status` again, we’re told that the file is ready to be committed.  
         ![Remove files from GitHub tutorial][37] 
-    5.  So let’s commit it: type in `git commit -m 'delete page2.html'` and hit Enter.  
+5.  So let’s commit it: type in `git commit -m 'delete page2.html'` and hit Enter.  
         ![Remove files from GitHub tutorial][38] 
-    6.  Finally, we do a `git push`, hit Enter and check our repo. “page2.html” is gone.  
+6.  Finally, we do a `git push`, hit Enter and check our repo. “page2.html” is gone.  
         ![Remove files from GitHub tutorial][39] 
     
-    ## Further Reading
+## Further Reading
+This tutorial focused on how Git handles file and directory deletion but there’s more to Git than that. From a beginner’s level, here are some great learning resources:
     
-    This tutorial focused on how Git handles file and directory deletion but there’s more to Git than that. From a beginner’s level, here are some great learning resources:
-    
-    *   ### [The Git Site »][2]
-        
-        Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.  
-        *   ### [Try Git »][40]
-            
-        If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.  
-        *   ### [GitHub Training »][42]
+### [The Git Site »][2]
+Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.
+
+### [Try Git »][40]
+If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
+
+### [GitHub Training »][42]
+One of the reasons that GitHub has become popular is the same reason that [Chris Coyier][43] and [Paul Irish][44] have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources][45] section as well as their [Online Training][46] and [Events][47] sections. For the last two, some things are free and some are not, but I think they’re reasonably priced.  
+
+### [Common Git Commands »][48]
+UK-based developer [Kerry Gallagher][49] put together a really useful list of Git commands. Print it out and tape it to the wall by your computer. 
+
+### [“Git Is Simpler Than You Think” by Nick Farina »][50]
+If you *really* want to know how Git works, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
+
+### [“What is Version Control: Centralized vs. DVCS” by Giancarlo Lionetti »][51]
+I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It’s the part that makes sharing code via GitHub a snap and, let’s be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find. 
+
+### [*Pro Git* by Scott Chacon »][52]
+*The* Git Book, and it’s free! It’s a little dense and doesn’t flow as easily as these other resources…I’ll admit that I haven’t read all of it. But I have read enough of it to know that it’s an important Git resource.   
                 
-        One of the reasons that GitHub has become popular is the same reason that [Chris Coyier][43] and [Paul Irish][44] have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources][45] section as well as their [Online Training][46] and [Events][47] sections. For the last two, some things are free and some are not, but I think they’re reasonably priced.  
-                *   ### [Common Git Commands »][48]
-                    
-        UK-based developer [Kerry Gallagher][49] put together a really useful list of Git commands. Print it out and tape it to the wall by your computer. 
-                *   ### [“Git Is Simpler Than You Think” by Nick Farina »][50]
-                        
-        If you *really* want to know how Git works, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
-                *   ### [“What is Version Control: Centralized vs. DVCS” by Giancarlo Lionetti »][51]
-                            
-         I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It’s the part that makes sharing code via GitHub a snap and, let’s be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.  
-                *   ### [*Pro Git* by Scott Chacon »][52]
-                                
-        *The* Git Book, and it’s free! It’s a little dense and doesn’t flow as easily as these other resources…I’ll admit that I haven’t read all of it. But I have read enough of it to know that it’s an important Git resource.   
-                
-            ## Conclusion
-                                
-              I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you’ve come to realize that the title of Farina’s post is correct: Git *is* simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you’ll discover how bloody useful Git can be, along with a ton of other things.
+## Conclusion                             
+I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you’ve come to realize that the title of Farina’s post is correct: Git *is* simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you’ll discover how bloody useful Git can be, along with a ton of other things.
 
  [30]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo5.png
  [31]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot14.png

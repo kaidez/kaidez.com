@@ -36,7 +36,7 @@ The stricter object-oriented languages like C# and Java have syntax to create pr
 
 Obviously, closures can be tough to understand at first, but understanding them is a must if you want to master JavaScript. So, I’m going to try to help here.
 
-A little parable about the New York City subway may help…
+A little parable about the New York City subway may help...
 
 ## The Subway Story
 
@@ -58,9 +58,9 @@ A more direct line between Manhattan and the neighborhoods that the G runs along
 
 Now…how does all of this subway stuff tie in with closures?
 
-*   Think of the G line as a private variable encapsulated by a function named `brooklyn`.
-*   All those stops along the G, like Court Square? Think of them as both public and privileged methods: they’re public because things outside of the `brooklyn` function can access them, but they’re also privileged because they’re inside the `brooklyn` function and have access to the private variable, the G line.
-*   Since the only way to get to the G is via one the connecting lines, think of the connecting lines as closures.
+* Think of the G line as a private variable encapsulated by a function named `brooklyn`.
+* All those stops along the G, like Court Square? Think of them as both public and privileged methods: they’re public because things outside of the `brooklyn` function can access them, but they’re also privileged because they’re inside the `brooklyn` function and have access to the private variable, the G line.
+* Since the only way to get to the G is via one the connecting lines, think of the connecting lines as closures.
 
 Let’s start with small examples that will build up to the big one. I’ll be running these simple examples in Firebug Console for Firefox.
 
@@ -68,36 +68,37 @@ Let’s start with small examples that will build up to the big one. I’ll be r
 
 Cut-and-paste the code below in to the Console and run it:
 
-    var GLine = "You have connected to the G line!";
-    
-    alert(GLine); //alert popup appears!
-    
+{% prism bash %}  var GLine = "You have connected to the G line!";
+alert(GLine); //alert popup appears!{% endprism %}
 
-All works fine…we get an alert popup that says “You have connected to the G line!”
+
+All works fine...we get an alert popup that says “You have connected to the G line!”
 
 Now, **open up a new tab** and plug this code in the console and run it:
 
-    function brooklyn() {
-     var GLine = "You have connected to the G line!";
-    }
+{% prism javascript %} 
+function brooklyn() {
+  var GLine = "You have connected to the G line!";
+}
     
-    alert(GLine); //Oops! The alert doesn't show!
-    
+alert(GLine); //Oops! The alert doesn't show!
+{% endprism %}   
 
 The console now returns a message that the `GLine` is not defined. This because `GLine` is now a private variable wrapped inside the `brooklyn` function, meaning the outside world can’t see it. And since our alert lives in the outside world, it’s giving us this error.
 
-A closure named `connectingLine` can help us here. **Open up a new tab again** and run this code in the console:
+A closure named `connectingLine` can help us here. **Open up a new tab again** and run this code in the console.
 
-    function brooklyn() {
-     var GLine = "You have connected to the G line!";
-     return function() {
-      alert(GLine);
-     };
-    }
-    
-    var connectingLine = brooklyn();
-    connectingLine(); //alert popup appears!
-    
+function brooklyn() {
+var GLine = "You have connected to the G line!";
+return function() {
+alert(GLine);
+  };
+}
+
+
+var connectingLine = brooklyn();
+connectingLine(); //alert popup appears!
+
 
 And with that, the alert now pops up…let’s break down why:
 
@@ -113,36 +114,17 @@ We started with alerts for the sake of easy explanation-now let’s create somet
 
 ### HTML for the difficult closure example
 
-    
-    
-    
-    
-    
+*   [Catch the G train by taking the E Train][2]
      
-    *   [Catch the G train by taking the E Train][2]
-     
-    *   [Catch the G train by taking the F Train][2]
-     
-    *   [Catch the G train by taking the N Train][2]
+*   [Catch the G train by taking the F Train][2]
     
+*   [Catch the G train by taking the N Train][2]
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
- [2]: #
-
-Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
+[2]: # Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
 
 ### JavaScript for the difficult closure example (scripts.js)
 
-    (function() {
+(function() {
     
     var brooklyn,
      connectWithETrain,
@@ -154,8 +136,7 @@ Our simple HTML5-formatted page has three links, each with unique page ID. Using
      function howToGetThere(trainLine,startingStation,endingStation) {
         $('#myRoute').html('Catch the '   trainLine   ' at the '   startingStation   ' station. Take it to '   endingStation   ' station and get off to catch the '   GLine);
       }
-    
-      return {
+          return {
         ETrain: function() {
           howToGetThere('E train','14th Street, Manhattan','Court Square');
         },
