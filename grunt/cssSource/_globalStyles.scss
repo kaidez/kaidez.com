@@ -49,18 +49,17 @@ html, body {
 p code {
   display: inline-block;
   white-space: no-wrap;
-  background: #FFF;
-  font-size: 1em;
-  line-height: 1.5em;
-  color: #555;
-  border: 1px solid #DDD;
+  background: #f1f1f1;
+  font-size: .9em;
+  line-height: 1.3em;
+  color: #000;
+  border: 1px solid #999;
   -webkit-border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
   -ms-border-radius: 0.4em;
   -o-border-radius: 0.4em;
   border-radius: 0.4em;
-  padding: 0 .3em;
-  margin: -1px 0;
+  padding: 0 .1em;
+  margin: 0 2px 0;
 }
 
 // ===========================================================================
