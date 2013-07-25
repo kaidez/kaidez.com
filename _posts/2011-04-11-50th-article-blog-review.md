@@ -43,27 +43,29 @@ I did say that documenting my web development learning process was this blog’s
     As true as that last line is, I can’t be too cocky about it and need to put things in perspective. I’m mostly blogging about HTML5 right now and that’s an *extremely* hot topic. Lots of people want to learn it and lots of employers want to hire people who know it. That being said, there are lots of Google searches on the subject so it stands to reason that my blog will snag some of them.
     
     Blogging about a hot topic is not a bad thing. Not having a plan to expand your blog beyond that hot topic if/when it’s no longer hot, that’s a bad thing. 
-    *   **SEO**  
-        During the WordPress Wordcamp/Bulgaria in 2011, Joost de Valk, pretty much [*the* WordPress SEO expert][6], delivered [one of the most inspirational blogging lectures][7] I’ve ever heard. Among the many great things he said, this was his most brilliant quote: 
-        > “The funny thing is, if you have really good content, SEO is the easiest game in the world. If you have sh*t content, SEO is really REALLY hard because you’re working against your content all the time.”
+*   **SEO**  
+    During the WordPress Wordcamp/Bulgaria in 2011, Joost de Valk, pretty much [*the* WordPress SEO expert][6], delivered [one of the most inspirational blogging lectures][7] I’ve ever heard. Among the many great things he said, this was his most brilliant quote:
+
+    > “The funny thing is, if you have really good content, SEO is the easiest game in the world. If you have sh*t content, SEO is really REALLY hard because you’re working against your content all the time.”
         
-         
+    I believe that this outlook is 100% true. While I use the all the proper SEO methods, well-crafted title & meta description tags, proper alt tag use, competitive keyword research, etc; I focus on content first and foremost. Again, HTML5 is content that people want; I believe I provide it in a format which appeals to endusers first and search engines second.
         
-        I believe that this outlook is 100% true. While I use the all the proper SEO methods, well-crafted title & meta description tags, proper alt tag use, competitive keyword research, etc; I focus on content first and foremost. Again, HTML5 is content that people want; I believe I provide it in a format which appeals to endusers first and search engines second.
+    I do get long-winded sometimes…this article is proof of that and it’s something I need to work on.  
         
-        I do get long-winded sometimes…this article is proof of that and it’s something I need to work on.  
-        *   **Social Networking**  
-            Prior to my [changing this blog from a soccer one to a web development one][8], I wasn’t a big social networker. I never got involved with MySpace, was pretty active on [Facebook][9] and had a [Twitter][10] account that I only used to tweet my blog articles. 
-            I now use Twitter, Facebook and LinkedIn to promote my articles, but am actively tweeting a whole lot more. Best of all, I’m using Twitter more to communicate than to promote. And I *love* it! 
+*   **Social Networking**  
             
-            I thoroughly enjoy talking to people on Twitter. I’ve connected with my two main blogging inspirations, an SEO expert in New Zealand and a few friends from high school. I find myself more on Twitter than I do Facebook nowadays, and that suits me just fine.
+    Prior to my [changing this blog from a soccer one to a web development one][8], I wasn’t a big social networker. I never got involved with MySpace, was pretty active on [Facebook][9] and had a [Twitter][10] account that I only used to tweet my blog articles. 
+    I now use Twitter, Facebook and LinkedIn to promote my articles, but am actively tweeting a whole lot more. Best of all, I’m using Twitter more to communicate than to promote. And I *love* it! 
             
-            I’ve recently been involved in [Quora][11]. In that space, I answer and ask questions on a wide variety of topics, but also trying to promote myself as an overall nice guy. I try answer as many questions as I can about HTML5: if I can’t directly answer someone’s question, I try to help them find an answer online.
+    I thoroughly enjoy talking to people on Twitter. I’ve connected with my two main blogging inspirations, an SEO expert in New Zealand and a few friends from high school. I find myself more on Twitter than I do Facebook nowadays, and that suits me just fine.
             
-            I’m also thinking of expanding to Tumblr. I was really influenced by [the Mashable article on fashion brands flocking to Tumblr][12], specifically the part about how Kate Spade uses various social networking sites for specific tasks, making them a more efficient company in terms of their promotional efforts. Mashable has recently implemented the same tactic, [using their Tumble site specifically for sharing the company’s behind-the-scenes activities with their readers.][13].
+    I’ve recently been involved in [Quora][11]. In that space, I answer and ask questions on a wide variety of topics, but also trying to promote myself as an overall nice guy. I try answer as many questions as I can about HTML5: if I can’t directly answer someone’s question, I try to help them find an answer online.
             
-            While I’ve sort of done this with Quora, using a social network channel for the specific task of promoting myself as someone willing to help, applying this method to my overall blogging strategy will take me a little time though.   
-            So here I am at my 50th article. While I still have work to do in certain areas, I’m happy overall and will enjoy getting to article #100!!! I hope you stay with me!!!
+    I’m also thinking of expanding to Tumblr. I was really influenced by [the Mashable article on fashion brands flocking to Tumblr][12], specifically the part about how Kate Spade uses various social networking sites for specific tasks, making them a more efficient company in terms of their promotional efforts. Mashable has recently implemented the same tactic, [using their Tumble site specifically for sharing the company’s behind-the-scenes activities with their readers.][13].
+            
+    While I’ve sort of done this with Quora, using a social network channel for the specific task of promoting myself as someone willing to help, applying this method to my overall blogging strategy will take me a little time though.
+
+So here I am at my 50th article. While I still have work to do in certain areas, I’m happy overall and will enjoy getting to article #100!!! I hope you stay with me!!!
 
  [6]: http://yoast.com/
  [7]: http://kaidez.com/yoast-awesome-wordpress-seo-speech/
