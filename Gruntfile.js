@@ -11,6 +11,9 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'grunt/cssSource/styles.css': 'grunt/cssSource/styles.scss'
+        },
+        options: {
+          style: 'expanded'
         }
       }
     },
@@ -30,8 +33,8 @@ module.exports = function(grunt) {
         tasks: ['sassbuild']
       },
       scripts :{
-        files: ['grunt/jsSrc/*.js', 'js/vendor/*/js'],
-        tasks: ['jshint','uglify']
+        files: ['grunt/jsSource/*.js', 'js/*.js'],
+        tasks: ['jshint']
       }
     },
 
