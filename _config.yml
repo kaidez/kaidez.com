@@ -11,5 +11,5 @@ exclude: [
           package.json,
           robots.txt,
           css/styles.css,
-          assets/,
+          assets/
           ]
