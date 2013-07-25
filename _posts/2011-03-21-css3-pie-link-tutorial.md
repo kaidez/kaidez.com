@@ -23,12 +23,12 @@ Internet Explorer 9 provides wide CSS3 support while the previous versions of IE
 
 This tutorial will first create code that’s not friendly for older versions of IE, progressively adding the CSS3 PIE code so you get a before-and-after view of things. I’ll be using both Internet Explorer 8 and Google Chrome to test my code.
 
-1)   Create a new folder on your Desktop, naming it “PIETest” (without the quotes, of course).
-2)   Download the most recent version of CSS3 PIE by [going to their site][5] and clicking the “Download” button in the far right column. It should download as a .zip file.
-3)   Unzip the PIE files.
-4)   Open your “PIETest” folder and create another folder called “PIEFiles.” Find the “PIE.htc” file and place it into this new “PIEFIles” folder.
-5)   Using the web editor of your choice, create an html file called “PIEpage.html” and save it to your main “PIETest” folder.
-6)  Copy and paste the code below into “PIEpage.html”: 
+1) Create a new folder on your Desktop, naming it “PIETest” (without the quotes, of course).
+2) Download the most recent version of CSS3 PIE by [going to their site][5] and clicking the “Download” button in the far right column. It should download as a .zip file.
+3) Unzip the PIE files.
+4) Open your “PIETest” folder and create another folder called “PIEFiles.” Find the “PIE.htc” file and place it into this new “PIEFIles” folder.
+5) Using the web editor of your choice, create an html file called “PIEpage.html” and save it to your main “PIETest” folder.
+6) Copy and paste the code below into “PIEpage.html”: 
 
 {% prism markup %}        	
 <!DOCTYPE html>
@@ -111,11 +111,11 @@ Any time a link with a class of “links” gets a mouseover, it should shift to
             
 We create a link with a class name of “links” so it responds based on the CSS code above when rolled over as well as rolled off. 
 
-9) If you review PIEpage.html in Chrome, it should look like this: ![][6]
+9) If you review PIEpage.html in Chrome, it should look like this:  
+![][6]
             
-But if you review it in Internet Explorer 8 or lower, it should look like this:
-            
-            ![][7]
+But if you review it in Internet Explorer 8 or lower, it should look like this:  
+![][7]
             
 CSS3 PIE will neaten things up for us.  
 
@@ -185,6 +185,6 @@ That’s it but let me make a few points…
 Please help me get better at explaining things…feel free to let me know if I’m not clear on something. And, again, [feel free to grab the completed code for this tutorial over at GitHub][1].
 
  [6]: http://kaidez.com/wp-content/uploads/2011/03/nonIE.png "nonIE"
- [7]: http://kaidez.com/wp-content/uploads/2011/03/IE.png "IE"
+ [7]: ../img/pie-tut-IE.png "IE"
  [8]: http://twitter.com/css3pie
  [9]: http://kaidez.com/html5-project-update-january-21-2011/

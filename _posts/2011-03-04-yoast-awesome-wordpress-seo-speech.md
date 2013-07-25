@@ -16,6 +16,8 @@ Yes, he provides quite a few technical tips but he *really* drives home the need
 
 Be forewarned…Yoast pulls no punches about what is and isn’t bad WordPress SEO practice. And if you use [Semper Fi’s All In One SEO Pack plugin][2], be prepared to rethink about how you’re currently using it.
 
+<embed type="application/x-shockwave-flash" src="http://s0.videopress.com/player.swf?v=1.03" width="400" height="300" wmode="direct" seamlesstabbing="true" allowfullscreen="true" allowscriptaccess="always" overstretch="true" flashvars="guid=poalo5Ff&amp;isDynamicSeeking=true"></embed>
+
  [2]: http://semperfiwebdesign.com/portfolio/wordpress/wordpress-plugins/all-in-one-seo-pack/
 
 Final note: If you’re a blogger (particular one that uses WordPress), you need to know who this guy is and know about his brilliant [WordPress SEO plugin.][3]

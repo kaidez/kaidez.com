@@ -52,21 +52,16 @@ Take note: as of this article, mobile web use is on the rise. Mobile sites are o
 
 If you’re aiming to be a developer instead of a designer, strong math skills will take you a long way. Web programming is primarily based on **conditional math**, a series of “if-then-else” statements. For example: if you wanted to write a command to determine what days you go to school, it would look something like this:
 
-    if (dayOfWeek == "Saturday") {
-    
-       stayHome();
-    
-    } else {
-    
-       if (dayOfWeek == "Sunday") {
-    
-       stayHome();
-    
-    } else {
-    
-    goToSchool();
-    
-    }
+{% prism javascript %}
+ if (dayOfWeek == "Saturday") {
+   stayHome();
+ } else {
+if (dayOfWeek == "Sunday") {
+  stayHome();
+} else { 
+  goToSchool();
+}
+{% endprism %}
     
 
 By no means is this the most optimal code. I would need to “declare a variable” in order for this to work and would also need to load all of the days of the week into an “array.” I could also have written less code for determining the days and, if I was really ambitious, could have written code that checked for school holidays and the summer break. But this is still a good example of math-based web code. And the more math you understand, the more this block of code makes sense on its own.

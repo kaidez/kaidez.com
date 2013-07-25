@@ -16,8 +16,4 @@ If they are doing this, then they’re missing the *absolutely brilliant* code w
 
 If you’re a front-end web developer or want to be one, ***I cannot stress enough how informative this video is***. Budget 40 minutes of your time and watch it in its entirety!
 
- 
-
-
-
- 
+<iframe width="420" height="315" src="//www.youtube.com/embed/oDlsOyPKUTM" frameborder="0" allowfullscreen></iframe>
