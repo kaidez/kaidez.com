@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // 'sass' task
+    // convert main saas file to a development build of 'styles.css'
     sass: {
       dist: {
         files: {
@@ -35,7 +35,23 @@ module.exports = function(grunt) {
       }
     },
 
-    // 'modernizr' task 
+    // minify all images
+    imagemin: {
+      dist: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+          files: [{
+            expand: true,
+            cwd: 'imgSource/',
+            src: '*.{png,jpg,jpeg}',
+            dest: '../img'
+        }]
+      }
+    },
+
+    // create a custom 'modernizr' file 
     modernizr: {
 
       "devFile" : "modernizr/modernizr-dev.js", //modernizr full build
@@ -115,7 +131,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // 'sftp-deploy'...don't keep passwords in source control
+    // deploy to dev site
    'sftp-deploy': {
     build: {
       auth: {
@@ -137,6 +153,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sftp-deploy');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
@@ -144,5 +161,6 @@ module.exports = function(grunt) {
   grunt.registerTask('cssp', ['sassbuild', 'push']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('devpush', ['sftp-deploy']);
+  grunt.registerTask('comp', ['imagemin']);
   
 };
