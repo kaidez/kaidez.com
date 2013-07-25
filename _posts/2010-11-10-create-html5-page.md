@@ -14,7 +14,7 @@ This is a very simple tutorial. It won’t teach you how to use ,  or any other 
 Cut-and-paste the code below into your favorite web editor:
 
  
-{% highlight html %}
+{% prism markup %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +25,7 @@ Cut-and-paste the code below into your favorite web editor:
      Your content goes here.
   </body>
 </html> 
-{% endhighlight %}
+{% endprism %}
  
 
  

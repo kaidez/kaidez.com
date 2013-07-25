@@ -17,38 +17,18 @@ Truthfully, I wasn’t going to post this: I found it on another site and felt t
 
 I’m viewing all those other re-posts as an endorsement of how almost-perfect this code is. Here’s my endorsement: 
 
-     
-    
-    
-    
-    A Simple jQuery Image Rollover
-    
-    
-    
-    
-    $(document).ready(function() {
-    $("img.rollover").hover( 
-    function() { this.src = this.src.replace("_off", "_on"); 
-    }, 
-    function() { this.src = this.src.replace("_on", "_off"); 
-    });
-    }); 
-    
-    
-    
-     
-    
-     
-    
-    
-    
-    
-    
-    
+{% prism javascript %}
 
-
-
-
+$(document).ready(function() {
+  $("img.rollover").hover(function() {
+      this.src = this.src.replace("_off", "_on"); 
+  }, 
+  function() {
+    this.src = this.src.replace("_on", "_off"); 
+  });
+}); 
+    
+{% endprism %}
 
 First, make sure that you create your rollover images. Each individual rollover needs two images attached to it: one named ‘yourFilename_off.gif’ and the other named ‘yourFilename_on.gif’. As long as these images are of the same file type, it doesn’t matter what file type it is. GIF, JPEG, PNG…it doesn’t matter. For this example, I have four images that will be used in two rollovers:
 
