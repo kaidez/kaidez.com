@@ -16,10 +16,10 @@ Both of my NYC Social Media Week panel recaps, [the social listening one][1] and
 
 A HUGE thank you to JWT/New York for Tweeting one of the articles and, of course, gratitude upon gratitude to **Heather Duffy Wales** at JWT/Atlanta for not only sharing them with her co-workers, but also getting me into both panels in the first place!!!!!!
 
+<img src="../img/volk.jpg" alt="" class="post-pic">
 **Kristin Volk of MediaVest**, one of the panelists on the mobile strategy panel, also shared that respective article with quite a few people. There were a few of panel points which, for the sake of space, I had to omit. Kristin made some points that I didn’t include, but she would like to share:
 
-> ![Kristin Volk][3]
-> Kristin Volk of MediaVest (Courtesy: Kristin Volk)“…I did keep making the point that smartphones are still only 30% of mobile phones, and I mentioned that there are now more mobile devices than PCs and TVs combined, making it the first screen now, not the third.
+> “...I did keep making the point that smartphones are still only 30% of mobile phones, and I mentioned that there are now more mobile devices than PCs and TVs combined, making it the first screen now, not the third.
 > 
 >   
 >   
@@ -30,9 +30,6 @@ A HUGE thank you to JWT/New York for Tweeting one of the articles and, of course
 > I emphasized how we must put people first when creating mobile campaigns, and think about what kind of meaningful experience we can give them, whether entertainment or utility.  
 >   
 > I made the point that agencies and brands are no longer calling the shots, consumers are (communications has evolved from a dictatorship to a democracy).”
-
- [3]: http://kaidez.com/wp-content/uploads/2011/02/volk.jpg "Kristin Volk"
-
  
 
 With the benefit of 20/20 hindsight, I wish I had mentioned, at least, the Confucius content in the original article.
