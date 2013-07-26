@@ -2,11 +2,36 @@ module.exports = function(grunt) {
 
   'use strict';
 
-  // Project configuration
+  // Project config
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    // Jekyll builds the site
+    jekyll: {
+      dev: {
+        src: ['.'],
+        dest: '_site'
+      },
+      buildit: {
+        src: ['.'],
+        dest: '_site',
+        lsi: true
+      }
+    },
 
-    // convert main saas file to a development build of 'styles.css'
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        expand: true,
+        cwd: '_site',
+        src: ['**/*.html', '*.index.html'],
+        dest: '_site/'
+      }
+    },
+
+    // convert main sass file to a development build of 'styles.css'
     sass: {
       dist: {
         files: {
@@ -28,13 +53,9 @@ module.exports = function(grunt) {
 
     // 'watch' task
     watch: {
-      styles :{
-        files: 'grunt/cssSource/*.scss',
-        tasks: ['sassbuild']
-      },
-      scripts :{
-        files: ['grunt/jsSource/*.js', 'js/*.js'],
-        tasks: ['jshint']
+      src: {
+        files: ['*.html','**/*.html','!_site/**/*.html','_posts/*.md','grunt/cssSource/*.scss', 'img/*.{png,jpg,jpeg,gif}', 'js/**/*.js'],
+        tasks: ['sassbuild','jekyll:dev']
       }
     },
 
@@ -47,8 +68,8 @@ module.exports = function(grunt) {
         },
           files: [{
             expand: true,
-            cwd: 'grunt/imgSource/',
-            src: '*.{png,jpg,jpeg}',
+            cwd: 'img',
+            src: '*.{png,jpg,jpeg,gif}',
             dest: 'img'
         }]
       }
@@ -60,7 +81,7 @@ module.exports = function(grunt) {
       "devFile" : "grunt/modernizr/modernizr-dev.js", //modernizr full build
 
       // Path to save out the built file.
-      "outputFile" : "../js/vendor/modernizr.min.js",
+      "outputFile" : "js/vendor/modernizr.min.js",
 
       // Based on default settings on http://modernizr.com/download/
       "extra" : {
@@ -144,12 +165,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-sftp-deploy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('devpush', ['sftp-deploy']);
-  grunt.registerTask('comp', ['imagemin']);
-  
+  grunt.registerTask('push', ['imagemin','jekyll:buildit', 'htmlmin', 'sftp-deploy']);
 };

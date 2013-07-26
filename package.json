@@ -10,6 +10,7 @@
     "grunt-modernizr": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-sftp-deploy": "~0.0.7",
-    "grunt-contrib-imagemin": "~0.1.4"
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-htmlmin": "~0.1.3"
   }
 }
