@@ -6,15 +6,12 @@ permalink: /jquery-tshirt-geek-gift/
 meta-excerpt: My cool jQuery t-shirt
 category: personal
 cat-name: "Personal"
-tags: [kai]
+tags: [kai, jquery]
 ---
 
-[![][2]][2]
-jQuery T-shirt...how cool am I?All my friends know I like t-shirts so no one should be surprised by my new one, considering the man-crush I have on jQuery. Will probably rock this the next warm day that comes around.
+jQuery T-shirt...how cool am I? All my friends know I like t-shirts so no one should be surprised by my new one, considering the man-crush I have on jQuery. Will probably rock this the next warm day that comes around.
 
-  
-  
-Click on the picture to enlarge…and you can get yours [here][2].
+<img src="../img/jqueryShirt.jpg" class="post-pic" />
+You can get yours [here][1].
 
- []: http://kaidez.com/wp-content/uploads/2010/12/jqueryShirt.jpg
- [2]: http://store.jquery.org/
+ [1]: http://devswag.com/products/classic-jquery-tshirt
