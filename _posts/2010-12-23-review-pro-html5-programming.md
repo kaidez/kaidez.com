@@ -10,16 +10,13 @@ tags: [javascript, review]
 ---
 # 
 
-[![Pro HTML5 Programming: Powerful APIs for Richer Internet Application Development][2]][2]
-
 There are quite a few HTML5 books on the market right now. Some are better than others.
-
- []: http://gan.doubleclick.net/gan_click?lid=41000000012871747&pid=9781430227915&adurl=http://search.barnesandnoble.com/Pro-HTML5-Programming/Peter-Lubbers/e/9781430227915&usg=AFHzDLtEElq-5WtExUOLfQZOC4FP7iELHw&pubid=21000000000317732
 
 I’m not sure if a book is needed for seasoned developers wanting to learn the HTML5 basics like page tags. If you’re new to HTML5, I suggest avoiding books altogether and just doing a Google search on how HTML5 tags should be structured. After that, head over to [Mark Pilgrim’s site][2] to dig deeper into HTML5 functionality.
 
- [2]: http://diveintohtml5.org/
+ [2]: http://diveintohtml5.info/
 
+<img src="../img/pro-html5-programming.jpg" class="post-pic" />
 Pilgrim’s site does a good job of explaining the more complicated aspects of HTML5 like Canvas and Geolocation and provides coding examples, but some may require a little more hand-holding during the learning process than he provides. The new [*Pro HTML5 Programming*][3] published by Apress seems to fill this need.
 
  [3]: http://gan.doubleclick.net/gan_click?lid=41000000012871747&pid=9781430227915&adurl=http://search.barnesandnoble.com/Pro-HTML5-Programming/Peter-Lubbers/e/9781430227915&usg=AFHzDLtEElq-5WtExUOLfQZOC4FP7iELHw&pubid=21000000000317732
