@@ -16,19 +16,11 @@ As mentioned in my last post, a friend at JWT got me into the top two panels for
 
 [I’ve already recapped the second biggest one, the social listening panel][2] so it’s time to recap the big one: the mobile strategy panel. This panel was the most-anticipated and, interestingly enough, the most-surprising one of the conference.
 
- 
-
- 
 
 The panel topic was just as the title says, *how to properly integrate a mobile strategy into your overall marketing plan*. Its main takeaway was:
 
->  
-> 
-> iPhones and Androids provide a great user experience and we should care about the new functionality that they provide. But when it comes to effective product and brand promotion, they under-perform when compared to both text messaging and the mobile web, at least, for now. Whatever your mobile strategy though, it should “play a role” in your promotional campaign, not “be” your promotional campaign, Plus, it needs to interact with good, desirable content. Because content is, indeed, king.
-> 
->  
 
- 
+> iPhones and Androids provide a great user experience and we should care about the new functionality that they provide. But when it comes to effective product and brand promotion, they under-perform when compared to both text messaging and the mobile web, at least, for now. Whatever your mobile strategy though, it should “play a role” in your promotional campaign, not “be” your promotional campaign, Plus, it needs to interact with good, desirable content. Because content is, indeed, king.
 
 Here are the topics for this post:
 
@@ -36,15 +28,27 @@ Here are the topics for this post:
 *   [The Audience][4]
 *   [The Panel Discussion Content][5]
 *   [Know Your Customer][6]
-*   [The Mobile Web][7]
-*   [A Successful Adaptation To The Digital World][8]
-*   [Some Other Smartphone Stats][9]
-*   [Women Rule!][10]
-*   [Conclusion][11]
+*   [The Power Of Traditional Advertising][7]
+*   [The Mobile Web][8]
+*   [A Successful Adaptation To The Digital World][9]
+*   [Some Other Smartphone Stats][10]
+*   [Women Rule!][11]
+*   [Conclusion][12]
 
-<h2>The Panel Participants</h2>
+ [3]: #panelists
+ [4]: #audience
+ [5]: #panelContent
+ [6]: #knowYourCustomer
+ [7]: #advertising
+ [8]: #mobileWeb
+ [9]: #adapt
+ [10]: #otherStats
+ [11]: #women
+ [12]: #conclusion
 
-Another impressive group…
+<h2 id="panelists">The Panel Participants</h2>
+
+Another impressive group...
 
   * Stefan Gromoll, CEO & Co-Founder, DOTGO (Moderator)
   * Farrah Bostic, VP, Group Planning Director, Digitas
@@ -52,21 +56,24 @@ Another impressive group…
   * Mary Gail Pezzimenti, Executive Producer, Lucky Magazine/ Conde Nast Publications
   * Kristin Volk, VP, Human Experience Strategy Director, MediaVest
  
+<figure class="post-image-box">
+<img src="../img/feb11Badge.jpg" alt="kaidez's badge for mobile promotion event">
+<figcaption class="post-image-caption">My badge for the Cross Mobile Event</figcaption>
+</figure>
 
-My badge for the Cross Mobile Event
  
-<h2>The Audience</h2>
+<h2 id="audience">The Audience</h2>
 
 The last point is a surprise…
 
-  * nother packed room as this was a sold out event.
+  * Another packed room as this was a sold out event.
   * unlike the social listening crowd with an age range of mid-thirties to early forties, the audience for this panel skewed significantly younger: the median age appeared to be no higher than 28. I take this to mean that I was part of an “early adopter” audience.
 
-<h2>The Panel Discussion Content</h2>
+<h2 id="panelContent">The Panel Discussion Content</h2>
 
 At one point in the discussion, Kristin Volk from MediaVest showed a picture of a Tibetan monk in the middle of his asceticism, being without wordly possessions for a year. But he had a cell phone stuck to his ear: he’s supposed to own nothing for a year, she said, but this monk simply could not be without his cell phone.
 
-A picture is worth a thousand words…it’s definitely a mobile world that we live in.
+A picture is worth a thousand words...it’s definitely a mobile world that we live in.
 
 I walked into this panel expecting a full-on discussion about the virtues of the iPhone and the Android. About how the panelists had tried new and exciting things with the two devices and, as insiders, heard rumors about what innovations the two devices would be bringing to the world of mobile promotion.
 
@@ -77,10 +84,11 @@ The panelists from left to right: moderator Stefan Gromoll of DOTGO, Kristin Vol
 
 The panelists presented lot of data early on in the discussion, most of which wasn’t that surprising. But they had to present it to get the point across:
  
-only 30% of the mobile users have a smartphone…the rest have regular cell phones.
-5 trillion texts were sent out in 2010
-there will be an estimated 9 trillion texts were sent out in 2015
-teens are the biggest texters.
+ * only 30% of the mobile users have a smartphone…the rest have regular cell phones.
+ * 5 trillion texts were sent out in 2010
+ * there will be an estimated 9 trillion texts were sent out in 2015
+ * teens are the biggest texters.
+
 The entire panel drove the point home that for all the bells and whistles surrounding the iPhone and the Android, text messaging is the best and most cost-effective way to promote a brand or a product for the following reasons:
 
   * It is direct
@@ -93,7 +101,7 @@ No embellishing, just the facts. SMS texting works! Well! Texting means you are 
 
 ...just like Twitter.
 
-<h2>Know Your Customer</h2>
+<h2 id="knowYourCustomer">Know Your Customer</h2>
 
 It was great to see Chi Modu from Diverse Insights on the panel. I remembered him as the main photographer for The Source magazine during the Jon Schecter-era of the early nineties and was excited to get a somewhat artistic perspective on mobile promotion.
 
@@ -103,17 +111,17 @@ In short: don’t just build an app for the sake of having one, or just because 
 
 
 These guys couldn't make it...
-<h2>The Power Of Traditional Advertising</h2>
+<h2 id="advertising">The Power Of Traditional Advertising</h2>
 
 Modu also spoke very highly of using mobile in conjuction with traditional advertising methods such as outdoor promotion, point-of-sale and the three foot rule. If these methods, he said, presented an inviting call-to-action for a pedestrian to get information with their mobile device right then and there, you’ve just converted a pedestrian into a customer. And you didn’t need an iPhone app to do it.
 
 
 ...but I was there!!!
-<h2>The Mobile Web</h2>
+<h2 id="mobileWeb">The Mobile Web</h2>
 
 Because of the stats, the panel was unanimous that mobile-based web browsers were a hit with customers as they provided the same instant gratification that texting does. A brand with a mobile-ready website has the power to give consumers all the on-the-spot information they need…no logging onto an app store necessary.
 
-<h2>A Successful Adaptation To The Digital World</h2>
+<h2 id="adapt">A Successful Adaptation To The Digital World</h2>
 
 Mary Gail Pezzimenti from Lucky Magazine elegantly demonstrated how a brand traditionally centered around an older business model (print in this case) can successfully adapt to the growing digital world around them. While Lucky has a pretty decent iPhone app (iTunes required) and uses mobile promotion, Pezzimenti and her team are more focused on delivering quality content to their readers while providing them with a variety of incentives at various points within the magazine.
 
@@ -127,20 +135,20 @@ The end result of focusing on mobile while focusing more on content: Pezzimenti 
 
 
 One of the panels during the Lucky Magazine presentation
-<h2>Some Other Smartphone Stats</h2>
+<h2 id="otherStats">Some Other Smartphone Stats</h2>
 
 While the panel didn’t spend a lot of time talking about smartphones, they did bring them up. Again, they came armed with real-world stats and, again, they brought us all down to Earth:
 
 Android is gaining on the iPhone: this fact has appeared multiple times in the press but was reiterated by the panel.
 Blackberry is slipping against everything else: newer models such as the Torch and the Storm may pick up speed. But according to Farrah Bostic of Digitas, Blackberry use is steadily shrinking, at least among consumers on the receiving end of mobile promotions.
 Mobile tutorials
-<h2>Women Rule!</h2>
+<h2 id="women">Women Rule!</h2>
 
 Staying on smartphones, Bostic broke down gender myth with the following stats..at least she broke it down for me:
 
 55% of women ages 15-24 own smartphones.
 Baby Boomer women are adopting smartphones at a faster pace than any other segment of the population.
-Conclusion
+<h2 id="conclusion">Conclusion</h2>
 
 “Mobile is not just another media channel” said one panelist. They politely delivered this message but were also direct on something else: when utilizing mobile promotion, the “less-is-more” approach traditionally does the better job.
 
