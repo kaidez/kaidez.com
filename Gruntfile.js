@@ -71,15 +71,15 @@ module.exports = function(grunt) {
 
     // all the 'watch' tasks
     watch: {
-      html_markdown: { // run 'jekyll build' on .html and .md file changes
+      postPageOnlyTask: { // run 'jekyll build' on .html and .md file changes
         files: ['*.html','**/*.html','!_site/**/*.html','_posts/*.md', 'js/**/*.js'],
         tasks: ['jekyll:dev']
       },
-      css: { // run 'jekyll build' on .scss/.css file changes
+      cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
         files: ['grunt/cssSource/*.scss'],
         tasks: ['sassbuild', 'jekyll:dev']
       },
-      justImg: { // run 'jekyll build' when the 'img/' directory changes
+      imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
         files: ['img/*.{png,jpg,jpeg,gif}'],
         tasks: ['imagemin', 'jekyll:dev']
       }
