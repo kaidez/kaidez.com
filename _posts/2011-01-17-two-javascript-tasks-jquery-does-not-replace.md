@@ -17,15 +17,15 @@ These are the two tasks that I’ve found *so far*…I expect find more as time 
 
 ## 1. document.write
 
-document.write automatically inserts copy and/or HTML code into a web page. So if the following  
+`document.write` automatically inserts copy and/or HTML code into a web page. So if the following  
 code was placed between the two body tags: 
 
-     {% highlight ruby %}document.write("The text is now red.");{% endhighlight %} 
+     {% highlight javascript %}document.write("The text is now red.");{% endhighlight %} 
     
 
 The following text would appear wherever you placed this code on your web page:
 
-The text is *now* red
+The text is *now* <span>red</span>
 
 As widely used as it is, serious JavaScripters believe that using document.write is bad practice. The development team behind jQuery is made up of nothing but serious JavaScripters, so don’t expect a jQuery equivalent of this anytime soon. I suppose you could rig up some jQuery code to do the same thing, but you’ll probably end up doing a lot of work to create somewhat sloppy code that accomplishes very little in the end. 
 
@@ -41,7 +41,7 @@ Now for the confusing part…
 
  []: http://www.lynda.com/home/ViewCourses.aspx?lpk0=20&utm_medium=affiliate&utm_source=ldc_affiliate&utm_content=598&utm_campaign=CD2146&bid=598&aid=CD2146&opt=
 
-jQuery actually *does* offer an alternative to navigator.userAgent in the form of the .browser property, but the jQuery team strongly recommends that you don’t use it!!!! In order for .browser to actually work, navigator.userAgent still needs to be working behind the scenes in the jQuery library. And since many recommend avoiding navigator.userAgent altogether, the team says “we don’t think that you should use .browser.” They further state that .browser will be implemented in future versions, most likely via a plug-in.
+jQuery actually *does* offer an alternative to `navigator.userAgent` in the form of the .browser property, but the jQuery team strongly recommends that you don’t use it!!!! In order for .browser to actually work, navigator.userAgent still needs to be working behind the scenes in the jQuery library. And since many recommend avoiding navigator.userAgent altogether, the team says “we don’t think that you should use .browser.” They further state that .browser will be implemented in future versions, most likely via a plug-in.
 
 So to recap: jQuery offers a coding alternative to a piece of JavaScript code that everyone says is bad, but their alternative code still needs the bad code to work properly. Because of this, the jQuery dev team recommends avoiding their alternative altogether, but promises to include it in a future version. Do you see the confusion? 
 
