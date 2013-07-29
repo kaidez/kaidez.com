@@ -2026,10 +2026,12 @@ a.pagination-link {
   .post-image-box {
     margin: 60px auto;
     text-align: center;
+    clear: both;
   }
 
   .post-image-caption {
     font-style: italic;
+    clear: both;
   }
 
   .control-section-width {
