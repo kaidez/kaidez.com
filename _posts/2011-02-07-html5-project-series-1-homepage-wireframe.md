@@ -11,13 +11,11 @@ tags: [html5]
 ***Read the entire “Wirefame Series”  
 [Intro»][1]  Page 1»  [Page 2][2]»  [Page 3»][3]***
 
- [1]: http://kaidez.com/html5-project-update-completed-wireframes/
- [2]: http://kaidez.com/html5-project-series-2-work-subcategory-playlist-wireframes/
- [3]: http://kaidez.com/html5-project-series-3-about-contact-wireframes/
+ [1]: /html5-project-update-completed-wireframes/
+ [2]: /html5-project-series-2-work-subcategory-playlist-wireframes/
+ [3]: /html5-project-series-3-about-contact-wireframes/
 
-This is the first in a series of articles reviewing the wireframes for [my HTML5 project][4], which is designing my web design & development online portfolio using pure HTML5 ([see the article announcing the series][1]). This was the toughest page to lay out: I had multiple page elements that needed to be positioned *exactly* to the current HTML5 specification, which will now be referred to as *the spec*.
-
- [4]: http://kaidez.com/html5-project/
+This is the first in a series of articles reviewing the wireframes for my HTML5 project, which is designing my web design & development online portfolio using pure HTML5 ([see the article announcing the series][1]). This was the toughest page to lay out: I had multiple page elements that needed to be positioned *exactly* to the current HTML5 specification, which will now be referred to as *the spec*.
 
 *(Important: I’ll be sending the final site to [HTML5 Doctor][5] and/or [HTML5 Gallery][6] for review when it’s done. While I’m confident that my site conforms to the HTML5 specification, these guys may say it doesn’t. Please keep that in mind when reading this.)*
 
