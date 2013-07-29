@@ -8,7 +8,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, html5 video]
 ---
-# 
 
 ## Video For Everybody!
 
