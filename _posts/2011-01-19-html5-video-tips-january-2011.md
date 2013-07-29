@@ -2,7 +2,7 @@
 title: 10 Things To Remember About HTML5 Video
 author: Kai Gittens
 layout: post
-permalink: /2-javascript-tasks-jquery-does-not-replace/
+permalink: /html5-video-tips-january-2011/
 meta-excerpt: HTML5 Video Tips from kaidez
 category: coding-best-practices
 cat-name: "Coding Tips"
