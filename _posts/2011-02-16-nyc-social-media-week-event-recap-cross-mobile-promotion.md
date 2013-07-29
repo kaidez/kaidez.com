@@ -79,8 +79,13 @@ I walked into this panel expecting a full-on discussion about the virtues of the
 
 That happened but for the most part, this was the course of events: each panelist talked for about five minutes, presented a wide array of Nielsen and comScore data, then opened the floor to questions. They answered questions on a variety of topics, but spent much more time clarifying that the simplest tools available in mobile promotion have statistically provided the greatest results.
 
-
+<figure class="post-image-box">
+<img src="../img/panelShot.jpg" />
+<figcaption class="post-image-caption">
 The panelists from left to right: moderator Stefan Gromoll of DOTGO, Kristin Volk of MediaVest, Mary Gail Pezzimenti of Lucky Magazine, and Chi Modu of Diverse Insights. Offscreen: Farrah Bostic of VP of Digitas
+</figcaption>
+</figure>
+
 
 The panelists presented lot of data early on in the discussion, most of which wasn’t that surprising. But they had to present it to get the point across:
  
@@ -109,14 +114,18 @@ So imagine my surprise when he turned out to be the most business-minded panelis
 
 In short: don’t just build an app for the sake of having one, or just because your competitors have one.
 
-
-These guys couldn't make it...
+<figure class="post-image-box">
+<img src="../img/absent.jpg" />
+<figcaption class="post-image-copy">These guys couldn't make it...</figcaption>
+</figure>
 <h2 id="advertising">The Power Of Traditional Advertising</h2>
 
 Modu also spoke very highly of using mobile in conjuction with traditional advertising methods such as outdoor promotion, point-of-sale and the three foot rule. If these methods, he said, presented an inviting call-to-action for a pedestrian to get information with their mobile device right then and there, you’ve just converted a pedestrian into a customer. And you didn’t need an iPhone app to do it.
 
-
-...but I was there!!!
+<figure class="post-image-box">
+<img src="../img/kaiShotPanel.jpg" />
+<figcaption class="post-image-copy">...but I was there!!!</figcaption>
+</figure>
 <h2 id="mobileWeb">The Mobile Web</h2>
 
 Because of the stats, the panel was unanimous that mobile-based web browsers were a hit with customers as they provided the same instant gratification that texting does. A brand with a mobile-ready website has the power to give consumers all the on-the-spot information they need…no logging onto an app store necessary.
