@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: '_site',
         src: ['**/*.html', '*.index.html'],
-        dest: '_site/'
+        dest: '_site'
       }
     },
 
