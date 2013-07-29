@@ -178,7 +178,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
