@@ -5,19 +5,21 @@ module.exports = function(grunt) {
   // Project config
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    
     // Jekyll builds the site
     jekyll: {
-      dev: {
+      dev: { // build the site without using 'lsi' to create similar posts content
         src: ['.'],
         dest: '_site'
       },
-      buildit: {
+      buildit: { // build the site using 'lsi' to create similar posts content
         src: ['.'],
         dest: '_site',
         lsi: true
       }
     },
 
+    // minify all .html files in the '_site' directory. only runs when 'grunt push' is called
     htmlmin: {
       dist: {
         options: {
@@ -31,7 +33,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // convert main sass file to a development build of 'styles.css'
+    // convert main sass file to a development build of 'css/styles.css'
     sass: {
       dist: {
         files: {
@@ -43,25 +45,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // 'cssmin' task
+    // minify 'css/styles.css & move it to the '_site' folder
     cssmin: {
       my_target: {
         src: 'grunt/cssSource/styles.css',
         dest: 'css/styles.min.css'
       }
     },
-
-    // 'watch' tasks
-    watch: {
-      all: {
-        files: ['*.html','**/*.html','!_site/**/*.html','_posts/*.md','grunt/cssSource/*.scss', 'js/**/*.js'],
-        tasks: ['sassbuild','jekyll:dev']
-      },
-      justImg: {
-        files: ['img/*.{png,jpg,jpeg,gif}'],
-        tasks: ['imagemin']
-      }
-     },
 
     // minify all images
     imagemin: {
@@ -78,6 +68,23 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+    // all the 'watch' tasks
+    watch: {
+      html_markdown: { // run 'jekyll build' on .html and .md file changes
+        files: ['*.html','**/*.html','!_site/**/*.html','_posts/*.md', 'js/**/*.js'],
+        tasks: ['jekyll:dev']
+      },
+      css: { // run 'jekyll build' on .scss/.css file changes
+        files: ['grunt/cssSource/*.scss'],
+        tasks: ['sassbuild', 'jekyll:dev']
+      },
+      justImg: { // run 'jekyll build' when the 'img/' directory changes
+        files: ['img/*.{png,jpg,jpeg,gif}'],
+        tasks: ['imagemin', 'jekyll:dev']
+      }
+     },
+
 
     // create a custom 'modernizr' file 
     modernizr: {
