@@ -55,7 +55,7 @@ Another impressive group...
   * Chi Modu, Brand Strategist, Diverse Insights
   * Mary Gail Pezzimenti, Executive Producer, Lucky Magazine/ Conde Nast Publications
   * Kristin Volk, VP, Human Experience Strategy Director, MediaVest
- 
+
 <figure class="post-image-box">
 <img src="../img/feb11Badge.jpg" alt="kaidez's badge for mobile promotion event">
 <figcaption class="post-image-caption">My badge for the Cross Mobile Event</figcaption>

@@ -253,6 +253,16 @@
     @include read-post-link($master-border-radius);
   }
 
+  // styling for pictures with captions on posts pages
+  .post-image-box {
+    margin:60px auto;
+    text-align: center;
+  }
+
+  // styling for captions copy
+  .post-image-caption {
+    font-style: italic;
+  }
   // =========================================================================
   //  Page content styles start
   //  ======================================================================== 
