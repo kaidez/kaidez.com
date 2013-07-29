@@ -2023,6 +2023,15 @@ a.pagination-link {
     text-align: center;
   }
 
+  .post-image-box {
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .post-image-caption {
+    font-style: italic;
+  }
+
   .control-section-width {
     max-width: 1024px;
     margin: 0 auto;
