@@ -174,4 +174,4 @@ Or, in layman’s terms...
 In closing, take note that the panelists came armed with tons of data to back their claims: think about this before you challenge their methods or come up with reasons for “why this won’t work for you.”
 
  [1]: http://socialmediaweek.org/
- [2]: nyc-social-media-week-event-recap-social-listening/
+ [2]: /nyc-social-media-week-event-recap-social-listening/
