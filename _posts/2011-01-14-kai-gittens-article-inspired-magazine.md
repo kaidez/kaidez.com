@@ -14,7 +14,7 @@ I’m proud to announce that ***my first guest post ever*** can now be seen at [
  [1]: http://www.inspiredm.com/
  [2]: http://www.inspiredm.com/2011/01/14/5-survival-tips-for-web-designers/
 
-[![Logo courtesy Inspired Magazine][4]][4]
+<img src="../img/inspiredLogo.jpg" class="post-pic" />
 
 Thanks to Catalin Zorzini at Inspired Mag for the opportunity!!
 
