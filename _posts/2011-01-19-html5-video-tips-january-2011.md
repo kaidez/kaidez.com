@@ -26,10 +26,6 @@ HTML5 supports four video files types: .mp4, .m4v, .ogv and .webm. You can’t d
 
 I advocate experimenting with all aspects of HTML5 as soon as you can, but don’t bother setting up HTML5-ready videos if they don’t need to display on smart-phones or tablets. Flash video files (or, .flvs) are fine if you’re only concerned about desktops and laptops. Still, keep in mind that demand for mobile video is growing.
 
-  
-  
- 
-
 ## 4. If Your Video Does Need To Show Up Mobile Devices, Consider Building A Mobile Version Of Your Site
 
 HTML5 video does not look and sound universal across all devices. I still need to experiment with this, but I'm thinking that building a straight website that loads a mobile version upon detection is the way to go. The mobile version would play the HTML5 video while the normal site runs .flvs. Again, I have to experiment.
