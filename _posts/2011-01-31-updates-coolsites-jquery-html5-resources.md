@@ -8,7 +8,8 @@ category: personal
 cat-name: "Personal"
 tags: [html5, sitecore, css3]
 ---
-*Note: This site no longer includes a sidebar.*
+*Note: This site no longer includes a 'Coolsites' section.*
+
 The more I read about HTML5, CSS3 and jQuery, the more cool online resources I need to share on this blog. Unfortunately, I also need to remove one.
 
 I created [a list of learning resources at the end of my recent AJAX, jQuery and HTML5 article][1], saying that I’d update it with new links when I could. I’ve since added three extra resources:
