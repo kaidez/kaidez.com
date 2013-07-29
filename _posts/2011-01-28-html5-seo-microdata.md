@@ -17,24 +17,17 @@ I’ve learned a few things about how HTML5 handles search engine optimization, 
 
 While I’m still learning about microdata, I understand 95% of it…and let me be clear from the beginning about what I do understand:
 
-Microdata’s main job is to provide extra information about your site to search engines and machine readers so they can better understand the site content.
-Microdata MUST be written in 100% pure HTML5.
-Microdata does not make page content more meaningful or more keyphrase-rich.
-As with all SEO best practices, Microdata does not guarantee you a high Google site ranking.
-Hope I was clear. Now let’s move on…
+  * **Microdata’s main job is to provide extra information about your site to search engines and machine readers so they can better understand the site content.**
+  * **Microdata MUST be written in 100% pure HTML5.**
+  * **Microdata does not make page content more meaningful or more keyphrase-rich.**
+  * **As with all SEO best practices, Microdata does not guarantee you a high Google site ranking.**
+  * **Hope I was clear. Now let’s move on...**
 
 Often called "HTML5′s best kept secret," Microdata, allows you to place a custom vocabulary of data onto your web page. "If the microdata uses a Google "rich snippet" vocabulary, it may also be used by Google".
 
 Let’s see it in action:
 
 I recently created this test page with the following code:
-
-<!--IMPORTANT POINT: On my About page, the code below is placed into
-a <div> tag that's placed into another <div> tag which contains all the
-page copy.  If my About page was a properly-formatted HTML5 page, the
-copy would go into an <article> tag, the microdata would go into
-an <aside> tag, and all of this would go into a <section> tag.-->
-
 
 {% prism markup %}
 <section itemscope itemtype="http://www.data-vocabulary.org/Person">
@@ -80,8 +73,8 @@ itemtype attaches the microdata to the "Person" vocabulary library stored at dat
 For every piece of data within the `<section>` tag (name, address, etc.) an itemprop attribute needs to be applied to it. Look at the code and copy it like I did in terms of assign values.
 All the data is then sent to Google and if it comes up in their search results, it will look like this:
 
-Kaidez Microdata Screenshot
-If you need more proof of this result, see what information comes back when my test page is plugged into Google’s Rich Snippets Testing Tool.
+<img src="../img/microdataSample.png" class="post-pic" />
+If you need more proof of this result, see what information comes back when my test page is plugged into [Google’s Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets?url=http%3A%2F%2Fkaidez.com%2Fwp-content%2Fthemes%2Fkaidez%2FkaidezUnique%2FScript%2FmicrodataTest.html&view==).
 
 I’ve done a variety of Google searches trying to get this snippet to come up…no luck yet. But I’m confident that it will eventually and know that the microdata is still doing things behind the scenes.
 
