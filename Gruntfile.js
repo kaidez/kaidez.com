@@ -51,13 +51,17 @@ module.exports = function(grunt) {
       }
     },
 
-    // 'watch' task
+    // 'watch' tasks
     watch: {
-      src: {
-        files: ['*.html','**/*.html','!_site/**/*.html','_posts/*.md','grunt/cssSource/*.scss', 'img/*.{png,jpg,jpeg,gif}', 'js/**/*.js'],
+      all: {
+        files: ['*.html','**/*.html','!_site/**/*.html','_posts/*.md','grunt/cssSource/*.scss', 'js/**/*.js'],
         tasks: ['sassbuild','jekyll:dev']
+      },
+      justImg: {
+        files: ['img/*.{png,jpg,jpeg,gif}'],
+        tasks: ['imagemin']
       }
-    },
+     },
 
     // minify all images
     imagemin: {
@@ -173,5 +177,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('push', ['imagemin','sassbuild','jekyll:buildit', 'htmlmin', 'sftp-deploy']);
+  grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'sftp-deploy']);
 };
