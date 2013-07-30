@@ -25,7 +25,7 @@ This is the first in a series of articles reviewing the wireframes for my HTML5 
 This article is structured as follows:
 
 *   [Wireframe Review][7]
-     *   [The Main `<nav>`  tag][8]
+     *   [The Main `<nav>` tag][8]
      *   [The Social Networking Navigation tag][9]
      *   [The Footer navigation tag][10] 
 
@@ -59,11 +59,9 @@ First, let’s look at the home page:
 
 Now, let’s break it all down…
 
-<h2>Navigation</h2>
-
 There are three navigation elements, each appearing on every page of the site:
 
-*   **The main navigation at the top of the page in the  tag**  
+*   **The main navigation at the top of the page in the  tag**
       
 ![Main Navigation screenshot for kaidez portfolio site][20] 
 *   The spec calls for only one  on the page. As this is the main navigation, this where  is going. role=”navigation” just makes the navigation more accessible to wider array of devices. 
@@ -96,15 +94,15 @@ Almost all unique page content goes into either one or both of these tags, makin
 First, let’s see what what HTML5 Doctor has to say about this:
   
   > There’s been a lot of confusion over the difference (or perceived lack of a difference) between the  and  elements in HTML5. The  element is a specialised kind of ; it has a more specific semantic meaning than  in that it is an independent, self-contained block of related content. We could use , but using  gives more semantic meaning to the content.  
-  By contrast  is only a block of related content, and  is only a block of content…To decide which of these three elements is appropriate, choose the first suitable option:
+  By contrast  is only a block of related content, and  is only a block of content…To decide which of these three elements is appropriate, choose the first suitable option:  
 
-  - Would the content would make sense on its own in a feed reader? If so use  
+  > - Would the content would make sense on its own in a feed reader? If so use `<article`> .  
 
-  - Is the content related? If so use  
+  > - Is the content related? If so use `<section>`.  
 
-  - Finally if there’s no semantic relationship use  
+  > - Finally if there’s no semantic relationship use `<div>`.  
 
-  [Read the whole article (no pun intended) »][25]
+  > [Read the whole article (no pun intended) »][25]
 
 So...
     
@@ -116,9 +114,9 @@ I think each sample would make sense on its own in a feed reader if needed, so I
     
 HTML5 Doctor may shoot this down when the time comes, but I think I did this right.
     
-## The  Tag
+<h2>The div Tag</h2>
 
-The two organizations overseeing the creation of the HTML5 spec, [W3C][27] and [WHATWG][28], want you to use the  tag as little as possible and, instead, use one of the newer tags. But they’re fine with you using  if it’s your only option. 
+The two organizations overseeing the creation of the HTML5 spec, [W3C][27] and [WHATWG][28], want you to use the `<div>` tag as little as possible and, instead, use one of the newer tags. But they’re fine with you using `<div>` if it’s your only option. 
     
 With the social networking and blog links I discussed above,  was my only option. Let’s look at some other  tags on the home page:
     
@@ -141,7 +139,7 @@ Why is the “feeds” content in a  instead of  or ? Let’s talk about it…
     *   Finally if there’s no semantic relationship use 
                     
 
-So…
+So...
                     
   *   These Facebook, Twitter and blog posts are already in a feed. Having them stand alone in another feed seems repetitive to me so I think this cancels out #1.
   *   The content being displayed here are snippets from my blog and the social networking world. I don’t think they’re really related so I think this cancels out #2.
