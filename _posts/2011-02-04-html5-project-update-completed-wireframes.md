@@ -12,14 +12,13 @@ tags: [html5]
 ***Read the entire “Wirefame Series”***  
 *** Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
 
- [1]: http://kaidez.com/html5-project-series-1-homepage-wireframe/
- [2]: http://kaidez.com/html5-project-series-2-work-subcategory-playlist-wireframes/
- [3]: http://kaidez.com/html5-project-series-3-about-contact-wireframes/
+ [1]: /html5-project-series-1-homepage-wireframe/
+ [2]: /html5-project-series-2-work-subcategory-playlist-wireframes/
+ [3]: /html5-project-series-3-about-contact-wireframes/
 
-I outlined the steps for [my HTML5 Project ][4]in [a previous post][5]. I’m glad to say that I’ve accomplished the first three steps, which were:
+I outlined the steps for my HTML5 Project in [a previous post][5]. I’m glad to say that I’ve accomplished the first three steps, which were:
 
- [4]: http://kaidez.com/html5-project/
- [5]: http://kaidez.com/html5-project-update-january-21-2011/
+ [5]: /html5-project-update-january-21-2011/
 
 *   reading many of the various articles at [HTML5 Doctor][6].
 *   thoroughly review sites featured at [HTML5 Gallery][7] to get a firm understanding of the proper HTML5 layout.
