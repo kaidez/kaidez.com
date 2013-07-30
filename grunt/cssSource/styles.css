@@ -670,6 +670,7 @@ a:hover {
 
 .containing-element {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .page-content {
