@@ -25,17 +25,17 @@ This is the first in a series of articles reviewing the wireframes for my HTML5 
 This article is structured as follows:
 
 *   [Wireframe Review][7]
-*   [The Main  tag][8]
-*   [The Social Networking Navigation tag][9]
-*   [The Footer navigation tag][10] 
+     *   [The Main `<nav>`  tag][8]
+     *   [The Social Networking Navigation tag][9]
+     *   [The Footer navigation tag][10] 
 
-*   [HTML5′s  and  tags][11]
-*   [HTML5′s  and  tags][12]
+*   [HTML5′s `<header>` and `<footer>` tags][11]
+*   [HTML5′s `<article>`  and `<section>`  tags][12]
 *   [All the older  tags and their usage][13] 
-    *   [The Container  tag][14]
-    *   [The Page Content  tag][15]
-    *   [The Feeds  tag][16]
-*   [The  tag][17]
+    *   [The Container `<div>`  tag][14]
+    *   [The Page Content `<div>`  tag][15]
+    *   [The Feeds `<div>`  tag][16]
+*   [The `<small>` tag][17]
 *   [Summary][18]
 
  [7]: #wfReview
@@ -51,87 +51,79 @@ This article is structured as follows:
  [17]: #small
  [18]: #summary
 
-## Wireframe Review
+<h2 id="wfReview">Wireframe Review</h2>
 
 First, let’s look at the home page:
 
 [![Home Page for kaidez portfolio site][20]][20]
 
- []: http://kaidez.com/wp-content/uploads/2011/02/Home.jpg "Home Page"
-
 Now, let’s break it all down…
 
-## Navigation
-
- 
+<h2>Navigation</h2>
 
 There are three navigation elements, each appearing on every page of the site:
 
 *   **The main navigation at the top of the page in the  tag**  
       
-    ![Main Navigation screenshot for kaidez portfolio site][20] 
-    *   The spec calls for only one  on the page. As this is the main navigation, this where  is going. role=”navigation” just makes the navigation more accessible to wider array of devices. 
+    ![Main Navigation screenshot for kaidez portfolio site][21] 
+*   The spec calls for only one  on the page. As this is the main navigation, this where  is going. role=”navigation” just makes the navigation more accessible to wider array of devices. 
 *   **The  tag directly below the main navigation which contain links to my Facebook, Twitter and blog pages**  
       
     ![Social networking navigation screen shot for kaidez portfolio home page wire frame][21] 
-    *   The spec calls for the  tag to ***only contain links that go to pages within the site***. Since both the Facebook and Twitter links leave the site, they need to be placed outside of  and into a .  
+*   The spec calls for the  tag to ***only contain links that go to pages within the site***. Since both the Facebook and Twitter links leave the site, they need to be placed outside of  and into a .  
           
-        This portfolio will mostly likely live in a sub-domain: something like “work.kaidez.com.” This blog link goes to this site’s home page so when you click it, you go from “work.kaidez.com” to “kaidez.com.” Since it’s not going to page within the current site but still stays within the primary domain, I wasn’t sure if it should go in the  tag.  
+This portfolio will mostly likely live in a sub-domain: something like “work.kaidez.com.” This blog link goes to this site’s home page so when you click it, you go from “work.kaidez.com” to “kaidez.com.” Since it’s not going to page within the current site but still stays within the primary domain, I wasn’t sure if it should go in the  tag.  
           
-        I asked HTML5 Doctor about this and they said that it’s okay to put the blog link into , but I’m opting to put it with the social networking stuff. I may end up putting it back into  at the end of the day though. 
-*   **A reappearance of the main navigation in a  tag in the  tag at the bottom of the page**  
+I asked HTML5 Doctor about this and they said that it’s okay to put the blog link into , but I’m opting to put it with the social networking stuff. I may end up putting it back into  at the end of the day though. 
+
+  *   **A reappearance of the main navigation in a  tag in the  tag at the bottom of the page**  
     ![Footer navigation for the kaidez portfolio site][22] 
-    *   Again, the spec allows for only one  tag per page. Since a  tag already exists, putting these links in the  as I did here seems to be the way to go.  
+  *   Again, the spec allows for only one  tag per page. Since a  tag already exists, putting these links in the  as I did here seems to be the way to go.  
     ## The  &  Tags
     
-    You guessed it right.  should go at the very top of the page and contain header content…  
+You guessed it right.  should go at the very top of the page and contain header content…  
       
-    ![Header snippet for the kaidez portfolio site][23]  
-    while  should go at the very bottom of the page and contain footer content.  
+![Header snippet for the kaidez portfolio site][23]  
+while  should go at the very bottom of the page and contain footer content.  
       
-    ![Footer Snippet for kaidez portfolio site][24]
+![Footer Snippet for kaidez portfolio site][24]
     
-    ## The  &  Tags
+## The  &  Tags
+Almost all unique page content goes into either one or both of these tags, making them the two most exciting and most confusing aspects of HTML5 in terms of how the spec tells us to use them. 
     
-    Almost all unique page content goes into either one or both of these tags, making them the two most exciting and most confusing aspects of HTML5 in terms of how the spec tells us to use them. 
+First, let’s see what what HTML5 Doctor has to say about this:
+  
+  > There’s been a lot of confusion over the difference (or perceived lack of a difference) between the  and  elements in HTML5. The  element is a specialised kind of ; it has a more specific semantic meaning than  in that it is an independent, self-contained block of related content. We could use , but using  gives more semantic meaning to the content.  
+  By contrast  is only a block of related content, and  is only a block of content…To decide which of these three elements is appropriate, choose the first suitable option:
+  
+  - Would the content would make sense on its own in a feed reader? If so use  
+
+  - Is the content related? If so use  
+
+  - Finally if there’s no semantic relationship use  
+
+  [Read the whole article (no pun intended) »][25]
+
+So...
     
-    First, let’s see what what HTML5 Doctor has to say about this:
+I want to display four different samples of my work on the home page. Since I believe all my work is related on some level, I’m putting all of it into a  tag.
     
-    >   
-    > There’s been a lot of confusion over the difference (or perceived lack of a difference) between the  and  elements in HTML5. The  element is a specialised kind of ; it has a more specific semantic meaning than  in that it is an independent, self-contained block of related content. We could use , but using  gives more semantic meaning to the content.  
-    >   
-    > By contrast  is only a block of related content, and  is only a block of content…To decide which of these three elements is appropriate, choose the first suitable option:
-    > 
-    > *   Would the content would make sense on its own in a feed reader? If so use 
-    > *   Is the content related? If so use 
-    > *   Finally if there’s no semantic relationship use 
-    > 
-    > [Read the whole article (no pun intended) »][25]
-    > 
-    >  
-    
-     
-    
-    So…
-    
-    I want to display four different samples of my work on the home page. Since I believe all my work is related on some level, I’m putting all of it into a  tag.
-    
-    I think each sample would make sense on its own in a feed reader if needed, so I’m putting each one in their own individual  tag.  
+I think each sample would make sense on its own in a feed reader if needed, so I’m putting each one in their own individual  tag.  
       
-    ![Section screenshot of the kaidez home page][26]
+![Section screenshot of the kaidez home page][26]
     
-    HTML5 Doctor may shoot this down when the time comes, but I think I did this right.
+HTML5 Doctor may shoot this down when the time comes, but I think I did this right.
     
-    ## The  Tag
+## The  Tag
+
+The two organizations overseeing the creation of the HTML5 spec, [W3C][27] and [WHATWG][28], want you to use the  tag as little as possible and, instead, use one of the newer tags. But they’re fine with you using  if it’s your only option. 
     
-    The two organizations overseeing the creation of the HTML5 spec, [W3C][27] and [WHATWG][28], want you to use the  tag as little as possible and, instead, use one of the newer tags. But they’re fine with you using  if it’s your only option. 
+With the social networking and blog links I discussed above,  was my only option. Let’s look at some other  tags on the home page:
     
-    With the social networking and blog links I discussed above,  was my only option. Let’s look at some other  tags on the home page:
-    
-    *   **The Container **  
+*   **The Container **  
           
-        ![Container Div for kaidez portfolio site][29] 
-        *   It’s common practice to wrap every single solitary page element into a single  tag, usually with an ID of either “container” or “wrapper” (I used “container”). This has not changed…you should *always* do this for an HTML5 page.  
+![Container Div for kaidez portfolio site][29] 
+  *   It’s common practice to wrap every single solitary page element into a single  tag, usually with an ID of either “container” or “wrapper” (I used “container”). This has not changed…you should *always* do this for an HTML5 page.  
         *   **The Page Content **  
               
             ![Entire Mid-section Home Page for the kaidez portfolio site][30] 
@@ -171,9 +163,10 @@ There are three navigation elements, each appearing on every page of the site:
                 
                 > ***Read the entire “Wirefame Series”: [Intro»][1] | Page 1» | [Page 2][2]» | [Page 3»][3]***
 
- [20]: http://kaidez.com/wp-content/uploads/2011/02/mainNav.jpg "Main Navigation screenshot for kaidez portfolio site"
- [21]: http://kaidez.com/wp-content/uploads/2011/02/socialNav.jpg "Social networking navigation screen shot for kaidez portfolio home page wire frame"
- [22]: http://kaidez.com/wp-content/uploads/2011/02/footerNav.jpg "Footer navigation for the kaidez portfolio site"
+
+ [20]: ../img/mainNav.jpg "Main Navigation screenshot for kaidez portfolio site"
+ [21]: ../img/socialNav.jpg "Social networking navigation screen shot for kaidez portfolio home page wire frame"
+ [22]: ../img/footerNav.jpg "Footer navigation for the kaidez portfolio site"
  [23]: http://kaidez.com/wp-content/uploads/2011/02/header.jpg "Header snippet for the kaidez portfolio site"
  [24]: http://kaidez.com/wp-content/uploads/2011/02/footerSnippet.jpg "Footer Snippet for kaidez portfolio site"
  [25]: http://html5doctor.com/the-article-element/
