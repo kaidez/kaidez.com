@@ -350,6 +350,7 @@ a:hover {
 // Wraps all the page content, <header>, <nav>, <footer>, etc.
 .containing-element {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 // Container for all unique page content: blog post copy, search results, etc.
