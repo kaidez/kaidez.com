@@ -11,7 +11,7 @@ meta-excerpt: Code Tips posts on kaidez.com discuss tips for certain web develop
   </div> <!-- #about-description -->
 
   {% for post in site.categories.coding-best-practices %}
-    <article class="post-snippet">
+    <article class="post-snippet" role="article">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }}
       <div class="read-post-link">
