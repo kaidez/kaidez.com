@@ -5,7 +5,7 @@ layout: post
 meta-excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great"
 permalink: /review-jquery-visual-quickstart-guide/
 category: Reviews
-cat-name: "reviews"
+cat-name: "Reviews"
 tags: [jquery, review, book]
 ---
 [![jQuery: Visual Quickstart Guide Book from peachpit Press][2]][2]  
