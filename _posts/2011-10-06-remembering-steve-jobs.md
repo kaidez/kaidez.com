@@ -16,9 +16,10 @@ But it happened and needs to documented by as many as possible. On October 5, 20
 
 In this generation, no one will deliver the legacy of innovation, creativity and design that Steve Jobs left us. He loved (*loved*) going to work every day: not because Apple was making billions of dollars (although I’m sure it helped), but because he couldn’t wait to see what the company would think of next.
 
-[![][2]][2]Being a web developer and making a blanket statement, I see two standout contributions from Jobs. And I have to go all “computer geek” when I talk about the first one: the OS X operating system.
+<img src="../img/sjPic.jpg" class="post-pic" />
+Being a web developer and making a blanket statement, I see two standout contributions from Jobs. And I have to go all “computer geek” when I talk about the first one: the OS X operating system.
 
- [2]: http://kaidez.com/wp-content/uploads/2011/10/sjPic.jpg
+
 
 Released in 2001, OS X was UNIX-like operating system based on one of Jobs’ previous creations, Darwin OS. The open source web development community adopted at it lightning speed-the fact that a group dedicated to creating and freely giving away high-quality software were spending four figure amounts on Macs was something I always found humorously ironic.
 
