@@ -7,7 +7,6 @@ meta-excerpt: Great book for learning HTML5 games development as well as web dev
 category: reviews
 cat-name: "Review"
 tags: [book, review, beginner]
-cache-manifest: html5-games-book
 ---
 
 No doubt about it: the demand for HTML5 games is high and will only get higher. Game development has always been a lucrative skillset to possess and thanks to HTML5, web-based game development is a bit easier.
