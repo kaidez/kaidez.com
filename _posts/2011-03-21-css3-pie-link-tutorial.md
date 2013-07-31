@@ -12,13 +12,13 @@ tags: [css, tute]
 
  [1]: https://github.com/kaidez/Files-For-kaidez-CSS3-PIE-Rollover-Tutorial
 
-[![Logo Courtesy Of CSS3 Pie][3]][3]With all the talk about fancy JavaScript libraries like [jQuery][3] and [Modernizr][4], Jason Johnston’s [CSS3 PIE][5] gets overlooked. Its features may not be as extensive as the other two, but it’s still good at what it does.
+With all the talk about fancy JavaScript libraries like [jQuery][3] and [Modernizr][4], Jason Johnston’s [CSS3 PIE][5] gets overlooked. Its features may not be as extensive as the other two, but it’s still good at what it does.
 
- []: http://css3pie.com
  [3]: http://jquery.com/
  [4]: http://www.modernizr.com/
  [5]: http://css3pie.com/
 
+<img src="../img/CSS3-PIE.png" class="post-pic" />
 Internet Explorer 9 provides wide CSS3 support while the previous versions of IE don’t support it at all. But CSS3 PIE is a lightweight library (32kb as of this post) that allows developers to apply a limited amount of CSS3 features to Internet Explorer versions 6 through 8. Let’s take a peek at these features by creating a link with rounded corners and transparency.
 
 This tutorial will first create code that’s not friendly for older versions of IE, progressively adding the CSS3 PIE code so you get a before-and-after view of things. I’ll be using both Internet Explorer 8 and Google Chrome to test my code.
