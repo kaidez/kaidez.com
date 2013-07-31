@@ -85,9 +85,9 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 
 This page shares the same  /  ***Read the entire “Wirefame Series”: [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
- []: http://kaidez.com/wp-content/uploads/2011/02/Work.jpg
+ []: ../img/Work.jpg
  [12]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#div
  [13]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#articleSection
- []: http://kaidez.com/wp-content/uploads/2011/02/Experiments.jpg
+ []: ../img/Experiments.jpg
  [15]: http://html5doctor.com/aside-revisited/
- []: http://kaidez.com/wp-content/uploads/2011/02/Playlist.jpg
+ []: ../img/Playlist.jpg
