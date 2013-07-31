@@ -206,7 +206,7 @@
     @include post-category-title(40px, 56px 0 11px);
   }
 
-  #content h2 {
+  .post-subheading {
     @include content-h2(27px);
   }
 
