@@ -25,29 +25,16 @@ This is the first in a series of articles reviewing the wireframes for my HTML5 
 This article is structured as follows:
 
 *   [Wireframe Review][7]
-     *   [The Main `<nav>` tag][8]
-     *   [The Social Networking Navigation tag][9]
-     *   [The Footer navigation tag][10] 
-
 *   [HTML5′s `<header>` and `<footer>` tags][11]
 *   [HTML5′s `<article>`  and `<section>`  tags][12]
 *   [All the older  tags and their usage][13] 
-    *   [The Container `<div>`  tag][14]
-    *   [The Page Content `<div>`  tag][15]
-    *   [The Feeds `<div>`  tag][16]
 *   [The `<small>` tag][17]
 *   [Summary][18]
 
  [7]: #wfReview
- [8]: #mainNav
- [9]: #socialNetworkNav
- [10]: #footerNav
  [11]: #headFoot
  [12]: #articleSection
  [13]: #div
- [14]: #containDiv
- [15]: #pageContentDiv
- [16]: #Feeds
  [17]: #small
  [18]: #summary
 
@@ -79,16 +66,16 @@ I asked HTML5 Doctor about this and they said that it’s okay to put the blog l
 
   *   Again, the spec allows for only one  tag per page. Since a  tag already exists, putting these links in the  as I did here seems to be the way to go.
 
-<h2> The header &amp; footer  Tags</h2>   
+<h2 id="headFoot"> HTML5′s header &amp; footer Tags</h2>   
 You guessed it right.  should go at the very top of the page and contain header content…  
       
 ![Header snippet for the kaidez portfolio site][23]  
 
-while  should go at the very bottom of the page and contain footer content.  
+while `footer` should go at the very bottom of the page and contain footer content.  
       
-![Footer Snippet for kaidez portfolio site][24]  
+    ![Footer Snippet for kaidez portfolio site][24]  
 
-<h2>The article &amp; section Tags</h2>
+<h2 id="articleSection">HTML5′s article and section tags</h2>
 Almost all unique page content goes into either one or both of these tags, making them the two most exciting and most confusing aspects of HTML5 in terms of how the spec tells us to use them. 
     
 First, let’s see what what HTML5 Doctor has to say about this:
@@ -114,7 +101,7 @@ I think each sample would make sense on its own in a feed reader if needed, so I
     
 HTML5 Doctor may shoot this down when the time comes, but I think I did this right.
     
-<h2>The div Tag</h2>
+<h2 id="div">All the older div tags and their usage</h2>
 
 The two organizations overseeing the creation of the HTML5 spec, [W3C][27] and [WHATWG][28], want you to use the `<div>` tag as little as possible and, instead, use one of the newer tags. But they’re fine with you using `<div>` if it’s your only option. 
     
@@ -123,16 +110,21 @@ With the social networking and blog links I discussed above,  was my only option
 *   **The Container **  
           
 ![Container Div for kaidez portfolio site][29] 
+
   It’s common practice to wrap every single solitary page element into a single  tag, usually with an ID of either “container” or “wrapper” (I used “container”). This has not changed…you should *always* do this for an HTML5 page.  
- *   **The Page Content **  
+ **The Page Content **  
               
 ![Entire Mid-section Home Page for the kaidez portfolio site][30] 
-    I used this to neatly contain both the  tag that contains all my work and another  tag with an ID called called “feeds”.  
+
+I used this to neatly contain both the  tag that contains all my work and another  tag with an ID called called “feeds”.  
                   
-Why is the “feeds” content in a  instead of  or ? Let’s talk about it…  
-  *   **The Feeds **  
-    ![Feed screenshot for kaidez portfolio site][31] 
-  *   I’d want to display RSS feeds of my most recent, Facebook, Twitter and blog posts on the home page and I want them above the fold. I guess I could put them in either an  or  tag, but let’s go back and review what HTML5 Doctor told us earlier:  
+Why is the “feeds” content in a  instead of  or ? Let’s talk about it...
+
+**The Feeds **  
+
+![Feed screenshot for kaidez portfolio site][31]  
+
+I’d want to display RSS feeds of my most recent, Facebook, Twitter and blog posts on the home page and I want them above the fold. I guess I could put them in either an  or  tag, but let’s go back and review what HTML5 Doctor told us earlier:  
                     
   > *   Would the content would make sense on its own in a feed reader? If so use 
     *   Is the content related? If so use 
@@ -145,7 +137,7 @@ So...
   *   The content being displayed here are snippets from my blog and the social networking world. I don’t think they’re really related so I think this cancels out #2.
   *   With #1 and #2 canceled out, I’m going with #3.
 
-<h2>The  Tag</h2>    
+<h2 id="small">The small Tag</h2>    
 ![][32]
                 
 In terms of how this tag renders text, there’s nothing new here. But in terms of *how* to use it as per the spec, there’s a difference.
@@ -154,7 +146,7 @@ The  tag does exactly as it implies: it makes text smaller. In HTML 4.01, you co
                 
 But according to the spec,  should only appear in an HTML5 page if it’s applied to small print…things like legal disclaimers and, in this case, copyrights.
                 
-<h2>Summary</h2>
+<h2 id="summary">Summary</h2>
 As you can see, HTML5 is very big on semantics. The spec has many rules, regulations and best practices to follow when it comes to setting up the page tags. [HTML5 Doctor][5] does a great job of taking the somewhat verbose HTML5 spec and translating it into easy-to-understand terms, so they should be your first stop in understanding HTML5 as a whole.
                 
 A major *major* characteristic of HTML5 has to do with how all the page content relates to one another. I briefly discussed this in the  and  paragraphs above, but the  tag plays a big role here as well. This will be discussed in my next article (again, no pun intended).
