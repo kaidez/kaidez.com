@@ -88,7 +88,7 @@ As I see it, responsive web design must utilize the following:
 <meta name = "viewport" content = "width = EnterYourOwnWidth">
 {% endprism %} 
 
-    It’s good to know how the Viewport meta tag works so [read up on it over at the Apple Developer site][10].
+It’s good to know how the Viewport meta tag works so [read up on it over at the Apple Developer site][10].
 
 *   ***Added Bonus:*** 
 #### Marcotte’s Responsive Images JavaScript Library
@@ -136,6 +136,7 @@ There are tons of responsive design resources…here’s a complete list of ones
 *   [Rachel Andrew’s “How To Use CSS3 Media Queries To Create a Mobile Version of Your Website” article, also over at Smashing Magazine][20]
 *   [The LESS framework-a pre-built template for creating responsive web design sites][21]
 *   [mediaqueri.es – a GREAT gallery of responsive web design sites][22] 
+
 **Extra:** As of this article, Ethan Marcotte is set to release a book entitled (surprise!) [“Responsive Web Design” via A Book Apart][23] in a few monthsextension of his two ALA articles along with new content. To be alerted when it’s released, either sign up for their newsletter at the previously-mentioned link or [follow A Book Apart on Twitter][24].
                     
 Feel free to share any responsive web design resources that you like…and your comments!!!! Responsive web design is new so the more info that goes around, the better for all of us.
