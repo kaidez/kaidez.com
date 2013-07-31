@@ -13,6 +13,7 @@ An unspoken rule of mine is to NOT give any products a bad review. I’ve tried 
 
 Since I’m about to beat this book up, let me quantify why I think it’s OK for me to do this…
 
+<img src="../img/jqueryBook.jpg" class="post-pic" />
 Whenever I try to learn a new web skill, I’ve almost always looked to [Peachpit Press’ Visual Quickstart (VQS) series][2] first and foremost. I’ve done this for HTML, CSS, Flash/ActionScript, JavaScript, PHP and PhotoShop…just to name a few.
 
  [2]: http://www.peachpit.com/imprint/series_detail.aspx?ser=335245
