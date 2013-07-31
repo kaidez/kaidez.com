@@ -8,10 +8,8 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---
-[![HTML5 Boilerplate][2]][2]As if it wasn’t awesome already, the [HTML5 Boilerplate][2] just got awesome-er.
-
- []: http://kaidez.com/wp-content/uploads/2011/03/boilerplateLogo.png
- [2]: http://html5boilerplate.com/
+As if it wasn’t awesome already, the [HTML5 Boilerplate][2] just got awesome-er.
+[2]: http://html5boilerplate.com/
 
 On March 21st, 2011, HTML5 Boilerplate moved out of beta to version 1.0. [Paul Irish][3] and [Divya Manian][4] have always been the main developers behind it, but Boilerplate’s popularity has drawn in a TON of others to contribute code to the cause. The end result is a very-close-to-perfect template for front-end web development.
 
