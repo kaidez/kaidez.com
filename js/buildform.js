@@ -9,7 +9,7 @@ define(function() {
   /*  
    *  Dynamically create a form that looks like this:
    *
-   *  <form action="/search.html" id="js-searchbox">
+   *  <form action="/search.html" id="js-searchbox" class="form">
    *    <input type="text" name="q" id="tipue_search_input"
    *     placeholder="Search...">
    *    <input type="submit" id="tipue_search_button" value="Search">
@@ -24,6 +24,7 @@ define(function() {
     
     // set attributes for form
     form.action = "/search.html";
+    form.setAttribute("role", "search");
     form.id = "js-searchbox";
     form.setAttribute("class", "form");
 
