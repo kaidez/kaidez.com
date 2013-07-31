@@ -107,7 +107,7 @@ p code, li code {
 }
 
 // Hide menu heading on mobile phones
-#menu-heading {
+.menu-toggle {
   @include hide-element;
 }
 
