@@ -7,7 +7,12 @@ tipuesearch/
 
 assets/
 old_img/
-grunt/imgSource/
+
+# Application cache manifest
+#---------------------------
+
+manifest.appcache
+
 
 # General all-around files
 # ------------------------
