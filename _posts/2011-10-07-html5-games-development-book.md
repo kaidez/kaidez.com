@@ -15,11 +15,12 @@ So if you already have basic HTML5, CSS and JavaScript skills, Packt Publishing�
 
  [1]: http://www.packtpub.com/html5-games-development-using-css-javascript-beginners-guide/book
 
-[![HTML5 Games Development by Example: Beginner’s Guide book and eBook][3]][3]The book offers six step-by-step HTML5 game creation tutorials, starting with a simple ping-pong game and gradually getting more difficult, using things like WebSockets. It uses a varied array of coding techniques to create HTML5 games: jQuery, HTML5 audio, CSS3, JSON and (wow!) [node.js][3]. I went through the coding examples and didn’t see any errors. There certainly some stylistic differences in how page elements were rendered across browsers and devices, but nothing so glaring to the point that I would badmouth the code.
+The book offers six step-by-step HTML5 game creation tutorials, starting with a simple ping-pong game and gradually getting more difficult, using things like WebSockets. It uses a varied array of coding techniques to create HTML5 games: jQuery, HTML5 audio, CSS3, JSON and (wow!) [node.js][3]. I went through the coding examples and didn’t see any errors. There certainly some stylistic differences in how page elements were rendered across browsers and devices, but nothing so glaring to the point that I would badmouth the code.
 
- []: http://kaidez.com/wp-content/uploads/2011/10/html5GamesPackt.jpg
+
  [3]: http://nodejs.org/
 
+<img src="../img/html5GamesPackt.jpg" class="post-pic" />
 *HTML5 Games* also holds your hand quite nicely through the process. At times, it goes through a set of steps, then asks the reader “What just happened?”, clarifying the coding steps you just performed. It also, at times, makes sure that your brain retained the lessons you learned as pop quizes show up in the content.
 
 The book is certainly good for learning HTML5 gaming development but I have to say, it’s also if you have no plans to get into this realm. While this book demonstrates many coding techniques, four in particular jumped out at me:
