@@ -32,13 +32,13 @@
             <form id="contact" method="post">
               <fieldset id="footer-contact-fieldset">
                 <p class="footer-contact-fields">
-                  <input name="form-name" id="form-name" type="text" class="contact-form-field" placeholder="Name" required> 
+                  <input name="form-name" placeholder="Name" type="text" id="form-name" class="contact-form-field" aria-required="true" required> 
                 </p>
                 <p class="footer-contact-fields">
-                  <input name="form-email" id="form-email" type="email" class="contact-form-field" placeholder="Email" required>  
+                  <input name="form-email" placeholder="Email" type="email" id="form-email" class="contact-form-field" aria-required="true" required>  
                 </p>
                 <p class="footer-contact-fields">
-                  <textarea tabindex="-8" rows="10" placeholder="Message" class="placeholder contact-form-field" name="message" id="message" required></textarea>
+                  <textarea tabindex="-8" rows="10" name="message" placeholder="Message" id="message" class="placeholder contact-form-field" aria-required="true" required></textarea>
                 </p>
               </fieldset>
               <input type="submit" value="Send Your Message" name="submit" class="button">
