@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: '_site',
-        src: ['**/*.html', '*.index.html'],
+        src: ['**/*.html', '*.index.html', '!manifest.appcache'],
         dest: '_site'
       }
     },
@@ -85,7 +85,6 @@ module.exports = function(grunt) {
       }
      },
 
-
     // create a custom 'modernizr' file 
     modernizr: {
 
@@ -139,6 +138,37 @@ module.exports = function(grunt) {
       // Files added here will be excluded when looking for Modernizr refs.
       "excludeFiles" : "Gruntfile.js"
     },
+    
+    // properties to be loaded into the application cache (manifest.appcache) file.  they load in via a template in the 'manifest task'
+    site_files: [
+      'js/*.js',
+      'js/vendor/*.js'
+    ],
+
+    // create application cache (manifest.appcache) file for the whole site
+    manifest: {
+      generate: {
+        options: {
+          basePath: '_site/',
+          cache: [
+            'index.html',
+            'search.html',
+            'css/styles.min.css',
+            'img/profilepic.jpg',
+            'img/footer-bg.png',
+            'img/snSprite@2x.png',
+            'img/white_carbon.png',
+            'img/white_carbon_@2X.png'
+          ],
+          network: ['*'],
+          preferOnline: true,
+          verbose: true,
+          timestamp: true
+        },
+        src: '<%= site_files %>',
+        dest: 'manifest.appcache'
+      }
+    },
 
     // 'jshint' task
     jshint: {
@@ -167,7 +197,7 @@ module.exports = function(grunt) {
       }
     }
   });
-
+  
   // Use 'loadNpmTasks' to enable plugins
   grunt.loadNpmTasks('grunt-css');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -178,10 +208,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-manifest');
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'sftp-deploy']);
+  grunt.registerTask('push', ['manifest', 'jekyll:buildit', 'htmlmin', 'sftp-deploy']);
+
 };
