@@ -101,11 +101,6 @@
     @include master-center;
   }
 
-  // Hide 'mobile first' menu & search boxes on tablets
-  #menu, #search {
-    @include hide-element;
-  }
-
   .nav-search-style {
      @include nav-search-style;
      margin-top: 18px;

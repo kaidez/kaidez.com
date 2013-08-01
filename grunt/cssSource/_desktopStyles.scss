@@ -89,11 +89,6 @@
     @include main-navigation;
   }
 
-  // Hide moble menu and search icons on all devices EXCEPT hand-helds
-  #menu, #search {
-    @include hide-element;
-  }
-
   .nav-search-style {
      @include nav-search-style;
   }

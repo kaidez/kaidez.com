@@ -89,13 +89,6 @@
   	@include show-menu;
   	@include master-center;
   }
-  
-   // Hide 'mobile first' menu & search
-   // boxes on tablets
-   
-  #menu, #search {
-    @include hide-element;
-  }
 
   .nav-search-style {
     margin-top: 7px;
