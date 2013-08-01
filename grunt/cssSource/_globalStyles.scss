@@ -86,7 +86,7 @@ p code, li code {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6, {
-  @include fonts($srf);
+  font-family: $srf;
   visibility: hidden;
 }
 
@@ -97,8 +97,7 @@ p code, li code {
 .wf-active h4,
 .wf-active h5,
 .wf-active h6 {
-  font-family: $robo;
-  visibility: visible;
+  @include fonts($robo);
 }
 
 // Logo link...provides a large enough space for a click area
@@ -184,7 +183,7 @@ p code, li code {
 // ===========================================================================
 
 // may be redundant
-.no-js #site-navigation-list, .no-js #searchform {
+.no-js .site-navigation-list-styles, .no-js #searchform {
   display: block;
   position: relative;
 }
@@ -217,7 +216,7 @@ p code, li code {
 
 .search-highlight {
   font-weight: bolder;
-  font-style: none;
+  font-style: normal;
 }
 
 #tipue_search_input:focus {
@@ -382,7 +381,7 @@ a:hover {
   clear: both
 }
 
-#social-network-list {
+.social-network-list-styles {
   padding: 0;
   margin:0 auto;
   text-align: center;

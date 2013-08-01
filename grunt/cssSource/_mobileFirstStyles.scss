@@ -64,7 +64,7 @@
   float: none;
 }
 
-#site-navigation-list {
+.site-navigation-list-styles {
   @include site-navigation-list(none);
 }
 

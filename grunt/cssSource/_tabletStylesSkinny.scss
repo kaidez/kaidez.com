@@ -95,7 +95,7 @@
   }
 
   // <ul> container for the main nav  
-  #site-navigation-list {
+  .site-navigation-list-styles {
     @include site-navigation-list(block);
   }
   

@@ -94,7 +94,7 @@
   }
 
   // <ul> tag
-  #site-navigation-list {
+  .site-navigation-list-styles {
     @include show-menu;
     margin: 11px auto 0 auto;
     padding: 0;
