@@ -437,7 +437,6 @@ p code, li code {
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6 {
   font-family: serif;
-  visibility: visible;
   visibility: hidden;
 }
 
@@ -504,7 +503,7 @@ p code, li code {
   border-bottom: 1px solid #1f2467;
 }
 
-.no-js #site-navigation-list, .no-js #searchform {
+.no-js .site-navigation-list-class, .no-js #searchform {
   display: block;
   position: relative;
 }
@@ -533,7 +532,7 @@ p code, li code {
 
 .search-highlight {
   font-weight: bolder;
-  font-style: none;
+  font-style: normal;
 }
 
 #tipue_search_input:focus {
@@ -698,7 +697,7 @@ a:hover {
   clear: both;
 }
 
-#social-network-list {
+.social-network-list-styles {
   padding: 0;
   margin: 0 auto;
   text-align: center;
@@ -793,7 +792,7 @@ a:hover {
   float: none;
 }
 
-#site-navigation-list {
+.site-navigation-list-class {
   display: none;
   margin: 0;
   padding: 0;
@@ -1357,7 +1356,7 @@ a.pagination-link {
     margin-top: 18px;
   }
 
-  #site-navigation-list {
+  .site-navigation-list-class {
     display: block;
     margin: 0;
     padding: 0;
@@ -1608,7 +1607,7 @@ a.pagination-link {
     margin-top: 7px;
   }
 
-  #site-navigation-list {
+  .site-navigation-list-class {
     display: block;
     margin: 0;
     padding: 0;
@@ -1814,7 +1813,7 @@ a.pagination-link {
     float: right;
   }
 
-  #site-navigation-list {
+  .site-navigation-list-class {
     display: block;
     min-height: 21px;
     font-size: 12px;
