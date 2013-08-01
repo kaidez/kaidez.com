@@ -8,10 +8,13 @@ tipuesearch/
 assets/
 old_img/
 
+
+
 # Application cache manifest
 #---------------------------
 
 manifest.appcache
+
 
 
 # General all-around files
@@ -42,7 +45,7 @@ sitemap.xml.gz
 license.txt
 readme.html
 *.ftppass
-*_oldIE.scss
+grunt/cssSource/_oldIE.scss
 
 
 
