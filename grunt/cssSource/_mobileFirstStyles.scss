@@ -84,10 +84,6 @@
   display: none;
 }
 
-#not-found-searchbox {
-  display: block
-}
-
 .searchbox-style {
   @include master-center;
   padding:15px 0;
@@ -215,7 +211,7 @@ a.read-post-link {
 
 // Inner part of the pagination button
 a.pagination-link {
-  @include pagButtonInner
+  @include pagButtonInner;
 }
 
 // ===========================================================================
