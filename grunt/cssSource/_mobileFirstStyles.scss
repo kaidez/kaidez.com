@@ -257,6 +257,12 @@ a.pagination-link {
   float: none;
 }
 
+
+// remove box-shadow from handheld view
+.outerWrapperNavFooter {
+  box-shadow: none;
+}
+
 // ===========================================================================
 // Footer styles end
 // ===========================================================================
