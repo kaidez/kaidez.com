@@ -411,7 +411,7 @@ html, body {
 
 p code, li code {
   display: inline-block;
-  white-space: no-wrap;
+  white-space: nowrap;
   background: #F9F9F9;
   font-size: .9em;
   line-height: 1.3em;
