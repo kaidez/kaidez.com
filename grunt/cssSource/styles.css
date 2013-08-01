@@ -700,7 +700,7 @@ a:hover {
 
 #social-network-list {
   padding: 0;
-  margin: 0px auto;
+  margin: 0 auto;
   text-align: center;
   width: 287px;
 }
@@ -1014,26 +1014,14 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
-    background: url("../img/snSprite.png") no-repeat -2px -68px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
+  .mobile-menu-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
-  #search {
-    background: url("../img/snSprite.png") no-repeat -41px -69px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    margin-right: 10px;
-    cursor: pointer;
-    float: right;
+  .search-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
   .btnSearch {
@@ -1095,7 +1083,7 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
+  .mobile-menu-btn-class {
     background: url("../img/snSprite.png") no-repeat -2px -68px;
     background-size: 350px 210px;
     height: 44px;
@@ -1106,7 +1094,7 @@ a.pagination-link {
     cursor: pointer;
   }
 
-  #search {
+  .search-btn-class {
     background: url("../img/snSprite.png") no-repeat -41px -69px;
     background-size: 350px 210px;
     height: 44px;
@@ -1175,26 +1163,14 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
-    background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
+  .mobile-menu-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
-  #search {
-    background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    margin-right: 10px;
-    cursor: pointer;
-    float: right;
+  .search-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
   .btnSearch {
@@ -1255,7 +1231,7 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
+  .mobile-menu-btn-class {
     background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
     background-size: 350px 210px;
     height: 44px;
@@ -1266,7 +1242,7 @@ a.pagination-link {
     cursor: pointer;
   }
 
-  #search {
+  .search-btn-class {
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
     background-size: 350px 210px;
     height: 44px;
@@ -1374,11 +1350,6 @@ a.pagination-link {
     font-size: 12px;
     margin: 0px auto;
     text-align: center;
-  }
-
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
   }
 
   .nav-search-style {
@@ -1633,11 +1604,6 @@ a.pagination-link {
     text-align: center;
   }
 
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-  }
-
   .nav-search-style {
     margin-top: 7px;
   }
@@ -1842,11 +1808,6 @@ a.pagination-link {
   .main-navigation {
     border: none;
     width: 555px;
-  }
-
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
   }
 
   .nav-search-style {
