@@ -14,17 +14,24 @@
 
 define("menu", ["jquery"], function($) {
   var header = document.getElementById("masthead"),
+    loadButtons = document.createDocumentFragment(),
     $navMenu = $("#site-navigation-list"),
     $searchBox = $("#searchbox"),
     menuButton = document.createElement("div"),
     searchButton = document.createElement("div"),
     showMenus;
 
-  $(menuButton).attr("id", "menu");
-  $(searchButton).attr("id", "search");
+  menuButton.id = "menu";
+  menuButton.setAttribute("class", "mobile-menu-btn-class");
+
+  searchButton.id = "search";
+  searchButton.setAttribute("class", "search-btn-class");
   
-  header.appendChild(searchButton);
-  header.appendChild(menuButton);
+  
+  loadButtons.appendChild(searchButton);
+  loadButtons.appendChild(menuButton);
+
+  header.appendChild(loadButtons);
 
   showMenus = function(btn,el) {
     $(btn).click(function() {
