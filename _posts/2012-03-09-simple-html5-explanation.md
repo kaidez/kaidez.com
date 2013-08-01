@@ -86,7 +86,7 @@ Think of site content as a pirate’s treasure chest full of gold. Semantic mark
 
 One last note on the subject: sites written with semantic markup are said to be “following web standards.” Web developers have been coding with web standards for years, but too many haven’t. A push for *all* developers to use web standards has always existed, but HTML5 has strengthened this push more than ever before.
 
-<h2 id="Web-Applications">Web Applications</H2>
+<h2 id="Web-Applications">Web Applications</h2>
 
 A *website* is a site that gives people information, but doesn’t offer a lot in terms of interaction. People may be able to fill out a form of some sort while visiting the site, but the interaction won’t go much beyond that.
 
