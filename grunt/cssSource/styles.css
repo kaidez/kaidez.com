@@ -964,6 +964,10 @@ a.pagination-link {
   float: none;
 }
 
+.outerWrapperNavFooter {
+  box-shadow: none;
+}
+
 @media only screen and (min-width: 569px) {
   body {
     background: url(../img/white_carbon.png);
