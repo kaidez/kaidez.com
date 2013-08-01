@@ -18,8 +18,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 audio:not([controls]) {
@@ -413,7 +411,7 @@ html, body {
 
 p code, li code {
   display: inline-block;
-  white-space: no-wrap;
+  white-space: nowrap;
   background: #F9F9F9;
   font-size: .9em;
   line-height: 1.3em;
@@ -439,7 +437,6 @@ p code, li code {
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6 {
   font-family: serif;
-  visibility: visible;
   visibility: hidden;
 }
 
@@ -457,7 +454,7 @@ p code, li code {
   display: block;
 }
 
-#menu-heading {
+.menu-toggle {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
 }
@@ -506,7 +503,7 @@ p code, li code {
   border-bottom: 1px solid #1f2467;
 }
 
-.no-js #site-navigation-list, .no-js #searchform {
+.no-js .site-navigation-list-styles {
   display: block;
   position: relative;
 }
@@ -535,7 +532,7 @@ p code, li code {
 
 .search-highlight {
   font-weight: bolder;
-  font-style: none;
+  font-style: normal;
 }
 
 #tipue_search_input:focus {
@@ -700,9 +697,9 @@ a:hover {
   clear: both;
 }
 
-#social-network-list {
+.social-network-list-styles {
   padding: 0;
-  margin: 0px auto;
+  margin: 0 auto;
   text-align: center;
   width: 287px;
 }
@@ -730,6 +727,10 @@ a:hover {
   border-bottom: 2px dotted #01070A;
 }
 
+.footer-contact-fieldset-styles {
+  border: none;
+}
+
 .outerWrapperNavFooter {
   color: #01070a;
   height: auto;
@@ -749,7 +750,7 @@ a:hover {
   visibility: visible;
 }
 
-#author-image {
+.author-image-class {
   float: left;
   padding: 0 10px 4px 0;
 }
@@ -795,18 +796,14 @@ a:hover {
   float: none;
 }
 
-#site-navigation-list {
+.site-navigation-list-styles {
   display: none;
   margin: 0;
   padding: 0;
 }
 
-#searchbox {
+.searchbox-display {
   display: none;
-}
-
-#not-found-searchbox {
-  display: block;
 }
 
 .searchbox-style {
@@ -936,10 +933,6 @@ a.pagination-link {
   text-align: center;
 }
 
-#footer-contact-fieldset {
-  border: none;
-}
-
 .footer-contact-fields {
   width: 152px;
 }
@@ -986,28 +979,28 @@ a.pagination-link {
     float: left;
   }
 
-  #twitter {
+  .twitter {
     background: url("../img/snSprite.png") no-repeat -1px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #google-plus {
+  .google-plus {
     background: url("../img/snSprite.png") no-repeat -59px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #github {
+  .github {
     background: url("../img/snSprite.png") no-repeat -118px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #youtube {
+  .youtube {
     background: url("../img/snSprite.png") no-repeat -173px -2px;
     background-size: 350px 210px;
     height: 51px;
@@ -1016,26 +1009,14 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
-    background: url("../img/snSprite.png") no-repeat -2px -68px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
+  .mobile-menu-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
-  #search {
-    background: url("../img/snSprite.png") no-repeat -41px -69px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    margin-right: 10px;
-    cursor: pointer;
-    float: right;
+  .search-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
   .btnSearch {
@@ -1067,28 +1048,28 @@ a.pagination-link {
     display: block;
   }
 
-  #twitter {
+  .twitter {
     background: url("../img/snSprite.png") no-repeat -1px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #google-plus {
+  .google-plus {
     background: url("../img/snSprite.png") no-repeat -59px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #github {
+  .github {
     background: url("../img/snSprite.png") no-repeat -118px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #youtube {
+  .youtube {
     background: url("../img/snSprite.png") no-repeat -173px -2px;
     background-size: 350px 210px;
     height: 51px;
@@ -1097,7 +1078,7 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
+  .mobile-menu-btn-class {
     background: url("../img/snSprite.png") no-repeat -2px -68px;
     background-size: 350px 210px;
     height: 44px;
@@ -1108,7 +1089,7 @@ a.pagination-link {
     cursor: pointer;
   }
 
-  #search {
+  .search-btn-class {
     background: url("../img/snSprite.png") no-repeat -41px -69px;
     background-size: 350px 210px;
     height: 44px;
@@ -1147,28 +1128,28 @@ a.pagination-link {
     float: left;
   }
 
-  #twitter {
+  .twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #google-plus {
+  .google-plus {
     background: url("../img/snSprite@2x.png") no-repeat -59px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #github {
+  .github {
     background: url("../img/snSprite@2x.png") no-repeat -118px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #youtube {
+  .youtube {
     background: url("../img/snSprite@2x.png") no-repeat -173px -2px;
     background-size: 350px 210px;
     height: 51px;
@@ -1177,26 +1158,14 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
-    background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
+  .mobile-menu-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
-  #search {
-    background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
-    background-size: 350px 210px;
-    height: 44px;
-    width: 44px;
-    display: block;
-    margin-right: 10px;
-    cursor: pointer;
-    float: right;
+  .search-btn-class {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
   }
 
   .btnSearch {
@@ -1227,28 +1196,28 @@ a.pagination-link {
     float: left;
   }
 
-  #twitter {
+  .twitter {
     background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #google-plus {
+  .google-plus {
     background: url("../img/snSprite@2x.png") no-repeat -59px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #github {
+  .github {
     background: url("../img/snSprite@2x.png") no-repeat -118px -2px;
     background-size: 350px 210px;
     height: 51px;
     width: 51px;
   }
 
-  #youtube {
+  .youtube {
     background: url("../img/snSprite@2x.png") no-repeat -173px -2px;
     background-size: 350px 210px;
     height: 51px;
@@ -1257,7 +1226,7 @@ a.pagination-link {
     list-style-type: none;
   }
 
-  #menu {
+  .mobile-menu-btn-class {
     background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
     background-size: 350px 210px;
     height: 44px;
@@ -1268,7 +1237,7 @@ a.pagination-link {
     cursor: pointer;
   }
 
-  #search {
+  .search-btn-class {
     background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
     background-size: 350px 210px;
     height: 44px;
@@ -1378,17 +1347,12 @@ a.pagination-link {
     text-align: center;
   }
 
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-  }
-
   .nav-search-style {
     float: right;
     margin-top: 18px;
   }
 
-  #site-navigation-list {
+  .site-navigation-list-styles {
     display: block;
     margin: 0;
     padding: 0;
@@ -1439,12 +1403,8 @@ a.pagination-link {
     padding: 31px 0 6px;
   }
 
-  #searchbox {
+  .searchbox-display {
     display: block;
-  }
-
-  #s {
-    font-size: 1em;
   }
 
   #tipue_search_input {
@@ -1639,16 +1599,11 @@ a.pagination-link {
     text-align: center;
   }
 
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-  }
-
   .nav-search-style {
     margin-top: 7px;
   }
 
-  #site-navigation-list {
+  .site-navigation-list-styles {
     display: block;
     margin: 0;
     padding: 0;
@@ -1674,12 +1629,8 @@ a.pagination-link {
     border-radius: 10px;
   }
 
-  #searchbox {
+  .searchbox-display {
     display: block;
-  }
-
-  #s {
-    font-size: 1em;
   }
 
   #tipue_search_input {
@@ -1854,16 +1805,11 @@ a.pagination-link {
     width: 555px;
   }
 
-  #menu, #search {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-  }
-
   .nav-search-style {
     float: right;
   }
 
-  #site-navigation-list {
+  .site-navigation-list-styles {
     display: block;
     min-height: 21px;
     font-size: 12px;
@@ -1894,11 +1840,7 @@ a.pagination-link {
     margin-top: 13px;
   }
 
-  #s {
-    font-size: 1em;
-  }
-
-  #searchbox {
+  .searchbox-display {
     display: block;
   }
 
@@ -1953,7 +1895,7 @@ a.pagination-link {
     padding: 56px 0 11px;
   }
 
-  #content h2 {
+  .post-subheading {
     font-size: 27px;
   }
 

@@ -76,43 +76,35 @@
   }
 
  // Twitter footer icon
-  #twitter {
+  .twitter {
     @include sprite-images('../img/snSprite.png', -1px -2px, 51px,51px);
   }
 
 // Google+ footer icon
-  #google-plus {
+  .google-plus {
     @include sprite-images('../img/snSprite.png', -59px -2px, 51px,51px);
   }
   
  // GitHub footer icon
-  #github {
+  .github {
     @include sprite-images('../img/snSprite.png', -118px -2px, 51px,51px);
   }
   
  // YouTube footer icon
-  #youtube {
+  .youtube {
     @include sprite-images('../img/snSprite.png', -173px -2px, 51px,51px);
     float: left;
     list-style-type: none;
   }
   
  // Menu bg image for mobile
-  #menu {
-    @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
+  .mobile-menu-btn-class {
+    @include hide-element;
   }
 
  // Search bg image for mobile
-  #search {
-    @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
-    display: block;
-    margin-right:10px;
-    cursor: pointer;
-    float: right;
+  .search-btn-class {
+    @include hide-element;
   }
 
  // Search button by the search field
@@ -147,29 +139,29 @@
   }
 
  // Twitter footer icon
-  #twitter {
+  .twitter {
     @include sprite-images('../img/snSprite.png', -1px -2px, 51px,51px);
   }
  
  // Google+ footer icon
-  #google-plus {
+  .google-plus {
     @include sprite-images('../img/snSprite.png', -59px -2px, 51px,51px);
   }
 
  // GitHub footer icon
-  #github {
+  .github {
     @include sprite-images('../img/snSprite.png', -118px -2px, 51px,51px);
   }
   
  // YouTube footer icon
-  #youtube {
+  .youtube {
     @include sprite-images('../img/snSprite.png', -173px -2px, 51px,51px);
     float: left;
     list-style-type: none;
   }
 
  // Menu bg image for mobile
-  #menu {
+  .mobile-menu-btn-class {
     @include sprite-images('../img/snSprite.png', -2px -68px, 44px, 44px);
     display: block;
     float: right;
@@ -178,7 +170,7 @@
   }
 
  // Search bg image for mobile
-  #search {
+  .search-btn-class {
     @include sprite-images('../img/snSprite.png', -41px -69px, 44px, 44px);
     display: block;
     margin-right:10px;
@@ -220,43 +212,35 @@
   }
 
  // Twitter footer icon
-  #twitter {
+  .twitter {
     @include sprite-images('../img/snSprite@2x.png', -1px -2px, 51px,51px);
   }
 
 // Google+ footer icon
-  #google-plus {
+  .google-plus {
     @include sprite-images('../img/snSprite@2x.png', -59px -2px, 51px,51px);
   }
   
  // GitHub footer icon
-  #github {
+  .github {
     @include sprite-images('../img/snSprite@2x.png', -118px -2px, 51px,51px);
   }
   
  // YouTube footer icon
-  #youtube {
+  .youtube {
     @include sprite-images('../img/snSprite@2x.png', -173px -2px, 51px,51px);
     float: left;
     list-style-type: none;
   }
   
  // Menu bg image for mobile
-  #menu {
-    @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
+  .mobile-menu-btn-class {
+    @include hide-element;
   }
 
  // Search bg image for mobile
-  #search {
-    @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
-    display: block;
-    margin-right:10px;
-    cursor: pointer;
-    float: right;
+  .search-btn-class {
+    @include hide-element;
   }
 
  // Search button by the search field
@@ -294,29 +278,29 @@
   }
   
  // Twitter footer icon
-  #twitter {
+  .twitter {
     @include sprite-images('../img/snSprite@2x.png', -1px -2px, 51px,51px);
   }
  
  // Google+ footer icon
-  #google-plus {
+  .google-plus {
     @include sprite-images('../img/snSprite@2x.png', -59px -2px, 51px,51px);
   }
 
  // GitHub footer icon
-  #github {
+  .github {
     @include sprite-images('../img/snSprite@2x.png', -118px -2px, 51px,51px);
   }
   
  // YouTube footer icon
-  #youtube {
+  .youtube {
     @include sprite-images('../img/snSprite@2x.png', -173px -2px, 51px,51px);
     float: left;
     list-style-type: none;
   }
 
  // Menu bg image for mobile
-  #menu {
+  .mobile-menu-btn-class {
     @include sprite-images('../img/snSprite@2x.png', -2px -68px, 44px, 44px);
     display: block;
     float: right;
@@ -325,7 +309,7 @@
   }
 
  // Search bg image for mobile
-  #search {
+  .search-btn-class {
     @include sprite-images('../img/snSprite@2x.png', -41px -69px, 44px, 44px);
     display: block;
     margin-right:10px;

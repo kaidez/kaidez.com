@@ -89,17 +89,12 @@
     @include main-navigation;
   }
 
-  // Hide moble menu and search icons on all devices EXCEPT hand-helds
-  #menu, #search {
-    @include hide-element;
-  }
-
   .nav-search-style {
      @include nav-search-style;
   }
 
   // <ul> tag
-  #site-navigation-list {
+  .site-navigation-list-styles {
     @include show-menu;
     margin: 11px auto 0 auto;
     padding: 0;
@@ -134,13 +129,8 @@
     margin-top: 13px;
   }
 
-  // Search box-related styles start
-  #s {
-    font-size: 1em;
-  }
-
-  // Search box
-  #searchbox {
+  // The div that contains the search box...either show it or hide it
+  .searchbox-display {
     display: block;
   }
 
@@ -206,7 +196,7 @@
     @include post-category-title(40px, 56px 0 11px);
   }
 
-  #content h2 {
+  .post-subheading {
     @include content-h2(27px);
   }
 

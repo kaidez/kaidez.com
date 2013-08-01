@@ -89,20 +89,13 @@
   	@include show-menu;
   	@include master-center;
   }
-  
-   // Hide 'mobile first' menu & search
-   // boxes on tablets
-   
-  #menu, #search {
-    @include hide-element;
-  }
 
   .nav-search-style {
     margin-top: 7px;
   }
 
   // <ul> container for the main nav  
-  #site-navigation-list {
+  .site-navigation-list-styles {
     @include site-navigation-list(block);
   }
   
@@ -126,14 +119,16 @@
    // Navigation styles end
    // =========================================================================
    
-  // Search box-related styles start
-  // the div that contains the search box
-  #searchbox {
-    display: block;
-  }
 
-  #s {
-    font-size: 1em;
+
+
+  // =========================================================================
+  // Search styles start
+  // =========================================================================
+  
+  // The div that contains the search box...either show it or hide it
+  .searchbox-display {
+    display: block;
   }
 
   // Search box
@@ -174,9 +169,9 @@
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
-  // Search box-related styles end
-
-  //Font styles for tablets & desktops. Google font doesn't load on mobile.
+  // =========================================================================
+  // Search styles end
+  // =========================================================================
    
   .share-post-link {
     font-size:16px;

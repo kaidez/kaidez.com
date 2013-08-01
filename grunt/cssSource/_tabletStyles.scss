@@ -101,17 +101,12 @@
     @include master-center;
   }
 
-  // Hide 'mobile first' menu & search boxes on tablets
-  #menu, #search {
-    @include hide-element;
-  }
-
   .nav-search-style {
      @include nav-search-style;
      margin-top: 18px;
   }
   // <ul> tag
-  #site-navigation-list {
+  .site-navigation-list-styles {
     @include site-navigation-list(block);
   }
 
@@ -149,13 +144,9 @@
     @include post-category-title(40px, 31px 0 6px);
   }
 
-  // the div that contains the search box
-  #searchbox {
+  // The div that contains the search box...either show it or hide it
+  .searchbox-display {
     display: block;
-  }
-
-  #s {
-    font-size: 1em;
   }
 
   // Search box

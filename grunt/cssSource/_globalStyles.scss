@@ -48,7 +48,7 @@ html, body {
 
 p code, li code {
   display: inline-block;
-  white-space: no-wrap;
+  white-space: nowrap;
   background: #F9F9F9;
   font-size: .9em;
   line-height: 1.3em;
@@ -86,7 +86,7 @@ p code, li code {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6, {
-  @include fonts($srf);
+  font-family: $srf;
   visibility: hidden;
 }
 
@@ -97,8 +97,7 @@ p code, li code {
 .wf-active h4,
 .wf-active h5,
 .wf-active h6 {
-  font-family: $robo;
-  visibility: visible;
+  @include fonts($robo);
 }
 
 // Logo link...provides a large enough space for a click area
@@ -107,7 +106,7 @@ p code, li code {
 }
 
 // Hide menu heading on mobile phones
-#menu-heading {
+.menu-toggle {
   @include hide-element;
 }
 
@@ -184,7 +183,7 @@ p code, li code {
 // ===========================================================================
 
 // may be redundant
-.no-js #site-navigation-list, .no-js #searchform {
+.no-js .site-navigation-list-styles {
   display: block;
   position: relative;
 }
@@ -217,7 +216,7 @@ p code, li code {
 
 .search-highlight {
   font-weight: bolder;
-  font-style: none;
+  font-style: normal;
 }
 
 #tipue_search_input:focus {
@@ -382,9 +381,9 @@ a:hover {
   clear: both
 }
 
-#social-network-list {
+.social-network-list-styles {
   padding: 0;
-  margin:0px auto;
+  margin:0 auto;
   text-align: center;
   width: 287px;
 }
@@ -424,6 +423,10 @@ a:hover {
   border-bottom: 2px dotted #01070A;
 }
 
+.footer-contact-fieldset-styles {
+  border: none;
+}
+
 // Primary footer element
 .outerWrapperNavFooter {
   color: $darken-the-footer-color;
@@ -446,7 +449,7 @@ a:hover {
 }
 
 // Style related to a picture of me
-#author-image {
+.author-image-class {
   float: left;
   padding:0 10px 4px 0;
 }

@@ -16,11 +16,11 @@ A few months ago at work, I and the other web designer got [lynda.com][1] accoun
 
 A quick history: lynda.com is an online training website that, as of this post, offers over 54,000 courses on web design, graphic design and web development. It covers a wide array of topics: from beginner’s level ActionScript to advanced Adobe Illustrator skills. All of their courses are instructor-led and stored online (meaning you can take each course at your own pace). Most exercises require that you create code as the instructors speaks but you can save time and download a course’s exercise files if you sign up for one of the premium packages. Along with design and development courses, lynda.com also offers video lectures from a wide array of design and artistic experts. If you don’t want to take a course online, DVDs of all the courses and lectures are for sale through the website.
 
-## How I Tested
+<h2 class="post-subheading">How I Tested</h2>
 
 Roughly 75% of my lynda.com test drive consisted of going through courses around skill-sets that I *needed* to improve. At the time, that meant I went through most their ActionScript 3 and JavaScript-related courses along with their PHP/MySQL and .NET courses. Each course lasted an average of six hours of and took me an average of five days to complete. 20% consisted of me reviewing only a few chapters of certain courses, just so I can get the answers I needed, mostly PhotoShop. The remaining 5% consisted of going through some of the lecture videos. I also had a premium account and access to all the exercise files. 
 
-## Results
+<h2 class="post-subheading">Results</h2>
 
 I may not have gone through all 54,000 courses but I can tell you that the following was true for each one that I took:
 
@@ -28,7 +28,7 @@ I may not have gone through all 54,000 courses but I can tell you that the follo
 *   the courses assisted me in solving a problem or a set of problems.
 *   the exercises that I performed produced exactly what the course instructors said that they would.
 
-## Who Will Get The Most Out Of Lynda
+<h2 class="post-subheading">Who Will Get The Most Out Of Lynda</h2>
 
 Without question, graphic designers and front-end web developers will get the most bang for the buck out of Lynda…especially PhotoShop freaks.
 
@@ -44,7 +44,7 @@ The depth of the PhotoShop courses highlight lynda.com’s key strength. PhotoSh
 
 Front-end web developers also will benefit from Lynda. JavaScript, AJAX, and ActionScript fans will find more than enough content to keep them coming back to the site, ActionScript in particular. I’ve gone through two of the AS courses myself and was quire happy with them. 
 
-## Who Will NOT Get The Most Out Of Lynda
+<h2 class="post-subheading">Who Will NOT Get The Most Out Of Lynda</h2>
 
 While there are courses on more-structured programming and database development, there may not be enough to justify lynda.com’s subscription price if that’s all you want to learn.
 
@@ -52,7 +52,7 @@ Lynda does provide ASP.NET, PHP/MySQL and Ruby courses and the like. I went thro
 
 It’s key to point out that Lynda most likely only offers courses on the most-requested topics. Since the site definitely attracts more designers than developers, it’s doubtful that a lot of requests for programming courses come in. And regarding database development, applications like WordPress, Joomla and Drupal (all of which have courses on Lynda) reduce the a designer’s need for back-end database developers (at least on a freelance level), so such courses may be a tad redundant. Plus, Lynda adds courses on *all* subjects with great frequency so more courses for the above-mentioned topics may be coming. Just know going in that as of now, there are a limited amount of courses on extensive web and software development on Lynda.com. 
 
-## The Instructors and Lecturers
+<h2 class="post-subheading">The Instructors and Lecturers</h2>
 
 Top-notch on both counts.
 
@@ -60,7 +60,7 @@ Most of the Adobe-related courses are taught by Adobe Certified instructors. Pas
 
 Lecture-wise, Lynda is pretty interesting. Most of their lectures are listed under the “Creative Inspiration” section, giving you an idea of their overall subject matter. Both Rick Smolan and Douglas Kirkland talk up photography quite succinctly. The lead illustrator of tokidoki, the cutting edge, Japanese-inspired lifestyle brand demonstrate their workflow. And music types will really enjoy lectures from the likes of DJ Jason Bentley and Devo frontman (and Yo Gabba Gabba regular) Mark Motherbaugh. The pleasant surprise for me was the graphic designer documentary directed by Hillman Curtis.
 
-## Price
+<h2 class="post-subheading">Price</h2>
 
 On the individual level, Lynda offers both a monthly an annual subscription price. Each price structure offers two pricing tiers: one for just the courses and one for courses and the exercise files. My lynda.com experience convinced me that having the exercise files is a *must*, especially for the developer-related courses. If you’re on a budget, I’d suggest starting off with the monthly subscription with exercise files for $37.50. If you have the cash (and the time) go for the yearly subscription at $375.00.
 
