@@ -503,7 +503,7 @@ p code, li code {
   border-bottom: 1px solid #1f2467;
 }
 
-.no-js .site-navigation-list-class, .no-js #searchform {
+.no-js .site-navigation-list-styles, .no-js #searchform {
   display: block;
   position: relative;
 }
@@ -792,7 +792,7 @@ a:hover {
   float: none;
 }
 
-.site-navigation-list-class {
+.site-navigation-list-styles {
   display: none;
   margin: 0;
   padding: 0;
@@ -1356,7 +1356,7 @@ a.pagination-link {
     margin-top: 18px;
   }
 
-  .site-navigation-list-class {
+  .site-navigation-list-styles {
     display: block;
     margin: 0;
     padding: 0;
@@ -1607,7 +1607,7 @@ a.pagination-link {
     margin-top: 7px;
   }
 
-  .site-navigation-list-class {
+  .site-navigation-list-styles {
     display: block;
     margin: 0;
     padding: 0;
@@ -1813,7 +1813,7 @@ a.pagination-link {
     float: right;
   }
 
-  .site-navigation-list-class {
+  .site-navigation-list-styles {
     display: block;
     min-height: 21px;
     font-size: 12px;
