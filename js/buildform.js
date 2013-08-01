@@ -1,5 +1,5 @@
 /*
- *   Can 'loadMenu() be cached? Check: https://gist.github.com/Integralist'
+ *   Can 'loadMenu()' be cached? Check: https://gist.github.com/Integralist
  */
 
 define(function() {
