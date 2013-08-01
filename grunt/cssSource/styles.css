@@ -503,7 +503,7 @@ p code, li code {
   border-bottom: 1px solid #1f2467;
 }
 
-.no-js .site-navigation-list-styles, .no-js #searchform {
+.no-js .site-navigation-list-styles {
   display: block;
   position: relative;
 }
@@ -727,6 +727,10 @@ a:hover {
   border-bottom: 2px dotted #01070A;
 }
 
+.footer-contact-fieldset-styles {
+  border: none;
+}
+
 .outerWrapperNavFooter {
   color: #01070a;
   height: auto;
@@ -800,10 +804,6 @@ a:hover {
 
 .searchbox-display {
   display: none;
-}
-
-#not-found-searchbox {
-  display: block;
 }
 
 .searchbox-style {
@@ -931,10 +931,6 @@ a.pagination-link {
   margin-right: 7px;
   text-decoration: none;
   text-align: center;
-}
-
-.footer-contact-fieldset-styles {
-  border: none;
 }
 
 .footer-contact-fields {
