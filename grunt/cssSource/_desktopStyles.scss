@@ -281,7 +281,7 @@
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavFooter {
-    width: $inner-content-width;
+    width: 750px;
     margin: 0 auto 53px;
   }
   
@@ -301,7 +301,7 @@
   }
 
   .footer-sections {
-    float: left;
+    width: 250px;
   }
 
 
@@ -320,15 +320,18 @@
     width: 300px;
   }
 
-  .footer-column-one-class {
-    margin-left: 100px;
+  .first-footer-column {
     float: left;
   }
 
-  .footer-column-two-class {
-    margin-right: 100px;
+  .second-footer-column {
+    float: left;
+  }
+
+  .third-footer-column {
     float: right;
   }
+
 
   // =========================================================================
   //  Footer styles end
