@@ -153,6 +153,7 @@ module.exports = function(grunt) {
           cache: [
             'index.html',
             'search.html',
+            'search.json',
             'css/styles.min.css',
             'img/profilepic.jpg',
             'img/footer-bg.png',
