@@ -37,7 +37,7 @@ define(function() {
     // set attributes for Submit button
     searchButton.type = "submit";
     searchButton.setAttribute("class", "btnSearch");
-    searchButton.value = "Go";
+    searchButton.value = "Search";
 
     // Arrange elements
     form.appendChild(searchTextBox);
