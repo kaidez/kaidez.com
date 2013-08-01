@@ -281,7 +281,7 @@
 
   // the inner wrapper for the <header>. Width is set to 900px.
   .innerWrapperNavFooter {
-    width: 750px;
+    width: 900px;
     margin: 0 auto 53px;
   }
   
@@ -294,16 +294,22 @@
   
   .footer-header {
     @include footer-header;
+    width: 250px;
+  }
+
+  .footer-sections {
+    width: 250px;
+    float: left;
   }
 
   .contact-form-field {
     @include contact-form-field;
   }
 
-  .footer-sections {
-    width: 250px;
+  // add left/right margin to the middle column so footer columns are evenly spaced on desktop view
+  .mid-footer-margin {
+    margin:0 50px
   }
-
 
   // Font styles for tablets & desktops. Google font doesn't load on mobile.
   .share-post-link {
@@ -311,27 +317,6 @@
     line-height: 1;
     @include fonts($helv);
   }
-
-  .footer-header {
-    width: 300px;
-  }
-
-  .footer-column {
-    width: 300px;
-  }
-
-  .first-footer-column {
-    float: left;
-  }
-
-  .second-footer-column {
-    float: left;
-  }
-
-  .third-footer-column {
-    float: right;
-  }
-
 
   // =========================================================================
   //  Footer styles end
