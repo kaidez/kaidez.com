@@ -799,7 +799,7 @@ a:hover {
   padding: 0;
 }
 
-#searchbox {
+.searchbox-display {
   display: none;
 }
 
@@ -1437,7 +1437,7 @@ a.pagination-link {
     padding: 31px 0 6px;
   }
 
-  #searchbox {
+  .searchbox-display {
     display: block;
   }
 
@@ -1668,7 +1668,7 @@ a.pagination-link {
     border-radius: 10px;
   }
 
-  #searchbox {
+  .searchbox-display {
     display: block;
   }
 
