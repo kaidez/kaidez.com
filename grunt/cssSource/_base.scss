@@ -34,14 +34,14 @@ $base-link-color: #262841;
 $post-link-color: #3285A5;
 
 // footer background color
-$footer-color: #0C5E7E;
+$aside-color: #0C5E7E;
 
 // PRIMARY COLOR PALETTE ends
 
 // Darken the footer color: effects the all copy in the footer and the bottom
 // border of the post snippets.
 
-$darken-the-footer-color: darken($footer-color, 25);
+$darken-the-footer-color: darken($aside-color, 25);
 
 // End color variables
 
@@ -383,7 +383,7 @@ $bg-size: 350px 210px;
 
 // Applies a text shadow and dotted border to the footer section's title
 @mixin footer-header {
-  @include makeTextShadow($footer-color);
+  @include makeTextShadow($aside-color);
 }
 
 @mixin footer-column-margins($margin-pos, $margin) {
