@@ -9,9 +9,10 @@ cat-name: "Reviews"
 tags: [javascript, review]
 ---
 
-[![Eloquent JavaScript book cover][2]][2]*Disclaimer: the author of this book has graciously [given it away for free online][2] but please feel free to support his efforts by buying it on Amazon either in [print format][3] or [Kindle format][4]. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.*
+<img src="../img/ejs.png" class="post-pic" alt="Eloquent JavaScript book cover" widyh"250" height="330">
+*Disclaimer: the author of this book has graciously [given it away for free online][2] but please feel free to support his efforts by buying it on Amazon either in [print format][3] or [Kindle format][4]. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.*
 
- []: http://eloquentjavascript.net/
+
  [2]: http://eloquentjavascript.net/
  [3]: http://amzn.to/OzcPdN
  [4]: http://amzn.to/NjFshD
