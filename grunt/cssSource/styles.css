@@ -723,6 +723,10 @@ a:hover {
   text-indent: -9999px;
 }
 
+.innerWrapperNavFooter {
+  display: table;
+}
+
 .footer-header {
   border-bottom: 2px dotted #01070A;
 }
@@ -1495,11 +1499,6 @@ a.pagination-link {
     font-size: 17px;
   }
 
-  .innerWrapperNavFooter {
-    width: 729px;
-    margin: 0 auto 53px;
-  }
-
   .outerWrapperNavFooter {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
@@ -1507,7 +1506,6 @@ a.pagination-link {
   .footer-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
-    width: 300px;
   }
 
   .contact-form-field {
@@ -1516,8 +1514,22 @@ a.pagination-link {
     border-radius: 5px;
   }
 
-  .footer-sections {
-    width: 300px;
+  .footer-column {
+    width: 250px;
+  }
+
+  .footer-header {
+    width: 250px;
+  }
+
+  .footer-column-one-class {
+    margin-left: 70px;
+    float: left;
+  }
+
+  .footer-column-two-class {
+    margin-right: 70px;
+    float: right;
   }
 }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
