@@ -116,11 +116,27 @@ We started with alerts for the sake of easy explanation-now let’s create somet
 
 ### HTML for the difficult closure example
 
-*   [Catch the G train by taking the E Train][2]
-     
-*   [Catch the G train by taking the F Train][2]
-    
-*   [Catch the G train by taking the N Train][2]
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>The NYC subway can teach you about closures!</title>
+</head>
+<body>
+<ul>
+ <li><a href="#" id="eTrain">Catch the G train by taking the E Train</a></li>
+ <li><a href="#" id="fTrain">Catch the G train by taking the F Train</a></li>
+ <li><a href="#" id="nTrain">Catch the G train by taking the N Train</a></li>
+</ul>
+ 
+<div id="myRoute"></div>
+ 
+<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
+{% endprism %}
     
 [2]: # Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
 
