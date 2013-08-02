@@ -182,14 +182,14 @@
 
 
 
-  // =========================================================================
-  // Page content styles start
-  // =========================================================================
+// =========================================================================
+// Page content styles start
+// =========================================================================
 
-   // header font-size on search results page
-  .tipue_search_content_title {
-    font-size: 32px;
-  }
+ // header font-size on search results page
+.tipue_search_content_title {
+  font-size: 32px;
+}
   
   // Styles for post and category <h1> tags
   .wf-active h1.post-title, .wf-active h1.category-title  {
@@ -297,10 +297,24 @@
     width: 250px;
   }
 
-  .footer-sections {
-    width: 250px;
-    float: left;
-  }
+.footer-sections {
+  width: 250px;
+  float: left;
+}
+
+.footer-nav-class {
+  background-color: rgba($darken-the-aside-color, 0.45);
+  padding-left: 0;
+}
+
+a.footer-nav-link {
+  list-style-type: none;
+  margin: 0;
+  padding:10px 5px 10px 17px;
+  height: 25px;
+  font-size: 18px;
+  display: block;
+}
 
   .contact-form-field {
     @include contact-form-field;
