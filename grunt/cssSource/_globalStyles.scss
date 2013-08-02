@@ -363,7 +363,7 @@ a:hover {
 
 // Post snippet that displays on both the home page and search results.
 .post-snippet {
-  @include bottomBorder($darken-the-footer-color);
+  @include bottomBorder($darken-the-aside-color);
   padding-bottom: 48px;
 }
 
@@ -431,7 +431,7 @@ a:hover {
 
 // Primary footer element
 .outerWrapperNavAside {
-  color: $darken-the-footer-color;
+  color: $darken-the-aside-color;
   height: auto;
   width: auto;
   padding:1px 10px;
