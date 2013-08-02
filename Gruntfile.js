@@ -157,9 +157,7 @@ module.exports = function(grunt) {
             'css/styles.min.css',
             'img/profilepic.jpg',
             'img/footer-bg.png',
-            'img/snSprite@2x.png',
-            'img/white_carbon.png',
-            'img/white_carbon_@2X.png'
+            'img/snSprite@2x.png'
           ],
           network: ['*'],
           preferOnline: true,
