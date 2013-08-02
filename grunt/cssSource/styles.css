@@ -735,7 +735,7 @@ a:hover {
   border: none;
 }
 
-.outerWrapperNavFooter {
+.outerWrapperNavAside {
   color: #01070a;
   height: auto;
   width: auto;
@@ -968,7 +968,7 @@ a.pagination-link {
   float: none;
 }
 
-.outerWrapperNavFooter {
+.outerWrapperNavAside {
   box-shadow: none;
 }
 
@@ -1499,7 +1499,7 @@ a.pagination-link {
     font-size: 17px;
   }
 
-  .outerWrapperNavFooter {
+  .outerWrapperNavAside {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
@@ -2002,7 +2002,7 @@ a.pagination-link {
     margin: 0 auto 53px;
   }
 
-  .outerWrapperNavFooter {
+  .outerWrapperNavAside {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
     padding: 35px 10px;
   }
