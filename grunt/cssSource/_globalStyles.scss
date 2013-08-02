@@ -471,13 +471,14 @@ a:hover {
 }
 
 .footer-nav-class {
-  padding-left:0;
+  background-color: rgba($darken-the-aside-color, 0.45);
+  padding-left: 0;
 }
 
 .footer-nav-link {
   list-style: none;
   margin: 0;
-  padding:0 0 10px 0;
+  padding:10px;
   font-size: 18px;
 }
 
