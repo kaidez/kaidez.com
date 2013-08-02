@@ -36,6 +36,7 @@ manifest.appcache
 
 sitemap.xml.gz
 license.txt
+robots.txt
 readme.html
 
 *.ftppass
