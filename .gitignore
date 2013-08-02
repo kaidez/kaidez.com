@@ -4,22 +4,21 @@ tipuesearch/
 
 # Site assets
 #------------
-
 assets/
 old_img/
 
 
 
+
 # Application cache manifest
 #---------------------------
-
 manifest.appcache
+
 
 
 
 # General all-around files
 # ------------------------
-
 *.DS_Store
 *Thumbs.db
 *.zip
@@ -29,13 +28,7 @@ manifest.appcache
 *.psd
 *.ai
 *.eps
-*backwpup
 
-# ignore all .txt files...
-*.txt
-
-# ...except for wpDeployment.txt
-!wpDeployment.txt
 
 *.htaccess
 
@@ -44,15 +37,16 @@ manifest.appcache
 sitemap.xml.gz
 license.txt
 readme.html
+
 *.ftppass
 grunt/cssSource/_oldIE.scss
-
 
 
 
 # Sass-related files
 # ------------------
 *.sass-cache
+
 
 
 
