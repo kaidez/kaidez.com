@@ -742,6 +742,10 @@ p code, li code {
   padding: 0;
 }
 
+.all-aside-sections {
+  width: 300px;
+}
+
 .aside-nav-list-item {
   list-style-type: none;
 }
@@ -1527,6 +1531,10 @@ a.pagination-link {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
+  .aside-inner-wrapper-class {
+    margin-top: 16px;
+  }
+
   .aside-section-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
@@ -1548,13 +1556,12 @@ a.pagination-link {
   }
 
   .aside-column-class {
-    width: 569px;
-    float: left;
+    max-width: 1024px;
     clear: both;
   }
 
   .aside-header {
-    width: 250px;
+    width: 300px;
   }
 }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
