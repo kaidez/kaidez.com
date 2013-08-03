@@ -191,24 +191,24 @@
   font-size: 32px;
 }
   
-  // Styles for post and category <h1> tags
-  .wf-active h1.post-title, .wf-active h1.category-title  {
-    @include post-category-title(40px, 56px 0 11px);
-  }
+// Styles for post and category <h1> tags
+.wf-active h1.post-title, .wf-active h1.category-title  {
+  @include post-category-title(40px, 56px 0 11px);
+}
 
-  .post-subheading {
-    @include content-h2(27px);
-  }
+.post-subheading {
+  @include content-h2(27px);
+}
 
   // title tag for post snippets
-  .post-snippet-title {
-    font-size: 34px;
-  }
+.post-snippet-title {
+  font-size: 34px;
+}
 
-  .page-content {
-    @include page-content($inner-content-width);
-    @include create-box-shadow(8px);
-  }
+.page-content {
+  @include page-content($inner-content-width);
+  @include create-box-shadow(8px);
+}
   
   // breadcrumbs
   .breadcrumb-styles {
@@ -279,23 +279,23 @@
   //  ========================================================================
 
 
-  // the inner wrapper for the <header>. Width is set to 900px.
-  .inner-wrapper-nav-aside {
-    width: 900px;
-    margin: 0 auto 53px;
-  }
+// the inner wrapper for the <header>. Width is set to 900px.
+.inner-wrapper-nav-aside {
+  width: 900px;
+  margin: 0 auto 53px;
+}
   
 
-  // apply background image to the footer
-  .outerWrapperNavAside {
-    background: $aside-color url('../img/footer-bg.png') no-repeat left;
-    padding: 35px 10px;
-  }
+// apply background image to the footer
+.outerWrapperNavAside {
+  background: $aside-color url('../img/footer-bg.png') no-repeat left;
+  padding: 35px 10px;
+}
   
-  .footer-header {
-    @include footer-header;
-    width: 250px;
-  }
+.footer-header {
+  @include footer-header;
+  width: 250px;
+}
 
 .footer-sections {
   width: 250px;
@@ -307,30 +307,39 @@
   padding-left: 0;
 }
 
-a.footer-nav-link {
+.footer-nav-link {
   list-style-type: none;
   margin: 0;
   padding:10px 5px 10px 17px;
   height: 25px;
   font-size: 18px;
   display: block;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-  .contact-form-field {
-    @include contact-form-field;
-  }
+.footer-nav-link:hover {
+  text-decoration: none;
+  background-color: $darken-the-aside-color;
+}
 
-  // add left/right margin to the middle column so footer columns are evenly spaced on desktop view
-  .mid-footer-margin {
-    margin:0 50px
-  }
+.contact-form-field {
+  @include contact-form-field;
+}
 
-  // Font styles for tablets & desktops. Google font doesn't load on mobile.
-  .share-post-link {
-    font-size:16px;
-    line-height: 1;
-    @include fonts($helv);
-  }
+// add left/right margin to the middle column so footer columns are evenly spaced on desktop view
+.mid-footer-margin {
+  margin:0 50px
+}
+
+// Font styles for tablets & desktops. Google font doesn't load on mobile.
+.share-post-link {
+  font-size:16px;
+  line-height: 1;
+  @include fonts($helv);
+}
 
   // =========================================================================
   //  Footer styles end
