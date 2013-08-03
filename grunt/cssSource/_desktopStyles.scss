@@ -285,7 +285,6 @@
   margin: 0 auto 53px;
 }
   
-
 // apply background image to the footer
 .outer-wrapper-nav-aside {
   background: $aside-color url('../img/footer-bg.png') no-repeat left;
@@ -340,6 +339,11 @@
   font-size:16px;
   line-height: 1;
   @include fonts($helv);
+}
+
+// padding for the <h3> tag for ads in the <aside> tag
+.ad-title-margin {
+  margin-bottom: 16px;
 }
 
   // =========================================================================
