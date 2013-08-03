@@ -240,12 +240,12 @@
   // =========================================================================
    
   // apply background image to the footer
-  .outer-wrapper-nav-aside {
+  .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
   }
 
-  .aside-header {
-    @include aside-header;
+  .aside-section-header {
+    @include aside-section-header;
   }
 
   // the <aside> nav links
@@ -254,7 +254,7 @@
     @include transitions(all);
   }
 
-  .aside-section {
+  .aside-column-class {
     width: 569px;
     float: left;
     clear: both;

@@ -280,23 +280,23 @@
 
 
 // the inner wrapper for the <header>. Width is set to 900px.
-.inner-wrapper-nav-aside {
+.aside-inner-wrapper-class {
   width: 1000px;
   margin: 0 auto 53px;
 }
   
 // apply background image to the footer
-.outer-wrapper-nav-aside {
+.aside-outer-wrapper-class {
   background: $aside-color url('../img/footer-bg.png') no-repeat left;
   padding: 35px 10px;
 }
   
-.aside-header {
-  @include aside-header;
+.aside-section-header {
+  @include aside-section-header;
   width: 250px;
 }
 
-.aside-section {
+.aside-column-class {
   width: 250px;
   float: left;
 }

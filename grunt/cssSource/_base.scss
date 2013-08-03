@@ -381,7 +381,7 @@ $bg-size: 350px 210px;
 }
 
 // Applies a text shadow and dotted border to the footer section's title
-@mixin aside-header {
+@mixin aside-section-header {
   @include makeTextShadow($aside-color);
 }
 

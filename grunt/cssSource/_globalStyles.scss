@@ -424,7 +424,7 @@ p code, li code {
 // Page content styles end
 // ===========================================================================
 
-.inner-wrapper-nav-aside {
+.aside-inner-wrapper-class {
   display:table;
   margin: 0 auto;
 }
@@ -435,7 +435,7 @@ p code, li code {
 // ===========================================================================
 
 //all header tags in the footer should have a black dotted bottom border
-.aside-header {
+.aside-section-header {
   border-bottom: 2px dotted #01070A;
   margin: 0;
 }
@@ -450,7 +450,7 @@ p code, li code {
 }
 
 // Primary footer element
-.outer-wrapper-nav-aside {
+.aside-outer-wrapper-class {
   color: $darken-the-aside-color;
   height: auto;
   width: auto;
@@ -460,13 +460,13 @@ p code, li code {
 }
 
 // Hide the Google font on all <h3> tags in the footer before page load
-.wf-loading .aside-header {
+.wf-loading .aside-section-header {
   font-family: $srf;
   visibility: hidden;
 }
 
 // Apply the Google font to all <h3> tags in the footer after page load
-.wf-active .aside-header {
+.wf-active .aside-section-header {
   @include fonts($robo);
   font-size: 23px;
 }
