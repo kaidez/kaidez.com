@@ -275,7 +275,7 @@
 
 
   // =========================================================================
-  //  Footer styles start
+  //  Aside styles start
   //  ========================================================================
 
 
@@ -297,16 +297,16 @@
   width: 250px;
 }
 
-.footer-sections {
+.aside-sections {
   width: 250px;
   float: left;
 }
 
-.footer-nav-class {
+.aside-nav-class {
   padding-left: 0;
 }
 
-.footer-nav-link {
+.aside-nav-link {
   list-style-type: none;
   margin: 0;
   padding:10px 5px 10px 17px;
@@ -320,7 +320,7 @@
   transition: all .3s ease;
 }
 
-.footer-nav-link:hover {
+.aside-nav-link:hover {
   text-decoration: none;
   background-color: $darken-the-aside-color;
 }
@@ -342,7 +342,7 @@
 }
 
   // =========================================================================
-  //  Footer styles end
+  //  Aside styles end
   //  ========================================================================
  
  }

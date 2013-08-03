@@ -233,9 +233,7 @@ $bg-size: 350px 210px;
 }
 
 @mixin contact-form-field {
-  -webkit-border-radius: $master-border-radius - 5;
-  -moz-border-radius: $master-border-radius - 5;
-  border-radius: $master-border-radius - 5;
+
 }
 
 @mixin read-post-link($border-radius: blank) {
