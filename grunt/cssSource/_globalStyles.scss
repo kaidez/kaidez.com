@@ -445,6 +445,10 @@ p code, li code {
   padding: 0;
 }
 
+// applied to all <sections> in the <aside> tag
+.all-aside-sections {
+  width: 300px;
+}
 .aside-nav-list-item {
   list-style-type: none;
 }
