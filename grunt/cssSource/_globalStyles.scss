@@ -421,8 +421,9 @@ a:hover {
 // ===========================================================================
 
 //all header tags in the footer should have a black dotted bottom border
-.footer-header {
+.aside-header {
   border-bottom: 2px dotted #01070A;
+  margin: 0;
 }
 
 .footer-contact-fieldset-styles {
@@ -445,14 +446,15 @@ a:hover {
 }
 
 // Hide the Google font on all <h3> tags in the footer before page load
-.wf-loading .footer-header {
-  @include fonts($srf);
+.wf-loading .aside-header {
+  font-family: $srf;
+  visibility: hidden;
 }
 
 // Apply the Google font to all <h3> tags in the footer after page load
-.wf-active .footer-header {
+.wf-active .aside-header {
+  @include fonts($robo);
   font-size: 23px;
-  visibility: visible;
 }
 
 // Style related to a picture of me

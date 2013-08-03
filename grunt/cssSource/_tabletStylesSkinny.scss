@@ -245,8 +245,8 @@
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
   }
 
-  .footer-header {
-    @include footer-header;
+  .aside-header {
+    @include aside-header;
   }
 
   .contact-form-field {
