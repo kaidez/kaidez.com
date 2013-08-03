@@ -733,6 +733,7 @@ a:hover {
 
 .footer-contact-fieldset-styles {
   border: none;
+  padding: 0;
 }
 
 .footer-nav-list-item {
@@ -2027,13 +2028,22 @@ a.pagination-link {
     padding-left: 0;
   }
 
-  a.footer-nav-link {
+  .footer-nav-link {
     list-style-type: none;
     margin: 0;
     padding: 10px 5px 10px 17px;
     height: 25px;
     font-size: 18px;
     display: block;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+  .footer-nav-link:hover {
+    text-decoration: none;
+    background-color: #01070a;
   }
 
   .contact-form-field {
