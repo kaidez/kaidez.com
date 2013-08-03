@@ -743,7 +743,7 @@ p code, li code {
 }
 
 .all-aside-sections {
-  width: 300px;
+  width: 250px;
 }
 
 .aside-nav-list-item {
@@ -983,7 +983,7 @@ a.pagination-link {
 }
 
 .aside-section-header {
-  width: 300px;
+  width: 250px;
 }
 
 .footer-column-one-class {
@@ -1558,6 +1558,19 @@ a.pagination-link {
   .aside-column-class {
     max-width: 1024px;
     clear: both;
+    margin-bottom: 35px;
+  }
+
+  .aside-about-section-class,
+  .aside-nav-section-class {
+    float: left;
+    margin-right: 30px;
+  }
+
+  .aside-ad-section-class,
+  .aside-social-network-section-class {
+    float: right;
+    margin-left: 30px;
   }
 
   .aside-header {
