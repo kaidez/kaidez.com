@@ -655,13 +655,17 @@ p code, li code {
   color: #111;
 }
 
-a:link, a:visited {
+.post-header-link:link, .post-header-link:visited {
   color: #2d7895;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #3182a1;
+.post-header-link:hover {
+  color: #57accc;
   text-decoration: underline;
 }
 
