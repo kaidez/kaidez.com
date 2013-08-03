@@ -655,7 +655,7 @@ p code, li code {
   color: #111;
 }
 
-.post-header-link:link, .post-header-link:visited {
+.post-snippet-link:link, .post-snippet-link:visited {
   color: #2d7895;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
@@ -664,7 +664,7 @@ p code, li code {
   transition: color 0.3s ease;
 }
 
-.post-header-link:hover {
+.post-snippet-link:hover {
   color: #57accc;
   text-decoration: underline;
 }
