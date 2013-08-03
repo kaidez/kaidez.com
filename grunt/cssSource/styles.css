@@ -780,6 +780,10 @@ a:hover {
   margin: 0 auto;
 }
 
+.lynda-ad-section-class {
+  margin-top: 34px;
+}
+
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.4;
@@ -975,7 +979,7 @@ a.pagination-link {
   float: none;
 }
 
-.outerWrapperNavAside {
+.outer-wrapper-nav-aside {
   box-shadow: none;
 }
 
@@ -1506,7 +1510,7 @@ a.pagination-link {
     font-size: 17px;
   }
 
-  .outerWrapperNavAside {
+  .outer-wrapper-nav-aside {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
@@ -1735,7 +1739,7 @@ a.pagination-link {
     display: inline;
   }
 
-  .outerWrapperNavAside {
+  .outer-wrapper-nav-aside {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
@@ -2009,7 +2013,7 @@ a.pagination-link {
     margin: 0 auto 53px;
   }
 
-  .outerWrapperNavAside {
+  .outer-wrapper-nav-aside {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
     padding: 35px 10px;
   }
