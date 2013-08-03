@@ -281,7 +281,7 @@
 
 // the inner wrapper for the <header>. Width is set to 900px.
 .inner-wrapper-nav-aside {
-  width: 900px;
+  width: 1000px;
   margin: 0 auto 53px;
 }
   
@@ -330,8 +330,8 @@
 }
 
 // add left/right margin to the middle column so footer columns are evenly spaced on desktop view
-.mid-footer-margin {
-  margin:0 50px
+.mid-aside-margin {
+  margin:0 125px
 }
 
 // Font styles for tablets & desktops. Google font doesn't load on mobile.
