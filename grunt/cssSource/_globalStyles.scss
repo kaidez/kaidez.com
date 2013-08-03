@@ -426,6 +426,7 @@ p code, li code {
 
 .inner-wrapper-nav-aside {
   display:table;
+  margin: 0 auto;
 }
 
 
@@ -444,7 +445,7 @@ p code, li code {
   padding: 0;
 }
 
-.footer-nav-list-item {
+.aside-nav-list-item {
   list-style-type: none;
 }
 
@@ -468,6 +469,11 @@ p code, li code {
 .wf-active .aside-header {
   @include fonts($robo);
   font-size: 23px;
+}
+
+// padding for the <h3> tag for ads in the <aside> tag
+.ad-title-margin {
+  margin-bottom: 16px;
 }
 
 // Style related to a picture of me
