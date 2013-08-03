@@ -788,7 +788,7 @@ p code, li code {
   margin: 0 auto;
 }
 
-.lynda-ad-section-class {
+.ad-section-class {
   margin: 34px auto;
 }
 
@@ -2020,7 +2020,7 @@ a.pagination-link {
     width: 250px;
   }
 
-  .aside-sections {
+  .aside-section {
     width: 250px;
     float: left;
   }
