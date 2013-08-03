@@ -202,6 +202,12 @@ $bg-size: 350px 210px;
   height: $height;
   width: $width;
 }
+@mixin transitions ($property) {
+  -webkit-transition: $property .3s ease;
+  -moz-transition: $property .3s ease;
+  -o-transition: $property.3s ease;
+  transition: $property .3s ease;
+}
 
  // Unique styles for the 'site-title' class in the desktop styles...add this to sprite mixin code.
 @mixin desktop-logo-sprite-add-on {
