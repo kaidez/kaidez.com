@@ -303,7 +303,6 @@
 }
 
 .footer-nav-class {
-  background-color: rgba($darken-the-aside-color, 0.45);
   padding-left: 0;
 }
 
@@ -314,6 +313,7 @@
   height: 25px;
   font-size: 18px;
   display: block;
+  color: #999;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
