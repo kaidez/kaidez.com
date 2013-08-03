@@ -262,6 +262,19 @@
   .aside-column-class {
     max-width: 1024px;
     clear: both;
+    margin-bottom: 35px;
+  }
+
+  .aside-about-section-class,
+  .aside-nav-section-class {
+    float:left;
+    margin-right: 30px;
+  }
+
+  .aside-ad-section-class,
+  .aside-social-network-section-class {
+    float:right;
+    margin-left: 30px;
   }
 
   .contact-form-field {

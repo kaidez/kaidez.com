@@ -245,6 +245,7 @@
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
   }
 
+  // <h3> for all <section> tags in the <aside>
   .aside-section-header {
     @include aside-section-header;
   }
