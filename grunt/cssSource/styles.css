@@ -729,6 +729,7 @@ p code, li code {
 
 .inner-wrapper-nav-aside {
   display: table;
+  margin: 0 auto;
 }
 
 .aside-header {
@@ -741,7 +742,7 @@ p code, li code {
   padding: 0;
 }
 
-.footer-nav-list-item {
+.aside-nav-list-item {
   list-style-type: none;
 }
 
@@ -763,6 +764,10 @@ p code, li code {
   font-family: "Roboto Condensed";
   visibility: visible;
   font-size: 23px;
+}
+
+.ad-title-margin {
+  margin-bottom: 16px;
 }
 
 .author-image-class {
@@ -2066,10 +2071,6 @@ a.pagination-link {
     line-height: 1;
     font-family: "Lato";
     visibility: visible;
-  }
-
-  .ad-title-margin {
-    margin-bottom: 16px;
   }
 }
 .assistive-text,
