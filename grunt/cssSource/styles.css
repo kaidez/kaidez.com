@@ -699,7 +699,7 @@ a:hover {
 
 .social-network-list-styles {
   padding: 0;
-  margin: 0 auto;
+  margin: 16px auto 0;
   text-align: center;
   width: 287px;
 }
@@ -763,7 +763,7 @@ a:hover {
 
 .author-image-class {
   float: left;
-  padding: 0 10px 4px 0;
+  padding: 16px 10px 4px 0;
 }
 
 .kaidez-social-network-list-item {
