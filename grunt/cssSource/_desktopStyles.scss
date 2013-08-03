@@ -308,14 +308,7 @@
 
 // the <aside> nav links
 .aside-nav-link {
-  list-style-type: none;
-  margin: 0;
-  padding:5px 5px 5px 0;
-  height: 25px;
-  font-size: 18px;
-  display: block;
-  color: $header-color;
-  text-decoration: none;
+  @include aside-nav-link;
   @include transitions(all);
 }
 

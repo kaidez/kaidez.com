@@ -236,7 +236,7 @@
   }
 
   // =========================================================================
-  // Footer styles start
+  // Aside styles start
   // =========================================================================
    
   // apply background image to the footer
@@ -248,30 +248,28 @@
     @include aside-header;
   }
 
-  .contact-form-field {
-    @include contact-form-field;
+  // the <aside> nav links
+  .aside-nav-link {
+    @include aside-nav-link;
+    @include transitions(all);
   }
 
-  .footer-column {
-    width: 250px;
+  .aside-section {
+    width: 569px;
+    float: left;
+    clear: both;
+  }
+
+  .contact-form-field {
+    @include contact-form-field;
   }
 
   .aside-header {
     width: 250px;
   }
-
-  .footer-column-one-class {
-    margin-left: 70px;
-    float: left;
-  }
-
-  .footer-column-two-class {
-    margin-right: 70px;
-    float: right;
-  }
   
   // =========================================================================
-  // Footer styles end
+  // Aside styles end
   // =========================================================================
    
 }
