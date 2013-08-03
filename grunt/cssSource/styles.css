@@ -727,8 +727,9 @@ a:hover {
   display: table;
 }
 
-.footer-header {
+.aside-header {
   border-bottom: 2px dotted #01070A;
+  margin: 0;
 }
 
 .footer-contact-fieldset-styles {
@@ -749,14 +750,15 @@ a:hover {
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
-.wf-loading .footer-header {
+.wf-loading .aside-header {
   font-family: serif;
-  visibility: visible;
+  visibility: hidden;
 }
 
-.wf-active .footer-header {
-  font-size: 23px;
+.wf-active .aside-header {
+  font-family: "Roboto Condensed";
   visibility: visible;
+  font-size: 23px;
 }
 
 .author-image-class {
@@ -959,7 +961,7 @@ a.pagination-link {
   width: 250px;
 }
 
-.footer-header {
+.aside-header {
   width: 300px;
 }
 
@@ -1508,7 +1510,7 @@ a.pagination-link {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
-  .footer-header {
+  .aside-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
   }
@@ -1523,7 +1525,7 @@ a.pagination-link {
     width: 250px;
   }
 
-  .footer-header {
+  .aside-header {
     width: 250px;
   }
 
@@ -1737,7 +1739,7 @@ a.pagination-link {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
-  .footer-header {
+  .aside-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
   }
@@ -2003,7 +2005,7 @@ a.pagination-link {
   }
 
   .inner-wrapper-nav-aside {
-    width: 900px;
+    width: 1000px;
     margin: 0 auto 53px;
   }
 
@@ -2012,7 +2014,7 @@ a.pagination-link {
     padding: 35px 10px;
   }
 
-  .footer-header {
+  .aside-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
     width: 250px;
@@ -2052,8 +2054,8 @@ a.pagination-link {
     border-radius: 5px;
   }
 
-  .mid-footer-margin {
-    margin: 0 50px;
+  .mid-aside-margin {
+    margin: 0 125px;
   }
 
   .share-post-link {
