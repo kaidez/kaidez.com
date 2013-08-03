@@ -334,15 +334,28 @@ p code, li code {
 // Page content styles start
 // ===========================================================================
 
+// // All text links (except for post meta info) are blue but have no underline.
+// a:link, a:visited { 
+//   color: darken($post-link-color, 4);
+//   text-decoration: none;
+// }
+
+// // All text links have an underline on hover.
+// a:hover {  
+//   color: darken($post-link-color, 1);
+//   text-decoration: underline;
+// }
+
 // All text links (except for post meta info) are blue but have no underline.
-a:link, a:visited { 
+.post-snippet-link:link, .post-snippet-link:visited { 
   color: darken($post-link-color, 4);
   text-decoration: none;
+  @include transitions (color);
 }
 
 // All text links have an underline on hover.
-a:hover {  
-  color: darken($post-link-color, 1);
+.post-snippet-link:hover {  
+  color: lighten($post-link-color, 15);
   text-decoration: underline;
 }
 
