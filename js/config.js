@@ -5,7 +5,6 @@ requirejs.config({
 
   paths: {
     jquery: "vendor/jquery",
-    val: "vendor/validate",
     tipuesetContent: "vendor/tipuesearch_content",
     tipueset: "vendor/tipuesearch_set",
     tipue: "vendor/tipuesearch.min" 
@@ -13,10 +12,6 @@ requirejs.config({
 
   shim: { 
     jquery: {
-      exports: 'jquery'
-    },
-    val: {
-      deps: ['jquery'],
       exports: 'jquery'
     },
     tipuesetContent: {
