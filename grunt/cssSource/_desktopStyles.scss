@@ -314,10 +314,7 @@
   font-size: 18px;
   display: block;
   color: #999;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  @include transitions(all);
 }
 
 .aside-nav-link:hover {
