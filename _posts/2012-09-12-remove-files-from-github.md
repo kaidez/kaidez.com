@@ -122,17 +122,17 @@ We’ll create our file with nano, Terminal’s built-in text editor (Windows us
 11. Now let’s push the change to GitHub…type `git push` and hitting Enter. Then when we check our repo, we see that “.gitignore” is now part of it.  
     ![Remove files from GitHub tutorial][23] 
 
- [13]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo1.png
- [14]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot1.png
- [15]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot2.png
- [16]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot3.png
- [17]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot4.png
- [18]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot5.png
- [19]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot6.png
- [20]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot7.png
- [21]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot8.png
- [22]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot9.png
- [23]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo2.png
+ [13]: ../img/repo1.png
+ [14]: ../img/terminalShot1.png
+ [15]: ../img/terminalShot2.png
+ [16]: ../img/terminalShot3.png
+ [17]: ../img/terminalShot4.png
+ [18]: ../img/terminalShot5.png
+ [19]: ../img/terminalShot6.png
+ [20]: ../img/terminalShot7.png
+ [21]: ../img/terminalShot8.png
+ [22]: ../img/terminalShot9.png
+ [23]: ../img/repo2.png
 
 ## The *right* way to remove files from GitHub
 
@@ -151,12 +151,12 @@ Now let’s remove a file using `rm`. Let’s do this to delete the “page1.htm
 6.  Next comes the push to GitHub…type `git push` and hit Enter, then check our repo. “page1.html” is gone.  
     ![Remove files from GitHub tutorial][29] 
 
- [24]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo3.png
- [25]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot10.png
- [26]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot11.png
- [27]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot12.png
- [28]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot13.png
- [29]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo4.png
+ [24]: ../img/repo3.png
+ [25]: ../img/terminalShot10.png
+ [26]: ../img/terminalShot11.png
+ [27]: ../img/terminalShot12.png
+ [28]: ../img/terminalShot13.png
+ [29]: ../img/repo4.png
 
 ## The *right* way to remove directories from GitHub
 
@@ -218,16 +218,16 @@ I *really* want you to understand that Git is a distributed version control syst
 ## Conclusion                             
 I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you’ve come to realize that the title of Farina’s post is correct: Git *is* simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you’ll discover how bloody useful Git can be, along with a ton of other things.
 
- [30]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo5.png
- [31]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot14.png
- [32]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot15.png
- [33]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo6.png
- [34]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot17.png
- [35]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot18.png
- [36]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot19.png
- [37]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot20.png
- [38]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/terminalShot21.png
- [39]: http://kaidez.com/wp-content/themes/kaidez/kaidezUnique/Images/ArticleImages/repo7.png
+ [30]: ../img/repo5.png
+ [31]: ../img/terminalShot14.png
+ [32]: ../img/terminalShot15.png
+ [33]: ../img/repo6.png
+ [34]: ../img/terminalShot17.png
+ [35]: ../img/terminalShot18.png
+ [36]: ../img/terminalShot19.png
+ [37]: ../img/terminalShot20.png
+ [38]: ../img/terminalShot21.png
+ [39]: ../img/repo7.png
  [40]: http://try.GitHub.com/
  [41]: http://codeschool.com/
  [42]: https://GitHub.com/training/
