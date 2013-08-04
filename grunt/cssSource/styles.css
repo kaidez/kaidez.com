@@ -1297,6 +1297,21 @@ a.pagination-link {
     padding: 8px 19px;
     padding-top: 10px;
   }
+
+  .aside-nav-link {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 5px 5px 0;
+    height: 25px;
+    font-size: 18px;
+    display: block;
+    color: #67cddc;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
 }
 @media only screen and (min-width: 729px) and (max-width: 1024px) {
   body {
@@ -1532,6 +1547,12 @@ a.pagination-link {
     transition: all 0.3s ease;
   }
 
+  .aside-nav-link:hover {
+    background-color: #01070a;
+    padding-left: 5px;
+    color: #fff;
+  }
+
   .aside-column-class {
     max-width: 1024px;
     clear: both;
@@ -1753,6 +1774,27 @@ a.pagination-link {
   .all-aside-sections {
     float: left;
     padding: 0 10px;
+  }
+
+  .aside-nav-link {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 5px 5px 0;
+    height: 25px;
+    font-size: 18px;
+    display: block;
+    color: #67cddc;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .aside-nav-link:hover {
+    background-color: #01070a;
+    padding-left: 5px;
+    color: #fff;
   }
 }
 @media only screen and (min-width: 1025px) {
