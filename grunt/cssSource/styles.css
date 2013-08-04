@@ -393,9 +393,10 @@ pre[class*="language-"] {
 body {
   background-color: white;
   max-width: 100%;
+  height: 100%;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
@@ -437,7 +438,7 @@ p code, li code {
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6 {
   font-family: serif;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .wf-active h1,
@@ -482,7 +483,7 @@ p code, li code {
 
 .wf-loading .site-navigation-list-link {
   font-family: serif;
-  visibility: hidden;
+  visibility: visible;
   font-size: 20px;
 }
 
@@ -761,7 +762,7 @@ p code, li code {
 
 .wf-loading .aside-section-header {
   font-family: serif;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .wf-active .aside-section-header {
@@ -933,6 +934,7 @@ a.read-post-link {
 
 .wf-active .category-header {
   font-family: "Roboto Condensed";
+  visibility: visible;
   font-size: 1.5rem;
   margin-top: 0;
 }
@@ -1317,7 +1319,6 @@ a.pagination-link {
 @media only screen and (min-width: 729px) and (max-width: 1024px) {
   body {
     font-family: "Lato";
-    visibility: visible;
   }
 
   .wf-active h1,
@@ -1402,7 +1403,6 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    visibility: visible;
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -1484,7 +1484,6 @@ a.pagination-link {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato";
-    visibility: visible;
   }
 
   .post-snippet-title {
@@ -1580,7 +1579,6 @@ a.pagination-link {
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   body {
     font-family: "Lato";
-    visibility: visible;
   }
 
   .wf-active h1,
@@ -1670,7 +1668,6 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    visibility: visible;
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -1727,7 +1724,6 @@ a.pagination-link {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato";
-    visibility: visible;
   }
 
   .wf-active h1.post-title, .wf-active h1.category-title {
@@ -1799,7 +1795,6 @@ a.pagination-link {
 @media only screen and (min-width: 1025px) {
   body {
     font-family: "Lato";
-    visibility: visible;
   }
 
   .clearfix:before,
@@ -1869,7 +1864,6 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
     font-family: "Lato";
-    visibility: visible;
     margin-right: 18px;
     font-size: 22px;
     padding: 5px;
@@ -2090,7 +2084,6 @@ a.pagination-link {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato";
-    visibility: visible;
   }
 }
 .assistive-text,
