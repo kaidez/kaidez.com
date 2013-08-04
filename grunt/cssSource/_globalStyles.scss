@@ -472,10 +472,15 @@ p code, li code {
   width: 250px;
 }
 
-// Applied to form fields in <aside>
-.aside-contact-fieldset-styles {
-  border: none;
-  padding: 0;
+// Style related to a picture of me in <aside>
+.author-image-class {
+  float: left;
+  padding:16px 10px 4px 0;
+}
+
+// padding for the <h3> tag for ad section in the <aside> tag
+.ad-title-margin {
+  margin-bottom: 16px;
 }
 
 // <li> tag in nav section of <aside>
@@ -483,22 +488,17 @@ p code, li code {
   list-style-type: none;
 }
 
-// padding for the <h3> tag for ads in the <aside> tag
-.ad-title-margin {
-  margin-bottom: 16px;
-}
-
-// Style related to a picture of me in <aside>
-.author-image-class {
-  float: left;
-  padding:16px 10px 4px 0;
-}
-
 // <li> tag wrapping kaidez social network links in <aside>
 .kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
   margin-right: 14px;
+}
+
+// Applied to form fields in <aside>
+.aside-contact-fieldset-styles {
+  border: none;
+  padding: 0;
 }
 
 // copyright <p> tag in <aside>
