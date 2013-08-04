@@ -426,9 +426,9 @@ p code, li code {
   margin: 0 2px 0;
 }
 
-.post-pic {
-  float: left;
-  padding: 0 10px 10px 0;
+.containing-element {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .wf-loading h1, .wf-inactive h1,
@@ -460,12 +460,12 @@ p code, li code {
   clip: rect(1px 1px 1px 1px);
 }
 
-.outer-wrapper-nav-header {
-  background-color: #67cddc;
-}
-
 .site-header {
   text-align: left;
+}
+
+.outer-wrapper-nav-header {
+  background-color: #67cddc;
 }
 
 .site-description {
@@ -666,11 +666,6 @@ p code, li code {
   text-decoration: underline;
 }
 
-.containing-element {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 .page-content {
   position: relative;
   height: auto;
@@ -684,6 +679,11 @@ p code, li code {
 .post-snippet {
   border-bottom: 1px solid #01070a;
   padding-bottom: 48px;
+}
+
+.post-pic {
+  float: left;
+  padding: 0 10px 10px 0;
 }
 
 .related-posts-header {
@@ -709,13 +709,6 @@ p code, li code {
   list-style: none;
 }
 
-.kaidez-social-network-list-styles {
-  padding: 0;
-  margin: 16px auto 0;
-  text-align: center;
-  width: 287px;
-}
-
 .social-sharing-list-item {
   list-style-type: none;
   padding-right: 10px;
@@ -723,8 +716,10 @@ p code, li code {
   margin-bottom: 15px;
 }
 
-.social-network-list-post-class {
+.kaidez-social-network-list-styles {
   padding: 0;
+  margin: 16px auto 0;
+  text-align: center;
   width: 287px;
 }
 
@@ -735,9 +730,9 @@ p code, li code {
   text-indent: -9999px;
 }
 
-.aside-inner-wrapper-class {
-  display: table;
-  margin: 0 auto;
+.social-network-list-post-class {
+  padding: 0;
+  width: 287px;
 }
 
 .aside-outer-wrapper-class {
@@ -749,22 +744,9 @@ p code, li code {
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
-.aside-section-header {
-  border-bottom: 2px dotted #01070A;
-  margin: 0;
-}
-
-.aside-contact-fieldset-styles {
-  border: none;
-  padding: 0;
-}
-
-.all-aside-sections {
-  width: 250px;
-}
-
-.aside-nav-list-item {
-  list-style-type: none;
+.aside-inner-wrapper-class {
+  display: table;
+  margin: 0 auto;
 }
 
 .wf-loading .aside-section-header {
@@ -776,10 +758,12 @@ p code, li code {
   font-family: "Roboto Condensed";
   visibility: visible;
   font-size: 23px;
+  border-bottom: 1px solid #01070A;
+  margin: 0;
 }
 
-.ad-title-margin {
-  margin-bottom: 16px;
+.all-aside-sections {
+  width: 250px;
 }
 
 .author-image-class {
@@ -787,10 +771,23 @@ p code, li code {
   padding: 16px 10px 4px 0;
 }
 
+.ad-title-margin {
+  margin-bottom: 16px;
+}
+
+.aside-nav-list-item {
+  list-style-type: none;
+}
+
 .kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
   margin-right: 14px;
+}
+
+.aside-contact-fieldset-styles {
+  border: none;
+  padding: 0;
 }
 
 .copyright-style {
