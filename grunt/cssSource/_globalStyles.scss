@@ -444,26 +444,7 @@ p code, li code {
 // Aside styles start
 // ===========================================================================
 
-//all header tags in the footer should have a black dotted bottom border
-.aside-section-header {
-  border-bottom: 2px dotted #01070A;
-  margin: 0;
-}
-
-.aside-contact-fieldset-styles {
-  border: none;
-  padding: 0;
-}
-
-// applied to all <sections> in the <aside> tag
-.all-aside-sections {
-  width: 250px;
-}
-.aside-nav-list-item {
-  list-style-type: none;
-}
-
-// Primary <aside><aside> element
+// <aside> tag
 .aside-outer-wrapper-class {
   color: $darken-the-aside-color;
   height: auto;
@@ -473,12 +454,34 @@ p code, li code {
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
-// Hide the Google font on all <h3> tags in the <aside> before page load
+//all header tags in the footer should have a black dotted bottom border
+.aside-section-header {
+  border-bottom: 2px dotted #01070A;
+  margin: 0;
+}
+
+// Applied to form fields in <aside>
+.aside-contact-fieldset-styles {
+  border: none;
+  padding: 0;
+}
+
+// applied to all <sections> in <aside>
+.all-aside-sections {
+  width: 250px;
+}
+
+// <li> tag in nav section of <aside>
+.aside-nav-list-item {
+  list-style-type: none;
+}
+
+// hide the Google font on all <h3> tags in the <aside> before page load
 .wf-loading .aside-section-header {
   @include fonts($srf, hidden);
 }
 
-// Apply the Google font to all <h3> tags in the <aside> after page load
+// apply the Google font to all <h3> tags in the <aside> after page load
 .wf-active .aside-section-header {
   @include fonts($robo, visible);
   font-size: 23px;
@@ -495,6 +498,7 @@ p code, li code {
   padding:16px 10px 4px 0;
 }
 
+// <li> tag wrapping kaidez social network links in <aside>
 .kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
