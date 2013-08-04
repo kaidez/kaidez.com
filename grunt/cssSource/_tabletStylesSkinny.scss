@@ -23,35 +23,13 @@
     @include read-post-link($master-border-radius);
   }
 
-  
-   // ===================
-   // Header styles start
-   // ===================
-   
-  
-  // Shared class for nav and searchbox elements
-  .header-element-margin {
-    @include header-element-margin-tablet  
-  }
+  // ==========================================================================
+  // Header styles start
+  // ==========================================================================
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
     @include homepage-link(65px, 209px);
-  }
-
-  // the inner wrapper for the <header>
-  .inner-wrapper-nav-header {
-    padding: 8px 15px 15px 15px;
-  }
-
-  // searchbox
-  .searchbox-style {
-    padding: 19px 0 0 0;
-  }
-
-  // <h2> tag...the 'closing tags...wrapping functions text'
-  .site-description {
-    @include hide-element;
   }
 
   // <header> tag
@@ -59,14 +37,30 @@
     margin-bottom: 37px;
   }
 
+  // styling for the logo link...unique to tablet view
   .site-title {
     margin: 0 auto;
     float: none;
   }
 
-   // =================
-   // Header styles end
-   // =================
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    padding: 8px 15px 15px 15px;
+  }
+
+  // <h2> tag...the 'closing tags...wrapping functions text'
+  .site-description {
+    @include hide-element;
+  }
+
+  // Shared class for nav and searchbox elements
+  .header-element-margin {
+    @include header-element-margin-tablet  
+  }
+
+  // ==========================================================================
+  // Header styles start
+  // ==========================================================================
    
 
 
@@ -131,6 +125,11 @@
     display: block;
   }
 
+  // styles the main searchbox
+  .searchbox-style {
+    padding: 19px 0 0 0;
+  }
+
   // Search box
   #tipue_search_input{
     font: 13px/1.5 'open sans', $srf;
@@ -173,13 +172,14 @@
   // Search styles end
   // =========================================================================
 
-
- 
- // ===========================================================================
- // Page content styles start
- // ===========================================================================
  
 
+
+
+  // ==========================================================================
+  // Page content styles start
+  // ==========================================================================
+ 
   // Styles for post and category <h1> tags
   .wf-active h1.post-title, .wf-active h1.category-title  {
     @include post-category-title(40px);
@@ -206,13 +206,12 @@
     @include breadcrumb-separator(10px);
   }
 
-  // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
-  
-.breadcrumb-last {
+  // make sure the breadcrumb is visible since it's being hidden by the
+  // mobileFirst styles...over-ride it.
+  .breadcrumb-last {
     display:inline;
   }
 
- 
   // ==========================================================================
   // Page content styles end
   // ==========================================================================
@@ -222,10 +221,10 @@
 
  
   // ==========================================================================
-  // Footer styles start
+  // Aside styles start
   // ==========================================================================
   
-  // apply background image to the footer
+  // apply background image to the <aside>
   .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
   }
@@ -234,27 +233,14 @@
   .aside-section-header {
     @include aside-section-header;
   }
-
+  
+  // empty as of now in '_base.scss'..can it be deleted
   .contact-form-field {
     @include contact-form-field;
   }
 
-  .footer-column {
-    width: 300px;
-  }
-
-  .footer-column-one-class {
-    margin: 0 auto;
-    float: none;
-  }
-
-  .footer-column-two-class {
-    margin: 0 auto;
-    float: none;
-  }
-
   // ==========================================================================
-  // Footer styles end
+  // Aside styles end
   // ==========================================================================
   
 }

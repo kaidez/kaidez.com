@@ -1,11 +1,11 @@
 
-//  =====================
+//  ===========================================================================
 //  Desktop styles start:
 // 
-//  These should appear on desktop browsers. They are sorta/kinda set up in a 
-//  way that they require a respectable amount of bandwidth to render when
-//  compared to the "mobile first" styles.
-//  =====================
+//  These should appear on desktop browsers. Expect that this set of styles
+//  will take more bandwith to render when compared to the others, especially //  the mobile ones.
+//  ===========================================================================
+
 
 
 
@@ -172,41 +172,37 @@
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
-// =========================================================================
-//  Search styles start
-//  ========================================================================
+  // =========================================================================
+  //  Search styles start
+  //  ========================================================================
 
 
 
 
 
-// =========================================================================
-// Page content styles start
-// =========================================================================
+  // =========================================================================
+  // Page content styles start
+  // =========================================================================
 
- // header font-size on search results page
-.tipue_search_content_title {
-  font-size: 32px;
-}
+  // header font-size on search results page
+  .tipue_search_content_title {
+    font-size: 32px;
+  }
   
-// Styles for post and category <h1> tags
-.wf-active h1.post-title, .wf-active h1.category-title  {
-  @include post-category-title(40px, 56px 0 11px);
-}
-
-.post-subheading {
-  @include content-h2(27px);
-}
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
+    @include post-category-title(40px, 56px 0 11px);
+  }
 
   // title tag for post snippets
-.post-snippet-title {
-  font-size: 34px;
-}
+  .post-snippet-title {
+    font-size: 34px;
+  }
 
-.page-content {
-  @include page-content($inner-content-width);
-  @include create-box-shadow(8px);
-}
+  .page-content {
+    @include page-content($inner-content-width);
+    @include create-box-shadow(8px);
+  }
   
   // breadcrumbs
   .breadcrumb-styles {
@@ -232,7 +228,7 @@
 
   // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
   
-.breadcrumb-last {
+  .breadcrumb-last {
     display:inline;
   }
 
@@ -251,10 +247,15 @@
   .post-image-caption {
     font-style: italic;
   }
-  // =========================================================================
-  //  Page content styles start
-  //  ======================================================================== 
 
+  // Font styles for tablets & desktops. Google font doesn't load on mobile.
+  .share-post-link {
+    @include share-post-link;
+  }
+
+  // =========================================================================
+  //  Page content styles end
+  //  ======================================================================== 
 
 
 
@@ -267,27 +268,29 @@
     @include page-content($inner-content-width);
   }
 
-// =========================================================================
-//  Home page pagination styles end
-//  ========================================================================
+  // =========================================================================
+  //  Home page pagination styles end
+  //  ========================================================================
 
 
-// =========================================================================
-//  Aside styles start
-//  ========================================================================
 
 
-// the inner wrapper for the <header>. Width is set to 900px.
-.aside-inner-wrapper-class {
-  width: 1000px;
-  margin: 0 auto 53px;
-}
+
+  // =========================================================================
+  //  Aside styles start
+  //  ========================================================================
+
+  // the inner wrapper for the <header>. Width is set to 900px.
+  .aside-inner-wrapper-class {
+    width: 1000px;
+    margin: 0 auto 53px;
+  }
   
-// apply background image to the footer
-.aside-outer-wrapper-class {
-  background: $aside-color url('../img/footer-bg.png') no-repeat left;
-  padding: 35px 10px;
-}
+  // apply background image to the footer
+  .aside-outer-wrapper-class {
+    background: $aside-color url('../img/footer-bg.png') no-repeat left;
+    padding: 35px 10px;
+  }
   
 .aside-section-header {
   @include aside-section-header;
@@ -304,31 +307,26 @@
   padding-left:0;
 }
 
-// the <aside> nav links
-.aside-nav-link {
-  @include aside-nav-link;
-  @include transitions(all);
-}
+  // the <aside> nav links
+  .aside-nav-link {
+    @include aside-nav-link;
+    @include transitions(all);
+  }
 
-.aside-nav-link:hover {
-  background-color: $darken-the-aside-color;
-  padding-left: 5px;
-  color: #fff;
-}
+  .aside-nav-link:hover {
+    background-color: $darken-the-aside-color;
+    padding-left: 5px;
+    color: #fff;
+  }
 
-.contact-form-field {
-  @include contact-form-field;
-}
+  .contact-form-field {
+    @include contact-form-field;
+  }
 
-// add left/right margin to the middle column so footer columns are evenly spaced on desktop view
-.mid-aside-margin {
-  margin:0 125px
-}
-
-// Font styles for tablets & desktops. Google font doesn't load on mobile.
-.share-post-link {
-  @include share-post-link;
-}
+  // add left/right margin to the middle column so footer columns are evenly // spaced on desktop view
+  .mid-aside-margin {
+    margin:0 125px
+  }
 
   // =========================================================================
   //  Aside styles end

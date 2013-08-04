@@ -1,5 +1,4 @@
 @media only screen and (min-width: 729px) and (max-width:1024px) {
-
   
    // =========================================================================
    // Start "all-around" styles that should affect the entire page and not one 
@@ -11,7 +10,6 @@
   
    // Handhelds and tablets get the helvetica-type Google font. Too many fonts 
    // applied to handhelds will slow down their page load.
-   
   body {
     @include fonts($lato);
   }
@@ -73,20 +71,17 @@
      @include homepage-link(63px, 211px);
    }
   
+  // =========================================================================
+  // Header styles end
+  // =========================================================================
+   
+
+
+
   
-   // =========================================================================
-   // Header styles end
-   // =========================================================================
-   
-
-
-
-
-
-   
-    // ========================================================================
-    // Navigation styles start
-    // ========================================================================
+  // ========================================================================
+  // Navigation styles start
+  // ========================================================================
     
 
   // <nav> tag
@@ -124,9 +119,9 @@
   }
 
   
-   // =========================================================================
-   // Navigation styles end
-   // =========================================================================
+  // =========================================================================
+  // Navigation styles end
+  // =========================================================================
    
 
   // the "Read post" link on the home, category and search pages
@@ -187,21 +182,12 @@
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
-  // Search box-related styles end
-
-  //Font styles for tablets & desktops. Google font doesn't load on mobile.
-  .share-post-link {
-    @include share-post-link;
-  }
-
-
 
   
-   // =========================================================================
-   // Page content styles start
-   // =========================================================================
+  // =========================================================================
+  // Page content styles start
+  // =========================================================================
    
-
   // title tag for post snippets
   .post-snippet-title {
     font-size: 34px;
@@ -232,12 +218,16 @@
     @include related-posts-header(17px);
   }
 
+  //Font styles for tablets & desktops. Google font doesn't load on mobile.
+  .share-post-link {
+    @include share-post-link;
+  }
+
   // =========================================================================
   // Aside styles start
   // =========================================================================
    
   // apply background image to the footer
-
   .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
   }

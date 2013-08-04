@@ -124,7 +124,7 @@ p code, li code {
   background-color: $header-color;
 }
 
-// <h2> tag...the "closing tags...wrapping functions" text
+// <h2> tag...hides the "closing tags...wrapping functions" text
 .site-description {
   clear: both;
 }
@@ -344,7 +344,8 @@ p code, li code {
 //   text-decoration: underline;
 // }
 
-// All text links (except for post meta info) are blue but have no underline.
+// title tag for post snippets All text links (except for post meta info) are
+// blue but have no underline.
 .post-snippet-link:link, .post-snippet-link:visited { 
   color: darken($post-link-color, 4);
   text-decoration: none;
