@@ -131,23 +131,18 @@ $bg-size: 350px 210px;
   text-align: center;
 }
 
-// All of the main page elements need a padding of 10px
-@mixin allElementPadding {
-  padding: 10px;
-}
-
-// Certain elements need this to ensure 100% height
+// Certain elements need this to ensure 100% height. Used in the
+//'page-content' mixin below.
 @mixin full-height {
   position: relative;
   height: auto;
   min-height: 100%;
 }
  
-// When possible, A better way accessibilty-wise to hidepage elements than display:none or negative text indents.
+// When possible, A better way accessibilty-wise to hidepage elements than // display:none or negative text indents.
 
 // Read more over at Yahoo! Accessibilty Blog: 
 // http://yaccessibilityblog.com/library/css-clip-hidden-content.html
-
 @mixin hide-element {
   position:absolute;
   clip:rect(1px 1px 1px 1px);
@@ -171,18 +166,18 @@ $bg-size: 350px 210px;
   padding: 8px $side-padding;
 }
 
-  @mixin breadcrumb-separator($side-padding, $font-size: blank) {
-    padding:0 $side-padding;
-    @if $font-size != blank {
-      font-size: $font-size;
-    }
+// style breadcrumb separator
+@mixin breadcrumb-separator($side-padding, $font-size: blank) {
+  padding:0 $side-padding;
+  @if $font-size != blank {
+     font-size: $font-size;
   }
+}
 
 // Define width for the <header>, <main> and <footer> elements by applying
 // this mixin to a class that's applied to the element. The '$dimension'
 // variable defines the width value and the values are determined by the
 // "Width variables" directly below the mixin.
-
 @mixin page-content($dimension) {
   max-width: $dimension;
   margin: 0 auto;
@@ -195,12 +190,15 @@ $bg-size: 350px 210px;
   text-align: left;
 }
 
+// Applies properties to sprite layouts...used in '_retinaMediaQuery.scss'
 @mixin sprite-images ($img, $position, $height, $width) {
   background: url($img) no-repeat $position;
   background-size: $bg-size;
   height: $height;
   width: $width;
 }
+
+// All transitions 'ease in' in 0.3 seconds
 @mixin transitions ($property) {
   -webkit-transition: $property .3s ease;
   -moz-transition: $property .3s ease;
@@ -208,12 +206,19 @@ $bg-size: 350px 210px;
   transition: $property .3s ease;
 }
 
- // Unique styles for the 'site-title' class in the desktop styles...add this to sprite mixin code.
+ // Unique styles for the 'site-title' class in the desktop styles...add this // to sprite mixin code.
 @mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
   text-indent: -999px;
   display: block;
+}
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+@mixin outer-wrapper-nav-header {
+  width: auto;
+  padding: 15px 45px 0;
+  margin: 0 auto;
 }
 
 // <ul> container for the main nav  
@@ -312,14 +317,36 @@ $bg-size: 350px 210px;
 
 // Add box-shadow to the site's content element (i.e.: ".page-content")
 @mixin create-box-shadow ($y-axis) {
-    -webkit-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
-    -moz-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
-    box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+  box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
 }
 
+// Applies a text shadow 
+@mixin makeTextShadow($base-color) {
+  color: darken($base-color, 27);
+  text-shadow: 0px 2px 3px lighten($base-color, 9);
+}
+
+// Applies a text shadow and dotted border to the footer section's title
+@mixin aside-section-header {
+  @include makeTextShadow($aside-color);
+}
+
+// Styles the link in the <aside> "LINKS" section
+@mixin aside-nav-link {
+  list-style-type: none;
+  margin: 0;
+  padding:5px 5px 5px 0;
+  height: 25px;
+  font-size: 18px;
+  display: block;
+  color: $header-color;
+  text-decoration: none;
+}
 
 // ============================================================================
-// Pagination mixins
+// Pagination mixins start
 
 // These mixins are styles that are for the most part, copied from the 
 // pagination styles that are part of the Tipue search plugin. For clarity 
@@ -373,44 +400,11 @@ $bg-size: 350px 210px;
   text-align: center;
 }
 
-// Applies a text shadow 
-@mixin makeTextShadow($base-color) {
-  color: darken($base-color, 27);
-  text-shadow: 0px 2px 3px lighten($base-color, 9);
-}
+// ============================================================================
+// Pagination mixins end
+// ============================================================================
 
-// Applies a text shadow and dotted border to the footer section's title
-@mixin aside-section-header {
-  @include makeTextShadow($aside-color);
-}
-
-@mixin aside-nav-link {
-  list-style-type: none;
-  margin: 0;
-  padding:5px 5px 5px 0;
-  height: 25px;
-  font-size: 18px;
-  display: block;
-  color: $header-color;
-  text-decoration: none;
-}
-
-@mixin footer-column-margins($margin-pos, $margin) {
-  $margin-pos: $margin;
-}
 
 // ============
 //  Mix-ins end
 // ============
-
-
-
-
-
-
-// outer wrapper for the <header> which wraps the link, nav & search elements
-@mixin outer-wrapper-nav-header {
-  width: auto;
-  padding: 15px 45px 0;
-  margin: 0 auto;
-}
