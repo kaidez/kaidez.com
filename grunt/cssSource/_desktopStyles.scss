@@ -12,6 +12,7 @@
 
  @media only screen and (min-width: 1025px) {
 
+// <body> tag
   body {
     @include fonts($lato);
   }
@@ -86,7 +87,7 @@
      @include nav-search-style;
   }
 
-  // <ul> tag
+  // <ul> for main nav
   .site-navigation-list-styles {
     @include show-menu;
     margin: 11px auto 0 auto;
@@ -114,8 +115,9 @@
   // =========================================================================
   //  Search styles start
   //  ========================================================================
-
-  .form {
+  
+  // add a box-radius to the main search form on the desktop view only
+  .searchform-class {
     -webkit-border-radius: $master-border-radius;
     -moz-border-radius: $master-border-radius;
     border-radius: $master-border-radius;
@@ -131,7 +133,8 @@
   .searchbox-style {
     text-align: left;
   }
-
+  
+  // jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
   #tipue_search_input {
     font: 13px/1.5 'open sans', sans-serif;
     color: #333;

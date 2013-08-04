@@ -84,16 +84,20 @@
   display: none;
 }
 
+// style the main searchbox
 .searchbox-style {
   @include master-center;
   padding:15px 0;
   position: static;
 }
 
-.searchfield-style {
+// widen the searchbox a little on handheld devicwes
+.searchfield-style { 
   width: 260px;
 }
 
+// jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/)
+// Set to appear on browsers with JavaScript turned on.
 .tipue_search_content_title {
   font-size: 32px;
 }
@@ -109,14 +113,14 @@
 // Page content styles start
 // ===========================================================================
 
-// Styles for post and category <h1> tags
+// styles for post and category <h1> tags
 .wf-active h1.post-title, .wf-active h1.category-title  {
   @include post-category-title(24px);
   margin:0;
   line-height: 1.3;
 }
 
-// For the main element
+// style the <main> element
 .page-content {
   max-width: $mobile-portrait-width;
   margin: 0 auto;
@@ -129,9 +133,14 @@
   text-align: left;
 }
 
-// breadcrumbs
+// breadcrumb container
 .breadcrumb-styles {
   @include breadcrumb-styles(14px, 19px);
+}
+
+// the breadcrumb-separator
+.breadcrumb-separator {
+  @include breadcrumb-separator(2px, 14px);
 }
   
 // breadcrumb link
@@ -147,12 +156,8 @@
   color: darken($header-color, 20);
 }
 
-// the breadcrumb-separator
-.breadcrumb-separator {
-  @include breadcrumb-separator(2px, 14px);
-}
-
-// hide the page title value and &raqou; with this class on single post page's // breadcrumb.
+// on handhelds, hide the page title value and &raqou; with this class on 
+// single post page's breadcrumb.
 .breadcrumb-last {
   display:none
 }
@@ -162,20 +167,23 @@ a.read-post-link {
   @include read-post-link($master-border-radius);
 }
 
-// <h1> title on the category page...hides the 'Roboto' font on load. These styles will also be applied to the '_mobileLandscape' view.
+// <h1> title on the category page...hides the 'Roboto' font on load. These 
+// styles will also be applied to the '_mobileLandscape' view.
 .wf-loading .category-header,
 .wf-inactive .category-header {
   @include fonts($srf, hidden);
 }
 
-// <h1> title on the category page...loads the 'Roboto'. These styles will also be applied to the '_mobileLandscape' view.
+// <h1> title on the category page...loads the 'Roboto'. These styles will 
+// also be applied to the '_mobileLandscape' view.
 .wf-active .category-header {
   @include fonts($robo, visible);
   font-size: 1.5rem;
   margin-top: 0;
 }
 
-// <h1> title on the category page.These styles will also be applied to the '_mobileLandscape' view.
+// <h1> title on the category page.These styles will also be applied to the 
+// '_mobileLandscape' view.
 .category-description-page {
   padding:12px;
   margin-bottom: 35px;
@@ -193,7 +201,7 @@ a.read-post-link {
 // Home page pagination styles start
 // ===========================================================================
 
-// Unordered lists
+// Unordered list in the homepage pagination
 .pages {
   @include pagUL
 }
