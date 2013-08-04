@@ -460,7 +460,13 @@ p code, li code {
   @include fonts($robo, visible);
   font-size: 23px;
   border-bottom: 1px solid #01070A;
-  margin: 0;
+  margin-bottom: 16px;
+}
+
+// the <ul> container for the <aside> nav links
+.aside-nav-class {
+  padding-left: 0;
+  margin-top: 7px;
 }
 
 // applied to all <sections> in <aside>
@@ -471,12 +477,7 @@ p code, li code {
 // Style related to a picture of me in <aside>
 .author-image-class {
   float: left;
-  padding:16px 10px 4px 0;
-}
-
-// padding for the <h3> tag for ad section in the <aside> tag
-.ad-title-margin {
-  margin-bottom: 16px;
+  padding:0 10px 4px 0;
 }
 
 // <li> tag in nav section of <aside>
