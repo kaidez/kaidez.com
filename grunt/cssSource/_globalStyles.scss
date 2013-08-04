@@ -346,14 +346,17 @@ p code, li code {
 
 // title tag for post snippets All text links (except for post meta info) are
 // blue but have no underline.
-.post-snippet-link:link, .post-snippet-link:visited { 
+.post-snippet-link:link,
+.post-snippet-link:visited { 
   color: darken($post-link-color, 4);
   text-decoration: none;
   @include transitions (color);
 }
 
-// All text links have an underline on hover.
-.post-snippet-link:hover {  
+// what happens if you rollover the post snippet titels...hover is 
+// for desktop views and (maybe) iPads, focus is for everything else.
+.post-snippet-link:hover,
+.post-snippet-link:focus {  
   color: lighten($post-link-color, 15);
   text-decoration: underline;
 }
@@ -503,17 +506,27 @@ p code, li code {
 
 // link styling for kaidez social networking links
 .kaidez-social-sharing-list-item-link {
-  color: #000;
+  color: $header-color;
   text-decoration: none;
+  @include transitions (color);
 }
 
-[class^=icon-], [class*=" icon-"] {
-  float: left;
+// what happens if you rollover the kaidez social networking links...hover is 
+// for desktop views and (maybe) iPads, focus is for everything else.
+.kaidez-social-sharing-list-item-link:hover,
+.kaidez-social-sharing-list-item-link:focus {
+  color: $darken-the-aside-color;
 }
 
 // copy inside the <span> tag inside the kaidez social netwoek links
 .kaidez-social-sharing-list-item-link-text {
   display: block;
+  float: left;
+  padding: 21px 9px;
+}
+
+// float: left the Font Awesome fonts in the <aside>
+[class^=icon-], [class*=" icon-"] {
   float: left;
 }
 
