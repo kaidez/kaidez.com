@@ -2,8 +2,8 @@
 //  ===========================================================================
 //  Desktop styles start:
 // 
-//  These should appear on desktop browsers. Expect that this set of styles
-//  will take more bandwith to render when compared to the others, especially //  the mobile ones.
+//  These should appear on desktop browsers. Expect this set of styles to
+//  require more bandwith to render when compared to the others, especially //  the mobile ones.
 //  ===========================================================================
 
 
@@ -38,6 +38,11 @@
     @include homepage-link(65px, 209px);
   }
 
+  // <header> tag
+  .site-header {
+    @include site-header;
+  }
+
   // the inner wrapper for the <header>
   .inner-wrapper-nav-header {
     @include inner-wrapper-nav-header;
@@ -47,16 +52,6 @@
   .outer-wrapper-nav-header {
     @include outer-wrapper-nav-header;
     min-height: 130px;
-  }
-
-  // searchbox
-  .searchbox-style {
-    text-align: left;
-  }
-
-  // <header> tag
-  .site-header {
-    @include site-header;
   }
 
   // <h2> tag...the "closing tags...wrapping functions" text
@@ -132,6 +127,11 @@
     display: block;
   }
 
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+  }
+
   #tipue_search_input {
     font: 13px/1.5 'open sans', sans-serif;
     color: #333;
@@ -173,7 +173,7 @@
   }
 
   // =========================================================================
-  //  Search styles start
+  //  Search styles end
   //  ========================================================================
 
 
@@ -227,7 +227,6 @@
   }
 
   // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
-  
   .breadcrumb-last {
     display:inline;
   }
@@ -248,7 +247,7 @@
     font-style: italic;
   }
 
-  // Font styles for tablets & desktops. Google font doesn't load on mobile.
+  // link styling for the 'share link' area of the post pages
   .share-post-link {
     @include share-post-link;
   }
@@ -260,59 +259,45 @@
 
 
 
-  // =========================================================================
-  //  Home page pagination styles start
-  //  ========================================================================
-
-  .control-section-width {
-    @include page-content($inner-content-width);
-  }
-
-  // =========================================================================
-  //  Home page pagination styles end
-  //  ========================================================================
-
-
-
-
 
   // =========================================================================
   //  Aside styles start
   //  ========================================================================
 
-  // the inner wrapper for the <header>. Width is set to 900px.
+  // the inner wrapper for the <aside>
   .aside-inner-wrapper-class {
     width: 1000px;
     margin: 0 auto 53px;
   }
   
-  // apply background image to the footer
+  // apply background image to <aside>
   .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
     padding: 35px 10px;
   }
   
-.aside-section-header {
-  @include aside-section-header;
-  width: 250px;
-}
+  .aside-section-header {
+    @include aside-section-header;
+    width: 250px;
+  }
 
-.aside-column-class {
-  width: 250px;
-  float: left;
-}
+  .aside-column-class {
+    width: 250px;
+    float: left;
+  }
 
-// the UL container for the <aside> nav links
-.aside-nav-class {
-  padding-left:0;
-}
+  // the <ul> container for the <aside> nav links
+  .aside-nav-class {
+    padding-left:0;
+  }
 
   // the <aside> nav links
   .aside-nav-link {
     @include aside-nav-link;
     @include transitions(all);
   }
-
+  
+   // hover state for the <aside> nav links
   .aside-nav-link:hover {
     background-color: $darken-the-aside-color;
     padding-left: 5px;
@@ -323,7 +308,8 @@
     @include contact-form-field;
   }
 
-  // add left/right margin to the middle column so footer columns are evenly // spaced on desktop view
+  // add left/right margin to the middle column so aside columns are evenly
+  // spaced on desktop view
   .mid-aside-margin {
     margin:0 125px
   }

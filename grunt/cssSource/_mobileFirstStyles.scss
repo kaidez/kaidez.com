@@ -14,6 +14,7 @@
 
 
 
+
 // ============================================================================
 // Header styles start
 // ============================================================================
@@ -28,7 +29,6 @@
 // Logo link :provides a large enough space for a click area. These styles
 // will also be applied to the '_mobileLandscape' view.
 // ============================================================================
-
 .homepage-link {
   @include homepage-link(44px, 166px);
 }
@@ -188,6 +188,7 @@ a.read-post-link {
 
 
 
+
 // ===========================================================================
 // Home page pagination styles start
 // ===========================================================================
@@ -215,12 +216,13 @@ a.pagination-link {
 
 
 
+
 // ===========================================================================
-// Footer styles start...These styles will also be applied to the
+// Aside styles start...These styles will also be applied to the
 // '_mobileLandscape' view.
 // ===========================================================================
 
-.aside-contact-fields  {
+.aside-contact-fields {
   width:152px;
 }
 
@@ -238,6 +240,6 @@ a.pagination-link {
 }
 
 // ===========================================================================
-// Footer styles end
+// Aside styles end
 // ===========================================================================
 

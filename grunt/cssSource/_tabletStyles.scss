@@ -29,6 +29,16 @@
   .wf-active h6 {
     @include fonts($robo, visible);
   }
+  
+  // Logo link
+  .homepage-link {
+    @include homepage-link(63px, 211px);
+  }
+
+  // <header> tag
+  .site-header {
+    @include site-header;
+  }
 
   // Shared class for nav and searchbox elements
   .header-element-margin {
@@ -46,12 +56,6 @@
     min-height: 130px;
   }
 
-  // styles the main searchbox
-  .searchbox-style {
-    text-align: left;
-    padding:40px 0 0 0;
-  }
-
   // <h2> tag...the "closing tags...wrapping functions" copy
   .site-description {
     display: block;
@@ -61,15 +65,6 @@
     width: 270px;
     line-height: 2.5;
   }
-
-  // <header> tag
-  .site-header {
-    @include site-header;
-  }
-
-  .homepage-link {
-     @include homepage-link(63px, 211px);
-   }
   
   // =========================================================================
   // Header styles end
@@ -100,6 +95,7 @@
      @include nav-search-style;
      margin-top: 18px;
   }
+
   // <ul> tag
   .site-navigation-list-styles {
     @include site-navigation-list(block);
@@ -135,7 +131,13 @@
     display: block;
   }
 
-  // Search box
+  // styles the main searchbox
+  .searchbox-style {
+    text-align: left;
+    padding:40px 0 0 0;
+  }
+
+  // Search box styles related to the Tipue jQuery plugin
   #tipue_search_input{
     font: 13px/1.5 'open sans', $srf;
     color: #333;
@@ -185,24 +187,19 @@
   // Page content styles start
   // =========================================================================
 
-  // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
-
   // Post snippet that displays on both the home page and search results.
   .post-snippet-title {
     font-size: 27px;
   }
 
+  // the "Read post" link on the home, category and search pages
+  a.read-post-link {
+    @include read-post-link($master-border-radius);
+  }
+
   // Styles for post and category <h1> tags
   .wf-active h1.post-title, .wf-active h1.category-title  {
     @include post-category-title(40px, 31px 0 6px);
-  }
-   
-  // title tag for post snippets
-  .post-snippet-title {
-    font-size: 34px;
   }
 
   // For the main element
