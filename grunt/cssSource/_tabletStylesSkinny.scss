@@ -5,7 +5,7 @@
    // will slow down their page load.
    
   body {
-    @include fonts($helv);
+    @include fonts($lato);
   }
 
   // apply the Google font to all <header> tags  
@@ -176,7 +176,7 @@
   .share-post-link {
     font-size:16px;
     line-height: 1;
-    @include fonts($helv);
+    @include fonts($lato);
   }
 
   

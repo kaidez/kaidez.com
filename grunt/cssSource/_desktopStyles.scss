@@ -13,7 +13,7 @@
  @media only screen and (min-width: 1025px) {
 
   body {
-    @include fonts($helv);
+    @include fonts($lato);
   }
 
   .clearfix:before,
@@ -29,12 +29,9 @@
    
 
 
-
-
   // =========================================================================
   //  Header styles start
   //  ========================================================================
-
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
@@ -89,6 +86,7 @@
     @include main-navigation;
   }
 
+  // wrapper for the <nav> and searchbox tag
   .nav-search-style {
      @include nav-search-style;
   }
@@ -331,7 +329,7 @@
 .share-post-link {
   font-size:16px;
   line-height: 1;
-  @include fonts($helv);
+  @include fonts($lato);
 }
 
   // =========================================================================

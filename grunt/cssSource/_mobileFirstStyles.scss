@@ -162,12 +162,6 @@ a.read-post-link {
   @include read-post-link($master-border-radius);
 }
 
-.related-posts-link {
-  line-height: 1.4;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
 // <h1> title on the category page...hides the 'Roboto' font on load. These styles will also be applied to the '_mobileLandscape' view.
 .wf-loading .category-header,
 .wf-inactive .category-header {

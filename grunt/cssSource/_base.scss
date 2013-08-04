@@ -43,7 +43,7 @@ $darken-the-aside-color: darken($aside-color, 25);
 
 
 // Font variables
-$helv: "Lato"; // Google Font
+$lato: "Lato"; // Google Font
 $robo: "Roboto Condensed"; // A Google Font
 $srf: serif;
 
@@ -299,7 +299,7 @@ $bg-size: 350px 210px;
 
 // link styles
 @mixin link-styles($margin-right, $font-size, $padding, $base-color) {
-  @include fonts($helv);
+  @include fonts($lato);
   margin-right: $margin-right; 
   font-size: $font-size;
   padding: $padding;
