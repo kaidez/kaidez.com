@@ -66,10 +66,10 @@ p code, li code {
   margin: 0 2px 0;
 }
 
-// picture that appears in posts
-.post-pic {
-  float: left;
-  padding: 0 10px 10px 0;
+// Wraps all the page content, <header>, <nav>, <footer>, etc.
+.containing-element {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 // ===========================================================================
@@ -114,14 +114,14 @@ p code, li code {
   @include hide-element;
 }
 
-// outer wrapper for the <header> which wraps the link, nav & search elements
-.outer-wrapper-nav-header {
-  background-color: $header-color;
-}
-
 // <header> tag
 .site-header {
   text-align: left;
+}
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+.outer-wrapper-nav-header {
+  background-color: $header-color;
 }
 
 // <h2> tag...the "closing tags...wrapping functions" text
@@ -357,12 +357,6 @@ p code, li code {
   text-decoration: underline;
 }
 
-// Wraps all the page content, <header>, <nav>, <footer>, etc.
-.containing-element {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 // Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
@@ -376,6 +370,12 @@ p code, li code {
 .post-snippet {
   @include bottomBorder($darken-the-aside-color);
   padding-bottom: 48px;
+}
+
+// picture that appears in posts
+.post-pic {
+  float: left;
+  padding: 0 10px 10px 0;
 }
 
 // Related posts
@@ -402,14 +402,6 @@ p code, li code {
   list-style: none;
 }
 
-// <ul> that contains the social networking links in the <aside>
-.kaidez-social-network-list-styles {
-  padding: 0;
-  margin:16px auto 0;
-  text-align: center;
-  width: 287px;
-}
-
 // <li> tag for the above-mentioned <ul>
 .social-sharing-list-item {
   list-style-type: none;
@@ -418,11 +410,15 @@ p code, li code {
   margin-bottom: 15px;
 }
 
-.social-network-list-post-class {
+// <ul> that contains the kaidez social networking links in the <aside>
+.kaidez-social-network-list-styles {
   padding: 0;
+  margin:16px auto 0;
+  text-align: center;
   width: 287px;
 }
 
+// link styling for kaidez social networking links
 .kaidez-social-sharing-list-item-link {
   height: 56px;
   width: 56px;
@@ -430,14 +426,17 @@ p code, li code {
   text-indent: -9999px;
 }
 
+.social-network-list-post-class {
+  padding: 0;
+  width: 287px;
+}
+
 // ===========================================================================
 // Page content styles end
 // ===========================================================================
 
-.aside-inner-wrapper-class {
-  display:table;
-  margin: 0 auto;
-}
+
+
 
 
 // ===========================================================================
@@ -452,6 +451,12 @@ p code, li code {
   padding:1px 10px;
   background: $aside-color;
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
+}
+
+// inner wrapper for <aside>...better contains all the elements/columns
+.aside-inner-wrapper-class {
+  display:table;
+  margin: 0 auto;
 }
 
 // hide the Google font on all <h3> tags in the <aside> before page load
