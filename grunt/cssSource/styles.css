@@ -437,7 +437,7 @@ p code, li code {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6 {
-  font-family: serif;
+  font-family: sans-serif;
   visibility: visible;
 }
 
@@ -478,7 +478,7 @@ p code, li code {
 }
 
 .wf-loading .site-navigation-list-link {
-  font-family: serif;
+  font-family: sans-serif;
   visibility: visible;
   font-size: 20px;
 }
@@ -511,7 +511,7 @@ p code, li code {
 }
 
 #tipue_search_input {
-  font: 13px/1.5 "open sans", serif;
+  font: 13px/1.5 "open sans", sans-serif;
   font-style: italic;
   color: #333;
   padding: 7px;
@@ -612,7 +612,7 @@ p code, li code {
 
 .wf-loading .search-result-font,
 .wf-inactive .search-result-font {
-  font-family: serif;
+  font-family: sans-serif;
   visibility: visible;
 }
 
@@ -627,13 +627,13 @@ p code, li code {
 }
 
 #tipue_search_warning_head {
-  font: 14px/1.5 "open sans", serif;
+  font: 14px/1.5 "open sans", sans-serif;
   color: #333;
   text-align: center;
 }
 
 #tipue_search_warning {
-  font: 300 14px/1.5 serif;
+  font: 300 14px/1.5 sans-serif;
   color: #111;
   margin: 13px 0;
 }
@@ -686,12 +686,6 @@ p code, li code {
   padding: 0 10px 10px 0;
 }
 
-.related-posts-header {
-  font-size: 20px;
-  margin: 0px auto;
-  text-align: center;
-}
-
 .related-posts-style {
   font-size: 20px;
   margin: 0px auto;
@@ -699,6 +693,12 @@ p code, li code {
   padding: 10px;
   background-color: #E1F5F6;
   clear: both;
+}
+
+.related-posts-header {
+  font-size: 20px;
+  margin: 0px auto;
+  text-align: center;
 }
 
 .related-posts-list-item {
@@ -709,6 +709,11 @@ p code, li code {
   list-style: none;
 }
 
+.social-sharing-list-post-class {
+  padding: 0;
+  width: 287px;
+}
+
 .social-sharing-list-item {
   list-style-type: none;
   padding-right: 10px;
@@ -716,23 +721,10 @@ p code, li code {
   margin-bottom: 15px;
 }
 
-.kaidez-social-network-list-styles {
-  padding: 0;
-  margin: 16px auto 0;
-  text-align: center;
-  width: 287px;
-}
-
-.kaidez-social-sharing-list-item-link {
-  height: 56px;
-  width: 56px;
-  display: block;
-  text-indent: -9999px;
-}
-
-.social-network-list-post-class {
-  padding: 0;
-  width: 287px;
+.share-post-link {
+  font-size: 16px;
+  line-height: 1;
+  font-family: sans-serif;
 }
 
 .aside-outer-wrapper-class {
@@ -750,7 +742,7 @@ p code, li code {
 }
 
 .wf-loading .aside-section-header {
-  font-family: serif;
+  font-family: sans-serif;
   visibility: visible;
 }
 
@@ -779,10 +771,24 @@ p code, li code {
   list-style-type: none;
 }
 
+.kaidez-social-network-list-styles {
+  padding: 0;
+  margin: 16px auto 0;
+  text-align: center;
+  width: 287px;
+}
+
 .kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
   margin-right: 14px;
+}
+
+.kaidez-social-sharing-list-item-link {
+  height: 56px;
+  width: 56px;
+  display: block;
+  text-indent: -9999px;
 }
 
 .aside-contact-fieldset-styles {
@@ -922,7 +928,7 @@ a.read-post-link {
 
 .wf-loading .category-header,
 .wf-inactive .category-header {
-  font-family: serif;
+  font-family: sans-serif;
   visibility: visible;
 }
 
@@ -963,11 +969,6 @@ a.pagination-link {
 
 .footer-contact-fields {
   width: 152px;
-}
-
-.share-post-link {
-  font-size: 16px;
-  line-height: 1;
 }
 
 .aside-paragraph {
@@ -1438,7 +1439,7 @@ a.pagination-link {
   }
 
   #tipue_search_input {
-    font: 13px/1.5 "open sans", serif;
+    font: 13px/1.5 "open sans", sans-serif;
     color: #333;
     padding: 7px;
     margin: 0;
@@ -1678,7 +1679,7 @@ a.pagination-link {
   }
 
   #tipue_search_input {
-    font: 13px/1.5 "open sans", serif;
+    font: 13px/1.5 "open sans", sans-serif;
     color: #333;
     padding: 7px;
     margin: 0;
@@ -1712,12 +1713,6 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px #e3e3e3;
     -webkit-box-shadow: 1px 1px 2px #e3e3e3;
     box-shadow: 1px 1px 2px #e3e3e3;
-  }
-
-  .share-post-link {
-    font-size: 16px;
-    line-height: 1;
-    font-family: "Lato";
   }
 
   .wf-active h1.post-title, .wf-active h1.category-title {
