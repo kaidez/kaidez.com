@@ -17,12 +17,15 @@
 // specfic page region section (i.e., headers, footers, etc.)
 // ===========================================================================
 
+// <body> tag
 body {
   background-color: $site-background-color;
   max-width: 100%;
+  height: 100%;
 }
 
-html, body {
+// <html> tag
+html {
   height: 100%;
 }
 
@@ -46,6 +49,7 @@ html, body {
   clear: both;
 }
 
+// <code> snippets inside of post copy
 p code, li code {
   display: inline-block;
   white-space: nowrap;
@@ -61,10 +65,11 @@ p code, li code {
   padding: 0 3px;
   margin: 0 2px 0;
 }
-  
-.post-pic {
-  float: left;
-  padding: 0 10px 10px 0;
+
+// Wraps all the page content, <header>, <nav>, <footer>, etc.
+.containing-element {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 // ===========================================================================
@@ -86,8 +91,7 @@ p code, li code {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6, {
-  font-family: $srf;
-  visibility: hidden;
+  @include fonts($srf, hidden);
 }
 
 // Apply Google 'Roboto' font to all <header> tags after page load.
@@ -97,7 +101,7 @@ p code, li code {
 .wf-active h4,
 .wf-active h5,
 .wf-active h6 {
-  @include fonts($robo);
+  @include fonts($robo, visible);
 }
 
 // Logo link...provides a large enough space for a click area
@@ -110,18 +114,14 @@ p code, li code {
   @include hide-element;
 }
 
-.top-level-header-wrapper {
-  @include top-level-header-wrapper
+// <header> tag
+.site-header {
+  text-align: left;
 }
 
 // outer wrapper for the <header> which wraps the link, nav & search elements
 .outer-wrapper-nav-header {
   background-color: $header-color;
-}
-
-// <header> tag
-.site-header {
-  text-align: left;
 }
 
 // <h2> tag...the "closing tags...wrapping functions" text
@@ -149,15 +149,14 @@ p code, li code {
 
 // Hide the Google font on all <nav> links before page load
 .wf-loading .site-navigation-list-link {
-  font-family: $srf;
-  visibility: hidden;
+  @include fonts($srf, hidden);
   font-size: 20px;
 }
 
 // Apply the Google font to all <nav> links after page load
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited { 
-  @include fonts($robo);
+  @include fonts($robo, visible);
   @include master-center;
   background-color: $aside-color;
   text-decoration: none;
@@ -190,13 +189,14 @@ p code, li code {
 
 // '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
 // browsers with JavaScript and/or CSS turned off
-
 .js #no-js-searchbox {
   @include hide-element;
 }
 
-// jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
-
+// jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on. the 'pagination' class 
+// shares some of these styles.
+//
+// Tipue styles start here.
 #tipue_search_input {
   font: 13px/1.5 'open sans', $srf;
   font-style: italic;
@@ -236,8 +236,8 @@ p code, li code {
 #tipue_search_button:hover {
   border: 1px solid #c3c3c3;
 }
+// Tipue styles start end.
 
-// Homepage pagination box & search results pagination box
 .pagination, #tipue_search_foot {
   @include pagBox
 }
@@ -281,14 +281,12 @@ p code, li code {
 // Hide the Google font on all search result links before page load
 .wf-loading .search-result-font,
 .wf-inactive .search-result-font {
-
-  @include fonts($srf);
+  @include fonts($srf, hidden);
 }
 
 // Apply the Google font to all search result links after page load
 .wf-active .search-result-font {
-  font-family: $robo;
-  visibility: visible;
+  @include fonts($robo, visible);
 }
 
 #tipue_search_content {
@@ -329,27 +327,34 @@ p code, li code {
 
 
 
- 
+
 // ===========================================================================
 // Page content styles start
 // ===========================================================================
 
+// // All text links (except for post meta info) are blue but have no underline.
+// a:link, a:visited { 
+//   color: darken($post-link-color, 4);
+//   text-decoration: none;
+// }
+
+// // All text links have an underline on hover.
+// a:hover {  
+//   color: darken($post-link-color, 1);
+//   text-decoration: underline;
+// }
+
 // All text links (except for post meta info) are blue but have no underline.
-a:link, a:visited { 
+.post-snippet-link:link, .post-snippet-link:visited { 
   color: darken($post-link-color, 4);
   text-decoration: none;
+  @include transitions (color);
 }
 
 // All text links have an underline on hover.
-a:hover {  
-  color: darken($post-link-color, 1);
+.post-snippet-link:hover {  
+  color: lighten($post-link-color, 15);
   text-decoration: underline;
-}
-
-// Wraps all the page content, <header>, <nav>, <footer>, etc.
-.containing-element {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 // Container for all unique page content: blog post copy, search results, etc.
@@ -367,70 +372,69 @@ a:hover {
   padding-bottom: 48px;
 }
 
-
-// Related posts
-#related-posts .related-posts-header {
-  @include related-posts-header(20px);
-  @include master-center;
+// picture that appears in posts
+.post-pic {
+  float: left;
+  padding: 0 10px 10px 0;
 }
 
-// Related posts styles that appear on single post pages
+// <div> that wraps related posts styles that appear on single post pages
 .related-posts-style {
+  @include related-posts-header(20px);
+  @include master-center;
   padding: 10px;
   background-color: #E1F5F6;
   clear: both
 }
 
-.social-network-list-styles {
+// <h3> for related posts
+.related-posts-header {
+  @include related-posts-header(20px);
+  @include master-center;
+}
+
+// <li> in related posts area
+.related-posts-list-item {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+  list-style: none;
+}
+
+// <ul> in the item in the "share post" posts section
+.social-sharing-list-post-class {
   padding: 0;
-  margin:0 auto;
-  text-align: center;
   width: 287px;
 }
 
-.social-network-list-item {
+// <li> tag for the above-mentioned <ul>
+.social-sharing-list-item {
   list-style-type: none;
   padding-right: 10px;
   line-height: 1;
   margin-bottom: 15px;
 }
 
-#social-network-list-post {
-  padding: 0;
-  width: 287px;
-}
-
-.kaidez-share-post-link {
-  height: 56px;
-  width: 56px;
-  display: block;
-  text-indent: -9999px;
+// link styling for the 'share link' area of the post pages
+.share-post-link {
+  @include share-post-link($srf);
 }
 
 // ===========================================================================
 // Page content styles end
 // ===========================================================================
 
-.inner-wrapper-nav-aside {
-  display:table;
-}
+
+
 
 
 // ===========================================================================
-// Footer styles start
+// Aside styles start
 // ===========================================================================
 
-//all header tags in the footer should have a black dotted bottom border
-.footer-header {
-  border-bottom: 2px dotted #01070A;
-}
-
-.footer-contact-fieldset-styles {
-  border: none;
-}
-
-// Primary footer element
-.outerWrapperNavAside {
+// <aside> tag
+.aside-outer-wrapper-class {
   color: $darken-the-aside-color;
   height: auto;
   width: auto;
@@ -439,29 +443,76 @@ a:hover {
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
-// Hide the Google font on all <h3> tags in the footer before page load
-.wf-loading .footer-header {
-  @include fonts($srf);
+// inner wrapper for <aside>...better contains all the elements/columns
+.aside-inner-wrapper-class {
+  display:table;
+  margin: 0 auto;
 }
 
-// Apply the Google font to all <h3> tags in the footer after page load
-.wf-active .footer-header {
+// hide the Google font on all <h3> tags in the <aside> before page load
+.wf-loading .aside-section-header {
+  @include fonts($srf, hidden);
+}
+
+// apply the Google font to all <h3> tags in the <aside> after page load
+.wf-active .aside-section-header {
+  @include fonts($robo, visible);
   font-size: 23px;
-  visibility: visible;
+  border-bottom: 1px solid #01070A;
+  margin: 0;
 }
 
-// Style related to a picture of me
+// applied to all <sections> in <aside>
+.all-aside-sections {
+  width: 250px;
+}
+
+// Style related to a picture of me in <aside>
 .author-image-class {
   float: left;
-  padding:0 10px 4px 0;
+  padding:16px 10px 4px 0;
 }
 
-.kaidez-social-network-list-item {
+// padding for the <h3> tag for ad section in the <aside> tag
+.ad-title-margin {
+  margin-bottom: 16px;
+}
+
+// <li> tag in nav section of <aside>
+.aside-nav-list-item {
+  list-style-type: none;
+}
+
+// <ul> that contains the kaidez social networking links in the <aside>
+.kaidez-social-network-list-styles {
+  padding: 0;
+  margin:16px auto 0;
+  text-align: center;
+  width: 287px;
+}
+
+// <li> tag wrapping kaidez social network links in <aside>
+.kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
   margin-right: 14px;
 }
 
+// link styling for kaidez social networking links
+.kaidez-social-sharing-list-item-link {
+  height: 56px;
+  width: 56px;
+  display: block;
+  text-indent: -9999px;
+}
+
+// Applied to form fields in <aside>
+.aside-contact-fieldset-styles {
+  border: none;
+  padding: 0;
+}
+
+// copyright <p> tag in <aside>
 .copyright-style {
   display:block;
   clear: both;
@@ -470,8 +521,13 @@ a:hover {
   margin: 0 auto;
 }
 
+// ad section of the <aside>
+.ad-section-class {
+  margin: 34px auto;
+}
+
 // ===========================================================================
-// Footer styles end
+// Aside styles end
 // ===========================================================================
 
 

@@ -30,7 +30,6 @@ $header-color: #67CDDC;
 $base-link-color: #262841;
 
 // Base color for page links in post content. Also effects the color of any and all pagination buttons.
-
 $post-link-color: #3285A5;
 
 // aside background color
@@ -38,18 +37,17 @@ $aside-color: #0C5E7E;
 
 // Darken the footer color: effects the all copy in the footer and the bottom
 // border of the post snippets.
-
 $darken-the-aside-color: darken($aside-color, 25);
 
 // End color variables
 
 
 // Font variables
-$helv: "Lato";
-$robo: "Roboto Condensed";
-$srf: serif;
+$lato: "Lato"; // Google Font
+$robo: "Roboto Condensed"; // A Google Font
+$srf: sans-serif;
 
-// Width varibles...affects the width of the "inner" containers on all pages.
+// Width varibles...mostly applied to the <main> tag and affects all content // sections.
 $mobile-portrait-width: 290px; // Mobile
 $mobile-landscape-width: 548px; // Mobile Landscape
 $inner-content-width: 1024px; // Desktop
@@ -64,8 +62,10 @@ $master-page-content-shadow: 1px 5px 7px 2px rgba(0,0,0,0.2);
 
 
 
-// Mobile Retina: if the screen is retina-based AND is at least 320px. Targets mobiles and handhelds.
+// Variables for the retina media queries start...they're used inside
+// '_retinaMediaQuery.scss' 
 
+// Mobile Retina: if the screen is retina-based AND is at least 320px. Targets mobiles and handhelds.
 $mobile-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px),
   only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px),
@@ -75,7 +75,6 @@ $mobile-retina:
   only screen and (min-resolution: 2dppx) and (max-width: 568px)";
 
 // Mobile Non Retina: if the screen is not retina AND at least 320px. Targets mobiles and handhelds.
-
 $mobile-non-retina:   
   "only screen and (max-width: 568px),
   only screen and (max-width: 568px),
@@ -84,8 +83,8 @@ $mobile-non-retina:
   only screen and (max-width: 568px),
   only screen and (max-width: 568px)";
 
-// Tablet/Desktop Retina: if the screen retina based AND is at least 569px wide. Targeting tablets and desktops.
-
+// Tablet/Desktop Retina: if the screen retina based AND is at least 569px
+// wide. Targeting tablets and desktops.
 $desktop-tablet-retina:   
   "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px),
   only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px),
@@ -95,12 +94,12 @@ $desktop-tablet-retina:
   only screen and (min-resolution: 2dppx) and (min-width: 569px)";
 
 // Tablet/Desktop: if the screen retina based AND is at least 569px wide. Targeting tablets and desktops.
- 
 $desktop-tablet-non-retina: "only screen and (min-width: 569px)";
 
 // 'background-size' variable for any and all CSS classes that reference the sprites. You HAVE to do this is you're doubling the size of your image for retina purposes or the image will look weird.
-
 $bg-size: 350px 210px;
+
+// Variables for the retina media queries start
 
 // =============
 // Variables end
@@ -120,10 +119,17 @@ $bg-size: 350px 210px;
   width: $width;
 }
 
-// applies a font and makes visible on load
-@mixin fonts($font) {
+// If a Google font is applied to a page element, the element should be hidden 
+// on initial page load as well as set to either serif or another default font.
+// After page load, the element should set to visibile, then load the Google 
+// font. Two differnt events...use a mixin for both.
+//
+// Some CSS selectors call @fonts. They always need to be visible but do not // pass a visible parameter. In those instances, "visibility" is always set to // "visible."
+@mixin fonts($font, $visibility: blank) {
   font-family: $font;
-  visibility: visible;
+  @if $visibility != blank {
+    visibility: visible;
+  }
 }
 
 // Centers whatever is applied to it
@@ -132,23 +138,18 @@ $bg-size: 350px 210px;
   text-align: center;
 }
 
-// All of the main page elements need a padding of 10px
-@mixin allElementPadding {
-  padding: 10px;
-}
-
-// Certain elements need this to ensure 100% height
+// Certain elements need this to ensure 100% height. Used in the
+//'page-content' mixin below.
 @mixin full-height {
   position: relative;
   height: auto;
   min-height: 100%;
 }
  
-// When possible, A better way accessibilty-wise to hidepage elements than display:none or negative text indents.
+// When possible, A better way accessibilty-wise to hidepage elements than // display:none or negative text indents.
 
 // Read more over at Yahoo! Accessibilty Blog: 
 // http://yaccessibilityblog.com/library/css-clip-hidden-content.html
-
 @mixin hide-element {
   position:absolute;
   clip:rect(1px 1px 1px 1px);
@@ -172,18 +173,18 @@ $bg-size: 350px 210px;
   padding: 8px $side-padding;
 }
 
-  @mixin breadcrumb-separator($side-padding, $font-size: blank) {
-    padding:0 $side-padding;
-    @if $font-size != blank {
-      font-size: $font-size;
-    }
+// style breadcrumb separator
+@mixin breadcrumb-separator($side-padding, $font-size: blank) {
+  padding:0 $side-padding;
+  @if $font-size != blank {
+     font-size: $font-size;
   }
+}
 
 // Define width for the <header>, <main> and <footer> elements by applying
 // this mixin to a class that's applied to the element. The '$dimension'
 // variable defines the width value and the values are determined by the
 // "Width variables" directly below the mixin.
-
 @mixin page-content($dimension) {
   max-width: $dimension;
   margin: 0 auto;
@@ -196,6 +197,7 @@ $bg-size: 350px 210px;
   text-align: left;
 }
 
+// Applies properties to sprite layouts...used in '_retinaMediaQuery.scss'
 @mixin sprite-images ($img, $position, $height, $width) {
   background: url($img) no-repeat $position;
   background-size: $bg-size;
@@ -203,12 +205,27 @@ $bg-size: 350px 210px;
   width: $width;
 }
 
- // Unique styles for the 'site-title' class in the desktop styles...add this to sprite mixin code.
+// All transitions 'ease in' in 0.3 seconds
+@mixin transitions ($property) {
+  -webkit-transition: $property .3s ease;
+  -moz-transition: $property .3s ease;
+  -o-transition: $property.3s ease;
+  transition: $property .3s ease;
+}
+
+ // Unique styles for the 'site-title' class in the desktop styles...add this // to sprite mixin code.
 @mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
   text-indent: -999px;
   display: block;
+}
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+@mixin outer-wrapper-nav-header {
+  width: auto;
+  padding: 15px 45px 0;
+  margin: 0 auto;
 }
 
 // <ul> container for the main nav  
@@ -233,9 +250,7 @@ $bg-size: 350px 210px;
 }
 
 @mixin contact-form-field {
-  -webkit-border-radius: $master-border-radius - 5;
-  -moz-border-radius: $master-border-radius - 5;
-  border-radius: $master-border-radius - 5;
+
 }
 
 @mixin read-post-link($border-radius: blank) {
@@ -284,7 +299,7 @@ $bg-size: 350px 210px;
 
 // link styles
 @mixin link-styles($margin-right, $font-size, $padding, $base-color) {
-  @include fonts($helv);
+  @include fonts($lato);
   margin-right: $margin-right; 
   font-size: $font-size;
   padding: $padding;
@@ -309,14 +324,44 @@ $bg-size: 350px 210px;
 
 // Add box-shadow to the site's content element (i.e.: ".page-content")
 @mixin create-box-shadow ($y-axis) {
-    -webkit-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
-    -moz-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
-    box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
+  box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
 }
 
+// For the 'share post' sections on post pages. loads the Google 'Lato' font 
+// by default...loads sans-serif on hand-helds.
+@mixin share-post-link ($font: $lato) {
+  font-size:16px;
+  line-height: 1;
+  font-family: $font;
+}
+
+// Applies a text shadow 
+@mixin makeTextShadow($base-color) {
+  color: darken($base-color, 27);
+  text-shadow: 0px 2px 3px lighten($base-color, 9);
+}
+
+// Applies a text shadow and dotted border to the aside section's title
+@mixin aside-section-header {
+  @include makeTextShadow($aside-color);
+}
+
+// Styles the link in the <aside> "LINKS" section
+@mixin aside-nav-link {
+  list-style-type: none;
+  margin: 0;
+  padding:5px 5px 5px 0;
+  height: 25px;
+  font-size: 18px;
+  display: block;
+  color: $header-color;
+  text-decoration: none;
+}
 
 // ============================================================================
-// Pagination mixins
+// Pagination mixins start
 
 // These mixins are styles that are for the most part, copied from the 
 // pagination styles that are part of the Tipue search plugin. For clarity 
@@ -370,33 +415,11 @@ $bg-size: 350px 210px;
   text-align: center;
 }
 
-// Applies a text shadow 
-@mixin makeTextShadow($base-color) {
-  color: darken($base-color, 27);
-  text-shadow: 0px 2px 3px lighten($base-color, 9);
-}
+// ============================================================================
+// Pagination mixins end
+// ============================================================================
 
-// Applies a text shadow and dotted border to the footer section's title
-@mixin footer-header {
-  @include makeTextShadow($aside-color);
-}
-
-@mixin footer-column-margins($margin-pos, $margin) {
-  $margin-pos: $margin;
-}
 
 // ============
 //  Mix-ins end
 // ============
-
-
-
-
-
-
-// outer wrapper for the <header> which wraps the link, nav & search elements
-@mixin outer-wrapper-nav-header {
-  width: auto;
-  padding: 15px 45px 0;
-  margin: 0 auto;
-}

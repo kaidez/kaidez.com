@@ -45,31 +45,49 @@
 
     <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
 
-      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
         <h1 class="post-title" class="entry-title">{{ page.title }}</h1>
+
         {{ content }}
+
       </article>
 
-      <div id="share-post-container" class="postSharing">
+      <div id="share-post-container">
 
-        <ul id="social-network-list-post">
-          <li class="social-network-list-item"><a href="https://twitter.com/share" target="blank" class="share-post-link">Twitter</a></li>
-          <li class="social-network-list-item"><a href="https://plus.google.com/share?url=http://dev.kaidez.com{{ page.permalink }}" target="blank" class="share-post-link">Google+</a></li>
-          <li id="fb-root" class="social-network-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com{{ page.permalink }}&t={{ page.title }}" class="share-post-link fb" target="blank">Facebook</a></li>
-        </ul> <!-- #social-network-list-post -->
+        <ul id="social-sharing-list-post" class="social-sharing-list-post-class">
+
+          <li class="social-sharing-list-item"><a href="https://twitter.com/share" target="blank" class="share-post-link">Twitter</a></li>
+
+          <li class="social-sharing-list-item"><a href="https://plus.google.com/share?url=http://dev.kaidez.com{{ page.permalink }}" target="blank" class="share-post-link">Google+</a></li>
+
+          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com{{ page.permalink }}&t={{ page.title }}" class="share-post-link fb" target="blank">Facebook</a></li>
+
+        </ul> <!-- #social-sharing-list-post -->
+
       </div> <!-- #share-post-container -->
 
       <div id="related-posts" class="related-posts-style">
+
         <h3 class="related-posts-header">MORE POSTS LIKE THIS...</h3>
-        <ul>
+
+        <ul id="related-posts-list">
+
           {% for post in site.related_posts limit:3 %}
-          <li class="related-posts-link"><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
+
+          <li class="related-posts-list-item"><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
+
           {% endfor %}
+
         </ul>
+
       </div> <!-- #related-posts -->
+
     </main> <!-- #content -->
 
-    {% include footer_partial.html %}
+    {% include aside_partial.html %}
+
+    % include footer_partial.html %}
 
   </div> <!-- #container -->
   

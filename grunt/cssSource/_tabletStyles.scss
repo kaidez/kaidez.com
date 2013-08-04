@@ -13,7 +13,7 @@
    // applied to handhelds will slow down their page load.
    
   body {
-    @include fonts($helv);
+    @include fonts($lato);
   }
 
   
@@ -29,7 +29,7 @@
   .wf-active h4,
   .wf-active h5,
   .wf-active h6 {
-    @include fonts($robo);
+    @include fonts($robo, visible);
   }
 
   // Shared class for nav and searchbox elements
@@ -190,11 +190,8 @@
   // Search box-related styles end
 
   //Font styles for tablets & desktops. Google font doesn't load on mobile.
-   
   .share-post-link {
-    font-size:16px;
-    line-height: 1;
-    @include fonts($helv);
+    @include share-post-link;
   }
 
 
@@ -236,42 +233,57 @@
   }
 
   // =========================================================================
-  // Footer styles start
+  // Aside styles start
   // =========================================================================
    
   // apply background image to the footer
-  .outerWrapperNavAside {
+
+  .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
   }
 
-  .footer-header {
-    @include footer-header;
+  .aside-inner-wrapper-class {
+    margin-top: 16px;
+  }
+
+  .aside-section-header {
+    @include aside-section-header;
+  }
+
+  // the <aside> nav links
+  .aside-nav-link {
+    @include aside-nav-link;
+    @include transitions(all);
+  }
+
+  .aside-column-class {
+    max-width: 1024px;
+    clear: both;
+    margin-bottom: 35px;
+  }
+
+  .aside-about-section-class,
+  .aside-nav-section-class {
+    float:left;
+    margin-right: 30px;
+  }
+
+  .aside-ad-section-class,
+  .aside-social-network-section-class {
+    float:right;
+    margin-left: 30px;
   }
 
   .contact-form-field {
     @include contact-form-field;
   }
 
-  .footer-column {
-    width: 250px;
-  }
-
-  .footer-header {
-    width: 250px;
-  }
-
-  .footer-column-one-class {
-    margin-left: 70px;
-    float: left;
-  }
-
-  .footer-column-two-class {
-    margin-right: 70px;
-    float: right;
+  .aside-header {
+    width: 300px;
   }
   
   // =========================================================================
-  // Footer styles end
+  // Aside styles end
   // =========================================================================
    
 }
