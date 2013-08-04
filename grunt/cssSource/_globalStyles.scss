@@ -90,7 +90,7 @@ p code, li code {
 .wf-loading h3, .wf-inactive h3,
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
-.wf-loading h6, .wf-inactive h6, {
+.wf-loading h6, .wf-inactive h6 {
   @include fonts($srf, hidden);
 }
 
