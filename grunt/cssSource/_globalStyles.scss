@@ -454,9 +454,9 @@ p code, li code {
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
-//all header tags in the footer should have a black dotted bottom border
+//all header tags in the footer should have a black solid bottom border
 .aside-section-header {
-  border-bottom: 2px dotted #01070A;
+  border-bottom: 2px solid #01070A;
   margin: 0;
 }
 
