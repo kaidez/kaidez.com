@@ -411,19 +411,19 @@ p code, li code {
 }
 
 // <li> tag for the above-mentioned <ul>
-.social-network-list-item {
+.social-sharing-list-item {
   list-style-type: none;
   padding-right: 10px;
   line-height: 1;
   margin-bottom: 15px;
 }
 
-#social-network-list-post {
+.social-network-list-post-class {
   padding: 0;
   width: 287px;
 }
 
-.kaidez-social-network-list-item-link {
+.kaidez-social-sharing-list-item-link {
   height: 56px;
   width: 56px;
   display: block;
@@ -495,13 +495,13 @@ p code, li code {
   padding:16px 10px 4px 0;
 }
 
-.kaidez-social-network-list-item {
+.kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
   margin-right: 14px;
 }
 
-// copyright <p> tag in <footer>
+// copyright <p> tag in <aside>
 .copyright-style {
   display:block;
   clear: both;
@@ -510,6 +510,7 @@ p code, li code {
   margin: 0 auto;
 }
 
+// ad section of the <aside>
 .ad-section-class {
   margin: 34px auto;
 }
