@@ -250,7 +250,13 @@ a.pagination-link {
 // the <aside> nav links
 .aside-nav-link {
   @include aside-nav-link;
-  @include transitions(all);
+}
+
+// focus state for the <aside> nav links
+.aside-nav-link:focus {
+  background-color: $darken-the-aside-color;
+  padding-left: 5px;
+  color: #fff;
 }
 
 // ===========================================================================
