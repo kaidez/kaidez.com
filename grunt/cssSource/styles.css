@@ -2526,7 +2526,8 @@ p code, li code {
   color: #111;
 }
 
-.post-snippet-link:link, .post-snippet-link:visited {
+.post-snippet-link:link,
+.post-snippet-link:visited {
   color: #2d7895;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
@@ -2535,7 +2536,8 @@ p code, li code {
   transition: color 0.3s ease;
 }
 
-.post-snippet-link:hover {
+.post-snippet-link:hover,
+.post-snippet-link:focus {
   color: #57accc;
   text-decoration: underline;
 }
@@ -2661,16 +2663,26 @@ p code, li code {
 }
 
 .kaidez-social-sharing-list-item-link {
-  color: #000;
+  color: #67cddc;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-[class^=icon-], [class*=" icon-"] {
-  float: left;
+.kaidez-social-sharing-list-item-link:hover,
+.kaidez-social-sharing-list-item-link:focus {
+  color: #01070a;
 }
 
 .kaidez-social-sharing-list-item-link-text {
   display: block;
+  float: left;
+  padding: 21px 9px;
+}
+
+[class^=icon-], [class*=" icon-"] {
   float: left;
 }
 
