@@ -119,10 +119,17 @@ $bg-size: 350px 210px;
   width: $width;
 }
 
-// applies a Google font and makes visible on load
-@mixin fonts($font) {
+// If a Google font is applied to a page element, the element should be hidden 
+// on initial page load as well as set to either serif or another default font.
+// After page load, the element should set to visibile, then load the Google 
+// font. Two differnt events...use a mixin for both.
+//
+// Some CSS selectors call @fonts. They always need to be visible but do not // pass a visible parameter. In those instances, "visibility" is always set to // "visible."
+@mixin fonts($font, $visibility: blank) {
   font-family: $font;
-  visibility: visible;
+  @if $visibility != blank {
+    visibility: visible;
+  }
 }
 
 // Centers whatever is applied to it
