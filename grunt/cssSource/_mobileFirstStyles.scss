@@ -46,7 +46,7 @@
 // hide the <h2> tag in <header> on page load
 .site-description {
   @include hide-element;
-}
+} 
 
 // ============================================================================
 // Header styles end
@@ -245,6 +245,12 @@ a.pagination-link {
 // remove box-shadow from handheld view
 .aside-outer-wrapper-class {
   box-shadow: none;
+}
+
+// the <aside> nav links
+.aside-nav-link {
+  @include aside-nav-link;
+  @include transitions(all);
 }
 
 // ===========================================================================
