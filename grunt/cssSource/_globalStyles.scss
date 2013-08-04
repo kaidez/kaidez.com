@@ -378,13 +378,7 @@ p code, li code {
   padding: 0 10px 10px 0;
 }
 
-// Related posts
-.related-posts-header {
-  @include related-posts-header(20px);
-  @include master-center;
-}
-
-// Related posts styles that appear on single post pages
+// <div> that wraps related posts styles that appear on single post pages
 .related-posts-style {
   @include related-posts-header(20px);
   @include master-center;
@@ -393,13 +387,25 @@ p code, li code {
   clear: both
 }
 
-// <li> in Related Posts area
+// <h3> for related posts
+.related-posts-header {
+  @include related-posts-header(20px);
+  @include master-center;
+}
+
+// <li> in related posts area
 .related-posts-list-item {
   line-height: 1.4;
   font-size: 14px;
   margin-bottom: 20px;
   text-align: left;
   list-style: none;
+}
+
+// <ul> in the item in the "share post" posts section
+.social-sharing-list-post-class {
+  padding: 0;
+  width: 287px;
 }
 
 // <li> tag for the above-mentioned <ul>
@@ -410,25 +416,9 @@ p code, li code {
   margin-bottom: 15px;
 }
 
-// <ul> that contains the kaidez social networking links in the <aside>
-.kaidez-social-network-list-styles {
-  padding: 0;
-  margin:16px auto 0;
-  text-align: center;
-  width: 287px;
-}
-
-// link styling for kaidez social networking links
-.kaidez-social-sharing-list-item-link {
-  height: 56px;
-  width: 56px;
-  display: block;
-  text-indent: -9999px;
-}
-
-.social-network-list-post-class {
-  padding: 0;
-  width: 287px;
+// link styling for the 'share link' area of the post pages
+.share-post-link {
+  @include share-post-link($srf);
 }
 
 // ===========================================================================
@@ -493,11 +483,27 @@ p code, li code {
   list-style-type: none;
 }
 
+// <ul> that contains the kaidez social networking links in the <aside>
+.kaidez-social-network-list-styles {
+  padding: 0;
+  margin:16px auto 0;
+  text-align: center;
+  width: 287px;
+}
+
 // <li> tag wrapping kaidez social network links in <aside>
 .kaidez-social-sharing-list-item {
   list-style-type: none;
   float: left;
   margin-right: 14px;
+}
+
+// link styling for kaidez social networking links
+.kaidez-social-sharing-list-item-link {
+  height: 56px;
+  width: 56px;
+  display: block;
+  text-indent: -9999px;
 }
 
 // Applied to form fields in <aside>

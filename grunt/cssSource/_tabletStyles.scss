@@ -190,11 +190,8 @@
   // Search box-related styles end
 
   //Font styles for tablets & desktops. Google font doesn't load on mobile.
-   
   .share-post-link {
-    font-size:16px;
-    line-height: 1;
-    @include fonts($lato);
+    @include share-post-link;
   }
 
 

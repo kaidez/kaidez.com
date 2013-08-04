@@ -45,7 +45,7 @@ $darken-the-aside-color: darken($aside-color, 25);
 // Font variables
 $lato: "Lato"; // Google Font
 $robo: "Roboto Condensed"; // A Google Font
-$srf: serif;
+$srf: sans-serif;
 
 // Width varibles...mostly applied to the <main> tag and affects all content // sections.
 $mobile-portrait-width: 290px; // Mobile
@@ -329,13 +329,21 @@ $bg-size: 350px 210px;
   box-shadow: 1px $y-axis 7px 2px rgba(0,0,0,0.2);
 }
 
+// For the 'share post' sections on post pages. loads the Google 'Lato' font 
+// by default...loads sans-serif on hand-helds.
+@mixin share-post-link ($font: $lato) {
+  font-size:16px;
+  line-height: 1;
+  font-family: $font;
+}
+
 // Applies a text shadow 
 @mixin makeTextShadow($base-color) {
   color: darken($base-color, 27);
   text-shadow: 0px 2px 3px lighten($base-color, 9);
 }
 
-// Applies a text shadow and dotted border to the footer section's title
+// Applies a text shadow and dotted border to the aside section's title
 @mixin aside-section-header {
   @include makeTextShadow($aside-color);
 }
