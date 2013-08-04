@@ -297,11 +297,6 @@
     margin:0 125px
   }
 
-  // the <ul> container for the <aside> nav links
-  .aside-nav-class {
-    padding-left:0;
-  }
-
   // the <aside> nav links
   .aside-nav-link {
     @include aside-nav-link;
