@@ -751,7 +751,12 @@ p code, li code {
   visibility: visible;
   font-size: 23px;
   border-bottom: 1px solid #01070A;
-  margin: 0;
+  margin-bottom: 16px;
+}
+
+.aside-nav-class {
+  padding-left: 0;
+  margin-top: 7px;
 }
 
 .all-aside-sections {
@@ -760,11 +765,7 @@ p code, li code {
 
 .author-image-class {
   float: left;
-  padding: 16px 10px 4px 0;
-}
-
-.ad-title-margin {
-  margin-bottom: 16px;
+  padding: 0 10px 4px 0;
 }
 
 .aside-nav-list-item {
@@ -1998,10 +1999,6 @@ a.pagination-link {
 
   .mid-aside-margin {
     margin: 0 125px;
-  }
-
-  .aside-nav-class {
-    padding-left: 0;
   }
 
   .aside-nav-link {
