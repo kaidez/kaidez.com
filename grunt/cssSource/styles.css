@@ -460,10 +460,6 @@ p code, li code {
   clip: rect(1px 1px 1px 1px);
 }
 
-.top-level-header-wrapper {
-  padding-top: 12px;
-}
-
 .outer-wrapper-nav-header {
   background-color: #67cddc;
 }
@@ -690,16 +686,27 @@ p code, li code {
   padding-bottom: 48px;
 }
 
-#related-posts .related-posts-header {
+.related-posts-header {
   font-size: 20px;
   margin: 0px auto;
   text-align: center;
 }
 
 .related-posts-style {
+  font-size: 20px;
+  margin: 0px auto;
+  text-align: center;
   padding: 10px;
   background-color: #E1F5F6;
   clear: both;
+}
+
+.related-posts-list-item {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+  list-style: none;
 }
 
 .social-network-list-styles {
@@ -778,10 +785,6 @@ p code, li code {
 .author-image-class {
   float: left;
   padding: 16px 10px 4px 0;
-}
-
-.menu-social-networking-column-class {
-  margin-top: 34px;
 }
 
 .kaidez-social-network-list-item {
@@ -918,12 +921,6 @@ a.read-post-link {
   max-width: 120px;
   float: none;
   text-align: center;
-}
-
-.related-posts-link {
-  line-height: 1.4;
-  font-size: 14px;
-  margin-bottom: 20px;
 }
 
 .wf-loading .category-header,
