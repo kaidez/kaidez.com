@@ -984,6 +984,21 @@ a.pagination-link {
   box-shadow: none;
 }
 
+.aside-nav-link {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px 5px 0;
+  height: 25px;
+  font-size: 18px;
+  display: block;
+  color: #67cddc;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 @media only screen and (min-width: 569px) {
   body {
     background: url(../img/white_carbon.png);
