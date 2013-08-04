@@ -818,6 +818,10 @@ p code, li code {
   width: 166px;
 }
 
+.site-header {
+  width: auto;
+}
+
 .outer-wrapper-nav-header {
   width: 100%;
 }
@@ -825,10 +829,6 @@ p code, li code {
 .site-description {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
-}
-
-.site-header {
-  width: auto;
 }
 
 .nav-search-style {
@@ -967,7 +967,7 @@ a.pagination-link {
   text-align: center;
 }
 
-.footer-contact-fields {
+.aside-contact-fields {
   width: 152px;
 }
 
@@ -975,22 +975,8 @@ a.pagination-link {
   font-size: 15px;
 }
 
-.footer-column {
-  width: 250px;
-}
-
 .aside-section-header {
   width: 250px;
-}
-
-.footer-column-one-class {
-  margin: 0 auto;
-  float: none;
-}
-
-.footer-column-two-class {
-  margin: 0 auto;
-  float: none;
 }
 
 .aside-outer-wrapper-class {
@@ -1409,31 +1395,6 @@ a.pagination-link {
     border-radius: 10px;
   }
 
-  a.read-post-link {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    color: #fff;
-    display: block;
-    padding: 2px;
-    margin-top: 14px;
-    background-color: #3285a5;
-    max-width: 120px;
-    float: none;
-    text-align: center;
-  }
-
-  .post-snippet-title {
-    font-size: 27px;
-  }
-
-  .wf-active h1.post-title, .wf-active h1.category-title {
-    margin: 0px auto;
-    text-align: center;
-    font-size: 40px;
-    padding: 31px 0 6px;
-  }
-
   .searchbox-display {
     display: block;
   }
@@ -1473,6 +1434,31 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px #e3e3e3;
     -webkit-box-shadow: 1px 1px 2px #e3e3e3;
     box-shadow: 1px 1px 2px #e3e3e3;
+  }
+
+  a.read-post-link {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    padding: 2px;
+    margin-top: 14px;
+    background-color: #3285a5;
+    max-width: 120px;
+    float: none;
+    text-align: center;
+  }
+
+  .post-snippet-title {
+    font-size: 27px;
+  }
+
+  .wf-active h1.post-title, .wf-active h1.category-title {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 40px;
+    padding: 31px 0 6px;
   }
 
   .post-snippet-title {
