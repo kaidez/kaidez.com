@@ -1520,7 +1520,7 @@ a.pagination-link {
   .aside-nav-link {
     list-style-type: none;
     margin: 0;
-    padding: 5px 5px 5px 0;
+    padding: 0 5px 5px 0;
     height: 25px;
     font-size: 18px;
     display: block;
@@ -2004,7 +2004,7 @@ a.pagination-link {
   .aside-nav-link {
     list-style-type: none;
     margin: 0;
-    padding: 5px 5px 5px 0;
+    padding: 0 5px 5px 0;
     height: 25px;
     font-size: 18px;
     display: block;
