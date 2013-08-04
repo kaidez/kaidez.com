@@ -12,7 +12,7 @@
 
  @media only screen and (min-width: 1025px) {
 
-// <body> tag
+  // <body> tag
   body {
     @include fonts($lato);
   }
@@ -263,9 +263,9 @@
 
 
 
-  // =========================================================================
+  // ==========================================================================
   //  Aside styles start
-  //  ========================================================================
+  // ==========================================================================
 
   // the inner wrapper for the <aside>
   .aside-inner-wrapper-class {
@@ -279,14 +279,22 @@
     padding: 35px 10px;
   }
   
+  // create a "letterpress" text-shadow effect on <h3> tags in <aside>
   .aside-section-header {
     @include aside-section-header;
     width: 250px;
   }
 
+  // for the 3 columns in the <aside>
   .aside-column-class {
     width: 250px;
     float: left;
+  }
+
+  // add left/right margin to the middle column so aside columns are evenly
+  // spaced on desktop view
+  .mid-aside-margin {
+    margin:0 125px
   }
 
   // the <ul> container for the <aside> nav links
@@ -307,18 +315,13 @@
     color: #fff;
   }
 
+  // for the contact form fields in <aside>
   .contact-form-field {
     @include contact-form-field;
   }
 
-  // add left/right margin to the middle column so aside columns are evenly
-  // spaced on desktop view
-  .mid-aside-margin {
-    margin:0 125px
-  }
-
-  // =========================================================================
+  // ==========================================================================
   //  Aside styles end
-  //  ========================================================================
+  // ==========================================================================
  
  }
