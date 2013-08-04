@@ -39,9 +39,7 @@ After having a GitHub account for 18 months and knowing just enough to get by, I
 
 ## Assumptions & Tips
 
-[![GitHub][12]][12]I’m assuming a few things: 
-
- []: http://GitHub.com/
+<img src="../img/octocat.png" class="post-pic" /> I’m assuming a few things: 
 
 *   that you have a Git repo on your computer and it’s been uploaded to GitHub.
 *   that you know how to access this repo from the Terminal.
