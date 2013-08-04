@@ -454,28 +454,6 @@ p code, li code {
   box-shadow: inset 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 
-//all header tags in the footer should have a black solid bottom border
-.aside-section-header {
-  border-bottom: 2px solid #01070A;
-  margin: 0;
-}
-
-// Applied to form fields in <aside>
-.aside-contact-fieldset-styles {
-  border: none;
-  padding: 0;
-}
-
-// applied to all <sections> in <aside>
-.all-aside-sections {
-  width: 250px;
-}
-
-// <li> tag in nav section of <aside>
-.aside-nav-list-item {
-  list-style-type: none;
-}
-
 // hide the Google font on all <h3> tags in the <aside> before page load
 .wf-loading .aside-section-header {
   @include fonts($srf, hidden);
@@ -485,6 +463,24 @@ p code, li code {
 .wf-active .aside-section-header {
   @include fonts($robo, visible);
   font-size: 23px;
+  border-bottom: 1px solid #01070A;
+  margin: 0;
+}
+
+// applied to all <sections> in <aside>
+.all-aside-sections {
+  width: 250px;
+}
+
+// Applied to form fields in <aside>
+.aside-contact-fieldset-styles {
+  border: none;
+  padding: 0;
+}
+
+// <li> tag in nav section of <aside>
+.aside-nav-list-item {
+  list-style-type: none;
 }
 
 // padding for the <h3> tag for ads in the <aside> tag
