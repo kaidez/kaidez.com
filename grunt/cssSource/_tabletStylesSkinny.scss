@@ -234,6 +234,12 @@
     @include aside-section-header;
   }
   
+  // applied to all <sections> in <aside>
+  .all-aside-sections {
+    float: left;
+    padding: 0 10px;
+  }
+  
   // empty as of now in '_base.scss'..can it be deleted
   .contact-form-field {
     @include contact-form-field;
