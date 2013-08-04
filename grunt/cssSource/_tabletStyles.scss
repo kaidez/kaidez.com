@@ -1,23 +1,23 @@
 @media only screen and (min-width: 729px) and (max-width:1024px) {
   
-   // =========================================================================
-   // Start "all-around" styles that should affect the entire page and not one 
-   // specfic section (i.e., <header>, <footer>, <content>, etc.)
-   // =========================================================================
+  // =========================================================================
+  // Start "all-around" styles that should affect the entire page and not one 
+  // specfic section (i.e., <header>, <footer>, <content>, etc.)
+  // =========================================================================
    
 
 
   
-   // Handhelds and tablets get the helvetica-type Google font. Too many fonts 
-   // applied to handhelds will slow down their page load.
+  // Handhelds and tablets get the helvetica-type Google font. Too many fonts 
+  // applied to handhelds will slow down their page load.
   body {
     @include fonts($lato);
   }
 
   
-   // =========================================================================
-   // Header styles start
-   // =========================================================================
+  // =========================================================================
+  // Header styles start
+  // =========================================================================
    
 
   // Show Google 'Roboto' font on all <header> tags before page load
@@ -35,7 +35,7 @@
     @include header-element-margin-tablet 
   }
 
-    // the inner wrapper for the <header>
+  // the inner wrapper for the <header>
   .inner-wrapper-nav-header {
     @include inner-wrapper-nav-header;
   }
@@ -46,7 +46,7 @@
     min-height: 130px;
   }
 
-  // searchbox
+  // styles the main searchbox
   .searchbox-style {
     text-align: left;
     padding:40px 0 0 0;
@@ -122,22 +122,13 @@
   // =========================================================================
   // Navigation styles end
   // =========================================================================
-   
 
-  // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
 
-  // Post snippet that displays on both the home page and search results.
-  .post-snippet-title {
-    font-size: 27px;
-  }
 
-  // Styles for post and category <h1> tags
-  .wf-active h1.post-title, .wf-active h1.category-title  {
-    @include post-category-title(40px, 31px 0 6px);
-  }
+
+  // =========================================================================
+  // Search styles start
+  // =========================================================================
 
   // The div that contains the search box...either show it or hide it
   .searchbox-display {
@@ -182,11 +173,32 @@
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
-
+  // =========================================================================
+  // Search styles end
+  // =========================================================================
   
+
+
+
+
   // =========================================================================
   // Page content styles start
   // =========================================================================
+
+  // the "Read post" link on the home, category and search pages
+  a.read-post-link {
+    @include read-post-link($master-border-radius);
+  }
+
+  // Post snippet that displays on both the home page and search results.
+  .post-snippet-title {
+    font-size: 27px;
+  }
+
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
+    @include post-category-title(40px, 31px 0 6px);
+  }
    
   // title tag for post snippets
   .post-snippet-title {
@@ -222,6 +234,14 @@
   .share-post-link {
     @include share-post-link;
   }
+
+  // =========================================================================
+  // Page content styles end
+  // =========================================================================
+
+
+
+
 
   // =========================================================================
   // Aside styles start

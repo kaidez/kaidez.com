@@ -33,6 +33,11 @@
   @include homepage-link(44px, 166px);
 }
 
+// <header> tag
+.site-header {
+  width: auto;
+}
+
 // outer wrapper for the <header> which wraps the link, nav & search elements
 .outer-wrapper-nav-header {
   width: 100%;
@@ -41,11 +46,6 @@
 // hide the <h2> tag in <header> on page load
 .site-description {
   @include hide-element;
-}
-
-// <header> tag
-.site-header {
-  width: auto;
 }
 
 // ============================================================================
@@ -220,7 +220,7 @@ a.pagination-link {
 // '_mobileLandscape' view.
 // ===========================================================================
 
-.footer-contact-fields {
+.aside-contact-fields  {
   width:152px;
 }
 
@@ -228,22 +228,8 @@ a.pagination-link {
   font-size:15px;
 }
 
-.footer-column {
-  width: 250px;
-}
-
 .aside-section-header {
   width: 250px;
-}
-
-.footer-column-one-class {
-  margin: 0 auto;
-  float: none;
-}
-
-.footer-column-two-class {
-  margin: 0 auto;
-  float: none;
 }
 
 // remove box-shadow from handheld view
@@ -254,8 +240,4 @@ a.pagination-link {
 // ===========================================================================
 // Footer styles end
 // ===========================================================================
-
-
-
-
 
