@@ -171,12 +171,12 @@ a.read-post-link {
 // <h1> title on the category page...hides the 'Roboto' font on load. These styles will also be applied to the '_mobileLandscape' view.
 .wf-loading .category-header,
 .wf-inactive .category-header {
-  @include fonts($srf);
+  @include fonts($srf, hidden);
 }
 
 // <h1> title on the category page...loads the 'Roboto'. These styles will also be applied to the '_mobileLandscape' view.
 .wf-active .category-header {
-  font-family: $robo;
+  @include fonts($robo, visible);
   font-size: 1.5rem;
   margin-top: 0;
 }

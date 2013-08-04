@@ -17,12 +17,15 @@
 // specfic page region section (i.e., headers, footers, etc.)
 // ===========================================================================
 
+// <body> tag
 body {
   background-color: $site-background-color;
   max-width: 100%;
+  height: 100%;
 }
 
-html, body {
+// <html> tag
+html {
   height: 100%;
 }
 
@@ -46,6 +49,7 @@ html, body {
   clear: both;
 }
 
+// <code> snippets inside of post copy
 p code, li code {
   display: inline-block;
   white-space: nowrap;
@@ -62,6 +66,7 @@ p code, li code {
   margin: 0 2px 0;
 }
 
+// picture that appears in posts
 .post-pic {
   float: left;
   padding: 0 10px 10px 0;
@@ -86,8 +91,7 @@ p code, li code {
 .wf-loading h4, .wf-inactive h4,
 .wf-loading h5, .wf-inactive h5,
 .wf-loading h6, .wf-inactive h6, {
-  font-family: $srf;
-  visibility: hidden;
+  @include fonts($srf, hidden);
 }
 
 // Apply Google 'Roboto' font to all <header> tags after page load.
@@ -97,7 +101,7 @@ p code, li code {
 .wf-active h4,
 .wf-active h5,
 .wf-active h6 {
-  @include fonts($robo);
+  @include fonts($robo, visible);
 }
 
 // Logo link...provides a large enough space for a click area
@@ -149,15 +153,14 @@ p code, li code {
 
 // Hide the Google font on all <nav> links before page load
 .wf-loading .site-navigation-list-link {
-  font-family: $srf;
-  visibility: hidden;
+  @include fonts($srf, hidden);
   font-size: 20px;
 }
 
 // Apply the Google font to all <nav> links after page load
 .wf-active .site-navigation-list-link a:link,
 .wf-active .site-navigation-list-link a:visited { 
-  @include fonts($robo);
+  @include fonts($robo, visible);
   @include master-center;
   background-color: $aside-color;
   text-decoration: none;
@@ -281,14 +284,12 @@ p code, li code {
 // Hide the Google font on all search result links before page load
 .wf-loading .search-result-font,
 .wf-inactive .search-result-font {
-
-  @include fonts($srf);
+  @include fonts($srf, hidden);
 }
 
 // Apply the Google font to all search result links after page load
 .wf-active .search-result-font {
-  font-family: $robo;
-  visibility: visible;
+  @include fonts($robo, visible);
 }
 
 #tipue_search_content {
@@ -465,13 +466,12 @@ p code, li code {
 
 // Hide the Google font on all <h3> tags in the footer before page load
 .wf-loading .aside-section-header {
-  font-family: $srf;
-  visibility: hidden;
+  @include fonts($srf, hidden);
 }
 
 // Apply the Google font to all <h3> tags in the footer after page load
 .wf-active .aside-section-header {
-  @include fonts($robo);
+  @include fonts($robo, visible);
   font-size: 23px;
 }
 

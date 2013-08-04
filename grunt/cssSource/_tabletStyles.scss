@@ -29,7 +29,7 @@
   .wf-active h4,
   .wf-active h5,
   .wf-active h6 {
-    @include fonts($robo);
+    @include fonts($robo, visible);
   }
 
   // Shared class for nav and searchbox elements
