@@ -2656,13 +2656,22 @@ p code, li code {
 .kaidez-social-sharing-list-item {
   list-style-type: none;
   text-align: left;
+  margin-bottom: 10px;
+  clear: both;
 }
 
 .kaidez-social-sharing-list-item-link {
-  height: 56px;
-  width: 56px;
+  color: #000;
+  text-decoration: none;
+}
+
+[class^=icon-], [class*=" icon-"] {
+  float: left;
+}
+
+.kaidez-social-sharing-list-item-link-text {
   display: block;
-  text-indent: -9999px;
+  float: left;
 }
 
 .aside-contact-fieldset-styles {
