@@ -1475,12 +1475,6 @@ a.pagination-link {
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
-  .share-post-link {
-    font-size: 16px;
-    line-height: 1;
-    font-family: "Lato";
-  }
-
   .post-snippet-title {
     font-size: 34px;
   }
@@ -1519,6 +1513,12 @@ a.pagination-link {
 
   .related-posts-header {
     font-size: 17px;
+  }
+
+  .share-post-link {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Lato";
   }
 
   .aside-outer-wrapper-class {
@@ -1600,26 +1600,9 @@ a.pagination-link {
     text-align: center;
   }
 
-  .header-element-margin {
-    margin: 0;
-  }
-
   .homepage-link {
     height: 65px;
     width: 209px;
-  }
-
-  .inner-wrapper-nav-header {
-    padding: 8px 15px 15px 15px;
-  }
-
-  .searchbox-style {
-    padding: 19px 0 0 0;
-  }
-
-  .site-description {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
   }
 
   .site-header {
@@ -1629,6 +1612,19 @@ a.pagination-link {
   .site-title {
     margin: 0 auto;
     float: none;
+  }
+
+  .inner-wrapper-nav-header {
+    padding: 8px 15px 15px 15px;
+  }
+
+  .site-description {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+  }
+
+  .header-element-margin {
+    margin: 0;
   }
 
   .main-navigation {
@@ -1676,6 +1672,10 @@ a.pagination-link {
 
   .searchbox-display {
     display: block;
+  }
+
+  .searchbox-style {
+    padding: 19px 0 0 0;
   }
 
   #tipue_search_input {
@@ -1765,20 +1765,6 @@ a.pagination-link {
   .aside-section-header {
     color: black;
     text-shadow: 0px 2px 3px #107da8;
-  }
-
-  .footer-column {
-    width: 300px;
-  }
-
-  .footer-column-one-class {
-    margin: 0 auto;
-    float: none;
-  }
-
-  .footer-column-two-class {
-    margin: 0 auto;
-    float: none;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -1925,10 +1911,6 @@ a.pagination-link {
     padding: 56px 0 11px;
   }
 
-  .post-subheading {
-    font-size: 27px;
-  }
-
   .post-snippet-title {
     font-size: 34px;
   }
@@ -2005,6 +1987,12 @@ a.pagination-link {
     font-style: italic;
   }
 
+  .share-post-link {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Lato";
+  }
+
   .control-section-width {
     max-width: 1024px;
     margin: 0 auto;
@@ -2067,12 +2055,6 @@ a.pagination-link {
 
   .mid-aside-margin {
     margin: 0 125px;
-  }
-
-  .share-post-link {
-    font-size: 16px;
-    line-height: 1;
-    font-family: "Lato";
   }
 }
 .assistive-text,
