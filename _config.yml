@@ -5,6 +5,7 @@ paginate: 10
 include: [.htaccess]
 exclude: [
   assets,
+  backbone,
   css/styles.css,
   Gruntfile.js,
   grunt,

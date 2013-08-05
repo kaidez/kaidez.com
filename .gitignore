@@ -9,7 +9,9 @@ old_img/
 js/cacheTest.js
 
 
-
+# Backbone code drafts
+#---------------------
+backbone/
 
 
 # Application cache manifest
