@@ -2901,43 +2901,13 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("../img/snSprite.png") no-repeat -125px -80px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite.png") no-repeat -125px -6px;
+    background-size: 350px 123px;
     height: 62px;
     width: 221px;
     text-indent: -999px;
     margin: 0;
     float: left;
-  }
-
-  .twitter {
-    background: url("../img/snSprite.png") no-repeat -1px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .google-plus {
-    background: url("../img/snSprite.png") no-repeat -59px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .github {
-    background: url("../img/snSprite.png") no-repeat -118px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .youtube {
-    background: url("../img/snSprite.png") no-repeat -173px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-    float: left;
-    list-style-type: none;
   }
 
   .mobile-menu-btn-class {
@@ -2951,8 +2921,8 @@ a.pagination-link {
   }
 
   .btnSearch {
-    background: url("../img/snSprite.png") no-repeat -79px -78px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite.png") no-repeat -79px -4px;
+    background-size: 350px 123px;
     height: 27px;
     width: 44px;
     border: 0;
@@ -2969,8 +2939,8 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("../img/snSprite.png") no-repeat -117px -149px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite.png") no-repeat -117px -69px;
+    background-size: 350px 123px;
     height: 60px;
     width: 176px;
     float: left;
@@ -2979,39 +2949,9 @@ a.pagination-link {
     display: block;
   }
 
-  .twitter {
-    background: url("../img/snSprite.png") no-repeat -1px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .google-plus {
-    background: url("../img/snSprite.png") no-repeat -59px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .github {
-    background: url("../img/snSprite.png") no-repeat -118px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .youtube {
-    background: url("../img/snSprite.png") no-repeat -173px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-    float: left;
-    list-style-type: none;
-  }
-
   .mobile-menu-btn-class {
-    background: url("../img/snSprite.png") no-repeat -2px -68px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite.png") no-repeat -2px 8px;
+    background-size: 350px 123px;
     height: 44px;
     width: 44px;
     display: block;
@@ -3021,8 +2961,8 @@ a.pagination-link {
   }
 
   .search-btn-class {
-    background: url("../img/snSprite.png") no-repeat -41px -69px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite.png") no-repeat -41px 8px;
+    background-size: 350px 123px;
     height: 44px;
     width: 44px;
     display: block;
@@ -3033,7 +2973,7 @@ a.pagination-link {
 
   .btnSearch {
     background: url("../img/snSprite.png") no-repeat -87px -78px;
-    background-size: 350px 210px;
+    background-size: 350px 123px;
     height: 27px;
     width: 28px;
     border: 0;
@@ -3045,48 +2985,14 @@ a.pagination-link {
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 569px), only screen and (min-device-pixel-ratio: 2) and (min-width: 569px), only screen and (min-resolution: 192dpi) and (min-width: 569px), only screen and (min-resolution: 2dppx) and (min-width: 569px) {
-  body {
-    background: url(../img/white_carbon_@2x.png);
-  }
-
   .site-title {
-    background: url("../img/snSprite@2x.png") no-repeat -125px -80px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite@2x.png") no-repeat -125px -6px;
+    background-size: 350px 123px;
     height: 62px;
     width: 221px;
     text-indent: -999px;
     margin: 0;
     float: left;
-  }
-
-  .twitter {
-    background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .google-plus {
-    background: url("../img/snSprite@2x.png") no-repeat -59px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .github {
-    background: url("../img/snSprite@2x.png") no-repeat -118px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .youtube {
-    background: url("../img/snSprite@2x.png") no-repeat -173px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-    float: left;
-    list-style-type: none;
   }
 
   .mobile-menu-btn-class {
@@ -3100,8 +3006,8 @@ a.pagination-link {
   }
 
   .btnSearch {
-    background: url("../img/snSprite@2x.png") no-repeat -79px -78px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite@2x.png") no-repeat -79px -4px;
+    background-size: 350px 123px;
     height: 27px;
     width: 44px;
     border: 0;
@@ -3113,13 +3019,9 @@ a.pagination-link {
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 568px), only screen and (min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min-resolution: 192dpi) and (max-width: 568px), only screen and (min-resolution: 2dppx) and (max-width: 568px) {
-  body {
-    background: url(../img/white_carbon_@2x.png);
-  }
-
   .site-title {
-    background: url("../img/snSprite@2x.png") no-repeat -117px -149px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite@2x.png") no-repeat -117px -69px;
+    background-size: 350px 123px;
     height: 60px;
     width: 176px;
     text-indent: -999px;
@@ -3127,39 +3029,9 @@ a.pagination-link {
     float: left;
   }
 
-  .twitter {
-    background: url("../img/snSprite@2x.png") no-repeat -1px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .google-plus {
-    background: url("../img/snSprite@2x.png") no-repeat -59px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .github {
-    background: url("../img/snSprite@2x.png") no-repeat -118px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-  }
-
-  .youtube {
-    background: url("../img/snSprite@2x.png") no-repeat -173px -2px;
-    background-size: 350px 210px;
-    height: 51px;
-    width: 51px;
-    float: left;
-    list-style-type: none;
-  }
-
   .mobile-menu-btn-class {
-    background: url("../img/snSprite@2x.png") no-repeat -2px -68px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite@2x.png") no-repeat -2px 8px;
+    background-size: 350px 123px;
     height: 44px;
     width: 44px;
     display: block;
@@ -3169,8 +3041,8 @@ a.pagination-link {
   }
 
   .search-btn-class {
-    background: url("../img/snSprite@2x.png") no-repeat -41px -69px;
-    background-size: 350px 210px;
+    background: url("../img/snSprite@2x.png") no-repeat -41px 8px;
+    background-size: 350px 123px;
     height: 44px;
     width: 44px;
     display: block;
@@ -3181,7 +3053,7 @@ a.pagination-link {
 
   .btnSearch {
     background: url("../img/snSprite@2x.png") no-repeat -87px -78px;
-    background-size: 350px 210px;
+    background-size: 350px 123px;
     height: 27px;
     width: 28px;
     border: 0;
