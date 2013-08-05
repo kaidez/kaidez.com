@@ -97,7 +97,7 @@ $desktop-tablet-retina:
 $desktop-tablet-non-retina: "only screen and (min-width: 569px)";
 
 // 'background-size' variable for any and all CSS classes that reference the sprites. You HAVE to do this is you're doubling the size of your image for retina purposes or the image will look weird.
-$bg-size: 350px 210px;
+$bg-size: 350px 123px;
 
 // Variables for the retina media queries start
 
