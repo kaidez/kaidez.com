@@ -78,6 +78,10 @@ module.exports = function(grunt) {
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
         files: ['grunt/cssSource/*.scss'],
         tasks: ['sassbuild', 'jekyll:dev']
+      },
+      imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
+        files: ['img/*.{png,jpg,jpeg,gif}'],
+        tasks: ['imagemin', 'jekyll:dev']
       }
      },
 
@@ -210,6 +214,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'imagemin', 'manifest', 'sftp-deploy']);
+  grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'manifest', 'sftp-deploy']);
 
 };
