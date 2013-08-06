@@ -153,7 +153,11 @@
 
 // Desktop/tablet retina media query.
  
-@media #{$desktop-tablet-retina} { 
+@media #{$desktop-tablet-retina} {
+
+  body {
+    background: url(../img/white_carbon@2X.png);
+  } 
 
  // <h1> tag in the <header>
   .site-title {
@@ -195,7 +199,11 @@
  
 @media #{$mobile-retina} { 
 
- // <h1> tag in the <header>
+   body {
+    background: url(../img/white_carbon@2X.png);
+  } 
+
+  // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite@2x.png', -117px -69px, 60px, 176px);
     text-indent: -999px;
