@@ -3793,9 +3793,9 @@ a.pagination-link {
 
   .aside-outer-wrapper-class {
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
-    -webkit-box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset0 7px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     padding: 35px 10px;
   }
 
@@ -3817,6 +3817,12 @@ a.pagination-link {
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
+  }
+
+  .footer-class {
+    -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
   }
 }
 .assistive-text,
