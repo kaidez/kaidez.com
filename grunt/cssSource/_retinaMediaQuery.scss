@@ -50,10 +50,8 @@
 //     -the menu image in the header on mobile
 //     -the search icon in the header on mobile devices
 //     -the search icon that appears in the search bar
-//     -all four social networking icons in the sitefooter
 // 
-// The layout for the social netowking icons is consistent across all devices // and resolutions. The logo and the two mobile-based images appear 
-// differently across all devices and resolutions.
+// The logo and the two mobile-based images appear differently across all devices and resolutions.
 // 
 // ============================================================================
  
@@ -153,7 +151,11 @@
 
 // Desktop/tablet retina media query.
  
-@media #{$desktop-tablet-retina} { 
+@media #{$desktop-tablet-retina} {
+
+  body {
+    background: url(../img/white_carbon@2X.png);
+  } 
 
  // <h1> tag in the <header>
   .site-title {
@@ -195,7 +197,11 @@
  
 @media #{$mobile-retina} { 
 
- // <h1> tag in the <header>
+   body {
+    background: url(../img/white_carbon@2X.png);
+  } 
+
+  // <h1> tag in the <header>
   .site-title {
     @include sprite-images('../img/snSprite@2x.png', -117px -69px, 60px, 176px);
     text-indent: -999px;
