@@ -316,22 +316,28 @@
   // Footer styles start
   // ==========================================================================
 
-// styling hook for <footer>
-.footer-class {
-  @include create-box-shadow;
-}
+  // styling hook for <footer>
+  .footer-class {
+    @include create-box-shadow;
+  }
 
-.copyright-style {
-  display:block;
-  clear: both;
-  width: 1024px;
-  padding: 59px 0;
-  margin: 0 auto;
-  text-align: start;
-}
+  .copyright-style {
+    display:block;
+    clear: both;
+    width: 1024px;
+    padding: 59px 0;
+    margin: 0 auto;
+    text-align: start;
+  }
 
-// ===========================================================================
-// Footer styles end
-// ===========================================================================
+  .colophon-class {
+    background-color: red;
+    height: 150px;
+    width: 150px;
+  }
+
+  // ==========================================================================
+  // Footer styles end
+  // ==========================================================================
  
  }
