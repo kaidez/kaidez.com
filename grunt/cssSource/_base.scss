@@ -32,8 +32,11 @@ $base-link-color: #262841;
 // Base color for page links in post content. Also effects the color of any and all pagination buttons.
 $post-link-color: #3285A5;
 
+// footer background color
+$footer-color: #0C5E7E;
+
 // aside background color
-$aside-color: #0C5E7E;
+$aside-color: lighten($footer-color, 8);
 
 // Darken the footer color: effects the all copy in the footer and the bottom
 // border of the post snippets.
