@@ -2699,9 +2699,9 @@ p code, li code {
 .copyright-style {
   display: block;
   clear: both;
-  width: 1024px;
   padding: 59px 0;
   margin: 0 auto;
+  color: #fff;
 }
 
 .ad-section-class {
@@ -2896,6 +2896,11 @@ a.pagination-link {
   display: block;
   color: #67cddc;
   text-decoration: none;
+}
+
+.copyright-style {
+  padding: 59px 0 75px 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 569px) {
@@ -3823,6 +3828,15 @@ a.pagination-link {
     -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .copyright-style {
+    display: block;
+    clear: both;
+    width: 1024px;
+    padding: 59px 0;
+    margin: 0 auto;
+    text-align: start;
   }
 }
 .assistive-text,
