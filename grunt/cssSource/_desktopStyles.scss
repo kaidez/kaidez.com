@@ -204,13 +204,12 @@
 
   .page-content {
     @include page-content($inner-content-width);
-    @include create-box-shadow(8px);
   }
   
   // breadcrumbs
   .breadcrumb-styles {
     @include breadcrumb-styles(16px, 45px);
-    @include create-box-shadow(5px);
+    @include create-box-shadow;
   }
 
   .breadcrumb-styles a:link,
@@ -276,6 +275,7 @@
   // apply background image to <aside>
   .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
+    @include create-box-shadow;
     padding: 35px 10px;
   }
   
