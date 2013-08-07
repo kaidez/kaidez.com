@@ -3732,9 +3732,6 @@ a.pagination-link {
     position: relative;
     margin: 0 auto;
     padding: 8px 45px;
-    -webkit-box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset0 7px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
   }
 
   .breadcrumb-styles a:link,
