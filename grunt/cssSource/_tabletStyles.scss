@@ -253,10 +253,6 @@
     margin-top: 16px;
   }
 
-  .aside-section-header {
-    @include aside-section-header;
-  }
-
   // the <aside> nav links
   .aside-nav-link {
     @include aside-nav-link;

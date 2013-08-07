@@ -2604,7 +2604,7 @@ p code, li code {
 }
 
 .aside-outer-wrapper-class {
-  color: #01070a;
+  color: #67cddc;
   height: auto;
   width: auto;
   padding: 1px 10px;
@@ -2626,8 +2626,9 @@ p code, li code {
   font-family: "Roboto Condensed";
   visibility: visible;
   font-size: 23px;
-  border-bottom: 1px solid #01070A;
+  border-bottom: 1px solid #90dbe6;
   margin-bottom: 16px;
+  color: #90dbe6;
 }
 
 .aside-nav-class {
@@ -2648,6 +2649,10 @@ p code, li code {
   list-style-type: none;
 }
 
+.aside-nav-link:hover, .aside-nav-link:focus {
+  color: #29a2b4;
+}
+
 .kaidez-social-network-list-styles {
   padding: 0;
   margin: 16px auto 0;
@@ -2662,7 +2667,7 @@ p code, li code {
   clear: both;
 }
 
-.kaidez-social-sharing-list-item-link {
+.kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
   color: #67cddc;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
@@ -2673,7 +2678,7 @@ p code, li code {
 
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: #01070a;
+  color: #29a2b4;
 }
 
 .kaidez-social-sharing-list-item-link-text {
@@ -2887,12 +2892,6 @@ a.pagination-link {
   display: block;
   color: #67cddc;
   text-decoration: none;
-}
-
-.aside-nav-link:focus {
-  background-color: #01070a;
-  padding-left: 5px;
-  color: #fff;
 }
 
 @media only screen and (min-width: 569px) {
@@ -3303,11 +3302,6 @@ a.pagination-link {
     margin-top: 16px;
   }
 
-  .aside-section-header {
-    color: black;
-    text-shadow: 0px 2px 3px #107da8;
-  }
-
   .aside-nav-link {
     list-style-type: none;
     margin: 0;
@@ -3542,11 +3536,6 @@ a.pagination-link {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
   }
 
-  .aside-section-header {
-    color: black;
-    text-shadow: 0px 2px 3px #107da8;
-  }
-
   .all-aside-sections {
     float: left;
     padding: 0 10px;
@@ -3733,9 +3722,6 @@ a.pagination-link {
     background-color: #fff;
     width: auto;
     text-align: left;
-    -webkit-box-shadow: 1px 8px 7px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 1px 8px 7px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 8px 7px 2px rgba(0, 0, 0, 0.2);
   }
 
   .breadcrumb-styles {
@@ -3746,9 +3732,9 @@ a.pagination-link {
     position: relative;
     margin: 0 auto;
     padding: 8px 45px;
-    -webkit-box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 5px 7px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset0 7px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
   }
 
   .breadcrumb-styles a:link,
@@ -3806,12 +3792,13 @@ a.pagination-link {
 
   .aside-outer-wrapper-class {
     background: #0c5e7e url("../img/footer-bg.png") no-repeat left;
+    -webkit-box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset0 7px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 2px rgba(0, 0, 0, 0.2);
     padding: 35px 10px;
   }
 
   .aside-section-header {
-    color: black;
-    text-shadow: 0px 2px 3px #107da8;
     width: 250px;
   }
 
@@ -3825,24 +3812,10 @@ a.pagination-link {
   }
 
   .aside-nav-link {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 5px 5px 0;
-    height: 25px;
-    font-size: 18px;
-    display: block;
-    color: #67cddc;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .aside-nav-link:hover {
-    background-color: #01070a;
-    padding-left: 5px;
-    color: #fff;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
   }
 }
 .assistive-text,
