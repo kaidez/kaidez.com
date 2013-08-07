@@ -327,9 +327,9 @@ $bg-size: 350px 123px;
 
 // Add box-shadow to the site's content element (i.e.: ".page-content")
 @mixin create-box-shadow {
-  -webkit-box-shadow: inset 0 7px 2px rgba(0,0,0,0.2);
-  -moz-box-shadow: inset0 7px 2px rgba(0,0,0,0.2);
-  box-shadow: inset 0 7px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 7px 16px rgba(0,0,0,0.2);
+  -moz-box-shadow: inset0 7px 16px rgba(0,0,0,0.2);
+  box-shadow: inset 0 7px 16px rgba(0,0,0,0.2);
 }
 
 // For the 'share post' sections on post pages. loads the Google 'Lato' font 
