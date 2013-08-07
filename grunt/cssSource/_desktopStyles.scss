@@ -317,7 +317,7 @@
   // ==========================================================================
 
   // styling hook for <footer>
-  .footer-class {
+  .footer-outer-wrapper-class {
     @include create-box-shadow;
     height: 150px;
   }
