@@ -2903,6 +2903,10 @@ a.pagination-link {
   text-align: center;
 }
 
+.colophon-class {
+  display: none;
+}
+
 @media only screen and (min-width: 569px) {
   body {
     background: url(../img/white_carbon.png);
@@ -3828,21 +3832,24 @@ a.pagination-link {
     -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    height: 150px;
   }
 
-  .copyright-class {
+  .copyright-style {
     display: block;
     clear: both;
-    width: 1024px;
     padding: 59px 0;
     margin: 0 auto;
     text-align: start;
+    float: left;
   }
 
   .colophon-class {
-    background-color: red;
+    background-color: #09465d;
     height: 150px;
     width: 150px;
+    float: right;
+    display: block;
   }
 }
 .assistive-text,
