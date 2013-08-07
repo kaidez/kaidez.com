@@ -343,11 +343,6 @@ $bg-size: 350px 123px;
   text-shadow: 0px 2px 3px lighten($base-color, 9);
 }
 
-// Applies a text shadow and dotted border to the aside section's title
-@mixin aside-section-header {
-  @include makeTextShadow($aside-color);
-}
-
 // Styles the link in the <aside> "LINKS" section
 @mixin aside-nav-link {
   list-style-type: none;

@@ -439,7 +439,7 @@ p code, li code {
 
 // <aside> tag
 .aside-outer-wrapper-class {
-  color: $darken-the-aside-color;
+  color: $header-color;
   height: auto;
   width: auto;
   padding:1px 10px;
@@ -462,8 +462,9 @@ p code, li code {
 .wf-active .aside-section-header {
   @include fonts($robo, visible);
   font-size: 23px;
-  border-bottom: 1px solid #01070A;
+  border-bottom: 1px solid lighten($header-color,10);
   margin-bottom: 16px;
+  color: lighten($header-color,10);
 }
 
 // the <ul> container for the <aside> nav links
@@ -488,6 +489,11 @@ p code, li code {
   list-style-type: none;
 }
 
+// hover state for the <aside> nav links
+.aside-nav-link:hover , .aside-nav-link:focus {
+  color: darken($header-color,20);
+}
+
 // <ul> that contains the kaidez social networking links in the <aside>
 .kaidez-social-network-list-styles {
   padding: 0;
@@ -505,7 +511,7 @@ p code, li code {
 }
 
 // link styling for kaidez social networking links
-.kaidez-social-sharing-list-item-link {
+.kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
   color: $header-color;
   text-decoration: none;
   @include transitions (color);
@@ -515,7 +521,7 @@ p code, li code {
 // for desktop views and (maybe) iPads, focus is for everything else.
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: $darken-the-aside-color;
+  color: darken($header-color,20);
 }
 
 // copy inside the <span> tag inside the kaidez social netwoek links
