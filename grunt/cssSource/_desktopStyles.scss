@@ -209,7 +209,6 @@
   // breadcrumbs
   .breadcrumb-styles {
     @include breadcrumb-styles(16px, 45px);
-    @include create-box-shadow;
   }
 
   .breadcrumb-styles a:link,
