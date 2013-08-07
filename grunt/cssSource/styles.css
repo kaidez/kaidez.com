@@ -2604,7 +2604,7 @@ p code, li code {
 }
 
 .aside-outer-wrapper-class {
-  color: #01070a;
+  color: #67cddc;
   height: auto;
   width: auto;
   padding: 1px 10px;
@@ -2626,9 +2626,9 @@ p code, li code {
   font-family: "Roboto Condensed";
   visibility: visible;
   font-size: 23px;
-  border-bottom: 1px solid #29a2b4;
+  border-bottom: 1px solid #90dbe6;
   margin-bottom: 16px;
-  color: #29a2b4;
+  color: #90dbe6;
 }
 
 .aside-nav-class {
@@ -2649,6 +2649,10 @@ p code, li code {
   list-style-type: none;
 }
 
+.aside-nav-link:hover, .aside-nav-link:focus {
+  color: #29a2b4;
+}
+
 .kaidez-social-network-list-styles {
   padding: 0;
   margin: 16px auto 0;
@@ -2663,7 +2667,7 @@ p code, li code {
   clear: both;
 }
 
-.kaidez-social-sharing-list-item-link {
+.kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
   color: #67cddc;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
@@ -2674,7 +2678,7 @@ p code, li code {
 
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: #01070a;
+  color: #29a2b4;
 }
 
 .kaidez-social-sharing-list-item-link-text {
@@ -2888,12 +2892,6 @@ a.pagination-link {
   display: block;
   color: #67cddc;
   text-decoration: none;
-}
-
-.aside-nav-link:focus {
-  background-color: #01070a;
-  padding-left: 5px;
-  color: #fff;
 }
 
 @media only screen and (min-width: 569px) {
@@ -3814,16 +3812,10 @@ a.pagination-link {
   }
 
   .aside-nav-link {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .aside-nav-link:hover {
-    background-color: #01070a;
-    padding-left: 5px;
-    color: #fff;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
   }
 }
 .assistive-text,
