@@ -2696,7 +2696,7 @@ p code, li code {
   padding: 0;
 }
 
-.copyright-style {
+.copyright-class {
   display: block;
   clear: both;
   padding: 59px 0;
@@ -2898,7 +2898,7 @@ a.pagination-link {
   text-decoration: none;
 }
 
-.copyright-style {
+.copyright-class {
   padding: 59px 0 75px 0;
   text-align: center;
 }
@@ -3830,7 +3830,7 @@ a.pagination-link {
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
   }
 
-  .copyright-style {
+  .copyright-class {
     display: block;
     clear: both;
     width: 1024px;
