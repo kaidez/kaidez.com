@@ -370,6 +370,12 @@ p code, li code {
   text-align: left;
 }
 
+// all links in post copy are this color...fails lint tests...I'll live
+main a,
+main a:visited {
+  color: darken($post-link-color, 4);
+}
+
 // Post snippet that displays on both the home page and search results.
 .post-snippet {
   @include bottomBorder($darken-the-aside-color);
