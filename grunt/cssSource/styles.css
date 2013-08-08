@@ -3877,6 +3877,12 @@ a.pagination-link {
     float: left;
   }
 
+  .colophon-header {
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
   .colophon-class {
     background-color: #09465d;
     height: 150px;
@@ -3887,6 +3893,8 @@ a.pagination-link {
 
   .colophon-list-class {
     padding: 0;
+    margin: 0;
+    float: left;
   }
 
   .colophon-list-item-class {
