@@ -71,7 +71,7 @@
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/snSprite.png', -125px -6px, 62px, 221px);
+    @include sprite-images('../img/kaidez-sprite.png', -125px -6px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -89,7 +89,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/snSprite.png', -79px -4px, 27px, 44px);
+    @include sprite-images('../img/kaidez-sprite.png', -79px -4px, 27px, 44px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -99,15 +99,15 @@
   }
 
   .jekyll {
-    @include sprite-images('../img/snSprite.png', -10px -133px, 57px, 151px);
+    @include sprite-images('../img/kaidez-sprite.png', -10px -133px, 57px, 151px);
   }
 
   .aws {
-    @include sprite-images('../img/snSprite.png', -10px -204px, 57px, 151px);
+    @include sprite-images('../img/kaidez-sprite.png', -10px -204px, 57px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/snSprite.png', -10px -258px, 39px, 151px);
+    @include sprite-images('../img/kaidez-sprite.png', -10px -258px, 39px, 151px);
   }
 }
 
@@ -126,13 +126,13 @@
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/snSprite.png', -117px -69px, 60px, 176px);
+    @include sprite-images('../img/kaidez-sprite.png', -117px -69px, 60px, 176px);
     @include desktop-logo-sprite-add-on;
   }
 
  // Menu bg image for mobile
   .mobile-menu-btn-class {
-    @include sprite-images('../img/snSprite.png', -2px 8px, 44px, 44px);
+    @include sprite-images('../img/kaidez-sprite.png', -2px 8px, 44px, 44px);
     display: block;
     float: right;
     margin-right: 10px;
@@ -141,7 +141,7 @@
 
  // Search bg image for mobile
   .search-btn-class {
-    @include sprite-images('../img/snSprite.png', -41px 8px, 44px, 44px);
+    @include sprite-images('../img/kaidez-sprite.png', -41px 8px, 44px, 44px);
     display: block;
     margin-right:10px;
     cursor: pointer;
@@ -150,7 +150,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/snSprite.png', -87px -78px, 27px, 28px);
+    @include sprite-images('../img/kaidez-sprite.png', -87px -78px, 27px, 28px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -175,7 +175,7 @@
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/snSprite@2x.png', -125px -6px, 62px, 221px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -125px -6px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -193,7 +193,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/snSprite@2x.png', -79px -4px, 27px, 44px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -79px -4px, 27px, 44px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -219,7 +219,7 @@
 
   // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/snSprite@2x.png', -117px -69px, 60px, 176px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -117px -69px, 60px, 176px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -227,7 +227,7 @@
 
  // Menu bg image for mobile
   .mobile-menu-btn-class {
-    @include sprite-images('../img/snSprite@2x.png', -2px 8px, 44px, 44px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -2px 8px, 44px, 44px);
     display: block;
     float: right;
     margin-right: 10px;
@@ -236,7 +236,7 @@
 
  // Search bg image for mobile
   .search-btn-class {
-    @include sprite-images('../img/snSprite@2x.png', -41px 8px, 44px, 44px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -41px 8px, 44px, 44px);
     display: block;
     margin-right:10px;
     cursor: pointer;
@@ -245,7 +245,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/snSprite@2x.png', -87px -78px, 27px, 28px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -87px -78px, 27px, 28px);
     border: 0;
     text-indent: -999px;
     padding: 0;
