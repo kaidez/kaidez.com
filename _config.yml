@@ -6,6 +6,7 @@ include: [.htaccess]
 exclude: [
   assets,
   backbone,
+  bower_components,
   css/styles.css,
   Gruntfile.js,
   grunt,
