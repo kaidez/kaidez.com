@@ -336,7 +336,16 @@
     text-align: start;
     float: left;
   }
+  
 
+  // <h3> for the colophon
+  .colophon-header {
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
+  //  the colophon containing element
   .colophon-class {
     background-color: darken($aside-color, 15);
     height: 150px;
@@ -345,9 +354,11 @@
     display: block;
   }
 
-  // list element for Jekyll, AWS & MaxCDN links
+  // <ol> element for Jekyll, AWS & MaxCDN links
   .colophon-list-class {
     padding: 0;
+    margin: 0;
+    float: left;
   }
 
   // individual <li> tags for footer image links
