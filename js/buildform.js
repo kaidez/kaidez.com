@@ -5,7 +5,8 @@
 
 define(function() {
   
-  var loadMenu, cssdisabled, testcss, currstyle; // 4 variables global to this RequireJS module only.
+  // 4 variables global to this RequireJS module only.
+  var loadMenu, isCssDisabled, testcss, currstyle; 
 
   /*  
    *  Dynamically create a form that looks like this:
@@ -56,7 +57,7 @@ define(function() {
    *
    * A very clever way to test if CSS is enabled in the browser...
    *
-   * First, create a Boolean-type variable called 'cssdisabled' and set its 
+   * First, create a Boolean-type variable called 'isCssDisabled' and set its 
    * value to 'false'. Then create a simple <div> tag.  The default value of a 
    * <div> tag's 'position' property is 'static'...we're going to set/change
    * it to 'absolute'. After that, we place the <div> directly below the
@@ -79,19 +80,19 @@ define(function() {
    * If the value is 'static', it means that the browser was unable to detect 
    * the <div> tag's absolute positioning we set earlier with
    * 'testcss.style.position:absolute'. Therefore, CSS is disabled in the 
-   * browser and the value of the 'cssdisabled' variable is 'true'. But if the 
-   * value is anything else (in this case, the 'absolute' value we set
-   * earlier), CSS is enabled so the value of our 'cssdisabled' variable is 
+   * browser and the value of the 'isCssDisabled' variable is 'true'. But if 
+   * the value is anything else (in this case, the 'absolute' value we set
+   * earlier), CSS is enabled so the value of our 'isCssDisabled' variable is 
    * 'false' (which is what it was set to at the start initially). At this 
    * point, we can remove the <div> tag from the page.
    *
-   * The 'cssdisabled' variable is still available to our module's namespace so
-   * we can see its value. If we see that the value is set to 'false', it 
-   * means that CSS is enabled in the browser so it's safe to run the
-   * loadMenu() method above and display our fancy searchbox. But if 
-   * 'cssdisabled' is set to true', it means that CSS is NOT enabled. So don't 
-   * run the loadMenu() method and instead, return a value of 'false': a best
-   *  practice in this case.
+   * The 'isCssDisabled' variable is still available to our RequireJS module's
+   * namespace so we can see its value. If we see that the value is set to 
+   * 'false', it means that CSS is enabled in the browser so it's safe to run
+   * the loadMenu() method above and display our fancy searchbox. But if 
+   * 'isCssDisabled' is set to true', it means that CSS is NOT enabled. So 
+   * don't run the loadMenu() method and instead, return a value of 'false': a 
+   * best practice in this case.
    *
    * We've set thngs up so that if either any type of CSS is disabled (extenal 
    * stylesheets, embedded or inline), our Google searchbox will show up.
@@ -100,7 +101,7 @@ define(function() {
    *  http://bit.ly/11iKpZh
    */
 
-  cssdisabled = false; // must be proven otherwise
+  isCssDisabled = false; // must be proven otherwise
   
   testcss = document.createElement('div');
 
@@ -116,11 +117,11 @@ define(function() {
     currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
   } 
 
-  cssdisabled = (currstyle === 'static') ? true : false;
+  isCssDisabled = (currstyle === 'static') ? true : false;
 
   document.getElementsByTagName('body')[0].removeChild(testcss);
 
-  if (cssdisabled === false) {
+  if (isCssDisabled === false) {
     loadMenu();
   } else {
     return false;
