@@ -2710,6 +2710,7 @@ p code, li code {
 
 .footer-outer-wrapper-class {
   background-color: #0c5e7e;
+  padding: 20px 0;
   color: #fff;
 }
 
@@ -3829,11 +3830,16 @@ a.pagination-link {
     transition: color 0.3s ease;
   }
 
-  .footer-class {
+  .footer-outer-wrapper-class {
     -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     height: 150px;
+  }
+
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
   }
 
   .copyright-style {
