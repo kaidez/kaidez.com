@@ -2957,8 +2957,6 @@ a.pagination-link {
     background-size: 350px 305px;
     height: 57px;
     width: 151px;
-    height: 57px;
-    width: 151px;
   }
 
   .aws {
@@ -2966,15 +2964,11 @@ a.pagination-link {
     background-size: 350px 305px;
     height: 57px;
     width: 151px;
-    height: 57px;
-    width: 151px;
   }
 
   .maxcdn {
     background: url("../img/kaidez-sprite.png") no-repeat -10px -258px;
     background-size: 350px 305px;
-    height: 39px;
-    width: 151px;
     height: 39px;
     width: 151px;
   }
