@@ -321,7 +321,8 @@
     @include create-box-shadow;
     height: 150px;
   }
-
+  
+  // inner wrapper in the <footer>
   .footer-inner-wrapper-class {
     max-width: 1024px;
     margin: 0 auto;
@@ -339,9 +340,21 @@
   .colophon-class {
     background-color: darken($aside-color, 15);
     height: 150px;
-    width: 150px;
+    max-width: 700px;
     float: right;
     display: block;
+  }
+
+  // list element for Jekyll, AWS & MaxCDN links
+  .colophon-list-class {
+    padding: 0;
+  }
+
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
   }
 
   // ==========================================================================
