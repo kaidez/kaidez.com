@@ -2953,24 +2953,24 @@ a.pagination-link {
   }
 
   .jekyll {
-    background: url("../img/snSprite.png") no-repeat 6px -129px;
+    background: url("../img/snSprite.png") no-repeat -10px -133px;
     background-size: 350px 305px;
     height: 57px;
-    width: 153px;
+    width: 151px;
   }
 
   .aws {
-    background: url("../img/snSprite.png") no-repeat 6px -129px;
+    background: url("../img/snSprite.png") no-repeat -10px -204px;
     background-size: 350px 305px;
     height: 57px;
-    width: 153px;
+    width: 151px;
   }
 
   .maxcdn {
-    background: url("../img/snSprite.png") no-repeat 6px -129px;
+    background: url("../img/snSprite.png") no-repeat -10px -258px;
     background-size: 350px 305px;
-    height: 57px;
-    width: 153px;
+    height: 39px;
+    width: 151px;
   }
 }
 @media only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px) {
