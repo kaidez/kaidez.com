@@ -50,6 +50,9 @@
 //     -the menu image in the header on mobile
 //     -the search icon in the header on mobile devices
 //     -the search icon that appears in the search bar
+//     -the Jekyll logo
+//     -the AWS logo
+//     -the MaxCDN logo
 // 
 // The logo and the two mobile-based images appear differently across all
 // devices and resolutions.
@@ -93,6 +96,18 @@
     position: relative;
     left: -42px;
     top: -3px;
+  }
+
+  .jekyll {
+    @include sprite-images('../img/snSprite.png', -10px -133px, 57px, 151px);
+  }
+
+  .aws {
+    @include sprite-images('../img/snSprite.png', -10px -204px, 57px, 151px);
+  }
+
+  .maxcdn {
+    @include sprite-images('../img/snSprite.png', -10px -258px, 39px, 151px);
   }
 }
 
