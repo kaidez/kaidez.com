@@ -2921,7 +2921,7 @@ a.pagination-link {
 
   .site-title {
     background: url("../img/snSprite.png") no-repeat -125px -6px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 62px;
     width: 221px;
     text-indent: -999px;
@@ -2941,7 +2941,7 @@ a.pagination-link {
 
   .btnSearch {
     background: url("../img/snSprite.png") no-repeat -79px -4px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 27px;
     width: 44px;
     border: 0;
@@ -2951,6 +2951,27 @@ a.pagination-link {
     left: -42px;
     top: -3px;
   }
+
+  .jekyll {
+    background: url("../img/snSprite.png") no-repeat 6px -129px;
+    background-size: 350px 305px;
+    height: 57px;
+    width: 153px;
+  }
+
+  .aws {
+    background: url("../img/snSprite.png") no-repeat 6px -129px;
+    background-size: 350px 305px;
+    height: 57px;
+    width: 153px;
+  }
+
+  .maxcdn {
+    background: url("../img/snSprite.png") no-repeat 6px -129px;
+    background-size: 350px 305px;
+    height: 57px;
+    width: 153px;
+  }
 }
 @media only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px), only screen and (max-width: 568px) {
   body {
@@ -2959,7 +2980,7 @@ a.pagination-link {
 
   .site-title {
     background: url("../img/snSprite.png") no-repeat -117px -69px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 60px;
     width: 176px;
     float: left;
@@ -2970,7 +2991,7 @@ a.pagination-link {
 
   .mobile-menu-btn-class {
     background: url("../img/snSprite.png") no-repeat -2px 8px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 44px;
     width: 44px;
     display: block;
@@ -2981,7 +3002,7 @@ a.pagination-link {
 
   .search-btn-class {
     background: url("../img/snSprite.png") no-repeat -41px 8px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 44px;
     width: 44px;
     display: block;
@@ -2992,7 +3013,7 @@ a.pagination-link {
 
   .btnSearch {
     background: url("../img/snSprite.png") no-repeat -87px -78px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 27px;
     width: 28px;
     border: 0;
@@ -3010,7 +3031,7 @@ a.pagination-link {
 
   .site-title {
     background: url("../img/snSprite@2x.png") no-repeat -125px -6px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 62px;
     width: 221px;
     text-indent: -999px;
@@ -3030,7 +3051,7 @@ a.pagination-link {
 
   .btnSearch {
     background: url("../img/snSprite@2x.png") no-repeat -79px -4px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 27px;
     width: 44px;
     border: 0;
@@ -3048,7 +3069,7 @@ a.pagination-link {
 
   .site-title {
     background: url("../img/snSprite@2x.png") no-repeat -117px -69px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 60px;
     width: 176px;
     text-indent: -999px;
@@ -3058,7 +3079,7 @@ a.pagination-link {
 
   .mobile-menu-btn-class {
     background: url("../img/snSprite@2x.png") no-repeat -2px 8px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 44px;
     width: 44px;
     display: block;
@@ -3069,7 +3090,7 @@ a.pagination-link {
 
   .search-btn-class {
     background: url("../img/snSprite@2x.png") no-repeat -41px 8px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 44px;
     width: 44px;
     display: block;
@@ -3080,7 +3101,7 @@ a.pagination-link {
 
   .btnSearch {
     background: url("../img/snSprite@2x.png") no-repeat -87px -78px;
-    background-size: 350px 377px;
+    background-size: 350px 305px;
     height: 27px;
     width: 28px;
     border: 0;
@@ -3874,10 +3895,6 @@ a.pagination-link {
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
-    background: url("../img/colophonSprite.png") no-repeat -125px -6px;
-    background-size: 350px 377px;
-    height: 62px;
-    width: 221px;
   }
 }
 .assistive-text,
