@@ -208,6 +208,13 @@ $bg-size: 350px 305px;
   width: $width;
 }
 
+// Create hit areas for <footer> colophon links
+@mixin footer-link-hit-area ($height, $width) {
+  height: $height;
+  width: $width;
+  display: block;
+}
+
 // All transitions 'ease in' in 0.3 seconds
 @mixin transitions ($property) {
   -webkit-transition: $property .3s ease;

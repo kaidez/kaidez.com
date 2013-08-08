@@ -350,12 +350,28 @@
     padding: 0;
   }
 
+  // individual <li> tags for footer image links
   .colophon-list-item-class {
     list-style-type: none;
     display: inline;
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
+  }
+
+  // set height/width for jekyll bg link
+  .jekyll-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for aws bg link
+  .aws-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for maxcdn bg link
+  .maxcdn-link {
+    @include footer-link-hit-area(39px, 151px);
   }
 
 
