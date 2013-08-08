@@ -3902,6 +3902,24 @@ a.pagination-link {
     margin-right: 10px;
     text-indent: -9999px;
   }
+
+  .jekyll-link {
+    height: 57px;
+    width: 151px;
+    display: block;
+  }
+
+  .aws-link {
+    height: 57px;
+    width: 151px;
+    display: block;
+  }
+
+  .maxcdn-link {
+    height: 39px;
+    width: 151px;
+    display: block;
+  }
 }
 .assistive-text,
 .site .screen-reader-text {
