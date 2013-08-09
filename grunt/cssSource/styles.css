@@ -3914,6 +3914,7 @@ a.pagination-link {
     float: right;
     display: block;
     padding: 12px;
+    margin: 32px 0;
   }
 
   .colophon-list-class {
