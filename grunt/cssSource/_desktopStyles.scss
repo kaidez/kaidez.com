@@ -349,10 +349,11 @@
   .colophon-class {
     background-color: darken($aside-color, 15);
     @include site-border-radius;
-    height: 150px;
+    height: 100px;
     max-width: 700px;
     float: right;
     display: block;
+    padding:12px;
   }
 
   // <ol> element for Jekyll, AWS & MaxCDN links
