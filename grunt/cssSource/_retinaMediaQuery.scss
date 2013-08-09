@@ -89,7 +89,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite.png', -79px -4px, 27px, 44px);
+    @include sprite-images('../img/kaidez-sprite.png', -88px -4px, 27px, 44px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -150,7 +150,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite.png', -87px -78px, 27px, 28px);
+    @include sprite-images('../img/kaidez-sprite.png', -88px -4px, 27px, 28px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -257,7 +257,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -87px -78px, 27px, 28px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -88px -4px, 27px, 28px);
     border: 0;
     text-indent: -999px;
     padding: 0;
