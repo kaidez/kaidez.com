@@ -2960,14 +2960,14 @@ a.pagination-link {
   }
 
   .aws {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -245px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -234px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -325px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -286px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
@@ -3070,14 +3070,14 @@ a.pagination-link {
   }
 
   .aws {
-    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -245px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -234px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -325px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -286px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
@@ -3909,10 +3909,11 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    height: 150px;
+    height: 58px;
     max-width: 700px;
     float: right;
     display: block;
+    padding: 12px;
   }
 
   .colophon-list-class {
