@@ -157,8 +157,13 @@ module.exports = function(grunt) {
             'css/styles.min.css',
             'img/profilepic.jpg',
             'img/footer-bg.png',
-            'img/snSprite.png',
-            'img/snSprite@2x.png'
+            'img/kaidez-sprite.png',
+            'img/kaidez-sprite@2x.png',
+            'font/FontAwesome.otf',
+            'font/fontawesome-webfont.eot',
+            'font/fontawesome-webfont.svg',
+            'font/fontawesome-webfont.ttf',
+            'font/fontawesome-webfont.woff'
           ],
           network: ['*'],
           preferOnline: true,
