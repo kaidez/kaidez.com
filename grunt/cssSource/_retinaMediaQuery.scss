@@ -103,11 +103,11 @@
   }
 
   .aws {
-    @include sprite-images('../img/kaidez-sprite.png', -10px -245px, 58px, 151px);
+    @include sprite-images('../img/kaidez-sprite.png', -10px -234px, 58px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/kaidez-sprite.png', -10px -325px, 58px, 151px);
+    @include sprite-images('../img/kaidez-sprite.png', -10px -286px, 58px, 151px);
   }
 }
 
@@ -207,11 +207,11 @@
   }
 
   .aws {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -245px, 58px, 151px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -234px, 58px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -325px, 58px, 151px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -286px, 58px, 151px);
   }
 }
 
