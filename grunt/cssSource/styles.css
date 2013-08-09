@@ -3420,10 +3420,6 @@ a.pagination-link {
   }
 
   .copyright-style {
-    display: block;
-    clear: both;
-    padding: 59px 0;
-    margin: 0 auto;
     text-align: start;
     float: left;
   }
@@ -3431,7 +3427,6 @@ a.pagination-link {
   .colophon-header {
     color: #3ebfd2;
     display: block;
-    float: left;
     margin-top: 16px;
   }
 
@@ -3440,12 +3435,11 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    height: 58px;
-    max-width: 700px;
-    float: right;
+    max-width: 485px;
     display: block;
     padding: 12px;
-    margin: 32px 0;
+    margin-right: 20px;
+    float: right;
   }
 
   .colophon-list-class {
