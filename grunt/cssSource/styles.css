@@ -2920,7 +2920,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("../img/kaidez-sprite.png") no-repeat -125px -6px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -42px;
     background-size: 227px 364px;
     height: 62px;
     width: 221px;
@@ -2953,23 +2953,23 @@ a.pagination-link {
   }
 
   .jekyll {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -133px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -169px;
     background-size: 227px 364px;
-    height: 57px;
+    height: 58px;
     width: 151px;
   }
 
   .aws {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -204px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -245px;
     background-size: 227px 364px;
-    height: 57px;
+    height: 58px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -258px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -325px;
     background-size: 227px 364px;
-    height: 39px;
+    height: 58px;
     width: 151px;
   }
 }
@@ -3030,7 +3030,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("../img/kaidez-sprite@2x.png") no-repeat -125px -6px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -42px;
     background-size: 227px 364px;
     height: 62px;
     width: 221px;
@@ -3060,6 +3060,27 @@ a.pagination-link {
     position: relative;
     left: -42px;
     top: -3px;
+  }
+
+  .jekyll {
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -169px;
+    background-size: 227px 364px;
+    height: 58px;
+    width: 151px;
+  }
+
+  .aws {
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -245px;
+    background-size: 227px 364px;
+    height: 58px;
+    width: 151px;
+  }
+
+  .maxcdn {
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -325px;
+    background-size: 227px 364px;
+    height: 58px;
+    width: 151px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 568px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 568px), only screen and (min-device-pixel-ratio: 2) and (max-width: 568px), only screen and (min-resolution: 192dpi) and (max-width: 568px), only screen and (min-resolution: 2dppx) and (max-width: 568px) {
