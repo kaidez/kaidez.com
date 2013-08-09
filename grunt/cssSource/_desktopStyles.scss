@@ -340,14 +340,15 @@
 
   // <h3> for the colophon
   .colophon-header {
-    margin: 0;
+    color: darken($header-color,10);
     display: block;
     float: left;
+    margin-top: 16px;
   }
 
   //  the colophon containing element
   .colophon-class {
-    background-color: darken($aside-color, 15);
+    background-color: darken($aside-color, 11);
     @include site-border-radius;
     height: 58px;
     max-width: 700px;
