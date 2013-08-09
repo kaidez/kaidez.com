@@ -3899,13 +3899,14 @@ a.pagination-link {
   }
 
   .colophon-header {
-    margin: 0;
+    color: #3ebfd2;
     display: block;
     float: left;
+    margin-top: 16px;
   }
 
   .colophon-class {
-    background-color: #09465d;
+    background-color: #0b5470;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
