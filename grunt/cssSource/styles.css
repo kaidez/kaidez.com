@@ -3885,6 +3885,9 @@ a.pagination-link {
 
   .colophon-class {
     background-color: #09465d;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     height: 150px;
     max-width: 700px;
     float: right;
@@ -3903,10 +3906,10 @@ a.pagination-link {
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
   }
 
   .colophon-list-item-class:hover {
