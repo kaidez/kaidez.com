@@ -348,6 +348,7 @@
   //  the colophon containing element
   .colophon-class {
     background-color: darken($aside-color, 15);
+    @include site-border-radius;
     height: 150px;
     max-width: 700px;
     float: right;
@@ -368,6 +369,11 @@
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
+    @include transitions (opacity);
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
   }
 
   // set height/width for jekyll bg link
