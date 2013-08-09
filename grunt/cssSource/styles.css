@@ -2979,7 +2979,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("../img/kaidez-sprite.png") no-repeat -117px -69px;
+    background: url("../img/kaidez-sprite.png") no-repeat 0px -107px;
     background-size: 227px 334px;
     height: 60px;
     width: 176px;
@@ -3089,7 +3089,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("../img/kaidez-sprite@2x.png") no-repeat -117px -69px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat 0px -107px;
     background-size: 227px 334px;
     height: 60px;
     width: 176px;
@@ -3406,6 +3406,87 @@ a.pagination-link {
   .aside-header {
     width: 300px;
   }
+
+  .footer-outer-wrapper-class {
+    -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    height: 150px;
+  }
+
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .copyright-style {
+    display: block;
+    clear: both;
+    padding: 59px 0;
+    margin: 0 auto;
+    text-align: start;
+    float: left;
+  }
+
+  .colophon-header {
+    color: #3ebfd2;
+    display: block;
+    float: left;
+    margin-top: 16px;
+  }
+
+  .colophon-class {
+    background-color: #0b5470;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 58px;
+    max-width: 700px;
+    float: right;
+    display: block;
+    padding: 12px;
+    margin: 32px 0;
+  }
+
+  .colophon-list-class {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    text-indent: -9999px;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
+  }
+
+  .jekyll-link {
+    height: 57px;
+    width: 151px;
+    display: block;
+  }
+
+  .aws-link {
+    height: 57px;
+    width: 151px;
+    display: block;
+  }
+
+  .maxcdn-link {
+    height: 39px;
+    width: 151px;
+    display: block;
+  }
 }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   body {
@@ -3622,6 +3703,87 @@ a.pagination-link {
     background-color: #04232f;
     padding-left: 5px;
     color: #fff;
+  }
+
+  .footer-outer-wrapper-class {
+    -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
+    height: 150px;
+  }
+
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .copyright-style {
+    display: block;
+    clear: both;
+    padding: 59px 0;
+    margin: 0 auto;
+    text-align: start;
+    float: left;
+  }
+
+  .colophon-header {
+    color: #3ebfd2;
+    display: block;
+    float: left;
+    margin-top: 16px;
+  }
+
+  .colophon-class {
+    background-color: #0b5470;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 58px;
+    max-width: 700px;
+    float: right;
+    display: block;
+    padding: 12px;
+    margin: 32px 0;
+  }
+
+  .colophon-list-class {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    text-indent: -9999px;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
+  }
+
+  .jekyll-link {
+    height: 57px;
+    width: 151px;
+    display: block;
+  }
+
+  .aws-link {
+    height: 57px;
+    width: 151px;
+    display: block;
+  }
+
+  .maxcdn-link {
+    height: 39px;
+    width: 151px;
+    display: block;
   }
 }
 @media only screen and (min-width: 1025px) {
