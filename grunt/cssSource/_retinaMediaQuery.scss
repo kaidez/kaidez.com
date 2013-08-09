@@ -126,7 +126,7 @@
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/kaidez-sprite.png', -117px -69px, 60px, 176px);
+    @include sprite-images('../img/kaidez-sprite.png', 0px -107px, 60px, 176px);
     @include desktop-logo-sprite-add-on;
   }
 
@@ -231,7 +231,7 @@
 
   // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -117px -69px, 60px, 176px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', 0px -107px, 60px, 176px);
     text-indent: -999px;
     margin: 0;
     float: left;
