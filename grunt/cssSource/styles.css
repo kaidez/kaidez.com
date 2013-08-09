@@ -3903,20 +3903,20 @@ a.pagination-link {
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
   }
 
   .jekyll-link {
     height: 57px;
     width: 151px;
     display: block;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-  }
-
-  .jekyll-link:hover {
-    background: 0;
   }
 
   .aws-link {
