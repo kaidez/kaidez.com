@@ -2715,7 +2715,7 @@ main a:visited {
 
 .footer-outer-wrapper-class {
   background-color: #0c5e7e;
-  padding: 20px 0;
+  padding: 20px;
   color: #fff;
 }
 
@@ -3428,6 +3428,7 @@ a.pagination-link {
     color: #3ebfd2;
     display: block;
     margin-top: 16px;
+    text-align: center;
   }
 
   .colophon-class {
@@ -3712,10 +3713,6 @@ a.pagination-link {
   }
 
   .copyright-style {
-    display: block;
-    clear: both;
-    padding: 59px 0;
-    margin: 0 auto;
     text-align: start;
     float: left;
   }
@@ -3723,8 +3720,8 @@ a.pagination-link {
   .colophon-header {
     color: #3ebfd2;
     display: block;
-    float: left;
     margin-top: 16px;
+    text-align: center;
   }
 
   .colophon-class {
@@ -3732,12 +3729,11 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    height: 58px;
-    max-width: 700px;
-    float: right;
+    max-width: 485px;
     display: block;
     padding: 12px;
-    margin: 32px 0;
+    margin-right: 20px;
+    float: right;
   }
 
   .colophon-list-class {
