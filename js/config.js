@@ -1,19 +1,19 @@
 requirejs.config({
+
   baseUrl: "/js",
 
-  deps: ["buildform","menu","form","search"],
+  deps: ["buildform","ladda","menu","form","search"],
 
   paths: {
     jquery: "vendor/jquery",
     tipuesetContent: "vendor/tipuesearch_content",
     tipueset: "vendor/tipuesearch_set",
-    tipue: "vendor/tipuesearch.min" 
+    tipue: "vendor/tipuesearch.min",
+    ladda: "vendor/ladda.min",
+    spin: "vendor/spin.min"
   },
 
-  shim: { 
-    jquery: {
-      exports: 'jquery'
-    },
+  shim: {
     tipuesetContent: {
       deps: ['jquery'],
       exports: 'jquery'
@@ -25,6 +25,12 @@ requirejs.config({
     tipue: {
       deps: ['jquery'],
       exports: 'jquery'
+    },
+    ladda: {
+      exports: 'ladda'
+    },
+    spin: {
+      exports: 'spin'
     }
   }
 
