@@ -27,7 +27,10 @@
   // Header styles start
   // ==========================================================================
 
-  // Logo link...provides a large enough space for a click area
+  .outer-wrapper-nav-header {
+    @include gradient-bg;
+  }
+    // Logo link...provides a large enough space for a click area
   .homepage-link {
     @include homepage-link(65px, 209px);
   }

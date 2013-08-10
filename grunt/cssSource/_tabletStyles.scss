@@ -53,6 +53,7 @@
   // outer wrapper for the <header> which wraps the link, nav & search elements
   .outer-wrapper-nav-header {
     @include outer-wrapper-nav-header;
+    @include gradient-bg;
     min-height: 130px;
   }
 
