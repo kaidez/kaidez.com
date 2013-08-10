@@ -295,5 +295,90 @@
   // =========================================================================
   // Aside styles end
   // =========================================================================
+
+
+
+
+
+  // =========================================================================
+  // Footer styles start
+  // =========================================================================
+
+  // styling hook for <footer>
+  .footer-outer-wrapper-class {
+    @include create-box-shadow;
+    height: 150px;
+  }
+  
+  // inner wrapper in the <footer>
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .copyright-style {
+    text-align: start;
+    float: left;
+  }
+  
+  // <h3> for the colophon
+  .colophon-header {
+    color: darken($header-color,10);
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  //  the colophon containing element
+  .colophon-class {
+    background-color: darken($aside-color, 11);
+    @include site-border-radius;
+    max-width: 485px;
+    display: block;
+    padding:12px;
+    margin-right: 20px;
+    float: right;
+  }
+
+  // <ol> element for Jekyll, AWS & MaxCDN links
+  .colophon-list-class {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  // individual <li> tags for footer image links
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    text-indent: -9999px;
+    @include transitions (opacity);
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
+  }
+
+  // set height/width for jekyll bg link
+  .jekyll-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for aws bg link
+  .aws-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for maxcdn bg link
+  .maxcdn-link {
+    @include footer-link-hit-area(39px, 151px);
+  }
+
+
+  // ==========================================================================
+  // Footer styles end
+  // ==========================================================================
    
 }
