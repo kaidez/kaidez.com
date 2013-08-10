@@ -257,6 +257,10 @@
   // Aside styles end
   // ==========================================================================
 
+
+
+
+
   // =========================================================================
   // Footer styles start
   // =========================================================================
@@ -264,7 +268,6 @@
   // styling hook for <footer>
   .footer-outer-wrapper-class {
     @include create-box-shadow;
-    height: 150px;
   }
   
   // inner wrapper in the <footer>
@@ -274,8 +277,8 @@
   }
 
   .copyright-style {
-    text-align: start;
-    float: left;
+    text-align: center;
+    margin-bottom: 20px;
   }
   
   // <h3> for the colophon
@@ -290,11 +293,10 @@
   .colophon-class {
     background-color: darken($aside-color, 11);
     @include site-border-radius;
-    max-width: 485px;
+    max-width: 528px;
     display: block;
     padding:12px;
-    margin-right: 20px;
-    float: right;
+    margin: 0 auto;
   }
 
   // <ol> element for Jekyll, AWS & MaxCDN links
@@ -337,5 +339,4 @@
   // ==========================================================================
   // Footer styles end
   // ==========================================================================
-
 }
