@@ -2339,7 +2339,7 @@ p code, li code {
 }
 
 .outer-wrapper-nav-header {
-  background-color: #67cddc;
+  background-color: #87e0fd;
 }
 
 .site-description {
@@ -2451,7 +2451,7 @@ p code, li code {
 }
 
 #tipue_search_foot_boxes li.current {
-  background-color: #67cddc;
+  background-color: #87e0fd;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
@@ -2459,7 +2459,7 @@ p code, li code {
 }
 
 .current-page {
-  background-color: #67cddc;
+  background-color: #87e0fd;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
@@ -2609,7 +2609,7 @@ main a:visited {
 }
 
 .aside-outer-wrapper-class {
-  color: #67cddc;
+  color: #87e0fd;
   height: auto;
   width: auto;
   padding: 1px 10px;
@@ -2631,9 +2631,9 @@ main a:visited {
   font-family: "Roboto Condensed";
   visibility: visible;
   font-size: 23px;
-  border-bottom: 1px solid #90dbe6;
+  border-bottom: 1px solid #b9edfe;
   margin-bottom: 16px;
-  color: #90dbe6;
+  color: #b9edfe;
 }
 
 .aside-nav-class {
@@ -2655,7 +2655,7 @@ main a:visited {
 }
 
 .aside-nav-link:hover, .aside-nav-link:focus {
-  color: #29a2b4;
+  color: #23c6fb;
 }
 
 .kaidez-social-network-list-styles {
@@ -2673,7 +2673,7 @@ main a:visited {
 }
 
 .kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-  color: #67cddc;
+  color: #87e0fd;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
@@ -2683,7 +2683,7 @@ main a:visited {
 
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: #29a2b4;
+  color: #23c6fb;
 }
 
 .kaidez-social-sharing-list-item-link-text {
@@ -2796,7 +2796,7 @@ main a:visited {
 .breadcrumb-styles {
   font-size: 14px;
   font-weight: 900;
-  background-color: #d7f2f6;
+  background-color: white;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
@@ -2811,12 +2811,12 @@ main a:visited {
 .breadcrumb-styles a:link,
 .breadcrumb-styles a:visited {
   text-decoration: underline;
-  color: #29a2b4;
+  color: #23c6fb;
 }
 
 .breadcrumb-styles a:hover {
   text-decoration: none;
-  color: #29a2b4;
+  color: #23c6fb;
 }
 
 .breadcrumb-last {
@@ -2901,7 +2901,7 @@ a.pagination-link {
   height: 25px;
   font-size: 18px;
   display: block;
-  color: #67cddc;
+  color: #87e0fd;
   text-decoration: none;
 }
 
@@ -3142,7 +3142,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 14px;
     font-weight: 900;
-    background-color: #d7f2f6;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -3188,6 +3188,22 @@ a.pagination-link {
     width: auto;
     padding: 15px 45px 0;
     margin: 0 auto;
+    background: #87e0fd;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #87e0fd), color-stop(40%, #53cbf1), color-stop(100%, #05abe0));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 );
+    /* IE6-9 */
     min-height: 130px;
   }
 
@@ -3235,7 +3251,7 @@ a.pagination-link {
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
-    color: #67cddc;
+    color: #87e0fd;
     float: left;
     border: 0;
     -webkit-border-radius: 10px;
@@ -3331,7 +3347,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #d7f2f6;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -3371,7 +3387,7 @@ a.pagination-link {
     height: 25px;
     font-size: 18px;
     display: block;
-    color: #67cddc;
+    color: #87e0fd;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -3424,7 +3440,7 @@ a.pagination-link {
   }
 
   .colophon-header {
-    color: #3ebfd2;
+    color: #55d3fc;
     display: block;
     margin-top: 16px;
     text-align: center;
@@ -3510,6 +3526,25 @@ a.pagination-link {
     text-align: center;
   }
 
+  .outer-wrapper-nav-header {
+    background: #87e0fd;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #87e0fd), color-stop(40%, #53cbf1), color-stop(100%, #05abe0));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 );
+    /* IE6-9 */
+  }
+
   .homepage-link {
     height: 65px;
     width: 209px;
@@ -3572,7 +3607,7 @@ a.pagination-link {
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
-    color: #67cddc;
+    color: #87e0fd;
     float: left;
     border: 0;
     -webkit-border-radius: 10px;
@@ -3652,7 +3687,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #d7f2f6;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -3684,7 +3719,7 @@ a.pagination-link {
     height: 25px;
     font-size: 18px;
     display: block;
-    color: #67cddc;
+    color: #87e0fd;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -3715,7 +3750,7 @@ a.pagination-link {
   }
 
   .colophon-header {
-    color: #3ebfd2;
+    color: #55d3fc;
     display: block;
     margin-top: 16px;
     text-align: center;
@@ -3806,6 +3841,22 @@ a.pagination-link {
     width: auto;
     padding: 15px 45px 0;
     margin: 0 auto;
+    background: #87e0fd;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #87e0fd), color-stop(40%, #53cbf1), color-stop(100%, #05abe0));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 );
+    /* IE6-9 */
     min-height: 130px;
   }
 
@@ -3847,7 +3898,7 @@ a.pagination-link {
     float: left;
     border: 0;
     background-color: transparent;
-    text-shadow: 1px 1px 0 #a5e1ea;
+    text-shadow: 1px 1px 0 #d2f3fe;
   }
 
   .searchform-class {
@@ -3937,7 +3988,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #d7f2f6;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -3947,12 +3998,12 @@ a.pagination-link {
   .breadcrumb-styles a:link,
   .breadcrumb-styles a:visited {
     text-decoration: underline;
-    color: #29a2b4;
+    color: #23c6fb;
   }
 
   .breadcrumb-styles a:hover {
     text-decoration: none;
-    color: #29a2b4;
+    color: #23c6fb;
   }
 
   .breadcrumb-separator {
@@ -4047,7 +4098,7 @@ a.pagination-link {
   }
 
   .colophon-header {
-    color: #3ebfd2;
+    color: #55d3fc;
     display: block;
     float: left;
     margin-top: 16px;
