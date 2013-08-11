@@ -3192,6 +3192,10 @@ main a:visited {
   color: #fff;
 }
 
+.not-found-box-class {
+  min-height: 300px;
+}
+
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.4;
