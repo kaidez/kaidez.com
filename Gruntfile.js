@@ -2,6 +2,8 @@ module.exports = function(grunt) {
 
   'use strict';
 
+   require('time-grunt')(grunt);  // log individual task runtime
+
   // Project config
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -214,6 +216,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-manifest');
+
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
