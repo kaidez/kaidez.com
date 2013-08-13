@@ -22,10 +22,6 @@
 @import "globalStyles";
 // Global device styles end
 
-// Global device styles start
-@import "oldIE";
-// Global device styles end
-
 // "Mobile first" styles start
 @import "mobileFirstStyles";
 // "Mobile first" styles end
@@ -49,6 +45,10 @@
 // Desktop styles start
 @import "desktopStyles";
 // Desktop styles styles end
+
+// Global device styles start
+@import "oldIE";
+// Global device styles end
 
 // assistive CSS styles start
 @import "assistive";

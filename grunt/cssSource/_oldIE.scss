@@ -80,7 +80,8 @@
 
   // <nav> tag
   .main-navigation {
-    @include main-navigation;
+    width: auto;
+    border: none;
   }
 
   // wrapper for the <nav> and searchbox tag
@@ -92,17 +93,19 @@
   .site-navigation-list-styles {
     @include show-menu;
     margin: 11px auto 0 auto;
-    padding: 0;
-    width: auto;
+    padding: 0; 
+  }
+
+  // Hide the Google font on all <nav> links before page load
+  .wf-loading .site-navigation-list-link {
+    @include fonts($srf, hidden);
   }
 
   // Apply the Google font to all <nav> links after page load
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(18px, 22px, 5px, $base-link-color); // margin-right, font-size, padding, color
-    background-color: transparent;
-    text-shadow: 1px 1px 0 lighten($header-color, 15);
+    background: none;
   }
 
   // =========================================================================
