@@ -597,9 +597,42 @@ main a:visited {
 // 404 page styles start
 // ===========================================================================
 
-// styling hook for not found div
+// wrap the elements on the 404 page
+.wrapper-404-class {
+  display: table;
+  margin: 0 auto;
+}
+
+// elements on the 404 page
 .not-found-box-class {
   min-height: 300px;
+  max-width: 400px;
+  float: left;
+  display: table;
+  padding:0 60px;
+}
+
+// page copy...except for the 'Cristiano' copy
+.form-container-404-page-copy {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+// large 404 copy
+.large-404-page-copy {
+  font-size: 24px;
+}
+
+// remove border from 404 page fieldset
+.fieldset-404-page {
+  border: none;
+}
+
+// 404 page links
+.links-list-404 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.7;
 }
 
 // ===========================================================================
