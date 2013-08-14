@@ -4384,6 +4384,17 @@ a.pagination-link {
     float: left;
   }
 
+  .site-title {
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  .site-title:hover {
+    opacity: 0.5;
+  }
+
   .inner-wrapper-nav-header {
     max-width: 1024px;
     margin: 0 auto;
