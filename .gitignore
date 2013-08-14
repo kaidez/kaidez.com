@@ -2,6 +2,7 @@ _site
 ./_site
 tipuesearch/
 
+
 # Site assets
 #------------
 assets/
@@ -21,7 +22,7 @@ manifest.appcache
 
 # Site notes file
 #---------------------------
-gitNotes.txt
+kaidezSiteNotes.txt
 
 
 # General all-around files
