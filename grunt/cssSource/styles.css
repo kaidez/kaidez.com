@@ -3199,10 +3199,10 @@ main a:visited {
 
 .not-found-box-class {
   min-height: 300px;
-  max-width: 400px;
+  max-width: 300px;
   float: left;
   display: table;
-  padding: 0 60px;
+  padding: 0 20px;
 }
 
 .form-container-404-page-copy {
@@ -4310,6 +4310,14 @@ a.pagination-link {
     height: 39px;
     width: 151px;
     display: block;
+  }
+
+  .not-found-box-class {
+    min-height: 300px;
+    float: none;
+    display: table;
+    padding: 0 20px;
+    width: 529px;
   }
 }
 @media only screen and (min-width: 1025px) {
