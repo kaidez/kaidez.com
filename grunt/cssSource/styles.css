@@ -3194,6 +3194,19 @@ main a:visited {
 
 .not-found-box-class {
   min-height: 300px;
+  float: left;
+}
+
+.not-found-box-classk {
+  float: right;
+}
+
+.large-404-page-copy {
+  font-size: 24px;
+}
+
+.fieldset-404-page {
+  border: none;
 }
 
 .post-snippet-title {
@@ -4393,7 +4406,7 @@ a.pagination-link {
     text-align: left;
   }
 
-  #tipue_search_input, #tipue_search_input2 {
+  #tipue_search_input {
     font: 13px/1.5 'open sans', sans-serif;
     color: #333;
     padding: 7px;
