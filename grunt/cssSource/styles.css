@@ -3195,10 +3195,8 @@ main a:visited {
 .not-found-box-class {
   min-height: 300px;
   float: left;
-}
-
-.not-found-box-classk {
-  float: right;
+  display: table;
+  padding: 0 60px;
 }
 
 .large-404-page-copy {
@@ -3207,6 +3205,11 @@ main a:visited {
 
 .fieldset-404-page {
   border: none;
+}
+
+.wrapper-404-class {
+  display: table;
+  margin: 0 auto;
 }
 
 .post-snippet-title {
