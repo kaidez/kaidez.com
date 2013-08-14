@@ -96,16 +96,19 @@
     padding: 0; 
   }
 
-  // Hide the Google font on all <nav> links before page load
-  .wf-loading .site-navigation-list-link {
-    @include fonts($srf, hidden);
-  }
 
   // Apply the Google font to all <nav> links after page load
-  .wf-active .site-navigation-list-link,
-  .wf-active .site-navigation-list-link a:visited,
-  .wf-active .site-navigation-list-link a:hover { 
-    background: #fff;
+  .site-navigation-list-link a:link,
+  .site-navigation-list-link a:visited { 
+    @include fonts($robo, visible);
+    @include master-center;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+    float: left;
+    padding: 9px 0;
+    display: block;
+    color: $base-link-color;
   }
 
   // =========================================================================
