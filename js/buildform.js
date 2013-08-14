@@ -1,12 +1,15 @@
 /*
- * Can 'loadMenu()' be cached?
- * Check: https://gist.github.com/Integralist/1247263
+ *
+ *
  */
 
 define(function() {
   
-  // 4 variables global to this RequireJS module only.
-  var loadMenu, isCssDisabled, testcss, currstyle; 
+  // Variables that are global to this RequireJS module only
+  var loadMenu,
+    isCssDisabled,
+    testcss,
+    currstyle; 
 
   /*  
    *  Dynamically create a form that looks like this:
@@ -17,8 +20,8 @@ define(function() {
    *    <input type="submit" id="tipue_search_button" value="Search">
    *  </form>
    */
-  loadMenu = function() {
-    var loadBox = document.getElementById("searchbox"),
+  loadMenu = function(doc, formId) {
+    var loadSearchBox = document.getElementById(doc),
       frag = document.createDocumentFragment(),
       form = document.createElement("form"),
       searchTextBox = document.createElement("input"),
@@ -27,7 +30,7 @@ define(function() {
     // set attributes for form
     form.action = "/search.html";
     form.setAttribute("role", "search");
-    form.id = "js-searchbox";
+    form.id = formId;
     form.setAttribute("class", "searchform-class");
 
     // set attributes for Search text box
@@ -49,7 +52,7 @@ define(function() {
     frag.appendChild(form);
 
     // Load document fragment into #searchbox, which is already on the page
-    loadBox.appendChild(frag);
+    loadSearchBox.appendChild(frag);
   }
 
   /*
@@ -122,7 +125,12 @@ define(function() {
   document.getElementsByTagName('body')[0].removeChild(testcss);
 
   if (isCssDisabled === false) {
-    loadMenu();
+    loadMenu("searchbox", "kai");
+    if(document.getElementById("not-found-box")) {
+      loadMenu("not-found-searchbox", "niko");
+    } else {
+      return;
+    }
   } else {
     return false;
   }
