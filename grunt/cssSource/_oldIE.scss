@@ -378,11 +378,6 @@
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
-    @include transitions (opacity);
-  }
-
-  .colophon-list-item-class:hover {
-    opacity: 0.5;
   }
 
   // set height/width for jekyll bg link
