@@ -3416,6 +3416,10 @@ a.pagination-link {
   text-align: center;
 }
 
+.pagination-link:hover, .pagination-link:visited {
+  color: #fff;
+}
+
 .aside-contact-fields {
   width: 152px;
 }
