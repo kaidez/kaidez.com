@@ -44,6 +44,16 @@
     @include site-header;
   }
 
+  // Set up opacity hover on the logo
+  .site-title {
+    @include transitions (opacity);
+  }
+  
+  // the actual hover style
+  .site-title:hover {
+    opacity: 0.5;
+  }
+
   // the inner wrapper for the <header>
   .inner-wrapper-nav-header {
     @include inner-wrapper-nav-header;
