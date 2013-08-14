@@ -19,6 +19,9 @@ backbone/
 manifest.appcache
 
 
+# Site notes file
+#---------------------------
+gitNotes.txt
 
 
 # General all-around files

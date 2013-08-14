@@ -8,6 +8,7 @@ exclude: [
   backbone,
   bower_components,
   css/styles.css,
+  gitNotes.txt,
   Gruntfile.js,
   grunt,
   js/cacheTest.js,
