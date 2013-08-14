@@ -9,9 +9,9 @@ define(function() {
   var loadMenu,
     isCssDisabled,
     testcss,
-    currstyle; 
+    currstyle;
 
-  /*  
+  /*
    *  Dynamically create a form that looks like this:
    *
    *  <form action="/search.html" id="js-searchbox" class="searchform-class">
@@ -20,8 +20,9 @@ define(function() {
    *    <input type="submit" id="tipue_search_button" value="Search">
    *  </form>
    */
-  loadMenu = function(doc, formId) {
-    var loadSearchBox = document.getElementById(doc),
+
+  loadMenu = function() {
+    var loadSearchBox = document.getElementById("searchbox"),
       frag = document.createDocumentFragment(),
       form = document.createElement("form"),
       searchTextBox = document.createElement("input"),
@@ -30,7 +31,7 @@ define(function() {
     // set attributes for form
     form.action = "/search.html";
     form.setAttribute("role", "search");
-    form.id = formId;
+    form.id = "js-searchbox";
     form.setAttribute("class", "searchform-class");
 
     // set attributes for Search text box
@@ -125,12 +126,7 @@ define(function() {
   document.getElementsByTagName('body')[0].removeChild(testcss);
 
   if (isCssDisabled === false) {
-    loadMenu("searchbox", "kai");
-    if(document.getElementById("not-found-box")) {
-      loadMenu("not-found-searchbox", "niko");
-    } else {
-      return;
-    }
+    loadMenu();
   } else {
     return false;
   }
