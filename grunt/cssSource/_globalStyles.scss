@@ -586,6 +586,19 @@ main a:visited {
   color: #fff;
 }
 
+// footer links
+.footer-links {
+  color: #fff;
+  text-decoration: underline;
+  margin: 3px 0;
+}
+
+// footer links: hover and visted
+.footer-links:hover, .footer-links:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 // ===========================================================================
 // Footer styles end
 // ===========================================================================
