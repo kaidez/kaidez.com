@@ -3225,6 +3225,27 @@ main a:visited {
   line-height: 1.7;
 }
 
+.site-map-link:link,
+.site-map-link:visited {
+  color: #2d7895;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+.site-map-link:hover,
+.site-map-link:focus {
+  color: #57accc;
+  text-decoration: underline;
+}
+
+.site-map-list-item {
+  list-style-type: none;
+}
+
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.4;
