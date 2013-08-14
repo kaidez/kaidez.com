@@ -102,10 +102,10 @@
   }
 
   // Apply the Google font to all <nav> links after page load
-  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover { 
-    background: none;
+    background: #fff;
   }
 
   // =========================================================================
