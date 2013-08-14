@@ -276,7 +276,7 @@
   .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
     @include create-box-shadow;
-    padding: 35px 10px;
+    padding: 1px 10px;
   }
   
   // create a "letterpress" text-shadow effect on <h3> tags in <aside>

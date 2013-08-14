@@ -230,6 +230,7 @@
   // apply background image to the <aside>
   .aside-outer-wrapper-class {
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
+    min-height: 1056px;
   }
   
   // applied to all <sections> in <aside>
