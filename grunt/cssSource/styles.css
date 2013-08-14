@@ -4959,13 +4959,6 @@ a.pagination-link {
   float: left;
   margin-right: 10px;
   text-indent: -9999px;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-.lt-ie9 .colophon-list-item-class:hover {
-  opacity: 0.5;
 }
 .lt-ie9 .jekyll-link {
   height: 57px;
