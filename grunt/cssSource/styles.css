@@ -3193,6 +3193,17 @@ main a:visited {
   color: #fff;
 }
 
+.footer-links {
+  color: #fff;
+  text-decoration: underline;
+  margin: 3px 0;
+}
+
+.footer-links:hover, .footer-links:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 .wrapper-404-class {
   display: table;
   margin: 0 auto;
@@ -4621,17 +4632,6 @@ a.pagination-link {
   .footer-inner-wrapper-class {
     max-width: 1024px;
     margin: 0 auto;
-  }
-
-  .footer-links {
-    color: #fff;
-    text-decoration: underline;
-    margin: 3px 0;
-  }
-
-  .footer-links:hover, .footer-links:visited {
-    color: #fff;
-    text-decoration: none;
   }
 
   .copyright-style {
