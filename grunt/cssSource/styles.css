@@ -4393,7 +4393,7 @@ a.pagination-link {
     text-align: left;
   }
 
-  #tipue_search_input {
+  #tipue_search_input, #tipue_search_input2 {
     font: 13px/1.5 'open sans', sans-serif;
     color: #333;
     padding: 7px;
