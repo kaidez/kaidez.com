@@ -645,5 +645,35 @@ main a:visited {
 
 
 // ===========================================================================
+// Site map page styles start
+// ===========================================================================
+
+// Site map links
+.site-map-link:link,
+.site-map-link:visited { 
+  color: darken($post-link-color, 4);
+  text-decoration: none;
+  @include transitions (color);
+
+  font-size: 16px;
+}
+
+// Site map links - hover & focus state
+.site-map-link:hover,
+.site-map-link:focus {  
+  color: lighten($post-link-color, 15);
+  text-decoration: underline;
+}
+
+// site map list item
+.site-map-list-item {
+  list-style-type: none;
+}
+
+// ===========================================================================
+// Site map page styles end
+// ===========================================================================
+
+// ===========================================================================
 // Global styles end
 // ===========================================================================

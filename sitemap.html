@@ -1,0 +1,84 @@
+---
+layout: default
+title: Site Map / kaidez.com / Tutorials &amp; articles about  Web Development
+meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
+---
+    
+  <section id="tutorial-site-map-links" class="site-map-section">
+
+    <h1>Tutorials</h1>
+
+    <ul>
+
+    {% for post in site.categories.tutorials %}
+
+      <li class="site-map-list-item">
+        <a href="{{ post.url }}" rel="bookmark" class="site-map-link">{{ post.title }} &raquo;</a>
+      </li>
+
+    {% endfor %}
+
+    </ul>
+
+  </section> <!-- #tutorial-site-map-links -->
+
+
+
+  <section id="code-tips-site-map-links" class="site-map-section">
+
+    <h1>Code Tips</h1>
+
+    <ul>
+
+    {% for post in site.categories.coding-best-practices %}
+
+      <li class="site-map-list-item">
+        <a href="{{ post.url }}" rel="bookmark" class="site-map-link">{{ post.title }} &raquo;</a>
+      </li>
+
+    {% endfor %}
+
+    </ul>
+    
+  </section> <!-- #code-tips-site-map-links -->
+
+
+
+  <section id="reviews-site-map-links" class="site-map-section">
+
+    <h1>Reviews</h1>
+
+    <ul>
+
+    {% for post in site.categories.reviews %}
+
+      <li class="site-map-list-item">
+        <a href="{{ post.url }}" rel="bookmark" class="site-map-link">{{ post.title }} &raquo;</a>
+      </li>
+
+    {% endfor %}
+
+    </ul>
+    
+  </section> <!-- #reviews-site-map-links -->
+
+
+
+
+  <section id="personal-site-map-links" class="site-map-section">
+
+    <h1>Personal</h1>
+
+    <ul>
+
+    {% for post in site.categories.personal %}
+
+      <li class="site-map-list-item">
+        <a href="{{ post.url }}" rel="bookmark" class="site-map-link">{{ post.title }} &raquo;</a>
+      </li>
+
+    {% endfor %}
+
+    </ul>
+    
+  </section> <!-- #personal-site-map-links -->
