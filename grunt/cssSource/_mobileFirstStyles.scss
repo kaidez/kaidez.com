@@ -217,6 +217,11 @@ a.pagination-link {
   @include pagButtonInner;
 }
 
+// Inner part of the pagination button
+.pagination-link:hover, .pagination-link:visited {
+  color: #fff;
+}
+
 // ===========================================================================
 // Home page pagination styles end
 // ===========================================================================
