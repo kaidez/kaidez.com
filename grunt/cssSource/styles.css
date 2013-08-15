@@ -3253,6 +3253,22 @@ main a:visited {
   text-decoration: underline;
 }
 
+.sitemap-header-link:link,
+.sitemap-header-link:visited {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.sitemap-header-link:hover,
+.sitemap-header-link:focus {
+  color: #737373;
+  text-decoration: underline;
+}
+
 .site-map-list-item {
   list-style-type: none;
 }
