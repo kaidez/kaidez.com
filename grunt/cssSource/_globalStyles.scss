@@ -661,7 +661,7 @@ main a:visited {
 // Site map page styles start
 // ===========================================================================
 
-// Site map links
+// Site map post links
 .site-map-link:link,
 .site-map-link:visited { 
   color: darken($post-link-color, 4);
@@ -671,7 +671,7 @@ main a:visited {
   font-size: 16px;
 }
 
-// Site map links - hover & focus state
+// Site map post links - hover & focus state
 .site-map-link:hover,
 .site-map-link:focus {  
   color: lighten($post-link-color, 15);
