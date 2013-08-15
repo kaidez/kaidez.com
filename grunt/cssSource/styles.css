@@ -3236,6 +3236,10 @@ main a:visited {
   line-height: 1.7;
 }
 
+.site-map-section {
+  margin-bottom: 65px;
+}
+
 .site-map-link:link,
 .site-map-link:visited {
   color: #2d7895;
