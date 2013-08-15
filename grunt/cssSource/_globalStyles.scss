@@ -678,6 +678,21 @@ main a:visited {
   text-decoration: underline;
 }
 
+// Site map post links
+.sitemap-header-link:link,
+.sitemap-header-link:visited { 
+  color: #000;
+  text-decoration: none;
+  @include transitions (color);
+}
+
+// Site map post links - hover & focus state
+.sitemap-header-link:hover,
+.sitemap-header-link:focus {  
+  color: lighten(#000, 45);
+  text-decoration: underline;
+}
+
 // site map list item
 .site-map-list-item {
   list-style-type: none;
