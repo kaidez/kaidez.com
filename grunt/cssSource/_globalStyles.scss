@@ -661,6 +661,11 @@ main a:visited {
 // Site map page styles start
 // ===========================================================================
 
+// individual sections for the sitemaps
+.site-map-section {
+  margin-bottom: 65px;
+}
+
 // Site map post links
 .site-map-link:link,
 .site-map-link:visited { 
@@ -697,6 +702,7 @@ main a:visited {
 .site-map-list-item {
   list-style-type: none;
 }
+
 
 // ===========================================================================
 // Site map page styles end
