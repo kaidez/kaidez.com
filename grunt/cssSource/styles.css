@@ -2617,7 +2617,7 @@ a .icon-flip-vertical:before {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px transparent;
+  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -2650,7 +2650,7 @@ a .icon-flip-vertical:before {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .ladda-button:hover {
