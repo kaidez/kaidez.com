@@ -2743,6 +2743,10 @@ html {
   height: 100%;
 }
 
+.ulNoPad {
+  padding: 0;
+}
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -3275,6 +3279,8 @@ main a:visited {
 
 .site-map-list-item {
   list-style-type: none;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .post-snippet-title {
@@ -4737,25 +4743,6 @@ a.pagination-link {
     height: 39px;
     width: 151px;
     display: block;
-  }
-
-  .sitemap-header-tooltip {
-    display: inline;
-    position: relative;
-  }
-
-  .sitemap-header-tooltip:hover:after {
-    background: #333;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    bottom: 26px;
-    color: #fff;
-    content: attr(title);
-    left: 20%;
-    padding: 5px 15px;
-    position: absolute;
-    z-index: 98;
-    width: 220px;
   }
 }
 /*
