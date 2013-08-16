@@ -29,6 +29,12 @@ html {
   height: 100%;
 }
 
+// Some browser stylesheets add extra padding (on the right usually)...use this
+// class/mixin to remove all padding
+.ulNoPad {
+  @include ulNoPad
+}
+
 // Clearfix: contain floats (borrowed from HTML5 Boilerplate)
 //
 // For modern browsers
@@ -701,6 +707,8 @@ main a:visited {
 // site map list item
 .site-map-list-item {
   list-style-type: none;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 
