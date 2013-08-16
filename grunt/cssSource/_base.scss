@@ -6,17 +6,6 @@
 // no less.
 // =================================================================
 
-@mixin gradient-bg {
-  background: #87e0fd; /* Old browsers */
-  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
-}
-
 
 // =============
 // ALL VARIABLES
@@ -70,8 +59,6 @@ $master-border-radius: 10px;
 
 // master shadow for the site's content element (i.e.: ".page-content")
 $master-page-content-shadow: 1px 5px 7px 2px rgba(0,0,0,0.2); 
-
-
 
 // Variables for the retina media queries start...they're used inside
 // '_retinaMediaQuery.scss' 
@@ -377,6 +364,23 @@ $bg-size: 227px 334px;
   display: block;
   color: $header-color;
   text-decoration: none;
+}
+
+// use this Sass variable to remove padding from all <ul> tags (when needed)
+@mixin ulNoPad {
+  padding:0;
+}
+
+// header gradient
+@mixin gradient-bg {
+  background: #87e0fd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
 }
 
 // ============================================================================
