@@ -11,6 +11,7 @@
   ],
   "dependencies": {
     "jquery": "1.10.2",
+    "modernizr": "2.6.2",
     "font-awesome": "3.2.1",
     "prism": "latest",
     "normalize-css":"2.1.2",
