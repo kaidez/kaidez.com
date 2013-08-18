@@ -37,6 +37,9 @@ kaidezSiteNotes.txt
 *.ai
 *.eps
 
+# bower downloads
+# ---------------
+bower_components/
 
 *.htaccess
 
