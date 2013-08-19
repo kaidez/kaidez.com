@@ -2,7 +2,7 @@ requirejs.config({
 
   baseUrl: "/js",
 
-  deps: ["buildform","ladda","menu","form","search"],
+  deps: ["buildform","ladda","menu","form","search", "loadLyndaAd"],
 
   paths: {
     jquery: "vendor/jquery",
@@ -10,27 +10,31 @@ requirejs.config({
     tipueset: "vendor/tipuesearch_set",
     tipue: "vendor/tipuesearch.min",
     ladda: "vendor/ladda.min",
-    spin: "vendor/spin.min"
+    spin: "vendor/spin.min",
+    enquire: "vendor/enquire.min"
   },
 
   shim: {
     tipuesetContent: {
-      deps: ['jquery'],
-      exports: 'jquery'
+      deps: ["jquery"],
+      exports: "jquery"
     },
     tipueset: {
-      deps: ['jquery'],
-      exports: 'jquery'
+      deps: ["jquery"],
+      exports: "jquery"
     },
     tipue: {
-      deps: ['jquery'],
-      exports: 'jquery'
+      deps: ["jquery"],
+      exports: "jquery"
     },
     ladda: {
-      exports: 'ladda'
+      exports: "ladda"
     },
     spin: {
-      exports: 'spin'
+      exports: "spin"
+    },
+    "enquire": {
+      "exports": "enquire"
     }
   }
 
