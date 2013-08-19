@@ -100,7 +100,7 @@ module.exports = function(grunt) {
         "shiv" : true,
         "printshiv" : false,
         "load" : true,
-        "mq" : true,
+        "mq" : false,
         "cssclasses" : true
       },
 
