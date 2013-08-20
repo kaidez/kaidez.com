@@ -4295,8 +4295,10 @@ a.pagination-link {
   }
 
   .share-post-container-class {
-    text-align: center;
-    background-color: #E1F5F6;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px;
   }
 
   .share-post-container-header-class {
@@ -4312,6 +4314,10 @@ a.pagination-link {
   .fb-post-share-match {
     position: relative;
     top: -2px;
+  }
+
+  .share-post-container-header-class {
+    margin-right: 20px;
   }
 
   .aside-outer-wrapper-class {
