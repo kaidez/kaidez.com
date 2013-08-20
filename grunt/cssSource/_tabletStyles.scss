@@ -225,7 +225,7 @@
 
   // Related post links
   .related-posts-header {
-    @include related-posts-header(17px);
+    @include related-posts-header(21px);
   }
 
   //Font styles for tablets & desktops. Google font doesn't load on mobile.
@@ -235,6 +235,8 @@
 
   .share-post-container-class {
     @include site-border-radius;
+    padding:10px;
+    margin-bottom: 40px;
   }
 
   // =========================================================================
