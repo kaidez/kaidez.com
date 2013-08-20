@@ -1,14 +1,19 @@
 define("loadLyndaAd", ["enquire"], function(enquire) {
   
-  var loadLyndaAd = function() {
+  var loadLyndaAds = function() {
     var adBox = document.getElementById("aside-ad-section"),
       frag = document.createDocumentFragment(),
       adLink = document.createElement("a"),
       adImg = document.createElement("img");
     
-    // set attributes for form
-    adImg.setAttribute("src", "http://affiliates.lynda.com/42/2146/11593/");
+    // set attributes for ad
     adLink.setAttribute("href", "http://www.lynda.com/Programming-Foundations-training-tutorials/1351-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11593&utm_campaign=CD2146&bid=11593&aid=CD2146&opt=");
+
+    // set attributes for ad image
+    adImg.src = "http://affiliates.lynda.com/42/2146/11593/";
+    adImg.border = "0";
+    adImg.width = "200";
+    adImg.height = "200";
 
     // Arrange elements
     adLink.appendChild(adImg);
@@ -20,13 +25,22 @@ define("loadLyndaAd", ["enquire"], function(enquire) {
   }
 
   // enquire.js code
-  enquire.register("screen and (max-width: 400px)", {
-    match : function() {
-      console.log("hello");
+  enquire.register("only screen and (min-width: 569px)", {
+
+    deferSetup : true,
+
+    setup : function() {
+      loadLyndaAds();
     },
-                       
+
+    match : function() {
+      document.getElementById("aside-ad-section").style.display="block";
+      
+    },
     unmatch : function() {
-      console.log("goodbye");
-    }
+      document.getElementById("aside-ad-section").style.display="none";
+    }  
+
+
   });                            
 });
