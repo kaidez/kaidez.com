@@ -422,7 +422,9 @@ main a:visited {
 // <ul> in the item in the "share post" posts section
 .social-sharing-list-post-class {
   padding: 0;
-  width: 287px;
+  max-width: 208px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 // <li> tag for the above-mentioned <ul>
@@ -431,6 +433,7 @@ main a:visited {
   padding-right: 10px;
   line-height: 1;
   margin-bottom: 15px;
+  float: left;
 }
 
 // link styling for the 'share link' area of the post pages
@@ -440,6 +443,33 @@ main a:visited {
 
 // ===========================================================================
 // Page content styles end
+// ===========================================================================
+
+
+
+
+
+// ===========================================================================
+// Post content styles start
+// ===========================================================================
+
+.share-post-container-class {
+  text-align: center;
+}
+
+// <h3> in the sharing post section in post pages
+.share-post-container-header-class {
+  display: block;
+}
+
+// make non-Facebook sharing links lay out like the Facebook one
+.fb-post-share-match {
+  position: relative;
+  top: -2px;
+}
+
+// ===========================================================================
+// Post content styles end
 // ===========================================================================
 
 
