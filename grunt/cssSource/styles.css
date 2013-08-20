@@ -3954,7 +3954,7 @@ a.pagination-link {
   }
 
   .related-posts-header {
-    font-size: 17px;
+    font-size: 21px;
   }
 
   .share-post-link {
@@ -3967,6 +3967,8 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
   }
 
   .aside-outer-wrapper-class {
