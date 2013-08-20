@@ -5,7 +5,7 @@ requirejs.config({
   deps: ["loadLyndaAd", "buildform","ladda","menu","form","search"],
 
   paths: {
-    enquire: "vendor/enquire.min"
+    enquire: "vendor/enquire.min",
     jquery: "vendor/jquery",
     tipuesetContent: "vendor/tipuesearch_content",
     tipueset: "vendor/tipuesearch_set",
