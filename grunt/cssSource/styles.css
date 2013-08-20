@@ -4309,10 +4309,20 @@ a.pagination-link {
 
   .social-sharing-list-post-class {
     width: auto;
+    margin-top: 13px;
   }
 
   .share-post-container-header-class {
     margin-right: 20px;
+    margin-top: 6px;
+  }
+
+  .social-sharing-list-item {
+    padding-right: 20px;
+  }
+
+  .fb-post-share-match {
+    top: -3px;
   }
 
   .aside-outer-wrapper-class {
