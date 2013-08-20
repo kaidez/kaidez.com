@@ -3065,7 +3065,7 @@ main a:visited {
 
 .social-sharing-list-post-class {
   padding: 0;
-  max-width: 208px;
+  width: 208px;
   margin: 0 auto;
   text-align: center;
 }
@@ -4292,6 +4292,26 @@ a.pagination-link {
 
   .breadcrumb-last {
     display: inline;
+  }
+
+  .share-post-container-class {
+    text-align: center;
+    background-color: #E1F5F6;
+  }
+
+  .share-post-container-header-class {
+    display: block;
+    margin: 0px;
+    float: left;
+  }
+
+  .social-sharing-list-post-class {
+    width: auto;
+  }
+
+  .fb-post-share-match {
+    position: relative;
+    top: -2px;
   }
 
   .aside-outer-wrapper-class {
