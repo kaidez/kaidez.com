@@ -3046,7 +3046,6 @@ main a:visited {
   margin: 0px auto;
   text-align: center;
   padding: 10px;
-  background-color: #E1F5F6;
   clear: both;
 }
 
@@ -3087,10 +3086,12 @@ main a:visited {
 
 .share-post-container-class {
   text-align: center;
+  background-color: #E1F5F6;
 }
 
 .share-post-container-header-class {
   display: block;
+  margin-bottom: 10px;
 }
 
 .fb-post-share-match {
