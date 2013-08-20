@@ -3124,6 +3124,10 @@ main a:visited {
   padding: 0 10px 4px 0;
 }
 
+.aside-ad-section-class {
+  display: none;
+}
+
 .aside-nav-list-item {
   list-style-type: none;
 }
