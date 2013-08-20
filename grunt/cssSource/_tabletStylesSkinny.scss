@@ -216,27 +216,36 @@
   }
 
   .share-post-container-class {
-    text-align: center;
-    background-color: #E1F5F6;
+    @include site-border-radius;
+    padding:10px;
  }
 
-// <h3> in the sharing post section in post pages
-.share-post-container-header-class {
-  display: block;
-  margin: 0px;
-  float: left;
-}
+  // <h3> in the sharing post section in post pages
+  .share-post-container-header-class {
+    display: block;
+    margin: 0px;
+    float: left;
+  }
 
-// <ul> in the item in the "share post" posts section
-.social-sharing-list-post-class {
-  width: auto;
-}
+  // <ul> in the item in the "share post" posts section
+  .social-sharing-list-post-class {
+    width: auto;
+    margin-top: 13px;
+  }
 
-// make non-Facebook sharing links lay out like the Facebook one
-.fb-post-share-match {
-  position: relative;
-  top: -2px;
-}
+  // <h3> in the sharing post section in post pages
+  .share-post-container-header-class {
+    margin-right: 20px;
+    margin-top: 6px;
+  }
+
+  .social-sharing-list-item {
+    padding-right: 20px;
+  }
+
+  .fb-post-share-match {
+    top: -3px;
+  }
 
   // ==========================================================================
   // Page content styles end
