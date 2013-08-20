@@ -3482,7 +3482,7 @@ a.pagination-link {
 
 .aside-outer-wrapper-class {
   box-shadow: none;
-  padding: 1px 10px 20px 10px;
+  padding: 1px 10px 51px 10px;
 }
 
 .aside-nav-link {
@@ -3961,6 +3961,12 @@ a.pagination-link {
     font-size: 16px;
     line-height: 1;
     font-family: "Lato";
+  }
+
+  .share-post-container-class {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
   }
 
   .aside-outer-wrapper-class {
