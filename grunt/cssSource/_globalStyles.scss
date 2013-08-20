@@ -497,6 +497,11 @@ main a:visited {
   padding:0 10px 4px 0;
 }
 
+// hide element that holds the lynda add on page load
+.aside-ad-section-class {
+  display: none;
+}
+
 // <li> tag in nav section of <aside>
 .aside-nav-list-item {
   list-style-type: none;
