@@ -264,6 +264,13 @@
     @include share-post-link;
   }
 
+  .share-post-container-class {
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 500px;
+  }
+
   // =========================================================================
   //  Page content styles end
   //  ======================================================================== 
@@ -314,6 +321,11 @@
   // for the contact form fields in <aside>
   .contact-form-field {
     @include contact-form-field;
+  }
+
+  .related-posts-header {
+    @include site-border-radius;
+    text-align: start;
   }
 
   // ==========================================================================
