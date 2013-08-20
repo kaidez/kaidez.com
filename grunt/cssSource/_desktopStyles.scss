@@ -326,6 +326,11 @@
   .related-posts-header {
     @include site-border-radius;
     text-align: start;
+    font-size: 21px;
+  }
+
+  .related-posts-list-item {
+    font-size: 18px;
   }
 
   // ==========================================================================
