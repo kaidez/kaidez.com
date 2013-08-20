@@ -215,6 +215,29 @@
     display:inline;
   }
 
+  .share-post-container-class {
+    text-align: center;
+    background-color: #E1F5F6;
+ }
+
+// <h3> in the sharing post section in post pages
+.share-post-container-header-class {
+  display: block;
+  margin: 0px;
+  float: left;
+}
+
+// <ul> in the item in the "share post" posts section
+.social-sharing-list-post-class {
+  width: auto;
+}
+
+// make non-Facebook sharing links lay out like the Facebook one
+.fb-post-share-match {
+  position: relative;
+  top: -2px;
+}
+
   // ==========================================================================
   // Page content styles end
   // ==========================================================================
