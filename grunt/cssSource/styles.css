@@ -4299,22 +4299,19 @@ a.pagination-link {
     -moz-border-radius: 10px;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 40px;
   }
 
   .share-post-container-header-class {
     display: block;
-    margin: 0px;
+    margin-right: 20px;
+    margin-top: 6px;
     float: left;
   }
 
   .social-sharing-list-post-class {
     width: auto;
     margin-top: 13px;
-  }
-
-  .share-post-container-header-class {
-    margin-right: 20px;
-    margin-top: 6px;
   }
 
   .social-sharing-list-item {
