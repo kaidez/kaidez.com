@@ -1,7 +1,6 @@
 /*
- * Code that manages the contact form. Uses RequireJS
- * and the jQuery Validation plugin. Attribution goes
- * to Spruce Interactive's original code at:
+ * Code that manages the contact form. Attribution goes to Spruce 
+ * Interactive's original code at:
  * http://www.spruce.it/noise/simple-ajax-contact-form/
  */
 
