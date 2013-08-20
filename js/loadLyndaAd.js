@@ -5,10 +5,11 @@
  */
 
 define("loadLyndaAd", ["enquire"], function(enquire) {
-  var adBox;
-  var loadLyndaAds = function() {
-    adBox = document.getElementById("aside-ad-section"),
-    frag = document.createDocumentFragment(),
+
+  var adBox = document.getElementById("aside-ad-section");
+
+  var showAd = function() {
+    var frag = document.createDocumentFragment(),
     adLink = document.createElement("a"),
     adImg = document.createElement("img");
     
@@ -27,16 +28,16 @@ define("loadLyndaAd", ["enquire"], function(enquire) {
     // Load arranged elements into document fragment
     frag.appendChild(adLink);
     
-    // Load document fragment into #aside
+    // Load document fragment into '#aside-ad-section'
     adBox.appendChild(frag);
 
   }
 
-  // enquire.js code: show that manages when the lynda.com add displays
+  // enquire.js code:  manages when the lynda.com add displays
   enquire.register("only screen and (min-width: 569px)", {
 
     /*
-     * The 'setup' method below runs 'loadLyndaAds()'. This 'deferSetup' 
+     * The 'setup' method below runs 'showAd()'. This 'deferSetup' 
      * method makes sure that 'setup' only runs when it's media query is
      * first matched. In other words, only run it when it's on a device that
      * has 569px width setting above, tablets in this website's case.
@@ -45,22 +46,22 @@ define("loadLyndaAd", ["enquire"], function(enquire) {
     deferSetup : true,
 
     /*
-     * Stores the 'loadLyndaAds' method in a callback so enquire only runs it 
+     * Stores the 'showAd' method in a callback so enquire only runs it 
      * once. Our code is optimized now.
      */
     setup : function() {
-      loadLyndaAds();
+      showAd();
     },
 
     /*
      * If the we have a 'match' in our media query (i.e. if the site's being
      * looked at on a device that's at least 569px wide), display the box that 
      * contains the Lynda ad. Also, since 'match()' as run, this means that 
-     * 'loadLyndaAds()' has run and has been stored it in a callback for 
+     * 'showAd()' has run and has been stored it in a callback for 
      * future use.
      */
     match : function() {
-      document.getElementById("aside-ad-section").style.display="block";
+      adBox.style.display="block";
     },
 
     /*
@@ -69,9 +70,9 @@ define("loadLyndaAd", ["enquire"], function(enquire) {
      * box that contains the Lynda ad.
      */
     unmatch : function() {
-      document.getElementById("aside-ad-section").style.display="none";
-    }  
+      adBox.style.display="none";
+    }
 
-  });
+  }, true);
 
 });
