@@ -4735,6 +4735,11 @@ a.pagination-link {
     -moz-border-radius: 10px;
     border-radius: 10px;
     text-align: start;
+    font-size: 21px;
+  }
+
+  .related-posts-list-item {
+    font-size: 18px;
   }
 
   .footer-outer-wrapper-class {
