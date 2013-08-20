@@ -3082,6 +3082,11 @@ main a:visited {
   font-family: sans-serif;
 }
 
+.fb-post-share-match {
+  position: relative;
+  top: -3px;
+}
+
 .aside-outer-wrapper-class {
   color: #7db9e8;
   height: auto;
