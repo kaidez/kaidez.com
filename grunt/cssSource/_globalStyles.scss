@@ -400,7 +400,6 @@ main a:visited {
   @include related-posts-header(20px);
   @include master-center;
   padding: 10px;
-  background-color: #E1F5F6;
   clear: both
 }
 
@@ -455,11 +454,13 @@ main a:visited {
 
 .share-post-container-class {
   text-align: center;
+  background-color: #E1F5F6;
 }
 
 // <h3> in the sharing post section in post pages
 .share-post-container-header-class {
   display: block;
+  margin-bottom: 10px;
 }
 
 // make non-Facebook sharing links lay out like the Facebook one
