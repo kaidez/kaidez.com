@@ -233,6 +233,10 @@
     @include share-post-link;
   }
 
+  .share-post-container-class {
+    @include site-border-radius;
+  }
+
   // =========================================================================
   // Page content styles end
   // =========================================================================
