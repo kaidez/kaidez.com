@@ -3066,7 +3066,9 @@ main a:visited {
 
 .social-sharing-list-post-class {
   padding: 0;
-  width: 287px;
+  max-width: 208px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .social-sharing-list-item {
@@ -3074,6 +3076,7 @@ main a:visited {
   padding-right: 10px;
   line-height: 1;
   margin-bottom: 15px;
+  float: left;
 }
 
 .share-post-link {
@@ -3082,9 +3085,17 @@ main a:visited {
   font-family: sans-serif;
 }
 
+.share-post-container-class {
+  text-align: center;
+}
+
+.share-post-container-header-class {
+  display: block;
+}
+
 .fb-post-share-match {
   position: relative;
-  top: -3px;
+  top: -2px;
 }
 
 .aside-outer-wrapper-class {
