@@ -12,6 +12,8 @@ requirejs.config({
     tipue: "vendor/tipuesearch.min",
     ladda: "vendor/ladda.min",
     spin: "vendor/spin.min",
+    backbone: "vendor/backbone.min",
+    underscore: "vendor/underscore.min"
   },
 
   shim: {
@@ -35,6 +37,12 @@ requirejs.config({
     },
     spin: {
       exports: "spin"
+    },
+    backbone: {
+      exports: "backbone"
+    },
+    underscore: {
+      exports: "underscore"
     }
   }
 
