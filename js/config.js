@@ -2,7 +2,15 @@ requirejs.config({
 
   baseUrl: "/js",
 
-  deps: ["loadLyndaAd", "buildform","ladda","menu","form","search"],
+  deps: [
+          "loadLyndaAd",
+           "buildform",
+           "ladda",
+           "menu",
+           "form",
+           "search",
+           "formViews"
+         ],
 
   paths: {
     enquire: "vendor/enquire.min",
@@ -12,8 +20,9 @@ requirejs.config({
     tipue: "vendor/tipuesearch.min",
     ladda: "vendor/ladda.min",
     spin: "vendor/spin.min",
-    backbone: "vendor/backbone.min",
-    underscore: "vendor/underscore.min"
+    underscore: "vendor/underscore-min",
+    backbone: "vendor/backbone-min"
+    
   },
 
   shim: {
@@ -38,12 +47,12 @@ requirejs.config({
     spin: {
       exports: "spin"
     },
-    backbone: {
+    "underscore": {
+      exports: "_"
+    },
+    "backbone": {
       deps: ["underscore", "jquery"],
       exports: "Backbone"
-    },
-    underscore: {
-      exports: "_"
     }
   }
 
