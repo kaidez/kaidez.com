@@ -39,10 +39,11 @@ requirejs.config({
       exports: "spin"
     },
     backbone: {
-      exports: "backbone"
+      deps: ["underscore", "jquery"],
+      exports: "Backbone"
     },
     underscore: {
-      exports: "underscore"
+      exports: "_"
     }
   }
 
