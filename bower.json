@@ -13,8 +13,10 @@
     "jquery": "1.10.2",
     "modernizr": "2.6.2",
     "font-awesome": "3.2.1",
-    "normalize-css":"2.1.2",
+    "normalize-css": "2.1.2",
     "requirejs": "2.1.8",
-    "enquire": "2.0.2"
+    "enquire": "2.0.2",
+    "backbone": "~1.0.0",
+    "underscore": "~1.5.1"
   }
 }
