@@ -261,7 +261,7 @@ $bg-size: 227px 334px;
 }
 
 @mixin contact-form-field {
-
+  margin-top: 3px;
 }
 
 @mixin read-post-link($border-radius: blank) {
