@@ -9,7 +9,8 @@ requirejs.config({
            "menu",
            "form",
            "search",
-           "formViews"
+           "formViews",
+           "formValidation"
          ],
 
   paths: {
