@@ -6,7 +6,7 @@
 define(function() {
 
   /*
-   * Find the form by ID is faster than finding it by its name.  See the 
+   * Finding the form by ID is faster than finding it by its name.  See the 
    * jsPerf test at: http://jsperf.com/finding-input-fields.
    */ 
   var allFields = document.getElementById("contact").getElementsByTagName("input");
