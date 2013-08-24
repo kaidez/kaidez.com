@@ -5,7 +5,7 @@
 
 define(function() {
   
- var allFields = document.contactForm.getElementsByTagName("input");
+  var allFields = document.contactForm.getElementsByTagName("input");
     
     for (key in allFields) {
 
@@ -15,6 +15,7 @@ define(function() {
         if(this.value === '') {
           console.log("nope");
         }
+        
       }
     };
 
