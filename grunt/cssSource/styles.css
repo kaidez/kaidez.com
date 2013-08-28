@@ -3201,7 +3201,16 @@ main a:visited {
 }
 
 .error {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
   color: #7EFF73;
+}
+
+.error:focus {
+  opacity: 1;
 }
 
 .copyright-class {
