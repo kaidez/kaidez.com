@@ -16,9 +16,12 @@ define(function() {
       var theFields = allFields[key];
       
       theFields.onblur = function() {
+        var spanName = this.name + "-error",
+          spanNameMsg = document.getElementById(spanName);
         if(this.value === "") {
-          var spanName = this.name + "-error";
-          document.getElementById(spanName).innerHTML = this.name + " is required";
+          spanNameMsg.innerHTML = this.name + " is required";
+        } else {
+          spanNameMsg.innerHTML = "";
         }
       }
 
