@@ -586,7 +586,13 @@ main a:visited {
 
 // error class for the form
 .error {
+  @include transitions (opacity);
+  opacity: 0;
   color: #7EFF73;
+}
+
+.error-fade {
+  opacity: 1.0;
 }
 
 // copyright <p> tag in <aside>
