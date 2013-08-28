@@ -3209,8 +3209,8 @@ main a:visited {
   color: #7EFF73;
 }
 
-.error:focus {
-  opacity: 1;
+.errorr {
+  opacity: 1.0;
 }
 
 .copyright-class {
