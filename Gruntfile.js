@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 
       // Based on default settings on http://modernizr.com/download/
       "extensibility" : {
-        "addtest" : false,
+        "addtest" : true,
         "prefixed" : false,
         "teststyles" : false,
         "testprops" : false,
