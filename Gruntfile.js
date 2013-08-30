@@ -70,6 +70,25 @@ module.exports = function(grunt) {
         }]
       }
     },
+   
+
+   // copy files from 'bower_components/' to wherever I say
+    copy: {
+      main: {
+        files: [
+          {
+            src: ['jquery/jquery.min'],
+            dest: '..js/vendor/jquery'
+          }, // includes files in path
+          {
+            expand: true,
+            cwd: 'path/',
+            src: ['bower_components/'],
+            dest: 'js/'
+          }
+        ]
+      }
+    },
 
     // all the 'watch' tasks
     watch: {
@@ -216,12 +235,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-manifest');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
+  grunt.registerTask('cp', ['copy']);
   grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'manifest', 'sftp-deploy']);
 
 };
