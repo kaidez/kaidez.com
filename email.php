@@ -1,12 +1,21 @@
 <?php
 
-  if($_POST){
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $text=$_POST['text'];
-  
+  if($_POST) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $text = $_POST['text'];
+
+    $to = "kai.gittens@gmail.com";
+    $subject = "Contact form submitted from kaidez.com";
+    $headers = 'From: ' . $email . "\r\n" .
+    'Reply-To: ' . $email . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    $cleanUpmessage = filter_var($_POST['text'], FILTER_SANITIZE_STRING);
+    $message = "NAME: " . $name . "\r\n\n" . $cleanUpmessage;
+    
     //send email
-    mail("kai.gittens@gmail.com", "SUBJECT", $text, "From:" . $name);
+    mail($to, $subject, $message, $headers);
   }
 
 ?>
