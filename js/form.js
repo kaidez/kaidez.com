@@ -9,9 +9,9 @@
 define("form", ["jquery"], function($) {
 
   $("#contact").submit(function(event) {
-    var name = $("#form-name").val(),
-      email = $("#form-email").val(),
-      text = $("#message").val(),
+    var name = $("#formNameField").val(),
+      email = $("#formEmailField").val(),
+      text = $("#messageField").val(),
       dataString = 'name='+ name + '&email=' + email + '&text=' + text,
       formHeight = $("#contact").height();
 
