@@ -1,12 +1,13 @@
 <?php
-    $formName = $_REQUEST['name'];
-    $formEmail = $_REQUEST['email'];
-    $formText = $_REQUEST['text'];
+
+  $formName = $_REQUEST['name'];
+  $formEmail = $_REQUEST['email'];
+  $formText = $_REQUEST['text'];
 
   if($_POST) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $text = $_POST['text'];
+    $name = $formName;
+    $email = $formEmail;
+    $text = $formEmail;
 
     $to = "kai.gittens@gmail.com";
     $subject = "Contact form submitted from kaidez.com";
