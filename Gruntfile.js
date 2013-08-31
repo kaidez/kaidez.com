@@ -70,25 +70,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-   
-
-   // copy files from 'bower_components/' to wherever I say
-    copy: {
-      main: {
-        files: [
-          {
-            src: ['jquery/jquery.min'],
-            dest: '..js/vendor/jquery'
-          }, // includes files in path
-          {
-            expand: true,
-            cwd: 'path/',
-            src: ['bower_components/'],
-            dest: 'js/'
-          }
-        ]
-      }
-    },
 
     // all the 'watch' tasks
     watch: {
