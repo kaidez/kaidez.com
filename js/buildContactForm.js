@@ -10,7 +10,8 @@ define(function() {
 
 
   createContactForm = function() {
-    var loadSearchBox = document.getElementById("aside-contact-form-section");
+    var searchBoxContainer = document.getElementById("aside-contact-form-section");
+
   }
 
   /*
