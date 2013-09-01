@@ -18,7 +18,7 @@ define(function() {
       textarea = document.createElement("textarea");
 
     // Set contact form attributes
-    contactForm.id = "contact";
+    contactForm.id = "contactt";
     contactForm.name= "contactForm";
     contactForm.method = "post";
 
@@ -34,6 +34,17 @@ define(function() {
 
     // Load document fragment into #aside-contact-form-section, which is already on the page
     searchBoxContainer.appendChild(contactFormFragment);
+
+    (function(){
+      var elemFrag = document.createDocumentFragment(),
+        para = document.createElement("p"),
+        label = document.createElement("label"),
+        input = document.createElement("input"),
+        span = document.createElement("span"),
+        ctf = document.getElementById("contactt");
+        elemFrag.appendChild(para);
+        ctf.appendChild(elemFrag);
+    })();
   }
 
   /*
