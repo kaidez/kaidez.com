@@ -21,6 +21,10 @@ define(function() {
     contactForm.id = "contact";
     contactForm.name= "contactForm";
     contactForm.method = "post";
+
+    // Set <fieldset> attributes
+    fieldset.id = "aside-contact-fieldset";
+    fieldset.setAttribute("class", "aside-contact-fieldset-styles");
     
     // load <fieldset> into <form>
     contactForm.appendChild(fieldset);
