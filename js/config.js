@@ -5,6 +5,7 @@ requirejs.config({
   deps: [
           "loadLyndaAd",
            "buildSearchbox",
+           "buildContactForm",
            "ladda",
            "menu",
            "form",
