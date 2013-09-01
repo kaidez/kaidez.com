@@ -17,6 +17,11 @@ define(function() {
       emailBox = document.createElement("input"),
       textarea = document.createElement("textarea");
 
+    // Set contact form attributes
+    contactForm.id = "contact";
+    contactForm.name= "contactForm";
+    contactForm.method = "post";
+
     contactFormFragment.appendChild(contactForm);
 
     // Load document fragment into #aside-contact-form-section, which is already on the page
