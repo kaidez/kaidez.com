@@ -4,7 +4,7 @@ requirejs.config({
 
   deps: [
           "loadLyndaAd",
-           "buildform",
+           "buildSearchbox",
            "ladda",
            "menu",
            "form",
