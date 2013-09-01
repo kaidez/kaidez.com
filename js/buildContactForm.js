@@ -16,6 +16,11 @@ define(function() {
       nameBox = document.createElement("input"),
       emailBox = document.createElement("input"),
       textarea = document.createElement("textarea");
+
+    contactFormFragment.appendChild(contactForm);
+
+    // Load document fragment into #aside-contact-form-section, which is already on the page
+    searchBoxContainer.appendChild(contactFormFragment);
   }
 
   /*
