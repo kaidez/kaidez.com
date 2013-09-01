@@ -21,7 +21,11 @@ define(function() {
     contactForm.id = "contact";
     contactForm.name= "contactForm";
     contactForm.method = "post";
-
+    
+    // load <fieldset> into <form>
+    contactForm.appendChild(fieldset);
+    
+    // load <form> into the document fragment
     contactFormFragment.appendChild(contactForm);
 
     // Load document fragment into #aside-contact-form-section, which is already on the page
