@@ -11,7 +11,7 @@ define(function() {
   createContactForm = function() {
     var searchBoxContainer = document.getElementById("aside-contact-form-section"),
       contactFormFragment = document.createDocumentFragment(),
-      conatctForm = document.createElement("form"),
+      contactForm = document.createElement("form"),
       fieldset = document.createElement("fieldset"),
       nameBox = document.createElement("input"),
       emailBox = document.createElement("input"),
