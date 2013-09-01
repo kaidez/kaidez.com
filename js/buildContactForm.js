@@ -8,10 +8,14 @@ define(function() {
   // Variables that are global to this RequireJS module only
   var createContactForm;
 
-
   createContactForm = function() {
-    var searchBoxContainer = document.getElementById("aside-contact-form-section");
-
+    var searchBoxContainer = document.getElementById("aside-contact-form-section"),
+      contactFormFragment = document.createDocumentFragment(),
+      conatctForm = document.createElement("form"),
+      fieldset = document.createElement("fieldset"),
+      nameBox = document.createElement("input"),
+      emailBox = document.createElement("input"),
+      textarea = document.createElement("textarea");
   }
 
   /*
