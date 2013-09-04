@@ -17,7 +17,7 @@
     $formErrors = $true;
   }
 
-  if (!($formErrors)) {
+  if ($formErrors === false) {
 
     $cleanUpEmail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
