@@ -2,7 +2,7 @@
 
   $name = $_REQUEST['name'];
   $email = $_REQUEST['email'];
-  $text = $_REQUEST['text'];
+  $message = $_REQUEST['message'];
 
   // is "Name" filled out?
   if ($name === '') {
@@ -10,7 +10,7 @@
   }
 
   // Does "Message" field have at least 25 characters?
-  if (strlen($text) < 25) {
+  if (strlen($message) < 25) {
     echo "<div>Your Message must be at least 25 characters.</div>";
   }
 
