@@ -3,31 +3,36 @@ requirejs.config({
   baseUrl: "/js",
 
   deps: [
-          "loadLyndaAd",
-           "buildSearchbox",
-           "buildContactForm",
-           "ladda",
-           "menu",
-           "form",
-           "search",
-           "formViews",
-           "formValidation"
-         ],
+    "buildSearchbox",
+    "buildContactForm",
+    "form",
+    "ladda",
+    "loadLyndaAd",
+    "menu",
+    "prismInit",
+    "search",
+    "formViews",
+    "formValidation"
+  ],
 
   paths: {
+    prism: "vendor/prism",
     enquire: "vendor/enquire.min",
-    jquery: "vendor/jquery",
     tipuesetContent: "vendor/tipuesearch_content",
     tipueset: "vendor/tipuesearch_set",
     tipue: "vendor/tipuesearch.min",
     ladda: "vendor/ladda.min",
     spin: "vendor/spin.min",
     underscore: "vendor/underscore-min",
-    backbone: "vendor/backbone-min"
+    backbone: "vendor/backbone-min",
+    jquery: "vendor/jquery",
     
   },
 
   shim: {
+    "prism": {
+      "exports": "Prism"
+    },
     "enquire": {
       "exports": "enquire"
     },
