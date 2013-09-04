@@ -6,7 +6,7 @@ requirejs.config({
     "buildContactForm",
     "buildSearchbox",
     //"form",
-    //"formValidation",
+    "formValidation",
     "formViews",
     "ladda",
     "loadLyndaAd",
