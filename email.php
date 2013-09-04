@@ -17,24 +17,22 @@
     $formErrors = $true;
   }
 
+  if (!($formErrors)) {
 
-/* $cleanUpMessage = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-$message = "NAME: " . $name . "\r\n\n" . $cleanUpMessage;
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $text = $_POST['text'];
+    $cleanUpEmail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+
     $to = "kai.gittens@gmail.com";
     $subject = "Contact form submitted from kaidez.com";
-    $headers = 'From: ' . $email . "\r\n" .
-    'Reply-To: ' . $email . "\r\n" .
+    $headers = 'From: ' . $cleanUpEmail . "\r\n" .
+    'Reply-To: ' . $cleanUpEmail . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-    /*
-     * $cleanUpmessage: a variable that tests to see if the message field is 
-     * clean. i.e., make sure that it doesn't contain HTML characters.
-     
-    $cleanUpMessage = filter_var($_POST['text'], FILTER_SANITIZE_STRING);
+    $cleanUpMessage = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
     $message = "NAME: " . $name . "\r\n\n" . $cleanUpMessage;
 
-    mail($to, $subject, $message, $headers);*/
+    if(mail($to, $subject, $message, $headers)) {
+      echo "<div>Good!!!!!!!!</div>";
+    }
+  }
+
 ?>
