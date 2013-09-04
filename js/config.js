@@ -5,8 +5,8 @@ requirejs.config({
   deps: [
     "buildContactForm",
     "buildSearchbox",
-    "form",
-    "formValidation",
+    //"form",
+    //"formValidation",
     "formViews",
     "ladda",
     "loadLyndaAd",

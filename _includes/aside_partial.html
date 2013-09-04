@@ -94,27 +94,27 @@
             <span><i>*all fields are required</i></span>
             <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
 
-            <form id="contact" name="contactForm" method="post">
+            <form id="contact" name="contactForm" method="post" action="email.php">
 
               <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
 
                 <p class="aside-contact-fields">
                   <label for="formNameField">NAME*</label>
-                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true">
                   <span id="name-error" class=
                   "error"></span> 
                 </p>
 
                 <p class="aside-contact-fields">
                   <label for="formEmailField">EMAIL*</label>
-                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true">
                   <span id="email-error" class=
                   "error"></span>  
                 </p>
 
                 <p class="aside-contact-fields">
                   <label for="messageField">MESSAGE*</label>
-                  <textarea tabindex="-8" rows="10" name="message" id="messageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <textarea tabindex="-8" rows="10" name="message" id="messageField" class="contact-form-field" aria-required="true"></textarea>
                 </p>
 
               </fieldset> <!-- #aside-contact-fieldset -->
