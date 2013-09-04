@@ -9,6 +9,15 @@
   if ($name === '') {
     echo "<div>Please enter your name.</div>";
     $formErrors = true;
+  } elseif (strlen($name) < 4) {
+    echo "<div>Your name must be at least 4 characters long.</div>";
+    $formErrors = true;
+  }
+
+  // Is "Email" valid
+  if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "E-mail is not valid";
+    $formErrors = true;
   }
 
   // Does "Message" field have at least 25 characters?
@@ -17,8 +26,8 @@
     $formErrors = true;
   }
 
+  // If the form has no errors, send out the form email...
   if ($formErrors === false) {
-
 
     $to = "kai.gittens@gmail.com";
     $subject = "Contact form submitted from kaidez.com";
@@ -33,17 +42,8 @@
     $cleanUpMessage = filter_var($_POST['text'], FILTER_SANITIZE_STRING);
     $message = "NAME: " . $name . "\r\n\n" . $cleanUpMessage;
 
-    // $to = "kai.gittens@gmail.com";
-    // $subject = "Contact form submitted from kaidez.com";
-    // $headers = 'From: ' . $cleanUpEmail . "\r\n" .
-    // 'Reply-To: ' . $cleanUpEmail . "\r\n" .
-    // 'X-Mailer: PHP/' . phpversion();
-
-    // $cleanUpMessage = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-    // $message = "NAME: " . $name . "\r\n\n" . $cleanUpMessage;
-
     if(mail($to, $subject, $message, $headers)) {
-      echo "<div>Good!!!!!!!!</div>";
+      echo "<div>Thank You For Contacting Us!!!</div>";
     }
   }
 
