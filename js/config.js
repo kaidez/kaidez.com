@@ -3,16 +3,16 @@ requirejs.config({
   baseUrl: "/js",
 
   deps: [
-    "buildSearchbox",
     "buildContactForm",
+    "buildSearchbox",
     "form",
+    "formValidation"
+    "formViews",
     "ladda",
     "loadLyndaAd",
     "menu",
     "prismInit",
     "search",
-    "formViews",
-    "formValidation"
   ],
 
   paths: {
