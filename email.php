@@ -9,9 +9,6 @@
   if ($name === '') {
     echo "<div>Please enter your name.</div>";
     $formErrors = true;
-  } elseif (strlen($name) < 4) {
-    echo "<div>Your name must be at least 4 characters long.</div>";
-    $formErrors = true;
   }
 
   // Is "Email" valid
