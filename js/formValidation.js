@@ -1,10 +1,11 @@
 /*
+ * Module: 'formValidation'
  *
- *
+ * Validate contact form fields
  */
-define(function() {
+define("formValidation", ["jquery"], function($) {
 
-  var allFields = document.querySelectorAll(".contact-form-field"),
+  var allFields,
       validationInfo = {
         "name" : {
           "required": true
@@ -15,26 +16,34 @@ define(function() {
         "text" : {
           "required": true
         }
-      },
-      storeThisName;
+      };
+
   /*
-   * In order to safley use 'toggle()', we need to detect
-   * "Modernizr.classlist". But it's a Modernizer non-core detect and
-   * grunt-modernizr doesn't look for non-core detects. We need to 
-   * manually add it using the Modernizr addTest() API.
+   * We need to store our form fields by class name in our 'allFields'
+   * variable. 'getElementsByClassName()' sucks so we're going to locate this 
+   * class name with 'document.querySelectorAll()', which is so-so with 
+   * browser support.  Find the class names with jQuery if the browser 
+   * doesn't support 'document.querySelectorAll()'.
+   */
+  if (document.querySelectorAll) {
+    allFields = document.querySelectorAll(".contact-form-field");
+  } else {
+    allFields = $(".contact-form-field");
+  }
+
+  /*
+   * In order to safely use 'toggle()', we need to detect
+   * "Modernizr.classlist". But it's a Modernizr non-core detect and
+   * grunt-modernizr doesn't look for non-core detects when it builds out 
+   * Modernizr. We need to manually add it using the Modernizr addTest() API.
    */
   Modernizr.addTest("classlist", "classList" in document.documentElement);
 
-  /*
-   * Finding the form by ID is faster than finding it by its name for the most 
-   * part. See the  jsPerf test at: http://jsperf.com/finding-input-fields.
-   */
-  
-  
+  // If form is submitted, validate the fields  
   document.forms.contact.onsubmit = function() {
-    storeThisName = this.name;
-    var spanName = storeThisName + "Error",
-      spanNameMsg = document.getElementById(spanName);
+    var storeThisName = this.name;
+        spanName = storeThisName + "Error",
+        spanNameMsg = document.getElementById(spanName);
     for (key in validationInfo) {
       var myField = document.getElementById(key);
       if((validationInfo[key].required) && (myField.value === "")) {
@@ -44,12 +53,14 @@ define(function() {
     }
   }
 
+  // store the form fields an a key so
   for (key in allFields) {
-
     var theFields = allFields[key];
+
+    // If a form field is blurred, validate it  
     theFields.onblur = function() {
-      storeThisName = this.name;
-      var spanName = storeThisName + "Error",
+      var storeThisName = this.name,
+          spanName = storeThisName + "Error",
           spanNameMsg = document.getElementById(spanName);
       if(this.value === "") {
         spanNameMsg.innerHTML = this.name + " is required";
@@ -58,7 +69,6 @@ define(function() {
         spanNameMsg.innerHTML = "";
       }
     }
-
   };
 
 });
