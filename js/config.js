@@ -48,12 +48,12 @@ requirejs.config({
       deps: ["jquery"],
       exports: "jquery"
     },
-    ladda: {
-      exports: "ladda"
-    },
-    spin: {
-      exports: "spin"
-    },
+    // ladda: {
+    //   exports: "ladda"
+    // },
+    // spin: {
+    //   exports: "spin"
+    // },
     "underscore": {
       exports: "_"
     },
