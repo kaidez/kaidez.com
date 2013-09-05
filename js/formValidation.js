@@ -11,12 +11,16 @@ define(function() {
         },
         "email" : {
           "required": true
+        },
+        "text" : {
+          "required": true
         }
       },
       storeThisName;
   /*
-   * We need to detect "Modernizr.classlist" but it's a Modernizer non-core 
-   * detect and grunt-modernizr doesn't look for non-core detects. We need to 
+   * In order to safley use 'toggle()', we need to detect
+   * "Modernizr.classlist". But it's a Modernizer non-core detect and
+   * grunt-modernizr doesn't look for non-core detects. We need to 
    * manually add it using the Modernizr addTest() API.
    */
   Modernizr.addTest("classlist", "classList" in document.documentElement);
@@ -29,7 +33,7 @@ define(function() {
   
   document.forms.contact.onsubmit = function() {
     storeThisName = this.name;
-    var spanName = storeThisName + "-error",
+    var spanName = storeThisName + "Error",
       spanNameMsg = document.getElementById(spanName);
     for (key in validationInfo) {
       var myField = document.getElementById(key);
@@ -43,11 +47,10 @@ define(function() {
   for (key in allFields) {
 
     var theFields = allFields[key];
-      
     theFields.onblur = function() {
       storeThisName = this.name;
-      var spanName = storeThisName + "-error",
-        spanNameMsg = document.getElementById(spanName);
+      var spanName = storeThisName + "Error",
+          spanNameMsg = document.getElementById(spanName);
       if(this.value === "") {
         spanNameMsg.innerHTML = this.name + " is required";
         spanNameMsg.classList.toggle("error-fade");
