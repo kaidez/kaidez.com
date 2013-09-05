@@ -3207,7 +3207,6 @@ main a:visited {
   transition: opacity 0.3s ease;
   opacity: 0;
   color: #7EFF73;
-  display: block;
 }
 
 .error-fade {
