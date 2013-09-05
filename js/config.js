@@ -3,12 +3,9 @@ requirejs.config({
   baseUrl: "/js",
 
   deps: [
-    "buildContactForm",
     "buildSearchbox",
-    //"form",
     "formValidation",
     "formViews",
-    // "ladda",
     "loadLyndaAd",
     "menu",
     "prismInit",
@@ -21,8 +18,6 @@ requirejs.config({
     tipuesetContent: "vendor/tipuesearch_content",
     tipueset: "vendor/tipuesearch_set",
     tipue: "vendor/tipuesearch.min",
-    // ladda: "vendor/ladda.min",
-    // spin: "vendor/spin.min",
     underscore: "vendor/underscore-min",
     backbone: "vendor/backbone-min",
     jquery: "vendor/jquery",
@@ -48,12 +43,6 @@ requirejs.config({
       deps: ["jquery"],
       exports: "jquery"
     },
-    // ladda: {
-    //   exports: "ladda"
-    // },
-    // spin: {
-    //   exports: "spin"
-    // },
     "underscore": {
       exports: "_"
     },
