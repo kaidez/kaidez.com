@@ -1,13 +1,11 @@
 _site
 ./_site
-tipuesearch/
+
 
 
 # Site assets
 #------------
-assets/
-old_img/
-js/cacheTest.js
+old_js/
 
 
 # Backbone code drafts
