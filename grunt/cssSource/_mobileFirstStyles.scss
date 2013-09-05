@@ -235,10 +235,6 @@ a.pagination-link {
 // '_mobileLandscape' view.
 // ===========================================================================
 
-.aside-contact-fields {
-  width:152px;
-}
-
 .aside-paragraph {
   font-size:15px;
 }
@@ -256,6 +252,21 @@ a.pagination-link {
 // the <aside> nav links
 .aside-nav-link {
   @include aside-nav-link;
+}
+
+// all the fields in the contact form
+.aside-contact-fields {
+  width:152px;
+}
+
+// apply this height to the <input> fields
+.inputFieldHeight {
+  min-height: 71px;
+}
+
+// apply this height to the <textarea> field
+.textareaHeight {
+  min-height: 230px;
 }
 
 // ===========================================================================
