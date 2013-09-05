@@ -19,7 +19,7 @@ define("formValidation", ["jquery"], function($) {
       };
 
   /*
-   * We need to store our form fields by class name in our 'allFields'
+   * We need to detect our form fields by class name in our 'allFields'
    * variable. 'getElementsByClassName()' sucks so we're going to locate this 
    * class name with 'document.querySelectorAll()', which is so-so with 
    * browser support.  Find the class names with jQuery if the browser 
