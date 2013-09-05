@@ -4,7 +4,7 @@
  */
 define(function() {
 
-  var allFields = document.forms.contact.getElementsByTagName("input"),
+  var allFields = document.querySelectorAll(".contact-form-field"),
       validationInfo = {
         "name" : {
           "required": true
