@@ -3207,6 +3207,7 @@ main a:visited {
   transition: opacity 0.3s ease;
   opacity: 0;
   color: #7EFF73;
+  display: block;
 }
 
 .error-fade {
@@ -3481,10 +3482,6 @@ a.pagination-link {
   color: #fff;
 }
 
-.aside-contact-fields {
-  width: 152px;
-}
-
 .aside-paragraph {
   font-size: 15px;
 }
@@ -3507,6 +3504,18 @@ a.pagination-link {
   display: block;
   color: #7db9e8;
   text-decoration: none;
+}
+
+.aside-contact-fields {
+  width: 152px;
+}
+
+.inputFieldHeight {
+  min-height: 71px;
+}
+
+.textareaHeight {
+  min-height: 230px;
 }
 
 .copyright-style {
