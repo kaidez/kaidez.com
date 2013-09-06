@@ -10,10 +10,9 @@ exclude: [
   css/styles.css,
   Gruntfile.js,
   grunt,
-  js/cacheTest.js,
   kaidezSiteNotes.txt,
   node_modules,
-  old_img,
   package.json,
+  old_js,
   robots.txt
 ]
