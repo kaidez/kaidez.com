@@ -6,9 +6,11 @@
 
 define("formValidation", ["jquery"], function($) {
 
+  // if window.matchMedia is not supported, matchMedia polyfills. Each file
+  // will load twice, check to see if one is cached as it can be hit-or-miss.
   Modernizr.load({
     test: window.matchMedia,
-    yep: [
+    nope: [
       "js/vendor/matchMedia.js",
       "js/vendor/matchMedia.addListener.js"
     ]
