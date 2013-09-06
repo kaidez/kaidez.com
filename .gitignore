@@ -5,7 +5,8 @@ _site
 
 # Site assets
 #------------
-old_js/
+assets/
+old_img/
 
 
 # Backbone code drafts
