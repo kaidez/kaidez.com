@@ -3,7 +3,16 @@
  *
  * Validate contact form fields
  */
+
 define("formValidation", ["jquery"], function($) {
+
+  Modernizr.load({
+    test: window.matchMedia,
+    yep: [
+      "js/vendor/matchMedia.js",
+      "js/vendor/matchMedia.addListener.js"
+    ]
+  });
 
   var allFields,
       validationInfo = {
