@@ -3180,12 +3180,12 @@ main a:visited {
 
 .kaidez-social-sharing-list-item-link-text {
   display: block;
-  float: left;
+  display: inline-block;
   padding: 21px 9px;
 }
 
 [class^=icon-], [class*=" icon-"] {
-  float: left;
+  display: inline-block;
 }
 
 .aside-contact-fieldset-styles {
@@ -3208,6 +3208,14 @@ main a:visited {
 
 .error-fade {
   opacity: 1.0;
+}
+
+.ladda-button {
+  background: #1e2034;
+}
+
+.ladda-button:hover {
+  background: #24263e;
 }
 
 .copyright-class {
