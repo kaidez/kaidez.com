@@ -6,6 +6,17 @@
 
 define(["enquire"], function(enquire) {
 
+  
+  // if window.matchMedia is not supported, add matchMedia polyfills. Each file
+  // will load twice, check to see if one is cached as it can be hit-or-miss.
+  Modernizr.load({
+    test: window.matchMedia,
+    nope: [
+      "/js/vendor/matchMedia.js",
+      "/js/vendor/matchMedia.addListener.js"
+    ]
+  });
+
   var adBox = document.getElementById("aside-ad-section");
 
   var showAd = function() {
