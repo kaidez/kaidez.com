@@ -564,13 +564,13 @@ main a:visited {
 // copy inside the <span> tag inside the kaidez social netwoek links
 .kaidez-social-sharing-list-item-link-text {
   display: block;
-  float: left;
+  display: inline-block;
   padding: 21px 9px;
 }
 
 // float: left the Font Awesome fonts in the <aside>
 [class^=icon-], [class*=" icon-"] {
-  float: left;
+  display: inline-block;
 }
 
 // Applied to form fields in <aside>
@@ -590,8 +590,19 @@ main a:visited {
   color: #7EFF73;
 }
 
+// error message...gets applied to the <span class="error"> with toggle()
 .error-fade {
   opacity: 1.0;
+}
+
+// submit button
+.ladda-button {
+  background: darken($base-link-color, 4);
+}
+
+// submit button hover state
+.ladda-button:hover {
+  background: darken($base-link-color, 1);
 }
 
 // copyright <p> tag in <aside>
@@ -646,6 +657,8 @@ main a:visited {
   color: #fff;
   text-decoration: none;
 }
+
+
 
 // ===========================================================================
 // Footer styles end
