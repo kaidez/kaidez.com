@@ -14,13 +14,15 @@ requirejs.config({
   ],
 
   paths: {
-    prism: "vendor/prism",
+    backbone: "vendor/backbone-min",
     enquire: "vendor/enquire.min",
+    ladda: "vendor/ladda.min",
+    prism: "vendor/prism",
+    spin: "vendor/spin.min",
     tipuesetContent: "vendor/tipuesearch_content",
     tipueset: "vendor/tipuesearch_set",
     tipue: "vendor/tipuesearch.min",
     underscore: "vendor/underscore-min",
-    backbone: "vendor/backbone-min",
     jquery: "vendor/jquery",
     
   },
@@ -37,6 +39,10 @@ requirejs.config({
       exports: "jquery"
     },
     tipueset: {
+      deps: ["jquery"],
+      exports: "jquery"
+    },
+    tipue: {
       deps: ["jquery"],
       exports: "jquery"
     },
