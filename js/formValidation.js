@@ -6,18 +6,7 @@
 
 define(["jquery"], function($) {
 
-  // if window.matchMedia is not supported, add matchMedia polyfills. Each file
-  // will load twice, check to see if one is cached as it can be hit-or-miss.
-  Modernizr.load({
-    test: window.matchMedia,
-    nope: [
-      "/js/vendor/matchMedia.js",
-      "/js/vendor/matchMedia.addListener.js"
-    ]
-  });
-
-  var allFields,
-      validationInfo = {
+  var validationInfo = {
         "name" : {
           "required": true
         },
@@ -28,19 +17,6 @@ define(["jquery"], function($) {
           "required": true
         }
       };
-
-  /*
-   * We need to detect our form fields by class name in our 'allFields'
-   * variable. 'getElementsByClassName()' sucks so we're going to locate this 
-   * class name with 'document.querySelectorAll()', which is so-so with 
-   * browser support.  Find the class names with jQuery if the browser 
-   * doesn't support 'document.querySelectorAll()'.
-   */
-  if (document.querySelectorAll) {
-    allFields = document.querySelectorAll(".contact-form-field");
-  } else {
-    allFields = $(".contact-form-field");
-  }
 
   /*
    * In order to safely use 'toggle()', we need to detect
@@ -56,15 +32,25 @@ define(["jquery"], function($) {
         spanName = storeThisName + "Error",
         spanNameMsg = document.getElementById(spanName);
     for (key in validationInfo) {
-      var myField = document.getElementById(key);
-      if((validationInfo[key].required) && (myField.value === "")) {
+      if((validationInfo[key].required) && (validationInfo[key].value === "")) {
         spanNameMsg.innerHTML = this.name + " is required";
         spanNameMsg.classList.toggle("error-fade");
       }
     }
   }
 
-  // store the form fields an a key so
+  /*
+   * We need to detect our form fields by class name in our 'allFields'
+   * variable. 'getElementsByClassName()' sucks so we're going to locate this 
+   * class name with 'document.querySelectorAll()', which is so-so with 
+   * browser support.  Find the class names with jQuery if the browser 
+   * doesn't support 'document.querySelectorAll()'.
+   */
+  if (document.querySelectorAll) {
+    var allFields = document.querySelectorAll(".contact-form-field");
+  } else {
+    var allFields = $(".contact-form-field");
+  }
   for (key in allFields) {
     var theFields = allFields[key];
 
