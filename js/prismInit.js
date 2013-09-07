@@ -1,7 +1,7 @@
 /*
  * Run Prism.js as an AMD module (http://prismjs.com/)
  */
-define("prismInit", ["prism"],function(Prism) {
+define(["prism"],function(Prism) {
 	// Prism is firing off the JavaScript before the CSS is ready.
 	// Run this method to ensure that snippets gets highlighted after everything /  loads. 
   Prism.highlightAll();

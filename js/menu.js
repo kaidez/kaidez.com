@@ -10,7 +10,7 @@
 
 // Start RequireJS code
 
-define("menu", ["jquery"], function($) {
+define(["jquery"], function($) {
   var header = document.getElementById("masthead"),
     loadButtons = document.createDocumentFragment(),
     $navMenu = $("#site-navigation-list"),

@@ -1,5 +1,5 @@
  
-define("search", ["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
+define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
 
     $('#tipue_search_input').tipuesearch({
       'show': 10,

@@ -4,7 +4,7 @@
  *  Contruct a lynda ad
  */
 
-define("loadLyndaAd", ["enquire"], function(enquire) {
+define(["enquire"], function(enquire) {
 
   var adBox = document.getElementById("aside-ad-section");
 

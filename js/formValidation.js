@@ -4,7 +4,7 @@
  * Validate contact form fields
  */
 
-define("formValidation", ["jquery"], function($) {
+define(["jquery"], function($) {
 
   // if window.matchMedia is not supported, add matchMedia polyfills. Each file
   // will load twice, check to see if one is cached as it can be hit-or-miss.
