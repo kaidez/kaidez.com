@@ -94,7 +94,7 @@
             <span><i>*all fields are required</i></span>
             <p id="success-msg" style="display:none">Your message has been sent successfully.</p>
 
-            <form id="contact" name="contactForm" method="post" action="email.php">
+            <form id="contact" name="contactForm" method="post">
 
               <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
 
@@ -112,14 +112,14 @@
 
                 <p class="aside-contact-fields textareaHeight">
                   <label for="messageField">YOUR MESSAGE</label>
-                  <textarea tabindex="-8" rows="10" name="text" id="messageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
                   <span id="textError" class="error"></span> 
                 </p>
-                <p class="clearfix"><input type="submit" value="Submit"></p>
+                <p class="clearfix">
+                  <input type="submit" value="Submit">
+                </p>
 
               </fieldset> <!-- #aside-contact-fieldset -->
-<!-- <input type="submit" value="Submit"> -->
-
 
             </form> <!-- #contact -->
 
