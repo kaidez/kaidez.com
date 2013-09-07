@@ -3,38 +3,41 @@ requirejs.config({
   baseUrl: "/js",
 
   deps: [
-    "buildSearchbox",
-    "formValidation",
+    "buildform",
     "form",
+    "formValidation",
     "formViews",
     "loadLyndaAd",
     "menu",
     "prismInit",
-    "search",
+    "search"
   ],
 
   paths: {
     backbone: "vendor/backbone-min",
     enquire: "vendor/enquire.min",
+    jquery: "vendor/jquery",
     ladda: "vendor/ladda.min",
     prism: "vendor/prism",
     spin: "vendor/spin.min",
-    tipuesetContent: "vendor/tipuesearch_content",
-    tipueset: "vendor/tipuesearch_set",
     tipue: "vendor/tipuesearch.min",
-    underscore: "vendor/underscore-min",
-    jquery: "vendor/jquery",
-    
+    tipueset: "vendor/tipuesearch_set",
+    tipuesetContent: "vendor/tipuesearch_content",
+    underscore: "vendor/underscore-min"
   },
 
   shim: {
-    "prism": {
-      "exports": "Prism"
+    "backbone": {
+      deps: ["underscore", "jquery"],
+      exports: "Backbone"
     },
     "enquire": {
       "exports": "enquire"
     },
-    tipuesetContent: {
+    "prism": {
+      "exports": "Prism"
+    },
+    tipue: {
       deps: ["jquery"],
       exports: "jquery"
     },
@@ -42,17 +45,12 @@ requirejs.config({
       deps: ["jquery"],
       exports: "jquery"
     },
-    tipue: {
+    tipuesetContent: {
       deps: ["jquery"],
       exports: "jquery"
     },
-    tipue: {
     "underscore": {
       exports: "_"
-    },
-    "backbone": {
-      deps: ["jquery", "underscore"],
-      exports: "Backbone"
     }
   }
 
