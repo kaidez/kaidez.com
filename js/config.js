@@ -47,9 +47,6 @@ requirejs.config({
       exports: "jquery"
     },
     tipue: {
-      deps: ["jquery"],
-      exports: "jquery"
-    },
     "underscore": {
       exports: "_"
     },
