@@ -12,10 +12,7 @@ define(["jquery"], function($) {
     var name = $("#formNameField").val(),
         email = $("#formEmailField").val(),
         text = $("#formMessageField").val(),
-        dataString = 'name='+ name + '&email=' + email + '&text=' + text,
-        formHeight = $("#contact").height();
-
-  $('#success-msg').height(formHeight);
+        dataString = 'name='+ name + '&email=' + email + '&text=' + text;
 
     $.ajax({
       type: "POST",
@@ -23,7 +20,7 @@ define(["jquery"], function($) {
       data: dataString,
       success: function(){
         $("#contact").fadeOut(100);
-        $('#success-msg').fadeIn(100);
+        $("#successMsg").fadeIn(100);
       }
     });
     
