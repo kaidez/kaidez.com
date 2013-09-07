@@ -2756,6 +2756,12 @@ main a:visited {
   margin: 34px auto;
 }
 
+.successMsgClass {
+  display: none;
+  position: absolute;
+  max-width: 209px;
+}
+
 .footer-outer-wrapper-class {
   background-color: #0c5e7e;
   padding: 20px;
