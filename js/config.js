@@ -15,7 +15,7 @@ requirejs.config({
 
   paths: {
     backbone: "libs/backbone-min",
-    enquire: "libs/enquire.min",
+    enquire: "libs/enquire.min",  // AMD build...not released yet
     jquery: "libs/jquery",
     ladda: "libs/ladda.min",
     prism: "libs/prism",
@@ -30,9 +30,6 @@ requirejs.config({
     "backbone": {
       deps: ["underscore", "jquery"],
       exports: "Backbone"
-    },
-    "enquire": {
-      "exports": "enquire"
     },
     "prism": {
       "exports": "Prism"
