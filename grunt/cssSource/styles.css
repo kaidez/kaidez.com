@@ -3076,7 +3076,7 @@ main a:visited {
   padding-right: 10px;
   line-height: 1;
   margin-bottom: 15px;
-  float: left;
+  display: inline-block;
 }
 
 .share-post-link {
@@ -4735,10 +4735,11 @@ a.pagination-link {
   }
 
   .share-post-container-class {
-    display: table;
     margin: 0 auto;
-    padding: 20px;
-    min-width: 500px;
+  }
+
+  .sharePostStructure {
+    display: inline-block;
   }
 
   .aside-inner-wrapper-class {
