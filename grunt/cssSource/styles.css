@@ -3502,7 +3502,7 @@ a.pagination-link {
 
 .aside-outer-wrapper-class {
   box-shadow: none;
-  padding: 1px 10px 51px 10px;
+  padding: 1px 10px 200px;
 }
 
 .aside-nav-link {
@@ -4743,11 +4743,11 @@ a.pagination-link {
   }
 
   .aside-outer-wrapper-class {
-    background: #107aa3 url("../img/footer-bg.png") no-repeat left;
     -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
-    padding: 1px 10px;
+    background: #107aa3 url("../img/footer-bg.png") no-repeat left;
+    padding: 1px 10px 51px;
   }
 
   .aside-section-header {
