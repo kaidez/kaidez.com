@@ -78,6 +78,11 @@ p code, li code {
   overflow-x: hidden;
 }
 
+// Link focus style...better accessibility 
+a:focus {
+  outline: 2px solid red;
+}
+
 // ===========================================================================
 // End "all-around" styles
 // ===========================================================================
