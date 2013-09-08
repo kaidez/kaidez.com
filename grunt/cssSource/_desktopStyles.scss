@@ -286,14 +286,14 @@
   // the inner wrapper for the <aside>
   .aside-inner-wrapper-class {
     width: 1000px;
-    margin: 0 auto 53px;
+    margin: 0 auto;
   }
   
   // apply background image to <aside>
   .aside-outer-wrapper-class {
-    background: $aside-color url('../img/footer-bg.png') no-repeat left;
     @include create-box-shadow;
-    padding: 1px 10px;
+    background: $aside-color url('../img/footer-bg.png') no-repeat left;
+    padding: 1px 10px 12px;
   }
   
   // create a "letterpress" text-shadow effect on <h3> tags in <aside>
