@@ -14,16 +14,16 @@ requirejs.config({
   ],
 
   paths: {
-    backbone: "vendor/backbone-min",
-    enquire: "vendor/enquire.min",
-    jquery: "vendor/jquery",
-    ladda: "vendor/ladda.min",
-    prism: "vendor/prism",
-    spin: "vendor/spin.min",
-    tipue: "vendor/tipuesearch.min",
-    tipueset: "vendor/tipuesearch_set",
-    tipuesetContent: "vendor/tipuesearch_content",
-    underscore: "vendor/underscore-min"
+    backbone: "libs/backbone-min",
+    enquire: "libs/enquire.min",
+    jquery: "libs/jquery",
+    ladda: "libs/ladda.min",
+    prism: "libs/prism",
+    spin: "libs/spin.min",
+    tipue: "libs/tipuesearch.min",
+    tipueset: "libs/tipuesearch_set",
+    tipuesetContent: "libs/tipuesearch_content",
+    underscore: "libs/underscore-min"
   },
 
   shim: {

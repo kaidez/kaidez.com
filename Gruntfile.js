@@ -93,7 +93,7 @@ module.exports = function(grunt) {
       "devFile" : "grunt/modernizr/modernizr-dev.js", //modernizr full build
 
       // Path to save out the built file.
-      "outputFile" : "js/vendor/modernizr.min.js",
+      "outputFile" : "js/libs/modernizr.min.js",
 
       // Based on default settings on http://modernizr.com/download/
       "extra" : {
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
     // properties to be loaded into the application cache (manifest.appcache) file.  they load in via a template in the 'manifest task'
     site_files: [
       'js/*.js',
-      'js/vendor/*.js'
+      'js/libs/*.js'
     ],
 
     // create application cache (manifest.appcache) file for the whole site

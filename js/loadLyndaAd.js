@@ -12,8 +12,8 @@ define(["enquire"], function(enquire) {
   Modernizr.load({
     test: window.matchMedia,
     nope: [
-      "/js/vendor/matchMedia.js",
-      "/js/vendor/matchMedia.addListener.js"
+      "/js/libs/matchMedia.js",
+      "/js/libs/matchMedia.addListener.js"
     ]
   });
 
