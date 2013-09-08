@@ -12,7 +12,7 @@ meta-excerpt: Tutorials on kaidez.com are detailed posts that walk the reader th
 
   {% for post in site.categories.tutorials %}
     <article class="post-snippet" role="article">
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }}
     </article>
   {% endfor %}

@@ -12,7 +12,7 @@ meta-excerpt: Reviews posts on kaidez.com review web development based books, ev
 
   {% for post in site.categories.reviews %}
     <article class="post-snippet" role="article">
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }}
     </article>
   {% endfor %}

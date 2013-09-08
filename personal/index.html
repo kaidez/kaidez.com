@@ -12,7 +12,7 @@ meta-excerpt: Personal posts on kaidez.com include work that I've done, rants, c
 
   {% for post in site.categories.personal %}
     <article class="post-snippet" role="article">
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" rel="bookmark">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" class="post-snippet-link" rel="bookmark">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }}
     </article>
   {% endfor %}

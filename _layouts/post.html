@@ -26,7 +26,7 @@
       <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
         <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
           <div id="header-tag-wrapper" class="top-level-header-wrapper">
-            <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link">kaidez</a></h1>
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
             <h2 class="site-description">closing tags...wrapping functions</h2>
         </header> <!-- #masthead -->
 
@@ -58,11 +58,11 @@
         <h3 id="share-post-container-header" class="share-post-container-header-class">SHARE THIS POST:</h3>
         <ul id="social-sharing-list-post" class="social-sharing-list-post-class">
 
-          <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" target="blank" class="share-post-link">Twitter</a></li>
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share {{ page.title }} on Twitter" target="blank" class="share-post-link">Twitter</a></li>
 
-          <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://dev.kaidez.com{{ page.permalink }}" target="blank" class="share-post-link">Google+</a></li>
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://dev.kaidez.com{{ page.permalink }}" title="Share {{ page.title }} on Facebook" target="blank" class="share-post-link">Google+</a></li>
 
-          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com{{ page.permalink }}&t={{ page.title }}" class="share-post-link fb" target="blank">Facebook</a></li>
+          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com{{ page.permalink }}&t={{ page.title }}" class="share-post-link fb" title="Share {{ page.title }} on Google Plus" target="blank">Facebook</a></li>
 
         </ul> <!-- #social-sharing-list-post -->
 
@@ -76,7 +76,7 @@
 
           {% for post in site.related_posts limit:3 %}
 
-          <li class="related-posts-list-item"><a href="{{ post.url }}">{{ post.title }} &raquo;</a></li>
+          <li class="related-posts-list-item"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} &raquo;</a></li>
 
           {% endfor %}
 

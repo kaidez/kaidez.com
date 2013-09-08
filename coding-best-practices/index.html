@@ -6,13 +6,13 @@ meta-excerpt: Code Tips posts on kaidez.com discuss tips for certain web develop
 
   <div id="about-description" class="category-description-page">
   	<p>
-  		"Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
+  		"Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/" title="Tutorials on kaidez.com">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
   	</p>
   </div> <!-- #about-description -->
 
   {% for post in site.categories.coding-best-practices %}
     <article class="post-snippet" role="article">
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
       {{ post.meta-excerpt }}
     </article>
   {% endfor %}
