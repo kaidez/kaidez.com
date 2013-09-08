@@ -4739,7 +4739,7 @@ a.pagination-link {
 
   .aside-inner-wrapper-class {
     width: 1000px;
-    margin: 0 auto 53px;
+    margin: 0 auto;
   }
 
   .aside-outer-wrapper-class {
@@ -4747,7 +4747,7 @@ a.pagination-link {
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
-    padding: 1px 10px 51px;
+    padding: 1px 10px 12px;
   }
 
   .aside-section-header {
