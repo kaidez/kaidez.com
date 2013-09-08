@@ -1,5 +1,6 @@
 ---
 title: 'jQuery T-shirt &#8211; Geek Gift To Myself'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /jquery-tshirt-geek-gift/

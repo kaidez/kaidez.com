@@ -1,5 +1,6 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES &#8211; INTRO'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-completed-wireframes/

@@ -1,5 +1,6 @@
 ---
 title: 5 Reasons Why You Need To Learn To Use JavaScript Before jQuery
+comments: true
 author: Kai Gittens
 permalink: /learn-javascript-before-jquery/
 layout: post

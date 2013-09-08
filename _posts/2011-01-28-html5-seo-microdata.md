@@ -1,5 +1,6 @@
 ---
 title: HTML5, <del>SEO</del> and Microdata
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-seo-microdata/

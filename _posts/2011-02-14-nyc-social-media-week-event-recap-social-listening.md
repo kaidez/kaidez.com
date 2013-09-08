@@ -1,5 +1,6 @@
 ---
 title: 'Social Media Week/NYC Recap &#8211; SOCIAL LISTENING PANEL'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /nyc-social-media-week-event-recap-social-listening/

@@ -1,5 +1,6 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-3-about-contact-wireframes/

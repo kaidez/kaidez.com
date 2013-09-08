@@ -1,5 +1,6 @@
 ---
 title: 5 Mobile Web Development Best Practice Resources
+comments: true
 author: Kai Gittens
 permalink: /mobile-web-development-best-practice-resources/
 layout: post

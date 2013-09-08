@@ -1,5 +1,6 @@
 ---
 title: 'Yoast&#8217;s Awesome WordPress SEO Speech'
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing

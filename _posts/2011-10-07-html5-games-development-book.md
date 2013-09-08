@@ -1,5 +1,6 @@
 ---
 title: 'REVIEW: HTML5 Games Development by Example: Beginner’s Guide'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-games-development-book/

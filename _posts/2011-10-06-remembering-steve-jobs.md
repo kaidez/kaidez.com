@@ -1,5 +1,6 @@
 ---
 title: Remembering Steve Jobs
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: kaidez recalls the best about Steve Jobs

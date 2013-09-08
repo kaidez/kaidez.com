@@ -1,5 +1,6 @@
 ---
 title: 'HTML5 Project: Boilerplate WordPress Theme'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-boilerplate-theme-wordpress/

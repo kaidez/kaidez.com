@@ -1,5 +1,6 @@
 ---
 title: Updates To Coolsites and HTML5/jQuery Resources
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /updates-coolsites-jquery-html5-resources/

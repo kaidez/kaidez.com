@@ -1,5 +1,6 @@
 ---
 title: 'HTML5 Gallery: NEW COOLSITE!'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-gallery-coolsite/

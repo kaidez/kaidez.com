@@ -1,5 +1,6 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-1-homepage-wireframe/

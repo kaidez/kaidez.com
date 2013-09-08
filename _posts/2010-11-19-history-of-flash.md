@@ -1,5 +1,6 @@
 ---
 title: A Short History of Flash (how I saw it)
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.

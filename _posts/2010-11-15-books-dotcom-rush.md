@@ -1,5 +1,6 @@
 ---
 title: The Two Best Books On The Dot-com Rush
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /books-dotcom-rush/

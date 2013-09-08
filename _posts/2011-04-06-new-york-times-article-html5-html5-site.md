@@ -1,5 +1,6 @@
 ---
 title: 'New York Times Article On HTML5 &#038; Their New HTML5 Site'
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site

@@ -1,5 +1,6 @@
 ---
 title: 2 Bad Things About the Facebook App Setup
+comments: true
 author: Kai Gittens
 permalink: /2-bad-facebook-app-things/
 layout: post

@@ -1,5 +1,6 @@
 ---
 title: 'TUTORIAL: Create The Building Blocks For An HTML5 Page'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /create-html5-page/

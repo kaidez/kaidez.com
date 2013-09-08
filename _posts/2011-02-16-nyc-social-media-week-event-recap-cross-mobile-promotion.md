@@ -1,5 +1,6 @@
 ---
 title: Social Media Week/NYC Recap – MOBILE PROMOTION PANEL
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/

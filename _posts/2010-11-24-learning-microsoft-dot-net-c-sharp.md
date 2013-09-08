@@ -1,5 +1,6 @@
 ---
 title: 'I&#8217;m Focusing On .NET C#'
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: kaidez lays out a plan on how he&#8217;ll learn .NET/C#.

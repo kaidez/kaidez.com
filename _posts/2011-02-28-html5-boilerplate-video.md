@@ -1,5 +1,6 @@
 ---
 title: The HTML5 Boilerplate Video is AWESOME!!!!!!
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-boilerplate-video/

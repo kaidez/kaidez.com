@@ -1,5 +1,6 @@
 ---
 title: 5 Reasons To Design Websites For Internet Explorer 6
+comments: true
 author: Kai Gittens
 permalink: /reasons-design-websites-internet-explorer-6/
 layout: post

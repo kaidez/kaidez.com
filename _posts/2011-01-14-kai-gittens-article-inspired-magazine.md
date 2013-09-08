@@ -1,5 +1,6 @@
 ---
 title: Read My Article At Inspired Magazine!!!
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /kai-gittens-article-inspired-magazine/

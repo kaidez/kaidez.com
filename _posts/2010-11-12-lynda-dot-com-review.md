@@ -1,5 +1,6 @@
 ---
 title: 'REVIEW: lynda.com'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /lynda-dot-com-review/

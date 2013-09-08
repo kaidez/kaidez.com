@@ -1,5 +1,6 @@
 ---
 title: 5 Useful JavaScript Books
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.

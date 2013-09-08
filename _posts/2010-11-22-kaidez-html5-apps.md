@@ -1,5 +1,6 @@
 ---
 title: My HTML5 Applications
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: I'm starting to narrow down what my favorite HTML5 tools are.

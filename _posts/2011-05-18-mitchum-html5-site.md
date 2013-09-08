@@ -1,5 +1,6 @@
 ---
 title: New Mitchum Project I Worked On
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery

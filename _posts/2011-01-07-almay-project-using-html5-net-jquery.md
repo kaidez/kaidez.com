@@ -1,5 +1,6 @@
 ---
 title: New Almay Project I Worked On
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /almay-project-using-html5-net-jquery/

@@ -1,5 +1,6 @@
 ---
 title: 2 JavaScript Tasks That jQuery Does Not Replace
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /two-javascript-tasks-jquery-does-not-replace/

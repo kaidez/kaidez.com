@@ -1,5 +1,6 @@
 ---
 title: 'TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures'
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.

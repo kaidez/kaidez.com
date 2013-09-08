@@ -1,5 +1,6 @@
 ---
 title: 'WordPress &#038; WebMatrix'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /wordpress-webmatrix/

@@ -1,5 +1,6 @@
 ---
 title: 'My 50th Article &#8211; A Retrospective!'
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion

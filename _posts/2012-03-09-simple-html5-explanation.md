@@ -1,5 +1,6 @@
 ---
 title: A Simple Explanation of HTML5
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.

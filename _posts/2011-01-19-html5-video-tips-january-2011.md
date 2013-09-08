@@ -1,5 +1,6 @@
 ---
 title: 10 Things To Remember About HTML5 Video
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-video-tips-january-2011/

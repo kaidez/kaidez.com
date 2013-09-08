@@ -1,5 +1,6 @@
 ---
 title: Mobile Web Development Best Practices &#8211; Starting Tips
+comments: true
 author: Kai Gittens
 permalink: /mobile-web-development-best-practices-starting-tips/
 layout: post

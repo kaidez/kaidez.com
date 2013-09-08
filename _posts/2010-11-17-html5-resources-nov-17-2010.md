@@ -1,5 +1,6 @@
 ---
 title: 2 HTML5 Resources I Like
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: Great HTML5 learning resources

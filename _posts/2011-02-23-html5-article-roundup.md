@@ -1,5 +1,6 @@
 ---
 title: HTML5 Recent Article Roundup
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-article-roundup/

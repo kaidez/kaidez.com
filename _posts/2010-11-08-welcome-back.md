@@ -1,5 +1,6 @@
 ---
 title: Welcome Back!!!!!!!!
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /welcome-back/

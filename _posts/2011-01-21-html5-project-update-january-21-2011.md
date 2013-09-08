@@ -1,5 +1,6 @@
 ---
 title: 'HTML5 Project Update: 1/21/11'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-january-21-2011/

@@ -1,5 +1,6 @@
 ---
 title: 'REVIEW: jQuery: Visual Quickstart Guide'
+comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great"

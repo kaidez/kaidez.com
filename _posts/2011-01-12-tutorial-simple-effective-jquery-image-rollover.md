@@ -1,5 +1,6 @@
 ---
 title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover'
+comments: true
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-effective-jquery-image-rollover/
