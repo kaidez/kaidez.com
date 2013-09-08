@@ -2775,6 +2775,10 @@ p code, li code {
   overflow-x: hidden;
 }
 
+a:focus {
+  outline: 2px solid red;
+}
+
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
