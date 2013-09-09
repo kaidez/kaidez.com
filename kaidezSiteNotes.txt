@@ -243,7 +243,6 @@ LEFT TO DO
 -Get Grunt to copy files over from bower_components/
 -Remove Google search box on page load.
 -remove "no-js" using code you take from Modernizr.
--fix alignment in SHARE POST section.
 -Get Google ads up and running.
 -CSS animations...review 'em.'
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks.
