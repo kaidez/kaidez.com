@@ -201,10 +201,10 @@ a:focus {
 // '#no-js-searchbox' is the Google-powered searchbox. Set to appear on
 // browsers with JavaScript and/or CSS turned off
 .js #no-js-searchbox {
-  @include hide-element;
+  display:none;
 }
 
-// jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on. the 'pagination' class 
+// jQuery-powered search box courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on. the 'pagination' class 
 // shares some of these styles.
 //
 // Tipue styles start here.
