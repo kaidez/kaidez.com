@@ -265,8 +265,10 @@
   }
 
   .share-post-container-class {
+    @include site-border-radius;
     margin: 0 auto;
   }
+
 
   .sharePostStructure {
     display: inline-block;
