@@ -15,7 +15,7 @@ As mentioned in my last post, a friend at JWT got me into the top two panels for
 
 
 
-[I’ve already recapped the second biggest one, the social listening panel][2] so it’s time to recap the big one: the mobile strategy panel. This panel was the most-anticipated and, interestingly enough, the most-surprising one of the conference.
+[I've already recapped the second biggest one, the social listening panel][2] so it's time to recap the big one: the mobile strategy panel. This panel was the most-anticipated and, interestingly enough, the most-surprising one of the conference.
 
 
 The panel topic was just as the title says, *how to properly integrate a mobile strategy into your overall marketing plan*. Its main takeaway was:
@@ -34,7 +34,7 @@ Here are the topics for this post:
 *   [A Successful Adaptation To The Digital World][9]
 *   [Some Other Smartphone Stats][10]
 *   [Women Rule!][11]
-*   [Conclusion][12]
+*   [Conclusionn][12]
 
  [3]: #panelists
  [4]: #audience
@@ -72,9 +72,9 @@ The last point is a surprise…
 
 <h2 id="panelContent">The Panel Discussion Content</h2>
 
-At one point in the discussion, Kristin Volk from MediaVest showed a picture of a Tibetan monk in the middle of his asceticism, being without wordly possessions for a year. But he had a cell phone stuck to his ear: he’s supposed to own nothing for a year, she said, but this monk simply could not be without his cell phone.
+At one point in the discussion, Kristin Volk from MediaVest showed a picture of a Tibetan monk in the middle of his asceticism, being without worldly possessions for a year. But he had a cell phone stuck to his ear: he's supposed to own nothing for a year, she said, but this monk simply could not be without his cell phone.
 
-A picture is worth a thousand words...it’s definitely a mobile world that we live in.
+A picture is worth a thousand words...it's definitely a mobile world that we live in.
 
 I walked into this panel expecting a full-on discussion about the virtues of the iPhone and the Android. About how the panelists had tried new and exciting things with the two devices and, as insiders, heard rumors about what innovations the two devices would be bringing to the world of mobile promotion.
 
@@ -88,7 +88,7 @@ The panelists from left to right: moderator Stefan Gromoll of DOTGO, Kristin Vol
 </figure>
 
 
-The panelists presented lot of data early on in the discussion, most of which wasn’t that surprising. But they had to present it to get the point across:
+The panelists presented lot of data early on in the discussion, most of which wasn't that surprising. But they had to present it to get the point across:
  
  * only 30% of the mobile users have a smartphone…the rest have regular cell phones.
  * 5 trillion texts were sent out in 2010
@@ -111,9 +111,9 @@ No embellishing, just the facts. SMS texting works! Well! Texting means you are 
 
 It was great to see Chi Modu from Diverse Insights on the panel. I remembered him as the main photographer for The Source magazine during the Jon Schecter-era of the early nineties and was excited to get a somewhat artistic perspective on mobile promotion.
 
-So imagine my surprise when he turned out to be the most business-minded panelist. He loved the idea of convergence, how one mobile device can perform all your required digital tasks. “Mobile is a must,” he stated, and it will refine your brand’s promotional strategy. And you shouldn’t do mobile promotion just to do it; first research the mobile habits of your customer base, then implement a mobile strategy.
+So imagine my surprise when he turned out to be the most business-minded panelist. He loved the idea of convergence, how one mobile device can perform all your required digital tasks. “Mobile is a must,” he stated, and it will refine your brand's promotional strategy. And you shouldn't do mobile promotion just to do it; first research the mobile habits of your customer base, then implement a mobile strategy.
 
-In short: don’t just build an app for the sake of having one, or just because your competitors have one.
+In short: don't just build an app for the sake of having one, or just because your competitors have one.
 
 <figure class="post-image-box">
 <img src="../img/absent.jpg" />
@@ -121,7 +121,7 @@ In short: don’t just build an app for the sake of having one, or just because 
 </figure>
 <h2 id="advertising">The Power Of Traditional Advertising</h2>
 
-Modu also spoke very highly of using mobile in conjuction with traditional advertising methods such as outdoor promotion, point-of-sale and the three foot rule. If these methods, he said, presented an inviting call-to-action for a pedestrian to get information with their mobile device right then and there, you’ve just converted a pedestrian into a customer. And you didn’t need an iPhone app to do it.
+Modu also spoke very highly of using mobile in conjunction with traditional advertising methods such as outdoor promotion, point-of-sale and the three foot rule. If these methods, he said, presented an inviting call-to-action for a pedestrian to get information with their mobile device right then and there, you've just converted a pedestrian into a customer. And you didn't need an iPhone app to do it.
 
 <figure class="post-image-box">
 <img src="../img/kaiShotPanel.jpg" />
@@ -137,7 +137,7 @@ Mary Gail Pezzimenti from Lucky Magazine elegantly demonstrated how a brand trad
 
 The process works well for Lucky. Through the use of QR coupon codes inside the magazine, text messaging, Foursquare and the mobile web, they are reaching a wide array of mobile users, not just the smartphone people.
 
-Pezzimenti was excited about bringing things such as mobile online shopping and new location apps to Lucky readers. Nevertheless, she was clear that the quality of Lucky Magazine’s content is, and always will be, the driving force behind all their digital actions. “The consumer is in the driver’s seat” she said. “They no longer wanted to be marketed to, they want to be educated and informed.” No mobile tricks are making their readers come back. The magazine is the meal while all the mobile-related things are the spice.
+Pezzimenti was excited about bringing things such as mobile online shopping and new location apps to Lucky readers. Nevertheless, she was clear that the quality of Lucky Magazine's content is, and always will be, the driving force behind all their digital actions. “The consumer is in the driver's seat” she said. “They no longer wanted to be marketed to, they want to be educated and informed.” No mobile tricks are making their readers come back. The magazine is the meal while all the mobile-related things are the spice.
 
 The end result of focusing on mobile while focusing more on content: Pezzimenti says that Lucky has seen a rapid increase in readership, which is certainly appealing to their advertisers.
 
@@ -147,7 +147,7 @@ The end result of focusing on mobile while focusing more on content: Pezzimenti 
 One of the panels during the Lucky Magazine presentation
 <h2 id="otherStats">Some Other Smartphone Stats</h2>
 
-While the panel didn’t spend a lot of time talking about smartphones, they did bring them up. Again, they came armed with real-world stats and, again, they brought us all down to Earth:
+While the panel didn't spend a lot of time talking about smartphones, they did bring them up. Again, they came armed with real-world stats and, again, they brought us all down to Earth:
 
 Android is gaining on the iPhone: this fact has appeared multiple times in the press but was reiterated by the panel.
 Blackberry is slipping against everything else: newer models such as the Torch and the Storm may pick up speed. But according to Farrah Bostic of Digitas, Blackberry use is steadily shrinking, at least among consumers on the receiving end of mobile promotions.
@@ -162,17 +162,17 @@ Baby Boomer women are adopting smartphones at a faster pace than any other segme
 
 “Mobile is not just another media channel” said one panelist. They politely delivered this message but were also direct on something else: when utilizing mobile promotion, the “less-is-more” approach traditionally does the better job.
 
-Whatever your mobile promotion efforts, they must be supported by quality content. Be it information about what you’re selling or strong editorial, good content is the key.
+Whatever your mobile promotion efforts, they must be supported by quality content. Be it information about what you're selling or strong editorial, good content is the key.
 
 In fact, Farah Bostic summed up the device/content relationship perfectly:
 
 “Think of your brand as an API and mobile as middleware”
 
-Or, in layman’s terms...
+Or, in layman's terms...
 
 “You want consumers to be attracted to what your brand has to offer, not the mobile dog & pony show that your brand is performing”
 
-In closing, take note that the panelists came armed with tons of data to back their claims: think about this before you challenge their methods or come up with reasons for “why this won’t work for you.”
+In closing, take note that the panelists came armed with tons of data to back their claims: think about this before you challenge their methods or come up with reasons for “why this won't work for you.”
 
  [1]: http://socialmediaweek.org/
  [2]: /nyc-social-media-week-event-recap-social-listening/
