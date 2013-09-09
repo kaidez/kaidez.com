@@ -74,7 +74,7 @@ module.exports = function(grunt) {
     // all the 'watch' tasks
     watch: {
       postPageOnlyTask: { // run 'jekyll build' on .html, .js and .md file changes
-        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'js/*.js', 'js/**/*.js'],
+        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'js/*.js', 'js/**/*.js', 'feed.xml'],
         tasks: ['jekyll:dev']
       },
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes

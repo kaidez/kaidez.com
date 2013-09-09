@@ -1,3 +1,6 @@
+name: kaidez
+description: kaidez.com / Tutorials and articles about Web Development
+url: http://kaidez.com
 markdown: rdiscount
 permalink: /:title
 destination: ./_site
