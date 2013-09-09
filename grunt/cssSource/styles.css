@@ -4004,6 +4004,10 @@ a.pagination-link {
     margin-bottom: 40px;
   }
 
+  .sharePostStructure {
+    display: inline-block;
+  }
+
   .aside-outer-wrapper-class {
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
   }
@@ -4361,10 +4365,6 @@ a.pagination-link {
 
   .social-sharing-list-item {
     padding-right: 20px;
-  }
-
-  .fb-post-share-match {
-    top: -3px;
   }
 
   .aside-outer-wrapper-class {
