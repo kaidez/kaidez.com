@@ -274,16 +274,9 @@
     display: inline-block;
   }
 
-   // <footer> in <article> tags in posts...styles the post's publish date
+  // <footer> in <article> tags in posts...styles the post's publish date
   .articleFooterClass {
-    padding: 35px 0;
-    font-size: 17px;
-    font-style: italic;
-  }
-
-  // author name located in the <footer> that's inside the <article> on posts
-  .author {
-    color: #92aae3;
+    line-height: normal; 
   }
 
 

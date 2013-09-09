@@ -243,6 +243,11 @@
     display: inline-block;
   }
 
+  // <footer> in <article> tags in posts...styles the post's publish date
+  .articleFooterClass {
+    line-height: normal; 
+  }
+
   // =========================================================================
   // Page content styles end
   // =========================================================================
