@@ -265,10 +265,11 @@
   }
 
   .share-post-container-class {
-    display: table;
     margin: 0 auto;
-    padding: 20px;
-    min-width: 500px;
+  }
+
+  .sharePostStructure {
+    display: inline-block;
   }
 
   // =========================================================================
