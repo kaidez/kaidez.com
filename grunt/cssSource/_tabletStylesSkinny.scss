@@ -217,22 +217,19 @@
 
   .share-post-container-class {
     @include site-border-radius;
-    padding:10px;
     margin-bottom: 40px;
   }
 
   // <h3> in the sharing post section in post pages
   .share-post-container-header-class {
     display: block;
-    margin-right: 20px;
-    margin-top: 6px;
+    margin: 4px 0 0 31px;
     float: left;
   }
 
   // <ul> in the item in the "share post" posts section
   .social-sharing-list-post-class {
     width: auto;
-    margin-top: 13px;
   }
 
   .social-sharing-list-item {
