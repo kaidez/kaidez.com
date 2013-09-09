@@ -3063,13 +3063,6 @@ main a:visited {
   list-style: none;
 }
 
-.social-sharing-list-post-class {
-  padding: 0;
-  width: 208px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .social-sharing-list-item {
   list-style-type: none;
   padding-right: 10px;
@@ -3464,6 +3457,13 @@ a.read-post-link {
 .category-description-page {
   padding: 12px;
   margin-bottom: 35px;
+}
+
+.social-sharing-list-post-class {
+  padding: 0;
+  width: 215px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .pages {
@@ -4347,20 +4347,17 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    padding: 10px;
     margin-bottom: 40px;
   }
 
   .share-post-container-header-class {
     display: block;
-    margin-right: 20px;
-    margin-top: 6px;
+    margin: 4px 0 0 31px;
     float: left;
   }
 
   .social-sharing-list-post-class {
     width: auto;
-    margin-top: 13px;
   }
 
   .social-sharing-list-item {
