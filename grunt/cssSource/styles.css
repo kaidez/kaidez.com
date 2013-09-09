@@ -2854,8 +2854,7 @@ a:focus {
 }
 
 .js #no-js-searchbox {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
+  display: none;
 }
 
 #tipue_search_input {
