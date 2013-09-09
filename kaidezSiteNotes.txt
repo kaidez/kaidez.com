@@ -251,7 +251,6 @@ LEFT TO DO
 -Create a cool front page...may be post launch.
 -Video SEO...may be post launch.
 -Create favicon.ico
--Add dates to posts somewhere/
 
 
 Before deployment
