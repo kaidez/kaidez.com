@@ -4739,6 +4739,16 @@ a.pagination-link {
     display: inline-block;
   }
 
+  .articleFooterClass {
+    padding: 35px 0;
+    font-size: 17px;
+    font-style: italic;
+  }
+
+  .author {
+    color: #92aae3;
+  }
+
   .aside-inner-wrapper-class {
     width: 1000px;
     margin: 0 auto;
