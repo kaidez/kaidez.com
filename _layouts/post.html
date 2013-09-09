@@ -49,8 +49,14 @@
       <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
         <h1 class="post-title" class="entry-title">{{ page.title }}</h1>
-
+        
         {{ content }}
+
+        <footer id="articleFooter" class="articleFooterClass">
+
+          Published on <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time> by <span class="author">Kai "kaidez" Gittens</span>
+
+        </footer>
 
       </article>
 
