@@ -3090,6 +3090,16 @@ main a:visited {
   position: relative;
 }
 
+.articleFooterClass {
+  padding: 35px 0;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.author {
+  color: #92aae3;
+}
+
 .aside-outer-wrapper-class {
   color: #7db9e8;
   height: auto;
@@ -3464,6 +3474,10 @@ a.read-post-link {
   width: 215px;
   margin: 0 auto;
   text-align: center;
+}
+
+.articleFooterClass {
+  line-height: 1.2;
 }
 
 .pages {
@@ -4006,6 +4020,10 @@ a.pagination-link {
 
   .sharePostStructure {
     display: inline-block;
+  }
+
+  .articleFooterClass {
+    line-height: normal;
   }
 
   .aside-outer-wrapper-class {
@@ -4740,13 +4758,7 @@ a.pagination-link {
   }
 
   .articleFooterClass {
-    padding: 35px 0;
-    font-size: 17px;
-    font-style: italic;
-  }
-
-  .author {
-    color: #92aae3;
+    line-height: normal;
   }
 
   .aside-inner-wrapper-class {
