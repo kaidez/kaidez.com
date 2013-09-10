@@ -51,7 +51,7 @@
 //     -the search icon in the header on mobile devices
 //     -the search icon that appears in the search bar
 //     -the Jekyll logo
-//     -the AWS logo
+//     -the Media Temple logo
 //     -the MaxCDN logo
 // 
 // The logo and the two mobile-based images appear differently across all
@@ -102,12 +102,12 @@
     @include sprite-images('../img/kaidez-sprite.png', -10px -169px, 58px, 151px);
   }
 
-  .aws {
-    @include sprite-images('../img/kaidez-sprite.png', -10px -234px, 58px, 151px);
+  .mediaTemple {
+    @include sprite-images('../img/kaidez-sprite.png', -14px -228px, 57px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/kaidez-sprite.png', -10px -286px, 58px, 151px);
+    @include sprite-images('../img/kaidez-sprite.png', -4px -286px, 58px, 151px);
   }
 }
 
@@ -206,12 +206,12 @@
     @include sprite-images('../img/kaidez-sprite@2x.png', -10px -169px, 58px, 151px);
   }
 
-  .aws {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -234px, 58px, 151px);
+  .mediaTemple {
+    @include sprite-images('../img/kaidez-sprite@2x.png', -14px -228px, 57px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -286px, 58px, 151px);
+    @include sprite-images('../img/kaidez-sprite@2x.png', -4px -286px, 58px, 151px);
   }
 }
 

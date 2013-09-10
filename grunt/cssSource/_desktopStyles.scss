@@ -419,9 +419,9 @@
     @include footer-link-hit-area(57px, 151px);
   }
   
-  // set height/width for aws bg link
-  .aws-link {
-    @include footer-link-hit-area(57px, 151px);
+  // set height/width for media temple bg link
+  .mediaTemple-link {
+    @include footer-link-hit-area(44px, 151px);
   }
   
   // set height/width for maxcdn bg link
