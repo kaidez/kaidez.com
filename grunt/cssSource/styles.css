@@ -3597,15 +3597,15 @@ a.pagination-link {
     width: 151px;
   }
 
-  .aws {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -234px;
+  .mediaTemple {
+    background: url("../img/kaidez-sprite.png") no-repeat -14px -228px;
     background-size: 227px 334px;
-    height: 58px;
+    height: 57px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("../img/kaidez-sprite.png") no-repeat -10px -286px;
+    background: url("../img/kaidez-sprite.png") no-repeat -4px -286px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
@@ -3707,15 +3707,15 @@ a.pagination-link {
     width: 151px;
   }
 
-  .aws {
-    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -234px;
+  .mediaTemple {
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -14px -228px;
     background-size: 227px 334px;
-    height: 58px;
+    height: 57px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -286px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -4px -286px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
@@ -4143,7 +4143,7 @@ a.pagination-link {
     display: block;
   }
 
-  .aws-link {
+  .mediaTemple-link {
     height: 57px;
     width: 151px;
     display: block;
@@ -4479,7 +4479,7 @@ a.pagination-link {
     display: block;
   }
 
-  .aws-link {
+  .mediaTemple-link {
     height: 57px;
     width: 151px;
     display: block;
@@ -4878,8 +4878,8 @@ a.pagination-link {
     display: block;
   }
 
-  .aws-link {
-    height: 57px;
+  .mediaTemple-link {
+    height: 44px;
     width: 151px;
     display: block;
   }
@@ -5187,7 +5187,7 @@ a.pagination-link {
   width: 151px;
   display: block;
 }
-.lt-ie9 .aws-link {
+.lt-ie9 .mediaTemple-link {
   height: 57px;
   width: 151px;
   display: block;
