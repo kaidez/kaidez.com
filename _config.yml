@@ -13,14 +13,12 @@ exclude: [
   css/styles.css,
   Gruntfile.js,
   grunt,
+  js/jsbuild.js,
   kaidezSiteNotes.txt,
   node_modules,
   package.json,
   old_img,
   old_js,
-  requireBuild,
-  js/app.build.js,
-  js/search-built.js,
   r.js,
   robots.txt
 ]
