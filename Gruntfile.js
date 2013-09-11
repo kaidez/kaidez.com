@@ -147,7 +147,6 @@ module.exports = function(grunt) {
     
     // properties to be loaded into the application cache (manifest.appcache) file.  they load in via a template in the 'manifest task'
     site_files: [
-      'js/*.js',
       'js/libs/*.js'
     ],
 
@@ -165,6 +164,7 @@ module.exports = function(grunt) {
             'img/footer-bg.png',
             'img/kaidez-sprite.png',
             'img/kaidez-sprite@2x.png',
+            'js/main.min.js'
             'font/FontAwesome.otf',
             'font/fontawesome-webfont.eot',
             'font/fontawesome-webfont.svg',
