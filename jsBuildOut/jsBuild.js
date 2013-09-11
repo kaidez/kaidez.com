@@ -1,11 +1,11 @@
 ({
-    baseUrl: ".",
-    mainConfigFile: "config.js",
-    name: 'config',
-    out: "main.min.js",
+  baseUrl: ".",
+  mainConfigFile: "config.js",
+  name: 'config',
+  out: "main.min.js",
     preserveLicenseComments: false,
-    paths: {
-      requireLib: 'require'
+      paths: {
+        requireLib: 'require'
     },
-    include: 'requireLib'
+  include: 'requireLib'
 })

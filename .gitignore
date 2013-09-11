@@ -50,10 +50,6 @@ readme.html
 grunt/cssSource/_oldIE.scss
 
 
-# Old RequireJS/r.js build file...keep for future reference
-# ---------------------------------------------------------
-js/jsBuild.js
-
 
 
 # Sass-related files
