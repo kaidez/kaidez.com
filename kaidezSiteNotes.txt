@@ -238,7 +238,6 @@ http://calendar.perfplanet.com/2011/useless-downloads-of-background-images-in-an
 
 LEFT TO DO
 =================
--Optimize RequireJS with r.js.
 -Get Grunt to copy files over from bower_components/
 -remove "no-js" using code you take from Modernizr.
 -Get Google ads up and running.

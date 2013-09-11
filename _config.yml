@@ -13,7 +13,7 @@ exclude: [
   css/styles.css,
   Gruntfile.js,
   grunt,
-  js/jsbuild.js,
+  jsBuildOut,
   kaidezSiteNotes.txt,
   node_modules,
   package.json,

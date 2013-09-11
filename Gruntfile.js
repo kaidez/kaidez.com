@@ -176,6 +176,23 @@ module.exports = function(grunt) {
         dest: 'manifest.appcache'
       }
     },
+    
+    // automagically concate/minify site jS based on RequireJS settings
+    requirejs: {
+      compile: {
+        options: {
+          baseUrl: "jsBuildOut/",
+          mainConfigFile: "jsBuildOut/config.js",
+          name: 'config',
+          out: "js/main.min.js",
+           preserveLicenseComments: false,
+             paths: {
+              requireLib: 'require'
+            },
+            include: 'requireLib'
+          }
+        }
+      },
 
     // 'jshint' task
     jshint: {
@@ -216,14 +233,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-manifest');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('cp', ['copy']);
+  grunt.registerTask('req', ['requirejs']);
   grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'manifest', 'sftp-deploy']);
 
 };
