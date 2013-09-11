@@ -239,14 +239,11 @@ http://calendar.perfplanet.com/2011/useless-downloads-of-background-images-in-an
 LEFT TO DO
 =================
 -Optimize RequireJS with r.js.
--RSS feed.
 -Get Grunt to copy files over from bower_components/
--Remove Google search box on page load.
 -remove "no-js" using code you take from Modernizr.
 -Get Google ads up and running.
 -CSS animations...review 'em.'
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks.
--Replace AWS Logo with Media Temple one.
 -Get Backbone working with the form.
 -Create a cool front page...may be post launch.
 -Video SEO...may be post launch.
