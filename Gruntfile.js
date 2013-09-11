@@ -73,9 +73,13 @@ module.exports = function(grunt) {
 
     // all the 'watch' tasks
     watch: {
-      postPageOnlyTask: { // run 'jekyll build' on .html, .js and .md file changes
-        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'js/*.js', 'js/**/*.js', 'feed.xml'],
+      pageOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
+        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'feed.xml'],
         tasks: ['jekyll:dev']
+      },
+      jsOnlyTask: { // run 'jekyll build' on .js file changes
+        files: ['jsBuildOut/*.js'],
+        tasks: ['require', 'jekyll:dev']
       },
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
         files: ['grunt/cssSource/*.scss'],
@@ -240,7 +244,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('req', ['requirejs']);
+  grunt.registerTask('require', ['requirejs']);
   grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'manifest', 'sftp-deploy']);
 
 };
