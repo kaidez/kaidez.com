@@ -277,8 +277,6 @@ module.exports = function(grunt) {
             rename: function(dest, src) {
               return dest + '_' + src.substring(12, src.indexOf('/')) + '.scss';
             },
-            
-  
             filter: 'isFile'}
           ]
         },
