@@ -98,6 +98,11 @@ module.exports = function(grunt) {
         tasks: ['copy:backbone', 'requirejs', 'jekyll:dev']
       },
 
+      bowerTaskFontAwesome: {
+        files: ['bower_components/font-awesome/css/font-awesome.css'],
+        tasks: ['copy:fontAwesome']
+      },
+
       bowerTaskJquery: {
         files: ['bower_components/jquery/jquery.min.js'],
         tasks: ['copy:jquery', 'requirejs', 'jekyll:dev']
@@ -266,12 +271,13 @@ module.exports = function(grunt) {
         fontAwesome: {
           files: [
             {expand: true,
-            cwd: 'bower_components/font-awesome/scss/',
-            src: ['font-awesome.scss'],
-            dest: 'grunt/cssSource/',      
+            cwd: 'bower_components/font-awesome/css/',
+            src: ['font-awesome.css'],
+            dest: 'grunt/cssSource/',
             rename: function(dest, src) {
-              return dest + '_' + src;
+              return dest + '_' + src.substring(12, src.indexOf('/')) + '.scss';
             },
+            
   
             filter: 'isFile'}
           ]
