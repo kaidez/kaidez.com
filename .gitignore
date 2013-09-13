@@ -80,7 +80,11 @@ results
 npm-debug.log
 tmp
 
+#Capistrano stuff
+=================
 
+Capfile
+deploy.rb
 
 
 
