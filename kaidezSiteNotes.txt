@@ -238,7 +238,6 @@ http://calendar.perfplanet.com/2011/useless-downloads-of-background-images-in-an
 
 LEFT TO DO
 =================
--Get Grunt to copy files over from bower_components/
 -remove "no-js" using code you take from Modernizr.
 -Get Google ads up and running.
 -CSS animations...review 'em.'
@@ -254,3 +253,4 @@ Before deployment
 -301 the "2 javascript tasks" post
 -Install Google Analytics.
 -Install GWT
+-Test that a post can be added to search.json with no problems.
