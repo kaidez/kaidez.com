@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   'use strict';
 
-   require('time-grunt')(grunt);  // log individual task runtime
+  require('time-grunt')(grunt);  // log individual task runtime
 
   // Project config
   grunt.initConfig({
@@ -77,17 +77,50 @@ module.exports = function(grunt) {
         files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'feed.xml'],
         tasks: ['jekyll:dev']
       },
+
       jsOnlyTask: { // run 'jekyll build' on .js file changes
         files: ['jsBuildOut/*.js'],
         tasks: ['require', 'jekyll:dev']
       },
+
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
         files: ['grunt/cssSource/*.scss'],
         tasks: ['sassbuild', 'jekyll:dev']
       },
+
       imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
         files: ['img/*.{png,jpg,jpeg,gif}'],
         tasks: ['imagemin', 'jekyll:dev']
+      },
+
+      bowerTaskBackbone: {
+        files: ['bower_components/backbone/backbone-min.js'],
+        tasks: ['copy:backbone', 'requirejs', 'jekyll:dev']
+      },
+
+      bowerTaskJquery: {
+        files: ['bower_components/jquery/jquery.min.js'],
+        tasks: ['copy:jquery', 'requirejs', 'jekyll:dev']
+      },
+
+      bowerTaskMatchMedia: {
+        files: ['bower_components/matchmedia/*.js'],
+        tasks: ['copy:matchMedia', 'requirejs', 'jekyll:dev']
+      },
+
+      bowerTaskRequireJS: {
+        files: ['bower_components/require/require.js'],
+        tasks: ['copy:require', 'requirejs', 'jekyll:dev']
+      },
+
+      bowerTaskSpin: {
+        files: ['bower_components/spinjs/spin.js'],
+        tasks: ['copy:spin', 'requirejs', 'jekyll:dev']
+      },
+
+      bowerTaskUnderscore: {
+        files: ['bower_components/underscore/underscore-min.js'],
+        tasks: ['copy:underscore', 'requirejs', 'jekyll:dev']
       }
      },
 
@@ -132,7 +165,7 @@ module.exports = function(grunt) {
 
       // When parseFiles = true, this task will crawl all *.js, *.css, *.scss files.
       // You can override this by defining a "files" array below.
-      "files" : ["css/styles.min.css","js/*.js","js/**/*.js"],
+      "files" : ["css/styles.min.css","jsBuild/*.js","jsBuild/**/*.js"],
 
       // When parseFiles = true, matchCommunityTests = true will attempt to
       // match user-contributed tests.
@@ -191,7 +224,7 @@ module.exports = function(grunt) {
           mainConfigFile: "jsBuildOut/config.js",
           name: 'config',
           out: "js/main.min.js",
-           preserveLicenseComments: false,
+           preserveLicenseComments: true,
              paths: {
               requireLib: 'require'
             },
@@ -200,19 +233,83 @@ module.exports = function(grunt) {
         }
       },
 
-    // 'jshint' task
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
+      // copy task...used for updating Bower stuff
+      copy: {
+        backbone: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/backbone/',
+            src: ['backbone-min.js'],
+            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+          ]
+        },
+        // Site build currently contains the AMD version of enquire, which
+        // hasn't been officially released. Don't let Grunt update this file
+        // until the AMD version is out.
+        //
+        // enquire: {
+        //   files: [
+        //     {expand: true,
+        //     cwd: 'bower_components/enquire/dist/',
+        //     src: ['enquire.js'],
+        //     dest: 'jsBuildOut/libs/', filter: 'isFile'}
+        //   ]
+        // },
+        jquery: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/jquery/',
+            src: ['jquery.min.js'],
+            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+          ]
+        },
+        fontAwesome: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/font-awesome/scss/',
+            src: ['font-awesome.scss'],
+            dest: 'grunt/cssSource/',      
+            rename: function(dest, src) {
+              return dest + '_' + src;
+            },
+  
+            filter: 'isFile'}
+          ]
+        },
+        matchMedia: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/matchMedia/',
+            src: ['*.js'],
+            dest: 'js/libs/',      
+            filter: 'isFile'}
+          ]
+        },
+        require: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/require/',
+            src: ['require.js'],
+            dest: 'jsBuildOut/', filter: 'isFile'}
+          ]
+        },
+        spin: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/spinjs/',
+            src: ['spin.js'],
+            dest: 'jsBuildOut/libs', filter: 'isFile'}
+          ]
+        },
+        underscore: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/underscore/',
+            src: ['underscore-min.js'],
+            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+          ]
         }
       },
-      all: ['Gruntfile.js', 'package.json']
-    },
     
     // deploy to dev site
    'sftp-deploy': {
@@ -230,6 +327,7 @@ module.exports = function(grunt) {
   
   // Use 'loadNpmTasks' to enable plugins
   grunt.loadNpmTasks('grunt-css');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -248,5 +346,6 @@ module.exports = function(grunt) {
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
   grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'manifest', 'sftp-deploy']);
+
 
 };
