@@ -265,14 +265,14 @@ module.exports = function(grunt) {
         // hasn't been officially released. Don't let Grunt update this file
         // until the AMD version is out.
         //
-        // enquire: {
-        //   files: [
-        //     {expand: true,
-        //     cwd: 'bower_components/enquire/dist/',
-        //     src: ['enquire.js'],
-        //     dest: 'jsBuildOut/libs/', filter: 'isFile'}
-        //   ]
-        // },
+        enquire: {
+          files: [
+            {expand: true,
+            cwd: 'bower_components/enquire/dist/',
+            src: ['enquire.js'],
+            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+          ]
+        },
         jquery: {
           files: [
             {expand: true,
