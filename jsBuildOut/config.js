@@ -15,7 +15,7 @@
 
   paths: {
     backbone: "libs/backbone-min",
-    enquire: "libs/enquire.min",  // AMD build...not released yet
+    enquire: "libs/enquire.min",
     jquery: "libs/jquery.min",
     ladda: "libs/ladda.min",
     prism: "libs/prism",

@@ -84,7 +84,7 @@ tmp
 =================
 
 Capfile
-deploy.rb
+config/deploy.rb
 
 
 

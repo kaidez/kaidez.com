@@ -100,6 +100,13 @@ module.exports = function(grunt) {
         tasks: ['copy:backbone', 'requirejs', 'jekyll:dev']
       },
 
+      // if Bower updates Backbone, copy it to core Require build folder, run
+      // the "requirejs" task, then build the site.
+      bowerTaskEnquire: {  
+        files: ['bower_components/enquire/dist/enquire.min.js'],
+        tasks: ['copy:enquire', 'requirejs', 'jekyll:dev']
+      },
+
       // if Bower updates font-awesome, just copy it to core Sass build folder.
       // The 'sassbuild' task will run on its own after that.
       bowerTaskFontAwesome: {
@@ -269,7 +276,7 @@ module.exports = function(grunt) {
           files: [
             {expand: true,
             cwd: 'bower_components/enquire/dist/',
-            src: ['enquire.js'],
+            src: ['enquire.min.js'],
             dest: 'jsBuildOut/libs/', filter: 'isFile'}
           ]
         },
