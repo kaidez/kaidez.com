@@ -3215,6 +3215,25 @@ main a:visited {
   padding: 21px 9px;
 }
 
+.kaidez-social-sharing-list-item-link-text:hover {
+  display: inline-block;
+  padding: 21px 9px;
+  -webkit-animation-name: moveUp;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes moveUp {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-25px);
+  }
+}
+
 [class^=icon-], [class*=" icon-"] {
   display: inline-block;
 }
