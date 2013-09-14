@@ -241,7 +241,7 @@ LEFT TO DO
 -remove "no-js" using code you take from Modernizr.
 -CSS animations for the mobile menu & search box.
 -read up on zopfli. (https://github.com/mathiasbynens/grunt-zopfli)
--Get Google ads up and running.
+-Get Google ads up and running.h
 -CSS animations...review 'em.'
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks.
 -Get Backbone working with the form.
