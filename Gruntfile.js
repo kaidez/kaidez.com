@@ -249,7 +249,7 @@ module.exports = function(grunt) {
           mainConfigFile: "jsBuildOut/config.js",
           name: 'config',
           out: "js/main.min.js",
-           preserveLicenseComments: true,
+           preserveLicenseComments: false,
              paths: {
               requireLib: 'require'
             },
