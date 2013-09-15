@@ -241,9 +241,9 @@ LEFT TO DO
 -remove "no-js" using code you take from Modernizr.
 -CSS animations for the mobile menu & search box.
 -read up on zopfli. (https://github.com/mathiasbynens/grunt-zopfli)
--Get Google ads up and running.h
+-Get Google ads up and running.
 -CSS animations...review 'em.'
--Check to see if Git can push code to Media Temple via GitHub deploy hooks.
+-Check to see if Git can push code to Media Temple via GitHub deploy hooks. (sorta...not sure how to properly deploy _site folder...post launch)
 -Get Backbone working with the form.
 -Create a cool front page...may be post launch.
 -Video SEO...may be post launch.
