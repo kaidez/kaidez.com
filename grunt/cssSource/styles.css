@@ -3196,42 +3196,30 @@ main a:visited {
 }
 
 .kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-  color: #7db9e8;
-  text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  -webkit-transition: border-bottom 0.3s ease;
+  -moz-transition: border-bottom 0.3s ease;
+  -o-transition: border-bottom 0.3s ease;
+  transition: border-bottom 0.3s ease;
+  color: #7db9e8;
+  text-decoration: none;
+  top: 0;
+  border-bottom: 0;
+  position: relative;
 }
 
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: #268ad9;
+  color: #52a2e0;
+  border-bottom: 1px solid #52a2e0;
 }
 
 .kaidez-social-sharing-list-item-link-text {
-  display: block;
   display: inline-block;
   padding: 21px 9px;
-}
-
-.kaidez-social-sharing-list-item-link-text:hover {
-  display: inline-block;
-  padding: 21px 9px;
-  -webkit-animation-name: moveUp;
-  -webkit-animation-duration: 0.3s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes moveUp {
-  0% {
-    -webkit-transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(-25px);
-  }
 }
 
 [class^=icon-], [class*=" icon-"] {
