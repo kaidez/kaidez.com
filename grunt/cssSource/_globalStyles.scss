@@ -556,23 +556,30 @@ main a:visited {
 
 // link styling for kaidez social networking links
 .kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-  color: $header-color;
+   @include transitions (color);
+   @include transitions (border-bottom);
+   color: $header-color;
   text-decoration: none;
-  @include transitions (color);
+  top: 0;
+  border-bottom: 0;
+  position: relative;
 }
 
 // what happens if you rollover the kaidez social networking links...hover is 
 // for desktop views and (maybe) iPads, focus is for everything else.
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: darken($header-color,20);
+  color: darken($header-color,10);
+  border-bottom: 1px solid darken($header-color,10)
 }
 
-// copy inside the <span> tag inside the kaidez social netwoek links
+// copy inside the <span> tag inside the kaidez social network links
 .kaidez-social-sharing-list-item-link-text {
-  display: block;
+
   display: inline-block;
   padding: 21px 9px;
+
+
 }
 
 // float: left the Font Awesome fonts in the <aside>
