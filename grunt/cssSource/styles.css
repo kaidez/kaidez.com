@@ -3200,8 +3200,14 @@ main a:visited {
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  -webkit-transition: border-bottom 0.3s ease;
+  -moz-transition: border-bottom 0.3s ease;
+  -o-transition: border-bottom 0.3s ease;
+  transition: border-bottom 0.3s ease;
   color: #7db9e8;
   text-decoration: none;
+  top: 0;
+  border-bottom: 0;
   position: relative;
 }
 
@@ -3210,11 +3216,7 @@ main a:visited {
   color: #52a2e0;
 }
 
-.socialRolloverText {
-  position: relative;
-}
-
-.socialNetworkLink {
+.kaidez-social-sharing-list-item-link-text {
   display: inline-block;
   padding: 21px 9px;
 }
