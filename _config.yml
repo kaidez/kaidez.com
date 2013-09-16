@@ -7,8 +7,10 @@ destination: ./_site
 paginate: 10
 include: [.htaccess]
 exclude: [
+  .ftppass,
   assets,
   backbone,
+  bower.json,
   bower_components,
   css/styles.css,
   Gruntfile.js,

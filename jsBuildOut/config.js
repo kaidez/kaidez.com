@@ -1,6 +1,6 @@
-requirejs.config({
+  requirejs.config({
 
-  baseUrl: "/js",
+  baseUrl: "/jsBuildOut",
 
   deps: [
     "buildform",
@@ -10,16 +10,17 @@ requirejs.config({
     "loadLyndaAd",
     "menu",
     "prismInit",
-    "search"
+    "search",
+    "socialNetworkToggle"
   ],
 
   paths: {
     backbone: "libs/backbone-min",
-    enquire: "libs/enquire.min",  // AMD build...not released yet
-    jquery: "libs/jquery",
+    enquire: "libs/enquire.min",
+    jquery: "libs/jquery.min",
     ladda: "libs/ladda.min",
     prism: "libs/prism",
-    spin: "libs/spin.min",
+    spin: "libs/spin",
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
     tipuesetContent: "libs/tipuesearch_content",

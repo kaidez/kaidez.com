@@ -37,6 +37,10 @@ manifest.appcache
 # ---------------
 bower_components/
 
+# old require build script
+# ------------------------
+jsBuildOut/jsBuild.js
+
 *.htaccess
 
 *.log
@@ -76,7 +80,11 @@ results
 npm-debug.log
 tmp
 
+#Capistrano stuff
+=================
 
+Capfile
+config/deploy.rb
 
 
 

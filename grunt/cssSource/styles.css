@@ -856,6 +856,33 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
+/*!
+ *  Font Awesome 3.2.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Author - Dave Gandy
+ *  ------------------------------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/byscuits
+ *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ */
+/* FONT PATH
+ * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
   src: url("../font/fontawesome-webfont.eot?v=3.2.1");
@@ -3169,21 +3196,23 @@ main a:visited {
 }
 
 .kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-  color: #7db9e8;
-  text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  color: #7db9e8;
+  text-decoration: none;
+  top: 0;
+  border-bottom: 0;
+  position: relative;
 }
 
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
-  color: #268ad9;
+  color: #52a2e0;
 }
 
 .kaidez-social-sharing-list-item-link-text {
-  display: block;
   display: inline-block;
   padding: 21px 9px;
 }
@@ -4808,6 +4837,31 @@ a.pagination-link {
 
   .related-posts-list-item {
     font-size: 18px;
+  }
+
+  .kaidez-social-sharing-list-item-link {
+    width: 287px;
+    height: 64px;
+    display: inline-block;
+    z-index: 3;
+  }
+
+  .pushUp {
+    -webkit-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
+    -moz-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
+    -o-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
+    transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
+    top: -38px;
+    opacity: 0;
+    right: -90px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .pushUpHover {
+    opacity: 1;
+    right: -109px;
+    color: #bedcf3;
   }
 
   .footer-outer-wrapper-class {
