@@ -3200,10 +3200,6 @@ main a:visited {
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  -webkit-transition: border-bottom 0.3s ease;
-  -moz-transition: border-bottom 0.3s ease;
-  -o-transition: border-bottom 0.3s ease;
-  transition: border-bottom 0.3s ease;
   color: #7db9e8;
   text-decoration: none;
   top: 0;
@@ -4841,6 +4837,12 @@ a.pagination-link {
 
   .related-posts-list-item {
     font-size: 18px;
+  }
+
+  .kaidez-social-sharing-list-item-link {
+    width: 287px;
+    height: 64px;
+    display: inline-block;
   }
 
   .footer-outer-wrapper-class {
