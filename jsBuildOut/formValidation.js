@@ -66,6 +66,18 @@ define(["jquery"], function($) {
         spanNameMsg.innerHTML = "";
       }
     }
+
+    theFields.onfocus = function() {
+      var storeThisName = this.name,
+          spanName = storeThisName + "Error",
+          spanNameMsg = document.getElementById(spanName);
+      if(spanNameMsg.classList.toggle("error-fade")) {
+        spanNameMsg.innerHTML = "";
+        spanNameMsg.classList.toggle("error-fade");
+      } else {
+        spanNameMsg.innerHTML = "";
+      }
+    }
   };
 
 });
