@@ -10,7 +10,8 @@
     "loadLyndaAd",
     "menu",
     "prismInit",
-    "search"
+    "search",
+    "socialNetworkToggle"
   ],
 
   paths: {
