@@ -557,7 +557,6 @@ main a:visited {
 // link styling for kaidez social networking links
 .kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
    @include transitions (color);
-   @include transitions (border-bottom);
    color: $header-color;
   text-decoration: none;
   top: 0;
@@ -570,7 +569,6 @@ main a:visited {
 .kaidez-social-sharing-list-item-link:hover,
 .kaidez-social-sharing-list-item-link:focus {
   color: darken($header-color,10);
-  border-bottom: 1px solid darken($header-color,10)
 }
 
 // copy inside the <span> tag inside the kaidez social network links
