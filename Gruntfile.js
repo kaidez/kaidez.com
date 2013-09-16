@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 
       jsOnlyTask: { // run 'jekyll build' on .js file changes
         files: ['jsBuildOut/*.js'],
-        tasks: ['require', 'jekyll:dev']
+        tasks: ['requirejs', 'jekyll:dev']
       },
 
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
@@ -241,7 +241,7 @@ module.exports = function(grunt) {
       }
     },
     
-    // automagically concate/minify site jS based on RequireJS settings
+    // automagically concat/minify site jS based on RequireJS settings
     requirejs: {
       compile: {
         options: {
