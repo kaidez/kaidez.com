@@ -29,17 +29,19 @@ define(function() {
       };
 
 for (key in socialNames) {
-  var box =  socialNames[key]["box"],
-        socialNetworkLinkId =  socialNames[key]["link"],
-        socialNetworkLinkIdText = socialNames[key]["linkTextVisible"],
-        boxId = document.getElementById(box),
+  var socialNetworkLinkId =  socialNames[key]["link"],
+        socialNetworkLinkIdText = socialNames[key]["linkTextHover"],
         theLinkText = document.getElementById(socialNetworkLinkId),
-        theNoLinkText = document.getElementById(socialNetworkLinkIdText);
+        theHoverLinkText = document.getElementById(socialNetworkLinkIdText);
       
-      console.log(boxId+", "+theLinkText +", "+theNoLinkText);
+      
 
-  boxId.onmouseover = function() {
-    theNoLinkText.classList.toggle("socialLinkTop");
+  theLinkText.onmouseover = function() {
+    theHoverLinkText.classList.toggle("pushUpHover");
+  }
+
+  theLinkText.onmouseout = function() {
+    theHoverLinkText.classList.remove("pushUpHover");
   }
 
 };
