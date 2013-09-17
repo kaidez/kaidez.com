@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#" manifest="http://dev.kaidez.com/manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard." />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:creator" content="@kaidez">
+  <meta name="twitter:title" content="Media Queries Are Important">
+  <meta name="twitter:description" content="CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.">
+  <title>Media Queries Are Important &laquo; Code Tips &laquo; kaidez</title>
+  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+  <link rel="canonical" href="http://kaidez.com/media-queries-important/" />
+  <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
+  
+     <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/tutorials/" title="Tutorials on kaidez.com">TUTORIALS</a></li>  
+            <li class="site-navigation-list-link"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com">CODE TIPS</a></li>
+            <li class="site-navigation-list-link"><a href="/reviews/" title="Product and Book Reviews on kaidez.com">REVIEWS</a></li>
+            <li class="site-navigation-list-link"><a href="/personal/" title="Personal and Random posts on kaidez.com">PERSONAL</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+          
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+    
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/coding-best-practices/" title="More Code Tips posts on kaidez.com">Code Tips</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">Media Queries Are Important</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
+
+      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+        <h1 class="post-title" class="entry-title">Media Queries Are Important</h1>
+        
+        <p>CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design, which <a href="http://kaidez.com/html5-project-update-responsive-web-design/">I’ve previously written about</a>. This popularity is set to increase even more thanks to recent actions by Google and the W3C.</p>
+
+<p>On June 6, 2012 via their <a href="http://googlewebmastercentral.blogspot.com/2012/06/recommendations-for-building-smartphone.html">Webmaster Central Blog</a>, Google stated that sites well-optimized for mobile have “the best chance of performing well in Google’s search results,” making it clear that using media queries is the ideal way to optimize things. Thirteen days later, <a href="http://www.w3.org/TR/css3-mediaqueries/">the World Wide Web Consortium (W3C) formally recommended media queries as a web standard</a>.</p>
+
+<p>To be clear about Google’s statement: <strong>they have given absolutely NO indication that building your site with media queries will make it rank higher in Google’s search results, it just gives your site a better chance of that happening</strong>. I’ll discuss this in-depth later but don’t let this keep you from using them on your site, because <strong>these recent moves by Google and the W3C have placed a high premium on media queries as they pertain to proper web development</strong>.</p>
+
+<p>Let’s discuss the W3C’s actions first and they need to be placed in their proper context…</p>
+
+<h2>The W3C &amp; Media Queries</h2>
+
+<p>The W3C is the web standards watchdog, doing its best to enforce them globally. A potential standard goes through five phases of approval: “Working Draft,” “Last Call Working Draft,” “Candidate Recommendation,” “Proposed Recommendation” and “Recommendation.” There is some variation among the various standards committees but they all share these five phases.</p>
+
+<p>Nothing reaches Recommendation status until all of its features are 100% implemented in at least two web browsers and if you’re familiar with the <a href="http://en.wikipedia.org/wiki/Browser_wars">Browser Wars</a>, you know that’s an uphill battle. Case in point: the CSS2 specification was released in 1996 but didn’t reach Recommendation status until 2011.</p>
+
+<p>The W3C wanted CSS3 to gain Recommendation status at a faster pace than earlier versions so <a href="http://www.w3.org/Style/2011/CSS-process">they decided to break CSS3 into separate modules</a>. This meant that instead of the world waiting for the entire spec to go to Reco, the modules could reach the status on their own. The decision was a smart one and allowed media queries to go to Recommendation quickly.</p>
+
+<p>By being defined as a web standard, media queries are now seen as a key component in making your site widely accessible. The more accessible it is, the more end-users who can access it on a variety of devices. People can view your site on smartphones, laptops, desktops, e-readers, gaming consoles, etc…yes, <a href="http://www.alistapart.com/articles/testing-websites-in-game-console-browsers/">people do browse sites on gaming consoles</a>. Making sure that <em>anyone</em> can view your site on <em>any device</em> is a good goal for you to have as a site owner.</p>
+
+<p>In truth, this was a no-brainer move for the W3C. Layout-based media queries have been an immediate hit with developers, mostly due to <a href="http://www.alistapart.com/authors/m/emarcotte">Ethan Marcotte’s set of ALA articles</a>. Their rise in popularity <a href="http://caniuse.com/css-mediaqueries">caused most modern browsers to support them</a> before the spec even went to Reco.</p>
+
+<p>It was Google’s move that was a surprise but, if you look some of their recent actions, not a big one.</p>
+
+<h2>Google &amp; Media Queries</h2>
+
+<p>The primary thing that helps your site achieve high rankings in Google’s search results is to produce high quality content and, in all fairness, the process by which Google determines content as high quality is pretty fair. The second thing, which most ignore, is to make the content as easy for Google to find and understand as possible.</p>
+
+<p>If you have both a desktop and mobile version of your site, Google must crawl both versions, parse them, then decide how to properly index each site if they ever need to list the sites in their search results. It takes Google more time to do this for two sites than it would for one site.</p>
+
+<p>A responsive website built with media queries keeps both the desktop and mobile versions under one URL, reducing the amount of time it takes Google to find and parse content. And if you make it easy for them, they’ll <em>try</em> help you as best as they can.</p>
+
+<p>This action falls in line with Google’s growing love affair with fast-loading sites. They’ve invested heavily in their <a href="https://developers.google.com/speed/pagespeed/">PageSpeed suite of site optimization tools for web developers</a> and grabbed site speed guru <a href="http://stevesouders.com/">Steve Souders</a> from Yahoo. Plus, they announced in 2010 that <a href="http://googlewebmastercentral.blogspot.com/2010/04/using-site-speed-in-web-search-ranking.html">a fast-loading site <em>can</em> get a higher search rank</a>. While it carries a low weight and affects less than 1% of sites, the sum is greater than the parts. Because site speed matters so much to mobile devices, Google is paying strict attention to it at a much higher level than their competitors.</p>
+
+<p>Media queries are part of that sum but I’ll say it again: don’t take this to mean that a media query-enabled site guarantees you high search engine rankings. The link above where Google praises media queries also states that they understand that “it may not be possible or appropriate to use responsive web design” in certain situations. They offer site optimization tips for just such situations, which they wouldn’t do if they wanted to penalize sites for not using media queries.</p>
+
+<h2>This is all a big deal</h2>
+
+<p>A web dev-based blog post like this is basically a time capsule: a snapshot of what’s going on at a certain period of time. If this post survives the test of time and is still on the interwebs 20 years from now, people will look at it then and say, “how quaint.”</p>
+
+<p>So why create this post? Because the actions of Google and the W3C just made media queries a big deal <em>right now</em> and that needs to be screamed from the rooftops. The W3C has deemed it that MQs make can make sites more accessible. An accessible site makes Google’s job easier, so much so that they’ve flat-out told us that they care about the accessibility potential of media queries and want us to use them. We have been given a clear roadmap to making better websites with these statements…I’m skeptical that enough people are on the right path.</p>
+
+<p>I don’t think building, or rebuilding a site with media queries is easy. To the contrary: it’s incredibly tough! But some good reasons have just come up why you should at least consider using them, even if it means rebuilding your site from the ground up.</p>
+
+<p>Of course, you may do some research and decide that a media query-enabled website is not for you, and that’s perfectly fine. Not using media queries is not a sin: not realizing their importance is.</p>
+
+
+        <footer id="articleFooter" class="articleFooterClass">
+
+          Published on <time datetime="2012-09-14">September 14, 2012</time> by <span class="author">Kai "kaidez" Gittens</span>
+
+        </footer>
+
+      </article>
+
+      <div id="share-post-container" class="share-post-container-class clearfix">
+        <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+        <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share Media Queries Are Important on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://dev.kaidez.com/media-queries-important/" title="Share Media Queries Are Important on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com/media-queries-important/&t=Media Queries Are Important" class="share-post-link fb" title="Share Media Queries Are Important on Google Plus" target="blank">Facebook</a></li>
+
+        </ul> <!-- #social-sharing-list-post -->
+
+      </div> <!-- #share-post-container -->
+
+      <div id="related-posts" class="related-posts-style">
+
+        <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+        <ul id="related-posts-list">
+
+          
+
+          <li class="related-posts-list-item"><a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/eloquent-javascript-review/" title="REVIEW: Eloquent JavaScript">REVIEW: Eloquent JavaScript &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/javascript-off-dom/" title="SCREENCAST TUTORIAL: Using JavaScript Off-DOM">SCREENCAST TUTORIAL: Using JavaScript Off-DOM &raquo;</a></li>
+
+          
+
+        </ul>
+
+        <!-- Start Disqus Code -->
+
+                
+
+        <div id="disqus_thread"></div>
+
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+
+        <!-- End Disqus Code -->
+
+      </div> <!-- #related-posts -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">SITE LINKS</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+              
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" id="twitterLink" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-twitter icon-3x"></i>
+                  <span class="kaidez-social-sharing-list-item-link-text">twitter</span>
+                </a>
+                <div id="twitterText"class="pushUp"> / @kaidez</div>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/115509037875239263451/posts" title="Visit kaidez on Google Plus" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-google-plus icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">google +</span>
+                </a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez/" title="Visit kaidez on GitHub" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-github-alt icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">github</span>
+                </a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-youtube icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">youtube</span>
+                </a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+            
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span> 
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>  
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span> 
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+            <div id="todo">
+  </div>
+  <script type="text/template" id="item-template">
+    <div>
+      <input id="todo_complete" type="checkbox" <%= completed ? 'checked="checked"' : '' %>>
+      <%= title %>
+    </div>
+  </script>
+
+
+
+
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class"> 
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://mediatemple.net/" title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://maxcdn.com/" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2013 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> | <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="assistive-text" href="#container" title="Go back to the top">You have reached the bottom...go back to the top.</a>
+    </footer> <!-- #footer -->
+
+
+  </div> <!-- #container -->
+  
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+  
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

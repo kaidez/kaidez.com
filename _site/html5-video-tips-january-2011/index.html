@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#" manifest="http://dev.kaidez.com/manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="HTML5 Video Tips from kaidez" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:creator" content="@kaidez">
+  <meta name="twitter:title" content="10 Things To Remember About HTML5 Video">
+  <meta name="twitter:description" content="HTML5 Video Tips from kaidez">
+  <title>10 Things To Remember About HTML5 Video &laquo; Coding Tips &laquo; kaidez</title>
+  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+  <link rel="canonical" href="http://kaidez.com/html5-video-tips-january-2011/" />
+  <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
+  
+     <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/tutorials/" title="Tutorials on kaidez.com">TUTORIALS</a></li>  
+            <li class="site-navigation-list-link"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com">CODE TIPS</a></li>
+            <li class="site-navigation-list-link"><a href="/reviews/" title="Product and Book Reviews on kaidez.com">REVIEWS</a></li>
+            <li class="site-navigation-list-link"><a href="/personal/" title="Personal and Random posts on kaidez.com">PERSONAL</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+          
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+    
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/coding-best-practices/" title="More Coding Tips posts on kaidez.com">Coding Tips</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">10 Things To Remember About HTML5 Video</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
+
+      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+        <h1 class="post-title" class="entry-title">10 Things To Remember About HTML5 Video</h1>
+        
+        <p>Setting up HTML5 video for <a href="http://kaidez.com/almay-project-using-html5-net-jquery/">my recent Almay project</a> was certainly a learning experience (thanks to Max at <a href="http://blog.image0.com/">image0</a> for the help during this part of the project). Here’s what I learned…and will <em>never</em> forget:</p>
+
+<h2>1. You Need To Budget Enough Time To Do This</h2>
+
+<p>As of this post, there are no hard-and-fast rules for HTML5 video development. Setting it up requires trial and error, so give yourself enough time to finish the job.</p>
+
+<h2>2. Confirm That Your Site Can Support HTML5 Video</h2>
+
+<p>HTML5 supports four video files types: .mp4, .m4v, .ogv and .webm. You can’t display these video types unless your site’s server/host supports them. Make sure they do before you do any HTML5 video work. You don’t want to spend three hours coding HTML5 video only to find out you can’t use it.</p>
+
+<h2>3. If Your Video Doesn’t Need To Show Up Mobile Devices, You Don’t Need HTML5 Video</h2>
+
+<p>I advocate experimenting with all aspects of HTML5 as soon as you can, but don’t bother setting up HTML5-ready videos if they don’t need to display on smart-phones or tablets. Flash video files (or, .flvs) are fine if you’re only concerned about desktops and laptops. Still, keep in mind that demand for mobile video is growing.</p>
+
+<h2>4. If Your Video Does Need To Show Up Mobile Devices, Consider Building A Mobile Version Of Your Site</h2>
+
+<p>HTML5 video does not look and sound universal across all devices. I still need to experiment with this, but I'm thinking that building a straight website that loads a mobile version upon detection is the way to go. The mobile version would play the HTML5 video while the normal site runs .flvs. Again, I have to experiment.</p>
+
+<h2>5. Creating <em>Any</em> Kind Of Video For Blackberrys Will Be A Problem</h2>
+
+<p>If you're a seasoned web developer that tries to code for multiple web browsers, think of the Blackberry as the Internet Explorer 6 of web video. Blackberrys were initially built for corporate types that wanted to check their email every five minutes, not mobile app lovers. As such, they don't really support video streaming. The newer ones (sort of) let you download an .mp4 and then play it via its installed media player. The older ones don't even do that so it's best to offer a link for downloading the video...probably .mp4 but you should test things out first. In all fairness, upcoming Blackberrys will probably support video much better than their predecessors.</p>
+
+<h2>6. HTML 5 Video In Androids Is Just As Much Of A Pain As Blackberrys Are</h2>
+
+<p>Android's issues with HTML5 video are well documented. Sometimes, HTML5 video works on the device. Other times, it doesn't. Furthermore, there are no Android emulators to test your work: you will <em>have</em> to test things out on an actual Android. I was lucky to have access to three during my recent project.</p>
+
+<h2>7. You've Have Lots of Free Video Conversion Tools At Your Disposal</h2>
+
+<p>The four HTML5 video types are open source so you have many good, <strong>free</strong> video converters to choose from. I used the following converters for my recent project:</p>
+
+<ul>
+<li><a href="http://firefogg.org/">Firefogg Firefox plug-in</a> to convert files to both .ogv and .webm.</li>
+<li><a href="http://handbrake.fr/">Handbrake</a> to convert files to.m4v, which you'll need to do for Androids (free app for both Mac and PC).</li>
+<li><a href="http://www.any-video-converter.com/">Any Video Converter</a> to convert files to .mp4. (free and paid app for both Mac and PC...seems to work better on a PC).</li>
+</ul>
+
+
+<p>It may be possible to use Handbrake for both .mp4 and .m4v, but I had some issues trying to do this.</p>
+
+<h2>8. Convert Videos From Either An .mpg Or .mov</h2>
+
+<p>These two formats best preserve a video file's characteristics and should be the only file types you work with. You may not need the .mov version but as previously mentioned, HTML5 video requires trial and error. You have to test various video conversions to see what works best and the .mov may perform for you better than the .mpg. It's better to have it and not need it than need it and not have it.</p>
+
+<h2>9. Your Fallback Doesn't Need To Use An .flv</h2>
+
+<p>A fallback is extra code that lets end-users view a Flash version of the movie in case their browser doesn't support HTML5. The general rule for Flash video is to use the .flv format. No need to for this in HTML5 as Flash video can use both .mp4 and .m4v. Plus, I had some streaming issues when I ran an .flv through the HTML5 tag.</p>
+
+<h2>10. Be Wary Of HTML5 Video Online Tutorials</h2>
+
+<p>If you want to use HTML5 video code you that you found on an online tutorial, only use it if they provide a demo of the finished product first, and make sure it works the way you want it to work. I found a great tutorial that solved all my problems, only to discover a JavaScript error in the code that I couldn't solve. Four hours of work down the drain.</p>
+
+<p>These resources helped me tremendously while I was setting up HTML5 video...<strong>still, test them out before you use them!!!</strong></p>
+
+<ul>
+<li><a href="http://camendesign.com/code/video_for_everybody">Video For Everybody</a> (the end-all-be-all for HTML5 video...it's what used)</li>
+<li><a href="http://www.broken-links.com/2010/07/08/making-html5-video-work-on-android-phones/">Displaying HTML5 Video for Android Tutorial at Broken Links</a></li>
+<li><a href="http://www.broken-links.com/2010/07/30/encoding-video-for-android/">Encoding HTML5 Video for Android Tutorial at Broken Links</a></li>
+</ul>
+
+
+<p>Feel free to add your HTML5 video tips and ideas.</p>
+
+
+        <footer id="articleFooter" class="articleFooterClass">
+
+          Published on <time datetime="2011-01-19">January 19, 2011</time> by <span class="author">Kai "kaidez" Gittens</span>
+
+        </footer>
+
+      </article>
+
+      <div id="share-post-container" class="share-post-container-class clearfix">
+        <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+        <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share 10 Things To Remember About HTML5 Video on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://dev.kaidez.com/html5-video-tips-january-2011/" title="Share 10 Things To Remember About HTML5 Video on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com/html5-video-tips-january-2011/&t=10 Things To Remember About HTML5 Video" class="share-post-link fb" title="Share 10 Things To Remember About HTML5 Video on Google Plus" target="blank">Facebook</a></li>
+
+        </ul> <!-- #social-sharing-list-post -->
+
+      </div> <!-- #share-post-container -->
+
+      <div id="related-posts" class="related-posts-style">
+
+        <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+        <ul id="related-posts-list">
+
+          
+
+          <li class="related-posts-list-item"><a href="/media-queries-important/" title="Media Queries Are Important">Media Queries Are Important &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/eloquent-javascript-review/" title="REVIEW: Eloquent JavaScript">REVIEW: Eloquent JavaScript &raquo;</a></li>
+
+          
+
+        </ul>
+
+        <!-- Start Disqus Code -->
+
+                
+
+        <div id="disqus_thread"></div>
+
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+
+        <!-- End Disqus Code -->
+
+      </div> <!-- #related-posts -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">SITE LINKS</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+              
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" id="twitterLink" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-twitter icon-3x"></i>
+                  <span class="kaidez-social-sharing-list-item-link-text">twitter</span>
+                </a>
+                <div id="twitterText"class="pushUp"> / @kaidez</div>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/115509037875239263451/posts" title="Visit kaidez on Google Plus" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-google-plus icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">google +</span>
+                </a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez/" title="Visit kaidez on GitHub" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-github-alt icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">github</span>
+                </a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-youtube icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">youtube</span>
+                </a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+            
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span> 
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>  
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span> 
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+            <div id="todo">
+  </div>
+  <script type="text/template" id="item-template">
+    <div>
+      <input id="todo_complete" type="checkbox" <%= completed ? 'checked="checked"' : '' %>>
+      <%= title %>
+    </div>
+  </script>
+
+
+
+
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class"> 
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://mediatemple.net/" title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://maxcdn.com/" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2013 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> | <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="assistive-text" href="#container" title="Go back to the top">You have reached the bottom...go back to the top.</a>
+    </footer> <!-- #footer -->
+
+
+  </div> <!-- #container -->
+  
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+  
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

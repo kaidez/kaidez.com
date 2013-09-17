@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#" manifest="http://dev.kaidez.com/manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:creator" content="@kaidez">
+  <meta name="twitter:title" content="HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries">
+  <meta name="twitter:description" content="An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end">
+  <title>HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries &laquo; coding-best-practices &laquo; kaidez</title>
+  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+  <link rel="canonical" href="http://kaidez.com/html5-project-update-responsive-web-design/" />
+  <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
+  
+     <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/tutorials/" title="Tutorials on kaidez.com">TUTORIALS</a></li>  
+            <li class="site-navigation-list-link"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com">CODE TIPS</a></li>
+            <li class="site-navigation-list-link"><a href="/reviews/" title="Product and Book Reviews on kaidez.com">REVIEWS</a></li>
+            <li class="site-navigation-list-link"><a href="/personal/" title="Personal and Random posts on kaidez.com">PERSONAL</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+          
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+    
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/coding best practices/" title="More coding-best-practices posts on kaidez.com">coding-best-practices</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
+
+      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+        <h1 class="post-title" class="entry-title">HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries</h1>
+        
+        <p>In 2005, Jesse James Garrett wrote <a href="http://www.adaptivepath.com/ideas/essays/archives/000385.php">an excellent article describing and coining the term “Ajax.”</a> He demonstrated Ajax as a method of using multiple web programming languages to neatly load content onto a web page <em>without</em> actually refreshing the page.</p>
+
+<p>It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually <em>visualize</em> this functionality in action (although <a href="http://kaidez.com/ajax-jquery-html5-work-together/4/">this page will help you</a>). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.</p>
+
+<p>Google has given us the most widely-used Ajax applications: Gmail, Maps and their <a href="http://en.wikipedia.org/wiki/List_of_Google_products#Suggest">Suggest functionality</a>, just to name a few. And many others besides Google have given us great Ajax applications as well but the point is, Garrett’s article got the creative juices flowing for lots of designers and developers. By showing them what was possible, he made them rethink their entire creative process.</p>
+
+<p>What Jesse James Garrett was to Ajax, <a href="http://ethanmarcotte.com/">Ethan Marcotte</a> may end up being to <em>responsive web design</em>. The title of <a href="http://www.alistapart.com/articles/responsive-web-design/">his widely-cited <em>A List Apart</em> article</a>, responsive web design is a big buzz phrase among the early adopter segment of the design/development body politic. And although there are concerns about its implementation, many of them valid, <strong>responsive web design is an unquestionably forward-thinking concept</strong>.</p>
+
+<p>Inspired by modern architectural theory, responsive web design uses CSS3 to detect the width of a device…a web browser, a tablet, a smartphone…whatever. Combine this detection process with traditional CSS techniques for positioning page elements, and <strong>you’re able to create <em>one</em> website that neatly displays on <em>all</em> devices.</strong></p>
+
+<p>I’d like to present this as an opportunity to our team at work, but I need to develop and test out code on my own first. So I may adjust the portfolio for <a href="http://kaidez.com/html5-project/">my HTML5 Project</a> to accommodate a responsive web design. Doing this requires my understanding of the process….here’s what I’ve learned so far.</p>
+
+<h3>Setting Up CSS For Responsive Web Design</h3>
+
+<p><em>Media queries</em>, a part of the new CSS3 specification, are the linchpin of responsive web design. They’re set up when you link stylesheets to your web page and look somewhat like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1.0, maximum-scale=1.0&quot;&gt;
+ 
+&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-width: 600px)&quot; href=&quot;large.css&quot; /&gt; 
+
+&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (max-width: 320px)&quot; href=&quot;smartPhone.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (max-width: 600px)&quot; href=&quot;tablet.css&quot; /&gt;</code></pre>
+</div>
+
+
+<p>With this code in mind, let’s look at the following scenario:</p>
+
+<ul>
+<li>you want a wide desktop web browser to load the “large.css” file, which displays a certain text block on your site with a left-aligned, 14 point font</li>
+<li>you want a skinny iPhone web browser to load the “smartPhone.css” file, which displays the same text block on your site with a right-aligned, 6 point font</li>
+<li>you want a semi-wide iPad web browser to load the “tablet.css” file, which displays the same text block on your site with a center-aligned, 10 point font</li>
+<li>no problem for either bullet point…the previously-mentioned coding method will detect the device’s width, then apply the device’s proper CSS file</li>
+</ul>
+
+
+<h3>Browser Detection</h3>
+
+<p>Before we discuss how all this works, let’s look at responsive web design in action. Since not every browser supports this functionality, I need to check out your browser first…</p>
+
+<p><strong>It looks like you’re not using Internet Explorer 8 or lower</strong> so you should be able to view this demo with no issues. But if you’re using a really old version of either Firefox, Safari, Opera Mobile or Opera Mini, you may need to update it.</p>
+
+<h3>Sample Site</h3>
+
+<p>There are quite a few sites supporting a responsive web design, but I really like what web developer Chris Pederick has done with his site. So <a href="http://chrispederick.com/">let’s open that site up in a separate browser</a>.</p>
+
+<p>Now spend a few seconds clicking-and-dragging the bottom right corner of your browser to resize it. Notice how the page elements reformat themselves so that they neatly display on the page…regardless of its height and width.</p>
+
+<p>Set your browser dimensions up so that it’s vertical like a skyscraper. Notice how the elements neatly adjust to fit on the page. You’ve just previewed how this site would look on an iPhone or Android.</p>
+
+<p>Welcome to responsive web design!!!</p>
+
+<h3>How Responsive Web Design Works</h3>
+
+<p>As I see it, responsive web design must utilize the following:</p>
+
+<ul>
+<li><h4>Media Queries</h4>
+
+<p>Repeating myself here…a part of the new CSS3 specification that handles both the device detection process and the proper CSS file-loading based on that detection.</p></li>
+<li><h4>Fluid Grids</h4>
+
+<p>Referring to <a href="http://www.alistapart.com/articles/fluidgrids/">another Marcotte article over on <em>ALA</em></a>, fluid grids teach you how to apply 8th grade algebra to create CSS that neatly readjusts page elements, making things more responsive.</p></li>
+<li><h4>Fluid Images</h4>
+
+<p>Marcotte whipped up some spiffy JavaScript code to properly resize images on responsive design sites. <a href="http://unstoppablerobotninja.com/entry/fluid-images/">Read about it on his Unstoppable Robot Ninja site.</a></p></li>
+<li><h4>The Viewport Meta Tag</h4>
+
+<p>  Needed when creating a site for any iOS device, i.e., the iPad and the Phone. It looks like this...</p></li>
+</ul>
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;meta name = &quot;viewport&quot; content = &quot;width = EnterYourOwnWidth&quot;&gt;</code></pre>
+</div>
+
+
+<p>It’s good to know how the Viewport meta tag works so <a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">read up on it over at the Apple Developer site</a>.</p>
+
+<ul>
+<li><strong><em>Added Bonus:</em></strong>
+
+<h4>Marcotte’s Responsive Images JavaScript Library</h4>
+
+<p>Another way to make images more responsive. It’s part of a project that Marcotte did for Filament Group and performs the same functionality as the code over at Unstoppable Robot Ninja, but does so with an external JavaScript library. <a href="https://github.com/filamentgroup/Responsive-Images">Check it out over at GitHub</a>.</p>
+
+<p>This method doesn’t work on all browsers as of this article and also requires tweaking the .htaccess file, something I’ve never felt comfortable doing. But <a href="http://filamentgroup.com/examples/responsive-images/">the demo</a> shows that it works well in the browsers that it does support.</p></li>
+</ul>
+
+
+<h3>Responsive Design Issues</h3>
+
+<p>But as I said earlier, there are issues, the main one being site optimization.</p>
+
+<p>Let’s look at my previous code, without the viewport meta tag:</p>
+
+<p>The code above will detect a device’s width, then apply the proper CSS file. But while it will apply only one CSS file, it loads all three at once. The fact that you don’t use these files doesn’t matter-they will still load onto your computer. So your computer is loading resources it doesn’t need and won’t use, making things a little sluggish.</p>
+
+<p>Also, while either of the fluid image above techniques seem to work well, there’s a chance that you’ll want to load individual images for each stylesheet. Again, depending on which stylesheet is applied, you’re loading things that you don’t need.</p>
+
+<p>This loading of extra, unused resources may not be a big deal if you’re browsing a responsive-designed site on a ethernet cable-connected computer; however, a wireless device (especially one on a public network) will probably have issues.</p>
+
+<p>A simple Google search brings up quite a few articles against issues with responsive web design, <a href="http://www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/">the biggest one coming from web developer Jason Grigsby</a>. My suggestion is to read the negative articles on the subject as well as the positive ones, the Grigsby one at least.</p>
+
+<p>Despite the articles showcasing the problems, there are quite a few articles providing workarounds to the problems. For starters, Amsterdam-based developer Peter-Paul Koch (aka PPK) counters Grigsby’s article quite nicely with <a href="http://www.quirksmode.org/blog/archives/2010/08/combining_media.html">this article at his Quirksmode blog</a>. And let’s remember that Marcotte supplied both the fluid image code snippet and responsive image JavaScript library mentioned above: when these are applied properly, there’s no need to use multiple images per device. Plus, <a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">Kayla Knight’s responsive web design guideline article over at Smashing Magazine</a> provides some techniques for dealing with the multiple CSS file calls.</p>
+
+<h3>Conclusion</h3>
+
+<p>So, yes, the responsive web design concept is new. REALLY new. I do see its promise but am not ready to recommend as “development best practice” at work until I get my hands dirty with it on my own first.</p>
+
+<p>So, again, I’m now researching the possibility redoing <a href="http://kaidez.com/html5-project-update-completed-wireframes/">my HTML5 Project wireframes</a> to fit a responsive design so I can fully understand this concept. This will take time but I’m will to work as long as possible to get this done.</p>
+
+<h3>Resources</h3>
+
+<p>There are tons of responsive design resources…here’s a complete list of ones that have helped me. Some of these resources have already been mentioned:</p>
+
+<ul>
+<li><a href="http://www.alistapart.com/articles/responsive-web-design/">Ethan Marcotte’s original “Responsive Web Design” article at A List Apart</a></li>
+<li><a href="http://www.alistapart.com/articles/fluidgrids/">Marcotte’s “Fluid Grid” article, also over at A List Apart</a></li>
+<li><a href="http://unstoppablerobotninja.com/entry/fluid-images/">Marcotte’s great fluid image JavaScript code over at his Unstoppable Robot Ninja site</a></li>
+<li><a href="https://github.com/filamentgroup/Responsive-Images">Marcotte’s responsive image JavaScript library over at GitHub</a></li>
+<li><a href="http://5by5.tv/bigwebshow/9">“Responsive Web Design” episode at “The Big Web Show,” featuring Ethan Marcotte</a></li>
+<li><a href="http://vimeo.com/15986231">Stephen Hay’s “Real-world Responsive Design” lecture at the 2010 Fronteers conference</a></li>
+<li><a href="http://www.quirksmode.org/blog/archives/2010/08/combining_media.html">PPK’s “Combining media queries and JavaScript” over at his blog</a></li>
+<li><a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">Viewport meta tag documentation for iOS on the Safari Web Content Guide</a></li>
+<li><a href="http://www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/">Jason Grigsby’s “CSS Media Query for Mobile is Fool’s Gold” article over at his blog – an argument against responsive web design</a></li>
+<li><a href="http://www.lynda.com/CSS-training/css3-first-look/73288-2C.html"><em>CSS3 First Look</em> course over at lynda.com, which includes a GREAT chapter on media queries</a></li>
+<li><a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">Kayla Knight’s “Responsive Web Design: What It Is and How To Use It” article over at Smashing Magazine</a></li>
+<li><a href="http://www.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">Rachel Andrew’s “How To Use CSS3 Media Queries To Create a Mobile Version of Your Website” article, also over at Smashing Magazine</a></li>
+<li><a href="http://lessframework.com/">The LESS framework-a pre-built template for creating responsive web design sites</a></li>
+<li><a href="http://mediaqueri.es/">mediaqueri.es – a GREAT gallery of responsive web design sites</a></li>
+</ul>
+
+
+<p><strong>Extra:</strong> As of this article, Ethan Marcotte is set to release a book entitled (surprise!) <a href="http://books.alistapart.com/products/responsive-web-design">“Responsive Web Design” via A Book Apart</a> in a few monthsextension of his two ALA articles along with new content. To be alerted when it’s released, either sign up for their newsletter at the previously-mentioned link or <a href="http://twitter.com/#!/abookapart">follow A Book Apart on Twitter</a>.</p>
+
+<p>Feel free to share any responsive web design resources that you like…and your comments!!!! Responsive web design is new so the more info that goes around, the better for all of us.</p>
+
+
+        <footer id="articleFooter" class="articleFooterClass">
+
+          Published on <time datetime="2011-03-16">March 16, 2011</time> by <span class="author">Kai "kaidez" Gittens</span>
+
+        </footer>
+
+      </article>
+
+      <div id="share-post-container" class="share-post-container-class clearfix">
+        <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+        <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://dev.kaidez.com/html5-project-update-responsive-web-design/" title="Share HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com/html5-project-update-responsive-web-design/&t=HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries" class="share-post-link fb" title="Share HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries on Google Plus" target="blank">Facebook</a></li>
+
+        </ul> <!-- #social-sharing-list-post -->
+
+      </div> <!-- #share-post-container -->
+
+      <div id="related-posts" class="related-posts-style">
+
+        <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+        <ul id="related-posts-list">
+
+          
+
+          <li class="related-posts-list-item"><a href="/media-queries-important/" title="Media Queries Are Important">Media Queries Are Important &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/eloquent-javascript-review/" title="REVIEW: Eloquent JavaScript">REVIEW: Eloquent JavaScript &raquo;</a></li>
+
+          
+
+        </ul>
+
+        <!-- Start Disqus Code -->
+
+                
+
+        <div id="disqus_thread"></div>
+
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+
+        <!-- End Disqus Code -->
+
+      </div> <!-- #related-posts -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">SITE LINKS</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+              
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" id="twitterLink" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-twitter icon-3x"></i>
+                  <span class="kaidez-social-sharing-list-item-link-text">twitter</span>
+                </a>
+                <div id="twitterText"class="pushUp"> / @kaidez</div>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/115509037875239263451/posts" title="Visit kaidez on Google Plus" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-google-plus icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">google +</span>
+                </a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez/" title="Visit kaidez on GitHub" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-github-alt icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">github</span>
+                </a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-youtube icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">youtube</span>
+                </a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+            
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span> 
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>  
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span> 
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+            <div id="todo">
+  </div>
+  <script type="text/template" id="item-template">
+    <div>
+      <input id="todo_complete" type="checkbox" <%= completed ? 'checked="checked"' : '' %>>
+      <%= title %>
+    </div>
+  </script>
+
+
+
+
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class"> 
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://mediatemple.net/" title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://maxcdn.com/" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2013 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> | <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="assistive-text" href="#container" title="Go back to the top">You have reached the bottom...go back to the top.</a>
+    </footer> <!-- #footer -->
+
+
+  </div> <!-- #container -->
+  
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+  
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

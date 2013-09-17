@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>kaidez</title>
+		<description>kaidez.com / Tutorials and articles about Web Development</description>
+		<link>http://kaidez.com</link>
+		<atom:link href="http://kaidez.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Media Queries Are Important</title>
+				<description>&lt;p&gt;CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design, which &lt;a href=&quot;http://kaidez.com/html5-project-update-responsive-web-design/&quot;&gt;I’ve previously written about&lt;/a&gt;. This popularity is set to increase even more thanks to recent actions by Google and the W3C.&lt;/p&gt;
+
+&lt;p&gt;On June 6, 2012 via their &lt;a href=&quot;http://googlewebmastercentral.blogspot.com/2012/06/recommendations-for-building-smartphone.html&quot;&gt;Webmaster Central Blog&lt;/a&gt;, Google stated that sites well-optimized for mobile have “the best chance of performing well in Google’s search results,” making it clear that using media queries is the ideal way to optimize things. Thirteen days later, &lt;a href=&quot;http://www.w3.org/TR/css3-mediaqueries/&quot;&gt;the World Wide Web Consortium (W3C) formally recommended media queries as a web standard&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To be clear about Google’s statement: &lt;strong&gt;they have given absolutely NO indication that building your site with media queries will make it rank higher in Google’s search results, it just gives your site a better chance of that happening&lt;/strong&gt;. I’ll discuss this in-depth later but don’t let this keep you from using them on your site, because &lt;strong&gt;these recent moves by Google and the W3C have placed a high premium on media queries as they pertain to proper web development&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s discuss the W3C’s actions first and they need to be placed in their proper context…&lt;/p&gt;
+
+&lt;h2&gt;The W3C &amp;amp; Media Queries&lt;/h2&gt;
+
+&lt;p&gt;The W3C is the web standards watchdog, doing its best to enforce them globally. A potential standard goes through five phases of approval: “Working Draft,” “Last Call Working Draft,” “Candidate Recommendation,” “Proposed Recommendation” and “Recommendation.” There is some variation among the various standards committees but they all share these five phases.&lt;/p&gt;
+
+&lt;p&gt;Nothing reaches Recommendation status until all of its features are 100% implemented in at least two web browsers and if you’re familiar with the &lt;a href=&quot;http://en.wikipedia.org/wiki/Browser_wars&quot;&gt;Browser Wars&lt;/a&gt;, you know that’s an uphill battle. Case in point: the CSS2 specification was released in 1996 but didn’t reach Recommendation status until 2011.&lt;/p&gt;
+
+&lt;p&gt;The W3C wanted CSS3 to gain Recommendation status at a faster pace than earlier versions so &lt;a href=&quot;http://www.w3.org/Style/2011/CSS-process&quot;&gt;they decided to break CSS3 into separate modules&lt;/a&gt;. This meant that instead of the world waiting for the entire spec to go to Reco, the modules could reach the status on their own. The decision was a smart one and allowed media queries to go to Recommendation quickly.&lt;/p&gt;
+
+&lt;p&gt;By being defined as a web standard, media queries are now seen as a key component in making your site widely accessible. The more accessible it is, the more end-users who can access it on a variety of devices. People can view your site on smartphones, laptops, desktops, e-readers, gaming consoles, etc…yes, &lt;a href=&quot;http://www.alistapart.com/articles/testing-websites-in-game-console-browsers/&quot;&gt;people do browse sites on gaming consoles&lt;/a&gt;. Making sure that &lt;em&gt;anyone&lt;/em&gt; can view your site on &lt;em&gt;any device&lt;/em&gt; is a good goal for you to have as a site owner.&lt;/p&gt;
+
+&lt;p&gt;In truth, this was a no-brainer move for the W3C. Layout-based media queries have been an immediate hit with developers, mostly due to &lt;a href=&quot;http://www.alistapart.com/authors/m/emarcotte&quot;&gt;Ethan Marcotte’s set of ALA articles&lt;/a&gt;. Their rise in popularity &lt;a href=&quot;http://caniuse.com/css-mediaqueries&quot;&gt;caused most modern browsers to support them&lt;/a&gt; before the spec even went to Reco.&lt;/p&gt;
+
+&lt;p&gt;It was Google’s move that was a surprise but, if you look some of their recent actions, not a big one.&lt;/p&gt;
+
+&lt;h2&gt;Google &amp;amp; Media Queries&lt;/h2&gt;
+
+&lt;p&gt;The primary thing that helps your site achieve high rankings in Google’s search results is to produce high quality content and, in all fairness, the process by which Google determines content as high quality is pretty fair. The second thing, which most ignore, is to make the content as easy for Google to find and understand as possible.&lt;/p&gt;
+
+&lt;p&gt;If you have both a desktop and mobile version of your site, Google must crawl both versions, parse them, then decide how to properly index each site if they ever need to list the sites in their search results. It takes Google more time to do this for two sites than it would for one site.&lt;/p&gt;
+
+&lt;p&gt;A responsive website built with media queries keeps both the desktop and mobile versions under one URL, reducing the amount of time it takes Google to find and parse content. And if you make it easy for them, they’ll &lt;em&gt;try&lt;/em&gt; help you as best as they can.&lt;/p&gt;
+
+&lt;p&gt;This action falls in line with Google’s growing love affair with fast-loading sites. They’ve invested heavily in their &lt;a href=&quot;https://developers.google.com/speed/pagespeed/&quot;&gt;PageSpeed suite of site optimization tools for web developers&lt;/a&gt; and grabbed site speed guru &lt;a href=&quot;http://stevesouders.com/&quot;&gt;Steve Souders&lt;/a&gt; from Yahoo. Plus, they announced in 2010 that &lt;a href=&quot;http://googlewebmastercentral.blogspot.com/2010/04/using-site-speed-in-web-search-ranking.html&quot;&gt;a fast-loading site &lt;em&gt;can&lt;/em&gt; get a higher search rank&lt;/a&gt;. While it carries a low weight and affects less than 1% of sites, the sum is greater than the parts. Because site speed matters so much to mobile devices, Google is paying strict attention to it at a much higher level than their competitors.&lt;/p&gt;
+
+&lt;p&gt;Media queries are part of that sum but I’ll say it again: don’t take this to mean that a media query-enabled site guarantees you high search engine rankings. The link above where Google praises media queries also states that they understand that “it may not be possible or appropriate to use responsive web design” in certain situations. They offer site optimization tips for just such situations, which they wouldn’t do if they wanted to penalize sites for not using media queries.&lt;/p&gt;
+
+&lt;h2&gt;This is all a big deal&lt;/h2&gt;
+
+&lt;p&gt;A web dev-based blog post like this is basically a time capsule: a snapshot of what’s going on at a certain period of time. If this post survives the test of time and is still on the interwebs 20 years from now, people will look at it then and say, “how quaint.”&lt;/p&gt;
+
+&lt;p&gt;So why create this post? Because the actions of Google and the W3C just made media queries a big deal &lt;em&gt;right now&lt;/em&gt; and that needs to be screamed from the rooftops. The W3C has deemed it that MQs make can make sites more accessible. An accessible site makes Google’s job easier, so much so that they’ve flat-out told us that they care about the accessibility potential of media queries and want us to use them. We have been given a clear roadmap to making better websites with these statements…I’m skeptical that enough people are on the right path.&lt;/p&gt;
+
+&lt;p&gt;I don’t think building, or rebuilding a site with media queries is easy. To the contrary: it’s incredibly tough! But some good reasons have just come up why you should at least consider using them, even if it means rebuilding your site from the ground up.&lt;/p&gt;
+
+&lt;p&gt;Of course, you may do some research and decide that a media query-enabled website is not for you, and that’s perfectly fine. Not using media queries is not a sin: not realizing their importance is.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 14 Sep 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/media-queries-important/</link>
+				<guid isPermaLink="true">http://kaidez.com/media-queries-important/</guid>
+			</item>
+		
+			<item>
+				<title>TUTORIAL: Remove Files From GitHub</title>
+				<description>&lt;p&gt;If you’ve every tried to remove files from a &lt;a href=&quot;http://GitHub.com/&quot;&gt;GitHub&lt;/a&gt; repository by dragging them to your Trash or Recycle Bin and then doing a &lt;code&gt;git push&lt;/code&gt;, you know that this doesn’t work.&lt;/p&gt;
+
+&lt;p&gt;After having a GitHub account for 18 months and knowing just enough to get by, I spent 10 days focusing on &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;, the distributed version control system that GitHub’s built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub but also how Git &lt;em&gt;itself&lt;/em&gt; actually works. Knowing these things will help lead you to GitHub guru-ness.&lt;/p&gt;
+
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#assumptions&quot;&gt;Assumptions &amp;amp; Tips »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#simple-git-github-explanation&quot;&gt;A simple explanation of how Git &amp;amp; GitHub work »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#gitignore&quot;&gt;Prevent files from being uploaded to GitHub with .gitignore »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#right-way-to-remove-files-from-GitHub&quot;&gt;The &lt;em&gt;right&lt;/em&gt; way to remove files from GitHub »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#right-way-to-remove-directories-from-GitHub&quot;&gt;The &lt;em&gt;right&lt;/em&gt; way to remove directories from GitHub »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#you-already-deleted-files&quot;&gt;What to do if you’ve already deleted files from your machine and pushed things to GitHub »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#further-reading&quot;&gt;Further Reading »&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion »&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;Assumptions &amp;amp; Tips&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/octocat.png&quot; class=&quot;post-pic&quot; /&gt; I’m assuming a few things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;that you have a Git repo on your computer and it’s been uploaded to GitHub.&lt;/li&gt;
+&lt;li&gt;that you know how to access this repo from the Terminal.&lt;/li&gt;
+&lt;li&gt;that you know the three Git line commands that work together to upload your code to GitHub: &lt;code&gt;git add&lt;/code&gt;, &lt;code&gt;git commit&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Some tips:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I’ll be using the Mac Terminal for this tutorial. Except for &lt;a href=&quot;#gitignore&quot;&gt;the section where I create a &lt;code&gt;.gitignore&lt;/code&gt; file&lt;/a&gt;, everything mentioned here should work cross-platform.&lt;/li&gt;
+&lt;li&gt;Feel free to follow this tutorial using your own repo, but proceed with caution if you do. I’ll be deleting stuff and I don’t want you to mistakenly delete something as you follow along. Instead, feel free to &lt;a href=&quot;https://GitHub.com/kaidez/yourGitProject&quot;&gt;download this repo from GitHub&lt;/a&gt; and use it if you want to type and follow along.&lt;/li&gt;
+&lt;li&gt;If you opt to use your own repo while reading this tutorial as a whole, it’s best that it be as clean as possible. Go to your Terminal and type &lt;code&gt;git status&lt;/code&gt;. If you get a message saying that there’s nothing to commit, keep going. If you get a message saying that some files need to be added or removed, you may have to clean up your repo a bit. The steps mentioned in &lt;a href=&quot;#you-already-deleted-files&quot;&gt;this part of the tutorial&lt;/a&gt; may help you.&lt;/li&gt;
+&lt;li&gt;If your Terminal window starts getting full and you want to clear it, hit Cmd K. Note that everything you’ve typed will be gone once you do this and you may have wanted to save it somehow for future reference. If so, make sure you save stuff before hitting Cmd K.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Before we jump into the Terminal, we need to be clear about the differences between Git and GitHub, as well as how they work together.&lt;/p&gt;
+
+&lt;h2&gt;A simple explanation of how Git &amp;amp; GitHub work&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Git&lt;/em&gt; is the software on your machine that tracks changes to your code repository and retains its past versions. You upload the repo and its changes to &lt;em&gt;GitHub&lt;/em&gt;, the online web service that provides a feature-rich graphical user interface to manage the repo.&lt;/p&gt;
+
+&lt;p&gt;If you’re only Git education up to this point is doing what GitHub tells you to do when you setting up a repo, you should be familiar with &lt;code&gt;git add&lt;/code&gt;. You use it as part of a command sequence in Terminal when you want to add files to or change files on GitHub.&lt;/p&gt;
+
+&lt;p&gt;So if you have a file called “myFile.html” that you’ve just created or changed and you want to upload it to GitHub, the sequence would look something like this:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;git add 'myFile.html'
+git commit -m 'added myFile.html'
+git push&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;The sequence for &lt;em&gt;deleting&lt;/em&gt; files is the same, except for one change: you replace &lt;code&gt;add&lt;/code&gt; with &lt;code&gt;rm&lt;/code&gt;, which is the UNIX command for removing things.&lt;/p&gt;
+
+&lt;p&gt;So if you wanted to remove “myFile.html” from your repo, the sequence would look something like this:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;git rm 'myFile.html'
+git commit -m 'removed myFile.html'
+git push&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Why is all this necessary? Because Git views adding and removing things from your repo as a “change.” And while Git can detect these changes, it has absolutely no idea what to do with them: it’s your job to &lt;em&gt;tell&lt;/em&gt; Git what to do with them.&lt;/p&gt;
+
+&lt;p&gt;We just deleted a file from our repository in the last command sequence with &lt;code&gt;git rm&lt;/code&gt;, meaning we made a change to our repo. Then, by “committing” this change with &lt;code&gt;git commit&lt;/code&gt;, we “told” our repo to remove it. Lastly, we threw our repo up on GitHub with &lt;code&gt;git push&lt;/code&gt;: GitHub saw that a delete was committed to the repo during the push and, as such, deleted the file.&lt;/p&gt;
+
+&lt;p&gt;The “changes” concept is key to understanding the Git/GitHub relationship. Git’s job is to “track,” or “watch,” every single, solitary change that occurs inside your local repo…adds, deletes, individual file content updates…whatever. GitHub only changes what your local Git repo tells it to change. So in the case of deletions, if you don’t use &lt;code&gt;git rm&lt;/code&gt; to tell Git to remove a file, Git can’t tell GitHub to remove it.&lt;/p&gt;
+
+&lt;p&gt;While you may be familiar with &lt;code&gt;git add&lt;/code&gt; already, let’s do one for good measure. For this tutorial, we actually need to use it to create a certain file called &lt;code&gt;.gitignore&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Prevent files from being uploaded to GitHub with &lt;em&gt;.gitignore&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;If you already know which files you don’t want uploaded to GitHub and want to avoid uploading them by mistake (meaning you’ll never have to remove them with &lt;code&gt;git rm&lt;/code&gt;), list them in a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Let’s create this file and tell it to ignore all &lt;code&gt;.DS_Store&lt;/code&gt; files, which appear in Mac OS X directories anytime changes occur inside of them. Doing this doesn’t remove &lt;code&gt;.DS_Store&lt;/code&gt; files from our repo (we’ll get to removing files shortly), it just prevents Git from tracking them. &lt;strong&gt;If Git can’t track them, Git can’t upload them to GitHub&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We’ll create our file with nano, Terminal’s built-in text editor (Windows users should use Notepad outside of their command line tool to create this file, add the content described in step 4, save it in your repo, then start following the directions at step 8).&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;First, let’s look at our Git repo on GitHub. Mine’s called “yourGitProject” for this tutorial.&lt;br/&gt;
+&lt;img src=&quot;../img/repo1.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now let’s look at our file in Terminal. There are hidden files and directories (the ones that start with a “.”) and we want to look at those files as well. We need to tell Terminal to list all of our files and do so by typing in &lt;code&gt;ls -la&lt;/code&gt; and hitting Enter. &lt;img src=&quot;../img/terminalShot1.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Note that &lt;code&gt;.gitignore&lt;/code&gt; isn’t there yet so let’s add it…Type &lt;code&gt;nano .gitignore&lt;/code&gt; into Terminal and hit Enter.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot2.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;nano created &lt;code&gt;.gitignore&lt;/code&gt; in our repo and opened it. Now we need to make sure that &lt;code&gt;.DS_Store&lt;/code&gt; is not tracked in our root folder but as a best practice, let’s also make sure that it’s not tracked in our subfolders: “css” and “js”. To do this, type content into &lt;code&gt;.gitignore&lt;/code&gt; so it looks like it does below.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot3.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Start to save it by hitting “Ctrl X”.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot4.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;You’ll receive a prompt at the bottom to save it: type “y” for Yes.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot5.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;You’ll receive a prompt to write the file name, i.e., save it with the name “.gitignore”, which you want to do. Hit Enter.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot6.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;ls -la&lt;/code&gt; again: you should now see the &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot7.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now we need to upload it to our GitHub-hosted repo doing the usual add/commit/push thing that we always do. The “add” comes first…type &lt;code&gt;git add .gitignore&lt;/code&gt; into Terminal and hit Enter.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot8.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now we’ll commit it to our repo with a meaningful commit message…type &lt;code&gt;git commit -m 'added .gitignore to the repo'&lt;/code&gt; and hit Enter.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot9.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now let’s push the change to GitHub…type &lt;code&gt;git push&lt;/code&gt; and hitting Enter. Then when we check our repo, we see that “.gitignore” is now part of it.&lt;br/&gt;
+&lt;img src=&quot;../img/repo2.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;The &lt;em&gt;right&lt;/em&gt; way to remove files from GitHub&lt;/h2&gt;
+
+&lt;p&gt;Now let’s remove a file using &lt;code&gt;rm&lt;/code&gt;. Let’s do this to delete the “page1.html” file.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;As a reminder, let’s see what our code repo looks like.&lt;br/&gt;
+&lt;img src=&quot;../img/repo3.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Tell Git to remove this file by typing &lt;code&gt;git rm page1.html&lt;/code&gt; and hitting Enter. Git confirms this is done by displaying the message &lt;code&gt;rm 'page1.html'&lt;/code&gt; in Terminal.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot10.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Let’s review the status of our repo by typing &lt;code&gt;git status&lt;/code&gt; and hitting Enter. As we can see, “page1.html” has been deleted from our repo folder.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot11.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;We can confirm this by typing in &lt;code&gt;ls&lt;/code&gt; and then hitting Enter. Notice that “page1.html” is no longer listed:&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot12.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;So let’s commit this deletion…type &lt;code&gt;git commit -m 'delete page1.html'&lt;/code&gt; into Terminal and hit Enter. Note that “page1.html” has been flagged for a delete.&lt;br/&gt;
+&lt;img src=&quot;../img/terminalShot13.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Next comes the push to GitHub…type &lt;code&gt;git push&lt;/code&gt; and hit Enter, then check our repo. “page1.html” is gone.&lt;br/&gt;
+&lt;img src=&quot;../img/repo4.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;The &lt;em&gt;right&lt;/em&gt; way to remove directories from GitHub&lt;/h2&gt;
+
+&lt;p&gt;The process for removing directories is the same as files, except for one difference. Git views them as a big deal and makes you confirm you want to delete them.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Let’s go back to our repo on GitHub:&lt;br/&gt;
+&lt;img src=&quot;../img/repo4.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Let’s delete that “someFolder” directory but let’s see what’s inside of it first.
+As we can see, “someFolder” contains a file called “somePage.html.” This is important because if you want Git to delete directories at the command line level with &lt;code&gt;rm&lt;/code&gt;, they need to contain content…I’ll admit that I’m not sure why this is.&lt;br/&gt;
+&lt;img src=&quot;../img/repo5.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;So to delete “someFolder” from our local repo, we need to “remove it, but forcibly and recursively (i.e., also get rid of everything inside of it).” In the UNIX world, that means we need type &lt;code&gt;git rm -rf someFolder&lt;/code&gt; into Terminal and hit Enter. Terminal send us message that this is what happened, &lt;em&gt;directly&lt;/em&gt; referencing the file inside of &lt;code&gt;someFolder&lt;/code&gt;.&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot14.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now comes the commit…type &lt;code&gt;git commit -m 'delete someFolder'&lt;/code&gt; and hit Enter.&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot15.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now we do a &lt;code&gt;git push&lt;/code&gt;, hit Enter and check our repo. The “someFolder” directory is now gone.&lt;br/&gt;
+    &lt;img src=&quot;../img/repo6.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;What to do if you’ve already deleted files from your machine and pushed things to GitHub&lt;/h2&gt;
+
+&lt;p&gt;This is a newbie mistake that I’ve made more times than I can remember. But it’s an easy fix.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Let’s see what the “status” of our repo is by typing &lt;code&gt;git status&lt;/code&gt; into Terminal and hitting Enter. Since we’ve pushed everything, we get a message that there’s nothing to commit for an upload to GitHub.&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot17.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Now let’s drag “page2.html” to the Trash, then do another &lt;code&gt;git status&lt;/code&gt; check. We didn’t send out any Git commands, but Git is tracking the file anyway (side note: if you didn’t do &lt;a href=&quot;#gitignore&quot;&gt;the .gitignore part previously mentioned&lt;/a&gt;, you may see a reference to “.DS_Store” now).&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot18.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;We need to “tell” Git that this file needs to be removed, and can do so by sending out a “remove” command again. Type in &lt;code&gt;git rm page2.html&lt;/code&gt;, then hit Enter. We get another message that page2.html has been removed like we did in a previous example.&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot19.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;And when we do &lt;code&gt;git status&lt;/code&gt; again, we’re told that the file is ready to be committed.&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot20.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;So let’s commit it: type in &lt;code&gt;git commit -m 'delete page2.html'&lt;/code&gt; and hit Enter.&lt;br/&gt;
+    &lt;img src=&quot;../img/terminalShot21.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Finally, we do a &lt;code&gt;git push&lt;/code&gt;, hit Enter and check our repo. “page2.html” is gone.&lt;br/&gt;
+    &lt;img src=&quot;../img/repo7.png&quot; alt=&quot;Remove files from GitHub tutorial&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+
+&lt;p&gt;This tutorial focused on how Git handles file and directory deletion but there’s more to Git than that. From a beginner’s level, here are some great learning resources:&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;The Git Site »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://try.GitHub.com/&quot;&gt;Try Git »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by &lt;a href=&quot;http://codeschool.com/&quot;&gt;Code School&lt;/a&gt;, Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://GitHub.com/training/&quot;&gt;GitHub Training »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;One of the reasons that GitHub has become popular is the same reason that &lt;a href=&quot;http://css-tricks.com/&quot;&gt;Chris Coyier&lt;/a&gt; and &lt;a href=&quot;http://paulirish.com/&quot;&gt;Paul Irish&lt;/a&gt; have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their &lt;a href=&quot;https://GitHub.com/training/free&quot;&gt;Free Resources&lt;/a&gt; section as well as their &lt;a href=&quot;https://GitHub.com/training/online&quot;&gt;Online Training&lt;/a&gt; and &lt;a href=&quot;https://GitHub.com/training/events&quot;&gt;Events&lt;/a&gt; sections. For the last two, some things are free and some are not, but I think they’re reasonably priced.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://gist.GitHub.com/2043530#file_gistfile1.sh&quot;&gt;Common Git Commands »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;UK-based developer &lt;a href=&quot;http://www.kerrygallagher.co.uk/&quot;&gt;Kerry Gallagher&lt;/a&gt; put together a really useful list of Git commands. Print it out and tape it to the wall by your computer.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://nfarina.com/post/9868516270/git-is-simpler&quot;&gt;“Git Is Simpler Than You Think” by Nick Farina »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;If you &lt;em&gt;really&lt;/em&gt; want to know how Git works, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/&quot;&gt;“What is Version Control: Centralized vs. DVCS” by Giancarlo Lionetti »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;I &lt;em&gt;really&lt;/em&gt; want you to understand that Git is a distributed version control system as well as understand what that means. It’s the part that makes sharing code via GitHub a snap and, let’s be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://git-scm.com/book&quot;&gt;&lt;em&gt;Pro Git&lt;/em&gt; by Scott Chacon »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;The&lt;/em&gt; Git Book, and it’s free! It’s a little dense and doesn’t flow as easily as these other resources…I’ll admit that I haven’t read all of it. But I have read enough of it to know that it’s an important Git resource.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you’ve come to realize that the title of Farina’s post is correct: Git &lt;em&gt;is&lt;/em&gt; simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you’ll discover how bloody useful Git can be, along with a ton of other things.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 12 Sep 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/remove-files-from-github/</link>
+				<guid isPermaLink="true">http://kaidez.com/remove-files-from-github/</guid>
+			</item>
+		
+			<item>
+				<title>REVIEW: Eloquent JavaScript</title>
+				<description>&lt;p&gt;&lt;img src=&quot;../img/ejs.png&quot; class=&quot;post-pic&quot; alt=&quot;Eloquent JavaScript book cover&quot; width=&quot;250&quot; height=&quot;330&quot;&gt;
+&lt;em&gt;Disclaimer: the author of this book has graciously &lt;a href=&quot;http://eloquentjavascript.net/&quot;&gt;given it away for free online&lt;/a&gt; but please feel free to support his efforts by buying it on Amazon either in &lt;a href=&quot;http://amzn.to/OzcPdN&quot;&gt;print format&lt;/a&gt; or &lt;a href=&quot;http://amzn.to/NjFshD&quot;&gt;Kindle format&lt;/a&gt;. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’ve ever played any level of organized basketball, you know that you don’t start off learning slam dunks and behind-the-back dimes. You start by learning zone defense, the role of the two-guard, how to perfect your jump shot form and other aspects of team ball.&lt;/p&gt;
+
+&lt;p&gt;Simply put, you must master the fundamentals before you become a star. JavaScript is no different and Marijn Haverbeke’s &lt;em&gt;Eloquent JavaScript&lt;/em&gt; is one of the best fundamental JS books I’ve ever read.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Eloquent&lt;/em&gt; takes all the basic JavaScript building blocks, variables, functions, arrays, etc., and goes into great detail on their role in JS. By doing things like pointing out that objects and arrays are how JS manages data and clarifying the role of variables (“They do not &lt;em&gt;contain&lt;/em&gt; values, they &lt;em&gt;grasp&lt;/em&gt; them”), the book does great job highlighting that the basics are more than just, well, basic&lt;/p&gt;
+
+&lt;p&gt;The book also discusses other common JavaScript concepts such as regular expressions and event handling. But it’s key to mention that it covers things that have increased in popularity over the years, dependency management, prototypal inheritance and proper namespacing in particular. The fact that it covers these three latter things highlight an important point:&lt;/p&gt;
+
+&lt;p&gt;Because JavaScript is a hot programming language right, and a hot skillset in the job market right now, lots of books on the subject have come out…while haven’t read all of them, I’ve read quite a few of them. Some are good, some are OK, some flat-out suck. But most focus on making JavaScript work the way that we’ve always used it: form handling cookie creation, etc.&lt;/p&gt;
+
+&lt;p&gt;A focus on these concepts is fine if all we’re using JavaScript for is to create &lt;em&gt;websites&lt;/em&gt;, but we’re not. Instead, we’re using the language to create &lt;em&gt;web applications&lt;/em&gt;, web sites with a high level of complex functionality that allow us to actually &lt;em&gt;do&lt;/em&gt; things. &lt;em&gt;Eloquent JavaScript&lt;/em&gt; is one of the few books that focuses on educating the reader on how to create applications and on a beginner’s level. The book’s subtitle is “A Modern Introduction to Programming” and that’s exactly what it is.&lt;/p&gt;
+
+&lt;p&gt;I had no problem buying the print version of the book in support of the author and have used it heavily. But it must be pointed out that the online version is updated on somewhat regular basis and does contain content not in the book. Particularly, the online version has a chapter called “&lt;a href=&quot;http://eloquentjavascript.net/chapter7.html&quot;&gt;Searching&lt;/a&gt;” which does a great job of highlighting JavaScript’s algorithmic nature. Other content unique to the online version are two appendices that are short but useful. And I do have to point out that in a few instances, not all but a few, the code samples in the book could be a little clearer: the author knew that and clarified them in the online version.&lt;/p&gt;
+
+&lt;p&gt;Speaking of the code samples, they’re also good and will definitely help you. Some samples send out a &lt;code&gt;print&lt;/code&gt; command though, and, depending on your browser, will actually try to print something out on your printer. My suggestion is to substitute &lt;code&gt;print&lt;/code&gt; for &lt;code&gt;console.log()&lt;/code&gt; for best results: I did so using the consoles bundled in both Chrome Developer Tools and Opera Dragonfly and had no problems. The online version of &lt;em&gt;Eloquent&lt;/em&gt; does come bundled with a custom console application where you can run code, but I found it a little buggy.&lt;/p&gt;
+
+&lt;p&gt;Don’t let these little things with the code samples discourage you. &lt;em&gt;Eloquent JavaScript&lt;/em&gt; is a unique book when compared to all the JS books in the market. It will prepare you for complex JavaScript app development much better than many other books.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 10 Sep 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/eloquent-javascript-review/</link>
+				<guid isPermaLink="true">http://kaidez.com/eloquent-javascript-review/</guid>
+			</item>
+		
+			<item>
+				<title>SCREENCAST TUTORIAL: Using JavaScript Off-DOM</title>
+				<description>&lt;p&gt;Using JavaScript off-DOM is an efficient way to manipulate web page content. By “work off-DOM,” I mean “work inside of the browser memory instead of on a web page.”&lt;/p&gt;
+
+&lt;p&gt;A simple web search will display lots of good reasons for doing off-DOM JS. In my case, I was working on a personal project where it looked like I would need to do it so I could set my page up in a specific way. I may not need to do this anymore but still gained knowledge on doing off-DOM JavaScript and want to share what I learned.&lt;/p&gt;
+
+&lt;p&gt;The spark for my learning this stuff was Paul Irish’s excellent screencast, &lt;a href=&quot;http://www.youtube.com/watch?v=q_O9_C2ZjoA&quot;&gt;“HTML5, CSS3, and DOM Performance”&lt;/a&gt;, recorded a little over a year ago from this post. I also read a ton of articles and blog posts on the subject and, of course, wrote some code to test things out. I share all this stuff in this three-part screencast tutorial.&lt;/p&gt;
+
+&lt;p&gt;I do the following in this screencast:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create a document fragment off-DOM with &lt;code&gt;createDocumentFragment()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;create a bunch of web page elements off-DOM with &lt;code&gt;createElement()&lt;/code&gt; and &lt;code&gt;createTextNode()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;arrange them the way I want to arrange them with &lt;code&gt;appendChild()&lt;/code&gt;, &lt;code&gt;innerHTML&lt;/code&gt; and the jQuery &lt;code&gt;.attr()&lt;/code&gt; method.&lt;/li&gt;
+&lt;li&gt;load them into a document fragment with &lt;code&gt;appendChild()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;load the document fragment onto the web page with, yet again, &lt;code&gt;appendChild()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;duplicate the content that was just loaded on the page with &lt;code&gt;cloneNode()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;adjust the duplicate content with the JavaScript stuff just discussed as well as &lt;code&gt;childNodes[]&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;load the duplicate content onto a web page with, one more time, &lt;code&gt;appendChild()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;While certain aspects of this tutorial are for the beginner, I am assuming that you understand JavaScript variables and arrays…arrays especially. Please read up on them over at MDN if you don’t…variables link &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var&quot;&gt;here&lt;/a&gt;, arrays link &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I used a slide deck in this screencast, which has a boatload of useful links at the end…view it &lt;a href=&quot;http://slides.kaidez.com/work-off-dom/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And, of course, the tutorial’s final code on GitHub is &lt;a href=&quot;https://github.com/kaidez/work-off-dom-tutorial&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;ENJOY!!!&lt;/p&gt;
+
+&lt;h3&gt;Part 1&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/WhQbz1Zn72Y&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;h3&gt;Part 2&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/dGC-YAxD4pw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;h3&gt;Part 3&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/MUvnKrXHwwk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</description>
+				<pubDate>Tue, 04 Sep 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/javascript-off-dom/</link>
+				<guid isPermaLink="true">http://kaidez.com/javascript-off-dom/</guid>
+			</item>
+		
+			<item>
+				<title>The kaidez JavaScript Conference Tour: Leg 1: Fluent 2012/San Francisco</title>
+				<description>&lt;p&gt;I was hoping to attend at least &lt;em&gt;one&lt;/em&gt; JavaScript conference this year…luckily, I’m going to &lt;em&gt;two&lt;/em&gt;! First up is O’Reilly’s three-day &lt;a href=&quot;http://fluentconf.com/fluent2012&quot;&gt;Fluent Conference in San Francisco&lt;/a&gt; (with June’s &lt;a href=&quot;http://2012.texasjavascript.com/&quot;&gt;TXJS 2012&lt;/a&gt; in Austin being the second one). Conference dates are May 29th through the 31st: premium training sessions on the first day, keynotes and public sessions during the other two days.&lt;/p&gt;
+
+&lt;h2&gt;My Goals&lt;/h2&gt;
+
+&lt;p&gt;Like I said in &lt;a href=&quot;http://kaidez.com/learn-javascript-before-jquery/&quot;&gt;my last post&lt;/a&gt;, I’ve realized that I understand JavaScript a hell of a lot better than I give myself credit for. While I’m not a guru, I’m well past trying to figure out how it works. The time has come for me to understand the best case scenarios of “when “and “why” to use it, along with some top-notch implementation techniques.&lt;/p&gt;
+
+&lt;p&gt;Fluent’s first day training sessions and subsequent public ones should help me in meeting these goals…&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/full/public&quot;&gt;the full list of courses and sessions is here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Premium Sessions I’ll Be Taking&lt;/h2&gt;
+
+&lt;p&gt;The premium training day offers a morning and an afternoon block of sessions, allowing attendees to pick one from each block.&lt;/p&gt;
+
+&lt;p&gt;Here’s &lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/grid/public/2012-05-29&quot;&gt;the full list of premium training sessions&lt;/a&gt;: I’ll be attending “&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24654&quot;&gt;Breaking HTML5 limits on mobile JavaScript&lt;/a&gt;” with Maximiliano Firtman in the morning and “&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24856&quot;&gt;Writing robust Node.js applications&lt;/a&gt;” with Tom Hughes-Croucher in the afternoon.&lt;/p&gt;
+
+&lt;p&gt;I’m a big fan of Maximiliano (AKA Max). He’s been developing for and writing about the mobile web well before the iPhone pushed it to critical mass so he knows his stuff. Plus, Max curates the excellent mobile web reference, &lt;a href=&quot;http://mobilehtml5.org/&quot;&gt;mobilehtml5.org&lt;/a&gt;…should be a good session.&lt;/p&gt;
+
+&lt;p&gt;As for the Node course, I also mentioned in my last post that Node is starting to creep into the day job. I’m taking this session to better prepare myself in case I’m asked to support it.&lt;/p&gt;
+
+&lt;h2&gt;Free Sessions &amp;amp; Keynotes&lt;/h2&gt;
+
+&lt;p&gt;Keynotes are short and will be coming from some of the big names in web development: &lt;a href=&quot;http://brendaneich.com/&quot;&gt;Brendan Eich&lt;/a&gt;, &lt;a href=&quot;http://lea.verou.me/&quot;&gt;Lea Verou&lt;/a&gt;, &lt;a href=&quot;http://paulirish.com/&quot;&gt;Paul Irish&lt;/a&gt;, &lt;a href=&quot;http://stevesouders.com/&quot;&gt;Steve Souders&lt;/a&gt; and many others.&lt;/p&gt;
+
+&lt;p&gt;Here are the sessions I’m plan on attend, all of which are subject to change:&lt;/p&gt;
+
+&lt;h3&gt;Wednesday Sessions&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24881&quot;&gt;&lt;em&gt;Q&amp;amp;A with Brendan Eich&lt;/em&gt; »&lt;/a&gt;&lt;br/&gt;
+He invented JavaScript which created an environment inside which &lt;em&gt;all&lt;/em&gt; web developers can prosper and has earned respect as an elder in the developer community. I’m not thrilled about a specific political contribution that Eich made a few years back, but I have the chance to hear JavaScript’s inventor actually talk about JavaScript…&lt;em&gt;OK?!?!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24926&quot;&gt;&lt;em&gt;High Performance Snippets&lt;/em&gt; with Steve Souders »&lt;/a&gt;&lt;br/&gt;
+Souders is an expert in the field of creating efficient, high-performance code. HTML5 Boilerplate, its build script, YSlow and PageSpeed were created using many of the techniques he writes about on his blog and in his books.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24713&quot;&gt;&lt;em&gt;Jasmine: An Introduction&lt;/em&gt; with Davis W. Frank »&lt;/a&gt;&lt;br/&gt;
+As implied earlier, I know how to write JavaScript, I just have to embed the best practices in my brain. Reviewing Jasmine, a behavior-driven development (BDD) framework for JavaScript testing is a good start.&lt;/p&gt;
+
+&lt;p&gt;There’s a SLIGHT chance that I’ll pass on this session and go to &lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24889&quot;&gt;the Bootstrap one&lt;/a&gt;…will probably be a last minute decision.&lt;/p&gt;
+
+&lt;p&gt;These next two sessions are also happening at the same time, meaning I’ll have to make a choice…&lt;/p&gt;
+
+&lt;p&gt;Choice 1:&lt;br/&gt;
+&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24109&quot;&gt;&lt;em&gt;What Modernizr Teaches Us About Design &amp;amp; Development&lt;/em&gt; with Faruk Ateş »&lt;/a&gt;&lt;br/&gt;
+Modernizr is a kick-ass feature detection library that appears in practically every web dev stack nowadays. The guy that created it talks about it.&lt;/p&gt;
+
+&lt;p&gt;Choice 2:&lt;br/&gt;
+&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24929&quot;&gt;&lt;em&gt;/Reg(exp){2}lained/: Demystifying Regular Expressions&lt;/em&gt; with Lea Verou »&lt;/a&gt;&lt;br/&gt;
+It’s an opportunity to hear a well-known, well-respected web developer talk about something that many web developers ignore.&lt;/p&gt;
+
+&lt;p&gt;No idea what to do here…&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24440&quot;&gt;&lt;em&gt;Maintainable JavaScript&lt;/em&gt; with Nicholas Zakas »&lt;/a&gt;&lt;br/&gt;
+I want to write JavaScript at work, knowing I can document it well enough so that others can fix it while off on vacation and drunk on a beach. Factor in that I’m a Zakas fan and I’m definitely going to this session.&lt;/p&gt;
+
+&lt;h3&gt;Thursday Sessions&lt;/h3&gt;
+
+&lt;p&gt;Here’s another case of two great sessions happening at the same time…&lt;/p&gt;
+
+&lt;p&gt;Choice 1:&lt;br/&gt;
+&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24877&quot;&gt;&lt;em&gt;SpineJS – Moving State to the Client&lt;/em&gt; with Alex MacCaw »&lt;/a&gt;&lt;br/&gt;
+I’ve peeked at JavaScript MVC frameworks like Spine and Backbone for a while but haven’t really used them. I may check this session out.&lt;/p&gt;
+
+&lt;p&gt;Choice 2:&lt;br/&gt;
+&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24686&quot;&gt;&lt;em&gt;Sharing Code Between Client and Server with Node.js&lt;/em&gt; with Chris Powers »&lt;/a&gt;&lt;br/&gt;
+Again, I have the Node bug so this may be the session for me.&lt;/p&gt;
+
+&lt;p&gt;Since I’m already doing the Node premium session and I’ll be attending a Node session after this one, I’m leaning towards the Spine session here…not sure yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24643&quot;&gt;&lt;em&gt;How to Deploy a Node.js App to Production (And Not Get Fired)&lt;/em&gt; with Sean Hess »&lt;/a&gt;&lt;br/&gt;
+All the Node I’ve done up to this point has been on my laptop running off of &lt;em&gt;localhost, &lt;/em&gt;not a production site. Hoping to get a better understanding of production-based Node with this session.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24474&quot;&gt;&lt;em&gt;Hybrid Web-Mobile Applications with PhoneGap and jQuery Mobile&lt;/em&gt; with Ryan Stewart »&lt;/a&gt;&lt;br/&gt;
+I don’t see myself using PhoneGap to create native mobile apps…not that I dislike PhoneGap, I’m just not a native app guy. But I am curious about how it works with jQuery Mobile. I think this session will be a “cool kids” one, which is absolutely fine with me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24600&quot;&gt;&lt;em&gt;JS HTML5 Video Canvas = WOAH!&lt;/em&gt; with Wes Bos »&lt;/a&gt;&lt;br/&gt;
+I was really pumped about HTML5 Video at one point, but severely lost interested in it. I have seen some cool demos on how it works with Canvas so I’ll check it out.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://fluentconf.com/fluent2012/public/schedule/detail/24706&quot;&gt;&lt;em&gt;Ember.js: An MVC framework for ambitious web applications&lt;/em&gt; with Bruce Williams »&lt;/a&gt;&lt;br/&gt;
+I’ve heard nothing but good things about Ember so I’ll be at this one.&lt;/p&gt;
+
+&lt;h3&gt;Follow Me While I’m There!!!&lt;/h3&gt;
+
+&lt;p&gt;As I did with &lt;a href=&quot;http://kaidez.com/at-mix11/&quot;&gt;MIX11&lt;/a&gt;, I probably won’t live blog during Fluent but will be &lt;a href=&quot;https://twitter.com/kaidez&quot;&gt;tweeting it&lt;/a&gt; against the &lt;a href=&quot;https://twitter.com/#!/search/#FluentConf&quot;&gt;#FluentConf hash-tag&lt;/a&gt;. Follow me there and let me know if you’re going!&lt;/p&gt;
+</description>
+				<pubDate>Fri, 25 May 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/fluent-2012/</link>
+				<guid isPermaLink="true">http://kaidez.com/fluent-2012/</guid>
+			</item>
+		
+			<item>
+				<title>5 Reasons Why You Need To Learn To Use JavaScript Before jQuery</title>
+				<description>&lt;p&gt;A project came up at work involving &lt;a href=&quot;http://nodejs.org/&quot;&gt;Node&lt;/a&gt;, the software system that allows JavaScript to run server-side instead of client-side. I wasn’t involved in the project but wanted to play with the code once it landed in production and wanted to be ready if ever asked to support it. So I set Node up on my Mac laptop, read parts of its documentation and found some beginning Node learning resources online.&lt;/p&gt;
+
+&lt;p&gt;Server-side code is definitely not my thing so Node has always made me nervous. I can talk about how it works in the abstract, but actually &lt;em&gt;using&lt;/em&gt; it has intimidated me. I delayed learning Node until the last minute.&lt;/p&gt;
+
+&lt;p&gt;But as I started playing with Node, something funny happened: understanding it turned out to be easy!&lt;/p&gt;
+
+&lt;p&gt;I’m not saying that it was so easy that I’m now a Node guru. I had to grasp Node’s event loop, its handling of server modules and gain a basic understanding of the how servers work in general. And I still have more to learn.&lt;/p&gt;
+
+&lt;p&gt;But in terms of the JavaScript needed to run Node, I picked it up in about two days. Knowing some basic JS things, that functions are first class objects, that these functions can be passed, that callbacks are powerful; knowing all that made my Node learning process much easier than expected.&lt;/p&gt;
+
+&lt;p&gt;I suppose the point is, I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions.&lt;/p&gt;
+
+&lt;p&gt;None of this would have happened had I not made a conscious decision a year-and-a-half ago to focus on getting better at JavaScript instead of mastering jQuery. I’m may not be a JavaScript ninja but I’m comfortable putting it on my resume, something I was unsure about 18 months ago.&lt;/p&gt;
+
+&lt;p&gt;I need to be clear about something before I go on: I AM NOT BAD-MOUTHING JQUERY!!!! jQuery is awesome! I think you should use it and don’t see myself doing any future web projects without it.&lt;/p&gt;
+
+&lt;p&gt;jQuery effectively deals with a lot of cross-browser JavaScript issues, making overall web development an easier process. Its power as a DOM selection engine is so strong, that it doesn’t make sense to &lt;em&gt;not&lt;/em&gt; use it. Furthermore, jQuery lets developers write quality JavaScript faster, so a case can be made that a developer using jQuery is, at times, more productive than one that doesn’t. Also, key JavaScript things like adding data to objects and function parameters are what’s needed to make jQuery work, meaning you can pick up some key JS skills by writing JQ. And a web designer with no coding experience whose main job is to work in PhotoShop eight hours a day shouldn’t be faulted for using jQuery to whip out a quick effect. At least I don’t think so.&lt;/p&gt;
+
+&lt;p&gt;While learning jQuery has lots of positives, the focus of your learning should mostly be on JavaScript: doing so makes you a better developer.&lt;/p&gt;
+
+&lt;p&gt;Here’s the list:&lt;/p&gt;
+
+&lt;h2&gt;1. Because understanding JavaScript makes it easier to understand all the JavaScript-related stuff&lt;/h2&gt;
+
+&lt;p&gt;Already implied in this post but it bears a deeper examination. Let’s look at this list:&lt;/p&gt;
+
+&lt;h3&gt;What You Know After Learning &lt;em&gt;Just&lt;/em&gt; jQuery&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jqueryui.com/&quot;&gt;jQuery UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jquerymobile.com/&quot;&gt;jQuery Mobile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;And in terms of jQuery UI and jQuery Mobile, I’m being nice here. While you can apply raw JavaScript and jQuery to your UI and Mobile projects, setting UI and Mobile up is mostly done by adding attributes, IDs and classes to HTML elements. Things are made easy, an excellent goal that the jQuery team has achieved above and beyond all expectations.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s look at this list:&lt;/p&gt;
+
+&lt;h3&gt;What You Know After Learning JavaScript &lt;em&gt;Before&lt;/em&gt; jQuery&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jqueryui.com/&quot;&gt;jQuery UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jquerymobile.com/&quot;&gt;jQuery Mobile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.jquery.com/Plugins/Authoring&quot;&gt;How to create jQuery plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://howtonode.org/how-to-module&quot;&gt;How to create Node.js modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://modernizr.com/&quot;&gt;Modernizr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://yepnopejs.com/&quot;&gt;yepnope.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ecma-international.org/publications/standards/Ecma-262.htm&quot;&gt;ECMAscript 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;dojo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://script.aculo.us/&quot;&gt;script.aculo.us&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.prototypejs.org/&quot;&gt;Prototype&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mootools.net/&quot;&gt;MooTools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://spinejs.com/&quot;&gt;Spine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://documentcloud.github.com/backbone/&quot;&gt;Backbone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.json.org/&quot;&gt;JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsonselect.org/#overview&quot;&gt;JSONselect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://phonegap.com/&quot;&gt;PhoneGap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.appcelerator.com/platform/titanium-sdk&quot;&gt;Titanium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en/HTML/Canvas&quot;&gt;HTML5 Canvas API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en/Using_geolocation&quot;&gt;Geolocation API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en/Using_web_workers&quot;&gt;Web Workers API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://coffeescript.org/&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/janl/mustache.js&quot;&gt;mustache.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://handlebarsjs.com/&quot;&gt;Handlebars.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jquery/qunit&quot;&gt;QUnit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pivotal.github.com/jasmine/&quot;&gt;Jasmine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://fitzgen.github.com/github-api/&quot;&gt;github.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;…you get the idea.&lt;/p&gt;
+
+&lt;p&gt;While some of these things are so well-documented that a six-year old can use them, most of them are documented in a way that assumes the reader has pre-existing JavaScript knowledge. Many of these things assume you understand that a main object is loaded into the global namespace (like the &lt;code&gt;jQuery&lt;/code&gt; and &lt;code&gt;Modernizr&lt;/code&gt; objects) and that these objects have methods (like jQuery’s &lt;code&gt;.ajax()&lt;/code&gt; method and Modernizr’s &lt;code&gt;addThis()&lt;/code&gt; method). Also, knowing how to work with closures and callbacks is key to using many of these scripts and frameworks to their fullest.&lt;/p&gt;
+
+&lt;h2&gt;2. Because understanding JavaScript makes it easier for you to learn object-oriented languages&lt;/h2&gt;
+
+&lt;p&gt;JavaScript is not a full-on object-oriented language, it’s a &lt;a href=&quot;https://developer.mozilla.org/en/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages&quot;&gt;prototype-based language&lt;/a&gt; that can be made to act like an object-oriented language. However, what you learn in JavaScript can cascade down to other languages. Case in point: PHP associative arrays are easy to pick up once you know how JavaScript’s module pattern works. And JavaScript closures introduce the idea of private, public and protected variables…major building blocks of C#, C , Java and ActionScript.&lt;/p&gt;
+
+&lt;h2&gt;3. Because there are many cases when using JavaScript is more efficient&lt;/h2&gt;
+
+&lt;p&gt;Remember: your jQuery code doesn’t hit the page until it accesses the jQuery object that’s loaded into the browser. Accessing the object does happen fast but it’s faster if you write JavaScript that hits the browser directly.&lt;/p&gt;
+
+&lt;p&gt;The most obvious example here is adding, removing and manipulating DOM elements with things like &lt;code&gt;cloneNode&lt;/code&gt; and &lt;a href=&quot;https://developer.mozilla.org/en/DOM/document.createDocumentFragment&quot;&gt;document fragments&lt;/a&gt;. jQuery can help with these things but browsers can do them natively and more efficiently.&lt;/p&gt;
+
+&lt;h2&gt;4. Because potential employers care more about your JavaScript knowledge than your jQuery knowledge&lt;/h2&gt;
+
+&lt;p&gt;Why? Well for starters, lots of customer projects are created using the stuff in the number 1′s second list above, allowing web shops to charge the customers at a premium cost. And a good JavaScripter can figure out many things on that list over time, making them a very valuable employee. Second, employers want employees that can figure out coding problems on their own. They want an employee that can fix a Spine error one minute and a JSON one the next.&lt;/p&gt;
+
+&lt;h2&gt;5. Because JavaScript is so popular right now, that many excellent, &lt;em&gt;free&lt;/em&gt; beginning learning resources are now readily available&lt;/h2&gt;
+
+&lt;p&gt;I’ll toot my own horn here and mention my last post on &lt;a href=&quot;http://kaidez.com/useful-javascript-books/&quot;&gt;great JavaScript books for beginners&lt;/a&gt; but you have to pay for those. Here are some great free ones, two of which are jQuery-related:&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://www.codecademy.com/&quot;&gt;Codecademy »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications. Most importantly, &lt;a href=&quot;https://developer.mozilla.org/en-US/learn/javascript&quot;&gt;Mozilla Developer Network lists Codecademy as an excellent introductory level learning resource&lt;/a&gt;, which is a ringing endorsement.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://jqfundamentals.com/&quot;&gt;jQuery Fundamentals »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Written by &lt;a href=&quot;http://rmurphey.com/&quot;&gt;Rebecca Murphey&lt;/a&gt; who is, hands down, my favorite web developer right now. &lt;em&gt;jQuery Fundamentals&lt;/em&gt; teaches you jQuery the right way: by teaching you the JavaScript basics and best practices first.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=i_qE1iAmjFg&quot;&gt;10 Things I Learned from the jQuery Source »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Paul Irish walks you through the core JavaScript code behind the jQuery library, highlighting things like anonymous functions, robust module patterns and why they were written the way they were written.&lt;/p&gt;
+
+&lt;p&gt;Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! I know what it looks like.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 15 May 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/learn-javascript-before-jquery/</link>
+				<guid isPermaLink="true">http://kaidez.com/learn-javascript-before-jquery/</guid>
+			</item>
+		
+			<item>
+				<title>5 Useful JavaScript Books</title>
+				<description>&lt;p&gt;&lt;em&gt;Disclaimer: because of my affiliate relationships, you will make me money if you click on any of the book links below, then buy a book.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The good news is, there are a lot of JavaScript learning resources online. The bad news is, there are a lot of JavaScript learning resources online. Filtering the bad ones out from the good ones is hard.&lt;/p&gt;
+
+&lt;p&gt;This is why whenever I try to learn a new computer skill, I’ll buy a book about it first. Books go through rigid editing processes like fact checking and proofreading, all helping to filter out the bad content.&lt;/p&gt;
+
+&lt;p&gt;I have a &lt;a href=&quot;http://www.lynda.com/home/otl.aspx?utm_medium=affiliate&amp;amp;utm_source=ldc_affiliate&amp;amp;utm_content=329&amp;amp;utm_campaign=CD2146&amp;amp;bid=329&amp;amp;aid=CD2146&amp;amp;opt=&quot;&gt;lynda.com&lt;/a&gt; account so lately, I’ve used that as learning resource more than books. But JavaScript is the exception: a lot of great books have come out in the past few years, many of them “thinking books” that seemingly use theory when talking about JS.&lt;/p&gt;
+
+&lt;p&gt;Some books are better than others. I’ve read &lt;em&gt;a lot&lt;/em&gt; of JavaScript books in the year before this article’s publish date. So as far as &lt;em&gt;those&lt;/em&gt; books go, I’ve created a list of JS books which, I think, helps with the filtering process and lists only the best ones…so far. Here they are:&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321772970/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0321772970&quot;&gt;1. &lt;em&gt;JavaScript: Visual QuickStart Guide (8th Edition)&lt;/em&gt; by Dori Smith &amp;amp; Tom Negrino&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0321772970&quot; alt=&quot;&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;[![][5]][5]&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0321772970&quot; alt=&quot;&quot; /&gt;The best book for the JavaScript newbie. Every new edition migrates with the JavaScript trends: from image rollovers and cookie baking to DOM scripting to AJAX to object literals. The 8th addition keeps the tradition.&lt;/p&gt;
+
+&lt;p&gt;While the book does cover the trends, it also provides detailed step-by-step instructions on things that the JavaScript beginner needs to know: what a variable is, how to create an array, why are external JS files the right way to go, and so on. And it moves on from the basics to tutorials on more advanced topics such as reading data from a web server with AJAX and a few jQuery techniques. It ends with a great list of other learning resources in its “Where to Learn More” appendix.&lt;/p&gt;
+
+&lt;p&gt;If you know &lt;em&gt;absolutely nothing&lt;/em&gt; about JavaScript and you pick this book up, I suggest that you treat it like a textbook. It covers JavaScript in the broadest sense, explaining the “hows” and “whys” of the code samples.&lt;/p&gt;
+
+&lt;p&gt;Personally, I think &lt;em&gt;Visual QuickStart Guide&lt;/em&gt; should spend a bit more time covering the things that make JavaScript act more like an object-oriented programming language. One of its tutorials does mentions JSON, but not in great detail. Its object chapter does cover advance DOM manipulation techniques like &lt;code&gt;cloneNode()&lt;/code&gt;, but aside from the object literal, there no mention of design patterns.&lt;/p&gt;
+
+&lt;p&gt;A beginner’s JS book doesn’t need to cover every single thing about objects, but should leave the reader with a basic understanding of JavaScript’s OOP potential. The book doesn’t fail at this, but doesn’t exactly hit a home run here.&lt;/p&gt;
+
+&lt;p&gt;Regardless of its limited coverage of JavaScript’s OOP possibilities, &lt;em&gt;Visual QuickStart Guide&lt;/em&gt; is still the first book I recommend to someone who wants to learn JavaScript, but knows absolutely nothing about it.&lt;/p&gt;
+
+&lt;h2&gt;[2. &lt;em&gt;Object-Oriented JavaScript&lt;/em&gt; by Stoyan Stefanov][5]![][6]&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/41BIxA3nsNL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg&quot; alt=&quot;Object-Oriented JavaScript by Stoyan Stefanov&quot; class=&quot;post-pic &quot;&gt;I’ll get straight to the point: this is an &lt;em&gt;excellent&lt;/em&gt; book!&lt;/p&gt;
+
+&lt;p&gt;Embellishing a bit more, Yahoo developer Stefanov does an awesome job of teaching the reader how to treat JavaScript as a full-on object-oriented language. He also does an awesome job of explaining the “hows” and “whys” job of the code exercises.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;OOJ&lt;/em&gt; does cover JavaScript basics like variables and arrays, but not as in-depth as &lt;em&gt;Visual QuickStart Guide&lt;/em&gt;. And it doesn’t matter because every topic he discusses, inheritance, closures, prototypes, getters, setters-all of it is useful in today’s JavaScript environment and are discussed in-depth.&lt;/p&gt;
+
+&lt;p&gt;A few things: &lt;em&gt;OOJ&lt;/em&gt; was published by Packt Publishing who is notorious for releasing books with grammatical and spelling errors-this book is no exception. If you buy it, go to &lt;a href=&quot;http://www.packtpub.com/support&quot;&gt;Packt’s Support page&lt;/a&gt;, click on the “Title” drop-down menu and find the book title: you’ll see the errors.&lt;/p&gt;
+
+&lt;p&gt;Also, &lt;a href=&quot;http://www.phpied.com/publishing-5-books-this-year/&quot;&gt;Stefanov is working on the 2nd Edition of this book.&lt;/a&gt; He’ll be tackling ECMAScript5 and will have a new chapter on JS testing and documentation.&lt;/p&gt;
+
+&lt;p&gt;Despite the spelling errors and imminent updated version, any beginning developer with a little-better-than basic understanding of JS &lt;em&gt;has&lt;/em&gt; to read the first edition of &lt;em&gt;Object-Oriented JavaScript&lt;/em&gt;. That’s it…no more, no less.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0596806752&quot;&gt;3. &lt;em&gt;JavaScript Patterns&lt;/em&gt; by Stoyan Stefanov&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0596806752&quot; alt=&quot;&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0596517742&quot;&gt;&lt;img src=&quot;http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0596517742&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0596806752&quot; alt=&quot;&quot; /&gt;Another Stoyan Stefanov book, this one explains some excellent best practices such as the right way to structure for loops, when to use &lt;code&gt;hasOwnProperty&lt;/code&gt;, and yes, proper JavaScript patterns. Stefanov did apply a few of these best practices in his &lt;em&gt;OOJ&lt;/em&gt; coding samples but in &lt;em&gt;Patterns&lt;/em&gt;, he explains the meaning behind them.&lt;/p&gt;
+
+&lt;p&gt;This book also drives home the importance of keeping the global space as clean as possible. Stefanov’s tips on namespacing patterns, inheritance and encapsulation are must-learns.&lt;/p&gt;
+
+&lt;p&gt;This is not a book for beginners and the author says so in the Preface. Except for the first two chapters, reading this book without frustration requires an intermediate understanding of JavaScript, particularly objects.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0596517742&quot;&gt;4. &lt;em&gt;JavaScript: The Good Parts&lt;/em&gt; by Douglas Crockford&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0596517742&quot; alt=&quot;&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1590597273&quot;&gt;&lt;img src=&quot;http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1590597273&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0596517742&quot; alt=&quot;&quot; /&gt;This article is slightly implying that &lt;em&gt;Object-Oriented JavaScript&lt;/em&gt; is the best JavaScript book, which is subjective to other’s opinions. But no one can deny that &lt;em&gt;JavaScript: The Good Parts&lt;/em&gt; is the most important book.&lt;/p&gt;
+
+&lt;p&gt;Written by Douglas Crockford, the creator of JSON who also works at Yahoo, this book has had tremendous influence on the JavaScript community since it’s 2008 publication. Dig thru the core files of jQuery and Modernizr and you’ll see that they’re chocked full of best practices mentioned in the &lt;em&gt;The Good Parts&lt;/em&gt; or, as many refer to it, “the Crockford Book.”&lt;/p&gt;
+
+&lt;p&gt;Many, many things that you first learn in JavaScript will need to be unlearned after reading &lt;em&gt;The Good Parts&lt;/em&gt;. Iterators, the &lt;code&gt;new&lt;/code&gt; keyword, switch/case statements…be prepared to throw some of these away.&lt;/p&gt;
+
+&lt;p&gt;As with &lt;em&gt;JavaScript Patterns&lt;/em&gt;, the Crockford book is not for beginners…REALLY not for beginners. Those that can’t do anything dynamic with JS outside of making a few alerts will find this book a tough read.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=kaidez-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1590597273&quot;&gt;5. &lt;em&gt;Pro JavaScript Techniques&lt;/em&gt; by John Resig&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.com/e/ir?t=kaidez-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=1590597273&quot; alt=&quot;&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;I’ll be completely upfront here: I’ve read most of this book, but not all of it. Plus, I haven’t implemented a lot of the new stuff I learned from it.&lt;/p&gt;
+
+&lt;p&gt;But this first book by jQuery creator John Resig stands out because it takes key JavaScript concepts, like AJAX and DOM manipulation, and expands on them with step-by-step exercises. It also covers JavaScript testing which is Resig’s most underrated skill.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Techniques&lt;/em&gt; isn’t as difficult a read as &lt;em&gt;JavaScript Patterns&lt;/em&gt; or the Crockford book, but it won’t explain what a variable is like &lt;em&gt;Visual QuickStart Guide&lt;/em&gt; will. But the fact that it offers detailed tutorials on important JS stuff makes it a must-read.&lt;/p&gt;
+
+&lt;h2&gt;A suggestion on how to read these books&lt;/h2&gt;
+
+&lt;p&gt;If you understand variables, arrays, functions, try/catch statements and for loops in JavaScript, you MIGHT want to skip &lt;em&gt;Visual QuickStart Guide&lt;/em&gt; and go straight to &lt;em&gt;Object-Oriented JavaScript&lt;/em&gt;. And as mentioned above, some of the best practices discussed in both &lt;em&gt;JavaScript Patterns&lt;/em&gt; and the Crockford Book are discussed in the &lt;em&gt;OOJ&lt;/em&gt; book, but none of the others.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I suggest that you read &lt;em&gt;Patterns&lt;/em&gt; and &lt;em&gt;The Good Parts&lt;/em&gt; in parallel with the first two books. For example: when you start to read about for loops in &lt;em&gt;Visual QuickStart Guide&lt;/em&gt;, take a few minutes and see what both &lt;em&gt;Patterns&lt;/em&gt; and the Crockford book say about them. This is a pain, but the sooner you learn these best practices, the better.&lt;/p&gt;
+
+&lt;p&gt;After all this, go back and read &lt;em&gt;Patterns&lt;/em&gt; and the Crockford book in full.&lt;/p&gt;
+
+&lt;p&gt;Happy reading!&lt;/p&gt;
+</description>
+				<pubDate>Fri, 30 Mar 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/useful-javascript-books/</link>
+				<guid isPermaLink="true">http://kaidez.com/useful-javascript-books/</guid>
+			</item>
+		
+			<item>
+				<title>TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</title>
+				<description>&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/kaidez/KypGQ/&quot;&gt;VIEW THE DEMO FIRST »&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript doesn’t fit the strict definition of an object-oriented programming language, but it fits well enough so that you can use it to do object-oriented stuff. Closures play a big role here so understanding how they work is important.&lt;/p&gt;
+
+&lt;h2&gt;Encapsulation&lt;/h2&gt;
+
+&lt;p&gt;First, understand a programming concept called &lt;em&gt;encapsulation&lt;/em&gt; and understand that it has two roles:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Encapsulation hides your code from the web browser’s global space until the global space actually needs it, a top-notch JavaScript best practice.&lt;/li&gt;
+&lt;li&gt;It organizes your code quite nicely.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;You encapsulate variables and functions for the most part, and do so by placing them inside another function. Encapsulated variables are called &lt;em&gt;private variables&lt;/em&gt; while encapsulated functions are called &lt;em&gt;methods&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A private variable is not directly visible by the world outside of the encapsulating function. Encapsulated methods, however, act a little differently:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;An encapsulated method that returns something is called &lt;em&gt;public method&lt;/em&gt; because whatever it returns, it returns to the global space. This means that other parts of your code can access it &lt;em&gt;if you tell your code to do so&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;A public method is also a &lt;em&gt;privileged method&lt;/em&gt;. This is because it has “privileged” access to any variables and methods that it’s encapsulated with.&lt;/li&gt;
+&lt;li&gt;An encapsulated method can also be a &lt;em&gt;private method&lt;/em&gt; if it doesn’t return anything that doesn’t return a specific value we give it (meaning that it will still return &lt;code&gt;undefined&lt;/code&gt;). Despite this, always remember that it’s doing something…that’s the point of functions, isn’t it? Maybe it’s doing something as simple as sending out an alert, but it’s doing &lt;em&gt;something&lt;/em&gt;. And if it’s encapsulated with a public method, the public method can take whatever the private method is doing and send out to the global space.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;The stricter object-oriented languages like C# and Java have syntax to create private, public and privileged code, but JavaScript does not. JavaScript can still create such code, and it can still be accessed if it’s private.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In JavaScript, accessing private, encapsulated code from the outside is done with closures.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Obviously, closures can be tough to understand at first, but understanding them is a must if you want to master JavaScript. So, I’m going to try to help here.&lt;/p&gt;
+
+&lt;p&gt;A little parable about the New York City subway may help...&lt;/p&gt;
+
+&lt;h2&gt;The Subway Story&lt;/h2&gt;
+
+&lt;p&gt;Of all the subway systems in the world, New York City’s is the most famous. It averages 10 million rides a week and is made up of 421 subway stations.&lt;/p&gt;
+
+&lt;p&gt;The NYC subway has 24 lines, each traveling through four of the city’s five boroughs: Manhattan, Brooklyn, Queens and the Bronx (sorry Staten Island). So for example: the L line travels from 8th Avenue in Manhattan to Canarsie in Brooklyn, the 6 train travels from Pelham Bay Park in the Bronx to Manhattan’s Wall Street neighborhood, and so on.&lt;/p&gt;
+
+&lt;p&gt;There is no borough that all of these lines run through: every borough has a line that doesn’t run through it. And in the case of Manhattan, the busiest borough, that line is the G line that, as of this article, runs from Long Island City in Queens to the Kensington neighborhood in Brooklyn.&lt;/p&gt;
+
+&lt;p&gt;The only way to get to “the G” from Manhattan is to take another subway line to a connecting station where the G stops, then transfer over. The G has many connecting stations that you can get to from Manhattan. A few options are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Someone catching the E train at its 14th Street Manhattan stop can take it to its Court Square Queens stop and catch the G.&lt;/li&gt;
+&lt;li&gt;Someone catching the F train at its 2nd Avenue Manhattan stop can take it its to Fort Hamilton Parkway Brooklyn stop and catch the G.&lt;/li&gt;
+&lt;li&gt;Someone catching the N train at its 34th Street Manhattan stop can take it to its 4th Avenue Brooklyn stop and catch the G.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;A more direct line between Manhattan and the neighborhoods that the G runs along would be great, but impossible. Strictly speaking, Manhattan can’t see the G line so it can’t access it directly.&lt;/p&gt;
+
+&lt;h2&gt;The Simple Subway Closure Examples&lt;/h2&gt;
+
+&lt;p&gt;Now…how does all of this subway stuff tie in with closures?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Think of the G line as a private variable encapsulated by a function named &lt;code&gt;brooklyn&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;All those stops along the G, like Court Square? Think of them as both public and privileged methods: they’re public because things outside of the &lt;code&gt;brooklyn&lt;/code&gt; function can access them, but they’re also privileged because they’re inside the &lt;code&gt;brooklyn&lt;/code&gt; function and have access to the private variable, the G line.&lt;/li&gt;
+&lt;li&gt;Since the only way to get to the G is via one the connecting lines, think of the connecting lines as closures.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Let’s start with small examples that will build up to the big one. I’ll be running these simple examples in Firebug Console for Firefox.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;IMPORTANT: Every time you run a new block of code in the Console, you must do it in a new browser tab.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cut-and-paste the code below in to the Console and run it:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;var GLine = &amp;quot;You have connected to the G line!&amp;quot;;
+alert(GLine); //alert popup appears!&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;All works fine...we get an alert popup that says “You have connected to the G line!”&lt;/p&gt;
+
+&lt;p&gt;Now, &lt;strong&gt;open up a new tab&lt;/strong&gt; and plug this code in the console and run it:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;function brooklyn() {
+  var GLine = &amp;quot;You have connected to the G line!&amp;quot;;
+}
+    
+alert(GLine); //Oops! The alert doesn't show!&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;The console now returns a message that the &lt;code&gt;GLine&lt;/code&gt; is not defined. This because &lt;code&gt;GLine&lt;/code&gt; is now a private variable wrapped inside the &lt;code&gt;brooklyn&lt;/code&gt; function, meaning the outside world can’t see it. And since our alert lives in the outside world, it’s giving us this error.&lt;/p&gt;
+
+&lt;p&gt;A closure named &lt;code&gt;connectingLine&lt;/code&gt; can help us here. &lt;strong&gt;Open up a new tab again&lt;/strong&gt; and run this code in the console.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;function brooklyn() {
+  var GLine = &amp;quot;You have connected to the G line!&amp;quot;;
+  return function() {
+    alert(GLine);
+  };
+}
+
+var connectingLine = brooklyn();
+connectingLine(); //alert popup appears!&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;And with that, the alert now pops up…let’s break down why:&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;brooklyn&lt;/code&gt; function now contains the not only the &lt;code&gt;GLine&lt;/code&gt; private variable, but also an inner function. This inner function is a public method that’s also a privileged method.&lt;/p&gt;
+
+&lt;p&gt;As a public method, the function returns whatever it does to the world outside of &lt;code&gt;brooklyn&lt;/code&gt;, which is our alert from the earlier examples. And as a privileged method, the function has access to the &lt;code&gt;GLine&lt;/code&gt; private variable that it’s encapsulated with, which is the alert message.&lt;/p&gt;
+
+&lt;p&gt;Our closure, &lt;code&gt;connectingLine&lt;/code&gt;, has the power to find what the public/privileged method returns to the world outside of &lt;code&gt;brooklyn&lt;/code&gt;. And again, what it returns is an alert that displays the value of &lt;code&gt;GLine&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;The Difficult Subway Closure Example&lt;/h2&gt;
+
+&lt;p&gt;We started with alerts for the sake of easy explanation-now let’s create something more complicated with a private method:&lt;/p&gt;
+
+&lt;h3&gt;HTML for the difficult closure example&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-markup'&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+ &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+ &amp;lt;title&amp;gt;The NYC subway can teach you about closures!&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;ul&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot; id=&amp;quot;eTrain&amp;quot;&amp;gt;Catch the G train by taking the E Train&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot; id=&amp;quot;fTrain&amp;quot;&amp;gt;Catch the G train by taking the F Train&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot; id=&amp;quot;nTrain&amp;quot;&amp;gt;Catch the G train by taking the N Train&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ 
+&amp;lt;div id=&amp;quot;myRoute&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+ 
+&amp;lt;script src=&amp;quot;http://code.jquery.com/jquery-1.7.2.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;scripts.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;h3&gt;JavaScript for the difficult closure example (scripts.js)&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;(function() {
+
+  var brooklyn, connectWithETrain, connectWithFTrain, connectWithNTrain;
+    
+  brooklyn = function() {
+    var GLine = 'G line!';
+    function howToGetThere(trainLine,startingStation,endingStation) {
+      $('#myRoute').html('Catch the ' + trainLine + ' at the ' +   startingStation  + ' station. Take it to ' + endingStation + ' station   and get off to catch the ' + GLine);
+    }
+    return {
+      ETrain: function() {
+        howToGetThere('E train','14th Street, Manhattan','Court Square');
+      },
+      FTrain: function() {
+        howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
+      },
+      NTrain: function() {
+        howToGetThere('N train','34th Street Manhattan','4th Avenue');
+      }
+    };
+  };
+    
+  connectWithETrain = brooklyn();
+  connectWithFTrain = brooklyn();
+  connectWithNTrain = brooklyn();
+    
+  $('#eTrain').click(function () {
+    return connectWithETrain.ETrain();
+  });
+    
+  $('#fTrain').click(function () {
+    return connectWithFTrain.FTrain();
+  });
+    
+  $('#nTrain').click(function () {
+    return connectWithNTrain.NTrain();
+  });
+})();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Let’s break this code down:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;(function() {
+...
+})();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;This is a lot of code and we don’t want it in the global space as that can screw things up, so we’re wrapping it in a &lt;em&gt;self-executing anonymous function&lt;/em&gt; (it has other names, but I like this one).&lt;/p&gt;
+
+&lt;p&gt;This means that we wrap all this code up in an unnamed function: note that there’s no name between &lt;code&gt;function&lt;/code&gt; and &lt;code&gt;()&lt;/code&gt; on the first line. The code ends with another &lt;code&gt;()&lt;/code&gt; on the last line which makes the function run, or “self-execute.”&lt;/p&gt;
+
+&lt;p&gt;And a little piece of trivia: the code for the jQuery core library is wrapped up in a self-executing anonymous function. This type of function has been around for a while, but jQuery’s usage of it has increased its popularity with developers.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;var brooklyn, connectWithETrain, connectWithFTrain, connectWithNTrain;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;These are variables that we’re going to use at some point in our code. We’re naming them but not initializing them by giving them a value (although you should if possible).&lt;/p&gt;
+
+&lt;p&gt;We’re creating them using the &lt;em&gt;single var pattern&lt;/em&gt;, meaning that we group all of our variables together with one &lt;code&gt;var&lt;/code&gt; keyword and comma-separate them. This keeps our variables organized and easy to find, and since &lt;strong&gt;&lt;em&gt;JavaScript moves variables to the top of functions anyway&lt;/em&gt;&lt;/strong&gt;, we might as well do it ourselves.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;brooklyn = function() {
+  ...
+};&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Our &lt;code&gt;brooklyn&lt;/code&gt; function has returned…only this time, it’s not a function. Remember, we declared it as a variable in the beginning.&lt;/p&gt;
+
+&lt;p&gt;This &lt;code&gt;brooklyn&lt;/code&gt; variable is now equal to another anonymous function that encapsulates a lot of code.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;var GLine = 'G line!';
+function howToGetThere(trainLine,startingStation,endingStation) {
+  $('#myRoute').html('Catch the ' + trainLine + ' at the ' +   startingStation  + ' station. Take it to ' + endingStation + ' station   and get off to catch the ' + GLine);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Our &lt;code&gt;GLine&lt;/code&gt; private variable is still here and it’s still a text string, but it’s shorter than the earlier versions. &lt;code&gt;GLine&lt;/code&gt; is joined by a private method called &lt;code&gt;howToGetThere()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A reminder: a private method is method that doesn’t return anything that returns no other value than &lt;code&gt;undefined&lt;/code&gt; but does something. And as we can see, this describes &lt;code&gt;howToGetThere()&lt;/code&gt; perfectly.&lt;/p&gt;
+
+&lt;p&gt;And what’s &lt;code&gt;howToGetThere()&lt;/code&gt; “doing?” It’s using jQuery to look for the &lt;code&gt;myRoute&lt;/code&gt; ID on our HTML page, then load a text string into it with the jQuery’s &lt;code&gt;.html()&lt;/code&gt; function (&lt;em&gt;FYI: &lt;code&gt;.html()&lt;/code&gt; is actually a jQuery method!&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;howToGetThere&lt;/code&gt; method also has parameters that will be passed into the text string: &lt;code&gt;trainLine&lt;/code&gt;, &lt;code&gt;startingStation&lt;/code&gt; and &lt;code&gt;endingStation&lt;/code&gt;. They will represent, respectively, the name of the train line to catch, where in Manhattan to catch it and where to get off to catch the G Line. The &lt;code&gt;GLine&lt;/code&gt; variable will be passed to the text string as well.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;howToGetThere&lt;/code&gt; private method is going to run when a link is clicked, but we have a few more things to do first, code-wise.&lt;/p&gt;
+
+&lt;p&gt;return {
+ETrain: function() {
+  howToGetThere('E train','14th Street, Manhattan','Court Square');
+},
+FTrain: function() {
+  howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
+},
+NTrain: function() {
+  howToGetThere('N train','34th Street Manhattan','4th Avenue');
+}&lt;/p&gt;
+
+&lt;p&gt;Here are three public methods: &lt;code&gt;ETrain&lt;/code&gt;, &lt;code&gt;FTrain&lt;/code&gt; and &lt;code&gt;NTrain&lt;/code&gt;. They all have access to the &lt;code&gt;howToGetThere&lt;/code&gt; private method and are written out using something called the &lt;em&gt;&lt;a href=&quot;http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript&quot;&gt;module pattern&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Each of these methods runs the &lt;code&gt;howToGetThere&lt;/code&gt; private method, returning the parameters we discussed earlier. Again, &lt;code&gt;howToGetThere&lt;/code&gt; will run when a page link is clicked but before we talk about that, we have to set up our closures first.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;connectWithETrain = brooklyn();
+connectWithFTrain = brooklyn();
+connectWithNTrain = brooklyn();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Here are the closures. They’re actually the variable names we created at the top of our code with the single var pattern-we’ve just now given them a value.&lt;/p&gt;
+
+&lt;p&gt;The value of each closure is the &lt;code&gt;brooklyn()&lt;/code&gt; function, meaning it can access the public methods. It will do this with links, which we’ll now set up.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;$('#eTrain').click(function () {
+  return connectWithETrain.ETrain();
+});
+    
+$('#fTrain').click(function () {
+  return connectWithFTrain.FTrain();
+});
+    
+$('#nTrain').click(function () {
+  return connectWithNTrain.NTrain();
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Every time one of our three page links is clicked, jQuery’s &lt;code&gt;.click()&lt;/code&gt; method runs a callback function. This function then runs one of our three public methods, which in turn, runs the &lt;code&gt;howToGetThere()&lt;/code&gt; private method.&lt;/p&gt;
+
+&lt;p&gt;This means that a text string will load into the &lt;code&gt;myRoute&lt;/code&gt; page ID when a link is clicked. The parameters defined with the public methods decide what the text string will say.&lt;/p&gt;
+
+&lt;p&gt;That’s it for the code. I hope it helps but am sure you want to read up more on the subject. These articles may help.&lt;/p&gt;
+
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://developer.mozilla.org/en/JavaScript/Guide/Closures&quot;&gt;MDN Closure Article »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;The Mozilla Developer Network’s excellent post on closures is your first stop. Take note of the potential performance issues mentioned at the end.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://howtonode.org/why-use-closure&quot;&gt;&lt;em&gt;Why use “closure”?&lt;/em&gt; by Tim Caswell »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Another excellent article by this California-based developer. His closure examples also use factory patterns and &lt;code&gt;Object.prototype&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://vimeo.com/1967261&quot;&gt;Stuart Langridge: Secrets of JavaScript Closures (video) »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Hilarious presentation from this UK-based developer.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://www.manning.com/free/meta-excerpt_resig.html&quot;&gt;meta-excerpt from John Resig’s Upcoming Book, &lt;em&gt;Secrets of the JavaScript Ninja&lt;/em&gt; »&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;jQuery creator John Resig has written extensively on JavaScript closures. This sample content about closures from his upcoming book is, I think, his most in-depth article on the subject. It’s probably the toughest read on this list, but a great read nonetheless. Registration is required.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Closures are tough to understand in the beginning, I don’t deny it. But they’re useful as hell and make your JavaScript super-efficient. Re-read this article if you need to, check out the articles on the reading list and hit me up if you have questions.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 27 Mar 2012 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/javascript-closures-tutorial/</link>
+				<guid isPermaLink="true">http://kaidez.com/javascript-closures-tutorial/</guid>
+			</item>
+		
+			<item>
+				<title>A Simple Explanation of HTML5</title>
+				<description>&lt;p&gt;HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.&lt;/p&gt;
+
+&lt;p&gt;This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.
+&lt;img src=&quot;http://kaidez.com/wp-content/uploads/2012/03/HTML5_Logo.png&quot; alt=&quot;A Simple Explanation of HTML5&quot; class=&quot;post-pic&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;As awesome as this is, I’ve had a few conversations with non-developers who think HTML5 is a magic bullet. Most talk about it as something that they &lt;em&gt;should&lt;/em&gt; be doing without fully understanding &lt;em&gt;what it actually is&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;While some web developers may be frustrated by the misunderstanding, part of their job is to explain to clients and employers what’s good and bad about new technologies, and without a lot of tech terms. So I’m going to take a stab at providing a simple HTML5 explanation.&lt;/p&gt;
+
+&lt;p&gt;And for the record: I think we should be using HTML5 when creating sites, but only in a way that helps us carry through our content strategy.&lt;/p&gt;
+
+&lt;p&gt;Here are the topics for this article:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#What-Is-HTML5&quot;&gt;What Is HTML5 &lt;em&gt;Exactly&lt;/em&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Where-Did-HTML5-Come-From&quot;&gt;Where Did HTML5 Come From?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Semantic-Markup&quot;&gt;Semantic Markup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Web-Applications&quot;&gt;Web Applications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Mobile-Web-Development&quot;&gt;Mobile Web Development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Making-The-Site-Look-Pretty&quot;&gt;Making The Site Look Pretty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#How-Is-HTML5-Being-Used-As-of-This-Article&quot;&gt;How Is HTML5 Being Used As of This Article?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now&quot;&gt;How Can Businesses Use HTML5 &amp;amp; HTML5 Related-Technologies Right Now?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 id=&quot;What-Is-HTML5&quot;&gt;What Is HTML5 &lt;i&gt;Exactly&lt;/i&gt;?&lt;/h2&gt;
+
+
+&lt;p&gt;The 25-word answer is:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;“HTML5 is a major update to HTML that brings excellent new features to both websites and web applications, but also highlights an important older feature.”&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Expanding on this definition, the four key things to know about HTML5 are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;it creates better &lt;em&gt;semantic markup&lt;/em&gt; (the important older feature).&lt;/li&gt;
+&lt;li&gt;it allows for the creation of more robust &lt;em&gt;web applications.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;it allows for top-notch &lt;em&gt;mobile web development.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 id=&quot;Where-Did-HTML5-Come-From&quot;&gt;Where Did HTML5 Come From?&lt;/h2&gt;
+
+
+&lt;p&gt;Created in 1990, HTML has always been a programming language that creates a website’s basic structure. To build a website, HTML “frames” it first, then things like copy and images are added to complete the job.&lt;/p&gt;
+
+&lt;p&gt;HTML updates are overseen by the &lt;a href=&quot;http://www.w3.org/&quot;&gt;World Wide Web Consortium&lt;/a&gt;, or, the W3C. When they began work on the next update in 2004, a group of outside companies spoke out against the direction the W3C was taking it.&lt;/p&gt;
+
+&lt;p&gt;The update was great for &lt;em&gt;websites&lt;/em&gt;, the companies said, but not so great for the new &lt;em&gt;web applications&lt;/em&gt; that were starting to appear. Also, the W3C’s suggested update wasn’t backwards-compatible with older versions of HTML, which would cause developers a ton of problems.&lt;/p&gt;
+
+&lt;p&gt;The companies felt that the W3C weren’t evolving HTML beyond a structural language, so they formed a separate group called the &lt;a href=&quot;http://www.whatwg.org/&quot;&gt;Web Hypertext Application Technology Working Group&lt;/a&gt;, or WHATWG (pronounced “what-wig”) to do just that. Their goal was to build a new HTML that worked well for both websites &lt;em&gt;and&lt;/em&gt; web applications and would also be backwards-compatible with the old HTML.&lt;/p&gt;
+
+&lt;p&gt;In 2007, the W3C agreed with WHATWG’s point of view. The two groups remained separate but worked together on creating a new version of HTML, naming it “HTML5.”&lt;/p&gt;
+
+&lt;p&gt;The two groups are still working together as the HTML5 specification isn’t finalized as of this article, but it’s still possible to use it to create websites and web applications…as many do.&lt;/p&gt;
+
+&lt;h2 id=&quot;Semantic-Markup&quot;&gt;Semantic Markup&lt;/h2&gt;
+
+
+&lt;p&gt;Semantic markup is HTML written in a way that gives site content specific meaning. Semantic markup is &lt;em&gt;not&lt;/em&gt; a new a concept: it existed well before HTML5.&lt;/p&gt;
+
+&lt;p&gt;HTML5 does create excellent semantic markup though…better than earlier HTML versions. Metaphorically speaking, the semantic markup of earlier versions tells the world, “this is some site content” while HTML5 semantic markup tells the world, “this is some site content, now let me give you some detailed information about it.”&lt;/p&gt;
+
+&lt;p&gt;Sites written with semantic markup are easier to read on a multitude of devices: desktops, laptops, smartphones, screen-readers for the disabled, gaming consoles, just to name a few. But search engines also like semantic markup…so much so that web designer &lt;a href=&quot;http://twitter.com/#!/zeldman/statuses/1137456194&quot;&gt;Jeffrey Zeldman said it best in 2009:&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;“Client who saves $5,000 buying cut-rate non-semantic HTML will later spend $25,000 on SEO consultant to compensate”&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Correct! Site content wrapped in non-semantic markup is tough for search engines to understand; therefore, it’s tough for search engines to rank and list in their search results.&lt;/p&gt;
+
+&lt;p&gt;Hiring an SEO company to fix this is costly. If your site is coded with semantic markup at the beginning, this cost can be, at the very least, reduced.&lt;/p&gt;
+
+&lt;p&gt;To be clear: semantic markup up will &lt;em&gt;not&lt;/em&gt; improve a site’s search engine ranking. It just makes it easier for search engines to &lt;em&gt;understand&lt;/em&gt; a site’s content, which in turn, makes it easier to rank in search resullts.&lt;/p&gt;
+
+&lt;p&gt;Think of site content as a pirate’s treasure chest full of gold. Semantic markup gives search engines an awesome treasure map.&lt;/p&gt;
+
+&lt;p&gt;One last note on the subject: sites written with semantic markup are said to be “following web standards.” Web developers have been coding with web standards for years, but too many haven’t. A push for &lt;em&gt;all&lt;/em&gt; developers to use web standards has always existed, but HTML5 has strengthened this push more than ever before.&lt;/p&gt;
+
+&lt;h2 id=&quot;Web-Applications&quot;&gt;Web Applications&lt;/h2&gt;
+
+
+&lt;p&gt;A &lt;em&gt;website&lt;/em&gt; is a site that gives people information, but doesn’t offer a lot in terms of interaction. People may be able to fill out a form of some sort while visiting the site, but the interaction won’t go much beyond that.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;web application&lt;/em&gt; is a site that gives people information and offers a lot in terms of interaction. Some interaction examples are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;adding copy, images &amp;amp; videos.&lt;/li&gt;
+&lt;li&gt;removing copy, images &amp;amp; videos.&lt;/li&gt;
+&lt;li&gt;editing copy, images &amp;amp; (sometimes) videos.&lt;/li&gt;
+&lt;li&gt;writing product reviews.&lt;/li&gt;
+&lt;li&gt;sending messages to people.&lt;/li&gt;
+&lt;li&gt;letting people know your current location.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Looking at this list, Facebook, Twitter, FourSquare, and Yelp are great examples of web applications.&lt;/p&gt;
+
+&lt;p&gt;Other web application examples include: Hotmail, Yahoo Mail, Gmail, Google Docs and Google Maps.&lt;/p&gt;
+
+&lt;p&gt;HTML5′s role in web application development is a bit tricky to describe: start with understanding that there’s “HTML5″ and there’s “HTML5-related technology.”&lt;/p&gt;
+
+&lt;p&gt;The following is an incomplete list of things that are part of HTML5:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Video:&lt;/strong&gt; playing video on a website without needing things like Flash.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audio:&lt;/strong&gt; playing audio on a website without the need for plugins.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Canvas:&lt;/strong&gt; using code to automatically draw stuff on a website.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drag &amp;amp; Drop:&lt;/strong&gt; dragging and dropping stuff on a website.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Application Cache:&lt;/strong&gt; storing website content, such as images, on a device, making the site run faster.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;The following is an incomplete list of things that are HTML5-related technologies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WebGL:&lt;/strong&gt; creates 3D graphics on a website.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web Workers:&lt;/strong&gt; a method of running and storing website code behind the scenes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geolocation:&lt;/strong&gt; lets websites know where site visitors are geographically located.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;HTML5 and HTML5-related technologies can be combined with other technologies to create compelling web applications.&lt;/p&gt;
+
+&lt;p&gt;For the sake of easy explanations, I called these things “HTML5-related technologies” but I can’t stress enough that they’re &lt;em&gt;not&lt;/em&gt; HTML5. They’re “HTML5-related” at best and even that’s a stretch of the terminology.&lt;/p&gt;
+
+&lt;p&gt;Many don’t care about this the proper term usage but do not be surprised if a real stickler comments on this article, telling me that calling these things “HTML5-related” is a no-no. If you want the techie details on this, visit &lt;a href=&quot;https://developer.mozilla.org/en/HTML/HTML5&quot;&gt;MDN’s HTML5 page&lt;/a&gt; and take note of the section called “&lt;a href=&quot;https://developer.mozilla.org/en/HTML/HTML5#Technologies_often_called_part_of_HTML5_that_aren't&quot;&gt;Technologies often called part of HTML5 that aren’t&lt;/a&gt;.”&lt;/p&gt;
+
+&lt;h2 id=&quot;Mobile-Web-Development&quot;&gt;Mobile Web Development&lt;/h2&gt;
+
+
+&lt;p&gt;The web browsers pre-installed in the majority of mobile devices released in the past two years support HTML5: both websites and web applications.&lt;/p&gt;
+
+&lt;p&gt;First, understand that there are native applications and there are mobile web applications. Native applications are what are commonly called “apps” or “native apps;” small applications that you download from places such as Apple’s App Store or Google’s Android Market. Mobile web applications are applications that run inside a mobile web browser such as Safari Mobile or Opera Mini; they’re called “mobile web apps” nowadays.&lt;/p&gt;
+
+&lt;p&gt;So if you’re on an iPhone, you can open the Safari Mobile web browser (a native app) and go to &lt;a href=&quot;http://m.facebook.com/&quot;&gt;Facebook’s mobile site&lt;/a&gt; (a mobile web app). Or, you can open the App Store (another native app) and download the Facebook application (yet, another native app) and use Facebook from there.&lt;/p&gt;
+
+&lt;p&gt;The good thing about native apps is they have more functionality than mobile web apps. The good thing about mobile web apps is that they’re less expensive to create than native apps.&lt;/p&gt;
+
+&lt;p&gt;A native app that lives on your smartphone can use other native apps to aid in a particular task…the camera, the address book, directional apps like the compass and the maps, etc. Except for &lt;em&gt;very&lt;/em&gt; few instances, mobile web apps can’t do any of this as of this article; therefore, native apps have more functionality.&lt;/p&gt;
+
+&lt;p&gt;But it’s always a good idea to make your app to work on as many devices as possible, and doing so can be expensive. The current cost for creating an app that works on &lt;em&gt;just&lt;/em&gt; iPhones and Androids is in the five-figure range. Mobile web apps are coded to work on mobile web browsers, which practically every mobile device has. So a mobile web app will work on almost any mobile device, and will be cheap to create when compared to the cost for creating a native app for &lt;em&gt;every&lt;/em&gt; device.&lt;/p&gt;
+
+&lt;p&gt;HTML5 is well-suited for mobile web apps for a lot a reasons, a big one being the above-mentioned application cache.&lt;/p&gt;
+
+&lt;p&gt;When combined with certain HTML5-related technologies, application cache allows mobile web apps to work on devices &lt;em&gt;even if the device doesn’t have an internet connection!&lt;/em&gt; These apps would probably need a connection to work as fully intended, but they can still do lots of things offline.&lt;/p&gt;
+
+&lt;p&gt;Best of all mobile web browsers support many HTML5 features already. Non-mobile browsers are catching up, but the mobile browsers adopted them first and are ahead in the race as a result.&lt;/p&gt;
+
+&lt;p&gt;Because of their offline functionality and early adoption rate among mobile devices, lots of web developers are promoting HTML5 mobile web apps as a viable alternative to native apps. Mobile web apps will need to be able access things like the camera if they expect to beat the native guys, but I believe they’ll have access to many of these things eventually.&lt;/p&gt;
+
+&lt;h2 id=&quot;Making-The-Site-Look-Pretty&quot;&gt;Making The Site Look Pretty&lt;/h2&gt;
+
+
+&lt;p&gt;There are some HTML5 things that can make sites look good, but very little. And again, these things don’t work in many desktop browsers, which are still used more than mobile browsers.&lt;/p&gt;
+
+&lt;p&gt;So to make a site look good in as many browsers as possible, these three things are currently the best tools to do so:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CSS3:&lt;/strong&gt; applies pictures, colors and few cool effects to websites.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript:&lt;/strong&gt; creates interactivity on a website.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript-related technologies:&lt;/strong&gt; &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; is the biggest one of these right now.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;These things are not HTML5, but you will see them used in both HTML5 websites and web applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;How-Is-HTML5-Being-Used-As-of-This-Article&quot;&gt;How Is HTML5 Being Used As of This Article?&lt;/h2&gt;
+
+
+&lt;p&gt;In many ways…&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML5 games make up a bulk of the HTML5 web apps being created: &lt;a href=&quot;http://techcrunch.com/2011/01/27/facebook-bret-taylor/&quot;&gt;Facebook is very committed to HTML5 games&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Web designers are excelling at creating sites with semantically correct HTML5 markup and making them look pretty. &lt;a href=&quot;http://bostonglobe.com/&quot;&gt;The Boston Globe&lt;/a&gt; is one of the most celebrated of these sites but &lt;a href=&quot;http://html5gallery.com/&quot;&gt;HTML5 Gallery&lt;/a&gt; also provides some nice samples.&lt;/li&gt;
+&lt;li&gt;Web applications are popping up everywhere. One of my favorites is &lt;a href=&quot;https://web.tweetdeck.com/&quot;&gt;TweetDeck Web&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;There are a few mobile web apps out there. Some use a lot of HTML5 and its related technologies, some use just a little of it. &lt;a href=&quot;http://www.jqmgallery.com/&quot;&gt;jQuery Mobile Gallery&lt;/a&gt; is site that uses a fair amount of HTML5 stuff; the sites they display use HTML5 to varying degrees.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 id=&quot;How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now&quot;&gt;How Can Businesses Use HTML5 &amp; HTML5 Related-Technologies Right Now?&lt;/h2&gt;
+
+
+&lt;p&gt;I can’t stress the importance of web standard semantic markup enough. Businesses that don’t have it in their sites need to get it in there sooner, not later. They should either edit their current site and add the markup, or plan a site redesign that will include such markup.&lt;/p&gt;
+
+&lt;p&gt;If businesses go with the redesign, they can also make it look pretty at that point using CSS, JavaScript and JavaScript-related technologies.&lt;/p&gt;
+
+&lt;p&gt;As for web applications and mobile web development, I have to refer to a previous statement…creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.&lt;/p&gt;
+
+&lt;p&gt;For example: Facebook and Twitter’s desktop browser applications converted to HTML5 only recently, but millions of people were using them as web apps before that. And both have robust mobile web applications, each one created with an older version of HTML. This is also true for CNN, Fox News, Sephora, ESPN, Ford, Dollar General…I can probably go on and on.&lt;/p&gt;
+
+&lt;p&gt;So there’s no clear path here: using HTML5 certainly helps but it seems that &lt;em&gt;not&lt;/em&gt; using it doesn’t hurt. Regardless of this, I believe that all sites and web apps from here on in, should be created with HTML5.&lt;/p&gt;
+
+&lt;p&gt;I also believe that deciding whether to use HTML5 should not be the first task of a business-that should be focusing on delivering high quality content.&lt;/p&gt;
+
+&lt;p&gt;I’m basing this opinion on what I learned at &lt;a href=&quot;http://kaidez.com/nyc-social-media-week-event-recap-cross-mobile-promotion/&quot;&gt;the mobile promotion panel during Social Media Week 2011&lt;/a&gt;. Over and over again, the panelists stress how the mobile web was a better promoter than the native app and that we should spend more time developing an effective content strategy instead of following tech trends. Not one panelist mentioned HTML5 and there were many developers working with it at that time.&lt;/p&gt;
+
+&lt;p&gt;So my HTML5 suggestions for business don’t have that much to do with HTML5. They are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Confirm that your web developer or agency will create your site with HTML5 semantic web standard markup:&lt;/strong&gt; Most do, but double-check anyway.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remember that HTML5 isn’t the only thing that makes your site look good:&lt;/strong&gt; The CSS3 and JavaScript stuff is very important here.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Develop your content strategy first:&lt;/strong&gt; doing so will help you decide what parts of your content are the most important.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don’t think you need to create an HTML5 app:&lt;/strong&gt; You may find that you don’t need it after you devise your content strategy and that a website will do the job just fine.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;In closing, HTML5 is a highly discussed and debated subject right now and some may agree or disagree with what’s being said here. So please feel free to comment on this article and post your opinions.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 09 Mar 2012 00:00:00 -0500</pubDate>
+				<link>http://kaidez.com/simple-html5-explanation/</link>
+				<guid isPermaLink="true">http://kaidez.com/simple-html5-explanation/</guid>
+			</item>
+		
+			<item>
+				<title>SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out</title>
+				<description>&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/kaidez/6xfKN/33/&quot;&gt;VIEW THE DEMO FIRST »&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My most visited article (as of this one) is my &lt;a href=&quot;/tutorial-simple-jquery-fade-in-fade-out/&quot;&gt;jQuery fade in/fade out tutorial&lt;/a&gt;. Thanks to a clean title tag and a click-inducing meta description, this 58-post blog (also, as of this one) gets roughly 300 unique visits a day...all of which, I’m humbled by.&lt;/p&gt;
+
+&lt;p&gt;As I saw how people were using the tutorial’s code, a need to make it dynamic became very obvious. I did so with a JavaScript for() loop….here’s the complete code breakdown:&lt;/p&gt;
+
+&lt;h2&gt;HTML&lt;/h2&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-markup'&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;main.css&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;jQuery fade-ins with a JavaScript for() loop&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;  
+    &amp;lt;div id=&amp;quot;elem0&amp;quot; class=&amp;quot;toBeFaded&amp;quot;&amp;gt;Here's the first message...&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;elem1&amp;quot; class=&amp;quot;toBeFaded&amp;quot;&amp;gt;We have second one here...&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;elem2&amp;quot; class=&amp;quot;toBeFaded&amp;quot;&amp;gt;And here's the third message...&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;elem3&amp;quot; class=&amp;quot;toBeFaded&amp;quot;&amp;gt;OMG!!! Here's the fourth message!&amp;lt;/div&amp;gt;
+ 
+    &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+ 
+    &amp;lt;script src=&amp;quot;fadeCode.js&amp;quot; defer=&amp;quot;defer&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+ 
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;h2&gt;CSS (main.css)&lt;/h2&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-css'&gt;.toBeFaded {
+  display: none;
+  position:absolute;
+  font-size:70pt;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;h2&gt;JavaScript (fadeCode.js)&lt;/h2&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-javascript'&gt;$(function (){
+        
+  var yourFade = 1, // the amount of time in seconds that the elements will fade in fade out
+  yourDelay = 2, // the amount of time in seconds that there will be a delay between the fade ins and fade outs
+  fadeTime = yourFade * 1000, //convert fade seconds to milliseconds (1000)
+  delayTime = yourDelay * 1000, // convert delay seconds to milliseconds (2000)
+  totalTime = fadeTime   delayTime, //3000 milliseconds...needed for all those delays we talked about
+  allElems, // find out exactly how many page elements have the 'toBeFaded' class (4)
+  elemNoFade, // Will help us find the last element represent the last element (3)
+  i,
+  fadingElem;
+    
+  for (i = 0, allElems = $('.toBeFaded').length, elemNoFade = allElems - 1; i &amp;lt; allElems; i = 1) {
+    fadingElem = &amp;quot;#elem&amp;quot; + i;
+    if (i === 0) {  
+        $(fadingElem).fadeIn(fadeTime).delay(delayTime).fadeOut(fadeTime);
+    } else if (i === elemNoFade) {
+        $(fadingElem).delay(totalTime * i).fadeIn(fadeTime);
+    } else {
+        $(fadingElem).delay(totalTime * i).fadeIn(fadeTime).delay(delayTime).fadeOut(fadeTime);
+    }
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;What's happening here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The elements that you want to fade in and out &lt;em&gt;must&lt;/em&gt; be placed on your page with a unique ID that starts with &quot;elem&quot; and ends with a number. The numbers &lt;em&gt;must&lt;/em&gt; start counting at 0 (ie. &lt;code&gt;'elem0'&lt;/code&gt; first, &lt;code&gt;'elem1'&lt;/code&gt; next, &lt;code&gt;'elem2'&lt;/code&gt; after that, etc...)&lt;/li&gt;
+&lt;li&gt;Each fading page element &lt;em&gt;must&lt;/em&gt; have a classname of &lt;code&gt;'toBeFaded'&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The JavaScript uses those IDs and classnames to detect the page elements and, based on this detection, create jQuery code that fades the elements in and out.&lt;/li&gt;
+&lt;li&gt;There will be a delay between each element's fade in and fade out. The JavaScript dynamically detects the length of the delay.&lt;/li&gt;
+&lt;li&gt;If you want to adjust the seconds of fade in and fade out time, change the number value of the &lt;code&gt;'yourFade'&lt;/code&gt; variable in the JavaScript.&lt;/li&gt;
+&lt;li&gt;If you want to adjust the seconds of the delay, change the number value of the &lt;code&gt;'yourDelay'&lt;/code&gt; variable in the JavaScript.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;The code is fully dynamic: all you have to do is layout the HTML and tweak the JavaScript variables as described above; the code does the rest. You can style things however you want as the CSS but you probably want to keep the &lt;code&gt;display:none&lt;/code&gt; and &lt;code&gt;position:absolute&lt;/code&gt; settings.&lt;/p&gt;
+
+&lt;p&gt;As far as teaching people &lt;em&gt;how&lt;/em&gt; to do this, I always assume that those reading my code are web design/dev beginners and try to walk them through it. But the JavaScript for() loop is what's running things here...walking through that isn't a simple process.&lt;/p&gt;
+
+&lt;p&gt;I remember struggling with the JavaScript for() loop and believe that others do so as well. So I've created this three-part screencast tutorial that explains the JavaScript for() loop in excruciating detail.&lt;/p&gt;
+
+&lt;p&gt;No doubt about it, this screencast tutorial is for the JavaScript beginner. The JavaScript pro may be bored by it; however, if you are a JavaScript pro but have never read either Douglas Crockford's &lt;a href=&quot;http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742&quot;&gt;JavaScript: The Good Parts&lt;/a&gt; or Stoyan Stevanov's &lt;a href=&quot;http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752/ref=sr_1_1?s=books&amp;amp;ie=UTF8&amp;amp;qid=1330662444&amp;amp;sr=1-1&quot;&gt;JavaScript Patterns&lt;/a&gt;, you may want to check out the third video.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!!!&lt;/p&gt;
+
+&lt;h2&gt;Part One&lt;/h2&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/Wc_kLZTyTjQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;h2&gt;Part Two&lt;/h2&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/q0EYJfOz9Mg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;h2&gt;Part Three&lt;/h2&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/tFRC1tKeMJ0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</description>
+				<pubDate>Mon, 05 Mar 2012 00:00:00 -0500</pubDate>
+				<link>http://kaidez.com/javascript-for-loop-creates-jquery-fade/</link>
+				<guid isPermaLink="true">http://kaidez.com/javascript-for-loop-creates-jquery-fade/</guid>
+			</item>
+		
+			<item>
+				<title>REVIEW: HTML5 Games Development by Example: Beginner’s Guide</title>
+				<description>&lt;p&gt;No doubt about it: the demand for HTML5 games is high and will only get higher. Game development has always been a lucrative skillset to possess and thanks to HTML5, web-based game development is a bit easier.&lt;/p&gt;
+
+&lt;p&gt;So if you already have basic HTML5, CSS and JavaScript skills, Packt Publishing’s &lt;strong&gt;&lt;em&gt;&lt;a href=&quot;http://www.packtpub.com/html5-games-development-using-css-javascript-beginners-guide/book&quot;&gt;HTML5 Games Development by Example: Beginner’s Guide&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; is a learning resource that’s worth checking out if you want to get into game developmet. And if you don’t want to get into gaming, it may be worth a purchase anyway.&lt;/p&gt;
+
+&lt;p&gt;The book offers six step-by-step HTML5 game creation tutorials, starting with a simple ping-pong game and gradually getting more difficult, using things like WebSockets. It uses a varied array of coding techniques to create HTML5 games: jQuery, HTML5 audio, CSS3, JSON and (wow!) &lt;a href=&quot;http://nodejs.org/&quot;&gt;node.js&lt;/a&gt;. I went through the coding examples and didn’t see any errors. There certainly some stylistic differences in how page elements were rendered across browsers and devices, but nothing so glaring to the point that I would badmouth the code.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/html5GamesPackt.jpg&quot; class=&quot;post-pic&quot; /&gt;
+&lt;em&gt;HTML5 Games&lt;/em&gt; also holds your hand quite nicely through the process. At times, it goes through a set of steps, then asks the reader “What just happened?”, clarifying the coding steps you just performed. It also, at times, makes sure that your brain retained the lessons you learned as pop quizes show up in the content.&lt;/p&gt;
+
+&lt;p&gt;The book is certainly good for learning HTML5 gaming development but I have to say, it’s also if you have no plans to get into this realm. While this book demonstrates many coding techniques, four in particular jumped out at me:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Canvas&lt;/strong&gt; – this is one of the most talked about HTML5 APIs…&lt;em&gt;HTML5 Games&lt;/em&gt; covers it well and in-depth.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cache manifest &amp;amp; local storage&lt;/strong&gt; – sorely underrated as of this article, both of these things allow for the creation of browser-based games and web applications that can run without an internet connection. &lt;em&gt;HTML5 Games&lt;/em&gt; reviews them very early on.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The importance of JavaScript in HTML5 application development&lt;/strong&gt; – My opinion is that this point hasn’t been drilled enough into the heads of web designers with limited web development skills. If that’s you, read this book and you’ll be better-prepared.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript best practices&lt;/strong&gt; – things like “limit your global JavaScript variables!” are mentioned. This is good.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Factor these four topics in with the ones mentioned earlier (node.js, JSON, etc.) and &lt;em&gt;HTML5 Games&lt;/em&gt; is a pretty good primer of the most-desired web dev skillsets employees are looking for as of this article. Page 2 of the book states that it’s for game designers, but I think that any intermediate web developer can better their coding habits if they go through the six exercises. You become a better developer by working on many different projects…working on gaming projects like the ones discussed in the book is no exception.&lt;/p&gt;
+
+&lt;p&gt;But it also states on page 2 that you should have a “basic understanding of HTML, CSS and JavaScript,” which is spot-on correct. There are no extensive discussions on the semantic meaning of HTML5 tags or the hows-and-whys of jQuery, and those with a firm handle on JavaScript custom objects will breeze through this book. So the web development &lt;em&gt;beginner&lt;/em&gt; will struggle a bit with &lt;em&gt;HTML5 Games&lt;/em&gt; if they don’t understand those core concepts.&lt;/p&gt;
+
+&lt;p&gt;I walked away learning more than I did before after finishing &lt;strong&gt;&lt;em&gt;HTML5 Games Development by Example: Beginner’s Guide&lt;/em&gt;&lt;/strong&gt;. That’s a strong sign of quality learning resource so I suggest it.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 07 Oct 2011 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/html5-games-development-book/</link>
+				<guid isPermaLink="true">http://kaidez.com/html5-games-development-book/</guid>
+			</item>
+		
+			<item>
+				<title>Remembering Steve Jobs</title>
+				<description>&lt;h1&gt;&lt;/h1&gt;
+
+&lt;p&gt;I’m sitting here, typing away on my Mac Intel, syncing podcasts to my iPhone, my Powermac G4 self-customed web server humming two feet away, wondering what’s the best way to recall a visionary in writing. It’s tough…a loss like this doesn’t happen everyday.&lt;/p&gt;
+
+&lt;p&gt;But it happened and needs to documented by as many as possible. On October 5, 2011, Steven Paul Jobs, Apple co-founder, lost his seven year battle with cancer. He changed how we walk down the street so he must be remembered.&lt;/p&gt;
+
+&lt;p&gt;In this generation, no one will deliver the legacy of innovation, creativity and design that Steve Jobs left us. He loved (&lt;em&gt;loved&lt;/em&gt;) going to work every day: not because Apple was making billions of dollars (although I’m sure it helped), but because he couldn’t wait to see what the company would think of next.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/sjPic.jpg&quot; class=&quot;post-pic&quot; /&gt;
+Being a web developer and making a blanket statement, I see two standout contributions from Jobs. And I have to go all “computer geek” when I talk about the first one: the OS X operating system.&lt;/p&gt;
+
+&lt;p&gt;Released in 2001, OS X was UNIX-like operating system based on one of Jobs’ previous creations, Darwin OS. The open source web development community adopted at it lightning speed-the fact that a group dedicated to creating and freely giving away high-quality software were spending four figure amounts on Macs was something I always found humorously ironic.&lt;/p&gt;
+
+&lt;p&gt;But they did and as a result, the Mac is out-of-the-box ready for open source web and software development. Steve made sure that an entire generation of programmers had all the tools they needed to potentially change the world. The general public will never fully realize the impact of what Jobs was doing here.&lt;/p&gt;
+
+&lt;p&gt;The general public was, however, front-and-center for Jobs’ second key contribution, which was how easy he made home computing. One of the most common things I hear when people compare Macs to Windows-based machines, “You plug in a Mac and it just works.” No setup discs, no multiple virus updates. Macs are simple machines than an average consumer can figure out in little time.&lt;/p&gt;
+
+&lt;p&gt;This idea of “simplicity within technology” is best exemplified in the iPhone. For a few years prior to the iPhone’s release, every major mobile player at the time, Nokia, Motorola et al. were all promising to deliver on convergence, the idea that one handheld device would handle all your digital needs. Under Steve Jobs’ watch, Apple delivered it first….and best.&lt;/p&gt;
+
+&lt;p&gt;An ex-coworker of mine blogged how she sleeps with her iPhone, letting her boyfriend know that it comes first in the relationship. We are glued to our iPhones for news, music and information, all the while not paying attention to whether or not the cross signal is green. Yes, Steve Jobs changed how we walk down the street.&lt;/p&gt;
+
+&lt;p&gt;As geeky and granular as all these seems so far, stop and think for a second. How many times in your lifetime will you encounter one mind that delivers so much creative thought in so short a time span? And what inspiration will take from it? And &lt;em&gt;if&lt;/em&gt; you take from it, what will you actually &lt;em&gt;do&lt;/em&gt; with it once you have it?&lt;/p&gt;
+
+&lt;p&gt;Dave Ramsey is financial guru/author/radio host that’s quite conservative, socio-politically. So socio-politically, I disagree with most of what he says but he’s the only money guru that drives the point home that “All debt is bad and is to be avoided at all costs.” That worldview has saved me in more ways than I can count because I choose to filter out Ramsey’s political statements and pull the parts that help me the best.&lt;/p&gt;
+
+&lt;p&gt;The good parts of Steve Jobs’ legacy are plentiful and can be easily picked out…oh, so very easily. And those that do so, those that realize that thinking outside of the box sparks revolution, those that see how simplifying the difficult makes life better, they will be the next leaders. They &lt;em&gt;will&lt;/em&gt; create the next life-changing company. They &lt;em&gt;will&lt;/em&gt; be the catalyst for the next Arab Spring. They &lt;em&gt;will&lt;/em&gt; be the next ones that are extraordinary.&lt;/p&gt;
+
+&lt;p&gt;Those that focus on the negative aspects of his life, his lack of philanthropy, his need to control everything, his past estrangement with his daughter, will never take inspiration from the positive and are destined for life in the middle. Not a life on the sidelines but one in the middle. A life that will invoke for the greater good at best, but never create for it. They will never realize their full potential.&lt;/p&gt;
+
+&lt;p&gt;Don’t you dare shed a tear for Steve Jobs. He left this mortal coil knowing that in parallel, he created and inspired a generation to do better. The night he died, I saw a Facebook post saying that Jobs and DaVinci are probably up in heaven inventing some fascinating things. Thanks to Steve, that level of inventiveness already exists on Earth.&lt;/p&gt;
+
+&lt;p&gt;So the next time I’m walking to my morning commute bus, cueing up Stereolab on my iPhone while reviewing emails and world events as I unknowingly step in dogsh*t, I’ll know that Steve changed how I walk down the street, and I’ll know how much happier I am because of it.&lt;/p&gt;
+
+&lt;p&gt;RIP Steve Jobs.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 06 Oct 2011 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/remembering-steve-jobs/</link>
+				<guid isPermaLink="true">http://kaidez.com/remembering-steve-jobs/</guid>
+			</item>
+		
+			<item>
+				<title>5 Mobile Web Development Best Practice Resources</title>
+				<description>&lt;h1&gt;&lt;/h1&gt;
+
+&lt;p&gt;My last batch of articles have discussed which mobile web development best practices I’ve adopted. I obviously can’t claim them as my own creation and should share my resources for these practices.&lt;/p&gt;
+
+&lt;p&gt;Some are more mobile-specific then others but all focus on optimizing sites for speed: the number one mobile web development best practice:&lt;/p&gt;
+
+&lt;h2&gt;1) Steve Souders&lt;/h2&gt;
+
+&lt;p&gt;The one that really showed developers the way in terms of creating fast-loading sites. Formerly at Yahoo! and now at Google, &lt;a href=&quot;http://stevesouders.com/&quot;&gt;Steve Souders&lt;/a&gt; is &lt;em&gt;the&lt;/em&gt; speed site guru mostly on the strength of his two books: &lt;a href=&quot;http://www.amazon.com/gp/product/0596529309?ie=UTF8&amp;amp;tag=stevsoud-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0596529309&quot;&gt;&lt;em&gt;High Performance Web Sites&lt;/em&gt;&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/gp/product/0596522304?ie=UTF8&amp;amp;tag=stevsoud-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0596522304&quot;&gt;&lt;em&gt;Even Faster Websites&lt;/em&gt;&lt;/a&gt;. Paul Irish took the best tips from both of these books and applied them to the &lt;a href=&quot;http://html5boilerplate.com/docs/#Build-script&quot;&gt;HTML5 Boilerplate build script&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;2) PPK&lt;/h2&gt;
+
+&lt;p&gt;Web developer Peter-Paul Koch, also known as PPK, is next on the speed guru list. He’s well-known for performing tons of mobile device/browser tests, displaying the results on &lt;a href=&quot;http://www.quirksmode.org/mobile/&quot;&gt;the mobile section of his Quirksmode blog&lt;/a&gt;…spend some reading the Compatibility table on this page.&lt;/p&gt;
+
+&lt;p&gt;As he lives in Amsterdam, PPK can perform thorough tests on the &lt;a href=&quot;http://symbian.nokia.com/&quot;&gt;Symbian&lt;/a&gt; browser, which not only gets heavy usage in Europe, but is also the world’s most popular mobile web browser. So…American-based web developers need to read his Symbiam results on his &lt;a href=&quot;http://www.quirksmode.org/&quot;&gt;Quirksmode blog&lt;/a&gt; because they will have to code for it sooner than later.&lt;/p&gt;
+
+&lt;h2&gt;3) Yahoo’s YUI and YDN blogs&lt;/h2&gt;
+
+&lt;p&gt;Right now, Yahoo! is to site optimization what Google is to SEO: a well-respected authority in their area of expertise. Nowhere is this more clear than within &lt;a href=&quot;http://www.yuiblog.com/blog/category/performance/&quot;&gt;the Performance category of their Yahoo! User Interface Blog (or just the YUIBlog)&lt;/a&gt;. All of these posts offer great site speed tips, particularly the ones by &lt;a href=&quot;http://www.phpied.com/&quot;&gt;Stoyan Stefanov&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yahoo! also maintains the Yahoo! Developer Network blog (YDN), which doesn’t have the depth of site speed advice that YUI does, but is still good. Their “&lt;a href=&quot;http://developer.yahoo.com/performance/rules.html&quot;&gt;Best Practices for Speeding Up Your Web Site&lt;/a&gt;” article is pretty much required reading for any web developer right now, plus, YDN maintains the awesome Steve Souders-created &lt;a href=&quot;http://developer.yahoo.com/yslow/&quot;&gt;YSlow browser plugin&lt;/a&gt;, used for testing a web page’s optimization.&lt;/p&gt;
+
+&lt;p&gt;*(A related side-note: Yahoo released a &lt;a href=&quot;http://developer.yahoo.com/blogs/ydn/posts/2011/06/yslowmobile/&quot;&gt;beta version of YSlow for Mobile&lt;/a&gt; the day before this article’s posting. I downloaded it and believe me when I say that you should too). *&lt;/p&gt;
+
+&lt;h2&gt;4) YayQuery podcast with John Resig&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yayquery.com/&quot;&gt;YayQuery&lt;/a&gt; is an excellent jQuery podcast hosted by four jQuery experts: Paul Irish, Rebecca Murphey, Adam J. Sontag and Alex Sexton. jQuery creator John Resig appeared on the show in mid-2010, mostly discussing &lt;a href=&quot;http://jquerymobile.com/&quot;&gt;jQuery Mobile&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Prior to jQ Mobile’s release, Resig did a boatload of mobile device research, all of it interesting, quite a bit of it surprising. He shared his findings during this podcast…it’s a must-watch.&lt;/p&gt;
+
+&lt;h2&gt;5) HTML5 Boilerplate Build Script&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kaidez.com/html5-boilerplate-version-1/&quot;&gt;I’ve mentioned this before&lt;/a&gt; but let me be crystal clear right now: HTML5 Boilerplate’s build script does an incredible job of optimizing site files. With a simple command line prompt (or Windows batch file), you can run all your site files through YUI Compresser, optipng, jpegtran and many other applications to dramatically reduce their file size. The end-result is a faster-loading site.&lt;/p&gt;
+
+&lt;p&gt;Watch the Boilerplate how-to video..it’s well worth 28 minutes of your time:&lt;/p&gt;
+
+&lt;p&gt;Those are my biggies…feel free to share what you think are good mobile web development best practices because I can’t name them all!&lt;/p&gt;
+</description>
+				<pubDate>Thu, 16 Jun 2011 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/mobile-web-development-best-practice-resources/</link>
+				<guid isPermaLink="true">http://kaidez.com/mobile-web-development-best-practice-resources/</guid>
+			</item>
+		
+			<item>
+				<title>2 Bad Things About the Facebook App Setup</title>
+				<description>&lt;h1&gt;&lt;/h1&gt;
+
+&lt;p&gt;For the &lt;a href=&quot;http://kaidez.com/almay-facebook-page/&quot;&gt;Almay/Facebook&lt;/a&gt; project I recently worked on, I had to create a Facebook app under their new set of rules, which was interesting.&lt;/p&gt;
+
+&lt;p&gt;Creating Facebook apps, which are basically web pages, used to require the Facebook Markup Language (FBML) which is simply a flavor of XML. Facebook recently changed this, saying that developers now simply need to create FB app web pages with HTML, CSS, JavaScript, etc., then host the pages on their own web server. These pages then get fed to Facebook via an iframe.&lt;/p&gt;
+
+&lt;p&gt;This is an easier web development process and all the page content displays fine. But I’m in a headspace of creating page code that’s as optimized and as fast-loading as I can get it….my current &lt;a href=&quot;http://kaidez.com/mobile-web-development-best-practices-starting-tips/&quot;&gt;“thinking mobile”&lt;/a&gt; process. That being said, there are two things about the Facebook app setup which, I think, could be made better from a page optimization standpoint.&lt;/p&gt;
+
+&lt;p&gt;And it all points back to a JavaScript file named “all.js” that needs to be installed on your web pages in order for the app to work:&lt;/p&gt;
+
+&lt;h2&gt;1. CSS Expressions&lt;/h2&gt;
+
+&lt;p&gt;According to my app page’s &lt;a href=&quot;http://developer.yahoo.com/yslow/&quot;&gt;YSlow&lt;/a&gt; report, this “all.js” file is capable of inserting three inline CSS expressions on to the page. Affecting Internet Explorer 8 and lower only, CSS expressions are CSS selectors that are updated and manipulated with JavaScript. Here’s the CSS expression example from &lt;a href=&quot;http://developer.yahoo.com/performance/rules.html#css_expressions&quot;&gt;YDN page&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt; &lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-css'&gt;background-color: expression( (new Date()).getHours()%2 ? “#B8D4FF” : “#F08A00″ );&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically, this code updates the background color ever hour; however, it runs much more frequently then that. Simple things like scrolling and mouse movements can fire this code off, which slows down the page overall.&lt;/p&gt;
+
+&lt;p&gt;This sucks, but no where NEAR as bad as…&lt;/p&gt;
+
+&lt;h2&gt;2. Render Tree Reflows&lt;/h2&gt;
+
+&lt;p&gt;According to Safari’s Activity Monitor, the “all.js” dynamically adjusts lots of DOM properties when scrolling the page. One simple scroll changed the following DOM properties on the fly:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;clientWidth&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clientHeight&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scrollLeft&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scrollTop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;offsetLeft&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;offsetTop&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Changing properties like this triggers a render tree reflow, the recalculation of a web page’s layout and geometry. All of this takes time and browser resources, meaning all of this slows down a page…no good.&lt;/p&gt;
+
+&lt;p&gt;Paul Irish discusses this in his most-recent how-to video, “HTML5, CSS3, and DOM Performance” that’s listed below. He alludes to Stoyan Stefanov’s brilliant &lt;a href=&quot;http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/&quot;&gt;reflow/relayout article&lt;/a&gt;, which is the end-all-be-all discussion on the subject.&lt;/p&gt;
+
+&lt;p&gt;So Facebook apps are now easier to create but, I feel, still need improvement in terms of page optimization. Feel free to comment and agree or disagree.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 10 Jun 2011 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/2-bad-facebook-app-things/</link>
+				<guid isPermaLink="true">http://kaidez.com/2-bad-facebook-app-things/</guid>
+			</item>
+		
+			<item>
+				<title>Mobile Web Development Best Practices &#8211; Starting Tips</title>
+				<description>&lt;p&gt;My last two articles, reviewing my work for both &lt;a href=&quot;http://kaidez.com/almay-facebook-page/&quot;&gt;the Almay/Facebook project&lt;/a&gt; and &lt;a href=&quot;http://kaidez.com/mitchum-html5-site/&quot;&gt;the new Mitchum site&lt;/a&gt;, have tried to drive the same point home: &lt;strong&gt;it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.&lt;/strong&gt; This article expands on that point.&lt;/p&gt;
+
+&lt;p&gt;Here are the topics for this article:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#why&quot;&gt;Why We Need To Code For Mobile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#list&quot;&gt;The List of Tactics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#rule&quot;&gt;The Golden Rule Of Site Speed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#images&quot;&gt;The Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#pageElements&quot;&gt;The Page Elements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tweak&quot;&gt;Tweak All The Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#compress&quot;&gt;Compress The Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ySlowPageSpeed&quot;&gt;YSlow &amp;amp; Page Speed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 id=&quot;why&quot;&gt;Why We Need To Code For Mobile&lt;/h2&gt;
+
+
+&lt;p&gt;There are two good reasons for you to start “thinking mobile” when writing code:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;applying mobile development tactics to a desktop-based website results in a site that loads faster.&lt;/li&gt;
+&lt;li&gt;in April 2010, &lt;a href=&quot;http://googlewebmastercentral.blogspot.com/2010/04/using-site-speed-in-web-search-ranking.html&quot;&gt;Google announced that site speed would be factored into their search algorithm&lt;/a&gt;. They were only doing this for 1% of sites at the time of the announcement and I can’t find any statements by Google saying that the number has changed. But you can bet that it will increase as mobile usage, which is VERY dependent on fast-loading sites, also increases.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2 id=&quot;list&quot;&gt;The List of Tactics&lt;/h2&gt;
+
+
+&lt;p&gt;Following the suggestions mentioned in &lt;a href=&quot;http://developer.yahoo.com/performance/rules.html&quot;&gt; YDN’s “Best Practices for Speeding Up Your Web Site&lt;/a&gt;” article is the best way to begin building some best practices into your coding habits. The article lists many things but for now, let’s just focus on some &lt;em&gt;beginning&lt;/em&gt; tactics:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;optimize all your photos and graphic files for fast loading&lt;/li&gt;
+&lt;li&gt;make sure each page has as few page elements as possible&lt;/li&gt;
+&lt;li&gt;remove code that you’re not using&lt;/li&gt;
+&lt;li&gt;compress your files&lt;/li&gt;
+&lt;li&gt;constantly test your page speed with &lt;a href=&quot;http://developer.yahoo.com/yslow/&quot;&gt;Yahoo’s YSlow tool&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/speed/page-speed/&quot;&gt;Google’s Page Speed tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;This outlines the “mobile thinking” method I used when doing the Almay/Facebook project I mentioned…let’s walk through that.&lt;/p&gt;
+
+&lt;p&gt;First, let’s look at the &lt;a href=&quot;http://www.facebook.com/almay?sk=app_227757730571729&quot;&gt;What’s New section on Almay’s Facebook page&lt;/a&gt; which is three pages long and the end result of all this “mobile thinking.” Feel free to review it as you’re reading.&lt;/p&gt;
+
+&lt;p&gt;Next, let’s look the golden rule of site speed…&lt;/p&gt;
+
+&lt;h2 id=&quot;rule&quot;&gt;The Golden Rule Of Site Speed&lt;/h2&gt;
+
+
+&lt;p&gt;In 2010, the Yahoo User Interface team ran &lt;a href=&quot;http://www.yuiblog.com/blog/2010/07/12/mobile-browser-cache-limits-revisited/&quot;&gt;thorough tests on the cache limits of the most-popular mobile devices&lt;/a&gt;. They found that the iPad running iOS 3.2 had the lowest limit, only caching elements that were 25.6kb or less.&lt;/p&gt;
+
+&lt;p&gt;It’s important to note that newer iOS devices have, at least, &lt;em&gt;double&lt;/em&gt; this cache limit. It’s also important to note that these tests show that devices with an older iOS didn’t cache anything at all, affecting older iPhones. And, interestingly enough, the cache limit for the Android 2.1 OS and up can go up to a whopping &lt;em&gt;2MB!!!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore, the Golden Rule Site Speed is to &lt;strong&gt;try to keep the page element file sizes at 25.6kb or lower&lt;/strong&gt;: this was my mindset during the Almay/Facebook project. Older iPhones can’t cache anything at all: there was nothing I could do about this so I didn’t worry about it.&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;The Images&lt;/h2&gt;
+
+
+&lt;p&gt;With this file size limit in mind, I created image sprites for almost all the site images. I basically compiled a lot of my images into one image like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kaidez.com/wp-content/uploads/2011/06/copyArrowConcealerSprite.png&quot;&gt;&lt;img src=&quot;http://kaidez.com/wp-content/uploads/2011/06/copyArrowConcealerSprite.png&quot; alt=&quot;Almay Image Sprite&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, this 24kb transparent PNG bundles six images used on the Almay Facebook page, most of which will be used on all three pages of the Almay/Facebook page. I basically used CSS to display certain parts of it when I needed to, while effectively blocking out the others.&lt;/p&gt;
+
+&lt;p&gt;Since its file size is less than 25.6kb, the image will be stored in browser cache for most mobile devices. So when it’s needed on other pages, it will be pulled from the cache instead of getting called from the server. &lt;strong&gt;The less calls made to the server, the faster the site will be.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are tons of great sprite tutorials out there so there’s no need for me to create another one. This &lt;a href=&quot;http://css-tricks.com/css-sprites/&quot;&gt;sprite tutorial at CSS Tricks&lt;/a&gt; is simple, yet descriptive. Give it a read.&lt;/p&gt;
+
+&lt;h2 id=&quot;pageElements&quot;&gt;The Page Elements&lt;/h2&gt;
+
+
+&lt;p&gt;As you’re coding, keep a constant eye on how many page elements, or DOM elements, are on the page. A page element is any tag that you have on the page: , , , etc. The less you have, the faster the page loads.&lt;/p&gt;
+
+&lt;p&gt;Using the Console in either Firebug for Firefox or Google Chrome Dev Tools is the easiest way to do this. Let’s use the one in Chrome tools:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;open your page in Google Chrome&lt;/li&gt;
+&lt;li&gt;right-click on somewhere on it and click “Inspect Element”&lt;/li&gt;
+&lt;li&gt;click on the “Console” Button&lt;/li&gt;
+&lt;li&gt;a command-line prompt will open…type the following line:&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;code&gt;document.getElementsByTagName(&quot;*&quot;).length&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;What this line is saying is:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;ul&gt;
+&lt;li&gt;“Go through the entire page and search for all the page elements with a tag name. We definitely want &lt;em&gt;all&lt;/em&gt; of them so we’ll add a wildcard symbol, which is “*”. We also want to see the exact number of how many you found, so we’ll end our command with “length.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kaidez.com/wp-content/uploads/2011/06/console.png&quot;&gt;&lt;img src=&quot;http://kaidez.com/wp-content/uploads/2011/06/console.png&quot; alt=&quot;Chrome Console Used for Almay/Facebook project&quot; /&gt;&lt;/a&gt;&lt;br/&gt;
+By doing all of this, I got the page down to 44 elements, which is great! But...&lt;/p&gt;
+
+&lt;p&gt;...while having a low amount of page elements is important to site speed, I don’t see them as weighing the page down TOO much. The YDN article points out that the Yahoo! home page loads pretty fast and it has a little less than 700 elements. Yes, the elements should be marked up correctly, but I wouldn’t spend a whole lot of time keeping the total page elements down when you have other things to do. I say, track it…don’t over-think it.&lt;/p&gt;
+
+&lt;h2 id=&quot;tweak&quot;&gt;Tweak All The Files&lt;/h2&gt;
+
+
+&lt;p&gt;The less code on your page, the smaller its final file size will be. It’s that simple.&lt;/p&gt;
+
+&lt;p&gt;I attached the &lt;a href=&quot;http://html5boilerplate.com/docs/#The-style&quot;&gt;HTML5 CSS Reset file that comes with HTML5 Boilerplate&lt;/a&gt; to these pages, which not only makes your site more cross-browser compliant, but also safely renders the newer HTML5 elements on the page without issue.&lt;/p&gt;
+
+&lt;p&gt;At a lowly 9.6kb, this file follows the Golden Rule. But I still made it smaller by doing the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the stylesheet adds code for CSS3 media queries…I didn’t create media queries so I deleted that code.&lt;/li&gt;
+&lt;li&gt;the stylesheet adds code for that target’s Internet Explorer 6…I didn’t code for IE6 so I deleted that code.&lt;/li&gt;
+&lt;li&gt;the stylesheet adds a lot of extra CSS classes that I didn’t even come close to using so I deleted that code.&lt;/li&gt;
+&lt;li&gt; Page Speed (which I’ll discuss shortly) showed me which CSS code wasn’t being used so I deleted that code.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Compress The Files&lt;/h2&gt;
+
+
+&lt;p&gt;After you’ve tweaked the files as much as you can tweak them, it’s time to compress them, or, “minify” them. Using &lt;a href=&quot;http://html5boilerplate.com/docs/#Build-script&quot;&gt;HTML5 Boilerplate’s build script&lt;/a&gt; is the best way to achieve this.&lt;/p&gt;
+
+&lt;p&gt;This script does many things: removes unreferenced images, combines multiple CSS files into one file, runs the same combination process for JS files and so on. It also removes whitespace from files and shrinks the images using &lt;a href=&quot;http://optipng.sourceforge.net/&quot;&gt;optiping&lt;/a&gt; and &lt;a href=&quot;http://jpegclub.org/jpegtran/&quot;&gt;jpegtran&lt;/a&gt;: for this project, these last two things can in handy.&lt;/p&gt;
+
+&lt;p&gt;If you run the build script on a Mac OS 10.x machine, it will only run on a command line via the Terminal application. If you run it on a PC you can run it either on a command line via DOS or with a batch script that comes with the Boilerplate template.&lt;/p&gt;
+
+&lt;p&gt;IMPORTANT POINT: if you saved your graphic files using Photoshop’s “Save for Web and Devices…” functionality or something similar, the build script won’t shrink them anymore than that. There’s only so far that you can compress images and saving them out with this functionality takes them that far.&lt;/p&gt;
+
+&lt;h2 id=&quot;ySlowPageSpeed&quot;&gt;YSlow &amp; Page Speed&lt;/h2&gt;
+
+
+&lt;p&gt;As you’re coding, you should use Yahoo’s YSlow and Google’s Page Speed to estimate your site speed. Both are browser plugins for both Chrome and Firefox that scan your code and, based on its findings, grades how optimized for speed to determine how optimized it is.&lt;/p&gt;
+
+&lt;p&gt;YSlow grades site speed from A to F while Page Speed grades it from 0 to 100. So obviously, the higher the grade your site receives, the more optimized it is.&lt;/p&gt;
+
+&lt;p&gt;After tweaking images, deleting code, limiting page elements and minifying files, the Almay/Facebook earned a B from YSlow and an 85 from Page Speed. Not the highest marks, but good for now.&lt;/p&gt;
+
+&lt;p&gt;YSlow for Almay/Facebook Page&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kaidez.com/wp-content/uploads/2011/06/Yslow.png&quot;&gt;&lt;img src=&quot;http://kaidez.com/wp-content/uploads/2011/06/Yslow.png&quot; alt=&quot;YSlow for Almay/Facebook Page&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Page Speed for Almay/Facebook Page&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kaidez.com/wp-content/uploads/2011/06/PageSpeed.png&quot;&gt;&lt;img src=&quot;http://kaidez.com/wp-content/uploads/2011/06/PageSpeed.png&quot; alt=&quot;Page Speed for Almay/Facebook Page&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The are two reasons for the B/85 are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No content delivery network (CDN) to store images and files&lt;/strong&gt; – we have one at Revlon but due to the depth of projects among the web team, we couldn’t configure it in time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No gzip compression&lt;/strong&gt; – gzip compression is server-side functionality that compresses all the site files hosted on your server. This Almay/Facebook content runs on a .NET/IIS setup so setting gzip up would have meant adding the related code to the web.config file,testing it in a development environment, then pushing it to the live site…again, no time.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+
+&lt;p&gt;These are beginning tactics that mostly deal with front end code: there are many ways to speed things up on your web host as well. But if you’re just starting to “think mobile,” start with these steps, then ramp up on the server stuff.&lt;/p&gt;
+
+&lt;p&gt;We’re talking about the front end code I created for this Facebook project, but not Facebook itself. I have some things to say about this, none of it good. &lt;a href=&quot;http://kaidez.com/2-bad-facebook-app-things/&quot;&gt;That will be the next post&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 08 Jun 2011 00:00:00 -0400</pubDate>
+				<link>http://kaidez.com/mobile-web-development-best-practices-starting-tips/</link>
+				<guid isPermaLink="true">http://kaidez.com/mobile-web-development-best-practices-starting-tips/</guid>
+			</item>
+		
+	</channel>
+</rss>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns#" manifest="http://dev.kaidez.com/manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="JavaScript for loop dynamically creates a jQuery fade in/fade out effect with a delay; includes a demo, code sample and screencast tutorial." />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:creator" content="@kaidez">
+  <meta name="twitter:title" content="SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out">
+  <meta name="twitter:description" content="JavaScript for loop dynamically creates a jQuery fade in/fade out effect with a delay; includes a demo, code sample and screencast tutorial.">
+  <title>SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out &laquo; Tutorials &laquo; kaidez</title>
+  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+  <link rel="canonical" href="http://kaidez.com/javascript-for-loop-creates-jquery-fade/" />
+  <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
+  
+     <script>
+    WebFontConfig = {
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Lato:Normal 300' ] 
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+     })();
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/tutorials/" title="Tutorials on kaidez.com">TUTORIALS</a></li>  
+            <li class="site-navigation-list-link"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com">CODE TIPS</a></li>
+            <li class="site-navigation-list-link"><a href="/reviews/" title="Product and Book Reviews on kaidez.com">REVIEWS</a></li>
+            <li class="site-navigation-list-link"><a href="/personal/" title="Personal and Random posts on kaidez.com">PERSONAL</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+          
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+    
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/tutorials/" title="More Tutorials posts on kaidez.com">Tutorials</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
+
+      <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+        <h1 class="post-title" class="entry-title">SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out</h1>
+        
+        <p><a href="http://jsfiddle.net/kaidez/6xfKN/33/">VIEW THE DEMO FIRST »</a></p>
+
+<p>My most visited article (as of this one) is my <a href="/tutorial-simple-jquery-fade-in-fade-out/">jQuery fade in/fade out tutorial</a>. Thanks to a clean title tag and a click-inducing meta description, this 58-post blog (also, as of this one) gets roughly 300 unique visits a day...all of which, I’m humbled by.</p>
+
+<p>As I saw how people were using the tutorial’s code, a need to make it dynamic became very obvious. I did so with a JavaScript for() loop….here’s the complete code breakdown:</p>
+
+<h2>HTML</h2>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+    &lt;title&gt;jQuery fade-ins with a JavaScript for() loop&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;  
+    &lt;div id=&quot;elem0&quot; class=&quot;toBeFaded&quot;&gt;Here's the first message...&lt;/div&gt;
+    &lt;div id=&quot;elem1&quot; class=&quot;toBeFaded&quot;&gt;We have second one here...&lt;/div&gt;
+    &lt;div id=&quot;elem2&quot; class=&quot;toBeFaded&quot;&gt;And here's the third message...&lt;/div&gt;
+    &lt;div id=&quot;elem3&quot; class=&quot;toBeFaded&quot;&gt;OMG!!! Here's the fourth message!&lt;/div&gt;
+ 
+    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+ 
+    &lt;script src=&quot;fadeCode.js&quot; defer=&quot;defer&quot;&gt;&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<h2>CSS (main.css)</h2>
+
+<div>
+  <pre data-line=''><code class='language-css'>.toBeFaded {
+  display: none;
+  position:absolute;
+  font-size:70pt;
+}</code></pre>
+</div>
+
+
+<h2>JavaScript (fadeCode.js)</h2>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$(function (){
+        
+  var yourFade = 1, // the amount of time in seconds that the elements will fade in fade out
+  yourDelay = 2, // the amount of time in seconds that there will be a delay between the fade ins and fade outs
+  fadeTime = yourFade * 1000, //convert fade seconds to milliseconds (1000)
+  delayTime = yourDelay * 1000, // convert delay seconds to milliseconds (2000)
+  totalTime = fadeTime   delayTime, //3000 milliseconds...needed for all those delays we talked about
+  allElems, // find out exactly how many page elements have the 'toBeFaded' class (4)
+  elemNoFade, // Will help us find the last element represent the last element (3)
+  i,
+  fadingElem;
+    
+  for (i = 0, allElems = $('.toBeFaded').length, elemNoFade = allElems - 1; i &lt; allElems; i = 1) {
+    fadingElem = &quot;#elem&quot; + i;
+    if (i === 0) {  
+        $(fadingElem).fadeIn(fadeTime).delay(delayTime).fadeOut(fadeTime);
+    } else if (i === elemNoFade) {
+        $(fadingElem).delay(totalTime * i).fadeIn(fadeTime);
+    } else {
+        $(fadingElem).delay(totalTime * i).fadeIn(fadeTime).delay(delayTime).fadeOut(fadeTime);
+    }
+  }
+});</code></pre>
+</div>
+
+
+<p>What's happening here:</p>
+
+<ul>
+<li>The elements that you want to fade in and out <em>must</em> be placed on your page with a unique ID that starts with "elem" and ends with a number. The numbers <em>must</em> start counting at 0 (ie. <code>'elem0'</code> first, <code>'elem1'</code> next, <code>'elem2'</code> after that, etc...)</li>
+<li>Each fading page element <em>must</em> have a classname of <code>'toBeFaded'</code>.</li>
+<li>The JavaScript uses those IDs and classnames to detect the page elements and, based on this detection, create jQuery code that fades the elements in and out.</li>
+<li>There will be a delay between each element's fade in and fade out. The JavaScript dynamically detects the length of the delay.</li>
+<li>If you want to adjust the seconds of fade in and fade out time, change the number value of the <code>'yourFade'</code> variable in the JavaScript.</li>
+<li>If you want to adjust the seconds of the delay, change the number value of the <code>'yourDelay'</code> variable in the JavaScript.</li>
+</ul>
+
+
+<p>The code is fully dynamic: all you have to do is layout the HTML and tweak the JavaScript variables as described above; the code does the rest. You can style things however you want as the CSS but you probably want to keep the <code>display:none</code> and <code>position:absolute</code> settings.</p>
+
+<p>As far as teaching people <em>how</em> to do this, I always assume that those reading my code are web design/dev beginners and try to walk them through it. But the JavaScript for() loop is what's running things here...walking through that isn't a simple process.</p>
+
+<p>I remember struggling with the JavaScript for() loop and believe that others do so as well. So I've created this three-part screencast tutorial that explains the JavaScript for() loop in excruciating detail.</p>
+
+<p>No doubt about it, this screencast tutorial is for the JavaScript beginner. The JavaScript pro may be bored by it; however, if you are a JavaScript pro but have never read either Douglas Crockford's <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript: The Good Parts</a> or Stoyan Stevanov's <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1330662444&amp;sr=1-1">JavaScript Patterns</a>, you may want to check out the third video.</p>
+
+<p>Enjoy!!!</p>
+
+<h2>Part One</h2>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/Wc_kLZTyTjQ" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Part Two</h2>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/q0EYJfOz9Mg" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Part Three</h2>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/tFRC1tKeMJ0" frameborder="0" allowfullscreen></iframe>
+
+
+
+        <footer id="articleFooter" class="articleFooterClass">
+
+          Published on <time datetime="2012-03-05">March 05, 2012</time> by <span class="author">Kai "kaidez" Gittens</span>
+
+        </footer>
+
+      </article>
+
+      <div id="share-post-container" class="share-post-container-class clearfix">
+        <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+        <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+          <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://dev.kaidez.com/javascript-for-loop-creates-jquery-fade/" title="Share SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+          <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://dev.kaidez.com/javascript-for-loop-creates-jquery-fade/&t=SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out" class="share-post-link fb" title="Share SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out on Google Plus" target="blank">Facebook</a></li>
+
+        </ul> <!-- #social-sharing-list-post -->
+
+      </div> <!-- #share-post-container -->
+
+      <div id="related-posts" class="related-posts-style">
+
+        <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+        <ul id="related-posts-list">
+
+          
+
+          <li class="related-posts-list-item"><a href="/media-queries-important/" title="Media Queries Are Important">Media Queries Are Important &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub &raquo;</a></li>
+
+          
+
+          <li class="related-posts-list-item"><a href="/eloquent-javascript-review/" title="REVIEW: Eloquent JavaScript">REVIEW: Eloquent JavaScript &raquo;</a></li>
+
+          
+
+        </ul>
+
+        <!-- Start Disqus Code -->
+
+                
+
+        <div id="disqus_thread"></div>
+
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+
+        <!-- End Disqus Code -->
+
+      </div> <!-- #related-posts -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Revlon. I like to "over-communicate" in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">SITE LINKS</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+              
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" id="twitterLink" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-twitter icon-3x"></i>
+                  <span class="kaidez-social-sharing-list-item-link-text">twitter</span>
+                </a>
+                <div id="twitterText"class="pushUp"> / @kaidez</div>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/115509037875239263451/posts" title="Visit kaidez on Google Plus" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-google-plus icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">google +</span>
+                </a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez/" title="Visit kaidez on GitHub" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-github-alt icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">github</span>
+                </a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-sharing-list-item-link">
+                  <i class="icon-youtube icon-3x"></i><span class="kaidez-social-sharing-list-item-link-text">youtube</span>
+                </a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+            
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span> 
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>  
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span> 
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+            <div id="todo">
+  </div>
+  <script type="text/template" id="item-template">
+    <div>
+      <input id="todo_complete" type="checkbox" <%= completed ? 'checked="checked"' : '' %>>
+      <%= title %>
+    </div>
+  </script>
+
+
+
+
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class"> 
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://mediatemple.net/" title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://maxcdn.com/" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2013 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> | <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="assistive-text" href="#container" title="Go back to the top">You have reached the bottom...go back to the top.</a>
+    </footer> <!-- #footer -->
+
+
+  </div> <!-- #container -->
+  
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+  
+  <script src="/js/main.min.js"></script>
+</body>
+</html>
