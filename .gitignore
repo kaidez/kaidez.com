@@ -9,6 +9,7 @@ assets/
 old_img/
 js/main.min.js
 css/styles.min.css
+jekyllOutput.html
 
 
 # Backbone code drafts

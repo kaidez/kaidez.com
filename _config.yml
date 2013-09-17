@@ -15,6 +15,7 @@ exclude: [
   css/styles.css,
   Gruntfile.js,
   grunt,
+  jekyllOutput.html,
   jsBuildOut,
   kaidezSiteNotes.txt,
   node_modules,
