@@ -255,3 +255,4 @@ Before deployment
 -Install Google Analytics.
 -Install GWT
 -Test that a post can be added to search.json with no problems.
+-Make sure sitemap is properly configured (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
