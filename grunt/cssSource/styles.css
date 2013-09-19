@@ -4866,6 +4866,19 @@ a.pagination-link {
     font-family: FontAwesome, Lato;
   }
 
+  .gPlus {
+    position: relative;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .gPlus:before {
+    content: "\f0D5"    " google+";
+    font-family: FontAwesome, Lato;
+  }
+
   .footer-outer-wrapper-class {
     -webkit-box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
