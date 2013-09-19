@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px transparent;
+  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*!
+/*
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -4837,7 +4837,41 @@ a.pagination-link {
   }
 
   /*
-  */
+   * Fancy rollover for styling for the social networking links start here
+   */
+  .gPlus {
+    position: relative;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .gPlus:before {
+    content: "\f0D5" " google+";
+    font-family: FontAwesome, Lato;
+  }
+
+  .gPlusRollover {
+    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
+    -ms-transition: opacity 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, left 0.3s ease;
+    color: #7db9e8;
+    opacity: 0;
+    left: -78px;
+  }
+
+  .kaidez-social-link:hover .gPlusRollover {
+    opacity: 1;
+    display: inline-block;
+    left: -2px;
+    width: 125px;
+    text-indent: -76px;
+    overflow-x: hidden;
+  }
+
   .github {
     position: relative;
     color: #7db9e8;
@@ -4852,13 +4886,14 @@ a.pagination-link {
   }
 
   .githubRollover {
+    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
+    -ms-transition: opacity 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, left 0.3s ease;
     color: #7db9e8;
     opacity: 0;
     left: -78px;
-    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
   }
 
   .kaidez-social-link:hover .githubRollover {
@@ -4868,20 +4903,6 @@ a.pagination-link {
     width: 125px;
     text-indent: -62px;
     overflow-x: hidden;
-    color: lighten #7db9e8, 15;
-  }
-
-  .gPlus {
-    position: relative;
-    color: #7db9e8;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
-  }
-
-  .gPlus:before {
-    content: "\f0D5"    " google+";
-    font-family: FontAwesome, Lato;
   }
 
   .footer-outer-wrapper-class {
