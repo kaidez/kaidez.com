@@ -3195,28 +3195,6 @@ main a:visited {
   clear: both;
 }
 
-.kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-  color: #7db9e8;
-  text-decoration: none;
-  top: 0;
-  border-bottom: 0;
-  position: relative;
-}
-
-.kaidez-social-sharing-list-item-link:hover,
-.kaidez-social-sharing-list-item-link:focus {
-  color: #52a2e0;
-}
-
-.kaidez-social-sharing-list-item-link-text {
-  display: inline-block;
-  padding: 21px 9px;
-}
-
 [class^=icon-], [class*=" icon-"] {
   display: inline-block;
 }
@@ -4839,11 +4817,13 @@ a.pagination-link {
     font-size: 18px;
   }
 
-  .kaidez-social-sharing-list-item {
+  .kaidez-social-sharing-list-item,
+  .kaidez-social-sharing-list-item:visited {
+    font-size: 22px;
     list-style-type: none;
     text-align: left;
-    margin-bottom: 10px;
     clear: both;
+    text-decoration: none;
   }
 
   .social-network-title {
@@ -4854,30 +4834,27 @@ a.pagination-link {
     border-bottom: 0;
     position: relative;
     width: 123px;
-    height: 74px;
     text-indent: -66px;
     overflow-x: hidden;
     display: inline-block;
-    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
-    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
-    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
-    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
+    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
   }
 
   .kaidez-social-link:hover .social-network-title {
     opacity: 1;
     display: inline-block;
-    color: #bedcf3;
     left: -4px;
     width: 123px;
-    height: 74px;
     text-indent: -66px;
     overflow-x: hidden;
+    color: lighten #7db9e8, 15;
   }
 
   .github {
     position: relative;
-    font-size: 23px;
     color: #7db9e8;
     text-decoration: none;
     width: 287px;
