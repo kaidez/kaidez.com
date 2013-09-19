@@ -6,16 +6,13 @@
     "buildform",
     "form",
     "formValidation",
-    "formViews",
     "loadLyndaAd",
     "menu",
     "prismInit",
-    "search",
-    "socialNetworkToggle"
+    "search"
   ],
 
   paths: {
-    backbone: "libs/backbone-min",
     enquire: "libs/enquire.min",
     jquery: "libs/jquery.min",
     ladda: "libs/ladda.min",
@@ -24,14 +21,13 @@
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
     tipuesetContent: "libs/tipuesearch_content",
-    underscore: "libs/underscore-min"
   },
 
   shim: {
-    "backbone": {
-      deps: ["underscore", "jquery"],
-      exports: "Backbone"
-    },
+    // "backbone": {
+    //   deps: ["underscore", "jquery"],
+    //   exports: "Backbone"
+    // },
     "prism": {
       "exports": "Prism"
     },
@@ -46,10 +42,10 @@
     tipuesetContent: {
       deps: ["jquery"],
       exports: "jquery"
-    },
-    "underscore": {
-      exports: "_"
     }
+    // "underscore": {
+    //   exports: "_"
+    // }
   }
 
 });

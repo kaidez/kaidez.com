@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 3000px transparent;
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*
+/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -3195,28 +3195,6 @@ main a:visited {
   clear: both;
 }
 
-.kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-  color: #7db9e8;
-  text-decoration: none;
-  top: 0;
-  border-bottom: 0;
-  position: relative;
-}
-
-.kaidez-social-sharing-list-item-link:hover,
-.kaidez-social-sharing-list-item-link:focus {
-  color: #52a2e0;
-}
-
-.kaidez-social-sharing-list-item-link-text {
-  display: inline-block;
-  padding: 21px 9px;
-}
-
 [class^=icon-], [class*=" icon-"] {
   display: inline-block;
 }
@@ -4839,29 +4817,71 @@ a.pagination-link {
     font-size: 18px;
   }
 
-  .kaidez-social-sharing-list-item-link {
-    width: 287px;
-    height: 64px;
-    display: inline-block;
-    z-index: 3;
+  .kaidez-social-sharing-list-item,
+  .kaidez-social-sharing-list-item:visited {
+    font-size: 22px;
+    list-style-type: none;
+    text-align: left;
+    clear: both;
+    text-decoration: none;
   }
 
-  .pushUp {
-    -webkit-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    -moz-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    -o-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    top: -38px;
-    opacity: 0;
-    right: -90px;
-    z-index: 2;
+  .social-network-title {
+    text-decoration: none;
+    border-bottom: 0;
     position: relative;
+    width: 125px;
+    text-indent: -66px;
+    overflow-x: hidden;
+    display: inline-block;
   }
 
-  .pushUpHover {
+  /*
+  */
+  .github {
+    position: relative;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .github:before {
+    content: "\f09B"    " github";
+    font-family: FontAwesome, Lato;
+  }
+
+  .githubRollover {
+    color: #7db9e8;
+    opacity: 0;
+    left: -78px;
+    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+  }
+
+  .kaidez-social-link:hover .githubRollover {
     opacity: 1;
-    right: -109px;
-    color: #bedcf3;
+    display: inline-block;
+    left: -2px;
+    width: 125px;
+    text-indent: -62px;
+    overflow-x: hidden;
+    color: lighten #7db9e8, 15;
+  }
+
+  .gPlus {
+    position: relative;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .gPlus:before {
+    content: "\f0D5"    " google+";
+    font-family: FontAwesome, Lato;
   }
 
   .footer-outer-wrapper-class {

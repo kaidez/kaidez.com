@@ -554,30 +554,7 @@ main a:visited {
   clear: both;
 }
 
-// link styling for kaidez social networking links
-.kaidez-social-sharing-list-item-link, .kaidez-social-sharing-list-item-link:visited {
-   @include transitions (color);
-   color: $header-color;
-  text-decoration: none;
-  top: 0;
-  border-bottom: 0;
-  position: relative;
-}
-
-// what happens if you rollover the kaidez social networking links...hover is 
-// for desktop views and (maybe) iPads, focus is for everything else.
-.kaidez-social-sharing-list-item-link:hover,
-.kaidez-social-sharing-list-item-link:focus {
-  color: darken($header-color,10);
-}
-
-// copy inside the <span> tag inside the kaidez social network links
-.kaidez-social-sharing-list-item-link-text {
-  display: inline-block;
-  padding: 21px 9px;
-}
-
-// float: left the Font Awesome fonts in the <aside>
+// float: left the Font Awesome fonts in the <aside>...CAN THIS BE DELETED?
 [class^=icon-], [class*=" icon-"] {
   display: inline-block;
 }

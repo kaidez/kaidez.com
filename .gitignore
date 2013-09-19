@@ -7,8 +7,9 @@ _site
 #------------
 assets/
 old_img/
-js/main.min.js
-css/styles.min.css
+/js/main.min.js
+css/
+grunt/cssSource/styles.css
 jekyllOutput.html
 
 

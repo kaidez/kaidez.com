@@ -342,31 +342,81 @@
     font-size: 18px;
   }
 
-  .kaidez-social-sharing-list-item-link {
-     width: 287px;
-     height: 64px;
-     display: inline-block;
-     z-index:3;
+  // the <li> that contains all the individual links
+  .kaidez-social-sharing-list-item,
+  .kaidez-social-sharing-list-item:visited {
+    font-size: 22px;
+    list-style-type: none;
+    text-align: left;
+    clear: both;
+    text-decoration: none;
+  }
+ 
+  // styles common to the the copy that appears when a social network link is rolled over
+  .social-network-title {
+      text-decoration: none;
+      border-bottom: 0;
+      position: relative;
+      width: 125px;
+      text-indent: -66px;
+      overflow-x: hidden;
+      display: inline-block;
+  }  
+    /*
+    */
+  // style the GitHub link
+  .github {
+    position: relative;
+    color: $header-color;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
   }
 
-  // chain CSS3 animations...looking for a DRY way to this with Sass...any ideas?
-  .pushUp {
-    -webkit-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    -moz-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    -o-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    top: -38px;
-    opacity: 0;
-    right: -90px;
-    z-index:2;
-    position: relative; 
+  // set both the the GitHub logo and " github" text as the background of the above ".github" class
+  .github:before {
+  content: "\f09B"    " github";
+  font-family: FontAwesome, Lato;
+}
+
+// setup rollover transitions for the GitHub Logo
+.githubRollover {
+  color: $header-color;
+  opacity: 0;
+  left: -78px;
+  -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+  -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+  -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+}
+
+// when the GitHub Logo is rolled over, go these transitions
+.kaidez-social-link:hover .githubRollover {
+  opacity: 1;
+  display: inline-block;
+  left: -2px;
+  width: 125px;
+  text-indent: -62px;
+  overflow-x: hidden;
+  color: lighten ($header-color, 15);
+}
+
+
+
+.gPlus {
+    position: relative;
+    color: $header-color;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
   }
 
-  .pushUpHover {
-    opacity: 1;
-    right: -109px;
-    color: lighten($header-color,15);
-  }
+.gPlus:before {
+  content: "\f0D5"    " google+";
+  font-family: FontAwesome, Lato;
+}
+
+
 
   // ==========================================================================
   //  Aside styles end
