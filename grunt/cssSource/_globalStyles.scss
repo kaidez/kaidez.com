@@ -612,6 +612,74 @@ main a:visited {
   max-width: 209px;
 }
 
+ // style the Google Plus link
+  .twitter {
+    @include style-sn-link; 
+  }
+    
+  // set both the the Twitter logo and " twitter" text as the background of the above ".twitter" class
+  .twitter:before {
+    @include font-stack($fa, $lato);
+    font-size: 22px;
+    content: "\f099" " twitter";
+  }
+
+  // when the Twitter Logo is rolled over, go these transitions
+  .twitterRollover {
+    @include hide-element;
+  }  
+
+  // style the Google Plus link
+  .gPlus {
+    @include style-sn-link; 
+  }
+    
+  // set both the the Google + logo and " google+" text as the background of the above ".gPlus" class
+  .gPlus:before {
+    @include font-stack($fa, $lato);
+    font-size: 22px;
+    content: "\f0D5" " google+";
+  }
+
+  // when the Google+ Logo is rolled over, go these transitions
+  .gPlusRollover {
+    @include hide-element;
+  }   
+
+  // style the GitHub link
+  .github {
+    @include style-sn-link; 
+  }
+
+  // set both the the GitHub logo and " github" text as the background of the above ".github" class
+  .github:before {
+    content: "\f09B"    " github";
+    @include font-stack($fa, $lato);
+    font-size: 22px;
+  }
+
+  // when the GitHub Logo is rolled over, go these transitions
+  .githubRollover {
+    @include hide-element;
+  }
+
+  // style the YouTube link
+  .youtube {
+    @include style-sn-link; 
+  }
+
+  // set both the the YouTube logo and " youtube" text as the background of the above ".youtube" class
+  .youtube:before {
+    content: "\f167"    " youtube";
+    @include font-stack($fa, $lato);
+    font-size: 22px;
+  }
+
+  // when the YouTube Logo is rolled over, go these transitions
+  .youtubeRollover {
+    @include hide-element;
+  }
+
 // ===========================================================================
 // Aside styles end
 // ===========================================================================

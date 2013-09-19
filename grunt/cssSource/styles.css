@@ -3247,6 +3247,82 @@ main a:visited {
   max-width: 209px;
 }
 
+.twitter {
+  position: relative;
+  color: #7db9e8;
+  text-decoration: none;
+  width: 287px;
+  height: 74px;
+}
+
+.twitter:before {
+  font-family: "FontAwesome", "Lato";
+  font-size: 22px;
+  content: "\f099" " twitter";
+}
+
+.twitterRollover {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+}
+
+.gPlus {
+  position: relative;
+  color: #7db9e8;
+  text-decoration: none;
+  width: 287px;
+  height: 74px;
+}
+
+.gPlus:before {
+  font-family: "FontAwesome", "Lato";
+  font-size: 22px;
+  content: "\f0D5" " google+";
+}
+
+.gPlusRollover {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+}
+
+.github {
+  position: relative;
+  color: #7db9e8;
+  text-decoration: none;
+  width: 287px;
+  height: 74px;
+}
+
+.github:before {
+  content: "\f09B"    " github";
+  font-family: "FontAwesome", "Lato";
+  font-size: 22px;
+}
+
+.githubRollover {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+}
+
+.youtube {
+  position: relative;
+  color: #7db9e8;
+  text-decoration: none;
+  width: 287px;
+  height: 74px;
+}
+
+.youtube:before {
+  content: "\f167"    " youtube";
+  font-family: "FontAwesome", "Lato";
+  font-size: 22px;
+}
+
+.youtubeRollover {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+}
+
 .footer-outer-wrapper-class {
   background-color: #0c5e7e;
   padding: 20px;
