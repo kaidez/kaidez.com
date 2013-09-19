@@ -362,8 +362,43 @@
       overflow-x: hidden;
       display: inline-block;
   }  
-    /*
-    */
+  /*
+   * Fancy rollover for styling for the social networking links start here
+   */
+
+  // style the Google Plus link
+  .gPlus {
+    position: relative;
+    color: $header-color;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+    
+  // set both the the Google + logo and " google+" text as the background of the above ".gPlus" class
+  .gPlus:before {
+    content: "\f0D5" " google+";
+    font-family: FontAwesome, Lato;
+  }
+
+  // setup rollover transitions for the Google+ Logo
+  .gPlusRollover {
+    @include vendor-prefix(transition, opacity 0.3s ease, left 0.3s ease);
+    color: $header-color;
+    opacity: 0;
+    left: -78px;
+  }
+
+  // when the Google+ Logo is rolled over, go these transitions
+  .kaidez-social-link:hover .gPlusRollover {
+    opacity: 1;
+    display: inline-block;
+    left: -2px;
+    width: 125px;
+    text-indent: -76px;
+    overflow-x: hidden;
+  }   
+
   // style the GitHub link
   .github {
     position: relative;
@@ -375,47 +410,27 @@
 
   // set both the the GitHub logo and " github" text as the background of the above ".github" class
   .github:before {
-  content: "\f09B"    " github";
-  font-family: FontAwesome, Lato;
-}
-
-// setup rollover transitions for the GitHub Logo
-.githubRollover {
-  color: $header-color;
-  opacity: 0;
-  left: -78px;
-  -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-  -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-  -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-  transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-}
-
-// when the GitHub Logo is rolled over, go these transitions
-.kaidez-social-link:hover .githubRollover {
-  opacity: 1;
-  display: inline-block;
-  left: -2px;
-  width: 125px;
-  text-indent: -62px;
-  overflow-x: hidden;
-  color: lighten ($header-color, 15);
-}
-
-
-
-.gPlus {
-    position: relative;
-    color: $header-color;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
+    content: "\f09B"    " github";
+    font-family: FontAwesome, Lato;
   }
 
-.gPlus:before {
-  content: "\f0D5"    " google+";
-  font-family: FontAwesome, Lato;
-}
+  // setup rollover transitions for the GitHub Logo
+  .githubRollover {
+    @include vendor-prefix(transition, opacity 0.3s ease, left 0.3s ease);
+    color: $header-color;
+    opacity: 0;
+    left: -78px;
+  }
 
+  // when the GitHub Logo is rolled over, go these transitions
+  .kaidez-social-link:hover .githubRollover {
+    opacity: 1;
+    display: inline-block;
+    left: -2px;
+    width: 125px;
+    text-indent: -62px;
+    overflow-x: hidden;
+  }
 
 
   // ==========================================================================
