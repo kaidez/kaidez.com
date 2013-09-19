@@ -4833,7 +4833,7 @@ a.pagination-link {
     left: -78px;
     border-bottom: 0;
     position: relative;
-    width: 123px;
+    width: 125px;
     text-indent: -66px;
     overflow-x: hidden;
     display: inline-block;
@@ -4846,9 +4846,9 @@ a.pagination-link {
   .kaidez-social-link:hover .social-network-title {
     opacity: 1;
     display: inline-block;
-    left: -4px;
-    width: 123px;
-    text-indent: -66px;
+    left: -2px;
+    width: 125px;
+    text-indent: -62px;
     overflow-x: hidden;
     color: lighten #7db9e8, 15;
   }
