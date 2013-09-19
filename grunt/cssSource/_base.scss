@@ -224,7 +224,19 @@ $bg-size: 227px 334px;
   transition: $property 0.3s ease;
 }
 
- // Unique styles for the 'site-title' class in the desktop styles...add this // to sprite mixin code.
+// Dope-ass vendor prefix mixin!!! "$name" = what type of transition.
+// "$argument" = are your arguments. Can take as many arguments as you want.
+// Attribution Stefan Wienert to at:
+// http://stefanwienert.net/blog/2012/05/18/easy-css-vendor-prefix-mixin-for-sass/ 
+@mixin vendor-prefix($name, $argument...) {
+  -webkit-#{$name}: $argument;
+  -ms-#{$name}: $argument;
+  -moz-#{$name}: $argument;
+  -o-#{$name}: $argument;
+  #{$name}: $argument;
+}
+
+// Unique styles for the 'site-title' class in the desktop styles...add this // to sprite mixin code.
 @mixin desktop-logo-sprite-add-on {
   float: left;
   margin: 0;
