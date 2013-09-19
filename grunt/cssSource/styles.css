@@ -4827,32 +4827,17 @@ a.pagination-link {
   }
 
   .social-network-title {
-    color: #7db9e8;
-    opacity: 0;
     text-decoration: none;
-    left: -78px;
     border-bottom: 0;
     position: relative;
     width: 125px;
     text-indent: -66px;
     overflow-x: hidden;
     display: inline-block;
-    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
-    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
   }
 
-  .kaidez-social-link:hover .social-network-title {
-    opacity: 1;
-    display: inline-block;
-    left: -2px;
-    width: 125px;
-    text-indent: -62px;
-    overflow-x: hidden;
-    color: lighten #7db9e8, 15;
-  }
-
+  /*
+  */
   .github {
     position: relative;
     color: #7db9e8;
@@ -4864,6 +4849,26 @@ a.pagination-link {
   .github:before {
     content: "\f09B"    " github";
     font-family: FontAwesome, Lato;
+  }
+
+  .githubRollover {
+    color: #7db9e8;
+    opacity: 0;
+    left: -78px;
+    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s ease;
+  }
+
+  .kaidez-social-link:hover .githubRollover {
+    opacity: 1;
+    display: inline-block;
+    left: -2px;
+    width: 125px;
+    text-indent: -62px;
+    overflow-x: hidden;
+    color: lighten #7db9e8, 15;
   }
 
   .gPlus {
