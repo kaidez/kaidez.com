@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 3000px transparent;
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*
+/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -4839,29 +4839,54 @@ a.pagination-link {
     font-size: 18px;
   }
 
-  .kaidez-social-sharing-list-item-link {
-    width: 287px;
-    height: 64px;
-    display: inline-block;
-    z-index: 3;
+  .kaidez-social-sharing-list-item {
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 10px;
+    clear: both;
   }
 
-  .pushUp {
-    -webkit-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    -moz-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    -o-transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    transition: opacity 0.3s ease, right 0.3s ease, color 0.3s ease;
-    top: -38px;
+  .social-network-title {
+    color: #7db9e8;
     opacity: 0;
-    right: -90px;
-    z-index: 2;
+    text-decoration: none;
+    left: -78px;
+    border-bottom: 0;
     position: relative;
+    width: 123px;
+    height: 74px;
+    text-indent: -66px;
+    overflow-x: hidden;
+    display: inline-block;
+    -webkit-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
+    -moz-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
+    -o-transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
+    transition: opacity 0.3s ease, color 0.3s ease, left 0.3s;
   }
 
-  .pushUpHover {
+  .kaidez-social-link:hover .social-network-title {
     opacity: 1;
-    right: -109px;
+    display: inline-block;
     color: #bedcf3;
+    left: -4px;
+    width: 123px;
+    height: 74px;
+    text-indent: -66px;
+    overflow-x: hidden;
+  }
+
+  .github {
+    position: relative;
+    font-size: 23px;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .github:before {
+    content: "\f09B"    " github";
+    font-family: FontAwesome, Lato;
   }
 
   .footer-outer-wrapper-class {
