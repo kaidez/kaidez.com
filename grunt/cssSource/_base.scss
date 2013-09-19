@@ -251,6 +251,28 @@ $bg-size: 227px 334px;
   height: 74px;
 }
 
+
+// CSS transitions are applied to kaidez social network styles when rolled over
+// and need styles applied to them before the rollover occurs. These are said-styles. 
+@mixin sn-transition-setup {
+  color: $header-color;
+  opacity: 0;
+  left: -78px;
+}
+
+// When kaidez social network styles rolled over, they share all the styles...except
+// for the text indent and width. apply all those styles here but pass the text indent
+// as a mixin argument.
+@mixin sn-rollover-setup($text-indent, $width) {
+  text-indent: $text-indent;
+  width: $width;
+  opacity: 1;
+  display: inline-block;
+  left: -2px;
+  overflow-x: hidden;
+}
+
+
 // Shared styling for the icon backround used in kaidez social networking links
 @mixin icon-bg {
   font-family: FontAwesome, Lato;
