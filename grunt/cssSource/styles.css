@@ -4778,7 +4778,7 @@ a.pagination-link {
     -moz-box-shadow: inset0 7px 16px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 7px 16px rgba(0, 0, 0, 0.2);
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
-    padding: 1px 10px 12px;
+    padding: 1px 10px 84px;
   }
 
   .aside-section-header {
@@ -4824,6 +4824,7 @@ a.pagination-link {
     text-align: left;
     clear: both;
     text-decoration: none;
+    margin-bottom: 35px;
   }
 
   .social-network-title {
@@ -4839,6 +4840,39 @@ a.pagination-link {
   /*
    * Fancy rollover for styling for the social networking links start here
    */
+  .twitter {
+    position: relative;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .twitter:before {
+    font-family: "FontAwesome", "Lato";
+    content: "\f099" " twitter";
+  }
+
+  .twitterRollover {
+    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
+    -ms-transition: opacity 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, left 0.3s ease;
+    color: #7db9e8;
+    opacity: 0;
+    left: -78px;
+  }
+
+  .kaidez-social-link:hover .twitterRollover {
+    text-indent: -69px;
+    width: 125px;
+    opacity: 1;
+    display: inline-block;
+    left: -2px;
+    overflow-x: hidden;
+  }
+
   .gPlus {
     position: relative;
     color: #7db9e8;
@@ -4864,11 +4898,11 @@ a.pagination-link {
   }
 
   .kaidez-social-link:hover .gPlusRollover {
+    text-indent: -76px;
+    width: 125px;
     opacity: 1;
     display: inline-block;
     left: -2px;
-    width: 125px;
-    text-indent: -76px;
     overflow-x: hidden;
   }
 
@@ -4897,11 +4931,44 @@ a.pagination-link {
   }
 
   .kaidez-social-link:hover .githubRollover {
+    text-indent: -77px;
+    width: 125px;
     opacity: 1;
     display: inline-block;
     left: -2px;
-    width: 125px;
-    text-indent: -62px;
+    overflow-x: hidden;
+  }
+
+  .youtube {
+    position: relative;
+    color: #7db9e8;
+    text-decoration: none;
+    width: 287px;
+    height: 74px;
+  }
+
+  .youtube:before {
+    content: "\f167"    " youtube";
+    font-family: "FontAwesome", "Lato";
+  }
+
+  .youtubeRollover {
+    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
+    -ms-transition: opacity 0.3s ease, left 0.3s ease;
+    -moz-transition: opacity 0.3s ease, left 0.3s ease;
+    -o-transition: opacity 0.3s ease, left 0.3s ease;
+    transition: opacity 0.3s ease, left 0.3s ease;
+    color: #7db9e8;
+    opacity: 0;
+    left: -78px;
+  }
+
+  .kaidez-social-link:hover .youtubeRollover {
+    text-indent: -80px;
+    width: 156px;
+    opacity: 1;
+    display: inline-block;
+    left: -2px;
     overflow-x: hidden;
   }
 
