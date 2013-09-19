@@ -7,13 +7,13 @@
 
 define(function() {
 
-  // Modernizr.addTest("classlist", "classList" in document.documentElement);
+  Modernizr.addTest("classlist", "classList" in document.documentElement);
 
-  var socialNames = {
-        "twitter" : {
-          "link": "twitterLink",
-          "linkTextHover": "twitterText"
-        }
+  //var socialNames = {
+       //  "twitter" : {
+       //    "link": "twitterLink",
+       //    "linkTextHover": "twitterText"
+       //  },
        // "gPlus" : {
        //    "link": "gPlusLink",
        //    "linkTextHover": "gPlusText"
@@ -26,25 +26,22 @@ define(function() {
        //    "link": "youTubeLink",
        //    "linkTextVisible": "youTubeText"
        //  }
-      };
+      //};
 
-for (key in socialNames) {
-  var socialNetworkLinkId =  socialNames[key]["link"],
-        socialNetworkLinkIdText = socialNames[key]["linkTextHover"],
-        theLinkText = document.getElementById(socialNetworkLinkId),
-        theHoverLinkText = document.getElementById(socialNetworkLinkIdText);
-      
-      
+      document.querySelector('#kaidez-social-network-list').addEventListener('mouseover', function(e) {
+        if (e.target.tagName === 'SPAN') {
+          var removeTarget = e.target.childNodes[2];
+          removeTarget.classList.add("pushUpHover");
+        }
+        console.dir(e.target);
+      }, false);
 
-  theLinkText.onmouseover = function() {
-    theHoverLinkText.classList.toggle("pushUpHover");
-  }
-
-  theLinkText.onmouseout = function() {
-    theHoverLinkText.classList.remove("pushUpHover");
-  }
-
-};
-
+      document.querySelector('#kaidez-social-network-list').addEventListener('mouseout', function(e) {
+        if (e.target.tagName === 'SPAN') {
+          var removeTarget = e.target.childNodes[2];
+          removeTarget.classList.remove("pushUpHover");
+        }
+        console.dir(e.target);
+      }, false);
 
 });
