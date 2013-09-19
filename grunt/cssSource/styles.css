@@ -4848,8 +4848,8 @@ a.pagination-link {
   }
 
   .gPlus:before {
+    font-family: "FontAwesome", "Lato";
     content: "\f0D5" " google+";
-    font-family: FontAwesome, Lato;
   }
 
   .gPlusRollover {
@@ -4882,7 +4882,7 @@ a.pagination-link {
 
   .github:before {
     content: "\f09B"    " github";
-    font-family: FontAwesome, Lato;
+    font-family: "FontAwesome", "Lato";
   }
 
   .githubRollover {
