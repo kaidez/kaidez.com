@@ -47,6 +47,7 @@ $darken-the-aside-color: darken($aside-color, 25);
 // Font variables
 $lato: "Lato"; // Google Font
 $robo: "Roboto Condensed"; // A Google Font
+$fa: "FontAwesome"; // Fonty Awesome...they're icons
 $srf: sans-serif;
 
 // Width varibles...mostly applied to the <main> tag and affects all content // sections.
@@ -128,6 +129,11 @@ $bg-size: 227px 334px;
   @if $visibility != blank {
     visibility: visible;
   }
+}
+
+// Use this to create font stacks...at least one font listed as an argument
+@mixin font-stack($fonts...) {
+  font-family: $fonts;
 }
 
 // Centers whatever is applied to it
@@ -234,6 +240,20 @@ $bg-size: 227px 334px;
   -moz-#{$name}: $argument;
   -o-#{$name}: $argument;
   #{$name}: $argument;
+}
+
+// Shared styling for the kaidez social networking links
+@mixin style-sn-link {
+  position: relative;
+  color: $header-color;
+  text-decoration: none;
+  width: 287px;
+  height: 74px;
+}
+
+// Shared styling for the icon backround used in kaidez social networking links
+@mixin icon-bg {
+  font-family: FontAwesome, Lato;
 }
 
 // Unique styles for the 'site-title' class in the desktop styles...add this // to sprite mixin code.

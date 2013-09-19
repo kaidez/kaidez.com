@@ -368,17 +368,13 @@
 
   // style the Google Plus link
   .gPlus {
-    position: relative;
-    color: $header-color;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
+    @include style-sn-link; 
   }
     
   // set both the the Google + logo and " google+" text as the background of the above ".gPlus" class
   .gPlus:before {
+    @include font-stack($fa, $lato);
     content: "\f0D5" " google+";
-    font-family: FontAwesome, Lato;
   }
 
   // setup rollover transitions for the Google+ Logo
@@ -401,17 +397,13 @@
 
   // style the GitHub link
   .github {
-    position: relative;
-    color: $header-color;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
+    @include style-sn-link; 
   }
 
   // set both the the GitHub logo and " github" text as the background of the above ".github" class
   .github:before {
     content: "\f09B"    " github";
-    font-family: FontAwesome, Lato;
+    @include font-stack($fa, $lato);
   }
 
   // setup rollover transitions for the GitHub Logo
