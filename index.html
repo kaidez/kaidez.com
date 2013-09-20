@@ -29,6 +29,28 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
   </article> <!-- #newestArticle -->
 
 </div>
+<!-- check to see what the category is of the NEWEST ARTICLE above -->
+{% case post.category %} 
+
+{% when 'tutorials' %}
+
+    {% assign count = 1 %}
+
+
+{% when 'coding-best-practices' %}
+
+    {% assign count = 2 %}
+
+
+{% when 'reviews' %}
+
+    {% assign count = 3 %}
+
+
+{% else %}
+    {% assign count = 4 %}
+{% endcase %}
+
 
 <section>
   <h1>TUTORIALS</h1>
@@ -69,47 +91,6 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 <section>
   <h1></h1>
 </section>
-
-<!-- check to see what the category is of the NEWEST ARTICLE above -->
-{% case post.category %} 
-
-{% when 'tutorials' %}
-
-    {% assign count = 1 %}
-
-
-{% when 'coding-best-practices' %}
-
-    {% assign count = 2 %}
-
-
-{% when 'reviews' %}
-
-    {% assign count = 3 %}
-
-
-{% else %}
-    {% assign count = 4 %}
-{% endcase %}
-
-
-
-
-
-{% if count == 2 %}
-{% for post in site.categories.coding-best-practices limit:1 offset:1 %}
-    
-      {{ post.title }}
-
-  {% endfor %}
-
-{% else %}
-{% for post in site.categories.coding-best-practices limit:1 %}
-    
-      {{ post.title }}
-
-      {% endfor %}
-{% endif %}
 
 
 {% endfor %} <!-- end ENTIRE LOOP -->
