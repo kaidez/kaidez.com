@@ -3,13 +3,11 @@ layout: default
 title: kaidez.com / Tutorials &amp; articles about  Web Development
 meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
 ---
-<div>
-
-  <section id="newestArticle" class="newestArticleClass">
+  <article id="newestArticle" class="newestArticleClass">
     <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
-    <article>
     
-      {% for post in site.posts reversed limit: 1 %}
+    
+      {% for post in site.posts reversed limit: 1 %} <!-- start ENTIRE LOOP -->
         <h1>{{ post.title }}</h1>
 
         {% if post.has-home-img %}
@@ -19,6 +17,7 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
         {% endif %}
         {{ post.meta-excerpt }}
 
+  </article>
 
 {% case post.category %}
 
@@ -46,33 +45,19 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 
 
 {% if count == 2 %}
-{% for post in site.categories.coding-best-practices limit:1 %}
+{% for post in site.categories.coding-best-practices limit:1 offset:1 %}
     
       {{ post.title }}
 
   {% endfor %}
 
 {% else %}
-{% for post in site.categories.coding-best-practices limit:1 offset:1 %}
+{% for post in site.categories.coding-best-practices limit:1 %}
     
       {{ post.title }}
 
-  {% endfor %}
+      {% endfor %}
 {% endif %}
 
 
-
-
-
-
-
-      
-  </article>
-  <article>
-    
-  </article>
-
-  </section> <!-- #tutorialContent-->
-
-
-  {% endfor %}
+      {% endfor %} <!-- end ENTIRE LOOP -->
