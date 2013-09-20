@@ -19,28 +19,33 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
         {% endif %}
         {{ post.meta-excerpt }}
 
-        {% case post.category %}
-{% assign count = '0' %}
+
+{% case post.category %}
+
 {% when  'tutorials' %}
-  {% capture count %}
-    {{ count | plus: '1' }}
-  {% endcapture %}
+
+    {% assign count = 1 %}
+
 
 {% when  'coding-best-practices' %}
-  {% capture count %}
-    {{ count | plus: '2' }}
-  {% endcapture %}
+
+    {% assign count = 2 %}
+
 
 {% when  'reviews' %}
-  {% capture count %}
-    {{ count | plus: '3' }}
-  {% endcapture %}
+
+    {% assign count = 3 %}
+
 
 {% else %}
-    {{ count | plus: '4' }}
+    {% assign count = 4 %}
 {% endcase %}
 
-
+{% if count == 2 %}
+yep
+{% else %}
+nope
+{% endif %}
       
   </article>
   <article>
@@ -61,7 +66,6 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 
 
 
-    {{ count }}, ya
 
 
 
