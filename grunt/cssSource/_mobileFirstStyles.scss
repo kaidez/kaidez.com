@@ -107,13 +107,13 @@
 // ===========================================================================
 
 // Style the <section> tag that wraps the tutorials at the top of the home page
-.tutorialContentClass {
+.newestArticleClass {
   @include master-center;
   text-align: left;
   width: 300px;
 }
 
-.tutorialSectionHeaderClass {
+.newestArticleHeaderClass {
   font-size:16px;
 }
 // ===========================================================================
