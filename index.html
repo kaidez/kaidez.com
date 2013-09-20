@@ -16,14 +16,14 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 
     {% if post.has-home-img %}
 
-      <a href="{{ post.url }}">
-        <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
-      </a>
+    <a href="{{ post.url }}">
+      <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
+    </a>
     {% else %}
 
-      <a href="{{ post.url }}">
-        <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
-      </a>
+    <a href="{{ post.url }}">
+      <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
+    </a>
 
     {% endif %}
 
@@ -44,129 +44,166 @@ if NEWEST ARTICLE is in the 'tutorials' category, create a variable
 called 'isCategory' and set it equal to 1.
 -->
 {% when 'tutorials' %}
-  {% assign isCategory = 1 %}
+{% assign isCategory = 1 %}
 
 <!--
 if NEWEST ARTICLE is in the 'coding-best-practices' category, create a variable
 called 'isCategory' and set it equal to 2.
 -->
 {% when 'coding-best-practices' %}
-  {% assign isCategory = 2 %}
+{% assign isCategory = 2 %}
 
 <!--
 if NEWEST ARTICLE is in the 'reviews' category, create a variable
 called 'isCategory' and set it equal to 3.
 -->
 {% when 'reviews' %}
-  {% assign isCategory = 3 %}
+{% assign isCategory = 3 %}
 
 <!--
 otherwise, NEWEST ARTICLE is in the 'reviews' category, so create
 a variable called 'isCategory' and set it equal to 4.
 -->
 {% else %}
-  {% assign isCategory = 4 %}
+{% assign isCategory = 4 %}
 
 {% endcase %}
 <!-- Stop the Liquid case statement-->
 
+<!--
+################
+ TUTORIAL SECTION
+################
+-->
 <section id="homepageTutorials">
 
   <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> TUTORIALS</h1>
 
-  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
   {% if isCategory == 1 %}
 
-    {% for post in site.categories.tutorials limit:3 offset:1 %}
+  {% for post in site.categories.tutorials limit:3 offset:1 %}
+  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
     <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
     {{ post.meta-excerpt }}
-    {% endfor %}
-    
+  </article>
+  {% endfor %}
+
   {% else %}
 
-    {% for post in site.categories.tutorials limit:3 %}
+  {% for post in site.categories.tutorials limit:3 %}
+  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
     <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
     {{ post.meta-excerpt }} 
-    {% endfor %}
-
-  {% endif %}
-
-  <a href="/tutorials/" title="View more tutorials posts on kaidez.com">view more tutorial posts &raquo;</a>
   </article>
 
+  {% endfor %}
+  {% endif %}
+  
+  <a href="/tutorials/" title="View more tutorials on kaidez.com" class="post-snippet-link">view more tutorials &raquo;</a>
+  
 </section> <!-- #homepageTutorials -->
 
+<!--
+################
+ CODE TIPS SECTION
+################
+-->
 <section id="homepageCodingTips">
 
   <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> CODE TIPS</h1>
-
-  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+  
   {% if isCategory == 2 %}
 
     {% for post in site.categories.coding-best-practices limit:3 offset:1 %}
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} 
+    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }} 
+    </article>
+
     {% endfor %}
 
-  {% else %}
+    {% else %}
 
     {% for post in site.categories.coding-best-practices limit:3 %}
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1> 
-    {{ post.meta-excerpt }}
+    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1> 
+      {{ post.meta-excerpt }}
+    </article>
     {% endfor %}
 
-  {% endif %}
-  </article>
+    {% endif %}
 
-</section> <!-- #homepageCodingTips -->
+      <a href="/coding-best-practices/" title="View more coding tips on kaidez.com" class="post-snippet-link">view more coding tips &raquo;</a>
 
-<section id="homepageReviews">
+  </section> <!-- #homepageCodingTips -->
 
-  <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> REVIEWS</h1>
+<!--
+#############
+ REVIEW SECTION
+#############
+-->
 
-  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-  {% if isCategory == 3 %}
+  <section id="homepageReviews">
 
-    {% for post in site.categories.reviews limit:3 offset:1 %}
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} 
-    {% endfor %}
+    <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> REVIEWS</h1>
 
-  {% else %}
+    
+      {% if isCategory == 3 %}
+      {% for post in site.categories.reviews limit:3 offset:1 %}
+      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
+      </article>
+      {% endfor %}
 
-    {% for post in site.categories.reviews limit:3 %}
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} 
-    {% endfor %}
+      {% else %}
 
-  {% endif %}
-  </article>
+      {% for post in site.categories.reviews limit:3 %}
+      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
+      </article>
+      {% endfor %}
 
-</section> <!-- #homepageReviews -->
+      {% endif %}
 
-<section id="homepagePersonal">
+      <a href="/reviews/" title="View more reviews on kaidez.com" class="post-snippet-link">view more reviews &raquo;</a>
 
-  <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> PERSONAL</h1>
+  </section> <!-- #homepageReviews -->
 
-  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-  {% if isCategory == 4 %}
+<!--
+################
+ PERSONAL SECTION
+################
+-->
+  <section id="homepagePersonal">
 
-    {% for post in site.categories.personal limit:3 offset:1 %}
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} 
-    {% endfor %}
+    <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> PERSONAL</h1>
 
-  {% else %}
+    
+      {% if isCategory == 4 %}
 
-    {% for post in site.categories.personal limit:3 %}
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} 
-    {% endfor %}
+      {% for post in site.categories.personal limit:3 offset:1 %}
+      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
+      </article>
+      {% endfor %}
 
-  {% endif %}
-  </article>
+      {% else %}
 
-</section> <!-- #homepagePersonal -->
+      {% for post in site.categories.personal limit:3 %}
+      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
+      </article>
+      {% endfor %}
+
+      {% endif %}
+
+      <a href="/personal/" title="View more personal articles on kaidez.com" class="post-snippet-link">view more personal articles &raquo;</a>
+
+  </section> <!-- #homepagePersonal -->
 
 
 {% endfor %} <!-- end ENTIRE LOOP -->
