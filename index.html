@@ -3,35 +3,87 @@ layout: default
 title: kaidez.com / Tutorials &amp; articles about  Web Development
 meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
 ---
+
+{% for post in site.posts reversed limit: 1 %} <!-- start ENTIRE LOOP -->
+
+<div>
+
   <article id="newestArticle" class="newestArticleClass">
+
     <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
-    
-    
-      {% for post in site.posts reversed limit: 1 %} <!-- start ENTIRE LOOP -->
-        <h1>{{ post.title }}</h1>
 
-        {% if post.has-home-img %}
-          <img src="img/{{ post.has-home-img  }}" alt="{{ post.title }}"  />
-        {% else %}
-          <img src="img/profilepic.jpg" />
-        {% endif %}
-        {{ post.meta-excerpt }}
+    <h2>{{ post.title }}</h2>
 
+    {% if post.has-home-img %}
+
+      <img src="/img/{{ post.has-home-img  }}" alt="{{ post.title }}" />
+
+    {% else %}
+
+      <img src="/img/profilepic.jpg" />
+
+    {% endif %}
+
+    {{ post.meta-excerpt }}
+
+  </article> <!-- #newestArticle -->
+
+</div>
+
+<section>
+  <h1>TUTORIALS</h1>
+  <article>
+  {% if count == 1 %}
+    {% for post in site.categories.tutorials limit:3 offset:1 %}
+    <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+  {% else %}
+    {% for post in site.categories.tutorials limit:3 %}
+      <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+{% endif %}
   </article>
 
-{% case post.category %}
+</section>
 
-{% when  'tutorials' %}
+<section>
+    {% if count == 2 %}
+    {% for post in site.categories.coding-best-practices limit:3 offset:1 %}
+    <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+  {% else %}
+    {% for post in site.categories.coding-best-practices limit:3 %}
+      <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+{% endif %}
+</section>
+
+<section>
+  <h1></h1>
+</section>
+
+<section>
+  <h1></h1>
+</section>
+
+<!-- check to see what the category is of the NEWEST ARTICLE above -->
+{% case post.category %} 
+
+{% when 'tutorials' %}
 
     {% assign count = 1 %}
 
 
-{% when  'coding-best-practices' %}
+{% when 'coding-best-practices' %}
 
     {% assign count = 2 %}
 
 
-{% when  'reviews' %}
+{% when 'reviews' %}
 
     {% assign count = 3 %}
 
@@ -60,4 +112,4 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 {% endif %}
 
 
-      {% endfor %} <!-- end ENTIRE LOOP -->
+{% endfor %} <!-- end ENTIRE LOOP -->
