@@ -8,7 +8,7 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
   <section id="newestArticle" class="newestArticleClass">
     <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
     <article>
-    {% assign count = '0' %}
+    
       {% for post in site.posts reversed limit: 1 %}
         <h1>{{ post.title }}</h1>
 
@@ -16,11 +16,11 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
           <img src="img/{{ post.has-home-img  }}" alt="{{ post.title }}"  />
         {% else %}
           <img src="img/profilepic.jpg" />
-      {% endif %}
-      {{ post.meta-excerpt }}
+        {% endif %}
+        {{ post.meta-excerpt }}
 
-      {% case post.category %}
-
+        {% case post.category %}
+{% assign count = '0' %}
 {% when  'tutorials' %}
   {% capture count %}
     {{ count | plus: '1' }}
@@ -40,7 +40,7 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
     {{ count | plus: '4' }}
 {% endcase %}
 
-  {% endfor %}
+
       
   </article>
   <article>
@@ -52,11 +52,31 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
    <div id="ads">
 
   </div> <!-- #ads-->
-
+  {% endfor %}
 
   <article>
+   
+
     <h1>TUTORIALS</h1>
-    {{ count }}    
+
+
+
+    {{ count }}, ya
+
+
+
+
+    
+
+
+
+    
+
+    <article class="post-snippet" role="article">
+      <!-- <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }} -->
+    </article>
+
   </article>
 
   <article>
