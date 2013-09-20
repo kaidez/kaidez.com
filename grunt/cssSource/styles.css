@@ -3125,6 +3125,10 @@ main a:visited {
   color: #92aae3;
 }
 
+a.read-more-link {
+  color: red;
+}
+
 .aside-outer-wrapper-class {
   color: #7db9e8;
   height: auto;
@@ -3553,18 +3557,8 @@ main a:visited {
   display: none;
 }
 
-a.read-post-link {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  color: #fff;
-  display: block;
-  padding: 2px;
-  margin-top: 14px;
-  background-color: #3285a5;
-  max-width: 120px;
-  float: none;
-  text-align: center;
+.read-post-link:link {
+  color: #3285a5;
 }
 
 .wf-loading .category-header,
@@ -4063,20 +4057,6 @@ a.pagination-link {
     font-size: 27px;
   }
 
-  a.read-post-link {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    color: #fff;
-    display: block;
-    padding: 2px;
-    margin-top: 14px;
-    background-color: #3285a5;
-    max-width: 120px;
-    float: none;
-    text-align: center;
-  }
-
   .wf-active h1.post-title, .wf-active h1.category-title {
     margin: 0px auto;
     text-align: center;
@@ -4286,18 +4266,8 @@ a.pagination-link {
     visibility: visible;
   }
 
-  a.read-post-link {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    color: #fff;
-    display: block;
-    padding: 2px;
-    margin-top: 14px;
-    background-color: #3285a5;
-    max-width: 120px;
-    float: none;
-    text-align: center;
+  .read-post-link:link {
+    color: #3285a5;
   }
 
   .outer-wrapper-nav-header {
@@ -4833,18 +4803,8 @@ a.pagination-link {
     display: inline;
   }
 
-  a.read-post-link {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    color: #fff;
-    display: block;
-    padding: 2px;
-    margin-top: 14px;
-    background-color: #3285a5;
-    max-width: 120px;
-    float: none;
-    text-align: center;
+  .read-post-link:link {
+    color: #3285A5;
   }
 
   .post-image-box {
@@ -5349,19 +5309,6 @@ a.pagination-link {
 }
 .lt-ie9 .breadcrumb-last {
   display: inline;
-}
-.lt-ie9 a.read-post-link {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  color: #fff;
-  display: block;
-  padding: 2px;
-  margin-top: 14px;
-  background-color: #3285a5;
-  max-width: 120px;
-  float: none;
-  text-align: center;
 }
 .lt-ie9 .post-image-box {
   margin: 60px auto;
