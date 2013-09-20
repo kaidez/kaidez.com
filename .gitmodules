@@ -1,0 +1,3 @@
+[submodule "prodSite"]
+	path = prodSite
+	url = git@github.com:kaidez/kaidez.com.git
