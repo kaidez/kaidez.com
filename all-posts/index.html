@@ -1,0 +1,37 @@
+---
+layout: default
+title: kaidez.com / Tutorials &amp; articles about  Web Development
+meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
+---
+    
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
+    </article>
+  {% endfor %}
+    
+  <!-- Pagination links -->
+  <div id="post-pagination" class="pagination">
+    <ul class="pages">
+      <li class="page">
+        {% if paginator.page == 1 %}
+          <span class="current-page">1</span>
+        {% else %}
+          <a href="/" class="pagination-link">1</a>
+        {% endif %}
+      </li>
+
+      {% for count in (2..paginator.total_pages) %}
+        <li class="page">
+          {% if count == paginator.page %}
+            <span class="current-page">{{ count }}</span>
+          {% else %}
+            <a href="/page{{ count }}" class="pagination-link">{{ count }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul> <!-- .pages -->
+
+  </div>  <!-- #post-pagination -->
