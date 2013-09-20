@@ -3029,7 +3029,6 @@ a:focus {
 
 .post-snippet-link:link,
 .post-snippet-link:visited {
-  color: #2d7895;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
@@ -3055,11 +3054,10 @@ a:focus {
 
 main a,
 main a:visited {
-  color: #2d7895;
+  color: #000;
 }
 
 .post-snippet {
-  border-bottom: 1px solid #04232f;
   padding-bottom: 48px;
 }
 
@@ -3472,7 +3470,6 @@ main a:visited {
   text-align: left;
   width: 300px;
   margin: 0 auto 30px;
-  border-bottom: 2px solid #7db9e8;
 }
 
 .newestArticleHeaderClass {
@@ -3480,7 +3477,10 @@ main a:visited {
 }
 
 .homePageSectionHeaderClass {
-  font-size: 16px;
+  color: #2d7895;
+  border-top: 1px solid #000;
+  font-size: 18px;
+  padding-top: 5px;
 }
 
 .wf-active h1.post-title, .wf-active h1.category-title {
