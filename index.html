@@ -41,11 +41,31 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
     {% assign count = 4 %}
 {% endcase %}
 
+
+
+
+
 {% if count == 2 %}
-yep
+{% for post in site.categories.coding-best-practices limit:1 %}
+    
+      {{ post.title }}
+
+  {% endfor %}
+
 {% else %}
-nope
+{% for post in site.categories.coding-best-practices limit:1 offset:1 %}
+    
+      {{ post.title }}
+
+  {% endfor %}
 {% endif %}
+
+
+
+
+
+
+
       
   </article>
   <article>
@@ -54,48 +74,5 @@ nope
 
   </section> <!-- #tutorialContent-->
 
-   <div id="ads">
 
-  </div> <!-- #ads-->
   {% endfor %}
-
-  <article>
-   
-
-    <h1>TUTORIALS</h1>
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-    <article class="post-snippet" role="article">
-      <!-- <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }} -->
-    </article>
-
-  </article>
-
-  <article>
-    <h1>CODE TIPS</h1>
-    {{ count }}    
-  </article>
-
-  <article>
-    <h1>REVIEWS</h1>
-    {{ count }}    
-  </article>
-
-  <article>
-    <h1>PERSONAL</h1>
-    {{ count }}    
-  </article>
-
-
