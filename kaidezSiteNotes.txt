@@ -240,7 +240,6 @@ LEFT TO DO
 =================
 -remove "no-js" using code you take from Modernizr. (post launch)
 -CSS animations for the mobile menu & search box. (post launch)
--read up on zopfli. (https://github.com/mathiasbynens/grunt-zopfli)
 -Get Google ads up and running.
 -CSS animations...review 'em.' (post launch)
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks. (sorta...not sure how to properly deploy _site folder...post launch)
