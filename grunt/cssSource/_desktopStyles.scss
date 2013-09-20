@@ -244,8 +244,8 @@
   }
 
   // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
+  .read-post-link:link {
+    color: #3285A5;
   }
 
   // styling for pictures with captions on posts pages

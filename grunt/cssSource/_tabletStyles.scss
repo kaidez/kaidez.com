@@ -193,11 +193,6 @@
     font-size: 27px;
   }
 
-  // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
-
   // Styles for post and category <h1> tags
   .wf-active h1.post-title, .wf-active h1.category-title  {
     @include post-category-title(40px, 31px 0 6px);

@@ -239,11 +239,6 @@
     display:inline;
   }
 
-  // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
-  }
-
   // styling for pictures with captions on posts pages
   .post-image-box {
     margin:60px auto;

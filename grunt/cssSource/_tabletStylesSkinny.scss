@@ -19,8 +19,8 @@
   }
 
   // the "Read post" link on the home, category and search pages
-  a.read-post-link {
-    @include read-post-link($master-border-radius);
+  .read-post-link:link {
+    color: $post-link-color
   }
 
   // ==========================================================================

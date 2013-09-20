@@ -344,18 +344,6 @@ a:focus {
 // Page content styles start
 // ===========================================================================
 
-// // All text links (except for post meta info) are blue but have no underline.
-// a:link, a:visited { 
-//   color: darken($post-link-color, 4);
-//   text-decoration: none;
-// }
-
-// // All text links have an underline on hover.
-// a:hover {  
-//   color: darken($post-link-color, 1);
-//   text-decoration: underline;
-// }
-
 // title tag for post snippets All text links (except for post meta info) are
 // blue but have no underline.
 .post-snippet-link:link,
@@ -461,6 +449,11 @@ main a:visited {
   // author name located in the <footer> that's inside the <article> on posts
   .author {
     color: #92aae3;
+  }
+
+  // the "Read post" link on the home, category and search pages
+  a.read-more-link {
+    color: red //#3285A5;
   }
 
 // ===========================================================================

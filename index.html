@@ -1,7 +1,7 @@
 ---
 layout: default
 title: kaidez.com / Tutorials &amp; articles about  Web Development
-meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
+meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants and More from kaidez
 ---
 
 {% for post in site.posts reversed limit:1 %} <!-- start ENTIRE LOOP -->
@@ -19,6 +19,7 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
     <a href="{{ post.url }}">
       <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
     </a>
+
     {% else %}
 
     <a href="{{ post.url }}">
@@ -34,7 +35,7 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 </div>
 
 <!--
-Use a Liquid case statemenbt check to see what the category is of
+Use a Liquid case statement check to see what the category is of
 the NEWEST ARTICLE above.
 -->
 {% case post.category %} 
@@ -152,7 +153,7 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.reviews limit:3 offset:1 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }}
+      {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
@@ -161,7 +162,7 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.reviews limit:3 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }}
+      {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
