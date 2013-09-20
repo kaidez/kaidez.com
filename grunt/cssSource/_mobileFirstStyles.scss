@@ -117,9 +117,10 @@
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
   text-align: left;
-  width: 300px;
+  width: 280px; // should also be the max-width for all images site-wide
   margin:0 auto 30px;
-
+  padding: 10px;
+  background-color: #e3ebff;
 }
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page
@@ -133,6 +134,10 @@
   border-top: 1px solid #000;
   font-size:18px;
   padding-top: 5px;
+}
+
+.imgBorder {
+  border: 1px solid  #b9b9b9;
 }
 
 // ===========================================================================
