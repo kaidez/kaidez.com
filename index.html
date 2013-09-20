@@ -4,7 +4,7 @@ title: kaidez.com / Tutorials &amp; articles about  Web Development
 meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
 ---
 
-{% for post in site.posts reversed limit: 1 %} <!-- start ENTIRE LOOP -->
+{% for post in site.posts reversed limit:1 %} <!-- start ENTIRE LOOP -->
 
 <div>
 
@@ -29,68 +29,87 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
   </article> <!-- #newestArticle -->
 
 </div>
-<!-- check to see what the category is of the NEWEST ARTICLE above -->
+
+<!--
+Use a Liquid case statemenbt check to see what the category is of
+the NEWEST ARTICLE above.
+-->
 {% case post.category %} 
 
+<!--
+if NEWEST ARTICLE is in the 'tutorials' category, create a variable
+called 'isCategory' and set it equal to 1.
+-->
 {% when 'tutorials' %}
+  {% assign isCategory = 1 %}
 
-    {% assign count = 1 %}
-
-
+<!--
+if NEWEST ARTICLE is in the 'coding-best-practices' category, create a variable
+called 'isCategory' and set it equal to 2.
+-->
 {% when 'coding-best-practices' %}
+  {% assign isCategory = 2 %}
 
-    {% assign count = 2 %}
-
-
+<!--
+if NEWEST ARTICLE is in the 'reviews' category, create a variable
+called 'isCategory' and set it equal to 3.
+-->
 {% when 'reviews' %}
+  {% assign isCategory = 3 %}
 
-    {% assign count = 3 %}
-
-
+<!--
+otherwise, NEWEST ARTICLE is in the 'reviews' category, so create
+a variable called 'isCategory' and set it equal to 4.
+-->
 {% else %}
-    {% assign count = 4 %}
+  {% assign isCategory = 4 %}
+
 {% endcase %}
+<!-- Stop the Liquid case statement-->
 
+<section id="homepageTutorials">
 
-<section>
   <h1>TUTORIALS</h1>
+
   <article>
-  {% if count == 1 %}
+  {% if isCategory == 1 %}
+
     {% for post in site.categories.tutorials limit:3 offset:1 %}
     <h1>{{ post.title }}</h1> 
     {% endfor %}
 
   {% else %}
+
     {% for post in site.categories.tutorials limit:3 %}
-      <h1>{{ post.title }}</h1> 
+    <h1>{{ post.title }}</h1> 
     {% endfor %}
 
-{% endif %}
+  {% endif %}
   </article>
 
-</section>
+</section> <!-- #homepageTutorials -->
 
-<section>
-    {% if count == 2 %}
+<section id="homepageCodingTips">
+
+  <h1>CODE TIPS</h1>
+
+  <article>
+  {% if isCategory == 2 %}
+
     {% for post in site.categories.coding-best-practices limit:3 offset:1 %}
     <h1>{{ post.title }}</h1> 
     {% endfor %}
 
   {% else %}
+
     {% for post in site.categories.coding-best-practices limit:3 %}
-      <h1>{{ post.title }}</h1> 
+    <h1>{{ post.title }}</h1> 
     {% endfor %}
 
-{% endif %}
-</section>
+  {% endif %}
+  </article>
 
-<section>
-  <h1></h1>
-</section>
-
-<section>
-  <h1></h1>
-</section>
+</section> <!-- #homepageCodingTips -->
 
 
 {% endfor %} <!-- end ENTIRE LOOP -->
