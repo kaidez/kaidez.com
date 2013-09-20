@@ -111,5 +111,49 @@ a variable called 'isCategory' and set it equal to 4.
 
 </section> <!-- #homepageCodingTips -->
 
+<section id="homepageReviews">
+
+  <h1>REVIEWS</h1>
+
+  <article>
+  {% if isCategory == 3 %}
+
+    {% for post in site.categories.reviews limit:3 offset:1 %}
+    <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+  {% else %}
+
+    {% for post in site.categories.reviews limit:3 %}
+    <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+  {% endif %}
+  </article>
+
+</section> <!-- #homepageReviews -->
+
+<section id="homepagePersonal">
+
+  <h1>PERSONAL</h1>
+
+  <article>
+  {% if isCategory == 4 %}
+
+    {% for post in site.categories.personal limit:3 offset:1 %}
+    <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+  {% else %}
+
+    {% for post in site.categories.personal limit:3 %}
+    <h1>{{ post.title }}</h1> 
+    {% endfor %}
+
+  {% endif %}
+  </article>
+
+</section> <!-- #homepagePersonal -->
+
 
 {% endfor %} <!-- end ENTIRE LOOP -->
