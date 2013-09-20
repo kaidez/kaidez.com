@@ -11,7 +11,7 @@ has-home-img: gitTutorial.jpg
 tags: [git, github, tute]
 ---
 
-If you’ve every tried to remove files from a [GitHub][1] repository by dragging them to your Trash or Recycle Bin and then doing a `git push`, you know that this doesn’t work.
+If you’ve every tried to remove files from a [GitHub][1] repository by dragging them to your Trash or Recycle Bin and then doing a `git push`, you know that this doesn't work.
 
  [1]: http://GitHub.com/
 
