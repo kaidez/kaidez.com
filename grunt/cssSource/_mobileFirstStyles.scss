@@ -106,6 +106,14 @@
 // Search box-related styles end
 // ===========================================================================
 
+
+
+
+
+// ===========================================================================
+// Home page box-related styles start
+// ===========================================================================
+
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
   @include master-center;
@@ -113,16 +121,15 @@
   width: 300px;
 }
 
+// style the <h1> in the 'NEWEST ARTICLE' part of the home page
 .newestArticleHeaderClass {
+  font-size:20px;
+}
+
+// style the <h1> tags in home page category sections
+.homePageSectionHeaderClass {
   font-size:16px;
 }
-// ===========================================================================
-// Home page box-related styles start
-// ===========================================================================
-
-
-
-
 
 // ===========================================================================
 // Home page box-related styles end
