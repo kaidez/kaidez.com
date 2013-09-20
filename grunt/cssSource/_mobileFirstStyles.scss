@@ -116,9 +116,10 @@
 
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
-  @include master-center;
   text-align: left;
   width: 300px;
+  margin:0 auto 30px;
+  border-bottom: 2px solid $header-color;
 }
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page

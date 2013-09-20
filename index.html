@@ -16,11 +16,14 @@ meta-excerpt: Web development tutorials for beginners, product reviews, rants an
 
     {% if post.has-home-img %}
 
-      <img src="/img/{{ post.has-home-img  }}" alt="{{ post.title }}" />
-
+      <a href="{{ post.url }}">
+        <img src="/img/{{ post.has-home-img  }}" alt="{{ post.title }}" />
+      </a>
     {% else %}
 
-      <img src="/img/profilepic.jpg" />
+      <a href="{{ post.url }}">
+        <img src="/img/profilepic.jpg" alt="{{ post.title }}"  />
+      </a>
 
     {% endif %}
 
@@ -87,7 +90,7 @@ a variable called 'isCategory' and set it equal to 4.
     {% endfor %}
 
   {% endif %}
-  
+
   <a href="/tutorials/" title="View more tutorials posts on kaidez.com">view more tutorial posts &raquo;</a>
   </article>
 
