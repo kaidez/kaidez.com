@@ -454,6 +454,8 @@ a:focus {
   // the "Read post" link on the home, category and search pages
   a.read-more-link {
     color: #3285A5;
+    clear: both;
+    display: block;
   }
 
 // ===========================================================================

@@ -117,15 +117,16 @@
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
   text-align: left;
-  width: 280px; // should also be the max-width for all images site-wide
-  margin:0 auto 30px;
-  padding: 10px;
+  min-width: 280px; // should also be the max-width for all images site-wide
+  margin:0;
+  padding: 15px;
   background-color: #e3ebff;
 }
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page
 .newestArticleHeaderClass {
   font-size:20px;
+  margin: 0;
 }
 
 // style the <h1> tags in home page category sections
@@ -177,7 +178,7 @@
 .page-content {
   max-width: $mobile-portrait-width;
   margin: 0 auto;
-  padding: 15px 15px 58px;
+  padding: 0;
   font-size: 18px;
   line-height: 30px;
   @include full-height;
@@ -217,7 +218,7 @@
 
 // the "Read post" link on the home, category and search pages
 .read-post-link:link {
-  color: $post-link-color
+  color: $post-link-color;
 }
 
 // <h1> title on the category page...hides the 'Roboto' font on load. These 
