@@ -76,13 +76,15 @@ a variable called 'isCategory' and set it equal to 4.
 <!-- Stop the Liquid case statement-->
 
 <!--
-################
+#################
  TUTORIAL SECTION
-################
+#################
 -->
-<section id="homepageTutorials">
+<section id="homepageTutorials" class="categoryPadding bgColorTutorial">
 
-  <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> TUTORIALS</h1>
+  <h1 class="homePageSectionHeaderClass">
+    <span class="homePageSectionHeaderText"><i class="icon-compass"></i> TUTORIALS</span>
+  </h1>
 
   {% if isCategory == 1 %}
 
@@ -109,13 +111,15 @@ a variable called 'isCategory' and set it equal to 4.
   </section> <!-- #homepageTutorials -->
 
 <!--
-################
+#################
  CODE TIPS SECTION
-################
+#################
 -->
-<section id="homepageCodingTips">
+<section id="homepageCodingTips" class="categoryPadding bgColorCodeTips">
 
-  <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> CODE TIPS</h1>
+  <h1 class="homePageSectionHeaderClass">
+    <span class="homePageSectionHeaderText"><i class="icon-compass"></i> CODE TIPS</span>
+  </h1>
   
   {% if isCategory == 2 %}
 
@@ -149,14 +153,16 @@ a variable called 'isCategory' and set it equal to 4.
   </section> <!-- #homepageCodingTips -->
 
 <!--
-#############
+##############
  REVIEW SECTION
-#############
+##############
 -->
 
-  <section id="homepageReviews">
+  <section id="homepageReviews" class="categoryPadding bgColorReviews">
 
-    <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> REVIEWS</h1>
+    <h1 class="homePageSectionHeaderClass">
+      <span class="homePageSectionHeaderText"><i class="icon-compass"></i> REVIEWS</span>
+    </h1>
 
     
       {% if isCategory == 3 %}
@@ -189,14 +195,15 @@ a variable called 'isCategory' and set it equal to 4.
   </section> <!-- #homepageReviews -->
 
 <!--
-################
+#################
  PERSONAL SECTION
-################
+#################
 -->
-  <section id="homepagePersonal">
+  <section id="homepagePersonal" class="categoryPadding bgColorPersonal">
 
-    <h1 class="homePageSectionHeaderClass"><i class="icon-compass"></i> PERSONAL</h1>
-
+    <h1 class="homePageSectionHeaderClass">
+      <span class="homePageSectionHeaderText"><i class="icon-compass"></i> PERSONAL</span>
+    </h1>
     
       {% if isCategory == 4 %}
 

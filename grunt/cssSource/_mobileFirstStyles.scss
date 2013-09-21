@@ -120,7 +120,7 @@
   min-width: 280px; // should also be the max-width for all images site-wide
   margin:0;
   padding: 15px;
-  background-color: #e3ebff;
+  background-color: #fff;
 }
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page
@@ -132,9 +132,9 @@
 // style the <h1> tags in home page category sections
 .homePageSectionHeaderClass {
   color: darken($post-link-color, 4);
-  border-top: 1px solid #000;
   font-size:18px;
   padding-top: 5px;
+  border-top:1px solid grey;
 }
 
 // put a light grey border around all images
@@ -153,6 +153,10 @@
   background-color: $post-link-color;
   text-decoration: none;
   font-size: 14px;
+}
+
+.categoryPadding {
+  padding: 15px;
 }
 
 // ===========================================================================
@@ -176,12 +180,12 @@
 
 // style the <main> element
 .page-content {
+  @include full-height;
   max-width: $mobile-portrait-width;
   margin: 0 auto;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
-  @include full-height;
   background-color: #fff;
   width: auto;
   text-align: left;

@@ -364,7 +364,6 @@ a:focus {
 // Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
-  background-color: #fff;
   padding: 10px;
   width: auto;
   text-align: left;
@@ -458,6 +457,30 @@ a:focus {
     display: block;
   }
 
+ // background color for the tutorial section on the home page
+  .bgColorTutorial {
+    background-color: $homepage-section-bg-color;
+  }
+
+   // background color for the code tips section on the home page
+  .bgColorCodeTips {
+
+  }
+
+   // background color for the review section on the home page
+  .bgColorReviews {
+    background-color: $homepage-section-bg-color;
+  }
+
+   // background color for the personal section on the home page
+  .bgColorPersonal {
+
+  }
+
+  .homePageSectionHeaderText {
+    position: relative;
+    top: -21px;
+  }
 // ===========================================================================
 // Post content styles end
 // ===========================================================================
