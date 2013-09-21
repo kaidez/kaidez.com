@@ -348,7 +348,7 @@ a:focus {
 // blue but have no underline.
 .post-snippet-link:link,
 .post-snippet-link:visited { 
-  // color: darken($post-link-color, 4);
+  color: black;
   text-decoration: none;
   @include transitions (color);
 }
@@ -370,11 +370,11 @@ a:focus {
   text-align: left;
 }
 
-// all links in post copy are this color...fails lint tests...I'll live
-main a,
-main a:visited {
-  color: #000;
-}
+// // all links in post copy are this color...fails lint tests...I'll live
+// main a,
+// main a:visited {
+//   color: #000;
+// }
 
 // Post snippet that displays on both the home page and search results.
 .post-snippet {
@@ -453,7 +453,7 @@ main a:visited {
 
   // the "Read post" link on the home, category and search pages
   a.read-more-link {
-    color: red //#3285A5;
+    color: #3285A5;
   }
 
 // ===========================================================================

@@ -85,7 +85,7 @@ a variable called 'isCategory' and set it equal to 4.
   {% for post in site.categories.tutorials limit:3 offset:1 %}
   <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
     <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }}
+    {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
   </article>
   {% endfor %}
 
@@ -94,7 +94,7 @@ a variable called 'isCategory' and set it equal to 4.
   {% for post in site.categories.tutorials limit:3 %}
   <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
     <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} 
+    {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
   </article>
 
   {% endfor %}
@@ -118,7 +118,7 @@ a variable called 'isCategory' and set it equal to 4.
     {% for post in site.categories.coding-best-practices limit:3 offset:1 %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }} 
+      {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
     </article>
 
     {% endfor %}
@@ -128,7 +128,7 @@ a variable called 'isCategory' and set it equal to 4.
     {% for post in site.categories.coding-best-practices limit:3 %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1> 
-      {{ post.meta-excerpt }}
+      {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
     </article>
     {% endfor %}
 
@@ -187,7 +187,7 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.personal limit:3 offset:1 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }}
+      {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
@@ -196,7 +196,7 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.personal limit:3 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }}
+      {{ post.meta-excerpt }}...<a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
