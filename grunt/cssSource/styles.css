@@ -3047,7 +3047,6 @@ a:focus {
   position: relative;
   height: auto;
   min-height: 100%;
-  background-color: #fff;
   padding: 10px;
   width: auto;
   text-align: left;
@@ -3473,7 +3472,7 @@ a.read-more-link {
   min-width: 280px;
   margin: 0;
   padding: 15px;
-  background-color: #e3ebff;
+  background-color: #fff;
 }
 
 .newestArticleHeaderClass {
@@ -3483,7 +3482,6 @@ a.read-more-link {
 
 .homePageSectionHeaderClass {
   color: #2d7895;
-  border-top: 1px solid #000;
   font-size: 18px;
   padding-top: 5px;
 }
@@ -3521,7 +3519,7 @@ a.read-more-link {
   position: relative;
   height: auto;
   min-height: 100%;
-  background-color: #fff;
+  background-color: #DDFFF8;
   width: auto;
   text-align: left;
 }
