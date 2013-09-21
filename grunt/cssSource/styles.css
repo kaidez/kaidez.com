@@ -3123,6 +3123,8 @@ a:focus {
 
 a.read-more-link {
   color: #3285A5;
+  clear: both;
+  display: block;
 }
 
 .aside-outer-wrapper-class {
@@ -3468,14 +3470,15 @@ a.read-more-link {
 
 .newestArticleClass {
   text-align: left;
-  width: 280px;
-  margin: 0 auto 30px;
-  padding: 10px;
+  min-width: 280px;
+  margin: 0;
+  padding: 15px;
   background-color: #e3ebff;
 }
 
 .newestArticleHeaderClass {
   font-size: 20px;
+  margin: 0;
 }
 
 .homePageSectionHeaderClass {
@@ -3512,7 +3515,7 @@ a.read-more-link {
 .page-content {
   max-width: 290px;
   margin: 0 auto;
-  padding: 15px 15px 58px;
+  padding: 0;
   font-size: 18px;
   line-height: 30px;
   position: relative;
@@ -3880,7 +3883,7 @@ a.pagination-link {
 @media only screen and (min-width: 321px) and (max-width: 568px) {
   .page-content {
     max-width: 548px;
-    padding: 15px 15px 58px;
+    padding: 0;
   }
 
   .breadcrumb-styles {
