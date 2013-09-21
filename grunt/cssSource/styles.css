@@ -3126,6 +3126,19 @@ a.read-more-link {
   display: block;
 }
 
+.bgColorTutorial {
+  background-color: #f6ffff;
+}
+
+.bgColorReviews {
+  background-color: #f6ffff;
+}
+
+.homePageSectionHeaderText {
+  position: relative;
+  top: -21px;
+}
+
 .aside-outer-wrapper-class {
   color: #7db9e8;
   height: auto;
@@ -3484,6 +3497,7 @@ a.read-more-link {
   color: #2d7895;
   font-size: 18px;
   padding-top: 5px;
+  border-top: 1px solid grey;
 }
 
 .imgBorder {
@@ -3502,6 +3516,10 @@ a.read-more-link {
   font-size: 14px;
 }
 
+.categoryPadding {
+  padding: 15px;
+}
+
 .wf-active h1.post-title, .wf-active h1.category-title {
   margin: 0px auto;
   text-align: center;
@@ -3511,15 +3529,15 @@ a.read-more-link {
 }
 
 .page-content {
+  position: relative;
+  height: auto;
+  min-height: 100%;
   max-width: 290px;
   margin: 0 auto;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
-  position: relative;
-  height: auto;
-  min-height: 100%;
-  background-color: #DDFFF8;
+  background-color: #fff;
   width: auto;
   text-align: left;
 }
