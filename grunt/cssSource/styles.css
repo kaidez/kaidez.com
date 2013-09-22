@@ -3029,12 +3029,13 @@ a:focus {
 
 .post-snippet-link:link,
 .post-snippet-link:visited {
-  color: black;
-  text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  color: #3285a5;
+  text-decoration: none;
+  margin: 0;
 }
 
 .post-snippet-link:hover,
@@ -3122,13 +3123,13 @@ a:focus {
 
 a.read-more-link {
   color: #3285A5;
-  clear: both;
-  display: block;
 }
 
 .homePageSectionHeaderText {
   position: relative;
-  top: -21px;
+  top: -16px;
+  background-color: #fff;
+  padding-right: 3px;
 }
 
 .aside-outer-wrapper-class {
@@ -3423,6 +3424,7 @@ a.read-more-link {
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.4;
+  margin: 0;
 }
 
 .homepage-link {
@@ -3488,8 +3490,8 @@ a.read-more-link {
 .homePageSectionHeaderClass {
   color: #929292;
   font-size: 18px;
-  padding-top: 5px;
-  border-top: 1px solid grey;
+  margin: 0;
+  border-top: 1px solid #929292;
 }
 
 .imgBorder {
@@ -3508,8 +3510,9 @@ a.read-more-link {
   font-size: 14px;
 }
 
-.categoryPadding {
+.categorySpacing {
   padding: 15px;
+  margin-bottom: 26PX;
 }
 
 .wf-active h1.post-title, .wf-active h1.category-title {
