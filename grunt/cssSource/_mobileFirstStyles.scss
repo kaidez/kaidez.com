@@ -150,7 +150,7 @@
   font-size: 14px;
 }
 
-.categorySpacing {
+.sharedCategoryStyling {
   padding: 15px 0;
 }
 
@@ -191,8 +191,7 @@
   @include full-height;
   // max-width: $mobile-portrait-width;
   margin: 0 auto;
-  //margin: 0 auto;
-  padding: 17px;
+  padding: 15px 45px 58px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;

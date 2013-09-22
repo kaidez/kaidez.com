@@ -196,6 +196,7 @@
   // For the "main" id element
   .page-content {
     @include page-content($inner-content-width, #F5F5F5);
+    padding: 15px 0 58px;
   }
   
   // breadcrumbs
@@ -238,16 +239,30 @@
 
   .newestArticleClass {
      @include create-outer-box-shadow;
-     text-align: left;
     background: #fff;
-    margin-bottom: 53px;
+    max-width: 509px;
+    margin: 0 auto 53px;
     padding: 10px;
   }
+
 
   .newestArticleHeaderClass {
     color: $aside-color;
     font-size: 23px;
     margin-bottom: 5px;
+  }
+
+.homePageSectionHeaderText {
+    font-size: 21px;
+}
+
+  .sharedCategoryStyling {
+    padding: 15px 33px 40px;
+    background-color: #fff;
+  }
+
+  .homePageSectionHeaderClass {
+    margin-top: 13px;
   }
 
   // ==========================================================================
