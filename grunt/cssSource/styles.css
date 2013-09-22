@@ -3053,6 +3053,13 @@ a:focus {
   text-align: left;
 }
 
+.newestArticleClass {
+  text-align: center;
+  margin: 0;
+  background-color: #fff;
+  padding-bottom: 53px;
+}
+
 .post-snippet {
   padding-bottom: 28px;
 }
@@ -3469,7 +3476,6 @@ a.read-more-link {
 }
 
 .newestArticleClass {
-  text-align: left;
   min-width: 280px;
   margin: 0;
   background-color: #fff;
@@ -3479,6 +3485,7 @@ a.read-more-link {
 .newestArticleHeaderClass {
   font-size: 20px;
   margin: 0;
+  text-align: left;
 }
 
 .homePageSectionHeaderClass {
@@ -3516,6 +3523,7 @@ a.read-more-link {
 
 .post-snippet-text {
   margin: 0;
+  text-align: left;
 }
 
 .wf-active h1.post-title, .wf-active h1.category-title {

@@ -370,6 +370,15 @@ a:focus {
   text-align: left;
 }
 
+
+// Style the <section> tag that wraps the tutorials at the top of the home page
+.newestArticleClass {
+  text-align: center;
+  margin:0;
+  background-color: #fff;
+  padding-bottom: 53px;
+}
+
 // // all links in post copy are this color...fails lint tests...I'll live
 // main a,
 // main a:visited {

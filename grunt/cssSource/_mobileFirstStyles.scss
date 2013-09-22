@@ -111,7 +111,6 @@
 
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
-  text-align: left;
   min-width: 280px; // should also be the max-width for all images site-wide
   margin:0;
   background-color: #fff;
@@ -122,6 +121,7 @@
 .newestArticleHeaderClass {
   font-size:20px;
   margin: 0;
+  text-align: left;
 }
 
 // style the <h1> tags in home page category sections
@@ -162,6 +162,7 @@
 }
 .post-snippet-text {
   margin: 0;
+  text-align: left;
 }
 
 
