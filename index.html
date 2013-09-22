@@ -81,7 +81,7 @@ a variable called 'isCategory' and set it equal to 4.
 <section id="homepageTutorials" class="homepageTutorialsClass sharedCategoryStyling">
 
   <h1 class="homePageSectionHeaderClass">
-    <span class="homePageSectionHeaderText"><i class="icon-compass"></i> TUTORIALS</span>
+    <span class="homePageSectionHeaderText headerTutorial"><i class="icon-compass"></i> TUTORIALS</span>
   </h1>
 
   {% if isCategory == 1 %}
@@ -97,6 +97,9 @@ a variable called 'isCategory' and set it equal to 4.
 
   {% for post in site.categories.tutorials limit:3 %}
   <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+
+  {% include homepageThumb_partial.html %}
+
     <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
     {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
   </article>
@@ -116,7 +119,7 @@ a variable called 'isCategory' and set it equal to 4.
 <section id="homepageCodingTips" class="homepageCodingTipsClass sharedCategoryStyling">
 
   <h1 class="homePageSectionHeaderClass">
-    <span class="homePageSectionHeaderText"><i class="icon-compass"></i> CODE TIPS</span>
+    <span class="homePageSectionHeaderText headerCodeTips"><i class="icon-compass"></i> CODE TIPS</span>
   </h1>
   
   {% if isCategory == 2 %}
@@ -157,7 +160,7 @@ a variable called 'isCategory' and set it equal to 4.
   <section id="homepageReviews" class="homepageReviewsClass sharedCategoryStyling">
 
     <h1 class="homePageSectionHeaderClass">
-      <span class="homePageSectionHeaderText"><i class="icon-compass"></i> REVIEWS</span>
+      <span class="homePageSectionHeaderText headerReviews"><i class="icon-compass"></i> REVIEWS</span>
     </h1>
 
     
@@ -196,7 +199,7 @@ a variable called 'isCategory' and set it equal to 4.
   <section id="homepagePersonal" class="homepagePersonalClass sharedCategoryStyling">
 
     <h1 class="homePageSectionHeaderClass">
-      <span class="homePageSectionHeaderText"><i class="icon-compass"></i> PERSONAL</span>
+      <span class="homePageSectionHeaderText headerPersonal"><i class="icon-compass"></i> PERSONAL</span>
     </h1>
     
       {% if isCategory == 4 %}

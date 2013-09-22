@@ -187,10 +187,18 @@
   .wf-active h1.post-title, .wf-active h1.category-title  {
     @include post-category-title(40px);
   }
-
+  
+  .post-snippet {
+    @include create-outer-box-shadow;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
   // title tag for post snippets
   .post-snippet-title {
     font-size: 34px;
+    background-color: #fff;
+    padding: 0;
   }
   
   // For the "main" id element
@@ -245,11 +253,26 @@
     padding: 10px;
   }
 
-
   .newestArticleHeaderClass {
     color: $aside-color;
     font-size: 23px;
     margin-bottom: 5px;
+  }
+
+  .headerTutorial {
+    background-color: $catSectionColor;
+  }
+
+  .headerCodeTips {
+    background-color: darken($catSectionColor, 5);
+  }
+
+  .headerReviews {
+    background-color: darken($catSectionColor, 10);
+  }
+
+  .headerPersonal {
+    background-color: darken($catSectionColor, 15);
   }
 
 .homePageSectionHeaderText {
@@ -265,19 +288,19 @@
   }
 
   .homepageTutorialsClass {
-    background-color: #CDF9FF;
+    background-color: $catSectionColor;
   }
 
 .homepageCodingTipsClass {
-    background-color: darken(#CDF9FF, 5);
+    background-color: darken($catSectionColor, 5);
   }
 
 .homepageReviewsClass {
-    background-color: darken(#CDF9FF, 10);
+    background-color: darken($catSectionColor, 10);
   }
 
 .homepagePersonalClass {
-    background-color: darken(#CDF9FF, 15);
+    background-color: darken($catSectionColor, 15);
   }
 
   // ==========================================================================
