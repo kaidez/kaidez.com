@@ -3135,7 +3135,7 @@ a.read-more-link {
 .homePageSectionHeaderText {
   position: relative;
   top: -16px;
-  background-color: #fff;
+  background-color: #F5F5F5;
   padding-right: 3px;
 }
 
@@ -3511,7 +3511,7 @@ a.read-more-link {
   font-size: 14px;
 }
 
-.categorySpacing {
+.sharedCategoryStyling {
   padding: 15px 0;
 }
 
@@ -3539,7 +3539,7 @@ a.read-more-link {
   height: auto;
   min-height: 100%;
   margin: 0 auto;
-  padding: 17px;
+  padding: 15px 45px 58px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
@@ -4091,7 +4091,6 @@ a.pagination-link {
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 15px 45px 58px;
     font-size: 18px;
     line-height: 30px;
     position: relative;
@@ -4447,7 +4446,6 @@ a.pagination-link {
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 15px 45px 58px;
     font-size: 18px;
     line-height: 30px;
     position: relative;
@@ -4456,6 +4454,7 @@ a.pagination-link {
     background-color: whitesmoke;
     width: auto;
     text-align: left;
+    padding: 15px 0 58px;
   }
 
   .breadcrumb-styles {
@@ -4502,9 +4501,9 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    text-align: left;
     background: #fff;
-    margin-bottom: 53px;
+    max-width: 509px;
+    margin: 0 auto 53px;
     padding: 10px;
   }
 
@@ -4512,6 +4511,19 @@ a.pagination-link {
     color: #107aa3;
     font-size: 23px;
     margin-bottom: 5px;
+  }
+
+  .homePageSectionHeaderText {
+    font-size: 21px;
+  }
+
+  .sharedCategoryStyling {
+    padding: 15px 33px 40px;
+    background-color: #fff;
+  }
+
+  .homePageSectionHeaderClass {
+    margin-top: 13px;
   }
 
   .aside-outer-wrapper-class {
@@ -4809,7 +4821,6 @@ a.pagination-link {
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 15px 45px 58px;
     font-size: 18px;
     line-height: 30px;
     position: relative;
@@ -5322,7 +5333,6 @@ a.pagination-link {
 .lt-ie9 .page-content {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 15px 45px 58px;
   font-size: 18px;
   line-height: 30px;
   position: relative;
