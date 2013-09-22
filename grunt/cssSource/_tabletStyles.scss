@@ -243,6 +243,10 @@
     line-height: normal; 
   }
 
+  .newestArticleHeaderClass {
+    color: $aside-color;
+  }
+
   // =========================================================================
   // Page content styles end
   // =========================================================================
@@ -317,7 +321,7 @@
 
   // styling hook for <footer>
   .footer-outer-wrapper-class {
-    @include create-box-shadow;
+    @include create-inner-box-shadow;
   }
   
   // inner wrapper in the <footer>

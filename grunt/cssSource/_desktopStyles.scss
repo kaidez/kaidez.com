@@ -300,7 +300,7 @@
   
   // apply background image to <aside>
   .aside-outer-wrapper-class {
-    @include create-box-shadow;
+    @include create-inner-box-shadow;
     background: $aside-color url('../img/footer-bg.png') no-repeat left;
     padding: 1px 10px 84px;
   }
@@ -471,7 +471,7 @@
 
   // styling hook for <footer>
   .footer-outer-wrapper-class {
-    @include create-box-shadow;
+    @include create-inner-box-shadow;
     height: 150px;
   }
   
