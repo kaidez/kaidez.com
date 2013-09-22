@@ -19,12 +19,6 @@
 // Header styles start
 // ============================================================================
 
-// Post snippet that displays on both the home page and search results.
-.post-snippet-title {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  margin: 0;
-}
 
 // ============================================================================
 // Logo link :provides a large enough space for a click area. These styles
@@ -158,7 +152,16 @@
 
 .categorySpacing {
   padding: 15px;
-  margin-bottom: 26PX;
+}
+
+// Post snippet that displays on both the home page and search results.
+.post-snippet-title {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.post-snippet-text {
+  margin: 0;
 }
 
 // ===========================================================================
