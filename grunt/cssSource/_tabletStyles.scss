@@ -200,7 +200,7 @@
 
   // For the main element
   .page-content {
-    @include page-content($inner-content-width);
+    @include page-content($inner-content-width, #F5F5F5);
   }
 
   .breadcrumb-styles {
@@ -245,6 +245,8 @@
 
   .newestArticleHeaderClass {
     color: $aside-color;
+    font-size: 23px;
+    background-color: #fff;
   }
 
   // =========================================================================

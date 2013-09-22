@@ -210,7 +210,7 @@
   }
 
   .page-content {
-    @include page-content($inner-content-width);
+    @include page-content($inner-content-width, #F5F5F5);
   }
   
   // breadcrumbs

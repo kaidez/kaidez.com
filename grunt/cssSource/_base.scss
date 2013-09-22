@@ -192,14 +192,14 @@ $bg-size: 227px 334px;
 // this mixin to a class that's applied to the element. The '$dimension'
 // variable defines the width value and the values are determined by the
 // "Width variables" directly below the mixin.
-@mixin page-content($dimension) {
+@mixin page-content($dimension, $bg-color) {
   max-width: $dimension;
   margin: 0 auto;
   padding: 15px 45px 58px;
   font-size: 18px;
   line-height: 30px;
   @include full-height;
-  background-color: #fff;
+  background-color: $bg-color;
   width: auto;
   text-align: left;
 }
