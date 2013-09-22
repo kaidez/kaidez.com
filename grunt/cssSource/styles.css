@@ -4454,7 +4454,7 @@ a.pagination-link {
     background-color: whitesmoke;
     width: auto;
     text-align: left;
-    padding: 15px 0 58px;
+    padding: 15px 0 0;
   }
 
   .breadcrumb-styles {
@@ -4519,11 +4519,26 @@ a.pagination-link {
 
   .sharedCategoryStyling {
     padding: 15px 33px 40px;
-    background-color: #fff;
   }
 
   .homePageSectionHeaderClass {
     margin-top: 13px;
+  }
+
+  .homepageTutorialsClass {
+    background-color: #CDF9FF;
+  }
+
+  .homepageCodingTipsClass {
+    background-color: #b4f6ff;
+  }
+
+  .homepageReviewsClass {
+    background-color: #9af3ff;
+  }
+
+  .homepagePersonalClass {
+    background-color: #81f0ff;
   }
 
   .aside-outer-wrapper-class {
