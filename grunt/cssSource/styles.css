@@ -4146,6 +4146,10 @@ a.pagination-link {
     line-height: normal;
   }
 
+  .newestArticleHeaderClass {
+    color: #107aa3;
+  }
+
   .aside-outer-wrapper-class {
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
   }
@@ -4490,6 +4494,20 @@ a.pagination-link {
 
   .social-sharing-list-item {
     padding-right: 20px;
+  }
+
+  .newestArticleClass {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    text-align: left;
+    background: #f5f5f5;
+    margin-bottom: 53px;
+    padding: 10px;
+  }
+
+  .newestArticleHeaderClass {
+    color: #107aa3;
   }
 
   .aside-outer-wrapper-class {
