@@ -6,6 +6,7 @@ layout: post
 permalink: /eloquent-javascript-review/
 category: reviews
 cat-name: "Reviews"
+has-thumbnail: ejsThumb.png
 tags: [javascript, review]
 ---
 
