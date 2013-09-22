@@ -7,6 +7,7 @@ meta-excerpt: How to create/change page elements off-DOM with JavaScript. Discus
 permalink: /javascript-off-dom/
 category: tutorials
 cat-name: "Tutorials"
+has-thumbnail: jsLogo.png
 tags: [javascript,  screencast, tute]
 ---
   

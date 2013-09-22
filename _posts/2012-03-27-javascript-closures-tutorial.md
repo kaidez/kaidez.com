@@ -7,6 +7,7 @@ meta-excerpt: JavaScript closures tutorial using the New York City subway to exp
 permalink: /javascript-closures-tutorial/
 category: tutorials
 cat-name: "Tutorials"
+has-thumbnail: subwayMap.png
 tags: [javascript, beginner, tute]
 ---
 

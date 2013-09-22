@@ -8,6 +8,7 @@ permalink: /remove-files-from-github/
 category: tutorials
 cat-name: "Tutorials"
 has-home-img: gitTutorial.jpg
+has-thumbnail: gitTutorial-tn.jpg
 tags: [git, github, tute]
 ---
 
