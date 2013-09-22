@@ -114,8 +114,8 @@
   text-align: left;
   min-width: 280px; // should also be the max-width for all images site-wide
   margin:0;
-  padding: 15px;
   background-color: #fff;
+  padding-bottom: 53px;
 }
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page
@@ -151,7 +151,7 @@
 }
 
 .categorySpacing {
-  padding: 15px;
+  padding: 15px 0;
 }
 
 // Post snippet that displays on both the home page and search results.
@@ -163,6 +163,8 @@
 .post-snippet-text {
   margin: 0;
 }
+
+
 
 // ===========================================================================
 // Home page box-related styles end
@@ -189,12 +191,17 @@
   // max-width: $mobile-portrait-width;
   margin: 0 auto;
   //margin: 0 auto;
-  padding: 0;
+  padding: 17px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
   width: auto;
   text-align: left;
+}
+
+// pad stuff on the post and category pages
+.nonHomePagePadding {
+  padding: 17px;
 }
 
 // breadcrumb container

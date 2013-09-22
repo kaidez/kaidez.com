@@ -3472,8 +3472,8 @@ a.read-more-link {
   text-align: left;
   min-width: 280px;
   margin: 0;
-  padding: 15px;
   background-color: #fff;
+  padding-bottom: 53px;
 }
 
 .newestArticleHeaderClass {
@@ -3505,7 +3505,7 @@ a.read-more-link {
 }
 
 .categorySpacing {
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .post-snippet-title {
@@ -3531,12 +3531,16 @@ a.read-more-link {
   height: auto;
   min-height: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 17px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
   width: auto;
   text-align: left;
+}
+
+.nonHomePagePadding {
+  padding: 17px;
 }
 
 .breadcrumb-styles {
