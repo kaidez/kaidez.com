@@ -183,8 +183,9 @@
 // style the <main> element
 .page-content {
   @include full-height;
-  max-width: $mobile-portrait-width;
+  // max-width: $mobile-portrait-width;
   margin: 0 auto;
+  //margin: 0 auto;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
