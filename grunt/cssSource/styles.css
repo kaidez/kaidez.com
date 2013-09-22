@@ -4439,8 +4439,19 @@ a.pagination-link {
     font-size: 40px;
   }
 
+  .post-snippet {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
   .post-snippet-title {
     font-size: 34px;
+    background-color: #fff;
+    padding: 10px;
   }
 
   .page-content {
@@ -4513,6 +4524,22 @@ a.pagination-link {
     margin-bottom: 5px;
   }
 
+  .headerTutorial {
+    background-color: #cdf9ff;
+  }
+
+  .headerCodeTips {
+    background-color: #b4f6ff;
+  }
+
+  .headerReviews {
+    background-color: #9af3ff;
+  }
+
+  .headerPersonal {
+    background-color: #81f0ff;
+  }
+
   .homePageSectionHeaderText {
     font-size: 21px;
   }
@@ -4526,7 +4553,7 @@ a.pagination-link {
   }
 
   .homepageTutorialsClass {
-    background-color: #CDF9FF;
+    background-color: #cdf9ff;
   }
 
   .homepageCodingTipsClass {
