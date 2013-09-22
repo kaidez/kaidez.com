@@ -348,9 +348,10 @@ a:focus {
 // blue but have no underline.
 .post-snippet-link:link,
 .post-snippet-link:visited { 
-  color: black;
-  text-decoration: none;
   @include transitions (color);
+  color: $post-link-color;
+  text-decoration: none;
+  margin: 0;
 }
 
 // what happens if you rollover the post snippet titels...hover is 
@@ -453,13 +454,13 @@ a:focus {
   // the "Read post" link on the home, category and search pages
   a.read-more-link {
     color: #3285A5;
-    clear: both;
-    display: block;
   }
 
   .homePageSectionHeaderText {
     position: relative;
-    top: -21px;
+    top: -16px;
+    background-color: #fff;
+    padding-right: 3px;
   }
 // ===========================================================================
 // Post content styles end

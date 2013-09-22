@@ -23,6 +23,7 @@
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.4;
+  margin: 0;
 }
 
 // ============================================================================
@@ -133,8 +134,8 @@
 .homePageSectionHeaderClass {
   color: #929292;
   font-size:18px;
-  padding-top: 5px;
-  border-top:1px solid grey;
+  margin:0;
+  border-top:1px solid #929292;
 }
 
 // put a light grey border around all images
@@ -155,8 +156,9 @@
   font-size: 14px;
 }
 
-.categoryPadding {
+.categorySpacing {
   padding: 15px;
+  margin-bottom: 26PX;
 }
 
 // ===========================================================================

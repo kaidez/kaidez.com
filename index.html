@@ -29,10 +29,8 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
     {% endif %}
 
     <p class="post-snippet-text">
-      {{ post.meta-excerpt }}
+      {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
     </p>
-
-    <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
 
   </article> <!-- #newestArticle -->
 
@@ -80,7 +78,7 @@ a variable called 'isCategory' and set it equal to 4.
  TUTORIAL SECTION
 #################
 -->
-<section id="homepageTutorials" class="categoryPadding">
+<section id="homepageTutorials" class="categorySpacing">
 
   <h1 class="homePageSectionHeaderClass">
     <span class="homePageSectionHeaderText"><i class="icon-compass"></i> TUTORIALS</span>
@@ -115,7 +113,7 @@ a variable called 'isCategory' and set it equal to 4.
  CODE TIPS SECTION
 #################
 -->
-<section id="homepageCodingTips" class="categoryPadding">
+<section id="homepageCodingTips" class="categorySpacing">
 
   <h1 class="homePageSectionHeaderClass">
     <span class="homePageSectionHeaderText"><i class="icon-compass"></i> CODE TIPS</span>
@@ -127,9 +125,8 @@ a variable called 'isCategory' and set it equal to 4.
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }}
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </p>
-      <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
     </article>
 
     {% endfor %}
@@ -140,9 +137,8 @@ a variable called 'isCategory' and set it equal to 4.
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1> 
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }}
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </p>
-      <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
     </article>
     {% endfor %}
 
@@ -158,7 +154,7 @@ a variable called 'isCategory' and set it equal to 4.
 ##############
 -->
 
-  <section id="homepageReviews" class="categoryPadding">
+  <section id="homepageReviews" class="categorySpacing">
 
     <h1 class="homePageSectionHeaderClass">
       <span class="homePageSectionHeaderText"><i class="icon-compass"></i> REVIEWS</span>
@@ -170,9 +166,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }}
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </p>
-      <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
@@ -182,9 +177,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }}
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </p>
-      <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
@@ -199,7 +193,7 @@ a variable called 'isCategory' and set it equal to 4.
  PERSONAL SECTION
 #################
 -->
-  <section id="homepagePersonal" class="categoryPadding">
+  <section id="homepagePersonal" class="categorySpacing">
 
     <h1 class="homePageSectionHeaderClass">
       <span class="homePageSectionHeaderText"><i class="icon-compass"></i> PERSONAL</span>
@@ -211,9 +205,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }}
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </p>
-      <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
@@ -223,9 +216,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }}
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </p>
-      <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
       </article>
       {% endfor %}
 
