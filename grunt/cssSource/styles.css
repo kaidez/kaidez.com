@@ -3126,14 +3126,6 @@ a.read-more-link {
   display: block;
 }
 
-.bgColorTutorial {
-  background-color: #f6ffff;
-}
-
-.bgColorReviews {
-  background-color: #f6ffff;
-}
-
 .homePageSectionHeaderText {
   position: relative;
   top: -21px;
@@ -3494,7 +3486,7 @@ a.read-more-link {
 }
 
 .homePageSectionHeaderClass {
-  color: #2d7895;
+  color: #929292;
   font-size: 18px;
   padding-top: 5px;
   border-top: 1px solid grey;
