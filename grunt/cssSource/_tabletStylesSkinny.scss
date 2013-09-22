@@ -196,7 +196,7 @@
   // For the "main" id element
   .page-content {
     @include page-content($inner-content-width, #F5F5F5);
-    padding: 15px 0 58px;
+    padding: 15px 0 0;
   }
   
   // breadcrumbs
@@ -258,11 +258,26 @@
 
   .sharedCategoryStyling {
     padding: 15px 33px 40px;
-    background-color: #fff;
   }
 
   .homePageSectionHeaderClass {
     margin-top: 13px;
+  }
+
+  .homepageTutorialsClass {
+    background-color: #CDF9FF;
+  }
+
+.homepageCodingTipsClass {
+    background-color: darken(#CDF9FF, 5);
+  }
+
+.homepageReviewsClass {
+    background-color: darken(#CDF9FF, 10);
+  }
+
+.homepagePersonalClass {
+    background-color: darken(#CDF9FF, 15);
   }
 
   // ==========================================================================
