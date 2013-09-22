@@ -7,6 +7,7 @@ meta-excerpt: A lengthy but simple explanation of what HTML5 is with suggestions
 permalink: /simple-html5-explanation/
 category: coding-best-practices
 cat-name: "Code Tips"
+has-thumbnail: html5Thumb.png
 tags: [html5, best practice]
 ---
 

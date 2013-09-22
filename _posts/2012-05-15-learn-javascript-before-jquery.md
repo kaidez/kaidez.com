@@ -7,6 +7,7 @@ layout: post
 meta-excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
 category: coding-best-practices
 cat-name: "Code Tips"
+has-thumbnail: jQjS.png
 tags: [javascript, beginner, jquery, best practice]
 ---
 
