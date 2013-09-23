@@ -171,7 +171,6 @@ a variable called 'isCategory' and set it equal to 4.
     <h1 class="homePageSectionHeaderClass">
       <span class="homePageSectionHeaderText headerReviews"><i class="icon-compass"></i> REVIEWS</span>
     </h1>
-
     
       {% if isCategory == 3 %}
 
@@ -192,7 +191,7 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.reviews limit:3 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-        {% include homepageThumb_partial.html %}
+      {% include homepageThumb_partial.html %}
 
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
@@ -238,7 +237,7 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
         {% include homepageThumb_partial.html %}
-        
+
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
         {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
