@@ -3062,6 +3062,7 @@ a:focus {
 
 .post-snippet {
   padding-bottom: 28px;
+  min-height: 100px;
 }
 
 .post-pic {
