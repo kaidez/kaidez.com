@@ -14,7 +14,7 @@
 .lt-ie9 {
 
   body {
-    @include fonts($helv);
+    @include fonts($lato);
   }
 
   .clearfix:before,

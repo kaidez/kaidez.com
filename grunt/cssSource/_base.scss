@@ -48,7 +48,7 @@ $homepage-section-bg-color: #f6ffff;
 
 
 // Font variables
-$helv: "Helvetica"; // Google Font
+$lato: "Lato"; // Google Font
 $robo: "Roboto Condensed"; // A Google Font
 $fa: "FontAwesome"; // Fonty Awesome...they're icons
 $srf: sans-serif;
@@ -349,7 +349,7 @@ $bg-size: 227px 334px;
 
 // link styles
 @mixin link-styles($margin-right, $font-size, $padding, $base-color) {
-  @include fonts($helv);
+  @include fonts($lato);
   margin-right: $margin-right; 
   font-size: $font-size;
   padding: $padding;
@@ -388,7 +388,7 @@ $bg-size: 227px 334px;
 
 // For the 'share post' sections on post pages. loads the Google 'Lato' font 
 // by default...loads sans-serif on hand-helds.
-@mixin share-post-link ($font: $helv) {
+@mixin share-post-link ($font: $lato) {
   font-size:16px;
   line-height: 1;
   font-family: $font;

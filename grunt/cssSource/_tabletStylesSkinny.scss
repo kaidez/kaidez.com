@@ -5,7 +5,7 @@
    // will slow down their page load.
   
   body {
-    @include fonts($helv);
+    @include fonts($lato);
   }
 
   // apply the Google font to all <header> tags  
