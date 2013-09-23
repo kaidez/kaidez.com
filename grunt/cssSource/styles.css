@@ -3063,6 +3063,7 @@ a:focus {
 .post-snippet {
   padding-bottom: 28px;
   min-height: 100px;
+  padding: 18px;
 }
 
 .post-pic {
@@ -3136,7 +3137,6 @@ a.read-more-link {
 .homePageSectionHeaderText {
   position: relative;
   top: -16px;
-  background-color: #F5F5F5;
   padding-right: 3px;
 }
 
@@ -3497,8 +3497,13 @@ a.read-more-link {
 .homePageSectionHeaderClass {
   color: #929292;
   font-size: 18px;
-  margin: 0;
+  margin: auto 10px;
   border-top: 1px solid #929292;
+  min-width: 280px;
+}
+
+.homePageSectionHeaderText {
+  background-color: #fff;
 }
 
 .imgBorder {
@@ -3527,9 +3532,10 @@ a.read-more-link {
   margin: 0;
 }
 
-.post-snippet-text {
+.postSnippetNewArticle {
   margin: 0;
   text-align: left;
+  padding: 18px;
 }
 
 .wf-active h1.post-title, .wf-active h1.category-title {
@@ -3545,7 +3551,7 @@ a.read-more-link {
   height: auto;
   min-height: 100%;
   margin: 0 auto;
-  padding: 15px 45px 58px;
+  padding: 15px 0px 58px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
@@ -4881,6 +4887,7 @@ a.pagination-link {
     width: auto;
     text-align: left;
     color: #817C7C;
+    padding: 15px 45px 58px;
   }
 
   .breadcrumb-styles {
