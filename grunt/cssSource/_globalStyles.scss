@@ -478,6 +478,12 @@ a:focus {
     border: 1px solid #B9B9B9;
     margin:0 10px 10px 0;
   }
+
+.categorySectionLink:link,
+.categorySectionLink:visited {
+    color: #929292;
+    text-decoration: none;
+  }
 // ===========================================================================
 // Post content styles end
 // ===========================================================================
