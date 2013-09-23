@@ -3523,7 +3523,7 @@ a.read-more-link {
 
 .post-snippet-title {
   font-size: 1.3rem;
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -4098,7 +4098,7 @@ a.pagination-link {
     max-width: 1024px;
     margin: 0 auto;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 27px;
     position: relative;
     height: auto;
     min-height: 100%;
@@ -4455,7 +4455,7 @@ a.pagination-link {
   }
 
   .post-snippet-title {
-    font-size: 34px;
+    font-size: 25px;
     background-color: #fff;
     padding: 0;
   }
@@ -4464,7 +4464,7 @@ a.pagination-link {
     max-width: 1024px;
     margin: 0 auto;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 27px;
     position: relative;
     height: auto;
     min-height: 100%;
@@ -4863,14 +4863,14 @@ a.pagination-link {
   }
 
   .post-snippet-title {
-    font-size: 34px;
+    font-size: 25px;
   }
 
   .page-content {
     max-width: 1024px;
     margin: 0 auto;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 27px;
     position: relative;
     height: auto;
     min-height: 100%;
@@ -5382,7 +5382,7 @@ a.pagination-link {
   max-width: 1024px;
   margin: 0 auto;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 27px;
   position: relative;
   height: auto;
   min-height: 100%;
