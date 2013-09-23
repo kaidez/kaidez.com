@@ -128,8 +128,14 @@
 .homePageSectionHeaderClass {
   color: #929292;
   font-size:18px;
-  margin:0;
+  margin: auto 10px;
   border-top:1px solid #929292;
+  min-width: 280px;
+}
+
+// style the <h1> tags in home page category sections
+.homePageSectionHeaderText {
+  background-color: #fff;
 }
 
 // put a light grey border around all images
@@ -160,9 +166,10 @@
   line-height: 1.2;
   margin: 0;
 }
-.post-snippet-text {
+.postSnippetNewArticle {
   margin: 0;
   text-align: left;
+  padding: 18px;
 }
 
 
@@ -191,7 +198,7 @@
   @include full-height;
   // max-width: $mobile-portrait-width;
   margin: 0 auto;
-  padding: 15px 45px 58px;
+  padding: 15px 0px 58px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;

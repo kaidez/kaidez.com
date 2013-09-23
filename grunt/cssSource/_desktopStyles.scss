@@ -215,6 +215,7 @@
 
   .page-content {
     @include page-content($inner-content-width, #F5F5F5);
+    padding: 15px 45px 58px;
   }
   
   // breadcrumbs

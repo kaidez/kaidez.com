@@ -389,6 +389,7 @@ a:focus {
 .post-snippet {
   padding-bottom: 28px;
   min-height: 100px;
+  padding: 18px;
 }
 
 // picture that appears in posts
@@ -469,7 +470,7 @@ a:focus {
   .homePageSectionHeaderText {
     position: relative;
     top: -16px;
-    background-color: #F5F5F5;
+    // background-color: #F5F5F5;
     padding-right: 3px;
   }
 
