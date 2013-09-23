@@ -3274,7 +3274,7 @@ a.read-more-link {
 }
 
 .twitter:before {
-  font-family: "FontAwesome", "Lato";
+  font-family: "FontAwesome", "Helvetica";
   font-size: 22px;
   content: "\f099" " twitter";
 }
@@ -3293,7 +3293,7 @@ a.read-more-link {
 }
 
 .gPlus:before {
-  font-family: "FontAwesome", "Lato";
+  font-family: "FontAwesome", "Helvetica";
   font-size: 22px;
   content: "\f0D5" " google+";
 }
@@ -3313,7 +3313,7 @@ a.read-more-link {
 
 .github:before {
   content: "\f09B"    " github";
-  font-family: "FontAwesome", "Lato";
+  font-family: "FontAwesome", "Helvetica";
   font-size: 22px;
 }
 
@@ -3332,7 +3332,7 @@ a.read-more-link {
 
 .youtube:before {
   content: "\f167"    " youtube";
-  font-family: "FontAwesome", "Lato";
+  font-family: "FontAwesome", "Helvetica";
   font-size: 22px;
 }
 
@@ -3930,7 +3930,7 @@ a.pagination-link {
 }
 @media only screen and (min-width: 729px) and (max-width: 1024px) {
   body {
-    font-family: "Lato";
+    font-family: "Helvetica";
   }
 
   .wf-active h1,
@@ -4025,7 +4025,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
+    font-family: "Helvetica";
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -4096,15 +4096,16 @@ a.pagination-link {
 
   .page-content {
     max-width: 1024px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 27px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: whitesmoke;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 27px;
     width: auto;
     text-align: left;
+    color: #817C7C;
   }
 
   .breadcrumb-styles {
@@ -4132,7 +4133,7 @@ a.pagination-link {
   .share-post-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato";
+    font-family: "Helvetica";
   }
 
   .share-post-container-class {
@@ -4288,7 +4289,7 @@ a.pagination-link {
 }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   body {
-    font-family: "Lato";
+    font-family: "Helvetica";
   }
 
   .wf-active h1,
@@ -4382,7 +4383,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
+    font-family: "Helvetica";
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -4458,19 +4459,21 @@ a.pagination-link {
     font-size: 25px;
     background-color: #fff;
     padding: 0;
+    margin-bottom: 13px;
   }
 
   .page-content {
     max-width: 1024px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 27px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: whitesmoke;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 27px;
     width: auto;
     text-align: left;
+    color: #817C7C;
     padding: 15px 0 0;
   }
 
@@ -4693,7 +4696,7 @@ a.pagination-link {
 }
 @media only screen and (min-width: 1025px) {
   body {
-    font-family: "Lato";
+    font-family: "Helvetica";
   }
 
   .clearfix:before,
@@ -4785,7 +4788,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
+    font-family: "Helvetica";
     margin-right: 18px;
     font-size: 22px;
     padding: 5px;
@@ -4868,15 +4871,16 @@ a.pagination-link {
 
   .page-content {
     max-width: 1024px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 27px;
     position: relative;
     height: auto;
     min-height: 100%;
     background-color: whitesmoke;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 27px;
     width: auto;
     text-align: left;
+    color: #817C7C;
   }
 
   .breadcrumb-styles {
@@ -4924,7 +4928,7 @@ a.pagination-link {
   .share-post-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato";
+    font-family: "Helvetica";
   }
 
   .share-post-container-class {
@@ -5023,7 +5027,7 @@ a.pagination-link {
   }
 
   .twitter:before {
-    font-family: "FontAwesome", "Lato";
+    font-family: "FontAwesome", "Helvetica";
     content: "\f099" " twitter";
   }
 
@@ -5056,7 +5060,7 @@ a.pagination-link {
   }
 
   .gPlus:before {
-    font-family: "FontAwesome", "Lato";
+    font-family: "FontAwesome", "Helvetica";
     content: "\f0D5" " google+";
   }
 
@@ -5090,7 +5094,7 @@ a.pagination-link {
 
   .github:before {
     content: "\f09B"    " github";
-    font-family: "FontAwesome", "Lato";
+    font-family: "FontAwesome", "Helvetica";
   }
 
   .githubRollover {
@@ -5123,7 +5127,7 @@ a.pagination-link {
 
   .youtube:before {
     content: "\f167"    " youtube";
-    font-family: "FontAwesome", "Lato";
+    font-family: "FontAwesome", "Helvetica";
   }
 
   .youtubeRollover {
@@ -5238,7 +5242,7 @@ a.pagination-link {
  * ==========================================================================
  */
 .lt-ie9 body {
-  font-family: "Lato";
+  font-family: "Helvetica";
 }
 .lt-ie9 .clearfix:before,
 .lt-ie9 .clearfix:after {
@@ -5380,15 +5384,16 @@ a.pagination-link {
 }
 .lt-ie9 .page-content {
   max-width: 1024px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 27px;
   position: relative;
   height: auto;
   min-height: 100%;
   background-color: whitesmoke;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 27px;
   width: auto;
   text-align: left;
+  color: #817C7C;
 }
 .lt-ie9 .breadcrumb-styles {
   font-size: 16px;
@@ -5424,7 +5429,7 @@ a.pagination-link {
 .lt-ie9 .share-post-link {
   font-size: 16px;
   line-height: 1;
-  font-family: "Lato";
+  font-family: "Helvetica";
 }
 .lt-ie9 .aside-inner-wrapper-class {
   width: 1000px;
