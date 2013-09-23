@@ -7,6 +7,7 @@ meta-excerpt: kaidez recalls the best about Steve Jobs
 permalink: /remembering-steve-jobs/
 category: personal
 cat-name: "Personal"
+has-thumbnail: sjPicThumb.jpg
 tags: [rant, kai]
 ---
 # 
