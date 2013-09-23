@@ -3145,6 +3145,12 @@ a.read-more-link {
   margin: 0 10px 10px 0;
 }
 
+.categorySectionLink:link,
+.categorySectionLink:visited {
+  color: #929292;
+  text-decoration: none;
+}
+
 .aside-outer-wrapper-class {
   color: #7db9e8;
   height: auto;
@@ -3508,18 +3514,6 @@ a.read-more-link {
 
 .imgBorder {
   border: 1px solid  #b9b9b9;
-}
-
-.view-more-link:link,
-.view-more-link:visited {
-  display: block;
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 4px;
-  color: #fff;
-  background-color: #3285a5;
-  text-decoration: none;
-  font-size: 14px;
 }
 
 .sharedCategoryStyling {
