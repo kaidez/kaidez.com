@@ -368,6 +368,7 @@ a:focus {
   padding: 10px;
   width: auto;
   text-align: left;
+  color: #000;
 }
 
 
@@ -380,10 +381,10 @@ a:focus {
 }
 
 // // all links in post copy are this color...fails lint tests...I'll live
-// main a,
-// main a:visited {
-//   color: #000;
-// }
+main a,
+main a:visited {
+  color: #000;
+}
 
 // Post snippet that displays on both the home page and search results.
 .post-snippet {
