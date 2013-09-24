@@ -8,7 +8,7 @@
 
 
   
-  // Handhelds and tablets get the helvetica-type Google font. Too many fonts 
+  // Handhelds and tablets get the Lato-type Google font. Too many fonts 
   // applied to handhelds will slow down their page load.
   body {
     @include fonts($lato);
@@ -248,6 +248,26 @@
     font-size: 23px;
     background-color: #fff;
   }
+
+  .newestArticleClass {
+    width: 540px;
+    margin: 0;
+    background-color: #FFF;
+    padding-bottom: 53px;
+    display: inline-block;
+    -webkit-box-shadow: 1px 1px 2px 0 #CCC;
+    min-height: 490px;
+    vertical-align: top;
+}
+
+.adsClass {
+  display: inline-block;
+  margin-left: 20px;
+  width: 135px;
+  margin-left: 50px;
+  min-height: 490px;
+  vertical-align: top;
+}
 
   // =========================================================================
   // Page content styles end
