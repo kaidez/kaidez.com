@@ -2840,7 +2840,7 @@ a:focus {
 }
 
 .outer-wrapper-nav-header {
-  background-color: #7db9e8;
+  background-color: #e5d9b9;
 }
 
 .site-description {
@@ -2952,7 +2952,7 @@ a:focus {
 }
 
 #tipue_search_foot_boxes li.current {
-  background-color: #7db9e8;
+  background-color: #e5d9b9;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
@@ -2960,7 +2960,7 @@ a:focus {
 }
 
 .current-page {
-  background-color: #7db9e8;
+  background-color: #e5d9b9;
   padding: 7px 10px 8px;
   margin-right: 7px;
   text-decoration: none;
@@ -3158,7 +3158,7 @@ a.read-more-link {
 }
 
 .aside-outer-wrapper-class {
-  color: #7db9e8;
+  color: #e5d9b9;
   height: auto;
   width: auto;
   padding: 1px 10px;
@@ -3180,9 +3180,9 @@ a.read-more-link {
   font-family: "Roboto Condensed";
   visibility: visible;
   font-size: 23px;
-  border-bottom: 1px solid #a8d0f0;
+  border-bottom: 1px solid #f3edde;
   margin-bottom: 16px;
-  color: #a8d0f0;
+  color: #f3edde;
 }
 
 .aside-nav-class {
@@ -3208,7 +3208,7 @@ a.read-more-link {
 }
 
 .aside-nav-link:hover, .aside-nav-link:focus {
-  color: #268ad9;
+  color: #c9b16f;
 }
 
 .kaidez-social-network-list-styles {
@@ -3279,7 +3279,7 @@ a.read-more-link {
 
 .twitter {
   position: relative;
-  color: #7db9e8;
+  color: #e5d9b9;
   text-decoration: none;
   width: 287px;
   height: 74px;
@@ -3298,7 +3298,7 @@ a.read-more-link {
 
 .gPlus {
   position: relative;
-  color: #7db9e8;
+  color: #e5d9b9;
   text-decoration: none;
   width: 287px;
   height: 74px;
@@ -3317,7 +3317,7 @@ a.read-more-link {
 
 .github {
   position: relative;
-  color: #7db9e8;
+  color: #e5d9b9;
   text-decoration: none;
   width: 287px;
   height: 74px;
@@ -3336,7 +3336,7 @@ a.read-more-link {
 
 .youtube {
   position: relative;
-  color: #7db9e8;
+  color: #e5d9b9;
   text-decoration: none;
   width: 287px;
   height: 74px;
@@ -3566,7 +3566,7 @@ a.read-more-link {
 .breadcrumb-styles {
   font-size: 14px;
   font-weight: 900;
-  background-color: #f2f8fd;
+  background-color: white;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
@@ -3581,12 +3581,12 @@ a.read-more-link {
 .breadcrumb-styles a:link,
 .breadcrumb-styles a:visited {
   text-decoration: underline;
-  color: #268ad9;
+  color: #c9b16f;
 }
 
 .breadcrumb-styles a:hover {
   text-decoration: none;
-  color: #268ad9;
+  color: #c9b16f;
 }
 
 .breadcrumb-last {
@@ -3673,7 +3673,7 @@ a.pagination-link {
   height: 25px;
   font-size: 18px;
   display: block;
-  color: #7db9e8;
+  color: #e5d9b9;
   text-decoration: none;
 }
 
@@ -3926,7 +3926,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 14px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -3972,22 +3972,7 @@ a.pagination-link {
     width: auto;
     padding: 15px 45px 0;
     margin: 0 auto;
-    background: #87e0fd;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #87e0fd), color-stop(40%, #53cbf1), color-stop(100%, #05abe0));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 );
-    /* IE6-9 */
+    background-color: #e5d9b9;
     min-height: 130px;
   }
 
@@ -4035,7 +4020,7 @@ a.pagination-link {
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
-    color: #7db9e8;
+    color: #e5d9b9;
     float: left;
     border: 0;
     -webkit-border-radius: 10px;
@@ -4117,7 +4102,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4199,7 +4184,7 @@ a.pagination-link {
     height: 25px;
     font-size: 18px;
     display: block;
-    color: #7db9e8;
+    color: #e5d9b9;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -4256,7 +4241,7 @@ a.pagination-link {
   }
 
   .colophon-header {
-    color: #52a2e0;
+    color: #d7c594;
     display: block;
     margin-top: 16px;
     text-align: center;
@@ -4413,7 +4398,7 @@ a.pagination-link {
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
-    color: #7db9e8;
+    color: #e5d9b9;
     float: left;
     border: 0;
     -webkit-border-radius: 10px;
@@ -4506,7 +4491,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4620,7 +4605,7 @@ a.pagination-link {
     height: 25px;
     font-size: 18px;
     display: block;
-    color: #7db9e8;
+    color: #e5d9b9;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -4655,7 +4640,7 @@ a.pagination-link {
   }
 
   .colophon-header {
-    color: #52a2e0;
+    color: #d7c594;
     display: block;
     margin-top: 16px;
     text-align: center;
@@ -4822,7 +4807,7 @@ a.pagination-link {
     float: left;
     border: 0;
     background-color: transparent;
-    text-shadow: 1px 1px 0 #bedcf3;
+    text-shadow: 1px 1px 0 #faf7f1;
   }
 
   .searchform-class {
@@ -4913,7 +4898,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: white;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4923,12 +4908,12 @@ a.pagination-link {
   .breadcrumb-styles a:link,
   .breadcrumb-styles a:visited {
     text-decoration: underline;
-    color: #268ad9;
+    color: #c9b16f;
   }
 
   .breadcrumb-styles a:hover {
     text-decoration: none;
-    color: #268ad9;
+    color: #c9b16f;
   }
 
   .breadcrumb-separator {
@@ -5047,7 +5032,7 @@ a.pagination-link {
    */
   .twitter {
     position: relative;
-    color: #7db9e8;
+    color: #e5d9b9;
     text-decoration: none;
     width: 287px;
     height: 74px;
@@ -5064,7 +5049,7 @@ a.pagination-link {
     -moz-transition: opacity 0.3s ease, left 0.3s ease;
     -o-transition: opacity 0.3s ease, left 0.3s ease;
     transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
+    color: #e5d9b9;
     opacity: 0;
     left: -78px;
   }
@@ -5080,7 +5065,7 @@ a.pagination-link {
 
   .gPlus {
     position: relative;
-    color: #7db9e8;
+    color: #e5d9b9;
     text-decoration: none;
     width: 287px;
     height: 74px;
@@ -5097,7 +5082,7 @@ a.pagination-link {
     -moz-transition: opacity 0.3s ease, left 0.3s ease;
     -o-transition: opacity 0.3s ease, left 0.3s ease;
     transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
+    color: #e5d9b9;
     opacity: 0;
     left: -78px;
   }
@@ -5113,7 +5098,7 @@ a.pagination-link {
 
   .github {
     position: relative;
-    color: #7db9e8;
+    color: #e5d9b9;
     text-decoration: none;
     width: 287px;
     height: 74px;
@@ -5130,7 +5115,7 @@ a.pagination-link {
     -moz-transition: opacity 0.3s ease, left 0.3s ease;
     -o-transition: opacity 0.3s ease, left 0.3s ease;
     transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
+    color: #e5d9b9;
     opacity: 0;
     left: -78px;
   }
@@ -5146,7 +5131,7 @@ a.pagination-link {
 
   .youtube {
     position: relative;
-    color: #7db9e8;
+    color: #e5d9b9;
     text-decoration: none;
     width: 287px;
     height: 74px;
@@ -5163,7 +5148,7 @@ a.pagination-link {
     -moz-transition: opacity 0.3s ease, left 0.3s ease;
     -o-transition: opacity 0.3s ease, left 0.3s ease;
     transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
+    color: #e5d9b9;
     opacity: 0;
     left: -78px;
   }
@@ -5198,7 +5183,7 @@ a.pagination-link {
   }
 
   .colophon-header {
-    color: #52a2e0;
+    color: #d7c594;
     display: block;
     float: left;
     margin-top: 16px;
@@ -5425,7 +5410,7 @@ a.pagination-link {
 .lt-ie9 .breadcrumb-styles {
   font-size: 16px;
   font-weight: 900;
-  background-color: #f2f8fd;
+  background-color: white;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
@@ -5434,11 +5419,11 @@ a.pagination-link {
 .lt-ie9 .breadcrumb-styles a:link,
 .lt-ie9 .breadcrumb-styles a:visited {
   text-decoration: underline;
-  color: #268ad9;
+  color: #c9b16f;
 }
 .lt-ie9 .breadcrumb-styles a:hover {
   text-decoration: none;
-  color: #268ad9;
+  color: #c9b16f;
 }
 .lt-ie9 .breadcrumb-separator {
   padding: 0 10px;
@@ -5507,7 +5492,7 @@ a.pagination-link {
   float: left;
 }
 .lt-ie9 .colophon-header {
-  color: #52a2e0;
+  color: #d7c594;
   display: block;
   float: left;
   margin-top: 16px;
