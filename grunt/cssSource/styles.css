@@ -3051,6 +3051,7 @@ a:focus {
   padding: 10px;
   width: auto;
   text-align: left;
+  color: #000;
 }
 
 .newestArticleClass {
@@ -3058,6 +3059,11 @@ a:focus {
   margin-left: 0;
   background-color: #fff;
   padding-bottom: 53px;
+}
+
+main a,
+main a:visited {
+  color: #000;
 }
 
 .post-snippet {
@@ -3545,7 +3551,7 @@ a.read-more-link {
   height: auto;
   min-height: 100%;
   margin: 0 auto;
-  padding: 15px 0px 58px;
+  padding-bottom: 58px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
@@ -4105,7 +4111,7 @@ a.pagination-link {
     line-height: 27px;
     width: auto;
     text-align: left;
-    color: #817C7C;
+    color: #000;
   }
 
   .breadcrumb-styles {
@@ -4156,6 +4162,26 @@ a.pagination-link {
     color: #107aa3;
     font-size: 23px;
     background-color: #fff;
+  }
+
+  .newestArticleClass {
+    width: 540px;
+    margin: 0;
+    background-color: #FFF;
+    padding-bottom: 53px;
+    display: inline-block;
+    -webkit-box-shadow: 1px 1px 2px 0 #CCC;
+    min-height: 490px;
+    vertical-align: top;
+  }
+
+  .adsClass {
+    display: inline-block;
+    margin-left: 20px;
+    width: 135px;
+    margin-left: 50px;
+    min-height: 490px;
+    vertical-align: top;
   }
 
   .aside-outer-wrapper-class {
@@ -4473,7 +4499,7 @@ a.pagination-link {
     line-height: 27px;
     width: auto;
     text-align: left;
-    color: #817C7C;
+    color: #000;
     padding: 15px 0 0;
   }
 
@@ -4880,7 +4906,7 @@ a.pagination-link {
     line-height: 27px;
     width: auto;
     text-align: left;
-    color: #817C7C;
+    color: #000;
     padding: 15px 45px 58px;
   }
 
@@ -5394,7 +5420,7 @@ a.pagination-link {
   line-height: 27px;
   width: auto;
   text-align: left;
-  color: #817C7C;
+  color: #000;
 }
 .lt-ie9 .breadcrumb-styles {
   font-size: 16px;
