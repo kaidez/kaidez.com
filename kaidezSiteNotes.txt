@@ -244,7 +244,7 @@ LEFT TO DO
 -CSS animations...review 'em.' (post launch)
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks. (sorta...not sure how to properly deploy _site folder...post launch)
 -Get Backbone working with the form. (post launch)
--Create a cool front page...may be post launch.
+-Create a cool front page...may be post launch. (NO FOR NOW)
 -Video SEO...may be post launch.
 -Create favicon.ico
 
