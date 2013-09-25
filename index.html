@@ -1,268 +1,37 @@
 ---
 layout: default
 title: kaidez.com / Tutorials &amp; articles about  Web Development
-meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants and More from kaidez
+meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
 ---
-<!-- start ENTIRE LOOP -->
-{% for post in site.posts reversed limit:1 %} 
-
-
-<div id="topSectionWrapper" class="topSectionWrapperClass">
-  <article id="newestArticle" class="newestArticleClass" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-    <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
-
-    <h2>{{ post.title }}</h2>
-
-    {% if post.has-home-img %}
-
-    <a href="{{ post.url }}">
-      <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
-    </a>
-
-    {% else %}
-
-    <a href="{{ post.url }}">
-      <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
-    </a>
-
-    {% endif %}
-
-    <p class="postSnippetNewArticle">
-      {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-    </p>
-
-  </article> <!-- #newestArticle -->
-
-  <div id="ads" class="adsClass">
-    <div>
-      <a href="http://www.lynda.com/JavaScript-training-tutorials/244-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=639&utm_campaign=CD2146&bid=639&aid=CD2146"><img src="http://lynda.directtrack.com/42/2146/639/" alt="Learn Javascript" border="0"></a>
-    </div>
-    <div>
-      <a href="http://www.mediatemple.net#a_aid=5068b81963acf&amp;a_bid=a043447a" target="_top" rel="nofollow"><img src="https://affiliate.mediatemple.net/accounts/default1/banners/125x125-1.jpg" alt="" width="125" height="125" /></a><img style="border:0" src="https://affiliate.mediatemple.net/scripts/imp.php?a_aid=5068b81963acf&amp;a_bid=a043447a" width="1" height="1" alt="" />      
-    </div>
     
-  </div> <!-- #ads -->
-
-</div> <!-- #topSectionWrapper -->
-  
-
-
-
-<!--
-Use a Liquid case statement check to see what the category is of
-the NEWEST ARTICLE above.
--->
-{% case post.category %} 
-
-<!--
-if NEWEST ARTICLE is in the 'tutorials' category, create a variable
-called 'isCategory' and set it equal to 1.
--->
-{% when 'tutorials' %}
-{% assign isCategory = 1 %}
-
-<!--
-if NEWEST ARTICLE is in the 'coding-best-practices' category, create a variable
-called 'isCategory' and set it equal to 2.
--->
-{% when 'coding-best-practices' %}
-{% assign isCategory = 2 %}
-
-<!--
-if NEWEST ARTICLE is in the 'reviews' category, create a variable
-called 'isCategory' and set it equal to 3.
--->
-{% when 'reviews' %}
-{% assign isCategory = 3 %}
-
-<!--
-otherwise, NEWEST ARTICLE is in the 'reviews' category, so create
-a variable called 'isCategory' and set it equal to 4.
--->
-{% else %}
-{% assign isCategory = 4 %}
-
-{% endcase %}
-<!-- Stop the Liquid case statement-->
-
-<!--
-#################
- TUTORIAL SECTION
-#################
--->
-<section id="homepageTutorials" class="homepageTutorialsClass sharedCategoryStyling">
-
-  <h1 class="homePageSectionHeaderClass">
-    <a href="/tutorials/" class="categorySectionLink">
-      <span class="homePageSectionHeaderText headerTutorial">TUTORIALS <i class="icon-circle-arrow-right"></i> </span>
-    </a>
-  </h1>
-
-  {% if isCategory == 1 %}
-
-  {% for post in site.categories.tutorials limit:3 offset:1 %}
-  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-      {% include homepageThumb_partial.html %}
-
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-  </article>
-  {% endfor %}
-
-  {% else %}
-
-  {% for post in site.categories.tutorials limit:3 %}
-  <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-  {% include homepageThumb_partial.html %}
-
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-    {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-  </article>
-
-  {% endfor %}
-  {% endif %}
-  
-  </section> <!-- #homepageTutorials -->
-
-<!--
-#################
- CODE TIPS SECTION
-#################
--->
-<section id="homepageCodingTips" class="homepageCodingTipsClass sharedCategoryStyling">
-
-  <h1 class="homePageSectionHeaderClass">
-    <a href="/coding-best-practices/" class="categorySectionLink">
-      <span class="homePageSectionHeaderText headerCodeTips">CODE TIPS <i class="icon-circle-arrow-right"></i> </span>
-    </a>
-  </h1>
-  
-  {% if isCategory == 2 %}
-
-    {% for post in site.categories.coding-best-practices limit:3 offset:1 %}
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-      {% include homepageThumb_partial.html %}
-
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-      </p>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
     </article>
-
-    {% endfor %}
-
-    {% else %}
-
-    {% for post in site.categories.coding-best-practices limit:3 %}
-    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-      {% include homepageThumb_partial.html %}
-
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1> 
-      <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-      </p>
-    </article>
-    {% endfor %}
-
-    {% endif %}
-
-  </section> <!-- #homepageCodingTips -->
-
-<!--
-##############
- REVIEW SECTION
-##############
--->
-
-  <section id="homepageReviews" class="homepageReviewsClass sharedCategoryStyling">
-
-    <h1 class="homePageSectionHeaderClass">
-      <a href="/reviews/" class="categorySectionLink">
-        <span class="homePageSectionHeaderText headerReviews">REVIEWS <i class="icon-circle-arrow-right"></i> </span>
-      </a>
-    </h1>
+  {% endfor %}
     
-      {% if isCategory == 3 %}
+  <!-- Pagination links -->
+  <div id="post-pagination" class="pagination">
+    <ul class="pages">
+      <li class="page">
+        {% if paginator.page == 1 %}
+          <span class="current-page">1</span>
+        {% else %}
+          <a href="/" class="pagination-link">1</a>
+        {% endif %}
+      </li>
 
-      {% for post in site.categories.reviews limit:3 offset:1 %}
-      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-            {% include homepageThumb_partial.html %}
-            
-            <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-            <p class="post-snippet-text">
-              {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-            </p>
-      </article>
+      {% for count in (2..paginator.total_pages) %}
+        <li class="page">
+          {% if count == paginator.page %}
+            <span class="current-page">{{ count }}</span>
+          {% else %}
+            <a href="/page{{ count }}" class="pagination-link">{{ count }}</a>
+          {% endif %}
+        </li>
       {% endfor %}
+    </ul> <!-- .pages -->
 
-      {% else %}
-
-      {% for post in site.categories.reviews limit:3 %}
-      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-      {% include homepageThumb_partial.html %}
-
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-      </p>
-      </article>
-      {% endfor %}
-
-      {% endif %}
-
-  </section> <!-- #homepageReviews -->
-
-<!--
-#################
- PERSONAL SECTION
-#################
--->
-  <section id="homepagePersonal" class="homepagePersonalClass sharedCategoryStyling">
-
-    <h1 class="homePageSectionHeaderClass">
-      <a href="/personal/" class="categorySectionLink">
-        <span class="homePageSectionHeaderText headerPersonal">PERSONAL <i class="icon-circle-arrow-right"></i> </span>
-      </a>
-    </h1>
-    
-      {% if isCategory == 4 %}
-
-      {% for post in site.categories.personal limit:3 offset:1 %}
-      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-      {% include homepageThumb_partial.html %}
-
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-      </p>
-      </article>
-      {% endfor %}
-
-      {% else %}
-
-      {% for post in site.categories.personal limit:3 %}
-      <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-        {% include homepageThumb_partial.html %}
-
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-      </p>
-      </article>
-      {% endfor %}
-
-      {% endif %}
-
-  </section> <!-- #homepagePersonal -->
-
-
-{% endfor %} <!-- end ENTIRE LOOP -->
+  </div>  <!-- #post-pagination -->
