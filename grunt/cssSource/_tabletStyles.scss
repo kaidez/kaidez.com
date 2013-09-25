@@ -190,6 +190,12 @@
   // =========================================================================
 
   // Post snippet that displays on both the home page and search results.
+  .post-snippet {
+    width: 200px;
+    display: inline-block;
+  }
+
+  // Post snippet title
   .post-snippet-title {
     font-size: 27px;
   }
@@ -273,6 +279,10 @@
   margin-left: 50px;
   min-height: 490px;
   vertical-align: top;
+}
+
+.homePageSectionHeaderText {
+  font-size: 20px;
 }
 
   // =========================================================================

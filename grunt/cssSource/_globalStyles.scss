@@ -370,13 +370,17 @@ a:focus {
   color: #000;
 }
 
-
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
   text-align: center;
   margin-left:0;
   background-color: #fff;
   padding-bottom: 53px;
+}
+
+.sharedCategoryStyling {
+  padding: 15px 0;
+  margin-top: 10px;
 }
 
 // // all links in post copy are this color...fails lint tests...I'll live
