@@ -3060,6 +3060,11 @@ a:focus {
   padding-bottom: 53px;
 }
 
+.sharedCategoryStyling {
+  padding: 15px 0;
+  margin-top: 10px;
+}
+
 main a,
 main a:visited {
   color: #000;
@@ -3523,10 +3528,6 @@ a.read-more-link {
 
 .imgBorder {
   border: 1px solid  #b9b9b9;
-}
-
-.sharedCategoryStyling {
-  padding: 15px 0;
 }
 
 .post-snippet-title {
@@ -4077,6 +4078,11 @@ a.pagination-link {
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
+  .post-snippet {
+    width: 200px;
+    display: inline-block;
+  }
+
   .post-snippet-title {
     font-size: 27px;
   }
@@ -4175,6 +4181,10 @@ a.pagination-link {
     margin-left: 50px;
     min-height: 490px;
     vertical-align: top;
+  }
+
+  .homePageSectionHeaderText {
+    font-size: 20px;
   }
 
   .aside-outer-wrapper-class {
