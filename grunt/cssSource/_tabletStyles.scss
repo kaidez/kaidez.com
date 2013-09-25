@@ -54,7 +54,7 @@
   .outer-wrapper-nav-header {
     @include outer-wrapper-nav-header;
     // @include gradient-bg;
-    background-color: $header-color;
+    background-color: $header-color;  
     min-height: 130px;
   }
 
@@ -244,6 +244,12 @@
     line-height: normal; 
   }
 
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    padding: 17px;
+  }
+
   .newestArticleHeaderClass {
     color: $aside-color;
     font-size: 23px;
@@ -251,10 +257,10 @@
   }
 
   .newestArticleClass {
-    width: 540px;
+    width: 500px;
     margin: 0;
     background-color: #FFF;
-    padding-bottom: 53px;
+    padding-bottom: 20px;
     display: inline-block;
     -webkit-box-shadow: 1px 1px 2px 0 #CCC;
     min-height: 490px;
@@ -263,7 +269,6 @@
 
 .adsClass {
   display: inline-block;
-  margin-left: 20px;
   width: 135px;
   margin-left: 50px;
   min-height: 490px;
