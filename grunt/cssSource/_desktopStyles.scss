@@ -210,11 +210,11 @@
 
   // title tag for post snippets
   .post-snippet-title {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .page-content {
-    @include page-content($inner-content-width, #F5F5F5);
+    @include page-content($inner-content-width, #fff);
     padding: 15px 45px 58px;
   }
   
