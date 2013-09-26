@@ -189,22 +189,19 @@
   }
   
   .post-snippet {
-    @include create-outer-box-shadow;
-    background: #fff;
     margin-bottom: 20px;
     padding: 10px;
   }
   // title tag for post snippets
   .post-snippet-title {
     font-size: 25px;
-    background-color: #fff;
     padding: 0;
     margin-bottom: 13px;
   }
   
   // For the "main" id element
   .page-content {
-    @include page-content($inner-content-width, #F5F5F5);
+    @include page-content($inner-content-width, #FFF);
     padding: 15px 0 0;
   }
   
