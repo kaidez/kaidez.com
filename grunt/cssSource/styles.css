@@ -5029,7 +5029,7 @@ a.pagination-link {
     text-decoration: none;
     border-bottom: 0;
     position: relative;
-    width: 150px;
+    width: 125px;
     text-indent: -66px;
     overflow-x: hidden;
     display: inline-block;
@@ -5143,6 +5143,11 @@ a.pagination-link {
     text-decoration: none;
     width: 287px;
     height: 74px;
+  }
+
+  .youtube:before {
+    content: "\f167"    " youtube";
+    font-family: "FontAwesome", "Lato";
   }
 
   .youtubeRollover {
