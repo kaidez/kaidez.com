@@ -4885,7 +4885,7 @@ a.pagination-link {
   }
 
   .post-snippet-title {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .page-content {
@@ -4893,7 +4893,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0 auto;
     font-size: 16px;
     line-height: 27px;
