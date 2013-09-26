@@ -4078,11 +4078,6 @@ a.pagination-link {
     box-shadow: 1px 1px 2px #e3e3e3;
   }
 
-  .post-snippet {
-    width: 200px;
-    display: inline-block;
-  }
-
   .post-snippet-title {
     font-size: 27px;
   }
@@ -4476,17 +4471,12 @@ a.pagination-link {
   }
 
   .post-snippet {
-    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
-    -moz-box-shadow: 1px 1px 2px 0 #ccc;
-    box-shadow: 1px 1px 2px 0 #ccc;
-    background: #fff;
     margin-bottom: 20px;
     padding: 10px;
   }
 
   .post-snippet-title {
     font-size: 25px;
-    background-color: #fff;
     padding: 0;
     margin-bottom: 13px;
   }
@@ -4496,7 +4486,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0 auto;
     font-size: 16px;
     line-height: 27px;
