@@ -4,27 +4,13 @@ title: kaidez.com / Tutorials &amp; articles about  Web Development
 meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
 ---
     
-  <!-- This displays the snippet for the newest post -->
-  {% for post in paginator.posts limit: 1 %}
-    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-      <h1>NEWEST ARTICLE</h1>
-      <h2 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
-      
-      {% if post.has-home-img %}
-        <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
-      {% else %}
-        <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
-      {% endif %}
-
-      {{ post.meta-excerpt }}
-    </article>
-  {% endfor %}
-
-    <!-- This loops through the paginated posts -->
-  {% for post in paginator.posts offset: 1 %}
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
       <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
-      {{ post.meta-excerpt }}
+      <p>
+        {{ post.meta-excerpt }}
+      </p>
     </article>
   {% endfor %}
     
