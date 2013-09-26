@@ -191,7 +191,7 @@
 
 // Post snippet title
   .post-snippet-title {
-    font-size: 27px;
+    font-size: 30px;
   }
 
   // Styles for post and category <h1> tags
@@ -201,7 +201,7 @@
 
   // For the main element
   .page-content {
-    @include page-content($inner-content-width, #F5F5F5);
+    @include page-content($inner-content-width, #fff);
   }
 
   .breadcrumb-styles {
