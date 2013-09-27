@@ -10,7 +10,7 @@ old_img/
 /js/main.min.js
 grunt/cssSource/styles.css
 jekyllOutput.html
-
+prototypeTest/
 
 # Backbone code drafts
 #---------------------
