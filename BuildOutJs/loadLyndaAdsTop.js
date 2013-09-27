@@ -60,7 +60,7 @@
       };
 
     // enquire.js code:  manages when the lynda.com add displays
-    enquire.register("only screen and (min-width: 569px)", {
+    enquire.register("only screen and (min-width: 729px)", {
 
       /*
        * The 'setup' method below runs 'showAd()'. This 'deferSetup' 
