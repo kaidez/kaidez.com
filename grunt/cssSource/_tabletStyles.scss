@@ -256,9 +256,9 @@
   }
 
   .newestArticleClass {
+    @include create-outer-box-shadow;
     width: 395px;
     margin: 0;
-    background-color: #F2f2f2;
     padding-bottom: 20px;
     display: inline-block;
     min-height: 490px;
