@@ -1,7 +1,7 @@
   /*
-   *  Module: 'loadLyndaAd'
+   *  Module: 'loadLyndaAdsTop'
    *  
-   *  Contruct a lynda ad
+   *  Construct a lynda ad
    */
 
   define(["enquire"], function(enquire) {
@@ -51,7 +51,7 @@
               "source" : "http://lynda.directtrack.com/42/2146/761/",
               "alt"       : "7 day free trial"
           },
-          "javascrpt" : {
+          "javascript" : {
               "pageEl" : "adSpotTwo",
               "link"      : "http://www.lynda.com/JavaScript-training-tutorials/244-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=596&utm_campaign=CD2146&bid=596&aid=CD2146",
               "source" : "http://lynda.directtrack.com/42/2146/596/",
