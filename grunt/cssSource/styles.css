@@ -3544,6 +3544,10 @@ a.read-more-link {
   padding: 13px;
 }
 
+.newestArticlePostTitle {
+  font-size: 32px;
+}
+
 .wf-active h1.post-title, .wf-active h1.category-title {
   margin: 0px auto;
   text-align: center;
@@ -4178,6 +4182,12 @@ a.pagination-link {
 
   .homePageSectionHeaderText {
     font-size: 20px;
+  }
+
+  .newestArticlePostTitle {
+    font-size: 40px;
+    padding: 0 10px;
+    line-height: 1.3;
   }
 
   .aside-outer-wrapper-class {
@@ -4962,6 +4972,11 @@ a.pagination-link {
 
   .articleFooterClass {
     line-height: normal;
+  }
+
+  .newestArticlePostTitle {
+    font-size: 40px;
+    line-height: 1.3;
   }
 
   .aside-inner-wrapper-class {

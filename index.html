@@ -12,7 +12,7 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
 
     <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
 
-    <h2>{{ post.title }}</h2>
+    <h2 class="newestArticlePostTitle">{{ post.title }}</h2>
 
     {% if post.has-home-img %}
 
@@ -99,8 +99,6 @@ a variable called 'isCategory' and set it equal to 4.
   {% for post in site.categories.tutorials limit:3 offset:1 %}
   <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-
-
     <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
     {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
   </article>
@@ -180,9 +178,7 @@ a variable called 'isCategory' and set it equal to 4.
 
       {% for post in site.categories.reviews limit:3 offset:1 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-  
-            
+        
             <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
             <p class="post-snippet-text">
               {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
@@ -223,8 +219,6 @@ a variable called 'isCategory' and set it equal to 4.
 
       {% for post in site.categories.personal limit:3 offset:1 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
-
 
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
