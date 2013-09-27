@@ -224,7 +224,7 @@ module.exports = function(grunt) {
             'img/footer-bg.png',
             'img/kaidez-sprite.png',
             'img/kaidez-sprite@2x.png',
-            'js/main.min.js',
+            'js/scripts.min.js',
             'font/FontAwesome.otf',
             'font/fontawesome-webfont.eot',
             'font/fontawesome-webfont.svg',
