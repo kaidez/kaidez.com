@@ -7,6 +7,7 @@
     "form",
     "formValidation",
     "loadLyndaAd",
+    "loadLyndaAdsTop",
     "menu",
     "prismInit",
     "search"
