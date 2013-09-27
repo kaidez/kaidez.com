@@ -92,7 +92,7 @@
        * future use.
        */
       match : function() {
-        adBox.style.display="block";
+        ads.style.display="block";
       },
 
       /*
@@ -101,7 +101,7 @@
        * box that contains the Lynda ad.
        */
       unmatch : function() {
-        adBox.style.display="none";
+        ads.style.display="none";
       }
 
     }, true);
