@@ -92,7 +92,7 @@
        * future use.
        */
       match : function() {
-        ads.style.display="block";
+        ads.style.display="inline-block";
       },
 
       /*
