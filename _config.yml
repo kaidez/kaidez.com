@@ -22,6 +22,7 @@ exclude: [
   kaidezSiteNotes.txt,
   node_modules,
   package.json,
+  prototypeTest,
   old_img,
   old_js,
   r.js,
