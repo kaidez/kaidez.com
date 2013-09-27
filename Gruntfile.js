@@ -79,7 +79,7 @@ module.exports = function(grunt) {
       },
 
       jsOnlyTask: { // run 'jekyll build' on .js file changes
-        files: ['jsBuildOut/*.js'],
+        files: ['BuildOutJs/*.js'],
         tasks: ['requirejs', 'jekyll:dev']
       },
 
@@ -245,10 +245,10 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          baseUrl: "jsBuildOut/",
-          mainConfigFile: "jsBuildOut/config.js",
+          baseUrl: "BuildOutJs/",
+          mainConfigFile: "BuildOutJs/config.js",
           name: 'config',
-          out: "js/main.min.js",
+          out: "js/scripts.min.js",
            preserveLicenseComments: false,
              paths: {
               requireLib: 'require'
@@ -265,7 +265,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/backbone/',
             src: ['backbone-min.js'],
-            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+            dest: 'BuildOutJs/libs/', filter: 'isFile'}
           ]
         },
         // Site build currently contains the AMD version of enquire, which
@@ -277,7 +277,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/enquire/dist/',
             src: ['enquire.min.js'],
-            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+            dest: 'BuildOutJs/libs/', filter: 'isFile'}
           ]
         },
         jquery: {
@@ -285,7 +285,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/jquery/',
             src: ['jquery.min.js'],
-            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+            dest: 'BuildOutJs/libs/', filter: 'isFile'}
           ]
         },
         fontAwesome: {
@@ -314,7 +314,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/require/',
             src: ['require.js'],
-            dest: 'jsBuildOut/', filter: 'isFile'}
+            dest: 'BuildOutJs/', filter: 'isFile'}
           ]
         },
         spin: {
@@ -322,7 +322,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/spinjs/',
             src: ['spin.js'],
-            dest: 'jsBuildOut/libs', filter: 'isFile'}
+            dest: 'BuildOutJs/libs', filter: 'isFile'}
           ]
         },
         underscore: {
@@ -330,7 +330,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/underscore/',
             src: ['underscore-min.js'],
-            dest: 'jsBuildOut/libs/', filter: 'isFile'}
+            dest: 'BuildOutJs/libs/', filter: 'isFile'}
           ]
         }
       },
