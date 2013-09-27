@@ -3556,12 +3556,11 @@ a.read-more-link {
   height: auto;
   min-height: 100%;
   margin: 0 auto;
-  padding-bottom: 58px;
+  padding: 15px 0 58px;
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
   width: auto;
-  text-align: left;
 }
 
 .nonHomePagePadding {
