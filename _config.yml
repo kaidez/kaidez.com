@@ -5,6 +5,7 @@ markdown: rdiscount
 permalink: /:title
 destination: ./_site
 paginate: 15
+paginate_path: "pages/page:num"
 include: [.htaccess]
 exclude: [
   .ftppass,
@@ -16,7 +17,7 @@ exclude: [
   css/styles.css,
   Gruntfile.js,
   grunt,
-  # jekyllOutput.html,
+  jekyllOutput.html,
   jsBuildOut,
   kaidezSiteNotes.txt,
   node_modules,
