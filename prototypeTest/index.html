@@ -1,0 +1,81 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Prototypes</title>
+  </head>
+  <body>
+    <div id="adSpotOne">
+      
+    </div>
+      <div id="adSpotTwo">
+      
+    </div>
+    <script>
+
+    
+  (function() {
+
+
+
+     var createLyndaAd = function ( el, link, source ) {
+       var frag = document.createDocumentFragment(),
+        pageElement = document.getElementById( el ),
+        linkTag = document.createElement( "a" ),
+        imageTag = document.createElement( "img" );
+
+       // set attributes for ad link
+        linkTag.setAttribute("href", link);
+
+      // set attributes for ad image
+      imageTag.src = source;
+      imageTag.border = "0";
+      imageTag.width = "200";
+      imageTag.height = "200";
+
+      // Arrange elements
+      linkTag.appendChild(imageTag);
+
+      // Load arranged elements into document fragment
+      frag.appendChild(linkTag);
+      
+      // Load document fragment into '#aside-ad-section'
+      pageElement.appendChild(frag);
+
+   };
+   
+  var adCodes = {
+      "css" : {
+            "pageEl" : "adSpotOne",
+            "link"      : "http://www.lynda.com/CSS-training-tutorials/447-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=626&utm_campaign=CD2146&bid=626&aid=CD2146",
+            "source" : "http://lynda.directtrack.com/42/2146/626/"
+        },
+        "reg" : {
+            "pageEl" : "adSpotTwo",
+             "link"      : "http://www.lynda.com/Programming-Foundations-training-tutorials/1351-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11593&utm_campaign=CD2146&bid=11593&aid=CD2146&opt=",
+             "source" : "http://affiliates.lynda.com/42/2146/11593/",
+        }
+    };
+
+      for ( key in adCodes ) {
+        if ( adCodes.hasOwnProperty(key) ) {
+          var e = adCodes[key].pageEl,
+                l = adCodes[key].link,
+                s = adCodes[key].source;
+          createLyndaAd(e, l, s);
+        }
+
+     }    
+  // var mainAd = new CreateLyndaAd("spot");
+
+  // mainAd.loadAd ("http://affiliates.lynda.com/42/2146/11593/", "http://www.lynda.com/Programming-Foundations-training-tutorials/1351-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11593&utm_campaign=CD2146&bid=11593&aid=CD2146&opt=");
+
+  // var css = new CreateLyndaAd("spot2");
+
+  // css.loadAd ("http://lynda.directtrack.com/42/2146/626/", "http://www.lynda.com/CSS-training-tutorials/447-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=626&utm_campaign=CD2146&bid=626&aid=CD2146");
+  })();
+
+    </script>
+      
+  </body>
+  </html>
