@@ -5159,6 +5159,7 @@ a.pagination-link {
     color: #7db9e8;
     opacity: 0;
     left: -78px;
+    width: 400px;
   }
 
   .kaidez-social-link:hover .youtubeRollover {
@@ -5168,6 +5169,7 @@ a.pagination-link {
     display: inline-block;
     left: -2px;
     overflow-x: hidden;
+    width: 400px;
   }
 
   .footer-outer-wrapper-class {
