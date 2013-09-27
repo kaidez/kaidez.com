@@ -3062,6 +3062,10 @@ a:focus {
   padding-bottom: 53px;
 }
 
+.newestArticleHeaderClass {
+  color: #107aa3;
+}
+
 .sharedCategoryStyling {
   padding: 15px 0;
   margin-top: 10px;
@@ -4157,7 +4161,6 @@ a.pagination-link {
   }
 
   .newestArticleHeaderClass {
-    color: #107aa3;
     font-size: 23px;
   }
 
@@ -4555,7 +4558,6 @@ a.pagination-link {
   }
 
   .newestArticleHeaderClass {
-    color: #107aa3;
     font-size: 23px;
     margin-bottom: 5px;
   }
