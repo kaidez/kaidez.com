@@ -18,7 +18,7 @@
 
     var adBox = document.getElementById("ads");
 
-       var createLyndaAd = function ( el, link, source ) {
+       var createLyndaAd = function ( el, link, source, alt ) {
          var frag = document.createDocumentFragment(),
           pageElement = document.getElementById( el ),
           linkTag = document.createElement( "a" ),
@@ -32,6 +32,7 @@
         imageTag.border = "0";
         imageTag.width = "200";
         imageTag.height = "200";
+        imageTag.alt = alt;
 
         // Arrange elements
         linkTag.appendChild(imageTag);
@@ -80,8 +81,9 @@
           if ( adCodes.hasOwnProperty(key) ) {
             var e = adCodes[key].pageEl,
                   l  = adCodes[key].link,
-                  s = adCodes[key].source;
-            createLyndaAd(e, l, s);
+                  s = adCodes[key].source,
+                  a = adCodes[key].alt;
+            createLyndaAd(e, l, s, a);
           }
        }  
       },
