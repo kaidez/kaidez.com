@@ -379,12 +379,16 @@ a:focus {
   padding-bottom: 53px;
 }
 
+  .newestArticleHeaderClass {
+    color: $aside-color;
+  }
+
 .sharedCategoryStyling {
   padding: 15px 0;
   margin-top: 10px;
 }
 
-// // all links in post copy are this color...fails lint tests...I'll live
+// all links in post copy are this color...fails lint tests...I'll live
 main a,
 main a:visited {
   color: #000;
