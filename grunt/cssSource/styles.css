@@ -3056,9 +3056,9 @@ a:focus {
 }
 
 .newestArticleClass {
+  background: #F4FDFF;
   text-align: center;
   margin-left: 0;
-  background-color: #fff;
   padding-bottom: 53px;
 }
 
@@ -3506,7 +3506,6 @@ a.read-more-link {
 .newestArticleClass {
   min-width: 280px;
   margin: 0;
-  background-color: #fff;
   padding-bottom: 53px;
 }
 
@@ -4163,9 +4162,11 @@ a.pagination-link {
   }
 
   .newestArticleClass {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
     width: 395px;
     margin: 0;
-    background-color: #F2f2f2;
     padding-bottom: 20px;
     display: inline-block;
     min-height: 490px;
@@ -4548,7 +4549,6 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    background: #fff;
     max-width: 509px;
     margin: 0 auto 53px;
     padding: 10px;
@@ -4977,6 +4977,12 @@ a.pagination-link {
   .newestArticlePostTitle {
     font-size: 40px;
     line-height: 1.3;
+  }
+
+  .newestArticleClass {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .aside-inner-wrapper-class {
