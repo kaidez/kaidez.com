@@ -19,7 +19,7 @@ define(["enquire"], function(enquire) {
 
   var adBox = document.getElementById("aside-ad-section");
 
-  var showAd = function() {
+  var showLyndaAsideAd = function() {
     var frag = document.createDocumentFragment(),
     adLink = document.createElement("a"),
     adImg = document.createElement("img");
@@ -48,7 +48,7 @@ define(["enquire"], function(enquire) {
   enquire.register("only screen and (min-width: 569px)", {
 
     /*
-     * The 'setup' method below runs 'showAd()'. This 'deferSetup' 
+     * The 'setup' method below runs 'showLyndaAsideAd()'. This 'deferSetup' 
      * method makes sure that 'setup' only runs when it's media query is
      * first matched. In other words, only run it when it's on a device that
      * has 569px width setting above, tablets in this website's case.
@@ -57,18 +57,18 @@ define(["enquire"], function(enquire) {
     deferSetup : true,
 
     /*
-     * Stores the 'showAd' method in a callback so enquire only runs it 
+     * Stores the 'showLyndaAsideAd' method in a callback so enquire only runs it 
      * once. Our code is optimized now.
      */
     setup : function() {
-      showAd();
+      showLyndaAsideAd();
     },
 
     /*
      * If the we have a 'match' in our media query (i.e. if the site's being
      * looked at on a device that's at least 569px wide), display the box that 
      * contains the Lynda ad. Also, since 'match()' as run, this means that 
-     * 'showAd()' has run and has been stored it in a callback for 
+     * 'showLyndaAsideAd()' has run and has been stored it in a callback for 
      * future use.
      */
     match : function() {
