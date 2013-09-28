@@ -3081,7 +3081,7 @@ a:focus {
 
 .sharedCategoryStyling {
   padding: 15px 0;
-  margin-top: 10px;
+  margin: 0 10px 15px;
   background-color: #fff;
 }
 
@@ -3179,10 +3179,6 @@ a.read-more-link {
 .categorySectionLink:visited {
   color: #7db9e8;
   text-decoration: none;
-}
-
-.homepageTutorialsClass {
-  background-color: #fff;
 }
 
 .aside-outer-wrapper-class {
@@ -4221,7 +4217,6 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    padding: 15px 33px 40px;
   }
 
   .aside-outer-wrapper-class {
@@ -4615,27 +4610,10 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    padding: 15px 33px 40px;
   }
 
   .homePageSectionHeaderClass {
     margin-top: 13px;
-  }
-
-  .homepageTutorialsClass {
-    background-color: #cdf9ff;
-  }
-
-  .homepageCodingTipsClass {
-    background-color: #b4f6ff;
-  }
-
-  .homepageReviewsClass {
-    background-color: #9af3ff;
-  }
-
-  .homepagePersonalClass {
-    background-color: #81f0ff;
   }
 
   .aside-outer-wrapper-class {
@@ -5023,7 +5001,6 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    padding: 15px 33px 40px;
   }
 
   .aside-inner-wrapper-class {
