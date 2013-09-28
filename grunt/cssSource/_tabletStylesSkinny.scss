@@ -254,26 +254,6 @@
     margin-bottom: 5px;
   }
 
-  .headerTutorial {
-    background-color: $catSectionColor;
-  }
-
-  .headerCodeTips {
-    background-color: darken($catSectionColor, 5);
-  }
-
-  .headerReviews {
-    background-color: darken($catSectionColor, 10);
-  }
-
-  .headerPersonal {
-    background-color: darken($catSectionColor, 15);
-  }
-
-.homePageSectionHeaderText {
-    font-size: 21px;
-}
-
   .sharedCategoryStyling {
          @include create-outer-box-shadow;
   }

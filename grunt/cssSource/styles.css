@@ -4590,26 +4590,6 @@ a.pagination-link {
     margin-bottom: 5px;
   }
 
-  .headerTutorial {
-    background-color: #cdf9ff;
-  }
-
-  .headerCodeTips {
-    background-color: #b4f6ff;
-  }
-
-  .headerReviews {
-    background-color: #9af3ff;
-  }
-
-  .headerPersonal {
-    background-color: #81f0ff;
-  }
-
-  .homePageSectionHeaderText {
-    font-size: 21px;
-  }
-
   .sharedCategoryStyling {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
