@@ -276,27 +276,10 @@
 
   .sharedCategoryStyling {
          @include create-outer-box-shadow;
-         padding: 15px 33px 40px;
   }
 
   .homePageSectionHeaderClass {
     margin-top: 13px;
-  }
-
-  .homepageTutorialsClass {
-    background-color: $catSectionColor;
-  }
-
-.homepageCodingTipsClass {
-    background-color: darken($catSectionColor, 5);
-  }
-
-.homepageReviewsClass {
-    background-color: darken($catSectionColor, 10);
-  }
-
-.homepagePersonalClass {
-    background-color: darken($catSectionColor, 15);
   }
 
   // ==========================================================================
