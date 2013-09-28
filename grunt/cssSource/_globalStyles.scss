@@ -347,7 +347,9 @@ a:focus {
 
 // post copy spot 
 .postCopy {
+  @include create-outer-box-shadow;
   background-color: #fff;
+  padding: 40px; 
 }
 // title tag for post snippets All text links (except for post meta info) are
 // blue but have no underline.
