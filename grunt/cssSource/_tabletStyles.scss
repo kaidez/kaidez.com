@@ -256,20 +256,15 @@
 
   .newestArticleClass {
     @include create-outer-box-shadow;
-    width: 395px;
+    width: 710px;
     margin: 0;
     padding-bottom: 20px;
     display: inline-block;
-    min-height: 490px;
     vertical-align: top;
 }
 
 .adsClass {
   display: inline-block;
-  width: 135px;
-  margin-left: 50px;
-  min-height: 490px;
-  vertical-align: top;
 }
 
 .homePageSectionHeaderText {
@@ -282,6 +277,11 @@
   padding: 0 10px;
   line-height:1.3;
 }
+
+  .newestArticlePostText {
+    width: 400px;
+    display: inline-block;
+  }
 
   // =========================================================================
   // Page content styles end
