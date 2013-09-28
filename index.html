@@ -9,12 +9,19 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
 
 <div id="topSectionWrapper" class="topSectionWrapperClass">
   <article id="newestArticle" class="newestArticleClass" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-
+    
     <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
+    <div class="newestArticlePostText">
 
-    <h2 class="newestArticlePostTitle">{{ post.title }}</h2>
+      <h2 class="newestArticlePostTitle">{{ post.title }}</h2>
 
-    {% if post.has-home-img %}
+      <p class="postSnippetNewArticle">
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+    </p>
+    </div>
+
+    <div class="newestArticleImage">
+       {% if post.has-home-img %}
 
     <a href="{{ post.url }}">
       <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
@@ -27,10 +34,7 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
     </a>
 
     {% endif %}
-
-    <p class="postSnippetNewArticle">
-      {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-    </p>
+    </div>
   
   </article> <!-- #newestArticle -->
 
