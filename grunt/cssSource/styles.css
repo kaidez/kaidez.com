@@ -3028,6 +3028,10 @@ a:focus {
   color: #111;
 }
 
+.postCopy {
+  background-color: #fff;
+}
+
 .post-snippet-link:link,
 .post-snippet-link:visited {
   -webkit-transition: color 0.3s ease;
@@ -3081,7 +3085,7 @@ a:focus {
 
 .sharedCategoryStyling {
   padding: 15px 0;
-  margin: 0 10px 15px;
+  margin: 0 10px 50px;
   background-color: #fff;
 }
 
