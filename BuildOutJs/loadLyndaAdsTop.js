@@ -30,8 +30,8 @@
         // set attributes for ad image
         imageTag.src = source;
         imageTag.border = "0";
-        imageTag.width = "200";
-        imageTag.height = "200";
+        imageTag.width = "125";
+        imageTag.height = "125";
         imageTag.alt = alt;
 
         // Arrange elements
@@ -46,16 +46,16 @@
      };
      
     var adCodes = {
-        "freeTrial" : {
+        "css" : {
               "pageEl" : "adSpotOne",
-              "link"      : "http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=761&utm_campaign=CD2146&bid=761&aid=CD2146",
-              "source" : "http://lynda.directtrack.com/42/2146/761/",
-              "alt"       : "7 day free trial"
+              "link"      : "http://www.lynda.com/CSS-training-tutorials/447-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=637&utm_campaign=CD2146&bid=637&aid=CD2146",
+              "source" : "http://lynda.directtrack.com/42/2146/637/",
+              "alt"       : "Learn CSS"
           },
           "javascript" : {
               "pageEl" : "adSpotTwo",
-              "link"      : "http://www.lynda.com/JavaScript-training-tutorials/244-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=596&utm_campaign=CD2146&bid=596&aid=CD2146",
-              "source" : "http://lynda.directtrack.com/42/2146/596/",
+              "link"      : "http://www.lynda.com/JavaScript-training-tutorials/244-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=639&utm_campaign=CD2146&bid=639&aid=CD2146",
+              "source" : "http://lynda.directtrack.com/42/2146/639/",
               "alt"       : "Learn Javascript"
           }
       };
