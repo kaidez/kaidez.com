@@ -3056,10 +3056,9 @@ a:focus {
 }
 
 .newestArticleClass {
-  background: #F4FDFF;
+  background: #FFF;
   text-align: center;
-  margin-left: 0;
-  padding-bottom: 53px;
+  margin: 0 auto 53px;
 }
 
 .newestArticleHeaderClass {
@@ -3083,6 +3082,7 @@ a:focus {
 .sharedCategoryStyling {
   padding: 15px 0;
   margin-top: 10px;
+  background-color: #fff;
 }
 
 main a,
@@ -3523,8 +3523,6 @@ a.read-more-link {
 
 .newestArticleClass {
   min-width: 280px;
-  margin: 0;
-  padding-bottom: 53px;
 }
 
 .newestArticleHeaderClass {
@@ -3581,7 +3579,6 @@ a.read-more-link {
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
-  width: auto;
 }
 
 .nonHomePagePadding {
@@ -4115,7 +4112,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: white;
+    background-color: #F4FDFF;
     margin: 0 auto;
     font-size: 16px;
     line-height: 27px;
@@ -4183,7 +4180,6 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
     width: 710px;
-    margin: 0;
     padding-bottom: 20px;
     display: inline-block;
     vertical-align: top;
@@ -4532,7 +4528,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: white;
+    background-color: #F4FDFF;
     margin: 0 auto;
     font-size: 16px;
     line-height: 27px;
@@ -4587,7 +4583,6 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
     max-width: 509px;
-    margin: 0 auto 53px;
     padding: 10px;
   }
 
@@ -4940,7 +4935,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: white;
+    background-color: #F4FDFF;
     margin: 0 auto;
     font-size: 16px;
     line-height: 27px;
@@ -5472,7 +5467,7 @@ a.pagination-link {
   position: relative;
   height: auto;
   min-height: 100%;
-  background-color: whitesmoke;
+  background-color: #F4FDFF;
   margin: 0 auto;
   font-size: 16px;
   line-height: 27px;
