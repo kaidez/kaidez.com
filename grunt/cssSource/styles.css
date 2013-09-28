@@ -3070,8 +3070,14 @@ a:focus {
   display: inline-block;
 }
 
-.singleAd {
+.singleAdLeft {
   display: inline-block;
+  float: left;
+}
+
+.singleAdRight {
+  display: inline-block;
+  float: right;
 }
 
 .sharedCategoryStyling {
@@ -3081,7 +3087,7 @@ a:focus {
 
 main a,
 main a:visited {
-  color: #000;
+  color: #3285a5;
 }
 
 .post-snippet {
@@ -4184,7 +4190,18 @@ a.pagination-link {
   }
 
   .adsClass {
-    display: inline-block;
+    padding: 10px;
+    margin-top: 34px;
+    width: 500px;
+    border: 1px solid #ccc6c6;
+  }
+
+  .adsClassTitle {
+    position: relative;
+    background-color: #fff;
+    clear: both;
+    bottom: 24px;
+    color: #ccc6c6;
   }
 
   .homePageSectionHeaderText {
@@ -4200,6 +4217,15 @@ a.pagination-link {
   .newestArticlePostText {
     width: 400px;
     display: inline-block;
+    position: relative;
+    bottom: 62px;
+  }
+
+  .sharedCategoryStyling {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    padding: 15px 33px 40px;
   }
 
   .aside-outer-wrapper-class {
@@ -4591,6 +4617,9 @@ a.pagination-link {
   }
 
   .sharedCategoryStyling {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
     padding: 15px 33px 40px;
   }
 
@@ -4993,6 +5022,13 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
+  }
+
+  .sharedCategoryStyling {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    padding: 15px 33px 40px;
   }
 
   .aside-inner-wrapper-class {
