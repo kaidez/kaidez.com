@@ -67,7 +67,7 @@
        * The 'setup' method below runs 'showAd()'. This 'deferSetup' 
        * method makes sure that 'setup' only runs when it's media query is
        * first matched. In other words, only run it when it's on a device that
-       * has 569px width setting above, tablets in this website's case.
+       * has 729px width setting above, tablets in this website's case.
        * Why run it on smaller devices when we don't want it...ya know?!?! 
        */
       deferSetup : true,
@@ -90,7 +90,7 @@
 
       /*
        * If the we have a 'match' in our media query (i.e. if the site's being
-       * looked at on a device that's at least 569px wide), display the box that 
+       * looked at on a device that's at least 729px wide), display the box that 
        * contains the Lynda ad. Also, since 'match()' as run, this means that 
        * 'showAd()' has run and has been stored it in a callback for 
        * future use.
