@@ -246,7 +246,6 @@
   .newestArticleClass {
      @include create-outer-box-shadow;
     max-width: 509px;
-    margin: 0 auto 53px;
     padding: 10px;
   }
 
@@ -276,7 +275,8 @@
 }
 
   .sharedCategoryStyling {
-    padding: 15px 33px 40px;
+         @include create-outer-box-shadow;
+         padding: 15px 33px 40px;
   }
 
   .homePageSectionHeaderClass {

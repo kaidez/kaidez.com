@@ -290,6 +290,11 @@
      @include create-outer-box-shadow;
   }
 
+    .sharedCategoryStyling {
+      @include create-outer-box-shadow;
+      padding: 15px 33px 40px;
+    }
+
   // =========================================================================
   //  Page content styles end
   //  ======================================================================== 

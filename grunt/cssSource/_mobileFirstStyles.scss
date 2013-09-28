@@ -112,8 +112,6 @@
 // Style the <section> tag that wraps the tutorials at the top of the home page
 .newestArticleClass {
   min-width: 280px; // should also be the max-width for all images site-wide
-  margin:0;
-  padding-bottom: 53px;
 }
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page
@@ -186,7 +184,6 @@
   font-size: 18px;
   line-height: 30px;
   background-color: #fff;
-  width: auto;
 }
 
 // pad stuff on the post and category pages

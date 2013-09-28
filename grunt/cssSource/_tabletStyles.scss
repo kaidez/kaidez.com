@@ -257,14 +257,24 @@
   .newestArticleClass {
     @include create-outer-box-shadow;
     width: 710px;
-    margin: 0;
     padding-bottom: 20px;
     display: inline-block;
     vertical-align: top;
 }
 
 .adsClass {
-  display: inline-block;
+ padding: 10px;
+ margin-top: 34px;
+ width: 500px;
+ border: 1px solid #ccc6c6;
+}
+
+.adsClassTitle {
+  position: relative;
+  background-color: #fff;
+  clear: both;
+  bottom: 24px;
+  color: #ccc6c6;
 }
 
 .homePageSectionHeaderText {
@@ -281,6 +291,13 @@
   .newestArticlePostText {
     width: 400px;
     display: inline-block;
+    position: relative;
+    bottom: 62px;
+  }
+
+ .sharedCategoryStyling {
+    @include create-outer-box-shadow;
+    padding: 15px 33px 40px;
   }
 
   // =========================================================================
