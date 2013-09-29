@@ -5,28 +5,28 @@
    */
 
 
-define(["enquire"], function(enquire) {
+define( ["enquire"], function( enquire ) {
      
     /* 
      * if window.matchMedia is not supported, add matchMedia polyfills.
      * Each file will load twice, check to see if one is cached as it
      * can be hit-or-miss.
      */
-    Modernizr.load({
+    Modernizr.load( {
       test: window.matchMedia,
       nope: [
         "js/libs/matchMedia.js",
         "js/libs/matchMedia.addListener.js"
       ]
-    });
+    } );
 
     var adBox = document.getElementById("ads");
 
-       var createLyndaAd = function ( el, link, source, alt ) {
-         var frag = document.createDocumentFragment(),
-          pageElement = document.getElementById( el ),
-          linkTag = document.createElement( "a" ),
-          imageTag = document.createElement( "img" );
+      var createLyndaAd = function ( el, link, source, alt ) {
+        var frag = document.createDocumentFragment(),
+            pageElement = document.getElementById( el ),
+            linkTag = document.createElement( "a" ),
+            imageTag = document.createElement( "img" );
 
         // set attributes for ad link
         linkTag.setAttribute("href", link);
@@ -46,7 +46,6 @@ define(["enquire"], function(enquire) {
         
         // Load document fragment into '#ads'
         pageElement.appendChild(frag);
-
      };
      
     var adCodes = {
@@ -65,7 +64,7 @@ define(["enquire"], function(enquire) {
     };
 
     // enquire.js code:  manages when the lynda.com add displays
-    enquire.register("only screen and (min-width: 729px)", {
+    enquire.register( "only screen and (min-width: 729px)", {
 
       /*
        * The 'setup' method below runs 'showAd()'. This 'deferSetup' 
@@ -98,13 +97,12 @@ define(["enquire"], function(enquire) {
       /*
        * If the we have a 'match' in our media query (i.e. if the 
        * site's being looked at on a device that's at least 729px
-       * wide), display the box
-       * that contains the Lynda ad. Also, since 'match()' as run, 
-       * this means that 'showAd()' has run and has been stored it in 
-       * a callback for future use.
+       * wide), display the box that contains the Lynda ad. Also,
+       * since 'match()' has run, this means that 'showAd()' has run
+       * and has been stored it in a callback for future use.
        */
       match : function() {
-        if (document.body.className == "homePage") {
+        if ( document.body.className == "homePage" ) {
           ads.style.display="inline-block";
         } else {
           return false;
@@ -117,12 +115,12 @@ define(["enquire"], function(enquire) {
        * display the box that contains the Lynda ad.
        */
       unmatch : function() {
-        if (document.body.className == "homePage") {
+        if ( document.body.className == "homePage" ) {
           ads.style.display="none";
         } else {
           return false;
         }
       }
-    }, true);
+    }, true );
 
-  });
+  } );
