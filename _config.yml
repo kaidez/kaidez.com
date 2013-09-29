@@ -9,7 +9,6 @@ paginate_path: "pages/page:num"
 include: [.htaccess]
 exclude: [
   .ftppass,
-  all-posts,
   assets,
   backbone,
   bower.json,
