@@ -414,7 +414,7 @@ a:focus {
 
 // put a light grey border around all images
 .imgBorder {
-  border: 1px solid  #b9b9b9;
+  border: 1px solid #b9b9b9;
   width: 100%;
 }
 
@@ -435,6 +435,10 @@ main a:visited {
 .post-pic {
   float: left;
   padding: 0 10px 10px 0;
+}
+
+.postSnippetNewArticle {
+  margin: 0 auto;
 }
 
 // <div> that wraps related posts styles that appear on single post pages
