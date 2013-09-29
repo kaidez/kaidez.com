@@ -3096,7 +3096,7 @@ a:focus {
 }
 
 .imgBorder {
-  border: 1px solid  #b9b9b9;
+  border: 1px solid #b9b9b9;
   width: 100%;
 }
 
@@ -3114,6 +3114,10 @@ main a:visited {
 .post-pic {
   float: left;
   padding: 0 10px 10px 0;
+}
+
+.postSnippetNewArticle {
+  margin: 0 auto;
 }
 
 .related-posts-style {
@@ -3565,7 +3569,7 @@ a.read-more-link {
 }
 
 .postSnippetNewArticle {
-  margin: 0;
+  max-width: 701px;
   text-align: left;
   padding: 13px;
 }
