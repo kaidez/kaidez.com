@@ -411,6 +411,13 @@ a:focus {
   background-color: #fff;
 }
 
+
+// put a light grey border around all images
+.imgBorder {
+  border: 1px solid  #b9b9b9;
+  width: 100%;
+}
+
 // all links in post copy are this color...fails lint tests...I'll live
 main a,
 main a:visited {
