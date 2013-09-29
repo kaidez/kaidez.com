@@ -178,11 +178,8 @@
 // style the <main> element
 .page-content {
   @include full-height;
-  // max-width: $mobile-portrait-width;
   margin: 0 auto;
-  font-size: 18px;
   line-height: 30px;
-  background-color: #fff;
 }
 
 // pad stuff on the post and category pages

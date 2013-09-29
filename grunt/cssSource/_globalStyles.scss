@@ -372,9 +372,11 @@ a:focus {
 // Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
+  background-color: #fff;
   padding: 15px 0 58px;
   width: auto;
   text-align: left;
+  font-size: 18px;
   color: #000;
 }
 

@@ -201,7 +201,7 @@
   
   // For the "main" id element
   .page-content {
-    @include page-content($inner-content-width, #FFF);
+    @include page-content($inner-content-width, #fff);
     padding: 15px 0 0;
   }
   
