@@ -3095,6 +3095,11 @@ a:focus {
   background-color: #fff;
 }
 
+.imgBorder {
+  border: 1px solid  #b9b9b9;
+  width: 100%;
+}
+
 main a,
 main a:visited {
   color: #3285a5;
@@ -3551,10 +3556,6 @@ a.read-more-link {
 
 .homePageSectionHeaderText {
   background-color: #fff;
-}
-
-.imgBorder {
-  border: 1px solid  #b9b9b9;
 }
 
 .post-snippet-title {
@@ -4232,7 +4233,6 @@ a.pagination-link {
   }
 
   .newestArticlePostText {
-    width: 400px;
     display: inline-block;
     position: relative;
     bottom: 62px;
