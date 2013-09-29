@@ -3057,9 +3057,11 @@ a:focus {
   position: relative;
   height: auto;
   min-height: 100%;
+  background-color: #fff;
   padding: 15px 0 58px;
   width: auto;
   text-align: left;
+  font-size: 18px;
   color: #000;
 }
 
@@ -3584,9 +3586,7 @@ a.read-more-link {
   height: auto;
   min-height: 100%;
   margin: 0 auto;
-  font-size: 18px;
   line-height: 30px;
-  background-color: #fff;
 }
 
 .nonHomePagePadding {
