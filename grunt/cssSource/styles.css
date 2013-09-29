@@ -3578,7 +3578,7 @@ a.read-more-link {
   font-size: 32px;
 }
 
-.newestArticlePostText {
+.newestArticlePostContainer {
   padding: 8px;
 }
 
@@ -4240,7 +4240,7 @@ a.pagination-link {
     line-height: 1.3;
   }
 
-  .newestArticlePostText {
+  .newestArticlePostContainer {
     display: inline-block;
     position: relative;
     bottom: 62px;
