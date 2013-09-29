@@ -15,6 +15,7 @@ exclude: [
   bower.json,
   bower_components,
   BuildOutJs,
+  Capfile,
   config,
   css/styles.css,
   Gruntfile.js,
