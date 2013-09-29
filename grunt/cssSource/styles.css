@@ -3191,7 +3191,7 @@ a.read-more-link {
 
 .homePageSectionHeaderClass {
   border-top: 1px solid #000;
-  margin: 0 18px;
+  margin: 18px 18px 0;
 }
 
 .aside-outer-wrapper-class {
