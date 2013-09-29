@@ -3034,11 +3034,8 @@ a:focus {
 }
 
 .postCopy {
-  -webkit-box-shadow: 1px 1px 2px 0 #ccc;
-  -moz-box-shadow: 1px 1px 2px 0 #ccc;
-  box-shadow: 1px 1px 2px 0 #ccc;
   background-color: #fff;
-  padding: 40px;
+  padding: 20px 12px 0;
 }
 
 .post-snippet-link:link,
@@ -3074,10 +3071,23 @@ a:focus {
   background: #FFF;
   text-align: center;
   margin: 0 auto 53px;
+  padding-top: 15px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .newestArticleHeaderClass {
-  color: #107aa3;
+  color: #000;
+  border-top: 1px solid #222;
+  text-align: center;
+  margin: 18px 18px 0;
+}
+
+.newestArticleHeaderText {
+  position: relative;
+  top: -14px;
+  background-color: #fff;
+  padding: 0 4px;
 }
 
 .newestArticleImage {
@@ -3551,9 +3561,7 @@ a.read-more-link {
 }
 
 .newestArticleHeaderClass {
-  font-size: 20px;
-  margin-left: 12px;
-  text-align: left;
+  font-size: 25px;
 }
 
 .homePageSectionHeaderClass {
@@ -3590,9 +3598,9 @@ a.read-more-link {
 .wf-active h1.post-title, .wf-active h1.category-title {
   margin: 0px auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 .page-content {
@@ -4209,14 +4217,14 @@ a.pagination-link {
   }
 
   .newestArticleHeaderClass {
-    font-size: 23px;
+    font-size: 25px;
   }
 
   .newestArticleClass {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     vertical-align: top;
   }
 
@@ -4252,6 +4260,12 @@ a.pagination-link {
   }
 
   .sharedCategoryStyling {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
+  }
+
+  .postCopy {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
@@ -4620,7 +4634,7 @@ a.pagination-link {
   }
 
   .newestArticleHeaderClass {
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 5px;
   }
 
@@ -4636,6 +4650,12 @@ a.pagination-link {
 
   .homePageSectionHeaderText {
     font-size: 33px;
+  }
+
+  .postCopy {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .aside-outer-wrapper-class {
@@ -5017,6 +5037,11 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
+    padding-top: 15px;
+  }
+
+  .newestArticlePostContainer {
+    text-align: center;
   }
 
   .sharedCategoryStyling {
@@ -5028,6 +5053,12 @@ a.pagination-link {
   .homePageSectionHeaderText {
     font-size: 33px;
     text-shadow: 1px 1px 0 #EAEEF1;
+  }
+
+  .postCopy {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .aside-inner-wrapper-class {
