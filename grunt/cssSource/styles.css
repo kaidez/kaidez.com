@@ -3175,7 +3175,7 @@ a.read-more-link {
 .homePageSectionHeaderText {
   position: relative;
   top: -16px;
-  padding-right: 3px;
+  padding: 0 4px;
 }
 
 .snippetThumb {
@@ -3185,8 +3185,13 @@ a.read-more-link {
 
 .categorySectionLink:link,
 .categorySectionLink:visited {
-  color: #7db9e8;
+  color: #000;
   text-decoration: none;
+}
+
+.homePageSectionHeaderClass {
+  border-top: 1px solid #000;
+  margin: 0 18px;
 }
 
 .aside-outer-wrapper-class {
@@ -3538,9 +3543,8 @@ a.read-more-link {
 .homePageSectionHeaderClass {
   color: #929292;
   font-size: 18px;
-  margin: auto 10px;
-  border-top: 1px solid #7db9e8;
   min-width: 280px;
+  text-align: center;
 }
 
 .homePageSectionHeaderText {
@@ -5006,6 +5010,10 @@ a.pagination-link {
     box-shadow: 1px 1px 2px 0 #ccc;
   }
 
+  .homePageSectionHeaderText {
+    font-size: 33px;
+  }
+
   .aside-inner-wrapper-class {
     width: 1000px;
     margin: 0 auto;
@@ -5076,7 +5084,8 @@ a.pagination-link {
   }
 
   /*
-   * Fancy rollover for styling for the social networking links start here
+   * Fancy rollover for styling for the social networking links start 
+   * here
    */
   .twitter {
     position: relative;
