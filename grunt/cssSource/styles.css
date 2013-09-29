@@ -2806,6 +2806,11 @@ a:focus {
   outline: 2px solid red;
 }
 
+.jumpToTopText {
+  position: absolute;
+  text-indent: -999px;
+}
+
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
