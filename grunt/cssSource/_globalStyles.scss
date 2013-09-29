@@ -500,8 +500,7 @@ main a:visited {
   .homePageSectionHeaderText {
     position: relative;
     top: -16px;
-    // background-color: #F5F5F5;
-    padding-right: 3px;
+    padding: 0 4px;
   }
 
   .snippetThumb {
@@ -511,21 +510,26 @@ main a:visited {
 
   .categorySectionLink:link,
   .categorySectionLink:visited {
-    color: $header-color;
+    color: #000;
     text-decoration: none;
   }
 
-// ===========================================================================
+  .homePageSectionHeaderClass {
+    border-top: 1px solid #000;
+    margin: 0 18px;
+  }
+
+// ====================================================================
 // Post content styles end
-// ===========================================================================
+// ====================================================================
 
 
 
 
 
-// ===========================================================================
+// ====================================================================
 // Aside styles start
-// ===========================================================================
+// ====================================================================
 
 // <aside> tag
 .aside-outer-wrapper-class {

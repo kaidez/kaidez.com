@@ -122,12 +122,11 @@
 }
 
 // style the <h1> tags in home page category sections
-.homePageSectionHeaderClass {
+.homePageSectionHeaderClass { 
   color: #929292;
   font-size:18px;
-  margin: auto 10px;
-  border-top:1px solid $header-color; 
   min-width: 280px;
+  text-align: center;
 }
 
 // style the <h1> tags in home page category sections
