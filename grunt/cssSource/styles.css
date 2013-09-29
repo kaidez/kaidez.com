@@ -4623,6 +4623,10 @@ a.pagination-link {
     margin-top: 13px;
   }
 
+  .homePageSectionHeaderText {
+    font-size: 33px;
+  }
+
   .aside-outer-wrapper-class {
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
     min-height: 1056px;
