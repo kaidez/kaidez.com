@@ -4,8 +4,8 @@ title: kaidez.com / Tutorials &amp; articles about  Web Development
 meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants and More from kaidez
 ---
 
-{% for post in site.posts reversed limit:1 %} <!-- start ENTIRE LOOP -->
-
+<!-- start ENTIRE LOOP -->
+{% for post in site.posts reversed limit:1 %}
 
 <div id="topSectionWrapper" class="topSectionWrapperClass">
   <article id="newestArticle" class="newestArticleClass" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
@@ -13,27 +13,29 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
     <h1 id="newestArticleHeader" class="newestArticleHeaderClass">NEWEST ARTICLE</h1>
     <div class="newestArticlePostText">
 
-      <h2 class="newestArticlePostTitle">{{ post.title }}</h2>
+      <h2 class="newestArticlePostTitle">
+        <a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a>
+      </h2>
 
       <p class="postSnippetNewArticle">
         {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
-    </p>
+      </p>
     </div>
 
     <div class="newestArticleImage">
-       {% if post.has-home-img %}
+      {% if post.has-home-img %}
 
-    <a href="{{ post.url }}">
-      <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
-    </a>
+      <a href="{{ post.url }}">
+        <img src="/img/{{ post.has-home-img  }}" class="imgBorder" alt="{{ post.title }}" />
+      </a>
 
-    {% else %}
+      {% else %}
 
-    <a href="{{ post.url }}">
-      <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
-    </a>
+      <a href="{{ post.url }}">
+        <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
+      </a>
 
-    {% endif %}
+      {% endif %}
     </div>
   
   </article> <!-- #newestArticle -->
