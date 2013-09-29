@@ -269,6 +269,7 @@
   // post copy spot 
   .postCopy {
     @include create-outer-box-shadow;
+    margin: 0 15px;
   }
 
   // ==================================================================
