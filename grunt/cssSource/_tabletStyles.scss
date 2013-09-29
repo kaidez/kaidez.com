@@ -255,27 +255,24 @@
 
   .newestArticleClass {
     @include create-outer-box-shadow;
-    min-width: 0px;
-    max-width: 900px;
     padding-bottom: 20px;
-    display: inline-block;
     vertical-align: top;
-}
+  }
 
-.adsClass {
- padding: 10px;
- margin-top: 34px;
- width: 500px;
- border: 1px solid #ccc6c6;
-}
+  .adsClass {
+   padding: 10px;
+   margin-top: 34px;
+   width: 500px;
+   border: 1px solid #ccc6c6;
+  }
 
-.adsClassTitle {
-  position: relative;
-  background-color: #fff;
-  clear: both;
-  bottom: 24px;
-  color: #ccc6c6;
-}
+  .adsClassTitle {
+    position: relative;
+    background-color: #fff;
+    clear: both;
+    bottom: 24px;
+    color: #ccc6c6;
+  }
 
 .homePageSectionHeaderText {
   font-size: 33px;
