@@ -30,9 +30,9 @@
    
 
 
-  // =========================================================================
+  // ==================================================================
   //  Header styles start
-  //  ========================================================================
+  //  =================================================================
 
   // Logo link...provides a large enough space for a click area
   .homepage-link {
@@ -288,6 +288,11 @@
 
   .newestArticleClass {
      @include create-outer-box-shadow;
+     padding-top: 15px;
+  }
+
+  .newestArticlePostContainer {
+    text-align: center;
   }
 
   .sharedCategoryStyling {
@@ -297,6 +302,11 @@
   .homePageSectionHeaderText {
     font-size: 33px;
     text-shadow: 1px 1px 0 #EAEEF1;
+  }
+
+  // post copy spot 
+  .postCopy {
+    @include create-outer-box-shadow;
   }
 
   // =================================================================

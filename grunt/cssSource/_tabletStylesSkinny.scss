@@ -250,7 +250,7 @@
   }
 
   .newestArticleHeaderClass {
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 5px;
   }
 
@@ -264,6 +264,11 @@
 
   .homePageSectionHeaderText {
     font-size: 33px;
+  }
+
+  // post copy spot 
+  .postCopy {
+    @include create-outer-box-shadow;
   }
 
   // ==================================================================
