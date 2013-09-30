@@ -2808,7 +2808,7 @@ a:focus {
 
 .jumpToTopText {
   position: absolute;
-  text-indent: -999px;
+  text-indent: -9999px;
 }
 
 .wf-loading h1, .wf-inactive h1,
