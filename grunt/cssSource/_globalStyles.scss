@@ -904,8 +904,7 @@ main a:visited {
   color: darken($post-link-color, 4);
   text-decoration: none;
   @include transitions (color);
-
-  font-size: 16px;
+  font-size: 18px;
 }
 
 // Site map post links - hover & focus state

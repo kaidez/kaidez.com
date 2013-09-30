@@ -3514,7 +3514,7 @@ a.read-more-link {
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .site-map-link:hover,
