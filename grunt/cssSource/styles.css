@@ -3076,6 +3076,10 @@ a:focus {
   text-align: left;
 }
 
+.newestArticlePostContainer {
+  text-align: center;
+}
+
 .newestArticleHeaderClass {
   color: #000;
   border-top: 1px solid #222;
@@ -4263,10 +4267,6 @@ a.pagination-link {
     line-height: 1.3;
   }
 
-  .newestArticlePostContainer {
-    text-align: center;
-  }
-
   .sharedCategoryStyling {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
@@ -5056,10 +5056,6 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
     padding-top: 15px;
-  }
-
-  .newestArticlePostContainer {
-    text-align: center;
   }
 
   .sharedCategoryStyling {
