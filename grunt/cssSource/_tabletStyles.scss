@@ -250,15 +250,15 @@
     padding: 17px;
   }
 
-  .newestArticleHeaderClass {
-    font-size: 25px;
-  }
-
   .newestArticleClass {
     @include create-outer-box-shadow;
     padding-bottom: 10px;
     vertical-align: top;
   }
+
+  .newestArticleHeaderClass {
+    font-size:25px;
+  } 
 
   .adsClass {
    padding: 10px;

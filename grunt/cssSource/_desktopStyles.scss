@@ -301,6 +301,10 @@
      padding-top: 15px;
   }
 
+  .newestArticleHeaderClass {
+    font-size:25px;
+  } 
+
   .sharedCategoryStyling {
     @include create-outer-box-shadow;
   }

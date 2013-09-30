@@ -248,10 +248,15 @@
     padding: 10px;
   }
 
-  .newestArticleHeaderClass {
-    font-size: 25px;
-    margin-bottom: 5px;
+
+  // the post title in the NEWEST ARTICLE section on the home page
+  .newestArticlePostTitle {
+    font-size: 40px;
   }
+
+  .newestArticleHeaderClass {
+    font-size:25px;
+  }  
 
   .sharedCategoryStyling {
     @include create-outer-box-shadow;
