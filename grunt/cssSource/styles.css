@@ -3085,6 +3085,7 @@ a:focus {
   border-top: 1px solid #222;
   text-align: center;
   margin: 18px 18px 0;
+  font-size: 23px;
 }
 
 .newestArticleHeaderText {
@@ -3600,6 +3601,10 @@ a.read-more-link {
   font-size: 25px;
 }
 
+.newestArticleHeaderClass {
+  font-size: 21px;
+}
+
 .newestArticlePostTitle {
   font-size: 32px;
 }
@@ -3629,7 +3634,7 @@ a.read-more-link {
 }
 
 .breadcrumb-styles {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 900;
   background-color: #f2f8fd;
   max-width: 1024px;
@@ -3639,7 +3644,7 @@ a.read-more-link {
 }
 
 .breadcrumb-separator {
-  padding: 0 2px;
+  padding: 0 4px;
   font-size: 14px;
 }
 
@@ -3989,7 +3994,7 @@ a.pagination-link {
   }
 
   .breadcrumb-styles {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 900;
     background-color: #f2f8fd;
     max-width: 1024px;
@@ -4230,16 +4235,16 @@ a.pagination-link {
     padding: 17px;
   }
 
-  .newestArticleHeaderClass {
-    font-size: 25px;
-  }
-
   .newestArticleClass {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
     padding-bottom: 10px;
     vertical-align: top;
+  }
+
+  .newestArticleHeaderClass {
+    font-size: 25px;
   }
 
   .adsClass {
@@ -4641,9 +4646,12 @@ a.pagination-link {
     padding: 10px;
   }
 
+  .newestArticlePostTitle {
+    font-size: 40px;
+  }
+
   .newestArticleHeaderClass {
     font-size: 25px;
-    margin-bottom: 5px;
   }
 
   .sharedCategoryStyling {
@@ -5056,6 +5064,10 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
     padding-top: 15px;
+  }
+
+  .newestArticleHeaderClass {
+    font-size: 25px;
   }
 
   .sharedCategoryStyling {
