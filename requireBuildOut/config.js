@@ -6,7 +6,8 @@
     "buildform",
     "form",
     "formValidation",
-    "loadLyndaAd",
+    "loadAsideAd",
+    "loadHomePageAds",
     "menu",
     "prismInit",
     "search"
@@ -20,7 +21,7 @@
     spin: "libs/spin",
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
-    tipuesetContent: "libs/tipuesearch_content",
+    tipuesetContent: "libs/tipuesearch_content"
   },
 
   shim: {
