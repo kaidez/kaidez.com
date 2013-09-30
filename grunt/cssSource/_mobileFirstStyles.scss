@@ -109,10 +109,12 @@
 // Home page box-related styles start
 // ====================================================================
 
-// Style the <section> tag that wraps the tutorials at the top of the home page
-.newestArticleClass {
-  min-width: 280px; // should also be the max-width for all images site-wide
-}
+.topSectionWrapperClass {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 529px;
+ }
+
 
 // style the <h1> in the 'NEWEST ARTICLE' part of the home page
 .newestArticleHeaderClass {

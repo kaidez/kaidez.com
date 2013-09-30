@@ -217,6 +217,7 @@
   .postSnippetLinkHeader:link,
   .postSnippetLinkHeader:visited {
     font-size: 50px;
+    text-decoration: none;
   }
 
   .postSnippetNewArticle {
@@ -317,6 +318,13 @@
   // post copy spot 
   .pageCopy {
     @include create-outer-box-shadow;
+  }
+
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    min-width: 1004px;
+    max-width: 0;
   }
 
   // =================================================================

@@ -270,6 +270,12 @@
     font-size: 33px;
   }
 
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
   // post copy spot 
   .pageCopy {
     @include create-outer-box-shadow;
