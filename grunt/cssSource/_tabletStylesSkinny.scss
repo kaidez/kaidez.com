@@ -202,7 +202,7 @@
   // For the "main" id element
   .page-content {
     @include page-content($inner-content-width, #fff);
-    padding: 15px 0 0;
+    padding: 15px 10px 0;
   }
   
   // breadcrumbs
@@ -245,7 +245,6 @@
 
   .newestArticleClass {
      @include create-outer-box-shadow;
-    max-width: 509px;
     padding: 10px;
   }
 
