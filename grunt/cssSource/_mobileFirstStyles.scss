@@ -136,12 +136,17 @@
 .post-snippet-title {
   font-size: 1.3rem;
   line-height: 1.2;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 .postSnippetNewArticle {
   max-width: 701px;
   text-align: left;
   padding: 13px;
+}
+
+.post-snippet-link:link,
+.post-snippet-link:visited { 
+  font-size: 25px;
 }
 
 // the post title in the NEWEST ARTICLE section on the home page
