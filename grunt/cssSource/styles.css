@@ -3038,8 +3038,8 @@ a:focus {
   padding: 20px 18px 0;
 }
 
-.post-snippet-link:link,
-.post-snippet-link:visited {
+.postSnippetLinkHeader:link, .postSnippetLinkHeader:visited,
+.post-snippet-link:link, .post-snippet-link:visited {
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
@@ -3049,6 +3049,7 @@ a:focus {
   margin: 0;
 }
 
+.postSnippetLinkHeader:hover,
 .post-snippet-link:hover,
 .post-snippet-link:focus {
   color: #57accc;
@@ -3665,7 +3666,7 @@ a.read-more-link {
 .breadcrumb-styles {
   font-size: 18px;
   font-weight: 900;
-  background-color: #f2f8fd;
+  background-color: #c9c9c9;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
@@ -4014,7 +4015,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 18px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: #c9c9c9;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4206,7 +4207,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: #c9c9c9;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4592,7 +4593,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: #c9c9c9;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4969,7 +4970,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #f2f8fd;
+    background-color: #c9c9c9;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -5392,7 +5393,7 @@ a.pagination-link {
 .lt-ie9 .breadcrumb-styles {
   font-size: 16px;
   font-weight: 900;
-  background-color: #f2f8fd;
+  background-color: #c9c9c9;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
