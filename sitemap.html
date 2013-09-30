@@ -4,50 +4,44 @@ title: Site Map &laquo; kaidez.com
 meta-excerpt: A complete list of content on kaidez.com
 ---
   <h2><a href="/" title="kaidez.com home page" class="sitemap-header-link">Home Page &raquo;</a></h2>
-  
-  <div id="tutorial-site-map-links" class="site-map-section">
+    <div class="pageCopy">
+      <div id="tutorial-site-map-links" class="site-map-section">
 
-    <h2><a href="/tutorials/" title="Tutorials on kaidez.com" class="sitemap-header-link">Tutorials &raquo;</a></h2>
+        <h2><a href="/tutorials/" title="Tutorials on kaidez.com" class="sitemap-header-link">Tutorials &raquo;</a></h2>
 
-    <ul class="ulNoPad">
+        <ul class="ulNoPad">
 
-    {% for post in site.categories.tutorials %}
+        {% for post in site.categories.tutorials %}
 
-      <li class="site-map-list-item">
-        <a href="{{ post.url }}" title="{{ post.title }}" title="{{ post.title }}" rel="bookmark" class="site-map-link">{{ post.title }}</a>
-      </li>
+          <li class="site-map-list-item">
+            <a href="{{ post.url }}" title="{{ post.title }}" title="{{ post.title }}" rel="bookmark" class="site-map-link">{{ post.title }}</a>
+          </li>
 
-    {% endfor %}
+        {% endfor %}
 
-    </ul>
+        </ul>
 
-  </div> <!-- #tutorial-site-map-links -->
+      </div> <!-- #tutorial-site-map-links -->
 
+      <div id="code-tips-site-map-links" class="site-map-section">
 
+        <h2><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="sitemap-header-link">Code Tips &raquo;</a></h2>
 
+        <ul class="ulNoPad">
 
-  <div id="code-tips-site-map-links" class="site-map-section">
+       {% for post in site.categories.coding-best-practices %}
 
-    <h2><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="sitemap-header-link">Code Tips &raquo;</a></h2>
+        <li class="site-map-list-item">
+          <a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="site-map-link">{{ post.title }}</a>
+        </li>
 
-    <ul class="ulNoPad">
+      {% endfor %}
 
-    {% for post in site.categories.coding-best-practices %}
-
-      <li class="site-map-list-item">
-        <a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="site-map-link">{{ post.title }}</a>
-      </li>
-
-    {% endfor %}
-
-    </ul>
+      </ul>
     
-  </div> <!-- #code-tips-site-map-links -->
+    </div> <!-- #code-tips-site-map-links -->
 
-
-
-
-  <div id="reviews-site-map-links" class="site-map-section">
+    <div id="reviews-site-map-links" class="site-map-section">
 
     <h2><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="sitemap-header-link">Reviews &raquo;</a></h2>
 
@@ -87,3 +81,4 @@ meta-excerpt: A complete list of content on kaidez.com
   </div> <!-- #personal-site-map-links -->
 
   <h2><a href="affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="sitemap-header-link">Affiliate Disclaimer &raquo;</a></h2>
+  </div>
