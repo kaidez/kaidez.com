@@ -3035,7 +3035,7 @@ a:focus {
 
 .pageCopy {
   background-color: #fff;
-  padding: 20px 12px 0;
+  padding: 20px 18px 0;
 }
 
 .post-snippet-link:link,
@@ -3072,7 +3072,7 @@ a:focus {
   text-align: center;
   margin: 0 auto 53px;
   padding-top: 15px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -3218,6 +3218,10 @@ a.read-more-link {
 .homePageSectionHeaderClass {
   border-top: 1px solid #000;
   margin: 18px 18px 0;
+}
+
+.affiliate-disclaimer-container-class {
+  padding-bottom: 50px;
 }
 
 .aside-outer-wrapper-class {
@@ -4164,7 +4168,7 @@ a.pagination-link {
     min-height: 100%;
     background-color: #F4FDFF;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 27px;
     width: auto;
     text-align: left;
@@ -4583,7 +4587,7 @@ a.pagination-link {
     min-height: 100%;
     background-color: #F4FDFF;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 27px;
     width: auto;
     text-align: left;
@@ -4964,7 +4968,7 @@ a.pagination-link {
     min-height: 100%;
     background-color: #F4FDFF;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 27px;
     width: auto;
     text-align: left;
@@ -5512,7 +5516,7 @@ a.pagination-link {
   min-height: 100%;
   background-color: #F4FDFF;
   margin: 0 auto;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 27px;
   width: auto;
   text-align: left;

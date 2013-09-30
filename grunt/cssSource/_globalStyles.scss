@@ -354,7 +354,7 @@ a:focus {
 // post copy spot 
 .pageCopy {
   background-color: #fff;
-  padding: 20px 12px 0;
+  padding: 20px 18px 0;
 }
 
 // title tag for post snippets All text links (except for post meta
@@ -392,7 +392,7 @@ a:focus {
   text-align: center;
   margin: 0 auto 53px;
   padding-top: 15px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -460,7 +460,8 @@ main a:visited {
   margin: 0 auto;
 }
 
-// <div> that wraps related posts styles that appear on single post pages
+// <div> that wraps related posts styles that appear on single post
+// pages
 .related-posts-style {
   @include related-posts-header(20px);
   @include master-center;
@@ -549,6 +550,10 @@ main a:visited {
   .homePageSectionHeaderClass {
     border-top: 1px solid #000;
     margin: 18px 18px 0;
+  }
+
+  .affiliate-disclaimer-container-class {
+    padding-bottom: 50px;
   }
 
 // ====================================================================
