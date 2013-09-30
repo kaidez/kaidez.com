@@ -3033,7 +3033,7 @@ a:focus {
   color: #111;
 }
 
-.postCopy {
+.pageCopy {
   background-color: #fff;
   padding: 20px 12px 0;
 }
@@ -4270,7 +4270,7 @@ a.pagination-link {
     box-shadow: 1px 1px 2px 0 #ccc;
   }
 
-  .postCopy {
+  .pageCopy {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
@@ -4658,7 +4658,7 @@ a.pagination-link {
     font-size: 33px;
   }
 
-  .postCopy {
+  .pageCopy {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
@@ -5062,7 +5062,7 @@ a.pagination-link {
     text-shadow: 1px 1px 0 #EAEEF1;
   }
 
-  .postCopy {
+  .pageCopy {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
