@@ -270,21 +270,21 @@
     margin: 0 auto;
   }
 
-
   .sharePostStructure {
     display: inline-block;
   }
 
-  // <footer> in <article> tags in posts...styles the post's publish date
+  // <footer> in <article> tags in posts...styles the post's publish
+  // date
   .articleFooterClass {
     line-height: normal; 
   }
 
   // the post title in the NEWEST ARTICLE section on the home page
-.newestArticlePostTitle {
-  font-size: 40px;
-  line-height:1.3;
-}
+  .newestArticlePostTitle {
+    font-size: 40px;
+    line-height:1.3;
+  }
 
   .newestArticleClass {
      @include create-outer-box-shadow;
@@ -305,7 +305,7 @@
   }
 
   // post copy spot 
-  .postCopy {
+  .pageCopy {
     @include create-outer-box-shadow;
   }
 

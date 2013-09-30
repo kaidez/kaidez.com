@@ -45,9 +45,10 @@
     {% include category_breadcrumbs_partial.html %}
     
     <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
-      
-      <h1 class="category-title">Category: {{ page.title }}</h1>
-      {{ content }}
+      <div id="pageCopy"> 
+        <h1 class="category-title">Category: {{ page.title }}</h1>
+          {{ content }}
+      </div> 
     </main> <!-- #content -->
     
     {% include aside_partial.html %}
