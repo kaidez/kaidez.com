@@ -44,12 +44,11 @@ define( ["enquire"], function( enquire ) {
 
         // Load arranged elements into document fragment
         frag.appendChild(linkTag);
-        
-        // Load document fragment into '#ads'
-        // pageElement.appendChild(frag);
 
-        child = adBox.getElementsByTagName( 'img' );
-        adBox.insertBefore(frag, child);
+        var parent = pageElement;
+        child = parent.firstChild;
+        parent.insertBefore(frag, child);
+        
      };
      
     var adCodes = {

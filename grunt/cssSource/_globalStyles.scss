@@ -418,14 +418,24 @@ a:focus {
     display: inline-block;
   }
 
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    min-width: 650px;
+  }
+
+  .adsClass{
+    min-width: 650px;
+  }
+
   .singleAdLeft {
+    padding-right: 20px;
     display: inline-block;
-    float:left;
   }
 
   .singleAdRight {
+    padding-left: 20px;
     display: inline-block;
-    float:right;
   }
 
 .sharedCategoryStyling {

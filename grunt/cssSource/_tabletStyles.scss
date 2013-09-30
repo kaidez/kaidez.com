@@ -244,12 +244,6 @@
     line-height: normal; 
   }
 
-  .topSectionWrapperClass {
-    text-align: center;
-    margin: 0 auto;
-    padding: 17px;
-  }
-
   .newestArticleClass {
     @include create-outer-box-shadow;
     padding-bottom: 10px;
@@ -259,13 +253,6 @@
   .newestArticleHeaderClass {
     font-size:25px;
   } 
-
-  .adsClass {
-   padding: 10px;
-   margin-top: 34px;
-   width: 500px;
-   border: 1px solid #ccc6c6;
-  }
 
   .adsClassTitle {
     position: relative;
