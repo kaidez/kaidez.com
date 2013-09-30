@@ -1,7 +1,7 @@
   /*
-   *  Module: 'loadLyndaAdsTop'
+   *  Require JS Module: 'loadLyndaAdTop'
    *  
-   *  Construct a lynda ad
+   *  Create a 300px X 250px lynda ad and load it onto the home page.
    */
 
 
@@ -22,21 +22,21 @@ define( ["enquire"], function( enquire ) {
 
     var adBox = document.getElementById("ads");
 
-      var createLyndaAd = function ( el, link, source, alt ) {
+      var createLyndaAd = function () {
         var frag = document.createDocumentFragment(),
-            pageElement = document.getElementById( el ),
+            pageElement = document.getElementById( "adSpotOne" ),
             linkTag = document.createElement( "a" ),
             imageTag = document.createElement( "img" );
 
         // set attributes for ad link
-        linkTag.setAttribute("href", link);
+        linkTag.setAttribute("href", "http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=754&utm_campaign=CD2146&bid=754&aid=CD2146");
 
         // set attributes for ad image
-        imageTag.src = source;
+        imageTag.src = "http://lynda.directtrack.com/42/2146/754/";
         imageTag.border = "0";
-        imageTag.width = "125";
-        imageTag.height = "125";
-        imageTag.alt = alt;
+        imageTag.width = "250";
+        imageTag.height = "250";
+        imageTag.alt = "7-day free trial";
 
         // Arrange elements
         linkTag.appendChild(imageTag);
@@ -47,21 +47,6 @@ define( ["enquire"], function( enquire ) {
         // Load document fragment into '#ads'
         pageElement.appendChild(frag);
      };
-     
-    var adCodes = {
-      "css" : {
-        "pageEl" : "adSpotOne",
-        "link"   : "http://www.lynda.com/CSS-training-tutorials/447-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=637&utm_campaign=CD2146&bid=637&aid=CD2146",
-        "source" : "http://lynda.directtrack.com/42/2146/637/",
-        "alt"    : "Learn CSS"
-      },
-      "javascript" : {
-        "pageEl" : "adSpotTwo",
-        "link"   : "http://www.lynda.com/JavaScript-training-tutorials/244-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=639&utm_campaign=CD2146&bid=639&aid=CD2146",
-        "source" : "http://lynda.directtrack.com/42/2146/639/",
-        "alt"    : "Learn Javascript"
-      }
-    };
 
     // enquire.js code:  manages when the lynda.com add displays
     enquire.register( "only screen and (min-width: 729px)", {
@@ -82,15 +67,7 @@ define( ["enquire"], function( enquire ) {
        */
       setup : function() {
         if ( document.body.className == "homePage" ) {
-          for ( key in adCodes ) {
-            if ( adCodes.hasOwnProperty(key) ) {
-              var e = adCodes[key].pageEl,
-                  l = adCodes[key].link,
-                  s = adCodes[key].source,
-                  a = adCodes[key].alt;
-              createLyndaAd( e, l, s, a );
-            }
-          }  
+          createLyndaAd();
         }
       },
 
