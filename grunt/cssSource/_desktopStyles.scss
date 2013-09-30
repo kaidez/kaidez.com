@@ -213,6 +213,16 @@
     font-size: 30px;
   }
 
+  // link embedded in post snippets
+  .postSnippetLinkHeader:link,
+  .postSnippetLinkHeader:visited {
+    font-size: 50px;
+  }
+
+  .postSnippetNewArticle {
+    padding: 13px 0 40px 0;
+  }
+
   .page-content {
     @include page-content($inner-content-width, #fff);
     padding: 15px 45px 58px;
