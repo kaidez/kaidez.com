@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px transparent;
+  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*!
+/*
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -3099,14 +3099,24 @@ a:focus {
   display: inline-block;
 }
 
+.topSectionWrapperClass {
+  text-align: center;
+  margin: 0 auto;
+  min-width: 650px;
+}
+
+.adsClass {
+  min-width: 650px;
+}
+
 .singleAdLeft {
+  padding-right: 20px;
   display: inline-block;
-  float: left;
 }
 
 .singleAdRight {
+  padding-left: 20px;
   display: inline-block;
-  float: right;
 }
 
 .sharedCategoryStyling {
@@ -4229,12 +4239,6 @@ a.pagination-link {
     line-height: normal;
   }
 
-  .topSectionWrapperClass {
-    text-align: center;
-    margin: 0 auto;
-    padding: 17px;
-  }
-
   .newestArticleClass {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
@@ -4245,13 +4249,6 @@ a.pagination-link {
 
   .newestArticleHeaderClass {
     font-size: 25px;
-  }
-
-  .adsClass {
-    padding: 10px;
-    margin-top: 34px;
-    width: 500px;
-    border: 1px solid #ccc6c6;
   }
 
   .adsClassTitle {
