@@ -3136,6 +3136,11 @@ main a:visited {
   padding: 18px;
 }
 
+.postSnippetLinkHeader:link,
+.postSnippetLinkHeader:visited {
+  text-decoration: none;
+}
+
 .post-pic {
   float: left;
   padding: 0 10px 10px 0;
@@ -3284,10 +3289,6 @@ a.read-more-link {
   list-style-type: none;
 }
 
-.aside-nav-link:hover, .aside-nav-link:focus {
-  color: #268ad9;
-}
-
 .kaidez-social-network-list-styles {
   padding: 0;
   margin: 16px auto 0;
@@ -3313,6 +3314,27 @@ a.read-more-link {
 
 .aside-form-height {
   height: 380px;
+}
+
+.aside-nav-link {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px 5px 0;
+  height: 25px;
+  font-size: 18px;
+  display: block;
+  color: #7db9e8;
+  text-decoration: none;
+}
+
+.kaidez-social-link {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px 5px 0;
+  font-size: 20px;
+  display: block;
+  color: #7db9e8;
+  text-decoration: none;
 }
 
 .error {
@@ -3741,17 +3763,6 @@ a.pagination-link {
 .aside-outer-wrapper-class {
   box-shadow: none;
   padding: 1px 10px 200px;
-}
-
-.aside-nav-link {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 5px 5px 0;
-  height: 25px;
-  font-size: 18px;
-  display: block;
-  color: #7db9e8;
-  text-decoration: none;
 }
 
 .aside-contact-fields {
@@ -4293,27 +4304,6 @@ a.pagination-link {
     margin-top: 16px;
   }
 
-  .aside-nav-link {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 5px 5px 0;
-    height: 25px;
-    font-size: 18px;
-    display: block;
-    color: #7db9e8;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .aside-nav-link:hover {
-    background-color: #04232f;
-    padding-left: 5px;
-    color: #fff;
-  }
-
   .aside-column-class {
     max-width: 1024px;
     clear: both;
@@ -4691,27 +4681,6 @@ a.pagination-link {
     padding: 0 10px;
   }
 
-  .aside-nav-link {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 5px 5px 0;
-    height: 25px;
-    font-size: 18px;
-    display: block;
-    color: #7db9e8;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .aside-nav-link:hover {
-    background-color: #04232f;
-    padding-left: 5px;
-    color: #fff;
-  }
-
   .contact-form-field {
     margin-top: 3px;
   }
@@ -4976,7 +4945,6 @@ a.pagination-link {
   .postSnippetLinkHeader:link,
   .postSnippetLinkHeader:visited {
     font-size: 50px;
-    text-decoration: none;
   }
 
   .postSnippetNewArticle {
@@ -5103,7 +5071,7 @@ a.pagination-link {
 
   .aside-inner-wrapper-class {
     width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 43px;
   }
 
   .aside-outer-wrapper-class {
@@ -5127,11 +5095,17 @@ a.pagination-link {
     margin: 0 125px;
   }
 
-  .aside-nav-link {
+  .aside-nav-link,
+  .kaidez-social-link {
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
+  }
+
+  .kaidez-social-link:hover, .kaidez-social-link:focus,
+  .aside-nav-link:hover, .aside-nav-link:focus {
+    color: #268ad9;
   }
 
   .contact-form-field {
@@ -5157,7 +5131,7 @@ a.pagination-link {
     text-align: left;
     clear: both;
     text-decoration: none;
-    margin-bottom: 35px;
+    margin-bottom: 12px;
   }
 
   .social-network-title {
@@ -5168,142 +5142,6 @@ a.pagination-link {
     text-indent: -66px;
     overflow-x: hidden;
     display: inline-block;
-  }
-
-  /*
-   * Fancy rollover for styling for the social networking links start 
-   * here
-   */
-  .twitter {
-    position: relative;
-    color: #7db9e8;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
-  }
-
-  .twitter:before {
-    font-family: "FontAwesome", "Lato";
-    content: "\f099" " twitter";
-  }
-
-  .twitterRollover {
-    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
-    -ms-transition: opacity 0.3s ease, left 0.3s ease;
-    -moz-transition: opacity 0.3s ease, left 0.3s ease;
-    -o-transition: opacity 0.3s ease, left 0.3s ease;
-    transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
-    opacity: 0;
-    left: -78px;
-  }
-
-  .kaidez-social-link:hover .twitterRollover {
-    text-indent: -69px;
-    width: 125px;
-    opacity: 1;
-    display: inline-block;
-    left: -2px;
-    overflow-x: hidden;
-  }
-
-  .gPlus {
-    position: relative;
-    color: #7db9e8;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
-  }
-
-  .gPlus:before {
-    font-family: "FontAwesome", "Lato";
-    content: "\f0D5" " google+";
-  }
-
-  .gPlusRollover {
-    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
-    -ms-transition: opacity 0.3s ease, left 0.3s ease;
-    -moz-transition: opacity 0.3s ease, left 0.3s ease;
-    -o-transition: opacity 0.3s ease, left 0.3s ease;
-    transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
-    opacity: 0;
-    left: -78px;
-  }
-
-  .kaidez-social-link:hover .gPlusRollover {
-    text-indent: -76px;
-    width: 125px;
-    opacity: 1;
-    display: inline-block;
-    left: -2px;
-    overflow-x: hidden;
-  }
-
-  .github {
-    position: relative;
-    color: #7db9e8;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
-  }
-
-  .github:before {
-    content: "\f09B"    " github";
-    font-family: "FontAwesome", "Lato";
-  }
-
-  .githubRollover {
-    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
-    -ms-transition: opacity 0.3s ease, left 0.3s ease;
-    -moz-transition: opacity 0.3s ease, left 0.3s ease;
-    -o-transition: opacity 0.3s ease, left 0.3s ease;
-    transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
-    opacity: 0;
-    left: -78px;
-  }
-
-  .kaidez-social-link:hover .githubRollover {
-    text-indent: -77px;
-    width: 125px;
-    opacity: 1;
-    display: inline-block;
-    left: -2px;
-    overflow-x: hidden;
-  }
-
-  .youtube {
-    position: relative;
-    color: #7db9e8;
-    text-decoration: none;
-    width: 287px;
-    height: 74px;
-  }
-
-  .youtube:before {
-    content: "\f167"    " youtube";
-    font-family: "FontAwesome", "Lato";
-  }
-
-  .youtubeRollover {
-    -webkit-transition: opacity 0.3s ease, left 0.3s ease;
-    -ms-transition: opacity 0.3s ease, left 0.3s ease;
-    -moz-transition: opacity 0.3s ease, left 0.3s ease;
-    -o-transition: opacity 0.3s ease, left 0.3s ease;
-    transition: opacity 0.3s ease, left 0.3s ease;
-    color: #7db9e8;
-    opacity: 0;
-    left: -78px;
-  }
-
-  .kaidez-social-link:hover .youtubeRollover {
-    text-indent: -80px;
-    width: 156px;
-    opacity: 1;
-    display: inline-block;
-    left: -2px;
-    overflow-x: hidden;
   }
 
   .footer-outer-wrapper-class {
