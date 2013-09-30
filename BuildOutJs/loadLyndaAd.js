@@ -4,7 +4,6 @@
  *  Contruct a lynda ad
  */
 
-
 define( ["enquire"], function( enquire ) {
      
     /* 

@@ -13,7 +13,7 @@ exclude: [
   backbone,
   bower.json,
   bower_components,
-  BuildOutJs,
+  buildOutJs,
   Capfile,
   config,
   css/styles.css,
