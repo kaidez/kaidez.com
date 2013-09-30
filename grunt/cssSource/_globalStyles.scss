@@ -359,16 +359,17 @@ a:focus {
 
 // title tag for post snippets All text links (except for post meta
 // info) are blue but have no underline.
-.post-snippet-link:link,
-.post-snippet-link:visited { 
+.postSnippetLinkHeader:link,.postSnippetLinkHeader:visited,
+.post-snippet-link:link, .post-snippet-link:visited { 
   @include transitions (color);
   color: $post-link-color;
   text-decoration: none;
   margin: 0;
 }
 
-// what happens if you rollover the post snippet titels...hover is 
-// for desktop views and (maybe) iPads, focus is for everything else.
+// what happens if you rollover the post snippet titles...hover is 
+// for desktop views and (maybe) iPads, focus is for everything else.hover
+.postSnippetLinkHeader:hover,
 .post-snippet-link:hover,
 .post-snippet-link:focus {  
   color: lighten($post-link-color, 15);
