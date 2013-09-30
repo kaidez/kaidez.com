@@ -412,6 +412,17 @@ $bg-size: 227px 334px;
   text-decoration: none;
 }
 
+// Styles the link in the <aside> "LINKS" section
+@mixin aside-sn-link {
+  list-style-type: none;
+  margin: 0;
+  padding:0 5px 5px 0;
+  font-size: 20px;
+  display: block;
+  color: $header-color;
+  text-decoration: none;
+}
+
 // use this Sass variable to remove padding from all <ul> tags (when needed)
 @mixin ulNoPad {
   padding:0;

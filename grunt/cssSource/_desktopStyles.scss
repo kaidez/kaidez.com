@@ -217,7 +217,6 @@
   .postSnippetLinkHeader:link,
   .postSnippetLinkHeader:visited {
     font-size: 50px;
-    text-decoration: none;
   }
 
   .postSnippetNewArticle {
@@ -342,7 +341,7 @@
   // the inner wrapper for the <aside>
   .aside-inner-wrapper-class {
     width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 43px;;
   }
   
   // apply background image to <aside>
@@ -370,8 +369,15 @@
   }
 
   // the <aside> nav links
-  .aside-nav-link {
+  .aside-nav-link,
+  .kaidez-social-link  {
     @include transitions(color);
+  }
+
+  // hover state for the <aside> nav links
+  .kaidez-social-link:hover, .kaidez-social-link:focus,
+  .aside-nav-link:hover, .aside-nav-link:focus {
+    color: darken($header-color,20);
   }
 
   // for the contact form fields in <aside>
@@ -397,7 +403,7 @@
     text-align: left;
     clear: both;
     text-decoration: none;
-    margin-bottom: 35px;
+    margin-bottom: 12px;
   }
  
   // styles common to the the copy that appears when a social
@@ -411,108 +417,11 @@
       overflow-x: hidden;
       display: inline-block;
   }  
-  /*
-   * Fancy rollover for styling for the social networking links start 
-   * here
-   */
-
-
-
-  // style the Google Plus link
-  .twitter {
-    @include style-sn-link; 
-  }
-    
-  // set both the the Twitter logo and " twitter" text as the
-  // background of the above ".twitter" class
-  .twitter:before {
-    @include font-stack($fa, $lato);
-    content: "\f099" " twitter";
-  }
-
-  // setup rollover transitions for the Twitter Logo
-  .twitterRollover {
-    @include vendor-prefix(transition, opacity 0.3s ease, left 0.3s ease);
-    @include sn-transition-setup
-  }
-
-  // when the Twitter Logo is rolled over, go these transitions
-  .kaidez-social-link:hover .twitterRollover {
-    @include sn-rollover-setup(-69px, 125px);
-  }  
-
-  // style the Google Plus link
-  .gPlus {
-    @include style-sn-link; 
-  }
-    
-  // set both the the Google + logo and " google+" text as the
-  // background of the above ".gPlus" class
-  .gPlus:before {
-    @include font-stack($fa, $lato);
-    content: "\f0D5" " google+";
-  }
-
-  // setup rollover transitions for the Google+ Logo
-  .gPlusRollover {
-    @include vendor-prefix(transition, opacity 0.3s ease, left 0.3s ease);
-    @include sn-transition-setup;
-  }
-
-  // when the Google+ Logo is rolled over, go these transitions
-  .kaidez-social-link:hover .gPlusRollover {
-    @include sn-rollover-setup(-76px, 125px);
-  }   
-
-  // style the GitHub link
-  .github {
-    @include style-sn-link; 
-  }
-
-  // set both the the GitHub logo and " github" text as the background
-  // of the above ".github" class
-  .github:before {
-    content: "\f09B"    " github";
-    @include font-stack($fa, $lato);
-  }
-
-  // setup rollover transitions for the GitHub Logo
-  .githubRollover {
-    @include vendor-prefix(transition, opacity 0.3s ease, left 0.3s ease);
-    @include sn-transition-setup;
-  }
-
-  // when the GitHub Logo is rolled over, go these transitions
-  .kaidez-social-link:hover .githubRollover {
-    @include sn-rollover-setup(-77px, 125px) ;
-  }
-
-  // style the YouTune link
-  .youtube {
-    @include style-sn-link; 
-  }
-
-  // set both the the YouTube logo and " youtube" text as the background of the above ".youtube" class
-  .youtube:before {
-    content: "\f167"    " youtube";
-    @include font-stack($fa, $lato);
-  }
-
-  // setup rollover transitions for the YouTube Logo
-  .youtubeRollover {
-    @include vendor-prefix(transition, opacity 0.3s ease, left 0.3s ease);
-    @include sn-transition-setup;
-  }
-
-  // when the YouTube Logo is rolled over, go these transitions
-  .kaidez-social-link:hover .youtubeRollover {
-    @include sn-rollover-setup(-80px, 156px);
-  }
-
 
   // ==========================================================================
   //  Aside styles end
   // ==========================================================================
+
 
 
 

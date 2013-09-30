@@ -325,11 +325,6 @@ a.pagination-link {
   padding: 1px 10px 200px;
 }
 
-// the <aside> nav links
-.aside-nav-link {
-  @include aside-nav-link;
-}
-
 // all the fields in the contact form
 .aside-contact-fields {
   width:152px;

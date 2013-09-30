@@ -459,6 +459,12 @@ main a:visited {
   padding: 18px;
 }
 
+// link embedded in post snippets
+.postSnippetLinkHeader:link,
+.postSnippetLinkHeader:visited {
+  text-decoration: none;
+}
+
 // picture that appears in posts
 .post-pic {
   float: left;
@@ -634,10 +640,6 @@ main a:visited {
   list-style-type: none;
 }
 
-// hover state for the <aside> nav links
-.aside-nav-link:hover , .aside-nav-link:focus {
-  color: darken($header-color,20);
-}
 
 // <ul> that contains the kaidez social networking links in the <aside>
 .kaidez-social-network-list-styles {
@@ -669,6 +671,18 @@ main a:visited {
 .aside-form-height {
   height: 380px;
 }
+
+
+// the <aside> nav links
+.aside-nav-link {
+  @include aside-nav-link;
+}
+
+// the <aside> social network links
+.kaidez-social-link {
+  @include aside-sn-link ;
+}
+
 
 // error class for the form
 .error {
