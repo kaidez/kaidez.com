@@ -568,7 +568,9 @@ main a:visited {
     margin: 18px 18px 0;
   }
 
-  .affiliate-disclaimer-container-class {
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .sitemap-container-class {
     padding-bottom: 50px;
   }
 
@@ -827,6 +829,10 @@ main a:visited {
 .footer-links:hover, .footer-links:visited {
   color: #fff;
   text-decoration: none;
+}
+
+.footer-links {
+  padding: 0 5px;
 }
 
 
