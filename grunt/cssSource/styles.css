@@ -3099,14 +3099,9 @@ a:focus {
   display: inline-block;
 }
 
-.topSectionWrapperClass {
-  text-align: center;
-  margin: 0 auto;
-  min-width: 650px;
-}
-
 .adsClass {
   min-width: 650px;
+  padding-bottom: 52px;
 }
 
 .singleAdLeft {
@@ -3575,8 +3570,10 @@ a.read-more-link {
   font-size: 32px;
 }
 
-.newestArticleClass {
-  min-width: 280px;
+.topSectionWrapperClass {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 529px;
 }
 
 .newestArticleHeaderClass {
@@ -4269,6 +4266,12 @@ a.pagination-link {
     line-height: 1.3;
   }
 
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 990px;
+  }
+
   .sharedCategoryStyling {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
@@ -4665,6 +4668,12 @@ a.pagination-link {
     font-size: 33px;
   }
 
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
   .pageCopy {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
@@ -4967,6 +4976,7 @@ a.pagination-link {
   .postSnippetLinkHeader:link,
   .postSnippetLinkHeader:visited {
     font-size: 50px;
+    text-decoration: none;
   }
 
   .postSnippetNewArticle {
@@ -5082,6 +5092,13 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
+  }
+
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    min-width: 1004px;
+    max-width: 0;
   }
 
   .aside-inner-wrapper-class {
