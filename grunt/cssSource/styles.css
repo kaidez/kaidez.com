@@ -3236,7 +3236,9 @@ a.read-more-link {
   margin: 18px 18px 0;
 }
 
-.affiliate-disclaimer-container-class {
+.affiliate-disclaimer-container-class,
+.colophon-container-class,
+.sitemap-container-class {
   padding-bottom: 50px;
 }
 
@@ -3468,6 +3470,10 @@ a.read-more-link {
 .footer-links:hover, .footer-links:visited {
   color: #fff;
   text-decoration: none;
+}
+
+.footer-links {
+  padding: 0 5px;
 }
 
 .wrapper-404-class {
