@@ -3,23 +3,24 @@ layout: default
 title: Site Map &laquo; kaidez.com
 meta-excerpt: A complete list of content on kaidez.com
 ---
-  <h2><a href="/" title="kaidez.com home page" class="sitemap-header-link">Home Page &raquo;</a></h2>
-    <div class="pageCopy">
+  <div class="pageCopy">
+    <h2><a href="/" title="kaidez.com home page" class="sitemap-header-link">Home Page &raquo;</a></h2>
+    
       <div id="tutorial-site-map-links" class="site-map-section">
 
         <h2><a href="/tutorials/" title="Tutorials on kaidez.com" class="sitemap-header-link">Tutorials &raquo;</a></h2>
 
-        <ul class="ulNoPad">
+          <ul class="ulNoPad">
 
-        {% for post in site.categories.tutorials %}
+          {% for post in site.categories.tutorials %}
 
-          <li class="site-map-list-item">
-            <a href="{{ post.url }}" title="{{ post.title }}" title="{{ post.title }}" rel="bookmark" class="site-map-link">{{ post.title }}</a>
-          </li>
+            <li class="site-map-list-item">
+              <a href="{{ post.url }}" title="{{ post.title }}" title="{{ post.title }}" rel="bookmark" class="site-map-link">{{ post.title }}</a>
+            </li>
 
-        {% endfor %}
+          {% endfor %}
 
-        </ul>
+          </ul>
 
       </div> <!-- #tutorial-site-map-links -->
 
