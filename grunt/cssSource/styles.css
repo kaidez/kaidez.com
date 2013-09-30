@@ -3732,6 +3732,12 @@ a.read-more-link {
   line-height: 1.2;
 }
 
+.googleAdsenceContainer {
+  float: none;
+  text-align: center;
+  margin: 15px 0;
+}
+
 .pages {
   padding: 0;
   margin: 0;
@@ -4303,6 +4309,11 @@ a.pagination-link {
     margin: 0 15px;
   }
 
+  .googleAdsenceContainer {
+    float: left;
+    margin: 15px 15px 15px 0;
+  }
+
   .aside-outer-wrapper-class {
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
   }
@@ -4676,6 +4687,11 @@ a.pagination-link {
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
     margin: 0 15px;
+  }
+
+  .googleAdsenceContainer {
+    float: left;
+    margin: 15px 15px 15px 0;
   }
 
   .aside-outer-wrapper-class {
@@ -5074,6 +5090,11 @@ a.pagination-link {
     margin: 0 auto;
     min-width: 1004px;
     max-width: 0;
+  }
+
+  .googleAdsenceContainer {
+    float: left;
+    margin: 15px 15px 15px 0;
   }
 
   .aside-inner-wrapper-class {
