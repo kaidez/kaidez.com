@@ -4257,15 +4257,13 @@ a.pagination-link {
   }
 
   .newestArticlePostTitle {
-    font-size: 40px;
+    font-size: 50px;
     padding: 0 10px;
     line-height: 1.3;
   }
 
   .newestArticlePostContainer {
-    display: inline-block;
-    position: relative;
-    bottom: 62px;
+    text-align: center;
   }
 
   .sharedCategoryStyling {
