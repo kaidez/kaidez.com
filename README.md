@@ -2,7 +2,7 @@
 
 This is the source code for [kaidez.com](http://kaidez/com). It is 100% open source.
 
-## Hard Dependencies
+## Hard Development-Level Dependencies
 
 For developing the site on a local machine, there are some hard dependencies:
 
@@ -14,17 +14,17 @@ For developing the site on a local machine, there are some hard dependencies:
 
 * [RequireJS](http://requirejs.org/): a JavaScript-based script-loader.
 
-## Loose Dependencies
+## Loose Development-Level Dependencies
 
 There are also some loose dependencies...they don't REALLY need to be installed to make changes to the site or create a production build, but installing them makes changing and building out the site FUN!!!!!!!!
 
 * [GruntJS](http://gruntjs.com/): a JavaScript-based task manager used to run site-related tasks such as Sass compiling and assisting in the building-out of a production-ready copy of the site.
 
-* [Bower](http://bower.io/): a browser-centric package manager used to add, remove and update SOME of the site's production runtime dependencies.
+* [Bower](http://bower.io/): a low-level browser-centric package manager used to add, remove and update SOME of the site's production runtime dependencies.
 
 * [Sass](http://sass-lang.com/): a CSS preprocessor.
 
-## Understanding the Hard Dependencies
+## Understanding the Hard Development-Level Dependencies
 
 ### Ruby/Ruby Gems & Jekyll
 
@@ -42,21 +42,35 @@ When this command is run, Jekyll will output a production-ready copy of the site
   
 ### RequireJS
 
-RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition spec](https://github.com/amdjs/amdjs-api/wiki/AMD). 
+RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition spec](https://github.com/amdjs/amdjs-api/wiki/AMD).
+
+It is possible to rearrange kaidez.com's JS file structure and not use RequireJS, but it's recommended that RequireJS be treated as a hard dependency as it does an excellent job of treating all the JS in a modular fashion as well as prepping all the files for usage on production.
+
+Within kaidez.com's site structure, RequireJS depends on two files: 1) `requireBuildOut/require.js` to manage and treat all the JS files as modules, and 2) `r.js` in the root folder to concatenate and minify (almost) all the files in `requireBuildOut`.
+
+Within kaidez.com on the development level, the RequireJS functionality is managed by GruntJS. GruntJS concat/minify all the JS files into a single `scripts.min.js` file and load it into the `js` folder. This can be done via the command line by first navigating to the site root folder, then running the following command:
+
+    grunt require
+    
+## Understanding the Loose Development-Level Dependencies
 
 While both GruntJS and Bower are not hard dependencies of kaidez.com, both use Node and its internal package manager, npm, as a hard dependency.  Node and npm can be downloaded and installed simultaneously at [http://nodejs.org/](http://nodejs.org/).
 
-Within kaidez.com on the development level, GruntJS itself has many hard dependencies.  The site's Grunt functionality is powered by the `Gruntfile.js` file and its dependencies are listed in the `package.json`...both files are at the site root. These dependencies are essentially plugins stored as Node packages on the [npm Registry](https://npmjs.org/). Assuming that npm is installed on the local machine, these plugins can be installed all at once via the command line by first navigating to the site root folder, then running the following command:
+### Grunt
+
+Within kaidez.com on the development level, Grunt itself has many hard dependencies.  The site's Grunt functionality is powered by the `Gruntfile.js` file and its dependencies are listed in the `package.json`...both files are at the site root. These dependencies are essentially plugins stored as Node packages on the [npm Registry](https://npmjs.org/). Assuming that npm is installed on the local machine, these plugins can be installed all at once via the command line by first navigating to the site root folder, then running the following command:
 
     npm install
 
 When this command is run, npm will look at the plugins defined in the `devDependencies` object in `package.json` and either install them in the `node_modules` folder at the site root, or create a `node_modules` folder at the site root first, *then* install the plugins in the folder.
 
-Bower itself treats Git as semi-hard dependency: Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower functionality is powered by the `.bowerrc` file for Bower-specific configurations.  The `bower.json` at the site root lists site dependencies and *not* things that Bower depends on.
+### Bower
+
+Bower itself treats Git as semi-hard dependency: Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower functionality is powered by the `.bowerrc` file for Bower-specific configurations.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
 
 The above-mentioned `bower.json` file defines the site's packages in the `dependencies` object. These packages are core files such as [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/), [enquire.js](http://wicky.nillia.ms/enquire.js/), [jQuery](http://jquery.com/) and their respective dependencies. It's important to note that these files are "linked to" in the Bower registry and not actually "stored inside of it."
 
-If the site is either download either as a .zip file or with `git clone`, all of the packages are installed at the site root in either in the `requireBuildOut` or `font` folder. Bower is not required in this case; however, if the packages need to be managed, Bower would need to be installed...it's best if it's installed *globally* using npm at the site root and at the command line level as follows:
+If the site is either download either as a .zip file or with `git clone`, all of the packages are installed at the site root in either in the `requireBuildOut` or `font` folder. Bower is not required in this case; however, if the packages need to be managed, Bower would need to be installed...it's best if it's installed *globally* using npm at the site root, and at the command line level as follows:
 
     npm install -g bower
 
@@ -68,9 +82,11 @@ To install the packages, run the following command at the site root:
 
      bower install
 
-When this command is run, bower will look at the packages defined in the `dependencies` object listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages in the folder. If GruntJS is properly configured within the kaidez.com package folder and is running its `watch` task, it will run tasks that copy files that Bower downloaded over into certain folders, then run certain concat/minify tasks against these files.
+When this command is run, bower will look at the packages defined in the `dependencies` object listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages in the folder. If GruntJS is properly configured within the kaidez.com project folder and is running its `watch` task, it will run tasks that copy files that Bower downloaded over into certain folders, then run certain concat/minify tasks against these files.
 
 For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
+
+### Sass
 
 Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder first, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
 
@@ -85,3 +101,9 @@ Inside of kaidez.com, `Gruntfile.js` has a Sass-based `watch` task which watches
 
 
 For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
+
+## Hard Runtime Dependencies
+
+kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of the form sends a POST call to the server to 1) process the form content, 2) validate the form content, and 3) send the form content out an email.
+
+If the form is removed, kaidez.com can run on any web server that setup that can proper serve .html, .css, .js and images.  Apache, IIS, Ingenix, etc.
