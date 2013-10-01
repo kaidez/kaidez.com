@@ -1,8 +1,8 @@
-## WHAT IS THIS?
+# WHAT IS THIS?
 
 This is the source code for [kaidez.com](http://kaidez/com). It is 100% open source.
 
-# Dependencies
+## Dependencies
 
 For developing the site on a local machine, there are some hard dependencies:
 
