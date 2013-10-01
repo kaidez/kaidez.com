@@ -3036,6 +3036,7 @@ a:focus {
 .pageCopy {
   background-color: #fff;
   padding: 20px 18px 0;
+  margin: 25px 15px;
 }
 
 .postSnippetLinkHeader:link, .postSnippetLinkHeader:visited,
@@ -3268,8 +3269,11 @@ a.read-more-link {
 
 .affiliate-disclaimer-container-class,
 .colophon-container-class,
+.pages-container-class,
 .sitemap-container-class {
-  padding-bottom: 50px;
+  background-color: #fff;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .aside-outer-wrapper-class {
@@ -4289,7 +4293,7 @@ a.pagination-link {
   }
 
   .pageCopy {
-    margin: 0 15px;
+    margin: 25px 15px;
   }
 
   .pageContentPostWrapper {
@@ -4301,6 +4305,15 @@ a.pagination-link {
   .googleAdsenceContainer {
     float: left;
     margin: 15px 15px 15px 0;
+  }
+
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .aside-outer-wrapper-class {
@@ -4701,6 +4714,15 @@ a.pagination-link {
   .googleAdsenceContainer {
     float: left;
     margin: 15px 15px 15px 0;
+  }
+
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .aside-outer-wrapper-class {
@@ -5126,6 +5148,15 @@ a.pagination-link {
   .googleAdsenceContainer {
     float: left;
     margin: 15px 15px 15px 0;
+  }
+
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .aside-inner-wrapper-class {
