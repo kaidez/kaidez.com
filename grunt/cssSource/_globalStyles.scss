@@ -355,6 +355,7 @@ a:focus {
 .pageCopy {
   background-color: #fff;
   padding: 20px 18px 0;
+  margin: 25px 15px
 }
 
 // title tag for post snippets All text links (except for post meta
@@ -599,8 +600,11 @@ main a:visited {
 
   .affiliate-disclaimer-container-class,
   .colophon-container-class,
+  .pages-container-class,
   .sitemap-container-class {
-    padding-bottom: 50px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
   }
 
 // ====================================================================

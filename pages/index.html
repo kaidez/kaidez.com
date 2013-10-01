@@ -2,7 +2,7 @@
 layout: default
 title: kaidez.com / View all posts
 ---
-    
+<div class="pages-container-class">
   <!-- This loops through the paginated posts -->
   {% for post in paginator.posts %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
@@ -36,3 +36,4 @@ title: kaidez.com / View all posts
     </ul> <!-- .pages -->
 
   </div>  <!-- #post-pagination -->
+</div> <!-- pages-container-class -->

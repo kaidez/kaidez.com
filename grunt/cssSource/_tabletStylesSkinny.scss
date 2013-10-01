@@ -306,6 +306,13 @@
     margin: 15px 15px 15px 0;
   }
 
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    @include create-outer-box-shadow;
+  }
+
   // ==================================================================
   // Page content styles end
   // ==================================================================

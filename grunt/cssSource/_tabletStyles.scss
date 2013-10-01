@@ -304,7 +304,7 @@
 
   // post copy spot 
   .pageCopy {
-    margin: 0 15px;
+    margin: 25px 15px
   }
 
   .pageContentPostWrapper {
@@ -314,6 +314,13 @@
   .googleAdsenceContainer {
     float: left;
     margin: 15px 15px 15px 0;
+  }
+
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    @include create-outer-box-shadow;
   }
 
   // ==================================================================
