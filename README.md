@@ -6,9 +6,9 @@ This is the source code for [kaidez.com](http://kaidez/com). It is 100% open sou
 
 For developing the site on a local machine, there are some hard dependencies:
 
-* [Ruby](https://www.ruby-lang.org/en/): needed download Ruby Gems, to interact with Jekyll and optionally to run the local version of the site on http://localhost/:4000 via WebBrick
+* [Ruby](https://www.ruby-lang.org/en/): needed download Ruby Gems, to interact with Jekyll and optionally to run the local version of the site on http://localhost/:4000 via WebBrick.
 
-* [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages like Jekyll
+* [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages like Jekyll.
 
 * [Jekyll](http://jekyllrb.com/): a blog-aware static enfine that manages HTML and Markdown files, and also builds out a production copy of the site.
 
@@ -19,6 +19,8 @@ There are also some loose dependencies...they don't REALLY need to be installed 
 * [GruntJS](http://gruntjs.com/): a JavaScript-based task manager used to run site-related tasks such as Sass compiling and assisting in the building-out of a production-ready copy of the site.
 
 * [Bower](http://bower.io/): a browser-centric package manager used to add, remove and update SOME of the site's production runtime dependencies.
+
+* [Sass](http://sass-lang.com/): a CSS preprocessor.
 
 While both GruntJS and Bower are not hard dependencies of kaidez.com, both use Node and its internal package manager, npm, as a hard dependency.  Node and npm can be downloaded and installed simultaneously at [http://nodejs.org/](http://nodejs.org/).
 
@@ -44,4 +46,20 @@ To install the packages, run the following command at the site root:
 
      bower install
 
-When this command is run, bower will look at the packages defined in the `dependencies` listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages in the folder. If GruntJS is properly configured within the kaidez.com package folder and is running its `watch` task, it will run tasks that copy files that Bower downloaded over into certain folders, then run certain concat/minify tasks against these files.  For more details on this, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js), specifcally the `watch` task. 
+When this command is run, bower will look at the packages defined in the `dependencies` listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages in the folder. If GruntJS is properly configured within the kaidez.com package folder and is running its `watch` task, it will run tasks that copy files that Bower downloaded over into certain folders, then run certain concat/minify tasks against these files.
+
+For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js), specifcally the `watch` task.
+
+Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder first, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
+
+* Sass is fun!
+* The unminified version may be stop being built out and removed fom the repo someday.
+
+If both Ruby and Ruby Gems are installed locally, Sass can be installed via the command line by first navigating to the site root folder, then running the following command:
+
+    gem install sass
+
+Inside of kaidez.com, `Gruntfile.js` has a Sass-based `watch` task which watches changes to the `.scss` files inside of `grunt/cssSource`. If those files are changed, the `watch` task builds out the unminified `style.css` file to `grunt/cssSource` folder, then builds out a production-ready `styles.min.css` file to the `css` folder.
+
+
+For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
