@@ -215,6 +215,7 @@ module.exports = function(grunt) {
           basePath: '_site/',
           cache: [
             'affiliate-disclaimer.html',
+            'colophon.html',
             'index.html',
             'search.html',
             'search.json',
