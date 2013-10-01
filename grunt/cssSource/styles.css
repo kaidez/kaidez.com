@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 3000px transparent;
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*
+/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -2806,11 +2806,6 @@ a:focus {
   outline: 2px solid red;
 }
 
-.jumpToTopText {
-  position: absolute;
-  text-indent: -9999px;
-}
-
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
@@ -3432,6 +3427,18 @@ a.read-more-link {
 
 .footer-links {
   padding: 0 5px;
+}
+
+.jumpToTopText {
+  font-family: "Lato";
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  background-color: #04232f;
+  padding: 10px;
+  margin: 30px auto 10px;
+  width: 200px;
 }
 
 .wrapper-404-class {
@@ -5312,6 +5319,11 @@ a.pagination-link {
     height: 39px;
     width: 151px;
     display: block;
+  }
+
+  .jumpToTopText {
+    position: absolute;
+    text-indent: -9999px;
   }
 }
 /*
