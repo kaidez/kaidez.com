@@ -3060,12 +3060,15 @@ a:focus {
   position: relative;
   height: auto;
   min-height: 100%;
-  background-color: #fff;
   padding: 15px 0 58px;
   width: auto;
   text-align: left;
   font-size: 18px;
   color: #000;
+}
+
+.pageContentPostWrapper {
+  background-color: #fff;
 }
 
 .newestArticleClass {
@@ -3167,7 +3170,7 @@ main a:visited {
 
 .related-posts-list-item {
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 20px;
   text-align: left;
   list-style: none;
@@ -3190,10 +3193,13 @@ main a:visited {
 .share-post-container-class {
   text-align: center;
   background-color: #E1F5F6;
+  max-width: 600px;
+  margin: 0 13px 25px;
 }
 
 .share-post-container-header-class {
   display: block;
+  margin: 5px auto 9px;
 }
 
 .fb-post-share-match {
@@ -4206,7 +4212,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: #F4FDFF;
+    background-color: #DAF0F5;
     margin: 0 auto;
     font-size: 18px;
     line-height: 30px;
@@ -4303,10 +4309,13 @@ a.pagination-link {
   }
 
   .pageCopy {
+    margin: 0 15px;
+  }
+
+  .pageContentPostWrapper {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
-    margin: 0 15px;
   }
 
   .googleAdsenceContainer {
@@ -4597,7 +4606,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: #F4FDFF;
+    background-color: #DAF0F5;
     margin: 0 auto;
     font-size: 18px;
     line-height: 30px;
@@ -4683,9 +4692,6 @@ a.pagination-link {
   }
 
   .pageCopy {
-    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
-    -moz-box-shadow: 1px 1px 2px 0 #ccc;
-    box-shadow: 1px 1px 2px 0 #ccc;
     margin: 0 15px;
   }
 
@@ -4979,7 +4985,7 @@ a.pagination-link {
     position: relative;
     height: auto;
     min-height: 100%;
-    background-color: #F4FDFF;
+    background-color: #DAF0F5;
     margin: 0 auto;
     font-size: 18px;
     line-height: 30px;
@@ -4987,6 +4993,12 @@ a.pagination-link {
     text-align: left;
     color: #000;
     padding: 15px 45px 58px;
+  }
+
+  .pageContentPostWrapper {
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .breadcrumb-styles {
@@ -5041,7 +5053,7 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0 auto 33px;
   }
 
   .sharePostStructure {
@@ -5077,12 +5089,6 @@ a.pagination-link {
   .homePageSectionHeaderText {
     font-size: 33px;
     text-shadow: 1px 1px 0 #EAEEF1;
-  }
-
-  .pageCopy {
-    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
-    -moz-box-shadow: 1px 1px 2px 0 #ccc;
-    box-shadow: 1px 1px 2px 0 #ccc;
   }
 
   .topSectionWrapperClass {
@@ -5144,7 +5150,7 @@ a.pagination-link {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    text-align: start;
+    text-align: center;
     font-size: 21px;
   }
 
@@ -5409,7 +5415,7 @@ a.pagination-link {
   position: relative;
   height: auto;
   min-height: 100%;
-  background-color: #F4FDFF;
+  background-color: #DAF0F5;
   margin: 0 auto;
   font-size: 18px;
   line-height: 30px;
