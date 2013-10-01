@@ -12,4 +12,6 @@ There are also some loose dependencies...they don't REALLY need to be installed 
 
 * [GruntJS](http://gruntjs.com/): a JavaScript-based task manager used to run site-related tasks such as Sass compiling tasks and site deployments.
 
-* [Bower](http://bower.io/): a JavaScript-based package manager used to add, remove and update some of the site's runtime dependencies. 
+* [Bower](http://bower.io/): a JavaScript-based package manager used to add, remove and update SOME of the site's runtime dependencies.
+
+Both Grunt and Bower require both Node and it's internal package manager, npm.  Node and npm can be installed simultaneously at the node sit [http://nodejs.org/](http://nodejs.org/).
