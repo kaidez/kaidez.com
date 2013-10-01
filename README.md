@@ -2,17 +2,19 @@
 
 This is the source code for [kaidez.com](http://kaidez/com). It is 100% open source.
 
-## Dependencies
+## Hard Dependencies
 
 For developing the site on a local machine, there are some hard dependencies:
 
 * [Ruby](https://www.ruby-lang.org/en/): needed download Ruby Gems, to interact with Jekyll and optionally to run the local version of the site on http://localhost/:4000 via WebBrick.
 
-* [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages like Jekyll.
+* [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages such as Sass and Jekyll.
 
 * [Jekyll](http://jekyllrb.com/): a blog-aware static enfine that manages HTML and Markdown files, and also builds out a production copy of the site.
 
 * [RequireJS](http://requirejs.org/): a JavaScript-based script-loader.
+
+## Loose Dependencies
 
 There are also some loose dependencies...they don't REALLY need to be installed to make changes to the site or create a production build, but installing them makes changing and building out the site FUN!!!!!!!!
 
@@ -21,6 +23,26 @@ There are also some loose dependencies...they don't REALLY need to be installed 
 * [Bower](http://bower.io/): a browser-centric package manager used to add, remove and update SOME of the site's production runtime dependencies.
 
 * [Sass](http://sass-lang.com/): a CSS preprocessor.
+
+## Understanding the Hard Dependencies
+
+### Ruby/Ruby Gems & Jekyll
+
+Jekyll is probably kaidez.com's hardest dependency as it manages much of the site's internal structure. If Jekyll isn't installed on a local machine, it needs to be done so via Ruby Gems, which can't run unless Ruby is installed.
+
+If Ruby Gems is installed, Jekyll can be installed via the command line by first navigating to the site root folder, then running the following command:
+
+    gem install jekyll
+    
+[Review the Jekyll docs](http://jekyllrb.com/docs/home/) to see the many things it can do, but its primary purpose is to build out a production-ready copy of the site.  This can be done via the command line by first navigating to the site root folder, then running the following command:
+
+    jekyll build
+  
+When this command is run, Jekyll will output a production-ready copy of the site to the `_site` folder that can be uploaded to a web server. If the site's contact form should be utilized, PHP is a runtime dependency.
+  
+### RequireJS
+
+RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition spec](https://github.com/amdjs/amdjs-api/wiki/AMD). 
 
 While both GruntJS and Bower are not hard dependencies of kaidez.com, both use Node and its internal package manager, npm, as a hard dependency.  Node and npm can be downloaded and installed simultaneously at [http://nodejs.org/](http://nodejs.org/).
 
