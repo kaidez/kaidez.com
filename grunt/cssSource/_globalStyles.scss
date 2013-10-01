@@ -84,11 +84,7 @@ a:focus {
   outline: 2px solid red;
 }
 
-// go to the top text at the bottom of all pages
-.jumpToTopText {
-  position: absolute;
-  text-indent: -9999px;
-}
+
 // ====================================================================
 // End "all-around" styles
 // ====================================================================
@@ -799,6 +795,18 @@ main a:visited {
 .footer-links {
   padding: 0 5px;
 }
+
+  .jumpToTopText {
+    @include fonts($lato);
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: $darken-the-aside-color;
+    padding: 10px;
+    margin:30px auto 10px;
+    width: 200px;
+  }
 
 
 
