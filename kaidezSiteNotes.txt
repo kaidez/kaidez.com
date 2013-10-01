@@ -248,7 +248,7 @@ LEFT TO DO
 -Video SEO...may be post launch.
 -Create favicon.ico
 -Fix Disqus
--Add an RSS link
+-Add an RSS link (DONE)
 
 Before deployment
 =================
