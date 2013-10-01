@@ -1,5 +1,5 @@
 ---
-title: 'HTML5 Readiness: NEW COOLSITE!'
+title: HTML5 Readiness: NEW COOLSITE!
 comments: true
 author: Kai Gittens
 layout: post
