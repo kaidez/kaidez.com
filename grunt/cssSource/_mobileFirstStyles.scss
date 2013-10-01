@@ -126,12 +126,21 @@
   color: #929292;
   font-size:22px;
   min-width: 280px;
-  text-align: center;
 }
 
 // style the <h1> tags in home page category sections
 .homePageSectionHeaderText {
   background-color: #fff;
+}
+
+.homePageCategoryFooterLinkSection {
+  height: 59px;
+  text-align: center;
+}
+
+.homePageCategoryFooterLink:link,
+.homePageCategoryFooterLink:visited {
+  display: block;
 }
 
 // Post snippet that displays on both the home page and search results.
@@ -187,6 +196,7 @@
 // style the <main> element
 .page-content {
   @include full-height;
+  background-color: #fff;
   margin: 0 auto;
   line-height: 30px;
 }

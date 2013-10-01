@@ -203,7 +203,7 @@ $bg-size: 227px 334px;
 @mixin page-content($dimension, $bg-color) {
   max-width: $dimension;
   @include full-height;
-  background-color: #DAF0F5;
+  background-color: #E5FAF8;
   margin: 0 auto;
   font-size: 18px;
   line-height: 30px;
