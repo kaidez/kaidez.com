@@ -40,4 +40,8 @@ To check for both package and Bower updates, run the following command at the si
 
      bower list
 
+To install the packages, run the following command at the site root:
+
+     bower install
+
 When this command is run, npm will look at the plugins defined in the `dependencies` listed in `bower.json` and install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages. If GruntJS is properly configured, it will run tasks that copy certain file into certain folders, then run certain cancat/minify tasks against CSS and JavScript files.  For more details, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js), specifcally the `watch` task. 
