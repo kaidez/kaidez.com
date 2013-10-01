@@ -46,20 +46,20 @@ To install the packages, run the following command at the site root:
 
      bower install
 
-When this command is run, bower will look at the packages defined in the `dependencies` listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages in the folder. If GruntJS is properly configured within the kaidez.com package folder and is running its `watch` task, it will run tasks that copy files that Bower downloaded over into certain folders, then run certain concat/minify tasks against these files.
+When this command is run, bower will look at the packages defined in the `dependencies` object listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages in the folder. If GruntJS is properly configured within the kaidez.com package folder and is running its `watch` task, it will run tasks that copy files that Bower downloaded over into certain folders, then run certain concat/minify tasks against these files.
 
-For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js), specifcally the `watch` task.
+For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
 
 Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder first, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
 
-* Sass is fun!
 * The unminified version may be stop being built out and removed fom the repo someday.
+* Sass is fun!
 
 If both Ruby and Ruby Gems are installed locally, Sass can be installed via the command line by first navigating to the site root folder, then running the following command:
 
     gem install sass
 
-Inside of kaidez.com, `Gruntfile.js` has a Sass-based `watch` task which watches changes to the `.scss` files inside of `grunt/cssSource`. If those files are changed, the `watch` task builds out the unminified `style.css` file to `grunt/cssSource` folder, then builds out a production-ready `styles.min.css` file to the `css` folder.
+Inside of kaidez.com, `Gruntfile.js` has a Sass-based `watch` task which watches changes to the `.scss` files inside of `grunt/cssSource`. If those files are changed, the `watch` task builds out the unminified `style.css` file to `grunt/cssSource` folder first, then builds out a production-ready `styles.min.css` file to the `css` folder.
 
 
 For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
