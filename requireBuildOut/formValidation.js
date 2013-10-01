@@ -1,7 +1,7 @@
 /*
- * Module: 'formValidation'
+ * RequireJS module name: formValidation
  *
- * Validate contact form fields
+ * Validate contact form fields in the <aside> tag
  */
 
 define(["jquery"], function($) {
@@ -21,8 +21,9 @@ define(["jquery"], function($) {
   /*
    * In order to safely use 'toggle()', we need to detect
    * "Modernizr.classlist". But it's a Modernizr non-core detect and
-   * grunt-modernizr doesn't look for non-core detects when it builds out 
-   * Modernizr. We need to manually add it using the Modernizr addTest() API.
+   * grunt-modernizr doesn't look for non-core detects when it builds
+   * out Modernizr. We need to manually add it using the Modernizr
+   * addTest() API.
    */
   Modernizr.addTest("classlist", "classList" in document.documentElement);
 
@@ -41,10 +42,10 @@ define(["jquery"], function($) {
 
   /*
    * We need to detect our form fields by class name in our 'allFields'
-   * variable. 'getElementsByClassName()' sucks so we're going to locate this 
-   * class name with 'document.querySelectorAll()', which is so-so with 
-   * browser support.  Find the class names with jQuery if the browser 
-   * doesn't support 'document.querySelectorAll()'.
+   * variable. 'getElementsByClassName()' sucks so we're going to
+   * locate this class name with 'document.querySelectorAll()', which
+   * is so-so with browser support.  Find the class names with jQuery 
+   * if the browser doesn't support 'document.querySelectorAll()'.
    */
   if (document.querySelectorAll) {
     var allFields = document.querySelectorAll(".contact-form-field");

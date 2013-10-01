@@ -1,6 +1,7 @@
 /*
- *
- *
+ * RequireJS module name: buildform
+ * 
+ * Dynamically create the site's main search box
  */
 
 define(function() {
@@ -11,15 +12,7 @@ define(function() {
     testcss,
     currstyle;
 
-  /*
-   *  Dynamically create a form that looks like this:
-   *
-   *  <form action="/search.html" id="js-searchbox" class="searchform-class">
-   *    <input type="text" name="q" id="tipue_search_input"
-   *     placeholder="Search...">
-   *    <input type="submit" id="tipue_search_button" value="Search">
-   *  </form>
-   */
+  
 
   loadMenu = function() {
     var loadSearchBox = document.getElementById("searchbox"),

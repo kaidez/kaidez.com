@@ -1,7 +1,8 @@
 /*
- *  Module: 'loadLyndaAd'
+ *  Require JS Module: loadHomePageAds
  *  
- *  Contruct a lynda ad
+ *  Create 250px x 250px lynda.com & Media Temple ads and load them
+ *  onto the home page
  */
 
 

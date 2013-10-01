@@ -1,7 +1,7 @@
   /*
-   *  Require JS Module: 'loadLyndaAdTop'
+   *  Require JS Module: loadAsideAd
    *  
-   *  Create a 300px X 250px lynda ad and load it onto the home page.
+   *  Create a 200px x 200px lynda ad and load it in the <aside> tag
    */
 
 
