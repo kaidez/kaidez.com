@@ -538,8 +538,7 @@
   }
 
 .jumpToTopText {
-  position: absolute;
-  text-indent: -9999px;
+  @include hide-element;
 }
 
   // ==================================================================
