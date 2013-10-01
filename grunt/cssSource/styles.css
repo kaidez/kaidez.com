@@ -3074,6 +3074,7 @@ a:focus {
   padding-top: 15px;
   font-size: 18px;
   text-align: left;
+  padding-bottom: 38px;
 }
 
 .newestArticlePostContainer {
@@ -5323,7 +5324,7 @@ a.pagination-link {
 
   .jumpToTopText {
     position: absolute;
-    text-indent: -9999px;
+    clip: rect(1px 1px 1px 1px);
   }
 }
 /*
