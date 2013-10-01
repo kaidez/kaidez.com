@@ -240,13 +240,15 @@ LEFT TO DO
 =================
 -remove "no-js" using code you take from Modernizr. (post launch)
 -CSS animations for the mobile menu & search box. (post launch)
--Get Google ads up and running.
+-Get Google ads up and running. (DONE)
 -CSS animations...review 'em.' (post launch)
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks. (sorta...not sure how to properly deploy _site folder...post launch)
 -Get Backbone working with the form. (post launch)
--Create a cool front page (IN PROGRESS)
+-Create a cool front page (DONE)
 -Video SEO...may be post launch.
 -Create favicon.ico
+-Fix Disqus
+-Add an RSS link
 
 Before deployment
 =================
