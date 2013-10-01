@@ -4,7 +4,7 @@ url: http://kaidez.com
 markdown: rdiscount
 permalink: /:title
 destination: ./_site
-paginate: 15
+paginate: 10
 paginate_path: "pages/page:num"
 include: [.htaccess]
 exclude: [
