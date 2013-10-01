@@ -17,20 +17,20 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
     <div class="newestArticlePostContainer">
 
       <h2 class="newestArticlePostTitle">
-        <a href="{{ post.url }}" class="postSnippetLinkHeader">{{ post.title }}</a>
+        <a href="{{ post.url }}" class="postSnippetLinkHeader" title="Read {{ post.title }}">{{ post.title }}</a>
       </h2>
       <div class="newestArticleImage">
 
       {% if post.has-home-img %}
 
       <a href="{{ post.url }}">
-        <img src="/img/{{ post.has-home-img }}" class="imgBorder" alt="{{ post.title }}" />
+        <img src="/img/{{ post.has-home-img }}" class="imgBorder" alt="Image related to {{ post.title }}" title="Read {{ post.title }}" />
       </a>
 
       {% else %}
 
       <a href="{{ post.url }}">
-        <img src="/img/profilepic.jpg" class="imgBorder" alt="{{ post.title }}"  />
+        <img src="/img/profilepic.jpg" class="imgBorder" alt="Image related to {{ post.title }}" title="Read {{ post.title }}"  />
       </a>
 
       {% endif %}
@@ -38,7 +38,7 @@ meta-excerpt: Web Development Tutorials for Beginners, Product Reviews, Rants an
     </div> <!-- .newestArticleImage -->
 
       <p class="postSnippetNewArticle">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
       </p>
     </div>
   
@@ -99,7 +99,7 @@ a variable called 'isCategory' and set it equal to 4.
 
   <h1 class="homePageSectionHeaderClass">
 
-    <a href="/tutorials/" class="categorySectionLink">
+    <a href="/tutorials/" class="categorySectionLink" title="Read all tutorials posts">
       <span class="homePageSectionHeaderText"><i class="icon-cogs"></i> TUTORIALS</span>
     </a>
 
@@ -110,9 +110,9 @@ a variable called 'isCategory' and set it equal to 4.
   {% for post in site.categories.tutorials limit:3 offset:1 %}
   <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+    <h1 class="post-snippet-title"><a href="{{ post.url }}" title="Read {{ post.title }}" class="post-snippet-link">{{ post.title }}</a></h1>
 
-    {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+    {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
 
   </article>
   {% endfor %}
@@ -122,9 +122,9 @@ a variable called 'isCategory' and set it equal to 4.
   {% for post in site.categories.tutorials limit:3 %}
   <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+    <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
-      {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+      {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
 
   </article>
 
@@ -133,9 +133,9 @@ a variable called 'isCategory' and set it equal to 4.
   {% endif %}
 
     <div class="homePageCategoryFooterLinkSection">
-      <a href="/tutorials/" class="homePageCategoryFooterLink">view all "tutorials" posts &raquo;</i></a>
+      <a href="/tutorials/" class="homePageCategoryFooterLink" title="Read all tutorials posts">view all "tutorials" posts &raquo;</i></a>
 
-      <a href="/pages/" class="homePageCategoryFooterLink">view all posts &raquo;</i></a>
+      <a href="/pages/" class="homePageCategoryFooterLink" title="Read all posts on kaidez.com">view all posts &raquo;</i></a>
     </div>
 
   </section> <!-- #homepageTutorials -->
@@ -149,7 +149,7 @@ a variable called 'isCategory' and set it equal to 4.
 
   <h1 class="homePageSectionHeaderClass">
 
-    <a href="/coding-best-practices/" class="categorySectionLink">
+    <a href="/coding-best-practices/" class="categorySectionLink" title="Read all code tips posts">
       <span class="homePageSectionHeaderText"><i class="icon-cogs"></i> CODE TIPS</span>
     </a>
 
@@ -160,10 +160,10 @@ a variable called 'isCategory' and set it equal to 4.
     {% for post in site.categories.coding-best-practices limit:3 offset:1 %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
         <p class="post-snippet-text">
-          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
         </p>
 
     </article>
@@ -175,10 +175,10 @@ a variable called 'isCategory' and set it equal to 4.
     {% for post in site.categories.coding-best-practices limit:3 %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
         <p class="post-snippet-text">
-          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
         </p>
 
     </article>
@@ -188,9 +188,9 @@ a variable called 'isCategory' and set it equal to 4.
     {% endif %}
 
     <div class="homePageCategoryFooterLinkSection">
-      <a href="/coding-best-practices/" class="homePageCategoryFooterLink">view all "code tips" posts &raquo;</i></a>
+      <a href="/coding-best-practices/" class="homePageCategoryFooterLink" title="read all code tips posts">view all "code tips" posts &raquo;</i></a>
 
-      <a href="/pages/" class="homePageCategoryFooterLink">view all posts &raquo;</i></a>
+      <a href="/pages/" class="homePageCategoryFooterLink" title="Read all posts on kaidez.com">view all posts &raquo;</i></a>
     </div>
 
   </section> <!-- #homepageCodingTips -->
@@ -204,7 +204,7 @@ a variable called 'isCategory' and set it equal to 4.
   <section id="homepageReviews" class="homepageReviewsClass sharedCategoryStyling">
 
     <h1 class="homePageSectionHeaderClass">
-      <a href="/reviews/" class="categorySectionLink">
+      <a href="/reviews/" class="categorySectionLink" title="read all reviews posts">
         <span class="homePageSectionHeaderText"><i class="icon-cogs"></i> REVIEWS</span>
       </a>
     </h1>
@@ -216,7 +216,7 @@ a variable called 'isCategory' and set it equal to 4.
         
         <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
         <p class="post-snippet-text">
-          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="{{ post.title }}">Read More &raquo;</a>
         </p>
       </article>
       {% endfor %}
@@ -228,7 +228,7 @@ a variable called 'isCategory' and set it equal to 4.
 
       <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="{{ post.title }}">Read More &raquo;</a>
       </p>
       </article>
 
@@ -237,9 +237,9 @@ a variable called 'isCategory' and set it equal to 4.
       {% endif %}
 
       <div class="homePageCategoryFooterLinkSection">
-        <a href="/reviews/" class="homePageCategoryFooterLink">view all "reviews" posts &raquo;</i></a>
+        <a href="/reviews/" class="homePageCategoryFooterLink" title="read all reviews posts">view all "reviews" posts &raquo;</i></a>
 
-        <a href="/pages/" class="homePageCategoryFooterLink">view all posts &raquo;</i></a>
+        <a href="/pages/" class="homePageCategoryFooterLink" title="Read all posts on kaidez.com" title="Read all posts on kaidez.com">view all posts &raquo;</i></a>
     </div>
 
   </section> <!-- #homepageReviews -->
@@ -252,7 +252,7 @@ a variable called 'isCategory' and set it equal to 4.
   <section id="homepagePersonal" class="homepagePersonalClass sharedCategoryStyling">
 
     <h1 class="homePageSectionHeaderClass">
-      <a href="/personal/" class="categorySectionLink">
+      <a href="/personal/" class="categorySectionLink" title="read all personal posts">
         <span class="homePageSectionHeaderText"><i class="icon-cogs"></i> PERSONAL</span>
       </a>
     </h1>
@@ -262,9 +262,9 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.personal limit:3 offset:1 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
       </p>
       </article>
       {% endfor %}
@@ -274,11 +274,9 @@ a variable called 'isCategory' and set it equal to 4.
       {% for post in site.categories.personal limit:3 %}
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-  
-
-      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
       <p class="post-snippet-text">
-        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link">Read More &raquo;</a>
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
       </p>
       </article>
       {% endfor %}
@@ -286,9 +284,9 @@ a variable called 'isCategory' and set it equal to 4.
       {% endif %}
 
       <div class="homePageCategoryFooterLinkSection">
-        <a href="/reviews/" class="homePageCategoryFooterLink">view all "personal" posts &raquo;</i></a>
+        <a href="/reviews/" class="homePageCategoryFooterLink" title="view all personal posts">view all "personal" posts &raquo;</i></a>
 
-        <a href="/pages/" class="homePageCategoryFooterLink">view all posts &raquo;</i></a>
+        <a href="/pages/" class="homePageCategoryFooterLink" title="Read all posts on kaidez.com">view all posts &raquo;</i></a>
     </div>
 
   </section> <!-- #homepagePersonal -->
