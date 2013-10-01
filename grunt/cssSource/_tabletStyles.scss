@@ -283,10 +283,13 @@
     @include create-outer-box-shadow;
   }
 
-    // post copy spot 
+  // post copy spot 
   .pageCopy {
-    @include create-outer-box-shadow;
     margin: 0 15px;
+  }
+
+  .pageContentPostWrapper {
+    @include create-outer-box-shadow;
   }
 
   .googleAdsenceContainer {

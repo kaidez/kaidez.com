@@ -1,10 +1,11 @@
 
-//  ===========================================================================
+//  ===================================================================
 //  Desktop styles start:
 // 
-//  These should appear on desktop browsers. Expect this set of styles to
-//  require more bandwidth to render when compared to the others, especially //  the mobile ones.
-//  ===========================================================================
+//  These should appear on desktop browsers. Expect this set of styles 
+// to require more bandwidth to render when compared to the others, 
+// especially the mobile ones.
+//  ===================================================================
 
 
 
@@ -227,6 +228,10 @@
     @include page-content($inner-content-width, #fff);
     padding: 15px 45px 58px;
   }
+
+  .pageContentPostWrapper {
+     @include create-outer-box-shadow;
+  }
   
   // breadcrumbs
   .breadcrumb-styles {
@@ -277,7 +282,7 @@
 
   .share-post-container-class {
     @include site-border-radius;
-    margin: 0 auto;
+    margin: 0 auto 33px;
   }
 
   .sharePostStructure {
@@ -312,11 +317,6 @@
   .homePageSectionHeaderText {
     font-size: 33px;
     text-shadow: 1px 1px 0 #EAEEF1;
-  }
-
-  // post copy spot 
-  .pageCopy {
-    @include create-outer-box-shadow;
   }
 
   .topSectionWrapperClass {
@@ -392,7 +392,7 @@
 
   .related-posts-header {
     @include site-border-radius;
-    text-align: start;
+    text-align: center;
     font-size: 21px;
   }
 

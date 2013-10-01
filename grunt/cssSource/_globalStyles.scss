@@ -379,12 +379,15 @@ a:focus {
 // Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
-  background-color: #fff;
   padding: 15px 0 58px;
   width: auto;
   text-align: left;
   font-size: 18px;
   color: #000;
+}
+
+.pageContentPostWrapper {
+  background-color: #fff;
 }
 
 // Style the <section> tag that wraps the tutorials at the top of the home page
@@ -494,7 +497,7 @@ main a:visited {
 // <li> in related posts area
 .related-posts-list-item {
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 20px;
   text-align: left;
   list-style: none;
@@ -517,11 +520,14 @@ main a:visited {
 .share-post-container-class {
   text-align: center;
   background-color: #E1F5F6;
+  max-width: 600px;
+  margin: 0 13px 25px;
 }
 
 // <h3> in the sharing post section in post pages
 .share-post-container-header-class {
   display: block;
+  margin: 5px auto 9px;
 }
 
 // make non-Facebook sharing links lay out like the Facebook one

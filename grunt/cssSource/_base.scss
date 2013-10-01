@@ -124,12 +124,15 @@ $bg-size: 227px 334px;
   width: $width;
 }
 
-// If a Google font is applied to a page element, the element should be hidden 
-// on initial page load as well as set to either serif or another default font.
-// After page load, the element should set to visibile, then load the Google 
-// font. Two differnt events...use a mixin for both.
+// If a Google font is applied to a page element, the element should 
+// be hidden on initial page load as well as set to either serif or 
+// another default font. After page load, the element should set to 
+// visibile, then load the Google font. Two differnt events...use a 
+// mixin for both.
 //
-// Some CSS selectors call @fonts. They always need to be visible but do not // pass a visible parameter. In those instances, "visibility" is always set to // "visible."
+// Some CSS selectors call @fonts. They always need to be visible but 
+// do not pass a visible parameter. In those instances, "visibility"
+// is always set to "visible."
 @mixin fonts($font, $visibility: blank) {
   font-family: $font;
   @if $visibility != blank {
@@ -137,7 +140,8 @@ $bg-size: 227px 334px;
   }
 }
 
-// Use this to create font stacks...at least one font listed as an argument
+// Use this to create font stacks...at least one font listed as an 
+// argument.
 @mixin font-stack($fonts...) {
   font-family: $fonts;
 }
@@ -156,7 +160,8 @@ $bg-size: 227px 334px;
   min-height: 100%;
 }
  
-// When possible, A better way accessibilty-wise to hidepage elements than // display:none or negative text indents.
+// When possible, A better way accessibilty-wise to hidepage elements 
+// than display:none or negative text indents.
 
 // Read more over at Yahoo! Accessibilty Blog: 
 // http://yaccessibilityblog.com/library/css-clip-hidden-content.html
@@ -191,14 +196,14 @@ $bg-size: 227px 334px;
   }
 }
 
-// Define width for the <header>, <main> and <footer> elements by applying
-// this mixin to a class that's applied to the element. The '$dimension'
-// variable defines the width value and the values are determined by the
-// "Width variables" directly below the mixin.
+// Define width for the <header>, <main> and <footer> elements by 
+// applying this mixin to a class that's applied to the element. The 
+//'$dimension' variable defines the width value and the values are 
+// determined by the "Width variables" directly below the mixin.
 @mixin page-content($dimension, $bg-color) {
   max-width: $dimension;
   @include full-height;
-  background-color: #F4FDFF;
+  background-color: #DAF0F5;
   margin: 0 auto;
   font-size: 18px;
   line-height: 30px;
@@ -207,7 +212,8 @@ $bg-size: 227px 334px;
   color: #000;
 }
 
-// Applies properties to sprite layouts...used in '_retinaMediaQuery.scss'
+// Applies properties to sprite layouts...used in
+// '_retinaMediaQuery.scss'
 @mixin sprite-images ($img, $position, $height, $width) {
   background: url($img) no-repeat $position;
   background-size: $bg-size;
@@ -237,7 +243,8 @@ $bg-size: 227px 334px;
 }
 
 // Dope-ass vendor prefix mixin!!! "$name" = what type of transition.
-// "$argument" = are your arguments. Can take as many arguments as you want.
+// "$argument" = are your arguments. Can take as many arguments as you 
+// want.
 // Attribution Stefan Wienert to at:
 // http://stefanwienert.net/blog/2012/05/18/easy-css-vendor-prefix-mixin-for-sass/ 
 @mixin vendor-prefix($name, $argument...) {
@@ -258,8 +265,9 @@ $bg-size: 227px 334px;
 }
 
 
-// CSS transitions are applied to kaidez social network styles when rolled over
-// and need styles applied to them before the rollover occurs. These are said-styles. 
+// CSS transitions are applied to kaidez social network styles when 
+// rolled over and need styles applied to them before the rollover 
+// occurs. These are said-styles. 
 @mixin sn-transition-setup {
   color: $header-color;
   opacity: 0;
