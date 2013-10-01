@@ -22,11 +22,11 @@ There are also some loose dependencies...they don't REALLY need to be installed 
 
 While both GruntJS and Bower are not hard dependencies of kaidez.com, both use Node and its internal package manager, npm, as a hard dependency.  Node and npm can be downloaded and installed simultaneously at [http://nodejs.org/](http://nodejs.org/).
 
-GruntJS itself has many hard dependencies.  The site's Grunt functionality is powered by the `Gruntfile.js` file and its dependencies are listed in the `package.json`...both files are at the site root. These plugins are essentially Node packages stored in the [npm Registry](https://npmjs.org/). Assuming that npm is installed on the local machine, these plugins can be installed all at once via the command line by first navigating to the site root folder, then running the following command:
+On kaidez.com, GruntJS itself has many hard dependencies.  The site's Grunt functionality is powered by the `Gruntfile.js` file and its dependencies are listed in the `package.json`...both files are at the site root. These plugins are essentially Node packages stored in the [npm Registry](https://npmjs.org/). Assuming that npm is installed on the local machine, these plugins can be installed all at once via the command line by first navigating to the site root folder, then running the following command:
 
     npm install
 
-When this command is run, npm will look at the plugins defined in the `devDependencies` listed in `package.json` and install them in the `node_modules` folder at the site root, or create a `node_modules` folder at the site root first, *then* install the plugins.
+When this command is run, npm will look at the plugins defined in the `devDependencies` listed in `package.json` and either install them in the `node_modules` folder at the site root, or create a `node_modules` folder at the site root first, *then* install the plugins.
 
 Bower itself treats Git as semi-hard dependency: Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower functionality is powered by the `.bowerrc` file for Bower-specific configurations.  The `bower.json` at the site root lists site dependencies and *not* things that Bower depends on.
 
@@ -44,4 +44,4 @@ To install the packages, run the following command at the site root:
 
      bower install
 
-When this command is run, npm will look at the plugins defined in the `dependencies` listed in `bower.json` and install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages. If GruntJS is properly configured, it will run tasks that copy certain file into certain folders, then run certain cancat/minify tasks against CSS and JavScript files.  For more details, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js), specifcally the `watch` task. 
+When this command is run, npm will look at the plugins defined in the `dependencies` listed in `bower.json` and either install them in the `bower_components` folder at the site root, or create a `bower_components` folder at the site root first, *then* install the packages. If GruntJS is properly configured, it will run tasks that copy certain file into certain folders, then run certain cancat/minify tasks against CSS and JavScript files.  For more details, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js), specifcally the `watch` task. 
