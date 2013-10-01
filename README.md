@@ -4,7 +4,7 @@ This is the source code for [kaidez.com](http://kaidez/com). It is 100% open sou
 
 ## Hard Development-Level Dependencies
 
-For developing the site on a local machine, there are some hard dependencies:
+For developing the site on a local machine, there are some hard development-level dependencies:
 
 * [Ruby](https://www.ruby-lang.org/en/): needed download Ruby Gems, to interact with Jekyll and optionally to run the local version of the site on http://localhost/:4000 via WebBrick.
 
@@ -16,7 +16,7 @@ For developing the site on a local machine, there are some hard dependencies:
 
 ## Loose Development-Level Dependencies
 
-There are also some loose dependencies...they don't REALLY need to be installed to make changes to the site or create a production build, but installing them makes changing and building out the site FUN!!!!!!!!
+There are also some loose development-level dependencies...they don't REALLY need to be installed to make changes to the site or create a production build, but installing them makes changing and building out the site FUN!!!!!!!!
 
 * [GruntJS](http://gruntjs.com/): a JavaScript-based task manager used to run site-related tasks such as Sass compiling and assisting in the building-out of a production-ready copy of the site.
 
@@ -102,8 +102,8 @@ Inside of kaidez.com, `Gruntfile.js` has a Sass-based `watch` task which watches
 
 For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
 
-## Hard Runtime Dependencies
+## Hard Runtime Development-Level Dependencies
 
-kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of the form sends a POST call to the server to 1) process the form content, 2) validate the form content, and 3) send the form content out an email.
+kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends a POST call to the server to 1) process the form content, 2) validate the form content, and 3) sends the form content out in an email to the site's webmaster.
 
 If the form is removed, kaidez.com can run on any web server that setup that can proper serve .html, .css, .js and images.  Apache, IIS, Ingenix, etc.
