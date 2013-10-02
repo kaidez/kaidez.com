@@ -1,24 +1,24 @@
 # WHAT IS THIS?
 
-This is the source code for [kaidez.com](http://kaidez/com). It is 100% open source.
+This is repos contains the source code for [kaidez.com](http://kaidez/com). It is 100% open source.
 
 ## Hard Development-Level Dependencies
 
 For developing the site on a local machine, there are some hard development-level dependencies:
 
-* [Ruby](https://www.ruby-lang.org/en/): needed download Ruby Gems, to interact with Jekyll and optionally to run the local version of the site on http://localhost/:4000 via WebBrick.
+* [Ruby](https://www.ruby-lang.org/en/): needed to download Ruby Gems, interact with Jekyll and optionally use WebBrick to run the local version of the site on http://localhost:4000.
 
-* [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages such as Sass and Jekyll.
+* [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages like Sass and Jekyll.
 
-* [Jekyll](http://jekyllrb.com/): a blog-aware static enfine that manages HTML and Markdown files, and also builds out a production copy of the site.
+* [Jekyll](http://jekyllrb.com/): a blog-aware static engine that manages HTML & Markdown files, and also builds out a production copy of the site.
 
-* [RequireJS](http://requirejs.org/): a JavaScript-based script-loader.
+* [RequireJS](http://requirejs.org/): a JavaScript-based script-loader used to manage JavaScript files as modular dependencies.
 
 ## Loose Development-Level Dependencies
 
 There are also some loose development-level dependencies...they don't REALLY need to be installed to make changes to the site or create a production build, but installing them makes changing and building out the site FUN!!!!!!!!
 
-* [GruntJS](http://gruntjs.com/): a JavaScript-based task manager used to run site-related tasks such as Sass compiling and assisting in the building-out of a production-ready copy of the site.
+* [GruntJS](http://gruntjs.com/): a JavaScript-based task runner used to run site-related tasks such as Sass compiling and assisting in the building-out of a production-ready copy of the site.
 
 * [Bower](http://bower.io/): a low-level browser-centric package manager used to add, remove and update SOME of the site's production runtime dependencies.
 
@@ -34,17 +34,17 @@ If Ruby Gems is installed, Jekyll can be installed via the command line by first
 
     gem install jekyll
     
-[Review the Jekyll docs](http://jekyllrb.com/docs/home/) to see the many things it can do, but its primary purpose is to build out a production-ready copy of the site.  This can be done via the command line by first navigating to the site root folder, then running the following command:
+[Review the Jekyll docs](http://jekyllrb.com/docs/home/) to see the many things it can do, but its primary purpose is to build out a production-ready copy of the site. This can be done via the command line by first navigating to the site root folder, then running the following command:
 
     jekyll build
   
-When this command is run, Jekyll will output a production-ready copy of the site to the `_site` folder that can be uploaded to a web server. If the site's contact form should be utilized, PHP is a runtime dependency.
+When this command is run, Jekyll will output a production-ready copy of the site to the `_site` folder that can be uploaded to a web server. If the site's contact form should be utilized, PHP is a runtime dependency. Note that the `_site` folder is purposely not checked into this repo.
   
 ### RequireJS
 
-RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition spec](https://github.com/amdjs/amdjs-api/wiki/AMD).
+RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition specification](https://github.com/amdjs/amdjs-api/wiki/AMD).
 
-It is possible to rearrange kaidez.com's JS file structure and not use RequireJS, but it's recommended that RequireJS be treated as a hard dependency as it does an excellent job of treating all the JS in a modular fashion as well as prepping all the files for usage on production.
+It is possible to rearrange kaidez.com's JS file structure and not use RequireJS, but it's recommended that RequireJS be treated as a hard dependency as it does an excellent job of treating all the JS files as single modules...this is great for development. It also preps all the files for usage on production.
 
 Within kaidez.com's site structure, RequireJS depends on two files: 1) `requireBuildOut/require.js` to manage and treat all the JS files as modules, and 2) `r.js` in the root folder to concatenate and minify (almost) all the files in `requireBuildOut`.
 
