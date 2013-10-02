@@ -67,4 +67,12 @@ Instead, I designed this site within the browser, which allowed me to debug agai
 
 No issues with foing Mobile First with the content strategy for this redesign. I did a complete content audit of the previous site, then either elmininated lots of content I didn't need or moved it to the bottom of the page.
 
-Doing this for the code was a problem which, honestly, still needs to be fixed. I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/)
+Doing this for the code was a problem which, honestly, still needs to be fixed. I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside of the CSS media queries (using [Sass](http://sass-lang.com/), of course) for the benefit of oldIE. I may not have implemented properly, plus, I think I would have to add more code in certain spots even if I do apply a proper implementation.  I will need to revist this.
+
+Important note: by "oldIE," I mean Internet Explorer 8 only.  In terms of supporting IE versions prior to that, I'll just paraphrase Shakespeare:
+
+> *"By my head, you don't support IE7 and IE6!!!"*
+>
+> *"By my heel, I care not.*
+
+## RequireJS
