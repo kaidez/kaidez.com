@@ -40,7 +40,9 @@ So static site content is generated in ways that were once not possible unless s
 
 Ruby is a hard dependency for both Jekyll and Liquid and this site does use a few Ruby-based plugins: one for generating an [XML Sitemap](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/) for the search engines and one used in conjunction with [Lea Verou's](http://lea.verou.me/) excellent [Prism syntax highlighter plugin](http://prismjs.com/). But the Jekyll/Liquid combination is really doing the work of prepping this site for deployment.
 
-The end result of all this is that kaidez.com is very light in terms of site weight.  There are no SQL requests and script parsing going on behind the scenes, so things load really fast. Pages running ads and the Disqus commenting system slow things down in some spots, but overall page-load is still minimal.
+The end result of all this is that kaidez.com is very light in terms of site weight.  There are no SQL requests and server-side scripting parsing stuff behind the scenes, so things load really fast. Pages running ads and the Disqus commenting system load a little slow, but overall page-load is still minimal.
+
+I exported content from my old WordPress site to Jekyll using [this plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/) offer some good alternatives. Also, this [two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is choked fill of information.
 
 As happy as I am with Jekyll, please note that walking away from WordPress was not easy. WordPress did a lot of work via its related plugins...work that I now have to do on my own.
 
@@ -112,4 +114,22 @@ Past that, Here's a rundown of how JS is being used:
 * to run client-side form validation.
 * to implement AJAX to process form submissions.
 
-Best of all, all of the above-mentioned JavaScript is managed by [RequireJS](http://requirejs.org/), the popular JavaScript module loader.
+Best of all, all of the above-mentioned JavaScript is 100% managed by [RequireJS](http://requirejs.org/), the popular JavaScript module loader. WordPress prevented RequireJS from functioning *exactly* the way I wanted it to and was the main reason I jumped over to Jekyll.
+
+In the context of kaidez.com, RequireJS certainly "requires" further discussion...
+
+The Tipue search functionality mentioned above needs four JavaScript external files to work, including jQuery.  In the old days, I would have to link these four files to my page in `<script>` tags, then write actually implement the the search code in a fifth file somewhere.
+
+But by properly configuring RequireJS on my site (read more on that [here](http://requirejs.org/docs/api.html#data-main)), Tipue is, instead, set up in one file. This file includes the implementation code while the four needed files are listed as dependencies in a JavaScript array.  Here's a sample:
+
+{% prism javascript %}
+define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
+
+    $('#tipue_search_input').tipuesearch({
+      'show': 10,
+      'showURL': false,
+      'highlightEveryTerm': true
+    });
+   
+});
+{% endprism %}
