@@ -3648,11 +3648,12 @@ a.read-more-link {
 .breadcrumb-styles {
   font-size: 18px;
   font-weight: 900;
-  background-color: #c9c9c9;
+  background-color: #BDF2FF;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
   padding: 8px 19px;
+  background-color: #BDF2FF;
 }
 
 .breadcrumb-separator {
@@ -4003,7 +4004,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 18px;
     font-weight: 900;
-    background-color: #c9c9c9;
+    background-color: #BDF2FF;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4195,7 +4196,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #c9c9c9;
+    background-color: #BDF2FF;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -4619,7 +4620,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #c9c9c9;
+    background-color: #BDF2FF;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -5035,7 +5036,7 @@ a.pagination-link {
   .breadcrumb-styles {
     font-size: 16px;
     font-weight: 900;
-    background-color: #c9c9c9;
+    background-color: #BDF2FF;
     max-width: 1024px;
     position: relative;
     margin: 0 auto;
@@ -5492,7 +5493,7 @@ a.pagination-link {
 .lt-ie9 .breadcrumb-styles {
   font-size: 16px;
   font-weight: 900;
-  background-color: #c9c9c9;
+  background-color: #BDF2FF;
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
