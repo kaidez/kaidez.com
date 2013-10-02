@@ -11,9 +11,11 @@
 // ALL VARIABLES
 // =============
 
-// START PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure sea 
-// color palette at http://www.colourlovers.com/palette/2892492/azure_sea.
-// Changing these colors will affect other parts of the site, as noted below.
+// START PRIMARY COLOR PALETTE for kaidez.com, as defined by the azure
+// sea color palette at
+// http://www.colourlovers.com/palette/2892492/azure_sea.
+// Changing these colors will affect other parts of the site, as noted
+// below.
 
 
 // Site background color
@@ -181,7 +183,7 @@ $bg-size: 227px 334px;
 @mixin breadcrumb-styles($font-size, $side-padding) {
   font-size: $font-size;
   font-weight: 900;
-  background-color: #c9c9c9;
+  background-color: #BDF2FF;
   max-width: $inner-content-width;
   position: relative;
   margin: 0 auto;
