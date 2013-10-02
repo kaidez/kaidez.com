@@ -603,6 +603,10 @@ main a:visited {
     padding-bottom: 20px;
   }
 
+  .centerVideo {
+    @include master-center;
+  }
+
 // ====================================================================
 // Post content styles end
 // ====================================================================
