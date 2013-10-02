@@ -54,7 +54,7 @@ In all fairness there, are other options in terms of static site generators. [Da
 
 While I did use a pencil and paper to sketch out the site layout, I completely disregarded wireframes and PhotoShop mockups.  Reason being, mockups don't account for differences among browsers and devices...at least, not well.
 
-Instead, I designed this site within the browser, which allowed me to debug against browsers and devices very early in the process.  This was easy when I started working in WordPress and ridiculosly easy when I jumped over to Jekyll.
+Instead, I designed this site within the browser, which allowed me to debug against browsers and devices very early in the process.  This was easy when I started working in WordPress and ridiculously easy when I jumped over to Jekyll.
 
 [Divya Manian](http://nimbupani.com/) outlines the design-in-browser process better than me...
 <div class="centerVideo">
@@ -65,9 +65,9 @@ Instead, I designed this site within the browser, which allowed me to debug agai
 
 "Mobile First" has gone from a buzz word to a *de facto* web standard. It basically means "properly develop and position content for mobile devices before doing so for desktop devices"...this should be applied to both content strategy and code.
 
-No issues with foing Mobile First with the content strategy for this redesign. I did a complete content audit of the previous site, then either elmininated lots of content I didn't need or moved it to the bottom of the page.
+No issues with going Mobile First with the content strategy for this redesign. I did a complete content audit of the previous site, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
-Doing this for the code was a problem which, honestly, still needs to be fixed. I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside of the CSS media queries (using [Sass](http://sass-lang.com/), of course) for the benefit of oldIE. I may not have implemented properly, plus, I think I would have to add more code in certain spots even if I do apply a proper implementation.  I will need to revist this.
+Doing this for the code was a problem which, honestly, still needs to be fixed. I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside of the CSS media queries (using [Sass](http://sass-lang.com/), of course) for the benefit of oldIE. I may not have implemented properly, plus, I think I would have to add more code in certain spots even if I do apply a proper implementation.  I will need to revisit this.
 
 Important note: by "oldIE," I mean Internet Explorer 8 only.  In terms of supporting IE versions prior to that, I'll just paraphrase Shakespeare:
 
@@ -77,14 +77,35 @@ Important note: by "oldIE," I mean Internet Explorer 8 only.  In terms of suppor
 
 ## Overall Design
 
-Blogs are usually simple in design so I stuck with that rule.  I'm fine with the site's overall look and feel but think that the header could be a bit better, especially since the two modules at the bottom look really nice...at least I think so.  I may reveist the header sometime in the future.
+Blogs are usually simple in design so I stuck with that rule.  I'm fine with the site's overall look and feel but think that the header could be a bit better, especially since the two modules at the bottom look really nice...at least I think so.  I may revisit the header sometime in the future.
 
-The blue color is just something I came up with, color scheme-wise. I used [this color pallette over at Colour Lovers as an overall guide](http://www.colourlovers.com/palette/2892492/azure_sea.).
+The blue color is just something I came up with, color scheme-wise. I used [this color palette over at Colour Lovers as an overall guide](http://www.colourlovers.com/palette/2892492/azure_sea.).
 
 The site uses two Google fonts: Open Sans (mostly for page content) and Robot Condensed (mostly for headers). There also some font icons being used...these are courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
 
 I employed the aforementioned (and awesome) PrismJS for syntax highlighting. It has [a really cool build tool for generating the highlight code](http://prismjs.com/download.html), that generates nice, clean, well-optimized code.
 
-By walking away from oldIE, I was able to apply some CSS3 transitions and animations to the site...not as much as I wanted to though.  I did try to do some things that were more grand but ran into cross browser issues on the modern browsers. Thery're really just restricted to text link rollovers right now: maybe more in the future.
+By walking away from oldIE, I was able to apply some CSS3 transitions and animations to the site...not as much as I wanted to though.  I did try to do some things that were more grand but ran into cross browser issues on the modern browsers. They're really just restricted to text link rollovers right now: maybe more in the future.
 
+I did spend a few hours trying to apply a [flat design](http://fltdsgn.com/) to the site, but it's tough. Flat design, like [Swiss/International design](http://www.smashingmagazine.com/2009/07/17/lessons-from-swiss-style-graphic-design/) before it, is all about "designing a whole lot more with a whole lot less"...easier said than done. Probably the next design.
 
+*Side note: flat design leads to a more optimized, high-performance site...oh, yes it does, for Paul Irish tells us so*.
+<div class="centerVideo">
+	<iframe width="420" height="315" src="//www.youtube.com/embed/Z1IqzeA3XXg" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## JavaScript...RequireJS Specifically
+
+As mentioned earlier, my primary goal in developing this site was to maintain total control over all of its front-end code, especially the JavaScript. And I'm proud to say that I reached this goal.
+
+The big thing about this site's JavaScript code isn't 100% dependent on jQuery and pure JS is implemented where it can.jQuery is used to run the show/hide functionality on the mobile menu and to power the site's JSON-powered [Tipue Search plugin](http://www.tipue.com/search/).  But jQuery's wasn't my default position when writing JavaScript.
+
+Here's a rundown of how JS is being used:
+
+* to run the aforementioned PrismJS, Tipue and mobile menu show/hide functionality.
+* to create both affiliate ad elements and the site's search box off-DOM, then load them onto the page (a DEFINETE future blog post).
+* to show and hide the affiliate ads based on media queries with the help of the [enquire.js](http://www.tipue.com/search/).
+* to run client-side form validation.
+* to implement AJAX to process form submissions.
+
+Best of all, all of the above-mentioned JavaScript is managed by [RequireJS](http://requirejs.org/), the popular JavaScript module loader.
