@@ -24,31 +24,31 @@ This plan was based around my primary goal: create and manage all of the front-e
 Truthfully? I could have lived with the way WordPress did things with JavaScript and was just being anal-retentive.  Still, I was anal-retentive and needed to move away from WordPress. 
 
 ## ...Hello Jekyll &amp; Liquid
-If you're around GitHub enough, you've heard of [Jekyll][3], the blog-aware static site generator. [GitHub Pages][4] (which powers GitHub-hosted blogs) provides its underlying page structure, making overall site weight pretty light.
+If you're around GitHub enough, you've heard of [Jekyll][3], the blog-aware static site generator. [GitHub Pages][4] (which powers GitHub-hosted blogs) provides its underlying page structure.
 
 I've created HTML site templates that are applied to all the site content.  These templates contained [Liquid markup][5], a pretty powerful templating language with some logic under its hood. All blog post pages are created in [Markdown][6].
 
 Whenever I run `jekyll build` from the command line, Jekyll compiles a static, production-ready copy of the site. The logic created by the HTML templates and Liquid markup generate content the way I want to.
 
-So static site content is generated in ways that were once only possible with some sort of back-end database doing the heavy lifting. Some examples:
+So static site content is generated in ways that were once not possible unless some sort of back-end database did the heavy lifting. Some examples:
 
 * the Liquid logic displays posts on home page displays posts in a very specific way (more on this in a future blog post).
-* pagination for all the site content is created, which can be good for SEO.
+* a pagination structure is generated, which is good for SEO.
 * category-specific pages are generated.
 * an RSS/XML file is created.
 * a short list of related posts embeds itself on individual post pages.
 
-Ruby is a hard dependency for Jekyll and Liquid and this site does use a few Ruby-based plugins: one for generating an [XML Sitemap][7] and one used in conjunction with Lea Verou's excellent [Prism syntax highlighter plugin][8]. But the Jekyll/Liquid combination is really doing the work of prepping this site for deployment.
+Ruby is a hard dependency for both Jekyll and Liquid and this site does use a few Ruby-based plugins: one for generating an [XML Sitemap][7] for the search engines and one used in conjunction with [Lea Verou's][8] excellent [Prism syntax highlighter plugin][9]. But the Jekyll/Liquid combination is really doing the work of prepping this site for deployment.
 
-The end result of all this is that kaidez.com is running without the overhead of SQL requests and PHP parsing, making things load really fast. Pages running ads and the Disqus commenting system load in slow (2 seconds or more is considered slow.
+The end result of all this is that kaidez.com is very light in terms of site weight.  There are no SQL requests and script parsing going on behind the scenes, so things load really fast. Pages running ads and the Disqus commenting system slow things down in some spots, but overall site-load is still quite minimal.
 
-As happy as I am with Jekyll, walking away was from WordPress was not easy. WordPress did a lot of work via its related plugins...work that I now have to do on my own.
+As happy as I am with Jekyll, please note that walking away from WordPress was not easy. WordPress did a lot of work via its related plugins...work that I now have to do on my own.
 
 Also, Jekyll is geared towards the blogger that likes to write code and probably not a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in these arena.
 
-Jekyll is definitely increasing in popularity: I'm guessing this is due to the fact that [Jekyll can create a site that can be hosted for free on GitHub][9]. Also, Jekyll's attracting [lots of contributors][10] that are working together to make the platform better
+Jekyll is definitely increasing in popularity: I'm guessing this is due to the fact that [Jekyll can create a site that can be hosted for free on GitHub][10]. Also, Jekyll's attracting [lots of contributors][11] that are working together to make the platform better
 
-But in all fairness there are other options in terms of static site generators. [Dave Rupert][11] put together [a short list of static site generators in the form of a GitHub Gist that was extended by commenters][12]. And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo][13] but surfing around its [Trello Board][14] is also a good idea.
+But in all fairness there are other options in terms of static site generators. [Dave Rupert][12] put together [a short list of static site generators in the form of a GitHub Gist that was extended by commenters][13]. And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo][14] but surfing around its [Trello Board][15] is also a good idea.
 
 ## Mobile First
 
@@ -60,10 +60,11 @@ But in all fairness there are other options in terms of static site generators. 
 [5]: http://wiki.shopify.com/Liquid
 [6]: http://daringfireball.net/projects/markdown/
 [7]: http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/
-[8]: http://prismjs.com/
-[9]: https://help.github.com/articles/setting-up-a-custom-domain-with-pages
-[10]: https://github.com/mojombo/jekyll/graphs/contributors
-[11]: http://daverupert.com/
-[12]: https://gist.github.com/davatron5000/2254924
-[13]: https://github.com/Code52/pretzel
-[14]: https://trello.com/b/2IUErvJ2/pretzel
+[8]: http://lea.verou.me/
+[9]: http://prismjs.com/
+[10]: https://help.github.com/articles/setting-up-a-custom-domain-with-pages
+[11]: https://github.com/mojombo/jekyll/graphs/contributors
+[12]: http://daverupert.com/
+[13]: https://gist.github.com/davatron5000/2254924
+[14]: https://github.com/Code52/pretzel
+[15]: https://trello.com/b/2IUErvJ2/pretzel
