@@ -12,7 +12,7 @@ has-home-img: site-relaunch.jpg
 ---
 After five months and a little less then 2,000 Git commits, kaidez.com gets a redesign. It was a struggle mostly due to the lack of free time, but was also fun as hell and an *incredible* learning experience.
 
-This site's code is completely open source and [freely available on GitHub][1]. The repo includes a [pretty lengthy README][2] that gives a high-level look at the site's functionality.
+This site's code is completely open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/). The repo includes a [pretty lengthy README](https://github.com/kaidez/kaidez.com/blob/master/README.md) that gives a high-level look at the site's functionality.
 
 But the README is verbose so a simpler functionality walk-through is probably required, so let's proceed:
 
@@ -24,9 +24,9 @@ This plan was based around my primary goal: create and manage all of the front-e
 Truthfully? I could have lived with the way WordPress did things with JavaScript and was just being anal-retentive.  Still, I was anal-retentive and needed to move away from WordPress. 
 
 ## ...Hello Jekyll &amp; Liquid
-If you're around GitHub enough, you've heard of [Jekyll][3], the blog-aware static site generator. [GitHub Pages][4] (which powers GitHub-hosted blogs) provides its underlying page structure.
+If you're around GitHub enough, you've heard of [Jekyll](http://jekyllrb.com/), the blog-aware static site generator. [GitHub Pages](http://pages.github.com/) (which powers GitHub-hosted blogs) provides its underlying page structure.
 
-I've created HTML site templates that are applied to all the site content.  These templates contained [Liquid markup][5], a pretty powerful templating language with some logic under its hood. All blog post pages are created in [Markdown][6].
+I've created HTML site templates that are applied to all the site content.  These templates contained [Liquid markup](http://wiki.shopify.com/Liquid), a pretty powerful templating language with some logic under its hood. All blog post pages are created in [Markdown](http://daringfireball.net/projects/markdown/).
 
 Whenever I run `jekyll build` from the command line, Jekyll compiles a static, production-ready copy of the site. The logic created by the HTML templates and Liquid markup generate content the way I want to.
 
@@ -38,33 +38,33 @@ So static site content is generated in ways that were once not possible unless s
 * an RSS/XML file is created.
 * a short list of related posts embeds itself on individual post pages.
 
-Ruby is a hard dependency for both Jekyll and Liquid and this site does use a few Ruby-based plugins: one for generating an [XML Sitemap][7] for the search engines and one used in conjunction with [Lea Verou's][8] excellent [Prism syntax highlighter plugin][9]. But the Jekyll/Liquid combination is really doing the work of prepping this site for deployment.
+Ruby is a hard dependency for both Jekyll and Liquid and this site does use a few Ruby-based plugins: one for generating an [XML Sitemap](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/) for the search engines and one used in conjunction with [Lea Verou's](http://lea.verou.me/) excellent [Prism syntax highlighter plugin](http://prismjs.com/). But the Jekyll/Liquid combination is really doing the work of prepping this site for deployment.
 
-The end result of all this is that kaidez.com is very light in terms of site weight.  There are no SQL requests and script parsing going on behind the scenes, so things load really fast. Pages running ads and the Disqus commenting system slow things down in some spots, but overall site-load is still quite minimal.
+The end result of all this is that kaidez.com is very light in terms of site weight.  There are no SQL requests and script parsing going on behind the scenes, so things load really fast. Pages running ads and the Disqus commenting system slow things down in some spots, but overall page-load is still minimal.
 
 As happy as I am with Jekyll, please note that walking away from WordPress was not easy. WordPress did a lot of work via its related plugins...work that I now have to do on my own.
 
-Also, Jekyll is geared towards the blogger that likes to write code and probably not a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in these arena.
+Also, Jekyll is geared towards the blogger that likes to write code and probably not a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena.
 
-Jekyll is definitely increasing in popularity: I'm guessing this is due to the fact that [Jekyll can create a site that can be hosted for free on GitHub][10]. Also, Jekyll's attracting [lots of contributors][11] that are working together to make the platform better
+Jekyll is definitely increasing in popularity: I'm guessing this is due to the fact that Jekyll can [create a site that can be hosted for free on GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
 
-But in all fairness there are other options in terms of static site generators. [Dave Rupert][12] put together [a short list of static site generators in the form of a GitHub Gist that was extended by commenters][13]. And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo][14] but surfing around its [Trello Board][15] is also a good idea.
+In all fairness there, are other options in terms of static site generators. [Dave Rupert](http://daverupert.com/) put together [a GitHub Gist of static site generators that was extended by commenters](https://gist.github.com/davatron5000/2254924). And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo](https://github.com/Code52/pretzel) but surfing around [Pretzel Trello Board](https://trello.com/b/2IUErvJ2/pretzel) is also a good idea.
+
+## Design In-Browser
+
+While I did use a pencil and paper to sketch out the site layout, I completely disregarded wireframes and PhotoShop mockups.  Reason being, mockups don't account for differences among browsers and devices...at least, not well.
+
+Instead, I designed this site within the browser, which allowed me to debug against browsers and devices very early in the process.  This was easy when I started working in WordPress and ridiculosly easy when I jumped over to Jekyll.
+
+[Divya Manian](http://nimbupani.com/) outlines the design-in-browser process better than me...
+<div class="centerVideo">
+	<iframe width="560" height="315" src="//www.youtube.com/embed/h52uumn3sZc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Mobile First
 
+"Mobile First" has gone from a buzz word to a *de facto* web standard. It basically means "properly develop and position for mobile devices before doing so for desktop devices"...this should be applied to both content strategy and code.
 
-[1]: https://github.com/kaidez/kaidez.com/
-[2]: https://github.com/kaidez/kaidez.com/blob/master/README.md
-[3]: http://jekyllrb.com/
-[4]: http://pages.github.com/
-[5]: http://wiki.shopify.com/Liquid
-[6]: http://daringfireball.net/projects/markdown/
-[7]: http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/
-[8]: http://lea.verou.me/
-[9]: http://prismjs.com/
-[10]: https://help.github.com/articles/setting-up-a-custom-domain-with-pages
-[11]: https://github.com/mojombo/jekyll/graphs/contributors
-[12]: http://daverupert.com/
-[13]: https://gist.github.com/davatron5000/2254924
-[14]: https://github.com/Code52/pretzel
-[15]: https://trello.com/b/2IUErvJ2/pretzel
+No issues with foing Mobile First with the content strategy for this redesign. I did a complete content audit of the previous site, then either elmininated lots of content I didn't need or moved it to the bottom of the page.
+
+Doing this for the code was a problem which, honestly, still needs to be fixed. I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/)
