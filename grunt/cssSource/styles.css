@@ -3430,7 +3430,7 @@ a.read-more-link {
 }
 
 .jumpToTopText {
-  font-family: "Lato";
+  font-family: "Open Sans";
   display: block;
   text-align: center;
   color: #fff;
@@ -4013,7 +4013,7 @@ a.pagination-link {
 }
 @media only screen and (min-width: 729px) and (max-width: 1024px) {
   body {
-    font-family: "Lato";
+    font-family: "Open Sans";
   }
 
   .wf-active h1,
@@ -4108,7 +4108,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
+    font-family: "Open Sans";
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -4217,7 +4217,7 @@ a.pagination-link {
   .share-post-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato";
+    font-family: "Open Sans";
   }
 
   .share-post-container-class {
@@ -4433,7 +4433,7 @@ a.pagination-link {
 }
 @media only screen and (min-width: 569px) and (max-width: 728px) {
   body {
-    font-family: "Lato";
+    font-family: "Open Sans";
   }
 
   .wf-active h1,
@@ -4527,7 +4527,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
+    font-family: "Open Sans";
     margin-right: 29px;
     font-size: 13px;
     padding: 5px;
@@ -4829,7 +4829,7 @@ a.pagination-link {
 }
 @media only screen and (min-width: 1025px) {
   body {
-    font-family: "Lato";
+    font-family: "Open Sans";
   }
 
   .clearfix:before,
@@ -4921,7 +4921,7 @@ a.pagination-link {
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
   .wf-active .site-navigation-list-link a:hover {
-    font-family: "Lato";
+    font-family: "Open Sans";
     margin-right: 18px;
     font-size: 22px;
     padding: 5px;
@@ -5077,7 +5077,7 @@ a.pagination-link {
   .share-post-link {
     font-size: 16px;
     line-height: 1;
-    font-family: "Lato";
+    font-family: "Open Sans";
   }
 
   .share-post-container-class {
@@ -5336,7 +5336,7 @@ a.pagination-link {
  * ==========================================================================
  */
 .lt-ie9 body {
-  font-family: "Lato";
+  font-family: "Open Sans";
 }
 .lt-ie9 .clearfix:before,
 .lt-ie9 .clearfix:after {
@@ -5523,7 +5523,7 @@ a.pagination-link {
 .lt-ie9 .share-post-link {
   font-size: 16px;
   line-height: 1;
-  font-family: "Lato";
+  font-family: "Open Sans";
 }
 .lt-ie9 .aside-inner-wrapper-class {
   width: 1000px;
