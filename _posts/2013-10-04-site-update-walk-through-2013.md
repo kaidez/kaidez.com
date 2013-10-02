@@ -98,11 +98,15 @@ I did spend a few hours trying to apply a [flat design](http://fltdsgn.com/) to 
 
 As mentioned earlier, my primary goal in developing this site was to maintain total control over all of its front-end code, especially the JavaScript. And I'm proud to say that I reached this goal.
 
-The big thing about this site's JavaScript code isn't 100% dependent on jQuery and pure JS is implemented where it can.jQuery is used to run the show/hide functionality on the mobile menu and to power the site's JSON-powered [Tipue Search plugin](http://www.tipue.com/search/).  But jQuery's wasn't my default position when writing JavaScript.
+The big thing about this site's JavaScript code isn't 100% dependent on jQuery and pure JS is implemented as often as possible. jQuery is certainly used on the site, it just wasn't my default position when writing code.
 
-Here's a rundown of how JS is being used:
+Many leaders in the developer community have been pushing for all of us to use more pure JavaScript and less jQuery in our work. For my money, [Remy Sharp](http://remysharp.com/2013/04/19/i-know-jquery-now-what/) and [Todd Motto](http://toddmotto.com/is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background/) have provided the most compelling arguments.
 
-* to run the aforementioned PrismJS, Tipue and mobile menu show/hide functionality.
+Past that, Here's a rundown of how JS is being used:
+
+* to run the aforementioned PrismJS.
+* to power the site's search functionality using the jQuery-powered [Tipue](http://www.tipue.com/search/).
+* to execute the mobile menu's show/hide functionality.
 * to create both affiliate ad elements and the site's search box off-DOM, then load them onto the page (a DEFINETE future blog post).
 * to show and hide the affiliate ads based on media queries with the help of the [enquire.js](http://www.tipue.com/search/).
 * to run client-side form validation.
