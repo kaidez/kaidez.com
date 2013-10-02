@@ -63,7 +63,7 @@ Instead, I designed this site within the browser, which allowed me to debug agai
 
 ## Mobile First
 
-"Mobile First" has gone from a buzz word to a *de facto* web standard. It basically means "properly develop and position for mobile devices before doing so for desktop devices"...this should be applied to both content strategy and code.
+"Mobile First" has gone from a buzz word to a *de facto* web standard. It basically means "properly develop and position content for mobile devices before doing so for desktop devices"...this should be applied to both content strategy and code.
 
 No issues with foing Mobile First with the content strategy for this redesign. I did a complete content audit of the previous site, then either elmininated lots of content I didn't need or moved it to the bottom of the page.
 
@@ -75,4 +75,16 @@ Important note: by "oldIE," I mean Internet Explorer 8 only.  In terms of suppor
 >
 > *"By my heel, I care not.*
 
-## RequireJS
+## Overall Design
+
+Blogs are usually simple in design so I stuck with that rule.  I'm fine with the site's overall look and feel but think that the header could be a bit better, especially since the two modules at the bottom look really nice...at least I think so.  I may reveist the header sometime in the future.
+
+The blue color is just something I came up with, color scheme-wise. I used [this color pallette over at Colour Lovers as an overall guide](http://www.colourlovers.com/palette/2892492/azure_sea.).
+
+The site uses two Google fonts: Open Sans (mostly for page content) and Robot Condensed (mostly for headers). There also some font icons being used...these are courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
+
+I employed the aforementioned (and awesome) PrismJS for syntax highlighting. It has [a really cool build tool for generating the highlight code](http://prismjs.com/download.html), that generates nice, clean, well-optimized code.
+
+By walking away from oldIE, I was able to apply some CSS3 transitions and animations to the site...not as much as I wanted to though.  I did try to do some things that were more grand but ran into cross browser issues on the modern browsers. Thery're really just restricted to text link rollovers right now: maybe more in the future.
+
+
