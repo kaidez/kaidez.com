@@ -11,7 +11,7 @@
   // Handhelds and tablets get the Lato-type Google font. Too many 
   // fonts applied to handhelds will slow down their page load.
   body {
-    @include fonts($lato);
+    @include fonts($openSans);
   }
 
   

@@ -15,7 +15,7 @@
 
   // <body> tag
   body {
-    @include fonts($lato);
+    @include fonts($openSans);
   }
 
   .clearfix:before,

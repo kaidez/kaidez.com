@@ -14,7 +14,7 @@
 .lt-ie9 {
 
   body {
-    @include fonts($lato);
+    @include fonts($openSans);
   }
 
   .clearfix:before,

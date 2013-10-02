@@ -797,7 +797,7 @@ main a:visited {
 }
 
   .jumpToTopText {
-    @include fonts($lato);
+    @include fonts($openSans);
     display: block;
     text-align: center;
     color: #fff;
