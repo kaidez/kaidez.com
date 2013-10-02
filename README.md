@@ -66,7 +66,7 @@ When this command is run, npm will look at the plugins defined in the `devDepend
 
 ### Bower
 
-Bower itself treats Git as semi-hard dependency: Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower functionality is powered by the `.bowerrc` file for Bower-specific configurations.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
+Bower itself treats Git as semi-hard dependency.  Technically, speaking Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower configurations are managed by the `.bowerrc` file stored in the site root.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
 
 The above-mentioned `bower.json` file defines the site's packages in the `dependencies` object. These packages are core files such as [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/), [enquire.js](http://wicky.nillia.ms/enquire.js/), [jQuery](http://jquery.com/) and their respective dependencies. It's important to note that these files are "linked to" in the Bower registry and not actually "stored inside of it."
 
@@ -88,9 +88,9 @@ For more details on Grunt's `watch` task inside of kaidez.com, [review the site'
 
 ### Sass
 
-Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder first, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
+Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder, referenced in a `<link>` tag, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
 
-* The unminified version may be stop being built out and removed fom the repo someday.
+* The unminified version may stop being built out and removed fom the repo someday.
 * Sass is fun!
 
 If both Ruby and Ruby Gems are installed locally, Sass can be installed via the command line by first navigating to the site root folder, then running the following command:
@@ -104,6 +104,6 @@ For more details on Grunt's `watch` task inside of kaidez.com, [review the site'
 
 ## Hard Runtime Development-Level Dependencies
 
-kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends a POST call to the server that 1) processe the form content for server-side validation, and 2) sends the form content out in an email to the site's webmaster.
+kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends runs a POST action to the server that 1) process the form content for server-side validation, and 2) sends the form content out in an email to the site's webmaster.
 
-If the form is removed, kaidez.com can run on any web server setup that can proper serve .html, .css, .js and image files.  Apache, IIS, Ingenix, etc.
+If the form is removed, kaidez.com can run on any web server setup that can proper serve out .html, .css, .js and image files.  Apache, IIS, Nginx, etc.
