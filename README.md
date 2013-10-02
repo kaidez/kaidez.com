@@ -106,4 +106,4 @@ For more details on Grunt's `watch` task inside of kaidez.com, [review the site'
 
 kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends runs a POST action to the server that 1) process the form content for server-side validation, and 2) sends the form content out in an email to the site's webmaster.
 
-If the form is removed, kaidez.com can run on any web server setup that can proper serve out .html, .css, .js and image files.  Apache, IIS, Nginx, etc.
+If the form is removed, kaidez.com can run on any web server setup that can proper serve out .html, .css, .js and image files.  Apache, IIS, nginx, etc.
