@@ -110,7 +110,7 @@ Past that, Here's a rundown of how JS is being used:
 * to power the site's search functionality using the jQuery-powered [Tipue](http://www.tipue.com/search/).
 * to execute the mobile menu's show/hide functionality.
 * to create both affiliate ad elements and the site's search box off-DOM, then load them onto the page (a DEFINETE future blog post).
-* to show and hide the affiliate ads based on media queries with the help of the [enquire.js](http://www.tipue.com/search/).
+* to show and hide the affiliate ads based on media queries with the help of the [enquire.js](http://wicky.nillia.ms/enquire.js/).
 * to run client-side form validation.
 * to implement AJAX to process form submissions.
 
@@ -121,15 +121,3 @@ In the context of kaidez.com, RequireJS certainly "requires" further discussion.
 The Tipue search functionality mentioned above needs four JavaScript external files to work, including jQuery.  In the old days, I would have to link these four files to my page in `<script>` tags, then write actually implement the the search code in a fifth file somewhere.
 
 But by properly configuring RequireJS on my site (read more on that [here](http://requirejs.org/docs/api.html#data-main)), Tipue is, instead, set up in one file. This file includes the implementation code while the four needed files are listed as dependencies in a JavaScript array.  Here's a sample:
-
-{% prism javascript %}
-define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
-
-    $('#tipue_search_input').tipuesearch({
-      'show': 10,
-      'showURL': false,
-      'highlightEveryTerm': true
-    });
-   
-});
-{% endprism %}
