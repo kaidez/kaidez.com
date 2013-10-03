@@ -212,21 +212,66 @@ MT recently released a [DV Developer Package](http://mediatemple.net/webhosting/
 
 <a name="gruntWorkflow"></a>
 ### Grunt &amp; Development Workflow
-So far, we've discussed using Jekyll to build out my site for production, managing my CSS with Sass, using Bower to manage site runtime dependencies, using RequireJS to minify a lot of JavaScript, creating a cache manifest, running Modernizr and concatenating/minifying assets.
+So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concate/minify a lot of JavaScript and concatenating/minifying other assets.
 
-Managing all these processes require that various tasks be run at various times. And instead of doing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com).
+All these various processes means various tasks will run at various times. And instead of doing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com).
 
-And as I've told anyone in earshot for the past four months, Grunt is my new God.
+And as I've told anyone in earshot for the past two months, Grunt is my new God.
 
-Similar to things like Rake, Grunt is a JavaScript task runner that manages all of the just-mentioned tasks on my development environment, and then some. It runs on top of Node and is installed local to my project folder. The local Grunt interacts with a globally-installed Grunt command line interface tool.
+Similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner that manages all of the just-mentioned tasks in my development environment. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt command line interface tool.
 
-There are a boatload of [Grunt plugins](http://gruntjs.com/plugins) available, created by both the community and the Grunt core committers. One of the most popular plugins is [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)...over 7,000 downloads for the DAY this post was published.
+A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. One of the most popular plugins is [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)...over 7,000 downloads for the DAY this post was published.
 
-All Grunt plugins must be configured in a `Gruntfile.js` file at the root of your project folder. Once grunt-contrib-watch is configured, it can watch for changes to certain files, then run other Grunt tasks against those changed files based on your configurations.
+Grunt plugins must be configured in a `Gruntfile.js` file at the root of your project folder. Once grunt-contrib-watch is configured, it can watch for changes to certain files, then run other Grunt tasks against those changed files based on your plugin configs.
 
+The power of all this can be seen in my development workflow. It changed many times during development (and will change many more times in the future), but this is how I was doing things at the time of the site relaunch:
+
+1. Launch iTerm.
+
+2. Run a bash alias that 1) jumps to my site project folder, 2) runs `bower list` to check for dependency updates, and 3) launches my `grunt watch` task.
+
+3. Open another iTerm tab: if Bower says something needs to be updated in the other tab (including Bower), update it in this new window.
+
+4. If nothing needs to be updated, keep the window open to run bash aliases and Git commits.
+
+5. The `watch` command launched in the other window is "watching" things and performing tasks as follows:
+
+    * If Bower updates a CSS site dependency, Grunt automatically copies it over to another folder, converts its extention to `.scss`, uses Sass to minify it with other `.scss` files into the site's main `styles.min.css`, then makes Jekyll rebuild the site.
+
+    * If Bower updates a JS site dependency, Grunt automatically copies it over to another folder, uses RequireJS to minify/concatenate it with other JS files into the site's main `scripts.min.css`, then makes Jekyll rebuild the site.
+
+    * If Sass files are edited or added, the above-mentioned CSS task is run.
+
+    * If JavaScript files are added or updated, the above-mentioned JS task is run.
+
+    * If `.html`, `.xml`, `.php` or `.md` files are added or updated, Jekyll rebuilds the site.
+
+    * If `.jpg` or `.png` files are added or updated, they're minified with, respectively, [jpegtran](http://jpegclub.org/jpegtran/) or [optiping](http://optipng.sourceforge.net/), then Jekyll rebuilds the site.
+
+6. If the `grunt-modernizr` task is run, my project folder is scanned for things that Modernizr may need to feature detect (JSON, local storage, etc). Based on that scan, a custom build of Modernizr is created, bringing in only the things I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/).
+
+7. Code changes are made in Sublime Text and checked into Git in small bits using the [Tim Pope commit style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+
+8. For production deployments, my custom `grunt push` command does the following:
+
+   * Makes Jekyll build the site again, but adds the extra step of embedding related posts to the bottom of all post pages.
+
+   * Minifies the site's HTML.
+
+   * Builds out the cache manifest.
+
+   * Deploys the minified, optimized site build to production.
+
+I'm being bombastic when outline my workflow like this but am doing so to prove a point. The combination of Grunt and all the above-mentioned tools allowed me to craft a powerful, lightweight, highly-customizable integrated development environment that not only made me work efficiently but made the entire development process FUN!!!!! And within this environment, Grunt really ran the show.
 
 <a name="postLaunchTasks"></a>
 ### Post-Launch Tasks
 
 <a name="conclusion"></a>
 ### Conclusion
+
+Utilizing all these tools & techniques was just as rewarding as redesigning the site. I received a WHOLE lot of education by doing all this and am the better developer for it.
+
+Thanks for reading this very VERY long post and feel free to ask me questions!!!
+
+ -kdz
