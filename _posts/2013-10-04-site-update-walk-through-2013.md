@@ -17,8 +17,8 @@ The resulting site code is open source and [freely available on GitHub](https://
 The README uses a lot of verbose code-speak so a simpler (albeit lengthy) walk-through is required. Let's proceed with that:
 
 ## Table of Contents
-1. [Goodbye WordPress...](#wordpress)
-2. [...Hello Jekyll](#jekyll)
+1. [Goodbye, WordPress...](#wordpress)
+2. [...Hello, Jekyll](#jekyll)
 3. [Design In-Browser](#designInBrowser)
 4. [Mobile First](#mobileFirst)
 5. [Overall Design](#overallDesign)
@@ -27,10 +27,11 @@ The README uses a lot of verbose code-speak so a simpler (albeit lengthy) walk-t
 8. [SEO &amp; Accessibility](#seoAccessibility)
 9. [Web Hosting](#webHosting)
 10. [Grunt &amp; Development Workflow](#gruntWorkflow)
-11. [Conclusion](#conclusion)
+11. [Post-Launch Tasks](#postLaunchTasks)
+12. [Conclusion](#conclusion)
 
 <a name="wordpress"></a>
-### Goodbye WordPress... 
+### Goodbye, WordPress... 
 My initial plan was to design the site on top of WordPress while severely limiting WordPress' overall role. WP was to manage the back-end only: store data, implement security, optimize SQL, etc.
 
 WordPress would add as little JavaScript and CSS as possible and I would add all that myself...JavaScript especially. But a standard WordPress install comes stock with JavaScript libraries and manages them in a way that kept me from controlling the JS the way I wanted to (more about this in a future blog post).
@@ -38,7 +39,7 @@ WordPress would add as little JavaScript and CSS as possible and I would add all
 Truthfully? I could have lived with what WordPress was doing with the JS and was just being anal-retentive.  Still, I was anal-retentive so I moved away from WordPress. 
 
 <a name="jekyll"></a>
-### ...Hello Jekyll
+### ...Hello, Jekyll
 If you're around GitHub enough, you've heard of [Jekyll](http://jekyllrb.com/), the free blog-aware static site generator. [GitHub Pages](http://pages.github.com/), which power GitHub-hosted blogs, provide Jekyll its underlying HTML structure.
 
 I've created HTML site templates that are applied to all the site content.  The templates also contain [Liquid markup](http://wiki.shopify.com/Liquid), a templating language with some logic under its hood. All post content is written in [Markdown](http://daringfireball.net/projects/markdown/).
@@ -59,7 +60,7 @@ Ruby is a hard dependency for both Jekyll and Liquid and this site does use two 
 
 The end result of all this: kaidez.com's site weight is very light.  There aren't a bunch of SQL requests going back in forth, nor is there a lot of server-side scripting parsing stuff behind the scenes.
 
-Combine this with code minification and  using [MaxCDN](http://maxcdn.com) to serve up static assets, and kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and the Disqus commenting system slow things down sometimes, but the site's overall page-load time is still minimal.
+Combine this with code minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com) to serve up static assets, and kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and the Disqus commenting system slow things down sometimes, but the site's overall page-load time is still minimal.
 
 I exported content from my old WordPress site to Jekyll using [this plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter) but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/) offer alternative migration methods. Also, this [two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
 
@@ -161,9 +162,9 @@ Bower does not track EVERY library on kaidez.com: its job is to download package
 
 <a name="seoAccessibility"></a>
 ### SEO &amp; Accessibility
-The best SEO practices one can implement are creating compelling new content and cultivating your existing content to make it *more* compelling. Compelling content is primarily defined by the main search engines as content with a ton of back-links.
+The best SEO practices one can implement are creating compelling new content and cultivating your existing content to make it *more* compelling. Compelling content is primarily defined by the main search engines as content with a significant amount of back-links.
 
-If your content strategy plan doesn't implement these tasks, you have no content strategy. So moving forward, I'll try to make my content as standout as possible: this will require keyword research, running some all-in-title searches and crafting enticing meta descriptions.
+If your content strategy plan doesn't implement these two tasks, you have no content strategy. So moving forward, I'll try to make my content as standout as possible: this will require lengthy keyword research, running some all-in-title searches and crafting enticing meta descriptions.
 
 Still, I did the following SEO technical stuff behind the scenes:
 
@@ -171,15 +172,17 @@ Still, I did the following SEO technical stuff behind the scenes:
 * made sure each page had a canonical link.
 * generated an XML sitemap for the search engines.
 * made sure at least one section had pagination...view this [here](/pages/).
+* embedded [Open Graph](http://ogp.me/) protocols into the site code.
+* signed up for [Twitter Cards](https://dev.twitter.com/docs/cards).
 
 I also made sure that the site was accessible to people with disabilities by:
 
-* marked up the links with a `title` attribute for easy tab-throughs.
+* marking up the links with a `title` attribute for easy tab-throughs.
 * running some pages through a screen-reader.
-* turning off all styles and reading the page content out loud instead of letting the screen-readers do it.
-* making sure that any elements that need to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html).
+* turning off all styles and reading the rendered page content out loud instead of letting a screen-reader do it.
+* making sure that any elements that need to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that don't do this, but it's mostly done site-wide.
 
-If you don't think making your site accessible to people with disabilties, your wrong. Because as [Jen Kramer](http://www.jenkramer.org/) puts it:
+And if you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Because as [Jen Kramer](http://www.jenkramer.org/) puts it:
 
 > *"Websites that are built to be accessible will also be accessible your number one blind user: Google."*
 
@@ -191,18 +194,35 @@ I wanted a host that would let me run my site as well as install things like Nod
 
 DV Managed, Rackspace and AWS required installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME customer service in case I needed help and Rackspace seemed to pride itself on NOT providing it. So they were out.
 
-Media Temple had EXCELLENT customer service but AWS seemed to be cheaper, so I temporarily passed on upgrading my MT account and temporarily settled on using AWS.
+Media Temple has EXCELLENT customer service but AWS seemed to be cheaper than DV Managed, so I passed on upgrading my MT account and temporarily settled on AWS. And while AWS doesn't provide customer service as well, they have a ton of documentation on their various services.
 
-Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve up their static content with MaxCDN. [Kyle Rush](http://kylerush.net/) from the 2012 Obama campaign runs this setup and wrote about it [here](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/).
+Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/) from the 2012 Obama campaign runs this setup and wrote about it [here](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/).
 
 My contact form requires PHP, which can't run on S3 unless you [use Composer to install Amazon's SDK for PHP](http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/installation.html). I was researching how to do this until I discovered [Heroku](https://www.heroku.com/)...which insanely awesome!!
 
-Heroku may allow me to do the Node/Ruby stuff I want to for FREE! I'm still researching if this is doable but if it is, there's no reason to upgrade my current hosting package until I get a lot of traffic.
+Heroku allows me to do a limited amount of Node/Ruby stuff for free. I'm still researching if this is doable but if it is, there's no reason to upgrade my current hosting package.
 
-So for now, I'm sticking with my generic MT page with the plan to do some fancy coding stuff on Heroku...all of this is subject to change.
+So I'm sticking with my generic MT plan for now and will do some fancy coding stuff on Heroku...all of this is subject to change. But regardless of my taking all of the above tech stuff into consideration, I have to say that I stuck with Media Temple because of their customer service.
+
+MT recently released a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/) that offers a little less features than DV Managed, but may suit my specific needs.
 
 <a name="gruntWorkflow"></a>
 ### Grunt &amp; Development Workflow
+So far, we've discussed using Jekyll to build out my site for production, managing my CSS with Sass, using Bower to manage site runtime dependencies, using RequireJS to minify a lot of JavaScript, creating a cache manifest, running Modernizr and concatenating/minifying assets.
+
+Managing all these processes require that various tasks be run at various times. And instead of doing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com).
+
+And as I've told anyone in earshot for the past four months, Grunt is my new God.
+
+Similar to things like Rake, Grunt is a JavaScript task runner that manages all of the just-mentioned tasks, and then some. It runs on top of Node and is installed local to my project folder. The local Grunt interacts with a globally-installed Grunt command line interface tool.
+
+There are a boatload of [Grunt plugins](http://gruntjs.com/plugins) available, created by both the community and the Grunt core committers. One of the most popular plugins is [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)...over 7,000 downloads for the DAY this post was published.
+
+All Grunt plugins must be configured in a `Gruntfile.js` file at the root of your project folder. Once grunt-contrib-watch is configured, it can watch for changes to certain files, then run other Grunt tasks against those changed files based on your configurations.
+
+
+<a name="postLaunchTasks"></a>
+### Post-Launch Tasks
 
 <a name="conclusion"></a>
 ### Conclusion
