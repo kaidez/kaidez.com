@@ -266,6 +266,21 @@ I'm being bombastic when outline my workflow like this but am doing so to prove 
 
 <a name="postLaunchTasks"></a>
 ### Post-Launch Tasks
+If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20), you're familiar with the term "good enough software". It means, "the code may not be perfect, but does the job well enough."  And I do feel that way about some parts of the site.
+
+I do wish that the header was better but am absolutly fine with the code on the live site. It's optimized for mobile, renders no console errors, loads fast in a browser, looks & acts great across different browers & devices, utilizes SEO best practices and executes most events at the current 60 fps recommendation.
+
+But I'm somewhat critical of how things are working at the development level and the "good enough software" principal encourages such critism. So here are some things that I want to improve upon at a later date:
+
+  * __Make some Grunt stuff DRYer__: there are some things in my Gruntfile where the same task is repeating itself, particularly within the Bower tasks. Grunt has programmtic API that I haven't really looked at it...I need to do that eventually.
+
+
+  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox can only appear and disappear by clicking on buttons.  The show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Implementing animations correctly requires restructring the header and I was too close to being done with the redesign when I started thinking about all this.  This may de done letter and if I do so, it will also be an opportunity to redo the header.
+
+  * __Using Backbone in the contact form__: I'm really itching to use Backbone in a project and started to do so, but it would add render/event weight to the form's performance and be too much.  I still wanna use Backbone though so I may do this in the future.
+
+  * __A better deployment method__:
+
 
 <a name="conclusion"></a>
 ### Conclusion
