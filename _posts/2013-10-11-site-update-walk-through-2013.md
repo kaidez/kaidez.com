@@ -116,6 +116,8 @@ The site uses two Google fonts: Open Sans (mostly for page content) and Robot Co
 
 I employed the aforementioned (and awesome) PrismJS for code snippet highlighting. It has [a great build tool](http://prismjs.com/download.html) which generates the plugin code needed to implement syntax highlighting wherever you want to on your site.
 
+I created a [404 page](/404.html) with a little humor...
+
 By ignoring oldIE, I was able to apply some CSS3 animations and transitions to the site...although not as much as I wanted to.  I did try to do some things that were more "grand" but ran into cross-browser issues on the modern browsers. So for now, CSS3 animations/transitions are limited to some of the link rollovers.
 
 I did spend a few hours trying to apply a [flat design](http://fltdsgn.com/) to the site, but it's tough. Flat design, like [Swiss/International design](http://www.smashingmagazine.com/2009/07/17/lessons-from-swiss-style-graphic-design/) before it, is all about designing a whole lot more with a whole lot less...easier said than done.
