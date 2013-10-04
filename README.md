@@ -42,7 +42,7 @@ When this command is run, Jekyll will output a production-ready copy of the site
   
 ### RequireJS
 
-RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition specification](https://github.com/amdjs/amdjs-api/wiki/AMD).
+RequireJS is script loader for JavaScript files. Specifically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition specification](https://github.com/amdjs/amdjs-api/wiki/AMD).
 
 It is possible to rearrange kaidez.com's JS file structure and not use RequireJS, but it's recommended that RequireJS be treated as a hard dependency as it does an excellent job of treating all the JS files as single modules...this is great for development. It also preps all the files for usage on production.
 
@@ -66,7 +66,7 @@ When this command is run, npm will look at the plugins defined in the `devDepend
 
 ### Bower
 
-Bower itself treats Git as semi-hard dependency.  Technically, speaking Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower configurations are managed by the `.bowerrc` file stored in the site root.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
+Bower itself treats Git as semi-hard dependency.  Technically, speaking Bower can operate if Git is not installed locally, but this is not recommend. kaidez.com's Bower configurations are managed by the `.bowerrc` file stored in the site root.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
 
 The above-mentioned `bower.json` file defines the site's packages in the `dependencies` object. These packages are core files such as [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/), [enquire.js](http://wicky.nillia.ms/enquire.js/), [jQuery](http://jquery.com/) and their respective dependencies. It's important to note that these files are "linked to" in the Bower registry and not actually "stored inside of it."
 
@@ -90,7 +90,7 @@ For more details on Grunt's `watch` task inside of kaidez.com, [review the site'
 
 Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder, referenced in a `<link>` tag, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
 
-* The unminified version may stop being built out and removed fom the repo someday.
+* The unminified version may stop being built out and removed from the repo someday.
 * Sass is fun!
 
 If both Ruby and Ruby Gems are installed locally, Sass can be installed via the command line by first navigating to the site root folder, then running the following command:
