@@ -5,7 +5,11 @@ author: Kai Gittens
 layout: post
 permalink: /html5-gallery-coolsite/
 meta-excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
+<<<<<<< HEAD
 category: review
+=======
+category: reviews
+>>>>>>> origin/master
 cat-name: "Reviews"
 tags: [html5]
 ---

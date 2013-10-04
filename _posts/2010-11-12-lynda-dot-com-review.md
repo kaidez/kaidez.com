@@ -5,7 +5,7 @@ author: Kai Gittens
 layout: post
 permalink: /lynda-dot-com-review/
 meta-excerpt: A mostly positive review of lynda.com and its courses, front-end development and PhotoShop are discussed.
-category: reviews
+category: reviewss
 cat-name: "Reviews"
 tags: [review]
 ---

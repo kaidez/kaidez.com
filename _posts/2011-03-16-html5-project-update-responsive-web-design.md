@@ -5,7 +5,7 @@ author: Kai Gittens
 layout: post
 meta-excerpt: An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end
 permalink: /html5-project-update-responsive-web-design/
-category: Coding Best Practices
+category: "Code Tips"
 cat-name: "coding-best-practices"
 tags: [rwd, html5, media queries]
 ---

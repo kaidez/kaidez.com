@@ -1,6 +1,6 @@
 # WHAT IS THIS?
 
-This is repos contains the source code for [kaidez.com](http://kaidez/com). It is 100% open source.
+This is the repo that contains the source code for the [kaidez.com](http://kaidez/com) website. It is 100% open source.
 
 ## Hard Development-Level Dependencies
 
@@ -10,7 +10,7 @@ For developing the site on a local machine, there are some hard development-leve
 
 * [Ruby Gems](http://rubygems.org/): to install Gems, i.e. Ruby-related packages like Sass and Jekyll.
 
-* [Jekyll](http://jekyllrb.com/): a blog-aware static engine that manages HTML & Markdown files, and also builds out a production copy of the site.
+* [Jekyll](http://jekyllrb.com/): a blog-aware static site generator that manages HTML & Markdown files, and also builds out a production copy of the site.
 
 * [RequireJS](http://requirejs.org/): a JavaScript-based script-loader used to manage JavaScript files as modular dependencies.
 
@@ -42,15 +42,15 @@ When this command is run, Jekyll will output a production-ready copy of the site
   
 ### RequireJS
 
-RequireJS is script loader for JavaScript files. Specfically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition specification](https://github.com/amdjs/amdjs-api/wiki/AMD).
+RequireJS is script loader for JavaScript files. Specifically, RequireJS focuses on (almost) all the JavaScript files located in the `requireBuildOut` folder and treats then as dependency modules based on the [Asynchronous Module Definition specification](https://github.com/amdjs/amdjs-api/wiki/AMD).
 
 It is possible to rearrange kaidez.com's JS file structure and not use RequireJS, but it's recommended that RequireJS be treated as a hard dependency as it does an excellent job of treating all the JS files as single modules...this is great for development. It also preps all the files for usage on production.
 
 Within kaidez.com's site structure, RequireJS depends on two files: 1) `requireBuildOut/require.js` to manage and treat all the JS files as modules, and 2) `r.js` in the root folder to concatenate and minify (almost) all the files in `requireBuildOut`.
 
-Within kaidez.com on the development level, the RequireJS functionality is managed by GruntJS. GruntJS concat/minify all the JS files into a single `scripts.min.js` file and load it into the `js` folder. This can be done via the command line by first navigating to the site root folder, then running the following command:
+Within kaidez.com on the development level, the RequireJS functionality is managed by GruntJS. GruntJS concats/minifies all the JS files into a single `scripts.min.js` file and load it into the `js` folder. This can be done via the command line by first navigating to the site root folder, then running the following command:
 
-    grunt require
+    grunt requirejs
     
 ## Understanding the Loose Development-Level Dependencies
 
@@ -66,7 +66,7 @@ When this command is run, npm will look at the plugins defined in the `devDepend
 
 ### Bower
 
-Bower itself treats Git as semi-hard dependency.  Technically, speaking Bower can operate if Git is not installed locally, but this is not recommened. kaidez.com's Bower configurations are managed by the `.bowerrc` file stored in the site root.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
+Bower itself treats Git as semi-hard dependency.  Technically, speaking Bower can operate if Git is not installed locally, but this is not recommend. kaidez.com's Bower configurations are managed by the `.bowerrc` file stored in the site root.  The `bower.json` at the site root lists site dependencies, *not* things that Bower depends on.
 
 The above-mentioned `bower.json` file defines the site's packages in the `dependencies` object. These packages are core files such as [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/), [enquire.js](http://wicky.nillia.ms/enquire.js/), [jQuery](http://jquery.com/) and their respective dependencies. It's important to note that these files are "linked to" in the Bower registry and not actually "stored inside of it."
 
@@ -90,7 +90,7 @@ For more details on Grunt's `watch` task inside of kaidez.com, [review the site'
 
 Sass is not a hard dependency of kaidez.com: an unminfied version of the main `style.css` file exists in the `grunt/cssSource` folder and can be copied over to the `css` folder, referenced in a `<link>` tag, then manually edited. However, it's suggested that the site's CSS be managed by either Sass or another CSS preprocessor because:
 
-* The unminified version may stop being built out and removed fom the repo someday.
+* The unminified version may stop being built out and removed from the repo someday.
 * Sass is fun!
 
 If both Ruby and Ruby Gems are installed locally, Sass can be installed via the command line by first navigating to the site root folder, then running the following command:
@@ -104,6 +104,6 @@ For more details on Grunt's `watch` task inside of kaidez.com, [review the site'
 
 ## Hard Runtime Development-Level Dependencies
 
-kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends runs a POST action to the server that 1) process the form content for server-side validation, and 2) sends the form content out in an email to the site's webmaster.
+kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends runs a POST action to the server that 1) process the form content for server-side validation, and 2) sends the form content out in an email to a pre-defined email address.
 
 If the form is removed, kaidez.com can run on any web server setup that can proper serve out .html, .css, .js and image files.  Apache, IIS, nginx, etc.
