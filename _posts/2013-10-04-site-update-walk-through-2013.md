@@ -33,9 +33,9 @@ The README uses a lot of verbose code-speak so a simpler (but also lengthy) walk
 
 <a name="wordpress"></a> 
 ### Goodbye, WordPress... 
-My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.), but do little in terms of managing JavaScript and CSS. That would be my job, particularly the JavaScript.
+My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
 
-WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to (more about this in a future blog post). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress. 
+WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to (more about that in a future blog post). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress. 
 
 <a name="jekyll"></a>
 ### ...Hello, Jekyll
@@ -55,11 +55,9 @@ Here are some tasks that Jekyll runs when building the site out for production:
 * it builds an XML-powered RSS file for syndication.
 * it places a short list of related posts at the end of each blog post.
 
-Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/) and one used in conjunction with [Lea Verou's](http://lea.verou.me/) excellent [PrismJS syntax highlighter plugin](http://prismjs.com/). But Jekyll really does the work of prepping this site for deployment.
+Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/) and one used in conjunction with [Lea Verou's](http://lea.verou.me/) excellent [PrismJS syntax highlighter plugin](http://prismjs.com/). But Jekyll really does the work of prepping this site's content for deployment.
 
-A nice by-product of all this: kaidez.com's site weight is very light.  There aren't a bunch of SQL queries going back and forth, nor is there a lot of server-side scripting parsing stuff behind the scenes.
-
-Combine that with code/asset minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com) to serve up static content, and kaidez.com loads into a web browser pretty fast. Things like ads and social networking widgets slow things down sometimes, but the site's overall page-load time is still minimal.
+Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, using a cache manifest and using [MaxCDN](http://maxcdn.com) to serve up static content, and kaidez.com loads into a web browser pretty fast. Things like ads and social networking widgets slow things down sometimes, but the site's overall page-load time is still minimal.
 
 I exported content from my old WordPress site to Jekyll using [this plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter) but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/) lists alternative migration methods. Also, this [two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
 
@@ -84,9 +82,9 @@ Instead, I designed this site within a browser using a variety of desktop and re
 
 <a name="mobileFirst"></a>
 ### Mobile First
-"Mobile First" has gone from a buzz word to a W3C web standard (read my previous post about that [here](/media-queries-important/)) . It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
+"Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
 
-No issues with going Mobile First with the content strategy in my case. I did a complete content audit of the previous site, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
+No issues with going Mobile First with the content strategy for this redesign. I did a complete content audit of the previous site, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
 Doing this for the code was a bit of problem and it still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with [Sass](http://sass-lang.com/), of course.  All this benefits oldIE.
 
@@ -100,13 +98,13 @@ In terms of supporting IE versions prior to 8, I'll just paraphrase Shakespeare:
 >
 > *"By my heel, I care not!!!"*
 
-Past all this, some "mobile first" things are done right, such as:
+Past all this, some "Mobile First" things are done right, such as:
 
-* no third-party affiliate ads load in the site's mobile view.  Google ads have to load due to Google's rules, but they	 do so asynchronously.
+* no third-party affiliate ads load in the site's mobile view.  Google ads have to load due to Google's rules, but they	do so asynchronously...*and* responsively.  More on this later as well.
 
-* one less third party font loads in the mobile view...that number may increase.
+* one less third-party font loads in the mobile view.
 
-* gradients, box shadows and text shadow impend site load time since they force browser paints...these things appear on the tablet/desktop view but are removed from the site's mobile view.
+* gradients, box shadows and text shadows impend site load time since they force browser paints...these things appear on the tablet/desktop view but are removed from the site's mobile view.
 
 <a name="overallDesign"></a>
 ### Overall Design
@@ -131,9 +129,9 @@ But while its simplicity is difficult to implement, flat design ties in well wit
 
 <a name="jsRequireJS"></a>
 ### JavaScript...RequireJS Specifically
-As mentioned earlier, my primary goal while developing this site was to maintain total control over all of its front-end code, especially the JavaScript. And I'm proud to say that I reached this goal.
+As mentioned earlier, my primary goal while developing this site was to maintain total control over all the front-end code, especially the JavaScript. I'm proud to say I achieved this goal.
 
-The best thing about kaidez.com's JavaScript code is that it's not 100% jQuery-dependent...lots of pure JS is implemented. jQuery is certainly used on the site, it just wasn't my default position when writing JS code...like it has been in the past.
+The best thing about this site's JavaScript is that it's not 100% jQuery-dependent...lots of pure JS is implemented. jQuery is certainly used on the site, it just wasn't my default position when writing JS code...like it has been in the past.
 
 Many leaders in the developer community are pushing for other devs to use more pure JavaScript and less jQuery in their work. For my money, [Remy Sharp](http://remysharp.com/2013/04/19/i-know-jquery-now-what/) and [Todd Motto](http://toddmotto.com/is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background/) have provided the most compelling arguments here.
 
@@ -142,7 +140,7 @@ Here's a rundown of how some of the JavaScript is being used on kaidez.com:
 * to run PrismJS.
 * to power the site's search functionality via the [Tipue plugin for jQuery](http://www.tipue.com/search/).
 * to execute the mobile menu's show/hide functionality.
-* to create both affiliate ads and the site's search box off-DOM, then load them onto the page (a DEFINITE future blog post).
+* to create both affiliate ads and the search box off-DOM, then load them onto the page (a DEFINITE future blog post).
 * to show and hide the affiliate ads based on media queries with the help of the [enquire.js](http://wicky.nillia.ms/enquire.js/).
 * to run client-side form validation.
 * to let AJAX process form submissions.
@@ -159,7 +157,7 @@ RequireJS does all of the worrying for me. I made sure it was properly configure
 
 RequireJS doesn't manage ALL of this site's JavaScript...we'll discuss that in a minute. But RequireJS manages most of it.. And very well.
 
-There's not enough space in this post to discuss the brilliance of RequireJS so if you want to get up and running with it, I'm going to push you to [read the RequireJS API docs](http://requirejs.org/docs/api.html). The JavaScript/WordPress issues mentioned above were RequireJS-related so the promised blog post will discuss it when it's published. And I MIGHT do a complete RequireJS screencast in the future.
+There's not enough space in this post to discuss the brilliance of RequireJS so if you want to get up and running with it, I'm going to push you to [read the RequireJS API docs](http://requirejs.org/docs/api.html). The JavaScript/WordPress issues mentioned above were RequireJS-related so that future blog post will refer to it when published. And I MIGHT do a complete RequireJS screencast in the future.
 
 I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro/4686136) where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS.  It also discusses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), which RequireJS is heavily based upon.
 
@@ -169,7 +167,7 @@ There are some great comments in the Gist, many by well-known members of the JS 
 ### JavaScript...The Asynchronous Kind
 RequireJS doesn't interact with all of this site's JavaScript.  Modernizr, for example, lives on its own directly above the `<head>` tag, which is best practice.
 
-The rest of the JavaScript outside of RequireJS loads asynchronously, i.e., it loads onto the page in a manner that doesn't block page loading and rendering. Note that the minified RequireJS file does the same thing.
+The rest of the JavaScript outside of RequireJS loads asynchronously, i.e., it loads onto the page in a manner that doesn't block page loading and content rendering. Note that the minified RequireJS file does the same thing.
 
 The async code consists of:
 
@@ -183,14 +181,14 @@ The async code consists of:
 
 The Chris Coyier code is excellent but I have to single out the Google dev team and give them credit. All this code's been in need of cleanup for the years leading up to this writing, and they certainly cleaned stuff up.
 
-The Analytics/Webmaster code was once split into to two separate JS files...it's now been combined into one. The Web Font Loader code can obviously run Google and Typekit fonts, but it's been shared with fonts.com and Fontdeck so can implement it as well.
+The Analytics/Webmaster code was once split into to two separate JS files...it's now been combined into one. The Web Font Loader code can obviously run Google and Typekit fonts, but it's been shared with fonts.com and Fontdeck so can they implement it as well.
 
-And the ad code...not only is it async, it's also **RESPONSIVE!** It doesn't scale ads on web window resize, it just detects the window width with media queries on page-load, then loads in an ad of size that you preset. But it's a MAJOR step-up that solves a MAJOR problem that many people were having.
+And the ad code...not only is it async, it's also **RESPONSIVE!** It doesn't scale ads when the window is resized, it just detects the window width with media queries on page-load, then loads in an ad of size that you preset. But it's a MAJOR step-up that solves a MAJOR problem that many people were having.
 
 All is not perfect with the Google stuff: the Adsense-related JS files still load in without far-future expiring server headers, which is a bit of a performance hit. But I'm certainly not crying over that because I'm happy with (and respect) what Google has done here.
 <a name="bower"></a>
 ### Bower
-The site's JavaScript/CSS libraries and frameworks get updated when they need to, but watching for the updates on a consistent basis is a pain...[Bower](http://bower.io) makes it easy.
+This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io) makes it easy.
 
 Bower is a browser-based package manager that runs on top of Node and (sorta/kinda) depends on Git. When Bower is properly configured and you type `bower list` on the command line from your project folder, Bower checks to see if any of these files needs to be updated (as well as Bower itself). If any packages need updating, simply type `bower update <whatever-the-package>`.
 
@@ -198,7 +196,7 @@ Bower does not track EVERY library on kaidez.com: its job is to download package
 
 <a name="seoAccessibility"></a>
 ### SEO &amp; Accessibility
-The two best SEO practices you can implement on your site are 1) creating compelling new content, and 2) cultivating your existing content to make it *more* compelling. Compelling content is primarily defined by the main search engines as content with a significant amount of back-links.
+The two best SEO practices you can implement on your site are 1) creating compelling new content, and 2) cultivating your existing content to make it *more* compelling. Compelling content is primarily (but not singularly) defined by the main search engines as content with a significant amount of back-links.
 
 If your content strategy plan doesn't implement these two tasks, you have no content strategy plan. So moving forward, I'll try to make my content as standout as possible with the goal of garnering back-links. This will require lengthy keyword research, running some all-in-title searches and crafting enticing meta descriptions.
 
@@ -226,7 +224,7 @@ And if you don't think making your site accessible to people with disabilities i
 ### Web Hosting
 I'm sticking with my basic [Media Temple](http://www.mediatemple.net#a_aid=5068b81963acf) Grid Server package but deciding on a web host was really something I struggled with up to the last minute.
 
-I wanted a host that would run my site as well as let me install things like Node and Ruby.  The last two things aren't allowed with my current hosting package so I could either upgrade to Media Temple [DV Managed](http://mediatemple.net/webhosting/vps/managed/) or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/) or [Amazon Web Services](http://aws.amazon.com/) in this case.
+I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple [DV Managed](http://mediatemple.net/webhosting/vps/managed/) or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/) or [Amazon Web Services](http://aws.amazon.com/) in this case.
 
 DV Managed, Rackspace and AWS required installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME tech support in case I needed help and Rackspace seemed to pride itself on NOT providing this. So they were out.
 
@@ -248,15 +246,15 @@ Media Temple recently began offering a [DV Developer Package](http://mediatemple
 ### Grunt &amp; Development Workflow
 So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concate/minify a lot of JavaScript and concatenating/minifying other assets.
 
-All these various processes means various tasks will run at various times. And instead of doing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com).
+All these various processes means various tasks need to run at various times. And instead of doing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com).
 
 And as I've told anyone in earshot for the past two months, Grunt is my new God.
 
-Similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner that manages all of the just-mentioned tasks and processes within my development environment, and one or two more. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
+Similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner that manages all of the just-mentioned tasks and a few more inside my development environment. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
 
-A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. One of the most popular plugins is [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)...over 7,000 downloads for the DAY this post was published.
+A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. One of the most popular plugins is [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch).
 
-Grunt plugins must be configured in a `Gruntfile.js` file at the root of your project folder. Once grunt-contrib-watch is configured, it can "watch" for changes to certain files, then run Grunt tasks against those file changes based on your plugin configs.
+Grunt tasks must be configured in a `Gruntfile.js` file that's usually at the root of your project folder. Once grunt-contrib-watch is configured, it can "watch" for changes to certain files, then run Grunt tasks against the changes based on your plugin configs.
 
 The power of all this can be seen in my development workflow. It changed many times during development (and will change many more times in the future), but this is how I was doing things at the time of the site relaunch:
 
@@ -282,7 +280,7 @@ The power of all this can be seen in my development workflow. It changed many ti
 
     * If `.jpg` or `.png` files are added or updated, they're minified with, respectively, [jpegtran](http://jpegclub.org/jpegtran/) or [optiping](http://optipng.sourceforge.net/), then Jekyll rebuilds the site.
 
-6. If the `grunt-modernizr` task is run, my project folder is scanned for things that Modernizr may need to feature-detect (JSON, local storage, etc). Based on that scan, a custom build of Modernizr is created, bringing in only the feature-detects I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/).
+6. If the `grunt-modernizr` task is run, a pre-defined group of files is scanned for things that Modernizr may need to feature-detect. Based on that scan, a custom build of Modernizr is created, bringing in only the feature-detects I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/).
 
 7. Code changes are made in Sublime Text and checked into Git in small bits using the [Tim Pope commit style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
@@ -302,19 +300,19 @@ I'm being bombastic when outline my workflow like this but am doing so to prove 
 ### Post-Launch Tasks
 If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20), you're familiar with the term "good enough software". It means, "the code may not be perfect, but does the job well enough."  And I do feel that way about some parts of the site.
 
-I do wish that the header was better but am absolutely fine with the code on the live site. It's optimized for mobile, renders no console errors, loads fast in a browser, looks & acts great across different browsers & devices, utilizes SEO best practices and executes most events at the current 60 fps recommendation.
+Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors, loads fast in a browser, looks & acts great across different browsers & devices, utilizes SEO best practices and executes most events at the current 60 fps recommendation.
 
-But I'm somewhat critical of how things are working at the development level and the "good enough software" principal encourages such critism. So here are some things that I want to improve upon at a later date:
+But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principal encourages criticism so here are some things that I want to improve upon at a (not too) later date:
 
-  * __Make some Grunt stuff DRYer__: there are some things in my Gruntfile where the same task is repeats itself, particularly within the Bower tasks. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) but I haven't really looked at it.  I need to do that.
+  * __Make some Grunt stuff DRYer__: there are some spots in my Gruntfile where the same task is repeats itself, particularly within the Bower tasks. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) but I haven't really looked at it.  I need to do that.
 
-  * __Clean up the CSS &amp; Sass__: As I said before, I KNOW that the CSS in it's current format could be cleaned up and optimized.  And I do want to clean it up in IE8. My hope is to all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/).  
+  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/).  
 
-  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox can only appear and disappear by clicking on some buttons at the top.  This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Implementing animations correctly on this site means restructuring the header, and I was too close to being done with the redesign when I started thinking about all this.  This may be done later and if so, it will also be an opportunity to redo the header.
+  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox can only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
 
   * __Using Backbone in the contact form__: I'm really itching to use Backbone in a project and started to do so with my contact form, but it would add rendering/event weight to the form's performance and might be too much.  I still want to use Backbone though so I may do this in the future.
 
-  * __A better deployment method__: if your Jekyll site content is more than just a home page and blog posts AND is hosted anyplace other than GitHub, you may have to redeploy the ENTIRE site every time you make a change...even a small one/ There are ways to use Git commit hooks to deploy your site after it's pushed up to a remote repo like GitHub, but it's tough to do with Jekyll.  Still need to research this.
+  * __A better deployment method__: if your Jekyll site content is more than just a home page and blog posts AND is hosted anyplace other than GitHub, you may have to redeploy the ENTIRE site every time you make a change...even a small one. There are ways to use Git commit hooks to deploy your site after it's pushed up to a remote repo like GitHub, but it's tough to do with Jekyll.  Still researching this.
 
 
 <a name="conclusion"></a>
