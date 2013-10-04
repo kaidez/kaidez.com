@@ -5,7 +5,7 @@ author: Kai Gittens
 layout: post
 permalink: /html5-article-roundup/
 meta-excerpt: A list of great HTML5 articles compiled by kaidez
-category: review
+category: reviews
 cat-name: "Reviews"
 tags: [html5, review]
 ---

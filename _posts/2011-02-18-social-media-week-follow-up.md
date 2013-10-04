@@ -5,7 +5,7 @@ author: Kai Gittens
 layout: post
 permalink: /social-media-week-follow-up/
 meta-excerpt: Kristin Volk of MediaVest added some extra information to my recap of the Cross-Mobile Promotion panel at the 2011 NYC Social Media Week
-category: reviews
+category: reviewss
 cat-name: "Reviews"
 tags: [social media, review]
 ---
