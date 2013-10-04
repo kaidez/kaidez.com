@@ -5,11 +5,7 @@ author: Kai Gittens
 layout: post
 permalink: /html5-games-development-book/
 meta-excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
-<<<<<<< HEAD
 category: reviews
-=======
-category: reviewss
->>>>>>> origin/master
 cat-name: "Reviews"
 has-thumbnail: html5GamesThumb.jpg
 tags: [book, review, beginner]

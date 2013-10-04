@@ -5,7 +5,7 @@ author: Kai Gittens
 layout: post
 permalink: /nyc-social-media-week-event-recap-social-listening/
 meta-excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
-category: reviewss
+category: reviews
 cat-name: "Reviews"
 tags: [social networking, review]
 ---
