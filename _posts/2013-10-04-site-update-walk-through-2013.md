@@ -284,7 +284,9 @@ The power of all this can be seen in my development workflow. It changed many ti
 
 7. Code changes are made in Sublime Text and checked into Git in small bits using the [Tim Pope commit style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
-8. For production deployments, my custom `grunt push` command does the following:
+8. Code changes are reviewed on a MAMP-powered localhost.
+
+9. For production deployments, my custom `grunt push` command does the following:
 
    * Makes Jekyll build the site again, but adds the extra step of embedding related posts to the bottom of all post pages.
 
