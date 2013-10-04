@@ -220,7 +220,7 @@ I also made sure that the site was accessible to people with disabilities by:
 * turning off all styles and reading the rendered page content out loud instead of letting a screen-reader do it.
 * making sure that any elements that needs to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that I didn't do this, but it's mostly done site-wide.
 
-If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibilty is important...especially on moble. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/).
+If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibilty is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/).
 
 If you need convincing after reading that, refer to what [Jen Kramer](http://www.jenkramer.org/) says:
 
