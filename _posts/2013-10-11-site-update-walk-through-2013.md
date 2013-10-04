@@ -165,27 +165,29 @@ There are some great comments in the Gist, many by well-known members of the JS 
 
 <a name="otherJS"></a>
 ### The Rest Of The JavaScript
-RequireJS doesn't interact with all of this site's JavaScript.  Modernizr, for example, lives on its own directly above the `<head>` tag, which is best practice.
+RequireJS doesn't interact with all of this site's JavaScript.  The RequireJS code is placed at the bottom of the page and some things need to go at the top.
+
+Modernizr lives on its own directly above the `<head>` tag, which is best practice. The Google Fonts load in using the [Google/Typekit Web Font Loader](https://github.com/typekit/webfontloader) and should be placed at the top of the page before Modernizr
 
 The rest of the JavaScript outside of RequireJS loads asynchronously, i.e., it loads onto the page in a manner that doesn't block page loading and content rendering. Note that the minified RequireJS file does the same thing.
+
+Also note that the Web Font Loader code *can* be loaded asynchronously but [as its documentaion states](https://github.com/typekit/webfontloader#get-started), it will generate a lot of FOUTS.
 
 The async code consists of:
 
 * __[Google Analytics/Webmaster Tools code](https://support.google.com/analytics/answer/1142414?hl=en)__: the combined code tracks crawl errors, sitemap errors, traffic,etc.
 
-* __[Google/Typekit Web Font Loader code](https://github.com/typekit/webfontloader)__: for loading this site's Google Fonts.
-
 * __[Google Adsense code](https://support.google.com/adsense/answer/3221666?hl=en)__: for loading ads.
 
-* __[Social sharing functionality on the post pages](http://css-tricks.com/thinking-async/)__: props to Chris Coyier here.
+* __[Social sharing functionality on the post pages](https://gist.github.com/necolas/1025811)__: props to Nicholas Gallagherr here.
 
-The Chris Coyier code is excellent but I have to single out the Google dev team and give them credit. All this code's been in need of cleanup for the years leading up to this writing, and they certainly cleaned stuff up.
+I also have to give props to the Google Dev Team: all their code mentioned here has been in need of a cleanup for the few years leading up to this writing, and they certainly cleaned it up.
 
-The Analytics/Webmaster code was once split into to two separate JS files...it's now been combined into one. The Web Font Loader code can obviously run Google and Typekit fonts, but it's been shared with fonts.com and Fontdeck so can they implement it as well.
+The Analytics/Webmaster code was once split into to two separate JS files...it's now been combined into one.  And the ad code is not only it async, it's also **RESPONSIVE!**
 
-And the ad code...not only is it async, it's also **RESPONSIVE!** It doesn't scale ads when the window is resized, it just detects the window width with media queries on page-load, then loads in an ad of size that you preset. But it's a MAJOR step-up that solves a MAJOR problem that many people were having.
+Google ads don't scale when the window is resized, its related code just uses media queries to detect the window width on page-load, then loads in an ad of size that you preset. But it solves a MAJOR problem that many people were having.
 
-All is not perfect with the Google stuff: the Adsense-related JS files still load in without far-future expiring server headers, which is a bit of a performance hit. But I'm certainly not crying over that because I'm happy with (and respect) what Google has done here.
+All is not perfect with the Google stuff: the Adsense code still loads in a lot of unoptimized images and JS files, causing a bit of a performance hit. But I'm certainly not crying over that because I'm happy with (and respect) what Google has done here.
 <a name="bower"></a>
 ### Bower
 This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io) makes it easy.
