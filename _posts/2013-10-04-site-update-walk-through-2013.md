@@ -308,7 +308,7 @@ But I'm somewhat critical of how things are working at the development level and
 
   * __Make some Grunt stuff DRYer__: there are some things in my Gruntfile where the same task is repeats itself, particularly within the Bower tasks. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) but I haven't really looked at it.  I need to do that.
 
-  * Clean up the CSS &amp; Sass__: As I said before, I KNOW that the CSS could be cleaned up and optimized.  And I do want to clean it up in IE8. My hope is to all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/).  
+  * Clean up the CSS &amp; Sass__: As I said before, I KNOW that the CSS in it's current format could be cleaned up and optimized.  And I do want to clean it up in IE8. My hope is to all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/).  
 
   * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox can only appear and disappear by clicking on some buttons at the top.  This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Implementing animations correctly on this site means restructuring the header, and I was too close to being done with the redesign when I started thinking about all this.  This may be done later and if so, it will also be an opportunity to redo the header.
 
