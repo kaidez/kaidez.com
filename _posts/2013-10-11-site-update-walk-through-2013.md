@@ -220,6 +220,7 @@ I also made sure that the site was accessible to people with disabilities by:
 * turning off all styles and reading the rendered page content out loud instead of letting a screen-reader do it.
 * making sure that any elements that needs to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that I didn't do this, but it's mostly done site-wide.
 
+I'll also say this...  http://blog.austinseraphin.com/about/
 And if you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Because as [Jen Kramer](http://www.jenkramer.org/) puts it:
 
 > *"Websites that are built to be accessible will also be accessible your number one blind user: Google."*
