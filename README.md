@@ -50,7 +50,7 @@ Within kaidez.com's site structure, RequireJS depends on two files: 1) `requireB
 
 Within kaidez.com on the development level, the RequireJS functionality is managed by GruntJS. GruntJS concats/minifies all the JS files into a single `scripts.min.js` file and load it into the `js` folder. This can be done via the command line by first navigating to the site root folder, then running the following command:
 
-    grunt require
+    grunt requirejs
     
 ## Understanding the Loose Development-Level Dependencies
 
