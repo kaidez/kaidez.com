@@ -23,7 +23,7 @@ The README uses a lot of verbose code-speak so a simpler (but also lengthy) walk
 4. [Mobile First](#mobileFirst)
 5. [Overall Design](#overallDesign)
 6. [JavaScript...RequireJS Specifically](#jsRequireJS)
-7. [JavaScript...The Asynchronous Kind](#asyncJS)
+7. [The Rest Of The JavaScript](#otherJS)
 8. [Bower](#bower)
 9. [SEO &amp; Accessibility](#seoAccessibility)
 10. [Web Hosting](#webHosting)
@@ -163,8 +163,8 @@ I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro
 
 There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from [Ben Alman A.K.A. "cowboy"](http://benalman.com/) that perfectly sums up how RequireJS eliminates a lot of worry from JavaScript development.
 
-<a name="asyncJS"></a>
-### JavaScript...The Asynchronous Kind
+<a name="otherJS"></a>
+### The Rest Of The JavaScript
 RequireJS doesn't interact with all of this site's JavaScript.  Modernizr, for example, lives on its own directly above the `<head>` tag, which is best practice.
 
 The rest of the JavaScript outside of RequireJS loads asynchronously, i.e., it loads onto the page in a manner that doesn't block page loading and content rendering. Note that the minified RequireJS file does the same thing.
