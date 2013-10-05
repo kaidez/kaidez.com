@@ -66,12 +66,12 @@
 @media #{$desktop-tablet-non-retina} { 
 
   body {
-    background: url(../img/white_carbon.png);
+    background: url(http://kaidez.kaidez.netdna-cdn.com/img/white_carbon.png);
   }
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/kaidez-sprite.png',  -10px -42px, 62px, 221px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png',  -10px -42px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -89,7 +89,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite.png', -88px -4px, 27px, 44px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -88px -4px, 27px, 44px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -99,15 +99,15 @@
   }
 
   .jekyll {
-    @include sprite-images('../img/kaidez-sprite.png', -10px -169px, 58px, 151px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -10px -169px, 58px, 151px);
   }
 
   .mediaTemple {
-    @include sprite-images('../img/kaidez-sprite.png', -14px -228px, 57px, 151px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -14px -228px, 57px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/kaidez-sprite.png', -4px -286px, 58px, 151px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -4px -286px, 58px, 151px);
   }
 }
 
@@ -126,13 +126,13 @@
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/kaidez-sprite.png', 0px -107px, 60px, 176px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', 0px -107px, 60px, 176px);
     @include desktop-logo-sprite-add-on;
   }
 
  // Menu bg image for mobile
   .mobile-menu-btn-class {
-    @include sprite-images('../img/kaidez-sprite.png', -2px 8px, 44px, 44px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -2px 8px, 44px, 44px);
     display: block;
     float: right;
     margin-right: 10px;
@@ -141,7 +141,7 @@
 
  // Search bg image for mobile
   .search-btn-class {
-    @include sprite-images('../img/kaidez-sprite.png', -41px 8px, 44px, 44px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -41px 8px, 44px, 44px);
     display: block;
     margin-right:10px;
     cursor: pointer;
@@ -150,7 +150,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite.png', -88px -4px, 27px, 28px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite.png', -88px -4px, 27px, 28px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -170,12 +170,12 @@
 @media #{$desktop-tablet-retina} {
 
   body {
-    background: url(../img/white_carbon@2X.png);
+    background: url(http://kaidez.kaidez.netdna-cdn.com/img/white_carbon@2X.png);
   } 
 
  // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/kaidez-sprite@2x.png',  -10px -42px, 62px, 221px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png',  -10px -42px, 62px, 221px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -193,7 +193,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -79px -4px, 27px, 44px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -79px -4px, 27px, 44px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -203,15 +203,15 @@
   }
 
   .jekyll {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -10px -169px, 58px, 151px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -10px -169px, 58px, 151px);
   }
 
   .mediaTemple {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -14px -228px, 57px, 151px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -14px -228px, 57px, 151px);
   }
 
   .maxcdn {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -4px -286px, 58px, 151px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -4px -286px, 58px, 151px);
   }
 }
 
@@ -226,12 +226,12 @@
 @media #{$mobile-retina} { 
 
    body {
-    background: url(../img/white_carbon@2X.png);
+    background: url(http://kaidez.kaidez.netdna-cdn.com/img/white_carbon@2X.png);
   } 
 
   // <h1> tag in the <header>
   .site-title {
-    @include sprite-images('../img/kaidez-sprite@2x.png', 0px -107px, 60px, 176px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', 0px -107px, 60px, 176px);
     text-indent: -999px;
     margin: 0;
     float: left;
@@ -239,7 +239,7 @@
 
  // Menu bg image for mobile
   .mobile-menu-btn-class {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -2px 8px, 44px, 44px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -2px 8px, 44px, 44px);
     display: block;
     float: right;
     margin-right: 10px;
@@ -248,7 +248,7 @@
 
  // Search bg image for mobile
   .search-btn-class {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -41px 8px, 44px, 44px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -41px 8px, 44px, 44px);
     display: block;
     margin-right:10px;
     cursor: pointer;
@@ -257,7 +257,7 @@
 
  // Search button by the search field
   .btnSearch {
-    @include sprite-images('../img/kaidez-sprite@2x.png', -88px -4px, 27px, 28px);
+    @include sprite-images('http://kaidez.kaidez.netdna-cdn.com/img/kaidez-sprite@2x.png', -88px -4px, 27px, 28px);
     border: 0;
     text-indent: -999px;
     padding: 0;
@@ -268,7 +268,7 @@
 }
 
 
-// ============================================================================
+// ====================================================================
 // The entire retina/non-retina media query styles ends
-// ============================================================================
+// ====================================================================
  

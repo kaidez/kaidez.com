@@ -1,13 +1,13 @@
     {% if post.has-thumbnail %}
 
     <a href="{{ post.url }}">
-      <img src="/img/{{ post.has-thumbnail }}" class="snippetThumb" height="100" width="100" alt="{{ post.title }}" align="left" />
+      <img src="http://kaidez.kaidez.netdna-cdn.com/img/{{ post.has-thumbnail }}" class="snippetThumb" height="100" width="100" alt="{{ post.title }}" align="left" />
     </a>
 
     {% else %}
 
     <a href="{{ post.url }}">
-      <img src="/img/kaidezHomePage.jpg" class="snippetThumb" height="100" width="100" alt="{{ post.title }}"  align="left"  />
+      <img src="http://kaidez.kaidez.netdna-cdn.com/img/kaidezHomePage.jpg" class="snippetThumb" height="100" width="100" alt="{{ post.title }}"  align="left"  />
     </a>
 
     {% endif %}

@@ -10,7 +10,7 @@ has-thumbnail: ejsThumb.png
 tags: [javascript, review]
 ---
 
-<img src="../img/ejs.png" class="post-pic" alt="Eloquent JavaScript book cover" width="250" height="330">
+<img src="http://kaidez.kaidez.netdna-cdn.com/img/ejs.png" class="post-pic" alt="Eloquent JavaScript book cover" width="250" height="330">
 *Disclaimer: the author of this book has graciously [given it away for free online][2] but please feel free to support his efforts by buying it on Amazon either in [print format][3] or [Kindle format][4]. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.*
 
 
