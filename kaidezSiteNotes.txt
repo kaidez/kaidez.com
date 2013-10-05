@@ -250,7 +250,7 @@ LEFT TO DO
 -Fix Disqus
 -Video SEO...may be post launch.
 -Set up MaxCDN.
--fix background on the 404 page.
+-fix background on the 404 page. (done)
 
 Before deployment
 =================
