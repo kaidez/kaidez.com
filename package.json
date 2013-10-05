@@ -15,7 +15,8 @@
     "grunt-jekyll": "~0.3.8",
     "grunt-manifest": "~0.4.0",
     "grunt-contrib-requirejs": "~0.4.1",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-cdn": "~0.2.6"
   },
   "dependencies": {
     "time-grunt": "~0.1.1"

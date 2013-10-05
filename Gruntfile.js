@@ -203,6 +203,22 @@ module.exports = function(grunt) {
       "excludeFiles" : "Gruntfile.js"
     },
     
+    // CDN task
+    cdn: {
+      options: {
+          /** @required - root URL of your CDN (may contains sub-paths as shown below) */
+          cdn: 'http://kaidez.kaidez.netdna-cdn.com',
+          /** @optional  - if provided both absolute and relative paths will be converted */
+          flatten: false,
+          /** @optional  - if provided will be added to the default supporting types */
+          supportedTypes: { 'phtml': 'html' }
+      },
+      dist: {
+          /** @required  - string (or array of) including grunt glob variables */
+          src: ['_site/css/styles.min.css', '_site/js/scripts.min.js', '_site/*.html', '_site/**/*.html'],
+            }
+        },
+    
     // properties to be loaded into the application cache (manifest.appcache) file.  they load in via a template in the 'manifest task'
     site_files: [
       'js/libs/*.js'
@@ -269,10 +285,6 @@ module.exports = function(grunt) {
             dest: 'requireBuildOut/libs/', filter: 'isFile'}
           ]
         },
-        // Site build currently contains the AMD version of enquire, which
-        // hasn't been officially released. Don't let Grunt update this file
-        // until the AMD version is out.
-        //
         enquire: {
           files: [
             {expand: true,
@@ -363,6 +375,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-manifest');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-cdn');
 
 
   // Default task(s)
@@ -370,7 +383,7 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('push', ['jekyll:buildit', 'htmlmin', 'manifest', 'sftp-deploy']);
+  grunt.registerTask('push', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy']);
 
 
 };
