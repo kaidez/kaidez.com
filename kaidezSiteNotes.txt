@@ -154,7 +154,7 @@ Specific Development Goals
 -As few scripts running on page load as possible (Twitter status only?).
 -Progressively enhance the functionality: cross-browser test the basic code first, then add fancy CSS3/jQuery/JS. (SORTA KINDA DONE..CARING LESS AS I DON'T CARE ABOUT IE8)
 -Proper code for retina displays. (DONE WITH THE IMAGES)
--Support WAI-ARIA. ("Websites that are built to be accessible will also be accessible for your #1 blind user: Google.")..also, checkout http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/ (PRETTY MUCCH DONE)
+-Support WAI-ARIA. ("Websites that are built to be accessible will also be accessible for your #1 blind user: Google.")..also, checkout http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/ (PRETTY MUCH DONE)
 -Use as much non-blocking JS as possible, Modernizr is the exception. (DONE)
 -RE: the viewport, leave "initial-scale" off. (HAD IT, BUT DELETED IT)
 -Don't put <nav> links in a <ul>. (DONE)
@@ -249,8 +249,8 @@ LEFT TO DO
 -Create favicon.ico
 -Fix Disqus
 -Video SEO...may be post launch.
--Set up MaxCDN.
--fix background on the 404 page. (done)
+-Set up MaxCDN. (DONE, BUT NEED TO DO CNAME STUFF)
+-fix background on the 404 page. (DONE)
 
 Before deployment
 =================
