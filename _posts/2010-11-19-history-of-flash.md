@@ -16,7 +16,7 @@ About a year ago from this post, Steve Jobs called Flash a "memory hog" and stat
 
 Steve said this at a time when it looked like the iPhone would rule the smartphone market for awhile and the iPad would be the cool new gadget everyone wanted.  It's a year later and the iPhone is losing market share to Google's Android while the iPad is "cool," but not as "cool" as Apple thought it would be.  
 
-<img src="../img/flashLogo.jpg" class="post-pic" />
+<img src="/img/flashLogo.jpg" class="post-pic" />
 This isn't all because of Apple's lack of Flash support for its products, but it's partially due to it.  They may know this and the fact [the Flash-ready Sky Fire web browser][1] the Flash-ready Sky Fire web browser can be installed on the iPhone and iPod Touch could be a sign that they're rethinking their position.
 
 [1]: http://www.skyfire.com/en/for-consumers

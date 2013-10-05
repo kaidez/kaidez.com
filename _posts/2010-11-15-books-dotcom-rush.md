@@ -24,7 +24,7 @@ The burst didn’t stop the growth of the internet, it just forced internet comp
 ## The New New Thing  
 *by Michael Lewis*  
 
-<img src="../img/NewNewThing.jpg" alt="The New New Thing book image" class="post-pic">
+<img src="/img/NewNewThing.jpg" alt="The New New Thing book image" class="post-pic">
 Writer Michael Lewis has been getting a lot of props for his coverage of the 2008 financial crisis. His Pulitzer-winning article [“The End”][1] along with his series of Vanity Fair articles were combined and paraphrased to create his most recent novel, [*The Big Short*][2]. This precedes his first novel, the phenomenal [*Liar's Poker*][3] which chronicled both the birth of mortgage-backed security and the Michael Milken junk bond scandal.
 
 I’ve always felt that his critically acclaimed stuff overshadows his fascinating [*The New New Thing*][4] which told multiple stories about entrepreneur Jim Clark, including the story of his role in that “other incident” I mentioned above: the rise of Netscape.
@@ -37,7 +37,7 @@ Netscape would eventually be overshadowed by Microsoft’s Internet Explorer and
 
 ## All the Rave: The Rise and Fall of Shawn Fanning’s Napster  
 *by Joseph Menn*
-<img src="../img/AllTheRave.jpg" alt="All The Rave book image" class="post-pic">
+<img src="/img/AllTheRave.jpg" alt="All The Rave book image" class="post-pic">
 A funny by-product of the Dot-com Bubble was the arrogance of dot-com company CEOs. Most loved to talk about how their company would change the business sector they were in: if a startup based on selling cars showed up, its CEO told anyone in earshot how their company would create a revolutionary way of buying and selling cars and do away with the need for car dealerships. All predicted high levels of success, almost all failed.
 
 Within this arrogance lies the irony of Napster: that it was a music-based company that entered the music business, revolutionized how it functioned, then failed spectacularly as only an internet startup could. It was popular as hell as it allowed anyone to download music for free and it paved the way for Apple’s iPod and iTunes. But the company’s erratic CEO John Fanning, not his nephew Shawn as many assumed, was focused on taking Napster public and cashing in on the Dot-com Rush hype. Instead, he should have focused one achieving one of the company’s main priorities: legitimizing a business that clearly had legal issues.
