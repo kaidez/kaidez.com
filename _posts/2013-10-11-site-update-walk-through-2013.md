@@ -31,17 +31,17 @@ The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) 
 12. [Post-Launch Tasks](#post-launch-tasks)
 13. [Conclusion](#conclusion)
 
-<a name="wordpress"></a> 
+<a name="wordpress" title="go to the wordpress section of this article"></a> 
 ### Goodbye, WordPress... 
 My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
 
 WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to (more about that in a future blog post). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress. 
 
-<a name="jekyll"></a>
+<a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
 If you're a consistent GitHub user, you're probably familiar with [Jekyll](http://jekyllrb.com/), the blog-aware static site generator. [GitHub Pages](http://pages.github.com/) give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
 
-I've created HTML site templates and applied them to the site content.  The templates contain [Liquid markup](http://liquidmarkup.org/), a templating language with some logic under its hood. All posts are written in [Markdown](http://daringfireball.net/projects/markdown/).
+I've created HTML site templates and applied them to the site content.  The templates contain [Liquid markup](http://liquidmarkup.org/, "visit the liquid markup page"), a templating language with some logic under its hood. All posts are written in [Markdown](http://daringfireball.net/projects/markdown/, "visit the markdown documentation page").
 
 Whenever I run `jekyll build` from the command line while in my project folder, Jekyll outputs a static, production-ready copy of the site. Logic created by the template/Liquid combo generates the content the way I tell it to.
 
@@ -57,9 +57,9 @@ Here are some tasks that Jekyll runs when building the static site for productio
 
 Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/, "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/, "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/, "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
 
-Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, using a cache manifest and using [MaxCDN](http://maxcdn.com) to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes (especially images), but the site's overall page-load time is still minimal.
+Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, using a cache manifest and using [MaxCDN](http://maxcdn.com, "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes (especially images), but the site's overall page-load time is still minimal.
 
-I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/) lists alternative migration methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
+I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/, "read the Jekyll migration documentation") lists alternative migration methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
 
 While I'm happy with Jekyll, please note that walking away from WordPress was not easy to do after using it for five years. WordPress did a lot of work via its high-quality plugins...a lot of work that I now have to do on my own.
 
