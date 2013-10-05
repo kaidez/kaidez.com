@@ -30,24 +30,25 @@ meta-excerpt: Sorry but we are unable to find what you are looking for / kaidez.
 
 			<hr>
 
+       <div class="not-found-box-class">
+
       <p class="form-container-404-page-copy">
-      	These articles are considered "the best of kaidez.com":
+        Here are the last five articles published on kaidez.com:
       </p>
 
       <ul>
-      	<li class="links-list-404">
-      		<a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub</a>
-      	</li>
-      	<li class="links-list-404">
-      		<a href="/javascript-closures-tutorial/" title="TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
-      	</li>
-      	<li class="links-list-404">
-      		<a href="/media-queries-important/" title="Media Queries Are Important">Media Queries Are Important</a>
-      	</li>
+
+      {% for post in site.posts limit:5 %}
+     
         <li class="links-list-404">
-          <a href="/javascript-off-dom/" title="SCREENCAST TUTORIAL: Using JavaScript Off-DOM">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+          <a href="{{ post.url }}" title="{{ post.title }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a>
         </li>
+
+      {% endfor %}
+
       </ul>
+
+    </div>
 
       <hr>
 
@@ -61,6 +62,30 @@ meta-excerpt: Sorry but we are unable to find what you are looking for / kaidez.
         <a href="sitemap.html" title="Site map: review all page links on kaidez.com">Visit the Site Map</a> to view a complete list of all the site content.
       </p>
 
-    </div> <!-- form-container-404-page -->
+    </div> <!-- #form-container-404-page -->
+
+    <div class="not-found-box-class">
+      
+      <p class="form-container-404-page-copy">
+        These articles are considered "the best of kaidez.com":
+      </p>
+
+      <ul>
+        <li class="links-list-404">
+          <a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/javascript-closures-tutorial/" title="TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/media-queries-important/" title="Media Queries Are Important">Media Queries Are Important</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/javascript-off-dom/" title="SCREENCAST TUTORIAL: Using JavaScript Off-DOM">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+        </li>
+      </ul>
+    </div>
+
+
 
   </div> <!-- #wrapper-404 -->

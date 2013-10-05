@@ -445,6 +445,14 @@
     width: 529px;
   }
 
+  
+  .wrapper-404-class {
+    @include create-outer-box-shadow;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+
+
   // ==================================================================
   // 404 page styles end
   // ==================================================================
