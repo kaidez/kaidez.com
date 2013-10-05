@@ -383,7 +383,7 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('push', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy']);
+  grunt.registerTask('push', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy', 'jekyll:dev']);
 
 
 };
