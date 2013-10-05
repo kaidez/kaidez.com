@@ -12,7 +12,7 @@ has-home-img: site-relaunch.jpg
 ---
 After a little less then 2,000 Git commits, kaidez.com gets a redesign. It was a struggle due to limited free time but it was also a lot of fun and a great learning experience.
 
-The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/). The repo's [README file](https://github.com/kaidez/kaidez.com/blob/master/README.md) is a lengthy birds-eye view description of the code at the development level.
+The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/, "go to kaidez.com GitHub repo"). The repo's [README file](https://github.com/kaidez/kaidez.com/blob/master/README.md, "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code at the development level.
 
 The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is needed. Let's proceed with that:
 
@@ -55,7 +55,7 @@ Here are some tasks that Jekyll runs when building the static site for productio
 * it builds an XML-powered RSS file for syndication.
 * it places a short list of related posts at the end of each blog post.
 
-Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/) and one used in conjunction with [Lea Verou's](http://lea.verou.me/) excellent [PrismJS syntax highlighter plugin](http://prismjs.com/). But Jekyll really does the work of prepping this site's content for deployment.
+Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/, "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/, "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/, "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
 
 Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, using a cache manifest and using [MaxCDN](http://maxcdn.com) to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes (especially images), but the site's overall page-load time is still minimal.
 
