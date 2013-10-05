@@ -17,21 +17,21 @@ The site code is open source and [freely available on GitHub](https://github.com
 The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is needed. Let's proceed with that:
 
 ## Table of Contents
-1. [Goodbye, WordPress...](#wordpress)
-2. [...Hello, Jekyll](#jekyll)
-3. [Design In-Browser](#design-in-browser)
-4. [Mobile First](#mobile-first)
-5. [Overall Design](#overall-design)
-6. [JavaScript...RequireJS Specifically](#RequireJS)
-7. [The Rest Of The JavaScript](#other-javscript)
-8. [Bower](#bower)
-9. [SEO &amp; Accessibility](#seo-accessibility)
-10. [Web Hosting](#web-hosting)
-11. [Grunt &amp; Development Workflow](#grunt-development-workflow)
-12. [Post-Launch Tasks](#post-launch-tasks)
-13. [Conclusion](#conclusion)
+1. [Goodbye, WordPress...](#wordpress, "go to the WordPress section of this article")
+2. [...Hello, Jekyll](#jekyll, "go to the Jekyll section of this article")
+3. [Design In-Browser](#design-in-browser, "go to the design in browser section of this article")
+4. [Mobile First](#mobile-first, "go to the Mobile First section of this article")
+5. [Overall Design](#overall-design, "go to the Overall Design section of this article")
+6. [JavaScript...RequireJS Specifically](#RequireJS, "go to the RequireJS section of this article")
+7. [The Rest Of The JavaScript](#other-javscript, "go to the Rest of the JavaScript section of this article")
+8. [Bower](#bower, "go to the Bower section of this article")
+9. [SEO &amp; Accessibility](#seo-accessibility, "go to the SEO and Accessibility section of this article")
+10. [Web Hosting](#web-hosting, "go to the Web Hosting section of this article")
+11. [Grunt &amp; Development Workflow](#grunt-development-workflow, "go to the Grunt and Development section of this article")
+12. [Post-Launch Tasks](#post-launch-tasks, "go to the Post Launch Tasks section of this article")
+13. [Conclusion](#conclusion, "go to this article's conclusion")
 
-<a name="wordpress" title="go to the wordpress section of this article"></a> 
+<a name="wordpress"></a> 
 ### Goodbye, WordPress... 
 My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
 
@@ -47,12 +47,13 @@ Whenever I run `jekyll build` from the command line while in my project folder, 
 
 So I created some dynamic stuff at the development level, then ran a command that told Jekyll to use the dynamic stuff to create a static site.  Now kaidez.com does things that were once not possible unless a back-end database did a lot of heavy lifting at runtime.
 
-Here are some tasks that Jekyll runs when building the static site for production:
+Here are some of the tasks that Jekyll runs when building the static site for production:
 
 * it converts all the Markdown to HTML.
 * it uses pre-defined template/Liquid logic to display posts on the home page in a very specific, dynamic way (more on this in a future blog post).
 * it generates content for the site's four category-specific pages.
 * it builds an XML-powered RSS file for syndication.
+* it outputs both an HTML site map.
 * it places a short list of related posts at the end of each blog post.
 
 Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/, "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/, "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/, "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
@@ -84,9 +85,9 @@ Instead, I designed this site within a browser using various desktop and remote 
 ### Mobile First
 "Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
 
-No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
+No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on [the ROT principle](http://blog.braintraffic.com/2011/08/content-strategy-can-save-us-all-from-slobdom/, "What is ROT when talking about content strategy"), then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
-Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with [Sass](http://sass-lang.com/), of course.  All of this is for the benefit of oldIE.
+Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with [Sass](http://sass-lang.com/, "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
 
 I may not have implemented this method properly...I ended up writing more code than I planned on. The code "works" but I know it can be neater and need to revisit this.
 
@@ -304,15 +305,15 @@ I'm being bombastic when outline my workflow like this but am doing so to prove 
 
 <a name="post-launch-tasks"></a>
 ### Post-Launch Tasks
-If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
+If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20, "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
 
 Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors, loads fast, looks and acts great across different browsers/devices, utilizes SEO best practices and executes most post-load events at [the current recommended target rate of 60 frames per second](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/).
 
 But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:
 
-  * __Make some Grunt stuff DRYer__: there are some spots in my Gruntfile where the same task is repeats itself, particularly within the Bower tasks. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) but I haven't really looked at it.  I need to do that.
+  * __Make some Grunt stuff DRYer__: there are some spots in my Gruntfile where the same task is repeats itself, particularly within the Bower tasks. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself, "What is the DRY principle") but I haven't really looked at it.  I need to do that.
 
-  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/).  
+  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/, "Read the Smashing Magazine Article about OOCSS").  
 
   * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox can only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
 
