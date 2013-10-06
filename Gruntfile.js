@@ -215,7 +215,7 @@ module.exports = function(grunt) {
       },
       dist: {
           /** @required  - string (or array of) including grunt glob variables */
-          src: ['_site/*.html', '_site/**/*.html', '_site/css/styles.min.css', '_site/js/scripts.min.js', '!_site/js/**/*.js']
+          src: ['_site/*.html', '_site/**/*.html', '_site/css/styles.min.css']
             }
         },
     
