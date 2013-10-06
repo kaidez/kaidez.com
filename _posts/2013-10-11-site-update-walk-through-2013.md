@@ -10,9 +10,9 @@ cat-name: "Personal"
 tags: [jekyll, bower, requirejs, grunt, amd ]
 has-home-img: site-relaunch.jpg
 ---
-After a little less then 2,000 Git commits, kaidez.com gets a redesign. It was a struggle due to limited free time but it was also a lot of fun and a great learning experience.
+After over 2,000 Git commits, kaidez.com gets a redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
 
-The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/, "go to kaidez.com GitHub repo"). The repo's [README file](https://github.com/kaidez/kaidez.com/blob/master/README.md, "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code at the development level.
+The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/, "go to kaidez.com GitHub repo"). The repo's [README](https://github.com/kaidez/kaidez.com/blob/master/README.md, "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code at the development level.
 
 The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is needed. Let's proceed with that:
 
@@ -39,36 +39,32 @@ WordPress manages its internal JS libraries in a way that kept me from controlli
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
-If you're a consistent GitHub user, you're probably familiar with [Jekyll](http://jekyllrb.com/), the blog-aware static site generator. [GitHub Pages](http://pages.github.com/) give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
+If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/), the blog-aware static site generator. [GitHub Pages](http://pages.github.com/) give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
 
-I've created HTML site templates and applied them to the site content.  The templates contain [Liquid markup](http://liquidmarkup.org/, "visit the liquid markup page"), a templating language with some logic under its hood. All posts are written in [Markdown](http://daringfireball.net/projects/markdown/, "visit the markdown documentation page").
+I created multiple site layouts using [Liquid](http://liquidmarkup.org/, "visit the liquid markup page"), a templating markup language with some internal logic. Whenever I run `jekyll build` from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.
 
-Whenever I run `jekyll build` from the command line while in my project folder, Jekyll outputs a static, production-ready copy of the site. Logic created by the template/Liquid combo generates the content the way I tell it to.
+The outputted site does some very cool things...here's short list:
 
-So I created some dynamic stuff at the development level, then ran a command that told Jekyll to use the dynamic stuff to create a static site.  Now kaidez.com does things that were once not possible unless a back-end database did a lot of heavy lifting at runtime.
+* lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/, "visit the markdown documentation page")...it all gets converted to to HTML.
+* the logic displays posts on the [home page](/) in a very "dynamic" way (more on this in a future post).
+* four category-specific pages are generated.
+* an XML-powered RSS file for syndication is built.
+* an HTML site map is created.
+* a short list of related posts is placed at the end of each post.
 
-Here are some of the tasks that Jekyll runs when building the static site for production:
+Ruby is a Jekyll hard dependency so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/, "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/, "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/, "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
 
-* it converts all the Markdown to HTML.
-* it uses pre-defined template/Liquid logic to display posts on the home page in a very specific, dynamic way (more on this in a future blog post).
-* it generates content for the site's four category-specific pages.
-* it builds an XML-powered RSS file for syndication.
-* it outputs both an HTML site map.
-* it places a short list of related posts at the end of each blog post.
+Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com, "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
 
-Ruby is a hard dependency for both Jekyll and Liquid so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/, "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/, "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/, "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
+I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/, "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
 
-Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, using a cache manifest and using [MaxCDN](http://maxcdn.com, "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes (especially images), but the site's overall page-load time is still minimal.
+I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
-I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/, "read the Jekyll migration documentation") lists alternative migration methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
-
-While I'm happy with Jekyll, please note that walking away from WordPress was not easy to do after using it for five years. WordPress did a lot of work via its high-quality plugins...a lot of work that I now have to do on my own.
-
-Also, Jekyll is definitely geared towards the blogger that likes to write code and, in most cases, probably can't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being WordPress.
+Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being WordPress.
 
 Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
 
-I'm very happy with Jekyll but in all fairness, there are other options in terms of static site generators. [Dave Rupert](http://daverupert.com/) put together [a GitHub Gist of static site generators that was extended by commenters](https://gist.github.com/davatron5000/2254924). And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo](https://github.com/Code52/pretzel) but surfing around [Pretzel's Trello Board](https://trello.com/b/2IUErvJ2/pretzel) is also a good idea.
+And in all fairness, there are other options in terms of static site generators. [Dave Rupert](http://daverupert.com/) put together [a GitHub Gist of static site generators that was extended by commenters](https://gist.github.com/davatron5000/2254924). And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo](https://github.com/Code52/pretzel) but surfing around [Pretzel's Trello Board](https://trello.com/b/2IUErvJ2/pretzel) is also a good idea.
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
@@ -87,11 +83,11 @@ Instead, I designed this site within a browser using various desktop and remote 
 
 No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on [the ROT principle](http://blog.braintraffic.com/2011/08/content-strategy-can-save-us-all-from-slobdom/, "What is ROT when talking about content strategy"), then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
-Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with [Sass](http://sass-lang.com/, "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
+Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/, "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
 
-I may not have implemented this method properly...I ended up writing more code than I planned on. The code "works" but I know it can be neater and need to revisit this.
+I may not have implemented this method properly...I ended up writing more code than I planned on. The code "works" but I know it can be neater and need to revisit it.
 
-Important note: by "oldIE," I mean Internet Explorer 8 only. The site looks crappy in IE8 at the time of the relaunch, but I'm planning to fix it post-launch...more on this later.
+Important note: by "oldIE," I mean Internet Explorer 8 only. The site looks crappy in IE8 at the time of the relaunch, but I'm planning to fix it post-launch.
 
 In terms of supporting IE versions prior to 8, I'll just paraphrase Shakespeare:
 
@@ -99,25 +95,25 @@ In terms of supporting IE versions prior to 8, I'll just paraphrase Shakespeare:
 >
 > *"By my heel, I care not!!!"*
 
-Past all this, some Mobile First things are done right, such as:
+Past all this, some Mobile First things are done right:
 
-* no third-party affiliate ads load in the site's mobile view.  Google ads *have* to load due to Google rules, but they	do so asynchronously...*and* responsively.  More on that later as well.
+* no third-party affiliate ads load in the site's mobile view.  Google ads *have* to load due to Google rules, but they	do so asynchronously...*and* [responsively](https://support.google.com/adsense/answer/3213689?hl=en). More on all this shortly.
 
-* There are three vendor fonts that load on to the site, but only two load into the mobile view...that number may drop to one eventually.
+* four vendor fonts load on to the site, but only three are available to the mobile view...that number may drop at some point.
 
-* CSS3 gradients, box shadows and text shadows render a lot of heavy browser paints that can impend site load time...they appear on the site's tablet and desktop views but are removed from the its mobile view.
+* CSS3 gradients, box shadows and text shadows render heavy browser paints that can impend site load time...they appear on the site's tablet and desktop views but are removed from the its mobile view.
 
 <a name="overall-design"></a>
 ### Overall Design
-Blogs are usually simple in design...I stuck with that rule when redesigning kaidez.com.  I'm fine with the site's overall look &amp; feel but think the header could be better, especially since the two modules at the bottom look really nice...at least, I think so.  I may revisit the header sometime in the future.
+Blogs are usually simple in design...I stuck with that rule when redesigning kaidez.com.  I'm fine with the site's overall look &amp; feel but think the header could be better, especially since the two modules at the bottom look (I think) really nice.  I may revisit the header sometime in the future.
 
 The blue color is just something I came up with, color scheme-wise. I used [this color palette over at Colour Lovers as an overall guide](http://www.colourlovers.com/palette/2892492/azure_sea.).
 
-The site uses two Google fonts: Open Sans (mostly for page content) and Robot Condensed (mostly for headers). Some font icons are also being used courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
+The site uses Google's Open Sans and Open Sans Bold fonts (mostly for page content) as well as Robot Condensed (mostly for headers). Some font icons also appear on the page courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
 
 I employed the aforementioned (and awesome) PrismJS for code snippet highlighting. It has [a great build tool](http://prismjs.com/download.html) which generates the plugin code needed to implement syntax highlighting wherever you want to on your site.
 
-I created a [404 page](/404.html) with a little humor, but added content with the hopes of engaging whomever lands on it.
+I created a [404 page](/404.html) with a little humor, but added content to it in the hopes of further engaging whomever lands on it.
 
 By ignoring oldIE, I was able to apply some CSS3 animations and transitions to the site...although not as much as I wanted to.  I did try to do some things that were more "grand" but ran into cross-browser issues on the modern browsers. So for now, these animations and transitions are limited to some of the link rollovers.
 
@@ -125,14 +121,14 @@ I did spend a few hours trying to apply a [flat design](http://fltdsgn.com/) to 
 
 But while its simplicity is difficult to implement, flat design ties in well with the general simplicity of most blog layouts. So I'll probably go with a flat design next time.
 
-*Side note: flat design leads to a more optimized, high-performance site...oh, yes it does, for Paul Irish tells us so*.
+*Side note: flat design leads to a higher-performing site...oh, yes it does, for Paul Irish tells us so*.
 <div class="centerVideo">
 	<iframe width="420" height="315" src="//www.youtube.com/embed/Z1IqzeA3XXg" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <a name="RequireJS"></a>
 ### JavaScript...RequireJS Specifically
-As mentioned earlier, my primary goal while developing this site was to maintain total control over all the front-end code, especially the JavaScript. I'm proud to say I achieved this goal.
+As mentioned earlier, my primary goal while developing this site was to maintain total control over all the front-end code, especially the JavaScript. I'm proud to say I achieved that goal.
 
 The best thing about this site's JavaScript is that it's not 100% jQuery-dependent...lots of pure JS is implemented. jQuery is certainly used on the site, it just wasn't my default position when writing JS code...like it has been in the past.
 
@@ -152,29 +148,35 @@ All of the above-mentioned JavaScript is managed by [RequireJS](http://requirejs
 
 At the time of this blog post, there are 16 particular JS files I brought into the site build.  Some are core libraries, some are plugins and some contain code I wrote.
 
-In order to work, some of the code I wrote depends on some of the libraries and plugins. In the past, this meant I would have make sure all these files were listed in `<script>` tags on my page, and in a specific order to ensure that none of the JS would break.
+In order to work, some of the code I wrote depends on some of the libraries and plugins. In the past, this meant I would have make sure all these files were listed in `<script>` tags on my page, and in a specific order to ensure that none of their functionality would break.
 
 Of course, I would concatenate and minify these 16 files into one, but would still need to ensure that the files were concatenated/minified in the proper order so, again, nothing broke. You have to worry about this stuff when doing JS development.
 
 RequireJS does all of the worrying for me. I made sure it was properly configured on my page, wrote single code modules, and made sure the modules referenced any libraries and/or plugins it depended on. RequireJS did the rest, including minifying and concatenating things in the proper order.
 
-RequireJS doesn't manage ALL of this site's JavaScript...we'll discuss that in a minute. But RequireJS manages most of it very well, which is its primary function.
+RequireJS doesn't manage ALL of this site's JavaScript...we'll discuss that in a minute. But RequireJS manages most of it very well.
 
-There's not enough space in this post to discuss the brilliance of RequireJS so if you want to get up and running with it, I'm going to push you to [read the RequireJS API docs](http://requirejs.org/docs/api.html). The JavaScript/WordPress issues mentioned above were RequireJS-related so that future blog post will discuss it a bit. And I MIGHT do a complete RequireJS screencast in the future.
+Which is an important point: while it takes optimization seriously, RequireJS' main purpose in life is to allow developers to write JS in a modular, well-organized fashion (its [documentation](http://requirejs.org/docs/api.html#usage) is very clear about this purpose	). Developing with it made my life so much easier.
 
-I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro/4686136) where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS.  It also discusses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), which RequireJS is heavily based upon.
+There's not enough space in this post to discuss the brilliance of RequireJS so if you want to get up and running with it, I'm going to push you to [read the RequireJS API docs](http://requirejs.org/docs/api.html). The previously mentioned JavaScript/WordPress issues were RequireJS-related so that future post will discuss it a bit. And I MIGHT do a RequireJS screencast in the future...not 100% sure about this yet.
 
-There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from [Ben Alman A.K.A. "cowboy"](http://benalman.com/) which perfectly sums up how RequireJS eliminates a lot of worry from JavaScript development.
+I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro/4686136) where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS as well as [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), which RequireJS is heavily based upon.
+
+There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from [cowboy](http://benalman.com/) that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.
 
 <a name="other-javscript"></a>
 ### The Rest Of The JavaScript
-Modernizr is one of the JS files that don't interact with RequireJS.  While RequireJS should be placed as to close to the bottom as possible, it's best practice to place Modernizr above the closing `<head>` tag. The Google Fonts load in using the JS-based [Google/Typekit Web Font Loader](https://github.com/typekit/webfontloader) and should be placed at the top of the page before Modernizr
+Along with things bought in by the ads and Disqus, RequireJS certainly doesn't interact with all the sites JavaScipt. 
 
-The rest of the JavaScript outside of RequireJS loads asynchronously, i.e., it loads in a manner that doesn't hinder asset loading or content rendering. Note that the minified RequireJS runs JavaScript in the same way.
+Modernizr is one such thing.  While RequireJS should be placed as to close to the bottom as possible, it's best practice to place Modernizr above the closing `<head>` tag. The Google Fonts load in using the JS-based [Google/Typekit Web Font Loader](https://github.com/typekit/webfontloader) and should be placed at the top of the page before Modernizr
 
-Also note that the Web Font Loader code loads synchronously, but *can* load asynchronously. But [as its documentation states](https://github.com/typekit/webfontloader#get-started), it will generate a lot of [FOUTS](http://www.paulirish.com/2009/fighting-the-font-face-fout/).
+The rest of the JavaScript that's outside of the RequireJS process loads asynchronously, i.e., it loads in a manner that doesn't hinder asset loading or content rendering. In this context, note two things:
 
-The async code consists of:
+1. RequireJS also runs its code asynchronously.
+
+2. the Web Font Loader code actually loads synchronously, but *can* load asynchronously. But [as its documentation states](https://github.com/typekit/webfontloader#get-started), it will generate a lot of [FOUTS](http://www.paulirish.com/2009/fighting-the-font-face-fout/).
+
+The asynchronous code consists of:
 
 * __[Google Analytics/Webmaster Tools code](https://support.google.com/analytics/answer/1142414?hl=en)__: the combined code tracks crawl errors, sitemap errors, traffic,etc.
 
