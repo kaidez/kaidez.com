@@ -162,7 +162,7 @@ There's not enough space in this post to discuss the brilliance of RequireJS so 
 
 I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro/4686136) where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS as well as [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), which RequireJS is heavily based upon.
 
-There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from [cowboy](http://benalman.com/) that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.
+There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from cowboy that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.
 
 <a name="other-javscript"></a>
 ### The Rest Of The JavaScript
@@ -182,7 +182,7 @@ The asynchronous code consists of:
 
 * __[Google Adsense code](https://support.google.com/adsense/answer/3221666?hl=en)__: for loading ads.
 
-* __[Social sharing functionality on the post pages](https://gist.github.com/necolas/1025811)__: props to Nicholas Gallagherr here.
+* __[Social sharing functionality on the post pages](https://gist.github.com/necolas/1025811)__: props to Nicholas Gallagher here.
 
 I also have to give props to the Google Dev Team: all their code mentioned here has been in need of a cleanup for the few years leading up to this writing, and they certainly cleaned it up.
 
@@ -195,9 +195,9 @@ All is not perfect with the Google stuff: the Adsense code still loads in a lot 
 ### Bower
 This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io) makes it easy.
 
-Bower is a browser-based package manager that runs on top of Node and (sorta/kinda) depends on Git. When Bower is properly configured and you type `bower list` on the command line from your project folder, Bower checks to see if any of these files needs to be updated (as well as Bower itself). If any packages need updating, simply type `bower update <whatever-the-package>`.
+Bower is a browser-based package manager that runs on top of Node. When it's properly configured and you type `bower list` on the command line from your project folder, Bower checks to see if any of these files needs to be updated (as well as Bower itself). If any packages need updating, simply type `bower update <whatever-the-package>`.
 
-Bower does not track EVERY library on kaidez.com: its job is to download packages from remote repos, usually ones hosted on GitHub. Some packages like Tipue aren't on remote repos...no worries.
+Bower does not track EVERY library on kaidez.com: it downloads packages from remote repos, primarily those hosted on GitHub. Some packages like Tipue aren't on remote repos...no worries.
 
 <a name="seo-accessibility"></a>
 ### SEO &amp; Accessibility
@@ -214,12 +214,12 @@ Still, I did the following SEO technical stuff behind the scenes:
 * embedded [Open Graph](http://ogp.me/) protocols into the site code.
 * signed up for [Twitter Cards](https://dev.twitter.com/docs/cards).
 
-I also made sure that the site was accessible to people with disabilities by:
+Making a site was accessible to people with disabilities is also a good SEO practice, so I did the following:
 
-* marking up the links with a `title` attribute for easy tab-throughs.
-* running some pages through a screen-reader.
-* turning off all styles and reading the rendered page content out loud instead of letting a screen-reader do it.
-* making sure that any elements that needs to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that I didn't do this, but it's mostly done site-wide.
+* marked up the links with a `title` attribute for easy tab-throughs.
+* ran some pages through a screen-reader.
+* turned off all styles and read the rendered page content out loud (which is basically what a screen-reader does).
+* made sure that any elements that needs to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that I didn't do this, but it's mostly done site-wide.
 
 If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibilty is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/).
 
@@ -235,9 +235,9 @@ I wanted a hosting package that would run my site as well as let me install thin
 
 Going with either DV Managed, Rackspace or AWS meant installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME tech support in case I needed help and Rackspace seemed to pride itself on NOT providing any. So they were out.
 
-Media Temple has EXCELLENT customer service but it was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point. 
+Media Temple has EXCELLENT customer service but DV Managed was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point. 
 
-Like Rackspace, AWS doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, they have a ton of documentation on their various services...a ton to the point that I taught myself how to install a LAMP stack on [a (somewhat) free Amazon Usage Tier](http://aws.amazon.com/free/).
+AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free Amazon Usage Tier](http://aws.amazon.com/free/).
 
 Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/) from the 2012 Obama campaign runs this setup and has [a great write-up about it](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/).
 
@@ -247,7 +247,7 @@ Heroku is insanely awesome! It will let me do a limited amount of Node/Ruby stuf
 
 I'm sticking with my generic MT plan for now and will do some fancy coding stuff on Heroku...all this being subject to change. But while I took all of the above tech stuff into consideration, I have to say that Media Temple's excellent customer service was a big reason I stayed with them.
 
-Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/) that appears to be "AWS-like" and offers a few less features than DV Managed.  But it still may suit my specific future needs...we'll see.
+Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/) that offers a few less features than DV Managed (it doesn't come with [Plesk](http://www.parallels.com/products/plesk/)). It doesn't appear to be cloud-based but appears to be "AWS-like" in other ways and may suit my specific future needs.
 
 <a name="grunt-development-workflow"></a>
 ### Grunt &amp; Development Workflow
@@ -257,15 +257,15 @@ All these various processes means various tasks need to run at various times. An
 
 And as I've told anyone that would listen for the past two months, Grunt is my new God.
 
-Similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner that manages all of the just-mentioned tasks and a few more inside my development environment. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
+Created by the previously-mentioned [@cowboy (A.K.A Ben Alman)](https://twitter.com/cowboy) and similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
 
-A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. All of this works together to give me a powerful integrated development environment (IDE).
+A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. These plugins let me create tasks within my dev environment, giving it a high level of functionality.
 
-For example: whenever I push this site to production, the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin applies the MaxCDN URL to the all the images and the main CSS/JS files. But because of how Grunt works, these URLs are applied to my `localhost` development site.
+For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin it and appends the MaxCDN URL to the all the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
 
-Calling CDN assets inside a local dev environment incurs unnecessary costs so when the push to the server is done, my deployment sequence "resets" the dev site by removing the CDN URLs...very flexible.
+If the local dev site runs in a browser after that, it will render the assets from the CDN, incurring unnecessary costs. So when the production push is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll) plugin "resets" the dev site by removing the CDN URLs. 
 
-Flexibility like this exists throughout my entire development workflow. It changed many times during development (and will change many more times in the future), but this is how I was doing things at the time of the site relaunch:
+Grunt add a lot of flexibility to my development workflow, which changed many times during the redesign and will change many more times now that it's done. But this is how it was working at the time of the relaunch: it lists two non-Grunt things for clarity (one of the non-Grunt things):
 
 1. Launch a command prompt with [iTerm](http://iterm.sourceforge.net/).
 
@@ -277,11 +277,11 @@ Flexibility like this exists throughout my entire development workflow. It chang
 
 5. As mentioned, `grunt watch` looks out for certain file additions/changes. It works and performs as follows:
 
-    * if Bower updates a CSS site dependency, Grunt automatically copies it over to another folder, converts its extension to `.scss`, uses Sass to process/minify it with other `.scss` files into the site's main `styles.min.css`, then makes Jekyll rebuild the site.
+    * if Bower updates a CSS file, Grunt converts its extension to `.scss`, copies it over to another folder, uses Sass to process it with other `.scss` files into the site's main stylesheet, then makes Jekyll rebuild the site.
 
     * if Sass files are added or updated, the above-mentioned CSS task is run...except for the extension conversion.
 
-    * if Bower updates a JS site dependency, Grunt automatically copies it over to another folder, uses RequireJS to minify/concatenate it with other JS files into the site's main `scripts.min.js`, then makes Jekyll rebuild the site.
+    * if Bower updates a JS file, Grunt automatically copies it over to another folder, uses RequireJS to process it with other JS files into the site's main JavaScript file, then makes Jekyll rebuild the site.
 
     * if other JavaScript files are added or updated, the above-mentioned JS task is run.
 
@@ -291,11 +291,11 @@ Flexibility like this exists throughout my entire development workflow. It chang
 
 6. If the `grunt-modernizr` task is run, a pre-defined group of files is scanned for things that Modernizr may need to feature-detect. Based on that scan, a slimmed-down custom build of Modernizr is created, bringing in only the feature-detects I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/).
 
-7. Code changes are made in Sublime Text and committed to Git in small bits using the [Tim Pope style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+7. Code changes are made in Sublime Text and committed to Git in small bits using the [Tim Pope style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)...one of the "non-Grunt" things.
 
-8. Code changes are reviewed on `localhost` running on [MAMP](http://www.mamp.info/).
+8. Code changes are reviewed on `localhost` running on [MAMP](http://www.mamp.info/)...the other "non-Grunt" things.
 
-9. A custom `grunt push` task begins a deployment sequence that does the following:
+9. The `grunt push` task executes the above-discussed deployment sequence which does the following:
 
    * makes Jekyll build the site again, but adds the extra step of embedding related posts to the bottom of all post pages.
 
@@ -307,7 +307,7 @@ Flexibility like this exists throughout my entire development workflow. It chang
 
    * deploys the minified, optimized site build to production.
 
-   * removes the MaxCDN URLs from the site build, as mentioned above.
+   * rebuilds Jekyll, which removes the MaxCDN URLs from the site build for the reasons mentioned above.
 
 I'm being bombastic when outline my workflow like this but am doing so to prove a point. The combination all the above-mentioned tools allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN! And within this process, Grunt really ran the show.
 
@@ -319,11 +319,11 @@ Except for the overall neatness of the CSS, I'm fine with the production code. I
 
 But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:
 
-  * __Modify Grunt some more__: Grunt can be modified to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself, "What is the DRY principle") but I haven't really looked at it. I need to do that.
+  * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself, "What is the DRY principle") but I haven't really looked at it. I need to do that.
 
   * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/, "Read the Smashing Magazine Article about OOCSS").  
 
-  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox can only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
+  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
 
   * __Using Backbone in the contact form__: I'm really itching to use Backbone in a project and started to do so with my contact form, but it would add rendering/event weight to the form's performance and might be too much.  I still want to use Backbone though so I may do this in the future.
 
