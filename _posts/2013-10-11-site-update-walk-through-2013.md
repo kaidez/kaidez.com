@@ -17,19 +17,19 @@ The site code is open source and [freely available on GitHub](https://github.com
 The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is needed. Let's proceed with that:
 
 ## Table of Contents
-1. [Goodbye, WordPress...](#wordpress, "go to the WordPress section of this article")
-2. [...Hello, Jekyll](#jekyll, "go to the Jekyll section of this article")
-3. [Design In-Browser](#design-in-browser, "go to the design in browser section of this article")
-4. [Mobile First](#mobile-first, "go to the Mobile First section of this article")
-5. [Overall Design](#overall-design, "go to the Overall Design section of this article")
-6. [JavaScript...RequireJS Specifically](#RequireJS, "go to the RequireJS section of this article")
-7. [The Rest Of The JavaScript](#other-javscript, "go to the Rest of the JavaScript section of this article")
-8. [Bower](#bower, "go to the Bower section of this article")
-9. [SEO &amp; Accessibility](#seo-accessibility, "go to the SEO and Accessibility section of this article")
-10. [Web Hosting](#web-hosting, "go to the Web Hosting section of this article")
-11. [Grunt &amp; Development Workflow](#grunt-development-workflow, "go to the Grunt and Development section of this article")
-12. [Post-Launch Tasks](#post-launch-tasks, "go to the Post Launch Tasks section of this article")
-13. [Conclusion](#conclusion, "go to this article's conclusion")
+1. [Goodbye, WordPress...](#wordpress)
+2. [...Hello, Jekyll](#jekyll)
+3. [Design In-Browser](#design-in-browser)
+4. [Mobile First](#mobile-first)
+5. [Overall Design](#overall-design)
+6. [JavaScript...RequireJS Specifically](#RequireJS)
+7. [The Rest Of The JavaScript](#other-javscript)
+8. [Bower](#bower)
+9. [SEO &amp; Accessibility](#seo-accessibility)
+10. [Web Hosting](#web-hosting)
+11. [Grunt &amp; Development Workflow](#grunt-development-workflow)
+12. [Post-Launch Tasks](#post-launch-tasks)
+13. [Conclusion](#conclusion)
 
 <a name="wordpress"></a> 
 ### Goodbye, WordPress... 
@@ -257,25 +257,27 @@ And as I've told anyone that would listen for the past two months, Grunt is my n
 
 Similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner that manages all of the just-mentioned tasks and a few more inside my development environment. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
 
-A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. One of the most popular plugins is [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch).
+A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. All of this works together to give me a powerful integrated development environment (IDE).
 
-Grunt tasks must be configured in a `Gruntfile.js` file that's usually at the root of your project folder. Once grunt-contrib-watch is configured, it can "watch" for changes to certain files, then run Grunt tasks against the changes based on your plugin configs.
+For example: whenever I push this site to production, the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin applies the MaxCDN URL to the all the images and the main CSS/JS files. But because of how Grunt works, these URLs are applied to my `localhost` development site.
 
-The power of all this can be seen in my development workflow. It changed many times during development (and will change many more times in the future), but this is how I was doing things at the time of the site relaunch:
+Calling CDN assets inside a local dev environment incurs unnecessary costs so when the push to the server is done, my deployment sequence "resets" the dev site by removing the CDN URLs...very flexible.
 
-1. Launch a command prompt with iTerm.
+Flexibility like this exists throughout my entire development workflow. It changed many times during development (and will change many more times in the future), but this is how I was doing things at the time of the site relaunch:
 
-2. Run a bash alias that 1) jumps to my site project folder, 2) runs `bower list` to check for dependency updates, and 3) launches my `grunt watch` task.
+1. Launch a command prompt with [iTerm](http://iterm.sourceforge.net/).
+
+2. Run a bash alias that 1) jumps to my site project folder, 2) runs `bower list` to check for dependency updates, and 3) launches my `grunt watch` task which watches for certain file additions and changes.
 
 3. Open another iTerm tab: if Bower says something needs to be updated in the other tab (including Bower), update it in this new window.
 
 4. If nothing needs to be updated, keep the new tab open to run bash aliases and Git commits.
 
-5. The `watch` command launched in the other window is "watching" things and performing tasks as follows:
+5. As mentioned, `grunt watch` looks out for certain file additions/changes. It works and performs as follows:
 
-    * if Bower updates a CSS site dependency, Grunt automatically copies it over to another folder, converts its extention to `.scss`, uses Sass to process/minify it with other `.scss` files into the site's main `styles.min.css`, then makes Jekyll rebuild the site.
+    * if Bower updates a CSS site dependency, Grunt automatically copies it over to another folder, converts its extension to `.scss`, uses Sass to process/minify it with other `.scss` files into the site's main `styles.min.css`, then makes Jekyll rebuild the site.
 
-    * if Sass files are added or updated, the above-mentioned CSS task is run.
+    * if Sass files are added or updated, the above-mentioned CSS task is run...except for the extension conversion.
 
     * if Bower updates a JS site dependency, Grunt automatically copies it over to another folder, uses RequireJS to minify/concatenate it with other JS files into the site's main `scripts.min.js`, then makes Jekyll rebuild the site.
 
@@ -291,9 +293,11 @@ The power of all this can be seen in my development workflow. It changed many ti
 
 8. Code changes are reviewed on `localhost` running on [MAMP](http://www.mamp.info/).
 
-9. For production deployments, my custom `grunt push` command does the following:
+9. A custom `grunt push` task begins a deployment sequence that does the following:
 
    * makes Jekyll build the site again, but adds the extra step of embedding related posts to the bottom of all post pages.
+
+   * appends the MaxCDN URL to the proper assets, as mentioned above.
 
    * minifies the site's HTML.
 
@@ -301,7 +305,9 @@ The power of all this can be seen in my development workflow. It changed many ti
 
    * deploys the minified, optimized site build to production.
 
-I'm being bombastic when outline my workflow like this but am doing so to prove a point. The combination of Grunt and all the above-mentioned tools allowed me to craft a powerful, lightweight, highly-customizable integrated development environment that not only let me work efficiently but made the entire development process FUN! And within this environment, Grunt really ran the show.
+   * removes the MaxCDN URLs from the site build, as mentioned above.
+
+I'm being bombastic when outline my workflow like this but am doing so to prove a point. The combination all the above-mentioned tools allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN! And within this process, Grunt really ran the show.
 
 <a name="post-launch-tasks"></a>
 ### Post-Launch Tasks
@@ -311,7 +317,7 @@ Except for the overall neatness of the CSS, I'm fine with the production code. I
 
 But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:
 
-  * __Make some Grunt stuff DRYer__: there are some spots in my Gruntfile where the same task is repeats itself, particularly within the Bower tasks. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself, "What is the DRY principle") but I haven't really looked at it.  I need to do that.
+  * __Modify Grunt some more__: Grunt can be modified to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself, "What is the DRY principle") but I haven't really looked at it. I need to do that.
 
   * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/, "Read the Smashing Magazine Article about OOCSS").  
 
