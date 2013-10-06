@@ -22,7 +22,7 @@ The book offers six step-by-step HTML5 game creation tutorials, starting with a 
 
  [3]: http://nodejs.org/
 
-<img src="../img/html5GamesPackt.jpg" class="post-pic" />
+<img src="/img/html5GamesPackt.jpg" class="post-pic" />
 *HTML5 Games* also holds your hand quite nicely through the process. At times, it goes through a set of steps, then asks the reader “What just happened?”, clarifying the coding steps you just performed. It also, at times, makes sure that your brain retained the lessons you learned as pop quizes show up in the content.
 
 The book is certainly good for learning HTML5 gaming development but I have to say, it’s also if you have no plans to get into this realm. While this book demonstrates many coding techniques, four in particular jumped out at me:
