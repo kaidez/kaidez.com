@@ -259,9 +259,9 @@ Created by the previously-mentioned [@cowboy (A.K.A Ben Alman)](https://twitter.
 
 A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. These plugins let me create tasks within my dev environment, giving it a high level of functionality.
 
-For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin it and appends the MaxCDN URL to the all the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
+For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin and it appends the MaxCDN URL to the the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
 
-If the local dev site runs in a browser after that, it will call the CDN the assets and incur unnecessary costs. So when the production push to the remote server is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll) plugin "resets" the dev site by removing the CDN URLs. 
+If the local dev site runs in a browser after that, it will call the CDN assets and incur unnecessary costs. So when the production push to the remote server is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll) plugin "resets" the dev site by removing the CDN URLs. 
 
 Grunt add a lot of flexibility to my development workflow, which changed many times during the redesign and will change many more times now that it's done. But this is how it was working at the time of the relaunch: it lists two non-Grunt things for clarity (one of the non-Grunt things):
 
