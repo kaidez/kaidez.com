@@ -240,15 +240,17 @@ LEFT TO DO
 =================
 -remove "no-js" using code you take from Modernizr. (post launch)
 -CSS animations for the mobile menu & search box. (post launch)
--Get Google ads up and running. (DONE)
+-Video SEO (post launch)
 -CSS animations...review 'em.' (post launch)
 -Check to see if Git can push code to Media Temple via GitHub deploy hooks. (sorta...not sure how to properly deploy _site folder...post launch)
 -Get Backbone working with the form. (post launch)
 -Add an RSS link (DONE)
 -Create a cool front page (DONE)
--Create favicon.ico
+-Get Google ads up and running. (DONE)
 -Fix Disqus (in progress)
--Video SEO...may be post launch.
+-Build Grunt task to deploy to the staging site, but with CDN URLs and lsi building.
+-Create favicon.ico
+
 -Set up MaxCDN. (DONE)
 -fix background on the 404 page. (DONE)
 
@@ -258,6 +260,7 @@ Before/After deployment
 -Install Google Analytics.
 -Install GWT
 -Make sure affiliate links work sitewide.
+-Add 'cdn' sub-task back to 'grunt push' task.
 -Test that a post can be added to search.json with no problems.
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
