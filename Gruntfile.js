@@ -207,7 +207,7 @@ module.exports = function(grunt) {
     cdn: {
       options: {
           /** @required - root URL of your CDN (may contains sub-paths as shown below) */
-          cdn: 'http://kaidez.kaidez.netdna-cdn.com',
+          cdn: 'http://cdn.kaidez.com',
           /** @optional  - if provided both absolute and relative paths will be converted */
           flatten: false,
           /** @optional  - if provided will be added to the default supporting types */
