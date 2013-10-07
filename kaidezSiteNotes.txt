@@ -261,3 +261,4 @@ Before/After deployment
 -Test that a post can be added to search.json with no problems.
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
+-hide email.php via .gitignore
