@@ -166,15 +166,15 @@ There are some great comments in the Gist, many by well-known members of the JS 
 
 <a name="other-javscript"></a>
 ### The Rest Of The JavaScript
-Along with things bought in by the ads and Disqus, RequireJS certainly doesn't interact with all the sites JavaScipt. 
+RequireJS certainly doesn't interact with all the sites JavaScipt. It ignores JS bought in by ads and Disqus but there are other things it ignores.
 
-Modernizr is one such thing.  While RequireJS should be placed as to close to the bottom as possible, it's best practice to place Modernizr above the closing `<head>` tag. The Google Fonts load in using the JS-based [Google/Typekit Web Font Loader](https://github.com/typekit/webfontloader) and should be placed at the top of the page before Modernizr
+Modernizr is one such thing.  While your RequireJS file should be placed as to close to the bottom as possible, it's best practice to place Modernizr above the closing `<head>` tag. The Google Fonts load in using the JS-based [Google/Typekit Web Font Loader](https://github.com/typekit/webfontloader) and should be placed at the top of the page before Modernizr.
 
 The rest of the JavaScript that's outside of the RequireJS process loads asynchronously, i.e., it loads in a manner that doesn't hinder asset loading or content rendering. In this context, note two things:
 
 1. RequireJS also runs its code asynchronously.
 
-2. the Web Font Loader code actually loads synchronously, but *can* load asynchronously. But [as its documentation states](https://github.com/typekit/webfontloader#get-started), it will generate a lot of [FOUTS](http://www.paulirish.com/2009/fighting-the-font-face-fout/).
+2. the Web Font Loader code actually loads __synchronously__, but *can* load __asynchronously__. But, [as its documentation states](https://github.com/typekit/webfontloader#get-started), lots of [FOUTS](http://www.paulirish.com/2009/fighting-the-font-face-fout/) will be generated if the Loader comes into your page asynchronously.
 
 The asynchronous code consists of:
 
@@ -184,13 +184,13 @@ The asynchronous code consists of:
 
 * __[Social sharing functionality on the post pages](https://gist.github.com/necolas/1025811)__: props to Nicholas Gallagher here.
 
-I also have to give props to the Google Dev Team: all their code mentioned here has been in need of a cleanup for the few years leading up to this writing, and they certainly cleaned it up.
+I also have to give props to the Google Dev Team: all their code mentioned here has been in need of a cleanup for the few years leading up to this writing. They certainly cleaned it up.
 
 The Analytics/Webmaster code was once split into to two separate JS files...it's now been combined into one.  And the ad code is not only it async, it's also **RESPONSIVE!**
 
-Google ads don't scale when the window is resized. Its related code just uses media queries to detect the window width on page-load, then loads in an ad of size that you preset. But it solves a MAJOR problem that many people were having.
+Google ads don't scale when the window is resized. Its related code just uses media queries to detect the window width on page-load, then loads in a Google ad based on this detection. Your ads sizes can only be those [already approved by Google](https://support.google.com/adsense/answer/2953032?hl=en).
 
-All is not perfect with the Google stuff: the Adsense code still loads in a lot of unoptimized assets, causing a bit of a performance hit. But I'm certainly not crying over that because I'm happy with (and respect) what Google has done here.
+All is not perfect with the Google stuff: the Adsense code still loads in a lot of unoptimized assets, causing a bit of a performance hit. But this responsive solution solves a MAJOR problem that many people were having. I'm happy with (and respect) what the Google team has done here.
 <a name="bower"></a>
 ### Bower
 This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io) makes it easy.
