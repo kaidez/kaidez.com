@@ -12,7 +12,7 @@ has-home-img: site-relaunch.jpg
 ---
 After over 2,000 Git commits, kaidez.com gets a redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
 
-The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/, "go to kaidez.com GitHub repo"). The repo's [README](https://github.com/kaidez/kaidez.com/blob/master/README.md, "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code at the development level.
+The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/ "go to kaidez.com GitHub repo"). The repo's [README](https://github.com/kaidez/kaidez.com/blob/master/README.md "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code at the development level.
 
 The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is needed. Let's proceed with that:
 
@@ -39,32 +39,30 @@ WordPress manages its internal JS libraries in a way that kept me from controlli
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
-If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/), the blog-aware static site generator. [GitHub Pages](http://pages.github.com/) give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
+If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/ "Visit to the Jekyll site"), the blog-aware static site generator. [GitHub Pages](http://pages.github.com/) give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
 
-I created multiple site layouts using [Liquid](http://liquidmarkup.org/, "visit the liquid markup page"), a templating markup language with some internal logic. Whenever I run `jekyll build` from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.
+I created multiple site layouts using [Liquid](http://liquidmarkup.org/ "visit the liquid markup page"), a templating markup language with some internal logic. Whenever I run `jekyll build` from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.
 
 The outputted site does some very cool things...here's short list:
 
-* lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/, "visit the markdown documentation page")...it all gets converted to to HTML.
+* lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/ "visit the markdown documentation page")...it all gets converted to to HTML.
 * the logic displays posts on the [home page](/) in a very "dynamic" way (more on this in a future post).
 * four category-specific pages are generated.
 * an XML-powered RSS file for syndication is built.
 * an HTML site map is created.
 * a short list of related posts is placed at the end of each post.
 
-Ruby is a Jekyll hard dependency so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/, "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/, "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/, "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
+Ruby is a Jekyll hard dependency so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/ "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/ "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/ "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
 
-Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com, "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
+Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
 
-I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/, "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
+I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is the definitive article on the subject.
 
 I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
 Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being WordPress.
 
 Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
-
-And in all fairness, there are other options in terms of static site generators. [Dave Rupert](http://daverupert.com/) put together [a GitHub Gist of static site generators that was extended by commenters](https://gist.github.com/davatron5000/2254924). And in the .NET realm, [Pretzel](http://code52.org/pretzel/) looks interesting but is somewhat quiet in terms of commits to its [Github repo](https://github.com/Code52/pretzel). Checking out the [Pretzel Trello Board](https://trello.com/b/2IUErvJ2/pretzel) is a good idea.
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
@@ -81,9 +79,9 @@ Instead, I designed this site within a browser using various desktop and remote 
 ### Mobile First
 "Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
 
-No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on [the ROT principle](http://blog.braintraffic.com/2011/08/content-strategy-can-save-us-all-from-slobdom/, "What is ROT when talking about content strategy"), then either eliminated lots of content I didn't need or moved it to the bottom of the page.
+No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on [the ROT principle](http://blog.braintraffic.com/2011/08/content-strategy-can-save-us-all-from-slobdom/ "What is ROT when talking about content strategy"), then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
-Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/, "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
+Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/ "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
 
 I may not have implemented this method properly...I ended up writing more code than I planned on. The code "works" but I know it can be neater and need to revisit it.
 
@@ -263,7 +261,7 @@ A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by b
 
 For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin it and appends the MaxCDN URL to the all the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
 
-If the local dev site runs in a browser after that, it will render the assets from the CDN, incurring unnecessary costs. So when the production push is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll) plugin "resets" the dev site by removing the CDN URLs. 
+If the local dev site runs in a browser after that, it will call the CDN the assets and incur unnecessary costs. So when the production push to the remote server is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll) plugin "resets" the dev site by removing the CDN URLs. 
 
 Grunt add a lot of flexibility to my development workflow, which changed many times during the redesign and will change many more times now that it's done. But this is how it was working at the time of the relaunch: it lists two non-Grunt things for clarity (one of the non-Grunt things):
 
@@ -313,15 +311,15 @@ I'm being bombastic when outline my workflow like this but am doing so to prove 
 
 <a name="post-launch-tasks"></a>
 ### Post-Launch Tasks
-If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20, "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
+If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20 "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
 
 Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors, loads fast, looks and acts great across different browsers/devices, utilizes SEO best practices and executes most post-load events at [the current recommended target rate of 60 frames per second](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/).
 
 But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:
 
-  * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself, "What is the DRY principle") but I haven't really looked at it. I need to do that.
+  * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself "What is the DRY principle?") but I haven't really looked at it. I need to do that.
 
-  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/, "Read the Smashing Magazine Article about OOCSS").  
+  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Read the Smashing Magazine Article about OOCSS").  
 
   * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
 
