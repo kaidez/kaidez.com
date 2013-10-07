@@ -247,9 +247,9 @@ LEFT TO DO
 -Add an RSS link (DONE)
 -Create a cool front page (DONE)
 -Create favicon.ico
--Fix Disqus
+-Fix Disqus (in progress)
 -Video SEO...may be post launch.
--Set up MaxCDN. (DONE, BUT NEED TO DO CNAME STUFF)
+-Set up MaxCDN. (DONE)
 -fix background on the 404 page. (DONE)
 
 Before/After deployment
