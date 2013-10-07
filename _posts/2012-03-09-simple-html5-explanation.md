@@ -14,7 +14,7 @@ tags: [html5, best practice]
 HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.
 
 This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.
-<img src="http://kaidez.com/wp-content/uploads/2012/03/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic">
+<img src="/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic">
 
 As awesome as this is, I’ve had a few conversations with non-developers who think HTML5 is a magic bullet. Most talk about it as something that they *should* be doing without fully understanding *what it actually is*.
 

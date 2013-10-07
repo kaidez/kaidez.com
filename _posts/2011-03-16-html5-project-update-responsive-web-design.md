@@ -28,7 +28,7 @@ What Jesse James Garrett was to Ajax, [Ethan Marcotte][4] may end up being to *r
 
 Inspired by modern architectural theory, responsive web design uses CSS3 to detect the width of a device…a web browser, a tablet, a smartphone…whatever. Combine this detection process with traditional CSS techniques for positioning page elements, and **you’re able to create *one* website that neatly displays on *all* devices.**
 
-I’d like to present this as an opportunity to our team at work, but I need to develop and test out code on my own first. So I may adjust the portfolio for [my HTML5 Project][6] to accommodate a responsive web design. Doing this requires my understanding of the process….here’s what I’ve learned so far.
+I’d like to present this as an opportunity to our team at work, but I need to develop and test out code on my own first. So I may adjust the portfolio for [my HTML5 Project][6] to accommodate a responsive web design. Doing this requires my understanding of the process...here’s what I’ve learned so far.
 
  [6]: http://kaidez.com/html5-project/
 
@@ -54,7 +54,7 @@ With this code in mind, let’s look at the following scenario:
 
 ### Browser Detection
 
-Before we discuss how all this works, let’s look at responsive web design in action. Since not every browser supports this functionality, I need to check out your browser first…
+Before we discuss how all this works, let’s look at responsive web design in action. Since not every browser supports this functionality, I need to check out your browser first...
 
 **It looks like you’re not using Internet Explorer 8 or lower** so you should be able to view this demo with no issues. But if you’re using a really old version of either Firefox, Safari, Opera Mobile or Opera Mini, you may need to update it.
 

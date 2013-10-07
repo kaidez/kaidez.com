@@ -19,7 +19,7 @@ With all the talk about fancy JavaScript libraries like [jQuery][3] and [Moderni
  [4]: http://www.modernizr.com/
  [5]: http://css3pie.com/
 
-<img src="../img/CSS3-PIE.png" class="post-pic" />
+<img src="/img/CSS3-PIE.png" class="post-pic" />
 Internet Explorer 9 provides wide CSS3 support while the previous versions of IE don’t support it at all. But CSS3 PIE is a lightweight library (32kb as of this post) that allows developers to apply a limited amount of CSS3 features to Internet Explorer versions 6 through 8. Let’s take a peek at these features by creating a link with rounded corners and transparency.
 
 This tutorial will first create code that’s not friendly for older versions of IE, progressively adding the CSS3 PIE code so you get a before-and-after view of things. I’ll be using both Internet Explorer 8 and Google Chrome to test my code.
@@ -146,9 +146,7 @@ a.links:hover {
 }
 {% endprism %}                        
                 
-12)So our final code should look like this: 
-                        
-A CSS3 Rollover for Internet Explorer 6 thru 8
+12) So our final code should look like this: 
                         	
 {% prism css %}  
 body {
@@ -174,10 +172,11 @@ a.links:hover {
 {% endprism %}
                         	
 And with that, everything works in all browsers, including IE8, IE7, and yes, IE6.   
+
 That’s it but let me make a few points…
                     
 *   CSS3 PIE is in beta as of this article and still in its growing period, so you should keep yourself up to date in terms of its development. [Following them on Twitter][8] is a great idea!
-*   Since IE9 currently supports all the CSS3 features that CSS3 PIE currently supports, CSS3 PIE is disabled in IE9. At least, for now.
+*   Since IE9+ currently supports all the CSS3 features that CSS3 PIE currently supports, CSS3 PIE is disabled in IE9. At least, for now.
 *   Remember that CSS3 PIE targets IE only. Older versions of Firefox and the Webkit browsers have their own issues in terms of rendering rounded corners and transparencies…this tutorial won’t fix any of them.
 *   In [a previous post about my HTML5 Project][9], I said that I may or may not use CSS3 PIE in the project as it may conflict with Modernizr, which I’ll definitely be using. There was a point in developing this tutorial where I used both CSS3 PIE and Modernizr-the latter was obviously removed in the end but I did perform some browser checks before getting rid of it.  
                           
@@ -186,6 +185,6 @@ That’s it but let me make a few points…
 Please help me get better at explaining things…feel free to let me know if I’m not clear on something. And, again, [feel free to grab the completed code for this tutorial over at GitHub][1].
 
  [6]: http://kaidez.com/wp-content/uploads/2011/03/nonIE.png "nonIE"
- [7]: ../img/pie-tut-IE.png "IE"
+ [7]: /img/pie-tut-IE.png "IE"
  [8]: http://twitter.com/css3pie
  [9]: http://kaidez.com/html5-project-update-january-21-2011/

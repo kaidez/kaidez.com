@@ -9,10 +9,9 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, kai]
 ---
-The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and [their new Skimmer site][2].
+The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and [their new Skimmer site](http://www.nytimes.com/skimmer/#/Top News).
 
  [1]: http://www.nytimes.com/2011/03/27/business/27unboxed.html
- [2]: http://www.nytimes.com/skimmer/#/Top News
 
 The article referenced two other articles: [a previous Scientific American article by Tim Berners-Lee][3] and [another Wired article co-authored by Chris Anderson and Michael Wolff][4]. The cumulative point of the Sci American and Wired pieces was that applications like Facebook and mobile apps operated inside the open web while maintaining and storing information behind a non-searchable wall, which is not what the Word Wide Web is about. HTML5, according to the Times, will deliver most open source web-based apps which will break this wall down.
 

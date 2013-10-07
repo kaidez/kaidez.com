@@ -68,7 +68,7 @@ The spec says, if page elements are related to each other, code your page so the
 
 Let’s look at how I did it on the Experiments page:
 
-[![][15]][15] 
+[![][16]][16] 
 
  
 
@@ -86,9 +86,9 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 
 This page shares the same  /  ***Read the entire “Wirefame Series”: [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
- [9]: ../img/Work.jpg
+ [9]: /img/Work.jpg
  [12]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#div
  [13]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#articleSection
- []: ../img/Experiments.jpg
+ []: /img/Experiments-02.jpg
  [15]: http://html5doctor.com/aside-revisited/
- []: ../img/Playlist.jpg
+ [16]: /img/Playlist.jpg

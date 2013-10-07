@@ -17,7 +17,7 @@ Both of my NYC Social Media Week panel recaps, [the social listening one][1] and
 
 A HUGE thank you to JWT/New York for Tweeting one of the articles and, of course, gratitude upon gratitude to **Heather Duffy Wales** at JWT/Atlanta for not only sharing them with her co-workers, but also getting me into both panels in the first place!!!!!!
 
-<img src="../img/volk.jpg" alt="" class="post-pic">
+<img src="/img/volk.jpg" alt="" class="post-pic">
 **Kristin Volk of MediaVest**, one of the panelists on the mobile strategy panel, also shared that respective article with quite a few people. There were a few of panel points which, for the sake of space, I had to omit. Kristin made some points that I didn’t include, but she would like to share:
 
 > “...I did keep making the point that smartphones are still only 30% of mobile phones, and I mentioned that there are now more mobile devices than PCs and TVs combined, making it the first screen now, not the third.

@@ -76,11 +76,9 @@ Also, I suppose I could have placed the  tag in a  first. But if we follow HTML5
  
 
 *   single blocks of page content can go directly into  tags.
-*    seems to be reserved for a group of related  tags, not just one. My main Work page uses this type grouping.  
-    
-    [![][15]][15] 
+*    seems to be reserved for a group of related  tags, not just one. My main Work page uses this type grouping.
 
- []: http://kaidez.com/wp-content/uploads/2011/02/Work.jpg
+<img src="/img/Work.jpg" alt="Kaidez Old HTML5 Project">
 
 ## Summary
 

@@ -86,8 +86,8 @@ With this file size limit in mind, I created image sprites for almost all the si
 
 [![Almay Image Sprite][19]][19]
 
- []: http://kaidez.com/wp-content/uploads/2011/06/copyArrowConcealerSprite.png
- [19]: http://kaidez.com/wp-content/uploads/2011/06/copyArrowConcealerSprite.png
+ []: /img/copyArrowConcealerSprite.png
+ [19]: /img/copyArrowConcealerSprite.png
 
 As you can see, this 24kb transparent PNG bundles six images used on the Almay Facebook page, most of which will be used on all three pages of the Almay/Facebook page. I basically used CSS to display certain parts of it when I needed to, while effectively blocking out the others. 
 
@@ -171,11 +171,11 @@ These are beginning tactics that mostly deal with front end code: there are many
         
 We’re talking about the front end code I created for this Facebook project, but not Facebook itself. I have some things to say about this, none of it good. [That will be the next post][28].
 
- [21]: http://kaidez.com/wp-content/uploads/2011/06/console.png
+ [21]: /img/console.png
  [22]: http://html5boilerplate.com/docs/#The-style
  [23]: http://html5boilerplate.com/docs/#Build-script
  [24]: http://optipng.sourceforge.net/
  [25]: http://jpegclub.org/jpegtran/
- [26]: http://kaidez.com/wp-content/uploads/2011/06/Yslow.png
- [27]: http://kaidez.com/wp-content/uploads/2011/06/PageSpeed.png
+ [26]: /img/Yslow.png
+ [27]: /img/PageSpeed.png
  [28]: http://kaidez.com/2-bad-facebook-app-things/

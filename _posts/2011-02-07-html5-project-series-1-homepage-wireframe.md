@@ -155,17 +155,17 @@ A major *major* characteristic of HTML5 has to do with how all the page content 
 ***Read the entire “Wirefame Series”: [Intro»][1] | Page 1» | [Page 2][2]» | [Page 3»][3]***
 
 
- [19]: ../img/home.jpg "Main Navigation screenshot for kaidez portfolio site"
- [20]: ../img/mainNav.jpg "Main Navigation screenshot for kaidez portfolio site"
- [21]: ../img/socialNav.jpg "Social networking navigation screen shot for kaidez portfolio home page wire frame"
- [22]: ../img/footerNav.jpg "Footer navigation for the kaidez portfolio site"
- [23]: ../img/header.jpg "Header snippet for the kaidez portfolio site"
- [24]: ../img/footerSnippet.jpg "Footer Snippet for kaidez portfolio site"
+ [19]: /img/home.jpg "Main Navigation screenshot for kaidez portfolio site"
+ [20]: /img/mainNav.jpg "Main Navigation screenshot for kaidez portfolio site"
+ [21]: /img/socialNav.jpg "Social networking navigation screen shot for kaidez portfolio home page wire frame"
+ [22]: /img/footerNav.jpg "Footer navigation for the kaidez portfolio site"
+ [23]: /img/header.jpg "Header snippet for the kaidez portfolio site"
+ [24]: /img/footerSnippet.jpg "Footer Snippet for kaidez portfolio site"
  [25]: http://html5doctor.com/the-article-element/
- [26]: ../img/sectionOnlyHomePage.jpg
+ [26]: /img/sectionOnlyHomePage.jpg
  [27]: http://www.w3.org/
  [28]: http://www.whatwg.org/
- [29]: ../img/containerDiv.jpg "Container Div for kaidez portfolio site"
- [30]: ../img/entireMidSectionHomePage.jpg
- [31]: ../img/feeds.jpg "Feed screenshot for kaidez portfolio site"
- [32]: ../img/small.jpg "Small tag screen shot for the kaidez portfolio site"
+ [29]: /img/containerDiv.jpg "Container Div for kaidez portfolio site"
+ [30]: /img/entireMidSectionHomePage.jpg
+ [31]: /img/feeds.jpg "Feed screenshot for kaidez portfolio site"
+ [32]: /img/small.jpg "Small tag screen shot for the kaidez portfolio site"

@@ -53,7 +53,7 @@ Pretty impressive, I’d say…
  
 
 <figcaption class="post-image-box">
-<img src="../img/feb10Badge.jpg" />
+<img src="/img/feb10Badge.jpg" />
 <figcaption class="post-image-caption">My badge for the Social Listening Event</figcaption>
 </figcaption>
 
@@ -75,7 +75,7 @@ For the 2011 Super Bowl, his company ran one of the first and most talked-about 
 
 There were some examples of how too much listening could be a bad thing, the prime example coming from Clark at GMD Studios. He recalled the story of the *very* early Twitter promotion of *Snakes On A Plane*, which occurred while the film was in post-production. Movie geeks tweeted how *they* thought the movie’s storyline should run. The filmmakers took the tweets to heart and, as they were in post-production, re-edited the movie to so that the storyline matched the geek’s suggestions. The result: *Snakes* opened to a tepid response from movie-goers; there’s no direct proof that the film was great to begin with and that the Twitter users made the film worse, but they sure didn’t make it better.  
 <figcaption class="post-image-box">
-<img src="../img/packedHouse.jpg" />
+<img src="/img/packedHouse.jpg" />
 <figcaption class="post-image-caption">A packed house for the event!</figcaption>
 </figcaption>
   
@@ -122,7 +122,7 @@ And what about the limits of Facebook, the biggest social network out there righ
 Companies have to deal with this limitation as well. 5 trillion people could "Like" Pepsi on Facebook tomorrow, but Pepsi won’t know anything about them unless the consumer lets them in, and many don’t. Not even Radian6 can track everything on FB, which Ed Sullivan, VP of Radian6 and part of this panel discussion, confirmed.  
 
 <figcaption class="post-image-box">
-<img src="../img/panelists.jpg" />
+<img src="/img/panelists.jpg" />
 <figcaption class="post-image-caption">The panelists from left to right: Ed Sullivan of Radian 6, Kyle Monson of JWT, Brian Clark of GMD Studios, Michael Jaindl of Buddy Media, Shiv Singh of PepsiCo, and moderator Michael Learmonth of Ad Age</figcaption>
 </figcaption>
 
