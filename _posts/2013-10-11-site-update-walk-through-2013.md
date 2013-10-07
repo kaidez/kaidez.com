@@ -201,7 +201,7 @@ Bower does not track EVERY library on kaidez.com: it downloads packages from rem
 ### SEO &amp; Accessibility
 The two best SEO practices you can implement on your site are 1) create compelling new content, and 2) regularly cultivate your existing content to make it *more* compelling. Compelling content is primarily (but not singularly) defined by the main search engines as content with a significant amount of back-links.
 
-If your content strategy doesn't implement these two tasks, you don't have a content strategy. So moving forward, I'll try to make my content as standout as possible with the goal of garnering back-links. This will require lengthy keyword research, running all-in-title searches and crafting enticing meta descriptions.
+If your content strategy doesn't implement these two tasks, you don't have a content strategy. I've definitely seen slight traffic when I publish even a trivial post so moving forward, I'll try to make my content as standout as possible with the goal of garnering back-links. This will require lengthy keyword research, running all-in-title searches and crafting enticing meta descriptions.
 
 Still, I did the following SEO technical stuff behind the scenes:
 
