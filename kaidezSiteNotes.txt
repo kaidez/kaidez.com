@@ -248,17 +248,16 @@ LEFT TO DO
 -Create a cool front page (DONE)
 -Get Google ads up and running. (DONE)
 -Fix Disqus (in progress)
--Build Grunt task to deploy to the staging site, but with CDN URLs and lsi building.
--Create favicon.ico
-
 -Set up MaxCDN. (DONE)
 -fix background on the 404 page. (DONE)
+-Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building.
+-Create favicon.ico
 
 Before/After deployment
 =================
 -301 the "2 javascript tasks" post
 -Install Google Analytics.
--Install GWT
+-Install GWT (Done on the server side...needs to be done on the client side)
 -Make sure affiliate links work sitewide.
 -Add 'cdn' sub-task back to 'grunt push' task.
 -Test that a post can be added to search.json with no problems.
