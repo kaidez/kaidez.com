@@ -64,7 +64,7 @@ Also, Jekyll is definitely geared towards the blogger that likes to write code s
 
 Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
 
-And in all fairness, there are other options in terms of static site generators. [Dave Rupert](http://daverupert.com/) put together [a GitHub Gist of static site generators that was extended by commenters](https://gist.github.com/davatron5000/2254924). And in the .NET realm, there's lots of community action around Pretzel...check out [Pretzel's Github repo](https://github.com/Code52/pretzel) but surfing around [Pretzel's Trello Board](https://trello.com/b/2IUErvJ2/pretzel) is also a good idea.
+And in all fairness, there are other options in terms of static site generators. [Dave Rupert](http://daverupert.com/) put together [a GitHub Gist of static site generators that was extended by commenters](https://gist.github.com/davatron5000/2254924). And in the .NET realm, [Pretzel](http://code52.org/pretzel/) looks interesting but is somewhat quiet in terms of commits to its [Github repo](https://github.com/Code52/pretzel). Checking out the [Pretzel Trello Board](https://trello.com/b/2IUErvJ2/pretzel) is a good idea.
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
@@ -214,7 +214,7 @@ Still, I did the following SEO technical stuff behind the scenes:
 * embedded [Open Graph](http://ogp.me/) protocols into the site code.
 * signed up for [Twitter Cards](https://dev.twitter.com/docs/cards).
 
-Making a site was accessible to people with disabilities is also a good SEO practice, so I did the following:
+Making a site was accessible to people with disabilities is also a good SEO practice...and something you should just do anyway. So I did the following:
 
 * marked up the links with a `title` attribute for easy tab-throughs.
 * ran some pages through a screen-reader.
