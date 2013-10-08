@@ -199,7 +199,7 @@ All is not perfect with the Google stuff: the Adsense code still loads in a lot 
 None of that matters to me though...this responsive solution solves a MAJOR problem that many people were having with Google ads. I'm happy with (and respect) what the Google team has done here.
 <a name="bower"></a>
 ### Bower
-This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io) makes it easy.
+This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io "Download Bower: a task manager for the web") makes it easy.
 
 Bower is a browser-based package manager that runs on top of Node. When it's properly configured and you type `bower list` on the command line from your project folder, Bower checks to see if any of these packages needs to be updated (as well as Bower itself). If any packages need updating, typing `bower update <whatever-the-package>` into the CLI takes care of the update.
 
@@ -207,31 +207,31 @@ Bower does not track EVERY library on kaidez.com: it downloads packages from rem
 
 <a name="seo-accessibility"></a>
 ### SEO &amp; Accessibility
-The two best SEO practices you can implement on your site are 1) create compelling new content, and 2) regularly cultivate your existing content to make it *more* compelling. Compelling content is primarily (but not singularly) defined by the main search engines as content with a significant amount of back-links.
+The two best SEO practices you can implement on your site are 1) create compelling new content, and 2) regularly cultivate your existing content to make it *more* compelling. Compelling content is primarily (but not singularly) defined by the main search engines as content with a significant amount of external backlinks.
 
 If your content strategy doesn't implement these two tasks, you don't have a content strategy. And I've definitely gotten slight traffic bumps when I publish even a trivial post so there's definitely something to creating new content.
 
-So moving forward, I'll try to be more consistent with publishing stuff	 with the goal of making it as standout as possible to garner more back-links. This will require lengthy keyword research, running Google all-in-title searches and crafting enticing meta descriptions.
+So moving forward, I'll try to be more consistent with publishing stuff	 with the goal of making it as standout as possible to garner more external backlinks. This will require lengthy keyword research, running Google all-in-title searches and crafting enticing meta descriptions.
 
 Still, I did the following SEO technical stuff behind the scenes:
 
-* implemented [Schema.org](http://schema.org) data.
+* implemented [Schema.org](http://schema.org "Learn more about schema.org") data.
 * made sure each page had a canonical link.
 * generated an XML sitemap for the search engines.
-* made sure at least one section had pagination...view this [here](/pages/).
-* embedded [Open Graph](http://ogp.me/) protocols.
-* signed up for [Twitter Cards](https://dev.twitter.com/docs/cards).
+* made sure at least one section had pagination...view this [here](/pages/ "").
+* embedded [Open Graph](http://ogp.me/ "Learn more about Open Graph protocol") protocols.
+* signed up for [Twitter Cards](https://dev.twitter.com/docs/cards "Sign up for Twitter Cards").
 
 Making a site accessible to people with disabilities is also a good SEO practice...and something you should just do anyway. So I did the following:
 
-* started marking up the links with a `title` attribute for easy tab-throughs (I still have to do this for some older posts so this will be "in progress" for a while).
+* started marking up the links with a `title` attribute for easy tab-throughs (this will be "in progress" for a quite while).
 * ran some pages through a screen-reader.
 * turned off all styles and read the unstyled page content out loud (which is basically what a screen-reader does).
-* made sure that any elements that needed to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that I didn't do this, but it's mostly done site-wide.
+* made sure that any elements that needed to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html "Accessibility suggestions from Yahoo"). There are a few spots that I didn't do this, but it's mostly done site-wide.
 
-If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibilty is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/).
+If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibilty is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/ "Austin Seraphin article on iPhone providing great accessibilty functions for the disabled").
 
-If you still need convincing after reading that, refer to what [Jen Kramer](http://www.jenkramer.org/) says:
+If you still need convincing after reading that, refer to what [Jen Kramer](http://www.jenkramer.org/ "Go to technology instructor Jen Kramer's site") says:
 
 > *"Websites that are built to be accessible will also be accessible your number one blind user: Google."*
 
@@ -239,43 +239,43 @@ If you still need convincing after reading that, refer to what [Jen Kramer](http
 ### Web Hosting
 I'm sticking with my basic [Media Temple](http://www.mediatemple.net#a_aid=5068b81963acf) Grid Server package but deciding on a web host was really something I struggled with up to the last minute.
 
-I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple [DV Managed](http://mediatemple.net/webhosting/vps/managed/) or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/) or [Amazon Web Services](http://aws.amazon.com/) in this case.
+I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple [DV Managed](http://mediatemple.net/webhosting/vps/managed/#a_aid=5068b81963acf "Review Media Temple's DV Managed Package") or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/ "Check out Rackspace") or [Amazon Web Services](http://aws.amazon.com/ "Check out Amazon Web Services") in this case.
 
 Going with either DV Managed, Rackspace or AWS meant installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME tech support in case I needed help and Rackspace seemed to pride itself on NOT providing any. So they were out.
 
 Media Temple has EXCELLENT customer service but DV Managed was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point. 
 
-AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free Amazon Usage Tier](http://aws.amazon.com/free/).
+AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free AWS Usage Tier](http://aws.amazon.com/free/ "Read more about AWS' free Usage Tier").
 
 Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/) from the 2012 Obama campaign runs this setup and has [a great write-up about it](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/).
 
-My contact form requires PHP, which can't run on S3 unless you [install the Amazon PHP SDK with Composer](http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/installation.html). I was researching how to do this...until I started poking around [Heroku](https://www.heroku.com/).
+My contact form requires PHP, which can't run on S3 unless you [install the Amazon PHP SDK with Composer](http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/installation.html "Install the Amazon PHP SDK with Composer"). I was researching how to do this...until I started poking around [Heroku](https://www.heroku.com/ "Review the Heroku Cloud Application Platform").
 
 Heroku is insanely awesome! It will let me do a limited amount of Node/Ruby stuff for free....limited but powerful. I'm still researching how much of it is free but if it's enough, there's no reason to upgrade my current hosting package.
 
 I'm sticking with my generic, PHP-included Media Temple plan for now and will do some fancy coding stuff on Heroku. But while I took all of the above tech stuff into consideration, I have to say that MT's excellent customer service was a big reason I stayed with them.
 
-Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/) that offers a few less features than DV Managed (it doesn't come with [Plesk](http://www.parallels.com/products/plesk/)). It doesn't appear to be cloud-based but appears to be "AWS-like" in other ways and may suit my specific future needs.
+Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Devloper Package") that offers a few less features than DV Managed (it doesn't come with [Plesk](http://www.parallels.com/products/plesk/ "Learn more about the Plesk professional control panel"). It doesn't appear to be cloud-based but appears to be "AWS-like" in other ways and may suit my specific future needs.
 
 <a name="grunt-development-workflow"></a>
 ### Grunt &amp; Development Workflow
 So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concate/minify a lot of JavaScript and concatenating/minifying other assets.
 
-All these various processes means various tasks need to run at various times. And instead of manually performing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com).
+All these various processes means various tasks need to run at various times. And instead of manually performing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com "Go get Grunt: the JavScript task runner").
 
 And as I've told anyone that would listen for the past two months, Grunt is my new God.
 
-Created by the previously-mentioned [@cowboy (A.K.A Ben Alman)](https://twitter.com/cowboy) and similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial), Grunt is a JavaScript task runner. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
+Created by the previously-mentioned [@cowboy (A.K.A Ben Alman)](https://twitter.com/cowboy "Ben Alman/cowboy on Twitter") and similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial "Learn more about Rake"), Grunt is a JavaScript task runner. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
 
-A boatload of [Grunt plugins](http://gruntjs.com/plugins) have been created by both the community and the Grunt core committers. These plugins let me create tasks within my dev environment, giving it a high level of functionality.
+A boatload of [Grunt plugins](http://gruntjs.com/plugins "Look through all the Grunt plugins") have been created by both the community and the Grunt core committers. These plugins let me create tasks within my dev environment, giving it a high level of functionality.
 
-For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn) plugin and it appends the MaxCDN URL to the the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
+For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn "Get the grunt cdn plugin") plugin and it appends the MaxCDN URL to the the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
 
-I constantly load/relaod the local dev site in a browser when writing code and the CDN assets get called every time that happens.  This incurs unnecessary costs so when the production push to the remote server is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll) plugin "resets" the dev site by removing the CDN URLs. These and other tasks run using a single Grunt command...I LOVE IT!
+I constantly load/relaod the local dev site in a browser for testing purposes when writing code, meaning the CDN assets could get called that happens.  This woukd incur unnecessary costs so when the production push to the remote server is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll "Get the grunt jekyll plugin") plugin "resets" the dev site by removing the CDN URLs. These and other tasks run using a single Grunt deployment task...I LOVE IT!
 
 Grunt add a lot of flexibility to my development workflow, which changed many times during the redesign and will change many more times now that it's done. But this is how it was working at the time of the relaunch: it lists two non-Grunt things for clarity:
 
-1. Launch a command prompt with [iTerm](http://iterm.sourceforge.net/).
+1. Launch a command prompt with [iTerm](http://iterm.sourceforge.net/ "Get iTerm").
 
 2. Run a bash alias that 1) jumps to my site project folder, 2) runs `bower list` to check for dependency updates, and 3) launches my `grunt watch` task which watches for certain file additions and changes.
 
@@ -295,11 +295,11 @@ Grunt add a lot of flexibility to my development workflow, which changed many ti
 
     * if `.html`, `.xml`, `.php` or `.md` files are added or updated, Jekyll rebuilds the site.
 
-    * if `.jpg` or `.png` files are added or updated, they're minified with, respectively, [jpegtran](http://jpegclub.org/jpegtran/) or [optiping](http://optipng.sourceforge.net/), then Jekyll rebuilds the site.
+    * if `.jpg` or `.png` files are added or updated, they're minified with, respectively, [jpegtran](http://jpegclub.org/jpegtran/ "Get jpegtran") or [optiping](http://optipng.sourceforge.net/ "Get optipng"), then Jekyll rebuilds the site.
 
-6. If the `grunt-modernizr` task is run, a pre-defined group of files is scanned for things that Modernizr may need to feature-detect. Based on that scan, a slimmed-down custom build of Modernizr is created, bringing in only the feature-detects I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/).
+6. If the `grunt-modernizr` task is run, a pre-defined group of files is scanned for things that Modernizr may need to feature-detect. Based on that scan, a slimmed-down custom build of Modernizr is created, bringing in only the feature-detects I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/ "Go to Modernizr's custom build tool").
 
-7. Code changes are made in Sublime Text and committed to Git in small bits using the [Tim Pope style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)...one of the "non-Grunt" things.
+7. Code changes are made in Sublime Text and committed to Git in small bits using the [Tim Pope style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Tim Pope article on proper Git commits")...one of the "non-Grunt" things.
 
 8. Code changes are reviewed on `localhost` running on [MAMP](http://www.mamp.info/)...the other "non-Grunt" things.
 
@@ -331,13 +331,13 @@ I'm being bombastic when outline my workflow like this but am doing so to prove 
 ### Post-Launch Tasks
 If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20 "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
 
-Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors (although some 3rd-party code does), loads fast, looks and acts great across different browsers/devices (except oldIE-based stuff), utilizes SEO best practices and executes most post-load events at [the current recommended target rate of 60 frames per second](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/).
+Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors (although some 3rd-party code does), loads fast, looks and acts great across different browsers/devices (except oldIE-based stuff), utilizes SEO best practices and executes most post-load events at [the current recommended target rate of 60 frames per second](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/ "Smasing Magazine article about browser paint performance").
 
 But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:
 
   * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself "What is the DRY principle?") but I haven't really looked at it. I need to do that.
 
-  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Read the Smashing Magazine Article about OOCSS").  
+  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Smashing Magazine Article about OOCSS").  
 
   * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
 
