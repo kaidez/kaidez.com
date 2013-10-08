@@ -352,7 +352,7 @@ module.exports = function(grunt) {
    'sftp-deploy': {
     
     // deploy to the development site
-    dev: {
+    staging: {
       auth: {
         host: 's46798.gridserver.com',
         port: 22,
@@ -363,7 +363,7 @@ module.exports = function(grunt) {
     },
 
     // deploy to live site
-    prod: {
+    production: {
       auth: {
         host: 's46798.gridserver.com',
         port: 22,
@@ -396,6 +396,6 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('dpush', ['jekyll:dev', 'manifest', 'sftp-deploy:dev']);
-  grunt.registerTask('ppush', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:prod', 'jekyll:dev']);
+  grunt.registerTask('dpush', ['jekyll:dev', 'manifest', 'sftp-deploy:staging']);
+  grunt.registerTask('spush', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'jekyll:dev']);
 };
