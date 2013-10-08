@@ -375,7 +375,6 @@ $bg-size: 227px 334px;
 
 // Styles for post and category <h1> tags
 @mixin post-category-title($font-size, $padding: blank) {
-  @include master-center;
   font-size: $font-size;
   @if $padding != blank {
     padding: $padding;
