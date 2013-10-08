@@ -237,7 +237,7 @@ To-dos (review this every day)
 http://calendar.perfplanet.com/2011/useless-downloads-of-background-images-in-android/ (YEP!)
 
 LEFT TO DO
-=================
+==========
 -remove "no-js" using code you take from Modernizr. (post launch)
 -CSS animations for the mobile menu & search box. (post launch)
 -Video SEO (post launch)
@@ -247,16 +247,16 @@ LEFT TO DO
 -Add an RSS link (DONE)
 -Create a cool front page (DONE)
 -Get Google ads up and running. (DONE)
--Fix Disqus (in progress)
 -Set up MaxCDN. (DONE)
 -fix background on the 404 page. (DONE)
--Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building.
+-Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building. (DONE)
 -Create favicon.ico
 
 Before/After deployment
-=================
+=======================
 -301 the "2 javascript tasks" post
--whitelist dev site on MaxCDN.
+-Fix Disqus
+-blacklist dev site on MaxCDN.
 -Install Google Analytics.
 -Install GWT (Done on the server side...needs to be done on the client side)
 -Make sure affiliate links work sitewide.
