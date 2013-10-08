@@ -39,7 +39,7 @@ WordPress manages its internal JS libraries in a way that kept me from controlli
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
-If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/ "Visit to the Jekyll site"), the blog-aware static site generator. Sites that run using [GitHub Pages](http://pages.github.com/) give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
+If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/ "Visit to the Jekyll site"), the blog-aware static site generator. Sites that run using [GitHub Pages](http://pages.github.com/ "Learn more about GitHub pages") give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
 
 I created multiple site layouts using [Liquid](http://liquidmarkup.org/ "visit the liquid markup page"), a templating markup language with some internal logic. Whenever I run `jekyll build` from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.
 
@@ -56,13 +56,15 @@ Ruby is a Jekyll dependency so this site does use two Ruby-based plugins at the 
 
 Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
 
-I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs) is *the* definitive article on the subject.
+I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs "Vito Botta post for migrating from WordPress to Jekyll") is *the* definitive article on the subject.
+
+Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
 
 I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
-Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being WordPress.
+And let's be fair: with a little work, it is possible to create a static site with WordPress.  I found some plugins and techniques for doing this...I haven't tested it but the [Really Static plugin](http://wordpress.org/plugins/really-static/ "Check out Really Static: the WordPress plugin static site generator") seems that it can do the job.
 
-Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
+Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being WordPress.
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
@@ -220,7 +222,7 @@ Still, I did the following SEO technical stuff behind the scenes:
 
 Making a site accessible to people with disabilities is also a good SEO practice...and something you should just do anyway. So I did the following:
 
-* marked up the links with a `title` attribute for easy tab-throughs.
+* started marking up the links with a `title` attribute for easy tab-throughs (I still have to do this for some older posts so this will be "in progress" for a while).
 * ran some pages through a screen-reader.
 * turned off all styles and read the unstyled page content out loud (which is basically what a screen-reader does).
 * made sure that any elements that needed to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html). There are a few spots that I didn't do this, but it's mostly done site-wide.
@@ -299,19 +301,27 @@ Grunt add a lot of flexibility to my development workflow, which changed many ti
 
 8. Code changes are reviewed on `localhost` running on [MAMP](http://www.mamp.info/)...the other "non-Grunt" things.
 
-9. The `grunt push` task executes the above-discussed deployment sequence which does the following:
+9. There two deployment tasks: one for the staging site and one for the live production site. The `grunt spush` task runs the development deployment sequence and does the following:
 
-   * makes Jekyll build the site again, but adds the extra step of embedding related posts to the bottom of all post pages.
+    * makes Jekyll build the site.
 
-   * appends the MaxCDN URL to the proper assets, as mentioned above.
+    * builds out the cache manifest.
 
-   * minifies the site's HTML.
+    * deploys the site to the dev site.
 
-   * builds out the cache manifest.
+10. The `grunt ppush` task runs the production deployment sequence and does the following:
 
-   * deploys the minified, optimized site build to production.
+    * makes Jekyll build the site but adds the extra step of embedding related posts to the bottom of all post pages.
 
-   * rebuilds Jekyll, which removes the MaxCDN URLs from the site build for the reasons mentioned above.
+    * appends the MaxCDN URL to the proper assets, as mentioned above.
+
+    * minifies the site's HTML.
+
+    * builds out the cache manifest.
+
+    * deploys the minified, optimized site build to production.
+
+    * rebuilds Jekyll, which removes the MaxCDN URLs from the site build for the reasons mentioned above.
 
 I'm being bombastic when outline my workflow like this but am doing so to prove a point. The combination all the above-mentioned tools allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN! And within this process, Grunt really ran the show.
 
