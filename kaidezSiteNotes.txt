@@ -256,10 +256,10 @@ LEFT TO DO
 Before/After deployment
 =================
 -301 the "2 javascript tasks" post
+-whitelist dev site on MaxCDN.
 -Install Google Analytics.
 -Install GWT (Done on the server side...needs to be done on the client side)
 -Make sure affiliate links work sitewide.
--Add 'cdn' sub-task back to 'grunt push' task.
 -Test that a post can be added to search.json with no problems.
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
