@@ -397,5 +397,5 @@ module.exports = function(grunt) {
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
   grunt.registerTask('dpush', ['jekyll:dev', 'manifest', 'sftp-deploy:staging']);
-  grunt.registerTask('spush', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'jekyll:dev']);
+  grunt.registerTask('ppush', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'jekyll:dev']);
 };
