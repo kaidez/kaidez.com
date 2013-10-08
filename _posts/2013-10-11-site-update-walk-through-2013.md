@@ -62,9 +62,11 @@ Jekyll is increasing in popularity: I'm guessing this is due to the fact that it
 
 I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
+Plus, migrating from WordPress to Jekyll isn't always the ideal solution: [a succint Chirs Coyier post](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
+
 And let's be fair: with a little work, it is possible to create a static site with WordPress.  I found some plugins and techniques for doing this...I haven't tested it but the [Really Static plugin](http://wordpress.org/plugins/really-static/ "Check out Really Static: the WordPress plugin static site generator") seems that it can do the job.
 
-Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being WordPress.
+Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being for WordPress.
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
