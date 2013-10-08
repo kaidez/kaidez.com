@@ -348,9 +348,22 @@ module.exports = function(grunt) {
         }
       },
     
-    // deploy to dev site
+    // deployments
    'sftp-deploy': {
-    build: {
+    
+    // deploy to the development site
+    dev: {
+      auth: {
+        host: 's46798.gridserver.com',
+        port: 22,
+        authKey: 'key1'
+      },
+      src: '_site',
+      dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
+    },
+
+    // deploy to live site
+    prod: {
       auth: {
         host: 's46798.gridserver.com',
         port: 22,
@@ -383,7 +396,6 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('devPush', ['jekyll:dev', 'manifest', 'sftp-deploy']);
-  grunt.registerTask('prodPush', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy', 'jekyll:dev']);
-
+  grunt.registerTask('dpush', ['jekyll:dev', 'manifest', 'sftp-deploy:dev']);
+  grunt.registerTask('ppush', ['jekyll:buildit', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:prod', 'jekyll:dev']);
 };
