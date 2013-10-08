@@ -265,5 +265,4 @@ Before/After deployment
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured with Google and Bing (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
 -Do all the Google+ (Lynda course: Analyzing Your Website to Improve SEO...5.4 movie)
-
 -hide email.php via .gitignore
