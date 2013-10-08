@@ -51,18 +51,15 @@
         
         <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
-          <h1 class="post-title" class="entry-title" itemprop="headline">{{ page.title }}</h1>
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">{{ page.title }}</h1>
 
-            {% include google_ad_post_partial.html %}
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%B %d, %Y" }}</time> by <span class="author">Kai "kaidez" Gittens</span>
+          </header>
 
-            {{ content }}
+          {% include google_ad_post_partial.html %}
 
-          <footer id="articleFooter" class="articleFooterClass">
-
-            Published on&nbsp;<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>&nbsp;
-          by&nbsp;<span class="author">Kai "kaidez" Gittens</span>
-
-          </footer>
+          {{ content }}
 
         </article>
 
