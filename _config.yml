@@ -19,6 +19,7 @@ exclude: [
   Gruntfile.js,
   grunt,
   jekyllOutput.html,
+  kaidezcom.WPExport.xml
   kaidezSiteNotes.txt,
   node_modules,
   package.json,
