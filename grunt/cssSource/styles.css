@@ -3030,7 +3030,7 @@ a:focus {
 
 .pageCopy {
   background-color: #fff;
-  padding: 0 18px 0;
+  padding: 18px;
 }
 
 .postSnippetLinkHeader:link, .postSnippetLinkHeader:visited,
