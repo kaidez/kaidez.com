@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px transparent;
+  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*!
+/*
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -3035,10 +3035,10 @@ a:focus {
 
 .postSnippetLinkHeader:link, .postSnippetLinkHeader:visited,
 .post-snippet-link:link, .post-snippet-link:visited {
+  transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
   color: #3285a5;
   text-decoration: none;
   margin: 0;
@@ -3375,10 +3375,10 @@ a.read-more-link {
 }
 
 .error {
+  transition: opacity 0.3s ease;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
   opacity: 0;
   color: #7EFF73;
 }
@@ -3487,10 +3487,10 @@ a.read-more-link {
 .site-map-link:visited {
   color: #2d7895;
   text-decoration: none;
+  transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
   font-size: 18px;
 }
 
@@ -3504,10 +3504,10 @@ a.read-more-link {
 .sitemap-header-link:visited {
   color: #000;
   text-decoration: none;
+  transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
 }
 
 .sitemap-header-link:hover,
@@ -3539,6 +3539,14 @@ a.read-more-link {
 .site-description {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
+}
+
+.adsClass {
+  display: none;
+}
+
+.category-title {
+  margin-left: 0;
 }
 
 .nav-search-style {
@@ -3631,7 +3639,7 @@ a.read-more-link {
 
 .wf-active h1.post-title, .wf-active h1.category-title {
   font-size: 27px;
-  margin: 0;
+  margin-left: 10px;
   line-height: 1.1;
 }
 
@@ -4081,6 +4089,10 @@ a.pagination-link {
     line-height: 2.5;
   }
 
+  .category-title {
+    margin-left: 10px;
+  }
+
   .main-navigation {
     width: auto;
     border-top: none;
@@ -4223,9 +4235,9 @@ a.pagination-link {
   }
 
   .share-post-container-class {
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     padding: 10px;
     margin-bottom: 40px;
   }
@@ -4270,10 +4282,10 @@ a.pagination-link {
 
   .homePageCategoryFooterLink:link,
   .homePageCategoryFooterLink:visited {
+    transition: color 0.3s ease;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
     color: #000;
     font-size: 15px;
     text-decoration: none;
@@ -4384,9 +4396,9 @@ a.pagination-link {
 
   .colophon-class {
     background-color: #0b5470;
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     max-width: 528px;
     display: block;
     padding: 12px;
@@ -4405,10 +4417,10 @@ a.pagination-link {
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
+    transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
   }
 
   .colophon-list-item-class:hover {
@@ -4504,6 +4516,10 @@ a.pagination-link {
 
   .header-element-margin {
     margin: 0;
+  }
+
+  .category-title {
+    margin-left: 10px;
   }
 
   .main-navigation {
@@ -4644,9 +4660,9 @@ a.pagination-link {
   }
 
   .share-post-container-class {
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     margin-bottom: 40px;
   }
 
@@ -4701,10 +4717,10 @@ a.pagination-link {
 
   .homePageCategoryFooterLink:link,
   .homePageCategoryFooterLink:visited {
+    transition: color 0.3s ease;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
     color: #000;
     font-size: 15px;
     text-decoration: none;
@@ -4778,9 +4794,9 @@ a.pagination-link {
 
   .colophon-class {
     background-color: #0b5470;
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     max-width: 528px;
     display: block;
     padding: 12px;
@@ -4799,10 +4815,10 @@ a.pagination-link {
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
+    transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
   }
 
   .colophon-list-item-class:hover {
@@ -4869,10 +4885,10 @@ a.pagination-link {
   }
 
   .site-title {
+    transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
   }
 
   .site-title:hover {
@@ -4914,6 +4930,16 @@ a.pagination-link {
     margin: 0;
     width: 270px;
     line-height: 2.5;
+  }
+
+  .adsClass {
+    display: block;
+    min-width: 650px;
+    padding-bottom: 52px;
+  }
+
+  .category-title {
+    margin-left: 10px;
   }
 
   .main-navigation {
@@ -5095,9 +5121,9 @@ a.pagination-link {
   }
 
   .share-post-container-class {
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     margin: 0 auto 33px;
   }
 
@@ -5143,10 +5169,10 @@ a.pagination-link {
 
   .homePageCategoryFooterLink:link,
   .homePageCategoryFooterLink:visited {
+    transition: color 0.3s ease;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
     color: #000;
     font-size: 15px;
     text-decoration: none;
@@ -5206,10 +5232,10 @@ a.pagination-link {
 
   .aside-nav-link,
   .kaidez-social-link {
+    transition: color 0.3s ease;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
   }
 
   .kaidez-social-link:hover, .kaidez-social-link:focus,
@@ -5222,9 +5248,9 @@ a.pagination-link {
   }
 
   .related-posts-header {
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     text-align: center;
     font-size: 21px;
   }
@@ -5282,9 +5308,9 @@ a.pagination-link {
 
   .colophon-class {
     background-color: #0b5470;
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
     height: 58px;
     max-width: 700px;
     float: left;
@@ -5305,10 +5331,10 @@ a.pagination-link {
     float: left;
     margin-right: 10px;
     text-indent: -9999px;
+    transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
   }
 
   .colophon-list-item-class:hover {
@@ -5567,10 +5593,10 @@ a.pagination-link {
   margin: 0 125px;
 }
 .lt-ie9 .aside-nav-link {
+  transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
 }
 .lt-ie9 .contact-form-field {
   margin-top: 3px;
@@ -5601,9 +5627,9 @@ a.pagination-link {
 }
 .lt-ie9 .colophon-class {
   background-color: #0b5470;
+  border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  border-radius: 10px;
   height: 58px;
   max-width: 700px;
   float: right;
