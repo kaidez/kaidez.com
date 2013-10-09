@@ -6,7 +6,19 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.meta-excerpt }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+
+  <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+    <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+  <!-- @endif -->
+
+  <!-- @if NODE_ENV == 'PRODUCTION' -->
+
+    <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+
+  <!-- @endif -->
+  
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
   <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
   <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
@@ -58,5 +70,30 @@
 
   {% include scriptFile_partial.html %}
 
+  <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+  <!-- @endif -->
+
+
+
+  <!-- @if NODE_ENV == 'PRODUCTION' -->
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5549541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <!-- @endif -->
+
+  
 </body>
 </html>
