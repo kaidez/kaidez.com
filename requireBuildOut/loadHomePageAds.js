@@ -55,7 +55,7 @@ define( ["enquire"], function( enquire ) {
     var adCodes = {
       "lynda" : {
         "pageEl" : "adSpotOne",
-        "link"   : "http://www.lynda.com/CSS-training-tutorials/447-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=637&utm_campaign=CD2146&bid=637&aid=CD2146",
+        "link"   : "http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=753&utm_campaign=CD2146&bid=753&aid=CD2146",
         "source" : "http://lynda.directtrack.com/42/2146/754/",
         "alt"    : "7-day free trial"
       },
