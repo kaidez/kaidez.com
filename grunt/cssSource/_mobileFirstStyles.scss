@@ -41,7 +41,15 @@
 // hide the <h2> tag in <header> on page load
 .site-description {
   @include hide-element;
-} 
+}
+
+.adsClass {
+  display: none;
+}
+
+  .category-title {
+    margin-left: 0;
+  }
 
 // ====================================================================
 // Header styles end
@@ -189,7 +197,7 @@
 // styles for post and category <h1> tags
 .wf-active h1.post-title, .wf-active h1.category-title  {
   @include post-category-title(27px);
-  margin:0;
+  margin-left: 10px;
   line-height: 1.1;
 }
 
