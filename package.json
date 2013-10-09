@@ -1,6 +1,13 @@
 {
   "name": "kaidez",
+  "description": "Development environemnt dependencies for kaidez.com",
   "version": "0.1.0",
+  "author": " Kai Gittens (@kaidez)",
+  "homepage": "http://kaidez.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaidez/kaidez.com"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-css": "~0.5.4",
