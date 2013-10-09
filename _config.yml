@@ -21,6 +21,7 @@ exclude: [
   jekyllOutput.html,
   kaidezcom.WPExport.xml
   kaidezSiteNotes.txt,
+  LICENSE-MIT,
   node_modules,
   package.json,
   prototypeTest,
