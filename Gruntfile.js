@@ -420,8 +420,6 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('addDevAssets', ['targethtml:dev']);
-  grunt.registerTask('addProdAssets', ['targethtml:prod']);
-  grunt.registerTask('dpush', ['addDevAssets', 'manifest', 'sftp-deploy:staging' ]);
-  grunt.registerTask('ppush', ['addProdAssets', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'jekyll:dev', 'addDevAssets']);
+  grunt.registerTask('dpush', ['manifest', 'sftp-deploy:staging']);
+  grunt.registerTask('ppush', ['jekyll:dev','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
 };
