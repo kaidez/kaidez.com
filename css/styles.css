@@ -410,7 +410,7 @@ pre[class*="language-"] {
   border: 1px solid transparent;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ladda-button:hover {
@@ -834,7 +834,7 @@ pre[class*="language-"] {
 .ladda-button[data-style=contract-overlay] {
   overflow: hidden;
   width: 100px;
-  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 3000px transparent;
 }
 
 .ladda-button[data-style=contract-overlay] .ladda-spinner {
@@ -856,7 +856,7 @@ pre[class*="language-"] {
   opacity: 1;
 }
 
-/*
+/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -4337,6 +4337,11 @@ a.pagination-link {
     box-shadow: 1px 1px 2px 0 #ccc;
   }
 
+  .colophon-image {
+    float: right;
+    margin: 0 0 37px 31px;
+  }
+
   .aside-outer-wrapper-class {
     background: #107aa3 url("../img/footer-bg.png") no-repeat left;
   }
@@ -5202,6 +5207,11 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
+  }
+
+  .colophon-image {
+    float: right;
+    margin: 0 0 37px 31px;
   }
 
   .aside-inner-wrapper-class {
