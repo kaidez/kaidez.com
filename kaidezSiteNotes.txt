@@ -250,6 +250,8 @@ LEFT TO DO
 -Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building. (DONE)
 -Create favicon.ico
 
+-SITE REDESIGN POST: talk about testing on Androids
+
 Before/After deployment
 =======================
 -301 the "2 javascript tasks" post
