@@ -3,16 +3,18 @@
 <!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" manifest="http://dev.kaidez.com/manifest.appcache"> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} &laquo; kaidez</title>
   <meta name="description" content="{{ page.meta-excerpt }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-  
+  <!--(if target dev)><!-->
   <link rel="stylesheet" href="/css/styles.css" media="all" />
-   
+  <!--<!(endif)-->
 
-  
-  
+  <!--(if target prod)>
+  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
+  <!(endif)-->
+
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
   <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
   <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
@@ -31,13 +33,13 @@
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
   <div id="container" class="containing-element">
-    
+
     <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
       <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
         <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
           <div id="header-tag-wrapper" class="top-level-header-wrapper">
-            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
-            <h2 id="site-desc" class="site-description">closing tags...wrapping functions</h2>
+            <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link" title="kaidez.com home page">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
         </header> <!-- #masthead -->
 
         <div id="nav-search" class="nav-search-style">
@@ -51,22 +53,41 @@
       </div> <!-- header-nav-wrapper-inner -->
 
     </div> <!-- #header-nav-wrapper-outer -->
-
+    
+    {% include category_breadcrumbs_partial.html %}
+    
     <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
-      {{ content }}
+      <div class="newestArticleClass"> 
+        <h1 class="category-title">Category: {{ page.title }}</h1>
+          {{ content }}
+      </div> 
     </main> <!-- #content -->
-
+    
     {% include aside_partial.html %}
 
     {% include footer_partial.html %}
 
   </div> <!-- #container -->
-
+  
   {% include scriptFile_partial.html %}
-  
-  
 
-  
+  <!--(if target dev)><!--><!--<!(endif)-->
 
+  <!--(if target prod)>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type =   'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :   'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!(endif)-->
+  
 </body>
 </html>
