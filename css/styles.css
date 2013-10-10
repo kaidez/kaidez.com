@@ -3793,7 +3793,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("/img/kaidez-sprite.png") no-repeat -10px -42px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -42px;
     background-size: 227px 334px;
     height: 62px;
     width: 221px;
@@ -3813,7 +3813,7 @@ a.pagination-link {
   }
 
   .btnSearch {
-    background: url("/img/kaidez-sprite.png") no-repeat -88px -4px;
+    background: url("../img/kaidez-sprite.png") no-repeat -88px -4px;
     background-size: 227px 334px;
     height: 27px;
     width: 44px;
@@ -3826,21 +3826,21 @@ a.pagination-link {
   }
 
   .jekyll {
-    background: url("/img/kaidez-sprite.png") no-repeat -10px -169px;
+    background: url("../img/kaidez-sprite.png") no-repeat -10px -169px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
   }
 
   .mediaTemple {
-    background: url("/img/kaidez-sprite.png") no-repeat -14px -228px;
+    background: url("../img/kaidez-sprite.png") no-repeat -14px -228px;
     background-size: 227px 334px;
     height: 57px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("/img/kaidez-sprite.png") no-repeat -4px -286px;
+    background: url("../img/kaidez-sprite.png") no-repeat -4px -286px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
@@ -3852,7 +3852,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("/img/kaidez-sprite.png") no-repeat 0px -107px;
+    background: url("../img/kaidez-sprite.png") no-repeat 0px -107px;
     background-size: 227px 334px;
     height: 60px;
     width: 176px;
@@ -3863,7 +3863,7 @@ a.pagination-link {
   }
 
   .mobile-menu-btn-class {
-    background: url("/img/kaidez-sprite.png") no-repeat -2px 8px;
+    background: url("../img/kaidez-sprite.png") no-repeat -2px 8px;
     background-size: 227px 334px;
     height: 44px;
     width: 44px;
@@ -3874,7 +3874,7 @@ a.pagination-link {
   }
 
   .search-btn-class {
-    background: url("/img/kaidez-sprite.png") no-repeat -41px 8px;
+    background: url("../img/kaidez-sprite.png") no-repeat -41px 8px;
     background-size: 227px 334px;
     height: 44px;
     width: 44px;
@@ -3885,7 +3885,7 @@ a.pagination-link {
   }
 
   .btnSearch {
-    background: url("/img/kaidez-sprite.png") no-repeat -88px -4px;
+    background: url("../img/kaidez-sprite.png") no-repeat -88px -4px;
     background-size: 227px 334px;
     height: 27px;
     width: 28px;
@@ -3903,7 +3903,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -10px -42px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -42px;
     background-size: 227px 334px;
     height: 62px;
     width: 221px;
@@ -3923,7 +3923,7 @@ a.pagination-link {
   }
 
   .btnSearch {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -79px -4px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -79px -4px;
     background-size: 227px 334px;
     height: 27px;
     width: 44px;
@@ -3936,21 +3936,21 @@ a.pagination-link {
   }
 
   .jekyll {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -10px -169px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -10px -169px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
   }
 
   .mediaTemple {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -14px -228px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -14px -228px;
     background-size: 227px 334px;
     height: 57px;
     width: 151px;
   }
 
   .maxcdn {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -4px -286px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -4px -286px;
     background-size: 227px 334px;
     height: 58px;
     width: 151px;
@@ -3962,7 +3962,7 @@ a.pagination-link {
   }
 
   .site-title {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat 0px -107px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat 0px -107px;
     background-size: 227px 334px;
     height: 60px;
     width: 176px;
@@ -3972,7 +3972,7 @@ a.pagination-link {
   }
 
   .mobile-menu-btn-class {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -2px 8px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -2px 8px;
     background-size: 227px 334px;
     height: 44px;
     width: 44px;
@@ -3983,7 +3983,7 @@ a.pagination-link {
   }
 
   .search-btn-class {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -41px 8px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -41px 8px;
     background-size: 227px 334px;
     height: 44px;
     width: 44px;
@@ -3994,7 +3994,7 @@ a.pagination-link {
   }
 
   .btnSearch {
-    background: url("/img/kaidez-sprite@2x.png") no-repeat -88px -4px;
+    background: url("../img/kaidez-sprite@2x.png") no-repeat -88px -4px;
     background-size: 227px 334px;
     height: 27px;
     width: 28px;
