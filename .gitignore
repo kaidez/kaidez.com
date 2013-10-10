@@ -10,6 +10,7 @@ old_img/
 jekyllOutput.html
 prototypeTest/
 kaidezcom.WPExport.xml
+email.php
 
 # Backbone code drafts
 #---------------------
@@ -61,8 +62,6 @@ grunt/cssSource/_oldIE.scss
 # Sass-related files
 # ------------------
 *.sass-cache
-
-
 
 
 # Grunt/Node-related files
