@@ -75,36 +75,40 @@ module.exports = function(grunt) {
     watch: {
       pageOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
         files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'feed.xml'],
-        tasks: ['jekyll:dev', 'addDevAssets']
+        tasks: ['jekyll:dev']
+      },
+      layoutOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
+        files: ['_layouts/*.html'],
+        tasks: ['targethtml:dev', 'jekyll:dev']
       },
 
       jsOnlyTask: { // run 'jekyll build' on .js file changes
         files: ['requireBuildOut/*.js'],
-        tasks: ['requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['requirejs', 'jekyll:dev']
       },
 
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
         files: ['grunt/cssSource/*.scss'],
-        tasks: ['sassbuild', 'jekyll:dev', 'addDevAssets']
+        tasks: ['sassbuild', 'jekyll:dev']
       },
 
       imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
         files: ['img/*.{png,jpg,jpeg,gif}'],
-        tasks: ['imagemin', 'jekyll:dev', 'addDevAssets']
+        tasks: ['imagemin', 'jekyll:dev']
       },
 
       // if Bower updates Backbone, copy it to core Require build folder, run
       // the "requirejs" task, then build the site.
       bowerTaskBackbone: {  
         files: ['bower_components/backbone/backbone-min.js'],
-        tasks: ['copy:backbone', 'requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['copy:backbone', 'requirejs', 'jekyll:dev']
       },
 
       // if Bower updates Backbone, copy it to core Require build folder, run
       // the "requirejs" task, then build the site.
       bowerTaskEnquire: {  
         files: ['bower_components/enquire/dist/enquire.min.js'],
-        tasks: ['copy:enquire', 'requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['copy:enquire', 'requirejs', 'jekyll:dev']
       },
 
       // if Bower updates font-awesome, just copy it to core Sass build folder.
@@ -118,7 +122,7 @@ module.exports = function(grunt) {
       // the "requirejs" task, then build the site.
       bowerTaskJquery: {
         files: ['bower_components/jquery/jquery.min.js'],
-        tasks: ['copy:jquery', 'requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['copy:jquery', 'requirejs', 'jekyll:dev']
       },
       
       // if Bower updates matcheMedia, just copy it to 'js/libs'.
@@ -131,21 +135,21 @@ module.exports = function(grunt) {
       // the "requirejs" task, then build the site.
       bowerTaskRequireJS: {
         files: ['bower_components/require/require.js'],
-        tasks: ['copy:require', 'requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['copy:require', 'requirejs', 'jekyll:dev']
       },
       
       // if Bower updates Spin, copy it to core Require build folder, run 
       // the "requirejs" task, then build the site.
       bowerTaskSpin: {
         files: ['bower_components/spinjs/spin.js'],
-        tasks: ['copy:spin', 'requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['copy:spin', 'requirejs', 'jekyll:dev']
       },
       
       // if Bower updates Underscore, copy it to core Require build folder,
       // run the "requirejs" task, then build the site.
       bowerTaskUnderscore: {
         files: ['bower_components/underscore/underscore-min.js'],
-        tasks: ['copy:underscore', 'requirejs', 'jekyll:dev', 'addDevAssets']
+        tasks: ['copy:underscore', 'requirejs', 'jekyll:dev']
       }
      },
 
@@ -348,27 +352,22 @@ module.exports = function(grunt) {
         }
       },
       
-
-      // Define development/production environments
-      env : {
+      targethtml: {
         dev: {
-          NODE_ENV : 'DEVELOPMENT'
+          files: {
+            '_layouts/homePage.html': '_templates/homePage.html',
+            '_layouts/categories.html': '_templates/categories.html',
+            '_layouts/post.html': '_templates/post.html',
+            '_layouts/default.html': '_templates/default.html',
+          }
         },
-
-        prod : {
-          NODE_ENV : 'PRODUCTION'
-        }
-      },
-      
-      // Preprocess definitions for development/production environments
-      preprocess : {
-        dev : {
-          src : '_site/index.html',
-          dest : '_site/index.html'
-        },
-        prod : {
-          src : '_site/index.html',
-          dest : '_site/index.html'
+        prod: {
+          files: {
+            '_layouts/homePage.html': '_templates/homePage.html',
+            '_layouts/categories.html': '_templates/categories.html',
+            '_layouts/post.html': '_templates/post.html',
+            '_layouts/default.html': '_templates/default.html',
+          }
         }
       },
     
@@ -413,8 +412,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-manifest');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-cdn');
-  grunt.loadNpmTasks('grunt-preprocess');
-  grunt.loadNpmTasks('grunt-env');
+  grunt.loadNpmTasks('grunt-targethtml');
 
 
   // Default task(s)
@@ -422,8 +420,8 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('addDevAssets', ['env:dev', 'preprocess:dev']);
-  grunt.registerTask('addProdAssets', ['env:prod', 'preprocess:prod']);
-  grunt.registerTask('dpush', ['jekyll:dev', 'addDevAssets', 'manifest', 'sftp-deploy:staging', 'jekyll:dev', 'addDevAssets']);
-  grunt.registerTask('ppush', ['jekyll:prod', 'addProdAssets', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'jekyll:dev', 'addDevAssets']);
+  grunt.registerTask('addDevAssets', ['targethtml:dev']);
+  grunt.registerTask('addProdAssets', ['targethtml:prod']);
+  grunt.registerTask('dpush', ['addDevAssets', 'manifest', 'sftp-deploy:staging' ]);
+  grunt.registerTask('ppush', ['addProdAssets', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'jekyll:dev', 'addDevAssets']);
 };
