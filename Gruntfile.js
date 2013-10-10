@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         tasks: ['jekyll:dev']
       },
       layoutOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
-        files: ['_layouts/*.html'],
+        files: ['_layouts/*.html', '_templates/*.html'],
         tasks: ['targethtml:dev', 'jekyll:dev']
       },
 
@@ -243,6 +243,7 @@ module.exports = function(grunt) {
             'css/styles.min.css',
             'img/profilepic.jpg',
             'img/footer-bg.png',
+            'img/homePageDefault.jpg',
             'img/kaidez-sprite.png',
             'img/kaidez-sprite@2x.png',
             'js/scripts.min.js',
@@ -420,6 +421,6 @@ module.exports = function(grunt) {
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
-  grunt.registerTask('dpush', ['manifest', 'sftp-deploy:staging']);
-  grunt.registerTask('ppush', ['jekyll:dev','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
+  grunt.registerTask('dpush', ['sftp-deploy:staging']);
+  grunt.registerTask('ppush', ['targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
 };
