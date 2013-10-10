@@ -15,8 +15,8 @@ define( ["enquire"], function( enquire ) {
     Modernizr.load( {
       test: window.matchMedia,
       nope: [
-        "http://kaidez.kaidez.netdna-cdn.com/js/libs/matchMedia.js",
-        "http://kaidez.kaidez.netdna-cdn.com/js/libs/matchMedia.addListener.js"
+        "js/libs/matchMedia.js",
+        "js/libs/matchMedia.addListener.js"
       ]
     } );
 
