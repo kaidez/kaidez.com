@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
     // minify 'css/styles.css & move it to the '_site' folder
     cssmin: {
-      my_target: {
+      buildProductionCSS: {
         src: 'css/styles.css',
         dest: 'css/styles.min.css'
       }
@@ -397,7 +397,7 @@ module.exports = function(grunt) {
       dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
     },
 
-    // deploy to live site
+    // deploy to the live site
     production: {
       auth: {
         host: 's46798.gridserver.com',
