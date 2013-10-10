@@ -18,6 +18,7 @@
     jquery: "libs/jquery.min",
     ladda: "libs/ladda.min",
     prism: "libs/prism",
+    picturefill: "libs/picturefill",
     spin: "libs/spin",
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
@@ -31,6 +32,9 @@
     // },
     "prism": {
       "exports": "Prism"
+    },
+    "picturefill": {
+      "exports": "Picturedill"
     },
     tipue: {
       deps: ["jquery"],
