@@ -258,7 +258,6 @@ Before/After deployment
 -password-protect dev environment
 -Test Twitter Cards
 -Fix Disqus
--blacklist dev site on MaxCDN.
 -Make sure affiliate links work sitewide.
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured with Google and Bing (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
