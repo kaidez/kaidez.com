@@ -16,8 +16,8 @@ define( ["enquire"], function( enquire ) {
     Modernizr.load( {
       test: window.matchMedia,
       nope: [
-        "js/libs/matchMedia.js",
-        "js/libs/matchMedia.addListener.js"
+        "libs/matchMedia.js",
+        "libs/matchMedia.addListener.js"
       ]
     } );
 
@@ -91,9 +91,8 @@ define( ["enquire"], function( enquire ) {
               var e = adCodes[key].pageEl,
                   l = adCodes[key].link,
                   s = adCodes[key].source,
-                  a = adCodes[key].alt,
-                  c = adCodes[key].cb;
-              createLyndaAd( e, l, s, a, c );
+                  a = adCodes[key].alt;
+              createLyndaAd( e, l, s, a);
             }
           }  
         }
