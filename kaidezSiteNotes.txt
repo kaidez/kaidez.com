@@ -248,7 +248,7 @@ LEFT TO DO
 -Set up MaxCDN. (DONE)
 -fix background on the 404 page. (DONE)
 -Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building. (DONE)
--Create favicon.ico
+-Create favicon.ico (DONE)
 -add kai image image to the colophon page.
 
 -SITE REDESIGN POST: talk about testing on Androids
