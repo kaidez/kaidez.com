@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       },
       prod: { // build the site using 'lsi' to create similar posts content
         src: ['.'],
-        dest: '_site',
+        dest: '_deploy',
         lsi: true
       }
     },
@@ -29,9 +29,9 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         expand: true,
-        cwd: '_site',
+        cwd: '_deploy',
         src: ['**/*.html', '*.index.html'],
-        dest: '_site'
+        dest: '_deploy'
       }
     },
 
@@ -219,7 +219,7 @@ module.exports = function(grunt) {
       },
       dist: {
           /** @required  - string (or array of) including grunt glob variables */
-          src: ['_site/*.html', '_site/**/*.html', '_site/css/styles.min.css']
+          src: ['_deploy/*.html', '_deploy/**/*.html', '_deploy/css/styles.min.css']
             }
         },
     
@@ -232,7 +232,7 @@ module.exports = function(grunt) {
     manifest: {
       generate: {
         options: {
-          basePath: '_site/',
+          basePath: '_deploy/',
           cache: [
             'affiliate-disclaimer.html',
             'colophon.html',
@@ -259,7 +259,7 @@ module.exports = function(grunt) {
           timestamp: true,
         },
         src: '<%= site_files %>',
-        dest: '_site/manifest.appcache'
+        dest: '_deploy/manifest.appcache'
       }
     },
     
@@ -371,13 +371,24 @@ module.exports = function(grunt) {
           }
         }
       },
+      
+
+      // Shell commands for creating and removing '_deploy' folder
+      shell: {
+        makeDeploy: {
+          command: 'mkdir _deploy'
+        },
+        removeDeploy: {
+          command: 'rm -rf _deploy'
+        }
+      },
     
-    // deployments
-   'sftp-deploy': {
+      // deployments
+     'sftp-deploy': {
     
-    // deploy to the development site
-    staging: {
-      auth: {
+      // deploy to the development site
+      staging: {
+        auth: {
         host: 's46798.gridserver.com',
         port: 22,
         authKey: 'key1'
@@ -393,7 +404,7 @@ module.exports = function(grunt) {
         port: 22,
         authKey: 'key1'
       },
-      src: '_site',
+      src: '_deploy',
       dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
       }
     }
@@ -414,6 +425,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-cdn');
   grunt.loadNpmTasks('grunt-targethtml');
+  grunt.loadNpmTasks('grunt-shell');
 
 
   // Default task(s)
@@ -422,5 +434,5 @@ module.exports = function(grunt) {
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('require', ['requirejs']);
   grunt.registerTask('dpush', ['sftp-deploy:staging']);
-  grunt.registerTask('ppush', ['targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
+  grunt.registerTask('ppush', ['shell:makeDeploy','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev','shell:removeDeploy']);
 };
