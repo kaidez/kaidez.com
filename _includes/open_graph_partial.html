@@ -24,13 +24,13 @@
 
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}/about/" property="article:author">
+  <meta content="{{ site.url }}/colophon.html" property="article:author">
 {% endif %}
 
-{% if page.image %}
-  <meta content="{{ site.url }}/assets/img/posts/{{ page.image }}" property="og:image">
+{% if page.has-home-img %}
+  <meta content="{{ site.url }}/img/{{ page.has-home-img }}" property="og:image">
 {% else %}
-  <meta content="{{ site.url }}/assets/img/logo-high-resolution.png" property="og:image">
+  <meta content="{{ site.url }}/img/homePageDefault.jpg" property="og:image">
 {% endif %}
 
 {% if page.categories %}
