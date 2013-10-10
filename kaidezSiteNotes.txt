@@ -249,6 +249,7 @@ LEFT TO DO
 -fix background on the 404 page. (DONE)
 -Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building. (DONE)
 -Create favicon.ico
+-add kai image image to the colophon page.
 
 -SITE REDESIGN POST: talk about testing on Androids
 
@@ -262,4 +263,3 @@ Before/After deployment
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured with Google and Bing (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
 -Do all the Google+ (Lynda course: Analyzing Your Website to Improve SEO...5.4 movie)
--hide email.php via .gitignore
