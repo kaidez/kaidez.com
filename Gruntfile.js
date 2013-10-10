@@ -259,7 +259,7 @@ module.exports = function(grunt) {
           timestamp: true,
         },
         src: '<%= site_files %>',
-        dest: 'manifest.appcache'
+        dest: '_site/manifest.appcache'
       }
     },
     
