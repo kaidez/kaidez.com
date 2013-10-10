@@ -134,11 +134,10 @@ Specific Design Goals
 
 -As few nav links as possible. (DONE)
 -Design-in-browser. (in progress)
--Progressively enhance the design: cross-browser test the basic layout first, then add fancy CSS3/jQuery/JS.
+-Progressively enhance the design: cross-browser test the basic layout first, then add fancy CSS3/jQuery/JS. (DONE)
 -Either a minimal sidebar or none at all. (NONE AT ALL)
 -Proper design for retina displays. (DONE)
 -Make the breadcrumbs "sexy." (DONE, I GUESS)
--Create a favicon at  
 -Mobile layout should have a larger line-height than the tablet & desktop (a value of 2). (DONE)
 
 
@@ -183,13 +182,12 @@ SEO & SEO-related
 Maybes?
 =======
 
--Mailing List?
--RSS? 
--Backbone tutorial on its own page? May need to be post-launch. (NOT POST LAUNCH)
+-Mailing List? (maybe post-launch)
+-RSS (DONE)
 -HTML5 form elements for the contact form? (DONE)
 -Vector Design for the footer background? (DONE)
 -SVG images? (NOPE)
--Microformats? (USE SCHEMA.ORG)
+-Microformats? (USE SCHEMA.ORG) (DONE)
 -Give BuySellAds another chance? (NOPE)
 -Get rid of ALL the WordPress styles and start with a blank slate? (NOT USING WORDPRESS ANY MORE)
 -Fonts with less curves? (looks cleaner on non IE browsers when viewed on a PC)
@@ -201,7 +199,7 @@ Maybes?
 -A Backbone.js-powered contact form? (MAYBE)
 -Can the Tags/Topics dynamically load into a drop-down menu? (WILL NOT DO)
 -Use "Modernizr.MQ()" to allow RWD to work on IE (respond.js)? (NO! I DON'T CARE!)
--Can Google ads be loaded last or asynchronously? Probably not asynchronously so no Google ads on mobile. (http://googlecode.blogspot.com/2011/03/your-web-half-second-sooner.html & http://www.aaronpeters.nl/blog/non-blocking-google-adsense-ads-improve-page-speed)
+-Can Google ads be loaded last or asynchronously? Probably not asynchronously so no Google ads on mobile. (http://googlecode.blogspot.com/2011/03/your-web-half-second-sooner.html & http://www.aaronpeters.nl/blog/non-blocking-google-adsense-ads-improve-page-speed) (DONE)
 -Twitter card? If yes, remember to use 'function_exists' for it, (lynda/child theme -> 3.4) (NOT USING WORDPRESS ANY MORE)
 -Facebook Open Graph? (DONE, BUT CHECK)
 -Video SEO? (GOING TO BE A POST LAUNCH TASK)
@@ -259,10 +257,7 @@ Before/After deployment
 -Test Twitter Cards
 -Fix Disqus
 -blacklist dev site on MaxCDN.
--Install Google Analytics.
--Install GWT (Done on the server side...needs to be done on the client side)
 -Make sure affiliate links work sitewide.
--Test that a post can be added to search.json with no problems.
 -resubmit feed to Feedburner
 -Make sure sitemap is properly configured with Google and Bing (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
 -Do all the Google+ (Lynda course: Analyzing Your Website to Improve SEO...5.4 movie)
