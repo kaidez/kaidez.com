@@ -255,6 +255,7 @@ LEFT TO DO
 Before/After deployment
 =======================
 -301 the "2 javascript tasks" post
+-password-protect dev environment
 -Test Twitter Cards
 -Fix Disqus
 -blacklist dev site on MaxCDN.
