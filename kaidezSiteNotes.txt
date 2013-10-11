@@ -249,7 +249,7 @@ LEFT TO DO
 -fix background on the 404 page. (DONE)
 -Build Grunt task to deploy to the staging site, but without CDN URLs and lsi building. (DONE)
 -Create favicon.ico (DONE)
--add kai image image to the colophon page.
+-add kai image to the colophon page. (DONE)
 
 -SITE REDESIGN POST: talk about testing on Androids
 
