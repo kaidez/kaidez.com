@@ -29,5 +29,5 @@ exclude: [
   old_img,
   old_js,
   r.js,
-  robots.txt
+  sitemap.xml
 ]
