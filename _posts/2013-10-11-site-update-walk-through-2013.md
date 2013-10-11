@@ -251,17 +251,19 @@ Going with either DV Managed, Rackspace or AWS meant installing a LAMP stack on 
 
 Media Temple has EXCELLENT customer service but DV Managed was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point. 
 
-AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free AWS Usage Tier](http://aws.amazon.com/free/ "Read more about AWS' free Usage Tier").
+AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free AWS Usage Tier](http://aws.amazon.com/free/ "Read more about AWS's free Usage Tier").
 
-Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/) from the 2012 Obama campaign runs this setup and has [a great write-up about it](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/).
+Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/ "Go to Kyle Rush's site") from the 2012 Obama campaign runs this setup and has [a great write-up about it](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/ "Learn how to set up a static site with Jekyll, Amazon S3 and MaxCDN").
 
 My contact form requires PHP, which can't run on S3 unless you [install the Amazon PHP SDK with Composer](http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/installation.html "Install the Amazon PHP SDK with Composer"). I was researching how to do this...until I started poking around [Heroku](https://www.heroku.com/ "Review the Heroku Cloud Application Platform").
 
-Heroku is insanely awesome! It will let me do a limited amount of Node/Ruby stuff for free....limited but powerful. I'm still researching how much of it is free but if it's enough, there's no reason to upgrade my current hosting package.
+Heroku is insanely awesome. It's a cloud application platform that's "AWS-like" but focuses on creating single-page applications whereas AWS can create SPAs but is focused on creating a whole lot more.
+
+Heroku will let me do a limited amount of Node/Ruby stuff for free....limited but powerful. I'm still researching how much of it is free but if it's enough, there's no reason to upgrade my current hosting package.
 
 I'm sticking with my generic, PHP-included Media Temple plan for now and will do some fancy coding stuff on Heroku. But while I took all of the above tech stuff into consideration, I have to say that MT's excellent customer service was a big reason I stayed with them.
 
-Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Developer Package") that offers bare virtual machine...no package managers, . It doesn't appear to be cloud-based but appears to be "AWS-like" in other ways and may suit my specific future needs.
+Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Developer Package") that offers a bare virtual machine. It may be too bare but it still may suit my specific future needs...still researching this as of this post.
 
 <a name="grunt-deployment-workflow"></a>
 ### Grunt &amp; My Deployment Workflow
@@ -271,67 +273,35 @@ All these various processes means various tasks need to run at various times. An
 
 And as I've told anyone that would listen for the past two months, Grunt is my new God.
 
-Created by the previously-mentioned [@cowboy (A.K.A Ben Alman)](https://twitter.com/cowboy "Ben Alman/cowboy on Twitter") and similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial "Learn more about Rake"), Grunt is a JavaScript task runner. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
+Created by the previously-mentioned [cowboy (A.K.A Ben Alman)](http://benalman.com/ "Go to Ben Alman's site") and similar to things like [Rake](http://jasonseifer.com/2010/04/06/rake-tutorial "Learn more about Rake"), Grunt is a JavaScript task runner. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.
 
 A boatload of [Grunt plugins](http://gruntjs.com/plugins "Look through all the Grunt plugins") have been created by both the community and the Grunt core committers. These plugins let me create tasks within my dev environment, giving it a high level of functionality.
 
-For example: I have a single Grunt task that sequentially performs a bunch of sub-tasks for a production deployment. One of these sub-tasks is powered by the [grunt cdn](https://github.com/tactivos/grunt-cdn "Get the grunt cdn plugin") plugin and it appends the MaxCDN URL to the the required images and CSS/JS files. But because of how Jekyll works, these URLs are appended inside the directory that hosts my local development site.
+For example: there's a [grunt-watch plugin](https://github.com/gruntjs/grunt-contrib-watch "Get the grunt-contrib-watch plugin") that lets me watch for file additions and changes, performing specific tasks when these additions/changes occur. If Bower updates jQuery core, Grunt automatically copies it over to a spot in my project folder. If a .png file is added to a certain folder, Grunt automatically fires up [optiping](http://optipng.sourceforge.net/ "Get optipng") to minify it.
 
-I constantly load/relaod the local dev site in a browser for testing purposes when writing code, meaning the CDN assets could get called that happens.  This woukd incur unnecessary costs so when the production push to the remote server is done, another sub-task related to the [grunt jekyll](https://github.com/dannygarcia/grunt-jekyll "Get the grunt jekyll plugin") plugin "resets" the dev site by removing the CDN URLs. These and other tasks run using a single Grunt deployment task...I LOVE IT!
+All the `grunt watch` stuff is awesome but it's my `grunt ppush` task where things really rock out. It's the task that triggers the production deployment sequence and works as follows:
 
-Grunt add a lot of flexibility to my development workflow, which changed many times during the redesign and will change many more times now that it's done. But this is how it was working at the time of the relaunch: it lists two non-Grunt things for clarity:
+1. The [grunt-shell plugin](https://github.com/sindresorhus/grunt-shell "Get the grunt-shell plugin") runs a task that executes a bash command that creates a "_deploy" directory in my project folder.
 
-1. Launch a command prompt with [iTerm](http://iterm.sourceforge.net/ "Get iTerm").
+2. The [grunt-targethtml plugin](https://github.com/changer/grunt-targethtml "Get grunt-targethtml plugin") runs a task that embeds both Google Analytics code and a production-ready copy of the site's main  CSS file to the previously mentioned page layouts.
 
-2. Run a bash alias that 1) jumps to my site project folder, 2) runs `bower list` to check for dependency updates, and 3) launches my `grunt watch` task which watches for certain file additions and changes.
+3. The [grunt-jekyll plugin](https://github.com/dannygarcia/grunt-jekyll "Get grunt-jekyll plugin") runs a task that uses Jekyll to build the site based on the layouts and dumps the build into "_deploy".
 
-3. Open another iTerm tab: if Bower says something needs to be updated in the other tab (including Bower), update it in this new window.
+4. The [grunt-cdn plugin](https://github.com/tactivos/grunt-cdn "Get grunt-cdn plugin") runs a task that appends the MaxCDN URL to the proper images, CSS and JS files in "_deploy".
 
-4. If nothing needs to be updated, keep the new tab open to run bash aliases and Git commits.
+5. The [grunt-contrib-htmlmin plugin](https://github.com/gruntjs/grunt-contrib-htmlmin "Get grunt-contrib-htmlmin plugin") runs a task that minifies the HTML in "_deploy".
 
-5. As mentioned, `grunt watch` looks out for certain file additions/changes. It works and performs as follows:
+6. The [grunt-manifest plugin](https://github.com/gunta/grunt-manifest "Get grunt-manifest plugin") runs a task that builds the cache manifest and dumps it into "_deploy".
 
-    * if Bower updates a CSS file, Grunt converts its extension to `.scss`, copies it over to another folder, uses Sass to process it with other `.scss` files into the site's main stylesheet, then makes Jekyll rebuild the site.
+7. The [grunt-sftp-deploy plugin](https://github.com/thrashr888/grunt-sftp-deploy "Get grunt-sftp-deploy plugin") runs a task that deploys the minified, optimized site build in "_deploy" up to my live site.
 
-    * if Sass files are added or updated, the above-mentioned CSS task is run...except for the extension conversion.
+8. The grunt-targethtml plugin runs another task that not only removes the Google Analytics code and minified CSS from the templates, but also adds an unminified dev version of the CSS file to the templates.  All this has to be done so the templates can safely build a dev version of the site.
 
-    * if Bower updates a JS file, Grunt automatically copies it over to another folder, uses RequireJS to process it with other JS files into the site's main JavaScript file, then makes Jekyll rebuild the site.
+9. The grunt-jekyll plugin runs another task that builds a dev copy of the site. This is really just done as test to see if the previous task properly rebuilt the templates for dev site and may be removed eventually.
 
-    * if other JavaScript files are added or updated, the above-mentioned JS task is run.
+10. The grunt-shell plugin runs another task that executes a bash command that deletes "_deploy" from my project folder.
 
-    * if `.html`, `.xml`, `.php` or `.md` files are added or updated, Jekyll rebuilds the site.
-
-    * if `.jpg` or `.png` files are added or updated, they're minified with, respectively, [jpegtran](http://jpegclub.org/jpegtran/ "Get jpegtran") or [optiping](http://optipng.sourceforge.net/ "Get optipng"), then Jekyll rebuilds the site.
-
-6. If the `grunt-modernizr` task is run, a pre-defined group of files is scanned for things that Modernizr may need to feature-detect. Based on that scan, a slimmed-down custom build of Modernizr is created, bringing in only the feature-detects I need. This custom build is based on [Modernizr's online build tool](http://modernizr.com/download/ "Go to Modernizr's custom build tool").
-
-7. Code changes are made in Sublime Text and committed to Git in small bits using the [Tim Pope style](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Tim Pope article on proper Git commits")...one of the "non-Grunt" things.
-
-8. Code changes are reviewed on `localhost` running on [MAMP](http://www.mamp.info/)...the other "non-Grunt" things.
-
-9. There two deployment tasks: one for the staging site and one for the live production site. The `grunt spush` task runs the development deployment sequence and does the following:
-
-    * makes Jekyll build the site.
-
-    * builds out the cache manifest.
-
-    * deploys the site to the dev site.
-
-10. The `grunt ppush` task runs the production deployment sequence and does the following:
-
-    * makes Jekyll build the site but adds the extra step of embedding related posts to the bottom of all post pages.
-
-    * appends the MaxCDN URL to the proper assets, as mentioned above.
-
-    * minifies the site's HTML.
-
-    * builds out the cache manifest.
-
-    * deploys the minified, optimized site build to production.
-
-    * rebuilds Jekyll, which removes the MaxCDN URLs from the site build for the reasons mentioned above.
-
-I'm being bombastic when outline my workflow like this but am doing so to prove a point. The combination all the above-mentioned tools allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN! And within this process, Grunt really ran the show.
+I'm being bombastic when outline my deployment sequence like this but am doing so to prove a point. The combination all the above-mentioned Grunt tasks allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN!
 
 <a name="post-launch-tasks"></a>
 ### Post-Launch Tasks
@@ -341,15 +311,15 @@ Except for the overall neatness of the CSS, I'm fine with the production code. I
 
 But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The "good enough software" principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:
 
-  * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself "What is the DRY principle?") but I haven't really looked at it. I need to do that.
+  * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself "What is the DRY principle?") but I need to delve into it some more.
 
-  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using the [OOCSS principle](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Smashing Magazine Article about OOCSS").  
+  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS/Sass in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using [OOCSS principles](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Smashing Magazine Article about OOCSS").  
 
-  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header.
+  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header from a styling standpoint.
 
   * __Using Backbone in the contact form__: I'm really itching to use Backbone in a project and started to do so with my contact form, but this would add rendering/event weight to the form's performance and be too much.  I still want to use Backbone though so I may do this in the future.
 
-  * __A better deployment method__: if your Jekyll site content is more than just a home page and blog posts AND is hosted anyplace other than GitHub, you may have to redeploy the ENTIRE site every time you make a change...even a small one. There are ways to use Git commit hooks to deploy your site after it's pushed up to a remote repo like GitHub, but it's tough to do with Jekyll.  Still researching this.
+  * __A better deployment method__: if your Jekyll site content is more than just a home page and blog posts AND is hosted anyplace other than GitHub, you may have to redeploy the ENTIRE site every time you make a change...even a small one. There are ways to use Git commit hooks to deploy your site after it's pushed up to GitHub, but it's tough to do with Jekyll.  Still researching this.
 
 <a name="conclusion"></a>
 ### Conclusion
