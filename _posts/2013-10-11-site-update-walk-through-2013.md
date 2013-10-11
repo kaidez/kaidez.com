@@ -54,7 +54,7 @@ The outputted site does some very cool things...here's short list:
 
 Ruby is a Jekyll dependency so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/ "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/ "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/ "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
 
-Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://maxcdn.com "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
+Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://tracking.maxcdn.com/c/72639/3968/378 "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
 
 I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs "Vito Botta post for migrating from WordPress to Jekyll") is *the* definitive article on the subject.
 
@@ -62,7 +62,7 @@ Jekyll is increasing in popularity: I'm guessing this is due to the fact that it
 
 I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
-Plus, migrating from WordPress to Jekyll isn't always the ideal solution: [a succint Chirs Coyier post](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
+Plus, migrating from WordPress to Jekyll isn't always the ideal solution: [a succinct Chirs Coyier post](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
 
 And let's be fair: with a little work, it is possible to create a static site with WordPress.  I found some plugins and techniques for doing this...I haven't tested it but the [Really Static plugin](http://wordpress.org/plugins/really-static/ "Check out Really Static: the WordPress plugin static site generator") seems that it can do the job.
 
@@ -229,7 +229,7 @@ Making a site accessible to people with disabilities is also a good SEO practice
 * turned off all styles and read the unstyled page content out loud (which is basically what a screen-reader does).
 * made sure that any elements that needed to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://yaccessibilityblog.com/library/css-clip-hidden-content.html "Accessibility suggestions from Yahoo"). There are a few spots that I didn't do this, but it's mostly done site-wide.
 
-If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibilty is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/ "Austin Seraphin article on iPhone providing great accessibilty functions for the disabled").
+If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibility is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/ "Austin Seraphin article on iPhone providing great accessibility functions for the disabled").
 
 If you still need convincing after reading that, refer to what [Jen Kramer](http://www.jenkramer.org/ "Go to technology instructor Jen Kramer's site") says:
 
@@ -255,7 +255,7 @@ Heroku is insanely awesome! It will let me do a limited amount of Node/Ruby stuf
 
 I'm sticking with my generic, PHP-included Media Temple plan for now and will do some fancy coding stuff on Heroku. But while I took all of the above tech stuff into consideration, I have to say that MT's excellent customer service was a big reason I stayed with them.
 
-Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Devloper Package") that offers a few less features than DV Managed (it doesn't come with [Plesk](http://www.parallels.com/products/plesk/ "Learn more about the Plesk professional control panel"). It doesn't appear to be cloud-based but appears to be "AWS-like" in other ways and may suit my specific future needs.
+Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Developer Package") that offers a few less features than DV Managed (it doesn't come with [Plesk](http://www.parallels.com/products/plesk/ "Learn more about the Plesk professional control panel"). It doesn't appear to be cloud-based but appears to be "AWS-like" in other ways and may suit my specific future needs.
 
 <a name="grunt-development-workflow"></a>
 ### Grunt &amp; Development Workflow
