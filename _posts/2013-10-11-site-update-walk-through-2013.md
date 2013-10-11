@@ -297,7 +297,7 @@ All the `grunt watch` stuff is awesome but it's my `grunt ppush` task where thin
 
 8. The grunt-targethtml plugin runs another task that not only removes the Google Analytics code and minified CSS from the templates, but also adds an unminified dev version of the CSS file to the templates.  All this has to be done so the templates can safely build a dev version of the site.
 
-9. The grunt-jekyll plugin runs another task that builds a dev copy of the site. This is really just done as test to see if the previous task properly rebuilt the templates for dev site and may be removed eventually.
+9. The grunt-jekyll plugin runs another task that builds a dev copy of the site. This is really just done as test to see if the previous task properly rebuilt the templates for the dev site and may be removed eventually.
 
 10. The grunt-shell plugin runs another task that executes a bash command that deletes "_deploy" from my project folder.
 
