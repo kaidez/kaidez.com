@@ -1,6 +1,9 @@
 _site
 ./_site
 
+_deploy
+./_deploy
+
   
 
 # Site assets
