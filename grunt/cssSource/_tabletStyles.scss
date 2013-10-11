@@ -326,10 +326,10 @@
     @include create-outer-box-shadow;
   }
 
-    //big pic of kai on colophon.html
+  //big pic of kai on colophon.html
   .colophon-image {
-    float:right;
-    margin: 0 0 37px 31px;
+    margin: 0 auto;
+    display: block;
   }
 
   // ==================================================================
