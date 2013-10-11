@@ -3051,6 +3051,10 @@ a:focus {
   text-decoration: underline;
 }
 
+.tableOfContentsHeader {
+  clear: both;
+}
+
 .page-content {
   position: relative;
   height: auto;
