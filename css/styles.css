@@ -4022,6 +4022,12 @@ a.pagination-link {
     padding: 8px 19px;
     padding-top: 10px;
   }
+
+  .colophon-image {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 729px) and (max-width: 1024px) {
   body {
@@ -4338,8 +4344,8 @@ a.pagination-link {
   }
 
   .colophon-image {
-    float: right;
-    margin: 0 0 37px 31px;
+    margin: 0 auto;
+    display: block;
   }
 
   .aside-outer-wrapper-class {
@@ -4758,6 +4764,12 @@ a.pagination-link {
     -webkit-box-shadow: 1px 1px 2px 0 #ccc;
     -moz-box-shadow: 1px 1px 2px 0 #ccc;
     box-shadow: 1px 1px 2px 0 #ccc;
+  }
+
+  .colophon-image {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
   }
 
   .aside-outer-wrapper-class {
