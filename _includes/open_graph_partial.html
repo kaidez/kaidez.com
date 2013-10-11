@@ -12,8 +12,8 @@
   <meta content="article" property="og:type">
 {% endif %}
 
-{% if page.description %}
-  <meta content="{{ page.description }}" property="og:description">
+{% if page.meta-excerpt %}
+  <meta content="{{ page.meta-excerpt }}" property="og:description">
 {% else %}
   <meta content="{{ site.description }}" property="og:description">
 {% endif %}
@@ -44,3 +44,18 @@
   <meta content="{{ tag }}" property="article:tag">
   {% endfor %}
 {% endif %}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.meta-excerpt }}">
+  <meta name="twitter:creator" content="@kaidez">
+
+  {% if page.has-home-img %}
+  <meta name="twitter:image:src" content="{{ site.url }}/img/{{ page.has-home-img }}">
+  {% else %}
+  <meta name="twitter:image:src" content="{{ site.url }}/img/homePageDefault.jpg">
+  {% endif %}
+
+  <meta name="twitter:domain" content="{{ page.title }}/">
+  
+  
