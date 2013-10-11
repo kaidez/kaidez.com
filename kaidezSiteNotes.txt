@@ -251,15 +251,10 @@ LEFT TO DO
 -Create favicon.ico (DONE)
 -add kai image to the colophon page. (DONE)
 
--SITE REDESIGN POST: talk about testing on Androids
 
 Before/After deployment
 =======================
+-Fix sitemap buildout
 -301 the "2 javascript tasks" post
 -password-protect dev environment
--Test Twitter Cards
--Fix Disqus
--Make sure affiliate links work sitewide.
--resubmit feed to Feedburner
--Make sure sitemap is properly configured with Google and Bing (Lynda course: Analyzing Your Website to Improve SEO...5.1 movie)
 -Do all the Google+ (Lynda course: Analyzing Your Website to Improve SEO...5.4 movie)
