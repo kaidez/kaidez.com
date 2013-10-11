@@ -372,6 +372,12 @@ a:focus {
   text-decoration: underline;
 }
 
+// the table of contents header is usually close to page ads so it
+// should always clear both sides of itself
+.tableOfContentsHeader {
+  clear:both
+}
+
 // Container for all unique page content: blog post copy, search results, etc.
 .page-content {
   @include full-height;
