@@ -74,7 +74,7 @@ module.exports = function(grunt) {
     // all the 'watch' tasks
     watch: {
       pageOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
-        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'feed.xml', '.htaccess'],
+        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'feed.xml', 'htaccess'],
         tasks: ['jekyll:dev']
       },
       layoutOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
@@ -427,12 +427,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-shell');
 
-
   // Default task(s)
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('sassbuild', ['sass', 'cssmin']);
   grunt.registerTask('md', ['modernizr']);
-  grunt.registerTask('require', ['requirejs']);
+  grunt.registerTask('rq', ['requirejs']);
   grunt.registerTask('dpush', ['jekyll:dev','sftp-deploy:staging']);
   grunt.registerTask('ppush', ['shell:makeDeploy','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev','shell:removeDeploy']);
 };
