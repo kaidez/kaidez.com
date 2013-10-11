@@ -3275,11 +3275,36 @@ a.read-more-link {
   padding-bottom: 20px;
 }
 
-.centerVideo {
-  margin: 0px auto;
-  text-align: center;
+/*
+ * Center embedded YouTube videos
+ */
+.vidWrapper {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
+.centerVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.centerVideo iframe,
+.centerVideo object,
+.centerVideo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * Stop YouTube embedding code
+ */
 .aside-outer-wrapper-class {
   color: #7db9e8;
   height: auto;
