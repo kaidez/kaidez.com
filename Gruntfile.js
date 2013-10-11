@@ -405,7 +405,7 @@ module.exports = function(grunt) {
         authKey: 'key1'
       },
       src: '_deploy',
-      dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
+      dest: '/nfs/c02/h08/mnt/46798/domains/kaidez.com/html'
       }
     }
   });
