@@ -2,7 +2,6 @@
 layout: none
 permalink: .htaccess
 ---
-
 # Apache Configuration File
 
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
@@ -387,15 +386,30 @@ AddDefaultCharset utf-8
     # Compress all output labeled with one of the following MIME-types
     # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
     #  and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines
-    #  as `AddOutputFilterByType` is still in the core directives). 
+    #  as `AddOutputFilterByType` is still in the core directives).
 
 
 </IfModule>
 
 
-AddOutputFilterByType DEFLATE text/html text/plain text/xml
-AddOutputFilterByType DEFLATE text/css application/x-javascript
-AddOutputFilterByType DEFLATE text/css text/html text/plain text/xml text/javascript
+        AddOutputFilterByType DEFLATE text/css application/javascript
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/x-javascript \
+                                      application/json \
+                                      application/rss+xml \
+                                      application/vnd.ms-fontobject \
+                                      application/x-font-ttf \
+                                      application/x-web-app-manifest+json \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      font/opentype \
+                                      image/svg+xml \
+                                      image/x-icon \
+                                      text/html \
+                                      text/plain \
+                                      text/x-component \
+                                      text/xml
+
 
 # ------------------------------------------------------------------------------
 # | Content transformations                                                    |
