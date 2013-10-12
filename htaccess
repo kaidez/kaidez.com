@@ -577,7 +577,7 @@ Redirect 301 /my-writing/ /kai-gittens-article-inspired-magazine/
 
 Redirect 301 /tag/arsene-wenger/ /welcome-back/
 
-Redirect 301 /tutorial-simple-jquery-fade-in-fade-out/ /homepage-jquery-animation/
+Redirect 301 /homepage-jquery-animation/ /tutorial-simple-jquery-fade-in-fade-out/
 
 Redirect 301 /page/1/ /pages/page1/
 
@@ -599,3 +599,10 @@ Redirect 301 /the-html5-project/ /site-update/
 
 Redirect 301 /all-articles/ /pages/
 
+Redirect 301 /about-kaidez/ /colophon.html
+
+Redirect 301 /contact-kaidez/ /index.html#aside-contact-form-section
+
+Redirect 301 /javascript-for-loop-creates-jquery-fade/fadeCode.js /javascript-for-loop-creates-jquery-fade/
+
+Redirect 301 /tutorial-simple-jquery-slide/ /tutorial-simple-jquery-fade-in-fade-out/
