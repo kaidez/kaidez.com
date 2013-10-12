@@ -13,6 +13,7 @@ tags: [javascript, beginner, tute]
 
 [VIEW THE DEMO FIRST »][1]
 
+
  [1]: http://jsfiddle.net/kaidez/KypGQ/
 
 JavaScript doesn’t fit the strict definition of an object-oriented programming language, but it fits well enough so that you can use it to do object-oriented stuff. Closures play a big role here so understanding how they work is important.
@@ -230,6 +231,7 @@ The `howToGetThere` method also has parameters that will be passed into the text
 
 The `howToGetThere` private method is going to run when a link is clicked, but we have a few more things to do first, code-wise.
 
+{% prism javascript %}  
 return {
 ETrain: function() {
   howToGetThere('E train','14th Street, Manhattan','Court Square');
@@ -240,6 +242,7 @@ FTrain: function() {
 NTrain: function() {
   howToGetThere('N train','34th Street Manhattan','4th Avenue');
 }
+{% endprism %}  
     
 
 Here are three public methods: `ETrain`, `FTrain` and `NTrain`. They all have access to the `howToGetThere` private method and are written out using something called the *[module pattern][3]*.
