@@ -275,7 +275,7 @@
   
   // apply background image to <aside>
   .aside-outer-wrapper-class {
-    background: $aside-color url('../img/footer-bg.png') no-repeat left;
+    background: $aside-color url('/img/footer-bg.png') no-repeat left;
     @include create-inner-box-shadow;
     padding: 35px 10px;
   }
