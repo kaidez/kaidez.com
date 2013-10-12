@@ -597,3 +597,5 @@ Redirect 301 /code%20tips/ /coding-best-practices/
 
 Redirect 301 /the-html5-project/ /site-update/
 
+Redirect 301 /all-articles/ /pages/
+
