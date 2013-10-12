@@ -539,6 +539,16 @@ FileETag None
 # | Persistent connections |
 # ---------------------------------------------------------------------
 
+# Allow multiple requests to be sent over the same TCP connection:
+# http://httpd.apache.org/docs/current/en/mod/core.html#keepalive.
+
+# Enable if you serve a lot of static content but, be aware of the
+# possible disadvantages!
+
+# <IfModule mod_headers.c>
+#    Header set Connection Keep-Alive
+# </IfModule>
+
 # ---------------------------------------------------------------------
 # | 301 Redirects |
 # ---------------------------------------------------------------------
@@ -556,18 +566,16 @@ Redirect 301 /ajax-jquery-html5-work-together/5/ /ajax-jquery-html5-work-togethe
 Redirect 301 /ajax-jquery-html5-work-together/6/ /ajax-jquery-html5-work-together/
 
 Redirect 301 /ajax-jquery-html5-work-together/7/ /ajax-jquery-html5-work-together/
-
+  
 Redirect 301 /html5-project/ /site-update/
 
 Redirect 301 /the-html5-project/ /site-update/
 
-Redirect 301 /my-work/ /index.html
+Redirect 301 /my-work/ /personal/
 
-Redirect 301 /my-writing/ /index.html
+Redirect 301 /my-writing/ /kai-gittens-article-inspired-magazine/
 
-Redirect 301 /welcome-back/ /tag/arsene-wenger/
-
-Redirect 301 /Visite/ /index.html
+Redirect 301 /tag/arsene-wenger/ /welcome-back/
 
 Redirect 301 /tutorial-simple-jquery-fade-in-fade-out/ /homepage-jquery-animation/
 
@@ -585,17 +593,7 @@ Redirect 301 /page/6/ /pages/page6/
 
 Redirect 301 /page/7/ /pages/page7/
 
+Redirect 301 /code%20tips/ /coding-best-practices/
 
+Redirect 301 /the-html5-project/ /site-update/
 
-# Allow multiple requests to be sent over the same TCP connection:
-# http://httpd.apache.org/docs/current/en/mod/core.html#keepalive.
-
-RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?cdn.kaidez.com [NC]
-RewriteRule \.(jpg|jpeg|png|gif|png|webp|css|js|gif|pdf|eot|font.css|otf|ttc|ttf|woff)$ - [NC]
-
-# Enable if you serve a lot of static content but, be aware of the
-# possible disadvantages!
-
-# <IfModule mod_headers.c>
-#    Header set Connection Keep-Alive
-# </IfModule>
