@@ -1,5 +1,5 @@
 ---
-title: 2 JavaScript Tasks That jQuery Does Not Replace
+title: Two JavaScript Tasks That jQuery Does Not Replace
 comments: true
 author: Kai Gittens
 layout: post
@@ -14,7 +14,7 @@ While developing HTML5 video for [my recent Almay project][1], I discovered two 
 
  [1]: http://kaidez.com/almay-project-using-html5-net-jquery/
 
-These are the two tasks that I’ve found *so far*…I expect find more as time goes by: 
+These are the two tasks that I’ve found *so far*...I expect find more as time goes by: 
 
 ## 1. document.write
 

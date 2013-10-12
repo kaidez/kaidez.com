@@ -45,7 +45,7 @@ I used Jekyll to create multiple site layouts using [Liquid](http://liquidmarkup
 
 The outputted site does some very cool things...here's short list:
 
-* lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/ "visit the markdown documentation page")...it all gets converted to to HTML.
+* lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/ "visit the markdown documentation page")...it all gets converted to HTML.
 * the logic displays posts on the [home page](/) in a very "dynamic" way (more on this in a future post).
 * four category-specific pages are generated.
 * an XML-powered RSS file for syndication is built.
@@ -60,7 +60,7 @@ I exported the content from my old WordPress site to Jekyll using the [WordPress
 
 Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
 
-I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility. I switched over to Jekyll because 
+I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
 Migrating from WordPress to Jekyll isn't always the "right" solution: [a succinct post from Chirs Coyier](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
 
@@ -301,7 +301,7 @@ All the `grunt watch` stuff is awesome but it's my `grunt ppush` task where thin
 
 10. The grunt-shell plugin runs another task that executes a bash command that deletes "_deploy" from my project folder.
 
-I'm being bombastic when outline my deployment sequence like this but am doing so to prove a point. The combination all the above-mentioned Grunt tasks allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN!
+I'm being bombastic when outlining my deployment sequence like this but am doing so to prove a point. The combination all the above-mentioned Grunt tasks allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN!
 
 <a name="post-launch-tasks"></a>
 ### Post-Launch Tasks
