@@ -59,9 +59,9 @@ permalink: .htaccess
 # # ERRORS                                                                     #
 # ##############################################################################
 
-# ------------------------------------------------------------------------------
-# | 404 error prevention for non-existing redirected folders                   |
-# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# | 404 error prevention for non-existing redirected folders |
+# ---------------------------------------------------------------------
 
 # Prevent Apache from returning a 404 error for a rewrite if a directory
 # with the same name does not exist.
@@ -535,12 +535,63 @@ FileETag None
 #    </FilesMatch>
 # </IfModule>
 
-# ------------------------------------------------------------------------------
-# | Persistent connections                                                     |
-# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# | Persistent connections |
+# ---------------------------------------------------------------------
+
+# ---------------------------------------------------------------------
+# | 301 Redirects |
+# ---------------------------------------------------------------------
+
+Redirect 301 /2-javascript-tasks-jquery-does-not-replace/ /two-javascript-tasks-jquery-does-not-replace/
+
+Redirect 301 /ajax-jquery-html5-work-together/2/ /ajax-jquery-html5-work-together/
+
+Redirect 301 /ajax-jquery-html5-work-together/3/ /ajax-jquery-html5-work-together/
+
+Redirect 301 /ajax-jquery-html5-work-together/4/ /ajax-jquery-html5-work-together/
+
+Redirect 301 /ajax-jquery-html5-work-together/5/ /ajax-jquery-html5-work-together/
+
+Redirect 301 /ajax-jquery-html5-work-together/6/ /ajax-jquery-html5-work-together/
+
+Redirect 301 /ajax-jquery-html5-work-together/7/ /ajax-jquery-html5-work-together/
+
+Redirect 301 /html5-project/ /site-update/
+
+Redirect 301 /the-html5-project/ /site-update/
+
+Redirect 301 /my-work/ /index.html
+
+Redirect 301 /my-writing/ /index.html
+
+Redirect 301 /welcome-back/ /tag/arsene-wenger/
+
+Redirect 301 /Visite/ /index.html
+
+Redirect 301 /tutorial-simple-jquery-fade-in-fade-out/ /homepage-jquery-animation/
+
+Redirect 301 /page/1/ /pages/page1/
+
+Redirect 301 /page/2/ /pages/page2/
+
+Redirect 301 /page/3/ /pages/page3/
+
+Redirect 301 /page/4/ /pages/page4/
+
+Redirect 301 /page/5/ /pages/page5/
+
+Redirect 301 /page/6/ /pages/page6/
+
+Redirect 301 /page/7/ /pages/page7/
+
+
 
 # Allow multiple requests to be sent over the same TCP connection:
 # http://httpd.apache.org/docs/current/en/mod/core.html#keepalive.
+
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?cdn.kaidez.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|png|webp|css|js|gif|pdf|eot|font.css|otf|ttc|ttf|woff)$ - [NC]
 
 # Enable if you serve a lot of static content but, be aware of the
 # possible disadvantages!
