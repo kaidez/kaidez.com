@@ -372,7 +372,6 @@ module.exports = function(grunt) {
         }
       },
       
-
       // Shell commands for creating and removing '_deploy' folder
       shell: {
         makeDeploy: {
@@ -384,8 +383,7 @@ module.exports = function(grunt) {
       },
     
       // deployments
-     'sftp-deploy': {
-    
+     'sftp-deploy': {    
       // deploy to the development site
       staging: {
         auth: {
