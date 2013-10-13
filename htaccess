@@ -606,3 +606,7 @@ Redirect 301 /contact-kaidez/ /index.html#aside-contact-form-section
 Redirect 301 /javascript-for-loop-creates-jquery-fade/fadeCode.js /javascript-for-loop-creates-jquery-fade/
 
 Redirect 301 /tutorial-simple-jquery-slide/ /tutorial-simple-jquery-fade-in-fade-out/
+
+Redirect 301 /2011/10/ /index.html
+
+Redirect 301 /html /index.html
