@@ -199,9 +199,9 @@ AddDefaultCharset utf-8
 # # URL REWRITES                                                               #
 # ##############################################################################
 
-# ------------------------------------------------------------------------------
-# | Rewrite engine                                                             |
-# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# | Rewrite engine|
+# ---------------------------------------------------------------------
 
 # Turning on the rewrite engine and enabling the `FollowSymLinks` option is
 # necessary for the following directives to work.
@@ -220,9 +220,9 @@ AddDefaultCharset utf-8
   # RewriteBase /
 </IfModule>
 
-# ------------------------------------------------------------------------------
-# | Suppressing / Forcing the "www." at the beginning of URLs                  |
-# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# | Suppressing / Forcing the "www." at the beginning of URLs | 
+# ---------------------------------------------------------------------
 
 # The same content should never be available under two different URLs especially
 # not with and without "www." at the beginning. This can cause SEO problems
@@ -261,13 +261,13 @@ AddDefaultCharset utf-8
 # </IfModule>
 
 
-# ##############################################################################
-# # SECURITY                                                                   #
-# ##############################################################################
+# ####################################################################
+# # SECURITY #
+# ####################################################################
 
-# ------------------------------------------------------------------------------
-# | Content Security Policy (CSP)                                              |
-# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# | Content Security Policy (CSP)  |
+# ---------------------------------------------------------------------
 
 # You can mitigate the risk of cross-site scripting and other content-injection
 # attacks by setting a Content Security Policy which whitelists trusted sources
@@ -352,9 +352,9 @@ AddDefaultCharset utf-8
 #    Header set Strict-Transport-Security max-age=16070400;
 # </IfModule>
 
-# ------------------------------------------------------------------------------
-# | Server software information                                                |
-# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# | Server software information |
+# ---------------------------------------------------------------------
 
 # Avoid displaying the exact Apache version number, the description of the
 # generic OS-type and the information about Apache's compiled-in modules.
