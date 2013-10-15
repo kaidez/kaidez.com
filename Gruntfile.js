@@ -134,7 +134,7 @@ module.exports = function(grunt) {
       // if Bower updates RequireJS, copy it to core Require build folder, run 
       // the "requirejs" task, then build the site.
       bowerTaskRequireJS: {
-        files: ['bower_components/require/require.js'],
+        files: ['bower_components/requirejs/require.js'],
         tasks: ['copy:require', 'requirejs', 'jekyll:dev']
       },
       
@@ -330,7 +330,7 @@ module.exports = function(grunt) {
         require: {
           files: [
             {expand: true,
-            cwd: 'bower_components/require/',
+            cwd: 'bower_components/requirejs/',
             src: ['require.js'],
             dest: 'requireBuildOut/', filter: 'isFile'}
           ]
