@@ -198,7 +198,7 @@ Especially the ad code...not only is it async, but it's also **RESPONSIVE!**
 
 Google ads don't scale when the window is resized. Its related code just uses media queries to detect the window width on page-load, then loads in a Google ad based on this detection. Your ads sizes can only be  [the ones that Google has already designated](https://support.google.com/adsense/answer/2953032?hl=en "get Google's approved ad sizes").
 
-All is not perfect with the Google stuff: the Adsense code still loads in a lot of unoptimized assets, causing a bit of a performance hit. But many of these assets loading async (as do the Disqus ones).
+All is not perfect with the Google stuff: the Adsense code still loads in a lot of unoptimized assets, causing a bit of a performance hit. But many of these assets load in async (as do the Disqus ones).
 
 None of that matters to me though...this responsive solution solves a MAJOR problem that many people were having with Google ads. I'm happy with (and respect) what the Google team has done here.
 <a name="bower"></a>
