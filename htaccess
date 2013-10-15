@@ -643,7 +643,7 @@ Redirect 301 tutorials/page/2/ /tutorials/
 
 Redirect 301 /update-html5seomicrodata-post/ html5-seo-microdata/update-html5seomicrodata-post/
 
-Redirect 301 tutorial-simple-jquer.. /tutorial-simple-jquery-fade-in-fade-out/
+Redirect 301 tutorial-simple-jquer /tutorial-simple-jquery-fade-in-fade-out/
 
 Redirect 301 page3/index.html /pages/page3/
 
