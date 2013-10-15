@@ -31,7 +31,7 @@ After having a GitHub account for 18 months and knowing just enough to get by, I
 
 <img src="/img/octocat.png" class="post-pic" /> I'm assuming a few things: 
 
-*   that you have a Git repo on your computer and it's been uploaded to GitHub.
+*   that you know how to create a Git repo on your computer how to upload its changes to a remote GitHub repo.
 *   that you know how to access this repo from the Terminal.
 *   that you know the three Git line commands that work together to upload your code to GitHub: `git add`, `git commit` and `git push`.
 
@@ -47,7 +47,7 @@ Before we jump into the Terminal, we need to be clear about the differences betw
 <a name="simple-git-github-explanation"></a> 
 ## A simple explanation of how Git & GitHub work
 
-*Git* is the software on your machine that tracks changes to your code repository and retains its past versions. You upload the repo and its changes to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
+*Git* is the software on your machine that tracks changes to your code repository and retains its past versions. You upload a copy of the repo and its history of changes to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
 
 If you're only Git education up to this point is doing what GitHub tells you to do when you setting up a repo, you should be familiar with `git add`. You use it as part of a command sequence in Terminal when you want to add files to or change files on GitHub.
 
@@ -69,16 +69,16 @@ $ git commit -m 'removed myFile.html'
 $ git push
 {% endprism %}
 
-Why is all this necessary? Because Git views adding and removing things from your repo as a "change." And while Git can detect these changes, it has absolutely no idea what to do with them: it's your job to *tell* Git what to do with them.
+Why is all this necessary? Because Git views adding to, removing from and updating things in your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
 
-We just deleted a file from our repository in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we "told" our repo to remove it. Lastly, we threw our repo up on GitHub with `git push`: GitHub saw that a delete was committed to the repo during the push and, as such, deleted the file.
+We just deleted a file from our repository in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we "told" our repo to remove it. Lastly, we uploaded these changes to our remote repo on GitHub with `git push`: GitHub saw that a delete was performed on our local machine after the push and, as such, deleted `myFile.html`.
 
-The "changes" concept is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, individual file content updates...whatever. GitHub only changes what your local Git repo tells it to change. So in the case of deletions, if you don't use `git rm` to tell Git to remove a file, Git can't tell GitHub to remove it. 
-
-While you may be familiar with `git add` already, let's do one for good measure. For this tutorial, we actually need to use it to create a certain file called `.gitignore`.
+The "changes" concept is key to understanding the Git/GitHub relationship, Git in particular. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, individual file content updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file and then commit it, Git can't tell GitHub to remove it. 
 
 <a name="gitignore"></a> 
 ## Prevent files from being uploaded to GitHub with *.gitignore*
+
+While you may be familiar with `git add` already, let's do one for good measure. For this tutorial, we actually need to use it to create a certain file called `.gitignore`.
 
 If you already know which files you don't want uploaded to GitHub and want to avoid uploading them by mistake (meaning you'll never have to remove them with `git rm`), list them in a `.gitignore` file.
 
@@ -187,7 +187,7 @@ This tutorial focused on how Git handles file and directory deletion but there's
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
 Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.
 
-### [Try Git »][40]
+### [Try Git »](http://try.GitHub.com/ "A hand-son Git tutorial from Code School")
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
 ### [GitHub Training »][42]
@@ -199,10 +199,10 @@ UK-based developer [Kerry Gallagher][49] put together a really useful list of Gi
 ### ["Git Is Simpler Than You Think" by Nick Farina »][50]
 If you *really* want to know how Git works, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
 
-### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »][51]
+### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/ "Learn about centralized and distributed version control systems")
 I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find. 
 
-### [*Pro Git* by Scott Chacon »](http://git-scm.com/book, "Read the free Pro Git ")
+### [*Pro Git* by Scott Chacon »](http://git-scm.com/book, "Read the free Pro Git Book")
 *The* Git Book, and it's free! It's a little dense and doesn't flow as easily as these other resources…I'll admit that I haven't read all of it. But I have read enough of it to know that it's an important Git resource.   
      
 <a name="conclusion"></a>           
@@ -219,7 +219,6 @@ I hope you understand all the various ways to remove files from GitHub and learn
  [37]: /img/terminalShot20.png
  [38]: /img/terminalShot21.png
  [39]: /img/repo7.png
- [40]: http://try.GitHub.com/
  [41]: http://codeschool.com/
  [42]: https://GitHub.com/training/
  [43]: http://css-tricks.com/
@@ -230,5 +229,3 @@ I hope you understand all the various ways to remove files from GitHub and learn
  [48]: https://gist.GitHub.com/2043530#file_gistfile1.sh
  [49]: http://www.kerrygallagher.co.uk/
  [50]: http://nfarina.com/post/9868516270/git-is-simpler
- [51]: https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/
- [52]: http://git-scm.com/book
