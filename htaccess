@@ -645,13 +645,13 @@ Redirect 301 /tutorials/page/2/ /tutorials/
 
 Redirect 301 /html5-seo-microdata/update-html5seomicrodata-post/ /update-html5seomicrodata-post/ 
 
-Redirect 301 /tutorial-simple-jquer /tutorial-simple-jquery-fade-in-fade-out/
+Redirect 301 /tutorial-simple-jquer.. /tutorial-simple-jquery-fade-in-fade-out/
 
 Redirect 301 /page3/index.html /pages/page3/
 
 Redirect 301 /2-javascript-tasks-jquery-does-not /two-javascript-tasks-jquery-does-not-replace/
 
-Redirect 301 /tutorial/ /tutorials/
+Redirect 301 /tutorial/ /tutorials
 
 Redirect 301 /lynda /lynda-dot-com-review/
 
