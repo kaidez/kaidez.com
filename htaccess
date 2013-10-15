@@ -610,3 +610,51 @@ Redirect 301 /tutorial-simple-jquery-slide/ /tutorial-simple-jquery-fade-in-fade
 Redirect 301 /2011/10/ /index.html
 
 Redirect 301 /html /index.html
+
+Redirect 301 tutorials/tutorials/ /tutorials/
+
+Redirect 301 reviews/reviews/ /reviews/
+
+Redirect 301 personal/personal/ /personal/
+
+Redirect 301 coding-best-practices/coding-best-practices/ coding-best-practices/
+
+Redirect 301 pages/pages/ /pages/
+
+Redirect 301 cs /index.html
+
+Redirect 301 tutorial /tutorials/
+
+Redirect 301 tu /tutorials/
+
+Redirect 301 tutorial-simple-jquery /tutorial-simple-jquery-fade-in-fade-out/
+
+Redirect 301 tutorial-simple-jquery-fade /tutorial-simple-jquery-fade-in-fade-out/
+
+Redirect 301 page6/index.html /pages/page6/
+
+Redirect 301 html5-project-series-1-homepage-wireframe/footersnippet/ /html5-project-series-1-homepage-wireframe/
+
+Redirect 301 html5-project-series-1-homepage-wireframe/home-2/ /html5-project-series-1-homepage-wireframe/
+
+Redirect 301 page5/index.html /pages/page5/
+
+Redirect 301 tutorials/page/2/ /tutorials/
+
+Redirect 301 /update-html5seomicrodata-post/ html5-seo-microdata/update-html5seomicrodata-post/
+
+Redirect 301 tutorial-simple-jquer.. /tutorial-simple-jquery-fade-in-fade-out/
+
+Redirect 301 page3/index.html /pages/page3/
+
+Redirect 301 2-javascript-tasks-jquery-does-not /two-javascript-tasks-jquery-does-not-replace/
+
+Redirect 301 tutorial/ /tutorials/
+
+Redirect 301 lynda /lynda-dot-com-review/
+
+Redirect 301 2-javascript-tasks-jquery /two-javascript-tasks-jquery-does-not-replace/
+
+
+
+
