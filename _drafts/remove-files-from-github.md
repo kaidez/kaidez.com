@@ -20,12 +20,11 @@ After making this mistake too many times, I read up on [Git](http://git-scm.com/
 1.  [I just want to get the quick answers, then get out of here!](#quick-answers)
 2.  [Assumptions & Tips](#assumptions)
 3.  [A simple explanation of how Git & GitHub work »](#simple-git-github-explanation)
-4.  [Prevent files from being uploaded to GitHub with .gitignore](#gitignore)
-5.  [The *right* way to remove files from GitHub](#right-way-to-remove-files-from-GitHub)
-6.  [The *right* way to remove directories from GitHub](#right-way-to-remove-directories-from-GitHub)
-7.  [What to do if you've already deleted files from your machine and pushed things to GitHub](#you-already-deleted-files)
-8.  [Further Reading](#further-reading)
-9.  [Conclusion](#conclusion)
+4.  [The *right* way to remove files from GitHub](#right-way-to-remove-files-from-GitHub)
+5.  [The *right* way to remove directories from GitHub](#right-way-to-remove-directories-from-GitHub)
+6.  [What to do if you've already deleted files from your machine and pushed things to GitHub](#you-already-deleted-files)
+7.  [Further Reading](#further-reading)
+8.  [Conclusion](#conclusion)
 
 <a name="quick-answers"></a> 
 ## I just want to get the quick answers, then get out of here!
@@ -97,78 +96,41 @@ Some tips:
 
 First, we need to be clear about the differences between Git and GitHub, as well as how they work together.
 
-*Git* is the software on your machine that tracks changes to your code repository and keeps copies of the repository 's previous versions. You upload a copy of the repo and its history of changes to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
+*Git* is the software on your machine that tracks changes to your code repository and keeps copies of the repository's change history. You upload a copy of the repo and its history of changes to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
 
-If you're only Git education up to this point is doing what GitHub tells you to do when you setting up a repo, you should be familiar with `git add`. You use it as part of a command sequence in Terminal when you want to add files to or change files on GitHub.
+If your only Git education up to this point is doing what GitHub tells you to do when you setting up a repo, you should be familiar with `git add`. You use it as part of a command sequence in Terminal when you either add new files to GitHub or update existing ones.
 
-So if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, the sequence would look something like this:
+So if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:
 
 {% prism bash %}
 $ git add 'myFile.html'
+{% endprism %}
+{% prism bash %}
 $ git commit -m 'added myFile.html'
+{% endprism %}
+{% prism bash %}
 $ git push
 {% endprism %}
 
 The sequence for *deleting* files is the same, except for one change: you replace `add` with `rm`, which is the UNIX command for removing things.
 
-So if you wanted to remove "myFile.html" from your repo, the sequence would look something like this:
+So if you wanted to remove "myFile.html" from your repo, your typed-in command sequence would look something like this:
 
 {% prism bash %}
 $ git rm 'myFile.html'
+{% endprism %}
+{% prism bash %}
 $ git commit -m 'removed myFile.html'
+{% endprism %}
+{% prism bash %}
 $ git push
 {% endprism %}
 
-Why is all this necessary? Because Git views adding to, removing from and updating things in your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
+Why is all this necessary? Because Git views any type of update to your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
 
 We just deleted a file from our repository in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we "told" our repo to remove it. Lastly, we uploaded these changes to our remote repo on GitHub with `git push`: GitHub saw that a delete was performed on our local machine after the push and, as such, deleted `myFile.html`.
 
-The "changes" concept is key to understanding the Git/GitHub relationship, Git in particular. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, individual file content updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file and then commit it, Git can't tell GitHub to remove it. 
-
-<a name="gitignore"></a> 
-## Prevent files from being uploaded to GitHub with *.gitignore*
-
-While you may be familiar with `git add` already, let's do one for good measure. For this tutorial, we actually need to use it to create a certain file called `.gitignore`.
-
-If you already know which files you don't want uploaded to GitHub and want to avoid uploading them by mistake (meaning you'll never have to remove them with `git rm`), list them in a `.gitignore` file.
-
-Let's create this file and tell it to ignore all `.DS_Store` files, which appear in Mac OS X directories anytime changes occur inside of them. Doing this doesn't remove `.DS_Store` files from our repo (we'll get to removing files shortly), it just prevents Git from tracking them. **If Git can't track them, Git can't upload them to GitHub**.
-
-We'll create our file with nano, Terminal's built-in text editor (Windows users should use Notepad outside of their command line tool to create this file, add the content described in step 4, save it in your repo, then start following the directions at step 8).
-
-1.  First, let's look at our Git repo on GitHub. Mine's called "yourGitProject" for this tutorial.  
-    ![Remove files from GitHub tutorial][13] 
-2.  Now let's look at our file in Terminal. There are hidden files and directories (the ones that start with a ".") and we want to look at those files as well. We need to tell Terminal to list all of our files and do so by typing in `ls -la` and hitting Enter. ![Remove files from GitHub tutorial][14] 
-3.  Note that `.gitignore` isn't there yet so let's add it…Type `nano .gitignore` into Terminal and hit Enter.  
-    ![Remove files from GitHub tutorial][15] 
-4.  nano created `.gitignore` in our repo and opened it. Now we need to make sure that `.DS_Store` is not tracked in our root folder but as a best practice, let's also make sure that it's not tracked in our subfolders: "css" and "js". To do this, type content into `.gitignore` so it looks like it does below.  
-    ![Remove files from GitHub tutorial][16] 
-5.  Start to save it by hitting "Ctrl X".  
-    ![Remove files from GitHub tutorial][17] 
-6.  You'll receive a prompt at the bottom to save it: type "y" for Yes.  
-    ![Remove files from GitHub tutorial][18] 
-7.  You'll receive a prompt to write the file name, i.e., save it with the name ".gitignore", which you want to do. Hit Enter.  
-    ![Remove files from GitHub tutorial][19] 
-8.  Type `ls -la` again: you should now see the `.gitignore` file.  
-    ![Remove files from GitHub tutorial][20] 
-9.  Now we need to upload it to our GitHub-hosted repo doing the usual add/commit/push thing that we always do. The "add" comes first…type `git add .gitignore` into Terminal and hit Enter.  
-    ![Remove files from GitHub tutorial][21] 
-10. Now we'll commit it to our repo with a meaningful commit message…type `git commit -m 'added .gitignore to the repo'` and hit Enter.  
-    ![Remove files from GitHub tutorial][22] 
-11. Now let's push the change to GitHub…type `git push` and hitting Enter. Then when we check our repo, we see that ".gitignore" is now part of it.  
-    ![Remove files from GitHub tutorial][23] 
-
- [13]: /img/repo1.png
- [14]: /img/terminalShot1.png
- [15]: /img/terminalShot2.png
- [16]: /img/terminalShot3.png
- [17]: /img/terminalShot4.png
- [18]: /img/terminalShot5.png
- [19]: /img/terminalShot6.png
- [20]: /img/terminalShot7.png
- [21]: /img/terminalShot8.png
- [22]: /img/terminalShot9.png
- [23]: /img/repo2.png
+The "changes" concept is key to understanding the Git/GitHub relationship, Git in particular. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, individual file content updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file and then commit it, Git can't tell GitHub to remove it.
 
 <a name="right-way-to-remove-files-from-GitHub"></a> 
 ## The *right* way to remove files from GitHub
@@ -241,7 +203,12 @@ Obviously your first stop. The site went through a major redesign a few months a
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
 ### [GitHub Training »][42]
-One of the reasons that GitHub has become popular is the same reason that [Chris Coyier][43] and [Paul Irish][44] have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources][45] section as well as their [Online Training][46] and [Events][47] sections. For the last two, some things are free and some are not, but I think they're reasonably priced.  
+One of the reasons that GitHub has become popular is the same reason that [Chris Coyier][43] and [Paul Irish][44] have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources][45] section as well as their [Online Training][46] and [Events][47] sections. For the last two, some things are free and some are not, but I think they're reasonably priced.
+
+### [A Note About Git Commit Messages »](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Read Tim Pope's well-known article on proper Git commits")
+Written five years from the time of this post, this Tim Pope article on how to create a proper Git commit has become an industry standard. Rarely will you find a software pro NOT follow these rules so it's best to include them in your workflow.
+
+[Git Essential Training Course on lynda.com (premium) »](http://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD2146&bid=524&aid=CD2146' "Get thorough Git training on lynda.com: a kaidez.com affiliate") It cost bucks but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's thorough, hands-on Git course offered by [lynda.com](http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146) (a kaidez.com affiliate)...definitely worth checking out.
 
 ### [Common Git Commands »][48]
 UK-based developer [Kerry Gallagher][49] put together a really useful list of Git commands. Print it out and tape it to the wall by your computer. 
