@@ -656,3 +656,9 @@ Redirect 301 /tutorial/ /tutorials
 Redirect 301 /lynda /lynda-dot-com-review/
 
 Redirect 301 /2-javascript-tasks-jquery /two-javascript-tasks-jquery-does-not-replace/
+
+Redirect 301 /social-media-week-follow-up/volk/ /social-media-week-follow-up/
+
+Redirect 301 /jquery-tshirt-geek-gift/jqueryshirt/ /jquery-tshirt-geek-gift/
+
+Redirect 301 /mobile-web-development-best-practices-starting-tips/copyarrowconcealersprite/ /mobile-web-development-best-practices-starting-tips/
