@@ -2,7 +2,7 @@
 title: 'TUTORIAL: Remove Files From GitHub'
 comments: true
 author: Kai Gittens
-meta-excerpt: Get a quick answer first, then learn about how Git works with GitHub, then review the excellent list of learning links at the end.
+meta-excerpt: Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.
 layout: post
 permalink: /remove-files-from-github/
 category: tutorials
@@ -96,16 +96,16 @@ $ git push
 
 Why is all this necessary? Because Git views any type of update to your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
 
-We just deleted a file from our project folder in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with `git push`: GitHub saw that a delete was performed on our local machine after the push so it deleted `myFile.html` from the GitHub repo view.
+We just deleted a file from our project folder in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with `git push`: GitHub saw that a delete was performed on our local machine after the push so it deleted `myFile.html` from the GitHub repo's view.
 
-The "changes" concept is central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, individual file content updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file and then commit it, Git can't tell GitHub to remove it.
+The "changes" concept is a central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file, Git can't tell GitHub to remove it after you do a `git push`.
 
 <a name="further-reading"></a>
 ## Further Reading
 This tutorial focused on how Git handles file and directory deletion but there's more to Git than that. From a beginner's level, here are some great learning resources:
     
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
-Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.
+Obviously your first stop. The site went through a major redesign a while back, greatly improving the UI. Documentation and downloads are much easier to find and read.
 
 ### [Try Git »](http://try.GitHub.com/ "A hands-on Git tutorial from Code School")
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School](http://codeschool.com/ "Visit Code School"), Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
@@ -120,7 +120,7 @@ Written five years from the time of this post, this Tim Pope article on how to c
 It cost bucks but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's a thorough, hands-on Git course offered by [lynda.com](http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146) (a kaidez.com affiliate)...definitely worth checking out.
 
 ### [Common Git Commands »](https://gist.GitHub.com/2043530#file_gistfile1.sh "Get an excellent list of Git commands")
-UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it to the wall by your computer. 
+UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it somewhere by your computer. 
 
 ### ["Git Is Simpler Than You Think" by Nick Farina »](http://nfarina.com/post/9868516270/git-is-simpler)
 If you want to Git works under the hood, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
