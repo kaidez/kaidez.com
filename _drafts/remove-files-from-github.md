@@ -11,20 +11,24 @@ has-home-img: gitTutorial.jpg
 tags: [git, github]
 ---
 
-If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by dragging them to your Trash or Recycle Bin first and then doing a `git push`, you know that this doesn't work.
+If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by putting them in the Trash or Recycle Bin first and then doing a `git push`, you know that this doesn't work.
 
-After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub, but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
+After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. In the process, I gained a clear understanding how the two interact with each other: this is key in understand how to properly delete files as well as walking the path towards "GitHub guru-ness".
 
-But before we do all the guru stuff, let's walk through the proper methods for deleting files.
+Let's get started on all this guru stuff and walk through the proper methods for deleting files.
 
 ## Table of Contents
 1. [If you deleted an already-committed file outside of the command line](#files-already-deleted "If you deleted an already-committed file outside of the command line")
-2. [How you should always delete files from Git](#how-to-delete-files "How you should always delete files from Git")
+2. [How you should *always* delete files from Git](#how-to-delete-files "How you should always delete files from Git")
 3. [How to delete files NOT checked into Git](#delete-uncommitted-files "How to delete files NOT checked into Git")
+4. [How to delete folders](#delete-folders "How to delete folders in Git")
+5. [A simple explanation of how Git & GitHub work](#simple-git-explanation "A simple explanation of how Git & GitHub work")
+6. [Further Git &amp; GitHub Reading](#further-reading "Further Git and GitHub Reading")
+7. [Conslusion](#conclusion "Conslusion")
 
 <a name="files-already-deleted"></a>
 ## If you deleted an already-committed file outside of the command line
-If you have already committed a file to Git, you should only delete it from the command line. One of the most common GitHub newbie mistakes is to not do this and to just drag it to the trash, or something like it.
+A file that's already been committed to Git should only deleted via the command line. Not doing this and just dragging it to the Trash instead (or something similar) is one of the most common Git newbie mistakes.
 
 If you did that with a file named `oldFileAlreadyDeleted.html`, your terminal would return this message when you type `git status`:
 {% prism markup %}
@@ -87,7 +91,7 @@ $ rm oldFile.html
 {% endprism %}
 
 <a name="delete-folders"></a>
-## How to delete Folders
+## How to delete folders
 __Scenario 1:__ Empty folders cannot be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
 
 __Scenario 2:__ Git can track a folder once it has content. But if that folder (let's call it `someFolder`) hasn't been committed to the repo yet, you get this message after typing `git status`:
@@ -117,6 +121,7 @@ $ git push
 
 Why do things need to be done this way? First, we need to be clear about the difference between Git and GitHub, as well as how they work together.
 
+<a name="simple-git-explanation"></a>
 ## A simple explanation of how Git & GitHub work
 
 *Git* is version control software that tracks changes to your code repository on your local machine. It also retains the entire change history that's also on your local machine.
@@ -158,7 +163,7 @@ We just deleted a file from our project folder in the last command sequence with
 The "changes" concept is a central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file, Git can't tell GitHub to remove it after you do a `git push`.
 
 <a name="further-reading"></a>
-## Further Reading
+## Further Git &amp; GitHub Reading
 This tutorial focused on how Git handles file and folder deletions but there's more to Git than that. From a beginner's level, here are some great learning resources:
     
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
