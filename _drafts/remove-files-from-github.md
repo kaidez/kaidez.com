@@ -2,7 +2,7 @@
 title: 'TUTORIAL: Remove Files From GitHub'
 comments: true
 author: Kai Gittens
-meta-excerpt: Get a quick answer first and then learn in depth how to remove files from GitHub & how it works with Git. Learning resource list at the end
+meta-excerpt: Get a quick answer first then learn how to delete files & folders from Git. Also learn how Git works with GitHub. Learning links at the end.
 layout: post
 permalink: /remove-files-from-github/
 category: tutorials
@@ -13,18 +13,61 @@ tags: [git, github]
 
 If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by dragging them to your Trash or Recycle Bin and then doing a `git push`, you know that this doesn't work.
 
-After having a GitHub account for 18 months and knowing just enough to get by, I spent 10 days focusing on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
+After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
 
 ## Table of Contents
 
-1.  [Assumptions & Tips](#assumptions)
-2.  [A simple explanation of how Git & GitHub work »](#simple-git-github-explanation)
-3.  [Prevent files from being uploaded to GitHub with .gitignore](#gitignore)
-4.  [The *right* way to remove files from GitHub](#right-way-to-remove-files-from-GitHub)
-5.  [The *right* way to remove directories from GitHub](#right-way-to-remove-directories-from-GitHub)
-6.  [What to do if you've already deleted files from your machine and pushed things to GitHub](#you-already-deleted-files)
-7.  [Further Reading](#further-reading)
-8.  [Conclusion](#conclusion)
+1.  [I just want to get the quick answer, then get out of here!](#quick-answer)
+2.  [Assumptions & Tips](#assumptions)
+3.  [A simple explanation of how Git & GitHub work »](#simple-git-github-explanation)
+4.  [Prevent files from being uploaded to GitHub with .gitignore](#gitignore)
+5.  [The *right* way to remove files from GitHub](#right-way-to-remove-files-from-GitHub)
+6.  [The *right* way to remove directories from GitHub](#right-way-to-remove-directories-from-GitHub)
+7.  [What to do if you've already deleted files from your machine and pushed things to GitHub](#you-already-deleted-files)
+8.  [Further Reading](#further-reading)
+9.  [Conclusion](#conclusion)
+
+<a name="quick-answer"></a> 
+## I just want to get the quick answer, then get out of here!
+
+Say you're trying to remove `newFile.html` and you have already committed to Git as well as pushed up to GitHub. First, use the following Git command to remove the file from repository:
+
+{% prism markup %}
+$ git rm newFile.html
+{% endprism %}
+
+You will get a message the file has been removed:
+
+{% prism markup %}
+$ rm 'newFile.html'
+{% endprism %}
+
+If you HAVE NOT pushed the file up to GitHub, you can ignore the next step. But If you HAVE pushed it up to GitHub, you need to commit the change next, preferably with a message:
+
+{% prism markup %}
+$ git commit -m 'remove newFile.html'
+{% endprism %}
+
+Now push it up to GitHub:
+
+{% prism markup %}
+$ git push all
+{% endprism %}
+
+But if you want to delete `oldFile.html` 
+{% prism markup %}
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#   oldFile.html
+{% endprism %}
+
+This file hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
+
+{% prism markup %}
+$ rm oldFile.html
+{% endprism %}
+
 
 <a name="assumptions"></a> 
 ## Assumptions & Tips
