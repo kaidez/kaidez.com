@@ -23,7 +23,7 @@ Let's get started on all this guru stuff and walk through the proper methods for
 3. [How to delete files NOT checked into Git](#delete-uncommitted-files "How to delete files NOT checked into Git")
 4. [How to delete folders](#delete-folders "How to delete folders in Git")
 5. [A simple explanation of how Git & GitHub work](#simple-git-explanation "A simple explanation of how Git & GitHub work")
-6. [Further Git &amp; GitHub Reading](#further-reading "Further Git and GitHub Reading")
+6. [Further Git &amp; GitHub Reading](#further-git-github-reading "Further Git and GitHub Reading")
 7. [Conslusion](#conclusion "Conslusion")
 
 <a name="files-already-deleted"></a>
@@ -162,7 +162,7 @@ We just deleted a file from our project folder in the last command sequence with
 
 The "changes" concept is a central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file, Git can't tell GitHub to remove it after you do a `git push`.
 
-<a name="further-reading"></a>
+<a name="further-git-github-reading"></a>
 ## Further Git &amp; GitHub Reading
 This tutorial focused on how Git handles file and folder deletions but there's more to Git than that. From a beginner's level, here are some great learning resources:
     
