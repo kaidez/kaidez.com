@@ -15,6 +15,8 @@ If you've every tried to remove files from a [GitHub](http://github.com/ "Go to 
 
 After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub, but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
 
+But before we do all the guru stuff, let's walk through the proper methods for deleting files.
+
 ## If you deleted an already-committed file outside of the command line
 If you have already committed a file to Git, you should only delete it from the command line. One of the most common GitHub newbie mistakes is to not do this and to just drag it to the trash, or something like it.
 
@@ -27,34 +29,51 @@ If you did that with a file named `oldFileAlreadyDeleted.html`, your terminal wo
 #   deleted:    oldFileAlreadyDeleted.html
 {% endprism %}
 
-You have to delete it via the command line at this point like this:
+You now have to delete it via the command line like this:
 
-{% prism markup %}
+{% prism bash %}
 $ git rm oldFileAlreadyDeleted.html
 {% endprism %}
 
 Then commit the delete, preferably with a proper `git commit` message:
-
-{% prism markup %}
+{% prism bash %}
 $ git commit -m 'remove oldFileAlreadyDeleted.html'
 {% endprism %}
 
 If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a `git push` will remove it:  
-{% prism markup %}
+{% prism bash %}
 $ git push all
 {% endprism %}
 
-Moving forward, any file you want to remove from Git and GitHub should be done so using the above command sequence.
+## How you should *always* delete files from Git
+Moving forward, any file you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called `someCommitedFile.html`, you would do so like this:
 
-But say you want to delete `oldFile.html` and you get this message when you typed `git status`:
+{% prism bash %}
+$ git rm someCommittedFile.html
+{% endprism %}
+
+Then write a `git commit` message:
+
+{% prism bash %}
+$ git commit -m 'remove someCommittedFile.html'
+{% endprism %}
+
+And if `someCommittedFile.html` is viewable on GitHub, doing a `git push` will remove it:  
+{% prism bash %}
+$ git push all
+{% endprism %}
+
+## Delete files NOT checked into Git
+Say you want to delete `oldFile.html` and you get this message when you typed `git status`:
 {% prism markup %}
+
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
 #
 #   oldFile.html
 {% endprism %}
 
-This file hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
+This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
 
 {% prism markup %}
 $ rm oldFile.html
@@ -64,11 +83,13 @@ Why do things need to be done this way? First, we need to be clear about the dif
 
 ## A simple explanation of how Git & GitHub work
 
-*Git* is version control software on that tracks changes to your code repository as well as retain the entire change history. You upload your code repo's changes and change history to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
+*Git* is version control software that tracks changes to your code repository on your local machine. It also retains the entire change history, also on your local machine.
+
+You upload your code repo's changes and change history to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo. Most of these features are centered around project managment.
 
 If your only Git education up to this point is doing what GitHub tells you to do when you creating a repo, you should be familiar with `git add`. You use it as part of a command sequence in Terminal when you either add new files to GitHub or update existing ones.
 
-So to recap the command sequence, if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:
+So to recap the previously-discussed command sequence, if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:
 
 {% prism bash %}
 $ git add 'myFile.html'
@@ -96,7 +117,7 @@ $ git push
 
 Why is all this necessary? Because Git views any type of update to your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
 
-We just deleted a file from our project folder in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with `git push`: GitHub saw that a delete was performed on our local machine after the push so it deleted `myFile.html` from the GitHub repo's view.
+We just deleted a file from our project folder in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with `git push`. After the push was completed, GitHub saw that a delete was performed against on our local machine's repo; therefore, GitHub deleted `myFile.html` from the its brower-based view.
 
 The "changes" concept is a central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file, Git can't tell GitHub to remove it after you do a `git push`.
 
