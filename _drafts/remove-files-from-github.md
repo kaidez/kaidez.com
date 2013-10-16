@@ -79,6 +79,22 @@ This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm
 $ rm oldFile.html
 {% endprism %}
 
+## Delete Folders
+If a folder called `somreFolder` isn't checked into Git, isn't checked into git
+{% prism markup %}
+
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#   someFolder/
+{% endprism %}
+
+This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
+
+{% prism markup %}
+$ rm oldFile.html
+{% endprism %}
+
 Why do things need to be done this way? First, we need to be clear about the differences between Git and GitHub, as well as how they work together.
 
 ## A simple explanation of how Git & GitHub work
