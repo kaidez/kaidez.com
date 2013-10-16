@@ -11,13 +11,13 @@ has-home-img: gitTutorial.jpg
 tags: [git, github]
 ---
 
-If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by dragging them to your Trash or Recycle Bin and then doing a `git push`, you know that this doesn't work.
+If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by dragging them to your Trash or Recycle Bin, you know that this doesn't work.
 
-After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
+After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub, but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
 
 ## Table of Contents
 
-1.  [I just want to get the quick answer, then get out of here!](#quick-answer)
+1.  [I just want to get the quick answers, then get out of here!](#quick-answers)
 2.  [Assumptions & Tips](#assumptions)
 3.  [A simple explanation of how Git & GitHub work »](#simple-git-github-explanation)
 4.  [Prevent files from being uploaded to GitHub with .gitignore](#gitignore)
@@ -27,34 +27,40 @@ After making this mistake too many times, I read up on [Git](http://git-scm.com/
 8.  [Further Reading](#further-reading)
 9.  [Conclusion](#conclusion)
 
-<a name="quick-answer"></a> 
-## I just want to get the quick answer, then get out of here!
+<a name="quick-answers"></a> 
+## I just want to get the quick answers, then get out of here!
 
-Say you're trying to remove `newFile.html` and you have already committed to Git as well as pushed up to GitHub. First, use the following Git command to remove the file from repository:
+If you have already committed a file to Git, you should only delete it from the command line. One of the most common newbie mistakes is to not do this and, instead, drag it to the trash or something like it.
 
+If you did that with a file named `oldFileAlreadyDeleted.html`, your terminal would return this message when you type `git status`:
 {% prism markup %}
-$ git rm newFile.html
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#   deleted:    oldFileAlreadyDeleted.html
 {% endprism %}
 
-You will get a message the file has been removed:
+You have to delete it via the command line at this point like this:
 
 {% prism markup %}
-$ rm 'newFile.html'
+$ git rm oldFileAlreadyDeleted.html
 {% endprism %}
 
-If you HAVE NOT pushed the file up to GitHub, you can ignore the next step. But If you HAVE pushed it up to GitHub, you need to commit the change next, preferably with a message:
+Then commit the delete, preferably with a proper `git commit` message:
 
 {% prism markup %}
-$ git commit -m 'remove newFile.html'
+$ git commit -m 'remove oldFileAlreadyDeleted.html'
 {% endprism %}
 
-Now push it up to GitHub:
-
+If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a `git push` will remove it:  
 {% prism markup %}
 $ git push all
 {% endprism %}
 
-But if you want to delete `oldFile.html` 
+Moving forward, any file you want to remove from Git and GitHub should be done so using the above command sequence.
+
+But say you want to delete `oldFile.html` and you get this message when you typed `git status`:
 {% prism markup %}
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
@@ -68,13 +74,14 @@ This file hasn't been checked into Git yet, so just use `rm` to delete it and yo
 $ rm oldFile.html
 {% endprism %}
 
-
+So you have the quick answers but if you want to gain that "GitHub guru-ness," you should read on and go through some of the steps in the tutorial.
 <a name="assumptions"></a> 
 ## Assumptions & Tips
 
-<img src="/img/octocat.png" class="post-pic" /> I'm assuming a few things: 
+I'm assuming a few things: 
 
-*   that you know how to create a Git repo on your computer how to upload its changes to a remote GitHub repo.
+*   that you know how to create a Git repo on your computer
+*   how to upload its changes to a remote GitHub repo.
 *   that you know how to access this repo from the Terminal.
 *   that you know the three Git line commands that work together to upload your code to GitHub: `git add`, `git commit` and `git push`.
 
@@ -82,15 +89,15 @@ Some tips:
 
 *   I'll be using the Mac Terminal for this tutorial. Except for [the section where I create a `.gitignore` file](#gitignore "Create a .gitignore file"), everything mentioned here should work cross-platform.
 *   Feel free to follow this tutorial using your own repo, but proceed with caution if you do. I'll be deleting stuff and I don't want you to mistakenly delete something as you follow along. Instead, feel free to [download this test repo from GitHub](https://GitHub.com/kaidez/yourGitProject) and use it if you want to type and follow along.
-*   If you opt to use your own repo while reading this tutorial as a whole, it's best that it be as clean as possible. Go to your Terminal and type `git status`. If you get a message saying that there's nothing to commit, keep going. If you get a message saying that some files need to be added or removed, you may have to clean up your repo a bit. The steps mentioned in [this part of the tutorial][8] may help you.
-*   If your Terminal window starts getting full and you want to clear it, hit Cmd K. Note that everything you've typed will be gone once you do this and you may have wanted to save it somehow for future reference. If so, make sure you save stuff before hitting `Cmd K`.
-
-Before we jump into the Terminal, we need to be clear about the differences between Git and GitHub, as well as how they work together.
+*   If you opt to use your own repo while reading this tutorial as a whole, it's best that it be as clean as possible. Go to your Terminal and type `git status`. If you get a message saying that there's nothing to commit, keep going. If you get a message saying that some files need to be added or removed, you may have to clean up your repo a bit.
+*   If your Terminal window starts getting full and you want to clear it, hit `Cmd K`. Note that everything you've typed will be gone once you do this and you may have wanted to save it somehow for future reference. If so, make sure you save stuff before hitting `Cmd K`.
 
 <a name="simple-git-github-explanation"></a> 
 ## A simple explanation of how Git & GitHub work
 
-*Git* is the software on your machine that tracks changes to your code repository and retains its past versions. You upload a copy of the repo and its history of changes to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
+First, we need to be clear about the differences between Git and GitHub, as well as how they work together.
+
+*Git* is the software on your machine that tracks changes to your code repository and keeps copies of the repository 's previous versions. You upload a copy of the repo and its history of changes to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo.
 
 If you're only Git education up to this point is doing what GitHub tells you to do when you setting up a repo, you should be familiar with `git add`. You use it as part of a command sequence in Terminal when you want to add files to or change files on GitHub.
 
@@ -230,7 +237,7 @@ This tutorial focused on how Git handles file and directory deletion but there's
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
 Obviously your first stop. The site went through a major redesign a few months ago, greatly improving the UI. Documentation and downloads are much easier to find and read.
 
-### [Try Git »](http://try.GitHub.com/ "A hand-son Git tutorial from Code School")
+### [Try Git »](http://try.GitHub.com/ "A hands-on Git tutorial from Code School")
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School][41], Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
 ### [GitHub Training »][42]
