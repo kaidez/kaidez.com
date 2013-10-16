@@ -11,12 +11,18 @@ has-home-img: gitTutorial.jpg
 tags: [git, github]
 ---
 
-If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by dragging them to your Trash or Recycle Bin and then doing a `git push`, you know that this doesn't work.
+If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by dragging them to your Trash or Recycle Bin first and then doing a `git push`, you know that this doesn't work.
 
 After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. I figured out how to properly delete stuff but also realized not only how Git interacts with GitHub, but also how Git *itself* actually works. Knowing these things will help lead you to GitHub guru-ness.
 
 But before we do all the guru stuff, let's walk through the proper methods for deleting files.
 
+## Table of Contents
+1. [If you deleted an already-committed file outside of the command line](#files-already-deleted "If you deleted an already-committed file outside of the command line")
+2. [How you should always delete files from Git](#how-to-delete-files "How you should always delete files from Git")
+3. [How to delete files NOT checked into Git](#delete-uncommitted-files "How to delete files NOT checked into Git")
+
+<a name="files-already-deleted"></a>
 ## If you deleted an already-committed file outside of the command line
 If you have already committed a file to Git, you should only delete it from the command line. One of the most common GitHub newbie mistakes is to not do this and to just drag it to the trash, or something like it.
 
@@ -29,7 +35,7 @@ If you did that with a file named `oldFileAlreadyDeleted.html`, your terminal wo
 #   deleted:    oldFileAlreadyDeleted.html
 {% endprism %}
 
-You now have to delete it via the command line like this:
+You now have to delete it with Git via the command line like this:
 
 {% prism bash %}
 $ git rm oldFileAlreadyDeleted.html
@@ -40,13 +46,14 @@ Then commit the delete, preferably with a proper `git commit` message:
 $ git commit -m 'remove oldFileAlreadyDeleted.html'
 {% endprism %}
 
-If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a `git push` will remove it:  
+If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a subsequent `git push` will remove it:  
 {% prism bash %}
 $ git push all
 {% endprism %}
 
+<a name="how-to-delete-files"></a>
 ## How you should *always* delete files from Git
-Moving forward, any file you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called `someCommitedFile.html`, you would do so like this:
+Moving forward, any already-committed files	 you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called `someCommitedFile.html`, you would do so like this:
 
 {% prism bash %}
 $ git rm someCommittedFile.html
@@ -63,10 +70,10 @@ And if `someCommittedFile.html` is viewable on GitHub, doing a `git push` will r
 $ git push all
 {% endprism %}
 
-## Delete files NOT checked into Git
+<a name="delete-uncommitted-files"></a>
+## How to delete files NOT checked into Git
 Say you want to delete `oldFile.html` and you get this message when you typed `git status`:
 {% prism markup %}
-
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
 #
@@ -79,30 +86,40 @@ This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm
 $ rm oldFile.html
 {% endprism %}
 
-## Delete Folders
-Empty folders cannot be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
+<a name="delete-folders"></a>
+## How to delete Folders
+__Scenario 1:__ Empty folders cannot be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
 
-Of course, if the folder has content, Git can interract with it however it wants to:
-{% prism bash %}
-rm someFolder
+__Scenario 2:__ Git can track a folder once it has content. But if that folder (let's call it `someFolder`) hasn't been committed to the repo yet, you get this message after typing `git status`:
+{% prism markup %}
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	someFolder/
 {% endprism %}
 
-
-
-
-
-
-
-They can still be deleted using the generic `rm` command though, so a folder called `someFolder` can deleted like so:
+In either of these two scenarios, `someFolder` can be deleted using the generic `rm` command though, which looks like this:
 {% prism bash %}
-rm someFolder
+$ rm -rf someFolder
 {% endprism %}
 
-Why do things need to be done this way? First, we need to be clear about the differences between Git and GitHub, as well as how they work together.
+After a folder has been committed to your repo, *that's* when you can use Git to delete it, and at any time. You use the same remove/commit/push sequence previously discussed:
+
+{% prism bash %}
+$ git rm someFolder
+{% endprism %}
+{% prism bash %}
+$ git commit -m 'remove someFolder'
+{% endprism %}
+{% prism bash %}
+$ git push
+{% endprism %}
+
+Why do things need to be done this way? First, we need to be clear about the difference between Git and GitHub, as well as how they work together.
 
 ## A simple explanation of how Git & GitHub work
 
-*Git* is version control software that tracks changes to your code repository on your local machine. It also retains the entire change history, also on your local machine.
+*Git* is version control software that tracks changes to your code repository on your local machine. It also retains the entire change history that's also on your local machine.
 
 You upload your code repo's changes and change history to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo. Most of these features are centered around project managment.
 
@@ -114,7 +131,7 @@ So to recap the previously-discussed command sequence, if you have a file called
 $ git add 'myFile.html'
 {% endprism %}
 {% prism bash %}
-$ git commit -m 'added myFile.html'
+$ git commit -m 'add myFile.html'
 {% endprism %}
 {% prism bash %}
 $ git push
@@ -128,7 +145,7 @@ So if you wanted to remove "myFile.html" from your repo, your typed-in command s
 $ git rm 'myFile.html'
 {% endprism %}
 {% prism bash %}
-$ git commit -m 'removed myFile.html'
+$ git commit -m 'remove myFile.html'
 {% endprism %}
 {% prism bash %}
 $ git push
@@ -142,7 +159,7 @@ The "changes" concept is a central characteristic of Git and is key to understan
 
 <a name="further-reading"></a>
 ## Further Reading
-This tutorial focused on how Git handles file and directory deletion but there's more to Git than that. From a beginner's level, here are some great learning resources:
+This tutorial focused on how Git handles file and folder deletions but there's more to Git than that. From a beginner's level, here are some great learning resources:
     
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
 Obviously your first stop. The site went through a major redesign a while back, greatly improving the UI. Documentation and downloads are much easier to find and read.
@@ -151,13 +168,13 @@ Obviously your first stop. The site went through a major redesign a while back, 
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School](http://codeschool.com/ "Visit Code School"), Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
 ### [GitHub Training »](https://GitHub.com/training/ "Review Git/GitHub traing course from GitHub")
-One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "vist Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources](https://GitHub.com/training/free "Review free GitHub training courses") section as well as their [Online Training](https://GitHub.com/training/online "Review GitHub online training offerings") and [Events](https://GitHub.com/training/events "Review GirHub events") sections. For the last two, some things are free and some are not, but I think they're reasonably priced.
+One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "vist Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources](https://GitHub.com/training/free "Review free GitHub training courses") section as well as their [Online Training](https://GitHub.com/training/online "Review GitHub online training offerings") and [Events](https://GitHub.com/training/events "Review GitHub events") sections. For the last two, some things are free and some are not, but I think they're reasonably priced.
 
 ### [A Note About Git Commit Messages »](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Read Tim Pope's well-known article on proper Git commits")
-Written five years from the time of this post, this Tim Pope article on how to create a proper Git commit has become an industry standard. Rarely will you find a software pro NOT follow these rules so it's best to include them in your workflow.
+Written five years from the time of this post, this Tim Pope article on how to create a proper Git commit has become required reading for developers. Rarely will you find a software pro NOT follow these rules so it's best to include them in your workflow.
 
 ### [Git Essential Training Course on lynda.com (premium) »](http://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD2146&bid=524&aid=CD2146' "Get thorough Git training on lynda.com: a kaidez.com affiliate")
-It cost bucks but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's a thorough, hands-on Git course offered by [lynda.com](http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146) (a kaidez.com affiliate)...definitely worth checking out.
+It costs money but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's a thorough, hands-on Git course offered by [lynda.com](http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146) (a kaidez.com affiliate)...definitely worth checking out.
 
 ### [Common Git Commands »](https://gist.GitHub.com/2043530#file_gistfile1.sh "Get an excellent list of Git commands")
 UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it somewhere by your computer. 
