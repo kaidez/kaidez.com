@@ -80,19 +80,11 @@ $ rm oldFile.html
 {% endprism %}
 
 ## Delete Folders
-If a folder called `somreFolder` isn't checked into Git, isn't checked into git
-{% prism markup %}
+Empty folder can not be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
 
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#   someFolder/
-{% endprism %}
-
-This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
-
-{% prism markup %}
-$ rm oldFile.html
+They can still be deleted using the generic `rm` command though, so a folder called `someFolder` can deleted like so:
+{% prism bash %}
+rm someFolder
 {% endprism %}
 
 Why do things need to be done this way? First, we need to be clear about the differences between Git and GitHub, as well as how they work together.
