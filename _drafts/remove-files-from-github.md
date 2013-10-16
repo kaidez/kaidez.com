@@ -80,7 +80,18 @@ $ rm oldFile.html
 {% endprism %}
 
 ## Delete Folders
-Empty folder can not be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
+Empty folders cannot be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
+
+Of course, if the folder has content, Git can interract with it however it wants to:
+{% prism bash %}
+rm someFolder
+{% endprism %}
+
+
+
+
+
+
 
 They can still be deleted using the generic `rm` command though, so a folder called `someFolder` can deleted like so:
 {% prism bash %}
