@@ -11,16 +11,16 @@ has-home-img: gitTutorial.jpg
 tags: [git, github]
 ---
 
-If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by putting them in the Trash or Recycle Bin first and then doing a `git push`, you know that this doesn't work.
+If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by putting them in the Trash/Recycle Bin and then doing a `git push`, you know that this doesn't work.
 
 After making this mistake too many times, I read up on [Git](http://git-scm.com/ "Read about the Git source code management system"), the distributed version control system that GitHub's built on top of. In the process, I gained a clear understanding how the two interact with each other: this is key in understand how to properly delete files as well as walking the path towards "GitHub guru-ness".
 
-Let's get started on all this guru stuff and walk through the proper methods for deleting files.
+Let's get started on all this guru stuff by walk through the proper methods for deleting files.
 
 ## Table of Contents
 1. [If you deleted an already-committed file outside of the command line](#files-already-deleted "If you deleted an already-committed file outside of the command line")
 2. [How you should *always* delete files from Git](#how-to-delete-files "How you should always delete files from Git")
-3. [How to delete files NOT checked into Git](#delete-uncommitted-files "How to delete files NOT checked into Git")
+3. [How to delete files that are NOT checked into Git](#delete-uncommitted-files "How to delete files that are NOT checked into Git")
 4. [How to delete folders](#delete-folders "How to delete folders in Git")
 5. [A simple explanation of how Git & GitHub work](#simple-git-explanation "A simple explanation of how Git & GitHub work")
 6. [Further Git &amp; GitHub Reading](#further-git-github-reading "Further Git and GitHub Reading")
@@ -28,9 +28,9 @@ Let's get started on all this guru stuff and walk through the proper methods for
 
 <a name="files-already-deleted"></a>
 ## If you deleted an already-committed file outside of the command line
-A file that's already been committed to Git should only deleted via the command line. Not doing this and just dragging it to the Trash instead (or something similar) is one of the most common Git newbie mistakes.
+A file that's already been committed to Git can only be deleted from a repo via the command line. Trying to delete repo files by dragging them to the Trash/Recycle Bin (or something similar) is one of the most common Git newbie mistakes.
 
-If you did that with a file named `oldFileAlreadyDeleted.html`, your terminal would return this message when you type `git status`:
+If you moved a committed file named `oldFileAlreadyDeleted.html` to the Trash, your terminal would return this message when you type `git status`:
 {% prism markup %}
 # Changes not staged for commit:
 #   (use "git add/rm <file>..." to update what will be committed)
@@ -45,7 +45,7 @@ You now have to delete it with Git via the command line like this:
 $ git rm oldFileAlreadyDeleted.html
 {% endprism %}
 
-Then commit the delete, preferably with a proper `git commit` message:
+Then commit the delete with a proper `git commit` message:
 {% prism bash %}
 $ git commit -m 'remove oldFileAlreadyDeleted.html'
 {% endprism %}
@@ -75,7 +75,7 @@ $ git push all
 {% endprism %}
 
 <a name="delete-uncommitted-files"></a>
-## How to delete files NOT checked into Git
+## How to delete files that are NOT checked into Git
 Say you want to delete `oldFile.html` and you get this message when you typed `git status`:
 {% prism markup %}
 # Untracked files:
@@ -92,9 +92,9 @@ $ rm oldFile.html
 
 <a name="delete-folders"></a>
 ## How to delete folders
-__Scenario 1:__ Empty folders cannot be tracked by Git so they can't be checked into Git as well. They also can't be pushed up to GitHub.
+__Scenario 1:__ An empty folder (let's call it `someFolder`) cannot be tracked by Git, so it can't be checked into Git as well. It also can't be pushed up to GitHub.
 
-__Scenario 2:__ Git can track a folder once it has content. But if that folder (let's call it `someFolder`) hasn't been committed to the repo yet, you get this message after typing `git status`:
+__Scenario 2:__ Git can track the folder once it has content. But if `someFolder` hasn't been committed to the repo yet, you get this message after typing `git status`:
 {% prism markup %}
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
@@ -164,7 +164,7 @@ The "changes" concept is a central characteristic of Git and is key to understan
 
 <a name="further-git-github-reading"></a>
 ## Further Git &amp; GitHub Reading
-This tutorial focused on how Git handles file and folder deletions but there's more to Git than that. From a beginner's level, here are some great learning resources:
+This post focused on how Git and GitHub handle file and folder deletions but there's more to them than that. From a beginner's level, here are some great learning resources:
     
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
 Obviously your first stop. The site went through a major redesign a while back, greatly improving the UI. Documentation and downloads are much easier to find and read.
