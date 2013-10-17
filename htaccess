@@ -662,3 +662,9 @@ Redirect 301 /social-media-week-follow-up/volk/ /social-media-week-follow-up/
 Redirect 301 /jquery-tshirt-geek-gift/jqueryshirt/ /jquery-tshirt-geek-gift/
 
 Redirect 301 /mobile-web-development-best-practices-starting-tips/copyarrowconcealersprite/ /mobile-web-development-best-practices-starting-tips/
+
+Redirect 301 /page2/index.html /pages/page2/
+
+Redirect 301 /nyc-social-media-week-event-recap-cross-mobile-promotion/panelshot/ /nyc-social-media-week-event-recap-cross-mobile-promotion/
+
+Redirect /mobile-web-development-best-practices-starting-tips/yslow/ /mobile-web-development-best-practices-starting-tips/
