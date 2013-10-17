@@ -29,5 +29,6 @@ exclude: [
   old_img,
   old_js,
   r.js,
-  sitemap.xml
+  repo*.png,
+  terminalShot*.png
 ]
