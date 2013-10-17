@@ -24,6 +24,6 @@ The updates are as follows:
 
 * __Added some new links to the resource list at the end__: props to lynda.com and Tim Pope.
 
-The original post can be seen on [GitHub](https://github.com/kaidez/kaidez.com/blob/ef92fb205262b3bedd42de8b40afa2d2d5f15204/_posts/2012-09-12-remove-files-from-github.md "View the original GitHub tutorial post"). Some raw code appears in some places but it's still readable.
-
 View the updated post [here](/remove-files-from-github/ "Read kaidez's tutorial removing files from GitHub").
+
+The original post can be seen on [GitHub](https://github.com/kaidez/kaidez.com/blob/ef92fb205262b3bedd42de8b40afa2d2d5f15204/_posts/2012-09-12-remove-files-from-github.md "View the original GitHub tutorial post"). Some raw code appears in some places but it's still readable.
