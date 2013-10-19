@@ -665,6 +665,30 @@ Redirect 301 /mobile-web-development-best-practices-starting-tips/copyarrowconce
 
 Redirect 301 /page2/index.html /pages/page2/
 
+Redirect 301 /2009/04/02/why-i-love-jose-mourinho/feed/ /
+
 Redirect 301 /nyc-social-media-week-event-recap-cross-mobile-promotion/panelshot/ /nyc-social-media-week-event-recap-cross-mobile-promotion/
 
-Redirect /mobile-web-development-best-practices-starting-tips/yslow/ /mobile-web-development-best-practices-starting-tips/
+Redirect 301 /mobile-web-development-best-practices-starting-tips/yslow/ /mobile-web-development-best-practices-starting-tips/
+
+Redirect 301 /2009/04/02/why-i-love-jose-mourinho/feed/ /welcome-back/
+
+Redirect 301 /mix11/mix11/ /mix11/
+
+Redirect 301 /2008/08/11/great-story-on-ryan-giggs/feed/ /welcome-back/
+
+Redirect 301 /2009/02/03/a-follow-up-to-my-transfer-window-post/feed/ /welcome-back/
+
+Redirect 301 /personal/page/2/ /personal/
+
+Redirect /wp-admin/post-new.php /
+
+Redirect 301 /wp-includes/js/jquery/jquery.js /
+
+Redirect 301 /wp-includes/js/l10n.js /
+
+Redirect 301 /wp-admin/admin.php /
+
+Redirect 301 /wp-admin/comment.php /
+
+Redirect 301 /wp-login.php /
