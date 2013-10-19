@@ -692,3 +692,5 @@ Redirect 301 /wp-admin/admin.php /
 Redirect 301 /wp-admin/comment.php /
 
 Redirect 301 /wp-login.php /
+
+Redirect 301 /wp-content/themes/kaidez/kaidezUnique/Script/microdataTest.html /
