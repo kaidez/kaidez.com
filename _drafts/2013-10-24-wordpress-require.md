@@ -3,16 +3,45 @@ title: RequireJS with WordPress
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.
+meta-excerpt: Read about methods for managing RequireJS in WordPress
 permalink: /requirejs-wordpress/
 category: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery]
 ---
-As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started off redesigning things on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I wanted to control all the JavaScript in a specific way with [RequireJS](http://requirejs.org/ "Go to requirejs.org") and WordPress prevented this.
+As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started off redesigning things on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to control all the JavaScript in a specific way with [RequireJS](http://requirejs.org/ "Go to requirejs.org") and WordPress prevented this.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain modules.  But WordPress must regulate jQuery and many other JS libraries in a manner that 
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules.  But WordPress must regulate jQuery and many other JS libraries in a manner that allows plugin code to work seamlessly inside the WordPress ecosystem...a manner that didn't really align with how I wanted to use RequireJS.
+
+But RequireJS can still be used inside of WordPress with caveats.  This post discusses some of these caveats.
+
+## Table of Contents
+1. [Assumptions](#assumptions)
+2. [What Is RequireJS?](#what-is-requirejs)
+3. [How WordPress manages JavaScript Files](#javascript-wordpress)
+
+<a name="assumptions"></a>
+## Assumptions
+I'll give a quick definition of RequireJS, define some specific terms like "AMD" and walk-through some key WordPress functions. Past that, I'm assuming that you understands a few things...
+
+This post is a high-level discussion about customizing a WordPress theme and unless you're using a theme that doesn't permit it, customizing WordPress inside a child theme is best practice. This post assumes that you understand the simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describes how it's done.
+
+I'm not assuming that you're a JavaSript guru, but am assuming JS doesn't intimidate and that you know enough of it to get things done.You should also understand JS basics: you won't learn how to create a variable or invoke a function in JavaScript in this post.
+
+<a name="what-is-requirejs"></a>
+## What is RequireJS?
+RequireJS describes itself as a "JavaScript file and module loader." When configured properly, it allows you to write JavaScript in separate files that are looked upon as "modules."
+
+The code in some of these modules may need other files to core libraries like jQuery to work, as well as any plugins. Once properly configured, RequireJS creates a dependency management system that allows you to arrange these files exactly as they need to be.  
+
+<a name="javascript-wordpress"></a>
+## How WordPress manages JavaScript Files
+As mentioned, JavaScript is managed using a specific technique in WordPress. And we need to understand the technique if we want to embed RequireJS in our site build.
+
+
+
+RequireJS is a JavaScript file and module loader. Once you configure it properly, It lets you write multiple JavaScript files and  in a modular fashion an
 
 As I would want to safely customize my WordPress blog's look and feel, these tests were run against a [child theme](http://codex.wordpress.org/Child_Themes "Learn how to create a WordPress child theme") a globally agreed-upon WP best practice. This is done with TwentyThirteen child was the parent of this child theme. 
 
