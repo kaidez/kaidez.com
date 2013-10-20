@@ -7,11 +7,14 @@ meta-excerpt: CSS3 media queries can help sites perform better in Google search 
 permalink: /requirejs-wordpress/
 category: coding-best-practices
 cat-name: "Code Tips"
-has-home-img: HP-media-queries.jpg
+has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery]
 ---
+As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started off redesigning things on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I wanted to control all the JavaScript in a specific way with [RequireJS](http://requirejs.org/ "Go to requirejs.org") and WordPress prevented this.
 
-As I would want to safely customize my WordPress blog's look and feel, these tests were run against a [child theme](http://codex.wordpress.org/Child_Themes "Learn how to create a WordPress child theme") a globally agreed-upon WP best practice. This is done TwentyThirteen child was the parent of this child theme. 
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain modules.  But WordPress must regulate jQuery and many other JS libraries in a manner that 
+
+As I would want to safely customize my WordPress blog's look and feel, these tests were run against a [child theme](http://codex.wordpress.org/Child_Themes "Learn how to create a WordPress child theme") a globally agreed-upon WP best practice. This is done with TwentyThirteen child was the parent of this child theme. 
 
 
 
@@ -32,12 +35,11 @@ I say "almost all these files" because RequireJS will be placed as close to the 
 
 I would use Disqus for commenting so `comment-reply.min.js` can be removed. jQuery core and jQuery Migrate are placed within `<head>` and I would prefer to move them to the bottom of the page.
 
-Both Masonry and `functions.js` are placed at the bottom of the page; however, their version numbers are appended which isn't that great from a site optimization standpoint.
+Both Masonry and `functions.js` are placed at the bottom of the page; however, their version numbers are appended with a query string. This  isn't that great from [a site optimization standpoint](https://developers.google.com/speed/docs/best-practices/caching?hl=sv "Read about optimizing file caching").
 
 In the context of the TwentyThirteen theme, removing the rest of the JavaScript can be done by creating a new `functions.php` in my child them folder and placing the following code inside of it:
 
 {% prism php %}
-
 <?php
 
   // remove 'comment-reply.js' from the site
@@ -57,4 +59,8 @@ In the context of the TwentyThirteen theme, removing the rest of the JavaScript 
 ?>
 {% endprism %}
 
-The comment JS cdoe was removed by creating a `functions.php` file in my child theme and using [This post in the WordPress Support forums](http://wordpress.org/support/topic/how-to-remove-comment-replyjs-completely) can get you up and running with this code.
+The comment JS code was removed by creating a `functions.php` file in my child theme and using [This post in the WordPress Support forums](http://wordpress.org/support/topic/how-to-remove-comment-replyjs-completely) can get you up and running with this code.
+
+
+
+http://scribu.net/wordpress/optimal-script-loading.html
