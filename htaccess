@@ -698,3 +698,5 @@ Redirect 301 /wp-content/themes/kaidez/kaidezUnique/Script/microdataTest.html /
 Redirect 301 /2009/02/05/an-open-letter-apology-to-nicolas-anelka/feed/ /
 
 Redirect 301 /wp-admin/nav-menus.php /
+
+Redirect 301 /category/tutorials/ /tutorials/
