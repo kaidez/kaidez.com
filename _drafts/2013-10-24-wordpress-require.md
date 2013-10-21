@@ -10,42 +10,54 @@ cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery]
 ---
-As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started off redesigning things on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to control all the JavaScript in a specific way with [RequireJS](http://requirejs.org/ "Go to requirejs.org") and WordPress prevented this.
+As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to control all the JavaScript in a specific way with [RequireJS](http://requirejs.org/ "Go to requirejs.org"), and WordPress kept me from doing this *exactly* how I wanted to.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules.  But WordPress must regulate jQuery and many other JS libraries in a manner that allows plugin code to work seamlessly inside the WordPress ecosystem...a manner that didn't really align with how I wanted to use RequireJS.
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But WordPress must regulate jQuery and many other JS libraries in a manner that allows both Dashboard and third-party code to work seamlessly inside the WordPress ecosystem...a manner that didn't really align with how I wanted to use RequireJS.
 
 But RequireJS can still be used inside of WordPress with caveats.  This post discusses some of these caveats.
 
 ## Table of Contents
-1. [Assumptions](#assumptions)
-2. [What Is RequireJS?](#what-is-requirejs)
-3. [How WordPress manages JavaScript Files](#javascript-wordpress)
+1. [Assumptions &amp; Notes](#assumptions-notes)
+2. [How WordPress Manages JavaScript Files Behind the Scenes](#javascript-wordpress)
+3. [What Is RequireJS?](#what-is-requirejs)
+4. [jQuery and the WordPress Default Install](#jquery-wordpress-default-install)
 
-<a name="assumptions"></a>
-## Assumptions
-I'll give a quick definition of RequireJS, define some specific terms like "AMD" and walk-through some key WordPress functions. Past that, I'm assuming that you understands a few things...
+<a name="assumptions-notes"></a>
+## Assumptions &amp; Notes
+I'm assuming that you understand a few things:
 
-This post is a high-level discussion about customizing a WordPress theme and unless you're using a theme that doesn't permit it, customizing WordPress inside a child theme is best practice. This post assumes that you understand the simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describes how it's done.
+   * This post is a high-level discussion about customizing a WordPress theme and unless you're using a theme that doesn't permit it, customizing WordPress inside a child theme is a best practice. This post assumes that you understand the very simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex ](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress")clearly describes how it's done. 
 
-I'm not assuming that you're a JavaSript guru, but am assuming JS doesn't intimidate and that you know enough of it to get things done.You should also understand JS basics: you won't learn how to create a variable or invoke a function in JavaScript in this post.
+   * I'm not assuming that you're a JavaSript guru but am assuming JS doesn't intimidate you and that you know enough of it to get things done.
+
+There's only one thing to note: this post should *not* be looked as my stating that "WordPress is bad." WordPress is AWESOME and I will continue to use it, but was not the way to go in order to meet the development goals I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
+
+<a name="javascript-wordpress"></a>
+## How WordPress Manages JavaScript Files Behind the Scenes
+Version 3.6.1 is the current WordPress release at the time of this post. Like WordPress versions before it, v3.6.1 comes preloaded with many JavaScript libraries and plugins.
+
+The default WordPress install doesn't load all these libraries and plugins into the viewable website after the default install. It just makes them available to be loaded by both web developers who want to bring them in with hand-written code, and as dependencies for whatever other installed plugins may need them.
+
+A long but incomplete list of these libraries and plugins can be viewed on the [the Function Reference/wp register script page on the WordPress Codex](http://codex.wordpress.org/Function_Reference/wp_register_script) over on the WordPress Codex.
 
 <a name="what-is-requirejs"></a>
 ## What is RequireJS?
-RequireJS describes itself as a "JavaScript file and module loader." When configured properly, it allows you to write JavaScript in separate files that are looked upon as "modules."
+RequireJS is a script loader that provides dependency management for JavaScript files within your website or web app. It's based on the [Asynchronous Module Definition (AMD)](https://github.com/amdjs/amdjs-api/wiki/AMD "Learn more about the Asynchronous Module Definition") which allows all the files to load in organized, non-blocking fashion.
 
-The code in some of these modules may need other files to core libraries like jQuery to work, as well as any plugins. Once properly configured, RequireJS creates a dependency management system that allows you to arrange these files exactly as they need to be.  
+So for this site, there are 16 JavaScript files that do different things...form validation, off-DOM element construction, search box functionality etc. to name a few. RequireJS manages and loads all of them efficiently and properly: this is setup is expanded upon over in [the RequireJS section of my site redesign post](/site-redesign-2013/#RequireJS).
 
-<a name="javascript-wordpress"></a>
-## How WordPress manages JavaScript Files
-As mentioned, JavaScript is managed using a specific technique in WordPress. And we need to understand the technique if we want to embed RequireJS in our site build.
+<a name="jquery-wordpress-default-install"></a>
+## jQuery and the WordPress Default Install
+Again, WordPress is at version 3.6.1 at the time of this writing, and it implements TwentyThirteen as its default theme. It was at version 3.5.2 when I was still using it to redesign the site, which implements TwentyTweleve as its default theme. TwentyTwelve was the parent that my child theme was based on.
 
+While TwentyThirteen does load jQuery after the default install, TwentyTwelve does not. As I was working with TwentyTwelve, I would need to bring jQuery into the site somehow and would want to do so with RequireJS.
 
+This is where the problems started...
 
-RequireJS is a JavaScript file and module loader. Once you configure it properly, It lets you write multiple JavaScript files and  in a modular fashion an
-
-As I would want to safely customize my WordPress blog's look and feel, these tests were run against a [child theme](http://codex.wordpress.org/Child_Themes "Learn how to create a WordPress child theme") a globally agreed-upon WP best practice. This is done with TwentyThirteen child was the parent of this child theme. 
-
-
+An example: I have a RequireJS module that processes form submissions using `jQuery.ajax()`. To get it working on my site, it would look like this:
+{% prism html%}
+<script data-main="scripts/main" src="scripts/require.js"></script> 
+{% endprism %}
 
 Looking at the default install using the TwentyThirteen Theme, the following JavaScript is loaded onto the page:
 
