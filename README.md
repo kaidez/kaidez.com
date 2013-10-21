@@ -102,7 +102,7 @@ Inside of kaidez.com, `Gruntfile.js` has a Sass-based `watch` task which watches
 
 For more details on Grunt's `watch` task inside of kaidez.com, [review the site's Grunt file](https://github.com/kaidez/kaidez.com/blob/master/Gruntfile.js).
 
-## Hard Runtime Development-Level Dependencies
+## Hard Runtime Dependencies
 
 kaidez.com really only has one hard runtime dependency: PHP. This is because the contact form at the bottom of all the site pages sends runs a POST action to the server that 1) process the form content for server-side validation, and 2) sends the form content out in an email to a pre-defined email address.
 
