@@ -54,18 +54,17 @@ While TwentyThirteen does load jQuery after the default install, TwentyTwelve do
 
 This is where the problems started...
 
-As an example, I have a RequireJS module that processes form submissions using `jQuery.ajax()`. To get it working on my site,I would need to do the following:
+As an example, I have a RequireJS module that processes form submissions using `jQuery.ajax()`. To get it working on my site, I first need to call RequireJS on my page and pass a set of configurations to it.  Next, I need to write out the modules and their dependencies.
 
-Refer to RequireJS and its configurations...
-
+So, first reference RequireJS on my page and pass some configs to it:
 {% prism markup %}
 <script data-main="scripts/main" src="scripts/require.js"></script> 
 {% endprism %}
 
-The info in the `src` attribute refers to the core RequireJS code while the info in the `data-main` attribute refers to a file calles `main.js` and contains the configs. The `.js` is not included here because RequireJS always assume that the info in this attribute is a JavaScript file.  Both of these files are in a directory called `scripts`.
+The info in the `src` attribute refers to the core RequireJS code while the info in the `data-main` attribute refers to a file called `main.js` and contains the configs. The `.js` is not included here because RequireJS always assume that the info in this attribute is a JavaScript file.  Both of these files are in a directory called `scripts`.
 
 
-
+If you have a small unit of code, you could put it in `main.js` along with all its dependency mappings. But if you have more than one unit (the more common scenario), you should create separate modules for each that cont, placing the configs in `main.js` and the code 
 
 
 
