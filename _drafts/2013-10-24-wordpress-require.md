@@ -10,16 +10,16 @@ cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery]
 ---
-As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to control all the JavaScript in a specific way with [RequireJS](http://requirejs.org/ "Go to requirejs.org"), and WordPress kept me from doing this *exactly* how I wanted to.
+As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site JavaScript in a specific way, and WordPress kept me from doing this *exactly* how I wanted to.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But jQuery and the other JavaScript stuff must be managed in a manner that both benefits and protects the WordPress ecosystem: a manner that imposed limits on what I needed RequireJS to do.
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But inside WordPress, jQuery and the other JavaScript stuff must be managed in a manner that both benefits and protects the WP ecosystem: a manner that imposed limits on what I needed RequireJS to do.
 
 RequireJS can still be used inside of WordPress with caveats.  This post discusses some of these caveats.
 
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
 2. [What Is RequireJS?](#what-is-requirejs)
-3. [A Quick RequireJS Example](#quick-requirejs-example)
+3. [A RequireJS Example](#quick-requirejs-example)
 4. [How WordPress Manages JavaScript Files Behind the Scenes](#javascript-wordpress)
 5. [jQuery and the WordPress Default Install](#jquery-wordpress-default-install)
 
@@ -27,31 +27,31 @@ RequireJS can still be used inside of WordPress with caveats.  This post discuss
 ## Assumptions &amp; Notes
 I'm assuming that you understand a few things:
 
-   * This post is a high-level discussion about customizing a default WordPress theme with a child theme, which is a well-defined best practice. This post assumes that you understand the very simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex ](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress")clearly describes how it's done. 
+   * This post is a high-level discussion about taking a theme that's included in a default WordPress install and customizing it with a child theme, a well-defined WP best practice. This post assumes that you understand the very simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex ](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress")clearly describes how it's done. 
 
-   * I'm not assuming that you know either RequireJS or the AMD spec that it's bases upon, so I'll be walking through a sample of the code used on this site. But it's only a walk-through and RequireJS can do much more than tasks I described. Therefore, I'm assuming that you have a passion for JS and have no problem reading up on a few things, such as the [RequireJS API](http://requirejs.org/docs/api.html "Read the RequireJS API") and the [Asynchronous Module Definition (AMD)](https://github.com/amdjs/amdjs-api/wiki/AMD "Learn more about the Asynchronous Module Definition") that it's based upon.
+   * I'm not assuming that you know either RequireJS or the Asynchronous Module Definition (AMD) specification that it's based upon, so I'll be using sample code to walk through the process. But it's only a walk-through and RequireJS can do much more than the tasks I describe. Therefore, I'm assuming that you have a passion for JS and have no problem reading up on a few things, such as the [RequireJS API](http://requirejs.org/docs/api.html "Read the RequireJS API") and the [AMD spec](https://github.com/amdjs/amdjs-api/wiki/AMD "Learn more about the Asynchronous Module Definition").
 
-There's only one thing to note: this post should *not* be looked as my stating that "WordPress is bad." WordPress is AWESOME and I will continue to use it, but was not the way to go in order to meet the aRequireJS-related goal I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
+There's only one thing to note: this post should *not* be looked as my stating that "WordPress is bad." WordPress is AWESOME and I will continue to use it, but was not the way to go in order to meet the RequireJS-related goal I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
 
+That being said, let's start things off by describing RequireJS...
 <a name="what-is-requirejs"></a>
 ## What is RequireJS?
-RequireJS is a script loader that provides a dependency management system for your website's or web app's JavaScript files. It's based on the previously-mentioned AMD which specifies a coding pattern for loading JS files in organized, non-blocking, asynchronous fashion.
+RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the previously-mentioned AMD spec which defines a code pattern for loading JS files in organized, non-blocking, asynchronous fashion.
 
 Generally speaking, a RequireJS setup consists of two parts:
-1. Modules: singular units of JavaScript code that perform one task only. You can create multiple modules, each performing a different task.
 
-2. Configurations: setting you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly and without conflict.
+1. __Modules__: singular units of JavaScript code that execute either one task or a small group of closely-related tasks. You can create multiple modules, with each module performing a different task or tasks.
 
-The modules contain not only the code that runs your task, but also references to the dependencies need to run the task. These dependencies are things like the core jQuery library and plugins.
+2. __Configurations__: settings you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly and without conflict.
 
-To further illustrate this, let's look at a quick example of RequireJS in action on this site.
+The modules contain not only the code needed to run your task(s), but also references to the dependencies the code needs to run the task(s). These dependencies are things like the core jQuery library and plugins.
+
+*(Side note: if you're skeptical about setting up your JavaScript like this, read this [RequireJS discussion on GitHub](https://gist.github.com/desandro/4686136 "Read about the benefits of RequireJS") that nicely outlines the benefits of such a setup.)*
+
+Let's get some RequireJS perspective by looking at a quick example of how it works on this site.
 
 <a name="quick-requirejs-example"></a>
-## A Quick RequireJS Example
-At the time of this post, there are 16 JavaScript files that perform different tasks...form validation, off-DOM element construction, search box functionality, etc. RequireJS efficiently manages and loads all of them into this site: this process is discussed in [the RequireJS section of my site redesign post](/site-redesign-2013/#RequireJS).
-
-So the initial plan was to get RequireJS to perform these different tasks on my WordPress-powered site.  Let's look at a quick example of what the code for this would look like, particularly when jQuery's involved.
-
+## A RequireJS Example
 My site's search functionality is powered by the wonderful [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It basically takes end user searches and returns the results based on data in a JSON object that contains the site content.
 
 Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page...these will be dependencies:
@@ -61,21 +61,26 @@ Tipue needs four separate JS files to work and they must be listed in the follow
 3. `tipuesearch_set.js`: the file that tells Tipue to manages certain words typed into the search field in certain ways....things such as stop words.
 4. `tipuesearch.js`: the core Tipue plugin code.
 
-To get Tipue working via RequireJS, we need to load RequireJS on our page like so:
+Setting this up usually meant loading all these files in `<script>` tags on my HTML page in the order above, then referencing my custom Tipue code afterwards. RequireJS allows for an easier process.
+
+We first add the only `<script>` tag we need:
 {% prism markup %}
 <script data-main="scripts/main" src="scripts/require.js"></script> 
 {% endprism %}
 
-The info in the `data-main` attribute refers to a file called `main.js`and it contains RequireJS configurations. The `.js` is purposely left of because RequireJS always assume that the info in this attribute is a JavaScript file.  
+The info in the `data-main` attribute refers to a file called `main.js`, which contains the configurations. The `.js` is purposely left off  because RequireJS always assume that the info in this attribute is a JavaScript file.  
 
 `scripts/require.js` refers to the core RequireJS file. Both it and `main.js` are in a directory called `scripts`.
 
-Our `main.js` file looks like this:
+The configs in our `main.js` file look like this:
 
 {% prism javascript %}
-// This
-//
-//
+// We're only talking about creating one module here but this is
+// the config setup for multiple modules.  This is what's being
+// discussed here as it's common practice to use multiple modules
+// but configuring a single module is outlined over at: 
+// http://requirejs.org/docs/api.html#define
+
 requirejs.config({
 
   baseUrl: "/",
@@ -83,7 +88,7 @@ requirejs.config({
   deps: ["search"],
 
   paths: {
-    jquery: "libs/jquery.min",
+    jquery: "libs/jquery.min", // v.1.10.2
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
     tipuesetContent: "libs/tipuesearch_content"
@@ -106,6 +111,8 @@ requirejs.config({
 });
 {% endprism %}
 
+Let's break all this down...
+
 
 <a name="javascript-wordpress"></a>
 ## How WordPress Manages JavaScript Files Behind the Scenes
@@ -124,34 +131,6 @@ Again, WordPress is at version 3.6.1 at the time of this writing, and it impleme
 While TwentyThirteen does load jQuery after the default install, TwentyTwelve does not. As I was working with TwentyTwelve, I would need to bring jQuery into the site somehow and would want to do so with RequireJS.
 
 This is where the problems started...
-
-As an example, I have a RequireJS module that processes form submissions using `jQuery.ajax()`. To get it working on my site, I first need to call RequireJS on my page and pass it a set of configurations to perform certain tasks.  Next, I need to write out the modules and their dependencies.
-
-	
-
-If my entire site only utilized a small unit of JS code, I would put it in a `main.js` along with all its dependency mappings, ignoring the config process. But as I have multiple units of JS doing different things, it makes sense to put the form validation code and its single dependency (jQuery) in it's own module and place just the configs in `main.js`. 
-
-So `main.js` goes into the `scripts` folder and looks like this:
-
-{% prism javascript %} 
-requirejs.config({
-
-  baseUrl: "/jsBuildOut",
-
-  deps: ["form"],
-
-  paths: {
-    jquery: "libs/jquery.min"
-  }
-
-});
-{% endprism %}
-
-
-
-
-
-
 
 
 
