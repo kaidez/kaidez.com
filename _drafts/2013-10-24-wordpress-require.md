@@ -113,6 +113,28 @@ requirejs.config({
 
 Let's break all this down...
 
+{% prism javascript %} 
+requirejs.config({
+...
+});
+{% endprism %}
+
+We wrap our code in a self-enclosed function, which contains all the config info to the `requirejs.config` object that's attached to the browser's `window` object.
+
+
+{% prism javascript %} 
+baseUrl: "/",
+{% endprism %}
+
+Where stuff is...
+{% prism javascript %} 
+deps: ["search"],
+{% endprism %}
+
+`deps` is an array of all the dependencies needed by our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site...will get to that code shortly.  
+
+
+
 
 <a name="javascript-wordpress"></a>
 ## How WordPress Manages JavaScript Files Behind the Scenes
