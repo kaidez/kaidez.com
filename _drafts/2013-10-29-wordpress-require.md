@@ -36,7 +36,7 @@ There's only one thing to note: this post should *not* be looked as my stating t
 That being said, let's start things off by describing RequireJS...
 <a name="what-is-requirejs"></a>
 ## What is RequireJS?
-RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the previously-mentioned AMD spec which defines a code pattern for loading JS files in organized, non-blocking, asynchronous fashion.
+RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the previously-mentioned AMD spec which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
 
 Generally speaking, a RequireJS setup consists of two parts:
 
@@ -119,19 +119,77 @@ requirejs.config({
 });
 {% endprism %}
 
-We wrap our code in a self-enclosed function, which contains all the config info to the `requirejs.config` object that's attached to the browser's `window` object.
-
+We wrap our code in a self-enclosed function that will contain all our configs.  These configs will be passed onto the `requirejs.config` object which, in turn, attaches itself to the browser's `window` object.
 
 {% prism javascript %} 
 baseUrl: "/",
 {% endprism %}
 
-Where stuff is...
+`baseURL` represents a relative reference to the location of all the JS files that RequireJS must manage.
+
+*(Side note: I'm defining `baseURL` in a very simplified way here but the RequireJS docs outlines some best practices in terms of file structure.  The [Load JavaScript Files section in the RequireJS docs](http://requirejs.org/docs/api.html#jsfiles "Go to the Load JavaScript Files section in the RequireJS docs") is the spot to read up on this.)* 
 {% prism javascript %} 
 deps: ["search"],
 {% endprism %}
 
 `deps` is an array of all the dependencies needed by our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site...will get to that code shortly.  
+
+{% prism javascript %}
+paths: {
+  jquery: "libs/jquery.min", // v.1.10.2
+  tipue: "libs/tipuesearch.min",
+  tipueset: "libs/tipuesearch_set",
+  tipuesetContent: "libs/tipuesearch_content"
+},
+{% endprism %}
+A JS object that lists the dependencies that things on the `deps` array need in order to function properly. You can think of them as the "dependencies of the dependencies" (ha-ha!).
+
+As you can see, these are the previously-discussed four files that Tipue needs to function properly on our website. Also note that we're using jQuery 1.10.2: this will be important when we start talking about WordPress and is REALLY important when we talk about the final piece of our configurations.
+
+{% prism javascript %} 
+shim: {
+  tipue: {
+    deps: ["jquery"],
+    exports: "jquery"
+  },
+  tipueset: {
+    deps: ["jquery"],
+    exports: "jquery"
+  },
+  tipuesetContent: {
+    deps: ["jquery"],
+    exports: "jquery"
+  }
+}
+{% endprism %}
+
+As previously-mentioned, RequireJS is based on the AMD spec which defines code pattern for loading JS files asynchronously. When a JS libraries or frameworks contains this pattern, they are said to be "AMD-compliant."
+
+If file dependency is not AMD-compliant, RequireJS needs make it "appear" to be so.  That's what's happening here in this `shim` setting.
+
+Note that jQuery is not listed here: this is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant"). So there's no need to shim it in.
+
+Now that are configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file that we referred to earlier in our `deps` array, and it looks like this
+
+{% prism javascript %}
+define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
+
+  $('#tipue_search_input').tipuesearch({
+    'show': 10,
+    'showURL': false,
+    'highlightEveryTerm': true
+  });
+   
+});
+{% endprism %}
+
+
+
+
+
+
+
+
 
 
 
