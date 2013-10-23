@@ -29,37 +29,82 @@ I'm assuming that you understand a few things:
 
    * This post is a high-level discussion about customizing a default WordPress theme with a child theme, which is a well-defined best practice. This post assumes that you understand the very simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex ](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress")clearly describes how it's done. 
 
-   * I'm not assuming that you're a JavaSript guru but am assuming JS doesn't intimidate you and that you know enough of it to get things done.
+   * I'm not assuming that you know either RequireJS or the AMD spec that it's bases upon, so I'll be walking through a sample of the code used on this site. But it's only a walk-through and RequireJS can do much more than tasks I described. Therefore, I'm assuming that you have a passion for JS and have no problem reading up on a few things, such as the [RequireJS API](http://requirejs.org/docs/api.html "Read the RequireJS API") and the [Asynchronous Module Definition (AMD)](https://github.com/amdjs/amdjs-api/wiki/AMD "Learn more about the Asynchronous Module Definition") that it's based upon.
 
 There's only one thing to note: this post should *not* be looked as my stating that "WordPress is bad." WordPress is AWESOME and I will continue to use it, but was not the way to go in order to meet the aRequireJS-related goal I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
 
 <a name="what-is-requirejs"></a>
 ## What is RequireJS?
-RequireJS is a script loader that provides a dependency management system for your website's or web app's JavaScript files. It's based on the [Asynchronous Module Definition (AMD)](https://github.com/amdjs/amdjs-api/wiki/AMD "Learn more about the Asynchronous Module Definition") which defines a coding pattern for loading JS files in organized, non-blocking, asynchronous fashion.
+RequireJS is a script loader that provides a dependency management system for your website's or web app's JavaScript files. It's based on the previously-mentioned AMD which specifies a coding pattern for loading JS files in organized, non-blocking, asynchronous fashion.
 
-At the time of this post, there are 16 JavaScript files that perform different tasks...form validation, off-DOM element construction, search box functionality, etc. RequireJS efficiently manages and loads all of them into this site: this process is discussed in [the RequireJS section of my site redesign post](/site-redesign-2013/#RequireJS).
+Generally speaking, a RequireJS setup consists of two parts:
+1. Modules: singular units of JavaScript code that perform one task only. You can create multiple modules, each performing a different task.
 
-So the initial plan was to get RequireJS to perform these differnt tasks on my WordPress-powered site.  Let's look at a quick example of what the code for this would look like, particularly when jQuery's involved.
+2. Configurations: setting you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly and without conflict.
+
+The modules contain not only the code that runs your task, but also references to the dependencies need to run the task. These dependencies are things like the core jQuery library and plugins.
+
+To further illustrate this, let's look at a quick example of RequireJS in action on this site.
 
 <a name="quick-requirejs-example"></a>
 ## A Quick RequireJS Example
+At the time of this post, there are 16 JavaScript files that perform different tasks...form validation, off-DOM element construction, search box functionality, etc. RequireJS efficiently manages and loads all of them into this site: this process is discussed in [the RequireJS section of my site redesign post](/site-redesign-2013/#RequireJS).
+
+So the initial plan was to get RequireJS to perform these different tasks on my WordPress-powered site.  Let's look at a quick example of what the code for this would look like, particularly when jQuery's involved.
+
 My site's search functionality is powered by the wonderful [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It basically takes end user searches and returns the results based on data in a JSON object that contains the site content.
 
-Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page:
+Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page...these will be dependencies:
 
 1. `jquery.js`: the core jQuery library.
-2. `tipuesearch_content.js`: the file that contains the JSON object.
+2. `tipuesearch_content.js`: the file that contains the JSON object with the site content.
 3. `tipuesearch_set.js`: the file that tells Tipue to manages certain words typed into the search field in certain ways....things such as stop words.
 4. `tipuesearch.js`: the core Tipue plugin code.
 
-To get Tipue working, we need to load RequireJS on our page like so:
+To get Tipue working via RequireJS, we need to load RequireJS on our page like so:
 {% prism markup %}
 <script data-main="scripts/main" src="scripts/require.js"></script> 
 {% endprism %}
 
-The info in the `data-main` attribute refers to a file called `main.js`and it contains the all the code needed to run the search form. The `.js` is purposely left of because RequireJS always assume that the info in this attribute is a JavaScript file.  
+The info in the `data-main` attribute refers to a file called `main.js`and it contains RequireJS configurations. The `.js` is purposely left of because RequireJS always assume that the info in this attribute is a JavaScript file.  
 
 `scripts/require.js` refers to the core RequireJS file. Both it and `main.js` are in a directory called `scripts`.
+
+Our `main.js` file looks like this:
+
+{% prism javascript %}
+// This
+//
+//
+requirejs.config({
+
+  baseUrl: "/",
+
+  deps: ["search"],
+
+  paths: {
+    jquery: "libs/jquery.min",
+    tipue: "libs/tipuesearch.min",
+    tipueset: "libs/tipuesearch_set",
+    tipuesetContent: "libs/tipuesearch_content"
+  },
+
+  shim: {
+    tipue: {
+      deps: ["jquery"],
+      exports: "jquery"
+    },
+    tipueset: {
+      deps: ["jquery"],
+      exports: "jquery"
+    },
+    tipuesetContent: {
+      deps: ["jquery"],
+      exports: "jquery"
+    }
+  }
+});
+{% endprism %}
 
 
 <a name="javascript-wordpress"></a>
