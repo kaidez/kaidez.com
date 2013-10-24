@@ -701,6 +701,10 @@ Redirect 301 /wp-admin/nav-menus.php /
 
 Redirect 301 /category/tutorials/ /tutorials/
 
+<<<<<<< HEAD
 Redirect 301 /tutorial-simple-effective-jquery-image /tutorial-simple-effective-jquery-image-rollover/
 
 Redirect 301 /tutorial-simple-effective-jquery /tutorial-simple-effective-jquery-image-rollover/
+=======
+Redirect 301 /tutorial-simple-effective-jquery-image-rollover/www.linked.com /tutorial-simple-effective-jquery-image-rollover/
+>>>>>>> origin/master
