@@ -10,9 +10,9 @@ cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery]
 ---
-As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site JavaScript in a specific way, and WordPress kept me from doing this *exactly* how I wanted to.
+As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because I set a goal for myself to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But inside WordPress, jQuery and the other JavaScript stuff must be managed in a manner that both benefits and protects the WP ecosystem: a manner that imposed limits on what I needed RequireJS to do.
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But inside WordPress, all the JavaScript must be managed in a manner that benefits the WP ecosystem: a manner that imposed limits on what I needed RequireJS to do.
 
 RequireJS can still be used inside of WordPress with caveats.  This post discusses some of these caveats.
 
@@ -27,22 +27,30 @@ RequireJS can still be used inside of WordPress with caveats.  This post discuss
 ## Assumptions &amp; Notes
 I'm assuming that you understand a few things:
 
-   * This post is a high-level discussion about taking a theme that's included in a default WordPress install and customizing it with a child theme, a well-defined WP best practice. This post assumes that you understand the very simple technical work required to create a child theme: if not, [the Child Theme docs in the WordPress Codex ](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress")clearly describes how it's done. 
+This post is about both WordPress and RequireJS. Both have been around for awhile but RequireJS is relatively new at the time of this post's publish date; therefore, this post discusses RequireJS in more detail than WordPress.
 
-   * I'm not assuming that you know either RequireJS or the Asynchronous Module Definition (AMD) specification that it's based upon, so I'll be using sample code to walk through the process. But it's only a walk-through and RequireJS can do much more than the tasks I describe. Therefore, I'm assuming that you have a passion for JS and have no problem reading up on a few things, such as the [RequireJS API](http://requirejs.org/docs/api.html "Read the RequireJS API") and the [AMD spec](https://github.com/amdjs/amdjs-api/wiki/AMD "Learn more about the Asynchronous Module Definition").
+I do discuss some WordPress things in detail to make sure that things are clear, but not that much. So I'm assuming that you can get the job done when it comes to customizing WordPress.
 
-There's only one thing to note: this post should *not* be looked as my stating that "WordPress is bad." WordPress is AWESOME and I will continue to use it, but was not the way to go in order to meet the RequireJS-related goal I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
+All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to do this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describes how it's done. 
+
+While I do walk through RequireJS more than I do WordPress, it's only a walk-through. RequireJS can do much more than the tasks and so if you've read this far, I'm assuming that you know at least a little about RequireJS.
+
+If not, then I'm assuming that you're naturally curious about RequireJS and have no problem reading up on a few things to get better at it, starting eith the  [RequireJS API docs](http://requirejs.org/docs/api.html "Read the RequireJS API").
+
+An important thing to note: this post should *not* be looked as my stating that "WordPress is bad." WordPress is AWESOME and I will continue to use it, but was it not the way to go in order to meet the RequireJS-related goal I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
+
+And on a personal note: there were RequireJS things that I struggled with at both the beginning and the end of the redesign. I'm indebted to [Cary Landholt](https://twitter.com/carylandholt "visit Cary Landholt's Twitter page") for taking the time helping me at both points. His [YouTube screencasts](http://www.youtube.com/user/carylandholt "visit Cary Landholt's YouTube page") are worth a watch, specifically his RequireJS ones.  You should also spend some time poking around his [GitHub repo](https://github.com/CaryLandholt "visit Cary Landholt's GitHub repo") for cool JavaScript stuff.
 
 That being said, let's start things off by describing RequireJS...
 <a name="what-is-requirejs"></a>
 ## What is RequireJS?
-RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the previously-mentioned AMD spec which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
+RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
 
 Generally speaking, a RequireJS setup consists of two parts:
 
-1. __Modules__: singular units of JavaScript code that execute either one task or a small group of closely-related tasks. You can create multiple modules, with each module performing a different task or tasks.
+1. __Modules__: single units of JavaScript code that execute either a single task or a small group of closely-related tasks. You can create multiple modules, with each module performing a different task or tasks.
 
-2. __Configurations__: settings you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly and without conflict.
+2. __Configurations__: settings you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly.
 
 The modules contain not only the code needed to run your task(s), but also references to the dependencies the code needs to run the task(s). These dependencies are things like the core jQuery library and plugins.
 
@@ -52,9 +60,9 @@ Let's get some RequireJS perspective by looking at a quick example of how it wor
 
 <a name="quick-requirejs-example"></a>
 ## A RequireJS Example
-My site's search functionality is powered by the wonderful [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It basically takes end user searches and returns the results based on data in a JSON object that contains the site content.
+My site's search functionality is powered by the [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It takes end user search inputs and returns the results based on data in a JSON object that contains the site content.
 
-Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page...these will be dependencies:
+Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page.  These will be the dependencies:
 
 1. `jquery.js`: the core jQuery library.
 2. `tipuesearch_content.js`: the file that contains the JSON object with the site content.
@@ -70,7 +78,7 @@ We first add the only `<script>` tag we need:
 
 The info in the `data-main` attribute refers to a file called `main.js`, which contains the configurations. The `.js` is purposely left off  because RequireJS always assume that the info in this attribute is a JavaScript file.  
 
-`scripts/require.js` refers to the core RequireJS file. Both it and `main.js` are in a directory called `scripts`.
+`require.js` refers to the core RequireJS file. Both it and `main.js` are in a directory called `scripts`.
 
 The configs in our `main.js` file look like this:
 
@@ -78,8 +86,8 @@ The configs in our `main.js` file look like this:
 // We're only talking about creating one module here but this is
 // the config setup for multiple modules.  This is what's being
 // discussed here as it's common practice to use multiple modules
-// but configuring a single module is outlined over at: 
-// http://requirejs.org/docs/api.html#define
+// but the process for configuring a single module is outlined
+// over at: http://requirejs.org/docs/api.html#define.
 
 requirejs.config({
 
@@ -100,11 +108,9 @@ requirejs.config({
       exports: "jquery"
     },
     tipueset: {
-      deps: ["jquery"],
       exports: "jquery"
     },
     tipuesetContent: {
-      deps: ["jquery"],
       exports: "jquery"
     }
   }
@@ -119,7 +125,7 @@ requirejs.config({
 });
 {% endprism %}
 
-We wrap our code in a self-enclosed function that will contain all our configs.  These configs will be passed onto the `requirejs.config` object which, in turn, attaches itself to the browser's `window` object.
+We wrap our code in a self-enclosed function that will contain all our configs.
 
 {% prism javascript %} 
 baseUrl: "/",
@@ -127,7 +133,7 @@ baseUrl: "/",
 
 `baseURL` represents a relative reference to the location of all the JS files that RequireJS must manage.
 
-*(Side note: I'm defining `baseURL` in a very simplified way here but the RequireJS docs outlines some best practices in terms of file structure.  The [Load JavaScript Files section in the RequireJS docs](http://requirejs.org/docs/api.html#jsfiles "Go to the Load JavaScript Files section in the RequireJS docs") is the spot to read up on this.)* 
+*(Side note: I'm using a very simplified file structure in order to keep this post from being too long, but the RequireJS docs do outline some best practices in terms of organizing your code.  The [Load JavaScript Files section in the RequireJS docs](http://requirejs.org/docs/api.html#jsfiles "Go to the Load JavaScript Files section in the RequireJS docs") is the place to read up on this.)* 
 {% prism javascript %} 
 deps: ["search"],
 {% endprism %}
@@ -142,7 +148,7 @@ paths: {
   tipuesetContent: "libs/tipuesearch_content"
 },
 {% endprism %}
-A JS object that lists the dependencies that things on the `deps` array need in order to function properly. You can think of them as the "dependencies of the dependencies" (ha-ha!).
+`paths` is a JS object that lists the dependencies that things on the `deps` array need in order to function properly...you can think of them as the "dependencies of the dependencies" (ha-ha!). These files are located in a directory called `libs` that's in our `scripts` folder.
 
 As you can see, these are the previously-discussed four files that Tipue needs to function properly on our website. Also note that we're using jQuery 1.10.2: this will be important when we start talking about WordPress and is REALLY important when we talk about the final piece of our configurations.
 
@@ -153,23 +159,23 @@ shim: {
     exports: "jquery"
   },
   tipueset: {
-    deps: ["jquery"],
     exports: "jquery"
   },
   tipuesetContent: {
-    deps: ["jquery"],
     exports: "jquery"
   }
 }
 {% endprism %}
 
-As previously-mentioned, RequireJS is based on the AMD spec which defines code pattern for loading JS files asynchronously. When a JS libraries or frameworks contains this pattern, they are said to be "AMD-compliant."
+As previously-mentioned, RequireJS is based on the AMD spec which defines code pattern for loading JS files asynchronously. When a JS libraries or frameworks contains this pattern, they're said to be "AMD-compliant."
 
-If file dependency is not AMD-compliant, RequireJS needs make it "appear" to be so.  That's what's happening here in this `shim` setting.
+If the file dependency is not AMD-compliant, RequireJS needs make it "appear" to be.  That's what's happening here in this `shim` setting.
+
+`tipue` represents our core Tipue plugin code and this can't run without jQuery. So it's listed as a dependency in the `deps` array.  The other two shimmed-in files have no jQuery code inside them so they can skip this step.
 
 Note that jQuery is not listed here: this is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant"). So there's no need to shim it in.
 
-Now that are configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file that we referred to earlier in our `deps` array, and it looks like this
+Now that are configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file that we referred to earlier in our `deps` array, and it looks like this:
 
 {% prism javascript %}
 define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
@@ -183,7 +189,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
 });
 {% endprism %}
 
-
+The `define()` method first defines the dependencies in the array. It then passes them as parameters to a callback function
 
 
 
