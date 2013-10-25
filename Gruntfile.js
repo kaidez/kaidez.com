@@ -95,62 +95,7 @@ module.exports = function(grunt) {
       imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
         files: ['img/*.{png,jpg,jpeg,gif}'],
         tasks: ['imagemin', 'jekyll:dev']
-      },
-
-      // if Bower updates Backbone, copy it to core Require build folder, run
-      // the "requirejs" task, then build the site.
-      bowerTaskBackbone: {  
-        files: ['bower_components/backbone/backbone-min.js'],
-        tasks: ['copy:backbone', 'requirejs', 'jekyll:dev']
-      },
-
-      // if Bower updates Backbone, copy it to core Require build folder, run
-      // the "requirejs" task, then build the site.
-      bowerTaskEnquire: {  
-        files: ['bower_components/enquire/dist/enquire.min.js'],
-        tasks: ['copy:enquire', 'requirejs', 'jekyll:dev']
-      },
-
-      // if Bower updates font-awesome, just copy it to core Sass build folder.
-      // The 'sassbuild' task will run on its own after that.
-      bowerTaskFontAwesome: {
-        files: ['bower_components/font-awesome/css/font-awesome.css'],
-        tasks: ['copy:fontAwesome']
-      },
-      
-      // if Bower updates jquery, copy it to core Require build folder, run
-      // the "requirejs" task, then build the site.
-      bowerTaskJquery: {
-        files: ['bower_components/jquery/jquery.min.js'],
-        tasks: ['copy:jquery', 'requirejs', 'jekyll:dev']
-      },
-      
-      // if Bower updates matcheMedia, just copy it to 'js/libs'.
-      bowerTaskMatchMedia: {
-        files: ['bower_components/matchmedia/*.js'],
-        tasks: ['copy:matchMedia']
-      },
-      
-      // if Bower updates RequireJS, copy it to core Require build folder, run 
-      // the "requirejs" task, then build the site.
-      bowerTaskRequireJS: {
-        files: ['bower_components/requirejs/require.js'],
-        tasks: ['copy:require', 'requirejs', 'jekyll:dev']
-      },
-      
-      // if Bower updates Spin, copy it to core Require build folder, run 
-      // the "requirejs" task, then build the site.
-      bowerTaskSpin: {
-        files: ['bower_components/spinjs/spin.js'],
-        tasks: ['copy:spin', 'requirejs', 'jekyll:dev']
-      },
-      
-      // if Bower updates Underscore, copy it to core Require build folder,
-      // run the "requirejs" task, then build the site.
-      bowerTaskUnderscore: {
-        files: ['bower_components/underscore/underscore-min.js'],
-        tasks: ['copy:underscore', 'requirejs', 'jekyll:dev']
-      }
+      } 
      },
 
     // create a custom 'modernizr' file 
