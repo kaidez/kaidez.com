@@ -4,8 +4,6 @@ _site
 _deploy
 ./_deploy
 
-functions.test.js  
-
 # Site assets
 #------------
 assets/

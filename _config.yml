@@ -15,7 +15,6 @@ exclude: [
   requireBuildOut,
   Capfile,
   config,
-  functions.test.js,
   Gruntfile.js,
   grunt,
   jekyllOutput.html,
