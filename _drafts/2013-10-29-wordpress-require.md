@@ -171,7 +171,7 @@ As previously-mentioned, RequireJS is based on the AMD spec which defines code p
 
 If the file dependency is not AMD-compliant, RequireJS needs make it "appear" to be.  That's what's happening here in this `shim` setting.
 
-`tipue` represents our core Tipue plugin code and this can't run without jQuery. So it's listed as a dependency in the `deps` array.  The other two shimmed-in files have no jQuery code inside them so they can skip this step.
+`tipue` represents our core Tipue plugin code and this can't run without jQuery. So it's listed as a dependency in the `deps` array.  The other two shimmed-in files have no jQuery code inside them so they can skip this <step class=""></step>
 
 Note that jQuery is not listed here: this is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant"). So there's no need to shim it in.
 
