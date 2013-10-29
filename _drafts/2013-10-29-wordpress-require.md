@@ -12,7 +12,7 @@ tags: [RequireJS, Wordpress, jQuery]
 ---  
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But WordPress must manage its internal JavaScript in a manner that benefits its entire ecosystem: a manner that imposed limits on what I needed RequireJS to do.
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But WordPress must manage its internal JavaScript in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
 
 RequireJS can still be used inside of WordPress with caveats.  This post discusses some of these caveats.
 
@@ -36,11 +36,11 @@ If not, then I'm assuming that you're curious about RequireJS and have no proble
 
 Some notes...
 
-This post should *not* be looked as my stating that "WordPress is bad." WordPress is awesome and I will continue to use it, but was it not the way to go in order to meet the RequireJS-related goal I set for myself with this redesign. [I discuss this at great length in my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
+This post should *not* be looked as my stating that "WordPress is bad." WordPress is awesome and I will continue to use it, but it was not the way to go in order to meet the RequireJS-related goal I set for myself with this redesign. I discuss this at great length in [my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
 
-When started working on the redesign, I was working with WordPress version 3.5.2. I then left for Jekyll and since that time, WordPress has released versions 3.6 and 3.7, the latter being released about ten days before this post's publish date.
+When I started working on the redesign, I was working with WordPress version 3.5.2. I then left for Jekyll and since that time, WordPress has released versions 3.6 and 3.7, the latter being released about ten days before this post's publish date.
 
-TwentyTwelve was the default theme for 3.5.2 and it was what my child theme was based upon.  Both 3.6 and 3.7 use TwentyThirteen as its default theme, and each loads JavaScript onto a WP site differently than previous versions.
+TwentyTwelve was the default theme for 3.5.2 and was what my child theme was based upon.  Both 3.6 and 3.7 use TwentyThirteen as its default theme, which loads JavaScript onto a WP site differently from TwentyTwelve and previous themes.
 
 I did test some RequireJS things in 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So my point of view is using RequireJS stuff in a 3.5.2/TwentyTwelve setup, but what really matters here is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across versions and themes and all is the same. 
 
@@ -76,13 +76,13 @@ We first add the only `<script>` tag we need...it should go as close to the bott
 <script data-main="scripts/main" src="scripts/require.js"></script> 
 {% endprism %}
 
-The info in the `data-main` attribute refers to a file called `main.js`, which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is a JavaScript file.  
+The info in the `data-main` attribute refers to a file called `main.js`, which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is in the form of a JavaScript file.  
 
 `require.js` refers to the core RequireJS file.
 
 Both files are in a directory called `scripts`.
 
-The configs in our `main.js` file look like this:
+The configurations in our `main.js` file look like this:
 
 {% prism javascript %}
 // We're only talking about creating one module here but this is
@@ -141,7 +141,7 @@ deps: ["search"],
 {% endprism %}
 
 `deps` is an array of all the dependencies for our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site...will get to that code shortly.  
-
+çchr
 {% prism javascript %}
 paths: {
   jquery: "libs/jquery.min", // v.1.10.2
@@ -171,7 +171,7 @@ shim: {
 
 As previously-mentioned, RequireJS is based on the AMD spec which defines a code pattern for loading JS files asynchronously. JavaScript files that contain this pattern are said to be "AMD-compliant."
 
-If the file dependency is not AMD-compliant, RequireJS must force it to be so.  That's what's happening here in this `shim` setting.
+If the dependency is not AMD-compliant, RequireJS must force it to be so.  That's what's happening here in this `shim` setting.
 
 `tipue` represents our core Tipue plugin code and this can't run without jQuery, so it's listed as a dependency in the `deps` array.  The other two shimmed-in files have no jQuery code inside them so they can skip this step.
 
@@ -220,9 +220,67 @@ paths: {
 This worked fine for my RequireJS setup but creates potential future problems inside of WordPress.
 <a name="load-js-into-wordpress"></a>
 ## The Proper Way To Load JavaScript Files Into WordPress
-As previously mentioned, WordPress pre-installs JS libraries and plugins before the themes actually uses them. In TwentyTwelve, jQuery isn't pre-installed but almost always comes in if the end user installs a jQuery-dependent plugin.
+As previously mentioned, WordPress pre-installs JS libraries and plugins before the themes actually uses them. In TwentyTwelve, jQuery isn't pre-installed: it almost always installs itself when the end user installs a jQuery-dependent plugin via the Dashboard.
 
-A plugin like this checks to see jQuery is already installed in the theme, installing it if it's not. Unfortunately, the way I brought it 
+During the install process, a jQuery-dependent plugin will check to see jQuery is already installed in the theme.  If it is, it installs the plugin code, skipping the process of installing jQuery.  If it's not, it will take the time to install it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
