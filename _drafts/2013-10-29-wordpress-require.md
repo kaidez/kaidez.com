@@ -222,7 +222,7 @@ This worked fine for my RequireJS setup but creates potential future problems in
 ## The Proper Way To Load JavaScript Files Into WordPress
 As previously mentioned, WordPress pre-installs JS libraries and plugins before the themes actually uses them. In TwentyTwelve, jQuery isn't pre-installed but almost always comes in if the end user installs a jQuery-dependent plugin.
 
-
+A plugin like this checks to see jQuery is already installed in the theme, installing it if it's not. Unfortunately, the way I brought it 
 
 
 
