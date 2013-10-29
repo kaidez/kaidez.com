@@ -73,12 +73,12 @@ module.exports = function(grunt) {
 
     // all the 'watch' tasks
     watch: {
-      pageOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
-        files: ['*.html','**/*.html','!_site/**/*.html','email.php', '_posts/*.md', 'feed.xml', 'htaccess'],
-        tasks: ['jekyll:dev']
-      },
+      // pageOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
+      //   files: ['*.html', '**/*.html','!_site/**/*.html', '!_site/*.html', 'email.php', '_posts/*.md', '!jekyllOutput.html', 'search.html'],
+      //   tasks: ['jekyll:dev']
+      // },
       layoutOnlyTask: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
-        files: ['_layouts/*.html', '_templates/*.html'],
+        files: ['_templates/*.html'],
         tasks: ['targethtml:dev', 'jekyll:dev']
       },
 
@@ -90,12 +90,12 @@ module.exports = function(grunt) {
       cssOnlyTask: { // run 'jekyll build' on .scss/.css file changes
         files: ['grunt/cssSource/*.scss'],
         tasks: ['sassbuild', 'jekyll:dev']
-      },
+      }
 
-      imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
-        files: ['img/*.{png,jpg,jpeg,gif}'],
-        tasks: ['imagemin', 'jekyll:dev']
-      } 
+      // imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
+      //   files: ['img/*.{png,jpg,jpeg,gif}'],
+      //   tasks: ['imagemin', 'jekyll:dev']
+      // } 
      },
 
     // create a custom 'modernizr' file 
