@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "jquery": "1.10.2",
-    "font-awesome": "4.0.0",
+    "font-awesome": "4.0.2",
     "requirejs": "*",
     "backbone": "~1.1.0",
     "underscore": "~1.5.2",
