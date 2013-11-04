@@ -26,7 +26,7 @@ RequireJS can still be used inside of WordPress with caveats.  This post discuss
 ## Assumptions &amp; Notes
 I'm making a few assumptions:
 
-The main assumption is that you have a better-than-basic-understanding of WordPress. This post discuss utilizing some functions inside existing WP code, so your WP knowledge should extend beyond making changes in the Dashboard. 
+The main assumption is that you understand WordPress beyond just configuring it inside the Dashboard. This post discusses adjusting code in already-existing existing WP files so you should be comfortable adjusting WordPress code, be it CSS, PHP, JavaScript, whatever. 
 
 All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done. 
 
@@ -42,11 +42,11 @@ When I started working on the redesign, I was working with WordPress version 3.5
 
 TwentyTwelve was the default theme for 3.5.2 and was what my child theme was based upon.  Both 3.6 and 3.7 use TwentyThirteen as its default theme, which loads JavaScript onto a WP site differently from TwentyTwelve and previous themes.
 
-I did test some RequireJS things in 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So my point of view is using RequireJS stuff in a 3.5.2/TwentyTwelve setup, but what really matters here is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across versions and themes and all is the same. 
+I did test some RequireJS things in version 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So my point of view is from using RequireJS stuff in a 3.5.2/TwentyTwelve setup, but what really matters here is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across versions and themes and all is the same. 
 
 <a name="what-is-requirejs"></a>
 ## What is RequireJS?
-RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
+RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's written in JavaScript and is based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
 
 Generally speaking, a RequireJS setup consists of two parts:
 
@@ -54,13 +54,13 @@ Generally speaking, a RequireJS setup consists of two parts:
 
 2. __Configurations__: settings you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly.
 
-The modules contain not only the code needed to run your task(s), but also references to the dependencies the code needs to run the task(s). These dependencies are things like the core jQuery library and plugins.
+The modules contain not only the code needed to run your task(s), but also lists the dependencies that this code needs to run the task(s). These dependencies are things like the core jQuery library and plugins.
 
-Let's get some RequireJS perspective by looking at an example of how it works on this site.
+Let's examine this by looking at an example of how RequireJS works on kaidez.com.
 
 <a name="quick-requirejs-example"></a>
 ## A RequireJS Example
-My site's search functionality is powered by the [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It takes end user searches and returns the results based on the data in a JSON object that contains the site content.
+This site's search functionality is powered by the [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It takes end user searches and returns the search results based on the data in a JSON object that contains the site content.
 
 Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page:
 
@@ -69,16 +69,16 @@ Tipue needs four separate JS files to work and they must be listed in the follow
 3. `tipuesearch_set.js`: the file that sets rules for certain words inputed into the search field, rules such as ignoring words like "the" and "or".
 4. `tipuesearch.js`: the core Tipue plugin code.
 
-In the past, setting up this functionality usually meant loading all these files in `<script>` tags on my HTML page in the order above, then referencing my custom Tipue code sometime afterwards. RequireJS allows for an easier process.
+In the past, setting up this functionality usually meant placing all these files in `<script>` tags on my HTML page in the order above, then putting my custom Tipue code somewhere below them. RequireJS allows for an easier process.
 
 We first add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
 {% prism markup %}
 <script data-main="scripts/main" src="scripts/require.js"></script> 
 {% endprism %}
 
-The info in the `data-main` attribute refers to a file called `main.js`, which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is in the form of a JavaScript file.  
+The info in the `data-main` attribute refers to a file called `main.js`, which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is a JavaScript file.  
 
-`require.js` refers to the core RequireJS file.
+`require.js` refers to the file containing the core RequireJS code.
 
 Both files are in a directory called `scripts`.
 
@@ -140,7 +140,8 @@ baseUrl: "/",
 deps: ["search"],
 {% endprism %}
 
-`deps` is an array of all the dependencies for our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site...will get to that code shortly.  
+`deps` is an array of all the dependencies for our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site...will get to that code shortly. `search.js` is located in the `scripts` folder.
+
 
 {% prism javascript %}
 paths: {
@@ -159,17 +160,11 @@ shim: {
   tipue: {
     deps: ["jquery"],
     exports: "jquery"
-  },
-  tipueset: {
-    exports: "jquery"
-  },
-  tipuesetContent: {
-    exports: "jquery"
   }
 }
 {% endprism %}
 
-As previously-mentioned, RequireJS is based on the AMD spec which defines a code pattern for loading JS files asynchronously. JavaScript files that contain this pattern are said to be "AMD-compliant."
+As previously-mentioned, RequireJS is based on the AMD spec which defines a code pattern for loading JS files asynchronously. JavaScript files containing this pattern are said to be "AMD-compliant."
 
 If the dependency is not AMD-compliant, RequireJS must force it to be so.  That's what's happening here in this `shim` setting.
 
@@ -179,7 +174,7 @@ If the dependency is not AMD-compliant, RequireJS must force it to be so.  That'
 
 Note that jQuery is not listed here: this is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant"). So there's no need to shim it in.
 
-Now that are configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file (also inside the `scripts` folder) that we referred to earlier in our `deps` array, and looks like this:
+Now that are configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file that we referred to earlier in our `deps` array and looks like this:
 
 {% prism javascript %}
 define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
@@ -193,7 +188,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
 });
 {% endprism %}
 
-The `define()` method first defines the dependencies in the array. It then passes them as parameters to a callback function so our custom code can access it.
+The `define()` method first defines all the code's dependencies in the array, then passes them as parameters to a callback function. Because of how RequireJS works, the  so our custom code can access the depen.
 
 As far what our custom code is doing, it takes the returned search results and places them in a page element with an id of `tipue_search_input`. It will "show" 10 results per page, not "show the URL" for each result and "highlight" whatever the search term was by bolding it.
 

@@ -16,10 +16,7 @@
   paths: {
     enquire: "libs/enquire.min",
     jquery: "libs/jquery.min",
-    ladda: "libs/ladda.min",
     prism: "libs/prism",
-    picturefill: "libs/picturefill",
-    spin: "libs/spin",
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
     tipuesetContent: "libs/tipuesearch_content"
@@ -33,18 +30,7 @@
     "prism": {
       "exports": "Prism"
     },
-    "picturefill": {
-      "exports": "Picturedill"
-    },
     tipue: {
-      deps: ["jquery"],
-      exports: "jquery"
-    },
-    tipueset: {
-      deps: ["jquery"],
-      exports: "jquery"
-    },
-    tipuesetContent: {
       deps: ["jquery"],
       exports: "jquery"
     }

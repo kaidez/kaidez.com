@@ -8,7 +8,7 @@
 
 
 // Start RequireJS code
-define(["jquery", "spin", "ladda"], function($, spin, Ladda) {
+define(["jquery"], function($) {
 
   $("#contact").submit(function(event) {
     var name = $("#formNameField").val(),
@@ -29,8 +29,6 @@ define(["jquery", "spin", "ladda"], function($, spin, Ladda) {
     return false;
 
   });
-
-  Ladda.bind( 'input[type=submit]' );
 
 
 });
