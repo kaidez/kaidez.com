@@ -141,7 +141,7 @@ deps: ["search"],
 {% endprism %}
 
 `deps` is an array of all the dependencies for our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site...will get to that code shortly.  
-çchr
+
 {% prism javascript %}
 paths: {
   jquery: "libs/jquery.min", // v.1.10.2
