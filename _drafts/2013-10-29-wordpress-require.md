@@ -107,13 +107,7 @@ requirejs.config({
   shim: {
     tipue: {
       deps: ["jquery"],
-      exports: "jquery"
-    },
-    tipueset: {
-      exports: "jquery"
-    },
-    tipuesetContent: {
-      exports: "jquery"
+      exports: "tipue"
     }
   }
 });
@@ -159,20 +153,24 @@ As you can see, these are the previously-discussed four files that Tipue needs t
 shim: {
   tipue: {
     deps: ["jquery"],
-    exports: "jquery"
+    exports: "tipue"
   }
 }
 {% endprism %}
 
 As previously-mentioned, RequireJS is based on the AMD spec which defines a code pattern for loading JS files asynchronously. JavaScript files containing this pattern are said to be "AMD-compliant."
 
-If the dependency is not AMD-compliant, RequireJS must force it to be so.  That's what's happening here in this `shim` setting.
+If the dependency is not AMD-compliant, RequireJS must force it to be so. That's what's happening here in this `shim` setting.
 
-`tipue` represents our core Tipue plugin code and this can't run without jQuery, so it's listed as a dependency in the `deps` array.  The other two shimmed-in files have no jQuery code inside them so they can skip this step.
+`tipue` is a reference to our core Tipue plugin code that was defined in the `paths` object.  It's not AMD-compliant so it's shimmed in.
 
-`exports` properly exposes these files to the core RequireJS code so it can treat it as a dependency based on the AMD spec.
+`deps` informs our code that it needs jQuery to do work properly. `exports`, a core [Node.js](http://nodejs.org/ "Learn more about Node.js") concept, properly exposes these files to the core RequireJS code so it can treat it as a dependency based on the AMD spec.
 
-Note that jQuery is not listed here: this is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant"). So there's no need to shim it in.
+The other two shimmed-in files have no jQuery code inside them so they can skip this step.
+
+Both the `tipueset` and `tipuesetContent` listed in `paths` are also not AMD-compliant; however, they're not executing code like `tipue` is.  They're just adding support to the core Tipue plugin code so it can do it's job, so there's no need to shim them.
+
+jQuery doesn't need to be shimmed in as well. This is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant").
 
 Now that are configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file that we referred to earlier in our `deps` array and looks like this:
 
@@ -204,11 +202,11 @@ This was the code that I wanted to integrate into WordPress...and  this was wher
 ## How I THOUGHT I Could Bring jQuery Into WordPress
 While TwentyThirteen preloads jQuery and other JavaScript files, the TwentyTwelve theme I was working with does not. I was fine with this because as the above example illustrates, you only need to load one `script` tag onto the page to get RequireJS working. 
 
-I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress put it, like this:
+I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress put it, via the `paths` object:
 
 {% prism javascript %}
 paths: {
-  http://livetest.kaidez.com/wp-includes/js/jquery/jquery.js,
+  http://kaidez.com/wp-includes/js/jquery/jquery.js,
   ...
 }
 {% endprism %}
