@@ -21,6 +21,7 @@ RequireJS can still be used inside of WordPress with caveats.  This post discuss
 2. [What Is RequireJS?](#what-is-requirejs)
 3. [A RequireJS Example](#quick-requirejs-example)
 4. [How I THOUGHT I Could Bring jQuery Into WordPress](#bring-jquery-into-wordpress)
+5. [How To Load JavaScript Files Into WordPress](#load-js-into-wordpress)
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
@@ -222,18 +223,17 @@ Looking at my code snippet above, I didn't use any of these two methods...I just
 As a result, if I installed a WordPress plugin requiring jQuery, WP would load it into the HTML, meaning there would be two jQuery files on my page and that's not good. I was 99.99999% sure that I wouldn't be using such plugins and this would be a non-issue, but I wasn't 100% sure.
 
 The safest thing to do was to use `wp_enqueue_script` to bring in jQuery. This would be done using the `functions.php` method just discussed:
-
 {% prism php %}
 <?php
 function my_scripts_method() {
-    wp_enqueue_script( 'jquery' );
+  wp_enqueue_script( 'jquery' );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 ?>
 {% endprism %}
 
-
+This kept the 
 
 
 
