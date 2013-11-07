@@ -43,7 +43,9 @@ When I started working on the redesign, I was working with WordPress version 3.5
 
 TwentyTwelve was the default theme for 3.5.2, and was what my child theme was based upon.  Both 3.6 and 3.7 use TwentyThirteen as its default theme, which loads JavaScript onto a WP site differently from TwentyTwelve and previous themes.
 
-I did test some RequireJS things in version 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So this post's point of view is from using RequireJS inside a 3.5.2/TwentyTwelve setup, but what really matters is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across all the versions and themes mentioned: the pre-install process is the same all around. 
+I did test some RequireJS things in version 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So this post's point of view is from using RequireJS inside a 3.5.2/TwentyTwelve setup, but what really matters is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across all the versions and themes mentioned: the pre-install process is the same all around.
+
+And finally, there were RequireJS things that I struggled with at both the beginning and end of my site redesign. I give many thanks to [Cary Landholt](https://twitter.com/carylandholt) for helping me understanding these things, all while he had a kid take care of as well as work on one of his kick-ass JavaScript courses, the code, for  which, can be viewed on his [GitHub page](https://github.com/CaryLandholt).
 
 <a name="what-is-requirejs"></a>
 ## What Is RequireJS?
@@ -255,117 +257,8 @@ require(['app'], function (){});
 {% endprism %}
 > *This assumes jquery was loaded before the require call. If so, then this approach means requirejs will not load another version of jquery."*
 
-Yup...kicking myself for missing the obvious. James' example to uses the `require()` method where I used `define()`, but the end results in terms of detecting jQuery's presence before mapping it as a module depenedency would be the same.
+Yup...kicking myself for missing the obvious. James' example to uses the `require()` method where I used `define()`, but the end results in terms of detecting jQuery's presence before mapping it as a module dependency would be the same.
 
 I tested this inside of WordPress and it worked like a charm, but it meant that jQuery would be placed in a `<script>` tag on my page and be excluded from my final RequireJS build. I was very stubborn about managing all my site's JavaScript with RequireJS so I could better understand how RequireJS works.
 
 It was at this point that I went over to Jekyll.  But it needs to be said that if I ever need to use RequireJS and WordPress together, I would do so using the method above.
-This worked fine for my RequireJS setup but creates potential future problems inside of WordPress.
-<a name="future-wordpress-amd"></a>
-## WordPress, AMD &amp; The Future
-At the time of this posting, an active discussion has popped up around [a WordPress ticket to add AMD functionality to WP](http://core.trac.wordpress.org/ticket/23285 "Read a discussion about implementing AMD inside of WordPress"). Using RequireJS to achieve this is mentioned more than once in this thread.
-
-The thread also points out that adding AMD functionality for JavaScript would mean a heavy rewrite of how WordPress manages JS. AMD is awesome but WordPress prioritizes making things like jQuery accessible to plugins...AMD would need to be implemented in a way that this doesn't change to drastically. Easier said than done.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Looking at the default install using the TwentyThirteen Theme, the following JavaScript is loaded onto the page:
-
-* [HTML5shiv 3.6](https://code.google.com/p/html5shiv/): used to properly display HTML5 elements in browsers that don't naturally support them.  The browsers in question refer to Internet Explorer versions 8 and lower and, as such, this file's script reference is wrapped in IE conditional comments that prevent it from loading in any other browsers but those. Also, please note that WP 3.6.1 is currently running version 3.6 of the shiv, one build behind the current release.
-* [jQuery 1.10.2](https://jquery.com/): the core jQuery library...current in TwentyThirteen as of this post.
-* [jQuery Migrate](https://github.com/jquery/jquery-migrate/): detects and restores jQuery features that have been deprecated & and removed as of jQuery 1.9...current in TwentyThirteen as of this post.
-* [Masonry](http://masonry.desandro.com/): David Desandro's excellent jQuery-powered grid layout library.
-* functions.js: a small JavaScript file that provides some light dynamic styling to elements, enables the mobile menu button and fixes a Chrome/IE bug related to the theme's hidden "Skip to Content" link.
-* On any page that allows comments, `comment-reply.min.js` is included.
-
-*Side note: the "Skip to Content" fix is globally important and should everywhere and not just in WordPress. It comes from Nick Zakas and you can read about it [here](http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/).*
-
-I want to start things off by removing almost all these JavaScript files. By doing so, I can use RequireJS to properly manage all the JS I would bring in eventually.
-
-I say "almost all these files" because RequireJS will be placed as close to the bottom of all the site pages as possible. HTML5 Shiv is placed within the `<head>` tag because needs to do work very early in the page load process.  Moving it to the bottom would prevent that, so I'm keeping it where it is.
-
-I would use Disqus for commenting so `comment-reply.min.js` can be removed. jQuery core and jQuery Migrate are placed within `<head>` and I would prefer to move them to the bottom of the page.
-
-Both Masonry and `functions.js` are placed at the bottom of the page; however, their version numbers are appended with a query string. This  isn't that great from [a site optimization standpoint](https://developers.google.com/speed/docs/best-practices/caching?hl=sv "Read about optimizing file caching").
-
-In the context of the TwentyThirteen theme, removing the rest of the JavaScript can be done by creating a new `functions.php` in my child them folder and placing the following code inside of it:
-
-{% prism php %}
-<?php
-
-  // remove 'comment-reply.js' from the site
-  function clean_header(){
-	  wp_deregister_script( 'comment-reply' );
-  }
-  add_action('init','clean_header');
-
-  // remove 'jQuery core' from the site...this
-  // will also remove jQuery Migrate, Masonry
-  // and 'functions.js'
-  function remove_jquery(){
-	  wp_deregister_script( 'jquery' );
-  }
-  add_action('init','remove_jquery');
-
-?>
-{% endprism %}
-
-The comment JS code was removed by creating a `functions.php` file in my child theme and using [This post in the WordPress Support forums](http://wordpress.org/support/topic/how-to-remove-comment-replyjs-completely) can get you up and running with this code.
-
-
-
-http://scribu.net/wordpress/optimal-script-loading.html
