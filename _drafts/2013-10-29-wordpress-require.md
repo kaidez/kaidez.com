@@ -196,22 +196,42 @@ This was the code that I wanted to integrate into WordPress...and  this was wher
 
 <a name="bring-jquery-into-wordpress"></a>
 ## How I THOUGHT I Could Bring jQuery Into WordPress
-While TwentyThirteen preloads jQuery and other JavaScript files, the TwentyTwelve theme I was working with does not. I was fine with this because as the above example illustrates, you only need to load one `script` tag onto the page to get RequireJS working. 
+While TwentyThirteen preloads jQuery and other JavaScript files into the site's HTML, the TwentyTwelve theme I was working with does not. I was fine with this because as the above example illustrates, you only need to load one `script` tag onto the page to get RequireJS working. 
 
-I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress put it, via the `paths` object:
+As mentioned in the beginning, a default WordPress install contains jQuery other internal JS files. So I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress placed it during install via the `paths` object:
 
 {% prism javascript %}
 paths: {
+  // This ignores the 'baseURL' setting, but works
   http://kaidez.com/wp-includes/js/jquery/jquery.js,
   ...
 }
 {% endprism %}
 This worked fine for my RequireJS setup but creates potential future problems inside of WordPress.
 <a name="load-js-into-wordpress"></a>
-## The Proper Way To Load JavaScript Files Into WordPress
-As previously mentioned, WordPress pre-installs JS libraries and plugins before the themes actually uses them. In TwentyTwelve, jQuery isn't pre-installed: it almost always installs itself when the end user installs a jQuery-dependent plugin via the Dashboard.
+## How To Load JavaScript Files Into WordPress
+The JS files that WordPress contains but doesn't load into a theme's HTML are `registered` with WP, meaning that WP knows they exist. A registered file comes into the HTML file in one of two ways:
 
-During the install process, a jQuery-dependent plugin will check to see jQuery is already installed in the theme.  If it is, it installs the plugin code, skipping the process of installing jQuery.  If it's not, it will take the time to install it.
+1. a WordPress plugin that needs jQuery loads it in.
+2. a WordPress PHP function called ` wp_enqueue_script` loads onto the page.  This needs to be hand-written and should be placed in a custom `functions.php` file in your child theme...read more about [wp_enqueue_script](http://codex.wordpress.org/Function_Reference/wp_enqueue_script "Read more about wp_enqueue_script") and [functions.php](http://codex.wordpress.org/Functions_File_Explained "Read more about functions.php")
+
+Once a registered file is loaded in like this, WordPress knows not to install it again.  In other words, if a WordPress plugin loads jQuery UI into the HTML, subsequent plugins requiring jQueryUI won't install it and will just use the one already installed.
+
+Looking at my code snippet above, I didn't use any of these two methods...I just referred to the file in the `paths` object. This meant that WordPress had absolutely NO idea that jQuery was already on the site.
+
+As a result, if I installed a WordPress plugin requiring jQuery, WP would load it into the HTML, meaning there would be two jQuery files on my page and that's not good. I was 99.99999% sure that I wouldn't be using such plugins and this would be a non-issue, but I wasn't 100% sure.
+
+The safest thing to do was to use `wp_enqueue_script` to bring in jQuery. This would be done using the `functions.php` method just discussed:
+
+{% prism php %}
+<?php
+function my_scripts_method() {
+    wp_enqueue_script( 'jquery' );
+}
+
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+?>
+{% endprism %}
 
 
 
