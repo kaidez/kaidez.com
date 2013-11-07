@@ -18,5 +18,8 @@
     "matchmedia": "~0.1.0",
     "spinjs": "~1.3.2",
     "enquire": "~2.1.0"
+  },
+  "devDependencies": {
+    "font-awesome": "4.0.3"
   }
 }
