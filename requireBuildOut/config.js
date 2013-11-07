@@ -23,20 +23,13 @@
   },
 
   shim: {
-    // "backbone": {
-    //   deps: ["underscore", "jquery"],
-    //   exports: "Backbone"
-    // },
     "prism": {
       "exports": "Prism"
     },
     tipue: {
       deps: ["jquery"],
-      exports: "jquery"
+      exports: "tipue"
     }
-    // "underscore": {
-    //   exports: "_"
-    // }
   }
 
 });
