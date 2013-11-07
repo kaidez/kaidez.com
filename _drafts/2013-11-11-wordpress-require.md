@@ -263,9 +263,9 @@ It was at this point that I went over to Jekyll.  But it needs to be said that i
 This worked fine for my RequireJS setup but creates potential future problems inside of WordPress.
 <a name="future-wordpress-amd"></a>
 ## WordPress, AMD &amp; The Future
-At the time of this posting, a very active discussion thread has popped up around [a WordPress ticket to add AMD functionality to WP](http://core.trac.wordpress.org/ticket/23285 "Read a discussion about implementing AMD inside of WordPress"). Using RequireJS to do this is mentioned more than once in this thread.
+At the time of this posting, an active discussion has popped up around [a WordPress ticket to add AMD functionality to WP](http://core.trac.wordpress.org/ticket/23285 "Read a discussion about implementing AMD inside of WordPress"). Using RequireJS to achieve this is mentioned more than once in this thread.
 
-The thread also points out that adding AMD functionality for JavaScript would mean a heavy rewrite of how WordPress manages JS. AMD is awesome but WordPress priortizes making things like jQuery accessible to plugins...AMD would need to be implemented in a way that this doesn't change to drastically. Easier said than done.
+The thread also points out that adding AMD functionality for JavaScript would mean a heavy rewrite of how WordPress manages JS. AMD is awesome but WordPress prioritizes making things like jQuery accessible to plugins...AMD would need to be implemented in a way that this doesn't change to drastically. Easier said than done.
 
 
 
