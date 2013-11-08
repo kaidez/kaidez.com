@@ -16,7 +16,9 @@
   paths: {
     enquire: "libs/enquire.min",
     jquery: "libs/jquery.min",
+    ladda: "libs/ladda.min",
     prism: "libs/prism",
+    spin: "libs/spin",
     tipue: "libs/tipuesearch.min",
     tipueset: "libs/tipuesearch_set",
     tipuesetContent: "libs/tipuesearch_content"
