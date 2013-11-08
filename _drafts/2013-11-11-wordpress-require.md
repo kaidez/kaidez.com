@@ -12,13 +12,13 @@ tags: [RequireJS, Wordpress, jQuery, AMD]
 ---  
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install contains jQuery file and must manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install contains jQuery and must manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
 
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
 2. [What Is RequireJS?](#what-is-requirejs)
 3. [A RequireJS Example](#quick-requirejs-example)
-4. [How I THOUGHT I Could Bring jQuery Into WordPress](#bring-jquery-into-wordpress)
+4. [How I THOUGHT RequireJS Should Bring jQuery Into WordPress](#bring-jquery-into-wordpress)
 5. [The RIGHT Way To Load jQuery Into Wordress](#load-js-into-wordpress)
 6. [How To Use jQuery, RequireJS &amp; WordPress Together](#jquery-requirejs-wordpress)
 7. [WordPress, AMD &amp; The Future](#future-wordpress-amd)
@@ -27,7 +27,7 @@ The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check
 ## Assumptions &amp; Notes
 I'm making a few assumptions:
 
-The main assumption is that you understand WordPress beyond just configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable this. You should also understand that doing adding code to WP is relatively easy if you use the [WordPress Codex](http://codex.wordpress.org/) as a reference.
+The main assumption is that you understand WordPress beyond configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable this. You should also understand that adding code to WP is relatively easy if you use the [WordPress Codex](http://codex.wordpress.org/) as a reference.
 
 All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done. 
 
@@ -43,7 +43,7 @@ TwentyTwelve was the default theme for 3.5.2, and was what my child theme was ba
 
 I did test some RequireJS things in version 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So this post's point of view is from using RequireJS inside a 3.5.2/TwentyTwelve setup, but what really matters is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across all the versions and themes mentioned: the pre-install process is the same all around.
 
-And finally, there were RequireJS things that I struggled with at both the beginning and end of my site redesign. I give many thanks to [Cary Landholt](https://twitter.com/carylandholt) for helping me understanding these things, all while he had a kid take care of as well as work on one of his kick-ass JavaScript courses, the code, for  which, can be viewed on his [GitHub page](https://github.com/CaryLandholt).
+And finally, there were RequireJS things that I struggled with at both the beginning and end of my site redesign. I give many thanks to [Cary Landholt](https://twitter.com/carylandholt "Visit Cary Landholt's Twitter page") for helping me through the struggles.  Spending some time going through [Cary's YouTube screencasts](http://www.youtube.com/user/carylandholt "Watch Cary Landholt's YouTube screencasts") is time well spent, as well as the code on his [GitHub page](https://github.com/CaryLandholt "Visit Cary Landholt's GitHub page").
 
 <a name="what-is-requirejs"></a>
 ## What Is RequireJS?
@@ -203,7 +203,7 @@ RequireJS loads these four files and `scripts/search.js` into the `<head>` tag, 
 This was the code that I wanted to integrate into WordPress...and  this was where I started running into problems. Understanding these problems "requires" an understanding a few things about WordPress.
 
 <a name="bring-jquery-into-wordpress"></a>
-## How I THOUGHT I Could Bring jQuery Into WordPress
+## How I THOUGHT RequireJS Should Bring jQuery Into WordPress
 While TwentyThirteen preloads jQuery and other JavaScript files into the site's HTML, the TwentyTwelve theme I was working with does not. I was fine with this because as the above example illustrates, you only need to load one `script` tag onto the page to get RequireJS working. 
 
 As mentioned in the beginning, a default WordPress install contains jQuery other internal JS files. So I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress placed it during install via the `paths` object:
@@ -255,7 +255,9 @@ require(['app'], function (){});
 {% endprism %}
 > *This assumes jquery was loaded before the require call. If so, then this approach means requirejs will not load another version of jquery."*
 
-Yup...kicking myself for missing the obvious. James' example to uses the `require()` method where I used `define()`, but the end results in terms of detecting jQuery's presence before mapping it as a module dependency would be the same.
+Yup...kicking myself for missing the obvious. James' example to uses the `require()` method where my code used `define()`, but the end result is the same.
+
+Simply put,  in terms of detecting jQuery's presence before mapping it as a module dependency would be the same.
 
 I tested this inside of WordPress and it worked like a charm, but it meant that jQuery would be placed in a `<script>` tag on my page and be excluded from my final RequireJS build. I was very stubborn about managing all my site's JavaScript with RequireJS so I could better understand how RequireJS works.
 
