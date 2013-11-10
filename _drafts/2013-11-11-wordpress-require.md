@@ -21,13 +21,13 @@ The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check
 4. [How I THOUGHT RequireJS Should Bring jQuery Into WordPress](#bring-jquery-into-wordpress)
 5. [The RIGHT Way To Load jQuery Into Wordress](#load-js-into-wordpress)
 6. [How To Use jQuery, RequireJS &amp; WordPress Together](#jquery-requirejs-wordpress)
-7. [WordPress, AMD &amp; The Future](#future-wordpress-amd)
+7. [RequireJS/AMD, WordPress &amp; The Future?](#future-requirejs-amd-wordpress)
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
 I'm making a few assumptions:
 
-The main assumption is that you understand WordPress beyond configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable this. You should also understand that adding code to WP is relatively easy if you use the [WordPress Codex](http://codex.wordpress.org/) as a reference.
+The main assumption is that you understand WordPress beyond configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable doing this. You should also understand that adjusting code in WP is relatively easy when using the [WordPress Codex](http://codex.wordpress.org/) as a reference.
 
 All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done. 
 
@@ -43,11 +43,11 @@ TwentyTwelve was the default theme for 3.5.2, and was what my child theme was ba
 
 I did test some RequireJS things in version 3.6/TwentyThirteen and did no testing in version 3.7/TwentyThirteen as 3.7 was just released. So this post's point of view is from using RequireJS inside a 3.5.2/TwentyTwelve setup, but what really matters is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across all the versions and themes mentioned: the pre-install process is the same all around.
 
-And finally, there were RequireJS things that I struggled with at both the beginning and end of my site redesign. I give many thanks to [Cary Landholt](https://twitter.com/carylandholt "Visit Cary Landholt's Twitter page") for helping me through the struggles.  Spending some time going through [Cary's YouTube screencasts](http://www.youtube.com/user/carylandholt "Watch Cary Landholt's YouTube screencasts") is time well spent, as well as the code on his [GitHub page](https://github.com/CaryLandholt "Visit Cary Landholt's GitHub page").
+And finally, there were RequireJS things that I struggled with at both the beginning and end of this redesign. I pile gratitude upon gratitude onto [Cary Landholt](https://twitter.com/carylandholt "Visit Cary Landholt's Twitter page") for helping me through the struggles.  Spending some time going through [Cary's YouTube screencasts](http://www.youtube.com/user/carylandholt "Watch Cary Landholt's YouTube screencasts") is time well spent, particularly his RequireJS ones that are geared for beginners. Also, his [GitHub page](https://github.com/CaryLandholt "Visit Cary Landholt's GitHub page") is full of top-notch code samples.
 
 <a name="what-is-requirejs"></a>
 ## What Is RequireJS?
-RequireJS is a script loader that creates a JavaScript dependency management system within your website or web app. It's based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
+RequireJS is a script loader written in JavaScript that creates a JavaScript dependency management system within your website or web app. It's based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
 
 Generally speaking, a RequireJS setup consists of two parts:
 
@@ -55,9 +55,9 @@ Generally speaking, a RequireJS setup consists of two parts:
 
 2. __Configurations__: settings you pass to RequireJS so it can properly manage all the modules within your site or app, making sure everything works seamlessly.
 
-The modules contain not only the code needed to run your task(s), but also lists the dependencies that this code needs to run the task(s). These dependencies are things like the core jQuery library and plugins.
+The modules contain not only the code needed to run your task(s), but also lists the dependencies that this code needs to run the task(s). These dependencies are things like the core jQuery library and plugins
 
-Let's examine this by looking at an example of how RequireJS works on kaidez.com.
+Based on the configurations, RequireJS asynchronously loads the modules and dependencies onto your site. Let's examine this further by looking at an example of how RequireJS works on kaidez.com.
 
 <a name="quick-requirejs-example"></a>
 ## A RequireJS Example
@@ -72,7 +72,7 @@ Tipue needs four separate JS files to work and they must be listed in the follow
 
 In the past, setting up this functionality usually meant placing all these files in `<script>` tags on my HTML page in the order above, then putting my custom Tipue code somewhere below them. RequireJS allows for an easier process.
 
-We first add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
+First, we  add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
 {% prism markup %}
 <script data-main="scripts/config" src="scripts/require.js"></script> 
 {% endprism %}
@@ -88,9 +88,10 @@ The configurations in our `config.js` file look like this:
 {% prism javascript %}
 // We're only talking about creating one module here but this is
 // the config setup for multiple modules. This is what's being
-// discussed here as it's common practice to use multiple modules
-// but the process for configuring a single module is outlined
-// over at: http://requirejs.org/docs/api.html#define.
+// discussed because it's common practice to use multiple modules
+// in a site/app build, but the process for configuring a single
+// module is outlined over at:
+// http://requirejs.org/docs/api.html#define.
 
 requirejs.config({
 
@@ -196,9 +197,9 @@ The callback function contains our custom code, which does the following tasks:
 
 Our code is done. When our HTML page loads into a browser, `scripts/require.js` looks at the configurations in `scripts/config` and notices the `deps: ["search"]` setting, which refers to `scripts/search.js`.  It then sees that `search` needs four files to work properly, all of which are listed in the `paths` object.
 
-RequireJS loads these four files and `scripts/search.js` into the `<head>` tag, and in the proper order. If the `<script>` tag is placed as close to the bottom of the page as possible, all the files will usually load in a manner that doesn't slow down your site's/app's load time.
+RequireJS loads these four files and `scripts/search.js` into the `<head>` tag, and in the proper order. If the `<script>` tag is placed as close to the bottom of the page as possible, all the files will usually load in a manner that doesn't slow down your site's/app's load time. The code in `scripts/search.js` executes after everything loads.
 
-*(Side note: your project's RequireJS files can be concatenated and minified down to a single file, but discussing this is outside the scope of this post. The [RequireJS optimization docs](http://requirejs.org/docs/optimization.html "Learn about optimizing RequireJS") outline how to get this done.)*
+*(Side note: your project's RequireJS files can be concatenated and minified down to a single file, but discussing this is outside the scope of this post. The [RequireJS optimization docs](http://requirejs.org/docs/optimization.html "Learn about optimizing RequireJS") outline how to get this done. Plus, Cary Landholt has [a great YouTube screencast on RequireJS Optimization](http://www.youtube.com/watch?v=m6VNhqKDM4E, "Check out Cary Landholt's screencast on optimizing RequireJS").)*
 
 This was the code that I wanted to integrate into WordPress...and  this was where I started running into problems. Understanding these problems "requires" an understanding a few things about WordPress.
 
@@ -220,8 +221,8 @@ This worked fine for my RequireJS setup but creates potential future problems in
 ## The RIGHT Way To Load jQuery Into Wordress
 The JS files that WordPress contains, but doesn't load into a theme's HTML, are "registered" with WP, meaning that WP knows they exist. A registered file like jQuery comes into the HTML in one of two ways:
 
-1. a WordPress plugin that needs jQuery loads it in.
-2. a WordPress PHP function called ` wp_enqueue_script` loads it onto the page.  This needs to be hand-written and should be placed in a custom `functions.php` file in your child theme...read more about [wp_enqueue_script](http://codex.wordpress.org/Function_Reference/wp_enqueue_script "Read more about wp_enqueue_script") and [functions.php](http://codex.wordpress.org/Functions_File_Explained "Read more about functions.php")
+1. a WordPress plugin that needs jQuery loads it in durin the plugin's install.
+2. a WordPress PHP function called `wp_enqueue_script` loads it onto the page.  This needs to be hand-written and should be placed in a custom `functions.php` file in your child theme...read more about [wp_enqueue_script](http://codex.wordpress.org/Function_Reference/wp_enqueue_script "Read more about wp_enqueue_script") and [functions.php](http://codex.wordpress.org/Functions_File_Explained "Read more about functions.php")
 
 Once a registered file is loaded in like this, WordPress knows not to install it again.  In other words, if a WordPress plugin loads jQuery UI into the HTML, subsequent plugins requiring jQueryUI won't install it and will just use the one already installed.
 
@@ -230,7 +231,7 @@ Looking at my code snippet above, I didn't use any of these two methods...I just
 As a result, if I installed a WordPress plugin requiring jQuery, WP would load it into the HTML, meaning there would be two jQuery files on my page and that's not good. I was 99.99999% sure that I wouldn't be using such plugins and this would be a non-issue, but I wasn't 100% sure.
 <a name="jquery-requirejs-wordpress"></a>
 ## How To Use jQuery, RequireJS &amp; WordPress Together
-The safest thing to do was to use `wp_enqueue_script` to bring jQuery into the HTML. This would be done using the `functions.php` method just discussed:
+With the 3.5.2/ TwentyTwelve setup, the safest thing to do was to use `wp_enqueue_script` to bring jQuery into the HTML. The code for this would be placed in the just-mentioned `functions.php` file and would look like this:
 {% prism php %}
 <?php
 function my_scripts_method() {
@@ -245,7 +246,7 @@ This kept duplicate jQuery files from loading into my site, but I wasn't sure ho
 
 I surfed the web awhile looking for an answer, eventually posting something on RequireJS' GitHub Issue Tracker. It was at that point that RequireJS creator [James Burke gave me an answer](https://github.com/jrburke/requirejs/issues/622 "James Burke shows how to use RequireJS inside WordPress") so simple that to this day, I'm kicking myself for not figuring it out on my own:
 
-> *"...if jquery is already in the page, what you could do is detect for it before doing an(sic) require() loading and set it up as the 'jquery' module value:*
+> *"...if jquery is already in the page, what you could do is detect for it before doing [a] require() loading and set it up as the 'jquery' module value:*
 {% prism javascript %}
 if (typeof jQuery === 'function') {
   define('jquery', function () { return jQuery; });
@@ -255,10 +256,30 @@ require(['app'], function (){});
 {% endprism %}
 > *This assumes jquery was loaded before the require call. If so, then this approach means requirejs will not load another version of jquery."*
 
-Yup...kicking myself for missing the obvious. James' example to uses the `require()` method where my code used `define()`, but the end result is the same.
+Yup...kicking myself for missing the obvious. Had I stuck with WordPress, I would apply `wp_enqueue_script` to jQuery in using the method above, then setup `search.js` like this:
 
-Simply put,  in terms of detecting jQuery's presence before mapping it as a module dependency would be the same.
+{% prism javascript %}
+if (typeof jQuery === 'function') {
+  define('jquery', function () { return jQuery; });
+}
+
+define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
+
+  $("#tipue_search_input").tipuesearch({
+    "show": 10,
+    "showURL": false,
+    "highlightEveryTerm": true
+  });
+   
+});
+{% endprism %}
 
 I tested this inside of WordPress and it worked like a charm, but it meant that jQuery would be placed in a `<script>` tag on my page and be excluded from my final RequireJS build. I was very stubborn about managing all my site's JavaScript with RequireJS so I could better understand how RequireJS works.
 
 It was at this point that I went over to Jekyll.  But it needs to be said that if I ever need to use RequireJS and WordPress together, I would do so using the method above.
+
+<a name="future-requirejs-amd-wordpress"></a>
+## RequireJS/AMD, WordPress &amp; The Future?
+RequireJS and AMD are gaining in popularity so integrating them into WordPress is worth a discussion. Web searches show some small RequireJS implementations inside of WordPress by developers, but there's is no indication from the core WP team that some sort of AMD functionality will be bundled in a future version.
+
+There is [a feature request to bring AMD JavaScript loading into WordPress](http://core.trac.wordpress.org/ticket/23285 "Read the feature request to bring AMD into WordPress") and a great discussion has built up around it.
