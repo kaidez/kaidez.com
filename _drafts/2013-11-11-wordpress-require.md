@@ -282,4 +282,6 @@ It was at this point that I went over to Jekyll.  But if I ever need to use Requ
 ## RequireJS/AMD, WordPress &amp; The Future?
 RequireJS and AMD are gaining in popularity so integrating them into WordPress is worth a discussion. Web searches show some small RequireJS implementations inside of WordPress by developers, but there's is no indication from the core WP team that some sort of AMD functionality will be bundled in a future version.
 
-An interesting discussion has built up around [a WordPress feature request ticket to bring AMD JavaScript loading into WordPress](http://core.trac.wordpress.org/ticket/23285 "Read the feature request to bring AMD into WordPress"). The discussion's main point is that the various WordPress plugins don't necessarily use the same versions of a particular JavaScript library, particularly jQuery. 
+An interesting discussion has built up around [a WordPress feature request ticket to bring AMD JavaScript loading into WordPress](http://core.trac.wordpress.org/ticket/23285 "Read the feature request to bring AMD into WordPress"). The discussion's main point is that the various WordPress plugins don't necessarily use the same versions of a particular JavaScript library, particularly jQuery. Creating an AMD system that allows plugin developers to utilize different versions of jQuery is offered as an idea.
+
+ 
