@@ -1,4 +1,8 @@
 var tipuesearch = {"pages": [
+
+    {"title": "Using RequireJS In WordPress", "text": "Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.", "tags": "RequireJSWordpressjQueryAMD", "loc": "/requirejs-wordpress/"},
+  
+    {"title": "GitHub Tutorial Update", "text": "kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list", "tags": "gitgithub", "loc": "github-tutorial-update/"},
   
     {"title": "Media Queries Are Important", "text": "CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.", "tags": "css3media queriesbest practice", "loc": "/media-queries-important/"},
   
