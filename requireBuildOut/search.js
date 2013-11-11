@@ -4,7 +4,7 @@
  * Powers the jQuery-powered Tipue search plugin, which powers the 
  * site's main searchbox.
  */ 
-define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
+define(["jquery","tipueset","tipuesetContent","tipue"], function($, tipueset, tipuesetContent, tipue) {
 
     $('#tipue_search_input').tipuesearch({
       'show': 10,

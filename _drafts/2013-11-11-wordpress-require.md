@@ -12,7 +12,7 @@ tags: [RequireJS, Wordpress, jQuery, AMD]
 ---  
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
-The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install contains jQuery and must manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
+The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install comes with jQuery and must manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
 
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
@@ -63,14 +63,14 @@ Based on the configurations, RequireJS asynchronously loads the modules and depe
 ## A RequireJS Example
 This site's search functionality is powered by the [Tipue Search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search"). It takes end user searches and returns the search results based on the data in a JSON object containing the site content.
 
-Tipue needs four separate JS files to work and they must be listed in the following order on an HTML page:
+Tipue needs four separate JS files to work and should be listed in the following order on an HTML page:
 
 1. `jquery.js`: the core jQuery library.
 2. `tipuesearch_content.js`: the file that contains the JSON object with the site content.
 3. `tipuesearch_set.js`: the file that sets rules for certain words inputed into the search field, rules such as "ignore words like 'the' and 'or' in search inputs".
 4. `tipuesearch.js`: the core Tipue plugin code.
 
-In the past, setting up this functionality usually meant placing all these files in `<script>` tags on my HTML page in the order above, then putting my custom Tipue code somewhere below them. RequireJS allows for an easier process.
+In the past, setting up this functionality usually meant placing all these files in `<script>` tags on your HTML page in the order above, then putting your custom Tipue code somewhere below them. RequireJS allows for an easier process.
 
 First, we  add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
 {% prism markup %}
@@ -89,8 +89,8 @@ The configurations in our `config.js` file look like this:
 // We're only talking about creating one module here but this is
 // the config setup for multiple modules. This is what's being
 // discussed because it's common practice to use multiple modules
-// in a site/app build, but the process for configuring a single
-// module is outlined over at:
+// in a site/app build.  The process for configuring a single
+// module is discussed over at:
 // http://requirejs.org/docs/api.html#define.
 
 requirejs.config({
@@ -168,7 +168,7 @@ If the dependency is not AMD-compliant, RequireJS must force it to be so. That's
 
 `deps` tells RequireJS that the shimmed-in file needs jQuery to work properly. `exports`, a core [Node.js](http://nodejs.org/ "Learn more about Node.js") concept, properly exposes the shimmed-in file to the core RequireJS code so it can treat it as a dependency based on the AMD spec.
 
-Both the `tipueset` and `tipuesetContent` listed in `paths` are also not AMD-compliant; however, they're providing support for `tipue` to do its job and not executing code. So there's no need to shim them.
+Both the `tipueset` and `tipuesetContent` files listed in `paths` are also not AMD-compliant; however, they're just providing support for `tipue` to do its job instead of executing code. In this instance, there's no need to shim them.
 
 jQuery also doesn't need to be shimmed in. This is because we're using version 1.10.2 and [jQuery has been AMD-compliant since version 1.7](http://requirejs.org/docs/whyamd.html#amdtoday "View JS libraries and frameworks that are AMD-compliant").
 
@@ -186,7 +186,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
 });
 {% endprism %}
 
-The `define()` method first defines all the code's dependencies in the array, then passes them as parameters to a callback function. Note that they're listed in the order outlined above: RequireJS will load things in this order.
+The `define()` method first defines all the code's dependencies in the array, then passes them as parameters for a callback function. Note that they're listed in the order outlined above: RequireJS will load things in this order.
 
 The callback function contains our custom code, which does the following tasks:
 
@@ -219,12 +219,12 @@ paths: {
 This worked fine for my RequireJS setup but creates potential future problems inside of WordPress.
 <a name="load-js-into-wordpress"></a>
 ## The RIGHT Way To Load jQuery Into WordPress
-The JS files that WordPress contains, but doesn't load into a theme's HTML, are "registered" with WP, meaning that WP knows they exist. A registered file like jQuery comes into the HTML in one of two ways:
+The default WordPress install contains many JS file that are "registered," meaning that WP knows they exist but doesn't necessarily load them into the theme's HTML. An unloaded registered file comes into the HTML in one of two ways:
 
-1. a WordPress plugin that needs jQuery loads it in durin the plugin's install.
+1. a WordPress plugin that needs jQuery loads it in during the plugin's install.
 2. a WordPress PHP function called `wp_enqueue_script` loads it onto the page.  This needs to be hand-written and should be placed in a custom `functions.php` file in your child theme...read more about [wp_enqueue_script](http://codex.wordpress.org/Function_Reference/wp_enqueue_script "Read more about wp_enqueue_script") and [functions.php](http://codex.wordpress.org/Functions_File_Explained "Read more about functions.php")
 
-Once a registered file is loaded in like this, WordPress knows not to install it again.  In other words, if a WordPress plugin loads jQuery UI into the HTML, subsequent plugins requiring jQueryUI won't install it and will just use the one already installed.
+Once a registered file is loaded in like this, WordPress knows not to install it again.  In other words, if jQuery UI loads into the HTML via either a plugin or `wp_enqueue_script`, subsequent plugins requiring jQueryUI won't install it and will just use the one already installed.
 
 Looking at my code snippet above, I didn't use any of these two methods...I just referred to the file in the `paths` object. This meant that WordPress had absolutely NO idea that jQuery was already on the site.
 
@@ -274,7 +274,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
 });
 {% endprism %}
 
-I tested this inside of WordPress and it worked like a charm, but it meant that jQuery would be placed in a `<script>` tag on my page and be excluded from my final RequireJS build. I was very stubborn about managing all my site's JavaScript with RequireJS so I could better understand how RequireJS works.
+I tested this inside of WordPress and it worked like a charm, but I had to get jQuery on the page via `wp_enqueue_script`. This meant that jQuery would be placed in a `<script>` tag on my page and be excluded from my final RequireJS build. This is, generally, not how RequireJS works and I was very stubborn about managing all my site's JavaScript with RequireJS so I could better understand how it works.
 
 It was at this point that I went over to Jekyll.  But if I ever need to use RequireJS and WordPress together, I would do so using the method above.
 
@@ -282,6 +282,6 @@ It was at this point that I went over to Jekyll.  But if I ever need to use Requ
 ## RequireJS/AMD, WordPress &amp; The Future?
 RequireJS and AMD are gaining in popularity so integrating them into WordPress is worth a discussion. Web searches show some small RequireJS implementations inside of WordPress by developers, but there's is no indication from the core WP team that some sort of AMD functionality will be bundled in a future version.
 
-An interesting discussion has built up around [a WordPress feature request ticket to bring AMD JavaScript loading into WordPress](http://core.trac.wordpress.org/ticket/23285 "Read the feature request to bring AMD into WordPress"). The discussion's main point is that the various WordPress plugins don't necessarily use the same versions of a particular JavaScript library, particularly jQuery. Creating an AMD system that allows plugin developers to utilize different versions of jQuery is offered as an idea.
+An interesting discussion has built up around [a feature request ticket to bring AMD JavaScript loading into WordPress](http://core.trac.wordpress.org/ticket/23285 "Read the feature request to bring AMD into WordPress"). Referring primarily to jQuery, the discussion's main point is that the various WordPress plugins don't necessarily use the same versions of the JavaScript library. Some plugins require an older version of jQuery: creating an AMD system that allows plugin developers to load an older version is offered as a solution to the problem.
 
- 
+The discussion also doesn't offer any solutions, but WordPress somewhat solved this problem with the release of the TwentyThirteen theme.
