@@ -36,9 +36,9 @@ JavaScript wasn't the only thing I focused on: CSS stuff such as preprocessors, 
 
 ## Moving Forward With A New Site
 
-In order to implement this all I learned, I'll be redoing kaidez.com. Specifically, the site will be redesigned and get a radical change on the backend...more on that in the next blog post. Also, the HTML5 Project is no more...this site redesign will fully use HTML5 structure so I'll consider the project done as soon as it relaunches. I'll also be discussing the aforementioned development-level tooling, which made things REALLY fun.
+In order to implement all I learned, I'll be redoing kaidez.com. Specifically, the site will be redesigned and get a radical change on the backend...read about that [here](/site-redesign-2013/ "Read the resdesign process for kaidez.com"). Also, the HTML5 Project is no more...this site redesign will fully use HTML5 structure so I'll consider the project done as soon as it relaunches. I'll also be discussing the aforementioned development-level tooling, which made things REALLY fun.
 
-After that, I'll be redoing my [GitHub tutorial][6], then creating a bunch of new posts, including tutorials, coding tips, a review of the ["Downloaded" movie}][7] and (maybe) a screencast or two.
+After that, I'll be redoing my [GitHub tutorial][6], then creating a bunch of new posts, including tutorials, coding tips, a review of the ["Downloaded" movie][7] and (maybe) a screencast or two.
 
 Stay Tuned!!!!!!!!!
  

@@ -8,14 +8,16 @@ permalink: /requirejs-wordpress/
 category: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
-tags: [RequireJS, Wordpress, jQuery, AMD]
+tags: [RequireJS, Wordpress, jQuery, AMD, javascript]
 ---  
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
 The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install includes jQuery, and WP needs to manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
 
+*(Side note: his post is long so if you're looking for a quick answer for using RequireJS inside of WordPress, go to the ["How To Use jQuery, RequireJS &amp; WordPress Together"](#jquery-requirejs-wordpress "How To Use jQuery, RequireJS &amp; WordPress Together") section.)*
+
 ## Table of Contents
-1. [Notes &amp; Assumptions](#notes-assumptions)
+1. [Assumptions &amp; Notes](#assumptions-notes)
 2. [What Is RequireJS?](#what-is-requirejs)
 3. [A RequireJS Example](#quick-requirejs-example)
 4. [How I THOUGHT RequireJS Should Bring jQuery Into WordPress](#bring-jquery-into-wordpress)
@@ -24,11 +26,17 @@ The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check
 7. [RequireJS/AMD, WordPress &amp; The Future?](#future-requirejs-amd-wordpress)
 8. [Conclusion](#conclusion)
 
-<a name="notes-assumptions"></a>
-## Notes &amp; Assumptions
-Some notes...
+<a name="assumptions-notes"></a>
+## Assumptions &amp; Notes
+I'm making a few assumptions:
 
-This post is long so if you're looking for a quick answer for using RequireJS inside of WordPress, got to the ["How To Use jQuery, RequireJS &amp; WordPress Together"](#jquery-requirejs-wordpress "How To Use jQuery, RequireJS &amp; WordPress Together") section.
+The main assumption is that you understand WordPress beyond configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable doing this. You should also understand that adjusting code in WP is relatively easy when using the [WordPress Codex](http://codex.wordpress.org/) as a reference.
+
+All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done. 
+
+RequireJS is relatively new when compared to WordPress so I do walk through the former more that the latter, but it's still only a walk-through. RequireJS can do much more than the tasks discussed in this post so I'm assuming that you're curious about RequireJS and have no problem reading a few things to better understand it, starting with the [RequireJS API docs](http://requirejs.org/docs/api.html "Read the RequireJS API").
+
+Some notes...
 
 This post should *not* be looked as my stating that "WordPress is bad." WordPress is awesome and I will continue to use it, but it was not the way to go in order to meet the RequireJS-related goal I set for myself with this redesign. I discuss this at great length in [my site redesign post](/site-redesign-2013/#jekyll "Read about why kaidez.com switched from WordPress to Jekyll").
 
@@ -39,14 +47,6 @@ TwentyTwelve was the default theme for 3.5.2, and was what my child theme was ba
 I did test *some* RequireJS things in version 3.6/TwentyThirteen and did no testing in version 3.7 testing at all because it was released roughly three weeks before this post's publish date. So this post's point of view is from using RequireJS inside a 3.5.2/TwentyTwelve setup, but what really matters is how WordPress pre-installs JS libraries and plugins before the themes actually use them. That, I have tested across all the versions and themes mentioned: the pre-install process is the same all around.
 
 And finally, there were some RequireJS things that I struggled with at both the beginning and end of the redesign. I pile a ton of gratitude onto [Cary Landholt](https://twitter.com/carylandholt "Visit Cary Landholt's Twitter page") for helping me through the struggles.  Spending some time going through [Cary's YouTube screencasts](http://www.youtube.com/user/carylandholt "Watch Cary Landholt's YouTube screencasts") is time well spent, particularly his RequireJS ones that are geared for beginners. Also, his [GitHub page](https://github.com/CaryLandholt "Visit Cary Landholt's GitHub page") is full of top-notch code samples.
-
-I'm also making a few assumptions:
-
-The main assumption is that you understand WordPress beyond configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable doing this. You should also understand that adjusting code in WP is relatively easy when using the [WordPress Codex](http://codex.wordpress.org/) as a reference.
-
-All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done. 
-
-RequireJS is relatively new when compared to WordPress so I do walk through the former more that the latter, but it's still only a walk-through. RequireJS can do much more than the tasks discussed in this post so I'm assuming that you're curious about RequireJS and have no problem reading a few things to better understand it, starting with the [RequireJS API docs](http://requirejs.org/docs/api.html "Read the RequireJS API").
 
 <a name="what-is-requirejs"></a>
 ## What Is RequireJS?
