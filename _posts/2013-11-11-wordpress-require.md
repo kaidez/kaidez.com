@@ -50,7 +50,7 @@ And finally, there were some RequireJS things that I struggled with at both the 
 
 <a name="what-is-requirejs"></a>
 ## What Is RequireJS?
-RequireJS is a script loader written in JavaScript that creates a JavaScript dependency management system within your website or web app. It's based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
+RequireJS is a script loader written in JavaScript that creates a dependency management system within your website or web app. It's based on the [Asynchronous Module Definition (AMD) specification](https://github.com/amdjs/amdjs-api/wiki/AMD) which defines a code pattern for loading JS files in an asynchronous, organized, non-blocking fashion.
 
 Generally speaking, a RequireJS setup consists of two parts:
 
