@@ -35,7 +35,7 @@ The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) 
 ### Goodbye, WordPress... 
 My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
 
-WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to (more about that in a future blog post). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress. 
+WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to ([read more about this](/requirejs-wordpress/ "Read kaidez's Using RequireJS In WordPress' post")). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress. 
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
@@ -164,7 +164,7 @@ RequireJS doesn't manage ALL of this site's JavaScript...we'll discuss that in a
 
 Which is an important point: while it takes optimization seriously, RequireJS' main purpose in life is to allow developers to write JS in a modular, well-organized fashion (its [documentation](http://requirejs.org/docs/api.html#usage) is very clear about this purpose	). I wrote singular bits of JavaScript in separate files without worrying about global variable leakage, things loading in the proper order, etc...developing with RequireJS made my life so much easier.
 
-There's not enough space in this post to discuss the brilliance of RequireJS so [read the RequireJS API docs](http://requirejs.org/docs/api.html) so you can get up and running. The previously mentioned JavaScript/WordPress issues were RequireJS-related so that future post will discuss it a bit. And I MIGHT do a RequireJS screencast in the future...not 100% sure about this yet.
+There's not enough space in this post to discuss the brilliance of RequireJS so [read the RequireJS API docs](http://requirejs.org/docs/api.html) so you can get up and running. The previously mentioned JavaScript/WordPress issues were RequireJS-related and are discussed [here](/requirejs-wordpress/ "Read kaidez's Using RequireJS In WordPress' post"). And I MIGHT do a RequireJS screencast in the future...not 100% sure about this yet.
 
 I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro/4686136 "read this GitHub Gist about RequireJS") where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS as well as [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD "Go to the Asynchronous Module Definition Page"), which RequireJS is heavily based upon.
 

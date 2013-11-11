@@ -1,9 +1,9 @@
 ---
-title: RequireJS & WordPress
+title: Using RequireJS In WordPress
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Read about methods for managing RequireJS in WordPress
+meta-excerpt: Learn how to use RequireJS in WordPress. Includes a walkthrough of how RequireJS works and how WordPress manages JavaScript internally. 
 permalink: /requirejs-wordpress/
 category: coding-best-practices
 cat-name: "Code Tips"
@@ -22,6 +22,7 @@ The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check
 5. [The RIGHT Way To Load jQuery Into WordPress](#load-js-into-wordpress)
 6. [How To Use jQuery, RequireJS &amp; WordPress Together](#jquery-requirejs-wordpress)
 7. [RequireJS/AMD, WordPress &amp; The Future?](#future-requirejs-amd-wordpress)
+8. [Conclusion](#conclusion)
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
@@ -284,4 +285,12 @@ RequireJS and AMD are gaining in popularity so integrating them into WordPress i
 
 An interesting discussion has built up around [a feature request ticket to bring AMD JavaScript loading into WordPress](http://core.trac.wordpress.org/ticket/23285 "Read the feature request to bring AMD into WordPress"). Referring primarily to jQuery, the discussion's main point is that the various WordPress plugins don't necessarily use the same versions of the JavaScript library. Some plugins require an older version of jQuery: creating an AMD system that allows plugin developers to load an older version is offered as a solution to the problem.
 
-The discussion also doesn't offer any solutions, but WordPress somewhat solved this problem with the release of the TwentyThirteen theme.
+The discussion also doesn't offer any solutions, but WordPress somewhat solved this problem with the release of the TwentyThirteen theme. The theme comes bundled with [jQuery Migrate](https://github.com/jquery/jquery-migrate/, "Go to main the jQuery Migrate page"), which detects and loads deprecated jQuery features. Plugin developers in need of jQuery's older features can take advantage of this, after testing things, of course.
+
+Even if jQuery Migrate didn't solve this problem, I'm of the opinion that WordPress can't do much more than this right now. Integrating RequireJS or another AMD JavaScript solution is nice to have in WP, but not crucial to its growth and survival. And doing so would mean a major code rewrite for how WordPress already handles JavaScript, which is currently fine as is.
+
+Simply put, WordPress is content management system meant to solve customer and business problems. It needs to be demonstrated that AMD/RequireJS can solve such a problems and until that happens, I can't see this functionality landing into WordPress...just my opinion on all this.
+
+<a name="conclusion"></a>
+## Conclusion
+Bringing RequireJS into WordPress is possible, but you may have to make adjustments in some spots to make sure everything works. That's a natural occurrence in web development though, so feel free to review the many links above and go ahead and do so.
