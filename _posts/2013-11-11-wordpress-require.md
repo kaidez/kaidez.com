@@ -14,7 +14,7 @@ As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-throug
 
 The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install includes jQuery, and WP needs to manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
 
-*(Side note: his post is long so if you're looking for a quick answer for using RequireJS inside of WordPress, go to the ["How To Use jQuery, RequireJS &amp; WordPress Together"](#jquery-requirejs-wordpress "How To Use jQuery, RequireJS &amp; WordPress Together") section.)*
+*(Side note: this post is long so if you're looking for a quick answer for using RequireJS inside of WordPress, go to the ["How To Use jQuery, RequireJS &amp; WordPress Together"](#jquery-requirejs-wordpress "How To Use jQuery, RequireJS &amp; WordPress Together") section.)*
 
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
