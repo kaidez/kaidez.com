@@ -24,4 +24,6 @@ I'm assuming that you've got Jekyll already installed on your machine. If you do
 
 Some notes...
 
-This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search")when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it your self. The point of the tutorial is to teach you how to create JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled.
+Testing this code only works if both JavaScript and CSS are disabled __BEFORE__ it runs in a browser.  You can't run the code and then disable JavaScript and CSS with something like [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension").
+
+This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it your self. The point of the tutorial is to teach you how to create JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled.
