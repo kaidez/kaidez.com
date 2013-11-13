@@ -33,7 +33,7 @@ This tutorial is based on my implementing the [Tipue search jQuery plugin](http:
 
 To be honest: if you want search engine functionality on your Jekyll site, you really can just use one of the Google solutions and move on. It works fine and doesn't a JS solution to create Jekyll search functionality on your page.
 
-Finally, you may read this and some point and say "Isn't it easier to just place the fallback code in `<noscript>`?". No, because it doesn't always work and if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
+Finally, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?". No, because it doesn't always work and if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
 <a name="fallback-code"></a>
 ## The Various Versions Of Google CSE We Can Use For Our Fallback Code
