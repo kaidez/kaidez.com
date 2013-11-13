@@ -16,6 +16,7 @@ A common solution to this problem is to create custom search functionality power
 
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
+2. [Setup Our Fallback Code First](#setup-fallback-code)
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
@@ -24,6 +25,21 @@ I'm assuming that you've got Jekyll already installed on your machine. If you do
 
 Some notes...
 
-Testing this code only works if both JavaScript and CSS are disabled __BEFORE__ it runs in a browser.  You can't run the code and then disable JavaScript and CSS with something like [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension").
+The only way to test this code is to disable both JavaScript and CSS are __BEFORE__ the code runs in a browser.  You can't run the code and then disable JavaScript and CSS with something like [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension").
 
-This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it your self. The point of the tutorial is to teach you how to create JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled.
+This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it yourself. The point of the tutorial is to teach you how to create JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled, not push you towards the search solution I like. I list soon other search solutions towards the end of this post.
+
+You may read this and some point and say "Isn't it easier to just use `<noscript>` for the fallback code?". If you're writing HTML5 and are only concerned about modern browsers, 
+
+<a name="setup-fallback-code"></a>
+## Setup Our Fallback Code First
+First, let's setup the search functionality that will run if either JavaScript or CSS is disabled.
+
+
+<!-- <form id="cse-search-box" action="http://google.com/cse">
+  <input type="hidden" name="cx" value="002415104166026759813:ndlid96e1nk" />
+  <input type="hidden" name="ie" value="UTF-8" />
+  <input type="text" name="q" size="31" />
+  <input type="submit" name="sa" value="Search" />
+</form>
+<img src="http://www.google.com/cse/images/google_custom_search_smwide.gif"> -->
