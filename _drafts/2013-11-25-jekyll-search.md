@@ -138,7 +138,7 @@ The reason I did more than this was because I wanted to deliver a certain experi
 
 <a name="tipue"></a>
 ## Put Tipue Search On The Site
-As per the Tipue documentation  
+Let's look at the code for setting up Tipue
 
 
 
