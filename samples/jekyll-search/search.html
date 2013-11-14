@@ -5,23 +5,36 @@
 	<title>Search Results</title>
   <link href="css/tipuesearch.css" rel="stylesheet">
 </head>
-<body>
-	<div style="float: left;">
-    <input type="text" id="tipue_search_input"></div>
-<div style="float: left; margin-left: 13px;">
-  <input type="button" id="tipue_search_button"></div>
-<div id="tipue_search_content"></div>
-  
+  <div id="container" class="containerClass">
+  <h1>Search Results</h1>
+    <div id="searchbox">
+      <form action="search.html">
+        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        <input type="submit" class="btnSearch" value="Search">    
+      </form>
+    </div>
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+  </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <div id="tipue_search_content"></div>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <script src="js/tipuesearch_content.js"></script>
   <script src="js/tipuesearch_set.js"></script>
   <script src="js/tipuesearch.min.js"></script>
   <script>
-  $(document).ready(function() {
-     $('#tipue_search_input').tipuesearch();
-});
-</script>
+    $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch();
+    });
+  </script>
 
 </body>
 </html>
