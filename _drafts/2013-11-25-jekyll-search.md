@@ -10,14 +10,28 @@ cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tute]
 ---  
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites and not database-driven sites. This means that it can't provide the custom search functionality provided by content management systems like WordPress and Drupal.
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites instead of database-driven sites. This means that it can't provide the custom site search functionality provided by content management systems like WordPress and Drupal.
 
-A common solution to this problem is to create custom search functionality powered by either JavaScript or jQuery, but none of these solutions will work if the end-user disables JavaScript. This can create accessibility issues; therefore, this tutorial walks through how to create Jekyll search functionality with a fallback for situations where not only JavaScript is disabled, but also when CSS is disabled as well.
+A common solution to this problem is to create some type of Javascript/jQuery-powered search functionality, but this won't work if JavaScript is disabled in the browser. This can create accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality (which is great for static sites), but also create a fallback search method for situations where either JavaScript and/or CSS is disabled.
 
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
-2. [The Various Versions Of Google CSE We Can Use For Our Fallback Code](#fallback-code)
-3. [Start Putting Tipue Search On The Site](#start-tipue)
+2. [The Goal &amp; The Plan](#goal-plan)
+3. [The Various Versions Of Google CSE We Can Use For Our Fallback Code](#fallback-code)
+4. [Start Putting Tipue Search On The Site](#start-tipue)
+
+<a name="goal-plan"></a>
+## The Goal &amp; The Plan
+
+The goal is to add jQuery-powered search functionality to our site, but to also make sure that this functionality doesn't show up on our page if either JavaScript, CSS or both have been disabled in the browser. In those situations, we want to provide search functionality that works even if JavaScript, CSS or both have been disabled in the browser.
+
+Here's the plan to acheive this...
+
+We will first create an HTML page that contains the code for the fallback search method. This page will include a reference to a JavaScript file that contains code which will help to detect whether or not JavaScript is enabled in a web browser.
+
+This page will NOT contain the JavaScript-powered search functionality that we need, so we will create that next. It will be created off-DOM then loaded onto the page.
+
+Lastly, we will use JavaScript to detect whether or not CSS is enabled.  
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
@@ -26,9 +40,9 @@ I'm assuming that you've got Jekyll already installed on your machine. If you do
 
 Some notes...
 
-The proper way to test this code is to disable both JavaScript and CSS are __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough using [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  Disabling CSS before page load is tricky...Pederick's tool disables it __AFTER__ page load, then CSS is enabled on page refresh. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, I found the Firefox solution to be the easiest way to fully disable CSS (View &gt; Page Style &gt; No Style).
+The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But disabling CSS before page load is tricky: Pederick's tool disables it __AFTER__ page load.  CSS is enabled on page refresh after that, which isn't helpful. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, I found the Firefox solution to be the easiest way to fully disable CSS before page load (View &gt; Page Style &gt; No Style).
 
-The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), for which there are various versions. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, take accessibilty into consideration.  I go through all this versions in the next section, showing you the pros and cons for each and allowing you to make your own choice.
+The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), for which there are various versions. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, take accessibilty into consideration.  I go through all these options in the next section, showing you the pros and cons for each and allowing you to make your own choice. I probably could avoid going through all these options but since the tutorial's final code uses option that Google doesn't currently recommend, I feel obliged to show you all the options.
 
 This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it. The point of the tutorial is to teach you how to apply a JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled, not push you towards the Javascript-based Jekyll search solution that I like. I list some other search solutions towards the end of this post.
 
@@ -287,7 +301,7 @@ Let's breakdown the files, starting with both the similarities and differences a
 * both files have a `no-js` class attached to the `<html>` element.
 * both files reference the same three CSS files but the first two are only applying styles and have no affect on the Tipue search functionality. The last file, `css/styles.css`, has one selector called `.js #no-js-searchbox`, which does affect on the Tipue search functionality. We'll talk about all the JavaScript shortly.
 * both files reference a file called `js/jsDetect.js` which detects whether or not JavaScript is enabled. Again, we'll talk about all the JavaScript shortly.
-* both files have HTML code for two search boxes: the Tipue one and the Google CSE one. If you were to load either of these pages into a browser right now, the Tipue search box will be visible but the Google one would not be.  Again, all of this will make sense after we talk about the JavaScript.
+* both files have HTML code for the Google searcg box but not the Tipue search box. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into a web page element that's on each page called `<div id="searchbox"> </div>`.
 * both files reference jQuery using the method popularized by [HTML5 Boilerplate](http://html5boilerplate.com/ "Review HTML5 Boilerplate front-end template") and the three JavaScript files needed to make the Tipue search functionality work. Both also contain a file called `js/scripts.js` which where we'll be placing our custom code. All these files are important but moving forward in this post, we'll be talking about `js/scripts.js` only.
 * the title tag and `<h1>` copy is different among both pages but the key difference is `search.html` as an extra tag: `<div id="tipue_search_content"></div>`. This is because when and end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
 
@@ -296,10 +310,8 @@ Now...let's look at `css/styles.css`:
 .js #no-js-searchbox {
   display: none;
 }
-
 ...
 {% endprism %}
-
 
 <!-- 
 
