@@ -17,6 +17,7 @@ A common solution to this problem is to create custom search functionality power
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
 2. [The Various Versions Of Google CSE We Can Use For Our Fallback Code](#fallback-code)
+3. [Put Tipue Search On The Site](#tipue)
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
@@ -25,15 +26,13 @@ I'm assuming that you've got Jekyll already installed on your machine. If you do
 
 Some notes...
 
-The proper way to test this code is to disable both JavaScript and CSS are __BEFORE__ the code runs in a browser.  For this, I found that using [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension") in Firefox was the best way to initially test, then doing a full test in the other browsers. The Web Developer extension does work in Chrome and Opera, but each reloads the page after you use it to disable JavaScript and CSS, which is not what you want. 
+The proper way to test this code is to disable both JavaScript and CSS are __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough using [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  Disabling CSS before page load is tricky...Pederick's tool disables it __AFTER__ page load, then CSS is enabled on page refresh. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, I found the Firefox solution to be the easiest way to fully disable CSS (View &gt; Page Style &gt; No Style).
 
 The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), for which there are various versions. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, taking accessibilty into consideration.  I go through all this versions in the next section, showing you the pros and cons for each and allowing you to make your own choice.
 
-This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it yourself. The point of the tutorial is to teach you how to create JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled, not push you towards the Javascript-based Jekyll search solution that I prefer. I list some other search solutions towards the end of this post.
+This tutorial is based on my implementing the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") when I redesigned my site and while I'm very happy with it, I'm not suggesting that you use it. The point of the tutorial is to teach you how to create JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled, not push you towards the Javascript-based Jekyll search solution that I like. I list some other search solutions towards the end of this post.
 
-To be honest: if you want search engine functionality on your Jekyll site, you really can just use one of the Google solutions and move on. It works fine and doesn't a JS solution to create Jekyll search functionality on your page.
-
-Finally, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?". No, because it doesn't always work and if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
+Lastly, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?". No, because it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
 <a name="fallback-code"></a>
 ## The Various Versions Of Google CSE We Can Use For Our Fallback Code
@@ -97,7 +96,7 @@ For me, there are two downside with version 2...
 
 The first downside is that version 2's search results page displays more ads and branding when compared to the search results page in version 1.
 
-The second downside is this version needs JavaScript to return search results whereas version one did not. If you do a search using this search results box while JavaScript is *disabled*, you're taken to page that says the results can only be viewed unless JavaScript is *enabled*. The page also contains link that takes you a search results page that doesn't depend on on JavaScript and I guess that's good, but it ads another click to the end-user experience...I didn't want to include that on my site.
+The second downside is this version needs JavaScript to return search results whereas version 1 did not. If you do a search using this search results box while JavaScript is *disabled*, you're taken to page that says the results can only be viewed unless JavaScript is *enabled*. The page also contains link that takes you a search results page that doesn't depend on on JavaScript and I guess that's good, but it ads another click to the end-user experience...I didn't want to include that on my site.
 
 ### 3. CSE Code That Google Recommends
 {% prism markup %}
@@ -131,6 +130,23 @@ The second downside is this version needs JavaScript to return search results wh
 
 This is the current [CSE solution that Google recommends](http://googlecustomsearch.blogspot.com/2012/08/introducing-custom-search-element-v2.html "Read about the current Google CSE recommendation"). Note that the search engine ID is now placed inside a JavaScript variable instead of being applied to a tag attribute. It also provides the same level of customization that version 2 offers.
 
-Version 3's downside is that it's a pure JavaScript solution that won't work if JavaScript is disabled...the searchbox won't even show up on the page.  We need a solution that works when JavaScript is disable so this won't help us solve our problem.
+Version 3's downside is that it's a purely JavaScript solution that won't work if JavaScript is disabled...the searchbox won't even show up on the page.  We need a solution that works when JavaScript is disabled so this won't help us solve our problem.
+
+To be honest: if you want search engine functionality on your Jekyll site, you really can just use one of these Google solutions and move on. I would use one of the first two and skip the third one since it won't work if JS is turned off which, again, is not good from an accessibilty standpoint.
+
+The reason I did more than this was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on the site, I wanted them to stay on the site. None of the CSE solutions did this so I went with Tipue
+
+<a name="tipue"></a>
+## Put Tipue Search On The Site
+As per the Tipue documentation  
 
 
+
+
+<!--
+Legal
+404 (with sitemap)
+301 Redirect (What due date is the Revlon requeting due date for 301 Redirect mapping?)
+Excel spreadsheet for Webmaster Tools tagging & GA?
+Add event tagging the ADD TO CART button?
+-->
