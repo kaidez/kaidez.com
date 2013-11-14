@@ -128,7 +128,7 @@ The second downside is this version needs JavaScript to return search results wh
 </html>
 {% endprism %}
 
-This is the current [CSE solution that Google recommends](http://googlecustomsearch.blogspot.com/2012/08/introducing-custom-search-element-v2.html "Read about the current Google CSE recommendation"). Note that the search engine ID is now placed inside a JavaScript variable instead of being applied to a tag attribute. It also provides the same level of customization that version 2 offers.
+This is [the current CSE solution that Google recommends](http://googlecustomsearch.blogspot.com/2012/08/introducing-custom-search-element-v2.html "Read about the current Google CSE recommendation"). Note that the search engine ID is now placed inside a JavaScript variable instead of being applied to a tag attribute. It also provides the same level of customization that version 2 offers.
 
 Version 3's downside is that it's a purely JavaScript solution that won't work if JavaScript is disabled...the searchbox won't even show up on the page.  We need a solution that works when JavaScript is disabled so this won't help us solve our problem.
 
@@ -140,6 +140,7 @@ The reason I did more than this was because I wanted to deliver a certain experi
 ## Start Putting Tipue Search On The Site
 We're going to begin implementing our Tipue code.  This is not the final code that we'll use, just a preview of how things will look after out final code is executed. 
 
+Many files are needed to make this functionality work but there are four files we need to closely look at: 1) `index.html`, 2) `search.html`, 3) `css/styles.css`, and 4) `js/scripts.js`. 
 __index.html__
 {% prism markup %}
 <!DOCTYPE html>
@@ -150,16 +151,17 @@ __index.html__
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link href="css/tipuesearch.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jsDetect.js"></script>
 </head>
 <body>
   <div id="container" class="containerClass">
   <h1>Search here...</h1>
-    <div id="searchbox">
-      <form action="search.html">
-        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
-        <input type="submit" class="btnSearch" value="Search">    
-      </form>
-    </div>
+
+    <!-- Tipue Search box will go here -->
+    <div id="searchbox"> </div>
+
+
+    <!-- Google CSE search box starts here -->
     <div id="no-js-searchbox">
       <form action="http://google.com/search" method="get">
         <fieldset role="search">
@@ -169,6 +171,8 @@ __index.html__
         </fieldset>
       </form> 
     </div>
+    <!-- Google CSE search box ends here -->
+
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -192,16 +196,16 @@ __search.html__
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link href="css/tipuesearch.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jsDetect.js"></script>
 </head>
 <body>
   <div id="container" class="containerClass">
   <h1>Search Results</h1>
-    <div id="searchbox">
-      <form action="search.html">
-        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
-        <input type="submit" class="btnSearch" value="Search">    
-      </form>
-    </div>
+
+    <!-- Tipue Search box will go here -->
+    <div id="searchbox"> </div>
+
+    <!-- Google CSE search box starts here -->
     <div id="no-js-searchbox">
       <form action="http://google.com/search" method="get">
         <fieldset role="search">
@@ -211,6 +215,8 @@ __search.html__
         </fieldset>
       </form> 
     </div>
+    <!-- Google CSE search box ends here -->
+
   </div>
 
   <div id="tipue_search_content"></div>
@@ -224,26 +230,6 @@ __search.html__
 
 </body>
 </html>
-{% endprism %}
-
-__js/scripts.js__
-{% prism javascript %}
-(function(){
-
-    // The Tipue-powered code that returns search results to
-    // "search.html".
-    $(function() {
-      $('#tipue_search_input').tipuesearch();
-    });
-    
-    // If JavaScript is enabled, this code will change the "no-js" 
-    // class on the opening <html> element to "js". This code is stolen
-    // from Modernizr so if Modernizr is already on your web page,
-    // don't use this part of the code.
-    var docElement = document.documentElement;
-    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
-
-})();
 {% endprism %}
 
 __css/styles.css__
@@ -269,3 +255,57 @@ form {
   width: 900px;
 }
 {% endprism %}
+
+__js/scripts.js__
+{% prism javascript %}
+(function(){
+
+    // The Tipue-powered code that returns search results to
+    // "search.html".
+    $(function() {
+      $('#tipue_search_input').tipuesearch();
+    });
+
+})();
+{% endprism %}
+
+__js/jsDetect.js__
+{% prism javascript %}
+// If JavaScript is enabled, this code will change the "no-js" class on
+// the opening <html> element to "js". This code is stolen from
+// Modernizr so if Modernizr is already on your web page, don't use
+// this part of the code.
+var docElement = document.documentElement;
+docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
+
+})();
+{% endprism %}
+
+
+Let's breakdown the files, starting with both the similarities and differences among `index.html` and `search.html`:
+
+* both files have a `no-js` class attached to the `<html>` element.
+* both files reference the same three CSS files but the first two are only applying styles and have no affect on the Tipue search functionality. The last file, `css/styles.css`, has one selector called `.js #no-js-searchbox`, which does affect on the Tipue search functionality. We'll talk about all the JavaScript shortly.
+* both files reference a file called `js/jsDetect.js` which detects whether or not JavaScript is enabled. Again, we'll talk about all the JavaScript shortly.
+* both files have HTML code for two search boxes: the Tipue one and the Google CSE one. If you were to load either of these pages into a browser right now, the Tipue search box will be visible but the Google one would not be.  Again, all of this will make sense after we talk about the JavaScript.
+* both files reference jQuery using the method popularized by [HTML5 Boilerplate](http://html5boilerplate.com/ "Review HTML5 Boilerplate front-end template") and the three JavaScript files needed to make the Tipue search functionality work. Both also contain a file called `js/scripts.js` which where we'll be placing our custom code. All these files are important but moving forward in this post, we'll be talking about `js/scripts.js` only.
+* the title tag and `<h1>` copy is different among both pages but the key difference is `search.html` as an extra tag: `<div id="tipue_search_content"></div>`. This is because when and end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
+
+Now...let's look at `css/styles.css`:
+{% prism css %}
+.js #no-js-searchbox {
+  display: none;
+}
+
+...
+{% endprism %}
+
+
+<!-- 
+
+        <form action="search.html">
+        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        <input type="submit" class="btnSearch" value="Search">    
+      </form>
+
+    -->
