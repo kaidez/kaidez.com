@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Results</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+</head>
+<body>
+	<div style="float: left;"><input type="text" id="tipue_search_input"></div>
+<div style="float: left; margin-left: 13px;"><input type="button" id="tipue_search_button"></div>
+<div id="tipue_search_content"></div>
+
+  <script>
+  $(document).ready(function() {
+     $('#tipue_search_input').tipuesearch();
+});
+</script>
+
+</body>
+</html>
