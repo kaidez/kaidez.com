@@ -1,3 +1,7 @@
+#no-js-searchbox {
+  display: none;
+}
+
 body {
   font: 12px/1.7 'open sans', sans-serif;
 }
@@ -13,10 +17,4 @@ form {
 .containerClass {
   margin: 0 auto;
   width: 900px;
-}
-
-
-
-#no-js-searchbox {
-  display: none;
 }
