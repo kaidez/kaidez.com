@@ -11,6 +11,6 @@ h1 {
   width: 900px;
 }
 
-.js #no-js-searchbox {
+#no-js-searchbox {
   display: none;
 }
