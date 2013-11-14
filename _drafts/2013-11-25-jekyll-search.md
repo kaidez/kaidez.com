@@ -3,7 +3,7 @@ title: 'TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback'
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Create jQuery-powered search functionality in a Jekyll site & create fallback search functionality if JavaScript and/or CSS is disabled.
+meta-excerpt: jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.
 permalink: /custom-jekyll-search/
 category: tutorials
 cat-name: "Tutorials"
@@ -17,7 +17,7 @@ A common solution to this problem is to create custom search functionality power
 ## Table of Contents
 1. [Assumptions &amp; Notes](#assumptions-notes)
 2. [The Various Versions Of Google CSE We Can Use For Our Fallback Code](#fallback-code)
-3. [Put Tipue Search On The Site](#tipue)
+3. [Start Putting Tipue Search On The Site](#start-tipue)
 
 <a name="assumptions-notes"></a>
 ## Assumptions &amp; Notes
@@ -136,17 +136,136 @@ To be honest: if you want search engine functionality on your Jekyll site, you r
 
 The reason I did more than this was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on the site, I wanted them to stay on the site. None of the CSE solutions did this so I went with Tipue
 
-<a name="tipue"></a>
-## Put Tipue Search On The Site
-Let's look at the code for setting up Tipue
+<a name="start-tipue"></a>
+## Start Putting Tipue Search On The Site
+We're going to begin implementing our Tipue code.  This is not the final code that we'll use, just a preview of how things will look after out final code is executed. 
 
+__index.html__
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>Search For Content</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="css/tipuesearch.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="container" class="containerClass">
+  <h1>Search here...</h1>
+    <div id="searchbox">
+      <form action="search.html">
+        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        <input type="submit" class="btnSearch" value="Search">    
+      </form>
+    </div>
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+  </div>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+  <script src="js/scripts.js"></script>
+  
+</body>
+</html>
+{% endprism %}
 
+__search.html__
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="css/tipuesearch.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="container" class="containerClass">
+  <h1>Search Results</h1>
+    <div id="searchbox">
+      <form action="search.html">
+        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        <input type="submit" class="btnSearch" value="Search">    
+      </form>
+    </div>
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+  </div>
 
-<!--
-Legal
-404 (with sitemap)
-301 Redirect (What due date is the Revlon requeting due date for 301 Redirect mapping?)
-Excel spreadsheet for Webmaster Tools tagging & GA?
-Add event tagging the ADD TO CART button?
--->
+  <div id="tipue_search_content"></div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
+{% endprism %}
+
+__js/scripts.js__
+{% prism javascript %}
+(function(){
+
+    // The Tipue-powered code that returns search results to
+    // "search.html".
+    $(function() {
+      $('#tipue_search_input').tipuesearch();
+    });
+    
+    // If JavaScript is enabled, this code will change the "no-js" 
+    // class on the opening <html> element to "js". This code is stolen
+    // from Modernizr so if Modernizr is already on your web page,
+    // don't use this part of the code.
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
+
+})();
+{% endprism %}
+
+__css/styles.css__
+{% prism css %}
+.js #no-js-searchbox {
+  display: none;
+}
+
+body {
+  font: 12px/1.7 'open sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+.containerClass {
+  margin: 0 auto;
+  width: 900px;
+}
+{% endprism %}
