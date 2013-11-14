@@ -6,10 +6,16 @@ h1 {
   text-align: center;
 }
 
+form {
+  text-align: center;
+}
+
 .containerClass {
   margin: 0 auto;
   width: 900px;
 }
+
+
 
 #no-js-searchbox {
   display: none;
