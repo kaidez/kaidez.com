@@ -1,0 +1,16 @@
+body {
+  font: 12px/1.7 'open sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.containerClass {
+  margin: 0 auto;
+  width: 900px;
+}
+
+.js #no-js-searchbox {
+  display: none;
+}

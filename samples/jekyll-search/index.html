@@ -1,0 +1,33 @@
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>Search For Content</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+</head>
+<body>
+  <div id="container" class="containerClass">
+  <h1>Search here...</h1>
+  <div id="searchbox">
+    <form action="/search.html" role="search">
+      <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+      <input type="submit" value="Search"></input>
+    </form>
+  </div>
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+</body>
+</html>
