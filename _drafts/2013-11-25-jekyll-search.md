@@ -262,11 +262,16 @@ __search.html__
 These files have similarities and differences:
 
 * both files have a `no-js` class attached to the `<html>` element.
+
 * both files reference the same three CSS files but the first two are only applying styles and have no affect on the Tipue search functionality. The last file, `css/styles.css`, has one selector called `.js #no-js-searchbox`, which does affect on the Tipue search functionality. We'll talk about all the JavaScript shortly.
+
 * both files reference a file called `js/detect.js` which detects whether or not JavaScript is enabled. Again, we'll talk about all the JavaScript shortly.
+
 * both files have HTML code for the Google searcg box but not the Tipue search box. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into a web page element that's on each page called `<div id="searchbox"> </div>`.
+
 * both files reference jQuery using the method popularized by [HTML5 Boilerplate](http://html5boilerplate.com/ "Review HTML5 Boilerplate front-end template") and the three JavaScript files needed to make the Tipue search functionality work. Both also contain a file called `js/scripts.js` which where we'll be placing our custom code. All these files are important but moving forward in this post, we'll be talking about `js/scripts.js` only.
-* the title tag and `<h1>` copy is different among both pages but the key difference is `search.html` has an extra tag: `<div id="tipue_search_content"></div>`. This is because when and end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
+
+* `search.html` has an extra tag: `<div id="tipue_search_content"></div>`. This is because when an end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
 
 __css/styles.css__
 {% prism css %}
