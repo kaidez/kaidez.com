@@ -305,8 +305,6 @@ __js/jsDetect.js__
 // this part of the code.
 var docElement = document.documentElement;
 docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
-
-})();
 {% endprism %}
 
 <!-- 
