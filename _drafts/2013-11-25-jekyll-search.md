@@ -114,7 +114,7 @@ For me, there are two downside with version 2...
 
 The first downside is that version 2's search results page displays more ads and branding when compared to the search results page in version 1.
 
-The second downside is this version needs JavaScript to return search results whereas version 1 did not. If you do a search using this search results box while JavaScript is *disabled*, you're taken to page that says the results can only be viewed unless JavaScript is *enabled*. The page also contains a link that takes you a search results page that doesn't depend on on JavaScript and I guess that's good, but it ads another click to the end-user experience...I didn't want to include that on my site.
+The second downside is this version needs JavaScript to return search results whereas version 1 did not. If you use this search box while JavaScript is *disabled*, you're taken to page that says search results can only be viewed unless JavaScript is *enabled*. The page also contains a link that takes you a search results page that doesn't depend on on JavaScript and I guess that's good, but it ads another click to the end-user experience...I didn't want to include that on my site.
 
 ### 3. CSE Code That Google Recommends
 {% prism markup %}
@@ -158,7 +158,15 @@ The reason I did more than this was because I wanted to deliver a certain experi
 ## Start Putting Tipue Search On The Site
 We're going to begin implementing our Tipue code.  This is not the final code that we'll use, just a preview of how things will look after out final code is executed. 
 
-Many files are needed to make this functionality work but there are four files we need to closely look at: 1) `index.html`, 2) `search.html`, 3) `css/styles.css`, and 4) `js/scripts.js`. 
+We're not going to review either the jQuery or Tipue plugin files as they don't play a role in the JSS/CSS detection process, but five other files do and we need to review them:
+
+1. index.html
+2. search.html
+3. js/detect.js
+4. css/styles.css
+5. js/scripts.js
+
+Let's look at the `html` files first:
 
 __index.html__
 {% prism markup %}
@@ -170,7 +178,7 @@ __index.html__
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link href="css/tipuesearch.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jsDetect.js"></script>
+  <script src="js/detect.js"></script>
 </head>
 <body>
   <div id="container" class="containerClass">
@@ -215,7 +223,7 @@ __search.html__
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link href="css/tipuesearch.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jsDetect.js"></script>
+  <script src="js/detect.js"></script>
 </head>
 <body>
   <div id="container" class="containerClass">
@@ -251,14 +259,14 @@ __search.html__
 </html>
 {% endprism %}
 
-Let's review these files, starting with both the similarities and differences among `index.html` and `search.html`:
+These files have similarities and differences:
 
 * both files have a `no-js` class attached to the `<html>` element.
 * both files reference the same three CSS files but the first two are only applying styles and have no affect on the Tipue search functionality. The last file, `css/styles.css`, has one selector called `.js #no-js-searchbox`, which does affect on the Tipue search functionality. We'll talk about all the JavaScript shortly.
-* both files reference a file called `js/jsDetect.js` which detects whether or not JavaScript is enabled. Again, we'll talk about all the JavaScript shortly.
+* both files reference a file called `js/detect.js` which detects whether or not JavaScript is enabled. Again, we'll talk about all the JavaScript shortly.
 * both files have HTML code for the Google searcg box but not the Tipue search box. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into a web page element that's on each page called `<div id="searchbox"> </div>`.
 * both files reference jQuery using the method popularized by [HTML5 Boilerplate](http://html5boilerplate.com/ "Review HTML5 Boilerplate front-end template") and the three JavaScript files needed to make the Tipue search functionality work. Both also contain a file called `js/scripts.js` which where we'll be placing our custom code. All these files are important but moving forward in this post, we'll be talking about `js/scripts.js` only.
-* the title tag and `<h1>` copy is different among both pages but the key difference is `search.html` as an extra tag: `<div id="tipue_search_content"></div>`. This is because when and end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
+* the title tag and `<h1>` copy is different among both pages but the key difference is `search.html` has an extra tag: `<div id="tipue_search_content"></div>`. This is because when and end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
 
 __css/styles.css__
 {% prism css %}
@@ -288,16 +296,16 @@ __js/scripts.js__
 {% prism javascript %}
 (function(){
 
-    // The Tipue-powered code that returns search results to
-    // "search.html".
-    $(function() {
-      $('#tipue_search_input').tipuesearch();
-    });
+  // The Tipue-powered code that returns search results to
+  // "search.html".
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
 
 })();
 {% endprism %}
 
-__js/jsDetect.js__
+__js/detect.js__
 {% prism javascript %}
 // If JavaScript is enabled, this code will change the "no-js" class on
 // the opening <html> element to "js". This code is stolen from
