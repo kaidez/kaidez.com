@@ -12,28 +12,26 @@ tags: [jekyll, jquery, accessibility, javascript, tute]
 ---  
 [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites, not database-driven sites. This means that it can't provide the custom site search functionality provided by content management systems like WordPress and Drupal.
 
-A common alternative is to apply a JavaScript search solution to a static site which pulls search results from the data in a JSON file, but this won't work if JavaScript is disabled in the browser. This can lead to accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
+A common alternative is to apply a search solution based around JavaScript, but this won't work if an end-user disables JavaScript in their browser. This can lead to accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
 ## Table of Contents
-1. [The Goal &amp; The Plan](#goal-plan)
+1. [The Goal &amp; The Steps We'll Take](#goal-steps)
 2. [One Assumption...Many Notes](#assumptions-notes)
 3. [The Various Versions Of Google CSE We Can Use For Our Fallback Code](#fallback-code)
 4. [Start Putting Tipue Search On The Site](#start-tipue)
 
-<a name="goal-plan"></a>
-## The Goal &amp; The Plan
+<a name="goal-steps"></a>
+## The Goal &amp; The Steps We'll Take
 
-The goal is to add jQuery-powered search functionality to our site that is automatically disabled it if either JavaScript, CSS or both have been disabled in the browser. In those situations, we want to provide search functionality that works even if JavaScript, CSS or both have been disabled in the browser.
+The goal is to add jQuery-powered search functionality to our Jekyll-powered site, which gets automatically disabled it if either JavaScript, CSS or both have been disabled in the browser. In those situations, we want to provide search functionality that works even if JavaScript, CSS or both have been disabled in the browser.
 
-Here's the plan to achieve this...
+The steps we'll take to achieve this are:
 
-We will first create HTML pages that contains the code for the fallback search method. These pages will link to a JavaScript file that contains code which will detect whether or not JavaScript is enabled in a web browser.
+1. Create HTML pages that contains the code for the fallback search method. These pages will link to a JavaScript file that contains code which detects whether or not JavaScript is enabled in a web browser.
 
-This page will NOT contain the JavaScript-powered search functionality we need so we will create that next. We will use JavaScript to create it off-DOM, then load it onto the page.
+2. Dynamically create the JavaScript-powered search functionality with JavaScript...this will be done off-DOM first, then load it onto the page.
 
-Lastly, we will use JavaScript to detect whether or not CSS is enabled.
-
-All these things will work together to help us achieve our goal.
+3. Use JavaScript to detect whether or not CSS is enabled.
 
 <a name="assumptions-notes"></a>
 ## One Assumption...Many Notes
@@ -44,11 +42,11 @@ Some notes...
 
 * Despite the one assumption, this search functionality isn't Jekyll-specific. All this is based on my personal Jekyll experiences and the fact that it's one of the most popular static site generators at the time of the post's publish date.  I haven't tested this code outside of a Jekyll project but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
 
-* The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But disabling CSS before page load is tricky: Pederick's tool disables it __AFTER__ page load.  CSS is enabled on page refresh after that, which isn't helpful. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, I found the Firefox solution to be the easiest way to fully disable CSS before page load (View &gt; Page Style &gt; No Style).
+* The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But disabling CSS before page load is tricky: Pederick's tool disables it __AFTER__ page load.  CSS is enabled on page refresh after that, which isn't helpful. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
 
-* The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), which has multiple options. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, take accessibilty into consideration.  I go through all these options in the next section, showing you the pros and cons for each and allowing you to make your own choice. I probably could avoid going through all these options but since the tutorial's final code uses option that Google doesn't currently recommend, I feel obliged to show you all the options.
+* The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), which has multiple options. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, taking accessibility into consideration.  I go through all these options in the next section, showing you the pros and cons for each and allowing you to make your own choice. I probably could avoid going through all these options but since the tutorial's final code uses an option that Google doesn't currently recommend, I feel obliged to show you all the options.
 
-* This tutorial uses the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") for the JavaScript-powered search and while I'm very happy with it, I'm not suggesting that you use it. The point of the tutorial is to teach you how to apply a JavaScript-powered search for a Jekyll site and to create fallback search functionality if JavaScript and/or CSS is disabled, not push you towards the Javascript-based Jekyll search solution that I like. I list some other search solutions towards the end of this post.
+* This tutorial uses the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search") for the JavaScript-powered search and while I'm very happy with it, I'm not suggesting that you use it. The point of the tutorial is to teach you how to apply JavaScript-powered search solution for a static site and create fallback functionality if JavaScript and/or CSS is disabled, not push you towards a plugin that I particularly like. I list some other search solutions towards the end of this post.
 
 * Lastly, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?". No, because it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
