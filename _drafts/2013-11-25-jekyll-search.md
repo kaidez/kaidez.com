@@ -297,6 +297,21 @@ form {
 }
 {% endprism %}
 
+Most of this is just styling for the `html` pages.  The important style is the first one: `.js #no-js-searchbox`.
+
+This style will hide the Google CSE search when JavaScript is enabled *ONLY*.
+
+__js/detect.js__
+{% prism javascript %}
+// If JavaScript is enabled, this code will change the "no-js" class on
+// the opening <html> element to "js". This code is stolen from
+// Modernizr so if Modernizr is already on your web page, don't use
+// this part of the code.
+var docElement = document.documentElement;
+docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
+{% endprism %}
+
+
 __js/scripts.js__
 {% prism javascript %}
 (function(){
@@ -308,16 +323,6 @@ __js/scripts.js__
   });
 
 })();
-{% endprism %}
-
-__js/detect.js__
-{% prism javascript %}
-// If JavaScript is enabled, this code will change the "no-js" class on
-// the opening <html> element to "js". This code is stolen from
-// Modernizr so if Modernizr is already on your web page, don't use
-// this part of the code.
-var docElement = document.documentElement;
-docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
 {% endprism %}
 
 <!-- 
