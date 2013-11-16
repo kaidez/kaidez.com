@@ -10,26 +10,26 @@ cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tute]
 ---  
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites, not database-driven sites. This means that it can't provide the custom site search functionality provided by content management systems like WordPress and Drupal.
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites, not dynamic database-driven sites. This means that it can't provide the custom site search functionality bundled into content management systems like [WordPress](http://wordpress.org/ "Go to wordPress.org")and [Drupal](https://drupal.org/ "Go to drupal.org").
 
-A common alternative is to apply a search solution based around JavaScript, but this won't work if an end-user disables JavaScript in their browser. This can lead to accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
+A common alternative is to apply a search solution based around JavaScript, but this won't work if an end-user disables JS in their browser. This can lead to accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
 ## Table of Contents
 1. [The Goal &amp; The Steps We'll Take](#goal-steps)
 2. [One Assumption...Many Notes](#assumptions-notes)
-3. [The Various Versions Of Google CSE We Can Use For Our Fallback Code](#fallback-code)
+3. [The Various Versions Of Google CSE](#various-google-cse-code)
 4. [Start Putting Tipue Search On The Site](#start-tipue)
 
 <a name="goal-steps"></a>
 ## The Goal &amp; The Steps We'll Take
 
-The goal is to add jQuery-powered search functionality to our Jekyll-powered site, which gets automatically disabled it if either JavaScript, CSS or both have been disabled in the browser. In those situations, we want to provide search functionality that works even if JavaScript, CSS or both have been disabled in the browser.
+The goal for this tutorial is to add JavaScript-powered search functionality to our Jekyll-powered site, functionality that gets automatically disabled if either JavaScript, CSS or both have been disabled in the browser. For those situations, we will create an alternative search method using code provided by Google.
 
 The steps we'll take to achieve this are:
 
 1. Create HTML pages that contains the code for the fallback search method. These pages will link to a JavaScript file that contains code which detects whether or not JavaScript is enabled in a web browser.
 
-2. Dynamically create the JavaScript-powered search functionality with JavaScript...this will be done off-DOM first, then load it onto the page.
+2. Use JavaScript to dynamically create the JS-powered search functionality...this will be done off-DOM first, then loaded onto the pages next.
 
 3. Use JavaScript to detect whether or not CSS is enabled.
 
@@ -42,17 +42,19 @@ Some notes...
 
 * Despite the one assumption, this search functionality isn't Jekyll-specific. All this is based on my personal Jekyll experiences and the fact that it's one of the most popular static site generators at the time of the post's publish date.  I haven't tested this code outside of a Jekyll project but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
 
-* The JavaScript-powered search in this is provided by the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search"), but you can use another option...I some options towards the end of this post. The purpose of this tutorial is to achieve the above-mentioned goals and not push you to use a certain plugin.
+* The JavaScript-powered search in this is provided by the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search"), but you can use another option...I list some of these options towards the end of this post.
 
 * The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But disabling CSS before page load is tricky: Pederick's tool disables it __AFTER__ page load.  CSS is enabled on page refresh after that, which isn't helpful. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
 
-* The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), which has multiple options. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, taking accessibility into consideration.  I go through all these options in the next section, showing you the pros and cons for each and allowing you to make your own choice. I probably could avoid going through all these options but since the tutorial's final code uses an option that Google doesn't currently recommend, I feel obliged to show you all the options.
+* The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), which has multiple options. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, taking accessibility into consideration.  I go through all these options in the next section, showing you the pros and cons for each and allowing you to make your own choice. I could probably avoid going through all these options but since the tutorial's final code uses an option that Google doesn't currently recommend, I feel obliged to show you all the options.
 
-* Lastly, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?". No, because it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
+* Lastly, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...nope, because it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
-<a name="fallback-code"></a>
-## The Various Versions Of Google CSE We Can Use For Our Fallback Code
-First, let's setup the Google CSE code that will run if either JavaScript or CSS is disabled. There are three versions: note that all versions place the code in a `<div>` tag, and that the first two give the `<div>` an id of `no-js-searchbox`. The latter point will be important when we implement our fallback code.
+<a name="various-google-cse-code"></a>
+## The Various Versions Of Google CSE
+Let's start by reviewing the various versions of the Google CSE code. This tutorial uses version 1 for its fallback but sinces it's old, I want you to be aware of the newer, Google-recommended versions.
+
+There are three versions: note that all versions place the code in a `<div>` tag and that the first two give the `<div>` an id of `no-js-searchbox`. The latter point will be important when we actually implement our fallback code.
 
 ### 1. Really Old CSE Code (what kaidez.com uses)
 {% prism markup %}
@@ -106,7 +108,7 @@ The downside with this version is that it's old and Google may get rid of it som
 {% endprism %}
 If you *have* to use a `<form>` tag setup for CSE, Google prefers that you use this version. The code is not that much different from the version 1. 
 
-Note the setting of the `value` attribute in the first input tag: while version 1 just referenced a simple URL, version 2 requires a search engine ID. You must sign up with [Google CSE](https://www.google.com/cse/) for free to obtain a search engine ID.  A big advantage to this version is after you sign up, this version offers a higher level of customization for your search results page when compared to version 1.
+Note the setting of the `value` attribute in the first input tag: while version 1 just referenced a simple URL, version 2 requires a search engine ID, which you can get for free after signing up with [Google CSE](https://www.google.com/cse/). A big advantage to this version is that it offers a higher level of customization than version 1.
 
 For me, there are two downside with version 2...
 
@@ -144,7 +146,7 @@ The second downside is this version needs JavaScript to return search results wh
 </html>
 {% endprism %}
 
-This is [the current CSE solution that Google recommends](http://googlecustomsearch.blogspot.com/2012/08/introducing-custom-search-element-v2.html "Read about the current Google CSE recommendation")...an asynchronous JavaScript solution. Note that the search engine ID is now contained in a JavaScript variable instead of being applied to a tag attribute. It also provides the same level of customization that version 2 offers.
+This is [the current CSE solution that Google recommends](http://googlecustomsearch.blogspot.com/2012/08/introducing-custom-search-element-v2.html "Read about the current Google CSE recommendation")...an asynchronous JavaScript solution that provides the same level of customization that version 2 offers. Note that the search engine ID is now contained in a JavaScript variable instead of being applied to a tag attribute.
 
 Version 3's downside is that it's a purely JavaScript solution that won't work if JavaScript is disabled...the searchbox won't even show up on the page.  We need a solution that works when JavaScript is disabled so this won't help us solve our problem.
 
@@ -305,15 +307,6 @@ var docElement = document.documentElement;
 docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
 
 })();
-{% endprism %}
-
-
-Now...let's look at `css/styles.css`:
-{% prism css %}
-.js #no-js-searchbox {
-  display: none;
-}
-...
 {% endprism %}
 
 <!-- 
