@@ -10,29 +10,26 @@ cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tute]
 ---  
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator, meaning it generates static sites instead of dynamic, database-driven ones. This means it can't provide the custom site search functionality bundled into content management systems like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites and not dynamic, database-driven ones. This means that it doesn't contain the search functionality that's commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
-For static site generators, a common solution to this problem is to use a search solution based on JavaScript, but this won't work if the end-user disables JS in their browser. Search is vital nowadays so this tutorial shows you how to not only create JS-powered search, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
+For static site generators, a common solution to this problem is to use a search solution based on JavaScript, but this won't work if the end-user has disabled JS in their browser. Search is vital nowadays so this tutorial shows you how to not only implement JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
 ## Table of Contents
-1. [The Goal &amp; The Steps We'll Take](#goal-steps)
+1. [The Steps We Need To Take](#steps)
 2. [One Assumption...Many Notes](#assumptions-notes)
 3. [The Fallback Google CSE](#fallback-google-cse-code)
 4. [A Very Quick Tipue Walkthrough](#tipue-walkthrough)
-5. [Create Our Page Layouts](#create-page-layouts)
+5. [Add the JavaScript Detection &amp; Fallback Code to HTML Pages](#build-pages)
 
-<a name="goal-steps"></a>
-## The Goal &amp; The Steps We'll Take
+<a name="steps"></a>
+## The Steps We Need To Take
+To acheive our goal, the steps we need to take are:
 
-The goal for this tutorial is to add JavaScript-powered search functionality to our Jekyll-powered site, If either JavaScript, CSS or both have been disabled in the browser, an alternative search method will be provided using code from Google.
+1. __Add the JavaScript Detection &amp; Fallback Code to HTML Pages__: These pages will link to JavaScript and CSS files working together ti check for the presence if JavaScript, and will also contain our fallback code. ([jump to this section](#build-pages))
 
-The steps we'll take to achieve this are:
+2. __Dynamically Create the JS-powered Search Functionality__: We'll create it off-DOM first, then loaded onto the pages next.
 
-1. Create HTML pages that contains the code for the fallback search method. These pages will link to a JavaScript file that contains code which detects whether or not JavaScript is enabled in a web browser.
-
-2. Use JavaScript to dynamically create the JS-powered search functionality...this will be done off-DOM first, then loaded onto the pages next.
-
-3. Use JavaScript to detect whether or not CSS is enabled.
+3. __Use JavaScript to Detect whether or not CSS is enabled__: This will be walked through in greet detail.
 
 <a name="assumptions-notes"></a>
 ## One Assumption...Many Notes
@@ -41,13 +38,13 @@ The only assumption I'm making is that you have already installed Jekyll on your
 
 Some notes...
 
-* Despite the one assumption, this search functionality isn't Jekyll-specific. All this is based on my personal Jekyll experiences and the fact that it's one of the most popular static site generators at the time of the post's publish date.  I haven't tested this code outside of a Jekyll project but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
+* Despite the one assumption, this search functionality isn't Jekyll-specific. All this is based on my personal Jekyll experiences and the fact that it's one of the most popular static site generators at the time of the post's publish date. I haven't tested this code outside of a Jekyll project but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
 
-* The JavaScript-powered search in this is provided by the [Tipue search jQuery plugin](http://www.tipue.com/search/ "Read more about Tipue Search"), but you can use another option...I list some of these options towards the end of this post.
+* The JavaScript-powered search in this tutorial is provided by the [Tipue search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search") but this post does not go into great detail how of Tipue works. It bullet points what the code is doing but that's it...[read the Tipue documentation](http://www.tipue.com/search/docs/ "Read the Tipue documentation") to fully understand how Tipue works.
+
+Also, I like Tipue but this tutorial should work with other JS-powered search solutions. I list some of these options towards the end of this post.
 
 * The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But disabling CSS before page load is tricky: Pederick's tool disables it __AFTER__ page load.  CSS is enabled on page refresh after that, which isn't helpful. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to that post when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
-
-* The fallback code used in this tutorial is provided by [Google Custom Search Engine (CSE)](https://www.google.com/cse/ "Learn about Google Custom Search Engine"), which has multiple options. kaidez.com currently uses an older version that Google still supports...for now. The other versions work fine but don't provide the user experience I wanted to create while, at the same time, taking accessibility into consideration.  I go through all these options in the next section, showing you the pros and cons for each and allowing you to make your own choice. I could probably avoid going through all these options but since the tutorial's final code uses an option that Google doesn't currently recommend, I feel obliged to show you all the options.
 
 * Lastly, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...nope, because it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
@@ -99,8 +96,8 @@ It needs four JS files to work and they should be listed in the following order:
 3. `tipuesearch_set.js`, which filters words and phrases in the search results.
 4. `js/tipuesearch.min.js`, which is the core Tipue code.
 
-<a name="create-page-layouts"></a>
-## Create Our Page Layouts
+<a name="build-pages"></a>
+## Add the JavaScript Detection &amp; Fallback Code to HTML Pages
 We need to layout our pages and add `.css` and other `.js` files. We're not going to review any of the just-mentioned Tipue files as they don't play a role in the JSS/CSS detection process, but five other files do and we need to review them:
 
 1. index.html
