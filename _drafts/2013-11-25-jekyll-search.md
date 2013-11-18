@@ -10,7 +10,7 @@ cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tute]
 ---  
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites, not dynamic database-driven sites. This means that it can't provide the custom site search functionality bundled into content management systems like [WordPress](http://wordpress.org/ "Go to wordPress.org")and [Drupal](https://drupal.org/ "Go to drupal.org").
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites instead of dynamic database-driven sites. This means that it can't provide the custom site search functionality bundled into content management systems like [WordPress](http://wordpress.org/ "Go to wordPress.org")and [Drupal](https://drupal.org/ "Go to drupal.org").
 
 A common alternative is to apply a search solution based around JavaScript, but this won't work if an end-user disables JS in their browser. This can lead to accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
