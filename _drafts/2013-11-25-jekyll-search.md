@@ -10,21 +10,21 @@ cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tute]
 ---  
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") generates static sites instead of dynamic database-driven sites. This means that it can't provide the custom site search functionality bundled into content management systems like [WordPress](http://wordpress.org/ "Go to wordPress.org")and [Drupal](https://drupal.org/ "Go to drupal.org").
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator, meaning it generates static sites instead of dynamic, database-driven ones. This means it can't provide the custom site search functionality bundled into content management systems like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
-A common alternative is to apply a search solution based around JavaScript, but this won't work if an end-user disables JS in their browser. This can lead to accessibility issues; therefore, this tutorial shows you how to not only create JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
+For static site generators, a common solution to this problem is to use a search solution based on JavaScript, but this won't work if the end-user disables JS in their browser. Search is vital nowadays so this tutorial shows you how to not only create JS-powered search, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
 ## Table of Contents
 1. [The Goal &amp; The Steps We'll Take](#goal-steps)
 2. [One Assumption...Many Notes](#assumptions-notes)
-3. [The Various Versions Of Google CSE](#various-google-cse-code)
-4. [A VERY Quick Tipue Walkthrough](#tipue-walkthrough)
-5. [Start Putting Tipue Search On The Site](#start-tipue)
+3. [The Fallback Google CSE](#fallback-google-cse-code)
+4. [A Very Quick Tipue Walkthrough](#tipue-walkthrough)
+5. [Create Our Page Layouts](#create-page-layouts)
 
 <a name="goal-steps"></a>
 ## The Goal &amp; The Steps We'll Take
 
-The goal for this tutorial is to add JavaScript-powered search functionality to our Jekyll-powered site, functionality that gets automatically disabled if either JavaScript, CSS or both have been disabled in the browser. For those situations, we will create an alternative search method using code provided by Google.
+The goal for this tutorial is to add JavaScript-powered search functionality to our Jekyll-powered site, If either JavaScript, CSS or both have been disabled in the browser, an alternative search method will be provided using code from Google.
 
 The steps we'll take to achieve this are:
 
@@ -51,13 +51,14 @@ Some notes...
 
 * Lastly, you may read this and some point and say "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...nope, because it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
-<a name="various-google-cse-code"></a>
-## The Various Versions Of Google CSE
-Let's start by reviewing the various versions of the Google CSE code. This tutorial uses version 1 for its fallback but sinces it's old, I want you to be aware of the newer, Google-recommended versions.
+<a name="fallback-google-cse-code"></a>
+## The Fallback Google CSE
+There are three versions of the Google CSE code at the time of this post. This tutorial uses the oldest version as it best suits are needs and although it's old, it's still widely in use, particularly on sites that run [the Octopress framework for Jekyll](http://octopress.org/ "Learn about the Octopress framework").
 
-There are three versions: note that all versions place the code in a `<div>` tag and that the first two give the `<div>` an id of `no-js-searchbox`. The latter point will be important when we actually implement our fallback code.
+The second version is very similar to the first version and works when JavaScript is disabled, but adds an extra click-through to the user experience when compared to the first one. The third version is what Google currently recommends but is a pure JavaScript version that won't work if JS is disabled...not what we want.
 
-### 1. Really Old CSE Code (what kaidez.com uses)
+Let's look at the code:
+
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -79,11 +80,230 @@ There are three versions: note that all versions place the code in a `<div>` tag
 </body>
 </html>
 {% endprism %}
-This is the search fallback that I'm currently using on this site and I'm fine with it. Any searches entered into this searchbox return the search results in a standard Google search results page.
+Note the setting of the `value` attribute in the first input tag: you would need to change this to whatever your site URL is. Once that's done, any searches entered into this searchbox returns the results for that site, and in a standard Google search results page. 
 
-Note the setting of the `value` attribute in the first input tag: you would need to change this to whatever your site URL is.
+To be honest: if you want search engine functionality on your static site, you really can just use one of these Google solutions and move on. The reason I did more than this was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on the site, I wanted them to stay on the site. 
 
-The downside with this version is that it's old and Google may get rid of it someday. 
+None of the CSE solutions did this so I went with Tipue while using version 1 for my fallback code.
+
+<a name="tipue-walkthrough"></a>
+## A Very Quick Tipue Walkthrough
+Very quick...
+
+Tipue is jQuery plugin that provides static search. The search results must be returned to a properly-configured `search.html` page.
+
+It needs four JS files to work and they should be listed in the following order:
+
+1. the core `jquery.js` file.
+2. `tipuesearch_content.js`, which contains the searchable site data that's returned to `search.html`
+3. `tipuesearch_set.js`, which filters words and phrases in the search results.
+4. `js/tipuesearch.min.js`, which is the core Tipue code.
+
+<a name="create-page-layouts"></a>
+## Create Our Page Layouts
+We need to layout our pages and add `.css` and other `.js` files. We're not going to review any of the just-mentioned Tipue files as they don't play a role in the JSS/CSS detection process, but five other files do and we need to review them:
+
+1. index.html
+2. search.html
+3. css/styles.css
+4. js/detect.js
+5. js/scripts.js
+
+Let's start with`index.html`:
+
+__index.html__
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>Search For Content</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="css/tipuesearch.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/detect.js"></script>
+</head>
+<body>
+  <div id="container" class="containerClass">
+  <h1>Search here...</h1>
+
+    <!-- Tipue Search box will go here -->
+    <div id="searchbox"> </div>
+
+
+    <!-- Google CSE search box starts here -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+    <!-- Google CSE search box ends here -->
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+  <script src="js/scripts.js"></script>
+  
+</body>
+</html>
+{% endprism %}
+
+The key parts of the file:
+
+* A `no-js` class is attached to the `<html>` element. This will help us detect whether or not JavaScript is disabled.
+
+* There are three CSS files but the first two are only applying generic styles and don't help us in achieving our goal. The last file, `css/styles.css`, also applies some generic styling but has one selector called `.js #no-js-searchbox`, which does help us in achieving our goal.
+
+* There's a file called `js/detect.js` which detects whether or not JavaScript is enabled.
+
+* The Google search box is on the page but the Tipue search box is not. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into an element on page called `<div id="searchbox"></div>`.
+
+* Along with the Tipue-related files we discussed earlier, there's also a file called `js/scripts.js`. It contains code needed execute Tipue's searches and will be the place where we add both our off-DOM and JS detection code.
+
+__search.html__
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="css/tipuesearch.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/detect.js"></script>
+</head>
+<body>
+  <div id="container" class="containerClass">
+  <h1>Search Results</h1>
+
+    <!-- Tipue Search box will go here -->
+    <div id="searchbox"> </div>
+
+    <!-- Google CSE search box starts here -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+    <!-- Google CSE search box ends here -->
+
+  </div>
+
+  <div id="tipue_search_content"></div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
+{% endprism %}
+
+Again, `search.html` is the page where Tipue returns the search results.  It's similar to `index.html` but it has an extra tag: `<div id="tipue_search_content"></div>`. This is the spot where Tipue returns the search results.
+
+__css/styles.css__
+{% prism css %}
+.js #no-js-searchbox {
+  display: none;
+}
+
+body {
+  font: 12px/1.7 'open sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+.containerClass {
+  margin: 0 auto;
+  width: 900px;
+}
+{% endprism %}
+
+As mentioned, the `.js #no-js-searchbox` is the key class here...the rest of the styles just add generic styling. This style will hide the Google CSE search when JavaScript is enabled *ONLY*.
+
+
+__js/detect.js__
+{% prism javascript %}
+// If JavaScript is enabled, this code will change the "no-js" 
+// class on the opening <html> element to "js". This code is stolen
+// from Modernizr so if Modernizr is already on your web page,
+// don't use this part of the code.
+
+// This code is one file because it's a best practice as per the
+// Content Security Policy. Mike West breaks CSP down really well at:
+// http://bit.ly/KzGWUZ. Also make sure to read the CSP W3C spec at: 
+// http://bit.ly/vCQbiW
+var docElement = document.documentElement;
+docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
+{% endprism %}
+
+A very important piece of our code:
+
+`docElement` is storing a short-hand reference to `document.documentElement`, which is a DOM reference to our page's `<html>` tag. `docElement.className` is reference to the tag's only class: `no-js`.
+
+A regular expression search is run against `docElement.className` when the page loads. When the search finds the text "no-js", it replaces it with the text "js".
+
+Our HTML tag will now look like this:
+
+`<html lang="en" class="js">`
+
+Because of [CSS descendant selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors "Read about CSS descendant selectors"), the `.js #no-js-searchbox` selector will work and set our Google CSE search box to `display:none`. But if JavaScript is disabled, the regular expression search won't happen.
+
+This means that `no-js` class will remain in the `<html>` tag and that the `.js #no-js-searchbox` selector cannot be applied; therefore, *__ the selector cannot be applied to the Google CSE search box, so the search box will be visible.__*
+
+As the comments say, this code is currently built into [Modernizr](http://modernizr.com/, "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
+
+Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before the DOM starts loading. We're treating this piece of code the same way for the same reason.
+
+And as noted in the comments, this code is placed in its own JS file instead of inline because it's a best practice as per the Content Security Policy(CSP) that's starting to gain a consensus. Mike West's [Content Security Policy article on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/security/content-security-policy/) breaks it down really well and you should [read the W3C's Content Security Policy spec](http://www.w3.org/TR/CSP/ "Read the W3C's Content Security Policy spec") sooner than later.
+
+__js/scripts.js__
+{% prism javascript %}
+(function(){
+
+  // The Tipue-powered code that returns search results to
+  // "search.html".
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
+
+})();
+{% endprism %}
+This file is just running our Tipue search code, which has absolutely nothing to do with or JS and CSS detection. But again, it's where we're going to add our remaining code and is the only file we're really going to talk about moving forward.
+
+At this point we've established the basic structure for our pages as well as our system for detecting whether JavaScript is enabled or not. We also understand that if JavaScript is disabled, the Google search box will be visible.
+<!-- 
+
+        <form action="search.html">
+        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        <input type="submit" class="btnSearch" value="Search">    
+      </form>
+Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
+
+If JS is an enabledour Tipue search box i
+
+
 ### 2. CSE Code That Isn't As Old as Example #1, But Is Still Old
 {% prism markup %}
 <!DOCTYPE html>
@@ -96,7 +316,7 @@ The downside with this version is that it's old and Google may get rid of it som
   <h1>Search here...</h1>
   <div id="no-js-searchbox">
     <form id="cse-search-box" action="http://google.com/cse">
-      <!-- change the "value" attribute below to point to your search engine ID -->
+      <!-- change the "value" attribute below to point to your search engine ID
       <input type="hidden" name="cx" value="partner-pub-7363372172009273:x2tstb3o6ga" />
       <input type="hidden" name="ie" value="UTF-8" />
       <input type="text" name="q" size="31" />
@@ -151,208 +371,16 @@ This is [the current CSE solution that Google recommends](http://googlecustomsea
 
 Version 3's downside is that it's a purely JavaScript solution that won't work if JavaScript is disabled...the searchbox won't even show up on the page.  We need a solution that works when JavaScript is disabled so this won't help us solve our problem.
 
-To be honest: if you want search engine functionality on your Jekyll site, you really can just use one of these Google solutions and move on. I would use one of the first two and skip the third one since it won't work if JS is turned off which, again, is not good from an accessibilty standpoint.
-
-The reason I did more than this was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on the site, I wanted them to stay on the site. None of the CSE solutions did this so I went with Tipue while using version 1 for my fallback code.
-
-<a name="tipue-walkthrough"></a>
-## A VERY Quick Tipue Walkthrough
-
-<a name="start-tipue"></a>
-## Start Putting Tipue Search On The Site
-We're going to begin implementing our Tipue code.  This is not the final code that we'll use, just a preview of how things will look after out final code is executed. 
-
-We're not going to review either the jQuery or Tipue plugin files as they don't play a role in the JSS/CSS detection process, but five other files do and we need to review them:
-
-1. index.html
-2. search.html
-3. js/detect.js
-4. css/styles.css
-5. js/scripts.js
-
-Let's look at the `html` files first:
-
-__index.html__
-{% prism markup %}
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <title>Search For Content</title>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-  <link href="css/tipuesearch.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/detect.js"></script>
-</head>
-<body>
-  <div id="container" class="containerClass">
-  <h1>Search here...</h1>
-
-    <!-- Tipue Search box will go here -->
-    <div id="searchbox"> </div>
 
 
-    <!-- Google CSE search box starts here -->
-    <div id="no-js-searchbox">
-      <form action="http://google.com/search" method="get">
-        <fieldset role="search">
-          <!-- change the "value" attribute below to point to your site -->
-          <input type="hidden" name="q" value="site:kaidez.com"/>
-          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form> 
-    </div>
-    <!-- Google CSE search box ends here -->
 
-  </div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
-  <script src="js/tipuesearch_content.js"></script>
-  <script src="js/tipuesearch_set.js"></script>
-  <script src="js/tipuesearch.min.js"></script>
-  <script src="js/scripts.js"></script>
-  
-</body>
-</html>
-{% endprism %}
 
-__search.html__
-{% prism markup %}
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <title>Search Results</title>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-  <link href="css/tipuesearch.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/detect.js"></script>
-</head>
-<body>
-  <div id="container" class="containerClass">
-  <h1>Search Results</h1>
 
-    <!-- Tipue Search box will go here -->
-    <div id="searchbox"> </div>
 
-    <!-- Google CSE search box starts here -->
-    <div id="no-js-searchbox">
-      <form action="http://google.com/search" method="get">
-        <fieldset role="search">
-          <!-- change the "value" attribute below to point to your site -->
-          <input type="hidden" name="q" value="site:kaidez.com"/>
-          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form> 
-    </div>
-    <!-- Google CSE search box ends here -->
+Note that hiding elements with `display:none` is not a best practice...hiding them using the [the Yahoo! dev team has recommendation](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) is the recommended way to do it. But the Yahoo! implementation makes the CSE searchbox viewable to both screen readers and tab-throughs. So if JS is enabled and loads up our Tipue sear it would mean that the Google search box would be picked up by a screen reader.  
 
-  </div>
 
-  <div id="tipue_search_content"></div>
-  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
-  <script src="js/tipuesearch_content.js"></script>
-  <script src="js/tipuesearch_set.js"></script>
-  <script src="js/tipuesearch.min.js"></script>
-  <script src="js/scripts.js"></script>
 
-</body>
-</html>
-{% endprism %}
 
-These files have similarities and differences:
-
-* both files have a `no-js` class attached to the `<html>` element.
-
-* both files reference the same three CSS files but the first two are only applying styles and have no affect on the Tipue search functionality. The last file, `css/styles.css`, has one selector called `.js #no-js-searchbox`, which does affect on the Tipue search functionality. We'll talk about all the JavaScript shortly.
-
-* both files reference a file called `js/detect.js` which detects whether or not JavaScript is enabled. Again, we'll talk about all the JavaScript shortly.
-
-* both files have HTML code for the Google search box but not the Tipue search box. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into a web page element that's on each page called `<div id="searchbox"> </div>`.
-
-* both files reference jQuery using the method popularized by [HTML5 Boilerplate](http://html5boilerplate.com/ "Review HTML5 Boilerplate front-end template") and the three JavaScript files needed to make the Tipue search functionality work. Both also contain a file called `js/scripts.js` which where we'll be placing our custom code.
-
-* `search.html` has an extra tag: `<div id="tipue_search_content"></div>`. This is because when an end-user performs a search using our Tipue search box from anywhere on our site, search results are returned to the `search.html` page and listed within `<div id="tipue_search_content"></div>`.
-
-__css/styles.css__
-{% prism css %}
-.js #no-js-searchbox {
-  display: none;
-}
-
-body {
-  font: 12px/1.7 'open sans', sans-serif;
-}
-
-h1 {
-  text-align: center;
-}
-
-form {
-  text-align: center;
-}
-
-.containerClass {
-  margin: 0 auto;
-  width: 900px;
-}
-{% endprism %}
-
-Most of this is just styling for the `html` pages.  The important style is the first one: `.js #no-js-searchbox`.
-
-This style will hide the Google CSE search when JavaScript is enabled *ONLY*.
-
-__js/detect.js__
-{% prism javascript %}
-// If JavaScript is enabled, this code will change the "no-js" class on
-// the opening <html> element to "js". This code is stolen from
-// Modernizr so if Modernizr is already on your web page, don't use
-// this part of the code.
-var docElement = document.documentElement;
-docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
-{% endprism %}
-
-A very important piece of our code:
-
-`docElement` is storing a short-hand reference to `document.documentElement`, which simply a reference to our page's `<html>` tag. `docElement.className` is reference to the tag's only class: `no-js`.
-
-A regular expression search is run against `docElement.className` when the page loads. When the search finds the text "no-js", it changes replaces it with the text "js".
-
-Our HTML tag will now look like this:
-
-`<html lang="en" class="js">`
-
-Because of (need link) CSS descendant selectors, the `.js #no-js-searchbox` selector will work and set our Google CSE search box to `display:none`.
-
-As the comments say, this code is currently built into [Modernizr](http://modernizr.com/, "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
-
-Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before the DOM starts loading. We're treating this piece of code the same way for the same reason.
-
-As it's just one small script we're running here, it may make sense to just place it inline instead of placing it in its own `.js` file. But securing sites using the Content Security Policy(CSP) is slowly gaining a consensus and the CSP recommends avoiding inline scripts, so let's go with that for this tutorial. Mike West's [Content Security Policy article on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/security/content-security-policy/) breaks it down really well.
-
-__js/scripts.js__
-{% prism javascript %}
-(function(){
-
-  // The Tipue-powered code that returns search results to
-  // "search.html".
-  $(function() {
-    $('#tipue_search_input').tipuesearch();
-  });
-
-})();
-{% endprism %}
-This file is just running our Tipue search code, which has absolutely nothing to do with or JS and CSS detection. Just keep in mind that file is JavaScript and that for the rest of this tutorial, it's the only file that we're going to talk about. 
-<!-- 
-
-        <form action="search.html">
-        <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
-        <input type="submit" class="btnSearch" value="Search">    
-      </form>
-Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
-
-If JS is an enabledour Tipue search box i
     -->
