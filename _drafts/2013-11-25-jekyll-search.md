@@ -299,9 +299,9 @@ Let's now go to step two and build our Tipue search functionality.
 
 We now need to create the Tipue search box with JavaScript off-DOM, then load it onto the page. Specifically, we need to create code on both of our web pages that looks like this:
 {% prism markup %}
-<form action="search.html">
+<form action="search.html" role="search">
   <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
-  <input type="submit" class="btnSearch" value="Search">    
+  <input type="submit" value="Search">    
 </form>
 {% endprism %}
 
@@ -314,18 +314,18 @@ So the JavaScript way to create it and also load it onto the pages will be added
   $(function() {
     $('#tipue_search_input').tipuesearch();
   });
+  
 
+  // Build the Tipue search box & load it on all HTML pages
   var loadSearchBox = document.getElementById("searchbox"),
     frag = document.createDocumentFragment(),
     form = document.createElement("form"),
     searchTextBox = document.createElement("input"),
     searchButton = document.createElement("input");
     
-  // set attributes for form
   form.action = "search.html";
   form.setAttribute("role", "search");
 
-  // set attributes for Search text box
   searchTextBox.type = "text";
   searchTextBox.name = "q";
   searchTextBox.id = "tipue_search_input";
@@ -333,7 +333,6 @@ So the JavaScript way to create it and also load it onto the pages will be added
 
   // set attributes for Submit button
   searchButton.type = "submit";
-  searchButton.setAttribute("class", "btnSearch");
   searchButton.value = "Search";
 
   // Arrange elements
@@ -348,6 +347,51 @@ So the JavaScript way to create it and also load it onto the pages will be added
     
 })();
 {% endprism %}
+
+We already know what the Tipue code is doing so let's break it down the "build the search box code"...
+
+{% prism javascript %}
+var loadSearchBox = document.getElementById("searchbox"),
+  frag = document.createDocumentFragment(),
+  form = document.createElement("form"),
+  searchTextBox = document.createElement("input"),
+  searchButton = document.createElement("input");
+{% endprism %}
+
+We're uisng a single var pattern to create five variables:
+
+* `loadSearchBox` is a reference to `<div id="searchbox"> </div>`, which is already on our page.
+* `frag` is a reference to newly created document fragment, which is basically a virtual box created in our browser's memory.
+* `form`, `searchTextBox` and `searchButton` are references to newly-created page elements: specifcally a `<form>` tag and `two` `<input>` tags.
+
+{% prism javascript %}
+form.action = "search.html";
+form.setAttribute("role", "search");
+{% endprism %}
+
+We have to apply attributes to our three newly-created page elements, starting with the `<form>` tag. We're setting the tag's `action` attribute to ` `search.html` (which targets Tipue's search results page) and setting its `role` attribute to `search` (which is good from a web semantics standpoint).
+
+The end result of all this is a form tag which looks like this: `<form action="search.html" role="search"></form>`
+
+{% prism javascript %}
+searchTextBox.type = "text";
+searchTextBox.name = "q";
+searchTextBox.id = "tipue_search_input";
+searchTextBox.placeholder = "Search...";
+{% endprism %}
+
+We next have to apply attributes to our first input element.  The main thing we have to do is turn it into a text box: that happens with the `searchTextBox.type = "text"` line of code.
+
+Both `searchTextBox.name = "q"` and `searchTextBox.id = "tipue_search_input"` are what's being done as per the Tipue documentation, so let's never change that code. `searchTextBox.placeholder = "Search..."` could probably be changed and not affect the code.
+
+The end result of all this is an input tag which looks like this: `<input type="text" name="q" id="tipue_search_input" placeholder="Search...">`
+
+{% prism javascript %}
+searchButton.type = "submit";
+searchButton.value = "Search";
+{% endprism %}
+
+We next have to apply attributes to our second input element.  The main thing we have to do is turn it into a submit button: that happens with the `searchButton.type = "submit";` line of code.
 <!-- 
 
 Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
