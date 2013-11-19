@@ -21,6 +21,7 @@ For static site generators, a common solution to this problem is to use a search
 4. [A Very Quick Tipue Walkthrough](#tipue-walkthrough)
 5. [Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages](#build-pages)
 6. [Step 2: Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
+7. [Step 3: Use JavaScript to Detect whether or not CSS is enabled](#css-detection)
 
 <a name="three-steps"></a>
 ## The Three Steps We Need To Take
@@ -402,7 +403,7 @@ Since the `<form>` tag should contain our two `<input>` tags, the `<form>` tag i
 
 Because the search box (which is represented by the `searchTextBox` variable) is appended first, it will appear in our code before the search button (which is represented by the `searchButton` variable).
 
-At this point, we've constructed our search box the way we want to and it exists off-DOM in the computer's memory...the time ahas come to load it onto the pages.
+At this point, we've constructed our search box the way we want to and it exists off-DOM in the computer's memory...the time has come to load it onto the pages.
 
 {% prism javascript %}
 frag.appendChild(form);
@@ -415,6 +416,103 @@ loadSearchBox.appendChild(frag);
 {% endprism %}
 
 We take our document fragment and load it into the `#searchbox` element that's already on our web pages, an element which is curently represented in the variable list above by our `loadSearchBox` variable.
+
+At this point, is this what the JavaScript (not CSS) detection process looks like:
+
+1. our HTML page loads.
+
+2. if the page loads in a browser where JavaScript is __*enabled*__, `js/scripts.js` changes the `no-js` class in the `<html>` tag to `js`.
+
+3. the `<html>` tag's class is changed over to `js`, the `.js #no-js-searchbox` can be apply a `display:none` setting to the Google CSE search box currently on the page.
+
+4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM.
+
+5. if the page loads in a browser where JavaScript is __*disabled*__, steps 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and give our end-users option, but the Tipue search box won't be built.
+
+<a name="css-detection"></a>
+## Step 3: Use JavaScript to Detect whether or not CSS is enabled
+
+The code in step 2 works well if either JavaScript is disabled or if both JavaScript and CSS is disabled. But if *just* CSS disabled, things fall apart.
+
+If *just* CSS is disabled, JavaScript will change the `no-js` class name in our `<html>` tag to `js`. The point of this code was allow the invocation of the `.js #no-js-searchbox` so we can hide our Google CSE search box.
+
+But when CSS is disabled in a browser, it renders all custom styles usless and allows only the the brower's default styling to render. This means that the `.js #no-js-searchbox` selector be ignored and the CSE box will be visible.
+
+And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* searchboxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't build if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box box will be visible if CSS is disabled, giving our end-users a search option in every situation.
+
+Someone by the name of ["Kethinov" shared a very cool trick to detect if CSS is enabled with JavaScript](http://www.sitepoint.com/forums/showthread.php?592155-How-to-detect-whether-CSS-enabled-or-not-using-Javascript "How to detect whether CSS enabled or not using Javascript") over on the SitePoint forum. I made a few syntax changes but quite loyal to is clever code
+
+Let's update our already-existing `js/scripts.js` file so it looks like this:
+{% prism javascript %}
+(function(){
+
+  // Code that runs our Tipue search and loads it into 'search.html'
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
+
+  // Variables that are global to this RequireJS module only
+  var loadMenu,
+    isCssDisabled,
+    testcss,
+    currstyle;
+
+  loadMenu = function() {
+    var loadSearchBox = document.getElementById("searchbox"),
+      frag = document.createDocumentFragment(),
+      form = document.createElement("form"),
+      searchTextBox = document.createElement("input"),
+      searchButton = document.createElement("input");
+    
+    form.action = "search.html";
+    form.setAttribute("role", "search");
+
+    searchTextBox.type = "text";
+    searchTextBox.name = "q";
+    searchTextBox.id = "tipue_search_input";
+    searchTextBox.placeholder = "Search...";
+
+    searchButton.type = "submit";
+    searchButton.value = "Search";
+
+    form.appendChild(searchTextBox);
+    form.appendChild(searchButton);
+
+    frag.appendChild(form);
+
+    loadSearchBox.appendChild(frag);
+    
+  }
+
+  isCssDisabled = false;
+  
+  testcss = document.createElement('div');
+
+  testcss.style.position = 'absolute';
+
+  document.getElementsByTagName('body')[0].appendChild(testcss);
+
+  if (testcss.currentStyle) {
+    currstyle = testcss.currentStyle['position'];
+  }
+
+  else if (window.getComputedStyle) {
+    currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
+  } 
+
+  isCssDisabled = (currstyle === 'static') ? true : false;
+
+  document.getElementsByTagName('body')[0].removeChild(testcss);
+
+  if (isCssDisabled === false) {
+    loadMenu();
+  } else {
+    return false;
+  }
+    
+})();
+{% endprism %}
+
 <!-- 
 
 Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
