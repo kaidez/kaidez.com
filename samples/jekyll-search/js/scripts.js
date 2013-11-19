@@ -1,17 +1,17 @@
 (function(){
 
+  // Code that runs our Tipue search and loads it into 'search.html'
   $(function() {
     $('#tipue_search_input').tipuesearch();
   });
 
   // Variables that are global to this RequireJS module only
   var loadMenu,
-    isCssDisabled,
-    testcss,
-    currstyle;
+    isCSSDisabled,
+    testCSS,
+    currStyle;
 
   loadMenu = function() {
-    
     var loadSearchBox = document.getElementById("searchbox"),
       frag = document.createDocumentFragment(),
       form = document.createElement("form"),
@@ -37,30 +37,29 @@
     loadSearchBox.appendChild(frag);
     
   }
+
+  // Start detecting if CSS is enabled or disabled
+  isCSSDisabled = false;
   
+  testCSS = document.createElement('div');
 
-  // Start checking if CSS is disabled
-  isCssDisabled = false;
-  
-  testcss = document.createElement('div');
+  testCSS.style.position = 'absolute';
 
-  testcss.style.position = 'absolute';
+  document.getElementsByTagName('body')[0].appendChild(testCSS);
 
-  document.getElementsByTagName('body')[0].appendChild(testcss);
-
-  if (testcss.currentStyle) {
-    currstyle = testcss.currentStyle['position'];
+  if (testCSS.currentStyle) {
+    currStyle = testCSS.currentStyle['position'];
   }
 
   else if (window.getComputedStyle) {
-    currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
+    currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
   } 
 
-  isCssDisabled = (currstyle === 'static') ? true : false;
+  isCSSDisabled = (currStyle === 'static') ? true : false;
 
-  document.getElementsByTagName('body')[0].removeChild(testcss);
+  document.getElementsByTagName('body')[0].removeChild(testCSS);
 
-  if (isCssDisabled === false) {
+  if (isCSSDisabled === false) {
     loadMenu();
   } else {
     return false;

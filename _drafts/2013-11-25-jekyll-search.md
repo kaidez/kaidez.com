@@ -453,9 +453,9 @@ Let's update our already-existing `js/scripts.js` file so it looks like this:
 
   // Variables that are global to this RequireJS module only
   var loadMenu,
-    isCssDisabled,
-    testcss,
-    currstyle;
+    isCSSDisabled,
+    testCSS,
+    currStyle;
 
   loadMenu = function() {
     var loadSearchBox = document.getElementById("searchbox"),
@@ -484,27 +484,28 @@ Let's update our already-existing `js/scripts.js` file so it looks like this:
     
   }
 
-  isCssDisabled = false;
+  // Start detecting if CSS is enabled or disabled
+  isCSSDisabled = false;
   
-  testcss = document.createElement('div');
+  testCSS = document.createElement('div');
 
-  testcss.style.position = 'absolute';
+  testCSS.style.position = 'absolute';
 
-  document.getElementsByTagName('body')[0].appendChild(testcss);
+  document.getElementsByTagName('body')[0].appendChild(testCSS);
 
-  if (testcss.currentStyle) {
-    currstyle = testcss.currentStyle['position'];
+  if (testCSS.currentStyle) {
+    currStyle = testCSS.currentStyle['position'];
   }
 
   else if (window.getComputedStyle) {
-    currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
+    currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
   } 
 
-  isCssDisabled = (currstyle === 'static') ? true : false;
+  isCSSDisabled = (currStyle === 'static') ? true : false;
 
-  document.getElementsByTagName('body')[0].removeChild(testcss);
+  document.getElementsByTagName('body')[0].removeChild(testCSS);
 
-  if (isCssDisabled === false) {
+  if (isCSSDisabled === false) {
     loadMenu();
   } else {
     return false;
@@ -513,6 +514,40 @@ Let's update our already-existing `js/scripts.js` file so it looks like this:
 })();
 {% endprism %}
 
+{% prism javascript %}
+var loadMenu,
+  isCSSDisabled,
+  testCSS,
+  currstyle;
+{% endprism %}
+
+We're creating four new variables using the [single var pattern](http://tech.diaslopes.com/?p=51 "Learn more about the single var pattern"). We'll give them value as we go along, starting with the `loadMenu` variable.
+
+{% prism javascript %}
+loadMenu = function() {
+...
+}
+{% endprism %}
+
+The code we used to build the Tipue search box is now stored in a JavaScript function called `loadMenu`.  This code hasn't changed but it's important to understand that at this point, it has not executed yet, and won't if our code detects that CSS is disabled.
+
+Let's get to that code...
+
+{% prism javascript %}
+isCSSDisabled = false;
+{% endprism %}
+
+The `isCSSDisabled` that we created earlier is a Boolean-type variable: it has a value of either true or false....we're giving it a value of `false`.
+
+{% prism javascript %}
+testCSS = document.createElement('div');
+{% endprism %}
+
+The `testCSS` that we created earlier is storing a reference to a `div` tag created with the `createElement()` method.
+
+{% prism javascript %}
+testCSS.style.position = 'absolute';
+{% endprism %}
 <!-- 
 
 Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
