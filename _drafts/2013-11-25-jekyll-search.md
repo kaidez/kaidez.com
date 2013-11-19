@@ -309,8 +309,6 @@ So the JavaScript way to create it and also load it onto the pages will be added
 {% prism javascript %}
 (function(){
 
-  // The Tipue-powered code that returns search results to
-  // "search.html".
   $(function() {
     $('#tipue_search_input').tipuesearch();
   });
@@ -331,18 +329,14 @@ So the JavaScript way to create it and also load it onto the pages will be added
   searchTextBox.id = "tipue_search_input";
   searchTextBox.placeholder = "Search...";
 
-  // set attributes for Submit button
   searchButton.type = "submit";
   searchButton.value = "Search";
 
-  // Arrange elements
   form.appendChild(searchTextBox);
   form.appendChild(searchButton);
 
-  // Load arranged elements into document fragment
   frag.appendChild(form);
 
-  // Load document fragment into #searchbox, which is already on the page
   loadSearchBox.appendChild(frag);
     
 })();
@@ -365,13 +359,13 @@ We're using a single var pattern to create five variables:
 * `form`, `searchTextBox` and `searchButton` are references to newly-created page elements: specifically a `<form>` tag and `two` `<input>` tags.
 
 {% prism javascript %}
-form.action = "search.html";
+form.action = "search.html"; (abs/rel link)
 form.setAttribute("role", "search");
 {% endprism %}
 
 We have to apply attributes to our three newly-created page elements, starting with the `<form>` tag. We're setting the tag's `action` attribute to ` `search.html` (which targets Tipue's search results page) and setting its `role` attribute to `search` (which is good from a web semantics standpoint).
 
-The end result of all this is a form tag which looks like this: `<form action="search.html" role="search"></form>`
+The end result of all this is a form tag which, from a code perspective, looks like this: `<form action="search.html" role="search"></form>`
 
 {% prism javascript %}
 searchTextBox.type = "text";
@@ -384,14 +378,43 @@ We next have to apply attributes to our first input element.  The main thing we 
 
 Both `searchTextBox.name = "q"` and `searchTextBox.id = "tipue_search_input"` are what's being done as per the Tipue documentation, so let's never change that code. `searchTextBox.placeholder = "Search..."` could probably be changed and not affect the code.
 
-The end result of all this is an input tag which looks like this: `<input type="text" name="q" id="tipue_search_input" placeholder="Search...">`
+The end result of all this is an input tag which, from a code perspective, looks like this: `<input type="text" name="q" id="tipue_search_input" placeholder="Search...">`
 
 {% prism javascript %}
 searchButton.type = "submit";
 searchButton.value = "Search";
 {% endprism %}
 
-We next have to apply attributes to our second input element.  The main thing we have to do is turn it into a submit button: that happens with the `searchButton.type = "submit";` line of code.
+We next have to apply attributes to our second input element.  The main thing we have to do is turn it into a submit button: that happens with the `searchButton.type = "submit"` line of code.
+
+The value of `searchButton.value` can be anything you want it to be.
+
+The end result of all this is a submit button which, from a code perspective, looks like this: `<input type="submit" value="Search"> `
+
+Now we have to arrange all the page elements we created off-DOM.
+
+{% prism javascript %}
+form.appendChild(searchTextBox);
+form.appendChild(searchButton);
+{% endprism %}
+
+Since the `<form>` tag should contain our two `<input>` tags, the `<form>` tag is viewed as the "parrent element" and each `input` tag is viewed as "child elemnt". We can add each child to the inside of the parent using the `appendChild()` method in the manner above.
+
+Because the search box (which is represented by the `searchTextBox` variable) is appended first, it will appear in our code before the search button (which is represented by the `searchButton` variable).
+
+At this point, we've constructed our search box the way we want to and it exists off-DOM in the computer's memory...the time ahas come to load it onto the pages.
+
+{% prism javascript %}
+frag.appendChild(form);
+{% endprism %}
+
+We take our `<form>` tag and all of its contents and load it into our document fragment, which is curently represented in the variable list above by our `frag` variable.
+
+{% prism javascript %}
+loadSearchBox.appendChild(frag);
+{% endprism %}
+
+We take our document fragment and load it into the `#searchbox` element that's already on our web pages, an element which is curently represented in the variable list above by our `loadSearchBox` variable.
 <!-- 
 
 Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
