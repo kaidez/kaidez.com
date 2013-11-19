@@ -8,29 +8,29 @@ permalink: /custom-jekyll-search/
 category: tutorials
 cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
-tags: [jekyll, jquery, accessibility, javascript, tute]
+tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---  
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites and not dynamic, database-driven ones. This means that it doesn't contain the search functionality that's commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites and not  database-driven ones. This means it doesn't contain the search functionality that's commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
-For static site generators, a common solution to this problem is to use a search solution based on JavaScript, but this won't work if the end-user has disabled JS in their browser. Search is vital nowadays so this tutorial shows you how to not only implement JS-powered search functionality, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
+For static site generators, a common solution to this problem is to use a search solution based on JavaScript, but this won't work if the end-user has disabled JS in their browser. Search is vital so this tutorial shows you how to not only add JS-powered search functionality to your site, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
 ## Table of Contents
-1. [The Steps We Need To Take](#steps)
+1. [The Three Steps We Need To Take](#three-steps)
 2. [One Assumption...Many Notes](#assumptions-notes)
 3. [The Fallback Google CSE](#fallback-google-cse-code)
 4. [A Very Quick Tipue Walkthrough](#tipue-walkthrough)
 5. [Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages](#build-pages)
-6. [Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
+6. [Step 2: Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
 
-<a name="steps"></a>
-## The Steps We Need To Take
-To acheive our goal, the steps we need to take are:
+<a name="three-steps"></a>
+## The Three Steps We Need To Take
+To achieve our goal, there are three steps we need to take:
 
-1. __Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages__: These pages will link to JavaScript and CSS files working together to check for the presence of JavaScript, and will also contain our fallback code. ([jump to this section](#build-pages))
+1. __Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages__: These pages will link to JavaScript and CSS files working together to check for the presence of JavaScript, and will also contain our fallback search functionality.
 
-2. __Dynamically Create the JS-powered Search Functionality__: We'll create it off-DOM first, then load it onto the pages next.
+2. __Step 2: Dynamically Create the JS-powered Search Functionality__: We'll create it off-DOM first, then load it onto the pages next.
 
-3. __Use JavaScript to Detect whether or not CSS is enabled__: This will be walked through in great detail.
+3. __Step 3: Use JavaScript to Detect whether or not CSS is enabled__: This will be walked through in great detail.
 
 <a name="assumptions-notes"></a>
 ## One Assumption...Many Notes
@@ -39,11 +39,11 @@ The only assumption I'm making is that you have already installed Jekyll on your
 
 Some notes...
 
-* Despite the one assumption, this search functionality isn't Jekyll-specific. All this is based on my personal Jekyll experiences, and the fact that it's one of the most popular static site generators at the time of the post's publish date. I haven't tested this code outside of Jekyll but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
-
-* The JavaScript-powered search in this tutorial is provided by the [Tipue search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search") but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing but that's it...[read the Tipue documentation](http://www.tipue.com/search/docs/ "Read the Tipue documentation") to fully understand how Tipue works. Also, I like Tipue but this tutorial should work with other JS-powered search solutions. I list some of these options towards the end of this post.
+* Despite the one assumption, the search functionality in this tutorial isn't Jekyll-specific. All this is based on my personal Jekyll experiences, and the fact that it's one of the most popular static site generators at the time of the post's publish date. I haven't tested this code outside of Jekyll but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
 
 * The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in both Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But disabling CSS before page load is tricky: Pederick's tool disables it __AFTER__ page load, then CSS is enabled on page refresh after that, which won't render a proper test. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
+
+* The JavaScript-powered search in this tutorial is provided by the [Tipue search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search") but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing but that's it so [read the Tipue documentation](http://www.tipue.com/search/docs/ "Read the Tipue documentation") to fully understand how it works. Also, I like Tipue but this tutorial should work with other JS-powered search solutions. I list some of these options towards the end of this post.
 
 * At some point while reading this, you may say to yourself, "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...yes, but it doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C's HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
@@ -295,7 +295,7 @@ At this point we've established the basic structure for our pages as well as our
 Let's now go to step two and build our Tipue search functionality.
 
 <a name="create-javascript-search"></a>
-## Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
+## Step 2: Dynamically Create the JS-powered Search Functionality
 
 We now need to create the Tipue search box with JavaScript off-DOM, then load it onto the page. Specifically, we need to create code on both of our web pages that looks like this:
 {% prism markup %}
@@ -358,11 +358,11 @@ var loadSearchBox = document.getElementById("searchbox"),
   searchButton = document.createElement("input");
 {% endprism %}
 
-We're uisng a single var pattern to create five variables:
+We're using a single var pattern to create five variables:
 
 * `loadSearchBox` is a reference to `<div id="searchbox"> </div>`, which is already on our page.
 * `frag` is a reference to newly created document fragment, which is basically a virtual box created in our browser's memory.
-* `form`, `searchTextBox` and `searchButton` are references to newly-created page elements: specifcally a `<form>` tag and `two` `<input>` tags.
+* `form`, `searchTextBox` and `searchButton` are references to newly-created page elements: specifically a `<form>` tag and `two` `<input>` tags.
 
 {% prism javascript %}
 form.action = "search.html";
