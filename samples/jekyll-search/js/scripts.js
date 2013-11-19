@@ -1,40 +1,69 @@
 (function(){
 
-    // The Tipue-powered code that returns search results to
-    // "search.html".
-    $(function() {
-      $('#tipue_search_input').tipuesearch();
-    });
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
 
+  // Variables that are global to this RequireJS module only
+  var loadMenu,
+    isCssDisabled,
+    testcss,
+    currstyle;
+
+  loadMenu = function() {
+    
     var loadSearchBox = document.getElementById("searchbox"),
       frag = document.createDocumentFragment(),
       form = document.createElement("form"),
       searchTextBox = document.createElement("input"),
       searchButton = document.createElement("input");
     
-    // set attributes for form
     form.action = "search.html";
     form.setAttribute("role", "search");
 
-    // set attributes for Search text box
     searchTextBox.type = "text";
     searchTextBox.name = "q";
     searchTextBox.id = "tipue_search_input";
     searchTextBox.placeholder = "Search...";
 
-    // set attributes for Submit button
     searchButton.type = "submit";
-    searchButton.setAttribute("class", "btnSearch");
     searchButton.value = "Search";
 
-    // Arrange elements
     form.appendChild(searchTextBox);
     form.appendChild(searchButton);
 
-    // Load arranged elements into document fragment
     frag.appendChild(form);
 
-    // Load document fragment into #searchbox, which is already on the page
     loadSearchBox.appendChild(frag);
+    
+  }
+  
+
+  // Start checking if CSS is disabled
+  isCssDisabled = false;
+  
+  testcss = document.createElement('div');
+
+  testcss.style.position = 'absolute';
+
+  document.getElementsByTagName('body')[0].appendChild(testcss);
+
+  if (testcss.currentStyle) {
+    currstyle = testcss.currentStyle['position'];
+  }
+
+  else if (window.getComputedStyle) {
+    currstyle = document.defaultView.getComputedStyle(testcss, null).getPropertyValue('position');
+  } 
+
+  isCssDisabled = (currstyle === 'static') ? true : false;
+
+  document.getElementsByTagName('body')[0].removeChild(testcss);
+
+  if (isCssDisabled === false) {
+    loadMenu();
+  } else {
+    return false;
+  }
     
 })();
