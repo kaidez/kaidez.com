@@ -1,16 +1,17 @@
 (function(){
-console.time("time");
-  // Code that runs our Tipue search and loads it into 'search.html'
+
+  // Tipue code
   $(function() {
     $('#tipue_search_input').tipuesearch();
   });
 
-  // Variables that are global to this RequireJS module only
+  // Variables used throughout the code
   var loadMenu,
     isCSSDisabled,
     testCSS,
     currStyle;
-
+  
+  // Function that builds the Tipue search box
   loadMenu = function() {
     var loadSearchBox = document.getElementById("searchbox"),
       frag = document.createDocumentFragment(),
@@ -64,5 +65,4 @@ console.time("time");
   } else {
     return false;
   }
-console.timeEnd("time");
 })();
