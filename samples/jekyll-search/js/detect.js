@@ -1,7 +1,5 @@
-// If JavaScript is enabled, this code will change the "no-js" 
-// class on the opening <html> element to "js". This code is stolen
-// from Modernizr so if Modernizr is already on your web page,
-// don't use this part of the code.
+// This code is stolen from Modernizr so if Modernizr is already on
+// your web page, don't use this part of the code.
 
 // This code is one file because it's a best practice as per the
 // Content Security Policy. Mike West breaks CSP down really well at:

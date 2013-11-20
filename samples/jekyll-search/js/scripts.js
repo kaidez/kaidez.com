@@ -1,5 +1,5 @@
 (function(){
-
+console.time("time");
   // Code that runs our Tipue search and loads it into 'search.html'
   $(function() {
     $('#tipue_search_input').tipuesearch();
@@ -49,11 +49,11 @@
 
   if (testCSS.currentStyle) {
     currStyle = testCSS.currentStyle['position'];
+  } else {
+    if (window.getComputedStyle) {
+      currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
+    } 
   }
-
-  else if (window.getComputedStyle) {
-    currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
-  } 
 
   isCSSDisabled = (currStyle === 'static') ? true : false;
 
@@ -64,5 +64,5 @@
   } else {
     return false;
   }
-    
+console.timeEnd("time");
 })();
