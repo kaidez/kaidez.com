@@ -2654,6 +2654,26 @@ a:focus {
   outline: 2px solid red;
 }
 
+.demo {
+  background-color: #7db9e8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 220px;
+  height: 34px;
+  display: inline-block;
+  left: 190px;
+  position: relative;
+}
+
+.demoLink:link, .demoLink:visited {
+  color: #fff;
+  font-size: 23px;
+  text-decoration: none;
+}
+
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
