@@ -21,7 +21,7 @@ A common solution to this problem is to use some sort of JavaScript-based search
 4. [A Very Quick Tipue Walkthrough](#tipue-walkthrough)
 5. [Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages](#build-pages)
 6. [Step 2: Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
-7. [Step 3: Use JavaScript to Detect whether or not CSS is enabled](#css-detection)
+7. [Step 3: Use JavaScript to Detect if CSS is Enabled](#css-detection)
 
 <a name="three-steps"></a>
 ## The Three Steps We Need To Take
@@ -31,22 +31,22 @@ There are three steps we need to take to get everything done:
 
 2. __Step 2: Dynamically Create the JS-powered Search Functionality__: We'll create it off-DOM first, then load it onto the pages next.
 
-3. __Step 3: Use JavaScript to Detect whether or not CSS is enabled__: This will be walked through in great detail.
+3. __Step 3: Use JavaScript to Detect if CSS is Enabled__: This will be walked through in great detail.
 
 <a name="assumptions-notes"></a>
 ## One Assumption...More Notes
 
-Since we're talking about creating search for static sites, the only assumption I'm making is that you have either Jekyll or some other static site software on your machine.
+Since we're talking about creating search for static sites, the only assumption I'm making is that you have either Jekyll or some other static site software installed on your machine.
 
 Some notes...
 
-* Expanding on the assumption, let's be clear that the search functionality being described here isn't Jekyll-specific. All this is based on my personal Jekyll experiences. I haven't tested this code outside of Jekyll but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
+* Expanding on the assumption, let's be clear that the search functionality being described here isn't Jekyll-specific. This post is based on my personal Jekyll experiences. I haven't tested this code outside of Jekyll but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
 
-* The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in either Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But Pederick's tool currently can't disable CSS before a page load. It can disable it but it won't stay that way: CSS will be re-enabled after a page refresh and that doesn't help us. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
+* The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ its code runs in a browser.  Disabling JavaScript before page load in either Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But Pederick's tool currently can't disable CSS before page load. It can disable it afterwards but it won't stay that way: CSS will be re-enabled after a page refresh and that doesn't help us. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
 
 * The JavaScript-powered search in this tutorial is provided by the [Tipue search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search") but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing to provide context for this tutorial, but that's it.  [Read the Tipue documentation](http://www.tipue.com/search/docs/ "Read the Tipue documentation") to fully understand how it works.
 
-* At some point while reading this, you may say to yourself, "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...yes, but that doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C's HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
+* At some point while reading this, you may say to yourself, "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...maybe, but that doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C's HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
 <a name="fallback-search-code"></a>
 ## The Fallback Search Code
@@ -56,7 +56,7 @@ Our fallback search functionality comes from [Google Custom Search Engine (CSE)]
 
 [The second version](https://support.google.com/customsearch/answer/1351747?hl=en "Read Google's recommended way to use Google CSE with a form tag") is very similar to the first version and works when JavaScript is disabled, but adds an extra click-through to the user experience when compared to the first one...not what I wanted. [The third version is what Google currently recommends](http://googlecustomsearch.blogspot.com/2012/08/introducing-custom-search-element-v2.html "Read the official recommendation for Google CSE search boxes") but is a pure JavaScript version that won't work if JS is disabled...also, not what I wanted.
 
-Let's look at the code that we'll be using...version 1:
+Let's look at version 1 of the code we'll be using:
 
 {% prism markup %}
 <!DOCTYPE html>
@@ -77,7 +77,7 @@ Let's look at the code that we'll be using...version 1:
 </body>
 </html>
 {% endprism %}
-Note the setting of the `value` attribute in the first input tag: you would need to change this to whatever your site URL is. Once that's done, any searches entered into this searchbox returns the results for that site, and returns them to a standard Google search results page. 
+Note the setting of the `value` attribute in the first `<input>` tag: you would need to change this to whatever your site URL is. Once that's done, any searches entered into this searchbox will return the results for that site, and return them inside a standard Google search results page. 
 
 To be honest: if you want search engine functionality on your static site, you really can just apply a Google CSE solution and move on. The reason I went beyond Google CSE was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on my site, I wanted them to stay on my site. 
 
@@ -95,17 +95,17 @@ Along with the `search.html` page, Tipue also needs five JS files to work and th
 2. `tipuesearch_content.js`, which contains the searchable site data that's returned to `search.html`
 3. `tipuesearch_set.js`, which filters words and phrases in the search results.
 4. `js/tipuesearch.min.js`, which is the core Tipue code.
-5. a file containing the executable Tipue code that returns search results to `search.html`...this code will be placed in a file called `js/scripts.js` and we'll it discuss shortly.
+5. a file containing the executable Tipue code that returns search results to `search.html`...this code will be placed in a file called `js/scripts.js` and we'll discuss it shortly.
 
 <a name="build-pages"></a>
 ## Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages
-We need to layout our pages and add references to both `.css` and more `.js` files. We're not going to review any of the just-mentioned Tipue files as they don't play a role in the JSS/CSS detection process, but five other files do and we need to review them:
+We need to create our web pages and include references to both a `.css` file and some more `.js` files. We're not going to review any of the Tipue-related files we just discussed as they don't play a role in the JSS/CSS detection process, but these other files do play a role:
 
-1. index.html
-2. search.html
-3. css/styles.css
-4. js/detect.js
-5. js/scripts.js
+* index.html
+* search.html
+* css/styles.css
+* js/detect.js
+* js/scripts.js
 
 Let's start with`index.html`:
 
@@ -118,7 +118,7 @@ __index.html__
   <title>Search For Content</title>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link href="css/tipuesearch.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/styles.css" rel="stylesheet">
   <script src="js/detect.js"></script>
 </head>
 <body>
@@ -176,7 +176,7 @@ __search.html__
   <title>Search Results</title>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link href="css/tipuesearch.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/styles.css" rel="stylesheet">
   <script src="js/detect.js"></script>
 </head>
 <body>
@@ -426,7 +426,7 @@ At this point, is this what the JavaScript (not CSS) detection process looks lik
 5. if the page loads in a browser where JavaScript is __*disabled*__, steps 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and give our end-users option, but the Tipue search box won't be built.
 
 <a name="css-detection"></a>
-## Step 3: Use JavaScript to Detect whether or not CSS is enabled
+## Step 3: Use JavaScript to Detect if CSS is Enabled
 
 The code in step 2 works well if either JavaScript is disabled or if both JavaScript and CSS is disabled. But if *just* CSS is disabled, things fall apart.
 
