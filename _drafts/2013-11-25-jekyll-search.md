@@ -31,7 +31,7 @@ There are three steps we need to take to get everything done:
 
 2. __Step 2: Dynamically Create the JS-powered Search Functionality__: We'll create it off-DOM first, then load it onto the pages next.
 
-3. __Step 3: Use JavaScript to Detect if CSS is Enabled__: This will be walked through in great detail.
+3. __Step 3: Use JavaScript to Detect if CSS is Enabled__: The page that returns the searches will not look pretty if CSS is disabled, but they will be returned nonetheless.  The code for this will be walked through in great detail.
 
 <a name="assumptions-notes"></a>
 ## One Assumption...More Notes
@@ -42,7 +42,7 @@ Some notes...
 
 * Expanding on the assumption, let's be clear that the search functionality being described here isn't Jekyll-specific. This post is based on my personal Jekyll experiences. I haven't tested this code outside of Jekyll but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.
 
-* The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ its code runs in a browser.  Disabling JavaScript before page load in either Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension")...Opera had issues.  But Pederick's tool currently can't disable CSS before page load. It can disable it afterwards but it won't stay that way: CSS will be re-enabled after a page refresh and that doesn't help us. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
+* The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ its code runs in a browser.  Disabling JavaScript before page load in either Chrome and Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension").  But Pederick's tool currently can't disable CSS before page load. It can disable it afterwards but it won't stay that way: CSS will be re-enabled after a page refresh and that doesn't help us. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is *View &gt; Page Style &gt; No Style* while Safari is *Develop > Disable Styles*.
 
 * The JavaScript-powered search in this tutorial is provided by the [Tipue search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search") but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing to provide context for this tutorial, but that's it.  [Read the Tipue documentation](http://www.tipue.com/search/docs/ "Read the Tipue documentation") to fully understand how it works.
 
@@ -107,7 +107,7 @@ We need to create our web pages and include references to both a `.css` file and
 * js/detect.js
 * js/scripts.js
 
-Let's start with`index.html`:
+Let's review these files...
 
 __index.html__
 {% prism markup %}
@@ -155,9 +155,9 @@ __index.html__
 
 The key parts of the file:
 
-* A `no-js` class is attached to the `<html>` element. This will help us detect whether or not JavaScript is disabled.
+* A `no-js` class is attached to the `<html>` element. This will help us detect whether or not JavaScript is enabled.
 
-* There are three CSS files but the first two are only applying generic styles and don't help us in achieving our goal. The last file, `css/styles.css`, also applies some generic styling but has one selector called `.js #no-js-searchbox`, which does help us in achieving our goal.
+* There are three CSS files but the first two are just there as per Tipue documentation...they load in Google Fonts, apply some styling and don't play a role in the detection process. The last file, `css/styles.css`, also applies some styling but contains a selector called `.js #no-js-searchbox`, which plays a HUGE role in the detection process.
 
 * There's a file called `js/detect.js` which detects whether or not JavaScript is enabled.
 
@@ -165,7 +165,7 @@ The key parts of the file:
 
 * The Tipue search box is *not* on the page. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into a page element called `<div id="searchbox"></div>`.
 
-* Among the Tipue-related files we discussed earlier, we now see `js/scripts.js`. It currently contains the code needed execute Tipue's searches and will be the place where we add both our off-DOM building and JS detection code.
+* Among the Tipue-related files we discussed earlier, we now see `js/scripts.js`. We'll soon see that it contains the just the code needed execute Tipue's searches. But as we move forward, it will be the place where we add both the code needed to build things off-DOM as well as our JS detection code.
 
 __search.html__
 {% prism markup %}
@@ -213,7 +213,7 @@ __search.html__
 </html>
 {% endprism %}
 
-Again, `search.html` is the page where Tipue returns the search results.  It's similar to `index.html` but it has an extra tag: `<div id="tipue_search_content"></div>`. This is the spot where Tipue returns the search results.
+Again, `search.html` is the page where Tipue returns the search results.  It's similar to `index.html` but it has an extra tag: `<div id="tipue_search_content"></div>`. This is the page element where Tipue places the search results.
 
 __css/styles.css__
 {% prism css %}
@@ -239,17 +239,18 @@ form {
 }
 {% endprism %}
 
-As mentioned, the `.js #no-js-searchbox` is the key class here...the rest of the styles just add generic styling. This style will hide the Google CSE search *only when JavaScript is enabled*...let's now see how this is done.
+As mentioned, the `.js #no-js-searchbox` is the key class here...the rest of the styles just add generic styling. `.js #no-js-searchbox` will hide the Google CSE search *only when JavaScript is enabled*...let's start breaking down how that's done.
 
 __js/detect.js__
 {% prism javascript %}
 // This code is stolen from Modernizr so if Modernizr is already on
 // your web page, don't use this part of the code.
 
-// This code is one file because it's a best practice as per the
-// Content Security Policy. Mike West breaks CSP down really well at:
-// http://bit.ly/KzGWUZ. Also make sure to read the CSP W3C spec at: 
-// http://bit.ly/vCQbiW
+// This code is one file and not inline because it's a best practice as
+// per theContent Security Policy. Mike West breaks CSP down really
+// well over at: http://bit.ly/KzGWUZ. Also make sure to read the CSP
+// W3C spec at: http://bit.ly/vCQbiW
+
 var docElement = document.documentElement;
 docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
 {% endprism %}
@@ -272,7 +273,7 @@ As the comments say, this code is currently built into [Modernizr](http://modern
 
 Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before DOM starts building the visible page content. We're treating this piece of code the same way for the same reason.
 
-And as noted in the comments, this code is placed in its own JS file instead of inline because it's a best practice as per the Content Security Policy (CSP) that's starting to gain a consensus. Mike West's [Content Security Policy article on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/security/content-security-policy/) breaks it down really well and you should [read the W3C's Content Security Policy spec](http://www.w3.org/TR/CSP/ "Read the W3C's Content Security Policy spec") sooner than later.
+And as noted in the comments, this code is placed in its own JS file instead of inline because it's a best practice as per the Content Security Policy (CSP) that's starting to gain a consensus. Mike West's [Content Security Policy article on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/security/content-security-policy/) breaks it down really well but you should still [read the W3C's Content Security Policy spec](http://www.w3.org/TR/CSP/ "Read the W3C's Content Security Policy spec") sooner than later.
 
 __js/scripts.js__
 {% prism javascript %}
@@ -288,7 +289,7 @@ __js/scripts.js__
 {% endprism %}
 This file is just running our Tipue search code, which has absolutely nothing to do with the JS/CSS detection. But again, it's where we're going to add our remaining code and it's the only file we're really going to talk for the rest of this post.
 
-At this point we've established the basic structure for our pages as well as our system for detecting whether JavaScript is enabled or not. We also understand that if JavaScript is disabled, the Google search box will be visible.
+At this point we've established the basic structure for our pages as well as our system for detecting whether or not JavaScript is enabled. We also understand that if JavaScript is disabled, the Google search box will be visible.
 
 Let's now go to step two and build our Tipue search functionality.
 
@@ -303,7 +304,7 @@ We now need to create the Tipue search box with JavaScript off-DOM, then load it
 </form>
 {% endprism %}
 
-So the JavaScript way to create it and also load it onto the pages will be added to our already-existing `js/scripts.js` file and will look like this:
+We'll add this code to our already-existing `js/scripts.js` file so it will now look like this:
 {% prism javascript %}
 (function(){
 
@@ -339,7 +340,7 @@ So the JavaScript way to create it and also load it onto the pages will be added
 })();
 {% endprism %}
 
-We already know what the Tipue code is doing so let's break it down the "build the search box code"...
+We already know what the Tipue code is doing so let's look at the "build the search box code"...
 
 {% prism javascript %}
 var loadSearchBox = document.getElementById("searchbox"),
@@ -349,18 +350,18 @@ var loadSearchBox = document.getElementById("searchbox"),
   searchButton = document.createElement("input");
 {% endprism %}
 
-We're using a single var pattern to create five variables:
+We're using a [single var pattern](http://tech.diaslopes.com/?p=51 "Learn more about the single var pattern") to create five variables:
 
-* `loadSearchBox` is a reference to `<div id="searchbox"> </div>`, which is already on our page.
-* `frag` is a reference to newly created document fragment, which is basically a virtual box created in our browser's memory.
-* `form`, `searchTextBox` and `searchButton` are references to newly-created page elements: specifically a `<form>` tag and `two` `<input>` tags.
+* `loadSearchBox` is a variable reference to `<div id="searchbox"> </div>`, which is already on our pages.
+* `frag` is a variable reference to newly created document fragment, which is basically a virtual box created in browser memory.
+* `form`, `searchTextBox` and `searchButton` are variable references to newly-created page elements: specifically a `<form>` tag and two `<input>` tags.
 
 {% prism javascript %}
 form.action = "search.html"; (abs/rel link)
 form.setAttribute("role", "search");
 {% endprism %}
 
-We have to apply attributes to our three newly-created page elements, starting with the `<form>` tag. We're setting the tag's `action` attribute to ` `search.html` (which targets Tipue's search results page) and setting its `role` attribute to `search` (which is good from a web semantics standpoint).
+We have to apply attributes to our three newly-created page elements, starting with the `<form>` tag. We're setting the tag's `action` attribute to `search.html` (which targets Tipue's search results page) and setting its `role` attribute to `search` (which is good from a web semantics standpoint).
 
 The end result of all this is a form tag which, from a code perspective, looks like this: `<form action="search.html" role="search"></form>`
 
@@ -373,7 +374,7 @@ searchTextBox.placeholder = "Search...";
 
 We next have to apply attributes to our first input element.  The main thing we have to do is turn it into a text box: that happens with the `searchTextBox.type = "text"` line of code.
 
-Both `searchTextBox.name = "q"` and `searchTextBox.id = "tipue_search_input"` are what's being done as per the Tipue documentation, so let's never change that code. `searchTextBox.placeholder = "Search..."` could probably be changed and not affect the code.
+Both `searchTextBox.name = "q"` and `searchTextBox.id = "tipue_search_input"` are what's being done as per the Tipue documentation, so let's never change that code. `searchTextBox.placeholder = "Search..."` can be changed and even removed if you want to...I would change it but never remove it as it's a great visual cue for end-users.
 
 The end result of all this is an input tag which, from a code perspective, looks like this: `<input type="text" name="q" id="tipue_search_input" placeholder="Search...">`
 
@@ -395,7 +396,7 @@ form.appendChild(searchTextBox);
 form.appendChild(searchButton);
 {% endprism %}
 
-Since the `<form>` tag should contain our two `<input>` tags, the `<form>` tag is viewed as the "parrent element" and each `input` tag is viewed as "child elemnt". We can add each child to the inside of the parent using the `appendChild()` method in the manner above.
+Since the `<form>` tag should contain our two `<input>` tags, the `<form>` tag is viewed as the "parent element" and each `input` tag is viewed as a "child element". We can add each child to the inside of the parent using the `appendChild()` method.
 
 Because the search box (which is represented by the `searchTextBox` variable) is appended first, it will appear in our code before the search button (which is represented by the `searchButton` variable).
 
@@ -405,36 +406,36 @@ At this point, we've constructed our search box the way we want to and it exists
 frag.appendChild(form);
 {% endprism %}
 
-We take our `<form>` tag and all of its contents and load it into our document fragment, which is curently represented in the variable list above by our `frag` variable.
+We load our `<form>` tag and all of its contents into our document fragment, which is curently represented in the variable list above by our `frag` variable.
 
 {% prism javascript %}
 loadSearchBox.appendChild(frag);
 {% endprism %}
 
-We take our document fragment and load it into the `#searchbox` element that's already on our web pages, an element which is curently represented in the variable list above by our `loadSearchBox` variable.
+Since `frag` is a document fragment that contains all our `<form>` code, we now load it onto our pages by placing it inside the `<div id="searchbox"></div>` element that's already on our web pages.  This element is curently referenced in our `loadSearchBox` variable so we use it to target this page element in our code.
 
-At this point, is this what the JavaScript (not CSS) detection process looks like:
+At this point, this is what the JavaScript (not CSS) detection process looks like:
 
 1. our HTML page loads.
 
 2. if the page loads in a browser where JavaScript is __*enabled*__, `js/scripts.js` changes the `no-js` class in the `<html>` tag to `js`.
 
-3. the `<html>` tag's class is changed over to `js`, the `.js #no-js-searchbox` can be apply a `display:none` setting to the Google CSE search box currently on the page.
+3. the `<html>` tag's class is changed over to `js`, so the `.js #no-js-searchbox` applies a `display:none` setting to the Google CSE search box currently on the page.
 
 4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM.
 
-5. if the page loads in a browser where JavaScript is __*disabled*__, steps 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and give our end-users option, but the Tipue search box won't be built.
+5. if the page loads in a browser where JavaScript is __*disabled*__, steps 2, 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and be completly visible, giving our end-users a search option while, at the same time, the Tipue search box won't be built.
 
 <a name="css-detection"></a>
 ## Step 3: Use JavaScript to Detect if CSS is Enabled
 
-The code in step 2 works well if either JavaScript is disabled or if both JavaScript and CSS is disabled. But if *just* CSS is disabled, things fall apart.
+The code in Step 2 works well if either JavaScript is disabled or if both JavaScript and CSS is disabled. But if *just* CSS is disabled, things fall apart.
 
-If *just* CSS is disabled, JavaScript will change the `no-js` class name in our `<html>` tag to `js`. The point of this code was to allow the invocation of the `.js #no-js-searchbox` so we can hide our Google CSE search box.
+If *just* CSS is disabled, JavaScript will still change the `no-js` class name in our `<html>` tag to `js`. The point of this code was to allow the invocation of the `.js #no-js-searchbox` so we can hide our Google CSE search box.
 
 But when CSS is disabled in a browser, it renders all custom styles useless and allows only the the browser's default styling to render. This means that the `.js #no-js-searchbox` selector will be ignored and the CSE box will be visible.
 
-And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* search boxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't build if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box box will be visible if CSS is disabled, giving our end-users a search option in every situation.
+And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* search boxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't built if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box box will be visible if CSS is disabled, giving our end-users a search option in every situation.
 
 Someone by the name of "Kethinov" shared [a very cool trick to use JavaScript to detect if CSS is enabled in a browser](http://www.sitepoint.com/forums/showthread.php?592155-How-to-detect-whether-CSS-enabled-or-not-using-Javascript "How to detect whether CSS enabled or not using JavaScript") over on the SitePoint forum. I made a few syntax changes but remain quite loyal to his ridiculously clever code.
 
@@ -442,17 +443,18 @@ Let's update our already-existing `js/scripts.js` file so it looks like this:
 {% prism javascript %}
 (function(){
 
-  // Code that runs our Tipue search and loads it into 'search.html'
+  // Tipue code
   $(function() {
     $('#tipue_search_input').tipuesearch();
   });
 
-  // Variables that are global to this RequireJS module only
+  // Variables used throughout the code
   var loadMenu,
     isCSSDisabled,
     testCSS,
     currStyle;
-
+  
+  // Function that builds the Tipue search box
   loadMenu = function() {
     var loadSearchBox = document.getElementById("searchbox"),
       frag = document.createDocumentFragment(),
@@ -508,7 +510,7 @@ Let's update our already-existing `js/scripts.js` file so it looks like this:
   }
 })();
 {% endprism %}
-
+We already know what the Tipue code is doing so let's look at the "CSS enabled/disable" detection code...
 {% prism javascript %}
 var loadMenu,
   isCSSDisabled,
@@ -516,7 +518,7 @@ var loadMenu,
   currstyle;
 {% endprism %}
 
-We're creating four new variables using the [single var pattern](http://tech.diaslopes.com/?p=51 "Learn more about the single var pattern"). We'll give them value as we go along, starting with the `loadMenu` variable.
+We're creating four new variables using the single var pattern again. We'll give them value as we go along, starting with the `loadMenu` variable.
 
 {% prism javascript %}
 loadMenu = function() {
@@ -524,7 +526,7 @@ loadMenu = function() {
 }
 {% endprism %}
 
-The code we used to build the Tipue search box is now stored in a JavaScript function called `loadMenu`.  This code hasn't changed but it's important to understand that at this point, it has not executed yet, and won't if our code detects that CSS is disabled.
+The code we used to build the Tipue search box is now a function stored in a variable called `loadMenu`.  The code hasn't changed but it's important to understand that while the previous code ran immediatly, this new version isn't doing that. This code will now *not* run unless we tell it to.
 
 Let's get to that code...
 
@@ -532,27 +534,27 @@ Let's get to that code...
 isCSSDisabled = false;
 {% endprism %}
 
-The `isCSSDisabled` variable that we created earlier is a Boolean, meaning it as a variable of either true or false. We're setting it to false.
+The `isCSSDisabled` variable that we created earlier is a Boolean, meaning it has a value of either true or false. We're setting it to `false`.
 
- `isCSSDisabled` will be the variable that will tell us whether or not CSS is enabled in the browser....remember that.
+`isCSSDisabled` will be the variable that will tell us whether or not CSS is enabled in the browser....remember that.
 
 {% prism javascript %}
 testCSS = document.createElement('div');
 {% endprism %}
 
-The `testCSS` that we created earlier is storing a reference to a `<div>` tag created with the `createElement()` method.
+The `testCSS` variable that we created earlier is storing a reference to a `<div>` tag created with the `createElement()` method.
 
 {% prism javascript %}
 testCSS.style.position = 'absolute';
 {% endprism %}
 
-The position property of the `<div>` tag we just created is `static` by default....change it to `absolute`.
+The value of a `<div>` tag's position property is `static` by default....change the position property of our `testCSS` div to `absolute`.
 
 {% prism javascript %}
 document.getElementsByTagName('body')[0].appendChild(testCSS);
 {% endprism %}
 
-Load the `testCSS` div onto our web page so we can properly detect it. Do this by finding the `<body>` tag and place our `<div>` inside of it...it will be placed at the bottom of the page because we're using `appendChild()`.
+Load the `testCSS` div onto our web page so we can properly detect it in a browser. Do this by finding the `<body>` tag and place the `testCSS` div inside of it. It will be placed just above the closing `<body>` tag because we're using `appendChild()`.
 
 {% prism javascript %}
 if (testCSS.currentStyle) {
@@ -564,11 +566,11 @@ if (testCSS.currentStyle) {
 }
 {% endprism %}
 
-We need to find the value of the our `<div>` tag's position property in the `currStyle` variable we created earlier, but oldIE finds it differently from the other browsers. So we need to use a little feature detection.
+We need to find the value of our `testCSS` div's position property and place it inside the `currStyle` variable we created earlier. oldIE refers to this property one way...the other browsers refer to it another way. So we need to use a little feature detection here.
 
-If our `<div>` has a `currentStyle` property attached to it, we're in oldIE. So use `currentStyle` to find what we need and store it's value in `currStyle`.
+If our `testCSS` div has a `currentStyle` property attached to it, we're in oldIE. So use `currentStyle` to find what we need and store it's value inside `currStyle`.
 
-But if the `window` object has a `getComputedStyle()` method attached to it, we're in a browser other than oldIE. So use `getComputedStyle()` to find what we need and store it in `currStyle`.
+But if the `window` object has a `getComputedStyle()` method attached to it, we're in a browser other than oldIE. So use `getComputedStyle()` to find what we need and store it inside `currStyle`.
 
 {% prism javascript %}
 isCSSDisabled = (currStyle === 'static') ? true : false;
@@ -584,7 +586,7 @@ But if `testCSS` div's position property is set to anything else *but* `static` 
 document.getElementsByTagName('body')[0].removeChild(testCSS);
 {% endprism %}
 
-Our test is done so we don't need our `testCSS` div on our page anymore. So let's remove it. 
+Our test is done so we don't need `testCSS` div on our page anymore...let's remove it. 
 
 {% prism javascript %}
 if (isCSSDisabled === false) {
@@ -594,7 +596,7 @@ if (isCSSDisabled === false) {
 }
 {% endprism %}
 
-Our `testCSS` div may be gone but our `isCSSDisabled` variable is still around, and we can check it's value. And if `isCSSDisabled` is set to `false`, it means that CSS is *not* disabled so it's safe to run our `loadMenu()` function that builds the Tipue search box. But in any other situation, such as `isCSSDisabled` being set to `true`, don't do anything else and just play it safe a do a `return false`
+Our `testCSS` div may be gone but our `isCSSDisabled` variable is still around, and we can check its value. And if `isCSSDisabled` is set to `false`, it means that CSS is *not* disabled so it's safe to run our `loadMenu()` function to build the Tipue search box. But in any other situation, such as `isCSSDisabled` being set to `true`, don't do anything else and, to just play it safe, do absolutely nothing by performing a basic `return false`.
 <!-- 
 
 Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) but implementing it would mean that the Google search box would be picked up by a screen reader. 
