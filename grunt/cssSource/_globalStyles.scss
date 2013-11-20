@@ -84,6 +84,31 @@ a:focus {
   outline: 2px solid red;
 }
 
+// For demo links in posts
+
+// the <p> tag
+
+.demo {
+  background-color: $header-color;
+  -webkit-border-radius: $master-border-radius;
+  -moz-border-radius: $master-border-radius;
+  border-radius: $master-border-radius;
+  margin: 0 auto;
+  text-align: center;
+  width: 284px;
+  height: 34px;
+  display: inline-block;
+  left: 190px;
+  position: relative;
+}
+
+// the link
+.demoLink:link,.demoLink:visited { 
+  color: #fff;
+  font-size: 23px;
+  text-decoration: none;
+}
+
 
 // ====================================================================
 // End "all-around" styles
