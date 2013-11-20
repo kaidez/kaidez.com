@@ -9,7 +9,11 @@ category: tutorials
 cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]
----  
+---
+<p class="demo">
+  <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO FIRST</a>
+</p>
+
 [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
 A common solution to this problem is to use some sort of JavaScript-based search functionality, but this won't work if the end-user has disabled JS in their browser. This tutorial shows you how to not only add JS-powered search functionality to your static site, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
@@ -430,10 +434,10 @@ At this point, this is what the JavaScript (not CSS) detection process looks lik
 
 4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM.
 
-5. If the page loads in a browser where JavaScript is __*disabled*__, steps 2, 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and be completly visible, giving our end-users a search option.  Also, since JS is disabled, the Tipue search box won't be built.
+5. If the page loads in a browser where JavaScript is __*disabled*__, steps 2, 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and be completely visible, giving our end-users a search option.  Also, since JS is disabled, the Tipue search box won't be built.
 
 
-*(Shamless self-promotion: this part of the tutorial focused on dynamically construting page elements off-DOM....if you want to learn more about this, check out my [off-DOM screencast tutorial](/javascript-off-dom/ "kaidez screencast on creating web page elements off-DOM").)*
+*(Shameless self-promotion: this part of the tutorial focused on dynamically constructing page elements off-DOM....if you want to learn more about this, check out my [off-DOM screencast tutorial](/javascript-off-dom/ "kaidez screencast on creating web page elements off-DOM").)*
 
 <a name="css-detection"></a>
 ## Step 3: Use JavaScript to Detect if CSS is Disabled
@@ -536,7 +540,7 @@ loadMenu = function() {
 }
 {% endprism %}
 
-The code we used to build the Tipue search box is now a function stored in a variable called `loadMenu`.  The code hasn't changed so it's not displayed here, but it's important to understand that while the previous version of the code ran immediatly, this new version isn't doing that. This code will now *not* run unless we tell it to.
+The code we used to build the Tipue search box is now a function stored in a variable called `loadMenu`.  The code hasn't changed so it's not displayed here, but it's important to understand that while the previous version of the code ran immediately, this new version isn't doing that. This code will now *not* run unless we tell it to.
 
 {% prism javascript %}
 isCSSDisabled = false;
@@ -612,7 +616,7 @@ While this code works, there are a few things to keep in mind:
 
 * Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.
 
-* Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) and it's in wide use, but implementing it would mean that the Google search box would be picked up by a screen reader as well as the Tab key.  That means that two search boxes could have been picked up by the various accessibilty methods and caused a major headache. For that reason, I stuck with `display:none`.
+* Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) and it's in wide use, but implementing it would mean that the Google search box would be picked up by a screen reader as well as the Tab key.  That means that two search boxes could have been picked up by the various accessibility methods and caused a major headache. For that reason, I stuck with `display:none`.
 
 <a name="conclusion"></a>
 ## Conclusion
