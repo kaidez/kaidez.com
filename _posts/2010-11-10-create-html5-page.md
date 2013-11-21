@@ -5,7 +5,7 @@ author: Kai Gittens
 layout: post
 permalink: /create-html5-page/
 meta-excerpt: Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.
-category: tutorial
+category: tutorials
 cat-name: "Tutorials"
 tags: [tutorial, html5]
 ---

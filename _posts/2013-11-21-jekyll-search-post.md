@@ -288,7 +288,7 @@ If the regular expression search doesn't happen, it means that the `no-js` class
 
 As the comments say, this code is currently built into [Modernizr](http://modernizr.com/, "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
 
-Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before DOM starts building the visible page content. We're treating this piece of code the same way for the same reason.
+Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before the DOM starts constructing the page content. We're treating this piece of code the same way for the same reason.
 
 And as noted in the comments, this code is placed in its own JS file instead of inline because it's a best practice as per the Content Security Policy (CSP) that's starting to gain a consensus. Mike West's [Content Security Policy article on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/security/content-security-policy/) breaks it down really well but you should still [read the W3C's Content Security Policy spec](http://www.w3.org/TR/CSP/ "Read the W3C's Content Security Policy spec") sooner than later.
 
