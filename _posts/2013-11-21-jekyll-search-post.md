@@ -446,7 +446,7 @@ If *just* CSS is disabled, JavaScript will still change the `no-js` class name i
 
 But if *just* CSS is disabled in a browser, it renders all custom styles useless and allows only the the browser's default styling to render. This means that `.js #no-js-searchbox` will be ignored and the CSE box will be visible.
 
-And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* search boxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't built if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box box will be visible if CSS is disabled, giving our end-users a search option in every situation.
+And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* search boxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't built if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box will be visible if CSS is disabled, giving our end-users a search option in every situation.
 
 Someone by the name of "Kethinov" shared [a very cool trick to use JavaScript to detect if CSS is enabled in a browser](http://www.sitepoint.com/forums/showthread.php?592155-How-to-detect-whether-CSS-enabled-or-not-using-Javascript "How to detect whether CSS enabled or not using JavaScript") over on the SitePoint forum. I made a few syntax changes but remain quite loyal to his ridiculously clever code.
 
