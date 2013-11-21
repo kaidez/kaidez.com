@@ -2663,15 +2663,15 @@ a:focus {
   text-align: center;
   width: 284px;
   height: 34px;
-  display: inline-block;
-  left: 190px;
-  position: relative;
 }
 
 .demoLink:link, .demoLink:visited {
-  color: #fff;
   font-size: 23px;
+  color: #fff;
   text-decoration: none;
+  background-color: #7db9e8;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .wf-loading h1, .wf-inactive h1,
