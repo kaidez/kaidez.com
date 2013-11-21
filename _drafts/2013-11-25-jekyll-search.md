@@ -10,9 +10,7 @@ cat-name: "Tutorials"
 has-home-img: require-wordpress.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---
-<p class="demo">
-  <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO FIRST</a>
-</p>
+<a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>
 
 [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
@@ -506,10 +504,8 @@ Let's update our already-existing `js/scripts.js` file so it looks like this:
 
   if (testCSS.currentStyle) {
     currStyle = testCSS.currentStyle['position'];
-  } else {
-    if (window.getComputedStyle) {
+  } else if (window.getComputedStyle) {
       currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
-    } 
   }
 
   isCSSDisabled = (currStyle === 'static') ? true : false;
@@ -571,10 +567,8 @@ Load the `testCSS` div onto our web page so we can properly detect it in a brows
 {% prism javascript %}
 if (testCSS.currentStyle) {
   currStyle = testCSS.currentStyle['position'];
-} else {
-  if (window.getComputedStyle) {
+} else if (window.getComputedStyle) {
     currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
-  } 
 }
 {% endprism %}
 
