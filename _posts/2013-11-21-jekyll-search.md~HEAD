@@ -11,7 +11,7 @@ has-home-img: jekyllSearchPostImage.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---
 <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>
-
+  
 [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
 A common solution to this problem is to use some sort of JavaScript-based search functionality, but this won't work if the end-user has disabled JS in their browser. This tutorial shows you how to not only add JS-powered search functionality to your static site, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
