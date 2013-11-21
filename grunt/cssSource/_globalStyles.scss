@@ -97,16 +97,16 @@ a:focus {
   text-align: center;
   width: 284px;
   height: 34px;
-  display: inline-block;
-  left: 190px;
-  position: relative;
 }
 
 // the link
 .demoLink:link, .demoLink:visited { 
-  color: #fff;
   font-size: 23px;
+  color: #fff;
   text-decoration: none;
+  background-color: $header-color;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 
