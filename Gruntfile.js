@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // minify all .html files in the '_site' directory. only runs when 'grunt push' is called
+    // minify all .html files in the '_site' directory. only runs when 'grunt ppush' is called
     htmlmin: {
       dist: {
         options: {
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: '_deploy',
-        src: ['**/*.html', '*.index.html'],
+        src: ['**/*.html', '*.index.html', '!samples/**/*.html'],
         dest: '_deploy'
       }
     },
