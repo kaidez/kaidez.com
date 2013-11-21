@@ -50,10 +50,8 @@
 
   if (testCSS.currentStyle) {
     currStyle = testCSS.currentStyle['position'];
-  } else {
-    if (window.getComputedStyle) {
+  } else if (window.getComputedStyle) {
       currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
-    } 
   }
 
   isCSSDisabled = (currStyle === 'static') ? true : false;
@@ -65,5 +63,5 @@
   } else {
     return false;
   }
-  
+
 })();
