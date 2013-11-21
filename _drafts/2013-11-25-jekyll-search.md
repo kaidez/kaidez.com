@@ -7,7 +7,7 @@ meta-excerpt: jQuery-powered search functionality for a Jekyll site with fallbac
 permalink: /custom-jekyll-search/
 category: tutorials
 cat-name: "Tutorials"
-has-home-img: require-wordpress.jpg
+has-home-img: jekyllSearchPostImage.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---
 <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>
@@ -243,7 +243,7 @@ form {
 
 .containerClass {
   margin: 0 auto;
-  width: 900px;
+  width: auto;
 }
 {% endprism %}
 
@@ -584,7 +584,7 @@ isCSSDisabled = (currStyle === 'static') ? true : false;
 
 Our `isCSSDisabled` variable runs a quick ternary operation, which is a short-hand conditional check.  As previously mentioned, `isCSSDisabled` will tell us whether or not CSS is enabled in the browser and does so as follows...
 
-`isCSSDisabled` checks the value of our `currStyle` variable which, again, is storing the value of our `testCSS` div's position property.  If it's set to `static`, it means our browser is ignoring the `absolute` property we applied...which would only happen if CSS was disabled in a browser.  So `isCSSDisabled` will equal `true`.
+`isCSSDisabled` checks the value of our `currStyle` variable which, again, is storing the value of our `testCSS` div's position property.  If it still has its default `static` setting, it means our browser is ignoring the `absolute` property we applied...which would only happen if CSS was disabled in a browser.  So `isCSSDisabled` will equal `true`.
 
 But if `testCSS` div's position property is set to anything else *but* `static` (such as the `absolute` setting we gave it earlier), then CSS must be enabled. So `isCSSDisabled` will equal `false`.
 
@@ -610,7 +610,7 @@ While this code works, there are a few things to keep in mind:
 
 * Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.
 
-* Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has recommended another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) and it's in wide use, but implementing it would mean that the Google search box would be picked up by a screen reader as well as the Tab key.  That means that two search boxes could have been picked up by the various accessibility methods and caused a major headache. For that reason, I stuck with `display:none`.
+* Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has been recommending another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) and it's in wide use, but implementing it would mean that the Google search box would be picked up by a screen reader as well as the Tab key.  That means that two search boxes could have been picked up by the various accessibility methods and caused a major headache. For that reason, I stuck with `display:none`.
 
 <a name="conclusion"></a>
 ## Conclusion
