@@ -277,7 +277,7 @@ Because of the class name change and because of [CSS descendant selectors](https
 
 If the regular expression search doesn't happen, it means that the `no-js` class will remain in the `<html>` tag and that the `.js #no-js-searchbox` selector cannot be applied; in other words, *__if JavaScript is disabled, the Google CSE search box will be visible.__* This is exactly what we want.
 
-As the comments say, this code is currently built into [Modernizr](http://modernizr.com/, "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
+As the comments say, this code is currently built into [Modernizr](http://modernizr.com/ "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
 
 Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before the DOM starts constructing the page content. We're treating this piece of code the same way for the same reason.
 
