@@ -229,6 +229,14 @@ __css/styles.css__
  * The code below is just applying styles and has nothing to do with
  * the CSS/JS detection process. 
  */
+.js #no-js-searchbox {
+  display: none;
+}
+
+/* 
+ * The code below is just applying styles and has nothing to do with
+ * the CSS/JS detection process. 
+ */
 body {
   font: 12px/1.7 'open sans', sans-serif;
 }
@@ -237,13 +245,14 @@ h1 {
   text-align: center;
 }
 
-form {
+form, p {
   text-align: center;
 }
 
 .containerClass {
   margin: 0 auto;
   width: auto;
+}dth: auto;
 }
 {% endprism %}
 
