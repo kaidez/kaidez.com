@@ -1,5 +1,7 @@
 var tipuesearch = {"pages": [
 
+    {"title": "TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback", "text": "jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.", "tags": "jekylljqueryaccessibilityjavascripttutorial", "loc": "/custom-jekyll-search/"},
+
     {"title": "Using RequireJS In WordPress", "text": "Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.", "tags": "RequireJSWordpressjQueryAMD", "loc": "/requirejs-wordpress/"},
   
     {"title": "GitHub Tutorial Update", "text": "kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list", "tags": "gitgithub", "loc": "github-tutorial-update/"},
