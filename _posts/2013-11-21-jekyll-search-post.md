@@ -365,7 +365,7 @@ We're using a [single var pattern](http://tech.diaslopes.com/?p=51 "Learn more a
 * `form`, `searchTextBox` and `searchButton` are variable references to newly-created page elements: specifically a `<form>` tag and two `<input>` tags.
 
 {% prism javascript %}
-form.action = "search.html"; (abs/rel link)
+form.action = "search.html";
 form.setAttribute("role", "search");
 {% endprism %}
 
