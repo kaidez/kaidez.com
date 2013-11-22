@@ -24,7 +24,7 @@ A common solution to this problem is to use some sort of JavaScript-based search
 5. [Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages](#build-pages)
 6. [Step 2: Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
 7. [Step 3: Use JavaScript to Detect if CSS is Disabled](#css-detection)
-8. [Some Notes](#notes)
+8. [More Notes](#notes)
 9. [Conclusion](#conclusion)
 
 <a name="three-steps"></a>
@@ -255,7 +255,7 @@ __js/detect.js__
 // your web page, don't use this part of the code.
 
 // This code is one file and not inline because it's a best practice as
-// per theContent Security Policy. Mike West breaks CSP down really
+// per the Content Security Policy (CSP). Mike West breaks CSP down really
 // well over at: http://bit.ly/KzGWUZ. Also make sure to read the CSP
 // W3C spec at: http://bit.ly/vCQbiW
 
@@ -605,7 +605,7 @@ if (isCSSDisabled === false) {
 Our `testCSS` div may be gone but our `isCSSDisabled` variable is still around, and we can check its value. And if `isCSSDisabled` is set to `false`, it means that CSS is *not* disabled so it's safe to run our `loadMenu()` function to build the Tipue search box. But in any other situation, such as `isCSSDisabled` being set to `true`, don't do anything else and, just to play it safe, do absolutely nothing by performing a basic `return false`.
 
 <a name="notes"></a>
-## Some Notes
+## More Notes
 While this code works, there are a few things to keep in mind:
 
 * Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.
