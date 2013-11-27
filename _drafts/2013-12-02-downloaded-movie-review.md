@@ -20,4 +20,4 @@ Thanks to the press it received, Napster was the first *real* look that the gene
 
 While the Napster was was built using already-existing technologies, the way they were using them was innovative. By getting a bunch of desktops to work together to send, receive and manage content, Napster was very a much an early prototype for cloud computing.
 
-More profoundly, Napster was the first real challenge the then new Internet-based business models presented to the already-existing, old economy business models.
+More profoundly, Napster was the first real challenge that the then new Internet-based business models presented to the already-existing, old economy business ones. Napster's rise came during the tail end of the dot-com rush,
