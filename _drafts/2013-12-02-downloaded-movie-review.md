@@ -24,4 +24,6 @@ More profoundly, Napster was the first real challenge that the then new Internet
 
 *Downloaded* may not mention all of these points but it's still a great history lesson.  It starts off with an introductory history of the Internet and nicely segues into Napster's early history. How Shawn Fanning was trying to make easier to find MP3 music files and how, with the input of friends such as Sean Parker, he knocked out the first version of Napster.
 
-The documentary does effectively capture the hacking culture. It shows how Fanning and the other Napster developers would work around the clock to improve the software, all of whom would get a the rush after solving and figuring out problems.
+The documentary does effectively capture the hacking culture. It shows how Fanning and the other Napster developers would work around the clock to improve the software, all of whom would get a the rush after solving and figuring out problems. Combine that with many of them living and partying together, and a camaraderie was created among the team as continued to better the Napster software.
+
+Napster would spread like wildfire and created a ton of legal issues for them. 
