@@ -576,7 +576,7 @@ We need to find the value of our `testCSS` div's position property and place it 
 
 If our `testCSS` div has a `currentStyle` property attached to it, we're in oldIE. So use `currentStyle` to find the position property and store it's value inside `currStyle`.
 
-But if the `window` object has a `getComputedStyle()` method attached to it, we're in a browser other than oldIE. So use `getComputedStyle()` to find the position property and store it's value inside `currStyle`.
+But if the `window` object has a `getComputedStyle()` method attached to it, we're in a browser other than oldIE. So use `getComputedStyle()` to find the position property and store its value inside `currStyle`.
 
 {% prism javascript %}
 isCSSDisabled = (currStyle === 'static') ? true : false;
