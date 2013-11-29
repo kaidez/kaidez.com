@@ -430,7 +430,7 @@ At this point, this is what the JavaScript (not CSS) detection process looks lik
 
 3. The above class name change means that the `.js #no-js-searchbox` selector can apply a `display:none` setting to the Google CSE search box currently on the page and hide it.
 
-4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM.
+4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM and loads it onto the page.
 
 5. If the page loads in a browser where JavaScript is __*disabled*__, steps 2, 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and be completely visible, giving our end-users a search option.  Also, since JS is disabled, the Tipue search box won't be built.
 
