@@ -38,7 +38,7 @@ JavaScript wasn't the only thing I focused on: CSS stuff such as preprocessors, 
 
 In order to implement all I learned, I'll be redoing kaidez.com. Specifically, the site will be redesigned and get a radical change on the backend...read about that [here](/site-redesign-2013/ "Read the resdesign process for kaidez.com"). Also, the HTML5 Project is no more...this site redesign will fully use HTML5 structure so I'll consider the project done as soon as it relaunches. I'll also be discussing the aforementioned development-level tooling, which made things REALLY fun.
 
-After that, I'll be redoing my [GitHub tutorial][6], then creating a bunch of new posts, including tutorials, coding tips, a review of the ["Downloaded" movie][7] and (maybe) a screencast or two.
+After that, I'll be redoing my [GitHub tutorial][6], then creating a bunch of new posts, including tutorials, coding tips, a review of the ["Downloaded" movie](/downloaded-movie-review/ "Read kaidez's review of 'Downloaded: The Movie") and (maybe) a screencast or two.
 
 Stay Tuned!!!!!!!!!
  
@@ -48,5 +48,4 @@ Stay Tuned!!!!!!!!!
  [4]: http://dev.w3.org/html5/spec-author-view/
  [5]: http://html5doctor.com/
  [6]: http://kaidez.com/remove-files-from-github/
- [7]: http://www.downloadedthemovie.com/
 

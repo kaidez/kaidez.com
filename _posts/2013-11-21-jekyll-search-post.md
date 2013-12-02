@@ -24,7 +24,7 @@ A common solution to this problem is to use some sort of JavaScript-based search
 5. [Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages](#build-pages)
 6. [Step 2: Dynamically Create the JS-powered Search Functionality](#create-javascript-search)
 7. [Step 3: Use JavaScript to Detect if CSS is Disabled](#css-detection)
-8. [Some Notes](#notes)
+8. [More Notes](#notes)
 9. [Conclusion](#conclusion)
 
 <a name="three-steps"></a>
@@ -255,7 +255,7 @@ __js/detect.js__
 // your web page, don't use this part of the code.
 
 // This code is one file and not inline because it's a best practice as
-// per theContent Security Policy. Mike West breaks CSP down really
+// per the Content Security Policy (CSP). Mike West breaks CSP down really
 // well over at: http://bit.ly/KzGWUZ. Also make sure to read the CSP
 // W3C spec at: http://bit.ly/vCQbiW
 
@@ -277,7 +277,7 @@ Because of the class name change and because of [CSS descendant selectors](https
 
 If the regular expression search doesn't happen, it means that the `no-js` class will remain in the `<html>` tag and that the `.js #no-js-searchbox` selector cannot be applied; in other words, *__if JavaScript is disabled, the Google CSE search box will be visible.__* This is exactly what we want.
 
-As the comments say, this code is currently built into [Modernizr](http://modernizr.com/, "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
+As the comments say, this code is currently built into [Modernizr](http://modernizr.com/ "Read about the Modernizr feature detection library") so if Modernizr's already on your page, you don't need this code.
 
 Also, it's suggested that Modernizr be placed in the `<head>` tag so it can do work before the DOM starts constructing the page content. We're treating this piece of code the same way for the same reason.
 
@@ -365,7 +365,7 @@ We're using a [single var pattern](http://tech.diaslopes.com/?p=51 "Learn more a
 * `form`, `searchTextBox` and `searchButton` are variable references to newly-created page elements: specifically a `<form>` tag and two `<input>` tags.
 
 {% prism javascript %}
-form.action = "search.html"; (abs/rel link)
+form.action = "search.html";
 form.setAttribute("role", "search");
 {% endprism %}
 
@@ -430,7 +430,7 @@ At this point, this is what the JavaScript (not CSS) detection process looks lik
 
 3. The above class name change means that the `.js #no-js-searchbox` selector can apply a `display:none` setting to the Google CSE search box currently on the page and hide it.
 
-4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM.
+4. `js/scripts.js` runs the code that builds the Tipue search box off-DOM and loads it onto the page.
 
 5. If the page loads in a browser where JavaScript is __*disabled*__, steps 2, 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to `display:none` and be completely visible, giving our end-users a search option.  Also, since JS is disabled, the Tipue search box won't be built.
 
@@ -446,7 +446,7 @@ If *just* CSS is disabled, JavaScript will still change the `no-js` class name i
 
 But if *just* CSS is disabled in a browser, it renders all custom styles useless and allows only the the browser's default styling to render. This means that `.js #no-js-searchbox` will be ignored and the CSE box will be visible.
 
-And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* search boxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't built if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box box will be visible if CSS is disabled, giving our end-users a search option in every situation.
+And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have *two* search boxes. That's bad so we need to detect if CSS is *enabled*, making sure that the Tipue search box isn't built if CSS is *disabled*.  Which is fine because, as mentioned in the paragraph above, the Google search box will be visible if CSS is disabled, giving our end-users a search option in every situation.
 
 Someone by the name of "Kethinov" shared [a very cool trick to use JavaScript to detect if CSS is enabled in a browser](http://www.sitepoint.com/forums/showthread.php?592155-How-to-detect-whether-CSS-enabled-or-not-using-Javascript "How to detect whether CSS enabled or not using JavaScript") over on the SitePoint forum. I made a few syntax changes but remain quite loyal to his ridiculously clever code.
 
@@ -576,7 +576,7 @@ We need to find the value of our `testCSS` div's position property and place it 
 
 If our `testCSS` div has a `currentStyle` property attached to it, we're in oldIE. So use `currentStyle` to find the position property and store it's value inside `currStyle`.
 
-But if the `window` object has a `getComputedStyle()` method attached to it, we're in a browser other than oldIE. So use `getComputedStyle()` to find the position property and store it's value inside `currStyle`.
+But if the `window` object has a `getComputedStyle()` method attached to it, we're in a browser other than oldIE. So use `getComputedStyle()` to find the position property and store its value inside `currStyle`.
 
 {% prism javascript %}
 isCSSDisabled = (currStyle === 'static') ? true : false;
@@ -605,7 +605,7 @@ if (isCSSDisabled === false) {
 Our `testCSS` div may be gone but our `isCSSDisabled` variable is still around, and we can check its value. And if `isCSSDisabled` is set to `false`, it means that CSS is *not* disabled so it's safe to run our `loadMenu()` function to build the Tipue search box. But in any other situation, such as `isCSSDisabled` being set to `true`, don't do anything else and, just to play it safe, do absolutely nothing by performing a basic `return false`.
 
 <a name="notes"></a>
-## Some Notes
+## More Notes
 While this code works, there are a few things to keep in mind:
 
 * Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.
