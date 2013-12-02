@@ -34,8 +34,6 @@ Parker, Fanning and other Napster employees claim the music industry refused to 
 
 The employees also say that they regret not at least *trying* to get the Supreme Court to hear the case after losing in Appeals Court. But the only that would've happened if the Ninth Circuit court heard it first, which they chose not to do-another point that the movie fails to mention.
 
-And a 
-
 An email trail created by Sean Parker was revealed in the initial court proceedings and proved that Napster knew it was breaking the law: this was the beginning of the end for Napster.  The interviewees in *Downloaded* imply that Parker was made to be the scapegoat and that the email trail was overblown.
 
 But in covering this, *Downloaded* leaves out a lot. To paraphrase a quote from Joesph Menn's [*All The Rave*](http://www.amazon.com/gp/product/0609610937/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0609610937&linkCode=as2&tag=kaidez-20 "Buy 'All the Rave: The Rise and Fall of Shawn Fanning's Napster' on amazon.com"), the Napster case was about "the knowledge of wrong doing and the ability to stop it", regardless of what Napster was saying during the trials. Parker's email trail proved that the company possessed a ton of the former and not enough of the latter.
