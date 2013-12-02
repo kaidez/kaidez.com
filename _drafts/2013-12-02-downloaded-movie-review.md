@@ -14,9 +14,11 @@ With all the focus we place on our iPhones, iPads, iPods, Droids, Windows Phones
 
 Directed by Alex Winter of "Bill & Ted" fame (as well as [a bizarre, NSFW Butthole Surfers movie](https://www.youtube.com/watch?v=dBLUrDOxVX4 "Watch Butthole Surfers 'Entering Texas Bar-B-Que Movie'")), *Downloaded* does a great job documenting the Napster story and gives them credit where credit is due. But it makes no mention of how the company MIGHT have survived its legal problems were it not for certain business decisions...decisions that were mostly made by one man.
 
-Despite that one shortcoming, *Downloaded* is a movie that HAD to be made. No one has ever really denied Napster's historical importance but not enough have gone out the way to emphasize it...this documentary does a great job of reminding us of the Napster effect.
+Despite that one shortcoming, *Downloaded* is a movie that HAD to be made. No one has ever really denied Napster's historical importance but not enough have gone out the way to emphasize it.
 
-Napster was the first serious challenge that Internet-based business models presented to the old economy business models. Napster's rise came at the tail-end of the dot-com rush, just as the old economy couldn't see a clear profit model for the Internet and started to walk away from it. They would still walk away for a short time period but when they saw Napster's role in all but destroying the music industry, the old economy always kept a close eye on the web. Napster forced the old economy to take the Internet seriously.
+Napster was the first serious instance of the Internet-based business model pulling consumers away from the old economy business model. Or, to pull a quote from one of the *Downloaded* interviewees, "This is the first time technology actually attacked the existing system and started to take it away."
+
+Napster's rise began at the tail-end of the dotcom rush, just as the old economy started walking away from Internet due its ambiguous profit model. But when they saw how Napster gave consumers exactly what they wanted, while all but destroying the music industry in the process, they regrouped their Internet efforts instead of ignoring them. Napster forced the old economy to take the Internet seriously.
 
 *Downloaded* starts off with a short but excellent introductory history of the Internet and nicely segues into Napster's beginnings. How Shawn Fanning was trying to make easier to find MP3 music files and how, with the input of his friends from IRC such as Sean Parker, he knocked out the first version of Napster.
 
