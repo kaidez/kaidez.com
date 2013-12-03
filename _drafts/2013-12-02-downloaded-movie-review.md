@@ -30,12 +30,16 @@ Also interviewed is Hilary Rosen, who was president of the Recording Industry As
 
 Despite the industry's mistakes, and they made many, Napster was illegal and the industry had a strong case against Napster when they eventually sued the company. And in discussing the case, *Downloaded* is a little skewed in favor of Napster.
 
-Parker, Fanning and other Napster employees claim the music industry refused to settle the case once it went to court. True, but *Downloaded* ignores that fact that the RIAA only filed suit on industry's behalf after many failed attempts to reach an agreement with Napster, who gave the industry the runaround throughout the entire process.
+Parker, Fanning and other Napster employees claim the music industry refused to settle the case once it went to court. True, but *Downloaded* misses that fact that the RIAA only filed suit on industry's behalf after many failed attempts to reach an agreement with Napster, who gave the industry the runaround throughout the entire process.
 
 The employees also say that they regret not at least *trying* to get the Supreme Court to hear the case after losing in Appeals Court. But that only would have happened if the Ninth Circuit court heard it first, which they chose not to do-another point that the movie fails to mention.
 
 But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* makes no mention of the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY needed to take care of.
 
-That man isn't Sean Fanning, it's his uncle, John. And while Sean was certainly the face of Napster in the press, John Fanning was in charge.
+That man isn't Sean Fanning, it's his uncle, John. And while Sean was certainly the face of Napster in the press, John Fanning was in charge of the company.
+
+As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fanning's Napster *](http://www.amazon.com/gp/product/0609610937/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0609610937&linkCode=as2&tag=kaidez-20 "Buy All The Rave at amazon.com") (which [I've previously reviewed](/books-dotcom-rush/ "Read kaidez's review of 'All the Rave'")), John Fanning, a man with some technical experience, saw Napster and agreed to help his nephew turn it into a business. On the premise that the then, 18 year-old Sean was too young to be taken seriously as the leader of a tech startup, John convinced his nephew to give him 70% ownership of the company, giving Sean only 30%.
+
+
 
 Overall, *Downloaded* properly captures the zeitgeist that Napster generated. The MTV coverage, legal battles, congressional hearings, Metallica, Chuck D.,
