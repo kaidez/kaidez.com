@@ -36,9 +36,9 @@ The employees also say that they regret not at least *trying* to get the Supreme
 
 But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* makes no mention of the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY needed to take care of.
 
-That man isn't Sean Fanning, it's his uncle, John. And while Sean was certainly the face of Napster in the press, John Fanning was in charge of the company.
+That man isn't Shawn Fanning, it's his uncle, John. And while Shawn was certainly the public face of Napster in the press, John Fanning was in charge of the company.
 
-As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fanning's Napster *](http://www.amazon.com/gp/product/0609610937/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0609610937&linkCode=as2&tag=kaidez-20 "Buy All The Rave at amazon.com") (which [I've previously reviewed](/books-dotcom-rush/ "Read kaidez's review of 'All the Rave'")), John Fanning, a man with some technical experience, saw Napster and agreed to help his nephew turn it into a business. On the premise that the then, 18 year-old Sean was too young to be taken seriously as the leader of a tech startup, John convinced his nephew to give him 70% ownership of the company, giving Sean only 30%.
+As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fanning's Napster*](http://www.amazon.com/gp/product/0609610937/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0609610937&linkCode=as2&tag=kaidez-20 "Buy All The Rave at amazon.com") (which [I've previously reviewed](/books-dotcom-rush/ "Read kaidez's review of 'All the Rave'")), John Fanning, a man with some technical knowlegde, looked at Napster and agreed to help his nephew turn it into a business. On the premise that the then, 18 year-old Shawn was too young to be taken seriously as the company's business leader, John convinced his nephew to give him 70% ownership of the company, giving Sean only 30%.
 
 
 
