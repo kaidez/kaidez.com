@@ -38,8 +38,8 @@ But the way in which *Downloaded* presents the music industry's legal position i
 
 That man isn't Shawn Fanning, it's his uncle, John. And while Shawn was certainly the public face of Napster in the press, John Fanning was in charge of the company.
 
-As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fanning's Napster*](http://www.amazon.com/gp/product/0609610937/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0609610937&linkCode=as2&tag=kaidez-20 "Buy All The Rave at amazon.com") (which [I've previously reviewed](/books-dotcom-rush/ "Read kaidez's review of 'All the Rave'")), John Fanning, a man with some technical knowlegde, looked at Napster and agreed to help his nephew turn it into a business. On the premise that the then, 18 year-old Shawn was too young to be taken seriously as the company's business leader, John convinced his nephew to give him 70% ownership of the company, giving Sean only 30%.
+As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fanning's Napster*](http://www.amazon.com/gp/product/0609610937/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0609610937&linkCode=as2&tag=kaidez-20 "Buy 'All The Rave' at amazon.com") (which [I've previously reviewed](/books-dotcom-rush/ "Read kaidez's review of 'All the Rave'")), John Fanning, a man with some technical knowlegde, looked at Napster and agreed to help his nephew turn it into a business. On the premise that the then, 18 year-old Shawn was too young to be taken seriously as the company's business leader, John convinced his nephew to give him 70% ownership of the company, giving Sean only 30%.
 
-John Fanning's taking advantage of his nephew was bad but his resulting, subsequent actions were much worse.
+John Fanning's taking advantage of his nephew was bad, but his resulting actions that came about because it were much worse.
 
 Overall, *Downloaded* properly captures the zeitgeist that Napster generated. The MTV coverage, legal battles, congressional hearings, Metallica, Chuck D.,
