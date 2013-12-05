@@ -12,7 +12,7 @@ tags: [review]
 ---
 With all the focus we place on our iPhones, iPads, iPods, Droids, Windows Phones, Nexuses, etc., it's easy to forget that Napster, the controversial music file sharing software, was a major spark for mobile convergence. Napster let millions of people download as much music as they wanted to for free, demonstrating how pervasive music was.  Apple capitalized on that by creating an easy-to-use portable device to manage the music, a device that was the catalyst for an era of mobile innovation that's really only JUST beginning.
 
-Directed by Alex Winter of "Bill & Ted" fame (as well as [a bizarre, NSFW Butthole Surfers movie](https://www.youtube.com/watch?v=dBLUrDOxVX4 "Watch Butthole Surfers 'Entering Texas Bar-B-Que Movie'")), *Downloaded* is a great reminder of Napster's importance and gives them credit where credit is due. But it makes no mention of how the company MIGHT have survived its legal problems were it not for certain business decisions...decisions that were mostly made by one man.
+Directed by Alex Winter of "Bill & Ted" fame (as well as [that bizarre, NSFW Butthole Surfers movie](https://www.youtube.com/watch?v=dBLUrDOxVX4 "Watch Butthole Surfers 'Entering Texas Bar-B-Que Movie'")), *Downloaded* is a great reminder of Napster's importance and gives them credit where credit is due. But it makes no mention of how the company MIGHT have survived its legal problems were it not for certain business decisions...decisions that were mostly made by one man.
 
 Despite that one shortcoming, *Downloaded* is a movie that HAD to be made. No one has ever really denied Napster's historical importance but not enough have gone out the way to emphasize it.
 
