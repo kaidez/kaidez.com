@@ -34,7 +34,7 @@ For example: Parker, Fanning and other Napster employees claim the music industr
 
 The employees also say that they regret not at least *trying* to get the Supreme Court to hear the case after losing in Appeals Court. But that only could have happened if the Ninth Circuit court heard it first, which they chose not to do-another point that the movie fails to mention.
 
-But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* rarley mentions the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY had to do.
+But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* rarley mentions the man who made lots of rash decisions that prevented Napster from properly dealing with its legal problems, something they REALLY had to do.
 
 That man isn't Shawn Fanning, it's his uncle, John. And while Shawn was certainly the public face of Napster in the press, John Fanning was in charge of the company.
 
