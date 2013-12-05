@@ -30,7 +30,7 @@ Also interviewed is Hilary Rosen, who was president of the Recording Industry As
 
 Despite the industry's mistakes, and they made many, Napster was illegal and the industry had a strong case against Napster when they eventually sued the company. And in discussing the case, *Downloaded* is a little skewed in favor of Napster.
 
-For example: Parker, Fanning and other Napster employees claim the music industry refused to settle the case once it went to court. True, but *Downloaded* misses that fact that the RIAA only filed suit on industry's behalf after many failed attempts to reach an agreement with Napster, who gave the industry the runaround throughout the entire process.
+For example: Parker, Fanning and other Napster employees claim the music industry refused to settle the case once it went to court. True, but *Downloaded* misses that fact that the RIAA only filed suit on the industry's behalf after many failed attempts to reach an agreement with Napster, who gave the industry the runaround throughout the entire process.
 
 The employees also say that they regret not at least *trying* to get the Supreme Court to hear the case after losing in Appeals Court. But that only could have happened if the Ninth Circuit court heard it first, which they chose not to do-another point that the movie fails to mention.
 
