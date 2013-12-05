@@ -34,7 +34,7 @@ For example: Parker, Fanning and other Napster employees claim the music industr
 
 The employees also say that they regret not at least *trying* to get the Supreme Court to hear the case after losing in Appeals Court. But that only could have happened if the Ninth Circuit court heard it first, which they chose not to do-another point that the movie fails to mention.
 
-But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* makes no mention of the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY had to do.
+But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* rarley mentions the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY had to do.
 
 That man isn't Shawn Fanning, it's his uncle, John. And while Shawn was certainly the public face of Napster in the press, John Fanning was in charge of the company.
 
@@ -44,6 +44,10 @@ John Fanning's manipulative moves against his nephew were bad enough, but the en
 
 But before providing funding, all potential Napster investors not only insisted that the company prioritize dealing with its legal issues before seeking the big payoff, but also wanted reduce John Fanning's role in the company...removing it completly in some cases. John realized this and as he was majority owner, turned down practically every good funding offer that the company received, including one invloving venture capitalist powerhouse, [Kleiner Perkins Caufield & Byers](http://www.kpcb.com/ "Visit the Kleiner Perkins Caufield & Byers").
 
-As a result, the company was n
+As a result of John's decisions, Napster was never forced into the position of dealing with its legal problems, making their getting sued an inevibility. *All the Rave* effectively argues that if they had dealt with them, Naspter may have survived.
 
-Overall, *Downloaded* properly captures the zeitgeist that Napster generated. The MTV coverage, legal battles, congressional hearings, Metallica, Chuck D.,
+The book's characterization of John Fanning could also be chalked up as a matter of opinnion, but it's backed up by legal documents and corroborated statements. So the matter deserves at least a discussion about John within *Downloaded*...the fact that it doesn't is disappointing.
+
+Still, the documnetary is still worth watching. *Downloaded* properly captures the zeitgeist that Napster generated: the MTV coverage, the legal battles, the congressional hearings, Chuck D., Metallica, the overall happy feeling of using Napster...all are repsresented well in the movie. Personally, I was very happy to learn that Shawn Fanning would eventually get the multi-million dollar payoff he so richly deserved.
+
+In the end, *Downloaded* isn't telling any lies, but the whole truth isn't there. It's absolutly worth a watch but to understand the entire Napster experience, Joseph Menn's book is also worth a read.
