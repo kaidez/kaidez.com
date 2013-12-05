@@ -34,7 +34,7 @@ For example: Parker, Fanning and other Napster employees claim the music industr
 
 The employees also say that they regret not at least *trying* to get the Supreme Court to hear the case after losing in Appeals Court. But that only could have happened if the Ninth Circuit court heard it first, which they chose not to do-another point that the movie fails to mention.
 
-But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* makes no mention of the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY needed to take care of.
+But the way in which *Downloaded* presents the music industry's legal position is really just a matter of opinion and not a drawback of the documentary. What is a drawback (a BIG drawback) is that *Downloaded* makes no mention of the man who made lots of rash decisions that prevented Napster from properly dealing with it's legal problems, something they REALLY had to do.
 
 That man isn't Shawn Fanning, it's his uncle, John. And while Shawn was certainly the public face of Napster in the press, John Fanning was in charge of the company.
 
@@ -42,6 +42,8 @@ As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fannin
 
 John Fanning's manipulative moves against his nephew were bad enough, but the end result of these moves was worse. Since the Napster incident occured during the dotcom bubble, John seeked the big multi-million dollar payoff that was so prevalant at the time.
 
-But before providing funding, all potential Napster investors not only insisted that the company prioritize dealing with its legal issues before doing also anything else, but also wanted reduce John Fanning's role in the company...removing it completly in some cases. 
+But before providing funding, all potential Napster investors not only insisted that the company prioritize dealing with its legal issues before seeking the big payoff, but also wanted reduce John Fanning's role in the company...removing it completly in some cases. John realized this and as he was majority owner, turned down practically every good funding offer that the company received, including one invloving venture capitalist powerhouse, [Kleiner Perkins Caufield & Byers](http://www.kpcb.com/ "Visit the Kleiner Perkins Caufield & Byers").
+
+As a result, the company was n
 
 Overall, *Downloaded* properly captures the zeitgeist that Napster generated. The MTV coverage, legal battles, congressional hearings, Metallica, Chuck D.,
