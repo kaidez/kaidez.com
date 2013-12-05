@@ -42,7 +42,7 @@ As chronicled in Joseph Menn's [*All the Rave: The Rise and Fall of Shawn Fannin
 
 John Fanning's manipulative moves against his nephew were bad enough, but the end result of these moves was worse. Since the Napster incident occured during the dotcom bubble, John was always looking to sell Napster and get the big multi-million dollar payoff that was so prevalant at the time.
 
-But before providing funding, all potential Napster investors not only insisted that the company prioritize dealing with its legal issues before seeking the big payoff, but also wanted reduce John Fanning's role in the company...removing it completly in some cases. John realized this and as he was majority owner, turned down practically every good funding offer that the company received, including one invloving venture capitalist powerhouse, [Kleiner Perkins Caufield & Byers](http://www.kpcb.com/ "Visit the Kleiner Perkins Caufield & Byers").
+But before providing funding, all potential Napster investors not only insisted that the company prioritize dealing with its legal issues before seeking the big payoff, but also wanted to reduce John Fanning's role in the company...removing it completly in some cases. John realized this and as he was majority owner, turned down practically every good funding offer that the company received, including one invloving venture capitalist powerhouse, [Kleiner Perkins Caufield & Byers](http://www.kpcb.com/ "Visit the Kleiner Perkins Caufield & Byers").
 
 As a result of John's decisions, Napster was never forced into the position of dealing with its legal problems, making their getting sued an inevibility. *All the Rave* effectively argues that if they had dealt with them, Naspter may have survived.
 
