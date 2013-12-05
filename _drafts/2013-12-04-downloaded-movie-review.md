@@ -44,7 +44,7 @@ John Fanning's manipulative moves against his nephew were bad enough, but the en
 
 But before providing funding, all potential Napster investors not only insisted that the company prioritize dealing with its legal issues before seeking the big payoff, but also wanted to reduce John Fanning's role in the company...removing it completly in some cases. John realized this and as he was majority owner, turned down practically every good funding offer that the company received, including one invloving venture capitalist powerhouse, [Kleiner Perkins Caufield & Byers](http://www.kpcb.com/ "Visit the Kleiner Perkins Caufield & Byers").
 
-As a result of John's decisions, Napster was never forced into the position of dealing with its legal problems, making their getting sued an inevibility. *All the Rave* effectively argues that if they had dealt with them, Naspter may have survived.
+As a result of John's decisions, Napster was never forced to properly deal with its legal problems, making their getting sued an inevibility. *All the Rave* effectively argues that if they had dealt with them, Naspter may have survived.
 
 The book's characterization of John Fanning could also be chalked up as a matter of opinnion, but it's backed up by legal documents and corroborated statements. So the matter deserves at least a discussion about John within *Downloaded*...the fact that it doesn't is disappointing.
 
