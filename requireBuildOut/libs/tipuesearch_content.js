@@ -1,14 +1,20 @@
 var tipuesearch = {"pages": [
-
+  
+    {"title": "REVIEW: Downloaded", "text": "The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.", "tags": "review", "loc": "/downloaded-movie-review/"},
+  
     {"title": "TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback", "text": "jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.", "tags": "jekylljqueryaccessibilityjavascripttutorial", "loc": "/custom-jekyll-search/"},
-
-    {"title": "Using RequireJS In WordPress", "text": "Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.", "tags": "RequireJSWordpressjQueryAMD", "loc": "/requirejs-wordpress/"},
+  
+    {"title": "Using RequireJS In WordPress", "text": "Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.", "tags": "RequireJSWordpressjQueryAMDjavascript", "loc": "/requirejs-wordpress/"},
   
     {"title": "GitHub Tutorial Update", "text": "kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list", "tags": "gitgithub", "loc": "github-tutorial-update/"},
   
+    {"title": "kaidez.com 2013 Site Redesign", "text": "kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management", "tags": "jekyllbowerrequirejsgruntamd", "loc": "/site-redesign-2013/"},
+  
+    {"title": "Where I&#039;ve Been...Upcoming Site Update", "text": "A quick update about the status of kaidez.com, including the announcing of a new, upcoming site design.", "tags": "html5kai", "loc": "/site-update/"},
+  
     {"title": "Media Queries Are Important", "text": "CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.", "tags": "css3media queriesbest practice", "loc": "/media-queries-important/"},
   
-    {"title": "TUTORIAL: Remove Files From GitHub", "text": "Learn how to remove files from GitHub, how GitHub works with Git to manage repos, and some UNIX commands. Learning resource list at the end.", "tags": "gitgithubtute", "loc": "/remove-files-from-github/"},
+    {"title": "TUTORIAL: Remove Files From GitHub", "text": "Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.", "tags": "gitgithub", "loc": "/remove-files-from-github/"},
   
     {"title": "REVIEW: Eloquent JavaScript", "text": "Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.", "tags": "javascriptreview", "loc": "/eloquent-javascript-review/"},
   
@@ -30,7 +36,7 @@ var tipuesearch = {"pages": [
   
     {"title": "Remembering Steve Jobs", "text": "kaidez recalls the best about Steve Jobs", "tags": "rantkai", "loc": "/remembering-steve-jobs/"},
   
-    {"title": "5 Mobile Web Development Best Practice Resources", "text": "Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig", "tags": "mobilehtml5jquerysteve souderspractice", "loc": "/mobile-web-development-best-practice-resources/"},
+    {"title": "5 Mobile Web Development Best Practice Resources", "text": "Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig.", "tags": "mobilehtml5jquerysteve souderspractice", "loc": "/mobile-web-development-best-practice-resources/"},
   
     {"title": "2 Bad Things About the Facebook App Setup", "text": "Creating a Facebook app is easy but doing so generates CSS expressions and creates page reflows, all of which reduce page optimization", "tags": "almayfacebookpractice", "loc": "/2-bad-facebook-app-things/"},
   
@@ -66,41 +72,41 @@ var tipuesearch = {"pages": [
   
     {"title": "The HTML5 Boilerplate Video is AWESOME!!!!!!", "text": "Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices", "tags": "html5", "loc": "/html5-boilerplate-video/"},
   
-    {"title": "HTML5 Readiness: NEW COOLSITE!", "text": "HTML5 Readiness neatly displays browser support for HTML5 and CSS3", "tags": "html5css3", "loc": "/coolsite-html5-readiness/"},
+    {"title": "HTML5 Readiness -  NEW COOLSITE!", "text": "HTML5 Readiness neatly displays browser support for HTML5 and CSS3", "tags": "html5css3", "loc": "/coolsite-html5-readiness/"},
   
     {"title": "HTML5 Recent Article Roundup", "text": "A list of great HTML5 articles compiled by kaidez", "tags": "html5review", "loc": "/html5-article-roundup/"},
   
     {"title": "Update to My HTML5/SEO/Microdata Post", "text": "Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata", "tags": "html5review", "loc": "/update-html5seomicrodata-post/"},
   
-    {"title": "Social Media Week Follow-Up &#038; A Word From Panelist Kristin Volk", "text": "Kristin Volk of MediaVest added some extra information to my recap of the Cross-Mobile Promotion panel at the 2011 NYC Social Media Week", "tags": "html5review", "loc": "/social-media-week-follow-up/"},
+    {"title": "Social Media Week Follow-Up &#038; A Word From Panelist Kristin Volk", "text": "Kristin Volk of MediaVest added some extra information to my recap of the Cross-Mobile Promotion panel at the 2011 NYC Social Media Week", "tags": "social mediareview", "loc": "/social-media-week-follow-up/"},
   
     {"title": "Social Media Week/NYC Recap – MOBILE PROMOTION PANEL", "text": "The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products", "tags": "mobilereview", "loc": "/nyc-social-media-week-event-recap-cross-mobile-promotion/"},
   
     {"title": "Social Media Week/NYC Recap &#8211; SOCIAL LISTENING PANEL", "text": "The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks", "tags": "social networkingreview", "loc": "/nyc-social-media-week-event-recap-social-listening/"},
   
-    {"title": "HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES", "text": "", "tags": "", "loc": "/html5-project-series-3-about-contact-wireframes/"},
+    {"title": "HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES", "text": "Final article in the HTML5 wireframe series for the kaidez portfolio site", "tags": "html5", "loc": "/html5-project-series-3-about-contact-wireframes/"},
   
-    {"title": "HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&#8217;S PLAYLIST PAGES", "text": "", "tags": "", "loc": "/html5-project-series-2-work-subcategory-playlist-wireframes/"},
+    {"title": "HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&#8217;S PLAYLIST PAGES", "text": "Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it", "tags": "html5", "loc": "/html5-project-series-2-work-subcategory-playlist-wireframes/"},
   
-    {"title": "HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE", "text": "", "tags": "", "loc": "/html5-project-series-1-homepage-wireframe/"},
+    {"title": "HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE", "text": "Wireframes for the kaidez portfolio site of New York/Jersey City, N.J. based web designer, Kai Gittens, who also works at Revlon and Almay", "tags": "html5", "loc": "/html5-project-series-1-homepage-wireframe/"},
   
-    {"title": "HTML5 Project: WIREFRAME SERIES &#8211; INTRO", "text": "", "tags": "", "loc": "/html5-project-update-completed-wireframes/"},
+    {"title": "HTML5 Project: WIREFRAME SERIES &#8211; INTRO", "text": "HTML5 wireframe preview of kaidez.com portfolio site", "tags": "html5", "loc": "/html5-project-update-completed-wireframes/"},
   
     {"title": "WordPress &#038; WebMatrix", "text": "Using WebMatrix to create a WordPress development site", "tags": "wordpress", "loc": "/wordpress-webmatrix/"},
   
-    {"title": "Updates To Coolsites and HTML5/jQuery Resources", "text": "", "tags": "", "loc": "/updates-coolsites-jquery-html5-resources/"},
+    {"title": "Updates To Coolsites and HTML5/jQuery Resources", "text": "Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog", "tags": "html5sitecorecss3", "loc": "/updates-coolsites-jquery-html5-resources/"},
   
-    {"title": "HTML5, SEO and Microdata", "text": "", "tags": "", "loc": "/html5-seo-microdata/"},
+    {"title": "HTML5, <del>SEO</del> and Microdata", "text": "HTML5's Microdata feature is a good tactic if properly formatted", "tags": "html5", "loc": "/html5-seo-microdata/"},
   
-    {"title": "My Study Schedule As Of January 26, 2011", "text": "", "tags": "", "loc": "/study-schedule-1-26-2011/"},
+    {"title": "My Study Schedule As Of January 26, 2011", "text": "How I plan to study HTML5, CSS3 and .NET", "tags": "rantkai", "loc": "/study-schedule-1-26-2011/"},
   
     {"title": "Great Video Lecture on WordPress Usability &#038; Analytics", "text": "Stefanos Kofopoulos from pestaola.gr shares some excellent usability & analytics tips that he applied to his Wordpress-based blog.", "tags": "wordpress", "loc": "/video-lecture-wordpress-usability-analytics/"},
   
-    {"title": "HTML5 Project Update: 1/21/11", "text": "", "tags": "", "loc": "/html5-project-update-january-21-2011/"},
+    {"title": "HTML5 Project Update: 1/21/11", "text": "My HTML5 Project will use HTML5, CSS3, jQuery, Modernizr, maybe CSS PIE, and will be a portfolio of my work and experiments.", "tags": "html5jQuerymodernizr", "loc": "/html5-project-update-january-21-2011/"},
   
-    {"title": "10 Things To Remember About HTML5 Video", "text": "HTML5 Video Tips from kaidez", "tags": "html5mobile", "loc": "/2-javascript-tasks-jquery-does-not-replace/"},
+    {"title": "10 Things To Remember About HTML5 Video", "text": "HTML5 Video Tips from kaidez", "tags": "html5mobile", "loc": "/html5-video-tips-january-2011/"},
   
-    {"title": "2 JavaScript Tasks That jQuery Does Not Replace", "text": "Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent", "tags": "jqueryjavascript", "loc": "/2-javascript-tasks-jquery-does-not-replace/"},
+    {"title": "Two JavaScript Tasks That jQuery Does Not Replace", "text": "Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent", "tags": "jqueryjavascript", "loc": "/two-javascript-tasks-jquery-does-not-replace/"},
   
     {"title": "Read My Article At Inspired Magazine!!!", "text": "Kaidez guest post at Inspired Magazine responded to Cameron Chapman's web designer article at Smashing Magazine", "tags": "kai", "loc": "/kai-gittens-article-inspired-magazine/"},
   
@@ -112,7 +118,7 @@ var tipuesearch = {"pages": [
   
     {"title": "TUTORIAL: How AJAX, jQuery and HTML5 Work Together", "text": "AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays.  While getting these web technologies to work together is exciting, the programming required to do this isn't new.", "tags": "ajaxjqueryhtml5", "loc": "/ajax-jquery-html5-work-together/"},
   
-    {"title": "jQuery T-shirt &#8211; Geek Gift To Myself", "text": "My cool jQuery t-shirt", "tags": "kai", "loc": "/jquery-tshirt-geek-gift/"},
+    {"title": "jQuery T-shirt &#8211; Geek Gift To Myself", "text": "My cool jQuery t-shirt", "tags": "kaijquery", "loc": "/jquery-tshirt-geek-gift/"},
   
     {"title": "REVIEW: Pro HTML5 Programming", "text": "A review of the Pro HTML5 Programming by Apress", "tags": "javascriptreview", "loc": "/review-pro-html5-programming/"},
   
@@ -120,11 +126,11 @@ var tipuesearch = {"pages": [
   
     {"title": "HTML5 Gallery: NEW COOLSITE!", "text": "HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list", "tags": "html5", "loc": "/html5-gallery-coolsite/"},
   
-    {"title": "CNN calls the do not track option a &#8220;Google killer&#8221;", "text": "Quick recap of CNN's article on the FTC's proposal of adding a \"do not track\" feature that consumers can use for internet browsing, short opinion included", "tags": "rant", "loc": "/cnn-calls-track-option-google-killer/"},
+    {"title": "CNN calls the do not track option a &#8220;Google killer&#8221;", "text": "Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion included", "tags": "rant", "loc": "/cnn-calls-track-option-google-killer/"},
   
     {"title": "10 WordPress Tips For Web Designers", "text": "10 great tips that can help you with WordPress development, such as creating child themes, page templates and how to approach security.", "tags": "wordpress", "loc": "/10-wordpress-tips-12-01-10/"},
   
-    {"title": "I&#8217;m Focusing On .NET C#", "text": "kaidez lays out a plan on how he;ll slearn .NET/C#.", "tags": "kaiC#.NET", "loc": "/learning-microsoft-dot-net-c-sharp/"},
+    {"title": "I&#8217;m Focusing On .NET C#", "text": "kaidez lays out a plan on how he&#8217;ll learn .NET/C#.", "tags": "kaiC#.NET", "loc": "/learning-microsoft-dot-net-c-sharp/"},
   
     {"title": "My HTML5 Applications", "text": "I'm starting to narrow down what my favorite HTML5 tools are.", "tags": "html5", "loc": "/kaidez-html5-apps/"},
   
@@ -139,4 +145,5 @@ var tipuesearch = {"pages": [
     {"title": "TUTORIAL: Create The Building Blocks For An HTML5 Page", "text": "Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.", "tags": "tutorialhtml5", "loc": "/create-html5-page/"},
   
     {"title": "Welcome Back!!!!!!!!", "text": "kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.", "tags": "kai", "loc": "/welcome-back/"},
+   false
 ]};
