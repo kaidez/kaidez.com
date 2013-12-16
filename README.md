@@ -1,3 +1,4 @@
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 # WHAT IS THIS?
 
 This is the repo that contains the source code for the [kaidez.com](http://kaidez/com) website. It is 100% open source.
