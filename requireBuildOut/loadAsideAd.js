@@ -4,21 +4,19 @@
    *  Create a 200px x 200px lynda ad and load it in the <aside> tag
    */
 
+     
+/* 
+ * if window.matchMedia is not supported, add matchMedia polyfills.
+ * Each file will load twice, check to see if one is cached as it
+ * can be hit-or-miss.
+ */
+Modernizr.load([{
+  test: window.matchMedia,
+  nope: ["libs/matchMedia.js", "libs/matchMedia.addListener.js"]
+},
+
 
 define( ["enquire"], function( enquire ) {
-     
-    /* 
-     * if window.matchMedia is not supported, add matchMedia polyfills.
-     * Each file will load twice, check to see if one is cached as it
-     * can be hit-or-miss.
-     */
-    Modernizr.load( {
-      test: window.matchMedia,
-      nope: [
-        "libs/matchMedia.js",
-        "libs/matchMedia.addListener.js"
-      ]
-    } );
 
     var adBox = document.getElementById("aside-ad-section");
 
@@ -89,4 +87,6 @@ define( ["enquire"], function( enquire ) {
       }
     }, true );
 
-  } );
+  })
+
+]);
