@@ -16,7 +16,8 @@
   <!(endif)-->
 
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
-  <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/>
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
   <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
 
   {% include open_graph_partial.html %}
@@ -53,7 +54,9 @@
     <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
       <div class="newestArticleClass"> 
         <h1 class="category-title">Category: {{ page.title }}</h1>
-          {{ content }}
+          <p itemprop="text">
+            {{ content }}
+          </p>
       </div> 
     </main> <!-- #content -->
     
