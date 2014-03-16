@@ -9,7 +9,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [mobile, almay, html5, facebook, practice]
 ---
-
 My last two articles, reviewing my work for both [the Almay/Facebook project][1] and [the new Mitchum site][2], have tried to drive the same point home: **it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.** This article expands on that point.  
   
   

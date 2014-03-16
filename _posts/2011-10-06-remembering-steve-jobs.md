@@ -10,8 +10,6 @@ cat-name: "Personal"
 has-thumbnail: sjPicThumb.jpg
 tags: [rant, kai]
 ---
-# 
-
 I’m sitting here, typing away on my Mac Intel, syncing podcasts to my iPhone, my Powermac G4 self-customed web server humming two feet away, wondering what’s the best way to recall a visionary in writing. It’s tough…a loss like this doesn’t happen everyday.
 
 But it happened and needs to documented by as many as possible. On October 5, 2011, Steven Paul Jobs, Apple co-founder, lost his seven year battle with cancer. He changed how we walk down the street so he must be remembered. 

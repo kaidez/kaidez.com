@@ -10,7 +10,6 @@ cat-name: "Code Tips"
 has-thumbnail: jQjS.png
 tags: [javascript, beginner, jquery, best practice]
 ---
-
 A project came up at work involving [Node][1], the software system that allows JavaScript to run server-side instead of client-side. I wasn’t involved in the project but wanted to play with the code once it landed in production and wanted to be ready if ever asked to support it. So I set Node up on my Mac laptop, read parts of its documentation and found some beginning Node learning resources online.
 
  [1]: http://nodejs.org/

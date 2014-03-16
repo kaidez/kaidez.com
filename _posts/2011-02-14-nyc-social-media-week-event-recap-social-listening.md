@@ -9,7 +9,6 @@ category: reviews
 cat-name: "Reviews"
 tags: [social networking, review]
 ---
-
 [Social Media Week][1] is a semi-annual global conference covering all things social media-related. It runs concurrently in ten cities across globe, reaching as far as Istanbul. Of course, my home base of NYC was one of the ten cities. 
 
  [1]: http://socialmediaweek.org/
