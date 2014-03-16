@@ -332,12 +332,12 @@ module.exports = function(grunt) {
       // deploy to the development site
       staging: {
         auth: {
-        host: 's46798.gridserver.com',
-        port: 22,
-        authKey: 'key1'
-      },
-      src: '_site',
-      dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
+          host: 's46798.gridserver.com',
+          port: 22,
+          authKey: 'key1'
+        },
+        src: '_site',
+        dest: '/nfs/c02/h08/mnt/46798/domains/dev.kaidez.com/html'
     },
 
     // deploy to the live site
@@ -376,5 +376,5 @@ module.exports = function(grunt) {
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('rq', ['requirejs']);
   grunt.registerTask('dpush', ['jekyll:dev','sftp-deploy:staging']);
-  grunt.registerTask('ppush', ['shell:makeDeploy','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production']);
+  grunt.registerTask('ppush', ['shell:makeDeploy','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev','shell:removeDeploy']);
 };
