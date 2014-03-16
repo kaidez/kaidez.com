@@ -112,7 +112,9 @@ a variable called 'isCategory' and set it equal to 4.
 
     <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" title="Read {{ post.title }}" class="post-snippet-link">{{ post.title }}</a></h1>
 
-    {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
+    <p class="post-snippet-text" itemprop="text">
+      {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
+    </p>
 
   </article>
   {% endfor %}
@@ -124,7 +126,9 @@ a variable called 'isCategory' and set it equal to 4.
 
     <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
+    <p class="post-snippet-text" itemprop="text">
       {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
+    </p>
 
   </article>
 
@@ -162,9 +166,9 @@ a variable called 'isCategory' and set it equal to 4.
 
       <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
-        <p class="post-snippet-text">
-          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
-        </p>
+      <p class="post-snippet-text" itemprop="text">
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
+      </p>
 
     </article>
 
@@ -177,9 +181,9 @@ a variable called 'isCategory' and set it equal to 4.
 
       <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
-        <p class="post-snippet-text">
-          {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
-        </p>
+      <p class="post-snippet-text" itemprop="text">
+        {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
+      </p>
 
     </article>
 
@@ -215,7 +219,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
         
         <h1 class="post-snippet-title"><a href="{{ post.url }}" class="post-snippet-link" itemprop="headline">{{ post.title }}</a></h1>
-        <p class="post-snippet-text">
+
+        <p class="post-snippet-text" itemprop="text">
           {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="{{ post.title }}">Read More &raquo;</a>
         </p>
       </article>
@@ -227,7 +232,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" class="post-snippet-link">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
+      
+      <p class="post-snippet-text" itemprop="text">
         {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="{{ post.title }}">Read More &raquo;</a>
       </p>
       </article>
@@ -263,7 +269,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
+
+      <p class="post-snippet-text" itemprop="text">
         {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
       </p>
       </article>
@@ -275,7 +282,8 @@ a variable called 'isCategory' and set it equal to 4.
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" class="post-snippet-link" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-      <p class="post-snippet-text">
+
+      <p class="post-snippet-text" itemprop="text">
         {{ post.meta-excerpt }} <a href="{{ post.url }}" class="read-more-link" title="Read {{ post.title }}">Read More &raquo;</a>
       </p>
       </article>
