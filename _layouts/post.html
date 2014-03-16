@@ -16,6 +16,7 @@
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
   <!-- <link rel="author" href="https://plus.google.com/115509037875239263451/posts"/> -->
   <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
   <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
 
   {% include open_graph_partial.html %}
@@ -58,7 +59,7 @@
           <header class="postHeader">
             <h1 class="post-title" class="entry-title" itemprop="headline">{{ page.title }}</h1>
 
-            <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%B %d, %Y" }}</time>&nbsp;by&nbsp;<span class="author">Kai "kaidez" Gittens</span>
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%B %d, %Y" }}</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
           </header>
 
           {% include google_ad_post_partial.html %}
