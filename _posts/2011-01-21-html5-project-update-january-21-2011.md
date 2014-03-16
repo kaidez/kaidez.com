@@ -9,7 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [html5, jQuery, modernizr]
 ---
-
 My [HTML5 Project][1] is a centerpiece of this blog. I’ve been slacking on it but I’ve now made some decisions:
 
  [1]: http://kaidez.com/html5-project/

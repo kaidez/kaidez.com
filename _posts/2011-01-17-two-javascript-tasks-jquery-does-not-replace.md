@@ -9,7 +9,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [jquery, javascript]
 ---
-
 While developing HTML5 video for [my recent Almay project][1], I discovered two widely-used JavaScript techniques that, as of now, have no firm jQuery replacement. This should serve as a reminder that, while many believe that jQuery replaces every single solitary JavaScript task, this is simply not true.
 
  [1]: http://kaidez.com/almay-project-using-html5-net-jquery/

@@ -9,7 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [kai]
 ---
-
 I’m proud to announce that ***my first guest post ever*** can now be seen at [Inspired Magazine][1]. Titled “*[5 Survival Tips For Web Designers][2]*,” it’s my take on a heavily-debated Smashing Magazine article from late last year!
 
  [1]: http://www.inspiredm.com/

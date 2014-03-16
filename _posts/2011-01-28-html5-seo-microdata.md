@@ -9,7 +9,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---
-
 *MUCH thanks to at Oli Studholme at HTML5 Doctor for helping me understand this!!!!*
 
 *Update July 28, 2013: Not only are many points in this post erroneous, but the correct points are a bit outdated. The [schema.org](http://schema.org/) library is recommened for marking up microdata instead of the older data-vocabulary.org one.*

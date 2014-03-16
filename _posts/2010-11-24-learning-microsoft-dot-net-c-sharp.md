@@ -9,8 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [kai, C#, .NET]
 ---
-# 
-
 [My premier post][1] included a list of skills that I needed to improve upon for may day job. I’m not changing the list but I’m attacking it in a more organized way.
 
  [1]: http://kaidez.com/welcome-back/
@@ -23,4 +21,4 @@ The skill set list included Microsoft SharePoint, .NET C#, Microsoft Silverlight
 
 The stuff that I need to learn for personal growth hasn’t changed, especially the HTML5/CSS3 stuff.
 
-Now…where to find the time to do all this…
+Now…where to find the time to do all this…s

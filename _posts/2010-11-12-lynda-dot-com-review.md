@@ -9,8 +9,6 @@ category: reviews
 cat-name: "Reviews"
 tags: [review]
 ---
-# 
-
 A few months ago at work, I and the other web designer got [lynda.com][1] accounts. After test-driving it for a few months, I have to say that my employer’s money was well spent! lynda.com is a **great** web design learning resource!
 
  [1]: http://www.lynda.com/

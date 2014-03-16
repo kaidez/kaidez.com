@@ -9,7 +9,6 @@ category: reviews
 cat-name: "Reviews"
 tags: [book, review]
 ---
-
 Facebook, Twitter and Apple play a huge role in our daily routines nowadays, and cloud computing seems poised to do the same. But we should remember that none of this would be so had the Dot-com Rush never happened.
 
 The Dot-com Rush (or, the Internet Bubble) refers to the period from roughly 1994 to 2000, when a combination of new technological products, mainstream press hype and *very* high stock prices pushed the internet into the mainstream. Product-wise, AOL bought in-home internet connections to the general public while Microsoft spent billions to make their Windows 95 operating system a success, with each product making it easier for average folks to surf the web. 
@@ -56,3 +55,4 @@ The two books above, I believe, best chronicle the beginning and end of the Dot-
 [3]: http://www.amazon.com/Liars-Poker-Michael-Lewis/dp/039333869X/ref=sr_1_1?s=books&ie=UTF8&qid=1373150233&sr=1-1
 [4]: http://www.amazon.com/New-Thing-Silicon-Valley-Story/dp/0140296468/
 [5]: http://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/B000ENBO0S/
+</p>

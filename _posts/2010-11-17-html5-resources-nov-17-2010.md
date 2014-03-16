@@ -9,7 +9,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, html5 video]
 ---
-
 ## Video For Everybody!
 
 A simple block of code for properly implementing the HTML5  tag. It includes detection code, thumbnail placeholder tag and is heavily commented so you know how things work. *Best of all*, there’s are detailed notes on HTML5 video at the end. One of the best HTML5-related resources out right now. ([Sitelink»][1])

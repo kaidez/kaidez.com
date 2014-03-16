@@ -9,8 +9,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---
-# 
-
 As mentioned, [The HTML5 Project][1] is basically me creating a (hopefully) pure HTML5 and CSS3 website, the end result being my getting my head around both technologies. I still have to work out things like wireframes and SEO but I’ve just about narrowed down what applications and code frameworks I’ll be using.
 
  [1]: http://kaidez.com/html5-project/

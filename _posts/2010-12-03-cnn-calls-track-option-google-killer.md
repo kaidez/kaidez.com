@@ -9,8 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [rant]
 ---
-# 
-
 CNN wrote a pretty decent article yesterday on the FTC’s proposed “do not track” option. The government agency is calling for the creation of a web browser plug-in that allows endusers to block their information from being collected by third parties.
 
 The positive of this is increased enduser privacy, which is a growing concern. The negative is the cascading effect it could have on business, especially for companies like Google that track user information in order to properly target ads to consumers. 

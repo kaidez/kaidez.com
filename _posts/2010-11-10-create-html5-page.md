@@ -9,7 +9,6 @@ category: tutorials
 cat-name: "Tutorials"
 tags: [tutorial, html5]
 ---
-
 This is a very simple tutorial. It won’t teach you how to use ,  or any other HTML5-specific tags. All it does is describe what building blocks are needed BEFORE you insert those tags. And it all comes down to two lines of code.
 
 Cut-and-paste the code below into your favorite web editor:

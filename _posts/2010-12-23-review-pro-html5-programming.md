@@ -9,8 +9,6 @@ category: reviews
 cat-name: "Reviews"
 tags: [javascript, review]
 ---
-# 
-
 There are quite a few HTML5 books on the market right now. Some are better than others.
 
 I’m not sure if a book is needed for seasoned developers wanting to learn the HTML5 basics like page tags. If you’re new to HTML5, I suggest avoiding books altogether and just doing a Google search on how HTML5 tags should be structured. After that, head over to [Mark Pilgrim’s site][2] to dig deeper into HTML5 functionality.

@@ -9,7 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [flash, me]
 ---
-
 One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.  
 
 About a year ago from this post, Steve Jobs called Flash a "memory hog" and stated that Apple wouldn't support it on either the iPhone, iPad or iPod Touch.  He said that these devices would instead use HTML5 and Quicktime to display video, even though Flash is the unspoken web video standard.
@@ -66,4 +65,3 @@ With Flash, Macromedia was showed that they could create products that appealed 
 Which brings us to today. Thousands are still using FLVs despite Steve Jobs' statements, but YouTube's slowly utilizing HTML5 video.  There are less Flash sites out there, but not that much less.  And Flash is still a great online game development platform.
 
 HTML5's video format (OOG) is free from license, as are the tools to create them.  So it may beat Adobe in the online video arena (one reason why I'm getting into HTML5).  But history has proven that Flash can weather the punches and change to meet the needs of the times.  I think it will be fine.
-

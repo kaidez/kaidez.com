@@ -9,7 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [html5]
 ---
-
 ***Read the entire “Wirefame Series”***  
 *** Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
 

@@ -9,7 +9,6 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [wordpress]
 ---
-
 HAPPY GROUNDHOG DAY!!!!!!!!!!!!!
 
 This post actually started off as a referral to [a great WordPress.tv video on how to install a WordPress development site on a Windows machine with Microsoft WebMatrix][1]. But when I started doing extra research on the subject, I learned quite a bit about WebMatrix’s potential.

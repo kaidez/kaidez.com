@@ -9,7 +9,6 @@ category: tutorials
 cat-name: "Tutorials"
 tags: [ajax, jquery, html5]
 ---
-
 I used the following code to create the image rollovers for [the recent Almay project I worked on][1].
 
  [1]: http://kaidez.com/almay-project-using-html5-net-jquery/

@@ -9,7 +9,6 @@ category: personal
 cat-name: "Personal"
 tags: [almay, css, .NET]
 ---
-
 [Almay][1], which is wholly-owned by [my employer][2], launched four new products this week:
 
  [1]: http://almay.com/
