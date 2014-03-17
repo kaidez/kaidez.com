@@ -6,10 +6,10 @@ title: kaidez.com / View all posts
   <!-- This loops through the paginated posts -->
   {% for post in paginator.posts %}
     <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-      <h1 class="post-snippet-title">
+      <h1 class="post-snippet-title" itemprop="headline">
         <a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a>
       </h1>
-      {{ post.meta-excerpt }}
+      <p itemprop="text">{{ post.meta-excerpt }}</p>
     </article>
   {% endfor %}
     
