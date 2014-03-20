@@ -49,13 +49,11 @@
     
     {% include category_breadcrumbs_partial.html %}
     
-    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
-      <div class="newestArticleClass"> 
+    <main role="main" id="content" class="page-content" itemscope="itemscope" itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+      <section class="newestArticleClass"> 
         <h1 class="category-title">Category: {{ page.title }}</h1>
-          <p itemprop="text">
-            {{ content }}
-          </p>
-      </div> 
+          {{ content }}
+      </section> 
     </main> <!-- #content -->
     
     {% include aside_partial.html %}

@@ -5,14 +5,12 @@ meta-excerpt: Personal posts on kaidez.com include work that I've done, rants, c
 ---
 
   <div id="personal-description" class="category-description-page">
-  	<p itemprop="text">
-  		"Personal" posts on kaidez.com include work that I've done, rants, conference experiences and a few random posts that are uncategorized and don't fit anywhere else.
-  	</p>
+  	"Personal" posts on kaidez.com include work that I've done, rants, conference experiences and a few random posts that are uncategorized and don't fit anywhere else.
   </div> <!-- #personal-description -->
 
   {% for post in site.categories.personal %}
-    <article class="post-snippet" role="article">
-      <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}" class="post-snippet-link" rel="bookmark">{{ post.title }}</a></h1>
-      <p itemprop="text">{{ post.meta-excerpt }}</p>
+    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" class="post-snippet-link" rel="bookmark">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
     </article>
   {% endfor %}
