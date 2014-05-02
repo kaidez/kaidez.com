@@ -93,7 +93,7 @@ And with a few keystrokes, this file will output an `.html` file like this
 
 I went with Jade because I've been playing with the [MEAN](http://mean.io/ "review the MEAN stack") stack a bit more lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. But for me, it did take some getting used to.
 
-
+Jade has includes functionality similar to PHP include and .NET user controls. Meaning that The indentation didn't QUITE work out the way I wanted to and there was a point where I abandoned templating altog
 <a name="design-in-browser"></a>
 ### Design In-Browser
 While I did use a pencil and paper to sketch out the site before coding things, I completely disregarded wireframes and PhotoShop mockups.  Reason being, wireframes and mockups don't account for the differences among the various browsers and devices...at least, not well.
