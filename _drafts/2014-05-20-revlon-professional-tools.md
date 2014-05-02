@@ -7,17 +7,15 @@ permalink: /revlon-professionals/
 meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Gulp, Grunt, & Modernizr’s yepnope functionality for tooling.
 category: personal
 cat-name: "Personal"
-tags: [revlon, atom, jade, oocss, gulp, grunt]
+tags: [revlon, atom, jade, sass, oocss, gulp, grunt]
 has-home-img: revlon-pro-brands.jpg
 ---
-After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
+Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed onto the Revlon's internal web team for integration in a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
-The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/ "go to kaidez.com GitHub repo"). The repo's [README](https://github.com/kaidez/kaidez.com/blob/master/README.md "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code.
-
-The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is probably needed. So let's proceed with that, shall we?
+There wasn't a need for lots complicated code due to the site's overall simplicity, but it did give me the chance to use certain web development tools and code techniques. And while all the code techniques didn't make it to the site's final production build, I'm glad I got to practice a bit.
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
-1. [Goodbye, WordPress...](#wordpress)
+1. [GitHub Atom](#atom)
 2. [...Hello, Jekyll](#jekyll)
 3. [Design In-Browser](#design-in-browser)
 4. [Mobile First](#mobile-first)
@@ -31,11 +29,11 @@ The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) 
 12. [Post-Launch Tasks](#post-launch-tasks)
 13. [Conclusion](#conclusion)
 
-<a name="wordpress"></a>
-### Goodbye, WordPress...
-My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
+<a name="atom"></a>
+### GitHub Atom
+Most of my work for this was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped dev environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor released to beta a few months from this blog post by [GitHub](https://github.com/ "visit GitHub").
 
-WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to ([read more about this](/requirejs-wordpress/ "Read kaidez's Using RequireJS In WordPress' post")). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress.
+I basically jumped right into using editor only skimming the documentation.
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
