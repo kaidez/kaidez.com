@@ -140,8 +140,12 @@ There's not enough room in this blog post to go through all its characteristics.
 OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella, "stubbornella at Twitter"). The ideas include...
 
 * applying alls styling to CSS classes and not IDs, reserving IDs for JavaScript hooks.
-* separating the classes into two formats...one for style and one for structure.
-* in true object-oriented style, reusing the classes over your page elements as needed.
+* separating these classes into two formats...one for style and one for structure.
+* in true object-oriented style, reusing these classes across your page elements as needed.
+
+I applied these ideas to my page code 
+
+
 <a name="mobile-first"></a>
 ### Mobile First
 "Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
