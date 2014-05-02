@@ -3,11 +3,11 @@ title: 'New Site I Worked On: RevlonProBrands.com'
 comments: true
 author: Kai Gittens
 layout: post
-permalink: /revlon-professionals/
+permalink: /revlon-pro-brands/
 meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Gulp, Grunt, & Modernizr’s yepnope functionality for tooling.
 category: personal
 cat-name: "Personal"
-tags: [revlon, atom, jade, sass, oocss, gulp, grunt]
+tags: [revlon, atom, jade, sass, oocss, gulp, grunt, Modernizr]
 has-home-img: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed onto the Revlon's internal web team for integration in a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
@@ -16,7 +16,7 @@ There wasn't a need for lots complicated code due to the site's overall simplici
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
-2. [...Hello, Jekyll](#jekyll)
+2. [Jade](#jade)
 3. [Design In-Browser](#design-in-browser)
 4. [Mobile First](#mobile-first)
 5. [Overall Design](#overall-design)
@@ -35,38 +35,34 @@ Most of my work for this was done in the office using [Sublime Text](http://www.
 
 Atom definitely "takes inspitation" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom. Whitespace removal, code-hinting/completion, spell-checking...all come pre-installed in Atom.
 
-Including Git and GitHub integration, obviously when you consider the Atom's creator. If your project is already has Git configurastion, Atom 
+Including Git and GitHub integration, obviously when you consider the Atom's creator. If your project is already has Git configuration, the configs can communicate with Atom can manage lots of related tasks.
 
-<a name="jekyll" title="go to the jekyll section of this article"></a>
-### ...Hello, Jekyll
-If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/ "Visit to the Jekyll site"), the blog-aware static site generator. Sites that run using [GitHub Pages](http://pages.github.com/ "Learn more about GitHub pages") give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
+Here are a few of the tasks...
 
-I used Jekyll to create multiple site layouts using [Liquid](http://liquidmarkup.org/ "visit the liquid markup page"), a templating markup language with some internal logic. Whenever I run `jekyll build` from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.
+  * Atom can read a `.gitignore` file  and tell you which files are ignored by greting them out in your product tree.
 
-The outputted site does some very cool things...here's short list:
+  * Atom tells you what branch you're currently working on, telling if changes need to be committed and/or pushed.
 
-* lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/ "visit the markdown documentation page")...it all gets converted to HTML.
-* the logic displays posts on the [home page](/) in a very "dynamic" way (more on this in a future post).
-* four category-specific pages are generated.
-* an XML-powered RSS file for syndication is built.
-* an HTML site map is created.
-* a short list of related posts is placed at the end of each post.
+  * Atom can look at the page your working on and jump to it's history on GitHub.
 
-Ruby is a Jekyll dependency so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/ "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/ "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/ "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
+This is not to say that Sublime couldn't do any of these things, because it can.  It's just that these features came pre-installed into Atom: as packages in some cases but pre-intalled nonetheless.
 
-Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://tracking.maxcdn.com/c/72639/3968/378 "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
+Installing these features as packages is key to Atom's design. By installing them as packages, Atom takes on a modularized architecture, making it easier to configure and adjust if you need.
 
-I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs "Vito Botta post for migrating from WordPress to Jekyll") is *the* definitive article on the subject.
+This highly configurable architecture is mostly thanks to Atom's deep Node integration. Peek at most of Atom's pre-installed plugins and you'll see a basic Node sturucture...if you're a regular Node hacker then adding Atom to your toolkit is close to a no-brainer.
 
-Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
+Managing settings in Atom is done using a nice user interface, something that Atom has over Sublime Text (at least I think so). Adding themes, installing/removing packages and creating custom settings is a breeze in Jekyll.
 
-I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
+Again, Atom is in beta at the time of this post but GitHub has indicated that it will be released in both "fully-closed and fully-open" formats, which I take to mean as "free and paid versions". I personally see no issue with that: Atom as all the markings of a solid, viable application and I see no issue with charging money for it.
 
-Migrating from WordPress to Jekyll isn't always the "right" solution: [a succinct post from Chirs Coyier](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
+That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad, and it's nowhere near being bad. But I have gotten extremely confortable with Sublime Text over the years...getting my editor configs just as I want them, syncing the editor up with my bash scripts, settling in on themes I like.
 
-And let's be fair: it's easy to generate static content with WordPress. There would still be some database interaction so Jekyll may implements things faster, but it's possible. Frederick Townes' excellent [W3 Total Cache plugin](http://wordpress.org/plugins/w3-total-cache/ "Check out the W3 Total Cache") performs HTML static conversions quite well.
+I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of stand-out features. And Brackets features eventually make their way to Adobe's new commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
 
-Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being for WordPress.
+I suppose the point is, Atom's awesome but, in my case, it may not be necessary. I'm continuing to play with it and LOVE what I see. But because of my current needs and what tools I have already, I can't sae I'll buy it when the time comes.
+<a name="jade"></a>
+### Jade
+The 
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
