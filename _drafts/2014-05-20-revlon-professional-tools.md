@@ -8,7 +8,7 @@ meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, J
 category: personal
 cat-name: "Personal"
 tags: [revlon, atom, jade, oocss, gulp, grunt]
-has-home-img: site-relaunch.jpg
+has-home-img: revlon-pro-brands.jpg
 ---
 After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
 
