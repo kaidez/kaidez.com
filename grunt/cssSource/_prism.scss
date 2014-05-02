@@ -1,3 +1,4 @@
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+css-extras+clike+javascript+php+coffeescript+scss+bash+ruby&plugins=show-language */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -13,6 +14,7 @@ pre[class*="language-"] {
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
+	word-break: normal;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -111,3 +113,24 @@ color: #66d9ef;
 	cursor: help;
 }
 
+pre[class*='language-'] {
+	position: relative;
+}
+pre[class*='language-'] > code[data-language] {
+	overflow: scroll;
+	max-height: 28em;
+	display: block;
+}
+pre[class*='language-'] > code[data-language]::before {
+	content: attr(data-language);
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+}

@@ -300,7 +300,6 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-
 .fa {
   display: inline-block;
   font-family: FontAwesome;
@@ -399,7 +398,6 @@ table {
     -moz-transform: rotate(359deg);
   }
 }
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -409,7 +407,6 @@ table {
     -webkit-transform: rotate(359deg);
   }
 }
-
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg);
@@ -419,7 +416,6 @@ table {
     -o-transform: rotate(359deg);
   }
 }
-
 @-ms-keyframes spin {
   0% {
     -ms-transform: rotate(0deg);
@@ -429,7 +425,6 @@ table {
     -ms-transform: rotate(359deg);
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -439,7 +434,6 @@ table {
     transform: rotate(359deg);
   }
 }
-
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
@@ -2032,6 +2026,7 @@ table {
   content: "\f196";
 }
 
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+css-extras+clike+javascript+php+coffeescript+scss+bash+ruby&plugins=show-language */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -2046,6 +2041,7 @@ pre[class*="language-"] {
   text-align: left;
   white-space: pre;
   word-spacing: normal;
+  word-break: normal;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -2137,6 +2133,30 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help;
+}
+
+pre[class*='language-'] {
+  position: relative;
+}
+
+pre[class*='language-'] > code[data-language] {
+  overflow: scroll;
+  max-height: 28em;
+  display: block;
+}
+
+pre[class*='language-'] > code[data-language]::before {
+  content: attr(data-language);
+  color: black;
+  background-color: #CFCFCF;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 0 5px;
+  padding: 0 0.5em;
+  text-shadow: none;
 }
 
 /*
