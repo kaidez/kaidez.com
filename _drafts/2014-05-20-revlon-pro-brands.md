@@ -7,7 +7,7 @@ permalink: /revlon-pro-brands/
 meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Gulp, Grunt, & Modernizr’s yepnope functionality for tooling.
 category: personal
 cat-name: "Personal"
-tags: [revlon, atom, jade, sass, oocss, gulp, grunt, Modernizr]
+tags: [revlon, atom, jade, sass, oocss, gulp, grunt, Modernizr, yepnope]
 has-home-img: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed onto the Revlon's internal web team for integration in a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
@@ -17,7 +17,7 @@ There wasn't a need for lots complicated code due to the site's overall simplici
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
 2. [Jade](#jade)
-3. [Design In-Browser](#design-in-browser)
+3. [OOCSS](#oocss)
 4. [Mobile First](#mobile-first)
 5. [Overall Design](#overall-design)
 6. [JavaScript...RequireJS Specifically](#RequireJS)
@@ -62,12 +62,12 @@ I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Br
 I suppose the point is, Atom's awesome but, in my case, it may not be necessary. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
 <a name="jade"></a>
 ### Jade
-RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is loading in to versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
+RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
 
-I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a very simple templating engine that compile pages into HTML-format that can be uploaded at some future date. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines page structure.
+I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines page structure.
 
 So you use [npm](https://www.npmjs.org/package/jade, "install Jade with npm") to install Jade on your machine. Then create `.jade` files like this...
-{% prism markup %}
+{% prism javascript %}
 doctype html
 html
   head
@@ -91,22 +91,57 @@ And with a few keystrokes, this file will output an `.html` file like this
 </html>
 {% endprism %}
 
-I went with Jade because I've been playing with the [MEAN](http://mean.io/ "review the MEAN stack") stack a bit more lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. But for me, it did take some getting used to.
+I went with Jade because I've been playing with the [MEAN stack](http://mean.io/ "review the MEAN stack") lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.
 
-Jade has includes functionality similar to PHP include and .NET user controls. Meaning that The indentation didn't QUITE work out the way I wanted to and there was a point where I abandoned templating altog
-<a name="design-in-browser"></a>
-### Design In-Browser
-While I did use a pencil and paper to sketch out the site before coding things, I completely disregarded wireframes and PhotoShop mockups.  Reason being, wireframes and mockups don't account for the differences among the various browsers and devices...at least, not well.
+Jade has "includes" functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.
 
-Instead, I designed this site within a browser using various desktop and remote tools to debug against the different browsers and devices. This was easy when I started working in WordPress and even easier when I jumped over to Jekyll.
+So in other words, these two `.jade` files..
 
-[Divya Manian](http://nimbupani.com/) outlines the design-in-browser process better than me...
-<div class="vidWrapper">
-<div class="centerVideo">
-	<iframe width="560" height="315" src="//www.youtube.com/embed/h52uumn3sZc" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
+{% prism javascript %}
+//index.jade
+doctype html
+html
+  include includes/header //this is an include file
+  body
+    h1 My Page Header
+    p My Content
+{% endprism %}
 
+
+{% prism javascript %}
+//includes/header.jade
+head
+  title kaidez.com
+{% endprism %}
+
+...*SHOULD* output a single `.html` file like this...
+{% prism markup %}
+<!doctype html>
+<html>
+  <head>
+    <title>kaidez.com</title>
+  </head>
+  <body>
+    <h1>My Page Header</h1>
+    <p>My Content</p>
+  </body>
+</html>
+{% endprism %}
+
+The indentation didn't QUITE work out the way I wanted to when I used a `<header>` tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.
+
+That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer and couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straight-forward includes system.
+<a name="oocss"></a>
+### OOCSS
+As mentioned in my [2013 site redesign post](http://kaidez.com/site-redesign-2013/, "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
+
+There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: to apply object-oriented best practices to CSS.
+
+OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella, "stubbornella at Twitter"). The ideas include...
+
+* applying alls styling to CSS classes and not IDs, reserving IDs for JavaScript hooks.
+* separating the classes into two formats...one for style and one for structure.
+* in true object-oriented style, reusing the classes over your page elements as needed.
 <a name="mobile-first"></a>
 ### Mobile First
 "Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
