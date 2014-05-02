@@ -33,7 +33,9 @@ There wasn't a need for lots complicated code due to the site's overall simplici
 ### GitHub Atom
 Most of my work for this was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped dev environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor released to beta a few months from this blog post by [GitHub](https://github.com/ "visit GitHub").
 
-I basically jumped right into using editor only skimming the documentation.
+Atom definitely "takes inspitation" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom. Whitespace removal, code-hinting/completion, spell-checking...all come pre-installed in Atom.
+
+Including Git and GitHub integration, obviously when you consider the Atom's creator. If your project is already has Git configurastion, Atom 
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
