@@ -31,38 +31,68 @@ There wasn't a need for lots complicated code due to the site's overall simplici
 
 <a name="atom"></a>
 ### GitHub Atom
-Most of my work for this was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped dev environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor released to beta a few months from this blog post by [GitHub](https://github.com/ "visit GitHub").
+Most of my work for this project was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped dev environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
 
 Atom definitely "takes inspitation" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom. Whitespace removal, code-hinting/completion, spell-checking...all come pre-installed in Atom.
 
-Including Git and GitHub integration, obviously when you consider the Atom's creator. If your project is already has Git configuration, the configs can communicate with Atom can manage lots of related tasks.
+This includes Git and GitHub integration, which is obvious when you consider Atom's creator. If your project is already Git-configured (i.e., if you've already done a full `git init` inside of it), the configs can communicate with Atom can manage lots of related tasks.
 
 Here are a few of the tasks...
 
-  * Atom can read a `.gitignore` file  and tell you which files are ignored by greting them out in your product tree.
+  * Atom can read a `.gitignore` file  and tell you which files are ignored by greying them out in your project tree.
 
-  * Atom tells you what branch you're currently working on, telling if changes need to be committed and/or pushed.
+  * Atom tells you what branch you're currently working on, telling you if changes need to be committed and/or pushed.
 
-  * Atom can look at the page your working on and jump to it's history on GitHub.
+  * Atom can look at the page your working on and jump to its history on GitHub.
 
-This is not to say that Sublime couldn't do any of these things, because it can.  It's just that these features came pre-installed into Atom: as packages in some cases but pre-intalled nonetheless.
+This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-intalled nonetheless.
 
-Installing these features as packages is key to Atom's design. By installing them as packages, Atom takes on a modularized architecture, making it easier to configure and adjust if you need.
+Installing these features as packages is key to Atom's design. By installing them as packages, Atom takes on a modularized architecture, making it easy to configure and adjust the editor's architecture if needed.
 
-This highly configurable architecture is mostly thanks to Atom's deep Node integration. Peek at most of Atom's pre-installed plugins and you'll see a basic Node sturucture...if you're a regular Node hacker then adding Atom to your toolkit is close to a no-brainer.
+This highly configurable setup is mostly thanks to Atom's deep Node integration. Peek at most of Atom's pre-installed plugins and you'll see a basic Node architectural pattern...if you're a regular Node hacker then adding Atom to your toolkit is close to a no-brainer.
 
-Managing settings in Atom is done using a nice user interface, something that Atom has over Sublime Text (at least I think so). Adding themes, installing/removing packages and creating custom settings is a breeze in Jekyll.
+Managing settings in Atom is done using a nice user interface, something that Atom has over Sublime Text (at least I think so). Adding themes, installing/removing packages and creating custom settings is a breeze in Atom.
 
-Again, Atom is in beta at the time of this post but GitHub has indicated that it will be released in both "fully-closed and fully-open" formats, which I take to mean as "free and paid versions". I personally see no issue with that: Atom as all the markings of a solid, viable application and I see no issue with charging money for it.
+Again, Atom is in beta at the time of this post but GitHub has indicated that it will be released in both "fully-closed and fully-open" formats, which I take to mean as "free and paid versions". I personally see no issue with that: Atom has all the markings of a solid, viable application and I see no problem with charging money for it.
 
-That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad, and it's nowhere near being bad. But I have gotten extremely confortable with Sublime Text over the years...getting my editor configs just as I want them, syncing the editor up with my bash scripts, settling in on themes I like.
+That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad, and it's nowhere near being bad. But I have gotten extremely confortable with Sublime Text over the years...getting my editor configs just as I want them, syncing the editor up with my bash scripts, settling in on themes I like, etc.
 
-I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of stand-out features. And Brackets features eventually make their way to Adobe's new commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
+I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of stand-out features. And the best of Brackets' features eventually make their way to Adobe's new commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
 
-I suppose the point is, Atom's awesome but, in my case, it may not be necessary. I'm continuing to play with it and LOVE what I see. But because of my current needs and what tools I have already, I can't sae I'll buy it when the time comes.
+I suppose the point is, Atom's awesome but, in my case, it may not be necessary. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
 <a name="jade"></a>
 ### Jade
-The 
+RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is loading in to versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
+
+I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a very simple templating engine that compile pages into HTML-format that can be uploaded at some future date. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines page structure.
+
+So you use [npm](https://www.npmjs.org/package/jade, "install Jade with npm") to install Jade on your machine. Then create `.jade` files like this...
+{% prism markup %}
+doctype html
+html
+  head
+    title kaidez.com
+  body
+    h1 My Page Header
+    p My Content
+{% endprism %}
+
+And with a few keystrokes, this file will output an `.html` file like this
+{% prism markup %}
+<!doctype html>
+<html>
+  <head>
+    <title>kaidez.com</title>
+  </head>
+  <body>
+    <h1>My Page Header</h1>
+    <p>My Content</p>
+  </body>
+</html>
+{% endprism %}
+
+I went with Jade because I've been playing with the [MEAN](http://mean.io/ "review the MEAN stack") stack a bit more lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. But for me, it did take some getting used to.
+
 
 <a name="design-in-browser"></a>
 ### Design In-Browser
