@@ -7,7 +7,7 @@ permalink: /revlon-pro-brands/
 meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Gulp, Grunt, & Modernizr’s yepnope functionality for tooling.
 category: personal
 cat-name: "Personal"
-tags: [revlon, atom, jade, sass, oocss, gulp, grunt, Modernizr, yepnope]
+tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope]
 has-home-img: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed onto the Revlon's internal web team for integration in a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
@@ -143,7 +143,7 @@ OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter
 * separating these classes into two formats...one for style and one for structure.
 * in true object-oriented style, reusing these classes across your page elements as needed.
 
-I applied these ideas to my page code 
+I applied these ideas to my Pro Brands page code, specifically the individual product image module. Each module contains lots and lots of shared CSS classes among the various page elements it contains.  Some of the module elements contain IDs; however, none of these elements have CSS styles applied on the ID level.
 
 
 <a name="mobile-first"></a>
