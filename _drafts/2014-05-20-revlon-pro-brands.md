@@ -10,7 +10,7 @@ cat-name: "Personal"
 tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope]
 has-home-img: revlon-pro-brands.jpg
 ---
-Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed onto the Revlon's internal web team for integration in a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
+Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
 There wasn't a need for lots complicated code due to the site's overall simplicity, but it did give me the chance to use certain web development tools and code techniques. And while all the code techniques didn't make it to the site's final production build, I'm glad I got to practice a bit.
 
@@ -35,11 +35,11 @@ Most of my work for this project was done in the office using [Sublime Text](htt
 
 Atom definitely "takes inspitation" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom. Whitespace removal, code-hinting/completion, spell-checking...all come pre-installed in Atom.
 
-This includes Git and GitHub integration, which is obvious when you consider Atom's creator. If your project is already Git-configured (i.e., if you've already done a full `git init` inside of it), the configs can communicate with Atom can manage lots of related tasks.
+This includes Git and GitHub integration, which is obvious when you consider Atom's creator. If your project is already Git-configured (i.e., if you've already done a full `git init` inside of it and it it's been pushed to GitHub at last once), the configs can communicate with Atom and perform lots of Git-related tasks.
 
 Here are a few of the tasks...
 
-  * Atom can read a `.gitignore` file  and tell you which files are ignored by greying them out in your project tree.
+  * Atom can read a project's `.gitignore` file  and tell you which files are ignored by greying them out in your project tree.
 
   * Atom tells you what branch you're currently working on, telling you if changes need to be committed and/or pushed.
 
@@ -55,11 +55,11 @@ Managing settings in Atom is done using a nice user interface, something that At
 
 Again, Atom is in beta at the time of this post but GitHub has indicated that it will be released in both "fully-closed and fully-open" formats, which I take to mean as "free and paid versions". I personally see no issue with that: Atom has all the markings of a solid, viable application and I see no problem with charging money for it.
 
-That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad, and it's nowhere near being bad. But I have gotten extremely confortable with Sublime Text over the years...getting my editor configs just as I want them, syncing the editor up with my bash scripts, settling in on themes I like, etc.
+That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad...it's nowhere near that. But I have gotten extremely confortable with Sublime Text over the years...memorizing its keystrokes, syncing the editor up with my bash scripts, settling in on themes I like, etc.
 
 I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of stand-out features. And the best of Brackets' features eventually make their way to Adobe's new commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
 
-I suppose the point is, Atom's awesome but, in my case, it may not be necessary. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
+I suppose the point is, Atom's awesome but it may not be necessary for my specific needs. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
 <a name="jade"></a>
 ### Jade
 RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
