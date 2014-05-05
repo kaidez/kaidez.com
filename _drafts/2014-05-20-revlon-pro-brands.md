@@ -139,7 +139,7 @@ There's not enough room in this blog post to go through all its characteristics.
 
 OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella, "stubbornella at Twitter"). The central ideas include...
 
-* applying all styling to CSS classes and not IDs, reserving IDs for JavaScript hooks.
+* placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.
 * separating these classes into two formats...one for style and one for structure.
 * in true object-oriented style, reusing these classes across your page elements as needed.
 
