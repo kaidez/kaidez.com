@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   // Project config
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
+
     // Jekyll builds the site
     jekyll: {
       dev: { // build the site without using 'lsi' to create similar posts content
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       prod: { // build the site using 'lsi' to create similar posts content
         src: ['.'],
         dest: '_deploy',
-        lsi: true
+        lsi: false
       }
     },
 
@@ -95,10 +95,10 @@ module.exports = function(grunt) {
       // imgOnlyTask: { // run 'jekyll build' when the 'img/' directory changes
       //   files: ['img/*.{png,jpg,jpeg,gif}'],
       //   tasks: ['imagemin', 'jekyll:dev']
-      // } 
+      // }
      },
 
-    // create a custom 'modernizr' file 
+    // create a custom 'modernizr' file
     modernizr: {
 
       "devFile" : "grunt/modernizr/modernizr-dev.js", //modernizr full build
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
       // Files added here will be excluded when looking for Modernizr refs.
       "excludeFiles" : "Gruntfile.js"
     },
-    
+
     // CDN task
     cdn: {
       options: {
@@ -167,7 +167,7 @@ module.exports = function(grunt) {
           src: ['_deploy/*.html', '_deploy/**/*.html', '_deploy/css/styles.min.css']
             }
         },
-    
+
     // properties to be loaded into the application cache (manifest.appcache) file.  they load in via a template in the 'manifest task'
     site_files: [
       'js/libs/*.js'
@@ -207,7 +207,7 @@ module.exports = function(grunt) {
         dest: '_deploy/manifest.appcache'
       }
     },
-    
+
     // automagically concat/minify site jS based on RequireJS settings
     requirejs: {
       compile: {
@@ -268,7 +268,7 @@ module.exports = function(grunt) {
             {expand: true,
             cwd: 'bower_components/matchMedia/',
             src: ['*.js'],
-            dest: 'js/libs/',      
+            dest: 'js/libs/',
             filter: 'isFile'}
           ]
         },
@@ -297,7 +297,7 @@ module.exports = function(grunt) {
           ]
         }
       },
-      
+
       targethtml: {
         dev: {
           files: {
@@ -316,7 +316,7 @@ module.exports = function(grunt) {
           }
         }
       },
-      
+
       // Shell commands for creating and removing '_deploy' folder
       shell: {
         makeDeploy: {
@@ -326,9 +326,9 @@ module.exports = function(grunt) {
           command: 'rm -rf _deploy'
         }
       },
-    
+
       // deployments
-     'sftp-deploy': {    
+     'sftp-deploy': {
       // deploy to the development site
       staging: {
         auth: {
@@ -352,7 +352,7 @@ module.exports = function(grunt) {
       }
     }
   });
-  
+
   // Use 'loadNpmTasks' to enable plugins
   grunt.loadNpmTasks('grunt-css');
   grunt.loadNpmTasks('grunt-contrib-copy');
