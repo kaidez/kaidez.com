@@ -3619,6 +3619,18 @@ a.read-more-link {
   margin: 15px 0;
 }
 
+.postFigure {
+  width: 100%;
+  max-width: 364px;
+  margin: 27px auto;
+  text-align: center;
+}
+
+.postFigureCaption {
+  font-style: italic;
+  color: #858081;
+}
+
 .pages {
   padding: 0;
   margin: 0;
