@@ -28,7 +28,7 @@
     "grunt-manifest": "^0.4.0",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-copy": "^0.4.1",
-    "grunt-cdn": "^0.2.12",
+    "grunt-cdn": "^0.5.2",
     "grunt-targethtml": "^0.2.6",
     "grunt-shell": "^0.5.0",
     "time-grunt": "^0.1.2",
