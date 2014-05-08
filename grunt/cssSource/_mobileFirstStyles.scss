@@ -3,10 +3,10 @@
 // 'Mobile First' styles start:
 //
 // These are styles which should appear on mobile devices only. They
-// are placed outside of a media query, meaning that they are the 
-// first styles to be called on page load: i.e. "mobile first." oldIE 
+// are placed outside of a media query, meaning that they are the
+// first styles to be called on page load: i.e. "mobile first." oldIE
 // does not support media queries so it can only read code outside of
-// them...like this code. We don't want this so we've taken care of 
+// them...like this code. We don't want this so we've taken care of
 // this by creating '_oldIE.scss' which contains CSS that works in IE 8
 // ...kaidez.com doesn't care about IE7 and older.
 // ====================================================================
@@ -21,7 +21,7 @@
 
 
 // ====================================================================
-// Logo link :provides a large enough space for a click area. These 
+// Logo link :provides a large enough space for a click area. These
 // styles will also be applied to the '_mobileLandscape' view.
 // ====================================================================
 .homepage-link {
@@ -59,7 +59,7 @@
 
 
 // ====================================================================
-// Navigation styles start...these styles will also be applied to the 
+// Navigation styles start...these styles will also be applied to the
 // '_mobileLandscape' view.
 // ====================================================================
 
@@ -74,7 +74,7 @@
 // ====================================================================
 // Navigation styles end
 // ====================================================================
- 
+
 
 
 
@@ -95,7 +95,7 @@
 }
 
 // widen the searchbox a little on handheld devicwes
-.searchfield-style { 
+.searchfield-style {
   width: 260px;
 }
 
@@ -104,7 +104,7 @@
 .tipue_search_content_title {
   font-size: 32px;
 }
- 
+
 // ====================================================================
 // Search box-related styles end
 // ====================================================================
@@ -130,7 +130,7 @@
 }
 
 // style the <h1> tags in home page category sections
-.homePageSectionHeaderClass { 
+.homePageSectionHeaderClass {
   color: #929292;
   font-size:22px;
   min-width: 280px;
@@ -164,7 +164,7 @@
 }
 
 .post-snippet-link:link,
-.post-snippet-link:visited { 
+.post-snippet-link:visited {
   font-size: 25px;
 }
 
@@ -224,14 +224,14 @@
 .breadcrumb-separator {
   @include breadcrumb-separator(4px, 14px);
 }
-  
+
 // breadcrumb link
 .breadcrumb-styles a:link,
 .breadcrumb-styles a:visited  {
   text-decoration: underline;
   color: darken($header-color, 20);
 }
-  
+
 // hover class for breadcrumb link
 .breadcrumb-styles a:hover  {
   text-decoration: none;
@@ -249,14 +249,14 @@
   color: $post-link-color;
 }
 
-// <h1> title on the category page...hides the 'Roboto' font on load. These 
+// <h1> title on the category page...hides the 'Roboto' font on load. These
 // styles will also be applied to the '_mobileLandscape' view.
 .wf-loading .category-header,
 .wf-inactive .category-header {
   @include fonts($srf, hidden);
 }
 
-// <h1> title on the category page...loads the 'Roboto'. These styles will 
+// <h1> title on the category page...loads the 'Roboto'. These styles will
 // also be applied to the '_mobileLandscape' view.
 .wf-active .category-header {
   @include fonts($robo, visible);
@@ -264,7 +264,7 @@
   margin-top: 0;
 }
 
-// <h1> title on the category page.These styles will also be applied to the 
+// <h1> title on the category page.These styles will also be applied to the
 // '_mobileLandscape' view.
 .category-description-page {
   padding:12px;
@@ -288,6 +288,19 @@
     float: none;
     text-align: center;
     margin: 15px 0;
+  }
+
+  .postFigure {
+    width:100%;
+    max-width: 364px;
+    margin: 27px auto;
+    text-align: center;
+
+  }
+
+  .postFigureCaption {
+    font-style: italic;
+    color: #858081;
   }
 
 // ====================================================================
