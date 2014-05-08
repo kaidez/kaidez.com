@@ -44,8 +44,9 @@ Here are a few of the tasks...
   <img src="/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore work with atom">
   <figcaption class="postFigureCaption">Greyed-out files are in .gitignore</figcaption>
 </figure>
-* Atom tells you what branch you're currently working on, telling you if changes need to be committed and/or pushed.
+* Atom tells you what branch you're currently working on and if changes need to be committed and/or pushed.
 * Atom can look at the page your working on and jump to its history on GitHub.
+
 This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-intalled nonetheless.
 
 Installing these features as packages is key to Atom's design. By installing them as packages, Atom takes on a modularized architecture, making it easy to configure and adjust the editor's architecture if needed.
