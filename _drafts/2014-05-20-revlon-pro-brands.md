@@ -18,7 +18,7 @@ There wasn't a need for lots complicated code due to the site's overall simplici
 1. [GitHub Atom](#atom)
 2. [Jade](#jade)
 3. [OOCSS](#oocss)
-4. [Mobile First](#mobile-first)
+4. [Modernizr &amp; yepnope](#modernizr-yepnope)
 5. [Overall Design](#overall-design)
 6. [JavaScript...RequireJS Specifically](#RequireJS)
 7. [The Rest Of The JavaScript](#other-javscript)
@@ -144,48 +144,16 @@ OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter
 * placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.
 * separating these classes into two formats...one for style and one for structure.
 * in true object-oriented style, reusing these classes across your page elements as needed.
+* avoid inefficient CSS selectors, such as descendant selectors.
+* always [lint your CSS](http://csslint.net/ "lint you CSS with CSS Lint").
 
 I applied these ideas to my Pro Brands page code, specifically the individual product image module. Each module contains lots and lots of shared CSS classes among the various page elements it contains.  Some of the module elements contain IDs; however, none of these elements have CSS styles applied on the ID level.
 
+OOCSS definitely takes some getting used to and takes more work.  Quite a few people have personally told me they disagree with it as a practice and don't use it.  But I have noticed that the CSS parses faster than if I hadn't used it so I'm not going to give up on it.
 
+<a name="modernizr-yepnope"></a>
+### Modernizr &amp; yepnope
 
-
-
-
-
-
-
-
-
-
-
-
-
-<a name="mobile-first"></a>
-### Mobile First
-"Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
-
-No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on [the ROT principle](http://blog.braintraffic.com/2011/08/content-strategy-can-save-us-all-from-slobdom/ "What is ROT when talking about content strategy"), then either eliminated lots of content I didn't need or moved it to the bottom of the page.
-
-Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/ "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
-
-I may not have implemented this method properly...I ended up writing more code than I planned on. The code "works" but I know it can be neater and need to revisit it.
-
-Important note: by "oldIE," I mean Internet Explorer 8 only. The site looks crappy in IE8 at the time of the relaunch, but I'm planning to fix it post-launch.
-
-In terms of supporting IE versions prior to 8, I'll just paraphrase Shakespeare:
-
-> *"By my head, you don't support IE7 and IE6!!!"*
->
-> *"By my heel, I care not!!!"*
-
-Past all this, some Mobile First things are done right:
-
-* no third-party affiliate ads load in the site's mobile view.  Google ads *have* to load in this view due to their rules and restrictions, but they do so asynchronously...*and* [responsively](https://support.google.com/adsense/answer/3213689?hl=en). More on that shortly.
-
-* the site utilizes four vendor fonts but only two are available to the mobile view, resulting in two less server requests.
-
-* CSS3 gradients, box shadows and text shadows render heavy browser paints that can impend site load time...they appear on the site's tablet and desktop views but are removed from the its mobile view.
 
 <a name="overall-design"></a>
 ### Overall Design
