@@ -154,6 +154,7 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
 
+Each product image reacts to a mouseevent: clicks on handhelds and mouseovers on desktops. jQuery controls both events.
 
 <a name="overall-design"></a>
 ### Overall Design
