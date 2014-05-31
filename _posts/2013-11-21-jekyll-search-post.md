@@ -12,7 +12,7 @@ tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---
 <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordPress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordpress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
 
 A common solution to this problem is to use some sort of JavaScript-based search functionality, but this won't work if the end-user has disabled JS in their browser. This tutorial shows you how to not only add JS-powered search functionality to your static site, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
@@ -265,7 +265,7 @@ docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2')
 
 A very important piece of our code:
 
-`var docElement` is storing a short-hand reference to `document.documentElement`, which is a DOM reference to our page's `<html>` tag. `docElement.className` is a reference to the tag's only class: `no-js`.
+`var docElement` is storing a short-hand reference to `document.documentElement`, which is a reference to our page's `<html>` tag. `docElement.className` is a reference to the tag's only class: `no-js`.
 
 A regular expression search is run against `docElement.className` when the page loads. When the search finds the text "no-js", it replaces it with the text "js".
 
@@ -536,7 +536,7 @@ loadMenu = function() {
 }
 {% endprism %}
 
-The code we used to build the Tipue search box is now a function stored in a variable called `loadMenu`.  The code hasn't changed so it's not displayed here, but it's important to understand that while the previous version of the code ran immediately, this new version isn't doing that. This code will now *not* run unless we tell it to.
+The code we used to build the Tipue search box is now a function stored in a variable called `loadMenu`.  The code hasn't changed so it's not displayed here, but it's important to understand that while the previous version of the code ran immediately, this new version isn't doing that. This code will now *not* run until we tell it to.
 
 {% prism javascript %}
 isCSSDisabled = false;
@@ -556,7 +556,7 @@ The `testCSS` variable that we created earlier is storing a reference to a `<div
 testCSS.style.position = 'absolute';
 {% endprism %}
 
-The value of a `<div>` tag's position property is `static` by default....change the position property of our `testCSS` div to `absolute`.
+The value of a `<div>` tag's position property is `static` by default...let's change the position property of our `testCSS` div to `absolute`.
 
 {% prism javascript %}
 document.getElementsByTagName('body')[0].appendChild(testCSS);
