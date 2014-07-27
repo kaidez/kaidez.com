@@ -154,11 +154,11 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
 
-Sitecore loads a (slighlty) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered mouseevent: mouseovers on desktops and clicks on handhelds.
+Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered mouseevent: mouseovers on desktops and clicks on handhelds.
 
 As I was applying this functionality to a group of elements instead of just one, it made sense to treat the group as a JavaScript array, iterate over the each array element and apply the jQuery code to each.
 
-I wanted to do this using ECMAScript's `forEach` method, which isn't supported in legacy Internet Explorer. So to use it, I needed to feature-detect for `forEach` and if the site loaded into a brower that didn't support it, a polyfill would load in code that forced it to be supported.
+I wanted to do this using ECMAScript's `forEach` method, which isn't supported in legacy Internet Explorer. So to use it, I needed to feature-detect for `forEach` and if the site loaded into a browser that didn't support it, a polyfill would load in code that forced it to be supported.
 
 This whole process was managed by Modernizr and its internal Yepnope functionality.
 
