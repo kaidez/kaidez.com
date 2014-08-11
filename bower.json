@@ -11,12 +11,12 @@
   ],
   "dependencies": {
     "jquery": "1.10.2",
-    "font-awesome": "4.0.3",
+    "font-awesome": "4.1.0",
     "backbone": "~1.1.0",
-    "matchmedia": "~0.1.0",
-    "enquire": "~2.1.0",
-    "requirejs": "2.1.11",
+    "matchmedia": "0.2.0",
+    "enquire": "~2.1.2",
+    "requirejs": "2.1.14",
     "underscore": "1.6.0",
-    "spinjs": "2.0.0"
+    "spinjs": "2.0.1"
   }
 }
