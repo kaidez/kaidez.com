@@ -14,14 +14,14 @@ has-home-img: web-components-demo.jpg
 
 I spent some time hacking Web Components during a long flight layover and it was time well spent. I put together a small demo just so I could further comprehend WC as a whole.
 
-Web Components are a concept based on four sub-concepts, but I focused on just two of them for the demo: templates and Shadow DOM, primarily templates. At the time of this post, a neat cross-browser/cross-device implementation of Web Components requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before a deep dive into the polyfills. 
+Web Components is a concept based on four sub-concepts, but I focused on just two of them for the demo: templates and Shadow DOM, primarily templates. At the time of this post, a neat cross-browser/cross-device implementation of Web Components requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before a deep dive into the polyfills. 
 
 ### A quick Web Components description
-Web Components are a set of emerging technologies that are working towards a firm specification thanks to the hard work of the W3C. The goal of Web Components is to allow developers to use HTML, CSS and JavaScript to create custom elements..
+Web Components are a set of emerging technologies that are working towards a firm specification thanks to the hard work of the W3C. The goal of Web Components is to allow developers to use HTML, CSS and JavaScript to create custom elements.
 
-You can think of these custom elements as widgets and when discussing them, I mean things like the custom `<github-card>` element. If you have a GitHub account, [check out the <github-card> demo page](http://pazguille.github.io/github-card/ "go to <github-card> demo page"), add your name in the field so you can review the end result, then [read the <github-card> documentation](https://github.com/pazguille/github-card "go to <github-card> GitHub documentation") so you can see how to add it to your page using one simple page tag.
+You can think of these custom elements as widgets and by this, I mean things like the custom `<github-card>` element. If you have a GitHub account, [check out the &lt;github-card> demo page](http://pazguille.github.io/github-card/ "go to <github-card> demo page"), add your name in the field so you can review the end result, then [read the &lt;github-card> documentation](https://github.com/pazguille/github-card "go to <github-card> GitHub documentation") so you can see how to add it to your page using one simple page tag.
 
-Web Components are a concept that's made up of four sub-concepts *(all links courtesy of [HTML5 Rocks](http://www.html5rocks.com/))*:
+Web Components are a concept made up of four sub-concepts *(all links courtesy of [HTML5 Rocks](http://www.html5rocks.com/)):*
 
 1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/template/) 
 2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
@@ -32,10 +32,10 @@ All these sub-concepts can function on their own quite nicely but when they work
 
 *(Side note: there's another sub-concept called "decorators" but lots of developers don't like it, so it's not getting a lot of focus in terms of finalizing its specification. It may disappear.)*
 
-### Started out by focusing on templates:
-I've read about all of these sub-concepts (including decorators) and played with the code a bit, but the best way to learn about a piece of code is to actually write it out. So I'm in the middle of hacking out code for each sub-concept and decided to start with templates.
+### Started out by focusing on templates...mostly
+I've read about all of these sub-concepts (including decorators) and played with the code a bit, but the best way to learn about a piece of code is to actually write it out. So I'm in the middle of hacking out code for each sub-concept, and I'm starting with templates.
 
-For the templates, I wanted to display a simple list of books based on the data in a small JavaScript Object. Things started out like this...
+For the templates, I wanted to display a simple list of books based on a small JavaScript data object. Things started out like this...
 
 __index.html__
 {% prism markup %}
@@ -167,7 +167,9 @@ __scripts.js__
 
 `index.html` contains both `normalize.css` and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. `styles.css` adds extra styling to page elements.
 
-Past that, there's basic HTML but there's also the Web Component-centric `<template>` with an ID of `singleBook`. The code inside `<template>` contains HTML, some CSS inside a `<style>` tag and is also inert...meaning it doesn't render on page load and cannot communicate with any outside code.
+Past that, there's basic HTML but there's also the Web Component-centric `<template>` with an ID of `singleBook`. The code inside `<template>` contains HTML, some CSS inside a `<style>` tag.
+
+The template tag is also inert...meaning it doesn't render on page load and cannot communicate with any outside code.
 
 Some parts of the `<template>` are empty:
 
@@ -191,7 +193,7 @@ var jsBooks = {
 };
 {% endprism %}
 
-The JavaScript Object. It contains four items, each about a particular JS book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
+The JavaScript object. It contains four items, each about a particular JS book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
 
 The time has come to create Shadow DOM...
 
@@ -224,7 +226,7 @@ var title = jsBooks[key].title,
   amazonLink = jsBooks[key].amazonLink;
 {% endprism %}
 
-Assign simple variable names to all the `jsBooks` object properties.
+Assign simple variable references to all the `jsBooks` object properties.
 
 {% prism javascript %}
 templateContent.querySelector("img").src = image;
@@ -268,7 +270,7 @@ From there, we're treating the `root` as a parent element and appending (i.e., "
 
 *(Side note: `document.importNode()` is cool...[read more about it over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.importNode)).*
 
-And if we review index.html in Chrome 36 or higher with the "Show user agent shadow DOM" box checked, it should look (almost) like the demo. And if we then do an "Inspect Element" check and look in the `<section>` tag (the shadow host), you'll see the template content (the shadow root).
+And if we review index.html in Chrome 36 or higher with the "Show user agent shadow DOM" box checked, it should look (almost) like the demo. And if we then do an "Inspect Element" check and look in the `<section>` tag (which is the shadow host), you'll see the template content (which is the shadow root).
 
 <img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
@@ -276,7 +278,7 @@ But there's a problem: Bootstrap styles that are applied to certain elements ins
 
 <img src="/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling">
 
-This is happening because, as mentioned above, the code inside `<template>` can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM. So none of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can affect the template's layout. And for now, adding stylesheets to template using `<link>` isn't allowed.
+This is happening because, as mentioned above, the code inside `<template>` can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM, which is naturally-encapsulated. So none of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can affect the template's layout. And for now, adding stylesheets to templates using `<link>` isn't allowed.
 
 
 ### Import the styles
@@ -290,14 +292,14 @@ This is happening because, as mentioned above, the code inside `<template>` can'
 </style>
 {% endprism %}
 
-Using `@import` is frowned upon but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/), using Polymer avoids doing this by bringing in the stylesheets using XHR requests.
+Using `@import` is frowned upon from a performance standpoint, but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/), using Polymer avoids doing this by bringing in the stylesheets using XHR requests.
 
 But there's another problem: by doing deep clones of template content for each iteration of the loop, the `<style>` tag is getting copied four times when it only needs to be copied once.
 
 <img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
 ### Adjust the loop
-This can be fixed by changing the procedure of the loop...deep-copy and append just the `<article>` tags by referring to their "templateArticle" class while in the loop, then append the `<style>` tag immediately outside the loop. This requires changing the end of JS code from this...
+This can be fixed by changing the loop procedure...deep-copy and append <em>just</em> the `<article>` tags by referring to their "templateArticle" class for each single loop iteration, then append the `<style>` tag immediately <em>outside</em> the loop. This requires changing the end of JS code from this...
 
 
 {% prism javascript %}
@@ -344,9 +346,10 @@ Most profoundly, take note that IE has made no firm decision on what Web Compone
 
 Finally, take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html).
 
-X-Tag isn't as feature-rich as Polymer but supports a wider array of browser, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tags.org/docs).
+X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tags.org/docs).
 
 ### Conclusion
 Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
 I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough for me right now.
+
