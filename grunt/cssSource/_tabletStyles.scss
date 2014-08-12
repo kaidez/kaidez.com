@@ -236,7 +236,7 @@
   .share-post-container-class {
     @include site-border-radius;
     padding:10px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
   }
 
   .sharePostStructure {
