@@ -10,6 +10,7 @@ cat-name: "Code Tips"
 tags: [web components, shadow DOM, templates]
 has-home-img: web-components-demo.jpg
 ---
+<p><a href="/samples/template-shadowdom-practice/" class="demoLink" target="blank">VIEW THE DEMO</a></p>
 *Author's Note: it's best to review the demo in Google Chrome 36+. To properly review the code, open up your Dev Tools and under "General" and then "Settings," make sure that the "Show user agent shadow DOM" box is checked.*
 
 I spent some time hacking Web Components during a long flight layover and it was time well spent. I put together a small demo just so I could further comprehend WC as a whole.
