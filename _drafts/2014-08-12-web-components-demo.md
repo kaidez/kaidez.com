@@ -24,19 +24,21 @@ By custom elements, I mean things like the custom `<github-card>` element that y
 Web Components are a concept that's made up of four sub-concepts:
 
 1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/template/) 
-2. *__Shadow DOM__*: an area in your page DOM that you can not only add code to, but can also keep the code neatly encapsulated. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
-3. *__Custom Elements__*: the ability to create custom page tags, with the above-mentioned `<github-card>` tag as an example. [Read more](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
-4. *__HTML Imports__*: the ability to load in small pieces of HTML code into your page when needed. [Read more](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)
+2. *__Shadow DOM__*: a separate DOM that you can not only add code to, but can also neatly encapsulate. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
+3. *__Custom Elements__*: the ability to create custom page tags, with the above-mentioned `<github-card>` tag as an example. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
+4. *__HTML Imports__*: the ability to load in small pieces of HTML code into your page when needed. [Read more&raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)
 
-*(Side note: there's another concept called "decorators" but lots of developers don't like it, so it's not getting a lot of focus in terms of finalizing its specification and may disappear.)*
+All these sub-concepts can function on their own quite nicely but when they work together, they form Web Components. Conceptually, it's best to think of this in the same way as AJAX, where a group of technologies work together towards a single task.
+
+*(Side note: there's another sub-concept called "decorators" but lots of developers don't like it, so it's not getting a lot of focus in terms of finalizing its specification and may disappear.)*
 
 ### Started Out By Focusing on Templates:
 I've read about all of these sub-concepts (including decorators) and played with the code a bit, but the best way to learn about code is to actually write it out. So I'm in the middle of hacking out code for each sub-concept and decided to start with templates.
 
-Things started like this...
+For the templates, I wanted to display a simple list of books based on data in a small JavaScript Object. Things started out like this...
 
 __index.html__
-{% prism markup %}
+{% prism markup linenos %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +51,10 @@ __index.html__
 </head>
 <body>
   <div id="container">
-    <h1 class="page-header">JavaScript Books</h1>
+    <header>
+      <h1 class="page-header">JavaScript Books</h1>
+      <h2>Built with templates & Shadow DOM</h1>
+    </header>
     <template id="singleBook">
       <style>
         .templateArticle {
@@ -83,9 +88,6 @@ __index.html__
       </article>
     </template>
     <section id="allBooks" class="allBooksClass"></section>
-    <footer role="contentinfo">
-      <small>Open source, guys...use the code how you want to!!! But if you buy any of these books through the "Buy at Amazon" links, you're making me money!!!</small>
-    </footer>
     <script src="scripts/main.js"></script>
   </div>
 </body>
@@ -97,7 +99,7 @@ __styles.css__
 body {
   margin: 20px;
 }
-h1 {
+h1, h2 {
   text-align: center;
 }
 footer {
@@ -119,32 +121,32 @@ __scripts.js__
       "title": "Object-Oriented Javascript",
       "author": "Stoyan Stefanov",
       "image": "images/ooj.jpg",
-      "amazonLink": "http://www.amazon.com/gp/product/1849693129/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1849693129&linkCode=as2&tag=kaidez-20&linkId=CK7X5SMYEHL3BMEQ"
+      "amazonLink": "http://amzn.to/1sRFbEC"
     },
     "book2" : {
       "title": "Effective Javascript",
       "author": "David Herman",
       "image": "images/effectivejs.jpg",
-      "amazonLink": "http://www.amazon.com/gp/product/0321812182/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321812182&linkCode=as2&tag=kaidez-20&linkId=KC4WGKUBOQWXNFBA"
+      "amazonLink": "http://amzn.to/1pLu1A5"
     },
     "book3" : {
       "title": "JavaScript: The Good Parts",
       "author": "Douglas Crockford",
       "image": "images/goodparts.jpg",
-      "amazonLink": "http://www.amazon.com/gp/product/0596517742/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596517742&linkCode=as2&tag=kaidez-20&linkId=DMIEK65EIJ33NXHM"
+      "amazonLink": "http://amzn.to/1ukjoIN"
     },
     "book4" : {
       "title": "Eloquent Javascript",
       "author": "Marijn Haverbeke",
       "image": "images/eloquentjavascript.jpg",
-      "amazonLink": "http://www.amazon.com/gp/product/1593275846/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593275846&linkCode=as2&tag=kaidez-20&linkId=3EF3Y6ZCF3VNMI2N"
+      "amazonLink": "http://amzn.to/1lPP6pn"
     }
   };
   
   var template = document.querySelector("#singleBook"),
     templateContent = template.content,
     host = document.querySelector("#allBooks"),
-    root = host.createShadowRoot(); // "#allBooks" is the Shadow Root
+    root = host.createShadowRoot();
 
   for (key in jsBooks) {
     var title = jsBooks[key].title,
@@ -162,3 +164,106 @@ __scripts.js__
   }
 })();
 {% endprism %}
+
+`index.html` contains both `normalize.css` and the main Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty.
+
+Past that, there's basic HTML and some CSS inside a `<style>` tag but there's also the Web Component-centric `<template>` with an ID of `singleBook`. The code inside `<template>` is inert and doesn't render on page load. It also cannot communicate with any outside code.
+
+There are some parts of the `<template>` are empty:
+
+  * the two `<span>` tags.
+  * the `src` and `alt` attributes in for the only `<img>` tag.
+  * the `href` attribute for the only `<a>` tag.
+
+A simple JS `for..in` loop will populate these parts based on the aforementioned JS data object. And Shadow DOM will help...
+
+{% prism javascript %}
+(function(){
+...
+})();
+{% endprism %}
+
+Everything's wrapped in an [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "Read more about IIFEs").
+
+{% prism javascript %}
+var jsBooks = {
+...
+};
+{% endprism %}
+
+The JavaScript Object. It contains four items, each about a particular JS book and each one has a `title`, `author`, `image` and `amazonLink` property.
+
+The time has come to create Shadow DOM...
+
+{% prism javascript %}
+var template = document.querySelector("#singleBook"),
+  templateContent = template.content,
+  host = document.querySelector("#allBooks"),
+  root = host.createShadowRoot(); 
+{% endprism %}
+
+I'm creating a single var pattern to define four variables...
+
+  * `template` is a direct reference to our template that has an ID of `singleBook` with the help of `document.querySelector()`.
+  * `templateContent` is a direct reference to our template's `content` property, which grabs all the content that exists BEFORE we start adding the `jsBooks` data...the page tags, their attributes. Everything.
+  * `host` is a direct reference to a `<section>` tag that's already on the page and directly below the template. Once the template content has been populated, it will load into this `<section>` tag and be visible to end-users. A page element like this is commonly referred to as the "shadow host" and can have any variable name you want, but it's convention to name it "host."
+  * `root` is a direct reference to the "shadow root," which is the template populated with the content. Thanks to the `host.createShadowRoot()` object, the template content is returned as a document fragment. And as a reminder: `host` refers to the `<section>` tag already on our page and outside our template.
+
+{% prism javascript %}
+for (key in jsBooks) {
+...
+};
+{% endprism %}
+
+A for..in loop will take all the content in the `jsBooks` object and populate it with content based on the code inside of it.  Let's start looking at the code...
+
+{% prism javascript %}
+var title = jsBooks[key].title,
+  author = jsBooks[key].author,
+  image = jsBooks[key].image,
+  amazonLink = jsBooks[key].amazonLink;
+{% endprism %}
+
+Assign simple variable names to all the `jsBooks` object properties.
+
+{% prism javascript %}
+templateContent.querySelector("img").src = image;
+{% endprism %}
+
+Look for the `<img>` tag in the template and populate its `src` attribute with whatever the current `image` property is at the time of the loop.
+
+{% prism javascript %}
+templateContent.querySelector("img").alt 
+  = templateContent.querySelector("#bookTitle").innerHTML
+  = title;
+{% endprism %}
+
+Look for the `<img>` tag in the template and populate its `alt` attribute with whatever the value of the current `title` property is at the time of the loop.
+
+At the same time, look for the `#bookTitle` element in the template (one of the `span` tags) and populate it with whatever the value of the current `title` property is at the time of the loop.
+
+{% prism javascript %}
+templateContent.querySelector("#bookAuthor").innerHTML = author;
+{% endprism %}
+
+Look for the `#bookAuthor` element in the template (the other `span` tag) and populate it with whatever the value of the current `author` property is at the time of the loop.
+
+{% prism javascript %}
+templateContent.querySelector("#btnPurchase").href = amazonLink;
+{% endprism %}
+
+Look for the `#btnPurchase` element in the template (the only  `a` tag) and populate its `href` attribute with whatever the value of the current `amazonLink` property is at the time of the loop.
+
+{% prism javascript %}
+root.appendChild(document.importNode(templateContent, true));
+{% endprism %}
+
+Okay, we need to spend some time talking about this line of code...
+
+All our object data is inside the template and represented by the `templateContent` variable. But this was what was returned as the previously-mentioned document fragment.
+
+The document fragment isn't part of the page DOM and, in this case, need to be treated as an external document. The `document.importNode()` method can duplicate content from external template document and by passing the `deep` parameter, we're making sure to copy everything inside of it.
+
+From there, we're treating the `root` as a parent element and appending (i.e., "adding") a child inside of it. The child we're adding is the template content we just brought over with `document.importNode()`.
+
+*(Side note: `document.importNode()` is cool...[read more about it over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.importNode.))*
