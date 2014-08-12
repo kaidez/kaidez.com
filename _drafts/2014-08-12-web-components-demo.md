@@ -16,7 +16,7 @@ I spent some time hacking Web Components during a long flight layover and it was
 
 Web Components are a concept based on four sub-concepts, but I focused on just two of them for the demo: templates and Shadow DOM, primarily templates. At the time of this post, a neat cross-browser/cross-device implementation of Web Components requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before a deep dive into the polyfills. 
 
-### A Quick Web Components Description
+### A quick Web Components description
 Web Components are a set of emerging technologies that are working towards a firm specification thanks to the hard work of the W3C. The goal of Web Components is to allow developers to use HTML, CSS and JavaScript to create custom elements..
 
 You can think of these custom elements as widgets and when discussing them, I mean things like the custom `<github-card>` element. If you have a GitHub account, [check out the <github-card> demo page](http://pazguille.github.io/github-card/ "go to <github-card> demo page"), add your name in the field so you can review the end result, then [read the <github-card> documentation](https://github.com/pazguille/github-card "go to <github-card> GitHub documentation") so you can see how to add it to your page using one simple page tag.
@@ -32,7 +32,7 @@ All these sub-concepts can function on their own quite nicely but when they work
 
 *(Side note: there's another sub-concept called "decorators" but lots of developers don't like it, so it's not getting a lot of focus in terms of finalizing its specification. It may disappear.)*
 
-### Started Out By Focusing on Templates:
+### Started out by focusing on templates:
 I've read about all of these sub-concepts (including decorators) and played with the code a bit, but the best way to learn about a piece of code is to actually write it out. So I'm in the middle of hacking out code for each sub-concept and decided to start with templates.
 
 For the templates, I wanted to display a simple list of books based on the data in a small JavaScript Object. Things started out like this...
@@ -165,7 +165,7 @@ __scripts.js__
 })();
 {% endprism %}
 
-`index.html` contains both `normalize.css` and the main Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. `styles.css` adds extra styling to page elements.
+`index.html` contains both `normalize.css` and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. `styles.css` adds extra styling to page elements.
 
 Past that, there's basic HTML but there's also the Web Component-centric `<template>` with an ID of `singleBook`. The code inside `<template>` contains HTML, some CSS inside a `<style>` tag and is also inert...meaning it doesn't render on page load and cannot communicate with any outside code.
 
@@ -268,16 +268,18 @@ From there, we're treating the `root` as a parent element and appending (i.e., "
 
 *(Side note: `document.importNode()` is cool...[read more about it over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.importNode)).*
 
-So when reviewing `index.html` in a browser it should look like the demo. And if you do an "Inspect Element" check and look in the `<section>` tag (the shadow host), you'll see the template content (the shadow root).
+And if we review index.html in Chrome 36 or higher with the "Show user agent shadow DOM" box checked, it should look (almost) like the demo. And if we then do an "Inspect Element" check and look in the `<section>` tag (the shadow host), you'll see the template content (the shadow root).
 
 <img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
-But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored..  Anything class names containing the word `panel` or `btn`.
+But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored.  Anything class names containing the word `panel` or `btn` should have well-recognozed Bootstrap styles, especially the buttons.
+
+<img src="/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling">
 
 This is happening because, as mentioned above, the code inside `<template>` can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM. So neither of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can effect the the template's layout. And for now, adding stylesheets to template using `<link>` isn't allowed.
 
 
-### Import the styles.
+### Import the styles
 `styles.css` doesn't need to interact with the layout but the other two have to.  The solution is to use `@import` inside the template's `<style>` tag to bring both of them in:
 
 {% prism css %}
@@ -289,3 +291,62 @@ This is happening because, as mentioned above, the code inside `<template>` can'
 {% endprism %}
 
 Using `@import` is frowned upon but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/), using Polymer avoids doing this by bringing in the stylesheeys using XHR requests.
+
+But there's another problem: by doing deep clones of template content for each iteration of the loop, the `<style>` tag is getting copied four times when it only needs to be copied once.
+
+<img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+
+### Adjust the loop
+This can be fixed by changing the procedure of the loop...deep-copy and append just the `<article>` tags by refering to their "templateArticle" class while in the loop, then append the `<style>` tag immediatly outside the loop. This requires changing the end of JS code from this...
+
+
+{% prism javascript %}
+(function(){
+...
+    root.appendChild(document.importNode(templateContent, true));
+  }
+})();
+{% endprism %}
+
+
+...to this
+
+
+{% prism javascript %}
+(function(){
+...
+    root.appendChild(document.importNode(templateContent.querySelector(".templateArticle"), true));
+  }
+  root.appendChild(document.importNode(templateContent.querySelector("style"), true));
+})();
+{% endprism %}
+
+And now there's only one style tag inside the shadow root and it's properly applying the styles.
+
+<img src="/img/shadow-root-03.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+
+Because the code uses `append()`, the style tag is placed at the bottom of the shadow host.  If this were live production code I was working on, I would (probably) use something like `jQuery.prepend()` to place it at the top.
+
+But placing it at the bottom doesn't affect what I wanted to accomplish with this project, which was to learn how this stuff works. Still, read more about `jQuery.prepend()` [here](http://api.jquery.com/prepend/).
+
+### Further reading
+
+There are links above to a Rob Dodson article and a group of links to various articles over on HTML5 Rocks. The Dodson article provides a great high-level view of Web Components so if you're at the early stages of discovering them, I would read that one first...the HTML5 Rocks articles next.
+
+
+The W3C has an older article called [Introduction to Web Components](http://www.w3.org/TR/2013/WD-components-intro-20130606/). It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it with caution though.
+
+Truthfully, the W3C has been refering people to the [Web Components Wiki](http://www.w3.org/wiki/WebComponents/) lately so you may want to review that.  It points to the HTML5 Rocks links and the specs for [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/ "Read the Shadow DOM specification"), [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/ "Read the Shadow Custom Elements specification") and [HTML Imports](http://w3c.github.io/webcomponents/spec/imports/ "Read the HTML Imports specification"). The WHATWG has the proper version of [the Template spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element).
+
+Specs may be verbose to read at times, but it's always a good idea to read them.
+
+Most profoundly, take note that IE has made no firm decision on what Web Component features they will and will not support at the time of this post's publish date. I'm assuming that will change in the future though...read more on the [modern.ie status page](http://status.modern.ie/?iestatuses=underconsideration&browserstatuses=notsupported,indevelopment,implemented&browsers=chrome,firefox,opera,safari&ieversion=11).
+
+Finally, take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html).
+
+X-Tag isn't as feature-rich as Polymer but supports a wider array of browser, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tags.org/docs).
+
+### Conclusion
+Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
+
+I can't say that my code is perfect, but I acheived the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough for me right now.
