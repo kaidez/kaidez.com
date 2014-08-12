@@ -3016,6 +3016,11 @@ a:focus {
   width: 100%;
 }
 
+.imgBorderMaxWidth {
+  border: 1px solid #b9b9b9;
+  max-width: 100%;
+}
+
 main a,
 main a:visited {
   color: #3285a5;
