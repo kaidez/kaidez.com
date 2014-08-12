@@ -21,7 +21,7 @@ Web Components are a set of emerging technologies that are working towards a fir
 
 You can think of these custom elements as widgets and when discussing them, I mean things like the custom `<github-card>` element. If you have a GitHub account, [check out the <github-card> demo page](http://pazguille.github.io/github-card/ "go to <github-card> demo page"), add your name in the field so you can review the end result, then [read the <github-card> documentation](https://github.com/pazguille/github-card "go to <github-card> GitHub documentation") so you can see how to add it to your page using one simple page tag.
 
-Web Components are a concept that's made up of four sub-concepts:
+Web Components are a concept that's made up of four sub-concepts *(all links courtesy of [HTML5 Rocks](http://www.html5rocks.com/))*:
 
 1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/template/) 
 2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
@@ -266,21 +266,26 @@ The document fragment isn't part of the page DOM and, in this case, needs to be 
 
 From there, we're treating the `root` as a parent element and appending (i.e., "adding") a child inside of it. The child we're adding is the template content we just brought over with `document.importNode()`.
 
-*(Side note: `document.importNode()` is cool...[read more about it over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.importNode.))*
+*(Side note: `document.importNode()` is cool...[read more about it over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.importNode)).*
 
 So when reviewing `index.html` in a browser it should look like the demo. And if you do an "Inspect Element" check and look in the `<section>` tag (the shadow host), you'll see the template content (the shadow root).
 
-<img src="/img/shadow-root.png" alt="The shadow host in the shadow root">
+<img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
-But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored...anything class names containing the word `panel` or `btn`.
+But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored..  Anything class names containing the word `panel` or `btn`.
+
+This is happening because, as mentioned above, the code inside `<template>` can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM. So neither of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can effect the the template's layout. And for now, adding stylesheets to template using `<link>` isn't allowed.
+
 
 ### Import the styles.
-The solution is to use `@import` to bring in the styles.
+`styles.css` doesn't need to interact with the layout but the other two have to.  The solution is to use `@import` inside the template's `<style>` tag to bring both of them in:
 
 {% prism css %}
 <style>
-  @import url("css/bootstrap.min.css");
   @import url("css/normalize.min.css");
+  @import url("css/bootstrap.min.css");
 ...
 </style>
 {% endprism %}
+
+Using `@import` is frowned upon but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/), using Polymer avoids doing this by bringing in the stylesheeys using XHR requests.
