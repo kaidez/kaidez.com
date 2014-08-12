@@ -175,7 +175,7 @@ Some parts of the `<template>` are empty:
   * the `src` and `alt` attributes for the only `<img>` tag.
   * the `href` attribute for the only `<a>` tag.
 
-A simple JS `for..in` loop will populate these parts based on the aforementioned JS data object. And Shadow DOM will help...
+A simple JS `for...in` loop will populate these parts based on the aforementioned JS data object. And Shadow DOM will help...
 
 {% prism javascript %}
 (function(){
@@ -207,7 +207,7 @@ I'm creating a single var pattern to define four variables...
   * `template` is a direct DOM reference to my only template, which has an ID of `singleBook`.
   * `templateContent` is a direct reference to this template's `content` property...the page tags, their attributes. Everything.
   * `host` is a direct reference to a `<section>` tag that's already on the page and directly below the template. Once the template content has been populated, it will load into this `<section>` tag and be visible to end-users. A page element like this is commonly referred to as the "shadow host" and can have any variable name you want, but it's convention to name it "host."
-  * `root` is a direct reference to what's commonly referred to as the "shadow root"...it's the template populated with the object content. Thanks to the `host.createShadowRoot()` line, I'm placing this shadow root template inside of `host` which, again, refers to the `<section>` tag already on my page and outside my template. And it can also have any variable name you want, but it's convention to name it "root."
+  * `root` is a direct reference to what's commonly referred to as the "shadow root"...it's the template populated with the object content. Thanks to the `host.createShadowRoot()` line, I'm placing this shadow root template inside of `host`, which, again, refers to the `<section>` tag already on my page and outside my template. And it can also have any variable name you want, but it's convention to name it "root."
 
 {% prism javascript %}
 for (key in jsBooks) {
@@ -215,7 +215,7 @@ for (key in jsBooks) {
 };
 {% endprism %}
 
-A for..in loop will take all the content in the `jsBooks` object and populate it with content based on the code inside of it.  Let's start looking at that code...
+A for...in loop will take all the content in the `jsBooks` object and populate it with content based on the code inside of it.  Let's start looking at that code...
 
 {% prism javascript %}
 var title = jsBooks[key].title,
@@ -272,11 +272,11 @@ And if we review index.html in Chrome 36 or higher with the "Show user agent sha
 
 <img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
-But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored.  Anything class names containing the word `panel` or `btn` should have well-recognozed Bootstrap styles, especially the buttons.
+But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored.  Anything class names containing the word `panel` or `btn` should have well-recognized Bootstrap styles, especially the buttons.
 
 <img src="/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling">
 
-This is happening because, as mentioned above, the code inside `<template>` can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM. So neither of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can effect the the template's layout. And for now, adding stylesheets to template using `<link>` isn't allowed.
+This is happening because, as mentioned above, the code inside `<template>` can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM. So none of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can affect the template's layout. And for now, adding stylesheets to template using `<link>` isn't allowed.
 
 
 ### Import the styles
@@ -290,14 +290,14 @@ This is happening because, as mentioned above, the code inside `<template>` can'
 </style>
 {% endprism %}
 
-Using `@import` is frowned upon but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/), using Polymer avoids doing this by bringing in the stylesheeys using XHR requests.
+Using `@import` is frowned upon but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/), using Polymer avoids doing this by bringing in the stylesheets using XHR requests.
 
 But there's another problem: by doing deep clones of template content for each iteration of the loop, the `<style>` tag is getting copied four times when it only needs to be copied once.
 
 <img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
 ### Adjust the loop
-This can be fixed by changing the procedure of the loop...deep-copy and append just the `<article>` tags by refering to their "templateArticle" class while in the loop, then append the `<style>` tag immediatly outside the loop. This requires changing the end of JS code from this...
+This can be fixed by changing the procedure of the loop...deep-copy and append just the `<article>` tags by referring to their "templateArticle" class while in the loop, then append the `<style>` tag immediately outside the loop. This requires changing the end of JS code from this...
 
 
 {% prism javascript %}
@@ -336,7 +336,7 @@ There are links above to a Rob Dodson article and a group of links to various ar
 
 The W3C has an older article called [Introduction to Web Components](http://www.w3.org/TR/2013/WD-components-intro-20130606/). It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it with caution though.
 
-Truthfully, the W3C has been refering people to the [Web Components Wiki](http://www.w3.org/wiki/WebComponents/) lately so you may want to review that.  It points to the HTML5 Rocks links and the specs for [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/ "Read the Shadow DOM specification"), [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/ "Read the Shadow Custom Elements specification") and [HTML Imports](http://w3c.github.io/webcomponents/spec/imports/ "Read the HTML Imports specification"). The WHATWG has the proper version of [the Template spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element).
+Truthfully, the W3C has been referring people to the [Web Components Wiki](http://www.w3.org/wiki/WebComponents/) lately so you may want to review that.  It points to the HTML5 Rocks links and the specs for [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/ "Read the Shadow DOM specification"), [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/ "Read the Shadow Custom Elements specification") and [HTML Imports](http://w3c.github.io/webcomponents/spec/imports/ "Read the HTML Imports specification"). The WHATWG has the proper version of [the Template spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element).
 
 Specs may be verbose to read at times, but it's always a good idea to read them.
 
@@ -349,4 +349,4 @@ X-Tag isn't as feature-rich as Polymer but supports a wider array of browser, in
 ### Conclusion
 Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
-I can't say that my code is perfect, but I acheived the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough for me right now.
+I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough for me right now.
