@@ -503,6 +503,8 @@ a:focus {
 .imgBorderMaxWidth {
   border: 1px solid #b9b9b9;
   max-width: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 // all links in post copy are this color...fails lint tests...I'll live
