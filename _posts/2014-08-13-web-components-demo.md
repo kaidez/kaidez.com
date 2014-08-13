@@ -197,11 +197,17 @@ Everything's wrapped in an [IIFE](http://benalman.com/news/2010/11/immediately-i
 
 {% prism javascript %}
 var jsBooks = {
+  "book1" : {
+    "title": "Object-Oriented Javascript",
+    "author": "Stoyan Stefanov",
+    "image": "images/ooj.jpg",
+    "amazonLink": "http://amzn.to/1sRFbEC"
+  },
 ...
 };
 {% endprism %}
 
-The JavaScript data object. It contains four items, each about a particular JavaScript book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
+The JavaScript data object. There's only one listed here but it contains four items, each about a particular JavaScript book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
 
 {% prism javascript %}
 var template = document.querySelector("#singleBook"),
