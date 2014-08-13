@@ -207,7 +207,7 @@ var jsBooks = {
 };
 {% endprism %}
 
-The JavaScript data object. There's only one listed here but it contains four items, each about a particular JavaScript book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
+The JavaScript data object. There's only one item one listed here but it contains four items altogether, each about a particular JavaScript book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
 
 {% prism javascript %}
 var template = document.querySelector("#singleBook"),
