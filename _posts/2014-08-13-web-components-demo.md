@@ -276,7 +276,7 @@ Okay, we need to spend some time talking about this line of code...
 
 At this point in the code, all my object data has populated the template and is represented by the `templateContent` variable. But this is what was returned as a document fragment.
 
-The document fragment isn't part of the page DOM and, in this case, needs to be treated as an external document. The `document.importNode()` method can duplicate content from external documents, and by passing the `deep` parameter, we're making sure to copy <em>everything</em> inside of it.
+The document fragment isn't part of the page DOM and, in this case, needs to be treated as an external document. The `document.importNode()` method can duplicate content from external documents, and by passing the `true` parameter, we're doing a deep copy of the content and copying <em>everything</em> inside of it.
 
 From there, we're treating the `root` as a parent element and appending (i.e., "adding") a child inside of it. The child we're adding is the template content we just brought over with `document.importNode()`.
 
