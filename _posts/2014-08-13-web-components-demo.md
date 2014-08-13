@@ -337,7 +337,7 @@ And now there's only one style tag inside the shadow root and it's properly appl
 
 <img src="/img/shadow-root-03.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
-Because `<style>` gets added to `<section>` with `append()`, it gets placed at the bottom.  Were this live production code, I would (probably) use something like `jQuery.prepend()` to place it at the top.
+Because `<style>` gets added to `<section>` with `appendChild()`, it gets placed at the bottom.  Were this live production code, I would (probably) use something like `jQuery.prepend()` to place it at the top.
 
 But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about `jQuery.prepend()` [here](http://api.jquery.com/prepend/ "Read about jQuery.prepend()").
 
