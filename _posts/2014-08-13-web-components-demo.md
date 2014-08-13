@@ -350,9 +350,9 @@ Truthfully, the W3C has been referring people to the [Web Components Wiki](http:
 
 Specs may be verbose to read at times, but it's always a good idea to read them.
 
-Most profoundly, take note that IE has made no firm decision on what Web Component features they will and will not support at the time of this post's publish date. I'm assuming that will change in the future though...read more on the [modern.ie status page](http://status.modern.ie/?iestatuses=underconsideration&browserstatuses=notsupported,indevelopment,implemented&browsers=chrome,firefox,opera,safari&ieversion=11 "Read about Web Component support in Internet Explorer").
+Most profoundly, Microsoft has made no firm decision on what Web Component features Internet Explorer will and will not support at the time of this post's publish date. I'm assuming that will change in the future though...read more on the [modern.ie status page](http://status.modern.ie/?iestatuses=underconsideration&browserstatuses=notsupported,indevelopment,implemented&browsers=chrome,firefox,opera,safari&ieversion=11 "Read about Web Component support in Internet Explorer").
 
-Finally the polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html "Read about browser compatibility for Polymer").
+Pointing out the IE issues makes a nice segue to polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html "Read about browser compatibility for Polymer").
 
 X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tags.org/docs "Read about browser compatibility for X-Tags").
 
