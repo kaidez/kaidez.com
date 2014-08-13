@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Books</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1 class="page-header">JavaScript Books</h1>
+      <h2><small>...built with templates & Shadow DOM</small></h1>
+    </header>
+
+    <!--
+      start template...it won't display until we tell it to in
+      main.js
+    -->
+    <template id="singleBook">
+      <style>
+        
+        /*
+         * use something like Polymer & you don't need to use 
+         * "@import".
+         */
+        @import url("css/normalize.min.css");
+        @import url("css/bootstrap.min.css");
+
+        /* none of these styles can be accessed outside the template */
+        .templateArticle {
+          display: inline-block;
+          margin: 6px;
+        }
+
+        .btn {
+          margin: 10px;
+          float: right;
+        }
+
+        .thumbnail {
+          margin-bottom: 0;
+        }
+
+        .bookTitleClass {
+          text-align: left;
+        }
+
+        #bookTitle {
+          font-style: italic;
+        }
+
+      </style>
+
+      <article class="templateArticle panel panel-default">
+        <header class="panel-heading">
+          <h2 class="panel-title bookTitleClass">
+
+            <!-- some content will load in these two span tags -->
+            <span id="bookTitle"></span>
+            <br />
+            by <span id="bookAuthor"></span>
+          </h2>
+        </header>
+
+        <!--
+          some content will load into src and alt attributes for this
+          img tag
+        -->
+        <img src="" alt="" class="thumbnail">
+
+        <!--
+          some content will load in the href attribute for this a tag
+        -->
+        <a href="" id="btnPurchase" class="btn btn-primary" role="button" target="blank">Buy at Amazon</a>
+      </article>
+    </template> <!-- #singleBook -->
+
+    <!-- the shadow host...template content goes in here -->
+    <section id="allBooks" class="allBooksClass"></section> 
+
+    <footer role="contentinfo">
+      <small>
+        <p>
+          All book image renderings are owned by the book's respective publisher.
+        </p>
+        <p>
+          Past that, all the code is open source, guys...USE IT HOWEVER YOU WANT TO!!! But if you buy any of these books through the "Buy at Amazon" links above, you're making me money!!!
+        </p>
+        <p>
+          <a href="https://github.com/kaidez/template-shadowdom-practice"><strong>Grab the code from GitHub<strong></a> </strong>|</strong> <a href="https://kaidez.com/web-components-demo"><strong>See the code explanation in this blog post</strong></a>
+        </p>
+      </small>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </div> <!-- #container-->
+</body>
+</html>
