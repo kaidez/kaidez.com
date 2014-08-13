@@ -10,9 +10,9 @@ cat-name: "Personal"
 tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope]
 has-home-img: revlon-pro-brands.jpg
 ---
-Revlon, my employer, recently launched [RevlonProBrands.com](http://revlonprobrands.com "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
+Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
-There wasn't a need for lots complicated code due to the site's overall simplicity, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice a few coding techniques.
+There wasn't a need for lots complicated code, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice a few coding techniques.
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
@@ -48,7 +48,7 @@ Managing settings in Atom is done using a nice user interface, something that At
 
 Again, Atom is in beta at the time of this post but GitHub has indicated that it will be released in both "fully-closed and fully-open" formats, which I take to mean as "free and paid versions". I personally see no issue with that: Atom has all the markings of a solid, viable application and I see no problem with charging money for it.
 
-That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad...it's nowhere near that. But I have gotten extremely confortable with Sublime Text over the years...memorizing its keystrokes, syncing the editor up with my bash scripts, settling in on themes I like, etc.
+That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad...it's nowhere near that. But I have gotten extremely comfortable with Sublime Text over the years...memorizing its keystrokes, syncing the editor up with my bash scripts, settling in on themes I like, etc.
 
 I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of stand-out features. And the best of Brackets' features eventually make their way to Adobe's newest commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
 
@@ -60,17 +60,18 @@ RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* webs
 I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines block structure.
 
 So you use [npm](https://www.npmjs.org/package/jade, "install Jade with npm") to install Jade on your machine. Then create `.jade` files like this...
-{% prism javascript %}
+
+{% prism markup %}
 doctype html
 html
   head
     title kaidez.com
   body
     h1 My Page Header
-    p My Content
 {% endprism %}
 
 And with a few keystrokes, this file will output an `.html` file like this
+
 {% prism markup %}
 <!doctype html>
 <html>
@@ -88,9 +89,9 @@ I went with Jade because I've been playing with the [MEAN stack](http://mean.io/
 
 Jade has "includes" functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.
 
-So in other words, these two `.jade` files..
+So in other words, these two `.jade` files...
 
-{% prism javascript %}
+{% prism markup %}
 //index.jade
 doctype html
 html
@@ -100,14 +101,14 @@ html
     p My Content
 {% endprism %}
 
-
-{% prism javascript %}
+{% prism markup %}
 //includes/header.jade
 head
   title kaidez.com
 {% endprism %}
 
 ...*SHOULD* output a single `.html` file like this...
+
 {% prism markup %}
 <!doctype html>
 <html>
@@ -153,4 +154,32 @@ I wanted to do this using ECMAScript's `forEach` method, which isn't supported i
 
 This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its internal Yepnope functionality.  And it's a pretty straight-forward process...
 
-  * Modernizr features detects for many, many things
+  * Modernizr features detects for many, many things out of the box, but not everything.
+  * Modernizr has a sorely under-used `addTest()` method that lets you create your own feature detects. It also has [a well-stocked list of pre-written feature-detects in its GitHub repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See some Modernizr pre-written feature detects")
+  * I applied [the ECMAScript 5.1 feature detects](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See Modernizer's ES5 feature-detect polyfill") to the Pro Brands code.
+
+The end-result code looked liked this:
+
+{% prism javascript %}
+// The test
+/*
+ * Make Modernizr test for 'Array.prototype.forEach' so it can work 
+ * cross-browser when building out the single product modules. When 
+ * the test passes, "Modernizr.foreach" is attached to the list of 
+ * Modernizr classes in the <html> tag.
+ */
+Modernizr.addTest('foreach', function(){
+  var forEachFunc = Array.prototype.forEach;
+  return typeof forEachFunc === 'function'
+});
+
+/*
+ * Make Modernizr test for the existence of "Modernizr.foreach." If it
+ * does NOT exist, load "js/forEachPolyfill.js" into the browser.
+ */
+Modernizr.load({
+  test: Modernizr.foreach,
+  yep: 'js/app.js',
+  nope: ['js/forEachPolyfill.js', 'js/app.js']
+});
+{% endprism %}
