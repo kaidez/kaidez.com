@@ -12,7 +12,7 @@ has-home-img: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
-There wasn't a need for lots complicated code, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice a few coding techniques.
+There wasn't a need for lots complicated code, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice a few of the techniques.
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
@@ -146,23 +146,32 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
+*(Author's note: I may have written the code but Revlon owns it, so I can't just drop the it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have](http://twitter.com/kaidez "kaidez on Twitter").*
 
 Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseevent` on desktops and a `click` on handhelds.
 
-As I was applying this functionality to a group of elements instead of just one, it made sense to treat the group as a JavaScript array, iterate over the each array element and apply the jQuery code to each.
+The image reaction is, if any image is moused over on while in desktop view, a window scrolls over it displaying some product info. The same reaction happens on handhelds, but on a mouseclick instead of a mouseover.
 
-I wanted to do this using ECMAScript's `forEach` method, which isn't supported in legacy Internet Explorer. So to use it, I needed to feature-detect for `forEach` and if the site loaded into a browser that didn't support it, a polyfill would load in code that forced it to be supported.
+As I was applying this functionality to a group of elements instead of just one, it made sense to build the functionality using a JavaScript array instead of building it for each image one-by-one. The functionality would iterate over the each array element and apply the jQuery code mouseevent code to each element.
 
-This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its internal Yepnope functionality.  And it's a pretty straight-forward process...
+I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that forced it to be supported.
 
-  * Modernizr features detects for many, many things out of the box, but not everything.
-  * Modernizr has a sorely under-used `addTest()` method that lets you create your own feature detects. It also has [a well-stocked list of pre-written feature-detects in its GitHub repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See some Modernizr pre-written feature detects")
-  * I applied [the ECMAScript 5.1 feature detects](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See Modernizer's ES5 feature-detect polyfill") to the Pro Brands code.
+This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its internal Yepnope functionality.  And it's a pretty straight-forward process when keeping a few things in mind...
 
-The end-result code looked liked this:
+  * Note that [MDN provides a great piece of polyfill code<sup>1</sup>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill "Get the 'forEach' polyfill code at Mozilla Developer Network")...I copied it into a file called `forEachPolyfill.js`.
+  * Remember that that a full Modernizr build features detects for many things by default, but not everything.
+  * Remeber that you can also [create a custom Modernizr build](http://modernizr.com/download/ "Create a custom Modernizr build") with only the features-detects you want, and can also create your own custom features-detects with Modernizr's sorely under-used `addTest()` method.
+  * Note that Modernizr provides a well-stocked list of [pre-written feature-detects in its GitHub repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See some Modernizr pre-written feature detects").
+
+<small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small>
+
+I applied a custom feature-detect based [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"), and placed it in a fill called `forEachTest.js`.
+
+If the site loads in a browser that doesn't supprt `forEach`, a polyfill loads.
+
+The code that runs the mouseevents looks like this:
 
 {% prism javascript %}
-// The test
 /*
  * Make Modernizr test for 'Array.prototype.forEach' so it can work 
  * cross-browser when building out the single product modules. When 
@@ -183,4 +192,33 @@ Modernizr.load({
   yep: 'js/app.js',
   nope: ['js/forEachPolyfill.js', 'js/app.js']
 });
+{% endprism %}
+
+{% prism javascript %}
+function ScrollContent() {}
+
+ScrollContent.prototype.buildScrolls = function(element) {
+
+  // scroll up content
+  $("#" + element + "Id").click(function() {
+    $("#" + element + "Content").animate({
+      top: "-=434px"
+    }, "fast");
+  });
+
+  // scroll down content
+  $("#" + element + "Content").click(function() {
+    $(this).animate({
+      top: "+=434px"
+    }, "fast");
+  });
+};
+
+var products = new ScrollContent();
+["americanCrew","cnd","dfi","abba","orofludio","uniq1","voila"].forEach(products.buildScrolls);
+{% endprism %}
+
+
+{% prism markup %}
+<html class="js foreach">
 {% endprism %}
