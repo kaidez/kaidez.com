@@ -197,30 +197,45 @@ function ScrollContent() {}
 ScrollContent.prototype.buildScrolls = function(element) {
 
   /*
-   * scroll up code for handhelds...use "mouseover" instead of
+   * scroll up code/down for handhelds...use "mouseover" instead of
    * click for desktops
    */
+
+   // scroll up
   $("#" + element + "Id").click(function() {
     $("#" + element + "Content").animate({
       top: "-=434px"
     }, "fast");
   });
 
-  // scroll down code
+  // scroll down
   $("#" + element + "Content").click(function() {
     $(this).animate({
       top: "+=434px"
     }, "fast");
   });
+
 };
 
 var products = new ScrollContent();
 ["americanCrew","cnd","dfi","abba","orofludio","uniq1","voila"].forEach(products.buildScrolls);
 {% endprism %}
 
+And the HTML code for each scroll looks somewhat like this...
+{% prism markup %}
+<div id="americanCrewId">...</div>
+<div id="cnd">...</div>
+<div id="dfi">...</div>
+<div id="abba">...</div>
+<div id="orofludio">...</div>
+<div id="uniq1">...</div>
+<div id="voila">...</div>
+{% endprism %}
+
 So, everything works as follows...
 
 1. `Modernizr.addTest()` creates a test for ES5's `forEach` method inside of`forEachTest.js`.
 2. Modernizr runs this test on page-load.
-3. If Modernizr finds `forEach` in the browser, do the "yep" part of the code in `app.js` and just runs the scroll code in `app.js`.
-4. If Modernizr does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
+3. If the test finds `forEach` in the browser, do the "yep" part of the code in `app.js` and run juts the scroll code in `app.js`.
+4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
+5. The `forEach` loop is applied to an array, which contains the names of the div ids on the page.
