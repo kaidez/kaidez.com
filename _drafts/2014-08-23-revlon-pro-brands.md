@@ -150,7 +150,7 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds.
 
-The image reaction is, when one of those events happens, a window scrolls over it displaying some product info using `jQuery.anaimate()`. Because this affected a group of elements it made sense to build the functionality using a JavaScript array instead of building it for each image one-by-one. The functionality would iterate over the each array element and apply the jQuery code mouseevent code to each element.
+The image reaction is, when one of those events happens, a window scrolls over it displaying some product info using `jQuery.animate()`. Because this affected a group of elements it made sense to build the functionality using a JavaScript array instead of building it for each image one-by-one. The functionality would iterate over the each array element and apply the jQuery code mouseevent code to each element.
 
 I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that forced it to be supported.
 
@@ -165,9 +165,9 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
 I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed it in a file called `forEachTest.js`.
 
-From there, I used `Modernizr.addTest()` to test for the existence of `forEach` in the browser....if it didn't exist, the polyfill code was applied and then the `jQuery.anaimate()` went to work.
+The code that [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed it in a file called `forEachPolyfill.js`.
 
-The code that runs the mouseevents looks like this:
+The code that actually tested for the existence of `forEach` went into a file called `forEachTest.js`
 
 {% prism javascript %}
 /*
@@ -192,6 +192,8 @@ Modernizr.load({
 });
 {% endprism %}
 
+From there, I used `Modernizr.addTest()` to test for the existence of `forEach` in the browser....if it didn't exist, the polyfill code was applied and then the `jQuery.animate()` went to work.
+
 {% prism javascript %}
 function ScrollContent() {}
 
@@ -214,9 +216,4 @@ ScrollContent.prototype.buildScrolls = function(element) {
 
 var products = new ScrollContent();
 ["americanCrew","cnd","dfi","abba","orofludio","uniq1","voila"].forEach(products.buildScrolls);
-{% endprism %}
-
-
-{% prism markup %}
-<html class="js foreach">
 {% endprism %}
