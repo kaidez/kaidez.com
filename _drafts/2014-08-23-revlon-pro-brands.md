@@ -39,7 +39,7 @@ Here are a few of the tasks...
 * Atom tells you what branch you're currently working on and if changes need to be committed and/or pushed.
 * Atom can look at the page your working on and jump to its history on GitHub.
 
-This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-intalled nonetheless.
+This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-installed nonetheless.
 
 Installing these features as packages is key to Atom's design. By installing them as packages, Atom takes on a modularized architecture, making it easy to configure and adjust the editor's architecture if needed.
 
@@ -158,7 +158,7 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
   * Note that [MDN provides a great piece of polyfill code<sup>1</sup>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill "Get the 'forEach' polyfill code at Mozilla Developer Network")...I copied it into a file called `forEachPolyfill.js`.
   * Remember that that a full Modernizr build features detects for many things by default, but not everything.
-  * Remeber that you can also [create a custom Modernizr build](http://modernizr.com/download/ "Create a custom Modernizr build") with only the features-detects you want, and can also create your own custom features-detects with Modernizr's sorely under-used `addTest()` method.
+  * Remember that you can also [create a custom Modernizr build](http://modernizr.com/download/ "Create a custom Modernizr build") with only the features-detects you want, and can also create your own custom features-detects with Modernizr's sorely under-used `addTest()` method.
   * Note that Modernizr provides a well-stocked list of [pre-written feature-detects in its GitHub repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See some Modernizr pre-written feature detects").
 
 <small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small>
