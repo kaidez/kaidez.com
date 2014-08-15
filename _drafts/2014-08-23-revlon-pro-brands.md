@@ -146,13 +146,11 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
-*(Author's note: I may have written the code but Revlon owns it, so I can't just drop the it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have](http://twitter.com/kaidez "kaidez on Twitter").*
+*(Author's note: I may have written the code but Revlon owns it, so I can't just drop it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have](http://twitter.com/kaidez "kaidez on Twitter").*
 
-Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseevent` on desktops and a `click` on handhelds.
+Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds.
 
-The image reaction is, if any image is moused over on while in desktop view, a window scrolls over it displaying some product info. The same reaction happens on handhelds, but on a mouseclick instead of a mouseover.
-
-As I was applying this functionality to a group of elements instead of just one, it made sense to build the functionality using a JavaScript array instead of building it for each image one-by-one. The functionality would iterate over the each array element and apply the jQuery code mouseevent code to each element.
+The image reaction is, when one of those events happens, a window scrolls over it displaying some product info using `jQuery.anaimate()`. Because this affected a group of elements it made sense to build the functionality using a JavaScript array instead of building it for each image one-by-one. The functionality would iterate over the each array element and apply the jQuery code mouseevent code to each element.
 
 I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that forced it to be supported.
 
@@ -165,9 +163,9 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
 <small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small>
 
-I applied a custom feature-detect based [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"), and placed it in a fill called `forEachTest.js`.
+I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed it in a file called `forEachTest.js`.
 
-If the site loads in a browser that doesn't supprt `forEach`, a polyfill loads.
+From there, I used `Modernizr.addTest()` to test for the existence of `forEach` in the browser....if it didn't exist, the polyfill code was applied and then the `jQuery.anaimate()` went to work.
 
 The code that runs the mouseevents looks like this:
 
@@ -178,9 +176,9 @@ The code that runs the mouseevents looks like this:
  * the test passes, "Modernizr.foreach" is attached to the list of 
  * Modernizr classes in the <html> tag.
  */
-Modernizr.addTest('foreach', function(){
+Modernizr.addTest("foreach", function(){
   var forEachFunc = Array.prototype.forEach;
-  return typeof forEachFunc === 'function'
+  return typeof forEachFunc === "function"
 });
 
 /*
@@ -189,8 +187,8 @@ Modernizr.addTest('foreach', function(){
  */
 Modernizr.load({
   test: Modernizr.foreach,
-  yep: 'js/app.js',
-  nope: ['js/forEachPolyfill.js', 'js/app.js']
+  yep: "js/app.js",
+  nope: ["forEachPolyfill.js", "app.js"]
 });
 {% endprism %}
 
