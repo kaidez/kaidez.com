@@ -4,10 +4,10 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /revlon-pro-brands/
-meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Gulp, Grunt, & Modernizr’s yepnope functionality for tooling.
+meta-excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.
 category: personal
 cat-name: "Personal"
-tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope]
+tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope, GitHub]
 has-home-img: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
@@ -154,7 +154,7 @@ The image reaction is, when one of those events happens, a window scrolls over i
 
 I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that forced it to be supported.
 
-This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its internal Yepnope functionality.  And it's a pretty straight-forward process when keeping a few things in mind...
+This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its internal yepnope functionality.  And it's a pretty straight-forward process when keeping a few things in mind...
 
   * Note that [MDN provides a great piece of polyfill code<sup>1</sup>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill "Get the 'forEach' polyfill code at Mozilla Developer Network")...I copied it into a file called `forEachPolyfill.js`.
   * Remember that that a full Modernizr build features detects for many things by default, but not everything.
@@ -165,10 +165,11 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
 I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed it in a file called `forEachTest.js`.
 
-The code that [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed it in a file called `forEachPolyfill.js`.
+The code that [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill")...it went into the above-mentioned `forEachPolyfill.js`.
 
-The code that actually tested for the existence of `forEach` went into a file called `forEachTest.js`
+The code that tests for the existence of `forEach` goes into a file called `forEachTest.js`.  The code that actually runs the `jQuery.animate()` scroll code with the help of `forEach` goes into a file called `app.js`.
 
+__forEachTest.js__
 {% prism javascript %}
 /*
  * Make Modernizr test for 'Array.prototype.forEach' so it can work 
@@ -181,10 +182,6 @@ Modernizr.addTest("foreach", function(){
   return typeof forEachFunc === "function"
 });
 
-/*
- * Make Modernizr test for the existence of "Modernizr.foreach." If it
- * does NOT exist, load "js/forEachPolyfill.js" into the browser.
- */
 Modernizr.load({
   test: Modernizr.foreach,
   yep: "js/app.js",
@@ -192,21 +189,24 @@ Modernizr.load({
 });
 {% endprism %}
 
-From there, I used `Modernizr.addTest()` to test for the existence of `forEach` in the browser....if it didn't exist, the polyfill code was applied and then the `jQuery.animate()` went to work.
 
+__app.js__
 {% prism javascript %}
 function ScrollContent() {}
 
 ScrollContent.prototype.buildScrolls = function(element) {
 
-  // scroll up content
+  /*
+   * scroll up code for handhelds...use "mouseover" instead of
+   * click for desktops
+   */
   $("#" + element + "Id").click(function() {
     $("#" + element + "Content").animate({
       top: "-=434px"
     }, "fast");
   });
 
-  // scroll down content
+  // scroll down code
   $("#" + element + "Content").click(function() {
     $(this).animate({
       top: "+=434px"
@@ -217,3 +217,10 @@ ScrollContent.prototype.buildScrolls = function(element) {
 var products = new ScrollContent();
 ["americanCrew","cnd","dfi","abba","orofludio","uniq1","voila"].forEach(products.buildScrolls);
 {% endprism %}
+
+So, everything works as follows...
+
+1. `Modernizr.addTest()` creates a test for ES5's `forEach` method inside of`forEachTest.js`.
+2. Modernizr runs this test on page-load.
+3. If Modernizr finds `forEach` in the browser, do the "yep" part of the code in `app.js` and just runs the scroll code in `app.js`.
+4. If Modernizr does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
