@@ -234,8 +234,9 @@ And the HTML code for each scroll looks somewhat like this...
 
 So, everything works as follows...
 
-1. `Modernizr.addTest()` creates a test for ES5's `forEach` method inside of`forEachTest.js`.
+1. Inside of`forEachTest.js`, a test is created for ES5's `forEach` method .
 2. Modernizr runs this test on page-load.
 3. If the test finds `forEach` in the browser, do the "yep" part of the code in `app.js` and run juts the scroll code in `app.js`.
 4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
-5. The `forEach` loop is applied to an array, which contains the names of the div ids on the page.
+5. The `forEach` loop is applied to an array, which contains the names of the div ids on the page as well as the name of the page element that appears on either a mouseover or a click.
+6. The loop takes these names and concatenates them 
