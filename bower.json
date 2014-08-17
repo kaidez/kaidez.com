@@ -18,5 +18,8 @@
     "requirejs": "2.1.14",
     "underscore": "1.6.0",
     "spinjs": "2.0.1"
+  },
+  "devDependencies": {
+    "tipue": "git@github.com:Tipue/Tipue-Search.git"
   }
 }
