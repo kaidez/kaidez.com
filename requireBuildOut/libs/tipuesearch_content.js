@@ -1,5 +1,7 @@
 var tipuesearch = {"pages": [
   
+    {"title": "Web Components Demo: Templates and (some) Shadow DOM", "text": "A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.", "tags": "web componentsshadow DOMtemplates", "loc": "/web-components-demo/"},
+  
     {"title": "REVIEW: Downloaded", "text": "The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.", "tags": "review", "loc": "/downloaded-movie-review/"},
   
     {"title": "TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback", "text": "jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.", "tags": "jekylljqueryaccessibilityjavascripttutorial", "loc": "/custom-jekyll-search/"},
@@ -144,5 +146,6 @@ var tipuesearch = {"pages": [
   
     {"title": "TUTORIAL: Create The Building Blocks For An HTML5 Page", "text": "Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.", "tags": "tutorialhtml5", "loc": "/create-html5-page/"},
   
-    {"title": "Welcome Back!!!!!!!!", "text": "kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.", "tags": "kai", "loc": "/welcome-back/"}
+    {"title": "Welcome Back!!!!!!!!", "text": "kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.", "tags": "kai", "loc": "/welcome-back/"},
+   false
 ]};
