@@ -257,4 +257,4 @@ So, everything works as follows...
 3. If the test finds `forEach` in the browser, do the "yep" part of the code and run just the scroll code in `app.js`.
 4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
 5. `app.js` contains a `ScrollContent.buildScrolls()` method that takes each item in the array and concatenates it to create two text strings.
-6. Test string
+6. Each array item gets concanated as a text string twice in `buildScrolls`: once to 
