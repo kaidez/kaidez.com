@@ -146,26 +146,26 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
-*(Author's note: I may have written the code but Revlon owns it, so I can't just drop it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have](http://twitter.com/kaidez "kaidez on Twitter").*
+*(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have](http://twitter.com/kaidez "kaidez on Twitter").*
 
 Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds.
 
-The image reaction is, when one of those events happens, a window scrolls over it displaying some product info using `jQuery.animate()`. Because this affected a group of elements it made sense to build the functionality using a JavaScript array instead of building it for each image one-by-one. The functionality would iterate over the each array element and apply the jQuery code mouseevent code to each element.
+The image reaction is, when one of those events happens, a window scrolls up over it displaying some product info using `jQuery.animate()`. Since this affected a group of images, the functionality is applied to a JavaScript array that contains the instead of building it for each image one-by-one. For each iteration, the jQuery mouseevent code is applied to each element.
 
-I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that forced it to be supported.
+I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that applied `forEach` support in each browser.
 
-This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its internal yepnope functionality.  And it's a pretty straight-forward process when keeping a few things in mind...
+This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its [Modernizr.load() method](http://modernizr.com/docs/#load "Read more about Modernizr.load()").  And it's a pretty straight-forward process when keeping a few things in mind...
 
   * Note that [MDN provides a great piece of polyfill code<sup>1</sup>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill "Get the 'forEach' polyfill code at Mozilla Developer Network")...I copied it into a file called `forEachPolyfill.js`.
-  * Remember that that a full Modernizr build features detects for many things by default, but not everything.
-  * Remember that you can also [create a custom Modernizr build](http://modernizr.com/download/ "Create a custom Modernizr build") with only the features-detects you want, and can also create your own custom features-detects with Modernizr's sorely under-used `addTest()` method.
+  * Remember that a full Modernizr build features detects for many things by default, but not everything.
+  * Remember that you can [create a custom Modernizr build](http://modernizr.com/download/ "Create a custom Modernizr build") with only the features-detects you want, and can also create your own custom features-detects for the things that Modernizr doesn't look for by default...this is done with Modernizr's sorely under-used `addTest()` method.
   * Note that Modernizr provides a well-stocked list of [pre-written feature-detects in its GitHub repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See some Modernizr pre-written feature detects").
 
 <small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small>
 
-I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed it in a file called `forEachTest.js`.
+I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed the code in a file called `forEachTest.js`.
 
-The code that [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill")...it went into the above-mentioned `forEachPolyfill.js`.
+A test for `forEach` occurs is forEachTest.js` happens 
 
 The code that tests for the existence of `forEach` goes into a file called `forEachTest.js`.  The code that actually runs the `jQuery.animate()` scroll code with the help of `forEach` goes into a file called `app.js`.
 
@@ -194,6 +194,10 @@ __app.js__
 {% prism javascript %}
 function ScrollContent() {}
 
+/*
+ * "buildScrolls" method: runs faster if it's attached to core
+ * function's protototype and not inside core function.
+ */
 ScrollContent.prototype.buildScrolls = function(element) {
 
   /*
@@ -218,25 +222,38 @@ ScrollContent.prototype.buildScrolls = function(element) {
 };
 
 var products = new ScrollContent();
-["americanCrew","cnd","dfi","abba","orofludio","uniq1","voila"].forEach(products.buildScrolls);
+["productOne","productTwo","productThree","productFour","productFive","productSix","productSeven"].forEach(products.buildScrolls);
 {% endprism %}
 
 And the HTML code for each scroll looks somewhat like this...
 {% prism markup %}
-<div id="americanCrewId">...</div>
-<div id="cnd">...</div>
-<div id="dfi">...</div>
-<div id="abba">...</div>
-<div id="orofludio">...</div>
-<div id="uniq1">...</div>
-<div id="voila">...</div>
+<div id="productOneId">
+  <div id="productOneContent">...</div>
+</div>
+<div id="productTwoId">
+  <div id="productTwoContent">...</div>
+</div>
+<div id="productThreeId">
+  <div id="productThreeContent">...</div>
+</div>
+<div id="productFourId">
+  <div id="productFourContent">...</div>
+</div>
+<div id="productFiveId">
+  <div id="productFiveContent">...</div>
+</div>
+<div id="productSixId">
+  <div id="productSixContent">...</div>
+</div>
+<div id="productSevenId">
+  <div id="productSevenContent">...</div>
+</div>
 {% endprism %}
 
 So, everything works as follows...
 
-1. Inside of`forEachTest.js`, a test is created for ES5's `forEach` method .
+1. Inside of`forEachTest.js`, a test is created for ES5's `forEach` method.
 2. Modernizr runs this test on page-load.
-3. If the test finds `forEach` in the browser, do the "yep" part of the code in `app.js` and run juts the scroll code in `app.js`.
+3. If the test finds `forEach` in the browser, do the "yep" part of the code and run just the scroll code in `app.js`.
 4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
-5. The `forEach` loop is applied to an array, which contains the names of the div ids on the page as well as the name of the page element that appears on either a mouseover or a click.
-6. The loop takes these names and concatenates them 
+5. `app.js` contains a `ScrollContent.buildScrolls()` method that takes each item in the array and concatenates it 
