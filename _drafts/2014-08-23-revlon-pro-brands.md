@@ -146,7 +146,7 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
-*(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have](http://twitter.com/kaidez "kaidez on Twitter").*
+*(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have about it](http://twitter.com/kaidez "kaidez on Twitter").*
 
 Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds.
 
@@ -256,4 +256,4 @@ So, everything works as follows...
 2. Modernizr runs this test on page-load.
 3. If the test finds `forEach` in the browser, do the "yep" part of the code and run just the scroll code in `app.js`.
 4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
-5. `app.js` contains a `ScrollContent.buildScrolls()` method that takes each item in the array and concatenates it 
+5. `app.js` contains a `ScrollContent.buildScrolls()` method that takes each item in the array and concatenates it to a 
