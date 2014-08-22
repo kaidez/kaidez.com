@@ -252,7 +252,7 @@ And the HTML code for each scroll looks somewhat like this...
 
 So, everything works as follows...
 
-1. In the HTML, the divs that end in "Id" are buttons that react to the mouseevents. of`forEachTest.js`, a test is created for ES5's `forEach` method.
+1. In the HTML, the divs that end in "Id" are buttons that react to the mouseevents.  of`forEachTest.js`, a test is created for ES5's `forEach` method.
 2. Modernizr runs this test on page-load.
 3. If the test finds `forEach` in the browser, do the "yep" part of the code and run just the scroll code in `app.js`.
 4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
