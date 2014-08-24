@@ -148,11 +148,11 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 ### Modernizr &amp; yepnope
 *(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have about it](http://twitter.com/kaidez "kaidez on Twitter").*
 
-Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld. Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds.
+Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld.
 
-The image reaction is, when one of those events happens, a window scrolls up over it displaying some product info using `jQuery.animate()`. Since this affected a group of images, the functionality is applied to a JavaScript array that contains the instead of building it for each image one-by-one. For each iteration, the jQuery mouseevent code is applied to each element.
+Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds. The image reaction is, when one of those events happens, a window scrolls up over it displaying some product info using `jQuery.animate()`.
 
-I also wanted to use ECMAScript's `forEach` method for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that applied `forEach` support in each browser.
+The group of images is placed in a JS array where a `forEach` method loops over it. for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that applied `forEach` support in each browser.
 
 This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its [Modernizr.load() method](http://modernizr.com/docs/#load "Read more about Modernizr.load()").  And it's a pretty straight-forward process when keeping a few things in mind...
 
@@ -196,7 +196,7 @@ function ScrollContent() {}
 
 /*
  * "buildScrolls" method: runs faster if it's attached to core
- * function's protototype and not inside core function.
+ * function's prototype and not inside core function.
  */
 ScrollContent.prototype.buildScrolls = function(element) {
 
