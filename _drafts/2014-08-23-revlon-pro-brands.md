@@ -165,16 +165,16 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
 I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed the code in a file called `forEachTest.js`.
 
-A test for `forEach` occurs is forEachTest.js` happens 
+A test for `forEach` occurs is `forEachTest.js` happens
 
 The code that tests for the existence of `forEach` goes into a file called `forEachTest.js`.  The code that actually runs the `jQuery.animate()` scroll code with the help of `forEach` goes into a file called `app.js`.
 
 __forEachTest.js__
 {% prism javascript %}
 /*
- * Make Modernizr test for 'Array.prototype.forEach' so it can work 
- * cross-browser when building out the single product modules. When 
- * the test passes, "Modernizr.foreach" is attached to the list of 
+ * Make Modernizr test for "Array.prototype.forEach" so it can work
+ * cross-browser when building out the single product modules. When
+ * the test passes, "Modernizr.foreach" is attached to the list of
  * Modernizr classes in the <html> tag.
  */
 Modernizr.addTest("foreach", function(){
