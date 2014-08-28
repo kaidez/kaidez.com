@@ -17,11 +17,11 @@
     "enquire": "~2.1.2",
     "requirejs": "2.1.14",
     "underscore": "1.6.0",
-    "spinjs": "2.0.1"
-  },
-  "devDependencies": {
-    "tipue": "git@github.com:Tipue/Tipue-Search.git",
+    "spinjs": "2.0.1",
     "font-awesome": "4.2.0",
     "underscore": "1.7.0"
+  },
+  "devDependencies": {
+    "tipue": "git@github.com:Tipue/Tipue-Search.git"
   }
 }
