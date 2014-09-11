@@ -273,8 +273,8 @@ I can't see task tools like [Grunt](http://gruntjs.com "Learn more about the Gru
 
 Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarties but these are the two that stick out to me the most.
 
-The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I'm of the opinion that the streaming system makes it easier. Gulp streams allow for the easy chaining of tasks as well as requiring less configuratuion, and I like that.
+The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I think that the streaming system makes parts of it easier. Gulp streams allow for the easy chaining of tasks as well as requiring less configuratuion, and I like that.
 
-I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage,  
+I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.
 
 1. Gul
