@@ -269,3 +269,10 @@ So on page-load, everything works as follows...
 
 <a name="grunt-gulp"></a>
 ### Grunt &amp; Gulp
+I can't see task tools like [Grunt](http://gruntjs.com "Learn more about the Grunt task runner") being omitted from my workflow and as discussed in my last site redesign post, [Grunt ruled my workflow](/site-redesign-2013/#grunt-deployment-workflow "Read about kaidez.com's 2013 site redesign"). But [Gulp](http://gulpjs.com/, "Learn more about Gulp") has emerged as formidable challenger to Grunt.
+
+Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarties but these are the two that stick out to me the most.
+
+The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I'm of the opinion that the streaming system makes it easier.  This 
+
+1. Gul
