@@ -146,7 +146,7 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
-*(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have about it](http://twitter.com/kaidez "kaidez on Twitter"). Also, Yepnope has sorta/kinda been deprecated ([read more about this](https://github.com/SlexAxton/yepnope.js#deprecation-notice)) so this part of the post is here for historical purposes.)*
+*(Author's note: Yepnope has sorta/kinda been deprecated ([read more about this](https://github.com/SlexAxton/yepnope.js#deprecation-notice)) so this part of the post is here for historical purposes.)*
 
 Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld.
 
@@ -202,9 +202,9 @@ function ScrollContent() {}
 ScrollContent.prototype.buildScrolls = function(element) {
 
   /*
-   * scroll up code/down for handhelds...using "click" below since
-   * this is the mobile/handheld version.  In the desktop version,
-   * "click" is replaced by "mouseover".
+   * scroll up code/down for mobile/handhelds using "jQuery.click()"
+   * below since this is the mobile/handheld version. In the desktop
+   * version, "jQuery.click()" is replaced by "jQuery.mouseover()".
    */
 
    // scroll up
@@ -254,10 +254,11 @@ And the HTML code for each scroll looks somewhat like this...
 
 The divs that end in "Id" are buttons that run one of the mouse events while the divs that end in "Content" contain the  product images that appear on the mouse events.
 
-So on page load, everything works as follows...
+So on page-load, everything works as follows...
 
 1. Inside `forEachTest.js`, Modernizr tests for the existence of `forEach` in the browser.
 2. If `forEach` exists, the "yep" part of the code runs and loads `app.js` into the browser.
 3. If `forEach` does NOT exist, the "nope" part of the code runs and adds both the polyfill code and `app.js` into the browser.
 4. When one of the divs ending in id receives one of the mouse events, the `ScrollContent.buildScrolls()` method in `app.js` runs.
-5. `ScrollContent.buildScrolls()` takes an array of text strings and for each item in the array, it creates two text strings with concatenation. 
+5. `ScrollContent.buildScrolls()` takes an array of text strings, and each array item in the array is  passed as the `element` parameter in `buildScrolls()`.
+6. The paramters are text strings that get passed to the `element` reference  that get built are based on the `element` parameter in the 
