@@ -261,4 +261,9 @@ So on page-load, everything works as follows...
 3. If `forEach` does NOT exist, the "nope" part of the code runs and adds both the polyfill code and `app.js` into the browser.
 4. When one of the divs ending in id receives one of the mouse events, the `ScrollContent.buildScrolls()` method in `app.js` runs.
 5. `ScrollContent.buildScrolls()` takes an array of text strings, and each array item in the array is  passed as the `element` parameter in `buildScrolls()`.
-6. The paramters are text strings that get passed to the `element` reference  that get built are based on the `element` parameter in the 
+6. The paramters are text strings that get passed to the `element` reference in the jQuery event calls. So for example:
+
+    * the value of `element` in the forEach loop is "productOne".
+    * two text strings are built as a result: "productSevenId" and "productSevenContent".
+
+7. dslfhdsjfla
