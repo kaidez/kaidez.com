@@ -264,6 +264,8 @@ So on page-load, everything works as follows...
 6. The paramters are text strings that get passed to the `element` reference in the jQuery event calls. So for example:
 
     * the value of `element` in the forEach loop is "productOne".
-    * two text strings are built as a result: "productSevenId" and "productSevenContent".
+    * two text strings are built as a result: "#productOneId" and "#productOneContent".
+    * both text strings match the name of the div in the HTML code, synchronzing with the jQuery event calls
 
-7. dslfhdsjfla
+<a name="grunt-gulp"></a>
+### Grunt &amp; Gulp
