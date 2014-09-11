@@ -12,7 +12,7 @@ has-home-img: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
-There wasn't a need for lots complicated code, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice these techniques.
+There wasn't a need for lots complicated client-side code, but working on this project gave me the chance to use certain web development tools and code techniques. Let's discuss them:
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
@@ -24,7 +24,7 @@ There wasn't a need for lots complicated code, but it did give me the chance to 
 
 <a name="atom"></a>
 ### GitHub Atom
-Most of my work for this project was done in the office using [Sublime Text](http://www.sublimetext.com/ "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped development environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
+[Sublime Text](http://www.sublimetext.com/ "visit Sublime Text") was my primary development environment for this project, but there were a few instances when I switched to [Atom](https://atom.io/ "visit Atom"). Which is a web editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
 
 Atom definitely "takes inspiration" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom.
 
