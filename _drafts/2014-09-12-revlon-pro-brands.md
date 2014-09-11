@@ -24,7 +24,7 @@ There wasn't a need for lots complicated code, but it did give me the chance to 
 
 <a name="atom"></a>
 ### GitHub Atom
-Most of my work for this project was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped development environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
+Most of my work for this project was done in the office using [Sublime Text](http://www.sublimetext.com/ "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped development environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
 
 Atom definitely "takes inspiration" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom.
 
@@ -52,7 +52,7 @@ Again, Atom is in beta at the time of this post but GitHub has indicated that it
 
 That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad...it's nowhere near that. But I have gotten extremely comfortable with Sublime Text over the years...memorizing its keystrokes, syncing the editor up with my bash scripts, settling in on themes I like, etc.
 
-I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of standout features. And the best of Brackets' features eventually make their way to Adobe's newest commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
+I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of standout features. And the best of Brackets' features eventually make their way to Adobe's newest commercial web editor [Edge Code](http://html.adobe.com/edge/code/ "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
 
 I suppose the point is, Atom's awesome but it may not be necessary for my specific needs. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
 <a name="jade"></a>
@@ -61,7 +61,7 @@ RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* webs
 
 I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines block structure.
 
-So you use [npm](https://www.npmjs.org/package/jade, "install Jade with npm") to install Jade on your machine. Then create `.jade` files like this...
+So you [use npm to install Jade](https://www.npmjs.org/package/jade "install Jade with npm") on your machine. Then create `.jade` files like this...
 
 {% prism markup %}
 doctype html
@@ -129,17 +129,17 @@ The indentation didn't QUITE work out the way I wanted to when I used a `<header
 That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer and couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straightforward includes system.
 <a name="oocss"></a>
 ### OOCSS
-As mentioned in my [2013 site redesign post](http://kaidez.com/site-redesign-2013/, "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
+As mentioned in my [2013 site redesign post](http://kaidez.com/site-redesign-2013/ "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
 
 There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: to apply object-oriented best practices to CSS.
 
-OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella/, "stubbornella at Twitter"). The central ideas include...
+OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella/ "stubbornella at Twitter"). The central ideas include...
 
 * placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.
 * separating these classes into two formats...one for style and one for structure.
 * in true object-oriented style, reusing these classes across your page elements as needed.
 * avoid inefficient CSS selectors, such as descendant selectors.
-* always [lint your CSS](http://csslint.net/ "lint you CSS with CSS Lint").
+* always [lint your CSS](http://csslint.net/ "lint you CSS with CSS Lint") to test for bugs and confirm that CSS best practices are being followed.
 
 I applied these ideas to my Pro Brands page code, specifically the individual product image module. Each module contains lots and lots of shared CSS classes among the various page elements it contains.  Some of the module elements contain IDs; however, none of these elements have CSS styles applied on the ID level.
 
@@ -278,7 +278,7 @@ The BIG difference is how Gulp works behind the scenes...Gulp uses Node's stream
 
 I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.
 
-The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the [JavaScript Jabber Podcast](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/, "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
+The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the [JavaScript Jabber Podcast](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/ "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
 
 <a name="conclusion"></a>
 ### Conclusion
