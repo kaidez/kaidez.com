@@ -10,9 +10,9 @@ cat-name: "Personal"
 tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope, GitHub]
 has-home-img: revlon-pro-brands.jpg
 ---
-Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that will mostly act as a sales tool for the company's sales reps. It was designed by Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
+Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
-There wasn't a need for lots complicated code, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice a few of the techniques.
+There wasn't a need for lots complicated code, but it did give me the chance to use certain web development tools and code techniques. And while there were slight adjustments to the code before it got pushed up to production, I'm glad I got to practice these techniques.
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
@@ -24,9 +24,9 @@ There wasn't a need for lots complicated code, but it did give me the chance to 
 
 <a name="atom"></a>
 ### GitHub Atom
-Most of my work for this project was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped dev environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
+Most of my work for this project was done in the office using [Sublime Text](http://www.sublimetext.com/, "visit Sublime Text") as a development environment but there were a few instances when I did some work at home. In those instances, I swapped development environments and used  [Atom](https://atom.io/ "visit Atom"), a web-based text editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
 
-Atom definitely "takes inspiration" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom. Whitespace removal, code-hinting/completion, spell-checking...all come pre-installed in Atom.
+Atom definitely "takes inspiration" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom.
 
 This includes Git and GitHub integration, which is obvious when you consider Atom's creator. If your project is already Git-configured (i.e., if you've already done a full `git init` inside of it and it's been pushed up to GitHub at least once), the configs can communicate with Atom and perform lots of Git-related tasks.
 
@@ -42,7 +42,7 @@ Here are a few of the tasks...
 
 This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-installed nonetheless.
 
-Installing these features as packages is key to Atom's design. By installing them as packages, Atom takes on a modularized architecture, making it easy to configure and adjust the editor's architecture if needed.
+That these features are installed as packages is key to Atom's design. Atom adopts a modularized architecture as a result, making it easy to configure and adjust the architecture if needed.
 
 This highly configurable setup is mostly thanks to Atom's deep Node integration. Peek at most of Atom's pre-installed plugins and you'll see a basic Node architectural pattern...if you're a regular Node hacker then adding Atom to your toolkit is close to a no-brainer.
 
@@ -52,7 +52,7 @@ Again, Atom is in beta at the time of this post but GitHub has indicated that it
 
 That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad...it's nowhere near that. But I have gotten extremely comfortable with Sublime Text over the years...memorizing its keystrokes, syncing the editor up with my bash scripts, settling in on themes I like, etc.
 
-I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of stand-out features. And the best of Brackets' features eventually make their way to Adobe's newest commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
+I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of standout features. And the best of Brackets' features eventually make their way to Adobe's newest commercial web editor [Edge Code](http://html.adobe.com/edge/code/, "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
 
 I suppose the point is, Atom's awesome but it may not be necessary for my specific needs. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
 <a name="jade"></a>
@@ -126,14 +126,14 @@ head
 
 The indentation didn't QUITE work out the way I wanted to when I used a `<header>` tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.
 
-That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer and couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straight-forward includes system.
+That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer and couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straightforward includes system.
 <a name="oocss"></a>
 ### OOCSS
 As mentioned in my [2013 site redesign post](http://kaidez.com/site-redesign-2013/, "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
 
 There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: to apply object-oriented best practices to CSS.
 
-OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella, "stubbornella at Twitter"). The central ideas include...
+OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella/, "stubbornella at Twitter"). The central ideas include...
 
 * placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.
 * separating these classes into two formats...one for style and one for structure.
@@ -155,7 +155,7 @@ Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQue
 
 The group of images is placed in a JS array where a `forEach` method loops over it. for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that applied `forEach` support in each browser.
 
-This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its [Modernizr.load() method](http://modernizr.com/docs/#load "Read more about Modernizr.load()").  And it's a pretty straight-forward process when keeping a few things in mind...
+This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its [Modernizr.load() method](http://modernizr.com/docs/#load "Read more about Modernizr.load()").  And it's a pretty straightforward process when keeping a few things in mind...
 
   * Note that [MDN provides a great piece of polyfill code<sup>1</sup>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill "Get the 'forEach' polyfill code at Mozilla Developer Network")...I copied it into a file called `forEachPolyfill.js`.
   * Remember that a full Modernizr build features detects for many things by default, but not everything.
@@ -262,23 +262,23 @@ So on page-load, everything works as follows...
 3. If `forEach` does NOT exist, the "nope" part of the code runs and adds both the polyfill code and `app.js` into the browser.
 4. When one of the divs ending in id receives one of the mouse events, the `ScrollContent.buildScrolls()` method in `app.js` runs.
 5. `ScrollContent.buildScrolls()` takes an array of text strings, and each array item in the array is  passed as the `element` parameter in `buildScrolls()`.
-6. The paramters are text strings that get passed to the `element` reference in the jQuery event calls. So for example:
+6. The parameters are text strings that get passed to the `element` reference in the jQuery event calls. So for example:
 
     * the value of `element` in the forEach loop is "productOne".
     * two text strings are built as a result: "#productOneId" and "#productOneContent".
-    * both text strings match the name of the div in the HTML code, synchronzing with the jQuery event calls
+    * both text strings match the name of the div in the HTML code, synchronizing with the jQuery event calls
 
 <a name="grunt-gulp"></a>
 ### Grunt &amp; Gulp
 I can't see task tools like [Grunt](http://gruntjs.com "Learn more about the Grunt task runner") being omitted from my workflow and as discussed in my last site redesign post, [Grunt ruled my workflow](/site-redesign-2013/#grunt-deployment-workflow "Read about kaidez.com's 2013 site redesign"). But [Gulp](http://gulpjs.com/, "Learn more about Gulp") has emerged as formidable challenger to Grunt.
 
-Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarties but these are the two that stick out to me the most.
+Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarities but these are the two that stick out to me the most.
 
-The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I think that the streaming system makes parts of it easier. Gulp streams allow for the easy chaining of tasks as well as requiring less configuratuion, and I like that.
+The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I think that the streaming system makes parts of it easier. Gulp streams allow for the easy chaining of tasks as well as requiring less configuration, and I like that.
 
 I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.
 
-The fact that there less Gulp plugins that Grunt ones ties into Gulp's philosopy. Eric Schoffstall outlined this philosopy quite well on the [JavaScript Jabber Podcast](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/, "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
+The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the [JavaScript Jabber Podcast](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/, "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
 
 <a name="conclusion"></a>
 ### Conclusion
