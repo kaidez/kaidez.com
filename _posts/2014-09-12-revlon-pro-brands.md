@@ -34,11 +34,19 @@ Here are a few of the tasks...
 
 * Atom can read a project's `.gitignore` file  and tell you which files are ignored by greying them out in your project tree.
 <figure class="postFigure">
-  <img src="/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore work with atom">
+  <img src="/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore works with Atom">
   <figcaption class="postFigureCaption">Greyed-out files are in .gitignore</figcaption>
 </figure>
-* Atom tells you what branch you're currently working on and if changes need to be committed and/or pushed.
-* Atom can look at the page you're working on and jump to its history on GitHub.
+* Atom tells you what branch you're currently working on.
+<figure class="postFigure">
+  <img src="/img/atom_02.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+  <figcaption class="postFigureCaption">Current Git branch appears in the bottom-left corner of your editor</figcaption>
+</figure>
+* Atom uses color-coding to indicate that files need to be commited to your git repo.
+<figure class="postFigure">
+  <img src="/img/atom_03.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+  <figcaption class="postFigureCaption">Orange indicates that an already-existing file has been updated while green indicates that a new file has been added to the project, but hasn't been committed yet</figcaption>
+</figure>
 
 This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-installed nonetheless.
 
@@ -52,7 +60,7 @@ Again, Atom is in beta at the time of this post but it a version 1.o release is 
 
 I'm not yet ready to leave Sublime Text for Atom...I've gotten extremely comfortable with Sublime Text over the years and have it setup just how I want it. Keystrokes are memorized, bash scripts are synced up, themes are picked, etc.
 
-But this may change!  Will probably go full-on Atom for next project and put to the test.
+But this may change.  Will probably go full-on Atom for next project and put to the test.
 <a name="jade"></a>
 ### Jade
 RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
@@ -124,20 +132,20 @@ head
 
 The indentation didn't QUITE work out the way I wanted to when I used a `<header>` tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.
 
-That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer and couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straightforward includes system.
+That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer, so I couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straightforward templating system.
 <a name="oocss"></a>
 ### OOCSS
 As mentioned in my [2013 site redesign post](http://kaidez.com/site-redesign-2013/ "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
 
-There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: to apply object-oriented best practices to CSS.
+There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: an object-oriented method for writing CSS using some common best practices.
 
-OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella/ "stubbornella at Twitter"). The central ideas include...
+OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella/ "stubbornella at Twitter"). The central ideas include:
 
 * placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.
 * separating these classes into two formats...one for style and one for structure.
 * in true object-oriented style, reusing these classes across your page elements as needed.
 * avoid inefficient CSS selectors, such as descendant selectors.
-* always [lint your CSS](http://csslint.net/ "lint you CSS with CSS Lint") to test for bugs and confirm that CSS best practices are being followed.
+* always [linting your CSS](http://csslint.net/ "lint you CSS with CSS Lint") to test for bugs and confirm that CSS best practices are being followed.
 
 I applied these ideas to my Pro Brands page code, specifically the individual product image module. Each module contains lots and lots of shared CSS classes among the various page elements it contains.  Some of the module elements contain IDs; however, none of these elements have CSS styles applied on the ID level.
 
