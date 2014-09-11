@@ -146,7 +146,7 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 
 <a name="modernizr-yepnope"></a>
 ### Modernizr &amp; yepnope
-*(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have about it](http://twitter.com/kaidez "kaidez on Twitter").*
+*(Author's note: I may have written the code but Revlon owns it, so I can't just place it in files on a public GitHub repo. I'm going to be as descriptive about the code as I can...[tweet me any questions you may have about it](http://twitter.com/kaidez "kaidez on Twitter"). Also, Yepnope has sorta/kinda been deprecated ([read more about this](https://github.com/SlexAxton/yepnope.js#deprecation-notice)) so this part of the post is here for historical purposes.)*
 
 Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld.
 
@@ -163,11 +163,12 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
 <small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small>
 
+But most importantly, remember that Modernizr has a `Modernizr.load()` method that's based on yepnope.js 
 I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed the code in a file called `forEachTest.js`.
 
-A test for `forEach` occurs is `forEachTest.js` happens
+There are two versions of `app.js`: one for desktops and one for mobiles & handhelds. Sitecore uses device detection to decide which one to load.
 
-The code that tests for the existence of `forEach` goes into a file called `forEachTest.js`.  The code that actually runs the `jQuery.animate()` scroll code with the help of `forEach` goes into a file called `app.js`.
+The .js files look like this:
 
 __forEachTest.js__
 {% prism javascript %}
@@ -190,7 +191,7 @@ Modernizr.load({
 {% endprism %}
 
 
-__app.js__
+__app.js (Mobile/Handheld Version)__
 {% prism javascript %}
 function ScrollContent() {}
 
@@ -201,8 +202,9 @@ function ScrollContent() {}
 ScrollContent.prototype.buildScrolls = function(element) {
 
   /*
-   * scroll up code/down for handhelds...use "mouseover" instead of
-   * click for desktops
+   * scroll up code/down for handhelds...using "click" below since
+   * this is the mobile/handheld version.  In the desktop version,
+   * "click" is replaced by "mouseover".
    */
 
    // scroll up
@@ -250,11 +252,12 @@ And the HTML code for each scroll looks somewhat like this...
 </div>
 {% endprism %}
 
-So, everything works as follows...
+The divs that end in "Id" are buttons that run one of the mouse events while the divs that end in "Content" contain the  product images that appear on the mouse events.
 
-1. In the HTML, the divs that end in "Id" are buttons that react to the mouseevents.  of`forEachTest.js`, a test is created for ES5's `forEach` method.
-2. Modernizr runs this test on page-load.
-3. If the test finds `forEach` in the browser, do the "yep" part of the code and run just the scroll code in `app.js`.
-4. If the test does NOT find `forEach` in the browser, do the "nope" part of the code in `app.js`...add the polyfill code, then run `app.js`.
-5. `app.js` contains a `ScrollContent.buildScrolls()` method that takes each item in the array and concatenates it to create two text strings.
-6. Each array item gets concanated as a text string twice inside of `buildScrolls`: once to text string that targets the element
+So on page load, everything works as follows...
+
+1. Inside `forEachTest.js`, Modernizr tests for the existence of `forEach` in the browser.
+2. If `forEach` exists, the "yep" part of the code runs and loads `app.js` into the browser.
+3. If `forEach` does NOT exist, the "nope" part of the code runs and adds both the polyfill code and `app.js` into the browser.
+4. When one of the divs ending in id receives one of the mouse events, the `ScrollContent.buildScrolls()` method in `app.js` runs.
+5. `ScrollContent.buildScrolls()` takes an array of text strings and for each item in the array, it creates two text strings with concatenation. 
