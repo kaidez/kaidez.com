@@ -38,7 +38,7 @@ Here are a few of the tasks...
   <figcaption class="postFigureCaption">Greyed-out files are in .gitignore</figcaption>
 </figure>
 * Atom tells you what branch you're currently working on and if changes need to be committed and/or pushed.
-* Atom can look at the page your working on and jump to its history on GitHub.
+* Atom can look at the page you're working on and jump to its history on GitHub.
 
 This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-installed nonetheless.
 
@@ -48,13 +48,11 @@ This highly configurable setup is mostly thanks to Atom's deep Node integration.
 
 Managing settings in Atom is done using a nice user interface, something that Atom has over Sublime Text (at least I think so). Adding themes, installing/removing packages and creating custom settings is a breeze in Atom.
 
-Again, Atom is in beta at the time of this post but GitHub has indicated that it will be released in both "fully-closed and fully-open" formats, which I take to mean as "free and paid versions". I personally see no issue with that: Atom has all the markings of a solid, viable application and I see no problem with charging money for it.
+Again, Atom is in beta at the time of this post but it a version 1.o release is looming.  GitHub once said that there would be both free and paid versions of the editor, but it appears that it's now <em>100% free!!!</em>.
 
-That being said, I can't say that I'll pay for out after it comes out of beta.  Not because Atom is bad...it's nowhere near that. But I have gotten extremely comfortable with Sublime Text over the years...memorizing its keystrokes, syncing the editor up with my bash scripts, settling in on themes I like, etc.
+I'm not yet ready to leave Sublime Text for Atom...I've gotten extremely comfortable with Sublime Text over the years and have it setup just how I want it. Keystrokes are memorized, bash scripts are synced up, themes are picked, etc.
 
-I've also toyed around with [Adobe Brackets](http://brackets.io/ "visit Adobe Brackets") a bit, which has its own set of standout features. And the best of Brackets' features eventually make their way to Adobe's newest commercial web editor [Edge Code](http://html.adobe.com/edge/code/ "visit Adobe Edge Code"), which I recently received thanks to the good graces of my employer when I got a [Creative Cloud](https://creative.adobe.com/plans "learn more about Adobe Creative Cloud") membership.
-
-I suppose the point is, Atom's awesome but it may not be necessary for my specific needs. I'm continuing to play with it and LOVE what I see but because of my current needs and what tools I already have, I can't say I'll buy it when the time comes....still undecided.
+But this may change!  Will probably go full-on Atom for next project and put to the test.
 <a name="jade"></a>
 ### Jade
 RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
