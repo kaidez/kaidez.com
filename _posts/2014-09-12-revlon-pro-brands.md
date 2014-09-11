@@ -155,16 +155,16 @@ OOCSS definitely takes some getting used to and takes more work.  Quite a few pe
 ### Modernizr &amp; yepnope
 *(Author's note: Yepnope has sorta/kinda been deprecated ([read more about this](https://github.com/SlexAxton/yepnope.js#deprecation-notice)) so this part of the post is here for historical purposes.)*
 
-Sitecore loads a (slightly) different version of the site, depending on whether it loads on either a desktop or some sort of handheld.
+Sitecore loads one version of the site for desktops and a (slightly) different version of the site handheldz.
 
 Each product image reacts to a jQuery-powered `mouseover` on desktops and a jQuery-powered `click` on handhelds. The image reaction is, when one of those events happens, a window scrolls up over it displaying some product info using `jQuery.animate()`.
 
-The group of images is placed in a JS array where a `forEach` method loops over it. for the array iteration, which isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and if the site loaded into a browser that didn't support that, a polyfill would load in code that applied `forEach` support in each browser.
+The group of images is placed in a JS array where a `forEach` method loops over it, but `forEach` isn't supported in legacy Internet Explorer. That meant building a feature-detect for `forEach` and, if the site loaded into a browser that didn't support that, loading in a polyfill that would apply `forEach` support in such browsers.
 
 This whole process was managed by [Modernizr](http://modernizr.com "Read more about Modernizr") and its [Modernizr.load() method](http://modernizr.com/docs/#load "Read more about Modernizr.load()").  And it's a pretty straightforward process when keeping a few things in mind...
 
   * Note that [MDN provides a great piece of polyfill code<sup>1</sup>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill "Get the 'forEach' polyfill code at Mozilla Developer Network")...I copied it into a file called `forEachPolyfill.js`.
-  * Remember that a full Modernizr build features detects for many things by default, but not everything.
+  * Remember that a full Modernizr build performs features detects for many things by default, but not everything.
   * Remember that you can [create a custom Modernizr build](http://modernizr.com/download/ "Create a custom Modernizr build") with only the features-detects you want, and can also create your own custom features-detects for the things that Modernizr doesn't look for by default...this is done with Modernizr's sorely under-used `addTest()` method.
   * Note that Modernizr provides a well-stocked list of [pre-written feature-detects in its GitHub repo](https://github.com/Modernizr/Modernizr/tree/master/feature-detects "See some Modernizr pre-written feature detects").
 
