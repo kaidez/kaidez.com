@@ -19,7 +19,8 @@ There wasn't a need for lots complicated code, but it did give me the chance to 
 2. [Jade](#jade)
 3. [OOCSS](#oocss)
 4. [Modernizr &amp; yepnope](#modernizr-yepnope)
-4. [Grunt &amp; Gulp](#grunt-gulp)
+5. [Grunt &amp; Gulp](#grunt-gulp)
+6. [Conclusion](#conclusion)
 
 <a name="atom"></a>
 ### GitHub Atom
@@ -277,4 +278,7 @@ The BIG difference is how Gulp works behind the scenes...Gulp uses Node's stream
 
 I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.
 
-1. Gul
+The fact that there less Gulp plugins that Grunt ones ties into Gulp's philosopy. Eric Schoffstall outlined this philosopy quite well on the [JavaScript Jabber Podcast](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/, "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
+
+<a name="conclusion"></a>
+### Conclusion
