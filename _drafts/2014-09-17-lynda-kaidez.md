@@ -16,8 +16,8 @@ My first course was ["Up and Running with Backbone.js"](http://www.lynda.com/Bac
 
 Recording courses for lynda.com was an incredible experience and I hope to record more in the future. I've been a big fan of lynda.com ever since my employer, Revlon, paid for subscriptions for both myself and another staff web designer...so much so, that I paid for my own subscription out of my own pocket when my Revlon one wasn't renewed.
 
-I'm deeply indebted to lynda author [James Williamson](http://www.lynda.com/James-Williamson/128-1.html "Visit James Williamson's lynda courses") for recommending me to be an author as well as content producer Shira Gotshalk, who reviewed my demo and gave me chance. James gave me a lot of great advice on putting courses together, as did authors [Ray Villalobos](http://www.lynda.com/Ray-Villalobos/832401-1.html "Visit Ray Villalobos' lynda courses") and [Morten Rand-Hendriksen](http://www.lynda.com/Morten-Rand-Hendriksen/725535-1.html "Visit Morten Rand-Hendriksen' lynda courses") so I thank those two as well.
+I'm deeply indebted to Lynda author [James Williamson](http://www.lynda.com/James-Williamson/128-1.html "Visit James Williamson's lynda courses") for recommending me to be an author as well as content producer Shira Gotshalk, who reviewed my demo and gave me chance. James gave me a lot of great advice on putting courses together, as did authors [Ray Villalobos](http://www.lynda.com/Ray-Villalobos/832401-1.html "Visit Ray Villalobos' lynda courses") and [Morten Rand-Hendriksen](http://www.lynda.com/Morten-Rand-Hendriksen/725535-1.html "Visit Morten Rand-Hendriksen' lynda courses") so I thank those two as well.
 
 I also throw great thanks to both Scott Simpson and Dan Weston, the respective producers of my Backbone and Ember courses. I may have prepared the course content but Scott and Dan provided invaluable advice and creating as best of a course as I could.
 
-Check out the courses and hit me up on Twitter if you have any questions.
+Check out the courses and [hit me up on Twitter](http://twitter.com/kaidez "contact kaidez on Twitter") if you have any questions.
