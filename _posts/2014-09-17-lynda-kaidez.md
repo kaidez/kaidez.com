@@ -1,5 +1,5 @@
 ---
-title: 'kaidez on lynda'
+title: 'kaidez courses on lynda.com'
 comments: true
 author: Kai Gittens
 layout: post
