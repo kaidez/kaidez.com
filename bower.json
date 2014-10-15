@@ -11,17 +11,16 @@
   ],
   "dependencies": {
     "jquery": "1.11.1",
-    "font-awesome": "4.1.0",
+    "font-awesome": "4.2.0",
     "backbone": "~1.1.0",
     "matchmedia": "0.2.0",
     "enquire": "~2.1.2",
     "requirejs": "2.1.14",
-    "underscore": "1.6.0",
-    "spinjs": "2.0.1",
-    "font-awesome": "4.2.0",
-    "underscore": "1.7.0"
+    "underscore": "1.7.0",
+    "spinjs": "2.0.1"
   },
   "devDependencies": {
-    "tipue": "git@github.com:Tipue/Tipue-Search.git"
+    "tipue": "git@github.com:Tipue/Tipue-Search.git",
+    "requirejs": "2.1.14"
   }
 }
