@@ -15,12 +15,13 @@
     }
   ],
   "devDependencies": {
+    "bower": "latest",
     "glob": "^4.0.6",
     "grunt": "^0.4.5",
     "grunt-cdn": "^0.6.1",
-    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-htmlmin": "^0.3.0",
-    "grunt-contrib-imagemin": "^0.8.1",
+    "grunt-contrib-imagemin": "^0.9.1",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-sass": "^0.8.1",
@@ -30,13 +31,15 @@
     "grunt-jekyll": "^0.4.2",
     "grunt-manifest": "^0.4.0",
     "grunt-modernizr": "^0.6.0",
+    "grunt-penthouse": "^0.1.2",
     "grunt-sftp-deploy": "0.2.1",
     "grunt-shell": "^1.1.1",
     "grunt-targethtml": "^0.2.6",
     "grunt-uncss": "^0.3.7",
-    "gulp": "^3.8.8",
+    "gulp": "^3.8.9",
     "gulp-cssshrink": "^0.1.4",
-    "gulp-uncss": "^0.5.0",
+    "gulp-uncss": "^0.5.1",
+    "jshint": "^2.5.6",
     "time-grunt": "^1.0.0"
   }
 }

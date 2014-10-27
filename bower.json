@@ -21,6 +21,9 @@
   },
   "devDependencies": {
     "tipue": "git@github.com:Tipue/Tipue-Search.git",
-    "requirejs": "2.1.14"
+    "requirejs": "2.1.15"
+  },
+  "resolutions": {
+    "requirejs": "2.1.15"
   }
 }
