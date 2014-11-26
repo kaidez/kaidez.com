@@ -58,7 +58,6 @@ data-team="Chelsea"
 data-home-pitch="Stanford Bridge"
 data-manager="José Mourinho">
 
-
 </div>  
 
 <div id="team" class="dataTarget"></div>
@@ -87,9 +86,29 @@ $("#chelseaLink").click(function(event){
 
 Breaking down the code:
 
+{% prism markup %}
+<a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
+{% endprism %}
+
 In the HTML, clicking on the `id="chelseaLink` element will load the content stored in the data attributes.
 
-This content is listed in the three data attributes listed in `<div id="teamInfo">` element...these attributes are called `data-team`, `data-home-pitch` and `data-manager`.
+{% prism markup %}
+<div
+id="teamInfo"
+data-team="Chelsea"
+data-home-pitch="Stanford Bridge"
+data-manager="José Mourinho">
+
+</div>
+{% endprism %}
+
+{% prism markup %}
+<div id="team" class="dataTarget"></div>
+<div id="homePitch" class="dataTarget"></div>
+<div id="manager" class="dataTarget"></div>
+{% endprism %}
+
+This content loaded in by this click is stored in the three data attributes listed in `<div id="teamInfo">` element...these attributes are called `data-team`, `data-home-pitch` and `data-manager`.
 
 
 
