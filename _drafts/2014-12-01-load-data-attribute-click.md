@@ -22,7 +22,7 @@ The final project requirements forced us to not use swap out data attributes wit
     data-work="Revlon">
 
   <a href="#" id="myLink">Load My Info</a>
-  
+
 </div>  
 
 <div id="name"></div>
@@ -31,4 +31,4 @@ The final project requirements forced us to not use swap out data attributes wit
 {% endprism %}
 
 
-Cross-browser coding for android: as close to hell on earth as I;ve ever gotten.
+Cross-browser coding for android: as close to hell on earth as I've ever gotten.
