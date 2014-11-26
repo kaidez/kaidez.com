@@ -12,7 +12,7 @@ has-home-img: data-attribute.jpg
 ---
 A recent project at work *almost* required the use of swapping information in and out of the DOM with data attributes (usually referred to as `data-*`), and to do so with mouseclicks. I hadn't used them much so I researched some current production code we had and also did some web searches.
 
-The final project requirements forced us to not use swap out data attributes with clicks but while doing the web searches, I was unable to find any good, descriptive tutorials on the subject. That surprised me so while using info on my favorite footie teams, I spent a few days hacking some code together, all while taking note of the quirks and cross-browser issues, and created this tutorial.
+The final project requirements forced us not to do this but while doing the web searches, I was unable to find any good, descriptive tutorials on the subject. That surprised me so while using info on my favorite footie teams, I spent a few days hacking some code together, all while taking note of the quirks and cross-browser issues, and created this tutorial.
 
 Simple Example (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
