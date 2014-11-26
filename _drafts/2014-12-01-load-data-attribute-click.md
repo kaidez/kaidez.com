@@ -182,7 +182,7 @@ As a result of this, I suggest following two rules:
   1. No camelcase names in your data attributes in your HTML and no dash-separated words for the `dataset` properties.
   2. Keep your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
 
-
+Store the data attributes in a link instead (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 
 
 
