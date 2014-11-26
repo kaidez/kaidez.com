@@ -70,11 +70,13 @@ data-manager="José Mourinho">
 And the JavaScript that allows for the content that gets loaded on a mouseclick looks like this:
 {% prism javascript %}
 var team = document.querySelector("#team"),
-homePitch = document.querySelector("#homePitch"),
-manager = document.querySelector("#manager");
+    homePitch = document.querySelector("#homePitch"),
+    manager = document.querySelector("#manager");
 
-$("#chelseaLink").click(function(){
+$("#chelseaLink").click(function(event){
 
+
+  event.preventDefault();
   // Use the .dataset property
   team.innerHTML = teamInfo.dataset.team;
   homePitch.innerHTML = teamInfo.dataset.homePitch;
@@ -82,6 +84,14 @@ $("#chelseaLink").click(function(){
 
 });
 {% endprism %}
+
+Breaking down the code:
+
+In the HTML, clicking on the `id="chelseaLink` element will load the content stored in the data attributes.
+
+This content is listed in the three data attributes listed in `<div id="teamInfo">` element...these attributes are called `data-team`, `data-home-pitch` and `data-manager`.
+
+
 
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
