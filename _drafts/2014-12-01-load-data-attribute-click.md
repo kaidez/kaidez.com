@@ -112,7 +112,7 @@ data-manager="José Mourinho">
 </div>
 {% endprism %}
 
-When that link gets clicked, it loads content stored in the three data attributes onto the page. These attributes are listed in `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`.
+When that link gets clicked, it loads content stored in the three data attributes onto the page. These attributes are listed in `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`. Note that all these attributes are attached to a `<div id="teamInfo">` element.
 
 {% prism markup %}
 <div id="team" class="dataTarget"></div>
@@ -122,7 +122,7 @@ When that link gets clicked, it loads content stored in the three data attribute
 
 And where on the page is this content placed after the click? Into the three `div` tags at the bottom. Their ids are: `team`, `homePitch` and `manager`,
 
-Let's lookj at a nice, lengthy breakdown of the JavaScript next...
+Let's look at a nice, lengthy breakdown of the JavaScript next...
 
 {% prism javascript %}
 var team = document.querySelector("#team"),
@@ -144,7 +144,13 @@ $("#chelseaLink").click(function(event){
 });
 {% endprism %}
 
-The `$` tells us that we're using jQuery to bind its `click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we need to do this so we can use the `event.stopPropagation();` method...we'll discuss that shortly.
+The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll discuss that shortly.
+
+When `#chelseaLink` is clicked, it looks at the `innerHTML` property of the three elements just discussed...the ones where `div` tags are referenced by `querySelector()` and stored in the variables. For each one, it looks at the `dataset` property fo the `#teamInfo` element on the page.
+
+`dataset` is the key to this code: it's a property that stores __any and all information placed in an element's `data-*` attribute.__ So `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute in our HTML, with that value being "Chelsea".
+
+That attribute value is what gets loaded inside those three `div` tags, with some help from the `innerHTML` property of each of the tags.
 
 If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL. Depend on the page layout, will force the page to jump to the top...which we don't want.
 
