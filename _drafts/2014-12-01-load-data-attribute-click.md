@@ -16,27 +16,9 @@ The final project requirements forced us to not use swap out data attributes wit
 
 Simple Example (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
-This example is pretty simple: store content in data attributes for certain elements, then use JavaScript to load the content into other elements.
- The HTML looks like this:
-{% prism markup %}
-<a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
+Before we create code that changes/swaps the `data-*` content in different places, let's look at an example of how to load in just one set of data. It's pretty simple: store content in data attributes for certain elements, then use JavaScript to load the content into other elements.
 
-<div
-id="teamInfo"
-data-team="Chelsea"
-data-home-pitch="Stanford Bridge"
-data-manager="José Mourinho">
-
-
-</div>  
-
-<div id="team" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
-<div id="manager" class="dataTarget"></div>
-{% endprism %}
-
-
-The CSS looks like this...the CSS will remain the same for all future code samples and demos:
+First, the CSS looks like this...the CSS will be applied to all future code samples and demos:
 {% prism css %}
 body {
   background: grey;
@@ -45,7 +27,6 @@ body {
   font-weight: 900;
   font-size: 18px;
 }
-
 
 a:link {
   color: #fff;
@@ -67,6 +48,40 @@ a:hover {
 }
 {% endprism %}
 
+Next, the HTML looks like this:
+{% prism markup %}
+<a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
+
+<div
+id="teamInfo"
+data-team="Chelsea"
+data-home-pitch="Stanford Bridge"
+data-manager="José Mourinho">
+
+
+</div>  
+
+<div id="team" class="dataTarget"></div>
+<div id="homePitch" class="dataTarget"></div>
+<div id="manager" class="dataTarget"></div>
+{% endprism %}
+
+
+And the JavaScript that allows for the content that gets loaded on a mouseclick looks like this:
+{% prism javascript %}
+var team = document.querySelector("#team"),
+homePitch = document.querySelector("#homePitch"),
+manager = document.querySelector("#manager");
+
+$("#chelseaLink").click(function(){
+
+  // Use the .dataset property
+  team.innerHTML = teamInfo.dataset.team;
+  homePitch.innerHTML = teamInfo.dataset.homePitch;
+  manager.innerHTML = teamInfo.dataset.manager;
+
+});
+{% endprism %}
 
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
