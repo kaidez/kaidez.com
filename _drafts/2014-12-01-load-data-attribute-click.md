@@ -50,19 +50,30 @@ a:hover {
 
 Next, the HTML looks like this:
 {% prism markup %}
-<a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TUTORIAL: Change "data" Attributes with Mouse Clicks</title>
+  </head>
+  <body>
+    <a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
 
-<div
-id="teamInfo"
-data-team="Chelsea"
-data-home-pitch="Stanford Bridge"
-data-manager="José Mourinho">
+    <div
+    id="teamInfo"
+    data-team="Chelsea"
+    data-home-pitch="Stanford Bridge"
+    data-manager="José Mourinho">
 
-</div>  
+    </div>  
 
-<div id="team" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
-<div id="manager" class="dataTarget"></div>
+    <div id="team" class="dataTarget"></div>
+    <div id="homePitch" class="dataTarget"></div>
+    <div id="manager" class="dataTarget"></div>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  </body>
+</html>
 {% endprism %}
 
 
@@ -74,7 +85,6 @@ var team = document.querySelector("#team"),
 
 $("#chelseaLink").click(function(event){
 
-
   event.preventDefault();
   // Use the .dataset property
   team.innerHTML = teamInfo.dataset.team;
@@ -84,7 +94,7 @@ $("#chelseaLink").click(function(event){
 });
 {% endprism %}
 
-Breaking down the code:
+Breaking down the HTML first:
 
 {% prism markup %}
 <a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
@@ -102,13 +112,45 @@ data-manager="José Mourinho">
 </div>
 {% endprism %}
 
+When that link gets clicked, it loads content stored in the three data attributes onto the page. These attributes are listed in `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`.
+
 {% prism markup %}
 <div id="team" class="dataTarget"></div>
 <div id="homePitch" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
 {% endprism %}
 
-This content loaded in by this click is stored in the three data attributes listed in `<div id="teamInfo">` element...these attributes are called `data-team`, `data-home-pitch` and `data-manager`.
+And where on the page is this content placed after the click? Into the three `div` tags at the bottom. Their ids are: `team`, `homePitch` and `manager`,
+
+Let's lookj at a nice, lengthy breakdown of the JavaScript next...
+
+{% prism javascript %}
+var team = document.querySelector("#team"),
+    homePitch = document.querySelector("#homePitch"),
+    manager = document.querySelector("#manager");
+{% endprism %}
+
+I'm using `document.querySelector()` to store references to the three `div` tags I just discussed...this will make them easier to find when I start referring to them in this next function...
+
+{% prism javascript %}
+$("#chelseaLink").click(function(event){
+
+  event.stopPropagation();
+  // Use the .dataset property
+  team.innerHTML = teamInfo.dataset.team;
+  homePitch.innerHTML = teamInfo.dataset.homePitch;
+  manager.innerHTML = teamInfo.dataset.manager;
+
+});
+{% endprism %}
+
+The `$` tells us that we're using jQuery to bind its `click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we need to do this so we can use the `event.stopPropagation();` method...we'll discuss that shortly.
+
+If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL. Depend on the page layout, will force the page to jump to the top...which we don't want.
+
+*(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtruslively then `event.PreventDefault()`.)*
+
+
 
 
 
