@@ -146,7 +146,7 @@ $("#chelseaLink").click(function(event){
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll discuss that shortly.
 
-When `#chelseaLink` is clicked, it looks at the `innerHTML` property of the three elements just discussed...the ones where `div` tags are referenced by `querySelector()` and stored in the variables. For each one, it looks at the `dataset` property fo the `#teamInfo` element on the page.
+When `#chelseaLink` is clicked, it looks at the `innerHTML` property of the three elements just discussed...the ones where `div` tags are referenced by `querySelector()`. For each one, it looks at the `dataset` property fo the `#teamInfo` element on the page.
 
 `dataset` is the key to this code: it's a property that stores __any and all information placed in an element's `data-*` attribute.__ So `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute in our HTML, with that value being "Chelsea".
 
