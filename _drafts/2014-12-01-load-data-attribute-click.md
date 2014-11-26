@@ -60,10 +60,10 @@ Next, the HTML looks like this:
     <a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
 
     <div
-    id="teamInfo"
-    data-team="Chelsea"
-    data-home-pitch="Stanford Bridge"
-    data-manager="José Mourinho">
+      id="teamInfo"
+      data-team="Chelsea"
+      data-home-pitch="Stanford Bridge"
+      data-manager="José Mourinho">
 
     </div>  
 
@@ -104,10 +104,10 @@ In the HTML, clicking on the `id="chelseaLink` element will load the content sto
 
 {% prism markup %}
 <div
-id="teamInfo"
-data-team="Chelsea"
-data-home-pitch="Stanford Bridge"
-data-manager="José Mourinho">
+  id="teamInfo"
+  data-team="Chelsea"
+  data-home-pitch="Stanford Bridge"
+  data-manager="José Mourinho">
 
 </div>
 {% endprism %}
@@ -146,15 +146,46 @@ $("#chelseaLink").click(function(event){
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll discuss that shortly.
 
-When `#chelseaLink` is clicked, it looks at the `innerHTML` property of the three elements just discussed...the ones where `div` tags are referenced by `querySelector()`. For each one, it looks at the `dataset` property fo the `#teamInfo` element on the page.
+When `#chelseaLink` is clicked, it looks at the `innerHTML` property of the three elements just discussed...the ones where `div` tags are referenced by `querySelector()`. For each one, it looks at the `dataset` property for the `#teamInfo` element on the page.
 
 `dataset` is the key to this code: it's a property that stores __any and all information placed in an element's `data-*` attribute.__ So `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute in our HTML, with that value being "Chelsea".
 
 That attribute value is what gets loaded inside those three `div` tags, with some help from the `innerHTML` property of each of the tags.
 
-If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL. Depend on the page layout, will force the page to jump to the top...which we don't want.
+OK...back to the function's `event` parameter...
 
-*(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtruslively then `event.PreventDefault()`.)*
+We have to do this so we can use the `[event.PreventDefault()` method in the link. If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL.
+
+Depending on the page layout, will force the page to jump to the top. Which we don't want.
+
+*(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
+
+Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
+---------------------
+Here's one of the quirks of data attribiutes...
+
+As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute....that makes sense. But you may have noticed that for the `data-home-pitch` attribute, the syntax is different:
+{% prism javascript %}
+homePitch.innerHTML = teamInfo.dataset.homePitch;
+{% endprirm %}
+
+The JS reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is the result of an HTML5 thing, the result of how browsers are converting strings inside data attributes.
+
+The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
+
+Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
+
+This is part of the conversion that the browser's doing behind the scenes.  In order for things to work properly, it does a camelcase converion of `home-pitch` to `homePitch`.
+
+As a result of this, I suggest following two rules:
+
+  1. No camelcase names in your data attributes in your HTML and no dash-separated words for the `dataset` properties.
+  2. Keep your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
+
+
+
+
+
 
 
 
