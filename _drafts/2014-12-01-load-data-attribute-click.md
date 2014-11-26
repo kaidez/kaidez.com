@@ -14,7 +14,7 @@ A recent project at work *almost* required the use of swapping information in an
 
 The final project requirements forced us not to do this but while doing the web searches, I was unable to find any good, descriptive tutorials on the subject. That surprised me so while using info on my favorite footie teams, I spent a few days hacking some code together, all while taking note of the quirks and cross-browser issues, and created this tutorial.
 
-Simple Example (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
+Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
 Before we create code that changes/swaps the `data-*` content in different places, let's look at an example of how to load in just one set of data. It's pretty simple: store content in data attributes for certain elements, then use JavaScript to load the content into other elements.
 
@@ -160,14 +160,14 @@ Depending on the page layout, will force the page to jump to the top. Which we d
 
 *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
-Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
+Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
 Here's one of the quirks of data attribiutes...
 
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute....that makes sense. But you may have noticed that for the `data-home-pitch` attribute, the syntax is different:
 {% prism javascript %}
 homePitch.innerHTML = teamInfo.dataset.homePitch;
-{% endprirm %}
+{% endprism %}
 
 The JS reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is the result of an HTML5 thing, the result of how browsers are converting strings inside data attributes.
 
