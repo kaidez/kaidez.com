@@ -13,3 +13,6 @@ has-home-img: data-attribute.jpg
 A recent project at work *almost* required the use of swapping information in and out of the HTML DOM with data attributes (usually referred to as `data-*`), and to do so with mouseclicks. I researched some current production code we had and also did some web searches.
 
 The final functionality specs forced us to not use swap out data attributes witch clicks; however, I was shocked at the lack of good tutorials on the subject. So I spent a few days hacking some code together, all while taking note of the cross-browser issues, and created this tutorial.
+
+
+Cross-browser coding for android: as close to hell on earth as I;ve ever gotten.
