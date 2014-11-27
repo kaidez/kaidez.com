@@ -241,6 +241,7 @@ Still keeping the CSS the same, we can add a few more links to our HTML while sl
 
 __The HTML__
 {% prism markup %}
+...
 <ul>
   <li class="teamListItem">
     <a href="#"
@@ -282,7 +283,8 @@ __The HTML__
 
 <div id="team" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>  
+<div id="homePitch" class="dataTarget"></div>
+...  
 {% endprism %}
 
 __The JavaScript__
@@ -304,7 +306,7 @@ $(".teamLink").click(function(event){
 
 In the HTML we've removed the id property while adding a class called `teamLink` for each of our links.  We're also no longer targeting the id in the `jQuery.click` method and, instead, targeting this new `teamLink` class.
 
-So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page. 
+So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page.
 
 
 
