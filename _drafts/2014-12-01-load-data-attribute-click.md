@@ -81,7 +81,7 @@ Next, the HTML looks like this:
 {% endprism %}
 
 
-And the JavaScript that allows for the content that gets loaded on a mouseclick looks like this:
+And the JavaScript that allows for the content that gets loaded on a mouse click looks like this:
 {% prism javascript %}
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
@@ -183,10 +183,10 @@ The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on 
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
 
-Because of this, I suggest keeping your data attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
+Because of this, I suggest keeping your data attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
 Store the data attributes in a link instead (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
-
+---------------------
 
 
 
