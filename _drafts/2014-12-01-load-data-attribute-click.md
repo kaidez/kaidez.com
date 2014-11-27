@@ -237,8 +237,9 @@ Store the data-attributes in multiple links (<a href="http://codepen.io/kaidez/p
 
 In the previous example, we could have used `chelsea.dataset` instead of `this.dataset`. But when using `this`, we can make our code reusable and create multiple links with the same functionality.
 
-Keeping the CSS and JavaScript the same, we can add a few more links to our HTML.  Clicking on each link will load different info onto our page.
+Still keeping the CSS the same, we can add a few more links to our HTML while slightly adjusting our JavaScript.  Clicking on each link will load different info onto our page.
 
+__The HTML__
 {% prism markup %}
 <ul>
   <li class="teamListItem">
@@ -253,36 +254,65 @@ Keeping the CSS and JavaScript the same, we can add a few more links to our HTML
   <li class="teamListItem">
     <a href="#"
        class="teamLink"
-data-team="Real Madrid"
-data-manager="Carlo Ancelotti"
-data-home-pitch="Santiago Bernabéu">
-Load Real Madrid Info &raquo;
-</a>
-</li>
-<li class="teamListItem">
-<a href="#"
-class="teamLink"
-data-team="AC Milan"
-data-manager="Filippo Inzaghi"
-data-home-pitch="San Siro">
-Load AC Milan Info &raquo;
-</a>
-</li>
-</li>
-<li class="teamListItem">
-<a href="#"
-class="teamLink"
-data-team="Paris Saint-Germain"
-data-manager="Laurent Blanc"
-data-home-pitch="Parc des Princes">
-Load Paris Saint-Germain Info &raquo;
-</a>
-</li>
+      data-team="Real Madrid"
+      data-manager="Carlo Ancelotti"
+      data-home-pitch="Santiago Bernabéu">
+      Load Real Madrid Info &raquo;
+    </a>
+  </li>
+  <li class="teamListItem">
+    <a href="#"
+       class="teamLink"
+       data-team="AC Milan"
+       data-manager="Filippo Inzaghi"
+       data-home-pitch="San Siro">
+       Load AC Milan Info &raquo;
+    </a>
+  </li>
+  <li class="teamListItem">
+    <a href="#"
+       class="teamLink"
+       data-team="Paris Saint-Germain"
+       data-manager="Laurent Blanc"
+       data-home-pitch="Parc des Princes">
+       Load Paris Saint-Germain Info &raquo;
+    </a>
+  </li>
 </ul>
+
 <div id="team" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
 <div id="homePitch" class="dataTarget"></div>  
 {% endprism %}
+
+__The JavaScript__
+{% prism javascript %}
+var team = document.querySelector("#team"),
+    manager = document.querySelector("#manager"),
+    homePitch = document.querySelector("#homePitch");
+
+$(".teamLink").click(function(event){
+
+  event.preventDefault();
+  // Use the .dataset property
+  team.innerHTML = this.dataset.team;
+  manager.innerHTML = this.dataset.manager;
+  homePitch.innerHTML = this.dataset.homePitch;
+
+});
+{% endprism %}
+
+In the HTML we've removed the id property while adding a class called `teamLink` for each of our links.  We're also no longer targeting the id in the `jQuery.click` method and, instead, targeting this new `teamLink` class.
+
+So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page. 
+
+
+
+
+
+
+
+
 
 
 
