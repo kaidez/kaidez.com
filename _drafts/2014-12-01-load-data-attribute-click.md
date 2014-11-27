@@ -1,18 +1,18 @@
 ---
-title: 'TUTORIAL: Change "data" Attributes with Mouse Clicks'
+title: 'TUTORIAL: Change data attributes with Mouse Clicks'
 comments: true
 author: Kai Gittens
 layout: post
 permalink: /data-attribute-click/
-meta-excerpt: "Load/unload information stored in data-* attributes inside HTML with mouse clicks in a cross-browser compatible way. Includes demos."
+meta-excerpt: "Load/unload information stored in data attributes inside HTML with mouse clicks in a cross-browser compatible way. Includes demos."
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: data-attribute.jpg
 ---
-A recent project at work *almost* required the use of swapping information in and out of the DOM with data attributes (usually referred to as `data-*`), and to do so with mouseclicks. I hadn't used them much so I researched some current production code we had and also did some web searches.
+A recent work project *almost* required my creating functionality that loaded content stores in HTML5 data attributes onto a web page with mouse clicks. I hadn't used data attributes much so I researched some production code we had and did some web searches on the subject.
 
-The final project requirements forced us not to do this but while doing the web searches, I was unable to find any good, descriptive tutorials on the subject. That surprised me so while using info on my favorite footie teams, I spent a few days hacking some code together, all while taking note of the quirks and cross-browser issues, and created this tutorial.
+The final project specs end up not requiring this functionality but while doing the web searches, I was shocked at the lack of good, descriptive tutorials on data attributes. So while using info on my favorite footie teams, I spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial.
 
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
