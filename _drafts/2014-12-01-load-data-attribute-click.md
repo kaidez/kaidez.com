@@ -80,7 +80,6 @@ Next, the HTML looks like this:
 </html>
 {% endprism %}
 
-
 And the JavaScript that allows for the content that gets loaded on a mouse click looks like this:
 {% prism javascript %}
 var team = document.querySelector("#team"),
@@ -185,11 +184,41 @@ Adjust the code so it says `data-home-pitch` and it will work fine.  But from th
 
 Because of this, I suggest keeping your data attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
-Store the data attributes in a link instead (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
+Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 ---------------------
+The first example was separated out just so things would be clearer, but a real-world use case is to store the data-attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
+{% prism markup %}
+...
+<a href="#"
+   id="chelseaLink"
+   data-team="Chelsea"
+   data-home-pitch="Stanford Bridge"
+   data-manager="José Mourinho">
+   Load Chelsea FC Info &raquo;
+</a>
 
+<div id="team" class="dataTarget"></div>
+<div id="homePitch" class="dataTarget"></div>
+<div id="manager" class="dataTarget"></div>
+...
+{% endprism %}
 
+{% prism javascript %}
+var team = document.querySelector("#team"),
+manager = document.querySelector("#manager"),
+homePitch = document.querySelector("#homePitch");
+
+$("#chelseaLink").click(function(event){
+
+  event.preventDefault();
+  // Use the .dataset property
+  team.innerHTML = this.dataset.team;
+  homePitch.innerHTML = this.dataset.homePitch;
+  manager.innerHTML = this.dataset.manager;
+
+});
+{% endprism %}
 
 
 
