@@ -177,7 +177,9 @@ But you may have noticed that for the `data-home-pitch` attribute, the syntax is
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-It needs to be this way: the JS reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is the result of an HTML5 thing, the result of how browsers are converting strings inside data attributes.
+The JavaScript reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is due to how `dataset` works behind the scenes, using something called the `DOMStringMap` object.
+
+`dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
 The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
