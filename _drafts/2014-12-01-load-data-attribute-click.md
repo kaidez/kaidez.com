@@ -150,11 +150,11 @@ $("#chelseaLink").click(function(event){
 });
 {% endprism %}
 
-The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll come back to that shortly because `dataset` is the key to this code.
+The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll come back to that shortly because `.dataset` is the key to this code.
 
-`dataset` is a property that stores __any and all information placed in an element's data-attribute.__ For example: `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute listed in `<div id="teamInfo">` in HTML, with that value being "Chelsea".
+`.dataset` is a property that stores __any and all information placed in an element's data-attribute.__ For example: `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute listed in `<div id="teamInfo">` in HTML, with that value being "Chelsea".
 
-When `#chelseaLink` is clicked, it looks at all the content stored in the data-attributes listed in <div id="teamInfo"> and loads them inside the `div` tags that are referenced by `querySelector()`, all with the help of `innerHTML`.
+When `#chelseaLink` is clicked, it looks at all the content stored in the data-attributes listed in `<div id="teamInfo">` and loads them inside the `div` tags that are referenced by `querySelector()`, all with the help of `innerHTML`.
 
 OK...back to the function's `event` parameter...
 
@@ -175,17 +175,15 @@ But those are one-word attributes and our `data-home-pitch` attribute is two wor
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-It needs to be this way for two-word data-attributes.  `dataset` refer to it as `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`.
+It needs to be this way for two-word data-attributes.  `.dataset` can't refer to it as `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`.
 
-This is due to how `dataset` works behind the scenes, using something called the `DOMStringMap` object. `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
+This is due to how `.dataset` works behind the scenes, using something called the `DOMStringMap` object. `.dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
 The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
 
-This is part of the conversion that the browser's doing behind the scenes.  In order for things to work properly, it does a camelcase conversion of `home-pitch` to `homePitch`.
-
-As a result of this, I suggest keeping your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
+Because of this, I suggest keeping your data attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
 
 Store the data attributes in a link instead (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 
