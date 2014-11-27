@@ -150,13 +150,11 @@ $("#chelseaLink").click(function(event){
 });
 {% endprism %}
 
-The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll discuss that shortly.
+The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll come back to that shortly because `dataset` is the key to this code.
 
-When `#chelseaLink` is clicked, it looks at the `innerHTML` property of the three elements just discussed...the ones where `div` tags are referenced by `querySelector()`. For each one, it looks at the `dataset` property for the `#teamInfo` element on the page.
+`dataset` is a property that stores __any and all information placed in an element's data-attribute.__ For example: `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute listed in `<div id="teamInfo">` in HTML, with that value being "Chelsea".
 
-`dataset` is the key to this code: it's a property that stores __any and all information placed in an element's `data-*` attribute.__ So `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute in our HTML, with that value being "Chelsea".
-
-That attribute value is what gets loaded inside those three `div` tags, with some help from the `innerHTML` property of each of the tags.
+When `#chelseaLink` is clicked, it looks at all the content stored in the data-attributes listed in <div id="teamInfo"> and loads them inside the `div` tags that are referenced by `querySelector()`, all with the help of `innerHTML`.
 
 OK...back to the function's `event` parameter...
 
@@ -172,14 +170,14 @@ Here's one of the quirks of data attributes...
 
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
 
-But you may have noticed that for the `data-home-pitch` attribute, the syntax is different:
+But those are one-word attributes and our `data-home-pitch` attribute is two words. So the syntax is different:
 {% prism javascript %}
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-The JavaScript reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is due to how `dataset` works behind the scenes, using something called the `DOMStringMap` object.
+It needs to be this way for two-word data-attributes.  `dataset` refer to it as `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`.
 
-`dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
+This is due to how `dataset` works behind the scenes, using something called the `DOMStringMap` object. `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
 The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
