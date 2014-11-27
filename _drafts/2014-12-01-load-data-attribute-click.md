@@ -160,7 +160,7 @@ That attribute value is what gets loaded inside those three `div` tags, with som
 
 OK...back to the function's `event` parameter...
 
-We have to do this so we can use the `[event.PreventDefault()` method in the link. If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL.
+We have to do this so we can use the `event.PreventDefault()` method in the link. If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL.
 
 Depending on the page layout, will force the page to jump to the top. Which we don't want.
 
