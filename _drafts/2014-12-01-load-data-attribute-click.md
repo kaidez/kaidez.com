@@ -46,7 +46,14 @@ a:hover {
   text-decoration: none;
 }
 
+.teamListItem {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
 .dataTarget {
+  padding-left: 40px;
   margin: 10px 0;
 }
 {% endprism %}
@@ -221,7 +228,62 @@ $("#chelsea").click(function(event){
 });
 {% endprism %}
 
-We've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link 
+In the HTML, we've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
+
+In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to to...including the data-attributes.
+
+Store the data-attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the CodePen Demo</a>)
+---------------------
+
+In the previous example, we could have used `chelsea.dataset` instead of `this.dataset`. But when using `this`, we can make our code reusable and create multiple links with the same functionality.
+
+Keeping the CSS and JavaScript the same, we can add a few more links to our HTML.  Clicking on each link will load different info onto our page.
+
+{% prism markup %}
+<ul>
+  <li class="teamListItem">
+    <a href="#"
+       class="teamLink"
+       data-team="Chelsea"
+       data-manager="José Mourinho"
+       data-home-pitch="Stanford Bridge">
+       Load Chelsea FC Info &raquo;
+     </a>
+  </li>
+  <li class="teamListItem">
+    <a href="#"
+       class="teamLink"
+data-team="Real Madrid"
+data-manager="Carlo Ancelotti"
+data-home-pitch="Santiago Bernabéu">
+Load Real Madrid Info &raquo;
+</a>
+</li>
+<li class="teamListItem">
+<a href="#"
+class="teamLink"
+data-team="AC Milan"
+data-manager="Filippo Inzaghi"
+data-home-pitch="San Siro">
+Load AC Milan Info &raquo;
+</a>
+</li>
+</li>
+<li class="teamListItem">
+<a href="#"
+class="teamLink"
+data-team="Paris Saint-Germain"
+data-manager="Laurent Blanc"
+data-home-pitch="Parc des Princes">
+Load Paris Saint-Germain Info &raquo;
+</a>
+</li>
+</ul>
+<div id="team" class="dataTarget"></div>
+<div id="manager" class="dataTarget"></div>
+<div id="homePitch" class="dataTarget"></div>  
+{% endprism %}
+
 
 
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
