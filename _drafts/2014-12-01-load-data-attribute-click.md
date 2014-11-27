@@ -10,15 +10,18 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: data-attribute.jpg
 ---
-A recent work project *almost* required my creating functionality that loaded content stores in HTML5 data attributes onto a web page with mouse clicks. I hadn't used data attributes much so I researched some production code we had and did some web searches on the subject.
+A recent project at work *almost* required my creating functionality that loaded content that was stored in HTML5 data attributes onto a web page with mouse clicks. I hadn't used data attributes much so I researched some production code we had and did some web searches on the subject.
 
 The final project specs end up not requiring this functionality but while doing the web searches, I was shocked at the lack of good, descriptive tutorials on data attributes. So while using info on my favorite footie teams, I spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial.
 
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
-Before we create code that changes/swaps the `data-*` content in different places, let's look at an example of how to load in just one set of data. It's pretty simple: store content in data attributes for certain elements, then use JavaScript to load the content into other elements.
+Before we create code that changes/swaps multiple sets of `data-*` content in different places, let's look at an example of how to do all this with one set. The process for this is:
 
-First, the CSS looks like this...the CSS will be applied to all future code samples and demos:
+1. store content in data attributes in certain elements.
+2. use JavaScript to load the content into other elements.
+
+Let's look at the CSS first...the CSS will be applied to all future code samples and demos:
 {% prism css %}
 body {
   background: grey;
@@ -62,15 +65,16 @@ Next, the HTML looks like this:
     <div
       id="teamInfo"
       data-team="Chelsea"
-      data-home-pitch="Stanford Bridge"
-      data-manager="José Mourinho">
+      data-manager="José Mourinho"
+      data-home-pitch="Stanford Bridge">
 
     </div>  
 
     <div id="team" class="dataTarget"></div>
-    <div id="homePitch" class="dataTarget"></div>
     <div id="manager" class="dataTarget"></div>
+    <div id="homePitch" class="dataTarget"></div>
 
+    <!-- Note that we're using jQuery -->
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
   </body>
 </html>
@@ -80,16 +84,17 @@ Next, the HTML looks like this:
 And the JavaScript that allows for the content that gets loaded on a mouseclick looks like this:
 {% prism javascript %}
 var team = document.querySelector("#team"),
-    homePitch = document.querySelector("#homePitch"),
-    manager = document.querySelector("#manager");
+    manager = document.querySelector("#manager"),
+    homePitch = document.querySelector("#homePitch");
 
 $("#chelseaLink").click(function(event){
 
   event.preventDefault();
+
   // Use the .dataset property
   team.innerHTML = teamInfo.dataset.team;
-  homePitch.innerHTML = teamInfo.dataset.homePitch;
   manager.innerHTML = teamInfo.dataset.manager;
+  homePitch.innerHTML = teamInfo.dataset.homePitch;
 
 });
 {% endprism %}
@@ -106,18 +111,18 @@ In the HTML, clicking on the `id="chelseaLink` element will load the content sto
 <div
   id="teamInfo"
   data-team="Chelsea"
-  data-home-pitch="Stanford Bridge"
-  data-manager="José Mourinho">
+  data-manager="José Mourinho"
+  data-home-pitch="Stanford Bridge">
 
 </div>
 {% endprism %}
 
-When that link gets clicked, it loads content stored in the three data attributes onto the page. These attributes are listed in `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`. Note that all these attributes are attached to a `<div id="teamInfo">` element.
+Those attributes are listed inside `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`.
 
 {% prism markup %}
 <div id="team" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
+<div id="homePitch" class="dataTarget"></div>
 {% endprism %}
 
 And where on the page is this content placed after the click? Into the three `div` tags at the bottom. Their ids are: `team`, `homePitch` and `manager`,
@@ -126,8 +131,8 @@ Let's look at a nice, lengthy breakdown of the JavaScript next...
 
 {% prism javascript %}
 var team = document.querySelector("#team"),
-    homePitch = document.querySelector("#homePitch"),
-    manager = document.querySelector("#manager");
+    manager = document.querySelector("#manager"),
+    homePitch = document.querySelector("#homePitch");
 {% endprism %}
 
 I'm using `document.querySelector()` to store references to the three `div` tags I just discussed...this will make them easier to find when I start referring to them in this next function...
@@ -136,10 +141,11 @@ I'm using `document.querySelector()` to store references to the three `div` tags
 $("#chelseaLink").click(function(event){
 
   event.stopPropagation();
+
   // Use the .dataset property
   team.innerHTML = teamInfo.dataset.team;
-  homePitch.innerHTML = teamInfo.dataset.homePitch;
   manager.innerHTML = teamInfo.dataset.manager;
+  homePitch.innerHTML = teamInfo.dataset.homePitch;
 
 });
 {% endprism %}
@@ -162,25 +168,24 @@ Depending on the page layout, will force the page to jump to the top. Which we d
 
 Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
-Here's one of the quirks of data attribiutes...
+Here's one of the quirks of data attributes...
 
-As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute....that makes sense. But you may have noticed that for the `data-home-pitch` attribute, the syntax is different:
+As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
+
+But you may have noticed that for the `data-home-pitch` attribute, the syntax is different:
 {% prism javascript %}
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-The JS reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is the result of an HTML5 thing, the result of how browsers are converting strings inside data attributes.
+It needs to be this way: the JS reference to the data attribute value can't be `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`. This is the result of an HTML5 thing, the result of how browsers are converting strings inside data attributes.
 
 The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
 
-This is part of the conversion that the browser's doing behind the scenes.  In order for things to work properly, it does a camelcase converion of `home-pitch` to `homePitch`.
+This is part of the conversion that the browser's doing behind the scenes.  In order for things to work properly, it does a camelcase conversion of `home-pitch` to `homePitch`.
 
-As a result of this, I suggest following two rules:
-
-  1. No camelcase names in your data attributes in your HTML and no dash-separated words for the `dataset` properties.
-  2. Keep your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
+As a result of this, I suggest keeping your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-pitch-address` and `teamInfo.dataset.homePitchAddress` may work, but are too verbose.
 
 Store the data attributes in a link instead (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 
