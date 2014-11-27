@@ -60,7 +60,7 @@ Next, the HTML looks like this:
     <title>TUTORIAL: Change "data" Attributes with Mouse Clicks</title>
   </head>
   <body>
-    <a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
+    <a href="#" id="chelsea">Load Chelsea FC Info &raquo;</a>
 
     <div
       id="teamInfo"
@@ -86,7 +86,7 @@ var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch");
 
-$("#chelseaLink").click(function(event){
+$("#chelsea").click(function(event){
 
   event.preventDefault();
 
@@ -101,10 +101,10 @@ $("#chelseaLink").click(function(event){
 Breaking down the HTML first:
 
 {% prism markup %}
-<a href="#" id="chelseaLink">Load Chelsea FC Info &raquo;</a>
+<a href="#" id="chelsea">Load Chelsea FC Info &raquo;</a>
 {% endprism %}
 
-In the HTML, clicking on the `id="chelseaLink` element will load the content stored in the data attributes.
+In the HTML, clicking on the `id="chelsea` element will load the content stored in the data attributes.
 
 {% prism markup %}
 <div
@@ -137,7 +137,7 @@ var team = document.querySelector("#team"),
 I'm using `document.querySelector()` to store references to the three `div` tags I just discussed...this will make them easier to find when I start referring to them in this next function...
 
 {% prism javascript %}
-$("#chelseaLink").click(function(event){
+$("#chelsea").click(function(event){
 
   event.stopPropagation();
 
@@ -149,15 +149,15 @@ $("#chelseaLink").click(function(event){
 });
 {% endprism %}
 
-The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelseaLink`. It has a parameter called `event` passed to it...we'll come back to that shortly because `.dataset` is the key to this code.
+The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it...we'll come back to that shortly because `.dataset` is the key to this code.
 
 `.dataset` is a property that stores __any and all information placed in an element's data-attribute.__ For example: `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute listed in `<div id="teamInfo">` in HTML, with that value being "Chelsea".
 
-When `#chelseaLink` is clicked, it looks at all the content stored in the data-attributes listed in `<div id="teamInfo">` and loads them inside the `div` tags that are referenced by `querySelector()`, all with the help of `innerHTML`.
+When `#chelsea` is clicked, it looks at all the content stored in the data-attributes listed in `<div id="teamInfo">` and loads them inside the `div` tags that are referenced by `querySelector()`, all with the help of `innerHTML`.
 
 OK...back to the function's `event` parameter...
 
-We have to do this so we can use the `event.PreventDefault()` method in the link. If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelseaLink`), then the `#` will be passed to the URL.
+We have to do this so we can use the `event.PreventDefault()` method in the link. If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelsea`), then the `#` will be passed to the URL.
 
 Depending on the page layout, will force the page to jump to the top. Which we don't want.
 
@@ -188,39 +188,40 @@ Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoex
 ---------------------
 The first example was separated out just so things would be clearer, but a real-world use case is to store the data-attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
+__The HTML__
 {% prism markup %}
 ...
 <a href="#"
-   id="chelseaLink"
+   id="chelsea"
    data-team="Chelsea"
-   data-home-pitch="Stanford Bridge"
-   data-manager="José Mourinho">
+   data-manager="José Mourinho"
+   data-home-pitch="Stanford Bridge">
    Load Chelsea FC Info &raquo;
 </a>
 
 <div id="team" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
+<div id="homePitch" class="dataTarget"></div>
 ...
 {% endprism %}
-
+__The JavaScript__
 {% prism javascript %}
 var team = document.querySelector("#team"),
 manager = document.querySelector("#manager"),
 homePitch = document.querySelector("#homePitch");
 
-$("#chelseaLink").click(function(event){
+$("#chelsea").click(function(event){
 
   event.preventDefault();
   // Use the .dataset property
   team.innerHTML = this.dataset.team;
-  homePitch.innerHTML = this.dataset.homePitch;
   manager.innerHTML = this.dataset.manager;
+  homePitch.innerHTML = this.dataset.homePitch;
 
 });
 {% endprism %}
 
-
+We've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link 
 
 
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
