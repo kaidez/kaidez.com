@@ -308,9 +308,9 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page.
 
-
-
-
+Use `getAttribute` instead of `.dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
+---------------------
+`.dateset` is awesome but isn't cross-browser compliant and won't work in Internet Explorer 10 and lower. And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
 
 
 
