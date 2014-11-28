@@ -16,7 +16,7 @@ The final project specs end up not requiring this functionality but while doing 
 
 How data-attributes work
 ---------------------
-data-attributes (sometimes referred to as `data-*`), are attributes placed in page elements.  Here's an example:
+data-attributes (sometimes referred to as `data-*`), are attributes placed in page elements:
 {% prism markup %}
 <div id="teamInfo"
      data-team="Chelsea FC"
@@ -25,21 +25,21 @@ data-attributes (sometimes referred to as `data-*`), are attributes placed in pa
 </div>
 {% endprism %}
 
-These `data-*` attributes are placed in an accessible property called `.dataset`:
-{% prism markup %}
+The element that contains these data-attributes (`<div id="teamInfo">` in this case) has a property called `dataset`, which holds all these attributes in an object called `DOMStringMap` (an API introduced with HTML5):
+
+{% prism javascript %}
 console.log(teamInfo.dataset);
-// logs "DOMStringMap {team: "Chelsea", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
-
-console.log(teamInfo.dataset.team);
-// logs "Chelsea FC"
-
-console.log(teamInfo.dataset.manager);
-// logs "José Mourinho"
-
-console.log(teamInfo.dataset.homePitch);
-// logs "Stanford Bridge"
+// logs "DOMStringMap {team: "Chelsea FC", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
 {% endprism %}
 
+You can access the individual `dataset` properties instead of the entire object:
+{% prism javascript %}
+console.log(teamInfo.dataset.team); // logs "Chelsea FC"
+console.log(teamInfo.dataset.manager); // logs "José Mourinho"
+console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
+{% endprism %}
+
+The `<div id="teamInfo">` element
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
 Before we create code that changes/swaps multiple sets of `data-*` content in different places, let's look at an example of how to do all this with one set. The process for this is:
