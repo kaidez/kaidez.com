@@ -16,7 +16,7 @@ The final project specs end up not requiring this functionality but while doing 
 
 How data-attributes work
 ---------------------
-  data-attributes (sometimes referred to as `data-*`), are attributes places in page elements.  Here's an example:
+data-attributes (sometimes referred to as `data-*`), are attributes placed in page elements.  Here's an example:
 {% prism markup %}
 <div id="teamInfo"
      data-team="Chelsea FC"
@@ -26,7 +26,7 @@ How data-attributes work
 {% endprism %}
 
 These `data-*` attributes are placed in an accessible property called `.dataset`:
-{% prism javascript %}
+{% prism markup %}
 console.log(teamInfo.dataset);
 // logs "DOMStringMap {team: "Chelsea", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
 
