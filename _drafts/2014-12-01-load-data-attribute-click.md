@@ -255,10 +255,10 @@ __The HTML__
   <li class="teamListItem">
     <a href="#"
        class="teamLink"
-      data-team="Real Madrid"
-      data-manager="Carlo Ancelotti"
-      data-home-pitch="Santiago Bernabéu">
-      Load Real Madrid Info &raquo;
+       data-team="Real Madrid"
+       data-manager="Carlo Ancelotti"
+       data-home-pitch="Santiago Bernabéu">
+       Load Real Madrid Info &raquo;
     </a>
   </li>
   <li class="teamListItem">
@@ -321,5 +321,5 @@ Use `getAttribute` instead of `.dataset` (<a href="http://codepen.io/kaidez/pen/
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
 http://ejohn.org/blog/html-5-data-attributes/
-
+https://dev.opera.com/articles/introduction-to-datasets/
 make sure the CSS is consistent across all CodePen samples
