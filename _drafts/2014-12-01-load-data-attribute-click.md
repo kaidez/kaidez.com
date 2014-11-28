@@ -1,5 +1,5 @@
 ---
-title: 'TUTORIAL: Change data attributes with Mouse Clicks'
+title: 'TUTORIAL: Change data-attributes with Mouse Clicks'
 comments: true
 author: Kai Gittens
 layout: post
@@ -14,11 +14,37 @@ A recent project at work *almost* required my creating functionality that loaded
 
 The final project specs end up not requiring this functionality but while doing the web searches, I was shocked at the lack of good, descriptive tutorials on data attributes. So while using info on my favorite footie teams, I spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial.
 
+How data-attributes work
+---------------------
+  data-attributes (sometimes referred to as `data-*`), are attributes places in page elements.  Here's an example:
+{% prism markup %}
+<div id="teamInfo"
+     data-team="Chelsea FC"
+     data-manager="José Mourinho"
+     data-home-pitch="Stanford Bridge">
+</div>
+{% endprism %}
+
+These `data-*` attributes are placed in an accessible property called `.dataset`:
+{% prism javascript %}
+console.log(teamInfo.dataset);
+// logs "DOMStringMap {team: "Chelsea", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
+
+console.log(teamInfo.dataset.team);
+// logs "Chelsea FC"
+
+console.log(teamInfo.dataset.manager);
+// logs "José Mourinho"
+
+console.log(teamInfo.dataset.homePitch);
+// logs "Stanford Bridge"
+{% endprism %}
+
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
 Before we create code that changes/swaps multiple sets of `data-*` content in different places, let's look at an example of how to do all this with one set. The process for this is:
 
-1. store content in data attributes in certain elements.
+1. store content in data-attributes in certain elements.
 2. use JavaScript to load the content into other elements.
 
 Let's look at the CSS first...the CSS will be applied to all future code samples and demos:
@@ -111,7 +137,7 @@ Breaking down the HTML first:
 <a href="#" id="chelsea">Load Chelsea FC Info &raquo;</a>
 {% endprism %}
 
-In the HTML, clicking on the `id="chelsea` element will load the content stored in the data attributes.
+In the HTML, clicking on the `id="chelsea` element will load the content stored in the data-attributes.
 
 {% prism markup %}
 <div
@@ -172,7 +198,7 @@ Depending on the page layout, will force the page to jump to the top. Which we d
 
 Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
-Here's one of the quirks of data attributes...
+Here's one of the quirks of data-attributes...
 
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
 
@@ -189,7 +215,7 @@ The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on 
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
 
-Because of this, I suggest keeping your data attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
+Because of this, I suggest keeping your data-attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
 Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 ---------------------
@@ -228,7 +254,7 @@ $("#chelsea").click(function(event){
 });
 {% endprism %}
 
-In the HTML, we've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
+In the HTML, we've taken the data-attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
 
 In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to to...including the data-attributes.
 
@@ -321,5 +347,5 @@ Use `getAttribute` instead of `.dataset` (<a href="http://codepen.io/kaidez/pen/
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
 http://ejohn.org/blog/html-5-data-attributes/
-https://dev.opera.com/articles/introduction-to-datasets/
+  https://dev.opera.com/articles/introduction-to-datasets/
 make sure the CSS is consistent across all CodePen samples
