@@ -39,7 +39,7 @@ console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-All of this means we use JavaScirpt to access these properties and display on a web page. But ["Can I Use" tells us that data-attribute manipulation won't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
+All of this means we use JavaScirpt to access these properties and display on a web page. But [data-attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
 
 Before we create our final-production-ready code, we'll create some incremental examples so we understand it better.
 
