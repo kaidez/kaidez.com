@@ -25,7 +25,7 @@ data-attributes (sometimes referred to as `data-*`), are attributes placed in pa
 </div>
 {% endprism %}
 
-The element that contains these data-attributes (`<div id="teamInfo">` in this case) has a property called `dataset`, which holds all these attributes in an object called `DOMStringMap` (an API introduced with HTML5):
+The element that contains these data-attributes (`<div id="teamInfo">` in the above-example) has a property called `dataset`, which holds all these attributes and their respective values in an object called `DOMStringMap` (an API introduced with HTML5):
 
 {% prism javascript %}
 console.log(teamInfo.dataset);
@@ -39,7 +39,7 @@ console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-All of this means we can access these properties with JavaScript and display them how we want to on a web page. But ["Can I Use" tells us that data-attribute manipulation won't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so our final production code needs to write fallback code for those situations.
+All of this means we use JavaScirpt to access these properties and display on a web page. But ["Can I Use" tells us that data-attribute manipulation won't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
 
 Before we create our final-production-ready code, we'll create some incremental examples so we understand it better.
 
