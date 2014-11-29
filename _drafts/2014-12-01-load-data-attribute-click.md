@@ -380,6 +380,9 @@ And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/
 
 Some Notes
 ----------
+* This is a very basic data-attribute implementation and, quite frankly, data-attribute implementations should be simple. Each link isn't overloaded with data-attributes that have over 100 character lines of copy...were that my data structure, I would use a per JS implementation and ignore attributes. That's always been my opinion but reading [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
+
+* I admit to 
 
 
 
@@ -388,5 +391,4 @@ Some Notes
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
 http://ejohn.org/blog/html-5-data-attributes/
-    https://dev.opera.com/articles/introduction-to-datasets/
 make sure the CSS is consistent across all CodePen samples
