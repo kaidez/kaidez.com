@@ -82,6 +82,11 @@ module.exports = function(grunt) {
         tasks: ['targethtml:dev', 'jekyll:dev']
       },
 
+      draft: { // run 'jekyll build' on .html, .md, .php & .xml file changes globally...EXCEPT the '_site' directory
+      files: ['_drafts/*.md'],
+      tasks: ['shell:jbd']
+    },
+
       jsOnlyTask: { // run 'jekyll build' on .js file changes
         files: ['requireBuildOut/*.js'],
         tasks: ['requirejs', 'jekyll:dev']
@@ -324,6 +329,9 @@ module.exports = function(grunt) {
         },
         removeDeploy: {
           command: 'rm -rf _deploy'
+        },
+        jbd: {
+          command: 'jekyll build --drafts'
         }
       },
 
