@@ -378,17 +378,15 @@ But if the `dataset` property DOES exist, we'll just say that those new variable
 We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variables are properly storing the data-attributes values, regardless of whether or not the browser supports `dataset`. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with `document.querySelector()`.
 And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
 
-Some Notes
+Conclusion
 ----------
-* This is a very basic data-attribute implementation and, quite frankly, data-attribute implementations should be simple. Each link isn't overloaded with data-attributes that have over 100 character lines of copy...were that my data structure, I would use a per JS implementation and ignore attributes. That's always been my opinion but reading [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
+This was a very basic data-attribute implementation and, quite frankly, data-attribute implementations should be simple. Each link isn't overloaded with data-attributes that have over 100 character lines of copy.
 
-* I admit to 
+Were that my data structure, I would use a pure JS implementation and ignore data-attributes. That's always been my opinion but reading [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
 
+* Some other excellent posts on the
 
-
-
-
-Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
 http://ejohn.org/blog/html-5-data-attributes/
+
 make sure the CSS is consistent across all CodePen samples
