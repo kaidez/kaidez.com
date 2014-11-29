@@ -91,7 +91,7 @@ The HTML for this example looks like this:
     <title>TUTORIAL: Change "data" Attributes with Mouse Clicks</title>
   </head>
   <body>
-    <a href="#" id="chelsea">Load Chelsea FC Info &raquo;</a>
+    <a href="#" id="chelsea">Load Chelsea FC Info »</a>
 
     <div
       id="teamInfo"
@@ -132,7 +132,7 @@ $("#chelsea").click(function(event){
 Breaking down the HTML first:
 
 {% prism markup %}
-<a href="#" id="chelsea">Load Chelsea FC Info &raquo;</a>
+<a href="#" id="chelsea">Load Chelsea FC Info »</a>
 {% endprism %}
 
 In the HTML, clicking on the `id="chelsea` element will load the content stored in the data-attributes.
@@ -205,7 +205,7 @@ But those are one-word attributes and our `data-home-pitch` attribute is two wor
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-It needs to be this way for two-word data-attributes due to how both `dataset` and `DOMStringMap` object work behind the scenes. Specifcally, `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
+It needs to be this way for two-word data-attributes due to how both `dataset` and `DOMStringMap` object work behind the scenes. Specifically, `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
 Simply put, __*`dataset` can't refer to it as `teamInfo.dataset.home-pitch` in the JavaScript and the HTML reference can't be `data-homePitch`*__.
 
@@ -227,7 +227,7 @@ __The HTML__
    data-team="Chelsea"
    data-manager="José Mourinho"
    data-home-pitch="Stanford Bridge">
-   Load Chelsea FC Info &raquo;
+   Load Chelsea FC Info »
 </a>
 
 <div id="team" class="dataTarget"></div>
@@ -273,7 +273,7 @@ __The HTML__
        data-team="Chelsea"
        data-manager="José Mourinho"
        data-home-pitch="Stanford Bridge">
-       Load Chelsea FC Info &raquo;
+       Load Chelsea FC Info »
      </a>
   </li>
   <li class="teamListItem">
@@ -282,7 +282,7 @@ __The HTML__
        data-team="Real Madrid"
        data-manager="Carlo Ancelotti"
        data-home-pitch="Santiago Bernabéu">
-       Load Real Madrid Info &raquo;
+       Load Real Madrid Info »
     </a>
   </li>
   <li class="teamListItem">
@@ -291,7 +291,7 @@ __The HTML__
        data-team="AC Milan"
        data-manager="Filippo Inzaghi"
        data-home-pitch="San Siro">
-       Load AC Milan Info &raquo;
+       Load AC Milan Info »
     </a>
   </li>
   <li class="teamListItem">
@@ -300,7 +300,7 @@ __The HTML__
        data-team="Paris Saint-Germain"
        data-manager="Laurent Blanc"
        data-home-pitch="Parc des Princes">
-       Load Paris Saint-Germain Info &raquo;
+       Load Paris Saint-Germain Info »
     </a>
   </li>
 </ul>
@@ -342,43 +342,44 @@ The CSS and HTML stay the same while the JavaScript goes through some changes...
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch"),
-    theTeam,
-    theManager,
-    theHomePitch;
+    teamValue,
+    managerValue,
+    homePitchValue;
 
 $(".teamLink").click(function(event){
   event.preventDefault();
 
   // if "this.dataset" does NOT exist, do this
   if(!this.dataset) {
-    theTeam = this.getAttribute("data-team");
-    theManager = this.getAttribute("data-manager");
-    theHomePitch = this.getAttribute("data-home-pitch");
+    teamValue = this.getAttribute("data-team");
+    managerValue = this.getAttribute("data-manager");
+    homePitchValue = this.getAttribute("data-home-pitch");
 
     // if but if it does, do this
     } else {
-      theTeam = this.dataset.team;
-      theManager = this.dataset.manager;
-      theHomePitch = this.dataset.homePitch;
+      teamValue = this.dataset.team;
+      managerValue = this.dataset.manager;
+      homePitchValue = this.dataset.homePitch;
     };
 
-    team.innerHTML = theTeam;
-    manager.innerHTML = theManager;
-    homePitch.innerHTML = theHomePitch;
+    team.innerHTML = teamValue;
+    manager.innerHTML = managerValue;
+    homePitch.innerHTML = homePitchValue;
 
 });
 {% endprism %}
 
-We've add three new variables without giving them a value: `theTeam`, `theManager` and `theHomePitch.` From there, we make sure that every time a link is clicked, it first checks to see if `dataset` does NOT exist.
+We've add three new variables without giving them a value: `teamValue`, `managerValue` and `homePitchValue.` From there, we make sure that every time a link is clicked, it first checks to see if `dataset` does NOT exist.
 
-We do this using a JavaScript `if/else` statement. We start the statement by checking to see if the `dataset` property does NOT exist. by saying ` if(!this.dataset)`. And if it doesn't exist, we'll use use the `getAttribute` method to find all the attributes and store them in browser memory for later use.
+We do this using a JavaScript `if/else` statement, starting it by checking if the `dataset` property does NOT exist by saying ` if(!this.dataset)`. If it doesn't exist, we'll use use the `getAttribute` method to find all the attribute values and store them in the three new variables we created for later use.
 
-But if the `dataset` property DOES exist, we'll use a separate set of properties.
+But if the `dataset` property DOES exist, we'll just say that those new variables should use `dataset` to access and store those values like we've been doing up to this point.
 
-
+We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variables are properly storing the data-attributes values, regardless of whether or not the browser supports `dataset`. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with `document.querySelector()`.
 And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
 
-
+Some Notes
+----------
 
 
 
