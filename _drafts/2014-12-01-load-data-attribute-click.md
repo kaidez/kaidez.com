@@ -39,13 +39,13 @@ console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-All of this means we can access these properties with JavaScript and display them how we want to.
+All of this means we can access these properties with JavaScript and display them how we want to on a web page. But ["Can I Use" tells us that data-attribute manipulation won't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so our final production code needs to write fallback code for those situations.
+
+Before we create our final-production-ready code, we'll create some incremental examples so we understand it better.
 
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
-We'll create code that changes multiple sets of data-attributes with JavaScript, but let's look at some simple examples first.
-
-Let's start with the CSS...the CSS will be applied to all future code samples and demos:
+We'll start by creating code that changes just one set of data-attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
 {% prism css %}
 body {
   background: grey;
@@ -182,7 +182,7 @@ $("#chelsea").click(function(event){
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it, which we'll discuss a little later.
 
-When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees all the data-attributes set inside `<div id="teamInfo">`,  So `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and has a value of  "Chelsea FC".
+When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees the value of all the data-attributes set inside `<div id="teamInfo">`.  So after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and has a value of  "Chelsea FC".
 
 The link will then take that value and place it inside the `<div>` tags that we referenced with `querySelector()`, all with help of the `innerHTML` property.  
 
