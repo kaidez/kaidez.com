@@ -39,9 +39,9 @@ console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-All of this means we use JavaScirpt to access these properties and display on a web page. But [data-attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
+All of this means we use JavaScirpt to access these properties and display them on a web page. But [data-attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
 
-Before we create our final-production-ready code, we'll create some incremental examples so we understand it better.
+Before we create our final-production-ready code, we'll create some incremental examples to gain a better understanding of how this works.
 
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
@@ -82,7 +82,7 @@ a:hover {
 }
 {% endprism %}
 
-Next, the HTML looks like this:
+The HTML for this example looks like this:
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -111,7 +111,7 @@ Next, the HTML looks like this:
 </html>
 {% endprism %}
 
-And the JavaScript that allows for the content that gets loaded on a mouse click looks like this:
+And the JavaScript for this example looks like this:
 {% prism javascript %}
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
