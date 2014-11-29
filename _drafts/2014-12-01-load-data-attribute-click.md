@@ -244,7 +244,7 @@ homePitch = document.querySelector("#homePitch");
 $("#chelsea").click(function(event){
 
   event.preventDefault();
-  // Use the .dataset property
+
   team.innerHTML = this.dataset.team;
   manager.innerHTML = this.dataset.manager;
   homePitch.innerHTML = this.dataset.homePitch;
@@ -334,7 +334,47 @@ So every time a link with the `teamLink` class gets clicked, the `this` keyword 
 
 Use `getAttribute` instead of `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
 ---------------------
-`dateset` is awesome but isn't cross-browser compliant and won't work in Internet Explorer 10 and lower. And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
+`dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can use the `getAttribute` method to fallback code for those browsers, specifically IE 10 and lower.
+
+
+The CSS and HTML stay the same while the JavaScript goes through some changes...
+{% prism javascript %}
+var team = document.querySelector("#team"),
+    manager = document.querySelector("#manager"),
+    homePitch = document.querySelector("#homePitch"),
+    theTeam,
+    theManager,
+    theHomePitch;
+
+$(".teamLink").click(function(event){
+  event.preventDefault();
+
+  // if "this.dataset" does NOT exist, do this
+  if(!this.dataset) {
+    theTeam = this.getAttribute("data-team");
+    theManager = this.getAttribute("data-manager");
+    theHomePitch = this.getAttribute("data-home-pitch");
+
+    // if but if it does, do this
+    } else {
+      theTeam = this.dataset.team;
+      theManager = this.dataset.manager;
+      theHomePitch = this.dataset.homePitch;
+    };
+
+    team.innerHTML = theTeam;
+    manager.innerHTML = theManager;
+    homePitch.innerHTML = theHomePitch;
+
+});
+{% endprism %}
+
+We've add three new variables without giving them a value: `theTeam`, `theManager` and `theHomePitch.` From there, we make sure that every time a link is clicked, it first checks to see if `dataset` does NOT exist.
+
+We do this using a JavaScript `if/else` statement. We start the statement by checking to see if the `dataset` property does NOT exist. by saying ` if(!this.dataset)`. And if it doesn't exist, we'll use use the `getAttribute` method to find all the attributes and store them in browser memory for later use. 
+
+
+And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
 
 
 
