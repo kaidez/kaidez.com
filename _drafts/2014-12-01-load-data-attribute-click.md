@@ -32,22 +32,20 @@ console.log(teamInfo.dataset);
 // logs "DOMStringMap {team: "Chelsea FC", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
 {% endprism %}
 
-You can access the individual `dataset` properties instead of the entire object:
+You can access the individual `dataset` properties:
 {% prism javascript %}
 console.log(teamInfo.dataset.team); // logs "Chelsea FC"
 console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-The `<div id="teamInfo">` element
+All of this means we can access these properties with JavaScript and display them how we want to.
+
 Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
-Before we create code that changes/swaps multiple sets of `data-*` content in different places, let's look at an example of how to do all this with one set. The process for this is:
+We'll create code that changes multiple sets of data-attributes with JavaScript, but let's look at some simple examples first.
 
-1. store content in data-attributes in certain elements.
-2. use JavaScript to load the content into other elements.
-
-Let's look at the CSS first...the CSS will be applied to all future code samples and demos:
+Let's start with the CSS...the CSS will be applied to all future code samples and demos:
 {% prism css %}
 body {
   background: grey;
@@ -107,7 +105,7 @@ Next, the HTML looks like this:
     <div id="manager" class="dataTarget"></div>
     <div id="homePitch" class="dataTarget"></div>
 
-    <!-- Note that we're using jQuery -->
+    <!-- Note that we're using the oldIE-friendly version of jQuery -->
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
   </body>
 </html>
@@ -182,11 +180,11 @@ $("#chelsea").click(function(event){
 });
 {% endprism %}
 
-The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it...we'll come back to that shortly because `.dataset` is the key to this code.
+The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it, which we'll discuss a little later.
 
-`.dataset` is a property that stores __any and all information placed in an element's data-attribute.__ For example: `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute listed in `<div id="teamInfo">` in HTML, with that value being "Chelsea".
+When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees all the data-attributes set inside `<div id="teamInfo">`,  So `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and has a value of  "Chelsea FC".
 
-When `#chelsea` is clicked, it looks at all the content stored in the data-attributes listed in `<div id="teamInfo">` and loads them inside the `div` tags that are referenced by `querySelector()`, all with the help of `innerHTML`.
+The link will then take that value and place it inside the `<div>` tags that we referenced with `querySelector()`, all with help of the `innerHTML` property.  
 
 OK...back to the function's `event` parameter...
 
@@ -207,15 +205,15 @@ But those are one-word attributes and our `data-home-pitch` attribute is two wor
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-It needs to be this way for two-word data-attributes.  `.dataset` can't refer to it as `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`.
+It needs to be this way for two-word data-attributes.  `dataset` can't refer to it as `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`.
 
-This is due to how `.dataset` works behind the scenes, using something called the `DOMStringMap` object. `.dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
+This is due to how `dataset` works behind the scenes, using something called the `DOMStringMap` object. `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
 The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
 
-Because of this, I suggest keeping your data-attributes and `.dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
+Because of this, I suggest keeping your data-attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
 Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 ---------------------
@@ -334,9 +332,9 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page.
 
-Use `getAttribute` instead of `.dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
+Use `getAttribute` instead of `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
 ---------------------
-`.dateset` is awesome but isn't cross-browser compliant and won't work in Internet Explorer 10 and lower. And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
+`dateset` is awesome but isn't cross-browser compliant and won't work in Internet Explorer 10 and lower. And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
 
 
 
@@ -347,5 +345,5 @@ Use `getAttribute` instead of `.dataset` (<a href="http://codepen.io/kaidez/pen/
 Cross-browser coding for android: as close to hell on earth as I've ever gotten.
 
 http://ejohn.org/blog/html-5-data-attributes/
-  https://dev.opera.com/articles/introduction-to-datasets/
+    https://dev.opera.com/articles/introduction-to-datasets/
 make sure the CSS is consistent across all CodePen samples
