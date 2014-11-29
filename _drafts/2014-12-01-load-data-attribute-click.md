@@ -371,7 +371,9 @@ $(".teamLink").click(function(event){
 
 We've add three new variables without giving them a value: `theTeam`, `theManager` and `theHomePitch.` From there, we make sure that every time a link is clicked, it first checks to see if `dataset` does NOT exist.
 
-We do this using a JavaScript `if/else` statement. We start the statement by checking to see if the `dataset` property does NOT exist. by saying ` if(!this.dataset)`. And if it doesn't exist, we'll use use the `getAttribute` method to find all the attributes and store them in browser memory for later use. 
+We do this using a JavaScript `if/else` statement. We start the statement by checking to see if the `dataset` property does NOT exist. by saying ` if(!this.dataset)`. And if it doesn't exist, we'll use use the `getAttribute` method to find all the attributes and store them in browser memory for later use.
+
+But if the `dataset` property DOES exist, we'll use a separate set of properties.
 
 
 And [as MDN points out](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes), it has performance issues.
