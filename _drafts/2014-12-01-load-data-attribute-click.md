@@ -155,9 +155,9 @@ Those attributes are listed inside `<div id="teamInfo">` and named `data-team`, 
 <div id="homePitch" class="dataTarget"></div>
 {% endprism %}
 
-And where on the page is this content placed after the click? Into the three `div` tags at the bottom. Their ids are: `team`, `homePitch` and `manager`,
+Those attribute values will be placed inside the three `div` tags at the bottom. Their ids are: `team`, `homePitch` and `manager`.
 
-Let's look at a nice, lengthy breakdown of the JavaScript next...
+Breaking down the JavaScript next...
 
 {% prism javascript %}
 var team = document.querySelector("#team"),
@@ -165,12 +165,12 @@ var team = document.querySelector("#team"),
     homePitch = document.querySelector("#homePitch");
 {% endprism %}
 
-I'm using `document.querySelector()` to store references to the three `div` tags I just discussed...this will make them easier to find when I start referring to them in this next function...
+For those `div` tags that we're placing the data-attribute values inside of , we're using `document.querySelector()` to store references to the them. This will make them easier to find when I start referring to them in this next function...
 
 {% prism javascript %}
 $("#chelsea").click(function(event){
 
-  event.stopPropagation();
+  event.preventDefault();
 
   // Use the .dataset property
   team.innerHTML = teamInfo.dataset.team;
@@ -182,15 +182,15 @@ $("#chelsea").click(function(event){
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it, which we'll discuss a little later.
 
-When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees the value of all the data-attributes set inside `<div id="teamInfo">`.  So after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and has a value of  "Chelsea FC".
+When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees the value of all the data-attributes set inside `<div id="teamInfo">`.  So for example: after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and that it has a value of  "Chelsea FC".
 
-The link will then take that value and place it inside the `<div>` tags that we referenced with `querySelector()`, all with help of the `innerHTML` property.  
+The link will then take that value and place it inside the `<div>` tags that we referenced with `querySelector()`, all with help of the `innerHTML` property. So for example: that value of "Chelsea FC" will placed inside of ` <div id="team">`, which is referenced by the previously-created `team` variable.
 
 OK...back to the function's `event` parameter...
 
 We have to do this so we can use the `event.PreventDefault()` method in the link. If we don't use this and the link's `href` attribute is set to `#` (which is what's happening with `#chelsea`), then the `#` will be passed to the URL.
 
-Depending on the page layout, will force the page to jump to the top. Which we don't want.
+Depending on the page layout, this will force the page to jump to the top. Which we don't want.
 
 *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
@@ -205,19 +205,19 @@ But those are one-word attributes and our `data-home-pitch` attribute is two wor
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-It needs to be this way for two-word data-attributes.  `dataset` can't refer to it as `teamInfo.dataset.home-pitch` and the HTML reference can't be `data-homePitch`.
+It needs to be this way for two-word data-attributes due to how both `dataset` and `DOMStringMap` object work behind the scenes. Specifcally, `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
-This is due to how `dataset` works behind the scenes, using something called the `DOMStringMap` object. `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
+Simply put, __*`dataset` can't refer to it as `teamInfo.dataset.home-pitch` in the JavaScript and the HTML reference can't be `data-homePitch`*__.
 
 The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
-Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a Reference error saying "pitch is not defined".
+Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a browser console reference error saying "pitch is not defined".
 
 Because of this, I suggest keeping your data-attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
 Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 ---------------------
-The first example was separated out just so things would be clearer, but a real-world use case is to store the data-attributes in the link being clicked on. Using the same CSS, that code would look like this:
+The first example separated the link and the data-attribute content so things would be clearer, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
 __The HTML__
 {% prism markup %}
