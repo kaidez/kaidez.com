@@ -268,7 +268,7 @@ In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this
 Store the data attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the  demo</a>)
 ---------------------
 
-In the previous example, we could have used `chelsea.dataset` instead of `this.dataset`. But when using `this`, we can make our code reusable and create multiple links with the same functionality.
+In the previous example, we could have used `chelsea.dataset` instead of `this.dataset`. But by using `this`, our code reusable and lets us create multiple links that use the same functionality.
 
 Still keeping the CSS the same, we can add a few more links to our HTML while slightly adjusting our JavaScript.  Clicking on each link will load different info onto our page.
 
