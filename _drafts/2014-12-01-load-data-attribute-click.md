@@ -3,14 +3,14 @@ title: 'TUTORIAL: Load data-attributes with Mouse Clicks'
 comments: true
 author: Kai Gittens
 layout: post
-permalink: /load-data-attributes/
+permalink: /load-data-attributes-mouseclicks/
 meta-excerpt: "Load/unload information stored in data attributes inside HTML with mouse clicks in a cross-browser compatible way. Includes demos."
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: data-attribute.jpg
 ---
-A recent project at work *almost* required my creating functionality that loaded content that was stored in HTML5 data attributes onto a web page with mouse clicks. I hadn't used data attributes much so I researched some production code we had and did some web searches on the subject.
+A recent project at work *almost* required my creating functionality that took content stored in HTML5 data attributes and loading it onto a web page with mouse clicks. I hadn't used data attributes much so I researched some production code we had and did some web searches on the subject.
 
 The final project specs end up not requiring this functionality but while doing the web searches, I was shocked at the lack of good, descriptive tutorials on data attributes. So while using info on my favorite footie teams, I spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial.
 
@@ -19,9 +19,9 @@ How data-attributes work
 data-attributes (sometimes referred to as `data-*`), are attributes placed in page elements:
 {% prism markup %}
 <div id="teamInfo"
-data-team="Chelsea FC"
-data-manager="José Mourinho"
-data-home-pitch="Stanford Bridge">
+     data-team="Chelsea FC"
+     data-manager="José Mourinho"
+     data-home-pitch="Stanford Bridge">
 </div>
 {% endprism %}
 
@@ -87,26 +87,24 @@ The HTML for this example looks like this:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>TUTORIAL: Change "data" Attributes with Mouse Clicks</title>
+  <meta charset="UTF-8">
+  <title>TUTORIAL: Change "data" Attributes with Mouse Clicks</title>
 </head>
 <body>
-<a href="#" id="chelsea">Load Chelsea FC Info »</a>
+  <a href="#" id="chelsea">Load Chelsea FC Info »</a>
 
-<div
-id="teamInfo"
-data-team="Chelsea"
-data-manager="José Mourinho"
-data-home-pitch="Stanford Bridge">
+  <div id="teamInfo"
+       data-team="Chelsea"
+       data-manager="José Mourinho"
+       data-home-pitch="Stanford Bridge">
+  </div>  
 
-</div>  
+  <div id="team" class="dataTarget"></div>
+  <div id="manager" class="dataTarget"></div>
+  <div id="homePitch" class="dataTarget"></div>
 
-<div id="team" class="dataTarget"></div>
-<div id="manager" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
-
-<!-- Note that we're using the oldIE-friendly version of jQuery -->
-<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <!-- Note that we're using the oldIE-friendly version of jQuery -->
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 </body>
 </html>
 {% endprism %}
@@ -114,8 +112,8 @@ data-home-pitch="Stanford Bridge">
 And the JavaScript for this example looks like this:
 {% prism javascript %}
 var team = document.querySelector("#team"),
-manager = document.querySelector("#manager"),
-homePitch = document.querySelector("#homePitch");
+    manager = document.querySelector("#manager"),
+    homePitch = document.querySelector("#homePitch");
 
 $("#chelsea").click(function(event){
 
@@ -138,12 +136,10 @@ Breaking down the HTML first:
 In the HTML, clicking on the `id="chelsea` element will load the content stored in the data-attributes.
 
 {% prism markup %}
-<div
-  id="teamInfo"
-  data-team="Chelsea"
-  data-manager="José Mourinho"
-  data-home-pitch="Stanford Bridge">
-
+<div id="teamInfo"
+     data-team="Chelsea"
+     data-manager="José Mourinho"
+     data-home-pitch="Stanford Bridge">
 </div>
 {% endprism %}
 
@@ -192,7 +188,7 @@ We have to do this so we can use the `event.PreventDefault()` method in the link
 
 Depending on the page layout, this will force the page to jump to the top. Which we don't want.
 
-    *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
+*(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
 Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
@@ -223,11 +219,11 @@ __The HTML__
 {% prism markup %}
 ...
 <a href="#"
-  id="chelsea"
-  data-team="Chelsea"
-  data-manager="José Mourinho"
-  data-home-pitch="Stanford Bridge">
-  Load Chelsea FC Info »
+   id="chelsea"
+   data-team="Chelsea"
+   data-manager="José Mourinho"
+   data-home-pitch="Stanford Bridge">
+   Load Chelsea FC Info »
 </a>
 
 <div id="team" class="dataTarget"></div>
