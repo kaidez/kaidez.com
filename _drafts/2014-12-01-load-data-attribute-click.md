@@ -8,13 +8,14 @@ meta-excerpt: "Load/unload information stored in data attributes inside HTML wit
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
-has-home-img: data attribute.jpg
+has-home-img: data-attribute.jpg
 ---
-A recent project at work *almost* required my creating functionality that took content stored in HTML5 data attributes and loading it onto a web page with mouse clicks. I had used data attributes in practice code a bit, but readily admit to not knowing everything about them.
+A recent project at work *almost* required my creating functionality that loaded content stored in HTML5 data attributes onto a web page with mouse clicks. I had used data attributes in practice code a bit, but readily admit to not knowing everything about them.
 
 I did some web searches on data attributes and was shocked at the lack of good, descriptive tutorials on the subject. Even though I ended up not using them in the work project, I did spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial, using info about my favorite footie teams as a data structure.
 
-## Table of Contents
+Table of Contents
+---------------------
 1. [How data attributes work](#how-data attributes-work)
 2. [A simple example](#simple-example)
 3. [Proper naming of data attributes](#proper-naming-data attributes)
