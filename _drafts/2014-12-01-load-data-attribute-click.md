@@ -43,16 +43,16 @@ console.log(teamInfo.dataset);
 // logs "DOMStringMap {team: "Chelsea FC", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
 {% endprism %}
 
-You can access the element's `dataset` properties individually:
+The values in an element's `dataset` property can be accessed individually:
 {% prism javascript %}
 console.log(teamInfo.dataset.team); // logs "Chelsea FC"
 console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-All of this means we use JavaScript to access these properties and display them on a web page. But [data attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
+All of this means we use JavaScript to find these properties and display them on a web page. But [data attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
 
-Before we create our final-production-ready code, we'll create some incremental examples to gain a better understanding of how this works.
+Before we create our final-production-ready code with fallbacks, we'll create some incremental examples to gain a better understanding of how all this works.
 
 <a name="simple-example"></a>
 A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the  demo</a>)
