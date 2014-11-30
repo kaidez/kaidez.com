@@ -1,32 +1,32 @@
 ---
-title: 'TUTORIAL: Load data-attributes with Mouse Clicks'
+title: 'TUTORIAL: Load data attributes with Mouse Clicks'
 comments: true
 author: Kai Gittens
 layout: post
-permalink: /load-data-attributes-mouseclicks/
+permalink: /load-data attributes-mouseclicks/
 meta-excerpt: "Load/unload information stored in data attributes inside HTML with mouse clicks in a cross-browser compatible way. Includes demos."
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
-has-home-img: data-attribute.jpg
+has-home-img: data attribute.jpg
 ---
-A recent project at work *almost* required my creating functionality that took content stored in HTML5 data attributes and loading it onto a web page with mouse clicks. I had used data-attributes in practice code a bit, but readily admit to not knowing everything about them.
+A recent project at work *almost* required my creating functionality that took content stored in HTML5 data attributes and loading it onto a web page with mouse clicks. I had used data attributes in practice code a bit, but readily admit to not knowing everything about them.
 
-I did some web searches on data-attributes and was shocked at the lack of good, descriptive tutorials on the subject. Even though I ended up not using them in the work project, I did spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial, using info about my favorite footie teams as a data structure.
+I did some web searches on data attributes and was shocked at the lack of good, descriptive tutorials on the subject. Even though I ended up not using them in the work project, I did spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial, using info about my favorite footie teams as a data structure.
 
 ## Table of Contents
-1. [How data-attributes work](#how-data-attributes-work)
+1. [How data attributes work](#how-data attributes-work)
 2. [A Simple Example](#simple-example)
-3. [Proper Naming of Data Attributes](#proper-naming-data-attributes)
-4. [Store the data-attributes in a link](#store-data-attributes-link)
-5. [Store the data-attributes in multiple links](#store-data-attributes-multiple-link)
-6. [Use `getAttribute` as fallback code for `dataset`](#getattribute-falback)
+3. [Proper Naming of Data Attributes](#proper-naming-data attributes)
+4. [Store the data attributes in a link](#store-data attributes-link)
+5. [Store the data attributes in multiple links](#store-data attributes-multiple-link)
+6. [Use "getAttribute" as fallback code for "dataset"](#getattribute-falback)
 7. [Conclusion](#conclusion)
 
-<a name="how-data-attributes-work"></a>
-How data-attributes work
+<a name="how-data attributes-work"></a>
+How data attributes work
 ---------------------
-data-attributes (sometimes referred to as `data-*`), are attributes placed in page elements:
+data attributes (sometimes referred to as `data-*`), are attributes placed in page elements:
 {% prism markup %}
 <div id="teamInfo"
      data-team="Chelsea FC"
@@ -35,7 +35,7 @@ data-attributes (sometimes referred to as `data-*`), are attributes placed in pa
 </div>
 {% endprism %}
 
-The element that contains these data-attributes (`<div id="teamInfo">` in the above-example) has a property called `dataset`, which holds all these attributes and their respective values in an object called `DOMStringMap` (an API introduced with HTML5):
+The element that contains these data attributes (`<div id="teamInfo">` in the above-example) has a property called `dataset`, which holds all these attributes and their respective values in an object called `DOMStringMap` (an API introduced with HTML5):
 
 {% prism javascript %}
 console.log(teamInfo.dataset);
@@ -49,14 +49,14 @@ console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
 {% endprism %}
 
-All of this means we use JavaScript to access these properties and display them on a web page. But [data-attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
+All of this means we use JavaScript to access these properties and display them on a web page. But [data attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
 
 Before we create our final-production-ready code, we'll create some incremental examples to gain a better understanding of how this works.
 
 <a name="simple-example"></a>
 A Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
-We'll start by creating code that changes just one set of data-attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
+We'll start by creating code that changes just one set of data attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
 {% prism css %}
 body {
   background: grey;
@@ -144,7 +144,7 @@ Breaking down the HTML first:
 <a href="#" id="chelsea">Load Chelsea FC Info »</a>
 {% endprism %}
 
-In the HTML, clicking on the `id="chelsea` element will load the content stored in the data-attributes.
+In the HTML, clicking on the `id="chelsea` element will load the content stored in the data attributes.
 
 {% prism markup %}
 <div id="teamInfo"
@@ -172,7 +172,7 @@ var team = document.querySelector("#team"),
     homePitch = document.querySelector("#homePitch");
 {% endprism %}
 
-For those `div` tags that we're placing the data-attribute values inside of , we're using `document.querySelector()` to store references to them. This will make them easier to find when I start referring to them in this next function...
+For those `div` tags that we're placing the data attribute values inside of , we're using `document.querySelector()` to store references to them. This will make them easier to find when I start referring to them in this next function...
 
 {% prism javascript %}
 $("#chelsea").click(function(event){
@@ -189,7 +189,7 @@ $("#chelsea").click(function(event){
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it, which we'll discuss a little later.
 
-When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees the value of all the data-attributes set inside `<div id="teamInfo">`.  So for example: after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and that it has a value of  "Chelsea FC".
+When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees the value of all the data attributes set inside `<div id="teamInfo">`.  So for example: after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team`, and that it has a value of  "Chelsea FC".
 
 The link will then take that value and place it inside the `<div>` tags that we referenced with `querySelector()`, all with help of the `innerHTML` property. So for example: that value of "Chelsea FC" will be placed inside of ` <div id="team">`, which is referenced by the previously-created `team` variable.
 
@@ -201,10 +201,10 @@ Depending on the page layout, this will force the page to jump to the top. Which
 
 *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
-<a name="proper-naming-data-attributes"></a>
+<a name="proper-naming-data attributes"></a>
 Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
-Here's one of the quirks of data-attributes...
+Here's one of the quirks of data attributes...
 
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
 
@@ -213,7 +213,7 @@ But those are one-word attributes and our `data-home-pitch` attribute is two wor
 homePitch.innerHTML = teamInfo.dataset.homePitch;
 {% endprism %}
 
-It needs to be this way for two-word data-attributes due to how both `dataset` and `DOMStringMap` object work behind the scenes. Specifically, `dataset` will look at the data-attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
+It needs to be this way for two-word data attributes due to how both `dataset` and `DOMStringMap` object work behind the scenes. Specifically, `dataset` will look at the data attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
 Simply put, __*`dataset` can't refer to it as `teamInfo.dataset.home-pitch` in the JavaScript and the HTML reference can't be `data-homePitch`*__.
 
@@ -221,12 +221,12 @@ The HTML for this section's CodePen has a `data-homePitch` attribute.  Click on 
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a browser console reference error saying "pitch is not defined".
 
-Because of this, I suggest keeping your data-attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
+Because of this, I suggest keeping your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
-<a name="store-data-attributes-link"></a>
-Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
+<a name="store-data attributes-link"></a>
+Store the data attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 ---------------------
-The first example separated the link and the data-attribute content so things would be clearer, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
+The first example separated the link and the data attribute content so things would be clearer, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
 __The HTML__
 {% prism markup %}
@@ -261,12 +261,12 @@ $("#chelsea").click(function(event){
 });
 {% endprism %}
 
-In the HTML, we've taken the data-attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
+In the HTML, we've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
 
-In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to...including the data-attributes.
+In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to...including the data attributes.
 
-<a name="store-data-attributes-multiple-link"></a>
-Store the data-attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the CodePen Demo</a>)
+<a name="store-data attributes-multiple-link"></a>
+Store the data attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the CodePen Demo</a>)
 ---------------------
 
 In the previous example, we could have used `chelsea.dataset` instead of `this.dataset`. But when using `this`, we can make our code reusable and create multiple links with the same functionality.
@@ -340,7 +340,7 @@ var team = document.querySelector("#team"),
 
 In the HTML we've removed the id property while adding a class called `teamLink` for each of our links.  We're also no longer targeting the id in the `jQuery.click` method and, instead, targeting this new `teamLink` class.
 
-So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page.
+So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.
 
 <a name="getattribute-falback"></a>
 Use `getAttribute` as fallback code for `dataset`(<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
@@ -385,13 +385,13 @@ We do this using a JavaScript `if/else` statement, starting it by checking if th
 
 But if the `dataset` property DOES exist, we'll just say that those new variables should use `dataset` to access and store those values like we've been doing up to this point.
 
-We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variables are properly storing the data-attributes values, regardless of whether or not the browser supports `dataset`. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with `document.querySelector()`.
+We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variables are properly storing the data attributes values, regardless of whether or not the browser supports `dataset`. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with `document.querySelector()`.
 
 <a name="conclusion"></a>
 Conclusion
 ----------
-This was a very basic data-attribute implementation and, quite frankly, data-attribute implementations should be simple. Each link isn't overloaded with data-attributes that have over 100 character lines of copy.
+This was a very basic data attribute implementation and, quite frankly, data attribute implementations should be simple. Each link isn't overloaded with data attributes that have over 100 character lines of copy.
 
-Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data-attributes. That's always been my opinion but reading [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
+Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That's always been my opinion but reading [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
 
-But for simple data structures, using data-attributes will certainly fit your simpler use cases, especially if you need to load them with a mouse event. So there are many reasons to add them to your production code, and I hope this tutorial helps you.
+But for simple data structures, using data attributes will certainly fit your simpler use cases, especially if you need to load them with a mouse event. So there are many reasons to add them to your production code, and I hope this tutorial helps you.
