@@ -16,11 +16,11 @@ I did some web searches on data attributes and was shocked at the lack of good, 
 
 ## Table of Contents
 1. [How data attributes work](#how-data attributes-work)
-2. [A Simple Example](#simple-example)
-3. [Proper Naming of Data Attributes](#proper-naming-data attributes)
+2. [A simple example](#simple-example)
+3. [Proper naming of data attributes](#proper-naming-data attributes)
 4. [Store the data attributes in a link](#store-data attributes-link)
 5. [Store the data attributes in multiple links](#store-data attributes-multiple-link)
-6. [Use "getAttribute" as fallback code for "dataset"](#getattribute-falback)
+6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-falback)
 7. [Conclusion](#conclusion)
 
 <a name="how-data attributes-work"></a>
@@ -54,7 +54,7 @@ All of this means we use JavaScript to access these properties and display them 
 Before we create our final-production-ready code, we'll create some incremental examples to gain a better understanding of how this works.
 
 <a name="simple-example"></a>
-A Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
+A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
 We'll start by creating code that changes just one set of data attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
 {% prism css %}
@@ -202,7 +202,7 @@ Depending on the page layout, this will force the page to jump to the top. Which
 *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
 <a name="proper-naming-data attributes"></a>
-Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
+Proper naming of data attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
 Here's one of the quirks of data attributes...
 
@@ -343,7 +343,7 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.
 
 <a name="getattribute-falback"></a>
-Use `getAttribute` as fallback code for `dataset`(<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
+Use `getAttribute()` as fallback code for `dataset`(<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
 ---------------------
 `dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can use the `getAttribute` method to fallback code for those browsers, specifically IE 10 and lower.
 
