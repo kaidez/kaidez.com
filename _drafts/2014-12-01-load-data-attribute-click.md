@@ -10,10 +10,20 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: data-attribute.jpg
 ---
-A recent project at work *almost* required my creating functionality that took content stored in HTML5 data attributes and loading it onto a web page with mouse clicks. I hadn't used data attributes much so I researched some production code we had and did some web searches on the subject.
+A recent project at work *almost* required my creating functionality that took content stored in HTML5 data attributes and loading it onto a web page with mouse clicks. I had used data-attributes in practice code a bit, but readily admit to not knowing everything about them.
 
-The final project specs end up not requiring this functionality but while doing the web searches, I was shocked at the lack of good, descriptive tutorials on data attributes. So while using info on my favorite footie teams, I spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial.
+I did some web searches on data-attributes and was shocked at the lack of good, descriptive tutorials on the subject. Even though I ended up not using them in the work project, I did spent a few days hacking some code together (all while taking note of the quirks and cross-browser issues) and created this tutorial, using info about my favorite footie teams as a data structure.
 
+## Table of Contents
+1. [How data-attributes work](#how-data-attributes-work)
+2. [A Simple Example](#simple-example)
+3. [Proper Naming of Data Attributes](#proper-naming-data-attributes)
+4. [Store the data-attributes in a link](#store-data-attributes-link)
+5. [Store the data-attributes in multiple links](#store-data-attributes-multiple-link)
+6. [Use `getAttribute` as fallback code for `dataset`](#getattribute-falback)
+7. [Conclusion](#conclusion)
+
+<a name="how-data-attributes-work"></a>
 How data-attributes work
 ---------------------
 data-attributes (sometimes referred to as `data-*`), are attributes placed in page elements:
@@ -43,7 +53,8 @@ All of this means we use JavaScript to access these properties and display them 
 
 Before we create our final-production-ready code, we'll create some incremental examples to gain a better understanding of how this works.
 
-Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
+<a name="simple-example"></a>
+A Simple Example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the CodePen Demo</a>)
 ---------------------
 We'll start by creating code that changes just one set of data-attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
 {% prism css %}
@@ -190,6 +201,7 @@ Depending on the page layout, this will force the page to jump to the top. Which
 
 *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
+<a name="proper-naming-data-attributes"></a>
 Proper Naming of Data Attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the CodePen Demo</a>)
 ---------------------
 Here's one of the quirks of data-attributes...
@@ -211,6 +223,7 @@ Adjust the code so it says `data-home-pitch` and it will work fine.  But from th
 
 Because of this, I suggest keeping your data-attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
+<a name="store-data-attributes-link"></a>
 Store the data-attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the CodePen Demo</a>)
 ---------------------
 The first example separated the link and the data-attribute content so things would be clearer, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
@@ -252,6 +265,7 @@ In the HTML, we've taken the data-attributes listed in `<div id="teamInfo">` and
 
 In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to...including the data-attributes.
 
+<a name="store-data-attributes-multiple-link"></a>
 Store the data-attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the CodePen Demo</a>)
 ---------------------
 
@@ -328,7 +342,8 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data-attributes for that link only, then load them onto the page.
 
-Use `getAttribute` instead of `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
+<a name="getattribute-falback"></a>
+Use `getAttribute` as fallback code for `dataset`(<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
 ---------------------
 `dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can use the `getAttribute` method to fallback code for those browsers, specifically IE 10 and lower.
 
@@ -372,6 +387,7 @@ But if the `dataset` property DOES exist, we'll just say that those new variable
 
 We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variables are properly storing the data-attributes values, regardless of whether or not the browser supports `dataset`. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with `document.querySelector()`.
 
+<a name="conclusion"></a>
 Conclusion
 ----------
 This was a very basic data-attribute implementation and, quite frankly, data-attribute implementations should be simple. Each link isn't overloaded with data-attributes that have over 100 character lines of copy.
