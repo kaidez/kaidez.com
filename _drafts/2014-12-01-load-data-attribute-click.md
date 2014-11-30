@@ -216,7 +216,7 @@ homePitch.innerHTML = teamInfo.dataset.homePitch;
 
 It needs to be this way for two-word data attributes due to how   `dataset` works behind the scenes. Specifically, `dataset` will look at the data attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
-To better understand this, look at the HTML for this section's CodePen and note that it has a `data-homePitch` attribute.  Click on the "Load Chelsea FC Info" link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
+To better understand this, look at the HTML for this section's CodePen and note that it has a `data-homePitch` attribute.  Click on the *"Load Chelsea FC Info »"* link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a browser console reference error saying "pitch is not defined".
 
@@ -225,7 +225,7 @@ Because of this, I suggest keeping your data attributes and `dataset` properties
 <a name="store-data attributes-link"></a>
 Store the data attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the  demo</a>)
 ---------------------
-The first example separated the link and the data attribute content so things would be clearer, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
+The first example separated the link and the data attribute content for the sake of a clearer explanation, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
 __The HTML__
 {% prism markup %}
@@ -262,7 +262,7 @@ $("#chelsea").click(function(event){
 
 In the HTML, we've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
 
-In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to...including the data attributes.
+In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to it...including the data attributes.
 
 <a name="store-data attributes-multiple-link"></a>
 Store the data attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the  demo</a>)
