@@ -12,7 +12,7 @@ has-home-img: data-attribute.jpg
 ---
 A recent project at work *almost* required my creating functionality that loaded content stored in HTML5 data attributes onto a web page with mouse clicks. At that point, I had used data attributes in practice code a bit, but readily admitted to not knowing everything about them.
 
-I did some web searches on data attributes and was shocked at the lack of good, descriptive tutorials on the subject. Although I ended up not using them in the work project, I still spent a few days hacking some related code together (all while taking note of the quirks and cross-browser issues) and created this tutorial, using info about my favorite footie teams as a data structure.
+I did some web searches on data attributes and was shocked at the lack of good, descriptive tutorials on the subject. Although I ended up not using them in the work project, I still spent a few days hacking some related code together (all while taking note of the quirks and cross-browser issues), leading to this tutorial where I use info about my favorite footie teams as a data structure.
 
 Table of Contents
 ---------------------
@@ -43,7 +43,7 @@ console.log(teamInfo.dataset);
 // logs "DOMStringMap {team: "Chelsea FC", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
 {% endprism %}
 
-You can access these `dataset` properties individually:
+You can access the element's `dataset` properties individually:
 {% prism javascript %}
 console.log(teamInfo.dataset.team); // logs "Chelsea FC"
 console.log(teamInfo.dataset.manager); // logs "José Mourinho"
