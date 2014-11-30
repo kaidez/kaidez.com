@@ -163,7 +163,7 @@ Those attributes are listed inside `<div id="teamInfo">` and named `data-team`, 
 <div id="homePitch" class="dataTarget"></div>
 {% endprism %}
 
-Those attribute values will be placed inside the three `div` tags at the bottom. Their ids are: `team`, `homePitch` and `manager`.
+On mouse clicks, those attribute values will be placed inside the three `div` tags at the bottom. Their ids are: `team`, `manager` and `homePitch`.
 
 Breaking down the JavaScript next...
 
@@ -190,7 +190,7 @@ $("#chelsea").click(function(event){
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it, which we'll discuss a little later.
 
-When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property and sees the value of all the data attributes set inside `<div id="teamInfo">`.  So for example: after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of `data-team`, and that it has a value of  "Chelsea FC".
+When `#chelsea` is clicked, it accesses the previously-mentioned `dataset` property of the `#teamInfo` element and sees the value of all its data attributes.  So for example: after it's clicked, `#chelsea` sees that `teamInfo.dataset.team` is direct reference to the value of the `data-team` attribute in `#teamInfo`, and that the value is "Chelsea FC".
 
 The link will then take that value and place it inside the `<div>` tags that we referenced with `querySelector()`, all with help of the `innerHTML` property. So for example: that value of "Chelsea FC" will be placed inside of ` <div id="team">`, which is referenced by the previously-created `team` variable.
 
@@ -216,7 +216,7 @@ homePitch.innerHTML = teamInfo.dataset.homePitch;
 
 It needs to be this way for two-word data attributes due to how   `dataset` works behind the scenes. Specifically, `dataset` will look at the data attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
-To better understand this, look at the HTML for this section's CodePen and note that it has a `data-homePitch` attribute.  Click on the *"Load Chelsea FC Info »"* link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
+To better understand this, look at the HTML for this section's demo and note that it has a `data-homePitch` attribute.  Click on the *"Load Chelsea FC Info »"* link and notice that the pitch content loads in as `undefined` instead of the expected "Stanford Bridge".
 
 Adjust the code so it says `data-home-pitch` and it will work fine.  But from there, go to the JavaScript and change `teamInfo.dataset.homePitch` to `teamInfo.dataset.home-pitch`...you'll get a browser console reference error saying "pitch is not defined".
 
@@ -378,9 +378,9 @@ $(".teamLink").click(function(event){
 });
 {% endprism %}
 
-We've add three new variables without giving them a value: `teamValue`, `managerValue` and `homePitchValue.` From there, we make sure that every time a link is clicked, it first checks to see if `dataset` does NOT exist.
+We've add three new variables without giving them a value: `teamValue`, `managerValue` and `homePitchValue.` From there, we make sure that every time a link is clicked, it first checks to see if our links have a `dataset` property.
 
-We do this using a JavaScript `if/else` statement, starting it by checking if the `dataset` property does NOT exist by saying ` if(!this.dataset)`. If it doesn't exist, we'll use the `getAttribute` method to find all the attribute values and store them in the three new variables we created for later use.
+We do this using a JavaScript `if/else` statement and first check to see  `dataset` does NOT exist by saying `if(!this.dataset)`. If it doesn't exist, we'll use the `getAttribute()` method to find all the data attribute values and store them in the three new variables we just created.
 
 But if the `dataset` property DOES exist, we'll just say that those new variables should use `dataset` to access and store those values like we've been doing up to this point.
 
@@ -391,6 +391,6 @@ Conclusion
 ----------
 This was a very basic data attribute implementation and, quite frankly, data attribute implementations should be simple. Each link isn't overloaded with data attributes that have over 100 character lines of copy.
 
-Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That's always been my opinion but reading [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
+Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That was my opinion at the start of this but reading well-respected developer [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.
 
 But for simple data structures, using data attributes will certainly fit your simpler use cases, especially if you need to load them with a mouse event. So there are many reasons to add them to your production code, and I hope this tutorial helps you.
