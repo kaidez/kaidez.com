@@ -358,15 +358,7 @@ module.exports = function(grunt) {
       src: '_deploy',
       dest: '/nfs/c02/h08/mnt/46798/domains/kaidez.com/html'
       }
-    },
-
-    uncss: {
-  dist: {
-    files: {
-      '_site/css/styles.min.css': ['_site/index.html']
     }
-  }
-}
   });
 
   // Use 'loadNpmTasks' to enable plugins
@@ -385,7 +377,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-cdn');
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-uncss');
 
   // Default task(s)
   grunt.registerTask('default', ['watch']);
