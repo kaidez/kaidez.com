@@ -343,7 +343,7 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.
 
 <a name="getattribute-falback"></a>
-Use `getAttribute()` as fallback code for `dataset`(<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
+Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the CodePen Demo</a>)
 ---------------------
 `dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can use the `getAttribute` method to fallback code for those browsers, specifically IE 10 and lower.
 
