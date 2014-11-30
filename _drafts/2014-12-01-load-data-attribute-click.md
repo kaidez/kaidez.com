@@ -3,7 +3,7 @@ title: 'TUTORIAL: Load data attributes with Mouse Clicks'
 comments: true
 author: Kai Gittens
 layout: post
-permalink: /load-data attributes-mouseclicks/
+permalink: /load-data-attributes-mouseclicks/
 meta-excerpt: "Load/unload information stored in data attributes inside HTML with mouse clicks in a cross-browser compatible way. Includes demos."
 category: tutorials
 cat-name: "Tutorials"
