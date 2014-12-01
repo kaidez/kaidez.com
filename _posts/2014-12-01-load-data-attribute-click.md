@@ -344,7 +344,7 @@ So every time a link with the `teamLink` class gets clicked, the `this` keyword 
 <a name="getattribute-falback"></a>
 Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the  demo</a>)
 ---------------------
-`dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can use the `getAttribute` method to fallback code for those browsers, specifically IE 10 and lower.
+`dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
 
 The CSS and HTML stay the same while the JavaScript goes through some changes...
 {% prism javascript %}
