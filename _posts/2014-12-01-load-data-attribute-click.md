@@ -21,7 +21,7 @@ Table of Contents
 3. [Proper naming of data attributes](#proper-naming-data attributes)
 4. [Store the data attributes in a link](#store-data attributes-link)
 5. [Store the data attributes in multiple links](#store-data attributes-multiple-link)
-6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-falback)
+6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-fallback)
 7. [Conclusion](#conclusion)
 
 <a name="how-data attributes-work"></a>
@@ -341,7 +341,7 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.
 
-<a name="getattribute-falback"></a>
+<a name="getattribute-fallback"></a>
 Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the  demo</a>)
 ---------------------
 `dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
