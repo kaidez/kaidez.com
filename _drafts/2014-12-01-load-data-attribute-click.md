@@ -4,7 +4,7 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /load-data-attributes-mouseclicks/
-meta-excerpt: "Load/unload information stored in data attributes inside HTML with mouse clicks in a cross-browser compatible way. Includes demos."
+meta-excerpt: "Use mouse clicks to load information stored in data attributes onto a web page in a cross-browser compatible way. Contains lots of demos."
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
