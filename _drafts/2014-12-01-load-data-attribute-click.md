@@ -106,7 +106,7 @@ The HTML for this example looks like this:
   <a href="#" id="chelsea">Load Chelsea FC Info »</a>
 
   <div id="teamInfo"
-       data-team="Chelsea"
+       data-team="Chelsea FC"
        data-manager="José Mourinho"
        data-home-pitch="Stanford Bridge">
   </div>  
@@ -149,7 +149,7 @@ In the HTML, clicking on the `id="chelsea` element will load the content stored 
 
 {% prism markup %}
 <div id="teamInfo"
-     data-team="Chelsea"
+     data-team="Chelsea FC"
      data-manager="José Mourinho"
      data-home-pitch="Stanford Bridge">
 </div>
@@ -232,7 +232,7 @@ __The HTML__
 ...
 <a href="#"
    id="chelsea"
-   data-team="Chelsea"
+   data-team="Chelsea FC"
    data-manager="José Mourinho"
    data-home-pitch="Stanford Bridge">
    Load Chelsea FC Info »
@@ -279,7 +279,7 @@ __The HTML__
   <li class="teamListItem">
     <a href="#"
        class="teamLink"
-       data-team="Chelsea"
+       data-team="Chelsea FC"
        data-manager="José Mourinho"
        data-home-pitch="Stanford Bridge">
        Load Chelsea FC Info »
