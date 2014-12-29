@@ -1,5 +1,5 @@
 ---
-title: "TUTORIAL: Filter Page Content With jQuery On A Click"
+title: "TUTORIAL: Filter Page Content On A Click With"
 comments: true
 author: Kai Gittens
 layout: post
@@ -8,5 +8,5 @@ permalink: /jquery-filter-content/
 category: tutorials
 cat-name: "Tutorials"
 has-home-img: effective-js.jpg
-tags: [jquery, javascript]
+tags: [jquery, javascript data attributes]
 ---
