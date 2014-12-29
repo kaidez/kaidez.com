@@ -3,7 +3,7 @@ title: "TUTORIAL: Filter Content On A Click With jQuery"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Use jQuery.filter(), jQuery :not(), jQuery :contains and data attributes to filter out categorized content on a click. Includes a code demo.
+meta-excerpt: Use jQuery.filter(), jQuery Attribute Selectors and HTML5 data attributes to filter out categorized content on a click. Includes code demo.
 permalink: /filter-categories-jquery/
 category: tutorials
 cat-name: "Tutorials"
@@ -14,7 +14,7 @@ tags: [jquery, javascript data attributes]
 
 A recent personal project required that content in a certain category be removed on a link click. So if the page has two groups of content, clicking on one link would filter out the first group, displaying that first group while removing the second one.
 
-Armed with [my newly-found discoveries about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes"), I solved the problem using it along with a handful of jQuery methods: `jQuery.filter()`, `jQuery :not()` and `jQuery :contains`. There are probably a few different ways to solve this problem but this is how I did it.
+Armed with [my newly-found discoveries about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes"), I solved the problem using it along with a handful of jQuery methods: `jQuery.filter()` and jQuery Attribute Selectors. There are probably a few different ways to solve this problem but this is how I did it.
 
 To begin with, there are three files at use here: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
 
@@ -109,7 +109,7 @@ $( ".btn-player" ).click(function(){
 
   getElType = $( "div[data-players-team~="+getLinkType+"]" );
 
-  getElNotType = $( "div:not([data-players-team!="+getLinkType+"])" );
+  getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
 
    $( ".player" ).filter( getElNotType ).css( "display", "none" );
    $( ".player" ).filter( getElType ).css( "display", "block" );
@@ -164,6 +164,18 @@ In this case, "Attribute Contains" is looking for any `<div>` whose `data-player
 In other words, if the `.btn-player` button that gets clicked has a `data-team` value of `chelsea`, then `chelsea` gets stored in `getLinkType`. Then, the "Attribute Contains" code will look for any `<div>` whose `data-players-team` value matches that of the current value of `getLinkType`...it will find four `<div>` tags in this case.
 
 {% prism javascript %}
-getElNotType = $( "div:not([data-players-team!="+getLinkType+"])" );
+getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
 {% endprism %}
-Almost the same code as just-discussed except that the code that looks for `<div>` tags with matching `data-players-team` attributes is wrapped in a
+Almost the same code as just-discussed except we're now using jQuery's [Attribute Not Equal Selector](http://api.jquery.com/attribute-not-equal-selector/) (note the "!" that's now before the "=" in the code instead of "~"). As you've may have guessed, this code is looking for all the `<div>` tags that have `data-players-team` values that do NOT match `getLinkType`, then stores them in a variable called `getElNotType`.
+
+{% prism javascript %}
+$( ".player" ).filter( getElNotType ).css( "display", "none" );
+$( ".player" ).filter( getElType ).css( "display", "block" );
+{% endprism %}
+Lot's jQuery chaining now...
+
+All the `<div>` tags at the bottom have a class called `.player` and we're finding them in the DOM with jQuery. Plus, they're all contained in either the `getElType` or the `getElNotType` variable.
+
+We're, first, using jQuery's `.filter()` method to "filter", or "pick out" all the `.player` elements that are contained in `getElNotType`. From there, we use jQuery's `.css()` method to apply an inline style of `display:none;` to these particular `<div>` tags, removing them from view.
+
+Next, we do the opposite: we look for any `<div>` with a `.player` class and use `.filter()` to filter out those stored in `getElType`, which are the ones we DO want to display. Then use `css()` to apply an inline style of `display:block;` to these particular `<div>` tags, making them visible if they're not already.
