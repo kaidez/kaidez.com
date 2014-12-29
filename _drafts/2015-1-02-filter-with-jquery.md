@@ -107,9 +107,9 @@ $( ".btn-player" ).click(function(){
      getLinkType = this.dataset.team;
    }
 
-  getElType = $( "div[data-players-team*="+getLinkType+"]" );
+  getElType = $( "div[data-players-team~="+getLinkType+"]" );
 
-  getElNotType = $( "div:not([data-players-team*="+getLinkType+"])" );
+  getElNotType = $( "div:not([data-players-team~="+getLinkType+"])" );
 
    $( ".player" ).filter( getElNotType ).css( "display", "none" );
    $( ".player" ).filter( getElType ).css( "display", "block" );
@@ -146,6 +146,16 @@ if( !this.dataset ) { // If IE 10 or lower
 }
 {% endprism %}
 
-Whatever `btn-player` link gets clicked has a `data-team` attribute. Our code needs to find the value of that attribute and store it in the previously-created `getLinkType` variable.
+Whatever `btn-player` link gets clicked has a `data-team` attribute. Our code needs to find the value of that attribute and store it in the previously-created `getLinkType` variable, and JavaScript's `this` keyword makes sure we're looking the value for the `data-team` value for the clicked-on link only.
 
 But data-attributes can't be found unless the browser supports `dataset` properties for elements. Internet Explorer versions 10 and lower don't support that so we need to do a little feature detection.
+
+We'll start by checking to see if the clicked-on link does NOT have a `dataset` property. And if it doesn't, we'll use the `getAttribute()` method to find the value of `data-team` and store it in the `getLinkType` variable.
+
+But for browsers other than IE 10 and lower, we can use `dataset` to find the value of `data-team` and store it in the `getLinkType` variable. For a more in-depth discussion about data attributes and `getAttribute()`, read an older post of mine [here](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes").
+
+{% prism javascript %}
+getElType = $( "div[data-players-team~="+getLinkType+"]" );
+{% endprism %}
+
+jQuery's "Attribute Contains" selector functionality is at work here. There are a lot of uses for this selector but in this caem we're using the [Attribute Contains Word Selector](http://api.jquery.com/attribute-contains-word-selector/).
