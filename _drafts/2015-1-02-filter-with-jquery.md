@@ -14,7 +14,7 @@ tags: [jquery, javascript data attributes]
 
 A recent personal project required that content in a certain category be removed on a link click. So if the page has two groups of content, clicking on one link would filter out the first group, displaying that first group while removing the second one.
 
-Armed with [my recent knowledge of data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes"), I solved the problem using it along with a handful of jQuery methods: `jQuery.filter()`, `jQuery :not()` and `jQuery :contains`. There are probably a few different ways to solve this problem but this is how I did it.
+Armed with [my newly-found discoveries about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes"), I solved the problem using it along with a handful of jQuery methods: `jQuery.filter()`, `jQuery :not()` and `jQuery :contains`. There are probably a few different ways to solve this problem but this is how I did it.
 
 To begin with, there are three files at use here: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
 
@@ -80,11 +80,13 @@ The `index.html` file is key and looks like this...
   </body>
 </html>
 {% endprism %}
-Take note that that the page has two distinct sections: a list of footie teams at the top (except for the last one) and the list of footie players directly below that. Except for the last one, every item in the top list has a link with a class name of `btn-player` and a data attribute called `data-team`.
+Take note that that the page has two distinct sections: a list of footie teams at the top (except for the last one) and the list of footie players directly below that. Except for the last one, every item in the top list is a link with a class name of `btn-player` and a data attribute called `data-team`.
 
 The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differ across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
 
-Every item in the bottom list has a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute are shared across some of the `<div>` tags.
+At the bottom of this list is a link with an ID of `#btn-show-all`. If any content has been removed, clicking on this link will add all of it back to the page.  
+
+Every item in the bottom list is a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute are shared across some of the `<div>` tags.
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 
@@ -94,12 +96,12 @@ These shared values are assisting in binding the content to their respective lin
 
 But this is only a small part of the binding process...jQuery does a lot here too.  That code is in `main.js` and looks like this:
 {% prism javascript %}
-var getLinkType, getElType, getElNotType;
-
 $( ".btn-player" ).click(function(){
 
+  var getLinkType, getElType, getElNotType;
+
   // Feature-detect for dataset support
-  if( !this.dataset ) { // If IE10 or lower
+  if( !this.dataset ) { // If IE 10 or lower
     getLinkType = this.getAttribute( "data-team" );
    } else { // For other browsers
      getLinkType = this.dataset.team;
@@ -114,7 +116,36 @@ $( ".btn-player" ).click(function(){
 
 });
 
-$("#btn-show-all").click(function() {
-  $(".player").css("display", "block");
+$( "#btn-show-all" ).click(function() {
+  $( ".player" ).css( "display", "block" );
 });
 {% endprism %}
+
+Quite a bit to discuss here...let's break it down:
+
+{% prism javascript %}
+$( ".btn-player" ).click(function(){
+  ...
+});
+{% endprism %}
+
+There are four link at the top with a class name of `btn-player`. Whenever one of those buttons are clicked, a function will run and do a lot of stuff.
+
+{% prism javascript %}
+var getLinkType, getElType, getElNotType;
+{% endprism %}
+
+List three variables in a single var pattern for future use.
+
+{% prism javascript %}
+// Feature-detect for dataset support
+if( !this.dataset ) { // If IE 10 or lower
+  getLinkType = this.getAttribute( "data-team" );
+} else { // For other browsers
+  getLinkType = this.dataset.team;
+}
+{% endprism %}
+
+Whatever `btn-player` link gets clicked has a `data-team` attribute. Our code needs to find the value of that attribute and store it in the previously-created `getLinkType` variable.
+
+But data-attributes can't be found unless the browser supports `dataset` properties for elements. Internet Explorer versions 10 and lower don't support that so we need to do a little feature detection.
