@@ -61,7 +61,7 @@ The `index.html` file is key and looks like this...
     <a href="#" class="btn-player" data-team="psg">Paris St-Germain</a>
     <a href="#" class="btn-player" data-team="real-madrid">Real Madrid</a>
     <a href="#" class="btn-player" data-team="barcelona">Barcelona</a>
-    <a href="#" id="btn-show-all" data-team="barcelona">Show All Players</a>
+    <a href="#" id="btn-show-all">SHOW ALL PLAYERS</a>
 
     <!-- The Player -->
     <div class="player" data-players-team="chelsea">Cesc Fabregas</div>
@@ -80,15 +80,17 @@ The `index.html` file is key and looks like this...
   </body>
 </html>
 {% endprism %}
-Take note that th
-`main.js` plays a HUGE role in the functionality. It's also in the same directory as the others and looks like this:
+Take note that that the page has two distinct sections: a list of footie teams at the top and the list of players directly below that. Except for the last one, every item in the top list has a link with a class name of `btn-player` and a data attribute called `data-team`.
+
+The values of the `data-team` attribute differ across the links that have it.
+`main.js` is also key and looks like this:
 {% prism javascript %}
 var getLinkType, getElType, getElNotType;
 
-$(".btn-player").click(function(){
+$( ".btn-player" ).click(function(){
 
   // Feature-detect for dataset support
-  if(!this.dataset) {
+  if( !this.dataset ) { // If IE10 or lower
     getLinkType = this.getAttribute( "data-team" );
    } else { // For other browsers
      getLinkType = this.dataset.team;
