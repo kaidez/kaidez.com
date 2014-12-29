@@ -20,7 +20,7 @@ For example: Item 6 spends time clarifying the how semicolons do (and don't) wor
 
 Chapter 3 contains 12 excellent items covering functions. Commonly complex subjects like `call` and `apply` are fleshed out really REALLY well.
 
-For me personally, the sixth chapter on "Library and API Design" was worth the price of the book alone and [I've publicly said so](https://twitter.com/kaidez/status/507690685378887680). The day I learning the intricacies of what it takes to create jQuery-like chainable, configurable methods was a good day.
+For me personally, the sixth chapter on "Library and API Design" was worth the price of the book alone and [I've publicly said so](https://twitter.com/kaidez/status/507690685378887680). The day I learned the intricacies of what it takes to create jQuery-like chainable, configurable methods was a good day in my house.
 
 Also for me personally, parts I already understood were fleshed out.  Prototypes, JavaScript's inheritance paradigm, are something that I study constantly, but I still learned some new tips and tricks for implementing them.
 
