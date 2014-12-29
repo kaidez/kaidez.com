@@ -157,10 +157,12 @@ But for browsers other than IE 10 and lower, we can use `dataset` to find the va
 {% prism javascript %}
 getElType = $( "div[data-players-team~="+getLinkType+"]" );
 {% endprism %}
-We talked about how the `<a>` tags at the top are bound to the `<div>` tags at the bottom. For every `data-team` attribute value in an `<a>` tag, there's at least one `<div>` that has a matching value stored in its `data-players-team` attribute...the matching values are what binds certain `<a>` tags to certain `<div>` tags.
-
-The feature detection code we just discussed stores the value of a clicked-on button's `data-team` attribute inside the `getLinkType` variable. And since `data-team` and `data-players-team` match somewhere in the code. We can use the `getLinkType` to look for `<div>` tags with instances of the matching `data-players-team` attributes.
-
 jQuery's "Attribute Contains" selector functionality can help us here. jQuery has a lot of uses for this selector but in this case, we're using the [Attribute Contains Word Selector](http://api.jquery.com/attribute-contains-word-selector/).
 
 In this case, "Attribute Contains" is looking for any `<div>` whose `data-players-team` value matches that of `getLinkType`. The total `<div>` tags that match this criteria are stored in the previously-created `getElType` variable.
+
+In other words, if the `.btn-player` button that gets clicked has a `data-team` value of `chelsea`, then `chelsea` gets stored in `getLinkType`. Then, the "Attribute Contains" code will look for any `<div>` whose `data-players-team` value matches that of the current value of `getLinkType`...it will find four `<div>` tags in this case.
+
+{% prism javascript %}
+getElNotType = $( "div:not([data-players-team~="+getLinkType+"])" );
+{% endprism %}
