@@ -80,9 +80,12 @@ The `index.html` file is key and looks like this...
   </body>
 </html>
 {% endprism %}
-Take note that that the page has two distinct sections: a list of footie teams at the top and the list of players directly below that. Except for the last one, every item in the top list has a link with a class name of `btn-player` and a data attribute called `data-team`.
+Take note that that the page has two distinct sections: a list of footie teams at the top and the list of footie players directly below that. Except for the last one, every item in the top list has a link with a class name of `btn-player` and a data attribute called `data-team`.
 
-The values of the `data-team` attribute differ across the links that have it.
+The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differ across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
+
+Every item in the bottom list has a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-player-team` attribute are shared across these `<div>` tags.
+
 `main.js` is also key and looks like this:
 {% prism javascript %}
 var getLinkType, getElType, getElNotType;
@@ -98,7 +101,7 @@ $( ".btn-player" ).click(function(){
 
   getElType = $( "div[data-players-team*="+getLinkType+"]" );
 
-  getElNotType = $( "div:not([data-players-type*="+getLinkType+"])" );
+  getElNotType = $( "div:not([data-players-team*="+getLinkType+"])" );
 
 
    $( ".player" ).filter( getElNotType ).css( "display", "none" );
