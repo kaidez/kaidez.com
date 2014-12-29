@@ -10,7 +10,7 @@ cat-name: "Reviews"
 has-home-img: effective-js.jpg
 tags: [review, javascript]
 ---
-*"It very well may be the best Javascript book ever written...read it!"*
+*"It very well may be the best JavaScript book ever written...read it!"*
 
 There was a moment where I considered making that sentence the content for this entire post, and then just publishing it and moving on. But I guess I have to embellish.
 
@@ -24,4 +24,12 @@ For me personally, the sixth chapter on "Library and API Design" was worth the p
 
 Also for me personally, parts I already understood were fleshed out.  Prototypes, JavaScript's inheritance paradigm, are something that I study constantly, but I still learned some new tips and tricks for implementing them.
 
-And that's the point: *Effective JavaScript* will 
+And that's the point: you will come across concepts that you've already read about when reading *Effective JavaScript*. Commonly recommended books like [*JavaScript: The Good Parts*](http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742) and [JavaScript Patterns](http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596806752) have covered lots of the material discussed in *Effective*.
+
+But *Effective* takes many the most popular JS concepts you probably understand and teaches you things you never knew about them. No matter how much you know about JS, you *will* learn something new.
+
+*Effective JavaScript* is not a beginner's book and assumes you understand variables functions, objects and arrays. Having a basic understanding of how to use all those things in a function is assumed as well.
+
+If you understand all those things, you want to read *Effective JavaScript* sooner than later. You may have read the both *The Good Parts* and *Patterns* as well (and you should at some point), but if you're an intermediate JavaScript developer, *Effective JavaScript*  will change your life.
+
+That is all.
