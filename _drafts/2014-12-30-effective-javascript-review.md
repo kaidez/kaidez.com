@@ -16,4 +16,12 @@ There was a moment where I considered making that sentence the content for this 
 
 Written by [Dave Herman of Mozilla](https://twitter.com/littlecalculist), *Effective JavaScript* is not a book with a lot of tutorials or an explanation of a particular library or framework. This is a book that takes 68 specific concepts of the JavaScript language and explains them in depth and with amazing clarity.
 
-For example: Item3 spends time explaining all the benefits of properly implementing type coercion with the `typeof` operator. 
+For example: Item 6 spends time clarifying the how semicolons do (and don't) work in JavaScript. How adding them in some code spots prevent errors and how adding them in other spots can pretty much screw the code up.
+
+Chapter 3 contains 12 excellent items covering functions. Commonly complex subjects like `call` and `apply` are fleshed out really REALLY well.
+
+For me personally, the sixth chapter on "Library and API Design" was worth the price of the book alone and [I've publicly said so](https://twitter.com/kaidez/status/507690685378887680). The day I learning the intricacies of what it takes to create jQuery-like chainable, configurable methods was a good day.
+
+Also for me personally, parts I already understood were fleshed out.  Prototypes, JavaScript's inheritance paradigm, are something that I study constantly, but I still learned some new tips and tricks for implementing them.
+
+And that's the point: *Effective JavaScript* will 
