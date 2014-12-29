@@ -3,7 +3,7 @@ title: "REVIEW: Effective JavaScript"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Excellent book that explains complicated JavaScript concepts like API design in depth & with clarity. Great for intermediate JS developers.
+meta-excerpt: Excellent book that explains complicated JavaScript concepts like API design in painstaking clarity. Great for intermediate JS developers.
 permalink: /effective-javascript-review/
 category: reviews
 cat-name: "Reviews"
