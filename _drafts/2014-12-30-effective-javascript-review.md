@@ -14,7 +14,7 @@ tags: [review, javascript]
 
 There was a moment where I considered making that sentence the content for this entire post, and then just publishing it and moving on. But I guess I have to embellish.
 
-Written by [Dave Herman of Mozilla](https://twitter.com/littlecalculist), *Effective JavaScript* is not a book with a lot of tutorials or an explanation of a particular library or framework. This is a book that takes 68 specific concepts of the JavaScript language and explains them in depth and with amazing clarity.
+Written by [Dave Herman of Mozilla](https://twitter.com/littlecalculist), *Effective JavaScript* is not a book with a lot of tutorials or an explanation of a particular library or framework. This is a book that takes 68 specific concepts of the JavaScript language and explains them in depth, and with amazing clarity.
 
 For example: Item 6 spends time clarifying the how semicolons do (and don't) work in JavaScript. How adding them in some code spots prevent errors and how adding them in other spots can pretty much screw the code up.
 
