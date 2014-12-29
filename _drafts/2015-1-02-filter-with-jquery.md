@@ -80,11 +80,15 @@ The `index.html` file is key and looks like this...
   </body>
 </html>
 {% endprism %}
-Take note that that the page has two distinct sections: a list of footie teams at the top and the list of footie players directly below that. Except for the last one, every item in the top list has a link with a class name of `btn-player` and a data attribute called `data-team`.
+Take note that that the page has two distinct sections: a list of footie teams at the top (except for the last one) and the list of footie players directly below that. Except for the last one, every item in the top list has a link with a class name of `btn-player` and a data attribute called `data-team`.
 
 The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differ across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
 
-Every item in the bottom list has a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-player-team` attribute are shared across these `<div>` tags.
+Every item in the bottom list has a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-player-team` attribute are shared across some of the `<div>` tags.
+
+For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
+
+Most importantly, take note that the values of the `data-players-team`  attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea`
 
 `main.js` is also key and looks like this:
 {% prism javascript %}
