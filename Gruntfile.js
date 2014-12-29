@@ -16,8 +16,7 @@ module.exports = function(grunt) {
       },
       prod: { // build the site using 'lsi' to create similar posts content
         src: ['.'],
-        dest: '_deploy',
-        lsi: false
+        dest: '_site'
       }
     },
 
@@ -29,9 +28,9 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         expand: true,
-        cwd: '_deploy',
+        cwd: '_site',
         src: ['**/*.html', '*.index.html', '!samples/**/*.html'],
-        dest: '_deploy'
+        dest: '_site'
       }
     },
 
@@ -168,9 +167,9 @@ module.exports = function(grunt) {
           supportedTypes: { 'phtml': 'html' }
       },
       dist: {
-          cwd: './_deploy/',
+          cwd: './_site/',
           /** @required  - string (or array of) including grunt glob variables */
-          dest: './_deploy/',
+          dest: './_site/',
           src: ['index.html', '{,**/}*.html', 'css/styles.min.css']
             }
         },
@@ -184,7 +183,7 @@ module.exports = function(grunt) {
     manifest: {
       generate: {
         options: {
-          basePath: '_deploy/',
+          basePath: '_site/',
           cache: [
             'affiliate-disclaimer.html',
             'colophon.html',
@@ -211,7 +210,7 @@ module.exports = function(grunt) {
           timestamp: true,
         },
         src: '<%= site_files %>',
-        dest: '_deploy/manifest.appcache'
+        dest: '_site/manifest.appcache'
       }
     },
 
@@ -324,13 +323,13 @@ module.exports = function(grunt) {
         }
       },
 
-      // Shell commands for creating and removing '_deploy' folder
+      // Shell commands for creating and removing '_site' folder
       shell: {
         makeDeploy: {
-          command: 'mkdir _deploy'
+          command: 'mkdir _site'
         },
         removeDeploy: {
-          command: 'rm -rf _deploy'
+          command: 'rm -rf _site'
         },
         jbd: {
           command: 'jekyll build --drafts'
@@ -357,7 +356,7 @@ module.exports = function(grunt) {
         port: 22,
         authKey: 'key1'
       },
-      src: '_deploy',
+      src: '_site',
       dest: '/nfs/c02/h08/mnt/46798/domains/kaidez.com/html'
       }
     }
@@ -386,5 +385,5 @@ module.exports = function(grunt) {
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('rq', ['requirejs']);
   grunt.registerTask('dpush', ['jekyll:dev','sftp-deploy:staging']);
-  grunt.registerTask('ppush', ['shell:makeDeploy','targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev','shell:removeDeploy']);
+  grunt.registerTask('ppush', ['targethtml:prod', 'jekyll:prod', 'cdn', 'htmlmin', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
 };
