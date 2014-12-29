@@ -168,8 +168,10 @@ module.exports = function(grunt) {
           supportedTypes: { 'phtml': 'html' }
       },
       dist: {
+          cwd: './_deploy/',
           /** @required  - string (or array of) including grunt glob variables */
-          src: ['_deploy/*.html', '_deploy/**/*.html', '_deploy/css/styles.min.css']
+          dest: './_deploy/',
+          src: ['index.html', '{,**/}*.html', 'css/styles.min.css']
             }
         },
 
