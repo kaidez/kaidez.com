@@ -109,7 +109,7 @@ $( ".btn-player" ).click(function(){
 
   getElType = $( "div[data-players-team~="+getLinkType+"]" );
 
-  getElNotType = $( "div:not([data-players-team~="+getLinkType+"])" );
+  getElNotType = $( "div:not([data-players-team!="+getLinkType+"])" );
 
    $( ".player" ).filter( getElNotType ).css( "display", "none" );
    $( ".player" ).filter( getElType ).css( "display", "block" );
@@ -164,5 +164,6 @@ In this case, "Attribute Contains" is looking for any `<div>` whose `data-player
 In other words, if the `.btn-player` button that gets clicked has a `data-team` value of `chelsea`, then `chelsea` gets stored in `getLinkType`. Then, the "Attribute Contains" code will look for any `<div>` whose `data-players-team` value matches that of the current value of `getLinkType`...it will find four `<div>` tags in this case.
 
 {% prism javascript %}
-getElNotType = $( "div:not([data-players-team~="+getLinkType+"])" );
+getElNotType = $( "div:not([data-players-team!="+getLinkType+"])" );
 {% endprism %}
+Almost the same code as just-discussed except that the code that looks for `<div>` tags with matching `data-players-team` attributes is wrapped in a
