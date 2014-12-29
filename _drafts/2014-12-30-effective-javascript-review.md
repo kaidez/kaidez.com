@@ -12,7 +12,7 @@ tags: [review, javascript]
 ---
 *"It very well may be the best JavaScript book ever written...read it!"*
 
-There was a moment where I considered making that sentence the content for this entire post, and then just publishing it and moving on, just to drive home how brilliant this book is.
+There was a moment where I considered making that sentence the content for this entire post, and then just publishing it and moving in an attempt to drive home how nothing more needs to be said about how brilliant this book is.
 
 But I guess I have to embellish...written by [Dave Herman](https://twitter.com/littlecalculist) from Mozilla, [*Effective JavaScript*](http://www.amazon.com/gp/product/0321812182/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321812182&linkCode=as2&tag=kaidez-20&linkId=KC4WGKUBOQWXNFBA) is not a book with a lot of tutorials or an explanation of a particular library or framework. This is a book that takes 68 specific concepts of the JavaScript language and explains them in depth, and with amazing clarity.
 
@@ -24,9 +24,9 @@ For me personally, the sixth chapter on "Library and API Design" was worth the p
 
 Also for me personally, parts I already understood were fleshed out.  Prototypes, JavaScript's inheritance paradigm, are something that I study constantly, but I still learned some new tips and tricks for implementing them.
 
-And that's the point: you will come across concepts that you've already read about when reading *Effective JavaScript*. Commonly recommended books like [*JavaScript: The Good Parts*](http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742) and [JavaScript Patterns](http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596806752) have covered lots of the material discussed in *Effective*.
+And that's the point: you will come across concepts that you've already read about when reading *Effective JavaScript*. Commonly recommended books like [*JavaScript: The Good Parts*](http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742) and [*JavaScript Patterns*](http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596806752) have covered lots of the material discussed in *Effective*.
 
-But *Effective* takes many the most popular JS concepts you probably understand and teaches you things you never knew about them. No matter how much you know about JS, you *will* learn something new.
+But *Effective* that material along with many other popular JS concepts and teaches you things you never knew about them. No matter how much you know about JS, you *will* learn something new.
 
 *Effective JavaScript* is not a beginner's book and assumes you understand variables functions, objects and arrays. Having a basic understanding of how to use all those things in a function is assumed as well.
 
