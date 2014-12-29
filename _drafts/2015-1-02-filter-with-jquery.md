@@ -84,13 +84,15 @@ Take note that that the page has two distinct sections: a list of footie teams a
 
 The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differ across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
 
-Every item in the bottom list has a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-player-team` attribute are shared across some of the `<div>` tags.
+Every item in the bottom list has a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute are shared across some of the `<div>` tags.
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 
-Most importantly, take note that the values of the `data-players-team`  attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea`
+Most importantly, take note that the values of the `data-players-team`  attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
-`main.js` is also key and looks like this:
+These shared values are assisting in binding the content to their respective links...when of those links are clicked, they'll understand that it's their bound `<div>` tags that content should be visible.
+
+But this is only a small part of the binding process...jQuery does a lot here too.  That code is in `main.js` and looks like this:
 {% prism javascript %}
 var getLinkType, getElType, getElNotType;
 
