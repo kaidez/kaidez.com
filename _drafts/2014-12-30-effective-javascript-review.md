@@ -26,7 +26,7 @@ Also for me personally, parts I already understood were fleshed out.  Prototypes
 
 And that's the point: you will come across concepts that you've already read about when reading *Effective JavaScript*. Commonly recommended books like [*JavaScript: The Good Parts*](http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742) and [*JavaScript Patterns*](http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596806752) have covered lots of the material discussed in *Effective*.
 
-But *Effective* that material along with many other popular JS concepts and teaches you things you never knew about them. No matter how much you know about JS, you *will* learn something new.
+But *Effective* takes that material, along with many other popular JS concepts, and teaches you things you never knew about them. No matter how much you know about JS, you *will* learn something new.
 
 *Effective JavaScript* is not a beginner's book and assumes you understand variables functions, objects and arrays. Having a basic understanding of how to use all those things in a function is assumed as well.
 
