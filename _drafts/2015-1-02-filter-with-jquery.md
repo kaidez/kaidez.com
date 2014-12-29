@@ -109,7 +109,6 @@ $( ".btn-player" ).click(function(){
 
   getElNotType = $( "div:not([data-players-team*="+getLinkType+"])" );
 
-
    $( ".player" ).filter( getElNotType ).css( "display", "none" );
    $( ".player" ).filter( getElType ).css( "display", "block" );
 
