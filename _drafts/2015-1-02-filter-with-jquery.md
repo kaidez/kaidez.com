@@ -7,7 +7,7 @@ meta-excerpt: Use jQuery.filter(), jQuery Attribute Selectors and HTML5 data att
 permalink: /filter-categories-jquery/
 category: tutorials
 cat-name: "Tutorials"
-has-home-img: effective-js.jpg
+has-home-img: jquery-filter.jpg
 tags: [jquery, javascript data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
