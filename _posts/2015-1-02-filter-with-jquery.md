@@ -428,14 +428,14 @@ That's it for the code....here are a few interesting things to note:
 
 *   This code does not work on IE 8 and lower...and I don't care.
 
-*   We only used two jQuery attribute selectors here but there are many more. [Read about the jQuery Selector API](http://api.jquery.com/category/selectors/, "Read about jQuery Selectors on the jQuery API site").
+*   We only used two jQuery attribute selectors here but there are many more and they're all useful. [Read about the jQuery Selector API](http://api.jquery.com/category/selectors/, "Read about jQuery Selectors on the jQuery API site").
 
-*   While we had to do `dataset` feature detection for the `data-team` attribute, take note that we didn't have to do that for `data-players-team` attribute. This is because we had to find the exact value of `data-team` but `data-players-team`, we just need to see if it existed in the DOM.
+*   While we had to do `dataset` feature detection for the `data-team` attribute, take note that we didn't have to do that for `data-players-team`. This is because we had to find the exact value of `data-team` but with `data-players-team`, we just need to see if it existed in the DOM.
 
-*   The part of the code that uses `$.filter()` could be more elegant. It's written in a way that automatically assumes that all the `.player` elements aren't in view, which isn't the case so it's probably neater to use something like `if/else` to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit, so it's left out of the code for that reason.
+*   The part of the code that uses `$.filter()` could be more elegant. It's written in a way that automatically assumes that all the `.player` elements aren't in view, which isn't the case. So it's probably neater to use something like `if/else` to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit, so it's left out of the code for that reason.
 
 <a name="conclusion"></a>
 ### Conclusion
-I may do some performance tests to see how much of a hit I'll take doing an `if/else` check, but I found this code to be a neater way of doing things when compared to some other implementations. I like what I did here and will probably use the pattern again.
- 
+I may do some performance tests to see how much of a hit I'll take doing an `if/else` check, but I found this code to be a neater way of doing things when compared to some other implementations I commonly use. I like what I did here and will probably use the pattern again.
+
 Again, there may be other ways to do this...feel free to share alternatives.
