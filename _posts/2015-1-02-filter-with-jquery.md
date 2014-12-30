@@ -428,9 +428,9 @@ That's it for the code....here are a few interesting things to note:
 
 *   This code does not work on IE 8 and lower...and I don't care.
 
-*   I only used two jQuery attribute selectors here but there are many more. [Read about the jQuery Selector API](http://api.jquery.com/category/selectors/, "Read about jQuery Selectors on the jQuery API site").
+*   We only used two jQuery attribute selectors here but there are many more. [Read about the jQuery Selector API](http://api.jquery.com/category/selectors/, "Read about jQuery Selectors on the jQuery API site").
 
-*   I only used two jQuery attribute selectors here but there are many more. [Read about the jQuery Selector API](http://api.jquery.com/category/selectors/, "Read about jQuery Selectors on the jQuery API site").
+*   While we had to do `dataset` feature detection for the `data-team` attribute, take note that we didn't have to do that for `data-players-team` attribute. This is because 
 
 *   more performant code for detecting if stuff is visible...more elegant code.
 
