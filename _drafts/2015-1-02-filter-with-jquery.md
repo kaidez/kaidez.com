@@ -82,11 +82,11 @@ The `index.html` file is key and looks like this...
 {% endprism %}
 Take note that that the page has two distinct sections: a list of footie teams at the top (except for the last one) and the list of footie players directly below that. Except for the last one, every item in the top list is a link with a class name of `btn-player` and a data attribute called `data-team`.
 
-The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differ across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
+The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differs across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
 
 At the bottom of this list is a link with an ID of `#btn-show-all`. If any content has been removed, clicking on this link will add all of it back to the page.  
 
-Every item in the bottom list is a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute are shared across some of the `<div>` tags.
+Every item in the bottom list is a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute is shared across some of the `<div>` tags.
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 
@@ -129,7 +129,7 @@ $( ".btn-player" ).click(function(){
 });
 {% endprism %}
 
-There are four link at the top with a class name of `btn-player`. Whenever one of those buttons are clicked, a function will run and do a lot of stuff.
+There are four link at the top with a class name of `btn-player`. Whenever one of those buttons is clicked, a function will run and do a lot of stuff.
 
 {% prism javascript %}
 var getLinkType, getElType, getElNotType;
@@ -188,6 +188,6 @@ $( "#btn-show-all" ).click(function() {
 });
 {% endprism %}
 
-We'll end our code with functionality that makes an hidden `<div>` tags visible. The very last link at the top of the the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
+We'll end our code with functionality that makes an hidden `<div>` tags visible. The very last link at the top of the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
 
-That's it but, again, there may be other 
+That's it but, again, there may be other ways to do this...feel free to share alternatives.
