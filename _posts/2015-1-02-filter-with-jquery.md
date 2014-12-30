@@ -8,13 +8,13 @@ permalink: /filter-categories-jquery/
 category: tutorials
 cat-name: "Tutorials"
 has-home-img: jquery-filter.jpg
-tags: [jquery, javascript data attributes]
+tags: [jquery, javascript, data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-A personal project required that I filter out page content in a certain category with a link click. If the page has two groups of content, clicking on one link would keep the first group visible but would remove the second one.
+For a personal project, I had to create functionality that filtered out specific page content on a link click. So if the page has three groups of content, clicking on a link would keep remove one group while the others remained visible.
 
-To do this, I took [what I learned about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes") and combined it with the jQuery `.filter()` method and jQuery Attribute Selectors. There are certainly different ways to filter page content, but this is how I did it.
+To do this, I took [what I learned about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes") and combined it with the [jQuery .filter() method](http://api.jquery.com/filter/ "Read about the jQuery filter method") and some of [jQuery's selector methods](http://api.jquery.com/category/selectors/ "Read about the jQuery's selector methods"). There are certainly different ways to filter page content, but this is how I did it.
 
 ## Table of Contents
 1. [A brief look at the CSS](#brief-look-css)
@@ -22,7 +22,7 @@ To do this, I took [what I learned about data attributes](/load-data-attributes-
 3. [The 2 sections of the HTML](#2-html-sections)
 4. [The important binding of the 2 HTML sections](#html-section-binding)
 5. [A first look at the JavaScript](#javascript-first-look)
-
+6. [Feature-detect for data attributes](#feature-detect-data-attributes)
 <a name="brief-look-css"></a>
 ### A brief look at the CSS
 We are using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
@@ -151,7 +151,8 @@ var getLinkType, getElType, getElNotType;
 {% endprism %}
 
 List three variables in a single var pattern for future use.
-
+<a name="feature-detect-data-attributes"></a>
+### Feature-detect for data attributes
 {% prism javascript %}
 // Feature-detect for dataset support
 if( !this.dataset ) { // If IE 10 or lower
