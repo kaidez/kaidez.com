@@ -159,7 +159,7 @@ getElType = $( "div[data-players-team~="+getLinkType+"]" );
 {% endprism %}
 jQuery's "Attribute Contains" selector functionality can help us here. jQuery has a lot of uses for this selector but in this case, we're using the [Attribute Contains Word Selector](http://api.jquery.com/attribute-contains-word-selector/).
 
-In this case, "Attribute Contains" is looking for any `<div>` whose `data-players-team` value matches that of `getLinkType`. The total `<div>` tags that match this criteria are stored in the previously-created `getElType` variable.
+In this case, "Attribute Contains" uses `~` to look any `<div>` whose `data-players-team` value EXACTLY matches the value of `getLinkType`. The total `<div>` tags that match this criteria are stored in the previously-created `getElType` variable.
 
 In other words, if the `.btn-player` button that gets clicked has a `data-team` value of `chelsea`, then `chelsea` gets stored in `getLinkType`. Then, the "Attribute Contains" code will look for any `<div>` whose `data-players-team` value matches that of the current value of `getLinkType`...it will find four `<div>` tags in this case.
 
@@ -170,7 +170,6 @@ Almost the same code as just-discussed except we're now using jQuery's [Attribut
 
 {% prism javascript %}
 $( ".player" ).filter( getElNotType ).css( "display", "none" );
-$( ".player" ).filter( getElType ).css( "display", "block" );
 {% endprism %}
 Lot's jQuery chaining now...
 
@@ -178,4 +177,17 @@ All the `<div>` tags at the bottom have a class called `.player` and we're findi
 
 We're, first, using jQuery's `.filter()` method to "filter", or "pick out" all the `.player` elements that are contained in `getElNotType`. From there, we use jQuery's `.css()` method to apply an inline style of `display:none;` to these particular `<div>` tags, removing them from view.
 
+{% prism javascript %}
+$( ".player" ).filter( getElType ).css( "display", "block" );
+{% endprism %}
 Next, we do the opposite: we look for any `<div>` with a `.player` class and use `.filter()` to filter out those stored in `getElType`, which are the ones we DO want to display. Then use `css()` to apply an inline style of `display:block;` to these particular `<div>` tags, making them visible if they're not already.
+
+{% prism javascript %}
+$( "#btn-show-all" ).click(function() {
+  $( ".player" ).css( "display", "block" );
+});
+{% endprism %}
+
+We'll end our code with functionality that makes an hidden `<div>` tags visible. The very last link at the top of the the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
+
+That's it but, again, there may be other 
