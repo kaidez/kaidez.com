@@ -3,7 +3,7 @@ title: "TUTORIAL: Filter Content On A Click With jQuery"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Use jQuery.filter(), jQuery Attribute Selectors and HTML5 data attributes to filter out categorized content on a click. Includes code demo.
+meta-excerpt: Use jQuery.filter() and Attribute Selectors with HTML5 data attributes to filter out categorized content on a click. Includes code demo.
 permalink: /filter-categories-jquery/
 category: tutorials
 cat-name: "Tutorials"
@@ -12,13 +12,22 @@ tags: [jquery, javascript data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-A recent personal project required that content in a certain category be removed on a link click. So if the page has two groups of content, clicking on one link would filter out the first group, displaying that first group while removing the second one.
+A personal project required that I filter out page content in a certain category with a link click. If the page has two groups of content, clicking on one link would keep the first group visible but would remove the second one.
 
-Armed with [my newly-found discoveries about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes"), I solved the problem using it along with a handful of jQuery methods: `jQuery.filter()` and jQuery Attribute Selectors. There are probably a few different ways to solve this problem but this is how I did it.
+To do this, I took [what I learned about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes") and combined it with the jQuery `.filter()` method and jQuery Attribute Selectors. There are certainly different ways to filter page content, but this is how I did it.
 
-To begin with, there are three files at use here: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
+Table of Contents
+---------------------
+1. [A brief look at the CSS](#brief-look-css)
+2. [A first look at the HTML](#html-first-look)
+3. [The 2 sections of the HTML](#2-html-sections)
 
-The styles in `styles.css` are arbitrary and are here to give the page SOME style.  They have no bearing on the functionality and won't be discussed in depth in the post, but here they are...
+<a name="brief-look-css"></a>
+A brief look at the CSS
+---------------------
+We are using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
+
+The things in `styles.css` are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:
 {% prism css %}
 body {
   background-color: rgba(60, 105, 145, 1);
@@ -44,6 +53,9 @@ a:hover {
   text-decoration: none;
 }
 {% endprism %}
+<a name="html-first-look"></a>
+A first look at the HTML
+---------------------
 The `index.html` file is key and looks like this...
 {% prism markup %}
 <!DOCTYPE html>
@@ -80,6 +92,9 @@ The `index.html` file is key and looks like this...
   </body>
 </html>
 {% endprism %}
+<a name="2-html-sections"></a>
+The 2 sections of the HTML
+---------------------
 Take note that that the page has two distinct sections: a list of footie teams at the top (except for the last one) and the list of footie players directly below that. Except for the last one, every item in the top list is a link with a class name of `btn-player` and a data attribute called `data-team`.
 
 The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differs across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
@@ -152,7 +167,7 @@ But data-attributes can't be found unless the browser supports `dataset` propert
 
 We'll start by checking to see if the clicked-on link does NOT have a `dataset` property. And if it doesn't, we'll use the `getAttribute()` method to find the value of `data-team` and store it in the `getLinkType` variable.
 
-But for browsers other than IE 10 and lower, we can use `dataset` to find the value of `data-team` and store it in the `getLinkType` variable. For a more in-depth discussion about data attributes and `getAttribute()`, read an older post of mine [here](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes").
+But for browsers other than IE 10 and lower, we can use `dataset` to find the value of `data-team` and store it in the `getLinkType` variable. For a more in-depth discussion about data attributes and `getAttribute()`, [read my data attributes post](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes").
 
 {% prism javascript %}
 getElType = $( "div[data-players-team~="+getLinkType+"]" );
@@ -171,7 +186,7 @@ Almost the same code as just-discussed except we're now using jQuery's [Attribut
 {% prism javascript %}
 $( ".player" ).filter( getElNotType ).css( "display", "none" );
 {% endprism %}
-Lot's jQuery chaining now...
+Lots jQuery chaining now...
 
 All the `<div>` tags at the bottom have a class called `.player` and we're finding them in the DOM with jQuery. Plus, they're all contained in either the `getElType` or the `getElNotType` variable.
 
