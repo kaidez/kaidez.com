@@ -12,9 +12,9 @@ tags: [jquery, javascript, data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-For a personal project, I had to create functionality that filtered out specific page content on a link click. So if the page has three groups of content, clicking on a link would remove one group while the others remained visible.
+For a personal project, I had to create functionality that filtered out specific page content on a link click. So if the page has three different content groups, clicking on a link would display one group while removing the other two from view.
 
-I created the functionality using data attributes, jQuery's .filter() method, and some jQuery's selector methods. There are certainly different ways to filter page content, but this is how I did it.
+I created the functionality using data attributes, jQuery's .filter() method, and some jQuery selector methods. There are certainly different ways to filter page content, but this is how I did it.
 
 ## Table of Contents
 1. [A (very) brief look at the CSS](#brief-look-css)
@@ -24,6 +24,9 @@ I created the functionality using data attributes, jQuery's .filter() method, an
 5. [A first look at the JavaScript](#javascript-first-look)
 6. [Feature-detect for data attributes](#feature-detect-data-attributes)
 7. [Using jQuery attribute selectors](#jquery-attribute-selectors)
+8. [Adding & removing content](#add-remove-content)
+9. [Show all the content with a click](#show-all-content)
+10. [Conclusion](#conclusion)
 
 <a name="brief-look-css"></a>
 ### A (very) brief look at the CSS
@@ -186,7 +189,8 @@ In other words, if the `.btn-player` button that gets clicked has a `data-team` 
 getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
 {% endprism %}
 Almost the same code as just-discussed except we're now using jQuery's [Attribute Not Equal Selector](http://api.jquery.com/attribute-not-equal-selector/) (note the "!" that's now before the "=" in the code instead of "~"). As you've may have guessed, this code is looking for all the `<div>` tags that have `data-players-team` values that do NOT match `getLinkType`, then stores them in a variable called `getElNotType`.
-
+<a name="add-remove-content"></a>
+### Adding & removing content
 {% prism javascript %}
 $( ".player" ).filter( getElNotType ).css( "display", "none" );
 {% endprism %}
@@ -200,7 +204,8 @@ We're, first, using jQuery's `.filter()` method to "filter", or "pick out" all t
 $( ".player" ).filter( getElType ).css( "display", "block" );
 {% endprism %}
 Next, we do the opposite: we look for any `<div>` with a `.player` class and use `.filter()` to filter out those stored in `getElType`, which are the ones we DO want to display. Then use `css()` to apply an inline style of `display:block;` to these particular `<div>` tags, making them visible if they're not already.
-
+<a name="show-all-content"></a>
+### Show all the content with a click
 {% prism javascript %}
 $( "#btn-show-all" ).click(function() {
   $( ".player" ).css( "display", "block" );
@@ -208,5 +213,6 @@ $( "#btn-show-all" ).click(function() {
 {% endprism %}
 
 We'll end our code with functionality that makes an hidden `<div>` tags visible. The very last link at the top of the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
-
+<a name="conclusion"></a>
+### Conclusion
 That's it but, again, there may be other ways to do this...feel free to share alternatives.
