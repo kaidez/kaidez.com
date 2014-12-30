@@ -23,6 +23,7 @@ To do this, I took [what I learned about data attributes](/load-data-attributes-
 4. [The important binding of the 2 HTML sections](#html-section-binding)
 5. [A first look at the JavaScript](#javascript-first-look)
 6. [Feature-detect for data attributes](#feature-detect-data-attributes)
+
 <a name="brief-look-css"></a>
 ### A brief look at the CSS
 We are using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
