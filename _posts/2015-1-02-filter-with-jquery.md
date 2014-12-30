@@ -16,15 +16,15 @@ A personal project required that I filter out page content in a certain category
 
 To do this, I took [what I learned about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes") and combined it with the jQuery `.filter()` method and jQuery Attribute Selectors. There are certainly different ways to filter page content, but this is how I did it.
 
-Table of Contents
----------------------
+## Table of Contents
 1. [A brief look at the CSS](#brief-look-css)
 2. [A first look at the HTML](#html-first-look)
 3. [The 2 sections of the HTML](#2-html-sections)
+4. [The important binding of the 2 HTML sections](#html-section-binding)
+5. [A first look at the JavaScript](#javascript-first-look)
 
 <a name="brief-look-css"></a>
-A brief look at the CSS
----------------------
+### A brief look at the CSS
 We are using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
 
 The things in `styles.css` are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:
@@ -54,8 +54,7 @@ a:hover {
 }
 {% endprism %}
 <a name="html-first-look"></a>
-A first look at the HTML
----------------------
+### A first look at the HTML
 The `index.html` file is key and looks like this...
 {% prism markup %}
 <!DOCTYPE html>
@@ -93,9 +92,8 @@ The `index.html` file is key and looks like this...
 </html>
 {% endprism %}
 <a name="2-html-sections"></a>
-The 2 sections of the HTML
----------------------
-Take note that that the page has two distinct sections: a list of footie teams at the top (except for the last one) and the list of footie players directly below that. Except for the last one, every item in the top list is a link with a class name of `btn-player` and a data attribute called `data-team`.
+### The 2 sections of the HTML
+Take note that the page has two distinct sections: a list of soccer teams at the top (except for the last one) and the list of soccer players directly below that. Except for the last one, every item in the top list is a link with a class name of `btn-player` and a data attribute called `data-team`.
 
 The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differs across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
 
@@ -104,11 +102,13 @@ At the bottom of this list is a link with an ID of `#btn-show-all`. If any conte
 Every item in the bottom list is a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute is shared across some of the `<div>` tags.
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
-
+<a name="html-section-binding"></a>
+### The important binding of the 2 HTML sections
 Most importantly, take note that the values of the `data-players-team`  attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
 These shared values are assisting in binding the content to their respective links...when of those links are clicked, they'll understand that it's their bound `<div>` tags that content should be visible.
-
+<a name="javascript-first-look"></a>
+### A first look at the JavaScript
 But this is only a small part of the binding process...jQuery does a lot here too.  That code is in `main.js` and looks like this:
 {% prism javascript %}
 $( ".btn-player" ).click(function(){
