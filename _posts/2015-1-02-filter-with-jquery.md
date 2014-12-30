@@ -421,7 +421,7 @@ $( "#btn-show-all" ).click(function() {
 });
 {% endprism %}
 
-We'll end our code with functionality that makes an hidden `<div>` tags visible. The very last link at the top of the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
+We'll end our code with functionality that makes any hidden `<div>` tags visible. The very last link at the top of the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
 <a name="notes"></a>
 ### Some Notes
 That's it for the code....here are a few interesting things to note:
