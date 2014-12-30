@@ -3,8 +3,8 @@ title: "TUTORIAL: Filter Content On A Click With jQuery"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Use jQuery.filter() and Attribute Selectors with HTML5 data attributes to filter out categorized content on a click. Includes code demo.
-permalink: /filter-categories-jquery/
+meta-excerpt: Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo.
+permalink: /filter-content-jquery/
 category: tutorials
 cat-name: "Tutorials"
 has-home-img: jquery-filter.jpg
@@ -215,4 +215,6 @@ $( "#btn-show-all" ).click(function() {
 We'll end our code with functionality that makes an hidden `<div>` tags visible. The very last link at the top of the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and give them an inline style of `display:block;` if they don't have it already.
 <a name="conclusion"></a>
 ### Conclusion
-That's it but, again, there may be other ways to do this...feel free to share alternatives.
+That's it but
+
+Again, there may be other ways to do this...feel free to share alternatives.
