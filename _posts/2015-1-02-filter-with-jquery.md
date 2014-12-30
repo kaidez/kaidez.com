@@ -12,20 +12,21 @@ tags: [jquery, javascript, data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-For a personal project, I had to create functionality that filtered out specific page content on a link click. So if the page has three groups of content, clicking on a link would keep remove one group while the others remained visible.
+For a personal project, I had to create functionality that filtered out specific page content on a link click. So if the page has three groups of content, clicking on a link would remove one group while the others remained visible.
 
-To do this, I took [what I learned about data attributes](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes") and combined it with the [jQuery .filter() method](http://api.jquery.com/filter/ "Read about the jQuery filter method") and some of [jQuery's selector methods](http://api.jquery.com/category/selectors/ "Read about the jQuery's selector methods"). There are certainly different ways to filter page content, but this is how I did it.
+I created the functionality using data attributes, jQuery's .filter() method, and some jQuery's selector methods. There are certainly different ways to filter page content, but this is how I did it.
 
 ## Table of Contents
-1. [A brief look at the CSS](#brief-look-css)
+1. [A (very) brief look at the CSS](#brief-look-css)
 2. [A first look at the HTML](#html-first-look)
 3. [The 2 sections of the HTML](#2-html-sections)
 4. [The important binding of the 2 HTML sections](#html-section-binding)
 5. [A first look at the JavaScript](#javascript-first-look)
 6. [Feature-detect for data attributes](#feature-detect-data-attributes)
+7. [Using jQuery attribute selectors](#jquery-attribute-selectors)
 
 <a name="brief-look-css"></a>
-### A brief look at the CSS
+### A (very) brief look at the CSS
 We are using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
 
 The things in `styles.css` are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:
@@ -145,7 +146,7 @@ $( ".btn-player" ).click(function(){
 });
 {% endprism %}
 
-There are four link at the top with a class name of `btn-player`. Whenever one of those buttons is clicked, a function will run and do a lot of stuff.
+There are four links at the top with a class name of `btn-player`. Whenever one of those buttons is clicked, a function perform some tasks.
 
 {% prism javascript %}
 var getLinkType, getElType, getElNotType;
@@ -163,14 +164,15 @@ if( !this.dataset ) { // If IE 10 or lower
 }
 {% endprism %}
 
-Whatever `btn-player` link gets clicked has a `data-team` attribute. Our code needs to find the value of that attribute and store it in the previously-created `getLinkType` variable, and JavaScript's `this` keyword makes sure we're looking the value for the `data-team` value for the clicked-on link only.
+All the links with a `btn-player` class have a `data-team` attribute. When one of those links get clicked, we need to find that attribute's value and store it in the previously-created `getLinkType` variable.
 
-But data-attributes can't be found unless the browser supports `dataset` properties for elements. Internet Explorer versions 10 and lower don't support that so we need to do a little feature detection.
+We can find the value by looking directly at link's dataset property by saying `this.dataset`. But dataset isn't supported in Internet Explorer 10 and lower, so we need to provide fallback code for those browsers with feature detection.
 
-We'll start by checking to see if the clicked-on link does NOT have a `dataset` property. And if it doesn't, we'll use the `getAttribute()` method to find the value of `data-team` and store it in the `getLinkType` variable.
+We'll start by checking to see if the clicked-on link does NOT have a `dataset` property and if it doesn't, we'll use the `getAttribute()` method to find the value of `data-team` and store it in the `getLinkType` variable. But for other browsers, we can use `dataset` to do the finding and storing.
 
-But for browsers other than IE 10 and lower, we can use `dataset` to find the value of `data-team` and store it in the `getLinkType` variable. For a more in-depth discussion about data attributes and `getAttribute()`, [read my data attributes post](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes").
-
+For a more in-depth discussion about data attributes and `getAttribute()`, [read my data attributes post](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes").
+<a name="jquery-attribute-selectors"></a>
+### Using jQuery attribute selectors
 {% prism javascript %}
 getElType = $( "div[data-players-team~="+getLinkType+"]" );
 {% endprism %}
