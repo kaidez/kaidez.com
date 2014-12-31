@@ -1,5 +1,5 @@
 ---
-title: "TUTORIAL: Filter Content On A Click With jQuery"
+title: "TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors"
 comments: true
 author: Kai Gittens
 layout: post
