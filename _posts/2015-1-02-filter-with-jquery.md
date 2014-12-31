@@ -20,7 +20,7 @@ I built the functionality using data attributes, jQuery's .filter() method, and 
 1. [A (very) brief look at the CSS](#brief-look-css)
 2. [A first look at the HTML](#html-first-look)
 3. [The 2 sections of the HTML](#2-html-sections)
-4. [The binding of the 2 HTML sections](#html-section-binding)
+4. [The binding of the two HTML sections](#html-section-binding)
 5. [A first look at the JavaScript](#javascript-first-look)
 6. [Feature-detect for data attributes](#feature-detect-data-attributes)
 7. [Using jQuery attribute selectors](#jquery-attribute-selectors)
@@ -109,7 +109,7 @@ Every item in the bottom list is a `<div>` with a class name of `player` and a d
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 <a name="html-section-binding"></a>
-### The binding of the 2 HTML sections
+### The binding of the two HTML sections
 The values of the `data-players-team` attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
 These shared values create a binding between the two sections, As a result, when of those links are clicked, they'll understand that it's their bound `<div>` tags that should be visible.
@@ -223,7 +223,7 @@ That's it for the code....here are a few interesting things to note:
 
 *   While we had to do `dataset` feature detection for the `data-team` attribute, take note that we didn't have to do that for `data-players-team`. This is because we had to find the exact value of `data-team` but with `data-players-team`, we just need to see if it existed in the DOM.
 
-*   The part of the code that uses `$.filter()` could be more elegant. It's written in a way that automatically assumes that all the `.player` elements aren't in view, which isn't the case. So it's probably neater to use something like `if/else` to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit, so it's left out of the code for that reason.
+*   The part of the code that uses `$.filter()` could be more elegant. It's written in a way that automatically assumes that all the `.player` elements aren't in view, which isn't the case. So it's probably neater to use something like `if/else` to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit so it's left out of the code for that reason.
 
 <a name="conclusion"></a>
 ### Conclusion
