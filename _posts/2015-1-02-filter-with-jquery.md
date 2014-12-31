@@ -12,15 +12,15 @@ tags: [jquery, javascript, data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-For a personal project, I had to create functionality that filtered out specific page content on a link click. So if the page has three different content groups, clicking on a link would display one group while removing the other two from view.
+I had a project where I needed to create functionality that filtered out specific page content on a link click. So if the page had three different content groups, clicking on a link needed to display one group while removing the other two from view.
 
-I created the functionality using data attributes, jQuery's .filter() method, and some jQuery selector methods. There are certainly different ways to filter page content, but this is how I did it.
+I built the functionality using data attributes, jQuery's .filter() method, and some jQuery selector methods. There are certainly different ways to filter page content, but this is how I did it.
 
 ## Table of Contents
 1. [A (very) brief look at the CSS](#brief-look-css)
 2. [A first look at the HTML](#html-first-look)
 3. [The 2 sections of the HTML](#2-html-sections)
-4. [The important binding of the 2 HTML sections](#html-section-binding)
+4. [The binding of the 2 HTML sections](#html-section-binding)
 5. [A first look at the JavaScript](#javascript-first-look)
 6. [Feature-detect for data attributes](#feature-detect-data-attributes)
 7. [Using jQuery attribute selectors](#jquery-attribute-selectors)
@@ -31,7 +31,7 @@ I created the functionality using data attributes, jQuery's .filter() method, an
 
 <a name="brief-look-css"></a>
 ### A (very) brief look at the CSS
-We are using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
+We're using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
 
 The things in `styles.css` are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:
 {% prism css %}
@@ -61,7 +61,7 @@ a:hover {
 {% endprism %}
 <a name="html-first-look"></a>
 ### A first look at the HTML
-The `index.html` file is key and looks like this...
+The `index.html` file looks like this...
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -99,23 +99,23 @@ The `index.html` file is key and looks like this...
 {% endprism %}
 <a name="2-html-sections"></a>
 ### The 2 sections of the HTML
-Take note that the page has two distinct sections: a list of soccer teams at the top (except for the last one) and the list of soccer players directly below that. Except for the last one, every item in the top list is a link with a class name of `btn-player` and a data attribute called `data-team`.
+The page has two distinct sections: a list of `<a>` tags at the top and a list of `<div>` tags at the bottom. Except for the last one, every item in the top list has a class name of `btn-player` and a data attribute called `data-team`.
 
-The `btn-player` class name is important and will be discussed but for now, notice that the values of the `data-team` attribute differs across the links that have it. There are four different values across these links: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
+Notice that the values of the `data-team` attribute differ across the links that have it. There are four different values: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
 
-At the bottom of this list is a link with an ID of `#btn-show-all`. If any content has been removed, clicking on this link will add all of it back to the page.  
+At the bottom of this list is a link with an ID of `#btn-show-all`. We'll build functionality where clicking on this link will add back any content that has been removed.  
 
 Every item in the bottom list is a `<div>` with a class name of `player` and a data attribute called `data-players-team`. The `player` class name is important and will be discussed but for now, notice that the values of the `data-players-team` attribute is shared across some of the `<div>` tags.
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 <a name="html-section-binding"></a>
-### The important binding of the 2 HTML sections
-Most importantly, take note that the values of the `data-players-team`  attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
+### The binding of the 2 HTML sections
+The values of the `data-players-team` attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
-These shared values are assisting in binding the content to their respective links...when of those links are clicked, they'll understand that it's their bound `<div>` tags that content should be visible.
+These shared values create a binding between the two sections, As a result, when of those links are clicked, they'll understand that it's their bound `<div>` tags that should be visible.
 <a name="javascript-first-look"></a>
 ### A first look at the JavaScript
-But this is only a small part of the binding process...jQuery does a lot here too.  That code is in `main.js` and looks like this:
+But this is only a small part of the binding process...jQuery does a lot here, too.  That code is in `main.js` and looks like this:
 {% prism javascript %}
 $( ".btn-player" ).click(function(){
 
@@ -170,7 +170,7 @@ if( !this.dataset ) { // If IE 10 or lower
 
 All the links with a `btn-player` class have a `data-team` attribute. When one of those links gets clicked, we need to find that attribute's value and store it in the previously-created `getLinkType` variable.
 
-We can find the value by looking directly at link's dataset property by saying `this.dataset`. But dataset isn't supported in Internet Explorer 10 and lower, so we need to provide fallback code for those browsers with feature detection.
+We can find the value by looking directly at link's dataset property by saying `this.dataset`. But dataset isn't supported in Internet Explorer 10 and lower, so we need to provide fallback code for those browsers by applying feature detection.
 
 We'll start by checking to see if the clicked-on link does NOT have a `dataset` property and if it doesn't, we'll use the `getAttribute()` method to find the value of `data-team` and store it in the `getLinkType` variable. But for other browsers, we can use `dataset` to do the finding and storing.
 
@@ -184,7 +184,7 @@ jQuery's "Attribute Contains" selector functionality can help us here. jQuery ha
 
 In this case, "Attribute Contains" uses `~` to look any `<div>` whose `data-players-team` value EXACTLY matches the value of `getLinkType`. The total `<div>` tags that match this criteria are stored in the previously-created `getElType` variable.
 
-In other words, if the `.btn-player` button that gets clicked has a `data-team` value of `chelsea`, then `chelsea` gets stored in `getLinkType`. Then, the "Attribute Contains" code will look for any `<div>` whose `data-players-team` value matches that of the current value of `getLinkType`...it will find four `<div>` tags in this case.
+In other words, if the `.btn-player` button that gets clicked has a `data-team` value of `chelsea`, then `chelsea` gets stored in `getLinkType`. Then, the "Attribute Contains" code will look for any `<div>` whose `data-players-team` value matches `chelsea`...it will find four `<div>` tags in this case.
 
 {% prism javascript %}
 getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
@@ -199,12 +199,12 @@ Lots jQuery chaining now...
 
 All the `<div>` tags at the bottom have a class called `.player` and we're finding them in the DOM with jQuery. Plus, they're all contained in either the `getElType` or the `getElNotType` variable.
 
-We're, first, using jQuery's `.filter()` method to "filter", or "pick out" all the `.player` elements that are contained in `getElNotType`. From there, we use jQuery's `.css()` method to apply an inline style of `display:none;` to these particular `<div>` tags, removing them from view.
+We first, use jQuery's `.filter()` method to "filter", or "pick out" all the `.player` elements that are contained in `getElNotType`, which are the ones we DON'T want to display. From there, we use jQuery's `.css()` method to apply an inline style of `display:none;` to these particular `<div>` tags, removing them from view if they're not removed already.
 
 {% prism javascript %}
 $( ".player" ).filter( getElType ).css( "display", "block" );
 {% endprism %}
-Next, we do the opposite: we look for any `<div>` with a `.player` class and use `.filter()` to filter out those stored in `getElType`, which are the ones we DO want to display. Then use `css()` to apply an inline style of `display:block;` to these particular `<div>` tags, making them visible if they're not already.
+Next, we do the opposite: we look for any `<div>` with a `.player` class and use `.filter()` to filter out those stored in `getElType`, which are the ones we DO want to display. Then use `css()` to apply an inline style of `display:block;` to these particular `<div>` tags, making them visible if they're not visible already.
 <a name="show-all-content"></a>
 ### Show all the content with a click
 {% prism javascript %}
@@ -317,7 +317,7 @@ Every item in the bottom list is a `<div>` with a class name of `player` and a d
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 <a name="html-section-binding"></a>
-### The important binding of the 2 HTML sections
+### The binding of the 2 HTML sections
 Most importantly, take note that the values of the `data-players-team`  attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
 These shared values are assisting in binding the content to their respective links...when of those links are clicked, they'll understand that it's their bound `<div>` tags that content should be visible.
