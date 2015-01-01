@@ -34,7 +34,7 @@ There will always be a relative reference to a minified, production-ready versio
 |   ├── libs
 |       ├── jquery-1.11.2.min.js
 {% endprism %}
-`main.js` will always in the same folder as `index.html`: either one or both of these files will change with each step of this guide.
+`scripts.js` will always in the same folder as `index.html`: either one or both of these files will change with each step of this guide.
 
 For the example above, the HTML would look like to this:
 {% prism markup %}
@@ -64,14 +64,16 @@ The most important thing to understand about AJAX is that the `XMLHttpRequest` o
 That is really is the best way to describe it: `XMLHttpRequest`, or `xhr` as this guide will refer to it from this point on, is used to find resources not on a web page, then place them on the page. `xhr` has the ability to do this "asynchronously", meaning that it can load them onto specific parts of the page without having to completely reload or refresh the page.
 <a name="brief-history-ajax"></a>
 ### A brief history of AJAX
+http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx
 
 <a name="xhr-feature-detection"></a>
 ### XHR feature detection
-AJAX's rise in popularity occurred at a time when both Internet Explorer version's 6 and lower were still in wide use. Since those browsers implemented `xhr` differently from all the others, any code using it needed to include some sort of feature-detection system to make sure that it worked in all the browsers.
+AJAX's rise in popularity occurred at a time when both Internet Explorer version's 6 and lower were still in wide use. Since those browsers implemented `xhr` differently from all the others by placing it inside of `window.ActiveXObject`, any code using it needed to include some sort of feature-detection system to make sure that it worked in all the browsers.
 
 The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 
 {% prism javascript %}
+// sample/01scripts.js
 // Feature-detect XMLHttpRequest implementation
 var xhr;
 if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
@@ -82,6 +84,33 @@ if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   console.log("Supports older XHR implementations");
 }
 {% endprism %}
+The above-example will return one of the two console messages above, depending on which browser `index.html` loads into.
 
+Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions. So they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
+{% prism javascript %}
+// sample02/scripts.js
+// Feature-detect XMLHttpRequest implementation
+// More robust detecting of ActiveX implementations
+(function(){
+  var xhr;
+    if (window.XMLHttpRequest) {
+      xhr = new XMLHttpRequest();
+      console.log("Supports newer XHR implementations");
+    } else {
+      try {
+        xhr = new ActiveXObject("Msxml2.XMLHTTP");
+        console.log("Supports one version of ActiveX");
+      } catch (e) {
+        try {
+          xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          console.log("Supports another version of ActiveX");
+        } catch (e) {
+          xhr = false;
+        }
+      }
+    }
+  return xhr;
+})();
+{% endprism %}
 <a name="conclusion"></a>
 ### Conclusion
