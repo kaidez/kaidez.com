@@ -78,15 +78,17 @@ The simplest version of this code looked similar to this (<a href="/samples/ajax
 var xhr;
 if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   xhr = new XMLHttpRequest();
-  console.log("Supports newer XHR implementations");
+  alert("Supports newer XHR implementations");
 } else if (window.ActiveXObject) { // For IE 6 and lower
   xhr = new ActiveXObject("Microsoft.XMLHTTP");
-  console.log("Supports older XHR implementations");
+  alert("Supports older XHR implementations");
 }
 {% endprism %}
 The above-example will return one of the two console messages above, depending on which browser `index.html` loads into.
 
-Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions. So they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
+Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions. Sadly, they also realized that that some browsers didn't support `xhr` at all.
+
+As a result, they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample02/scripts.js
 // Feature-detect XMLHttpRequest implementation
@@ -95,22 +97,24 @@ Developers later realized that `window.ActiveXObject` was implemented differentl
   var xhr;
     if (window.XMLHttpRequest) {
       xhr = new XMLHttpRequest();
-      console.log("Supports newer XHR implementations");
+      alert("Supports newer XHR implementations");
     } else {
       try {
         xhr = new ActiveXObject("Msxml2.XMLHTTP");
-        console.log("Supports one version of ActiveX");
+        alert("Supports one version of ActiveX");
       } catch (e) {
         try {
           xhr = new ActiveXObject("Microsoft.XMLHTTP");
-          console.log("Supports another version of ActiveX");
+          alert("Supports another version of ActiveX");
         } catch (e) {
           xhr = false;
+          alert("Sorry...xhr is not supported");
         }
       }
     }
   return xhr;
 })();
 {% endprism %}
+
 <a name="conclusion"></a>
 ### Conclusion
