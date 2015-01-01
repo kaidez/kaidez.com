@@ -84,9 +84,9 @@ if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   alert("Supports older XHR implementations");
 }
 {% endprism %}
-The above-example will return one of the two console messages above, depending on which browser `index.html` loads into.
+The above-example will return one of the two alert messages above, depending on which browser `index.html` loads into.
 
-Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions. Sadly, they also realized that that some browsers didn't support `xhr` at all.
+Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions of IE. Sadly, they also realized that that some browsers heavily in use at the time didn't support `xhr` at all.
 
 As a result, they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
@@ -115,6 +115,9 @@ As a result, they built slightly different feature detection code (<a href="/sam
   return xhr;
 })();
 {% endprism %}
+The above-example will return one of the four alert messages above, depending on which browser `index.html` loads into. A `try...catch` statement is used to perform more robust ActiveX detection as well as detect whether or not the browser even supports `xhr`.
+
+The `try...catch` statement will loop through each single `try` statement until it one of them meets a condition that works. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read more about "try...catch" on MDN</a>
 
 <a name="conclusion"></a>
 ### Conclusion
