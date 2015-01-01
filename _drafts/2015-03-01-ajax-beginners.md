@@ -119,5 +119,6 @@ The above-example will return one of the four alert messages above, depending on
 
 The `try...catch` statement will loop through each single `try` statement until it one of them meets a condition that works. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read more about "try...catch" on MDN</a>
 
+There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>
 <a name="conclusion"></a>
 ### Conclusion
