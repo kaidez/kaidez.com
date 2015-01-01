@@ -227,6 +227,6 @@ That's it for the code....here are a few interesting things to note:
 
 <a name="conclusion"></a>
 ### Conclusion
-I may do some performance tests to see how much of a hit I'll take doing an `if/else` check, but I found this code to be a neater way of doing things when compared to some other implementations I commonly use. I like what I did here and will probably use the pattern again.
+I may or may not do some performance tests to see how much of a hit I'll take doing an `if/else` check but either way, I found this code to be a neater way of doing things when compared to some other implementations I commonly use. I like what I did here and will probably use the pattern again.
 
 Again, there may be other ways to do this...feel free to share alternatives.
