@@ -4,7 +4,7 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /ajax-beginners-tutorial/
-meta-excerpt: "A tutorial for beginners about how to use AJAX. Learn how to write AJAX using both pure JavaScript and jQuery. Includes many code samples."
+meta-excerpt: "A tutorial for beginners about how to use AJAX. Learn how to write AJAX using both pure JavaScript and jQuery. Includes code examples."
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
@@ -13,7 +13,7 @@ has-home-img: ajax-image.jpg
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [How the sample code works](#how-sample-code-works)
+2. [How the code examples work](#how-code-examples-works)
 3. [What Is AJAX](#what-is-ajax)
 4. [A brief history of AJAX](#brief-history-ajax)
 5. [XHR feature detection](#xhr-feature-detection)
@@ -22,8 +22,8 @@ has-home-img: ajax-image.jpg
 <a name="introduction"></a>
 ### Introduction
 
-<a name="how-sample-code-works"></a>
-### How the code samples works
+<a name="how-code-examples-works"></a>
+### How the code examples work
 
 There will always be a relative reference to a minified, production-ready version of jQuery version 1.11.2 and a file called `scripts.js`. jQuery will always be one level up to a folder called `js/libs` and the `js` folder will be in the same folder as `index.html`.
 {% prism markup %}
@@ -34,9 +34,9 @@ There will always be a relative reference to a minified, production-ready versio
 |   ├── libs
 |       ├── jquery-1.11.2.min.js
 {% endprism %}
-`main.js` will always in the same folder as `index.html`: either one or both of these files will change with each step of this guide. This is done so each code sample folder doesn't require its own copy of jQuery.
+`main.js` will always in the same folder as `index.html`: either one or both of these files will change with each step of this guide.
 
-The HTML code for each code sample looks similar to this:
+For the example above, the HTML would look like to this:
 {% prism markup %}
 <!-- sample-folder/index.html -->
 <!DOCTYPE html>
@@ -52,7 +52,9 @@ The HTML code for each code sample looks similar to this:
   </body>
 </html>
 {% endprism %}
-All code samples are located in the GitHb repo.
+This is done so each example folder doesn't need its own copy of jQuery. All code example linkss will open in a new browser window.
+
+Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
 ### What Is AJAX
 The most important thing to understand about AJAX is that the `XMLHttpRequest` object is the centerpiece of an AJAX implementation. With that in mind, <a href="http://www.w3.org/TR/XMLHttpRequest/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
@@ -67,7 +69,7 @@ That is really is the best way to describe it: `XMLHttpRequest`, or `xhr` as thi
 ### XHR feature detection
 AJAX's rise in popularity occurred at a time when both Internet Explorer version's 6 and lower were still in wide use. Since those browsers implemented `xhr` differently from all the others, any code using it needed to include some sort of feature-detection system to make sure that it worked in all the browsers.
 
-The simplest version of this code looked similar to this:
+The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 
 {% prism javascript %}
 // Feature-detect XMLHttpRequest implementation
