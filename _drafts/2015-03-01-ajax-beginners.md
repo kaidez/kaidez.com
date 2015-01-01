@@ -24,8 +24,21 @@ has-home-img: ajax-image.jpg
 
 <a name="how-sample-code-works"></a>
 ### How the code samples works
+
+There will always be a relative reference to a minified, production-ready version of jQuery version 1.11.2 and a file called `scripts.js`. jQuery will always be one level up to a folder called `js/libs` and the `js` folder will be in the same folder as `index.html`.
+{% prism markup %}
+├── sample-folder
+|   ├── index.html
+|   ├── scripts.js
+├── js
+|   ├── libs
+|       ├── jquery-1.11.2.min.js
+{% endprism %}
+`main.js` will always in the same folder as `index.html`: either one or both of these files will change with each step of this guide. This is done so each code sample folder doesn't require its own copy of jQuery.
+
 The HTML code for each code sample looks similar to this:
 {% prism markup %}
+<!-- sample-folder/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,13 +46,13 @@ The HTML code for each code sample looks similar to this:
     <title>A Code Sample</title>
   </head>
   <body>
-    <!-- Content will go here-->
+    <!-- Content will go here -->
     <script src="../js/libs/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
 {% endprism %}
-
+All code samples are located in the GitHb repo.
 <a name="what-is-ajax"></a>
 ### What Is AJAX
 The most important thing to understand about AJAX is that the `XMLHttpRequest` object is the centerpiece of an AJAX implementation. With that in mind, <a href="http://www.w3.org/TR/XMLHttpRequest/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
