@@ -10,14 +10,20 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: ajax-image.jpg
 ---
-
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [How the code examples work](#how-code-examples-works)
-3. [What Is AJAX](#what-is-ajax)
-4. [A brief history of AJAX](#brief-history-ajax)
-5. [XHR feature detection](#xhr-feature-detection)
-11. [Conclusion](#conclusion)
+<ol>
+  <li><a href="#introduction">Introduction</li>
+  <li><a href="#how-code-examples-works">How the code examples work</li>
+  <li><a href="#what-is-ajax">What Is AJAX</li>
+  <li><a href="#brief-history-ajax">A brief history of AJAX</li>
+  <li>
+    <a href="#ajax-javascript">Write AJAX with JavaScript</li>
+    <ol>
+      <li><a href="#xhr-feature-detection">XHR feature detection</li>
+    </ol>
+  </li>
+  <li><a href="#conclusion">Conclusion</li>
+</ol>
 
 <a name="introduction"></a>
 ### Introduction
@@ -52,7 +58,7 @@ For the example above, the HTML would look like to this:
   </body>
 </html>
 {% endprism %}
-This is done so each example folder doesn't need its own copy of jQuery. All code example linkss will open in a new browser window.
+This is done so each example folder doesn't need its own copy of jQuery. All code example links will open in a new browser window.
 
 Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
@@ -66,8 +72,11 @@ That is really is the best way to describe it: `XMLHttpRequest`, or `xhr` as thi
 ### A brief history of AJAX
 http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx
 
-<a name="xhr-feature-detection"></a>
+<a name="ajax-javascript"></a>
 ### XHR feature detection
+
+<a name="xhr-feature-detection"></a>
+#### XHR feature detection
 AJAX's rise in popularity occurred at a time when both Internet Explorer version's 6 and lower were still in wide use. Since those browsers implemented `xhr` differently from all the others by placing it inside of `window.ActiveXObject`, any code using it needed to include some sort of feature-detection system to make sure that it worked in all the browsers.
 
 The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
