@@ -112,7 +112,7 @@ For example: four tags have their `data-players-team` value set to `chelsea`, tw
 ### The binding of the two HTML sections
 The values of the `data-players-team` attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
-These shared values create a binding between the two sections, As a result, when of those links are clicked, they'll understand that it's their bound `<div>` tags that should be visible.
+These shared values create a binding between the two sections, As a result, when of a link is clicked, it will understand that it's their bound `<div>` tags that should be visible.
 <a name="javascript-first-look"></a>
 ### A first look at the JavaScript
 But this is only a small part of the binding process...jQuery does a lot here, too.  That code is in `main.js` and looks like this:
