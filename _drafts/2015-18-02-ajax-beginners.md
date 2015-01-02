@@ -10,6 +10,7 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: ajax-image.jpg
 ---
+
 ## Table of Contents
 <ol>
   <li><a href="#introduction">Introduction</li>
@@ -65,7 +66,7 @@ Either `index.html` or `scripts.js` will change with each new example.
 All code example links will open in a new browser window.  Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
 ### What Is AJAX
-The most important thing to understand about AJAX is that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
+First, understand that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> helps to provide the simplest definition of what AJAX is:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
@@ -79,7 +80,7 @@ Outlook Web Access still needed to make asynchronous requests, or, "async" reque
 XMLHTTP was not made directly accessible to the web browser, meaning that you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code. Instead, it was bundled inside of another object called
 <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>, which helps software interact with Microsoft apps.
 
-Other browsers added `XMLHttpRequest` directly to the browser. Microsoft would eventually do the same when they removed it from ActiveXObject with the release of Internet Explorer 7.
+Other browsers added `XMLHttpRequest` directly to the browser. Microsoft would eventually do the same with the release of Internet Explorer 7.
 
 `XMLHttpRequest`, or `xhr`, was used to create to web applications that loaded data asynchronous and without refreshing the page in its entirety. The most notable applications came from Google: specifically Google Maps and Gmail.
 
@@ -87,7 +88,7 @@ These web applications demonstrated how useful `xhr` was but the developer commu
 
 Garret described AJAX as _Asynchronous JavaScript + XML_: he went onto say that it wasn't a technology but rather "several technologies, each flourishing in its own right, coming together in powerful new ways."
 
-The technologies were XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript would bring all of these things together.
+The technologies were: XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript would bring all of these things together.
 
 
 <a name="ajax-javascript"></a>
