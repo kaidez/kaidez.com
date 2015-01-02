@@ -65,11 +65,11 @@ Either `index.html` or `scripts.js` will change with each new example.
 All code example links will open in a new browser window.  Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
 ### What Is AJAX
-The most important thing to understand about AJAX is that the `XMLHttpRequest` object is the centerpiece of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
+The most important thing to understand about AJAX is that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
-That's the best way to describe it: `XMLHttpRequest` is used to find resources on a remote web server and place them on the page. It has the ability to do this "asynchronously", meaning that *it can load resources onto specific parts of the page without having to completely reload or refresh the page.*
+That's the best way to describe it: `XMLHttpRequest` "requests" information from a server, then places it on a web page. It does this "asynchronously", meaning that *it loads the information onto specific parts of the page without having to completely reload or refresh the page.*
 <a name="brief-history-ajax"></a>
 ### A brief history of AJAX
 The roots of AJAX goes back to roughly early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
@@ -77,7 +77,7 @@ The roots of AJAX goes back to roughly early 1999: [according to JavaScript crea
 Outlook Web Access still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
 
 XMLHTTP was not made directly accessible to the web browser, meaning that you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code. Instead, it was bundled inside of another object called
-<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>, which is a software package the helps other software easily communicate with one another inside Microsoft apps.
+<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>, which helps software interact with Microsoft apps.
 
 Other browsers added `XMLHttpRequest` directly to the browser. Microsoft would eventually do the same when they removed it from ActiveXObject with the release of Internet Explorer 7.
 
