@@ -68,14 +68,15 @@ The most important thing to understand about AJAX is that the `XMLHttpRequest` o
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
-That's the best way to describe it: `XMLHttpRequest` is used to find resources on a remote web server and place them on the page. It has the ability to do this "asynchronously", meaning that it can load them onto specific parts of the page without having to completely reload or refresh the page.
+That's the best way to describe it: `XMLHttpRequest` is used to find resources on a remote web server and place them on the page. It has the ability to do this "asynchronously", meaning that it can load resources onto specific parts of the page without having to completely reload or refresh the page.
 <a name="brief-history-ajax"></a>
 ### A brief history of AJAX
-The roots of AJAX goes back to roughly early 1999: [according to JavaScript creator,Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
+The roots of AJAX goes back to roughly early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
 
 Outlook Web Access still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
 
-XMLHTTP was not made directly accessible to the web browser, meaning that you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code. Instead, it was bundled inside of another object called "[ActiveXObject](http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx, "Read more about Microsoft's ActiveXObject")", which is a software package the helps other software easily communicate with one another in Microsoft apps.
+XMLHTTP was not made directly accessible to the web browser, meaning that you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code. Instead, it was bundled inside of another object called
+<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>, which is a software package the helps other software easily communicate with one another inside Microsoft apps.
 
 Other browsers added `XMLHttpRequest` directly to the browser. Microsoft would eventually do the same when they removed it from ActiveXObject with the release of Internet Explorer 7.
 
@@ -83,7 +84,10 @@ Other browsers added `XMLHttpRequest` directly to the browser. Microsoft would e
 
 These web applications demonstrated how useful `xhr` was but the developer community as a whole didn't really take note. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
-Garret described AJAX as _Asynchronous JavaScript + XML_ 
+Garret described AJAX as _Asynchronous JavaScript + XML_: he went onto say that it wasn't a technology but rather "several technologies, each flourishing in its own right, coming together in powerful new ways."
+
+The technologies were XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript would bring all of these things together.
+
 
 <a name="ajax-javascript"></a>
 ### Write AJAX with JavaScript
