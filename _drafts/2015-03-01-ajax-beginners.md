@@ -32,7 +32,9 @@ has-home-img: ajax-image.jpg
 <a name="how-code-examples-works"></a>
 ### How the code examples work
 
-There will always be a relative reference to a minified, production-ready version of jQuery version 1.11.2 and a file called `scripts.js`. jQuery will always be one level up to a folder called `js/libs` and the `js` folder will be in the same folder as `index.html`.
+All examples run from an `index.html` file that references a minified version of jQuery 1.11.2 and a file called `scripts.js`. jQuery will always be one level up to a folder called `js/libs` and `scripts.js` file will be in the same folder as `index.html`.
+
+All of this is done so that each example folder doesn't need its own copy of jQuery.  The tree structure looks like this:
 {% prism markup %}
 ├── sample-folder
 |   ├── index.html
@@ -41,7 +43,6 @@ There will always be a relative reference to a minified, production-ready versio
 |   ├── libs
 |       ├── jquery-1.11.2.min.js
 {% endprism %}
-`scripts.js` will always in the same folder as `index.html`: either one or both of these files will change with each step of this guide.
 
 For the example above, the HTML would look like to this:
 {% prism markup %}
@@ -59,16 +60,16 @@ For the example above, the HTML would look like to this:
   </body>
 </html>
 {% endprism %}
-This is done so each example folder doesn't need its own copy of jQuery. All code example links will open in a new browser window.
+Either `index.html` or `scripts.js` will change with each new example.
 
-Raw code for all the examples is located in the GitHub repo.
+All code example links will open in a new browser window.  Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
 ### What Is AJAX
-The most important thing to understand about AJAX is that the `XMLHttpRequest` object is the centerpiece of an AJAX implementation. With that in mind, <a href="http://www.w3.org/TR/XMLHttpRequest/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
+The most important thing to understand about AJAX is that the `XMLHttpRequest` object is the centerpiece of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> provides the best, and simplest, definition to what AJAX is:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
-That's the best way to describe it: `XMLHttpRequest` is used to find resources on a remote web server and place them on the page. It has the ability to do this "asynchronously", meaning that it can load resources onto specific parts of the page without having to completely reload or refresh the page.
+That's the best way to describe it: `XMLHttpRequest` is used to find resources on a remote web server and place them on the page. It has the ability to do this "asynchronously", meaning that *it can load resources onto specific parts of the page without having to completely reload or refresh the page.*
 <a name="brief-history-ajax"></a>
 ### A brief history of AJAX
 The roots of AJAX goes back to roughly early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
