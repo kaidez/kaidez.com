@@ -1,19 +1,20 @@
 ---
-title: AJAX - A Beginner's Tutorial
+title: AJAX Tutorial for Beginners
 comments: true
 author: Kai Gittens
 layout: post
 permalink: /ajax-beginners-tutorial/
-meta-excerpt: "A tutorial for beginners about how to use AJAX. Learn how to write AJAX using both pure JavaScript and jQuery. Includes code examples."
+meta-excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."
 category: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: ajax-image.jpg
 ---
+AJAX has advanced a lot since [Jesse James Garrett defined it 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original'AJAX' article"). It's defined a way to create robust web applications and turned JavaScript into one of the world's most popular web programming languages.
 
+Lots of newer developers (as well as few intermediate ones) struggle to learn AJAX and are also not aware of how it's progressed inside the jQuery library.
 ## Table of Contents
 <ol>
-  <li><a href="#introduction">Introduction</li>
   <li><a href="#how-code-examples-works">How the code examples work</li>
   <li><a href="#what-is-ajax">What Is AJAX</li>
   <li><a href="#brief-history-ajax">A brief history of AJAX</li>
@@ -26,10 +27,6 @@ has-home-img: ajax-image.jpg
   </li>
   <li><a href="#conclusion">Conclusion</li>
 </ol>
-
-<a name="introduction"></a>
-### Introduction
-
 <a name="how-code-examples-works"></a>
 ### How the code examples work
 

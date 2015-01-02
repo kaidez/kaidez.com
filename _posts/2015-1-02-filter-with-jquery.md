@@ -12,7 +12,7 @@ tags: [jquery, javascript, data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-I had a project where I needed to create functionality that filtered out specific page content on a link click. So if the page had three different content groups, clicking on a link needed to display one group while removing the other two from view.
+I had a project where I needed to create functionality that filtered out specific page content on a link click. So if the page had three different content groups, clicking on a link had to display one group while removing the other two from view.
 
 I built the functionality using data attributes, jQuery's .filter() method, and some jQuery selector methods. There are certainly different ways to filter page content, but this is how I did it.
 
