@@ -115,35 +115,38 @@ As a result, they built slightly different feature detection code (<a href="/sam
 // sample02/scripts.js
 // Feature-detect XMLHttpRequest implementation
 // More robust detecting of ActiveX implementations
-(function(){
+function getXHR() {
   var xhr;
-    if (window.XMLHttpRequest) {
-      xhr = new XMLHttpRequest();
-      alert("Supports newer XHR implementations");
-    } else {
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+    alert("Supports newer XHR implementations");
+  } else {
+    try {
+      xhr = new ActiveXObject("Msxml2.XMLHTTP");
+      alert("Supports one version of ActiveX");
+    } catch (e) {
       try {
-        xhr = new ActiveXObject("Msxml2.XMLHTTP");
-        alert("Supports one version of ActiveX");
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        alert("Supports another version of ActiveX");
       } catch (e) {
-        try {
-          xhr = new ActiveXObject("Microsoft.XMLHTTP");
-          alert("Supports another version of ActiveX");
-        } catch (e) {
-          xhr = false;
-          alert("Sorry...xhr is not supported");
-        }
+        xhr = false;
+        alert("Sorry...this browser doesn't support XMLHttpRequest");
       }
     }
+  }
   return xhr;
-})();
+}
+
 {% endprism %}
-The above-example will return one of the four alert messages above, depending on which browser `index.html` loads into. A `try...catch` statement is used to perform more robust ActiveX detection as well as detect whether or not the browser even supports `xhr`.
+The above-example creates a reusable function called `getXHR()`. Every new instance `getXHR()` we create will be able to use `xhr` without worrying about the cross-browser issues.
+
+This version of `getXHR()` will return one of the four alert messages above, depending on which browser `index.html` loads into. A `try...catch` statement is used to perform more robust ActiveX detection as well as detect whether or not the browser even supports `xhr`.
 
 The `try...catch` statement will loop through each single `try` statement until it one of them meets a condition that works. The last condition is what's returned if the browser soes NOT support `xhr`.
 
-There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">read MDN's "try...catch" page</a>.
+There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 <a name="ajax-states"></a>
 #### What is "onreadystatechange"?
-Any new instance of an `XMLHttpRequest` object (such as `var xhr` in the example above), has methods 
+The `XMLHttpRequest` object has methods and properties attached to it.  One of the most important properties is `onreadystatechange`.
 <a name="conclusion"></a>
 ### Conclusion
