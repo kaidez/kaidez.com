@@ -68,6 +68,12 @@ First, understand that `XMLHttpRequest` is the heart of an AJAX implementation. 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
 That's the best way to describe it: `XMLHttpRequest` "requests" information from a server, then places it on a web page. It does this "asynchronously", meaning that *it loads the information onto specific parts of the page without having to completely reload or refresh the page.*
+
+"AJAX" started off as being an acronym for _Asynchronous JavaScript + XML_, but it's gone on to refer to the act of using `XMLHttpRequest`, or  "xhr", along side other web technologies. JavaScript and XML were used to create the AJAX experience, but so were XHTML, CSS and the Document Object Model (or, "the DOM").
+
+XML was main data layer in the original AJAX description but any other data layer can be used...text files, HTML files, etc. JSON is the most-used data layer at the time of this guide's initial publish date.
+
+XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. You can still use XHTML if you like.
 <a name="brief-history-ajax"></a>
 ### A brief history of AJAX
 The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
@@ -165,11 +171,20 @@ The official spec defines five states, each with a numerical value:
 
 * __4__: meaning that things are in the __DONE__ state...either the data has downloaded in full or there was an error during the download process.
 
+Microsoft's definition is shorter...MDN shortens even more it well:
+* 0 (uninitialized)
+
+* 1 (loading)
+
+* 2 (loaded)
+
+* 3 (interactive)
+
+* 4 (complete)
+
 <a name="what-is-onreadystatechange"></a>
 ##### What is "onreadystatechange"?
 When you create an instance of `xhr`, it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states...`onreadystatechange` is an event handler that tracks the current request state.
-
-The request state is stored in an `xhr` attribute called `readyState`  and its five states are defined by one of five numeric values:
 
 <a name="conclusion"></a>
 ### Conclusion
