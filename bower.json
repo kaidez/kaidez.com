@@ -15,7 +15,7 @@
     "matchmedia": "0.2.0",
     "enquire": "~2.1.2",
     "requirejs": "2.1.14",
-    "spinjs": "2.0.1"
+    "spinjs": "2.0.2"
   },
   "devDependencies": {
     "tipue": "git@github.com:Tipue/Tipue-Search.git",
