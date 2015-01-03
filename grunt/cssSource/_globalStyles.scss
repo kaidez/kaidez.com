@@ -4,7 +4,7 @@
 //
 // These are styles which should appear on all devices, regardless of
 // screen dimension or computer resolution. There may be other
-// references to these classes and ids in other .scss files, but they 
+// references to these classes and ids in other .scss files, but they
 // should only add to the list of properties and not override already-
 // existing properties.
 // ====================================================================
@@ -41,15 +41,15 @@ html {
 // For modern browsers
 // 1. The space content is one way to avoid an Opera bug when the
 // `contenteditable` attribute is included anywhere else in the
-// document. Otherwise it causes space to appear at the top and bottom 
+// document. Otherwise it causes space to appear at the top and bottom
 // of elements that receive the `clearfix` class.
 // 2. The use of `table` rather than `block` is only necessary if using
 // `:before` to contain the top-margins of child elements.
 
 .clearfix:before,
 .clearfix:after {
-  content: " "; //  1 // 
-  display: table; //  2 // 
+  content: " "; //  1 //
+  display: table; //  2 //
 }
 
 .clearfix:after {
@@ -79,7 +79,7 @@ p code, li code {
   overflow-x: hidden;
 }
 
-// Link focus style...better accessibility 
+// Link focus style...better accessibility
 a:focus {
   outline: 2px solid red;
 }
@@ -100,7 +100,7 @@ a:focus {
 }
 
 // the link
-.demoLink:link, .demoLink:visited { 
+.demoLink:link, .demoLink:visited {
   font-size: 23px;
   color: #fff;
   text-decoration: none;
@@ -193,7 +193,7 @@ a:focus {
 
 // Apply the Google font to all <nav> links after page load
 .wf-active .site-navigation-list-link a:link,
-.wf-active .site-navigation-list-link a:visited { 
+.wf-active .site-navigation-list-link a:visited {
   @include fonts($robo, visible);
   @include master-center;
   background-color: $aside-color;
@@ -231,7 +231,7 @@ a:focus {
   display:none;
 }
 
-// jQuery-powered search box courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on. the 'pagination' class 
+// jQuery-powered search box courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on. the 'pagination' class
 // shares some of these styles.
 //
 // Tipue styles start here.
@@ -259,7 +259,7 @@ a:focus {
 }
 
 #tipue_search_input:focus {
-  border-color: #c3c3c3;   
+  border-color: #c3c3c3;
 }
 
 #tipue_search_button {
@@ -314,7 +314,7 @@ a:focus {
 }
 
 .tipue_search_content_title a:hover {
-  color: #333;    
+  color: #333;
 }
 
 // Hide the Google font on all search result links before page load
@@ -351,7 +351,7 @@ a:focus {
 }
 
 #tipue_search_warning a:hover {
-  color: #111;     
+  color: #111;
 }
 
 #tipue_search_results_count {
@@ -372,7 +372,7 @@ a:focus {
 // ====================================================================
 
 
-// post copy spot 
+// post copy spot
 .pageCopy {
   background-color: #fff;
   padding: 18px;
@@ -381,18 +381,18 @@ a:focus {
 // title tag for post snippets All text links (except for post meta
 // info) are blue but have no underline.
 .postSnippetLinkHeader:link,.postSnippetLinkHeader:visited,
-.post-snippet-link:link, .post-snippet-link:visited { 
+.post-snippet-link:link, .post-snippet-link:visited {
   @include transitions (color);
   color: $post-link-color;
   text-decoration: none;
   margin: 0;
 }
 
-// what happens if you rollover the post snippet titles...hover is 
+// what happens if you rollover the post snippet titles...hover is
 // for desktop views and (maybe) iPads, focus is for everything else.hover
 .postSnippetLinkHeader:hover,
 .post-snippet-link:hover,
-.post-snippet-link:focus {  
+.post-snippet-link:focus {
   color: lighten($post-link-color, 15);
   text-decoration: underline;
 }
@@ -654,7 +654,7 @@ main a:visited {
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
- 
+
 .centerVideo iframe,
 .centerVideo object,
 .centerVideo embed {
@@ -665,6 +665,16 @@ main a:visited {
     height: 100%;
 }
 
+// <h3> in the sharing post section in post pages
+.h3-guide {
+  color: #3285a5;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.h4-guide {
+  font-size: 20px;
+}
 /*
  * Stop YouTube embedding code
  */
@@ -946,7 +956,7 @@ main a:visited {
 
 // Site map post links
 .site-map-link:link,
-.site-map-link:visited { 
+.site-map-link:visited {
   color: darken($post-link-color, 4);
   text-decoration: none;
   @include transitions (color);
@@ -955,14 +965,14 @@ main a:visited {
 
 // Site map post links - hover & focus state
 .site-map-link:hover,
-.site-map-link:focus {  
+.site-map-link:focus {
   color: lighten($post-link-color, 15);
   text-decoration: underline;
 }
 
 // Site map post links
 .sitemap-header-link:link,
-.sitemap-header-link:visited { 
+.sitemap-header-link:visited {
   color: #000;
   text-decoration: none;
   @include transitions (color);
@@ -970,7 +980,7 @@ main a:visited {
 
 // Site map post links - hover & focus state
 .sitemap-header-link:hover,
-.sitemap-header-link:focus {  
+.sitemap-header-link:focus {
   color: lighten(#000, 45);
   text-decoration: underline;
 }
