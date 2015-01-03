@@ -30,9 +30,11 @@ Many new developers (as well as few intermediate ones) struggle to learn AJAX an
 <a name="how-code-examples-works"></a>
 ### How the code examples work
 
-All examples run from an `index.html` file that references a minified version of jQuery 1.11.2 and a file called `scripts.js`. jQuery will always be one level up to a folder called `js/libs` and `scripts.js` file will be in the same folder as `index.html`.
+All examples run in their own folder from an `index.html` file.  `index.html` always references a minified version of jQuery 1.11.2 and a file called `scripts.js`.
 
-All of this is done so that each example folder doesn't need its own copy of jQuery.  The tree structure looks like this:
+jQuery will always be one level up from `index.html` in a folder called `js/libs` and `scripts.js` file will be in the same folder as `index.html`. All of this is done so that each example folder doesn't need its own copy of jQuery.
+
+The tree structure looks like this:
 {% prism markup %}
 ├── sample-folder
 |   ├── index.html
@@ -42,28 +44,12 @@ All of this is done so that each example folder doesn't need its own copy of jQu
 |       ├── jquery-1.11.2.min.js
 {% endprism %}
 
-For the example above, the HTML would look like to this:
-{% prism markup %}
-<!-- sample-folder/index.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>A Code Sample</title>
-  </head>
-  <body>
-    <!-- Content will go here -->
-    <script src="../js/libs/jquery-1.11.2.min.js"></script>
-    <script src="scripts.js"></script>
-  </body>
-</html>
-{% endprism %}
-Either `index.html` or `scripts.js` will change with each new example.
+Either `index.html` or `scripts.js` will change with each new example. All code example links will open in a new browser window.
 
-All code example links will open in a new browser window.  Raw code for all the examples is located in the GitHub repo.
+Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
 ### What Is AJAX
-First, understand that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the W3C's XMLHttpRequest specification</a> helps to provide the simplest definition of what AJAX is:
+First, understand that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
@@ -73,33 +59,31 @@ That's the best way to describe it: `XMLHttpRequest` "requests" information from
 
 XML was main data layer in the original AJAX description but any other data layer can be used...text files, HTML files, etc. JSON is the most-used data layer at the time of this guide's initial publish date.
 
-XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. You can still use XHTML if you like.
+XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. You can still use XHTML if you like, but using it in Strict mode is recommended.
 <a name="brief-history-ajax"></a>
 ### A brief history of AJAX
 The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
 
 Outlook Web Access still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
 
-Other browsers added the object as well, but with a slightly different implementation and called it `XMLHttpRequest`. With the release of Internet Explorer 7, Microsoft would copy this implementation and also name their object `XMLHttpRequest`.
+Other browsers added the object as well, but with a slightly different implementation and called it `XMLHttpRequest`. With the release of Internet Explorer 7, Microsoft would copy that other implementation and also name their object `XMLHttpRequest`.
 
-`XMLHttpRequest`, or `xhr`, was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
+`XMLHttpRequest` was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
 These web applications demonstrated how useful `xhr` was but the developer community as a whole didn't really take note. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
-Garret described AJAX as _Asynchronous JavaScript + XML_: he went onto say that it wasn't a technology but rather "several technologies, each flourishing in its own right, coming together in powerful new ways." The technologies were: XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript would bring all of these things together.
+Garret's article was where the AJAX acronym was defined (see the previous section for more on this). It was also where the initial AJAX technologies were listed out, which were: XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript.
 
 <a name="ajax-javascript"></a>
 ### Write AJAX with JavaScript
 <a name="xhr-feature-detection"></a>
 #### XHR feature detection
-As mentioned, Microsoft's XHR implementation was different from other browsers until they released IE7. But when AJAX started to become popular, older versions were still in use.
+As mentioned, Microsoft's XHR implementation was different from other browsers until they released IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code.
 
-In the older versions, XMLHTTP was not a directly accessible object in the web browser, meaning that you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code. Instead, it was bundled inside of another object called
-<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>, which helps software interact with Microsoft apps.
+Instead, it was bundled inside of another object called
+<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX started to become popular at a time when browsers using the old implementation were still in wide use, you had to write some sort of feature-detection system in your code to make sure that it worked globally.
 
-
-This meant that you had to write some sort of feature-detection system in your code to make sure that it worked in all the browsers. The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
-
+The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample/01scripts.js
 // Feature-detect XMLHttpRequest implementation
