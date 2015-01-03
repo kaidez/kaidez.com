@@ -81,9 +81,9 @@ Garret's article was where the AJAX acronym was defined (see the previous sectio
 As mentioned, Microsoft's "xhr" implementation was different from other browsers until they released IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
-<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection  code to make sure that your AJAX worked in all browsers.
+<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
 
-The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
+The simplest version of this feature-detection code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample/01scripts.js
 // Feature-detect XMLHttpRequest implementation
@@ -91,9 +91,11 @@ var xhr;
 if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   xhr = new XMLHttpRequest();
   alert("Supports newer XHR implementations");
-} else if (window.ActiveXObject) { // For IE 6 and lower
-  xhr = new ActiveXObject("Microsoft.XMLHTTP");
-  alert("Supports older XHR implementations");
+} else {
+  if (window.ActiveXObject) { // For IE 6 and lower
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    alert("Supports older XHR implementations");
+  }
 }
 {% endprism %}
 The above-example will return one of the two alert messages above, depending on which browser `index.html` loads into.
