@@ -32,7 +32,7 @@ Many new developers (as well as few intermediate ones) struggle to learn AJAX an
 
 All examples run in their own folder from an `index.html` file.  `index.html` always references a minified version of jQuery 1.11.2 and a file called `scripts.js`.
 
-jQuery will always be one level up from `index.html` in a folder called `js/libs` and `scripts.js` file will be in the same folder as `index.html`. All of this is done so that each example folder doesn't need its own copy of jQuery.
+jQuery will always be one level up from `index.html` in a folder called `js/libs` while `scripts.js` will be in the same folder as `index.html`. All of this is done so that each example folder doesn't need its own copy of jQuery.
 
 The tree structure looks like this:
 {% prism markup %}
@@ -70,7 +70,7 @@ Other browsers added the object as well, but with a slightly different implement
 
 `XMLHttpRequest` was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
-These web applications demonstrated how useful `xhr` was but the developer community as a whole didn't really take note. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
+These web applications demonstrated how useful "xhr" was but the developer community as a whole didn't really notice this. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
 Garret's article was where the AJAX acronym was defined (see the previous section for more on this). It was also where the initial AJAX technologies were listed out, which were: XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript.
 
@@ -78,10 +78,10 @@ Garret's article was where the AJAX acronym was defined (see the previous sectio
 ### Write AJAX with JavaScript
 <a name="xhr-feature-detection"></a>
 #### XHR feature detection
-As mentioned, Microsoft's XHR implementation was different from other browsers until they released IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by adding `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's "xhr" implementation was different from other browsers until they released IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
-<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX started to become popular at a time when browsers using the old implementation were still in wide use, you had to write some sort of feature-detection system in your code to make sure that it worked globally.
+<a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection  code to make sure that your AJAX worked in all browsers.
 
 The simplest version of this code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 {% prism javascript %}
