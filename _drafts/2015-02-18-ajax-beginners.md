@@ -48,7 +48,7 @@ Either `index.html` or `scripts.js` will change with each new example. All code 
 
 Raw code for all the examples is located in the GitHub repo.
 <a name="what-is-ajax"></a>
-### What Is AJAX
+<h3 class="h3-guide">What Is AJAX</h3>
 First, understand that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
@@ -61,7 +61,7 @@ XML was main data layer in the original AJAX description but any other data laye
 
 XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. You can still use XHTML if you like, but using it in Strict mode is recommended.
 <a name="brief-history-ajax"></a>
-### A brief history of AJAX
+<h3 class="h3-guide">A brief history of AJAX</h3>
 The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
 
 Outlook Web Access still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
@@ -75,9 +75,9 @@ These web applications demonstrated how useful "xhr" was but the developer commu
 Garret's article was where the AJAX acronym was defined (see the previous section for more on this). It was also where the initial AJAX technologies were listed out, which were: XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript.
 
 <a name="ajax-javascript"></a>
-### Write AJAX with JavaScript
+<h3 class="h3-guide">Write AJAX with JavaScript</h3>
 <a name="xhr-feature-detection"></a>
-#### XHR feature detection
+<h4 class="h4-guide">XHR feature detection</h4>
 As mentioned, Microsoft's "xhr" implementation was different from other browsers until they released IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
@@ -135,7 +135,7 @@ A JavaScript `try...catch` statement is doing multiple checks for two different 
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 <a name="ajax-states"></a>
-#### AJAX States
+<h4 class="h4-guide">AJAX States</h4>
 <a name="state-definitions"></a>
 ##### State definitions (YOU CAN SKIP THIS PART)
 *(NOTE: There are five different AJAX states but this guide focuses mainly on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
