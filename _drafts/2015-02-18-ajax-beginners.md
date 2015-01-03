@@ -120,17 +120,18 @@ function getXHR() {
       } catch (e) {
         // Browsers that don't support either XMLHttpRequest or ActiveXObject
         xhr = false;
+        alert("Sorry...XMLHttpRequest is not supported.")
       }
     }
   }
   return xhr;
 }
 {% endprism %}
-The above-example creates a reusable function called `getXHR()`. Every new instance `getXHR()` we create will be able to use `xhr` without worrying about the cross-browser issues.
+The feature detection code is now in a reusable function called `getXHR()`. We're checking for `XMLHttpRequest` in the same way, but we're also checking to see what ActiveXObject build the browser is using and also looking for the existence of either `XMLHttpRequest` or ActiveXObject.
 
-This version of `getXHR()` will return one of the four alert messages above, depending on which browser `index.html` loads into. A `try...catch` statement is used to perform more robust ActiveX detection as well as detect whether or not the browser even supports `xhr`.
+A JavaScript `try...catch` statement is doing multiple checks for two different versions of the ActiveXObject. If `try...catch`can't find either ActiveXObject or `XMLHttpRequest`, then it sets `xhr` to `false`.
 
-The `try...catch` statement will loop through each single `try` statement until it one of them meets a condition that works. The last condition is what's returned if the browser soes NOT support `xhr`.
+`getXHR()` says `return xhr` at the end of the code. Whenever we create a new instance of `getXHR()`, it will return whatever the final value of `xhr` ends up being set to, allowing us to safely use it in our code.
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 <a name="ajax-states"></a>
@@ -153,16 +154,16 @@ The official spec defines five states, each with a numerical value:
 
 * __4__: meaning that things are in the __DONE__ state...either the data has downloaded in full or there was an error during the download process.
 
-Microsoft's definition is shorter...MDN shortens even more it well:
-* 0 (uninitialized)
+Microsoft's definition is shorter...MDN shortens even more:
+* __0__ (uninitialized)
 
-* 1 (loading)
+* __1__ (loading)
 
-* 2 (loaded)
+* __2__ (loaded)
 
-* 3 (interactive)
+* __3__ (interactive)
 
-* 4 (complete)
+* __4__ (complete)
 
 <a name="what-is-onreadystatechange"></a>
 ##### What is "onreadystatechange"?
