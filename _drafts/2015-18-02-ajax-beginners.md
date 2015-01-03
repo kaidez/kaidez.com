@@ -145,12 +145,31 @@ This version of `getXHR()` will return one of the four alert messages above, dep
 The `try...catch` statement will loop through each single `try` statement until it one of them meets a condition that works. The last condition is what's returned if the browser soes NOT support `xhr`.
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
-<a name="what-is-onreadystatechange"></a>
-#### What is "onreadystatechange"?
-`onreadystatechange` is an event handler that tracks state changes in an `xhr` instance. It does this by watching for changes in `readyState`, which is an attribute attached to the `xhr`.
+<a name="ajax-states"></a>
+#### AJAX States
+<a name="state-definitions"></a>
+##### State definitions (YOU CAN SKIP THIS PART)
+*(NOTE: There are five different AJAX states but this guide focuses mainly on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
 
-While it's running, `readyState` will always be in one of five states and each state has a numeric value:
-* 0: meaning that `onreadystatechange` is in the __UNSENT__ state...the code understands that instance of `xhr` has been created, but it's not  doing anything.
-* 1: meaning that `onreadystatechange` is in the __OPEN__ state...the `open()` method has been invoked somewhere in our code. This guide will use `open()` to get data but when things are in this state, you can also set headers if you're sending things instead of getting things. [Read about setting headers over on MDN ](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_5_.E2.80.93_Working_with_data "Go to MDN to learn about setting headers in an XMLHttpRequest") 
+There are two widely-accepted definitions for AJAX states: [the one defined in the official specification](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the one defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
+
+The official spec defines five states, each with a numerical value:
+
+* __0__: meaning that things are in the __UNSENT__ state...the code understands that instance of `xhr` has been created, but it's not doing anything.
+
+* __1__: meaning that things are in the __OPEN__ state...the `open()` method has been invoked somewhere in our code and if you want to send any data to the server, you can do that with the `send()` method. This guide focuses more on getting things with `xhr` instead of sending things...[read about setting headers over on MDN ](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_5_.E2.80.93_Working_with_data "Go to MDN to learn about setting headers in an XMLHttpRequest").
+
+* __2__: meaning that things are in the __HEADERS_RECEIVED__ state...if you're downloading headers, the state will be set to 2 after they're finished downloading.
+
+* __3__: meaning that things are in the __LOADING__ state...the data is loading.
+
+* __4__: meaning that things are in the __DONE__ state...either the data has downloaded in full or there was an error during the download process.
+
+<a name="what-is-onreadystatechange"></a>
+##### What is "onreadystatechange"?
+When you create an instance of `xhr`, it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states...`onreadystatechange` is an event handler that tracks the current request state.
+
+The request state is stored in an `xhr` attribute called `readyState`  and its five states are defined by one of five numeric values:
+
 <a name="conclusion"></a>
 ### Conclusion
