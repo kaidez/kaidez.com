@@ -22,13 +22,14 @@ Many new developers (as well as few intermediate ones) struggle to learn AJAX an
       <a href="#ajax-javascript">Write AJAX with JavaScript</li>
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
+        <li><a href="#ajax-states">AJAX States (YOU CAN SKIP THIS PART)</li>
         <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
   </ol>
 <a name="how-code-examples-works"></a>
-### How the code examples work
+<h3 class="h3-guide">How the code examples work</h3>
 
 All examples run in their own folder from an `index.html` file.  `index.html` always references a minified version of jQuery 1.11.2 and a file called `scripts.js`.
 
@@ -135,9 +136,8 @@ A JavaScript `try...catch` statement is doing multiple checks for two different 
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 <a name="ajax-states"></a>
-<h4 class="h4-guide">AJAX States</h4>
+<h4 class="h4-guide">AJAX States (YOU CAN SKIP THIS PART)</h4>
 <a name="state-definitions"></a>
-##### State definitions (YOU CAN SKIP THIS PART)
 *(NOTE: There are five different AJAX states but this guide focuses mainly on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
 
 There are two widely-accepted definitions for AJAX states: [the one defined in the official specification](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the one defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
@@ -155,6 +155,7 @@ The official spec defines five states, each with a numerical value:
 * __4__: meaning that things are in the __DONE__ state...either the data has downloaded in full or there was an error during the download process.
 
 Microsoft's definition is shorter...MDN shortens even more:
+
 * __0__ (uninitialized)
 
 * __1__ (loading)
@@ -166,8 +167,8 @@ Microsoft's definition is shorter...MDN shortens even more:
 * __4__ (complete)
 
 <a name="what-is-onreadystatechange"></a>
-##### What is "onreadystatechange"?
+<h4 class="h4-guide">What is "onreadystatechange"?</h4>
 When you create an instance of `xhr`, it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states...`onreadystatechange` is an event handler that tracks the current request state.
 
 <a name="conclusion"></a>
-### Conclusion
+<h3 class="h3-guide">Conclusion</h3>
