@@ -90,15 +90,15 @@ The simplest version of this feature-detection code looked similar to this (<a h
 var xhr;
 if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   xhr = new XMLHttpRequest();
-  alert("Supports newer XHR implementations");
 } else {
   if (window.ActiveXObject) { // For IE 6 and lower
     xhr = new ActiveXObject("Microsoft.XMLHTTP");
-    alert("Supports older XHR implementations");
   }
 }
 {% endprism %}
-The above-example will return one of the two alert messages above, depending on which browser `index.html` loads into.
+The above-example creates a variable called `xhr`, then checks to see if `XMLHttpRequest` is attached to the browser via the `window` object.  If it is, then `xhr` will directly reference a new instance of `XMLHttpRequest` when doing AJAX things.
+
+The example is also checking to see if `ActiveXObject` is attached to the browser via the `window` object. If it is, then `xhr` will directly reference a new instance of `ActiveXObject` when doing AJAX things.
 
 Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions of IE. Sadly, they also realized that that some browsers heavily in use at the time didn't support `xhr` at all.
 
@@ -109,26 +109,22 @@ As a result, they built slightly different feature detection code (<a href="/sam
 // More robust detecting of ActiveX implementations
 function getXHR() {
   var xhr;
-  if (window.XMLHttpRequest) {
+  if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
     xhr = new XMLHttpRequest();
-    alert("Supports newer XHR implementations");
   } else {
-    try {
+    try { // Browsers with one type of ActiveXObject build
       xhr = new ActiveXObject("Msxml2.XMLHTTP");
-      alert("Supports one version of ActiveX");
     } catch (e) {
-      try {
+      try { // Browsers with another type of ActiveXObject build
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
-        alert("Supports another version of ActiveX");
       } catch (e) {
+        // Browsers that don't support either XMLHttpRequest or ActiveXObject
         xhr = false;
-        alert("Sorry...this browser doesn't support XMLHttpRequest");
       }
     }
   }
   return xhr;
 }
-
 {% endprism %}
 The above-example creates a reusable function called `getXHR()`. Every new instance `getXHR()` we create will be able to use `xhr` without worrying about the cross-browser issues.
 
