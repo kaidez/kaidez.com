@@ -22,7 +22,7 @@ Many new developers (as well as few intermediate ones) struggle to learn AJAX an
       <a href="#ajax-javascript">Write AJAX with JavaScript</li>
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
-        <li><a href="#ajax-states">What is "onreadystatechange"?</li>
+        <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -145,8 +145,12 @@ This version of `getXHR()` will return one of the four alert messages above, dep
 The `try...catch` statement will loop through each single `try` statement until it one of them meets a condition that works. The last condition is what's returned if the browser soes NOT support `xhr`.
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
-<a name="ajax-states"></a>
+<a name="what-is-onreadystatechange"></a>
 #### What is "onreadystatechange"?
-The `XMLHttpRequest` object has methods and properties attached to it.  One of the most important properties is `onreadystatechange`.
+`onreadystatechange` is an event handler that tracks state changes in an `xhr` instance. It does this by watching for changes in `readyState`, which is an attribute attached to the `xhr`.
+
+While it's running, `readyState` will always be in one of five states and each state has a numeric value:
+* 0: meaning that `onreadystatechange` is in the __UNSENT__ state...the code understands that instance of `xhr` has been created, but it's not  doing anything.
+* 1: meaning that `onreadystatechange` is in the __OPEN__ state...the `open()` method has been invoked somewhere in our code. This guide will use `open()` to get data but when things are in this state, you can also set headers if you're sending things instead of getting things. [Read about setting headers over on MDN ](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_5_.E2.80.93_Working_with_data "Go to MDN to learn about setting headers in an XMLHttpRequest") 
 <a name="conclusion"></a>
 ### Conclusion
