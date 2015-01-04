@@ -18,5 +18,19 @@ function getXHR() {
   return xhr;
 }
 
-var getMyName = new getXHR();
-console.log(typeof getMyName.readyState);
+var getMyName = new XMLHttpRequest();
+
+getMyName.open("GET", "myName.txt");
+getMyName.send();
+
+getMyName.onreadystatechange = function() {
+  if (getMyName.status === 200) {
+    if (getMyName.readyState === 4) {
+      if (getMyName.status === 200) {
+        console.log(getMyName.responseText);
+      } else {
+        console.log('There was a problem with the request.');
+      }
+    }
+  }
+}
