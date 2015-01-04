@@ -12,7 +12,7 @@ has-home-img: ajax-image.jpg
 ---
 AJAX has advanced a lot since [Jesse James Garrett defined it 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's defined a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
-Many new developers (as well as few intermediate ones) struggle to learn AJAX and are also not aware of how it's progressed inside the jQuery library. This guide was written with those developers and jQuery progressions in mind.
+Many new developers (as well as a few intermediate ones) struggle to learn AJAX and are also not aware of how it's progressed inside the jQuery library. This guide was written with those developers and jQuery progressions in mind.
 <h2 style="clear:both;">Table of Contents</h2>
   <ol>
     <li><a href="#how-code-examples-works">How the code examples work</li>
@@ -62,14 +62,14 @@ First, understand that XMLHttpRequest is the heart of an AJAX implementation. Wi
 
 That's the best way to describe it: XMLHttpRequest "requests" information from a server, then places it on a web page. It does this "asynchronously", meaning that __it loads the information onto specific parts of the page without having to completely reload the page.__
 
-"AJAX" is an acronym for _Asynchronous JavaScript + XML_ but other technologies are used as well, specifically XMLHttpRequest, or "xhr".  In original definition, AJAX was the term for a group of technologies working together to manage xhr requests inside a web page: they were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
+"AJAX" is an acronym for _Asynchronous JavaScript + XML_ but other technologies are used as well, specifically XMLHttpRequest, or "xhr".  In original definition, AJAX was the term for a group of technologies working together to manage "xhr" requests inside a web page: the technologies were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
 
 XML was defined as the main data layer but any other data layer can be used...text files, HTML files, etc. JSON is the most-used data layer at the time of this guide's initial publish date.
 
-XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. You can still use XHTML if you like, but using it in Strict mode is recommended.
+XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. If you use XHTML, using it in Strict mode is recommended.
 <a name="brief-history-ajax"></a>
 <h3 class="h3-guide">A brief history of AJAX</h3>
-The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
+The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous data requests inside its browser-based Outlook Web Access application. Due to a disagreement between Microsoft and Sun (who owned Java), Microsoft removed Java from their application.
 
 Outlook Web Access still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
 
