@@ -3171,11 +3171,15 @@ a.read-more-link {
 .h3-guide {
   color: #3285a5;
   font-weight: 900;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .h4-guide {
-  font-size: 21px;
+  font-size: 24px;
+}
+
+.h5-guide {
+  font-size: 22px;
 }
 
 /*
