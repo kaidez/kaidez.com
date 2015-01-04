@@ -22,9 +22,14 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
       <a href="#ajax-javascript">Write AJAX with JavaScript</li>
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
-        <li><a href="#status-codes">Response status codes</li>
-        <li><a href="#ajax-states">XHR States</li>
-        <li><a href="#what-is-onreadystatechange">Wht is "onreadystatechange"?</li>
+        <li>
+          <a href="#load-content">Load content on a page with AJAX</li>
+          <ol>
+            <li><a href="#ajax-states">XHR States</li>
+            <li><a href="#200-status-code">The 200 response status code</li>
+            <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
+          </ol>
+        </li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -142,11 +147,18 @@ A JavaScript `try...catch` statement is looking for the different versions of `A
 `getXHR()` says `return xhr` at the end of the code. This lets us create new instances of `getXHR()` outside of the function.
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
-<a name="status-codes"></a>
-<h4 class="h4-guide">Response status codes</h4>
 
-<a name="ajax-states"></a>
-<h4 class="h4-guide">XHR States</h4>
+<a name="load-content"></a>
+<h4 class="h4-guide">Load content on a page with AJAX</h4>
+Loading content with "xhr" is a three-step process:
+1. Wait for an HTTP 200 response.
+2. Wait for a state of 4.
+3. Bring everything together using "onreadystatechange".
+<a name="200-response"></a>
+<h5 class="h5-guide">Wait for an HTTP 200 response</h4>
+
+<a name="state-definitions"></a>
+<h5 class="h5-guide">XHR States</h4>
 <a name="state-definitions"></a>
 When you create an instance of "xhr", it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states, each with a numerical value that can be 0 through 4.
 
@@ -178,8 +190,11 @@ Microsoft's definition also attaches numbers to states but is shorter. MDN short
 
 * __4__ (complete)
 
+<a name="200-status-code"></a>
+<h4 class="h5-guide">The 200 response status code</h4>
+
 <a name="what-is-onreadystatechange"></a>
-<h4 class="h4-guide">What is "onreadystatechange"?</h4>
+<h5 class="h5-guide">What is "onreadystatechange"?</h4>
 `onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
 
 There are use cases for knowing the value of all five states in your code, but knowing the last one is the most important one. The last one is the `done` state and its numerical value is 4.
