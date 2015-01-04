@@ -52,19 +52,19 @@ All examples run in their own folder from an `index.html` file. `index.html` alw
 
 jQuery is being served out from the [code.jquery.com](http://code.jquery.com/ "Visit the jQuery CDN") content delivery network (CDN). Either `index.html` or `scripts.js` will change with each new example.
 
-All examples use the `XMLHttpRequest` object so if you download them from the GitHub repo, they should run from a web server and not as a local file in a web browser. Firefox can run files locally but to ensure the best results, they should run from some sort of web server.
+All examples use the XMLHttpRequest object so if you download them from the GitHub repo, they should run from a web server and not as a local file in a web browser. Firefox can run files locally but to ensure the best results, they should run from some sort of web server.
 
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
-First, understand that `XMLHttpRequest` is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
+First, understand that XMLHttpRequest is the heart of an AJAX implementation. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
-That's the best way to describe it: `XMLHttpRequest` "requests" information from a server, then places it on a web page. It does this "asynchronously", meaning that *it loads the information onto specific parts of the page without having to completely reload or refresh the page.*
+That's the best way to describe it: XMLHttpRequest "requests" information from a server, then places it on a web page. It does this "asynchronously", meaning that __it loads the information onto specific parts of the page without having to completely reload the page.__
 
-"AJAX" started off as being an acronym for _Asynchronous JavaScript + XML_, but it's gone on to refer to the act of using `XMLHttpRequest`, or  "xhr", along side other web technologies. JavaScript and XML were used to create the AJAX experience, but so were XHTML, CSS and the Document Object Model (or, "the DOM").
+"AJAX" is an acronym for _Asynchronous JavaScript + XML_ but other technologies are used as well, specifically XMLHttpRequest, or "xhr".  In original definition, AJAX was the term for a group of technologies working together to manage xhr requests inside a web page: they were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
 
-XML was main data layer in the original AJAX description but any other data layer can be used...text files, HTML files, etc. JSON is the most-used data layer at the time of this guide's initial publish date.
+XML was defined as the main data layer but any other data layer can be used...text files, HTML files, etc. JSON is the most-used data layer at the time of this guide's initial publish date.
 
 XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. You can still use XHTML if you like, but using it in Strict mode is recommended.
 <a name="brief-history-ajax"></a>
@@ -75,11 +75,11 @@ Outlook Web Access still needed to make asynchronous requests, or, "async" reque
 
 Other browsers added the object as well, but with a slightly different implementation and called it `XMLHttpRequest`. With the release of Internet Explorer 7, Microsoft would copy that other implementation and also name their object `XMLHttpRequest`.
 
-`XMLHttpRequest` was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
+XMLHttpRequest, or  "xhr", was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
 These web applications demonstrated how useful "xhr" was but the developer community as a whole didn't really notice this. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
-Garret's article was where the AJAX acronym was defined (see the previous section for more on this). It was also where the initial AJAX technologies were listed out, which were: XHTML, CSS, the Document Object Model(DOM), XML/XSLT, XMLHttpRequest, and JavaScript.
+Garret's article was where the AJAX acronym was defined and was also where the initial AJAX technologies were listed out. See the previous section for more on this.
 
 <a name="ajax-javascript"></a>
 <h3 class="h3-guide">Write AJAX with JavaScript</h3>
