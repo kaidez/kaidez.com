@@ -10,7 +10,7 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: ajax-image.jpg
 ---
-AJAX has advanced a lot since [Jesse James Garrett defined it 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original'AJAX' article"). It's defined a way to create robust web applications and turned JavaScript into one of the world's most popular web programming languages.
+AJAX has advanced a lot since [Jesse James Garrett defined it 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's defined a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 Many new developers (as well as few intermediate ones) struggle to learn AJAX and are also not aware of how it's progressed inside the jQuery library. This guide was written with those developers and jQuery progressions in mind.
 <h2 style="clear:both;">Table of Contents</h2>
@@ -31,7 +31,7 @@ Many new developers (as well as few intermediate ones) struggle to learn AJAX an
   </ol>
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
-Raw code for all the examples is located in the GitHub repo and typically look like this:
+The raw code for all the examples is located in the GitHub repo and typically looks like this:
 
 {% prism markup %}
 <!DOCTYPE html>
@@ -79,7 +79,7 @@ XMLHttpRequest, or  "xhr", was used to create to web applications that loaded da
 
 These web applications demonstrated how useful "xhr" was but the developer community as a whole didn't really notice this. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
-Garret's article was where the AJAX acronym was defined and was also where the initial AJAX technologies were listed out. See the previous section for more on this.
+Garret's article was where the AJAX acronym was defined and was also where the initial AJAX technologies were listed out. <a href="#what-is-ajax">See the previous section for more on this</a>.
 
 <a name="ajax-javascript"></a>
 <h3 class="h3-guide">Write AJAX with JavaScript</h3>
@@ -136,7 +136,7 @@ function getXHR() {
 {% endprism %}
 The feature detection code is now in a reusable function called `getXHR()`. We're checking for `XMLHttpRequest` in the same way, but we're also checking to see what ActiveXObject build the browser is using and also looking for the existence of either `XMLHttpRequest` or ActiveXObject.
 
-A JavaScript `try...catch` statement is doing multiple checks for two different versions of the ActiveXObject. If `try...catch`can't find either ActiveXObject or `XMLHttpRequest`, then it sets `xhr` to `false`.
+A JavaScript `try...catch` statement is doing multiple checks for two different versions of the ActiveXObject. If `try...catch ‘can’t find either ActiveXObject or `XMLHttpRequest`, then it sets `xhr` to `false`.
 
 `getXHR()` says `return xhr` at the end of the code. Whenever we create a new instance of `getXHR()`, it will return whatever the final value of `xhr` ends up being set to, allowing us to safely use it in our code.
 
@@ -150,9 +150,9 @@ There are many ways to implement MDN feature detection: <a href="https://develop
 <a name="state-definitions"></a>
 When you create an instance of "xhr", it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states, each with a numerical value that can be 0 through 4.
 
-*(NOTE: While there are are five different "xhr" states, this guide focuses on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
+*(NOTE: While there are five different "xhr" states, this guide focuses on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
 
-There are two widely-accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
+There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
 
 The WHATWG spec defines five states, each with a numerical value:
 
@@ -184,7 +184,7 @@ Microsoft's definition also attaches numbers to states but is shorter. MDN short
 
 There are use cases for knowing the value of all five states in your code, but knowing the last one is the most important one. The last one is the `done` state and its numerical value is 4.
 
-When `onreadystatechange` is equal to 4, it means that all the data has has fully downloaded and is ready to be used in our code.
+When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
