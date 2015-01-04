@@ -75,7 +75,7 @@ Outlook Web Access still needed to make asynchronous requests, or, "async" reque
 
 Other browsers added the object as well, but with a slightly different implementation and called it `XMLHttpRequest`. With the release of Internet Explorer 7, Microsoft would copy that other implementation and also name their object `XMLHttpRequest`.
 
-XMLHttpRequest, or  "xhr", was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
+The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
 These web applications demonstrated how useful "xhr" was but the developer community as a whole didn't really notice this. That all changed in February 2005, when [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
@@ -136,7 +136,7 @@ function getXHR() {
 {% endprism %}
 The feature detection code is now in a reusable function called `getXHR()`. We're checking for `XMLHttpRequest` in the same way, but we're also checking to see what ActiveXObject build the browser is using and also looking for the existence of either `XMLHttpRequest` or ActiveXObject.
 
-A JavaScript `try...catch` statement is doing multiple checks for two different versions of the ActiveXObject. If `try...catch ‘can’t find either ActiveXObject or `XMLHttpRequest`, then it sets `xhr` to `false`.
+A JavaScript `try...catch` statement is doing multiple checks for two different versions of the ActiveXObject. If `try...catch` can't find either ActiveXObject or `XMLHttpRequest`, then it sets `xhr` to `false`.
 
 `getXHR()` says `return xhr` at the end of the code. Whenever we create a new instance of `getXHR()`, it will return whatever the final value of `xhr` ends up being set to, allowing us to safely use it in our code.
 
