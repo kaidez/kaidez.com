@@ -155,10 +155,10 @@ Loading content with "xhr" is a three-step process:
 2. Wait for a state of 4.
 3. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
-<h5 class="h5-guide">Wait for an HTTP 200 response</h4>
+<h5 class="h5-guide">Wait for an HTTP 200 response</h5>
 
 <a name="state-definitions"></a>
-<h5 class="h5-guide">XHR States</h4>
+<h5 class="h5-guide">XHR States</h5>
 <a name="state-definitions"></a>
 When you create an instance of "xhr", it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states, each with a numerical value that can be 0 through 4.
 
@@ -191,10 +191,10 @@ Microsoft's definition also attaches numbers to states but is shorter. MDN short
 * __4__ (complete)
 
 <a name="200-status-code"></a>
-<h4 class="h5-guide">The 200 response status code</h4>
+<h5 class="h5-guide">The 200 response status code</h45>
 
 <a name="what-is-onreadystatechange"></a>
-<h5 class="h5-guide">What is "onreadystatechange"?</h4>
+<h5 class="h5-guide">What is "onreadystatechange"?</h5>
 `onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
 
 There are use cases for knowing the value of all five states in your code, but knowing the last one is the most important one. The last one is the `done` state and its numerical value is 4.
