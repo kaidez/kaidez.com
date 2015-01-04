@@ -161,7 +161,7 @@ A web server sends many server response codes, each in the form of a numerical n
 When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succeeded in making the request.
 <a name="xhr-states"></a>
 <h5 class="h5-guide">XHR States</h5>
-When you create an instance of "xhr", it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states, each with a numerical value that can be 0 through 4.
+An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last one, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
 *(NOTE: While there are five different "xhr" states, this guide mainly focuses on the last one only: the "done" state. This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only you can [skip this section](what-is-onreadystatechange "Go the the "onreadystatechange" section").*
 
