@@ -10,7 +10,7 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: ajax-image.jpg
 ---
-AJAX has advanced a lot since [Jesse James Garrett defined it 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's defined a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has advanced a lot since [Jesse James Garrett defined it 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 Many new developers (as well as a few intermediate ones) struggle to learn AJAX and are also not aware of how it's progressed inside the jQuery library. This guide was written with those developers and jQuery progressions in mind.
 <h2 style="clear:both;">Table of Contents</h2>
@@ -50,7 +50,7 @@ The raw code for all the examples is located in the GitHub repo and typically lo
 
 All examples run in their own folder from an `index.html` file. `index.html` always references a minified version of jQuery 1.11.2 and a file called `scripts.js`.
 
-jQuery is being served out from the [code.jquery.com](http://code.jquery.com/ "Visit the jQuery CDN") content delivery network (CDN). Either `index.html` or `scripts.js` will change with each new example.
+jQuery is being served out from [the jQuery CDN](http://code.jquery.com/ "Visit the jQuery CDN"). Either `index.html` or `scripts.js` will change with each new example.
 
 All examples use the XMLHttpRequest object so if you download them from the GitHub repo, they should run from a web server and not as a local file in a web browser. Firefox can run files locally but to ensure the best results, they should run from some sort of web server.
 
@@ -133,11 +133,13 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code is now in a reusable function called `getXHR()`. We're checking for `XMLHttpRequest` in the same way, but we're also checking to see what ActiveXObject build the browser is using and also looking for the existence of either `XMLHttpRequest` or ActiveXObject.
+The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use "xhr" by creating new `getXHR()` instances without worrying about the "xhr" cross-browser issues.
 
-A JavaScript `try...catch` statement is doing multiple checks for two different versions of the ActiveXObject. If `try...catch` can't find either ActiveXObject or `XMLHttpRequest`, then it sets `xhr` to `false`.
+The function checks for `XMLHttpRequest` in the same way, but we're also checking to see of the browser has one of two ActiveXObject builds and also checking to see if either `XMLHttpRequest` or `ActiveXObject` exists.
 
-`getXHR()` says `return xhr` at the end of the code. Whenever we create a new instance of `getXHR()`, it will return whatever the final value of `xhr` ends up being set to, allowing us to safely use it in our code.
+A JavaScript `try...catch` statement is looking for the different versions of `ActiveXObject`. If `try...catch` can't find it and also can't find `XMLHttpRequest`, then the value of the `xhr` variable is set to `false` and won't do any AJAX work.
+
+`getXHR()` says `return xhr` at the end of the code. This lets us create new instances of `getXHR()` outside of the function.
 
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 <a name="status-codes"></a>
