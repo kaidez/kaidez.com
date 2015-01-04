@@ -24,7 +24,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
         <li><a href="#status-codes">Response status codes</li>
         <li><a href="#ajax-states">XHR States</li>
-        <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
+        <li><a href="#what-is-onreadystatechange">Wht is "onreadystatechange"?</li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -144,7 +144,6 @@ A JavaScript `try...catch` statement is looking for the different versions of `A
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 <a name="status-codes"></a>
 <h4 class="h4-guide">Response status codes</h4>
-
 
 <a name="ajax-states"></a>
 <h4 class="h4-guide">XHR States</h4>
