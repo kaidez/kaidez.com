@@ -163,7 +163,7 @@ When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succe
 <h5 class="h5-guide">XHR States</h5>
 An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last one, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
-*(NOTE: While there are five different "xhr" states, this guide mainly focuses on the last one only: the "done" state. This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only you can [skip this section](what-is-onreadystatechange "Go the the "onreadystatechange" section").*
+*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the the "onreadystatechange" section").*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
 
@@ -179,7 +179,7 @@ The WHATWG spec defines five states, each with a numerical value:
 
 * __4__: meaning that things are in the __DONE__ state...either the data has downloaded in full or there was an error during the download process.
 
-Microsoft's definition also attaches numbers to states but is shorter. MDN shortens even more:
+Microsoft's definition also attaches numbers to states but is shorter. <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_2_.E2.80.93_Handling_the_server_response" title="See how AJAX states are listed in MDN" target="blank">MDN shortens it even more</a>:
 
 * __0__ (uninitialized)
 
@@ -197,7 +197,8 @@ Microsoft's definition also attaches numbers to states but is shorter. MDN short
 
 There are use cases for knowing the value of all five states in your code, but knowing the last one is the most important one. The last one is the `done` state and its numerical value is 4.
 
-When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code.
+When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that you're final code will be written in a way that keeps that from happening.
 
+You usually use `onreadystatechange` in your code when you're reasy to load data with AJAX.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
