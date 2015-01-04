@@ -127,7 +127,6 @@ function getXHR() {
       } catch (e) {
         // Browsers that don't support either XMLHttpRequest or ActiveXObject
         xhr = false;
-        alert("Sorry...XMLHttpRequest is not supported.")
       }
     }
   }
