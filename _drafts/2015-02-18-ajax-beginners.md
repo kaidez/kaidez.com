@@ -23,10 +23,10 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
         <li>
-          <a href="#load-content">Load content on a page with AJAX</li>
+          <a href="#load-content">Load content onto a page with AJAX</li>
           <ol>
-            <li><a href="#ajax-states">XHR States</li>
-            <li><a href="#200-status-code">The 200 response status code</li>
+            <li><a href="#200-response">Wait for an HTTP 200 response</li>
+            <li><a href="#xhr-states">XHR States</li>
             <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
           </ol>
         </li>
@@ -149,7 +149,7 @@ A JavaScript `try...catch` statement is looking for the different versions of `A
 There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 
 <a name="load-content"></a>
-<h4 class="h4-guide">Load content on a page with AJAX</h4>
+<h4 class="h4-guide">Load content onto a page with AJAX</h4>
 Loading content with "xhr" is a three-step process:
 1. Wait for an HTTP 200 response.
 2. Wait for a state of 4.
@@ -157,9 +157,8 @@ Loading content with "xhr" is a three-step process:
 <a name="200-response"></a>
 <h5 class="h5-guide">Wait for an HTTP 200 response</h5>
 
-<a name="state-definitions"></a>
+<a name="xhr-states"></a>
 <h5 class="h5-guide">XHR States</h5>
-<a name="state-definitions"></a>
 When you create an instance of "xhr", it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states, each with a numerical value that can be 0 through 4.
 
 *(NOTE: While there are five different "xhr" states, this guide focuses on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
@@ -189,9 +188,6 @@ Microsoft's definition also attaches numbers to states but is shorter. MDN short
 * __3__ (interactive)
 
 * __4__ (complete)
-
-<a name="200-status-code"></a>
-<h5 class="h5-guide">The 200 response status code</h45>
 
 <a name="what-is-onreadystatechange"></a>
 <h5 class="h5-guide">What is "onreadystatechange"?</h5>
