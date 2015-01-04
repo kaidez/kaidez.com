@@ -25,7 +25,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li>
           <a href="#load-content">Load content onto a page with AJAX</li>
           <ol>
-            <li><a href="#200-response">Wait for an HTTP 200 response</li>
+            <li><a href="#200-response">Wait for 200 response from the server</li>
             <li><a href="#xhr-states">XHR States</li>
             <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
           </ol>
@@ -155,7 +155,7 @@ Loading content with "xhr" is a three-step process:
 2. Wait for a state of 4.
 3. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
-<h5 class="h5-guide">Wait for an HTTP 200 response</h5>
+<h5 class="h5-guide">Wait for an  response from the server</h5>
 
 <a name="xhr-states"></a>
 <h5 class="h5-guide">XHR States</h5>
