@@ -25,7 +25,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li>
           <a href="#load-content">Load content onto a page with AJAX</li>
           <ol>
-            <li><a href="#200-response">Wait for 200 response from the server</li>
+            <li><a href="#200-response">Wait for 200 response code from the server</li>
             <li><a href="#xhr-states">XHR States</li>
             <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
           </ol>
@@ -151,17 +151,19 @@ There are many ways to implement MDN feature detection: <a href="https://develop
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
 Loading content with "xhr" is a three-step process:
-1. Wait for an HTTP 200 response.
+1. Wait for 200 response code from the server.
 2. Wait for a state of 4.
 3. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
-<h5 class="h5-guide">Wait for an  response from the server</h5>
+<h5 class="h5-guide">Wait for 200 response code from the server</h5>
+A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
 
+When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succeeded in making the request.
 <a name="xhr-states"></a>
 <h5 class="h5-guide">XHR States</h5>
 When you create an instance of "xhr", it makes a request...even if your code doesn't say exactly what it's requesting.  That request will always be in one of fives states, each with a numerical value that can be 0 through 4.
 
-*(NOTE: While there are five different "xhr" states, this guide focuses on the last one only: the "done" state. Because of this, you can skip this section as it's here for completeness).*
+*(NOTE: While there are five different "xhr" states, this guide mainly focuses on the last one only: the "done" state. This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only you can [skip this section](what-is-onreadystatechange "Go the the "onreadystatechange" section").*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
 
