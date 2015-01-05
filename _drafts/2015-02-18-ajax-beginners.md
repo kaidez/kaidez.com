@@ -274,7 +274,7 @@ For now, `getArticleInfo.onreadystatechange` will run a function called `loadTex
 
 The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
 
-`getArticleInfo.send()` is the part of the code that actually sends the request through. You can pass a parameter to `send()` but it will be ignored if you do this `GET`: the parameter will be set to its default value of `null`.
+`getArticleInfo.send()` is the part of the code that actually sends the request through. You can pass a parameter to `send()` but it will be ignored if you do this using `GET`: the parameter will be set to its default value of `null`.
 
 `send()` can accept and process parameters when using `POST` instead of `GET`.
 
@@ -283,10 +283,27 @@ function loadText() {
 ...
 };
 {% endprism %}
-Start building the `loadText()` function that runs when `getArticleInfo.onreadystatechange` goes through state changes.
+Start building the `loadText()` function that runs when `getArticleInfo.onreadystatechange` goes through state changes. These state changes are stored in the `readyState` property.
 {% prism javascript %}
 var text = document.getElementById("textTarget");
 {% endprism %}
+Store a variable reference to the `<div id="textTarget">` that we just added to `index.html`.
+{% prism javascript %}
+if (getArticleInfo.readyState === 4) {
+  if (getArticleInfo.status === 200) {
+    text.innerHTML = getArticleInfo.responseText;
+  } else {
+    console.log('There was a problem with the request.');
+  }
+}
+{% endprism %}
+First, check to see if `getArticleInfo.readyState` definitely equals `4`. If it does, then the data has been fully downloaded.
+
+If it does, then the next step is to check and see if `getArticleInfo.status` definitely equals `200`. If it does, then the code has successfully contacted the server.
+
+If our code makes a successful server connection, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
+
+`getArticleInfo.responseText` is a reference to the data we requested in `getArticleInfo.open()`, which is the "articleName.txt" file. The copy in that file will be placed in `<div id="textTarget">`.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
