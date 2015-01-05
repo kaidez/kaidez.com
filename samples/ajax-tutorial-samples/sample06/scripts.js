@@ -5,11 +5,11 @@ getArticleInfo.send();
 
 getArticleInfo.onreadystatechange = function() {
   var text = document.getElementById("textTarget");
-    if (getArticleInfo.readyState === 4) {
-      if (getArticleInfo.status === 200) {
-        text.innerHTML = getArticleInfo.responseText;
-      } else {
-        console.log('There was a problem with the request.');
-      }
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log('There was a problem with the request.');
     }
+  }
 };

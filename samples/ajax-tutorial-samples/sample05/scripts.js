@@ -6,11 +6,11 @@ getArticleInfo.send();
 
 function loadText() {
   var text = document.getElementById("textTarget");
-    if (getArticleInfo.readyState === 4) {
-      if (getArticleInfo.status === 200) {
-        text.innerHTML = getArticleInfo.responseText;
-      } else {
-        console.log('There was a problem with the request.');
-      }
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log('There was a problem with the request.');
     }
+  }
 };
