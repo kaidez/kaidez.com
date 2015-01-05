@@ -32,6 +32,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         </li>
         <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
         <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
+        <li><a href="#and-and-error">Using "&&" generates an error</li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -362,6 +363,12 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
+We've removed one line of called since we're now using a callback function, which also makes our code slightly faster.
+<a name="and-and-error"></a>
+<h4 class="h4-guide">Using "&&" generates an error</h4>
+
+
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
