@@ -19,7 +19,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
     <li><a href="#what-is-ajax">What Is AJAX</li>
     <li><a href="#brief-history-ajax">A brief history of AJAX</li>
     <li>
-      <a href="#ajax-javascript">Write AJAX with JavaScript</li>
+      <a href="#ajax-javascript">Write AJAX with Regular JavaScript</li>
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
         <li>
@@ -27,7 +27,9 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
           <ol>
             <li><a href="#200-response">Wait for 200 response code from the server</li>
             <li><a href="#xhr-states">XHR States</li>
-            <li><a href="#what-is-onreadystatechange">What is "onreadystatechange"?</li>
+            <li><a href="#what-is-onreadystatechange">Set up "onreadystatechange"</li>
+            <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
+            <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
           </ol>
         </li>
       </ol>
@@ -87,7 +89,7 @@ These web applications demonstrated how useful "xhr" was but the developer commu
 Garret's article was where the AJAX acronym was defined and was also where the initial AJAX technologies were listed out. <a href="#what-is-ajax">See the previous section for more on this</a>.
 
 <a name="ajax-javascript"></a>
-<h3 class="h3-guide">Write AJAX with JavaScript</h3>
+<h3 class="h3-guide">Write AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
 As mentioned, Microsoft's "xhr" implementation was different from other browsers until they released IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
@@ -192,7 +194,7 @@ Microsoft's definition also attaches numbers to states but is shorter. <a href="
 * __4__ (complete)
 
 <a name="what-is-onreadystatechange"></a>
-<h5 class="h5-guide">What is "onreadystatechange"?</h5>
+<h5 class="h5-guide">Set up "onreadystatechange"</h5>
 `onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
 
 There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states. But with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
@@ -316,6 +318,12 @@ As mentioned, AJAX can load in all different types of documents...we can tell th
 getArticleInfo.open("GET", "articleName.html");
 ...
 {% endprism %}
+<a name="callback-function"></a>
+<h3 class="h5-guide">Have "readyStateChange" run a callback function</h3>
+
+<a name="no-feature-detection"></a>
+<h3 class="h5-guide">Use AJAX without feature-detection</h3>
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
