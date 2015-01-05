@@ -243,7 +243,7 @@ var getArticleInfo = new getXHR();
 
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
-getArticleInfo.send(null);
+getArticleInfo.send();
 
 function loadText() {
   var text = document.getElementById("textTarget");
@@ -268,12 +268,24 @@ Treat the `getXHR()` function as a constructor function and create a new instanc
 {% prism javascript %}
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
-getArticleInfo.send(null);
+getArticleInfo.send();
 {% endprism %}
 For now, `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but our code will make sure that only happens when the state is set to `4`.
 
-`getArticleInfo.open()` sends a request for data. The first parameter is `GET` and it tells the server we want to "get" something from the server.
+`getArticleInfo.open()` describes the data request. The first parameter is `GET` and it tells the server we want to "get" something from the server.
 
-The second parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
+The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
+
+`getArticleInfo.send()` is the part of the code that actually sends the request through. You can pass a parameter to `send()` but it will be ignored if you do this `GET`: the parameter will be set to its default value of `null`.
+
+`send()` can accept and process parameters when using `POST` instead of `GET`.
+
+{% prism javascript %}
+function loadText() {
+...
+};
+{% endprism %}
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
+Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
