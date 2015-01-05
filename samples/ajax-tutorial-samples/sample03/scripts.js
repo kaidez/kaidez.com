@@ -22,7 +22,7 @@ var getArticleInfo = new getXHR();
 
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
-getArticleInfo.send(null);
+getArticleInfo.send();
 
 function loadText() {
   var text = document.getElementById("textTarget");
