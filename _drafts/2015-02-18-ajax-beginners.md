@@ -32,7 +32,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         </li>
         <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
         <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
-        <li><a href="#and-and-error">Using "&&" generates an error</li>
+        <li><a href="#logical-and-error">Using "&&" generates an error</li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -364,13 +364,23 @@ getArticleInfo.onreadystatechange = function() {
 };
 {% endprism %}
 We've removed one line of called since we're now using a callback function, which also makes our code slightly faster.
-<a name="and-and-error"></a>
+<a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-
+Developers like to use the [logical AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both the `readyState` and `status`:
 {% prism javascript %}
-// sample06/scripts.js
-
+// sample07/scripts.js
+// Update the getArticleInfo.onreadystatechange callback function only
+...
+getArticleInfo.onreadystatechange = function() {
+  var text = document.getElementById("textTarget");
+  if (getArticleInfo.readyState === 4 && getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+  } else {
+    console.log("There was a problem with the request.");
+  }
+};
 {% endprism %}
+While the code lets `XMLHttpRequest` request and display data without error, the console message will return anyway. This is because, we're  doing limited checks.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
