@@ -293,7 +293,7 @@ if (getArticleInfo.readyState === 4) {
   if (getArticleInfo.status === 200) {
     text.innerHTML = getArticleInfo.responseText;
   } else {
-    console.log('There was a problem with the request.');
+    console.log("There was a problem with the request.");
   }
 }
 {% endprism %}
@@ -304,6 +304,8 @@ If it does, then the next step is to check and see if `getArticleInfo.status` de
 If our code makes a successful server connection, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
 
 `getArticleInfo.responseText` is a reference to the data we requested in `getArticleInfo.open()`, which is the "articleName.txt" file. The copy in that file will be placed in `<div id="textTarget">`.
+
+If the code can't connect to the server and `getArticleInfo.status`  doesn't equal `200`, then the browser console will display a message saying, "There was a problem with the request."  Note that this console message will only appear if `getArticleInfo.status` doesn't equal `200`: the value of `getArticleInfo.readyState` has no effect on whether or not the console message appears.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
