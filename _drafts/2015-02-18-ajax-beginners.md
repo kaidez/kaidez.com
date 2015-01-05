@@ -161,7 +161,7 @@ A web server sends many server response codes, each in the form of a numerical n
 When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succeeded in making the request.
 <a name="xhr-states"></a>
 <h5 class="h5-guide">XHR States</h5>
-An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last one, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
+An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
 *(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the the "onreadystatechange" section").*
 
@@ -195,10 +195,81 @@ Microsoft's definition also attaches numbers to states but is shorter. <a href="
 <h5 class="h5-guide">What is "onreadystatechange"?</h5>
 `onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
 
-There are use cases for knowing the value of all five states in your code, but knowing the last one is the most important one. The last one is the `done` state and its numerical value is 4.
+There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states. But with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
 
-When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that you're final code will be written in a way that keeps that from happening.
+When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening.
 
-You usually use `onreadystatechange` in your code when you're reasy to load data with AJAX.
+Using `onreadystatechange` means that your AJAX code is is ready to load in data:
+
+{% prism markup %}
+<!-- sample03/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample 03</title>
+  </head>
+  <body>
+    <div id="textTarget"></div>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+{% endprism %}
+We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code will load data into this element.
+
+{% prism javascript %}
+// Feature-detect XMLHttpRequest implementation
+// More robust detecting of ActiveX implementations
+function getXHR() {
+  var xhr;
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+  } else {
+    try {
+      xhr = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+      try {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (e) {
+        xhr = false;
+      }
+    }
+  }
+  return xhr;
+}
+
+var getArticleInfo = new getXHR();
+
+getArticleInfo.onreadystatechange = loadText;
+getArticleInfo.open("GET", "articleName.txt");
+getArticleInfo.send(null);
+
+function loadText() {
+  var text = document.getElementById("textTarget");
+  if (getArticleInfo.status === 200) {
+    if (getArticleInfo.readyState === 4) {
+      if (getArticleInfo.status === 200) {
+        text.innerHTML = getArticleInfo.responseText;
+      } else {
+        console.log("There was a problem with the request.");
+      }
+    }
+  }
+};
+{% endprism %}
+The feature detection code is the same as before, so we won't be walking through that...let's look at the other code:
+
+{% prism javascript %}
+var getArticleInfo = new getXHR();
+{% endprism %}
+Treat the `getXHR()` function as a constructor function and create a new instance of it with a variable called `getArticleInfo`. Again, `getXHR()` lets us use `XMLHttpRequest()` in a cross-browser compatible way.
+
+{% prism javascript %}
+getArticleInfo.onreadystatechange = loadText;
+getArticleInfo.open("GET", "articleName.txt");
+getArticleInfo.send(null);
+{% endprism %}
+For now, `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but our code will make sure that only happens when the state is set to `4`.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
