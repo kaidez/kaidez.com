@@ -199,7 +199,7 @@ There are use cases for knowing all the times when `onreadystatechange` is equal
 
 When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening.
 
-Using `onreadystatechange` means that your AJAX code is is ready to load in data (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>)::
+Using `onreadystatechange` means that your AJAX code is is ready to load in data (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 
 {% prism markup %}
 <!-- sample03/index.html -->
@@ -219,6 +219,7 @@ Using `onreadystatechange` means that your AJAX code is is ready to load in data
 We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code will load data into this element.
 
 {% prism javascript %}
+// sample03/scripts.js
 // Feature-detect XMLHttpRequest implementation
 // More robust detecting of ActiveX implementations
 function getXHR() {
@@ -306,6 +307,15 @@ If our code makes a successful server connection, then find `<div id="textTarget
 `getArticleInfo.responseText` is a reference to the data we requested in `getArticleInfo.open()`, which is the "articleName.txt" file. The copy in that file will be placed in `<div id="textTarget">`.
 
 If the code can't connect to the server and `getArticleInfo.status`  doesn't equal `200`, then the browser console will display a message saying, "There was a problem with the request."  Note that this console message will only appear if `getArticleInfo.status` doesn't equal `200`: the value of `getArticleInfo.readyState` has no effect on whether or not the console message appears.
+
+As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open)` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
+{% prism javascript %}
+// sample03/scripts.js
+// Update the getArticleInfo.open() method only
+...
+getArticleInfo.open("GET", "articleName.html");
+...
+{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
