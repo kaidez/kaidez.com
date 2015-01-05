@@ -247,15 +247,13 @@ getArticleInfo.send();
 
 function loadText() {
   var text = document.getElementById("textTarget");
-  if (getArticleInfo.status === 200) {
     if (getArticleInfo.readyState === 4) {
       if (getArticleInfo.status === 200) {
         text.innerHTML = getArticleInfo.responseText;
       } else {
-        console.log("There was a problem with the request.");
+        console.log('There was a problem with the request.');
       }
     }
-  }
 };
 {% endprism %}
 The feature detection code is the same as before, so we won't be walking through that...let's look at the other code:
