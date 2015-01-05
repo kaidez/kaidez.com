@@ -8,6 +8,6 @@ getArticleInfo.onreadystatechange = function() {
   if (getArticleInfo.readyState === 4 && getArticleInfo.status === 200) {
       text.innerHTML = getArticleInfo.responseText;
   } else {
-    console.log('There was a problem with the request.');
+    console.log("There was a problem with the request.");
   }
 };
