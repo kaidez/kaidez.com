@@ -367,7 +367,10 @@ We've removed one line of called since we're now using a callback function, whic
 <a name="and-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
 
+{% prism javascript %}
+// sample06/scripts.js
 
+{% endprism %}
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
