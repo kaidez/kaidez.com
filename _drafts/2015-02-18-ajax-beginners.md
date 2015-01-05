@@ -28,8 +28,8 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
             <li><a href="#200-response">Wait for 200 response code from the server</li>
             <li><a href="#xhr-states">XHR States</li>
             <li><a href="#what-is-onreadystatechange">Set up "onreadystatechange"</li>
-            <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
             <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
+            <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
           </ol>
         </li>
       </ol>
@@ -318,11 +318,12 @@ As mentioned, AJAX can load in all different types of documents...we can tell th
 getArticleInfo.open("GET", "articleName.html");
 ...
 {% endprism %}
+<a name="no-feature-detection"></a>
+<h3 class="h5-guide">Use AJAX without feature-detection</h3>
+
 <a name="callback-function"></a>
 <h3 class="h5-guide">Have "readyStateChange" run a callback function</h3>
 
-<a name="no-feature-detection"></a>
-<h3 class="h5-guide">Use AJAX without feature-detection</h3>
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
