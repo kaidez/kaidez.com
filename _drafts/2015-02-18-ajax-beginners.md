@@ -283,7 +283,10 @@ function loadText() {
 ...
 };
 {% endprism %}
-
+Start building the `loadText()` function that runs when `getArticleInfo.onreadystatechange` goes through state changes.
+{% prism javascript %}
+var text = document.getElementById("textTarget");
+{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
