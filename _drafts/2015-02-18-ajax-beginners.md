@@ -28,10 +28,10 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
             <li><a href="#200-response">Wait for 200 response code from the server</li>
             <li><a href="#xhr-states">XHR States</li>
             <li><a href="#what-is-onreadystatechange">Set up "onreadystatechange"</li>
-            <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
-            <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
           </ol>
         </li>
+        <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
+        <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -312,19 +312,56 @@ If the code can't connect to the server and `getArticleInfo.status`  doesn't equ
 
 As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open)` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample03/scripts.js
+// sample04/scripts.js
 // Update the getArticleInfo.open() method only
 ...
 getArticleInfo.open("GET", "articleName.html");
 ...
 {% endprism %}
 <a name="no-feature-detection"></a>
-<h3 class="h5-guide">Use AJAX without feature-detection</h3>
+<h4 class="h4-guide">Use AJAX without feature-detection</h4>
+There are use cases for including "xhr" feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
+{% prism javascript %}
+// sample05/scripts.js
+var getArticleInfo = new XMLHttpRequest();
 
+getArticleInfo.onreadystatechange = loadText;
+getArticleInfo.open("GET", "articleName.html");
+getArticleInfo.send();
+
+function loadText() {
+  var text = document.getElementById("textTarget");
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log('There was a problem with the request.');
+    }
+  }
+};
+{% endprism %}
+The "xhr" feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
 <a name="callback-function"></a>
-<h3 class="h5-guide">Have "readyStateChange" run a callback function</h3>
+<h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
+Up to this point, we've had "readyStateChange" run AJAX code with a named function up to this point: a function named `loadText()`. That works fine but we like, we can use a callback function instead.
+{% prism javascript %}
+// sample06/scripts.js
+var getArticleInfo = new XMLHttpRequest();
 
+getArticleInfo.open("GET", "articleName.html");
+getArticleInfo.send();
 
+getArticleInfo.onreadystatechange = function() {
+  var text = document.getElementById("textTarget");
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log('There was a problem with the request.');
+    }
+  }
+};
+{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
