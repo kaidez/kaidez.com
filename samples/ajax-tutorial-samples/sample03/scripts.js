@@ -18,19 +18,21 @@ function getXHR() {
   return xhr;
 }
 
-var getMyName = new XMLHttpRequest();
+var getArticleInfo = new getXHR();
 
-getMyName.open("GET", "myName.txt");
-getMyName.send();
+getArticleInfo.onreadystatechange = loadText;
+getArticleInfo.open("GET", "articleName.txt");
+getArticleInfo.send(null);
 
-getMyName.onreadystatechange = function() {
-  if (getMyName.status === 200) {
-    if (getMyName.readyState === 4) {
-      if (getMyName.status === 200) {
-        console.log(getMyName.responseText);
+function loadText() {
+  var text = document.getElementById("textTarget");
+  if (getArticleInfo.status === 200) {
+    if (getArticleInfo.readyState === 4) {
+      if (getArticleInfo.status === 200) {
+        text.innerHTML = getArticleInfo.responseText;
       } else {
-        console.log('There was a problem with the request.');
+        console.log("There was a problem with the request.");
       }
     }
   }
-}
+};
