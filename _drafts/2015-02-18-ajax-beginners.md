@@ -380,7 +380,7 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
-While the code lets `XMLHttpRequest` request and display data without error, the console message will return anyway. This is because, we're  doing limited checks.
+While the code lets `XMLHttpRequest` request and display data without error, the console message will return anyway. This is because, we're  doing very limited checks...
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
