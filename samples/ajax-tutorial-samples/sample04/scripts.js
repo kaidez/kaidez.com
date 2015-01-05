@@ -21,7 +21,7 @@ function getXHR() {
 var getArticleInfo = new getXHR();
 
 getArticleInfo.onreadystatechange = loadText;
-getArticleInfo.open("GET", "articleName.txt");
+getArticleInfo.open("GET", "articleName.html");
 getArticleInfo.send();
 
 function loadText() {
