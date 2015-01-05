@@ -199,7 +199,7 @@ There are use cases for knowing all the times when `onreadystatechange` is equal
 
 When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening.
 
-Using `onreadystatechange` means that your AJAX code is is ready to load in data:
+Using `onreadystatechange` means that your AJAX code is is ready to load in data (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>)::
 
 {% prism markup %}
 <!-- sample03/index.html -->
