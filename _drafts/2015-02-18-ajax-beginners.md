@@ -271,5 +271,9 @@ getArticleInfo.open("GET", "articleName.txt");
 getArticleInfo.send(null);
 {% endprism %}
 For now, `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but our code will make sure that only happens when the state is set to `4`.
+
+`getArticleInfo.open()` sends a request for data. The first parameter is `GET` and it tells the server we want to "get" something from the server.
+
+The second parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
