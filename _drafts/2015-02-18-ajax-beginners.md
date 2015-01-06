@@ -35,6 +35,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#logical-and-error">Using "&&" generates an error</li>
         <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
         <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
+        <li><a href="#dynamic-button-code">Make the button code dynamic</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -466,6 +467,9 @@ document.getElementById("getTextFile").onclick = function() {
 We also updated our button code: it still runs the `loadFile()` function, but that function now needs a parameter in order to work. That parameter is the name of the file we want to load onto the page.
 
 We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
+<a name="dynamic-button-code"></a>
+<h4 class="h4-guide">Make the button code dynamic</h4>
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
