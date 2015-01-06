@@ -16,17 +16,22 @@ function loadFile(file) {
   }
 }
 
-var buttons = document.querySelectorAll(".btn");
+var getButtons = document.querySelectorAll(".btn");
 
-for (key in buttons) {
+for (key in getButtons) {
 
-  var theButtons = buttons[key];
+  var buttonGroup = getButtons[key];
 
-  // If a form field is blurred, validate it
-  theButtons.onclick = function() {
-
-    loadFile(this.dataset.file);
-
+  // If a button is clicked, run the loadFile() function
+  // Do feature detection to see if the browser supports "dataset"
+  // Get the value of the file listed in the "data-file" attribute
+  // Pass it as a parameter to loadFile()
+  buttonGroup.onclick = function() {
+    if(!this.dataset) {
+      loadFile(this.getAttribute("data-file"));
+    } else {
+      loadFile(this.dataset.file);
+    }
   }
 
 }
