@@ -18,21 +18,15 @@ function loadFile(file) {
 
 // The first click takes over a asecond to make the AJAX call
 // The clicks run the code really fast after that
+var buttons = document.querySelectorAll(".btn");
 console.time("run");
-document.addEventListener("DOMContentLoaded", function() {
-console.log("DOM's good");
-  var buttons = document.querySelectorAll(".btn");
+  for (key in buttons) {
+    var theButtons = buttons[key];
 
-  // for each selected element
-  console.time("run");
-  for (var i = 0; i < buttons.length; i++) {
-    // add click handler
-    buttons[i].addEventListener("click", function() {
-
+    // If a form field is blurred, validate it
+    theButtons.onclick = function() {
       loadFile(this.dataset.file);
+    }
 
-    });
-  }
-
-});
+}
 console.timeEnd("run");
