@@ -505,7 +505,9 @@ for (key in getButtons) {
 
 }
 {% endprism %}
+The button code for the two buttons is removed and replaced with this code. We start by finding all the buttons with the `btn` class name and storing them in a variable called `getButtons`.
 
+Then we're using a `for...in` loop to do something to each item in the `getButtons`.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
