@@ -366,7 +366,7 @@ getArticleInfo.onreadystatechange = function() {
 We've removed one line of called since we're now using a callback function, which also makes our code slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-Developers like to use the [logical AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both the `readyState` and `status`:
+Developers like to use the [logical AND operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both the `readyState` and `status`:
 {% prism javascript %}
 // sample07/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
@@ -380,7 +380,13 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
-While the code lets `XMLHttpRequest` request and display data without error, the console message will return anyway. This is because, we're  doing very limited checks...
+While the code lets `XMLHttpRequest` request and display data without error, the console message will return anyway. This is because, it's doing very limited checks.
+
+The code using logical AND will only load the content onto the page if `getArticleInfo.readyState` equals `4` at the same time that `getArticleInfo.status` equals `200`. But if `getArticleInfo.readyState` equals `3` (meaning that data is still loading), it won't place content on the page.
+
+But since `getArticleInfo.readyState` equals `3`, it doesn't meet the the conditions set by the logical AND. So it will return the console error message anyway even though the the data's loading...that's (probabl) not what you want.
+
+Most developers simply don't add a console statement but your web application may require them. You'll probably want to write a few more `if/else` checks in those case, but doing that is out of the scope of this guide.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
