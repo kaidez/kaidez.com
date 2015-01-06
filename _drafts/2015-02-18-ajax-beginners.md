@@ -154,7 +154,7 @@ There are many ways to implement MDN feature detection: <a href="https://develop
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
 Loading content with "xhr" is a three-step process:
-1. Wait for 200 response code from the server.
+1. Wait for a 200 response code from the server.
 2. Wait for a state of 4.
 3. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
@@ -166,7 +166,7 @@ When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succe
 <h5 class="h5-guide">XHR States</h5>
 An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
-*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the the "onreadystatechange" section").*
+*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
 
@@ -202,7 +202,7 @@ There are use cases for knowing all the times when `onreadystatechange` is equal
 
 When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening.
 
-Using `onreadystatechange` means that your AJAX code is is ready to load in data (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
+Using `onreadystatechange` means that your AJAX code is ready to load in data (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 
 {% prism markup %}
 <!-- sample03/index.html -->
@@ -384,7 +384,7 @@ While the code lets `XMLHttpRequest` request and display data without error, the
 
 The code using logical AND will only load the content onto the page if `getArticleInfo.readyState` equals `4` at the same time that `getArticleInfo.status` equals `200`. But if `getArticleInfo.readyState` equals `3` (meaning that data is still loading), it won't place content on the page.
 
-But since `getArticleInfo.readyState` equals `3`, it doesn't meet the the conditions set by the logical AND. So it will return the console error message anyway even though the the data's loading...that's (probabl) not what you want.
+But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical AND. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
 
 Most developers simply don't add a console statement but your web application may require them. You'll probably want to write a few more `if/else` checks in those case, but doing that is out of the scope of this guide.
 
