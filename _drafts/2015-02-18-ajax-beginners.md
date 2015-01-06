@@ -33,7 +33,8 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
         <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
         <li><a href="#logical-and-error">Using "&&" generates an error</li>
-        <li><a href="#ajax-requests-mouseclicks">Make AJAX requests with mouseclicks</a></li>
+        <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
+        <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -389,8 +390,8 @@ But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions
 
 Most developers simply don't add a console statement but your web application may require them. You'll probably want to write a few more `if/else` checks in those case, but doing that is out of the scope of this guide.
 
-<a name="ajax-requests-mouseclicks"></a>
-<h4 class="h4-guide">Make AJAX requests with mouseclicks</h4>
+<a name="ajax-request-mouseclick"></a>
+<h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
 The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common.
 {% prism markup %}
 <!-- sample08/index.html -->
@@ -402,6 +403,7 @@ The previous examples used AJAX to load data automatically, but we can also make
 
 Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the data inside the div tag.
 {% prism javascript %}
+<!-- sample08/scripts.js -->
 function loadHTML() {
   var getInfo = new XMLHttpRequest();
 
@@ -421,9 +423,15 @@ function loadHTML() {
 }
 
 // Code that loads the data on a button click
-document.getElementById("getHTMLFile").addEventListener("click", loadHTML, false);
+document.getElementById("getHTMLFile").addEventListener("click", loadHTML);
 {% endprism %}
-All the AJAX code is now inside a `loadHTML()` function. There's also the new code at the bottom which loads the data on the page with a mouseclick.
+All the AJAX code is now inside a `loadHTML()` function and there's also new code at the bottom that loads runs this function with a mouseclick. In the bottom code, the button with the id of `getHTMLFile` has the `addEventListener` method attached to it.
+
+The button is "listening for", or "watching for", whatever event we tell it to watch for...which is `click`. When the code see's that the button has been clicked, it runs the `loadHTML` that processes the AJAX code.
+
+<a name="multiple-ajax-buttons"></a>
+<h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
+We can create multiple buttons that load different data with AJAX:
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
