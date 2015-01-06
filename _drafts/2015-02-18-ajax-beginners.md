@@ -401,7 +401,7 @@ The previous examples used AJAX to load data automatically, but we can also make
 <div id="textTarget"></div>
 {% endprism %}
 
-Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load in an HTMLfile inside the div tag.
+Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of an HTML file inside the div tag.
 {% prism javascript %}
 // sample08/scripts.js
 function loadHTML() {
@@ -440,7 +440,7 @@ We can create multiple buttons that load different data with AJAX:
 <button id="getTextFile">Load the text file</button>
 <div id="textTarget"></div>
 {% endprism %}
-Add a new button tag with an id of "getTextFile" directly above `<div id="textTarget">`. Clicking on this button will load in a text file inside the div tag.
+Add a new button tag with an id of "getTextFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of a text file inside the div tag.
 {% prism javascript %}
 // sample09/scripts.js
 // Pass a parameter to loadFile and refer to it in getInfo.open()
@@ -461,6 +461,11 @@ document.getElementById("getTextFile").onclick = function() {
   loadFile("articleName.txt");
 };
 {% endprism %}
+`loadFile()` now requires a parameter that we're calling "file". The parameter will define what file get's loaded onto the page via `getInfo.open()`.
+
+We also updated our button code: it still runs the `loadFile()` function, but that function now needs a parameter in order to work. That parameter is the name of the file we want to load onto the page.
+
+We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
