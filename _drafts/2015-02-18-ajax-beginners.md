@@ -33,6 +33,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
         <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
         <li><a href="#logical-and-error">Using "&&" generates an error</li>
+        <li><a href="#ajax-requests-mouseclicks">Make AJAX requests with mouseclicks</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -388,6 +389,9 @@ But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions
 
 Most developers simply don't add a console statement but your web application may require them. You'll probably want to write a few more `if/else` checks in those case, but doing that is out of the scope of this guide.
 
+<a name="ajax-requests-mouseclicks"></a>
+<h4 class="h4-guide">Make AJAX requests with mouseclicks</h4>
+The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
