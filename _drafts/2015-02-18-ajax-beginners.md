@@ -473,12 +473,6 @@ The code in the last demo is fine if we only have a few buttons, but would get m
 
 {% prism markup %}
 <!-- sample10/index.html -->
-<!--
-  update the <button> tags directly above <div id="textTarget">
-  -remove the IDS
-  -add a class called "btn"
-  -refer to the files they need to know in a "data-file" attribute"
--->
 ...
 <button class="btn" data-file="articleName.html">Load the HTML file</button>
 <button class="btn" data-file="articleName.txt">Load the text file</button>
