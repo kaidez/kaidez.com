@@ -473,14 +473,21 @@ The code in the last demo is fine if we only have a few buttons, but would get m
 
 {% prism markup %}
 <!-- sample10/index.html -->
+<!--  update the <button> tags directly above <div id="textTarget"> -->
 ...
 <button class="btn" data-file="articleName.html">Load the HTML file</button>
 <button class="btn" data-file="articleName.txt">Load the text file</button>
+<div id="textTarget"></div>
 ...
 {% endprism %}
+The two buttons are still on our HTML page but we're updated them. For each one, we've removed the IDS, added a class called `btn` and added a data-attribute called `data-file`.
 
+The values of the data-attributes are unique for each button": each value is the name of the file that should be loaded using AJAX.
 {% prism javascript %}
 // sample10/scripts.js
+// Don't change the loadFile() function
+// Remove the button code for the two buttons at the bottom
+// Add this new code
 ...
 var getButtons = document.querySelectorAll(".btn");
 
