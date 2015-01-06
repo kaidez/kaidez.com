@@ -35,7 +35,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#logical-and-error">Using "&&" generates an error</li>
         <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
         <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
-        <li><a href="#dynamic-button-code">Make the button code dynamic</a></li>
+        <li><a href="#reusable-button-code">Create resusabe code for multiple buttons</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -467,8 +467,43 @@ document.getElementById("getTextFile").onclick = function() {
 We also updated our button code: it still runs the `loadFile()` function, but that function now needs a parameter in order to work. That parameter is the name of the file we want to load onto the page.
 
 We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
-<a name="dynamic-button-code"></a>
-<h4 class="h4-guide">Make the button code dynamic</h4>
+<a name="reusable-button-code"></a>
+<h4 class="h4-guide">Create resusabe code for multiple buttons</h4>
+The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share.
+
+{% prism markup %}
+<!-- sample10/index.html -->
+<!--
+  update the <button> tags directly above <div id="textTarget">
+  -remove the IDS
+  -add a class called "btn"
+  -refer to the files they need to know in a "data-file" attribute"
+-->
+...
+<button class="btn" data-file="articleName.html">Load the HTML file</button>
+<button class="btn" data-file="articleName.txt">Load the text file</button>
+...
+{% endprism %}
+
+{% prism javascript %}
+// sample10/scripts.js
+...
+var getButtons = document.querySelectorAll(".btn");
+
+for (key in getButtons) {
+
+  var buttonGroup = getButtons[key];
+
+  buttonGroup.onclick = function() {
+    if(!this.dataset) {
+      loadFile(this.getAttribute("data-file"));
+    } else {
+      loadFile(this.dataset.file);
+    }
+  }
+
+}
+{% endprism %}
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
