@@ -102,7 +102,7 @@ Instead, it was bundled inside of another object called
 
 The simplest version of this feature-detection code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample/01scripts.js
+// sample01/scripts.js
 // Feature-detect XMLHttpRequest implementation
 var xhr;
 if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
@@ -401,9 +401,9 @@ The previous examples used AJAX to load data automatically, but we can also make
 <div id="textTarget"></div>
 {% endprism %}
 
-Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the data inside the div tag.
+Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load in an HTMLfile inside the div tag.
 {% prism javascript %}
-<!-- sample08/scripts.js -->
+// sample08/scripts.js
 function loadHTML() {
   var getInfo = new XMLHttpRequest();
 
@@ -432,6 +432,35 @@ The button is "listening for", or "watching for", whatever event we tell it to w
 <a name="multiple-ajax-buttons"></a>
 <h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
 We can create multiple buttons that load different data with AJAX:
+{% prism markup %}
+<!-- sample09/index.html -->
+<!-- add a new <button> directly above <div id="textTarget">  -->
+...
+<button id="getHTMLFile">Load the HTML file</button>
+<button id="getTextFile">Load the text file</button>
+<div id="textTarget"></div>
+{% endprism %}
+Add a new button tag with an id of "getTextFile" directly above `<div id="textTarget">`. Clicking on this button will load in a text file inside the div tag.
+{% prism javascript %}
+// sample09/scripts.js
+// Pass a parameter to loadFile and refer to it in getInfo.open()
+function loadFile(file) {
+  var getInfo = new XMLHttpRequest();
+
+  getInfo.open("GET", file);
+  ...
+}
+...
+// Add a new button to the bottom of scripts.js
+// Have each button run loadFile() to load in a different file
+document.getElementById("getHTMLFile").onclick = function() {
+  loadFile("articleName.html");
+};
+
+document.getElementById("getTextFile").onclick = function() {
+  loadFile("articleName.txt");
+};
+{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
