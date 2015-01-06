@@ -392,6 +392,38 @@ Most developers simply don't add a console statement but your web application ma
 <a name="ajax-requests-mouseclicks"></a>
 <h4 class="h4-guide">Make AJAX requests with mouseclicks</h4>
 The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common.
+{% prism markup %}
+<!-- sample08/index.html -->
+<!-- add <button> directly above <div id="textTarget">  -->
+...
+<button id="getHTMLFile">Load the HTML file</button>
+<div id="textTarget"></div>
+{% endprism %}
+
+Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the data inside the div tag.
+{% prism javascript %}
+function loadHTML() {
+  var getInfo = new XMLHttpRequest();
+
+  getInfo.open("GET", "articleName.html");
+  getInfo.send();
+
+  getInfo.onreadystatechange = function() {
+    var text = document.getElementById("textTarget");
+    if (getInfo.readyState === 4) {
+      if (getInfo.status === 200) {
+        text.innerHTML = getInfo.responseText;
+      } else {
+        console.log('There was a problem with the request.');
+      }
+    }
+  }
+}
+
+// Code that loads the data on a button click
+document.getElementById("getHTMLFile").addEventListener("click", loadHTML, false);
+{% endprism %}
+All the AJAX code is now inside a `loadHTML()` function. There's also the new code at the bottom which loads the data on the page with a mouseclick.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
