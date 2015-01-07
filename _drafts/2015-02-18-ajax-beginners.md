@@ -54,7 +54,6 @@ The code for all the examples is located in the GitHub repo and looks similar to
   </head>
   <body>
 
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
@@ -218,7 +217,6 @@ Using `onreadystatechange` means that your AJAX code is ready to load in data (<
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
@@ -522,8 +520,7 @@ But if `dataset` DOES exist, we can use it to get the value of the data attribut
 <h4 class="h4-guide">Load JSON with AJAX</h4>
 As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):
 {% prism markup %}
-// sample11/index.html
-// Feature-detect XMLHttpRequest implementation
+<!-- sample11/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
