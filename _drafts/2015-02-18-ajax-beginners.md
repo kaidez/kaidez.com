@@ -555,7 +555,7 @@ The buttons have been removed from the HTML file.
     }
 }
 {% endprism %}
-Instead of using AJAX to load in data from either an HTML or text file, we're now loading it from a `json` file.
+Instead of using AJAX to load in data from either an HTML or text file, we're now loading it from a `json` file called `soccerplayers.json`.
 
 {% prism javascript %}
 // sample11/scripts.js
@@ -585,7 +585,32 @@ There are only a few changes to `scripts.js` but they're important:
 (function(){
 ...
 })();
+{% endprism %}
 The main change is that the function now runs as soon as the page loads instead of being invoked some place in our code. This is done with an "immediately invoked function expression", or an "IIFE": [learn about the IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "Read more about the IIFE").
+{% prism javascript %}
+...
+var getPlayerInfo = new XMLHttpRequest();
+getPlayerInfo.open("GET", "languages.json");
+getPlayerInfo.send();
+...
+{% endprism %}
+The main variable used in the AJAX code is renamed `getPlayerInfo` throughout the code. Also, the code's now fetching `soccerplayers.json`.
+{% prism javascript %}
+...
+getPlayerInfo.onreadystatechange = function() {
+  if (getPlayerInfo.readyState === 4) {
+    if (getPlayerInfo.status === 200) {
+      var players = JSON.parse(getPlayerInfo.responseText),
+          text = document.getElementById("textTarget");
+      for (i in players) {
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = players[i].playerOne;
+        text.appendChild(newDiv);
+      }
+    }
+  }
+};
+...
 {% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
