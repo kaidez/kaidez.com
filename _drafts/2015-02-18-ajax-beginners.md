@@ -632,7 +632,7 @@ Again, this is a basic example of how to use JSON with AJAX...the main takeaway 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes. It optimized jQuery's AJAX functionality to be faster but also did the following:
 
 * bundled deferreds and promises, making AJAX's asynchronous functionality better.
-* added the jqXHR object, adding new functionality to AJAX in jQuery.
+* increased the functionality of the jqXHR object, adding new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
 The core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
