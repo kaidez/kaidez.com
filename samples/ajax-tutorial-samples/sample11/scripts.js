@@ -1,7 +1,7 @@
 (function(){
     var getPlayerInfo = new XMLHttpRequest();
 
-    getPlayerInfo.open("GET", "languages.json");
+    getPlayerInfo.open("GET", "soccerplayers.json");
     getPlayerInfo.send();
 
     getPlayerInfo.onreadystatechange = function() {
