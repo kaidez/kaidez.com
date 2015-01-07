@@ -36,6 +36,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
         <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
         <li><a href="#reusable-button-code">Create resusabe code for multiple buttons</a></li>
+        <li><a href="#load-json-ajax">Load JSON with AJAX</a>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -517,9 +518,9 @@ We're first checking to see if `dataset` does NOT exist in the browser by saying
 
 But if `dataset` DOES exist, we can use it to get the value of the data attribute using `this.dataset`.
 
-*(Note: To learn more about data attributes, [read my "Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
-<a name="reusable-button-code"></a>
-<h4 class="h4-guide">Create resusabe code for multiple buttons</h4>
+*(Note: To learn more about data attributes, read my ["Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
+<a name="load-json-ajax"></a>
+<h4 class="h4-guide">Load JSON with AJAX</h4>
 
 
 <a name="conclusion"></a>
