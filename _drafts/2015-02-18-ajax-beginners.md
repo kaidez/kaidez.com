@@ -522,7 +522,63 @@ But if `dataset` DOES exist, we can use it to get the value of the data attribut
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
 As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example.
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample 11</title>
+  </head>
+  <body>
+    <div id="textTarget"></div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+{% endprism %}
 
+{% prism javascript %}
+(function(){
+    var getPlayerInfo = new XMLHttpRequest();
+
+    getPlayerInfo.open("GET", "languages.json");
+    getPlayerInfo.send();
+
+    getPlayerInfo.onreadystatechange = function() {
+      if (getPlayerInfo.readyState === 4) {
+        if (getPlayerInfo.status === 200) {
+          var players = JSON.parse(getPlayerInfo.responseText),
+              text = document.getElementById("textTarget");
+          for (i in players) {
+            var newDiv = document.createElement("div");
+            newDiv.innerHTML = players[i].playerOne;
+            text.appendChild(newDiv);
+          }
+        }
+      }
+    }
+})();
+{% endprism %}
+
+{% prism javascript %}
+{
+    "chelsea": {
+        "playerOne": "Didier Drogba",
+        "playerTwo": "Thibault Courtois",
+        "playerThree": "Cesc Fabregas"
+    },
+    "realMadrid": {
+        "playerOne": "Cristiano Ronaldo",
+        "playerTwo": "Sergio Ramos",
+        "playerThree": "Iker Casillas"
+    },
+    "psg": {
+        "playerOne": "Zlatan Ibrahimović",
+        "playerTwo": "Thiago Motta",
+        "playerThree": "Marquinhos"
+    }
+}
+
+{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
