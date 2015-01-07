@@ -493,9 +493,9 @@ var getButtons = document.querySelectorAll(".btn");
 
 for (key in getButtons) {
 
-  var buttonGroup = getButtons[key];
+  var singleButton = getButtons[key];
 
-  buttonGroup.onclick = function() {
+  singleButton.onclick = function() {
     if(!this.dataset) {
       loadFile(this.getAttribute("data-file"));
     } else {
@@ -505,9 +505,17 @@ for (key in getButtons) {
 
 }
 {% endprism %}
-The button code for the two buttons is removed and replaced with this code. We start by finding all the buttons with the `btn` class name and storing them in a variable called `getButtons`.
+The button code for the two buttons is removed and replaced with this new code. The code starts by finding all the buttons with the `btn` class name and stores them as a group in a variable called `getButtons`.
 
-Then we're using a `for...in` loop to do something to each item in the `getButtons`.
+Then a `for...in` loop runs for whatever the total amount of buttons there are inside of `getButtons`...there two right now. And every time the loop runs, it creates a variable called `singleButton` which stores a reference to one button at a time: that reference is the `getButtons[key]` line of code.
+
+Next, our code tells each `singleButton` what to do when it gets clicked. What it does is, look at the value of the button's data attribute (which is one of two files) and passes it as a parameter to the `loadFile()` function to load onto the page.
+
+Data attributes aren't supported in IE 10 and lower so we need to feature-detect for them, then provide fallback code for those browsers. We're detecting for the `dataset` property of the button being clicked, so we need to look for `this.dataset`.
+
+We're first checking to see if `dataset` does NOT exist in the browser by saying `if(!this.dataset)`...if it doesn't exist, we get the value of the data attribute with the `getAttribute()` method.
+
+But if `dataset` DOES exist, we can use it to get the value of the data attribute using `this.dataset`.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
