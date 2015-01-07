@@ -76,7 +76,7 @@ That's the best way to describe it: XMLHttpRequest "requests" information from a
 
 "AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage "xhr" requests inside a web page: the technologies were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
 
-XML was defined as the main data layer but any other data layer can be used...text files, HTML files, etc. JSON is the most-used data layer at the time of this guide's initial publish date.
+XML was defined as the main data type but any other data type can be used...text files, HTML files, etc. JSON is the most-used data type at the time of this guide's initial publish date.
 
 XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. If you use XHTML, using it in Strict mode is recommended.
 <a name="brief-history-ajax"></a>
@@ -521,7 +521,7 @@ But if `dataset` DOES exist, we can use it to get the value of the data attribut
 *(Note: To learn more about data attributes, read my ["Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
-
+As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
