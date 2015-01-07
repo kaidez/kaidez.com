@@ -157,8 +157,9 @@ There are many ways to implement MDN feature detection: <a href="https://develop
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
 Loading content with "xhr" is a three-step process:
+
 1. Wait for a 200 response code from the server.
-2. Wait for a state of 4.
+2. Wait for an "xhr" state of 4.
 3. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
 <h5 class="h5-guide">Wait for 200 response code from the server</h5>
@@ -166,7 +167,7 @@ A web server sends many server response codes, each in the form of a numerical n
 
 When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succeeded in making the request.
 <a name="xhr-states"></a>
-<h5 class="h5-guide">XHR States</h5>
+<h5 class="h5-guide"> Wait for an "xhr" state of 4</h5>
 An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
 *(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
@@ -533,6 +534,28 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
   </body>
 </html>
 {% endprism %}
+The buttons have been removed from the HTML file.
+{% prism javascript %}
+// sample11/soccerplayers.json
+{
+    "chelsea": {
+        "playerOne": "Didier Drogba",
+        "playerTwo": "Thibault Courtois",
+        "playerThree": "Cesc Fabregas"
+    },
+    "realMadrid": {
+        "playerOne": "Cristiano Ronaldo",
+        "playerTwo": "Sergio Ramos",
+        "playerThree": "Iker Casillas"
+    },
+    "psg": {
+        "playerOne": "Zlatan Ibrahimović",
+        "playerTwo": "Thiago Motta",
+        "playerThree": "Marquinhos"
+    }
+}
+{% endprism %}
+Instead of using AJAX to load in data from either an HTML or text file, we're now loading it from a `json` file.
 
 {% prism javascript %}
 // sample11/scripts.js
@@ -557,26 +580,12 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
     }
 })();
 {% endprism %}
-
+There are only a few changes to `scripts.js` but they're important:
 {% prism javascript %}
-// sample11/soccerplayers.json
-{
-    "chelsea": {
-        "playerOne": "Didier Drogba",
-        "playerTwo": "Thibault Courtois",
-        "playerThree": "Cesc Fabregas"
-    },
-    "realMadrid": {
-        "playerOne": "Cristiano Ronaldo",
-        "playerTwo": "Sergio Ramos",
-        "playerThree": "Iker Casillas"
-    },
-    "psg": {
-        "playerOne": "Zlatan Ibrahimović",
-        "playerTwo": "Thiago Motta",
-        "playerThree": "Marquinhos"
-    }
-}
+(function(){
+...
+})();
+The main change is that the function now runs as soon as the page loads instead of being invoked some place in our code. This is done with an "immediately invoked function expression", or an "IIFE": [learn about the IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "Read more about the IIFE").
 {% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
