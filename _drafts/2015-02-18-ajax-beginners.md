@@ -19,7 +19,7 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
     <li><a href="#what-is-ajax">What Is AJAX</li>
     <li><a href="#brief-history-ajax">A brief history of AJAX</li>
     <li>
-      <a href="#ajax-javascript">Write AJAX with Regular JavaScript</li>
+      <a href="#ajax-javascript">Write AJAX with Regular JavaScript
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
         <li>
@@ -35,8 +35,13 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
         <li><a href="#logical-and-error">Using "&&" generates an error</li>
         <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
         <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
-        <li><a href="#reusable-button-code">Create resusabe code for multiple buttons</a></li>
+        <li><a href="#reusable-button-code">Create reusable code for multiple buttons</a></li>
         <li><a href="#load-json-ajax">Load JSON with AJAX</a>
+      </ol>
+    </li>
+    <li><a href="#ajax-jquery">AJAX and jQuery
+      <ol>
+        <li><a href="#add-jquery">Add jQuery to the project</a>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -61,8 +66,7 @@ The code for all the examples is located in the GitHub repo and looks similar to
 
 All examples run from their own folder from an `index.html` file, which always references a file called `scripts.js`. Either `index.html` or `scripts.js` will change with each new example: new files may also be added as well.
 
-Because all the examples use XMLHttpRequest, they should run from a web server and not as a local file in a web browser. Firefox can run files locally but for best results, they should run from some sort of web server.
-
+Because all the examples use XMLHttpRequest, they should run from a web server instead of as a local file in a web browser. Firefox can run files locally but for best results, they should run from some sort of web server.
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
 First, understand that XMLHttpRequest is the heart of your AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
@@ -466,7 +470,7 @@ We also updated our button code: it still runs the `loadFile()` function, but th
 
 We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
 <a name="reusable-button-code"></a>
-<h4 class="h4-guide">Create resusabe code for multiple buttons</h4>
+<h4 class="h4-guide">Create reusable code for multiple buttons</h4>
 The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample10/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample10/index.html -->
@@ -592,7 +596,7 @@ getPlayerInfo.open("GET", "languages.json");
 getPlayerInfo.send();
 ...
 {% endprism %}
-The main variable used in the AJAX code is renamed `getPlayerInfo` throughout the code. Also, the code's now fetching `soccerplayers.json`.
+The main variable used in the AJAX code is renamed `getPlayerInfo` throughout the code. Also, the code is now fetching `soccerplayers.json`.
 {% prism javascript %}
 ...
 getPlayerInfo.onreadystatechange = function() {
@@ -621,6 +625,19 @@ Then we're doing a `for...in` loop again that loops through JSON content stored 
 * find the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
 
 Again, this is a basic example of how to use JSON with AJAX...the main takeaway from this is example is that __AJAX can load all different types of content, including JSON__.
+<a name="ajax-jquery"></a>
+<h3 class="h3-guide">AJAX and jQuery</h3>
+[jQuery](http://jquery.com "Go to the jQuery site") has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
+
+The release of jQuery 1.5 was significant because of certain AJAX-related changes. It optimized jQuery's AJAX functionality to be faster but also did the following:
+
+* bundled deferreds and promises, making AJAX's asynchronous functionality better.
+* added the jqXHR object, adding new functionality to AJAX in jQuery.
+<a name="add-jquery"></a>
+<h4 class="h4-guide">Add jQuery to the project</h4>
+
+yayquery: http://vimeo.com/19578621
+returns jqXHR...comes with a lot of stuff
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
