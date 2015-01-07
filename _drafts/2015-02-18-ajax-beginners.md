@@ -41,7 +41,8 @@ Many new developers (as well as a few intermediate ones) struggle to learn AJAX 
     </li>
     <li><a href="#ajax-jquery">AJAX and jQuery
       <ol>
-        <li><a href="#add-jquery">Add jQuery to the project</a>
+        <li><a href="#add-jquery">Add jQuery to the project</a></li>
+        <li><a href="#jquery-load">jQuery.load: the easiest way to use AJAX with jQuery</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -651,6 +652,9 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
 </html>
 {% endprism %}
 Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions vork in IE versions 6 and higher.
+<a name="jquery-load"></a>
+<h4 class="h4-guide">jQuery.load: the easiest way to use AJAX with jQuery</h4>
+
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff
 <a name="conclusion"></a>
