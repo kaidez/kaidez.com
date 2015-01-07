@@ -516,6 +516,12 @@ Data attributes aren't supported in IE 10 and lower so we need to feature-detect
 We're first checking to see if `dataset` does NOT exist in the browser by saying `if(!this.dataset)`...if it doesn't exist, we get the value of the data attribute with the `getAttribute()` method.
 
 But if `dataset` DOES exist, we can use it to get the value of the data attribute using `this.dataset`.
+
+*(Note: To learn more about data attributes, [read my "Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
+<a name="reusable-button-code"></a>
+<h4 class="h4-guide">Create resusabe code for multiple buttons</h4>
+
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
