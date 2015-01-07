@@ -635,7 +635,22 @@ The release of jQuery 1.5 was significant because of certain AJAX-related change
 * added the jqXHR object, adding new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
-
+The core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample 12</title>
+  </head>
+  <body>
+    <div id="textTarget"></div>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+{% endprism %}
+Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions vork in IE versions 6 and higher.
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff
 <a name="conclusion"></a>
