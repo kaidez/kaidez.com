@@ -348,7 +348,7 @@ function loadText() {
 The "xhr" feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
-Up to this point, we've had "readyStateChange" run AJAX code with a named function up to this point: a function named `loadText()`. That works fine but we like, we can use a callback function instead.
+Up to this point, we've had "readyStateChange" run AJAX code with a named function up to this point: a function named `loadText()`. That works fine but we like, we can use a callback function instead (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample06/scripts.js
 var getArticleInfo = new XMLHttpRequest();
@@ -370,7 +370,7 @@ getArticleInfo.onreadystatechange = function() {
 We've removed one line of called since we're now using a callback function, which also makes our code slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-Developers like to use the [logical AND operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both the `readyState` and `status`:
+Developers like to use the [logical AND operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both the `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample07/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
@@ -394,7 +394,7 @@ Most developers simply don't add a console statement but your web application ma
 
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
-The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common.
+The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample08/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
@@ -433,7 +433,7 @@ The button is "listening for", or "watching for", whatever event we tell it to w
 
 <a name="multiple-ajax-buttons"></a>
 <h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
-We can create multiple buttons that load different data with AJAX:
+We can create multiple buttons that load different data with AJAX (<a href="/samples/ajax-tutorial-samples/sample09/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample09/index.html -->
 <!-- add a new <button> directly above <div id="textTarget">  -->
@@ -470,8 +470,7 @@ We also updated our button code: it still runs the `loadFile()` function, but th
 We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
 <a name="reusable-button-code"></a>
 <h4 class="h4-guide">Create resusabe code for multiple buttons</h4>
-The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share.
-
+The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample10/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample10/index.html -->
 <!--  update the <button> tags directly above <div id="textTarget"> -->
@@ -521,8 +520,10 @@ But if `dataset` DOES exist, we can use it to get the value of the data attribut
 *(Note: To learn more about data attributes, read my ["Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
-As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example.
+As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):
 {% prism markup %}
+// sample11/index.html
+// Feature-detect XMLHttpRequest implementation
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -537,6 +538,7 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
 {% endprism %}
 
 {% prism javascript %}
+// sample11/scripts.js
 (function(){
     var getPlayerInfo = new XMLHttpRequest();
 
@@ -560,6 +562,7 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
 {% endprism %}
 
 {% prism javascript %}
+// sample11/soccerplayers.json
 {
     "chelsea": {
         "playerOne": "Didier Drogba",
@@ -577,7 +580,6 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
         "playerThree": "Marquinhos"
     }
 }
-
 {% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
