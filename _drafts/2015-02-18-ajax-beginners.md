@@ -59,9 +59,7 @@ The code for all the examples is located in the GitHub repo and looks similar to
 </html>
 {% endprism %}
 
-All examples run from their own folder from an `index.html` file. `index.html` always references a minified version of jQuery 1.11.2 and a file called `scripts.js`.
-
-jQuery is being served out from [the jQuery CDN](http://code.jquery.com/ "Visit the jQuery CDN"). Either `index.html` or `scripts.js` will change with each new example: new files may also be added as well.
+All examples run from their own folder from an `index.html` file, which always references a file called `scripts.js`. Either `index.html` or `scripts.js` will change with each new example: new files may also be added as well.
 
 Because all the examples use XMLHttpRequest, they should run from a web server and not as a local file in a web browser. Firefox can run files locally but for best results, they should run from some sort of web server.
 
@@ -612,6 +610,17 @@ getPlayerInfo.onreadystatechange = function() {
 };
 ...
 {% endprism %}
+Once `readyState` equals `4` and our code successfully connects to the server, it creates two variables: `players` and `text`. `players` grabs our data with `responseText` like before and converts it to a readable JSON format with `JSON.parse`.
+
+`text` is a reference to the `<div id="textTarget">` element on the HTML page. As before, our data will load into this element.
+
+Then we're doing a `for...in` loop again that loops through JSON content stored inside the `players` variable. Three steps are performed for every loop iteration:
+
+* create a div tag using `document.createElement` and store it in a variable called `newDiv`.
+* look at each item in the `players` variable and find it's `playerOne` property. Then place it inside the div tag created in the `newDiv` variable by accessing the div's `innerHTML` property.
+* find the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
+
+Again, this is a basic example of how to use JSON with AJAX...the main takeaway from this is example is that __AJAX can load all different types of content, including JSON__.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
