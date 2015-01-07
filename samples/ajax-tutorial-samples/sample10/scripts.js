@@ -20,13 +20,13 @@ var getButtons = document.querySelectorAll(".btn");
 
 for (key in getButtons) {
 
-  var buttonGroup = getButtons[key];
+  var singleButton = getButtons[key];
 
   // If a button is clicked, run the loadFile() function
   // Do feature detection to see if the browser supports "dataset"
   // Get the value of the file listed in the "data-file" attribute
   // Pass it as a parameter to loadFile()
-  buttonGroup.onclick = function() {
+  singleButton.onclick = function() {
     if(!this.dataset) {
       loadFile(this.getAttribute("data-file"));
     } else {
