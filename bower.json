@@ -10,7 +10,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "1.11.1",
+    "jquery": "1.11.2",
     "font-awesome": "4.2.0",
     "matchmedia": "0.2.0",
     "enquire": "~2.1.2",
