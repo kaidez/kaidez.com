@@ -309,9 +309,9 @@ if (getArticleInfo.readyState === 4) {
 {% endprism %}
 First, check to see if `getArticleInfo.readyState` definitely equals `4`. If it does, then the data has been fully downloaded.
 
-If the code is in the `4` state, then the next step is to check and see if `getArticleInfo.status` definitely equals `200`. If it does, then the code has successfully contacted the server.
+If the code is in the `4` state, then the next step is to check and see if `getArticleInfo.status` equals `200`. If it does, then the code has successfully contacted the server.
 
-If our code makes a successful server connection, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
+If it has, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
 
 `getArticleInfo.responseText` is a reference to the data we requested in `getArticleInfo.open()`, which is the "articleName.txt" file. The copy in that file will be placed in `<div id="textTarget">`.
 
@@ -350,7 +350,7 @@ function loadText() {
 The XHR feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
-Up to this point, we've had "readyStateChange" run AJAX code with a named function up to this point: a function named `loadText()`. That works fine but we like, we can use a callback function instead (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
+We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample06/scripts.js
 var getArticleInfo = new XMLHttpRequest();
@@ -369,17 +369,17 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
-We've removed one line of called since we're now using a callback function, which also makes our code slightly faster.
+`getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-Developers like to use the [logical AND operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both the `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
+Developers like to use the [logical AND operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample07/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
 ...
 getArticleInfo.onreadystatechange = function() {
   var text = document.getElementById("textTarget");
-  if (getArticleInfo.readyState === 4 && getArticleInfo.status === 200) {
+  if (getArticleInfo.readyState) === 4 && (getArticleInfo.status === 200) {
       text.innerHTML = getArticleInfo.responseText;
   } else {
     console.log("There was a problem with the request.");
