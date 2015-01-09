@@ -78,20 +78,20 @@ Simply put, XMLHttpRequest fetches, or "requests", information from a server, th
 
 "AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page: the technologies were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
 
-XML was defined as the main data type but any other data type can be used...text files, HTML files, even images. XML was the data type to use if you wanted to load in a large group of data but for that use case, is JSON preferred over XML at the time of this guide's initial publish date.
+XML was the recommended data type but other data types can be used...text files, HTML files, even images. XML was also the recommended data type to use when loading in a large group of data but for this, JSON is now preferred over XML at the time of this guide's initial publish date.  
 
-XHTML can be used as the presentation layer along with CSS. Using HTML5 instead of over XHTML is recommended at the time of this guide's initial publish date.
+XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of over XHTML is recommended at the time of this guide's initial publish date.
 <a name="brief-history-ajax"></a>
 <h3 class="h3-guide">A brief history of AJAX</h3>
-The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application(OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
+The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application (OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
 
-OWA still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
+OWA still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft developers created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
 
 Other browsers added the object as well, but with a different implementation and called it `XMLHttpRequest`. Microsoft would copy the other implementation and also name their object `XMLHttpRequest` when they released Internet Explorer 7.
 
 The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
-These web apps showed how useful XHR was but, for the most part, the developer community didn't really notice this. That changed in February 2005, [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
+These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005, [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
 Garret's article defined the AJAX acronym and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
 
@@ -99,7 +99,7 @@ Garret's article defined the AJAX acronym and also listed its required technolog
 <h3 class="h3-guide">Write AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
-As mentioned, Microsoft's XHR implementation was different from other browsers until tIE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
 <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
@@ -121,7 +121,7 @@ The above-example creates a variable called `xhr`, then checks to see if `XMLHtt
 
 The example is also checking to see if `ActiveXObject` is attached to the browser via the `window` object. If it is, then `xhr` will directly reference a new instance of `ActiveXObject` when doing AJAX things.
 
-Developers later realized that `window.ActiveXObject` was implemented differently across builds of all the older versions of IE. Sadly, they also realized that that some browsers heavily in use at the time didn't support `xhr` at all.
+Developers later realized that `window.ActiveXObject` was used differently across the older versions of IE. They also realized that that some browsers heavily in use at the time didn't support XHR at all.
 
 As a result, they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
@@ -147,15 +147,15 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use XHR by creating new `getXHR()` instances without worrying about the XHR cross-browser issues.
+The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use XHR by creating new `getXHR()` instances without worrying about cross-browser issues.
 
-The function checks for `XMLHttpRequest` in the same way, but we're also checking to see of the browser has one of two ActiveXObject builds and also checking to see if either `XMLHttpRequest` or `ActiveXObject` exists.
+`getXHR()` checks for `XMLHttpRequest` in the same way, but also checks to see of the browser has one of two ActiveXObject builds and also checks to see if either `XMLHttpRequest` or `ActiveXObject` exists.
 
 A JavaScript `try...catch` statement is looking for the different versions of `ActiveXObject`. If `try...catch` can't find it and also can't find `XMLHttpRequest`, then the value of the `xhr` variable is set to `false` and won't do any AJAX work.
 
 `getXHR()` says `return xhr` at the end of the code. This lets us create new instances of `getXHR()` outside of the function.
 
-There are many ways to implement MDN feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
+There are many ways to implement XHR feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
