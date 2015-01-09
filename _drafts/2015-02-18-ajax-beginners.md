@@ -147,9 +147,9 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use XHR by creating new `getXHR()` instances without worrying about cross-browser issues.
+The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use XHR by creating new `getXHR()` instances and not worry about cross-browser issues.
 
-`getXHR()` checks for `XMLHttpRequest` in the same way, but also checks to see of the browser has one of two ActiveXObject builds and also checks to see if either `XMLHttpRequest` or `ActiveXObject` exists.
+`getXHR()` checks for `XMLHttpRequest` in the same way, but also checks to see of the browser has one of two ActiveXObject builds and also checks to see if either the `XMLHttpRequest` or `ActiveXObject` exists.
 
 A JavaScript `try...catch` statement is looking for the different versions of `ActiveXObject`. If `try...catch` can't find it and also can't find `XMLHttpRequest`, then the value of the `xhr` variable is set to `false` and won't do any AJAX work.
 
@@ -175,7 +175,7 @@ An XHR request will be in one of fives states, each with a numerical value that 
 
 *(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
 
-There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources, including MDN, refer to the Microsoft one.
+There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources refer to the Microsoft one.
 
 The WHATWG spec defines five states, each with a numerical value:
 
@@ -189,7 +189,7 @@ The WHATWG spec defines five states, each with a numerical value:
 
 * __4__: meaning that things are in the __DONE__ state...either the data has downloaded in full or there was an error during the download process.
 
-Microsoft's definition also attaches numbers to states but is shorter. <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_2_.E2.80.93_Handling_the_server_response" title="See how AJAX states are listed in MDN" target="blank">MDN shortens it even more</a>:
+Microsoft's definition also attaches numbers to states, but the definition is shorter:
 
 * __0__ (uninitialized)
 
@@ -207,9 +207,7 @@ Microsoft's definition also attaches numbers to states but is shorter. <a href="
 
 There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states. But with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
 
-When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening.
-
-Using `onreadystatechange` means that your AJAX code is ready to load in data (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
+When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 
 {% prism markup %}
 <!-- sample03/index.html -->
@@ -271,16 +269,18 @@ The feature detection code is the same as before, so we won't be walking through
 {% prism javascript %}
 var getArticleInfo = new getXHR();
 {% endprism %}
-Treat the `getXHR()` function as a constructor function and create a new instance of it with a variable called `getArticleInfo`. Again, `getXHR()` lets us use `XMLHttpRequest()` in a cross-browser compatible way.
+Create a new instance of the `getXHR()` function and store it in a variable called `getArticleInfo`. Again, `getXHR()` lets us use `XMLHttpRequest` in a cross-browser compatible way.
 
 {% prism javascript %}
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
 getArticleInfo.send();
 {% endprism %}
-For now, `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but our code will make sure that only happens when the state is set to `4`.
+`getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that this only happens when the state is set to `4`.
 
-`getArticleInfo.open()` describes the data request. The first parameter is `GET` and it tells the server we want to "get" something from the server.
+The `open()` method is one of the most important methods of the XHR object and an AJAX application overall. This is because __the `open` method is the where we tell are code what data needs to downloaded__.
+
+In this example, `getArticleInfo.open()` describes the data request. The first parameter is `GET` and it tells the server we want to "get" something from the server.
 
 The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
 
