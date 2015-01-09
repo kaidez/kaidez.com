@@ -10,9 +10,9 @@ cat-name: "Tutorials"
 tags: [html5, javascript]
 has-home-img: ajax-image.jpg
 ---
-AJAX has advanced a lot since [Jesse James Garrett defined it in 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since [Jesse James Garrett defined it in 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
-Many new developers (as well as a few intermediate ones) struggle to learn AJAX and are also not aware of how it's progressed inside the jQuery library. This guide was written with those developers and jQuery progressions in mind.
+New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This guide was written with those developers in mind.
 <h2 style="clear:both;">Table of Contents</h2>
   <ol>
     <li><a href="#how-code-examples-works">How the code examples work</li>
@@ -65,22 +65,22 @@ The code for all the examples is located in the GitHub repo and looks similar to
 </html>
 {% endprism %}
 
-All examples run from their own folder from an `index.html` file, which always references a file called `scripts.js`. Either `index.html` or `scripts.js` will change with each new example: new files may also be added as well.
+All examples run from their own folder, and from an `index.html` file that references a file called `scripts.js`. Either `index.html` or `scripts.js` will change with each new example: new files may also be added as well.
 
-Because all the examples use XMLHttpRequest, they should run from a web server instead of as a local file in a web browser. Firefox can run files locally but for best results, they should run from some sort of web server.
+All the examples use XMLHttpRequest browser object. Because of these, they need to run from a web server instead of as a local file in a web browser.
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
-First, understand that XMLHttpRequest is the heart of your AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
+First, understand that XMLHttpRequest, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
-That's the best way to describe it: XMLHttpRequest "requests" information from a server, then places it on a web page. It does this "asynchronously", meaning that __it loads the information onto the page without needing to reload the page.__
+Simply put, XMLHttpRequest fetches, or "requests", information from a server, then places it on a web page. It does this "asynchronously", meaning that __XMLHttpRequest loads the information onto the page without needing to reload it.__
 
-"AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage "xhr" requests inside a web page: the technologies were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
+"AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page: the technologies were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
 
-XML was defined as the main data type but any other data type can be used...text files, HTML files, etc. JSON is the most-used data type at the time of this guide's initial publish date.
+XML was defined as the main data type but any other data type can be used...text files, HTML files, even images. XML was the data type to use if you wanted to load in a large group of data but for that use case, is JSON preferred over XML at the time of this guide's initial publish date.
 
-XHTML can be used as the presentation layer but at the time of this guide's initial publish date, using HTML5 is recommended over XHTML. If you use XHTML, using it in Strict mode is recommended.
+XHTML can be used as the presentation layer along with CSS. Using HTML5 instead of over XHTML is recommended at the time of this guide's initial publish date.
 <a name="brief-history-ajax"></a>
 <h3 class="h3-guide">A brief history of AJAX</h3>
 The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application(OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
@@ -91,7 +91,7 @@ Other browsers added the object as well, but with a different implementation and
 
 The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
-These web apps showed how useful "xhr" was but, for the most part, the developer community didn't really notice this. That changed in February 2005, [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
+These web apps showed how useful XHR was but, for the most part, the developer community didn't really notice this. That changed in February 2005, [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
 Garret's article defined the AJAX acronym and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
 
@@ -99,7 +99,7 @@ Garret's article defined the AJAX acronym and also listed its required technolog
 <h3 class="h3-guide">Write AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
-As mentioned, Microsoft's "xhr" implementation was different from other browsers until tIE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's XHR implementation was different from other browsers until tIE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
 <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
@@ -147,7 +147,7 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use "xhr" by creating new `getXHR()` instances without worrying about the "xhr" cross-browser issues.
+The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use XHR by creating new `getXHR()` instances without worrying about the XHR cross-browser issues.
 
 The function checks for `XMLHttpRequest` in the same way, but we're also checking to see of the browser has one of two ActiveXObject builds and also checking to see if either `XMLHttpRequest` or `ActiveXObject` exists.
 
@@ -159,19 +159,19 @@ There are many ways to implement MDN feature detection: <a href="https://develop
 
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
-Loading content with "xhr" is a three-step process:
+Loading content with XHR is a three-step process:
 
 1. Wait for a 200 response code from the server.
-2. Wait for an "xhr" state of 4.
+2. Wait for an XHR state of 4.
 3. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
 <h5 class="h5-guide">Wait for 200 response code from the server</h5>
 A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
 
-When your AJAX code sees a `200 OK` response, it knows that your "xhr" has succeeded in making the request.
+When your AJAX code sees a `200 OK` response, it knows that your XHR has succeeded in making the request.
 <a name="xhr-states"></a>
-<h5 class="h5-guide"> Wait for an "xhr" state of 4</h5>
-An "xhr" request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
+<h5 class="h5-guide"> Wait for an XHR state of 4</h5>
+An XHR request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
 *(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
 
@@ -327,7 +327,7 @@ getArticleInfo.open("GET", "articleName.html");
 {% endprism %}
 <a name="no-feature-detection"></a>
 <h4 class="h4-guide">Use AJAX without feature-detection</h4>
-There are use cases for including "xhr" feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
+There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample05/scripts.js
 var getArticleInfo = new XMLHttpRequest();
@@ -347,7 +347,7 @@ function loadText() {
   }
 };
 {% endprism %}
-The "xhr" feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
+The XHR feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
 Up to this point, we've had "readyStateChange" run AJAX code with a named function up to this point: a function named `loadText()`. That works fine but we like, we can use a callback function instead (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
@@ -629,6 +629,7 @@ Again, this is a basic example of how to use JSON with AJAX...the main takeaway 
 <a name="ajax-jquery"></a>
 <h3 class="h3-guide">AJAX and jQuery</h3>
 [jQuery](http://jquery.com "Go to the jQuery site") has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
+
 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes. It optimized jQuery's AJAX functionality to be faster but also did the following:
 
