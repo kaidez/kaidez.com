@@ -647,7 +647,7 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
@@ -657,7 +657,9 @@ Note that jQuery comes before `scripts.js` and that we're using a 2.x version of
 <h4 class="h4-guide">$.load: the easiest way to use AJAX with jQuery</h4>
 [jQuery has an `$.ajax()` method](http://api.jquery.com/jQuery.ajax/ "Read about jQuery's ajax method") that allows you to use AJAX with jQuery any way that you want. But it also has many [AJAX shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read about jQuery shorthand methods") that lets you use a little easier.
 
-If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechnage section of this article).
+
+<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
 {% prism markup %}
 <!-- sample12/index.html -->
 <!DOCTYPE html>
@@ -668,12 +670,12 @@ If you want to use jQuery to load in file with AJAX like we've been doing, the `
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
 {% endprism %}
-An HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
+A  HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
 {% prism javascript %}
 // sample12/scripts.js
 $("#textTarget").load("articleName.html");
