@@ -282,7 +282,7 @@ getArticleInfo.send();
 
 In this example, `getArticleInfo.open()` first describes *how* to get the data. That's done with the first parameter, which is `GET`...it tells the server to "get" something from the server.
 
-The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
+The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the author.
 
 `getArticleInfo.send()` is the part of the code that actually sends the request through. You can pass a parameter to `send()` but it will be ignored if you do this using `GET`: the parameter will be set to its default value of `null`.
 
@@ -293,7 +293,7 @@ function loadText() {
 ...
 };
 {% endprism %}
-Start building the `loadText()` function that runs when `getArticleInfo.onreadystatechange` goes through state changes. These state changes are stored in the `readyState` property.
+Start building the `loadText()` function that we defined above.
 {% prism javascript %}
 var text = document.getElementById("textTarget");
 {% endprism %}
@@ -309,7 +309,7 @@ if (getArticleInfo.readyState === 4) {
 {% endprism %}
 First, check to see if `getArticleInfo.readyState` definitely equals `4`. If it does, then the data has been fully downloaded.
 
-If it does, then the next step is to check and see if `getArticleInfo.status` definitely equals `200`. If it does, then the code has successfully contacted the server.
+If the code is in the `4` state, then the next step is to check and see if `getArticleInfo.status` definitely equals `200`. If it does, then the code has successfully contacted the server.
 
 If our code makes a successful server connection, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
 
