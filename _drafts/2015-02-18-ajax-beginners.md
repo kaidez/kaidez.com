@@ -42,7 +42,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
     <li><a href="#ajax-jquery">AJAX and jQuery
       <ol>
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
-        <li><a href="#jquery-load">jQuery.load: the easiest way to use AJAX with jQuery</a></li>
+        <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -654,7 +654,7 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
 {% endprism %}
 Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions vork in IE versions 6 and higher.
 <a name="jquery-load"></a>
-<h4 class="h4-guide">jQuery.load: the easiest way to use AJAX with jQuery</h4>
+<h4 class="h4-guide">$.load: the easiest way to use AJAX with jQuery</h4>
 [jQuery has an `$.ajax()` method](http://api.jquery.com/jQuery.ajax/ "Read about jQuery's ajax method") that allows you to use AJAX with jQuery any way that you want. But it also has many [AJAX shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read about jQuery shorthand methods") that lets you use a little easier.
 
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
