@@ -27,7 +27,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
           <ol>
             <li><a href="#200-response">Wait for 200 response code from the server</li>
             <li><a href="#xhr-states">XHR States</li>
-            <li><a href="#what-is-onreadystatechange">Set up "onreadystatechange"</li>
+            <li><a href="#what-is-onreadystatechange">Bring everything together using "onreadystatechange"</li>
           </ol>
         </li>
         <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
@@ -202,7 +202,7 @@ Microsoft's definition also attaches numbers to states, but the definition is sh
 * __4__ (complete)
 
 <a name="what-is-onreadystatechange"></a>
-<h5 class="h5-guide">Set up "onreadystatechange"</h5>
+<h5 class="h5-guide">Bring everything together using "onreadystatechange"</h5>
 `onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
 
 There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states. But with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
@@ -278,9 +278,9 @@ getArticleInfo.send();
 {% endprism %}
 `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that this only happens when the state is set to `4`.
 
-The `open()` method is one of the most important methods of the XHR object, and an AJAX application overall. This is because __the `open` method is the where we tell are code what data needs to downloaded__.
+  `open()` is a method attached to the XHR object, and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
 
-In this example, `getArticleInfo.open()` describes the data request. The first parameter is `GET` and it tells the server we want to "get" something from the server.
+In this example, `getArticleInfo.open()` first describes *how* to get the data. That's done with the first parameter, which is `GET`...it tells the server to "get" something from the server.
 
 The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the article.
 
