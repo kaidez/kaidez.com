@@ -278,7 +278,7 @@ getArticleInfo.send();
 {% endprism %}
 `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that this only happens when the state is set to `4`.
 
-The `open()` method is one of the most important methods of the XHR object and an AJAX application overall. This is because __the `open` method is the where we tell are code what data needs to downloaded__.
+The `open()` method is one of the most important methods of the XHR object, and an AJAX application overall. This is because __the `open` method is the where we tell are code what data needs to downloaded__.
 
 In this example, `getArticleInfo.open()` describes the data request. The first parameter is `GET` and it tells the server we want to "get" something from the server.
 
