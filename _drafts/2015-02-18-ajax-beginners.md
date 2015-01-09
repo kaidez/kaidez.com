@@ -372,25 +372,25 @@ getArticleInfo.onreadystatechange = function() {
 `getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-Developers like to use the [logical AND operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical AND operator on MDN") to simultaneously check the value of both `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
+Developers like to use the [logical "AND" operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical "AND" operator on MDN") to simultaneously check the value of both `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample07/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
 ...
 getArticleInfo.onreadystatechange = function() {
   var text = document.getElementById("textTarget");
-  if (getArticleInfo.readyState) === 4 && (getArticleInfo.status === 200) {
+  if ((getArticleInfo.readyState === 4) && (getArticleInfo.status === 200)) {
       text.innerHTML = getArticleInfo.responseText;
   } else {
     console.log("There was a problem with the request.");
   }
 };
 {% endprism %}
-While the code lets `XMLHttpRequest` request and display data without error, the console message will return anyway. This is because, it's doing very limited checks.
+`XMLHttpRequest` will request and display data without error but the console message, however we write it, will return anyway. This is because it's doing very limited checks.
 
-The code using logical AND will only load the content onto the page if `getArticleInfo.readyState` equals `4` at the same time that `getArticleInfo.status` equals `200`. But if `getArticleInfo.readyState` equals `3` (meaning that data is still loading), it won't place content on the page.
+The code using logical "AND" will only load the content onto the page if `getArticleInfo.readyState` equals `4` at the same time that `getArticleInfo.status` equals `200`. If `getArticleInfo.readyState` equals `3` (meaning that data is still loading), it won't place content on the page.
 
-But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical AND. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
+But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical "AND" to load in data. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
 
 Most developers simply don't add a console statement but your web application may require them. You'll probably want to write a few more `if/else` checks in those case, but doing that is out of the scope of this guide.
 
@@ -482,7 +482,7 @@ The code in the last demo is fine if we only have a few buttons, but would get m
 <div id="textTarget"></div>
 ...
 {% endprism %}
-The two buttons are still on our HTML page but we're updated them. For each one, we've removed the IDS, added a class called `btn` and added a data-attribute called `data-file`.
+The two buttons are still on our HTML page but we're updated them. For each one, we've removed the IDs, added a class called `btn` and added a data-attribute called `data-file`.
 
 The values of the data-attributes are unique for each button": each value is the name of the file that should be loaded using AJAX.
 {% prism javascript %}
@@ -621,9 +621,9 @@ Once `readyState` equals `4` and our code successfully connects to the server, i
 
 Then we're doing a `for...in` loop again that loops through JSON content stored inside the `players` variable. Three steps are performed for every loop iteration:
 
-* create a div tag using `document.createElement` and store it in a variable called `newDiv`.
-* look at each item in the `players` variable and find it's `playerOne` property. Then place it inside the div tag created in the `newDiv` variable by accessing the div's `innerHTML` property.
-* find the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
+1. create a div tag using `document.createElement` and store it in a variable called `newDiv`.
+2. look at each item in the `players` variable and find it's `playerOne` property. Then place it inside the div tag created in the `newDiv` variable by accessing the div's `innerHTML` property.
+3. find the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
 
 Again, this is a basic example of how to use JSON with AJAX...the main takeaway from this is example is that __AJAX can load all different types of content, including JSON__.
 <a name="ajax-jquery"></a>
@@ -643,7 +643,7 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 12</title>
+    <title>A Sample with the jQuery code attached to it</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -655,9 +655,33 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
 Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions vork in IE versions 6 and higher.
 <a name="jquery-load"></a>
 <h4 class="h4-guide">jQuery.load: the easiest way to use AJAX with jQuery</h4>
+[jQuery has an `$.ajax()` method](http://api.jquery.com/jQuery.ajax/ "Read about jQuery's ajax method") that allows you to use AJAX with jQuery any way that you want. But it also has many [AJAX shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read about jQuery shorthand methods") that lets you use a little easier.
+
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
+{% prism markup %}
+<!-- sample12/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample 12</title>
+  </head>
+  <body>
+    <div id="textTarget"></div>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+{% endprism %}
+An HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
+{% prism javascript %}
+// sample12/scripts.js
+$("#textTarget").load("articleName.html");
+{% endprism %}
+jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 
 yayquery: http://vimeo.com/19578621
-returns jqXHR...comes with a lot of stuff
+returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
