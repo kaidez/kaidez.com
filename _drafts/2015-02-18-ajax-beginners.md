@@ -735,14 +735,18 @@ We have to pass the name of data attribute we want to find as a parameter to the
 
 All of this is stored in a variable called `getData`. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `load` method that loads files inside of `<div id="textTarget">`.
 
-yayquery: http://vimeo.com/19578621
-returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
-jQuery's `$.ajax()` method is exceptionally power, but it may not be necessary for every situation. According to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"):
+jQuery's `$.ajax()` method is exceptionally powerful, but not needed for every project. According to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"):
 > *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
+jqXHR in $.ajax:
+http://api.jquery.com/jQuery.ajax/#jqXHR
+
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
+
+yayquery: http://vimeo.com/19578621
+returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
