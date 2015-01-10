@@ -43,6 +43,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
       <ol>
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
         <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
+        <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -647,12 +648,14 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
 {% endprism %}
-Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions vork in IE versions 6 and higher.
+Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions work in IE versions 6 and higher.
+
+If you use jQuery 1.x, it will perform the ActiveX Object feature detection we reviewed earlier.
 <a name="jquery-load"></a>
 <h4 class="h4-guide">$.load: the easiest way to use AJAX with jQuery</h4>
 [jQuery has an `$.ajax()` method](http://api.jquery.com/jQuery.ajax/ "Read about jQuery's ajax method") that allows you to use AJAX with jQuery any way that you want. But it also has many [AJAX shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read about jQuery shorthand methods") that lets you use a little easier.
@@ -670,7 +673,7 @@ If you want to use jQuery to load in file with AJAX like we've been doing, the `
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
@@ -681,6 +684,22 @@ A  HTML page like we've used in previous examples...it has `<div id="textTarget"
 $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
+<a name="jquery-ajax-request-mouseclick"></a>
+<h3 class="h3-guide">Use $.load to make an AJAX request with mouseclick</h3>
+{% prism markup %}
+<!-- sample13/index.html -->
+<!-- add <button> directly above <div id="textTarget">  -->
+...
+<button id="getHTMLFile">Load the HTML file</button>
+{% endprism %}
+
+{% prism javascript %}
+// sample13/scripts.js
+$("#getHTMLFile").click(function(){
+  $("#textTarget").load("articleName.html");
+});
+{% endprism %}
+
 
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
