@@ -44,7 +44,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
         <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
         <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
-        <li><a href="#jquery-multiple-ajax-buttons">Create reusable code for multiple buttons with $.load</a></li>
+        <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with $.load</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -707,6 +707,32 @@ $("#getHTMLFile").click(function(){
 Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
 <a name="jquery-reusable-button-code"></a>
 <h4 class="h4-guide">Create reusable code for multiple buttons with $.load</h4>
+We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient.
+{% prism markup %}
+<!-- sample14/index.html -->
+<!-- add two <button> tags directly above <div id="textTarget"> -->
+...
+<button class="btn" data-file="articleName.html">Load the HTML file</button>
+<button class="btn" data-file="articleName.txt">Load the text file</button>
+<div id="textTarget"></div>
+...
+{% endprism %}
+As before, create two buttons with a class called `btn` and a data-attribute called `data-file`. And `data-file` stores the file that should be loaded using AJAX.
+{% prism javascript %}
+// sample14/scripts.js
+$(".btn").click(function(){
+  var getData = $(this).data("file");
+  $("#textTarget").load(getData);
+});
+{% endprism %}
+As before, have all the buttons with the `btn` class share the same `click` function for loading in content. As before, the buttons simultaneously perform two tasks: find the file stored in the `data-file` attribute, and load that file into the `<div id="textTarget">` element.
+
+To get the file stored in `data-file`, we start by using `$(this).data()`. We're still using the JavaScript `this` keyword to reference the button being clicked, but it's now wrapped in the jQuery object so we can use it with other jQuery methods.
+
+We have to pass the name of data attribute we want to find as a parameter to the `.data` method. The name we want is `data-file` so we just need to write call our parameter "file".
+
+All of this is stored in a variable called `getData`...we don't HAVE to do this but it makes things easier to read. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `load` method that loads files inside of the the `<div id="textTarget">` element.
+
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
 <a name="conclusion"></a>
