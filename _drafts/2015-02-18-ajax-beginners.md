@@ -45,6 +45,8 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
         <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
         <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with $.load</a></li>
+        <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
+        <h4 class="h4-guide"></h4>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -661,7 +663,7 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 <h4 class="h4-guide">$.load: the easiest way to use AJAX with jQuery</h4>
 [jQuery has an `$.ajax()` method](http://api.jquery.com/jQuery.ajax/ "Read about jQuery's ajax method") that allows you to use AJAX with jQuery any way that you want. But it also has many [AJAX shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read about jQuery shorthand methods") that lets you use a little easier.
 
-If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechnage section of this article).
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
 
 <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
 {% prism markup %}
@@ -731,10 +733,16 @@ To get the file stored in `data-file`, we start by using `$(this).data()`. We're
 
 We have to pass the name of data attribute we want to find as a parameter to the `.data` method. The name we want is `data-file` so we just need to write call our parameter "file".
 
-All of this is stored in a variable called `getData`...we don't HAVE to do this but it makes things easier to read. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `load` method that loads files inside of the the `<div id="textTarget">` element.
+All of this is stored in a variable called `getData`. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `load` method that loads files inside of `<div id="textTarget">`.
 
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
+<a name="understanding-jquery-ajax"></a>
+<h4 class="h4-guide">Understanding $.ajax</h4>
+jQuery's `$.ajax()` method is exceptionally power, but it may not be necessary for every situation. According to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"):
+> *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
+
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
