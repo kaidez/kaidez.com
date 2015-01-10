@@ -19,7 +19,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
     <li><a href="#what-is-ajax">What Is AJAX</li>
     <li><a href="#brief-history-ajax">A brief history of AJAX</li>
     <li>
-      <a href="#ajax-javascript">Write AJAX with Regular JavaScript
+      <a href="#ajax-javascript">Create AJAX with Regular JavaScript
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</li>
         <li>
@@ -39,11 +39,12 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#load-json-ajax">Load JSON with AJAX</a>
       </ol>
     </li>
-    <li><a href="#ajax-jquery">AJAX and jQuery
+    <li><a href="#ajax-jquery">Create AJAX with jQuery
       <ol>
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
         <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
         <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
+        <li><a href="#jquery-multiple-ajax-buttons">Create reusable code for multiple buttons with $.load</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</li>
@@ -97,7 +98,7 @@ These web apps showed how useful XHR was but the developer community didn't real
 Garret's article defined the AJAX acronym and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
 
 <a name="ajax-javascript"></a>
-<h3 class="h3-guide">Write AJAX with Regular JavaScript</h3>
+<h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
 As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
@@ -628,7 +629,7 @@ Then we're doing a `for...in` loop again that loops through JSON content stored 
 
 Again, this is a basic example of how to use JSON with AJAX...the main takeaway from this is example is that __AJAX can load all different types of content, including JSON__.
 <a name="ajax-jquery"></a>
-<h3 class="h3-guide">AJAX and jQuery</h3>
+<h3 class="h3-guide">Create AJAX with jQuery</h3>
 [jQuery](http://jquery.com "Go to the jQuery site") has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
 
 
@@ -685,22 +686,27 @@ $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
-<h3 class="h3-guide">Use $.load to make an AJAX request with mouseclick</h3>
+<h4 class="h4-guide">Use $.load to make an AJAX request with mouseclick</h4>
+We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's it's jQuery version:
+
+<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
 {% prism markup %}
 <!-- sample13/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
+<div id="textTarget"></div>
 {% endprism %}
-
+Add a button with an id of `getHTMLFile` directly above `<div id="textTarget">`.
 {% prism javascript %}
 // sample13/scripts.js
 $("#getHTMLFile").click(function(){
   $("#textTarget").load("articleName.html");
 });
 {% endprism %}
-
-
+Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
+<a name="jquery-reusable-button-code"></a>
+<h4 class="h4-guide">Create reusable code for multiple buttons with $.load</h4>
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
 <a name="conclusion"></a>
