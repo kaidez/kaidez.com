@@ -16,40 +16,43 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
 <h2 style="clear:both;">Table of Contents</h2>
   <ol>
     <li><a href="#how-code-examples-works">How the code examples work</li>
-    <li><a href="#what-is-ajax">What Is AJAX</li>
-    <li><a href="#brief-history-ajax">A brief history of AJAX</li>
+    <li><a href="#what-is-ajax">What Is AJAX</a></li>
+    <li><a href="#brief-history-ajax">A brief history of AJAX</a></li>
     <li>
-      <a href="#ajax-javascript">Create AJAX with Regular JavaScript
+      <a href="#ajax-javascript">Create AJAX with Regular JavaScript</a>
       <ol>
-        <li><a href="#xhr-feature-detection">XHR feature detection</li>
+        <li><a href="#xhr-feature-detection">XHR feature detection</a></li>
         <li>
-          <a href="#load-content">Load content onto a page with AJAX</li>
+          <a href="#load-content">Load content onto a page with AJAX</a></li>
           <ol>
-            <li><a href="#200-response">Wait for 200 response code from the server</li>
-            <li><a href="#xhr-states">XHR States</li>
-            <li><a href="#what-is-onreadystatechange">Bring everything together using "onreadystatechange"</li>
+            <li><a href="#200-response">Wait for 200 response code from the server</a></li>
+            <li><a href="#xhr-states">XHR States</a></li>
+            <li><a href="#what-is-onreadystatechange">Bring everything together using "onreadystatechange"</a></li>
           </ol>
         </li>
-        <li><a href="#no-feature-detection">Use AJAX without feature-detection</li>
-        <li><a href="#callback-function">Have "readyStateChange" run a callback function</li>
-        <li><a href="#logical-and-error">Using "&&" generates an error</li>
+        <li><a href="#no-feature-detection">Use AJAX without feature-detection</a></li>
+        <li><a href="#callback-function">Have "readyStateChange" run a callback function</a></li>
+        <li><a href="#logical-and-error">Using "&&" generates an error</a></li>
         <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
         <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
         <li><a href="#reusable-button-code">Create reusable code for multiple buttons</a></li>
-        <li><a href="#load-json-ajax">Load JSON with AJAX</a>
+        <li><a href="#load-json-ajax">Load JSON with AJAX</a></a>
       </ol>
     </li>
-    <li><a href="#ajax-jquery">Create AJAX with jQuery
+    <li><a href="#ajax-jquery">Create AJAX with jQuery</a>
       <ol>
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
-        <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
-        <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
-        <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with $.load</a></li>
+        <li><a href="#ajax-shorthand">jQuery AJAX Shorthand methods</a>
+          <ol>
+            <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
+            <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
+            <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with $.load</a></li>
+          </ol>
+        </li>
         <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
-        <h4 class="h4-guide"></h4>
       </ol>
     </li>
-    <li><a href="#conclusion">Conclusion</li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
@@ -659,10 +662,23 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
 Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions work in IE versions 6 and higher.
 
 If you use jQuery 1.x, it will perform the ActiveX Object feature detection we reviewed earlier.
-<a name="jquery-load"></a>
-<h4 class="h4-guide">$.load: the easiest way to use AJAX with jQuery</h4>
-[jQuery has an `$.ajax()` method](http://api.jquery.com/jQuery.ajax/ "Read about jQuery's ajax method") that allows you to use AJAX with jQuery any way that you want. But it also has many [AJAX shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read about jQuery shorthand methods") that lets you use a little easier.
+<a name="ajax-shorthand"></a>
+<h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
+jQuery's `$.ajax()` method is powerful but, according to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"), not needed for every project:
 
+> *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
+
+In jQuery, these higher-level functions are commonly referred to as "[shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read more about jQuery AJAX shorthand methods")." jQuery currently offers five AJAX shorthand methods:
+
+1. `jQuery.get()`
+2. `jQuery.getJSON()`
+3. `jQuery.getScript()`
+4. `jQuery.post()`
+5. `.load()`
+
+We're going to look at `.load()` first because it's the easiest way to "AJAX in" content with jQuery.
+<a name="jquery-load"></a>
+<h5 class="h5-guide">$.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
 
 <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
@@ -688,7 +704,7 @@ $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
-<h4 class="h4-guide">Use $.load to make an AJAX request with mouseclick</h4>
+<h5 class="h5-guide">Use $.load to make an AJAX request with mouseclick</h5>
 We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's it's jQuery version:
 
 <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
@@ -708,7 +724,7 @@ $("#getHTMLFile").click(function(){
 {% endprism %}
 Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
 <a name="jquery-reusable-button-code"></a>
-<h4 class="h4-guide">Create reusable code for multiple buttons with $.load</h4>
+<h5 class="h5-guide">Create reusable code for multiple buttons with $.load</h5>
 We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient.
 {% prism markup %}
 <!-- sample14/index.html -->
@@ -737,9 +753,17 @@ All of this is stored in a variable called `getData`. Because `getData` refers t
 
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
-jQuery's `$.ajax()` method is exceptionally powerful, but not needed for every project. According to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"):
-> *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
 
+<a name="load-fragments"></a>
+<h5 class="h5-guide">Load in fragments with $.load</h5>
+`$load` method can load in a piece of data from a document instead of the entire document:
+{% prism javascript %}
+// sample15/scripts.js
+$(".btn").click(function(){
+  var getData = $(this).data("file");
+  $("#textTarget").load(getData);
+});
+{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
