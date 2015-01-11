@@ -789,6 +789,12 @@ The `$.get` method is different than `.load` in a few important ways:
 
 * Because of the last difference, it makes sense to use `.load` to "AJAX in" HTML documents only. `$.get` was created to "AJAX in" all types of documents.
 
+Using the same HTML as in the previous example, using `$.get` to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
+{% prism javascript %}
+$.get( "articleName.html", function(data) {
+  $("#textTarget").html(data);
+});
+{% endprism %}
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
 
