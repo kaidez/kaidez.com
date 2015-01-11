@@ -674,13 +674,12 @@ In jQuery, these higher-level functions are commonly referred to as "[shorthand 
 
 jQuery currently offers five AJAX shorthand methods:
 
-1. `jQuery.get()`
-2. `jQuery.getJSON()`
-3. `jQuery.getScript()`
-4. `jQuery.post()`
-5. `.load()`
+1. `.load()`
+2. `jQuery.get()`
+3. `jQuery.getJSON()`
+4. `jQuery.getScript()`
+5. `jQuery.post()`
 
-We're going to look at `.load()` first because it's the easiest way to "AJAX in" content with jQuery.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
@@ -791,10 +790,18 @@ The `$.get` method is different than `.load` in a few important ways:
 
 Using the same HTML as in the previous example, using `$.get` to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
 {% prism javascript %}
-$.get( "articleName.html", function(data) {
+$.get("articleName.html", function(data) {
   $("#textTarget").html(data);
 });
 {% endprism %}
+
+Where we used load as a chainable method inside a code block, `jQuery.get()` starts the code block. The first parameter tells us what content gets loaded onto the page, which is "articleName.html".
+
+The second parameter is a callback function that defines where the content gets loaded. The function takes a parameter called `data` which represents the content that gets loaded onto the page.
+
+The inside of the function loads the content onto the page. It loads inside the `#textTarget` element with the help of jQuery's `.html()` method. The `data` parameter, which represents the content, is passed to `.html()` so it knows what to load.
+
+The function parameter does not need to be called `data`: it can be anything you want. But naming it as `data` is a common practice.
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
 
