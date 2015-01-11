@@ -44,9 +44,11 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
         <li><a href="#ajax-shorthand">jQuery AJAX Shorthand methods</a>
           <ol>
-            <li><a href="#jquery-load">$.load: the easiest way to use AJAX with jQuery</a></li>
-            <li><a href="#jquery-ajax-request-mouseclick">Use $.load to make an AJAX request with mouseclick</a></li>
-            <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with $.load</a></li>
+            <li><a href="#jquery-load">.load: the easiest way to use AJAX with jQuery</a></li>
+            <li><a href="#jquery-ajax-request-mouseclick">Use .load to make an AJAX request with mouseclick</a></li>
+            <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with .load</a></li>
+            <li><a href="#load-fragments">Load in fragments with .load</a></li>
+            <li><a href="#jquery-get-request-mouseclick">Use $.get to make an AJAX request with mouseclick</a></li>
           </ol>
         </li>
         <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
@@ -668,7 +670,9 @@ jQuery's `$.ajax()` method is powerful but, according to [the current version of
 
 > *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
 
-In jQuery, these higher-level functions are commonly referred to as "[shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read more about jQuery AJAX shorthand methods")." jQuery currently offers five AJAX shorthand methods:
+In jQuery, these higher-level functions are commonly referred to as "[shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read more about jQuery AJAX shorthand methods")." All of them use core `.ajax()` method internally.
+
+jQuery currently offers five AJAX shorthand methods:
 
 1. `jQuery.get()`
 2. `jQuery.getJSON()`
@@ -678,7 +682,7 @@ In jQuery, these higher-level functions are commonly referred to as "[shorthand 
 
 We're going to look at `.load()` first because it's the easiest way to "AJAX in" content with jQuery.
 <a name="jquery-load"></a>
-<h5 class="h5-guide">$.load: the easiest way to use AJAX with jQuery</h5>
+<h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
 
 <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
@@ -704,10 +708,8 @@ $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
-<h5 class="h5-guide">Use $.load to make an AJAX request with mouseclick</h5>
-We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's it's jQuery version:
-
-<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
+<h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
+We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample13/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
@@ -724,8 +726,8 @@ $("#getHTMLFile").click(function(){
 {% endprism %}
 Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
 <a name="jquery-reusable-button-code"></a>
-<h5 class="h5-guide">Create reusable code for multiple buttons with $.load</h5>
-We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient.
+<h5 class="h5-guide">Create reusable code for multiple buttons with .load</h5>
+We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample14/index.html -->
 <!-- add two <button> tags directly above <div id="textTarget"> -->
@@ -751,19 +753,45 @@ We have to pass the name of data attribute we want to find as a parameter to the
 
 All of this is stored in a variable called `getData`. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `load` method that loads files inside of `<div id="textTarget">`.
 
+<a name="load-fragments"></a>
+<h5 class="h5-guide">Load in fragments with .load</h5>
+The `$load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>):
+{% prism markup %}
+<!-- sample15/index.html -->
+<!-- No <button> tags in this example -->
+...
+<div id="textTarget"></div>
+...
+{% endprism %}
+Use a page with just `<div id="textTarget"></div>`.
+{% prism markup %}
+<!-- sample15/article.html -->
+<div id="title">AJAX Tutorial for Beginners</div>
+<div id="author">Kai "kaidez" Gittens</div>
+{% endprism %}
+Create a page called `article.html` that contains two elements: `<div id="title">` and `<div id="author">`.
+{% prism javascript %}
+// sample15/scripts.js
+$("#textTarget").load("article.html #author");
+{% endprism %}
+Use load to "AJAX in" the `article.html` but instead of loading in the entire file, just load in the content in the `<div id="author">` element.
+
+<a name="jquery-get-request-mouseclick"></a>
+<h5 class="h5-guide">Use $.get to make an AJAX request with mouseclick</h5>
+
+The `$.get` method is different than `.load` in a few important ways:
+
+* `$.get` is a global function while `.load` is a method. This means that you would use `$.get` to start a jQuery code block but use `.load` as a chainable method inside a code block.
+
+* `$.get` manages GET server requests only while `.load` can manage both GET and POST requests.
+
+* With `.load`, you can define what content gets loaded onto a page and where. `$.get` cannot do on its own...extra code is needed.
+
+* Because of the last difference, it makes sense to use `.load` to "AJAX in" HTML documents only. `$.get` was created to "AJAX in" all types of documents.
+
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
 
-<a name="load-fragments"></a>
-<h5 class="h5-guide">Load in fragments with $.load</h5>
-`$load` method can load in a piece of data from a document instead of the entire document:
-{% prism javascript %}
-// sample15/scripts.js
-$(".btn").click(function(){
-  var getData = $(this).data("file");
-  $("#textTarget").load(getData);
-});
-{% endprism %}
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
