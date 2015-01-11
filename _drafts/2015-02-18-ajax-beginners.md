@@ -48,7 +48,8 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#jquery-ajax-request-mouseclick">Use .load to make an AJAX request with mouseclick</a></li>
             <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with .load</a></li>
             <li><a href="#load-fragments">Load in fragments with .load</a></li>
-            <li><a href="#jquery-get-request-mouseclick">Use $.get to make an AJAX request with mouseclick</a></li>
+            <li><a href="#jquery-get">Use jQuery.get()</a></li>
+            <li><a href="#jquery-get-json">Use jQuery.getJSON()</a></li>
           </ol>
         </li>
         <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
@@ -775,10 +776,10 @@ $("#textTarget").load("article.html #author");
 {% endprism %}
 Use load to "AJAX in" the `article.html` but instead of loading in the entire file, just load in the content in the `<div id="author">` element.
 
-<a name="jquery-get-request-mouseclick"></a>
-<h5 class="h5-guide">Use $.get to make an AJAX request with mouseclick</h5>
+<a name="jquery-get"></a>
+<h5 class="h5-guide">Use jQuery.get()</h5>
 
-The `$.get` method is different than `.load` in a few important ways:
+The `$.get` method is different from `.load` in a few important ways:
 
 * `$.get` is a global function while `.load` is a method. This means that you would use `$.get` to start a jQuery code block but use `.load` as a chainable method inside a code block.
 
@@ -802,6 +803,14 @@ The second parameter is a callback function that defines where the content gets 
 The inside of the function loads the content onto the page. It loads inside the `#textTarget` element with the help of jQuery's `.html()` method. The `data` parameter, which represents the content, is passed to `.html()` so it knows what to load.
 
 The function parameter does not need to be called `data`: it can be anything you want. But naming it as `data` is a common practice.
+
+<a href="http://api.jquery.com/jQuery.get/" target="blank">Read more about "jQuery.get"</a>
+
+<a name="jquery-get-json"></a>
+<h5 class="h5-guide">Use jQuery.getJSON()</h5>
+The `.getJSON()`
+<a href=http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>
+
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
 
