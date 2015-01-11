@@ -785,7 +785,7 @@ The `$.get` method is different than `.load` in a few important ways:
 
 * `$.get` manages GET server requests only while `.load` can manage both GET and POST requests.
 
-* With `.load`, you can define what content gets loaded onto a page and where. `$.get` cannot do on its own...extra code is needed.
+* With `.load`, you can define what content gets loaded onto a page and where. `$.get` cannot do this on its own...extra code is needed.
 
 * Because of the last difference, it makes sense to use `.load` to "AJAX in" HTML documents only. `$.get` was created to "AJAX in" all types of documents.
 
