@@ -1,2 +1,1 @@
-$.ajax("article")
-$("#textTarget").load("articleName.html");
+$("#textTarget").load("articleName.html #author");
