@@ -810,7 +810,7 @@ The function parameter does not need to be called `data`: it can be anything you
 <h5 class="h5-guide">Use jQuery.getJSON()</h5>
 The `.getJSON()`
 <a href=http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>
-
+We can use jQuery's `$.getJSON()` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax).
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
 
