@@ -50,6 +50,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#load-fragments">Load in fragments with .load</a></li>
             <li><a href="#jquery-get">Use jQuery.get()</a></li>
             <li><a href="#jquery-get-json">Use jQuery.getJSON()</a></li>
+            <li><a href="#jquery-get-script">Use jQuery.getScript()</a>
           </ol>
         </li>
         <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
@@ -796,23 +797,79 @@ $.get("articleName.html", function(data) {
 });
 {% endprism %}
 
-Where we used load as a chainable method inside a code block, `jQuery.get()` starts the code block. The first parameter tells us what content gets loaded onto the page, which is "articleName.html".
+Where we used `.load` as a chainable method inside a code block, `jQuery.get()` started the code block in this example. The first parameter told us what content gets loaded onto the page, which is "articleName.html".
 
-The second parameter is a callback function that defines where the content gets loaded. The function takes a parameter called `data` which represents the content that gets loaded onto the page.
+The second parameter was a callback function that defined where the content got loaded. The function took a parameter called `data` which represented the content that got loaded onto the page.
 
-The inside of the function loads the content onto the page. It loads inside the `#textTarget` element with the help of jQuery's `.html()` method. The `data` parameter, which represents the content, is passed to `.html()` so it knows what to load.
+The inside of the function loads the content onto the page. It loads inside the `#textTarget` element with the help of jQuery's `.html()` method.
 
-The function parameter does not need to be called `data`: it can be anything you want. But naming it as `data` is a common practice.
+The `data` parameter, which represents the content, is passed to `.html()` so it knows what to load. The function parameter does not need to be called `data`: it can be anything you want, but naming it as `data` is a common practice.
 
 <a href="http://api.jquery.com/jQuery.get/" target="blank">Read more about "jQuery.get"</a>
 
 <a name="jquery-get-json"></a>
 <h5 class="h5-guide">Use jQuery.getJSON()</h5>
-The `.getJSON()`
-<a href=http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>
 We can use jQuery's `$.getJSON()` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax).
+
+As a reminder, here's our JSON file
+{% prism javascript %}
+// sample17/soccerplayers.json
+{
+  "chelsea": {
+    "playerOne": "Didier Drogba",
+    "playerTwo": "Thibault Courtois",
+    "playerThree": "Cesc Fabregas"
+  },
+  "realMadrid": {
+    "playerOne": "Cristiano Ronaldo",
+    "playerTwo": "Sergio Ramos",
+    "playerThree": "Iker Casillas"
+  },
+  "psg": {
+    "playerOne": "Zlatan Ibrahimović",
+    "playerTwo": "Thiago Motta",
+    "playerThree": "Marquinhos"
+  }
+}
+{% endprism %}
+
+{% prism javascript %}
+// sample17/scripts.js
+$.getJSON("soccerplayers.json", function(players) {
+  $.each(players, function(i) {
+    var newDiv = $("<div></div>");
+    $(newDiv).append(players[i].playerOne);
+    $("#textTarget").append(newDiv);
+  })
+});
+{% endprism %}
+The first parameter for `$.getJSON()` is the JSON file with the content we want to load onto the page. The second parameter is a function that loads the data onto the page.
+
+The function takes one parameter we've called `player`, which the rest of our code will use to look at the JSON file. Next, we use jQuery's `$.each()` method do what the `for...in` loop did before and look for properties in our JSON data.
+
+`$.each()` also takes parameters: the first one is `players` parameter which, again, is pointing to our JSON data. The second parameter is another callback function that loads the data onto the page, and inside particular page elements we create.
+
+In the function, we created a variable called `newDiv` that used jQuery to create a new div tag. Then we used jQuery's `.append()` method to look for any `playerOne` properties in the items of the JSON object, and place them inside of the newly created div tag.
+
+The new div has content: we can now take it and use jQuery `.append()` again to load it into the `#textTarget` element already on the page.
+
+<a href="http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>
+
+<a name="jquery-get-script"></a>
+<h5 class="h5-guide">Use jQuery.getScript()</h5>
+The `$.getScript()` loads a single JavaScript file via AJAX. Two things happen after it's loaded:
+
+1. It executes whatever code is in the JavaScript file.
+2. It gets attached to global jQuery object, meaning other jQuery functions can access it..
+
+http://davidwalsh.name/loading-scripts-jquery
+
+<a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
+
+
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
+
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
@@ -823,4 +880,4 @@ http://api.jquery.com/jQuery.ajax/#jqXHR
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
 
 yayquery: http://vimeo.com/19578621
-returns jqXHR...comes with a lot of stuff...lets you use XHR with other functions if you want.
+returns jqXHR...comes with a lot of stuff...lets you use XHR methods/functions with other methods/functions if you want.
