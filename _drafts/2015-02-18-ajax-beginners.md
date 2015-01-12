@@ -104,7 +104,7 @@ The object was used to create to web applications that loaded data asynchronousl
 
 These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005, [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
 
-Garret's article defined the AJAX acronym and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
+Garret's article defined AJAX and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
 
 <a name="ajax-javascript"></a>
 <h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
@@ -796,7 +796,6 @@ $.get("articleName.html", function(data) {
   $("#textTarget").html(data);
 });
 {% endprism %}
-
 Where we used `.load` as a chainable method inside a code block, `jQuery.get()` started the code block in this example. The first parameter told us what content gets loaded onto the page, which is "articleName.html".
 
 The second parameter was a callback function that defined where the content got loaded. The function took a parameter called `data` which represented the content that got loaded onto the page.
@@ -843,9 +842,9 @@ $.getJSON("soccerplayers.json", function(players) {
   })
 });
 {% endprism %}
-The first parameter for `$.getJSON()` is the JSON file with the content we want to load onto the page. The second parameter is a function that loads the data onto the page.
+The first parameter for `$.getJSON()` is the JSON file with the content we want to load onto the page. The second parameter is a callback function that loads the data onto the page.
 
-The function takes one parameter we've called `player`, which the rest of our code will use to look at the JSON file. Next, we use jQuery's `$.each()` method do what the `for...in` loop did before and look for properties in our JSON data.
+That callback function takes one parameter we've called `player`, which points to the JSON file. Next, we use jQuery's `$.each()` method to do what the `for...in` loop did before and look for properties in our JSON data.
 
 `$.each()` also takes parameters: the first one is `players` parameter which, again, is pointing to our JSON data. The second parameter is another callback function that loads the data onto the page, and inside particular page elements we create.
 
