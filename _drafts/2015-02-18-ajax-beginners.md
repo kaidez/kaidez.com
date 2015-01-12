@@ -860,7 +860,9 @@ The new div has content: we can now take it and use jQuery `.append()` again to 
 The `$.getScript()` loads a single JavaScript file via AJAX. Two things happen after it's loaded:
 
 1. It executes whatever code is in the JavaScript file.
-2. It gets attached to global jQuery object, meaning other jQuery functions can access it..
+2. It gets attached to global jQuery object, meaning other jQuery functions can access it.
+
+
 
 http://davidwalsh.name/loading-scripts-jquery
 
