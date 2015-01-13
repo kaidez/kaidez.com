@@ -682,6 +682,7 @@ jQuery currently offers five AJAX shorthand methods:
 4. `jQuery.getScript()`
 5. `jQuery.post()`
 
+`jQuery.post()` deals with server interaction which is beyond the scope of this beginner tutorial, so it won't be discussed here. 
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
@@ -923,6 +924,8 @@ $.getScript("loadFile.js", function() {
 
 });
 {% endprism %}
+
+If you look at the Network panel in the developer tools now, you'll notice that no time stamp as been append to the filename.
 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
