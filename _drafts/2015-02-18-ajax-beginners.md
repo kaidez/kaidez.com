@@ -899,9 +899,13 @@ $.getScript("loadFile.js", function() {
 The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
 http://davidwalsh.name/loading-scripts-jquery
 
-Any .js files loaded in by `$.getScript()` are "cache busted", meaning that a time stamp is appended to the end of the file name on page load. This means that the browser will always look to download a new version of the file instead of loading in a cached onw.
+If you view `index.html` in a web browser with a good developer tool (Fiebug, Chrome Developer Tools, etc), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
+{% prism javascript %}
+loadFile.js?=1421161342213
+{% endprism %}
+This is because `$.getScript()` always "cache-busts" scripts that it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.
 
-  
+
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
 
