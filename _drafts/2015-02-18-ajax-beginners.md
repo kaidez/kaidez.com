@@ -856,15 +856,52 @@ The new div has content: we can now take it and use jQuery `.append()` again to 
 
 <a name="jquery-get-script"></a>
 <h5 class="h5-guide">Use jQuery.getScript()</h5>
-The `$.getScript()` loads a single JavaScript file via AJAX. Two things happen after it's loaded:
+`$.getScript()` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
-1. It executes whatever code is in the JavaScript file.
-2. It gets attached to global jQuery object, meaning other jQuery functions can access it.
+`index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):
+{% prism markup %}
+<!-- sample18/index.html -->
+...
+<div id="textTarget"></div>
+...
+{% endprism %}
+The same HTML structure we used in the last few examples.
+{% prism javascript %}
+// sample18/loadFile.js
+function getHtmlFile() {
 
+  $("#textTarget").load("articleName.html");
 
+};
 
+function setText() {
+
+  $("#textTarget").css({
+    "color": "red",
+    "font-weight": "bold"
+  });
+
+};
+{% endprism %}
+We created two functions in `loadFile.js`: `getHtmlFile()` `setText()`. `getHtmlFile()` loads the `articleName.html` into the `<div id="textTarget">` as was done in other examples, `setText()` changes the copy in `<div id="textTarget">` by making it red and bolding it.
+{% prism javascript %}
+// sample18/scripts.js
+$.getScript("loadFile.js", function() {
+
+  getHtmlFile();
+
+  $("#textTarget").click(function(){
+    setText();
+  });
+
+});
+{% endprism %}
+The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
 http://davidwalsh.name/loading-scripts-jquery
 
+Any .js files loaded in by `$.getScript()` are "cache busted", meaning that a time stamp is appended to the end of the file name on page load. This means that the browser will always look to download a new version of the file instead of loading in a cached onw.
+
+  
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
 
