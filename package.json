@@ -16,7 +16,7 @@
   ],
   "devDependencies": {
     "bower": "latest",
-    "glob": "^4.3.2",
+    "glob": "^4.3.4",
     "grunt": "^0.4.5",
     "grunt-cdn": "^0.6.3",
     "grunt-contrib-copy": "^0.7.0",
