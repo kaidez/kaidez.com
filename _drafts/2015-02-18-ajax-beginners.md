@@ -901,10 +901,28 @@ http://davidwalsh.name/loading-scripts-jquery
 
 If you view `index.html` in a web browser with a good developer tool (Fiebug, Chrome Developer Tools, etc), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
 {% prism javascript %}
+// Will look different every time the page gets reloaded
 loadFile.js?=1421161342213
 {% endprism %}
 This is because `$.getScript()` always "cache-busts" scripts that it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.
 
+If you want to avoid this, you can use `$.ajaxSetup()` to allow caching:  
+{% prism javascript %}
+// sample19/scripts.js
+$.ajaxSetup({
+  cache: true
+});
+
+$.getScript("loadFile.js", function() {
+
+  getHtmlFile();
+
+  $("#textTarget").click(function(){
+    setText();
+  });
+
+});
+{% endprism %}
 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
