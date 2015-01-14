@@ -682,7 +682,7 @@ jQuery currently offers five AJAX shorthand methods:
 4. `jQuery.getScript()`
 5. `jQuery.post()`
 
-`jQuery.post()` deals with server interaction which is beyond the scope of this beginner tutorial, so it won't be discussed here. 
+`jQuery.post()` deals with server interaction which is beyond the scope of this beginner tutorial, so it won't be discussed here.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
@@ -929,11 +929,11 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
-
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
+As mentioned, all the shorthand methods use the `$.ajax()` method internally. They allow you to use `$.ajax()` without applying any of the its configurations.
 
-
+This is fine for simple tasks but there are times when you need to do create complicated tasks. 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
