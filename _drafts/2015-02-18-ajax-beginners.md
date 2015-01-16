@@ -42,6 +42,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
     <li><a href="#ajax-jquery">Create AJAX with jQuery</a>
       <ol>
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
+        <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
         <li><a href="#ajax-shorthand">jQuery AJAX Shorthand methods</a>
           <ol>
             <li><a href="#jquery-load">.load: the easiest way to use AJAX with jQuery</a></li>
@@ -53,7 +54,6 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#jquery-get-script">Use jQuery.getScript()</a>
           </ol>
         </li>
-        <li><a href="#understanding-jquery-ajax">Understanding $.ajax</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -666,6 +666,13 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
 Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions work in IE versions 6 and higher.
 
 If you use jQuery 1.x, it will perform the ActiveX Object feature detection we reviewed earlier.
+
+<a name="understanding-jquery-ajax"></a>
+<h4 class="h4-guide">Understanding $.ajax</h4>
+`$.ajax()`is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
+
+Covering all this configurations is beyond the scope of a beginners tutorial, but understanding how it's structured is important.
+
 <a name="ajax-shorthand"></a>
 <h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
 jQuery's `$.ajax()` method is powerful but, according to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"), not needed for every project:
@@ -929,11 +936,6 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
-<a name="understanding-jquery-ajax"></a>
-<h4 class="h4-guide">Understanding $.ajax</h4>
-As mentioned, all the shorthand methods use the `$.ajax()` method internally. They allow you to use `$.ajax()` without applying any of the its configurations.
-
-This is fine for simple tasks but there are times when you need to do create complicated tasks. 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
