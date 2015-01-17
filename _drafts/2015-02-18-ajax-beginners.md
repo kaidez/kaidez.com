@@ -641,7 +641,6 @@ Again, this is a basic example of how to use JSON with AJAX...the main takeaway 
 <h3 class="h3-guide">Create AJAX with jQuery</h3>
 [jQuery](http://jquery.com "Go to the jQuery site") has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
 
-
 The release of jQuery 1.5 was significant because of certain AJAX-related changes. It optimized jQuery's AJAX functionality to be faster but also did the following:
 
 * bundled deferreds and promises, making AJAX's asynchronous functionality better.
@@ -671,11 +670,40 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 <h4 class="h4-guide">Understanding $.ajax</h4>
 `$.ajax()`is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
-Covering all this configurations is beyond the scope of a beginners tutorial, but understanding how it's structured is important.
+There are many ways to configure `$.ajax() and reviewing all of them is beyond the scope of a beginners tutorial. But understanding its structure is important.
 
+{% prism markup %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample 18</title>
+  </head>
+  <body>
+    <div id="textTarget"></div>
+    <div id="isLoadedTarget"></div>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+{% endprism %}
+
+The same HTML code as before except we've added a div with an id of "isLoadedTarget" and the core jQuery library.
+{% prism javascript %}
+$.ajax({
+  url: "articleName.html",
+  success: isLoaded
+}).done(function(data) {
+  $("#textTarget").html(data);
+});
+
+function isLoaded() {
+  $("#isLoadedTarget").html("<p>The file has loaded!</p>");
+}
+{% endprism %}
 <a name="ajax-shorthand"></a>
 <h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
-jQuery's `$.ajax()` method is powerful but, according to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"), not needed for every project:
+`$.ajax()` is powerful but according to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"), it's not needed for every project:
 
 > *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
 
@@ -790,7 +818,7 @@ Use load to "AJAX in" the `article.html` but instead of loading in the entire fi
 
 The `$.get` method is different from `.load` in a few important ways:
 
-* `$.get` is a global function while `.load` is a method. This means that you would use `$.get` to start a jQuery code block but use `.load` as a chainable method inside a code block.
+* `$.get` is a global function (like `$.ajax()`)while `.load` is a method. This means that you would use `$.get` to start a jQuery code block but use `.load` as a chainable method inside a code block.
 
 * `$.get` manages GET server requests only while `.load` can manage both GET and POST requests.
 
