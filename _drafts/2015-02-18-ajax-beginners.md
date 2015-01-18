@@ -867,7 +867,7 @@ We can use jQuery's `$.getJSON()` method to load in JSON content [as we did befo
 
 As a reminder, here's our JSON file
 {% prism javascript %}
-// sample17/soccerplayers.json
+// sample18/soccerplayers.json
 {
   "chelsea": {
     "playerOne": "Didier Drogba",
@@ -888,7 +888,7 @@ As a reminder, here's our JSON file
 {% endprism %}
 
 {% prism javascript %}
-// sample17/scripts.js
+// sample18/scripts.js
 $.getJSON("soccerplayers.json", function(players) {
   $.each(players, function(i) {
     var newDiv = $("<div></div>");
@@ -913,16 +913,16 @@ The new div has content: we can now take it and use jQuery `.append()` again to 
 <h5 class="h5-guide">Use jQuery.getScript()</h5>
 `$.getScript()` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
-`index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):
+`index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample18/index.html -->
+<!-- sample19/index.html -->
 ...
 <div id="textTarget"></div>
 ...
 {% endprism %}
 The same HTML structure we used in the last few examples.
 {% prism javascript %}
-// sample18/loadFile.js
+// sample19/loadFile.js
 function getHtmlFile() {
 
   $("#textTarget").load("articleName.html");
@@ -940,7 +940,7 @@ function setText() {
 {% endprism %}
 We created two functions in `loadFile.js`: `getHtmlFile()` `setText()`. `getHtmlFile()` loads the `articleName.html` into the `<div id="textTarget">` as was done in other examples, `setText()` changes the copy in `<div id="textTarget">` by making it red and bolding it.
 {% prism javascript %}
-// sample18/scripts.js
+// sample19/scripts.js
 $.getScript("loadFile.js", function() {
 
   getHtmlFile();
@@ -954,7 +954,7 @@ $.getScript("loadFile.js", function() {
 The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
 http://davidwalsh.name/loading-scripts-jquery
 
-If you view `index.html` in a web browser with a good developer tool (Fiebug, Chrome Developer Tools, etc), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
+If you view `index.html` in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
 {% prism javascript %}
 // Will look different every time the page gets reloaded
 loadFile.js?=1421161342213
