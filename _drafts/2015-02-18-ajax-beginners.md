@@ -671,14 +671,15 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 <h4 class="h4-guide">Understanding $.ajax()</h4>
 `$.ajax()` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
-There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of a beginners tutorial. But understanding its structure is important.
+There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of a beginners tutorial. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
 
 {% prism markup %}
+<!-- sample12/scripts.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 18</title>
+    <title>Sample 12</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -691,6 +692,7 @@ There are many ways to configure `$.ajax()` and reviewing all of them is beyond 
 
 The same HTML code as before except we've added a div with an id of "isLoadedTarget" and the core jQuery library.
 {% prism javascript %}
+// sample12/scripts.js
 $.ajax({
   url: "articleName.html",
   success: isLoaded,
@@ -741,14 +743,14 @@ jQuery currently offers five AJAX shorthand methods:
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
 
-<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
+<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">View the example</a>:
 {% prism markup %}
-<!-- sample12/index.html -->
+<!-- sample13/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 12</title>
+    <title>Sample 13</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -759,15 +761,15 @@ If you want to use jQuery to load in file with AJAX like we've been doing, the `
 {% endprism %}
 A  HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
 {% prism javascript %}
-// sample12/scripts.js
+// sample13/scripts.js
 $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
 <h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
-We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
+We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample13/index.html -->
+<!-- sample14/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
@@ -775,7 +777,7 @@ We used a mouseclick to [load content "AJAX in" content in a previous example](#
 {% endprism %}
 Add a button with an id of `getHTMLFile` directly above `<div id="textTarget">`.
 {% prism javascript %}
-// sample13/scripts.js
+// sample14/scripts.js
 $("#getHTMLFile").click(function(){
   $("#textTarget").load("articleName.html");
 });
@@ -783,9 +785,9 @@ $("#getHTMLFile").click(function(){
 Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
 <a name="jquery-reusable-button-code"></a>
 <h5 class="h5-guide">Create reusable code for multiple buttons with .load</h5>
-We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
+We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample14/index.html -->
+<!-- sample15/index.html -->
 <!-- add two <button> tags directly above <div id="textTarget"> -->
 ...
 <button class="btn" data-file="articleName.html">Load the HTML file</button>
@@ -795,7 +797,7 @@ We used [plain JavaScript to create separate buttons to "AJAX in" different cont
 {% endprism %}
 As before, create two buttons with a class called `btn` and a data-attribute called `data-file`. And `data-file` stores the file that should be loaded using AJAX.
 {% prism javascript %}
-// sample14/scripts.js
+// sample15/scripts.js
 $(".btn").click(function(){
   var getData = $(this).data("file");
   $("#textTarget").load(getData);
@@ -811,9 +813,9 @@ All of this is stored in a variable called `getData`. Because `getData` refers t
 
 <a name="load-fragments"></a>
 <h5 class="h5-guide">Load in fragments with .load</h5>
-The `$load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>):
+The `$load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample15/index.html -->
+<!-- sample16/index.html -->
 <!-- No <button> tags in this example -->
 ...
 <div id="textTarget"></div>
@@ -821,13 +823,13 @@ The `$load` method can load in a piece of data from an HTML document instead of 
 {% endprism %}
 Use a page with just `<div id="textTarget"></div>`.
 {% prism markup %}
-<!-- sample15/article.html -->
+<!-- sample16/article.html -->
 <div id="title">AJAX Tutorial for Beginners</div>
 <div id="author">Kai "kaidez" Gittens</div>
 {% endprism %}
 Create a page called `article.html` that contains two elements: `<div id="title">` and `<div id="author">`.
 {% prism javascript %}
-// sample15/scripts.js
+// sample16/scripts.js
 $("#textTarget").load("article.html #author");
 {% endprism %}
 Use load to "AJAX in" the `article.html` but instead of loading in the entire file, just load in the content in the `<div id="author">` element.
@@ -845,8 +847,9 @@ The `$.get` method is different from `.load` in a few important ways:
 
 * Because of the last difference, it makes sense to use `.load` to "AJAX in" HTML documents only. `$.get` was created to "AJAX in" all types of documents.
 
-Using the same HTML as in the previous example, using `$.get` to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
+Using the same HTML as in the previous example, using `$.get` to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample17/" target="blank">view the example</a>):
 {% prism javascript %}
+// sample17/scripts.js
 $.get("articleName.html", function(data) {
   $("#textTarget").html(data);
 });
@@ -961,7 +964,7 @@ loadFile.js?=1421161342213
 {% endprism %}
 This is because `$.getScript()` always "cache-busts" scripts that it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.
 
-If you want to avoid this, you can use `$.ajaxSetup()` to allow caching:  
+If you want to avoid this, you can use `$.ajaxSetup()` to allow caching (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):  
 {% prism javascript %}
 // sample20/scripts.js
 $.ajaxSetup({
