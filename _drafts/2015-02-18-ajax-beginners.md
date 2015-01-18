@@ -709,17 +709,17 @@ function isLoaded() {
 {% endprism %}
 You can use `$.ajax()` either with or without passing parameters to it. If you do pass parameters, you can pass more than one using a configurable object.
 
-We've created a configurable object be setting the following options:
+We've created a configurable object be setting three options:
 
-*  url: Defines which file is being loaded into the page via AJAX. This example loaded in the "articleName.html" file.
-*  success: Defines what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
-*  statusCode: Defines what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
+1.  url: Defines which file is being loaded into the page via AJAX. This example loaded in the "articleName.html" file.
+2.  success: Defines what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
+3.  statusCode: Defines what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
 
 `.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at promises but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
 
  `.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
 
-The callback used the `html()` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html()` instead of the file name. `.done()` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in. 
+The callback used the `html()` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html()` instead of the file name. `.done()` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.  
 <a name="ajax-shorthand"></a>
 <h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
 `$.ajax()` is powerful, but not needed for every project. According to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"):
@@ -963,7 +963,7 @@ This is because `$.getScript()` always "cache-busts" scripts that it loads in. T
 
 If you want to avoid this, you can use `$.ajaxSetup()` to allow caching:  
 {% prism javascript %}
-// sample19/scripts.js
+// sample20/scripts.js
 $.ajaxSetup({
   cache: true
 });
