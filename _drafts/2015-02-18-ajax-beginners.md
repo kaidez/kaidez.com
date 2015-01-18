@@ -644,7 +644,7 @@ Again, this is a basic example of how to use JSON with AJAX...the main takeaway 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes:
 
 * AJAX performed faster in jQuery.
-* deferreds and promises were introduced, making AJAX's asynchronous functionality better.
+* promises were introduced, making AJAX's asynchronous functionality better.
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
@@ -717,7 +717,7 @@ We've created a configurable object be setting three options:
 2.  success: Defines what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
 3.  statusCode: Defines what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
 
-`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at promises but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
+`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
 
  `.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
 
