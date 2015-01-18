@@ -1,3 +1,1 @@
-$("#getHTMLFile").click(function(){
-  $("#textTarget").load("articleName.html");
-});
+$("#textTarget").load("articleName.html");

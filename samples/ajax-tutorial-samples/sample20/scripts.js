@@ -1,3 +1,7 @@
+$.ajaxSetup({
+  cache: true
+});
+
 $.getScript("loadFile.js", function() {
 
   getHtmlFile();

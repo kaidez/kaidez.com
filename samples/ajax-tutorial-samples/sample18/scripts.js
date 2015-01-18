@@ -1,9 +1,7 @@
-$.getScript("loadFile.js", function() {
-
-  getHtmlFile();
-
-  $("#textTarget").click(function(){
-    setText();
-  });
-
+$.getJSON("soccerplayers.json", function(players) {
+  $.each(players, function(i) {
+    var newDiv = $("<div></div>");
+    $(newDiv).append(players[i].playerOne);
+    $("#textTarget").append(newDiv);
+  })
 });

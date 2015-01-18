@@ -1,3 +1,1 @@
-$.get("articleName.html", function(data) {
-  $("#textTarget").html(data);
-});
+$("#textTarget").load("article.html #author");
