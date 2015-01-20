@@ -54,6 +54,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#jquery-get-script">Use jQuery.getScript()</a>
           </ol>
         </li>
+        <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -644,7 +645,7 @@ Again, this is a basic example of how to use JSON with AJAX...the main takeaway 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes:
 
 * AJAX performed faster in jQuery.
-* promises were introduced, making AJAX's asynchronous functionality better.
+* deferreds and promises were introduced, making AJAX's asynchronous functionality better.
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
@@ -986,11 +987,21 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
+<a name="jqxhr-promises-deferreds"></a>
+<h4 class="h4-guide">jqHXR, Promises & Deferreds</h4>
+Anytime `$.ajax()` or any of the shorthand methods are used, they return the jQuery XMLHttpRequest object. The object is commonly referred to as "jqHXR".
+
+The jqXHR returns a "promise" which will be discussed s are different in jQuery, but also work closely together. Especially when doing things with AJAX.
+
+It's best to think of the process like this:
+
+1. Both `$.ajax()`
+jqXHR in $.ajax:
+http://api.jquery.com/jQuery.ajax/#jqXHR
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
-jqXHR in $.ajax:
-http://api.jquery.com/jQuery.ajax/#jqXHR
 
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
 
