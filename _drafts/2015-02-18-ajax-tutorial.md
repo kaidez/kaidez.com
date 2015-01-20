@@ -3,7 +3,7 @@ title: AJAX Tutorial for Beginners
 comments: true
 author: Kai Gittens
 layout: post
-permalink: /ajax-beginners-tutorial/
+permalink: /ajax-tutorial/
 meta-excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."
 category: tutorials
 cat-name: "Tutorials"
