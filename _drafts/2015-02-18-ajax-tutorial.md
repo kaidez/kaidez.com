@@ -7,7 +7,7 @@ permalink: /ajax-tutorial/
 meta-excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."
 category: tutorials
 cat-name: "Tutorials"
-tags: [html5, javascript]
+tags: [html5, javascript, ajax]
 has-home-img: ajax-image.jpg
 ---
 AJAX has grown a lot since [Jesse James Garrett defined it in 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
