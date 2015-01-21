@@ -718,7 +718,7 @@ We've created a configurable object be setting three options:
 2.  success: Defines what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
 3.  statusCode: Defines what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
 
-`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
+`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery promises and deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
 
  `.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
 
@@ -989,15 +989,13 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 
 <a name="jqxhr-promises-deferreds"></a>
 <h4 class="h4-guide">jqHXR, Promises & Deferreds</h4>
-Anytime `$.ajax()` or any of the shorthand methods are used, they return the jQuery XMLHttpRequest object. The object is commonly referred to as "jqHXR".
+When used, both `$.ajax()` and the shorthand methods return the jQuery XMLHttpRequest object, which is commonly referred to as "jqHXR".
 
-The jqXHR returns a "promise" which will be discussed s are different in jQuery, but also work closely together. Especially when doing things with AJAX.
+jqXHR is basically the traditional `XMLHttpRequest` object already in the browser, except it's wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-It's best to think of the process like this:
+An important part of the API are jQuery "promises" which are part of the [jQuery "Deffered" object](http://api.jquery.com/category/deferred-object/ "Read more about "). The object has its own methods with the most popular ones being `always`, `done`, `fail`, and `then`.
 
-1. Both `$.ajax()`
-jqXHR in $.ajax:
-http://api.jquery.com/jQuery.ajax/#jqXHR
+`done` was first seen in the ["Understanding $.ajax()"]#(understanding-jquery-ajax) part of this guide.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
