@@ -55,6 +55,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
           </ol>
         </li>
         <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
+        <li><a href="#what-is-javascript-promises">What is a Promise</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -995,8 +996,16 @@ jqXHR is basically the traditional `XMLHttpRequest` object already in the browse
 
 An important part of the API are jQuery "promises" which are part of the [jQuery "Deffered" object](http://api.jquery.com/category/deferred-object/ "Read more about "). The object has its own methods with the most popular ones being `always`, `done`, `fail`, and `then`.
 
-`done` was first seen in the ["Understanding $.ajax()"]#(understanding-jquery-ajax) part of this guide.
+`done` was first seen in the ["Understanding $.ajax()"](#understanding-jquery-ajax) part of this guide.
 
+<a name="what-is-javascript-promises"></a>
+<h4 class="h4-guide">What is a Promise</h4>
+From the community-led <a href="https://promisesaplus.com/" target="blank">Promises "specifcation</a>:"
+
+> *"A promise represents the eventual result of an asynchronous operation."*
+
+
+Promises are not a new technology ([read the Wikipedia article about the history of promises](http://en.wikipedia.org/wiki/Futures_and_promises)). But they are relatively new to JavaScript
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
