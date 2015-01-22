@@ -994,15 +994,17 @@ When used, both `$.ajax()` and the shorthand methods return the jQuery XMLHttpRe
 
 jqXHR is basically the traditional `XMLHttpRequest` object already in the browser, except it's wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the [jQuery "Deffered" object](http://api.jquery.com/category/deferred-object/ "Read more about "). The object has its own methods with the most popular ones being `always`, `done`, `fail`, and `then`.
-
-`done` was first seen in the ["Understanding $.ajax()"](#understanding-jquery-ajax) part of this guide.
+An important part of the API are jQuery "promises" which are part of the [jQuery Deffered object](http://api.jquery.com/category/deferred-object/ "Read more about jQuery Deffereds").
 
 <a name="what-is-javascript-promises"></a>
 <h4 class="h4-guide">What is a Promise</h4>
-Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is beyond the scope of this guide but it's good to understand the basic ideas.
+Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is beyond the scope of this guide but it's good to understand their basic ideas.
 
-Promises are a neater way of performing asynchronous, non-blocking tasks in JavaScript. These tasks were usually performed with callback functions and these functions are still needed when using promises...it's just that they're used in a much neater way.
+According to the <a href="https://promisesaplus.com/" target="blank">community-led Promises specifcation</a>:
+
+> *A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.*
+
+In other words, promises let you write code that does something, then.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
