@@ -673,7 +673,7 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 <h4 class="h4-guide">Understanding $.ajax()</h4>
 `$.ajax()` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
-There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of a beginners tutorial. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
+There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
 
 {% prism markup %}
 <!-- sample12/scripts.html -->
@@ -740,7 +740,7 @@ jQuery currently offers five AJAX shorthand methods:
 4. `jQuery.getScript()`
 5. `jQuery.post()`
 
-`jQuery.post()` deals with server interaction which is beyond the scope of this beginner tutorial, so it won't be discussed here.
+`jQuery.post()` deals with server interaction which is beyond the scope of this guide, so it won't be discussed here.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
@@ -1000,17 +1000,24 @@ An important part of the API are jQuery "promises" which are part of the [jQuery
 
 <a name="what-is-javascript-promises"></a>
 <h4 class="h4-guide">What is a Promise</h4>
-From the community-led <a href="https://promisesaplus.com/" target="blank">Promises "specifcation</a>:"
+Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is beyond the scope of this guide but it's good to understand the basic ideas.
 
-> *"A promise represents the eventual result of an asynchronous operation."*
+Promises are a neater way of performing asynchronous, non-blocking tasks in JavaScript. These tasks were usually performed with callback functions and these functions are still needed when using promises...it's just that they're used in a much neater way.
 
-
-Promises are not a new technology ([read the Wikipedia article about the history of promises](http://en.wikipedia.org/wiki/Futures_and_promises)). But they are relatively new to JavaScript
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
 
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
+
+Forbes Lindesay
+https://www.promisejs.org/
+
+MDN Promises
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
+([read the Wikipedia article about the history of promises](http://en.wikipedia.org/wiki/Futures_and_promises)).
 
 yayquery: http://vimeo.com/19578621
 returns jqXHR...comes with a lot of stuff...lets you use XHR methods/functions with other methods/functions if you want.
