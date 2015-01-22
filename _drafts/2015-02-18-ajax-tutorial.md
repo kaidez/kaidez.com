@@ -1002,10 +1002,19 @@ Promises are not a new technology, but are relatively new to JavaScript and are 
 
 According to the <a href="https://promisesaplus.com/" target="blank">community-led Promises specifcation</a>:
 
-> *A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.*
+> *A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its `then` method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.*
 
-In other words, promises let you write code that does something, then.
+In other words...
 
+* Promises let you write code that does something.
+* Promises wait for that code to finish what it's doing.
+* Promises let you run another piece of code as soon as that code COMPLETELY finishes what it's doing.
+* Promises have special event handling for situations where the code doesn't fully work.
+* Promises have a `then` method that manages all of these things.
+
+Promises are a neater way of performing asynchronous, non-blocking tasks in JavaScript. These tasks were usually performed with callback functions and these functions are still needed when using promises...it's just that they're used in a much neater way.
+
+At the time of this guide's publish date, Promises haven't been fully implemented in browsers. The current goal is make them part of a future version of JavaScript, specifically the ECMAScript 6 version, code-named "Harmony."
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
