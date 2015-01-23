@@ -57,6 +57,14 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
         <li><a href="#what-is-javascript-promises">What is a Promise</a></li>
         <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
+        <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
+          <ol>
+            <li><a href="#jqxhr-done">The jqXHR .done method</a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -1032,6 +1040,18 @@ According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a tick
 There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promise community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promise post on GitHub</a> that explains them even further.
 
 Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank">an excellent walk-through page on Promises</a>. Really good for beginners.
+
+<a name="deffered-methods"></a>
+<h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
+Because jqXHR is part of jQuery Deffereds, it has access to all of Deffereds methods. The four methods most commonly-used are:
+
+1. `done`
+2. `fail`
+3. `always`
+4. `then`
+
+<a name="jqxhr-done"></a>
+<h5 class="h5-guide">The jqXHR .done method</h5>
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
