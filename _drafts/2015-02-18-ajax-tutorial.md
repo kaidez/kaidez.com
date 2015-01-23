@@ -1030,14 +1030,16 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things in jQuery, affecting more than its Promise functionality.
 
 There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promise community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promise post on GitHub</a> that explains them even further.
+
+Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank">an excellent walk-through page on Promises</a>. Really good for beginners.
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
 
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
 
-Forbes Lindesay
-https://www.promisejs.org/
+
 
 MDN Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
