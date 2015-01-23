@@ -56,6 +56,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         </li>
         <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
         <li><a href="#what-is-javascript-promises">What is a Promise</a></li>
+        <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
       </ol>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -1012,9 +1013,24 @@ In other words...
 * Promises have special event handling for situations where the code doesn't fully work.
 * Promises have a `then` method that manages all of these things.
 
-Promises are a neater way of performing asynchronous, non-blocking tasks in JavaScript. These tasks were usually performed with callback functions and these functions are still needed when using promises...it's just that they're used in a much neater way.
+Promises are a neater way of performing asynchronous, non-blocking tasks in JavaScript. These tasks were usually performed with callback functions, which are still needed when using promises...it's just that they're used in a much neater way.
 
 At the time of this guide's publish date, Promises haven't been fully implemented in browsers. The current goal is make them part of a future version of JavaScript, specifically the ECMAScript 6 version, code-named "Harmony."
+
+<a name="jquery-promises"></a>
+<h4 class="h4-guide">An important note about jQuery Promises</h4>
+Since Promises aren't available in every browser, there are libraries that you can add to your add to your project that make them work. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank">a list of libraries that fully conform the spec</a>.
+
+Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the spec in two ways:
+
+1. The spec calls for Promises to be their own object when implememted: Promises are wrapped in the jQuery's Deffered object.
+
+2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this. 
+
+The spec calls for Promises to
+http://bugs.jquery.com/ticket/11010
+
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
