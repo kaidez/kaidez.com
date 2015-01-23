@@ -1023,14 +1023,13 @@ Since Promises aren't available in every browser, there are libraries that you c
 
 Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the spec in two ways:
 
-1. The spec calls for Promises to be their own object when implememted: Promises are wrapped in the jQuery's Deffered object.
+1. The spec calls for Promises to be their own object when implemented: Promises are wrapped in the jQuery's Deffered object.
 
-2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this. 
+2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.
 
-The spec calls for Promises to
-http://bugs.jquery.com/ticket/11010
+According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things in jQuery, affecting more than its Promise functionality.
 
-
+There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promise community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promise post on GitHub</a> that explains them even further.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
