@@ -37,8 +37,7 @@
     "grunt-targethtml": "^0.2.6",
     "gulp": "^3.8.10",
     "gulp-cssshrink": "^0.1.4",
-    "gulp-uncss": "^0.5.2",
-    "jshint": "^2.6.0",
+    "gulp-uncss": "^1.0.0",
     "time-grunt": "^1.0.0"
   },
   "dependencies": {
