@@ -55,7 +55,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
           </ol>
         </li>
         <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
-        <li><a href="#what-is-javascript-promises">What is a Promise</a></li>
+        <li><a href="#what-is-a-javascript-promise">What is a Promise</a></li>
         <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
         <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
           <ol>
@@ -1003,11 +1003,11 @@ When used, both `$.ajax()` and some of the shorthand methods return the jQuery X
 
 jqXHR is basically the traditional `XMLHttpRequest` object already in the browser wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality and can do more than what will be discussed...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">read the jQuery documentation to learn more about jQuery Deffereds</a>.
+An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">read the jQuery documentation to learn more about jQuery Deffereds</a>.
 
-<a name="what-is-javascript-promises"></a>
+<a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise</h4>
-Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is beyond the scope of this guide but it's good to understand their basic ideas.
+Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.
 
 According to the <a href="https://promisesaplus.com/" target="blank">community-led Promises specifcation</a>:
 
@@ -1017,10 +1017,10 @@ In other words...
 
 * Promises wait for your code to COMPLETELY finish what it's doing.
 * Promises then let you attach callbacks in a neater, cleaner way then it did previously.
-* Promises have special event handling for situations where the code doesn't fully work.
-* Promises have a `then` method that manages all of these things.
+* Promises have a `then` method that manages the callbacks.
+* Promises have special event handling for situations where the code fails.
 
-At the time of this guide's publish date, Promises haven't been fully implemented in browsers. The current goal is make them part of a future version of JavaScript, specifically the ECMAScript 6 version, code-named "Harmony."
+At the time of this guide's publish date, Promises haven't been fully implemented in browsers. The current goal is make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank">ECMAScript version 6, code-named "Harmony."</a>
 
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
@@ -1040,7 +1040,7 @@ Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="b
 
 <a name="deffered-methods"></a>
 <h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
-Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's methods. The four methods most commonly-used are:
+Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's methods. The four most commonly-used methods are:
 
 1. `done`
 2. `fail`
