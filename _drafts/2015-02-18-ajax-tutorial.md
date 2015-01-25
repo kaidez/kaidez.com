@@ -1003,7 +1003,7 @@ When used, both `$.ajax()` and some of the shorthand methods return the jQuery X
 
 jqXHR is basically the traditional `XMLHttpRequest` object already in the browser wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the [jQuery Deffered object](http://api.jquery.com/category/deferred-object/ "Read more about jQuery Deffereds").
+An important part of the API are jQuery "promises" which are part of the <a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">jQuery Deffered object</a>.
 
 <a name="what-is-javascript-promises"></a>
 <h4 class="h4-guide">What is a Promise</h4>
@@ -1015,13 +1015,10 @@ According to the <a href="https://promisesaplus.com/" target="blank">community-l
 
 In other words...
 
-* Promises let you write code that does something.
-* Promises wait for that code to finish what it's doing.
-* Promises let you run another piece of code as soon as that code COMPLETELY finishes what it's doing.
+* Promises wait for your code to COMPLETELY finish what it's doing.
+* Promises then let you attach callbacks in a neater, cleaner way then it did previously.
 * Promises have special event handling for situations where the code doesn't fully work.
 * Promises have a `then` method that manages all of these things.
-
-Promises are a neater way of performing asynchronous, non-blocking tasks in JavaScript. These tasks were usually performed with callback functions, which are still needed when using promises...it's just that they're used in a much neater way.
 
 At the time of this guide's publish date, Promises haven't been fully implemented in browsers. The current goal is make them part of a future version of JavaScript, specifically the ECMAScript 6 version, code-named "Harmony."
 
@@ -1035,11 +1032,11 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 
 2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.
 
-According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things in jQuery, affecting more than its Promise functionality.
+According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things in jQuery, affecting more than its Promises functionality.
 
-There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promise community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promise post on GitHub</a> that explains them even further.
+There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promises post on GitHub</a> that explains them even further.
 
-Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank">an excellent walk-through page on Promises</a>. Really good for beginners.
+Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank">an excellent walk-through on Promises</a>. Really good for beginners.
 
 <a name="deffered-methods"></a>
 <h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
