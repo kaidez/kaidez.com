@@ -999,9 +999,9 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 
 <a name="jqxhr-promises-deferreds"></a>
 <h4 class="h4-guide">jqHXR, Promises & Deferreds</h4>
-When used, both `$.ajax()` and the shorthand methods return the jQuery XMLHttpRequest object, which is commonly referred to as "jqHXR".
+When used, both `$.ajax()` and some of the shorthand methods return the jQuery XMLHttpRequest object, which is commonly referred to as "jqHXR". The `.load()` shorthand method does not return jqXHR.
 
-jqXHR is basically the traditional `XMLHttpRequest` object already in the browser, except it's wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
+jqXHR is basically the traditional `XMLHttpRequest` object already in the browser wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
 An important part of the API are jQuery "promises" which are part of the [jQuery Deffered object](http://api.jquery.com/category/deferred-object/ "Read more about jQuery Deffereds").
 
@@ -1043,7 +1043,7 @@ Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="b
 
 <a name="deffered-methods"></a>
 <h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
-Because jqXHR is part of jQuery Deffereds, it has access to all of Deffereds methods. The four methods most commonly-used are:
+Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's methods. The four methods most commonly-used are:
 
 1. `done`
 2. `fail`
