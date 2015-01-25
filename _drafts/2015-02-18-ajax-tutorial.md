@@ -60,7 +60,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
           <ol>
             <li><a href="#done-method">The .done method</a></li>
-            <li></li>
+            <li><a href="#fail-method">The .fail method</a></li>
             <li></li>
             <li></li>
           </ol>
@@ -1077,7 +1077,7 @@ $.get("article.html").done(function(data) {
 
 The callback loaded the contents of "article.html" on to the page and returned a console message.
 
-We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load()` doesn't return and is unable to do this.
+We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load()` doesn't return jqXHR and is unable to do this.
 
 The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
 
@@ -1091,7 +1091,10 @@ $("#textTarget").load("article.html")
 });
 {% endprism %}
 
-The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didnt work in our code. 
+The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didnt work in our code.
+
+<a name="fail-method"></a>
+<h5 class="h5-guide">The .fail method</h5>
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
