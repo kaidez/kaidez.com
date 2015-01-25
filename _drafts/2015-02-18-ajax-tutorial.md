@@ -1003,7 +1003,7 @@ When used, both `$.ajax()` and some of the shorthand methods return the jQuery X
 
 jqXHR is basically the traditional `XMLHttpRequest` object already in the browser wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the <a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">jQuery Deffered object</a>.
+An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality and can do more than what will be discussed...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">read the jQuery documentation to learn more about jQuery Deffereds</a>.
 
 <a name="what-is-javascript-promises"></a>
 <h4 class="h4-guide">What is a Promise</h4>
