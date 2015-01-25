@@ -1049,7 +1049,7 @@ Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's me
 
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
-The jQuery Deffered `.done` method sets a callback for what to do after code as fully run, or, fully "resolved".
+The jQuery Deffered `.done` method sets a callback for what to do after code as fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample21/index.html -->
 <!DOCTYPE html>
@@ -1073,7 +1073,25 @@ $.get("article.html").done(function(data) {
   console.log("The file has loaded!");
 });
 {% endprism %}
+`$.get()` requested "article.html" from the server. `.done` will run a callback function if the request is successful.
 
+The callback loaded the contents of "article.html" on to the page and returned a console message.
+
+We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load()` doesn't return and is unable to do this.
+
+The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
+
+{% prism javascript %}
+// sample22/scripts.js
+$("#textTarget").load("article.html")
+  .done(function(data) {
+    // Won't run because "load" doesn't understand "done"
+    // "done" will return as an undefined function
+    console.log("The file has loaded!");
+});
+{% endprism %}
+
+The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didnt work in our code. 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
