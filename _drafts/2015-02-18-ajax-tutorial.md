@@ -59,7 +59,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
         <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
           <ol>
-            <li><a href="#jqxhr-done">The jqXHR .done method</a></li>
+            <li><a href="#done-method">The .done method</a></li>
             <li></li>
             <li></li>
             <li></li>
@@ -1047,8 +1047,32 @@ Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's me
 3. `always`
 4. `then`
 
-<a name="jqxhr-done"></a>
-<h5 class="h5-guide">The jqXHR .done method</h5>
+<a name="done-method"></a>
+<h5 class="h5-guide">The .done method</h5>
+The jQuery Deffered `.done` method sets a callback for what to do after code as fully run, or, fully "resolved".
+{% prism markup %}
+<!-- sample21/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample 21</title>
+  </head>
+  <body>
+    <div id="textTarget"></div>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+{% endprism %}
+The HTML required for this code sample.
+{% prism javascript %}
+// sample21/scripts.js
+$.get("article.html").done(function(data) {
+  $("#textTarget").html(data);
+  console.log("The file has loaded!");
+});
+{% endprism %}
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
