@@ -10,7 +10,7 @@ cat-name: "Tutorials"
 tags: [html5, javascript, ajax]
 has-home-img: ajax-image.jpg
 ---
-AJAX has grown a lot since <a href="adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a> It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a> It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This guide was written with those developers in mind.
 <h2 style="clear:both;">Table of Contents</h2>
@@ -1001,9 +1001,9 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 <h4 class="h4-guide">jqHXR, Promises & Deferreds</h4>
 When used, both `$.ajax()` and some of the shorthand methods return the jQuery XMLHttpRequest object, which is commonly referred to as "jqHXR". The `.load()` shorthand method does not return jqXHR.
 
-jqXHR is basically the traditional `XMLHttpRequest` object already in the browser wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
+jqXHR is basically the traditional `XMLHttpRequest` object already in the browser, but wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">read the jQuery documentation to learn more about jQuery Deffereds</a>.
+An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed here...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">read the jQuery documentation to learn more about jQuery Deffereds</a>.
 
 <a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise</h4>
@@ -1016,7 +1016,7 @@ According to the <a href="https://promisesaplus.com/" target="blank">community-l
 In other words...
 
 * Promises wait for your code to COMPLETELY finish what it's doing.
-* Promises then let you attach callbacks in a neater, cleaner way then it did previously.
+* Promises let you attach callbacks to the code, and do it in a neater, cleaner way then before.
 * Promises have a `then` method that manages the callbacks.
 * Promises have special event handling for situations where the code fails.
 
@@ -1047,9 +1047,11 @@ Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's me
 3. `always`
 4. `then`
 
+As mentioned, Promises allow for the neater implementation of callbacks. Using these four methods for callback implementation is considered a best practice in jQuery.
+
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
-The jQuery Deffered `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>):
+The `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample21/index.html -->
 <!DOCTYPE html>
@@ -1095,7 +1097,7 @@ The file loaded onto the page but the console message failed to appear. This is 
 
 <a name="fail-method"></a>
 <h5 class="h5-guide">The .fail method</h5>
-The jQuery Deffered `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
+The `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
 
 `index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>.
 
@@ -1115,7 +1117,7 @@ Since `article.html` was removed from the directory, the code failed. The `.fail
 
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
-The jQuery Deffered `.always()` method sets a callback for what to do if the code either resolves or is rejected.
+The `.always()` method sets a callback for what to do if the code either resolves or is rejected.
 
 
 <a name="conclusion"></a>
