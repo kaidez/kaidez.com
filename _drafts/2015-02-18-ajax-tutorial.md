@@ -1047,7 +1047,7 @@ Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's me
 3. `always`
 4. `then`
 
-As mentioned, Promises allow for the neater implementation of callbacks. Using these four methods for callback implementation is considered a best practice in jQuery.
+As mentioned, Promises allow for the neater callback implementations. Using these four methods for callback implementation is considered a best practice in jQuery.
 
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
