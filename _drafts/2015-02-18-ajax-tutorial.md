@@ -659,7 +659,7 @@ The release of jQuery 1.5 was significant because of certain AJAX-related change
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
-The core jQuery library has been added to "index.html" via the jQuery CDN. "index.html" now looks like this:
+The core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -1049,7 +1049,7 @@ Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's me
 
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
-The jQuery Deffered `.done` method sets a callback for what to do after code as fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>):
+The jQuery Deffered `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample21/index.html -->
 <!DOCTYPE html>
@@ -1091,10 +1091,24 @@ $("#textTarget").load("article.html")
 });
 {% endprism %}
 
-The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didnt work in our code.
+The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didn't work in our code.
 
 <a name="fail-method"></a>
 <h5 class="h5-guide">The .fail method</h5>
+The jQuery Deffered `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
+
+`index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>.
+
+`scripts.js` now looks like this:
+$.get("article.html")
+  .done(function(data) {
+    $("#textTarget").html(data);
+  })
+  .fail(function() {
+    $("#textTarget").html("The file didn't load!");
+  });
+{% endprism %}
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
