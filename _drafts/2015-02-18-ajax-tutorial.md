@@ -1100,6 +1100,8 @@ The jQuery Deffered `.fail()` method sets a callback for what to do if the code 
 `index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>.
 
 `scripts.js` now looks like this:
+{% prism javascript %}
+// sample23/scripts.js
 $.get("article.html")
   .done(function(data) {
     $("#textTarget").html(data);
@@ -1109,6 +1111,7 @@ $.get("article.html")
   });
 {% endprism %}
 
+Since `article.html` was removed from the directory, the code failed. The `.fail()` method as a result, and it loaded a message into the "#textTarget" into the message saying so.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
