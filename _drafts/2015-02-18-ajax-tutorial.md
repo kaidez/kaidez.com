@@ -10,7 +10,7 @@ cat-name: "Tutorials"
 tags: [html5, javascript, ajax]
 has-home-img: ajax-image.jpg
 ---
-AJAX has grown a lot since [Jesse James Garrett defined it in 2005](adaptivepath.com/ideas/ajax-new-approach-web-applications/ "Read Jesse James Garrett original ‘AJAX' article"). It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since <a href="adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a> It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This guide was written with those developers in mind.
 <h2 style="clear:both;">Table of Contents</h2>
@@ -61,7 +61,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
           <ol>
             <li><a href="#done-method">The .done method</a></li>
             <li><a href="#fail-method">The .fail method</a></li>
-            <li></li>
+            <li><a href="#always-method">The .always method</a></li>
             <li></li>
           </ol>
         </li>
@@ -1112,6 +1112,12 @@ $.get("article.html")
 {% endprism %}
 
 Since `article.html` was removed from the directory, the code failed. The `.fail()` method as a result, and it loaded a message into the "#textTarget" into the message saying so.
+
+<a name="always-method"></a>
+<h5 class="h5-guide">The .always method</h5>
+The jQuery Deffered `.always()` method sets a callback for what to do if the code either resolves or is rejected.
+
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
