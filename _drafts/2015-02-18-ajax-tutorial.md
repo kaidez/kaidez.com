@@ -787,9 +787,9 @@ All of this is stored in a variable called `getData`. Because `getData` refers t
 
 <a name="load-fragments"></a>
 <h5 class="h5-guide">Load in fragments with .load</h5>
-The `$load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
+The `$load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample14/index.html -->
+<!-- sample13/index.html -->
 <!-- No <button> tags in this example -->
 ...
 <div id="textTarget"></div>
@@ -797,13 +797,13 @@ The `$load` method can load in a piece of data from an HTML document instead of 
 {% endprism %}
 Use a page with just `<div id="textTarget"></div>`.
 {% prism markup %}
-<!-- sample14/article.html -->
+<!-- sample13/article.html -->
 <div id="title">AJAX Tutorial for Beginners</div>
 <div id="author">Kai "kaidez" Gittens</div>
 {% endprism %}
 Create a page called `article.html` that contains two elements: `<div id="title">` and `<div id="author">`.
 {% prism javascript %}
-// sample14/scripts.js
+// sample13/scripts.js
 $("#textTarget").load("article.html #author");
 {% endprism %}
 Use load to "AJAX in" the `article.html` but instead of loading in the entire file, just load in the content in the `<div id="author">` element.
