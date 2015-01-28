@@ -734,7 +734,7 @@ We've created a configurable object be setting three options:
 The callback used the `html()` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html()` instead of the file name. `.done()` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.  
 <a name="ajax-shorthand"></a>
 <h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
-`$.ajax()` is powerful, but not needed for every project. According to [the current version of the $.ajax documentation](http://api.jquery.com/jQuery.ajax/ "Read the jQuery.ajax documentation"):
+`$.ajax()` is powerful, but not needed for every project. According to <a href="http://api.jquery.com/jQuery.ajax/" target="blank" title="Read the jQuery.ajax documentation">the current version of the $.ajax documentation</a>:
 
 > *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
 
