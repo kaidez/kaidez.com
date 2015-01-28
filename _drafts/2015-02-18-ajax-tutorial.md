@@ -393,9 +393,9 @@ getArticleInfo.onreadystatechange = function() {
 `getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-Developers like to use the [logical "AND" operator (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29 "Read about the logical "AND" operator on MDN") to simultaneously check the value of both `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
+Developers like to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read about the logical "AND" operator on MDN">logical "AND" operator (&&)</a> to simultaneously check the value of both `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample07/scripts.js
+// sample05/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
 ...
 getArticleInfo.onreadystatechange = function() {
