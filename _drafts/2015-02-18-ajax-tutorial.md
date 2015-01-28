@@ -751,7 +751,7 @@ jQuery currently offers five AJAX shorthand methods:
 `jQuery.post()` deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
-If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of <a href="#what-is-onreadystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
 
 <a href="/samples/ajax-tutorial-samples/sample11/" target="blank">View the example</a>:
 {% prism markup %}
@@ -777,9 +777,9 @@ $("#textTarget").load("articleName.html");
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
 <h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
-We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick, "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
+We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample14/index.html -->
+<!-- sample12/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
@@ -787,7 +787,7 @@ We used a mouseclick to [load content "AJAX in" content in a previous example](#
 {% endprism %}
 Add a button with an id of `getHTMLFile` directly above `<div id="textTarget">`.
 {% prism javascript %}
-// sample14/scripts.js
+// sample12/scripts.js
 $("#getHTMLFile").click(function(){
   $("#textTarget").load("articleName.html");
 });
