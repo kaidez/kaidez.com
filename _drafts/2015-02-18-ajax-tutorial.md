@@ -1112,7 +1112,7 @@ $.get("article.html")
   });
 {% endprism %}
 
-Since `article.html` was removed from the directory, the code failed. The `.fail()` method as a result, and it loaded a message into the "#textTarget" into the message saying so.
+Since `article.html` was removed from the directory, the code failed. The `.fail()` method was called as a result, so it loaded a message into the "#textTarget" into the message saying so.
 
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
