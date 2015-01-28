@@ -228,10 +228,10 @@ Microsoft's definition also attaches numbers to states, but the definition is sh
 
 There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states. But with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
 
-When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
+When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 
 {% prism markup %}
-<!-- sample03/index.html -->
+<!-- sample01/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -247,7 +247,7 @@ When `onreadystatechange` is equal to 4, it means that all the data has fully do
 We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code will load data into this element.
 
 {% prism javascript %}
-// sample03/scripts.js
+// sample01/scripts.js
 // Feature-detect XMLHttpRequest implementation
 // More robust detecting of ActiveX implementations
 function getXHR() {
@@ -299,7 +299,7 @@ getArticleInfo.send();
 {% endprism %}
 `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that this only happens when the state is set to `4`.
 
-  `open()` is a method attached to the XHR object, and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
+`open()` is a method attached to the XHR object, and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
 
 In this example, `getArticleInfo.open()` first describes *how* to get the data. That's done with the first parameter, which is `GET`...it tells the server to "get" something from the server.
 
@@ -338,9 +338,9 @@ If it has, then find `<div id="textTarget">` on our page and place whatever cont
 
 If the code can't connect to the server and `getArticleInfo.status`  doesn't equal `200`, then the browser console will display a message saying, "There was a problem with the request."  Note that this console message will only appear if `getArticleInfo.status` doesn't equal `200`: the value of `getArticleInfo.readyState` has no effect on whether or not the console message appears.
 
-As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open)` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
+As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open)` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample04/scripts.js
+// sample02/scripts.js
 // Update the getArticleInfo.open() method only
 ...
 getArticleInfo.open("GET", "articleName.html");
