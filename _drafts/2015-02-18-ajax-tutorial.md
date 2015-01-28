@@ -417,9 +417,9 @@ Most developers simply don't add a console statement but your web application ma
 
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
-The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
+The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample08/index.html -->
+<!-- sample06/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
@@ -428,7 +428,7 @@ The previous examples used AJAX to load data automatically, but we can also make
 
 Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of an HTML file inside the div tag.
 {% prism javascript %}
-// sample08/scripts.js
+// sample06/scripts.js
 function loadHTML() {
   var getInfo = new XMLHttpRequest();
 
