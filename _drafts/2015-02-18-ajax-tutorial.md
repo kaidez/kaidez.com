@@ -378,12 +378,12 @@ The code using logical "AND" will only load the content onto the page if `getArt
 
 But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical "AND" to load in data. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
 
-The point is, using `&&` doesn't like this isn't performing a robust check of the applicatiom state so it's best to avoid it.
+The point is, using `&&` doesn't like this doesn't perform a robust check of the application state so it's best to avoid it.
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
-The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
+The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample06/index.html -->
+<!-- sample05/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
@@ -392,7 +392,7 @@ The previous examples used AJAX to load data automatically, but we can also make
 
 Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of an HTML file inside the div tag.
 {% prism javascript %}
-// sample06/scripts.js
+// sample05/scripts.js
 function loadHTML() {
   var getInfo = new XMLHttpRequest();
 
