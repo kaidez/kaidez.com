@@ -1008,7 +1008,7 @@ An important part of the API are jQuery "promises" which are part of the jQuery 
 <h4 class="h4-guide">What is a Promise</h4>
 Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.
 
-According to the <a href="https://promisesaplus.com/" target="blank">community-led Promises specification</a>:
+According to the <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">community-led Promises specification</a>:
 
 > *A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its `then` method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.*
 
@@ -1019,11 +1019,11 @@ In other words...
 * Promises have a `then` method that manages the callbacks.
 * Promises have special event handling for situations where the code fails.
 
-At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank">ECMAScript version 6, code-named "Harmony."</a>
+At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specifcation">ECMAScript version 6, code-named "Harmony."</a>
 
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
-Since Promises aren't available in every browser, there are libraries that you can add to your add to your project that make them work. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank">a list of libraries that fully conform the spec</a>.
+Since Promises aren't available in every browser, there are libraries that you can add to your add to your project that make them work. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries that fully conform the spec</a>.
 
 Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the spec in two ways:
 
@@ -1031,11 +1031,11 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 
 2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.
 
-According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
+According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
-There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenici/3889970" target="blank">an excellent Promises post on GitHub</a> that explains them even further.
+There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenici/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that explains them even further.
 
-Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank">an excellent walk-through on Promises</a>. Really good for beginners.
+Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank" title="Read Forbes Lindesay's excellent Promises walk-through">an excellent walk-through on Promises</a>. Really good for beginners.
 
 <a name="deffered-methods"></a>
 <h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
@@ -1050,14 +1050,14 @@ As mentioned, Promises allow for the neater callback implementations. Using thes
 
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
-The `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>):
+The `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample21/index.html -->
+<!-- sample19/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 21</title>
+    <title>Sample 19</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -1068,7 +1068,7 @@ The `.done` method sets a callback for what to do after the code has fully run, 
 {% endprism %}
 The HTML required for this code sample.
 {% prism javascript %}
-// sample21/scripts.js
+// sample19/scripts.js
 $.get("article.html").done(function(data) {
   $("#textTarget").html(data);
   console.log("The file has loaded!");
