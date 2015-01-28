@@ -493,7 +493,7 @@ We also updated our button code: it still runs the `loadFile()` function, but th
 We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
 <a name="reusable-button-code"></a>
 <h4 class="h4-guide">Create reusable code for multiple buttons</h4>
-The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample10/" target="blank">view the example</a>):
+The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample08/index.html -->
 <!--  update the <button> tags directly above <div id="textTarget"> -->
@@ -543,14 +543,14 @@ But if `dataset` DOES exist, we can use it to get the value of the data attribut
 *(Note: To learn more about data attributes, read my ["Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
-As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):
+As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample09/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample11/index.html -->
+<!-- sample09/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 11</title>
+    <title>Sample 09</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -560,7 +560,7 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
 {% endprism %}
 The buttons have been removed from the HTML file.
 {% prism javascript %}
-// sample11/soccerplayers.json
+// sample09/soccerplayers.json
 {
     "chelsea": {
         "playerOne": "Didier Drogba",
@@ -582,7 +582,7 @@ The buttons have been removed from the HTML file.
 Instead of using AJAX to load in data from either an HTML or text file, we're now loading it from a `json` file called `soccerplayers.json`.
 
 {% prism javascript %}
-// sample11/scripts.js
+// sample09/scripts.js
 (function(){
     var getPlayerInfo = new XMLHttpRequest();
 
@@ -610,7 +610,7 @@ There are only a few changes to `scripts.js` but they're important:
 ...
 })();
 {% endprism %}
-The main change is that the function now runs as soon as the page loads instead of being invoked some place in our code. This is done with an "immediately invoked function expression", or an "IIFE": [learn about the IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "Read more about the IIFE").
+The main change is that the function now runs as soon as the page loads instead of being invoked some place in our code. This is done with an "immediately invoked function expression", or an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/ target="blank" title="learn about the IIFE">"IIFE"</a>.
 {% prism javascript %}
 ...
 var getPlayerInfo = new XMLHttpRequest();
