@@ -371,9 +371,9 @@ function loadText() {
 The XHR feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
-We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
+We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample06/scripts.js
+// sample04/scripts.js
 var getArticleInfo = new XMLHttpRequest();
 
 getArticleInfo.open("GET", "articleName.html");
