@@ -741,9 +741,9 @@ $("#textTarget").load("articleName.html");
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
 <h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
-We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
+We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample12/index.html -->
+<!-- sample11/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
@@ -751,7 +751,7 @@ We used a mouseclick to [load content "AJAX in" content in a previous example](#
 {% endprism %}
 Add a button with an id of `getHTMLFile` directly above `<div id="textTarget">`.
 {% prism javascript %}
-// sample12/scripts.js
+// sample11/scripts.js
 $("#getHTMLFile").click(function(){
   $("#textTarget").load("articleName.html");
 });
