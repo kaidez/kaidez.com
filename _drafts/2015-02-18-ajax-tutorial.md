@@ -30,7 +30,6 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#what-is-onreadystatechange">Bring everything together using "onreadystatechange"</a></li>
           </ol>
         </li>
-        <li><a href="#no-feature-detection">Use AJAX without feature-detection</a></li>
         <li><a href="#callback-function">Have "readyStateChange" run a callback function</a></li>
         <li><a href="#logical-and-error">Using "&&" generates an error</a></li>
         <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
@@ -333,29 +332,6 @@ As mentioned, AJAX can load in all different types of documents...we can tell th
 getArticleInfo.open("GET", "articleName.html");
 ...
 {% endprism %}
-<a name="no-feature-detection"></a>
-<h4 class="h4-guide">Use AJAX without feature-detection</h4>
-There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
-{% prism javascript %}
-// sample03/scripts.js
-var getArticleInfo = new XMLHttpRequest();
-
-getArticleInfo.onreadystatechange = loadText;
-getArticleInfo.open("GET", "articleName.html");
-getArticleInfo.send();
-
-function loadText() {
-  var text = document.getElementById("textTarget");
-  if (getArticleInfo.readyState === 4) {
-    if (getArticleInfo.status === 200) {
-      text.innerHTML = getArticleInfo.responseText;
-    } else {
-      console.log('There was a problem with the request.');
-    }
-  }
-};
-{% endprism %}
-The XHR feature detection has been removed...there's no need to for a `getXHR()` function that does `ActiveXObject` checks. Instead, our `getArticleInfo` variable is set to a new instance of the `XMLHttpRequest()` object.
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
 We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
