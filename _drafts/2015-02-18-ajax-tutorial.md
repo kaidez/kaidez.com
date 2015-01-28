@@ -7,10 +7,10 @@ permalink: /ajax-tutorial/
 meta-excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."
 category: tutorials
 cat-name: "Tutorials"
-tags: [html5, javascript, ajax]
+tags: [ajax, javascript, jquery]
 has-home-img: ajax-image.jpg
 ---
-AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a> It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This guide was written with those developers in mind.
 <h2 style="clear:both;">Table of Contents</h2>
@@ -87,9 +87,9 @@ The code for all the examples is located in the GitHub repo and looks similar to
 </html>
 {% endprism %}
 
-All examples run from their own folder, and from an `index.html` file that references a file called `scripts.js`. Either `index.html` or `scripts.js` will change with each new example: new files may also be added as well.
+All examples run from their own folder from an `index.html` file, which references a `scripts.js` file. Either `index.html` or `scripts.js` will change with each new example, and new files may be added or subtracted to each sample.
 
-All the examples use XMLHttpRequest browser object. Because of these, they need to run from a web server instead of as a local file in a web browser.
+All     examples use some form of the XMLHttpRequest browser object. Because of these, they need to run from a web server instead of as a local file in a web browser.
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
 First, understand that XMLHttpRequest, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
@@ -139,9 +139,9 @@ if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   }
 }
 {% endprism %}
-The above-example creates a variable called `xhr`, then checks to see if `XMLHttpRequest` is attached to the browser via the `window` object.  If it is, then `xhr` will directly reference a new instance of `XMLHttpRequest` when doing AJAX things.
+The above-example created a variable called `xhr`, then checked to see if `XMLHttpRequest` is attached to the browser via the `window` object.  If it was, then `xhr` directly referenced a new instance of `XMLHttpRequest` when it performed AJAX tasks.
 
-The example is also checking to see if `ActiveXObject` is attached to the browser via the `window` object. If it is, then `xhr` will directly reference a new instance of `ActiveXObject` when doing AJAX things.
+The example also checked to see if `ActiveXObject` was attached to the browser via the `window` object. If it was, then `xhr` will directly reference a new instance of `ActiveXObject` when it performed AJAX tasks.
 
 Developers later realized that `window.ActiveXObject` was used differently across the older versions of IE. They also realized that that some browsers heavily in use at the time didn't support XHR at all.
 
@@ -169,13 +169,13 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code is now in a reusable function called `getXHR()`. The function does the cross-browser checking for `XMLHttpRequest` internally, meaning we can use XHR by creating new `getXHR()` instances and not worry about cross-browser issues.
+The feature detection code was rewritten to be a reusable function called `getXHR()`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any `getXHR()` instance lets you use XHR without worrying about cross-browser issues.
 
-`getXHR()` checks for `XMLHttpRequest` in the same way, but also checks to see of the browser has one of two ActiveXObject builds and also checks to see if either the `XMLHttpRequest` or `ActiveXObject` exists.
+`getXHR()` checked for `XMLHttpRequest` in the same way, but also checks to see of the browser has one of two ActiveXObject builds and also checks to see if either the `XMLHttpRequest` or `ActiveXObject` exists.
 
-A JavaScript `try...catch` statement is looking for the different versions of `ActiveXObject`. If `try...catch` can't find it and also can't find `XMLHttpRequest`, then the value of the `xhr` variable is set to `false` and won't do any AJAX work.
+A JavaScript `try...catch` statement looked for the different versions of `ActiveXObject`. If `try...catch` didn't find it and also didn't find `XMLHttpRequest`, then the value of the `xhr` variable was set to `false` and didn't do any AJAX work.
 
-`getXHR()` says `return xhr` at the end of the code. This lets us create new instances of `getXHR()` outside of the function.
+`getXHR()` said `return xhr` at the end of the code. That let us create new instances of `getXHR()` outside of the function.
 
 There are many ways to implement XHR feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 
@@ -1020,7 +1020,7 @@ In other words...
 * Promises have a `then` method that manages the callbacks.
 * Promises have special event handling for situations where the code fails.
 
-At the time of this guide's publish date, Promises haven't been fully implemented in browsers. The current goal is make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank">ECMAScript version 6, code-named "Harmony."</a>
+At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to acheive this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank">ECMAScript version 6, code-named "Harmony."</a>
 
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
@@ -1032,7 +1032,7 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 
 2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.
 
-According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things in jQuery, affecting more than its Promises functionality.
+According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
 There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promises post on GitHub</a> that explains them even further.
 
@@ -1118,7 +1118,6 @@ Since `article.html` was removed from the directory, the code failed. The `.fail
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
 The `.always()` method sets a callback for what to do if the code either resolves or is rejected.
-
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
