@@ -645,7 +645,7 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 <h4 class="h4-guide">Understanding $.ajax()</h4>
 `$.ajax()` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
-There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
+There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample09/" target="blank">View the example</a>:
 
 {% prism markup %}
 <!-- sample09/scripts.html -->
