@@ -144,9 +144,9 @@ The above-example created a variable called `xhr`, then checked to see if `XMLHt
 
 The example also checked to see if `ActiveXObject` was attached to the browser via the `window` object. If it was, then `xhr` will directly reference a new instance of `ActiveXObject` when it performed AJAX tasks.
 
-Developers later realized that `window.ActiveXObject` was used differently across the older versions of IE. They also realized that that some browsers heavily in use at the time didn't support XHR at all.
+Developers later realized that `window.ActiveXObject` was used differently across the older versions of IE. They also realized that some browsers heavily in use at the time didn't support XHR at all.
 
-As a result, they built slightly different feature detection code:
+As a result, they updated the feature detection code:
 {% prism javascript %}
 // Feature-detect XMLHttpRequest implementation
 // More robust detecting of ActiveX
@@ -171,11 +171,11 @@ function getXHR() {
 {% endprism %}
 The feature detection code was rewritten to be a reusable function called `getXHR()`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any `getXHR()` instance lets you use XHR without worrying about cross-browser issues.
 
-`getXHR()` checked for `XMLHttpRequest` in the same way, but also checked to see of the browser had one of two ActiveXObject builds and also checked to see if either the `XMLHttpRequest` or `ActiveXObject` existed.
+`getXHR()` checked for `XMLHttpRequest`, but also checked to see of the browser had one of two ActiveXObject builds. It also checked to see if either the `XMLHttpRequest` or `ActiveXObject` existed.
 
 A JavaScript `try...catch` statement looked for the different versions of `ActiveXObject`. If `try...catch` didn't find it and also didn't find `XMLHttpRequest`, then the value of the `xhr` variable was set to `false` and didn't do any AJAX work.
 
-`getXHR()` said `return xhr` at the end of the code. That let us create new instances of `getXHR()` outside the function.
+`getXHR()` said `return xhr` at the end of the code, which let us create new instances of `getXHR()` outside the function.
 
 There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code and just create a direct instance of the XHR:
 
@@ -187,11 +187,12 @@ Goto MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Star
 
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
-Loading content with XHR is a three-step process:
+Loading content with XHR is a four-step process:
 
-1. Wait for a 200 response code from the server.
-2. Wait for an XHR state of 4.
-3. Bring everything together using "onreadystatechange".
+1. Create a new instance of the XHR object.
+2. Wait for a 200 response code from the server.
+3. Wait for an XHR state of 4.
+4. Bring everything together using "onreadystatechange".
 <a name="200-response"></a>
 <h5 class="h5-guide">Wait for 200 response code from the server</h5>
 A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
