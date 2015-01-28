@@ -348,9 +348,9 @@ getArticleInfo.open("GET", "articleName.html");
 {% endprism %}
 <a name="no-feature-detection"></a>
 <h4 class="h4-guide">Use AJAX without feature-detection</h4>
-There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
+There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample05/scripts.js
+// sample03/scripts.js
 var getArticleInfo = new XMLHttpRequest();
 
 getArticleInfo.onreadystatechange = loadText;
