@@ -1014,14 +1014,14 @@ As mentioned, Promises allow for the neater callback implementations. Using thes
 
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
-The `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):
+The `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample19/index.html -->
+<!-- sample18/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 19</title>
+    <title>Sample 18</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -1032,7 +1032,7 @@ The `.done` method sets a callback for what to do after the code has fully run, 
 {% endprism %}
 The HTML required for this code sample.
 {% prism javascript %}
-// sample19/scripts.js
+// sample18/scripts.js
 $.get("article.html").done(function(data) {
   $("#textTarget").html(data);
   console.log("The file has loaded!");
