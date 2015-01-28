@@ -105,7 +105,7 @@ The technologies were: XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the 
 XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of XHTML is recommended at the time of this guide's initial publish date.
 <a name="brief-history-ajax"></a>
 <h3 class="h3-guide">A brief history of AJAX</h3>
-*(NOTE: This section is to provide some historically perspective on AJAX and has nothing to do with the code in this guide. To start looking at code, you can <a href="#ajax-javascript">skip this section and go to "Create AJAX with Regular JavaScript"</a>.*
+*(NOTE: This section provides some historically perspective on AJAX but has nothing to do with the code in this guide. To start looking at code, you can <a href="#ajax-javascript">skip this section and go to "Create AJAX with Regular JavaScript"</a>.*
 
 The roots of AJAX goes back to roughly late 1988/early 1999: <a href="http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918" target="blank" title="Listen to Brendan Eich on the JavaScript Jabber Podcast">according to JavaScript creator, Brendan Eich</a>, Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application (OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
 
@@ -123,7 +123,7 @@ Garret's article defined AJAX and also listed its required technologies (<a href
 <h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
-As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...i.e., you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, XMLHTTP was not a directly accessible object in the web browser...i.e., you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
 <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
