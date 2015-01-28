@@ -938,9 +938,9 @@ loadFile.js?=1421161342213
 {% endprism %}
 This is because `$.getScript()` always "cache-busts" scripts that it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.
 
-If you want to avoid this, you can use `$.ajaxSetup()` to allow caching (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):  
+If you want to avoid this, you can use `$.ajaxSetup()` to allow caching (<a href="/samples/ajax-tutorial-samples/sample17/" target="blank">view the example</a>):  
 {% prism javascript %}
-// sample18/scripts.js
+// sample17/scripts.js
 $.ajaxSetup({
   cache: true
 });
