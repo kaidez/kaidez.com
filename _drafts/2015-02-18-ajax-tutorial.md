@@ -717,14 +717,14 @@ jQuery currently offers five AJAX shorthand methods:
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of <a href="#what-is-onreadystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
 
-<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">View the example</a>:
+<a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
 {% prism markup %}
-<!-- sample11/index.html -->
+<!-- sample10/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 11</title>
+    <title>Sample 10</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -735,7 +735,7 @@ If you want to use jQuery to load in file with AJAX like we've been doing, the `
 {% endprism %}
 A  HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
 {% prism javascript %}
-// sample11/scripts.js
+// sample10/scripts.js
 $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
