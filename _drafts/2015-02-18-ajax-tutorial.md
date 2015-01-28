@@ -681,15 +681,15 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 <h4 class="h4-guide">Understanding $.ajax()</h4>
 `$.ajax()` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
-There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample12/" target="blank">View the example</a>:
+There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
 
 {% prism markup %}
-<!-- sample12/scripts.html -->
+<!-- sample10/scripts.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 12</title>
+    <title>Sample 10</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -702,7 +702,7 @@ There are many ways to configure `$.ajax()` and reviewing all of them is beyond 
 
 The same HTML code as before except we've added a div with an id of "isLoadedTarget" and the core jQuery library.
 {% prism javascript %}
-// sample12/scripts.js
+// sample10/scripts.js
 $.ajax({
   url: "articleName.html",
   success: isLoaded,
