@@ -334,9 +334,9 @@ getArticleInfo.open("GET", "articleName.html");
 {% endprism %}
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
-We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
+We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample04/scripts.js
+// sample03/scripts.js
 var getArticleInfo = new XMLHttpRequest();
 
 getArticleInfo.open("GET", "articleName.html");
