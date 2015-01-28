@@ -495,7 +495,7 @@ We also added a new button: the new button loads in a text file while the old bu
 <h4 class="h4-guide">Create reusable code for multiple buttons</h4>
 The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample10/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample10/index.html -->
+<!-- sample08/index.html -->
 <!--  update the <button> tags directly above <div id="textTarget"> -->
 ...
 <button class="btn" data-file="articleName.html">Load the HTML file</button>
@@ -507,7 +507,7 @@ The two buttons are still on our HTML page but we're updated them. For each one,
 
 The values of the data-attributes are unique for each button": each value is the name of the file that should be loaded using AJAX.
 {% prism javascript %}
-// sample10/scripts.js
+// sample08/scripts.js
 // Don't change the loadFile() function
 // Remove the button code for the two buttons at the bottom
 // Add this new code
