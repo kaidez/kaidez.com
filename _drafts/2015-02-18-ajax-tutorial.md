@@ -1080,10 +1080,10 @@ The callback loaded the contents of "article.html" on to the page and returned a
 
 We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load()` doesn't return jqXHR and is unable to do this.
 
-The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
+The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>):
 
 {% prism javascript %}
-// sample22/scripts.js
+// sample20/scripts.js
 $("#textTarget").load("article.html")
   .done(function(data) {
     // Won't run because "load" doesn't understand "done"
