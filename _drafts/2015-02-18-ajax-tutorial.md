@@ -496,7 +496,7 @@ We also added a new button: the new button loads in a text file while the old bu
 The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample08/index.html -->
-<!--  update the <button> tags directly above <div id="textTarget"> -->
+<!-- update the <button> tags directly above <div id="textTarget"> -->
 ...
 <button class="btn" data-file="articleName.html">Load the HTML file</button>
 <button class="btn" data-file="articleName.txt">Load the text file</button>
@@ -540,7 +540,7 @@ We're first checking to see if `dataset` does NOT exist in the browser by saying
 
 But if `dataset` DOES exist, we can use it to get the value of the data attribute using `this.dataset`.
 
-*(Note: To learn more about data attributes, read my ["Load data attributes with Mouse Clicks" tutorial](/load-data-attributes-mouseclicks/ "read my "Load data attributes with Mouse Clicks" tutorial") or my ["Filter Content With jQuery.filter() & jQuery Selectors" tutorial]("/filter-content-jquery/")).*
+*(Note: To learn more about data attributes, read my <a href="/load-data-attributes-mouseclicks/" target="blank" title="Read my 'Load data attributes with Mouse Clicks' tutorial">"Load data attributes with Mouse Clicks" tutorial</a> or my <a href="/filter-content-jquery/" target="blank" target="blank" title="Read my 'Filter Content With jQuery.filter() & jQuery Selectors' tutorial">"Filter Content With jQuery.filter() & jQuery Selectors" tutorial</a>.*
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
 As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample09/" target="blank">view the example</a>):
@@ -753,14 +753,14 @@ jQuery currently offers five AJAX shorthand methods:
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
 
-<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">View the example</a>:
+<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">View the example</a>:
 {% prism markup %}
-<!-- sample13/index.html -->
+<!-- sample11/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 13</title>
+    <title>Sample 11</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -771,7 +771,7 @@ If you want to use jQuery to load in file with AJAX like we've been doing, the `
 {% endprism %}
 A  HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
 {% prism javascript %}
-// sample13/scripts.js
+// sample11/scripts.js
 $("#textTarget").load("articleName.html");
 {% endprism %}
 jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
