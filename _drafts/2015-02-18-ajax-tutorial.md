@@ -126,7 +126,7 @@ Garret's article defined AJAX and also listed its required technologies (<a href
 
 As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, XMLHTTP was not directly accessible in the browser...in other words, you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
-Instead, it was bundled inside proprietary Microsoft technology called <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx" target="blank" title="Learn more about Microsoft's ActiveXObject">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
+Instead, it was bundled inside proprietary Microsoft technology called <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx" target="blank" title="Learn more about Microsoft's ActiveXObject">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to use feature-detection code to make sure that your AJAX worked in all browsers.
 
 The simplest version of this feature-detection code looked similar to this:
 {% prism javascript %}
@@ -149,7 +149,7 @@ Developers later realized that `window.ActiveXObject` was used differently acros
 As a result, they built slightly different feature detection code:
 {% prism javascript %}
 // Feature-detect XMLHttpRequest implementation
-// More robust detecting of ActiveX implementations
+// More robust detecting of ActiveX
 function getXHR() {
   var xhr;
   if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
