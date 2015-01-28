@@ -1062,11 +1062,11 @@ The file loaded onto the page but the console message failed to appear. This is 
 <h5 class="h5-guide">The .fail method</h5>
 The `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
 
-`index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>.
+`index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.
 
 `scripts.js` now looks like this:
 {% prism javascript %}
-// sample21/scripts.js
+// sample20/scripts.js
 $.get("article.html")
   .done(function(data) {
     $("#textTarget").html(data);
