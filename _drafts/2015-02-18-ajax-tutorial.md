@@ -98,9 +98,9 @@ First, understand that XMLHttpRequest, or "XHR", is the heart of any AJAX code. 
 
 Simply put, XMLHttpRequest fetches, or "requests", information from a server, then places it on a web page. It does this "asynchronously", meaning that __XMLHttpRequest loads the information onto the page without needing to reload it.__
 
-"AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page: the technologies were XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM").
+"AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page.
 
-XML was the recommended data type but other data types can be used...text files, HTML files, even images. XML was also the recommended data type to use when loading in a large group of data but for this, JSON is now preferred over XML at the time of this guide's initial publish date.  
+The technologies were: XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM"). XML was the recommended data type but other data types can be used...text files, HTML files, images and (more so than anything else), JSON.  
 
 XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of over XHTML is recommended at the time of this guide's initial publish date.
 <a name="brief-history-ajax"></a>
