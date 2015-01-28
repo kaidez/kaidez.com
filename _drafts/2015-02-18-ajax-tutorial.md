@@ -178,7 +178,13 @@ A JavaScript `try...catch` statement looked for the different versions of `Activ
 
 `getXHR()` said `return xhr` at the end of the code. That let us create new instances of `getXHR()` outside of the function.
 
-There are many ways to implement XHR feature detection: <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a>. Also, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
+There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code and just create a direct instance of the XHR:
+
+{% prism javascript %}
+var xhr = new XMLHttpRequest();
+{% endprism %}
+
+The samples in this guide don't use the feature detection code but if you want to learn more about it, <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
 
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
@@ -250,27 +256,7 @@ We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code 
 
 {% prism javascript %}
 // sample01/scripts.js
-// Feature-detect XMLHttpRequest implementation
-// More robust detecting of ActiveX implementations
-function getXHR() {
-  var xhr;
-  if (window.XMLHttpRequest) {
-    xhr = new XMLHttpRequest();
-  } else {
-    try {
-      xhr = new ActiveXObject("Msxml2.XMLHTTP");
-    } catch (e) {
-      try {
-        xhr = new ActiveXObject("Microsoft.XMLHTTP");
-      } catch (e) {
-        xhr = false;
-      }
-    }
-  }
-  return xhr;
-}
-
-var getArticleInfo = new getXHR();
+var getArticleInfo = new XMLHttpRequest();
 
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
@@ -287,13 +273,12 @@ function loadText() {
     }
 };
 {% endprism %}
-The feature detection code is the same as before, so we won't be walking through that...let's look at the other code:
+Reviewing the code...
 
 {% prism javascript %}
-var getArticleInfo = new getXHR();
+var getArticleInfo = new XMLHttpRequest();
 {% endprism %}
-Create a new instance of the `getXHR()` function and store it in a variable called `getArticleInfo`. Again, `getXHR()` lets us use `XMLHttpRequest` in a cross-browser compatible way.
-
+Create a new instance of the `XMLHttpRequest` called `getArticleInfo`.
 {% prism javascript %}
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
@@ -332,7 +317,7 @@ if (getArticleInfo.readyState === 4) {
 {% endprism %}
 First, check to see if `getArticleInfo.readyState` definitely equals `4`. If it does, then the data has been fully downloaded.
 
-If the code is in the `4` state, then the next step is to check and see if `getArticleInfo.status` equals `200`. If it does, then the code has successfully contacted the server.
+If the code is in the `4` state, then check and see if `getArticleInfo.status` equals `200`. If it does, then the code has successfully contacted the server.
 
 If it has, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
 
