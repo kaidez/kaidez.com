@@ -236,9 +236,9 @@ When your AJAX code sees a `200 OK` response, it knows that your XHR has made a 
 
 <a name="readystatechange"></a>
 <h5 class="h5-guide">Bring everything together using "onreadystatechange"</h5>
-`onreadystatechange` is an event handler that tracks the current request state, which will always have a numerical value of 0 through 4. There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states but with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
+`onreadystatechange` is an event handler that watches for when `readystate` changes...again, `readyState` will always have a numerical value of 0 through 4. There are use cases for knowing all the times that this value changes but with AJAX, knowing when it's equal to 4, the `done` state, is the most important.
 
-When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
+When `onreadystatechange` sees that `readyState` is equal to 4, it knows that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 
 {% prism markup %}
 <!-- sample01/index.html -->
