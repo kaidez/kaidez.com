@@ -202,7 +202,7 @@ When your AJAX code sees a `200 OK` response, it knows that your XHR has succeed
 <h5 class="h5-guide"> Wait for an XHR state of 4</h5>
 An XHR request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
-*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the last state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
+*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources refer to the Microsoft one.
 
