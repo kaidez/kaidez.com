@@ -122,13 +122,13 @@ Garret's article defined AJAX and also listed its required technologies (<a href
 <h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
-*(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective, but is primarily needed for Internet Explorer versions 6 and lower. Usage for those browsers has dropped significantly, plus, jQuery version 1.x takes care of the feature detection for you when you use it. Therefore, you can <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)*
+*(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective only. It's primarily needed for Internet Explorer versions 6 and lower, but usage for those browsers has dropped significantly. Plus, jQuery version 1.x takes care of the feature detection for you if you use it. If you're not coding for those browsers and/or using jQuery version 1.x, <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)*
 
-As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, XMLHTTP was not a directly accessible object in the web browser...i.e., you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, XMLHTTP was not directly accessible in the browser...in other words, you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
-Instead, it was bundled inside of a proprietary Microsoft technology called <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx" target="blank" title="Learn more about Microsoft's ActiveXObject">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
+Instead, it was bundled inside proprietary Microsoft technology called <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx" target="blank" title="Learn more about Microsoft's ActiveXObject">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
 
-The simplest version of this feature-detection code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
+The simplest version of this feature-detection code looked similar to this:
 {% prism javascript %}
 // Feature-detect XMLHttpRequest implementation
 var xhr;
@@ -140,13 +140,13 @@ if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
   }
 }
 {% endprism %}
-The above-example created a variable called `xhr`, then checked to see if `XMLHttpRequest` is attached to the browser via the `window` object.  If it was, then `xhr` directly referenced a new instance of `XMLHttpRequest` when it performed AJAX tasks.
+The above-example created a variable called `xhr`, then checked to see if `XMLHttpRequest` was attached to the browser's `window` object.  If it was, then `xhr` directly referenced a new instance of `XMLHttpRequest` when it performed AJAX tasks.
 
 The example also checked to see if `ActiveXObject` was attached to the browser via the `window` object. If it was, then `xhr` will directly reference a new instance of `ActiveXObject` when it performed AJAX tasks.
 
 Developers later realized that `window.ActiveXObject` was used differently across the older versions of IE. They also realized that that some browsers heavily in use at the time didn't support XHR at all.
 
-As a result, they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
+As a result, they built slightly different feature detection code:
 {% prism javascript %}
 // Feature-detect XMLHttpRequest implementation
 // More robust detecting of ActiveX implementations
@@ -171,11 +171,11 @@ function getXHR() {
 {% endprism %}
 The feature detection code was rewritten to be a reusable function called `getXHR()`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any `getXHR()` instance lets you use XHR without worrying about cross-browser issues.
 
-`getXHR()` checked for `XMLHttpRequest` in the same way, but also checks to see of the browser has one of two ActiveXObject builds and also checks to see if either the `XMLHttpRequest` or `ActiveXObject` exists.
+`getXHR()` checked for `XMLHttpRequest` in the same way, but also checked to see of the browser had one of two ActiveXObject builds and also checked to see if either the `XMLHttpRequest` or `ActiveXObject` existed.
 
 A JavaScript `try...catch` statement looked for the different versions of `ActiveXObject`. If `try...catch` didn't find it and also didn't find `XMLHttpRequest`, then the value of the `xhr` variable was set to `false` and didn't do any AJAX work.
 
-`getXHR()` said `return xhr` at the end of the code. That let us create new instances of `getXHR()` outside of the function.
+`getXHR()` said `return xhr` at the end of the code. That let us create new instances of `getXHR()` outside the function.
 
 There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code and just create a direct instance of the XHR:
 
@@ -183,7 +183,7 @@ There are use cases for including XHR feature detection in your code, but it's p
 var xhr = new XMLHttpRequest();
 {% endprism %}
 
-The samples in this guide don't use the feature detection code but if you want to learn more about it, <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">MDN has another great implementation</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">Read about "try...catch" on MDN</a>.
+Goto MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">learn more about feature-detection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">learn more about "try...catch" on MDN</a>.
 
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
