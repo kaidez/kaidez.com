@@ -115,7 +115,7 @@ Other browsers added the object as well, but with a different implementation and
 
 The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
-These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005, [Jesse James Garrett wrote his influential AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/).
+These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005 when <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original AJAX article">Jesse James Garrett wrote his influential AJAX article</a>.
 
 Garret's article defined AJAX and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
 
@@ -649,7 +649,7 @@ Then we're doing a `for...in` loop again that loops through JSON content stored 
 Again, this is a basic example of how to use JSON with AJAX...the main takeaway from this is example is that __AJAX can load all different types of content, including JSON__.
 <a name="ajax-jquery"></a>
 <h3 class="h3-guide">Create AJAX with jQuery</h3>
-[jQuery](http://jquery.com "Go to the jQuery site") has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
+<a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes:
 
