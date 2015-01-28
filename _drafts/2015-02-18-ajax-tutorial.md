@@ -87,9 +87,9 @@ The code for all the examples is located in the GitHub repo and looks similar to
 </html>
 {% endprism %}
 
-All examples run from their own folder from an `index.html` file, which references a `scripts.js` file. Either `index.html` or `scripts.js` will change with each new example, and new files may be added or subtracted to each sample.
+All examples run from their own folder using an `index.html` file, which references a `scripts.js` file. Either `index.html` or `scripts.js` will change with each new example, and new files may be added or subtracted to each example.
 
-All     examples use some form of the XMLHttpRequest browser object. Because of these, they need to run from a web server instead of as a local file in a web browser.
+All examples use some form of the XMLHttpRequest browser object. Because of this, they need to run from a web server instead of as a local file in a web browser.
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
 First, understand that XMLHttpRequest, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
@@ -749,7 +749,7 @@ jQuery currently offers five AJAX shorthand methods:
 4. `jQuery.getScript()`
 5. `jQuery.post()`
 
-`jQuery.post()` deals with server interaction which is beyond the scope of this guide, so it won't be discussed here.
+`jQuery.post()` deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
 If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of [a JavaScript sample we looked at earlier](#what-is-onreadystatechange, "Read the "onreadystatechange section of this article).
@@ -915,7 +915,7 @@ The first parameter for `$.getJSON()` is the JSON file with the content we want 
 
 That callback function takes one parameter we've called `player`, which points to the JSON file. Next, we use jQuery's `$.each()` method to do what the `for...in` loop did before and look for properties in our JSON data.
 
-`$.each()` also takes parameters: the first one is `players` parameter which, again, is pointing to our JSON data. The second parameter is another callback function that loads the data onto the page, and inside particular page elements we create.
+`$.each()` also takes parameters: the first one is `players` parameter, which, again, is pointing to our JSON data. The second parameter is another callback function that loads the data onto the page, and inside particular page elements we create.
 
 In the function, we created a variable called `newDiv` that used jQuery to create a new div tag. Then we used jQuery's `.append()` method to look for any `playerOne` properties in the items of the JSON object, and place them inside of the newly created div tag.
 
@@ -968,7 +968,7 @@ $.getScript("loadFile.js", function() {
 The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
 http://davidwalsh.name/loading-scripts-jquery
 
-If you view `index.html` in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
+If you view `index.html` in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
 {% prism javascript %}
 // Will look different every time the page gets reloaded
 loadFile.js?=1421161342213
@@ -1003,13 +1003,13 @@ When used, both `$.ajax()` and some of the shorthand methods return the jQuery X
 
 jqXHR is basically the traditional `XMLHttpRequest` object already in the browser, but wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed here...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deffereds">read the jQuery documentation to learn more about jQuery Deffereds</a>.
+An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed here...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
 
 <a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise</h4>
 Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.
 
-According to the <a href="https://promisesaplus.com/" target="blank">community-led Promises specifcation</a>:
+According to the <a href="https://promisesaplus.com/" target="blank">community-led Promises specification</a>:
 
 > *A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its `then` method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.*
 
@@ -1020,7 +1020,7 @@ In other words...
 * Promises have a `then` method that manages the callbacks.
 * Promises have special event handling for situations where the code fails.
 
-At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to acheive this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank">ECMAScript version 6, code-named "Harmony."</a>
+At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank">ECMAScript version 6, code-named "Harmony."</a>
 
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
@@ -1034,13 +1034,13 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 
 According to <a href="http://bugs.jquery.com/ticket/11010" target="blank">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
-There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/domenic/3889970" target="blank">an excellent Promises post on GitHub</a> that explains them even further.
+There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenici/3889970" target="blank">an excellent Promises post on GitHub</a> that explains them even further.
 
 Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank">an excellent walk-through on Promises</a>. Really good for beginners.
 
 <a name="deffered-methods"></a>
 <h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
-Because jqXHR is part of jQuery Deffereds, it has access to all of Deffered's methods. The four most commonly-used methods are:
+Because jqXHR is part of jQuery Deferreds, it has access to all of Deferreds methods. The four most commonly-used methods are:
 
 1. `done`
 2. `fail`
