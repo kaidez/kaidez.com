@@ -21,7 +21,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
     <li>
       <a href="#ajax-javascript">Create AJAX with Regular JavaScript</a>
       <ol>
-        <li><a href="#xhr-feature-detection">XHR detection</a></li>
+        <li><a href="#xhr-feature-detection">XHR feature detection</a></li>
         <li>
           <a href="#load-content">Load content onto a page with AJAX</a></li>
           <ol>
@@ -123,7 +123,7 @@ Garret's article defined AJAX and also listed its required technologies (<a href
 <h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
-*(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective, but is primarily needed for Internet Explorer versions 6 and lower. Usage for those browsers has dropped significantly, plus, jQuery version 1.x takes care of the feature detection for you when used in your code. therefore, you can <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)*
+*(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective, but is primarily needed for Internet Explorer versions 6 and lower. Usage for those browsers has dropped significantly, plus, jQuery version 1.x takes care of the feature detection for you when you use it. Therefore, you can <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)*
 
 As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, XMLHTTP was not a directly accessible object in the web browser...i.e., you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
