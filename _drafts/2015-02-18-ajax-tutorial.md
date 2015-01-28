@@ -648,12 +648,12 @@ If you use jQuery 1.x, it will perform the ActiveX Object feature detection we r
 There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
 
 {% prism markup %}
-<!-- sample10/scripts.html -->
+<!-- sample09/scripts.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 10</title>
+    <title>Sample 09</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -666,7 +666,7 @@ There are many ways to configure `$.ajax()` and reviewing all of them is beyond 
 
 The same HTML code as before except we've added a div with an id of "isLoadedTarget" and the core jQuery library.
 {% prism javascript %}
-// sample10/scripts.js
+// sample09/scripts.js
 $.ajax({
   url: "articleName.html",
   success: isLoaded,
