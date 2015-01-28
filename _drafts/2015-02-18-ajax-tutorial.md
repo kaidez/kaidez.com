@@ -899,7 +899,7 @@ As a reminder, here's our JSON file
   }
 }
 {% endprism %}
-
+And our `scripts.js` file looks like this
 {% prism javascript %}
 // sample18/scripts.js
 $.getJSON("soccerplayers.json", function(players) {
