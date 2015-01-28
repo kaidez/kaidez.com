@@ -759,9 +759,9 @@ $("#getHTMLFile").click(function(){
 Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
 <a name="jquery-reusable-button-code"></a>
 <h5 class="h5-guide">Create reusable code for multiple buttons with .load</h5>
-We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
+We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample13/index.html -->
+<!-- sample12/index.html -->
 <!-- add two <button> tags directly above <div id="textTarget"> -->
 ...
 <button class="btn" data-file="articleName.html">Load the HTML file</button>
@@ -771,7 +771,7 @@ We used [plain JavaScript to create separate buttons to "AJAX in" different cont
 {% endprism %}
 As before, create two buttons with a class called `btn` and a data-attribute called `data-file`. And `data-file` stores the file that should be loaded using AJAX.
 {% prism javascript %}
-// sample13/scripts.js
+// sample12/scripts.js
 $(".btn").click(function(){
   var getData = $(this).data("file");
   $("#textTarget").load(getData);
