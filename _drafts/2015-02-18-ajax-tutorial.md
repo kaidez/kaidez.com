@@ -507,14 +507,14 @@ But if `dataset` DOES exist, we can use it to get the value of the data attribut
 *(Note: To learn more about data attributes, read my <a href="/load-data-attributes-mouseclicks/" target="blank" title="Read my 'Load data attributes with Mouse Clicks' tutorial">"Load data attributes with Mouse Clicks" tutorial</a> or my <a href="/filter-content-jquery/" target="blank" target="blank" title="Read my 'Filter Content With jQuery.filter() & jQuery Selectors' tutorial">"Filter Content With jQuery.filter() & jQuery Selectors" tutorial</a>.*
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
-As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample09/" target="blank">view the example</a>):
+As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample09/index.html -->
+<!-- sample08/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Sample 09</title>
+    <title>Sample 08</title>
   </head>
   <body>
     <div id="textTarget"></div>
@@ -524,7 +524,7 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
 {% endprism %}
 The buttons have been removed from the HTML file.
 {% prism javascript %}
-// sample09/soccerplayers.json
+// sample08/soccerplayers.json
 {
     "chelsea": {
         "playerOne": "Didier Drogba",
@@ -546,7 +546,7 @@ The buttons have been removed from the HTML file.
 Instead of using AJAX to load in data from either an HTML or text file, we're now loading it from a `json` file called `soccerplayers.json`.
 
 {% prism javascript %}
-// sample09/scripts.js
+// sample08/scripts.js
 (function(){
     var getPlayerInfo = new XMLHttpRequest();
 
