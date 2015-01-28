@@ -356,7 +356,7 @@ getArticleInfo.onreadystatechange = function() {
 `getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-Developers like to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read about the logical "AND" operator on MDN">logical "AND" operator (&&)</a> to simultaneously check the value of `readyState` and `status` (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
+Developers like to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read about the logical "AND" operator on MDN">logical "AND" operator (&&)</a> to simultaneously check the value of `readyState` and `status`. The code for this looks similar to this (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample04/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
@@ -370,7 +370,7 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
-`XMLHttpRequest` will request and display data without error but the console message, however we write it, will return anyway. This is because it's doing very limited checks.
+In this example, `XMLHttpRequest` probably requested and displayed data without error, but the console message displayed anyway. This is because it's doing very limited checks.
 
 The code using logical "AND" will only load the content onto the page if `getArticleInfo.readyState` equals `4` at the same time that `getArticleInfo.status` equals `200`. If `getArticleInfo.readyState` equals `3` (meaning that data is still loading), it won't place content on the page.
 
