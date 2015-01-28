@@ -420,9 +420,9 @@ The button is "listening for", or "watching for", whatever event we tell it to w
 
 <a name="multiple-ajax-buttons"></a>
 <h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
-We can create multiple buttons that load different data with AJAX (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
+We can create multiple buttons that load different data with AJAX (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
 {% prism markup %}
-<!-- sample07/index.html -->
+<!-- sample06/index.html -->
 <!-- add a new <button> directly above <div id="textTarget">  -->
 ...
 <button id="getHTMLFile">Load the HTML file</button>
@@ -431,7 +431,7 @@ We can create multiple buttons that load different data with AJAX (<a href="/sam
 {% endprism %}
 Add a new button tag with an id of "getTextFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of a text file inside the div tag.
 {% prism javascript %}
-// sample07/scripts.js
+// sample06/scripts.js
 // Pass a parameter to loadFile and refer to it in getInfo.open()
 function loadFile(file) {
   var getInfo = new XMLHttpRequest();
