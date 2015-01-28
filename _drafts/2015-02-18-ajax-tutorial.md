@@ -876,11 +876,11 @@ The `data` parameter, which represents the content, is passed to `.html()` so it
 
 <a name="jquery-get-json"></a>
 <h5 class="h5-guide">Use jQuery.getJSON()</h5>
-We can use jQuery's `$.getJSON()` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax).
+We can use jQuery's `$.getJSON()` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax)(<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>).
 
 As a reminder, here's our JSON file
 {% prism javascript %}
-// sample18/soccerplayers.json
+// sample16/soccerplayers.json
 {
   "chelsea": {
     "playerOne": "Didier Drogba",
@@ -901,7 +901,7 @@ As a reminder, here's our JSON file
 {% endprism %}
 And our `scripts.js` file looks like this
 {% prism javascript %}
-// sample18/scripts.js
+// sample16/scripts.js
 $.getJSON("soccerplayers.json", function(players) {
   $.each(players, function(i) {
     var newDiv = $("<div></div>");
