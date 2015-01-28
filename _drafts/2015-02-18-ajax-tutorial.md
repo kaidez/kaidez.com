@@ -729,7 +729,7 @@ We've created a configurable object be setting three options:
 
 `.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery promises and deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
 
- `.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
+`.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
 
 The callback used the `html()` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html()` instead of the file name. `.done()` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.  
 <a name="ajax-shorthand"></a>
