@@ -22,12 +22,12 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
       <a href="#ajax-javascript">Create AJAX with Regular JavaScript</a>
       <ol>
         <li><a href="#xhr-feature-detection">XHR feature detection</a></li>
-        <li>
-          <a href="#load-content">Load content onto a page with AJAX</a></li>
+        <li><a href="#load-content">Load content onto a page with AJAX</a></li>
           <ol>
+          <li><a href="#new-xhr-instance">Create a new instance of the XHR object</a></li>
             <li><a href="#200-response">Wait for 200 response code from the server</a></li>
             <li><a href="#xhr-states">XHR States</a></li>
-            <li><a href="#what-is-onreadystatechange">Bring everything together using "onreadystatechange"</a></li>
+            <li><a href="#readystatechange">Bring everything together using "onreadystatechange"</a></li>
           </ol>
         </li>
         <li><a href="#callback-function">Have "readyStateChange" run a callback function</a></li>
@@ -177,12 +177,6 @@ A JavaScript `try...catch` statement looked for the different versions of `Activ
 
 `getXHR()` said `return xhr` at the end of the code, which let us create new instances of `getXHR()` outside the function.
 
-There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code and just create a direct instance of the XHR:
-
-{% prism javascript %}
-var xhr = new XMLHttpRequest();
-{% endprism %}
-
 Go to MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">learn more about feature-detection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">learn more about "try...catch" on MDN</a>.
 
 <a name="load-content"></a>
@@ -193,6 +187,15 @@ Loading content with XHR is a four-step process:
 2. Wait for a 200 response code from the server.
 3. Wait for an XHR state of 4.
 4. Bring everything together using "onreadystatechange".
+
+<a name="new-xhr-instance"></a>
+<h5 class="h5-guide">Create a new instance of the XHR object</h5>
+There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code and just create a direct instance of the XHR:
+
+{% prism javascript %}
+var xhr = new XMLHttpRequest();
+{% endprism %}
+
 <a name="200-response"></a>
 <h5 class="h5-guide">Wait for 200 response code from the server</h5>
 A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
@@ -202,7 +205,7 @@ When your AJAX code sees a `200 OK` response, it knows that your XHR has succeed
 <h5 class="h5-guide"> Wait for an XHR state of 4</h5>
 An XHR request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
-*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section](what-is-onreadystatechange "Go the "onreadystatechange" section").*
+*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "Bring everything together using "onreadystatechange"](#readystatechange "Go the "onreadystatechange" section").*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources refer to the Microsoft one.
 
@@ -230,7 +233,7 @@ Microsoft's definition also attaches numbers to states, but the definition is sh
 
 * __4__ (complete)
 
-<a name="what-is-onreadystatechange"></a>
+<a name="readystatechange"></a>
 <h5 class="h5-guide">Bring everything together using "onreadystatechange"</h5>
 `onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
 
@@ -716,7 +719,7 @@ jQuery currently offers five AJAX shorthand methods:
 `jQuery.post()` deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
-If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of <a href="#what-is-onreadystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of <a href="#readystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
 
 <a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
 {% prism markup %}
