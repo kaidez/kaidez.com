@@ -102,14 +102,16 @@ Simply put, XMLHttpRequest fetches, or "requests", information from a server, th
 
 The technologies were: XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM"). XML was the recommended data type but other data types can be used...text files, HTML files, images and (more so than anything else), JSON.  
 
-XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of over XHTML is recommended at the time of this guide's initial publish date.
+XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of XHTML is recommended at the time of this guide's initial publish date.
 <a name="brief-history-ajax"></a>
 <h3 class="h3-guide">A brief history of AJAX</h3>
-The roots of AJAX goes back to roughly late 1988/early 1999: [according to JavaScript creator, Brendan Eich](http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918), Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application (OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
+*(NOTE: This section is to provide some historically perspective on AJAX and has nothing to do with the code in this guide. To start looking at code, you can <a href="#ajax-javascript">skip this section and go to "Create AJAX with Regular JavaScript"</a>.*
 
-OWA still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft developers created the [XMLHTTP object](http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx, "Read more about the XMLHTTP Object") to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
+The roots of AJAX goes back to roughly late 1988/early 1999: <a href="http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918" target="blank" title="Listen to Brendan Eich on the JavaScript Jabber Podcast">according to JavaScript creator, Brendan Eich</a>, Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application (OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
 
-Other browsers added the object as well, but with a different implementation and called it `XMLHttpRequest`. Microsoft would copy the other implementation and also name their object `XMLHttpRequest` when they released Internet Explorer 7.
+OWA still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft developers created the <a href="http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx" target="blank" title=""Read more about the XMLHTTP Object"">XMLHTTP object</a> to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
+
+Other browsers added the object as well, but with a different implementation and called it "XMLHttpRequest". Microsoft would copy the other implementation and also name their object `XMLHttpRequest` when they released Internet Explorer 7.
 
 The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
 
@@ -121,14 +123,13 @@ Garret's article defined AJAX and also listed its required technologies (<a href
 <h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
-As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older versions, XMLHTTP was not a directly accessible object in the web browser...i.e., you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside of another object called
 <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to write some sort of feature-detection code to make sure that your AJAX worked in all browsers.
 
 The simplest version of this feature-detection code looked similar to this (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample01/scripts.js
 // Feature-detect XMLHttpRequest implementation
 var xhr;
 if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
@@ -147,7 +148,6 @@ Developers later realized that `window.ActiveXObject` was used differently acros
 
 As a result, they built slightly different feature detection code (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
-// sample02/scripts.js
 // Feature-detect XMLHttpRequest implementation
 // More robust detecting of ActiveX implementations
 function getXHR() {
