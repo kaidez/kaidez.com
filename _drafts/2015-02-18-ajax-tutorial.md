@@ -356,6 +356,7 @@ getArticleInfo.onreadystatechange = function() {
 `getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
+*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Many developers have performed checks this way but it should be avoided, so this section is here for historically perspective. To get to the next part of the working code, <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
 Developers like to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read about the logical "AND" operator on MDN">logical "AND" operator (&&)</a> to simultaneously check the value of `readyState` and `status`. The code for this looks similar to this (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample04/scripts.js
@@ -376,8 +377,7 @@ The code using logical "AND" will only load the content onto the page if `getArt
 
 But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical "AND" to load in data. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
 
-Most developers simply don't add a console statement but your web application may require them. You'll probably want to write a few more `if/else` checks in those case, but doing that is out of the scope of this guide.
-
+The point is, using `&&` doesn't like this isn't performing a robust check of the applicatiom state so it's best to avoid it.
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
 The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
