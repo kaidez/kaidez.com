@@ -24,9 +24,9 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#xhr-feature-detection">XHR feature detection</a></li>
         <li><a href="#load-content">Load content onto a page with AJAX</a></li>
           <ol>
-          <li><a href="#new-xhr-instance">Create a new instance of the XHR object</a></li>
+            <li><a href="#new-xhr-instance">Create a new instance of the XHR object</a></li>
+            <li><a href="#xhr-states">Wait for an XHR state of 4</a></li>
             <li><a href="#200-response">Wait for 200 response code from the server</a></li>
-            <li><a href="#xhr-states">XHR States</a></li>
             <li><a href="#readystatechange">Bring everything together using "onreadystatechange"</a></li>
           </ol>
         </li>
@@ -184,8 +184,8 @@ Go to MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Sta
 Loading content with XHR is a four-step process:
 
 1. Create a new instance of the XHR object.
-2. Wait for a 200 response code from the server.
-3. Wait for an XHR state of 4.
+2. Wait for an XHR state of 4.
+3. Wait for a 200 response code from the server.
 4. Bring everything together using "onreadystatechange".
 
 <a name="new-xhr-instance"></a>
@@ -196,16 +196,11 @@ There are use cases for including XHR feature detection in your code, but it's p
 var xhr = new XMLHttpRequest();
 {% endprism %}
 
-<a name="200-response"></a>
-<h5 class="h5-guide">Wait for 200 response code from the server</h5>
-A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
-
-When your AJAX code sees a `200 OK` response, it knows that your XHR has succeeded in making the request.
 <a name="xhr-states"></a>
 <h5 class="h5-guide"> Wait for an XHR state of 4</h5>
 An XHR request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
-*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "Bring everything together using "onreadystatechange"](#readystatechange "Go the "onreadystatechange" section").*
+*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "aWit for 200 response code from the server"](#200-response "Go to "Wait for 200 response code from the server")".*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources refer to the Microsoft one.
 
@@ -233,11 +228,15 @@ Microsoft's definition also attaches numbers to states, but the definition is sh
 
 * __4__ (complete)
 
+<a name="200-response"></a>
+<h5 class="h5-guide">Wait for 200 response code from the server</h5>
+A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
+
+When your AJAX code sees a `200 OK` response, it knows that your XHR has made a successful server request.
+
 <a name="readystatechange"></a>
 <h5 class="h5-guide">Bring everything together using "onreadystatechange"</h5>
-`onreadystatechange` is an event handler that tracks the current request state. Whether it's 0 or 4, that value will always be stored in `onreadystatechange`.
-
-There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states. But with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
+`onreadystatechange` is an event handler that tracks the current request state, which will always have a numerical value of 0 through 4. There are use cases for knowing all the times when `onreadystatechange` is equal to all the different states but with AJAX, knowing when it's equal to 4, the `done` state, is the most important use case.
 
 When `onreadystatechange` is equal to 4, it means that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):
 
