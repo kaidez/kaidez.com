@@ -61,7 +61,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#done-method">The .done method</a></li>
             <li><a href="#fail-method">The .fail method</a></li>
             <li><a href="#always-method">The .always method</a></li>
-            <li></li>
+            <li><a href="#then-method">The .then method</a>
           </ol>
         </li>
       </ol>
@@ -1061,6 +1061,7 @@ $("#textTarget").load("article.html")
 
 The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didn't work in our code.
 
+<a href="http://api.jquery.com/deferred.done/" target="blank" title="Read more about the jQuery 'deferred.done()'">Read more about the jQuery "deferred.done()".</a>
 <a name="fail-method"></a>
 <h5 class="h5-guide">The .fail method</h5>
 The `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
@@ -1081,6 +1082,7 @@ $.get("article.html")
 
 Since `article.html` was removed from the directory, the code failed. The `.fail()` method was called as a result, so it loaded a message into the "#textTarget" into the message saying so.
 
+<a href="http://api.jquery.com/deferred.fail/" target="blank" title="Read more about the jQuery 'deferred.fail()'">"Read more about the jQuery "deferred.fail()".</a>
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
 The `.always()` method sets a callback for what to do if the code either resolves or is rejected <a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>:
@@ -1122,6 +1124,13 @@ $.get("article02.html")
 There were two functions in our code: one that loads in "article.html", which does exist, and one that loads in "article02.html", which does __NOT__ exist. Each one is chaining the `.done`, `.fail` and `.always` methods.
 
 The first one loads in the existing "article.html" file, so its chained `.done` method will run...as will its chained `.always` method. The second one loads in the non-existing "article02.html" file, so its chained `.fail` method will run...as will its chained `.always` method.
+
+<a href="http://api.jquery.com/deferred.always/" target="blank" title="Read more about the jQuery 'deferred.always()'">Read more about the jQuery "deferred.always()".</a>
+
+<a name="then-method"></a>
+<h5 class="h5-guide">The .then method</h5>
+
+<a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
