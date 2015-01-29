@@ -1085,6 +1085,7 @@ Since `article.html` was removed from the directory, the code failed. The `.fail
 <h5 class="h5-guide">The .always method</h5>
 The `.always()` method sets a callback for what to do if the code either resolves or is rejected.
 
+`index.html` remains the same but we've add "article.html" back to this sample's directory...<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
