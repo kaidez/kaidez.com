@@ -54,7 +54,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
           </ol>
         </li>
         <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
-        <li><a href="#what-is-a-javascript-promise">What is a Promise</a></li>
+        <li><a href="#what-is-a-javascript-promise">What is a Promise?</a></li>
         <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
         <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
           <ol>
@@ -972,7 +972,7 @@ jqXHR is basically the traditional `XMLHttpRequest` object already in the browse
 An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed here...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
 
 <a name="what-is-a-javascript-promise"></a>
-<h4 class="h4-guide">What is a Promise</h4>
+<h4 class="h4-guide">What is a Promise?</h4>
 Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.
 
 According to the <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">community-led Promises specification</a>:
@@ -982,9 +982,9 @@ According to the <a href="https://promisesaplus.com/" target="blank" title="Read
 In other words...
 
 * Promises wait for your code to COMPLETELY finish what it's doing.
-* Promises let you attach callbacks to the code, and do it in a neater, cleaner way then before.
+* Promises let you run callbacks to do things AFTER the code COMPLETELY finishes what it's doing, and do it in neater, cleaner ways then before.
 * Promises have a `then` method that manages the callbacks.
-* Promises have special event handling for situations where the code fails.
+* Promises have special event handling for situations where any part of the code fails.
 
 At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specifcation">ECMAScript version 6, code-named "Harmony."</a>
 
