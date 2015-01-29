@@ -1083,9 +1083,45 @@ Since `article.html` was removed from the directory, the code failed. The `.fail
 
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
-The `.always()` method sets a callback for what to do if the code either resolves or is rejected.
+The `.always()` method sets a callback for what to do if the code either resolves or is rejected <a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>:
+{% prism markup %}
+<!-- sample21/index.html -->
+<!-- Add <div id="textTarget02"> directly below <div id="textTarget">-->
+...
+<div id="textTarget"></div>
+<div id="textTarget02"></div>
+...
+{% endprism %}
+ A div tag with an id of "textTarget02" was added below the div tag with an id of "textTarget."
+{% prism javascript %}
+// sample21/scripts.js
+// Try & load "article.html" into "<div id="textTarget">"
+$.get("article.html")
+  .done(function(data) {
+    $("#textTarget").html(data);
+  })
+  .fail(function() {
+    $("#textTarget").html("The file didn't load!");
+  })
+  .always(function(){
+    console.log("The 'article.html' file either did or didn't load!");
+  });
 
-`index.html` remains the same but we've add "article.html" back to this sample's directory...<a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>.
+// Try & load "article02.html" into "<div id="textTarget02">"
+$.get("article02.html")
+  .done(function(data) {
+    $("#textTarget02").html(data);
+  })
+  .fail(function() {
+    $("#textTarget02").html("The 'article02.html' file didn't load!");
+  })
+  .always(function(){
+    console.log("The 'article02.html' file either did or didn't load!");
+  });
+{% endprism %}
+There were two functions in our code: one that loads in "article.html", which does exist, and one that loads in "article02.html", which does __NOT__ exist. Each one is chaining the `.done`, `.fail` and `.always` methods.
+
+The first one loads in the existing "article.html" file, so its chained `.done` method will run...as will its chained `.always` method. The second one loads in the non-existing "article02.html" file, so its chained `.fail` method will run...as will its chained `.always` method.
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
