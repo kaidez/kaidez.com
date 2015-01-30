@@ -430,7 +430,7 @@ document.getElementById("getHTMLFile").addEventListener("click", loadHTML);
 {% endprism %}
 All the AJAX code was placed in a `loadHTML` function and we added new code at the bottom that ran this function when the button was clicked. At the bottom of the code, the button with the id of `getHTMLFile` had the `addEventListener` method attached to it.
 
-The button was "listening for", or "watching for", whatever event we told it to watch for...which was `click`. When the code saw that the button has been clicked, it ran the `loadHTML` function and processed the AJAX code.
+The button was "listening for", or "watching for", whatever event we told it to watch for...which was `click`. When the code saw that the button was been clicked, it ran the `loadHTML` function and processed the AJAX code.
 
 <a name="multiple-ajax-buttons"></a>
 <h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
@@ -443,7 +443,7 @@ We can create multiple buttons that load different data with AJAX (<a href="/sam
 <button id="getTextFile">Load the text file</button>
 <div id="textTarget"></div>
 {% endprism %}
-Add a new button tag with an id of "getTextFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of a text file inside the div tag.
+We added a new button tag with an id of "getTextFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of a text file inside the div tag.
 {% prism javascript %}
 // sample06/scripts.js
 // Pass a parameter to loadFile and refer to it in getInfo.open()
@@ -464,14 +464,14 @@ document.getElementById("getTextFile").onclick = function() {
   loadFile("articleName.txt");
 };
 {% endprism %}
-`loadFile` now requires a parameter that we're calling "file". The parameter will define what file get's loaded onto the page via `getInfo.open()`.
+`loadFile` now requires a parameter that we're calling "file". The parameter will define what file get's loaded onto the page via `getInfo.open`.
 
-We also updated our button code: it still runs the `loadFile()` function, but that function now needs a parameter in order to work. That parameter is the name of the file we want to load onto the page.
+We also updated our button code: it still ran the `loadFile` function, but that function needed a parameter in order to work. That parameter was the name of the file we want to load onto the page.
 
-We also added a new button: the new button loads in a text file while the old button loads in an HTML file.
+The new button loaded in a text file while the old button loaded in an HTML file.
 <a name="reusable-button-code"></a>
 <h4 class="h4-guide">Create reusable code for multiple buttons</h4>
-The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
+The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample07/index.html -->
 <!-- update the <button> tags directly above <div id="textTarget"> -->
@@ -481,9 +481,9 @@ The code in the last demo is fine if we only have a few buttons, but would get m
 <div id="textTarget"></div>
 ...
 {% endprism %}
-The two buttons are still on our HTML page but we're updated them. For each one, we've removed the IDs, added a class called `btn` and added a data-attribute called `data-file`.
+We updated the two buttons already on our HTML page. For each one, we removed the IDs, added a class called `btn` and added a data-attribute called `data-file`.
 
-The values of the data-attributes are unique for each button": each value is the name of the file that should be loaded using AJAX.
+The values of the data-attributes were unique for each button: each value was the name of the file that needed be loaded with AJAX.
 {% prism javascript %}
 // sample07/scripts.js
 // Don't change the loadFile() function
@@ -506,22 +506,22 @@ for (key in getButtons) {
 
 }
 {% endprism %}
-The button code for the two buttons is removed and replaced with this new code. The code starts by finding all the buttons with the `btn` class name and stores them as a group in a variable called `getButtons`.
+The button code for the two buttons was replaced with new code. That code first found all the buttons with the `btn` class name and stored them as a group in a variable called `getButtons`.
 
-Then a `for...in` loop runs for whatever the total amount of buttons there are inside of `getButtons`...there two right now. And every time the loop runs, it creates a variable called `singleButton` which stores a reference to one button at a time: that reference is the `getButtons[key]` line of code.
+Then a `for...in` loop ran for whatever the total amount of buttons  were inside of `getButtons`...only two. Every time the loop ran, it created a variable called `singleButton` that stored a reference to one button at a time: that reference was the `getButtons[key]` line of code.
 
-Next, our code tells each `singleButton` what to do when it gets clicked. What it does is, look at the value of the button's data attribute (which is one of two files) and passes it as a parameter to the `loadFile()` function to load onto the page.
+Next, our code told each `singleButton` what to do when it got clicked. What it did was, looked at the value of the button's data attribute (which is one of two files) and passed it as a parameter to the `loadFile` function to load onto the page.
 
-Data attributes aren't supported in IE 10 and lower so we need to feature-detect for them, then provide fallback code for those browsers. We're detecting for the `dataset` property of the button being clicked, so we need to look for `this.dataset`.
+Data attributes aren't supported in IE 10 and lower so we had to feature-detect for them, then provide fallback code for those browsers. We looked for the `dataset` property of the button being clicked by saying `this.dataset`.
 
-We're first checking to see if `dataset` does NOT exist in the browser by saying `if(!this.dataset)`...if it doesn't exist, we get the value of the data attribute with the `getAttribute()` method.
+We first checked to see if `dataset` did NOT exist in the browser by saying `if(!this.dataset)`...if it didn't, we got the value of the data attribute with the `getAttribute()` method.
 
-But if `dataset` DOES exist, we can use it to get the value of the data attribute using `this.dataset`.
+But if `dataset` DID exist, we used it to get the value of the data attribute using `this.dataset`.
 
 *(Note: To learn more about data attributes, read my <a href="/load-data-attributes-mouseclicks/" target="blank" title="Read my 'Load data attributes with Mouse Clicks' tutorial">"Load data attributes with Mouse Clicks" tutorial</a> or my <a href="/filter-content-jquery/" target="blank" target="blank" title="Read my 'Filter Content With jQuery.filter() & jQuery Selectors' tutorial">"Filter Content With jQuery.filter() & jQuery Selectors" tutorial</a>.*
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
-As mentioned in the beginning, AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
+AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample08/index.html -->
 <!DOCTYPE html>
@@ -536,7 +536,7 @@ As mentioned in the beginning, AJAX can work with many data types but  JSON is t
   </body>
 </html>
 {% endprism %}
-The buttons have been removed from the HTML file.
+The buttons were removed from the HTML file.
 {% prism javascript %}
 // sample08/soccerplayers.json
 {
