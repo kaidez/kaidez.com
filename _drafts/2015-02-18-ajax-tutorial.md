@@ -988,9 +988,13 @@ In other words...
 
 At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specifcation">ECMAScript version 6, code-named "Harmony."</a>
 
+There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that explains them even further.
+
+Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank" title="Read Forbes Lindesay's excellent Promises walk-through">an excellent walk-through on Promises</a>. Really good for beginners.
+
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
-Since Promises aren't available in every browser, there are libraries that you can add to your add to your project that make them work. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries that fully conform the spec</a>.
+Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can use</a>.
 
 Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the spec in two ways:
 
@@ -1001,10 +1005,6 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 Also, jQuery's `.then` method is based on an older version of the Promises spec. This is discussed in <a href="#then-method">the jQuery .then section of this guide</a>.
 
 According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
-
-There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that explains them even further.
-
-Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank" title="Read Forbes Lindesay's excellent Promises walk-through">an excellent walk-through on Promises</a>. Really good for beginners.
 
 <a name="deffered-methods"></a>
 <h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
