@@ -981,7 +981,7 @@ The `$.ajax` method and some of the shorthand methods return the "jQuery XMLHttp
 
 jqXHR is basically the traditional `XMLHttpRequest` browser object wrapped in a specific jQuery API. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of this API are _jQuery Promises_ which are part of jQuery's _Deferred_ object. This guide focuses on using Promises and not Deferreds, but Deferreds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
+An important part of this API are _jQuery Promises_ which are part of jQuery's _Deferred_ object. This guide focuses on using Promises with AJAX and not Deferreds, but Deferreds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
 
 <a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise?</h4>
@@ -994,7 +994,8 @@ According to the <a href="https://promisesaplus.com/" target="blank" title="Read
 In other words...
 
 * Promises wait for your code to COMPLETELY finish what it's doing.
-* Promises let you run callbacks to do things AFTER the code COMPLETELY finishes what it's doing, and do it in neater, cleaner ways then before.
+* Promises let you run callbacks to do things AFTER the code COMPLETELY finishes what it's doing.
+* Promises run callbacks in neater, cleaner ways then in the past.
 * Promises have a `then` method that manages the callbacks.
 * Promises have special event handling for situations where any part of the code fails.
 
@@ -1006,15 +1007,15 @@ Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="b
 
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
-Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can <use> </use></a>.
+Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can use to implement Promise functionality in your code</a>.
 
-Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the Promises spec in two ways:
+jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the Promises spec in two ways:
 
 1. The spec calls for Promises to be their own object when implemented: Promises are wrapped in the jQuery's Deferred object.
 
 2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.
 
-Also, jQuery's `.then` method is based on an older version of the Promises spec. This is discussed in <a href="#then-method">the jQuery .then section of this guide</a>.
+Also, jQuery's `.then` method is based on an older version of the Promises spec. This is discussed in <a href="#then-method">the jQuery `.then` section of this guide</a>.
 
 According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
@@ -1055,11 +1056,11 @@ $.get("article.html").done(function(data) {
   console.log("The file has loaded!");
 });
 {% endprism %}
-`$.get()` requested "article.html" from the server. `.done` will run a callback function if the request is successful.
+`.get` requested "article.html" from the server and had a `.done` method chained to it. `.done` ran a callback function if the request was successful.
 
-The callback loaded the contents of "article.html" on to the page and returned a console message.
+The callback loaded the contents of "article.html" onto the page and returned a console message.
 
-We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load` doesn't return jqXHR and is unable to do this.
+We were able to do this with `.get` because it returned the `jqXHR` object. As a reminder: `.load` doesn't return `jqXHR` and is unable to do this.
 
 The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):
 
@@ -1073,12 +1074,12 @@ $("#textTarget").load("article.html")
 });
 {% endprism %}
 
-The file loaded onto the page but the console message failed to appear. This is because `load` doesn't automatically return `jqXHR`; therefore, `.done` didn't work in our code.
+The file loaded onto the page but the console message failed to appear. This is because `.load` doesn't automatically return `jqXHR`; therefore, `.done` didn't work in our code.
 
-<a href="http://api.jquery.com/deferred.done/" target="blank" title="Read more about the jQuery 'deferred.done()'">Read more about the jQuery "deferred.done()".</a>
+<a href="http://api.jquery.com/deferred.done/" target="blank" title="Read more about the jQuery 'deferred.done()'">Read more about the jQuery "deferred.done()"</a>.
 <a name="fail-method"></a>
 <h5 class="h5-guide">The .fail method</h5>
-The `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
+The `.fail` method sets a callback for what to do if the code fails, or if it's "rejected".
 
 `index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.
 
@@ -1094,12 +1095,12 @@ $.get("article.html")
   });
 {% endprism %}
 
-Since `article.html` was removed from the directory, the code failed. The `.fail()` method was called as a result, so it loaded a message into the "#textTarget" into the message saying so.
+Since `article.html` was removed from the directory, the code failed. The `.fail` method was called as a result, so it loaded a message into the "textTarget" into the message saying so.
 
-<a href="http://api.jquery.com/deferred.fail/" target="blank" title="Read more about the jQuery 'deferred.fail()'">"Read more about the jQuery "deferred.fail()".</a>
+<a href="http://api.jquery.com/deferred.fail/" target="blank" title="Read more about the jQuery 'deferred.fail()'">"Read more about the jQuery "deferred.fail()"</a>.
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
-The `.always()` method sets a callback for what to do if the code either resolves or is rejected <a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>:
+The `.always` method sets a callback for what to do if the code either resolves or is rejected <a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>:
 {% prism markup %}
 <!-- sample21/index.html -->
 <!-- Add <div id="textTarget02"> directly below <div id="textTarget">-->
