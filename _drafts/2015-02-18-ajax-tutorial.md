@@ -359,9 +359,11 @@ getArticleInfo.onreadystatechange = function() {
 `getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Many developers have performed checks this way but it should be avoided, so this section is here for historically perspective. To get to the next part of the working code, <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
+*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Developers still perform checks this way but this guide will not do this...this section is just here as a demonstration of what not to do and has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
 
-Developers like to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read about the logical "AND" operator on MDN">logical "AND" operator (&&)</a> to simultaneously check the value of `readyState` and `status`. The code for this looks similar to this (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
+Our code checked for the value of `readyState` first, _then_ checked for the server's status code. Some developers like to use the logical "AND" operator (&&) to simultaneously check for these values.
+
+The code for this looks similar to this (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample04/scripts.js
 // Update the getArticleInfo.onreadystatechange callback function only
@@ -382,6 +384,9 @@ The code using logical "AND" will only load the content onto the page if `getArt
 But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical "AND" to load in data. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
 
 The point is, using `&&` doesn't like this doesn't perform a robust check of the application state so it's best to avoid it.
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read more about the logical "AND" operator on MDN">Read more about the logical "AND" operator on MDN</a>.
+
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
 The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
