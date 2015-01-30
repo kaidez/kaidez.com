@@ -41,11 +41,10 @@ In order to implement all I learned, I'll be redoing kaidez.com. Specifically, t
 After that, I'll be redoing my [GitHub tutorial][6], then creating a bunch of new posts, including tutorials, coding tips, a review of the ["Downloaded" movie](/downloaded-movie-review/ "Read kaidez's review of 'Downloaded: The Movie") and (maybe) a screencast or two.
 
 Stay Tuned!!!!!!!!!
- 
+
  [1]: http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/
- [2]: http://www.lynda.com/course20/HTML-5-tutorials/HTML5-Structure-Syntax-and-Semantics/77585-2.html
+ [2]: http://www.lynda.com/HTML-tutorials/HTML5-Structure-Syntax-Semantics/182177-2.html
  [3]: http://developers.whatwg.org/
  [4]: http://dev.w3.org/html5/spec-author-view/
  [5]: http://html5doctor.com/
  [6]: http://kaidez.com/remove-files-from-github/
-
