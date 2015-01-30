@@ -49,9 +49,9 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#jquery-ajax-request-mouseclick">Use .load to make an AJAX request with mouseclick</a></li>
             <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with .load</a></li>
             <li><a href="#load-fragments">Load in fragments with .load</a></li>
-            <li><a href="#jquery-get">Use jQuery.get()</a></li>
-            <li><a href="#jquery-get-json">Use jQuery.getJSON()</a></li>
-            <li><a href="#jquery-get-script">Use jQuery.getScript()</a>
+            <li><a href="#jquery-get">Use jQuery.get</a></li>
+            <li><a href="#jquery-get-json">Use jQuery.getJSON</a></li>
+            <li><a href="#jquery-get-script">Use jQuery.getScript</a>
           </ol>
         </li>
         <li><a href="#jqxhr-promises-deferreds">jqHXR & Promises</a></li>
@@ -404,7 +404,7 @@ The previous examples used AJAX to load data automatically, but we can also make
 <div id="textTarget"></div>
 {% endprism %}
 
-We added a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button loaded the contents of an HTML file inside the div tag.
+We added a button tag with an id of "getHTMLFile" above `<div     id="textTarget">`. Clicking on this button loaded the contents of an HTML file inside the div tag.
 {% prism javascript %}
 // sample05/scripts.js
 function loadHTML() {
@@ -481,7 +481,7 @@ The code in the last demo is fine if we only have a few buttons, but would get m
 <div id="textTarget"></div>
 ...
 {% endprism %}
-We updated the two buttons already on our HTML page. For each one, we removed the IDs, added a class called `btn` and added a data-attribute called `data-file`.
+We updated the two buttons already on our HTML page. For each one, we removed the ids, added a class called `btn` and added a data-attribute called `data-file`.
 
 The values of the data-attributes were unique for each button: each value was the name of the file that needed be loaded with AJAX.
 {% prism javascript %}
@@ -506,9 +506,9 @@ for (key in getButtons) {
 
 }
 {% endprism %}
-The button code for the two buttons was replaced with new code. That code first found all the buttons with the `btn` class name and stored them as a group in a variable called `getButtons`.
+The button code for the two buttons was replaced with new code. That code first used `document.querySelectorAll` to find all the buttons with the `btn` class name and store them as a group in a variable called `getButtons`.
 
-Then a `for...in` loop ran for whatever the total amount of buttons  were inside of `getButtons`...only two. Every time the loop ran, it created a variable called `singleButton` that stored a reference to one button at a time: that reference was the `getButtons[key]` line of code.
+Then a `for...in` loop ran for whatever the total amount of buttons  were inside of `getButtons`...which was two. Every time the loop ran, it created a variable called `singleButton` that stored a reference to one button at a time: that reference was the `getButtons[key]` line of code.
 
 Next, our code told each `singleButton` what to do when it got clicked. What it did was, looked at the value of the button's data attribute (which is one of two files) and passed it as a parameter to the `loadFile` function to load onto the page.
 
@@ -619,9 +619,9 @@ Once `readyState` equaled `4` and our code successfully connected to the server,
 
 Then we did a `for...in` loop that looped through JSON content stored inside the `players` variable. Three steps were performed for every loop iteration:
 
-1. a div tag was created using `document.createElement` and stored in a variable called `newDiv`.
+1. the loop created a div tag using `document.createElement` and stored in a variable called `newDiv`.
 2. the loop looked at each item in the `players` variable and found its `playerOne` property. Then placed it inside the div tag created with the `newDiv` variable by accessing the div's `innerHTML` property.
-3. the loop found the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
+3. the loop found the `text` variable that referenced the `<div id="textTarget">` element already on the page and loaded the `newDiv` content inside of it.
 
 This was a basic example of how to use JSON with AJAX...the main takeaway from this is example is, __AJAX can load all different types of content, including JSON__.
 <a name="ajax-jquery"></a>
@@ -633,9 +633,11 @@ The release of jQuery 1.5 was significant because of certain AJAX-related change
 * AJAX performed faster in jQuery.
 * deferreds and promises were introduced, making AJAX's asynchronous functionality better.
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
+
+The release of jQuery 1.8 also saw significant changes to Deferreds and Promises.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
-The core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
+For the rest of the examples, the core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -645,20 +647,20 @@ The core jQuery library has been added to `index.html` via the jQuery CDN. `inde
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
 {% endprism %}
-Note that jQuery comes before `scripts.js` and that we're using a 2.x version of the library instead of a 1.x version. This means that jQuery is optimized to work in Internet Explorer versions 9 and higher only...1.x versions work in IE versions 6 and higher.
+Note that jQuery comes before `scripts.js` and that we're using a 1.x version of the library instead of a 2.x version. This means that jQuery is optimized to work in Internet Explorer versions 6 and higher...2.x versions only work in IE versions 9 and higher.
 
 If you use jQuery 1.x, it will perform the ActiveX Object feature detection we reviewed earlier.
 
 <a name="understanding-jquery-ajax"></a>
-<h4 class="h4-guide">Understanding $.ajax()</h4>
-`$.ajax()` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
+<h4 class="h4-guide">Understanding $.ajax</h4>
+`$.ajax` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
-There are many ways to configure `$.ajax()` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample09/" target="blank">View the example</a>:
+There are many ways to configure `$.ajax` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample09/" target="blank">View the example</a>:
 
 {% prism markup %}
 <!-- sample09/scripts.html -->
@@ -696,39 +698,39 @@ function isLoaded() {
   $("#isLoadedTarget").html("<p>The articleName.html file has loaded...check the console for a message returned by the statusCode property!!!</p>");
 }
 {% endprism %}
-You can use `$.ajax()` either with or without passing parameters to it. If you do pass parameters, you can pass more than one using a configurable object.
+You can use `$.ajax` either with or without passing parameters to it. If you do pass parameters, you can pass more than one using a configurable object.
 
 We've created a configurable object be setting three options:
 
-1.  url: Defines which file is being loaded into the page via AJAX. This example loaded in the "articleName.html" file.
-2.  success: Defines what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
-3.  statusCode: Defines what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
+1.  url: defined which file is being loaded into the page via AJAX. This example loaded in the "articleName.html" file.
+2.  success: defined what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
+3.  statusCode: defined what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
 
-`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery Promises and deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
+We chained `.ajax`to the `.done` method, so it will run next. `.done` is discussed later when we look at [jQuery Promises and Deferreds](#jqxhr-promises-deferreds "Read about Promises and Deferreds in AJAX") but for now, understand  that `.done` is a a callback function that ran after `.ajax` did everything it was supposed to do.
 
-`.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
+`.done` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax`, including the value of the "url" option.
 
-The callback used the `html()` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html()` instead of the file name. `.done()` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.  
+The callback used the `html` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html` instead of the file name. `.done` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.  
 <a name="ajax-shorthand"></a>
 <h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
-`$.ajax()` is powerful, but not needed for every project. According to <a href="http://api.jquery.com/jQuery.ajax/" target="blank" title="Read the jQuery.ajax documentation">the current version of the $.ajax documentation</a>:
+`$.ajax` is powerful, but not needed for every project. According to <a href="http://api.jquery.com/jQuery.ajax/" target="blank" title="Read the jQuery.ajax documentation">the current version of the $.ajax documentation</a>:
 
 > *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
 
-In jQuery, these higher-level functions are commonly referred to as "[shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read more about jQuery AJAX shorthand methods")." All of them use core `.ajax()` method internally.
+In jQuery, these higher-level functions are commonly referred to as "[shorthand methods](http://api.jquery.com/category/ajax/shorthand-methods/ "Read more about jQuery AJAX shorthand methods")." All of them use core `.ajax` method internally.
 
 jQuery currently offers five AJAX shorthand methods:
 
-1. `.load()`
-2. `jQuery.get()`
-3. `jQuery.getJSON()`
-4. `jQuery.getScript()`
-5. `jQuery.post()`
+1. `.load`
+2. `jQuery.get`
+3. `jQuery.getJSON`
+4. `jQuery.getScript`
+5. `jQuery.post`
 
-`jQuery.post()` deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.
+`jQuery.post` deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
-If you want to use jQuery to load in file with AJAX like we've been doing, the `.load()` function is the easiest way to do this. This is the jQuery version of <a href="#readystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load` function is the easiest way to do this. This is the jQuery version of <a href="#readystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
 
 <a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
 {% prism markup %}
@@ -741,17 +743,17 @@ If you want to use jQuery to load in file with AJAX like we've been doing, the `
   </head>
   <body>
     <div id="textTarget"></div>
-    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
 {% endprism %}
-A  HTML page like we've used in previous examples...it has `<div id="textTarget"></div>` where we'll load content on page-load.
+An HTML page like we've used in previous examples...it contains `<div id="textTarget"></div>` where we loaded in content on page-load.
 {% prism javascript %}
 // sample10/scripts.js
 $("#textTarget").load("articleName.html");
 {% endprism %}
-jQuery looks for the `<div id="textTarget"></div>` element on the page and runs it against the `load()` function. That function will use AJAX to "load" content inside of `<div id="textTarget"></div>`: that content is defined as `"articleName.html"` in the `load()` parameter.
+jQuery looked for the `<div id="textTarget"></div>` element on the page and ran it against the `.load` function. That function used AJAX to "load" content inside of the div...that content was defined as "articleName.html" in the `.load` parameter.
 <a name="jquery-ajax-request-mouseclick"></a>
 <h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
 We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):
@@ -762,14 +764,14 @@ We used a mouseclick to [load content "AJAX in" content in a previous example](#
 <button id="getHTMLFile">Load the HTML file</button>
 <div id="textTarget"></div>
 {% endprism %}
-Add a button with an id of `getHTMLFile` directly above `<div id="textTarget">`.
+We added a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button loaded the contents of an HTML file inside the div tag.
 {% prism javascript %}
 // sample11/scripts.js
 $("#getHTMLFile").click(function(){
   $("#textTarget").load("articleName.html");
 });
 {% endprism %}
-Bind the jQuery `click` method to the button we just added and have it run a callback function when it's clicked. The function will run the `load`-based code in the previous example.
+We bound the jQuery `.click` method to the button we just added and had it run a callback function when clicked. The function ran the `.load` code in the previous example.
 <a name="jquery-reusable-button-code"></a>
 <h5 class="h5-guide">Create reusable code for multiple buttons with .load</h5>
 We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
@@ -782,7 +784,7 @@ We used [plain JavaScript to create separate buttons to "AJAX in" different cont
 <div id="textTarget"></div>
 ...
 {% endprism %}
-As before, create two buttons with a class called `btn` and a data-attribute called `data-file`. And `data-file` stores the file that should be loaded using AJAX.
+We created two buttons with a class called `btn` and a data-attribute called `data-file`. `data-file` stored the name of the file that had to be loaded with AJAX.
 {% prism javascript %}
 // sample12/scripts.js
 $(".btn").click(function(){
@@ -790,17 +792,17 @@ $(".btn").click(function(){
   $("#textTarget").load(getData);
 });
 {% endprism %}
-As before, have all the buttons with the `btn` class share the same `click` function for loading in content. As before, the buttons simultaneously perform two tasks: find the file stored in the `data-file` attribute, and load that file into the `<div id="textTarget">` element.
+As before, we had all the buttons with the `btn` class share the same `.click` function for loading in content. As before, the buttons simultaneously performed two tasks: find the file stored in the `data-file` attribute, and load that file into the `<div id="textTarget">` element.
 
-To get the file stored in `data-file`, we start by using `$(this).data()`. We're still using the JavaScript `this` keyword to reference the button being clicked, but it's now wrapped in the jQuery object so we can use it with other jQuery methods.
+To get the file stored in `data-file`, we used `$(this).data()`. We still used the JavaScript `this` keyword to reference the button being clicked, but wrapped in the jQuery object so we could use it with other jQuery methods.
 
-We have to pass the name of data attribute we want to find as a parameter to the `.data` method. The name we want is `data-file` so we just need to write call our parameter "file".
+We passed the name of data attribute we want to find as a parameter to the `.data` method. The name we wanted was `data-file` so we just needed to call our parameter "file".
 
-All of this is stored in a variable called `getData`. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `load` method that loads files inside of `<div id="textTarget">`.
+All that was stored in a variable called `getData`. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `.load` method that loads files inside of `<div id="textTarget">`.
 
 <a name="load-fragments"></a>
 <h5 class="h5-guide">Load in fragments with .load</h5>
-The `$load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
+The `.load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample13/index.html -->
 <!-- No <button> tags in this example -->
@@ -821,39 +823,38 @@ $("#textTarget").load("article.html #author");
 {% endprism %}
 Use load to "AJAX in" the `article.html` but instead of loading in the entire file, just load in the content in the `<div id="author">` element.
 
+<a href="http://api.jquery.com/load/" target="blank" "title"=Read more about jQuery's '.load' method>Read more about jQuery's ".load()" method</a>.
 <a name="jquery-get"></a>
-<h5 class="h5-guide">Use jQuery.get()</h5>
+<h5 class="h5-guide">Use jQuery.get</h5>
 
-The `$.get` method is different from `.load` in a few important ways:
+The `.get` method is different from `.load` in a few important ways:
 
-* `$.get` is a global function while `.load` is a method. This means that you would use `$.get` to start a jQuery code block but use `.load` as a chainable method inside a code block.
+* `.get` is a global function while `.load` is a method. This means that you would use `.get` to start a jQuery code block but use `.load` as a chainable method inside a code block.
 
-* `$.get` manages GET server requests only while `.load` can manage both GET and POST requests.
+* Because of the last difference, it makes sense to use `.load` to "AJAX in" HTML documents only. `.get` was created to "AJAX in" all types of documents.
 
-* With `.load`, you can define what content gets loaded onto a page and where. `$.get` cannot do this on its own...extra code is needed.
+* `.get` manages GET server requests only while `.load` can manage both GET and POST requests.
 
-* Because of the last difference, it makes sense to use `.load` to "AJAX in" HTML documents only. `$.get` was created to "AJAX in" all types of documents.
-
-Using the same HTML as in the previous example, using `$.get` to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
+Using the same HTML as in the previous example, using `.get` to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample14/scripts.js
 $.get("articleName.html", function(data) {
   $("#textTarget").html(data);
 });
 {% endprism %}
-Where we used `.load` as a chainable method inside a code block, `jQuery.get()` started the code block in this example. The first parameter told us what content gets loaded onto the page, which is "articleName.html".
+Where we used `.load` as a chainable method inside a code block, `.get` started the code block in this example. The first parameter told us what content gets loaded onto the page, which is "articleName.html".
 
-The second parameter was a callback function that defined where the content got loaded. The function took a parameter called `data` which represented the content that got loaded onto the page.
+The second parameter was a callback function that defined where the content got loaded. The function took a parameter called "data" which represented the content that got loaded onto the page.
 
-The inside of the function loads the content onto the page. It loads inside the `#textTarget` element with the help of jQuery's `.html()` method.
+The inside of the function loaded the content inside the "textTarget" page element with the help of jQuery's `.html` method.
 
-The `data` parameter, which represents the content, is passed to `.html()` so it knows what to load. The function parameter does not need to be called `data`: it can be anything you want, but naming it as `data` is a common practice.
+The "data" parameter (which represented the content) was passed to the `.html` method so the method knew what to load. The function parameter  can be anything you want, but naming it "data" is a common practice.
 
-<a href="http://api.jquery.com/jQuery.get/" target="blank">Read more about "jQuery.get"</a>
+<a href="http://api.jquery.com/jQuery.get/" target="blank">Read more about "jQuery.get"</a>.
 
 <a name="jquery-get-json"></a>
-<h5 class="h5-guide">Use jQuery.getJSON()</h5>
-We can use jQuery's `$.getJSON()` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax)(<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>).
+<h5 class="h5-guide">Use jQuery.getJSON</h5>
+We can use jQuery's `.getJSON` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax) (<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>).
 
 As a reminder, here's our JSON file
 {% prism javascript %}
@@ -887,20 +888,20 @@ $.getJSON("soccerplayers.json", function(players) {
   })
 });
 {% endprism %}
-The first parameter for `$.getJSON()` is the JSON file with the content we want to load onto the page. The second parameter is a callback function that loads the data onto the page.
+The first parameter for `$.getJSON()` was the JSON file with the content we wanted to load onto the page. The second parameter was a callback function that loaded the data onto the page.
 
-That callback function takes one parameter we've called `player`, which points to the JSON file. Next, we use jQuery's `$.each()` method to do what the `for...in` loop did before and look for properties in our JSON data.
+That callback function took one parameter we've called `player`, which references the JSON file. Next, we used jQuery's `.each` method to do what the `for...in` loop did before: look for properties in our JSON data.
 
-`$.each()` also takes parameters: the first one is `players` parameter, which, again, is pointing to our JSON data. The second parameter is another callback function that loads the data onto the page, and inside particular page elements we create.
+`.each` also took parameters: the first one was `players` parameter, which, again, pointed to our JSON data. The second parameter was another callback function that loaded the data onto the page, and inside particular page elements we created.
 
-In the function, we created a variable called `newDiv` that used jQuery to create a new div tag. Then we used jQuery's `.append()` method to look for any `playerOne` properties in the items of the JSON object, and place them inside of the newly created div tag.
+In the function, we created a variable called `newDiv` that used jQuery to create a new div tag. Then we used jQuery's `.append` method to look for any `playerOne` properties in the items of the JSON object, and place them inside of the newly created div tag.
 
-The new div has content: we can now take it and use jQuery `.append()` again to load it into the `#textTarget` element already on the page.
+The new div had content at that point: we then took it and used `.append` again to load it into the "textTarget" element already on the page.
 
-<a href="http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>
+<a href="http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>.
 
 <a name="jquery-get-script"></a>
-<h5 class="h5-guide">Use jQuery.getScript()</h5>
+<h5 class="h5-guide">Use jQuery.getScript</h5>
 `$.getScript()` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
 `index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
@@ -928,7 +929,9 @@ function setText() {
 
 };
 {% endprism %}
-We created two functions in `loadFile.js`: `getHtmlFile()` `setText()`. `getHtmlFile()` loads the `articleName.html` into the `<div id="textTarget">` as was done in other examples, `setText()` changes the copy in `<div id="textTarget">` by making it red and bolding it.
+We created two functions in `loadFile.js`: `getHtmlFile` and `setText`.
+
+`getHtmlFile()` loads the `articleName.html` into the `<div id="textTarget">` as was done in other examples, `setText` changes the copy in `<div id="textTarget">` by making it red and bolding it.
 {% prism javascript %}
 // sample16/scripts.js
 $.getScript("loadFile.js", function() {
@@ -941,17 +944,16 @@ $.getScript("loadFile.js", function() {
 
 });
 {% endprism %}
-The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
-http://davidwalsh.name/loading-scripts-jquery
+Inside of `scripts.js`, the `getScript` method loaded `loadFile.js`, then ran a callback function. The callback immediately ran `getHtmlFile` and loaded in "articleName.html", and it also ran `setText` when `<div id="textTarget">` was clicked.
 
 If you view `index.html` in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
 {% prism javascript %}
 // Will look different every time the page gets reloaded
 loadFile.js?=1421161342213
 {% endprism %}
-This is because `$.getScript()` always "cache-busts" scripts that it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.
+This is because `.getScript` always "cache-busts" the scripts it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.
 
-If you want to avoid this, you can use `$.ajaxSetup()` to allow caching (<a href="/samples/ajax-tutorial-samples/sample17/" target="blank">view the example</a>):  
+If you want to avoid this, you can use `.ajaxSetup` to allow caching (<a href="/samples/ajax-tutorial-samples/sample17/" target="blank">view the example</a>):  
 {% prism javascript %}
 // sample17/scripts.js
 $.ajaxSetup({
@@ -971,11 +973,11 @@ $.getScript("loadFile.js", function() {
 
 If you look at the Network panel in the developer tools now, you'll notice that no time stamp as been append to the filename.
 
-<a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
+<a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>.
 
 <a name="jqxhr-promises-deferreds"></a>
 <h4 class="h4-guide">jqHXR & Promises</h4>
-The `$.ajax()` method and some of the shorthand methods return the "jQuery XMLHttpRequest" object, commonly referred to as "jqHXR". The `.load()` shorthand method does not return jqXHR.
+The `$.ajax` method and some of the shorthand methods return the "jQuery XMLHttpRequest" object, commonly referred to as "jqHXR". The `.load` shorthand method does not return jqXHR.
 
 jqXHR is basically the traditional `XMLHttpRequest` browser object wrapped in a specific jQuery API. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
@@ -1057,7 +1059,7 @@ $.get("article.html").done(function(data) {
 
 The callback loaded the contents of "article.html" on to the page and returned a console message.
 
-We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load()` doesn't return jqXHR and is unable to do this.
+We were able to do this with `$.get()` because it returned the `jqXHR` object. As a reminder: `load` doesn't return jqXHR and is unable to do this.
 
 The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):
 
