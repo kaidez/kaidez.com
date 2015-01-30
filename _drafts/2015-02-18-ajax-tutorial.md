@@ -1056,7 +1056,7 @@ $.get("article.html").done(function(data) {
   console.log("The file has loaded!");
 });
 {% endprism %}
-`.get` requested "article.html" from the server and had a `.done` method chained to it. `.done` ran a callback function if the request was successful.
+`.get` requested "article.html" from the server and had a `.done` method chained to it. If the request was successful,`.done` ran a callback function.
 
 The callback loaded the contents of "article.html" onto the page and returned a console message.
 
@@ -1140,11 +1140,11 @@ There were two functions in our code: one that loads in "article.html", which do
 
 The first one loads in the existing "article.html" file, so its chained `.done` method will run...as will its chained `.always` method. The second one loads in the non-existing "article02.html" file, so its chained `.fail` method will run...as will its chained `.always` method.
 
-<a href="http://api.jquery.com/deferred.always/" target="blank" title="Read more about the jQuery 'deferred.always()'">Read more about the jQuery "deferred.always()".</a>
+<a href="http://api.jquery.com/deferred.always/" target="blank" title="Read more about the jQuery 'deferred.always()'">Read more about the jQuery "deferred.always()"</a>.
 
 <a name="then-method"></a>
 <h5 class="h5-guide">The .then method</h5>
-The `.always()` method sets a callback for what to do if the code either resolves, is rejected or is still in progress (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
+The `.then` method sets a callback for what to do if the code either resolves, is rejected or is still in progress (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample22/index.html -->
 <!-- Remove <div id="textTarget02"> that was in the previous example -->
@@ -1187,11 +1187,11 @@ Demonstrating the progress function passed in the third parameter is tough with 
 
 As mentioned, jQuery's `then` method is based on an older version of the Promises spec, which is <a href="http://wiki.commonjs.org/wiki/Promises/A" target="blank" title="Read the Promises A specification">the Promises A spec maintained by the Common JS community</a>. That spec requires that `then` allow for a progress parameter while newer <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">Promises/A+ spec</a> states that it should not.
 
-<a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
+<a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()"</a>.
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
-
+AJAX is
 
 Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
 
@@ -1199,9 +1199,3 @@ Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the
 
 MDN Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-
-
-([read the Wikipedia article about the history of promises](http://en.wikipedia.org/wiki/Futures_and_promises)).
-
-yayquery: http://vimeo.com/19578621
-returns jqXHR...comes with a lot of stuff...lets you use XHR methods/functions with other methods/functions if you want.
