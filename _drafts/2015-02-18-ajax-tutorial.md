@@ -12,7 +12,8 @@ has-home-img: ajax-image.jpg
 ---
 AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
-New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of the popular jQuery library. This AJAX tutorial was written with those developers in mind.
+New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This AJAX tutorial was written with those developers in mind.
+<a name="table-of-contents"></a>
 <h2 style="clear:both;">Table of Contents</h2>
   <ol>
     <li><a href="#how-code-examples-works">How the code examples work</li>
@@ -70,7 +71,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
   </ol>
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
-The code for all the examples is located in the GitHub repo and looks similar to this:
+The code for all the examples is on GitHub and looks similar to this:
 
 {% prism markup %}
 <!DOCTYPE html>
@@ -86,20 +87,20 @@ The code for all the examples is located in the GitHub repo and looks similar to
 </html>
 {% endprism %}
 
-All examples run from their own folder using an "index.html" file, which references a `scripts.js` file. Either "index.html" or `scripts.js` will change with each new example, and new files may be added or subtracted to each example.
+All examples run from their own folder using an `index.html` file, which references a `scripts.js` file. Either `index.html` or `scripts.js` will change with each new example, and new files may be added or subtracted to each example.
 
-All examples use some form of the XMLHttpRequest browser object. Because of this, they need to run from a web server instead of as a local file in a web browser.
+All examples use some form of the `XMLHttpRequest` browser object. Because of this, they need to run from a web server instead of as a local file in a web browser.
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
-First, understand that XMLHttpRequest, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
+First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
-Simply put, XMLHttpRequest fetches, or "requests", information from a server, then places it on a web page. It does this "asynchronously", meaning that __XMLHttpRequest loads the information onto the page without needing to reload it.__
+Simply put, `XMLHttpRequest` fetches, or "requests", information from a server, then places it on a web page. It does this "asynchronously", meaning that __XHR loads the information onto the page without needing to reload it.__
 
 "AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page.
 
-The technologies were: XMLHttpRequest, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM"). XML was the recommended data type but other data types can be used...text files, HTML files, images and (more so than anything else), JSON.  
+The technologies were: XHR, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM"). XML was the recommended data type but other data types can be used...text files, HTML files, images and (more so than anything else), JSON.  
 
 XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of XHTML is recommended at the time of this guide's initial publish date.
 <a name="brief-history-ajax"></a>
@@ -110,9 +111,9 @@ The roots of AJAX goes back to roughly late 1988/early 1999: <a href="http://www
 
 OWA still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft developers created the <a href="http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx" target="blank" title=""Read more about the XMLHTTP Object"">XMLHTTP object</a> to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.
 
-Other browsers added the object as well, but with a different implementation and called it "XMLHttpRequest". Microsoft would copy the other implementation and also name their object `XMLHttpRequest` when they released Internet Explorer 7.
+Other browsers added the object as well, but with a different implementation and called it `XMLHttpRequest`. Microsoft would copy the other implementation and also name their object `XMLHttpRequest` when they released Internet Explorer 7.
 
-The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and [Google Suggest](http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/ "Read about Google Suggest").
+The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and <a href="http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/" target="blank" title="Read about Google Suggest">Google Suggest</a>..
 
 These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005 when <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original AJAX article">Jesse James Garrett wrote his influential AJAX article</a>.
 
@@ -124,7 +125,7 @@ Garret's article defined AJAX and also listed its required technologies (<a href
 <h4 class="h4-guide">XHR feature detection</h4>
 *(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective only. It's primarily needed for Internet Explorer versions 6 and lower, but usage for those browsers has dropped significantly. Plus, jQuery version 1.x takes care of the feature detection for you if you use it. If you're not coding for those browsers and/or using jQuery version 1.x, <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)*
 
-As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, XMLHTTP was not directly accessible in the browser...in other words, you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
+As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, `XMLHTTP` was not directly accessible in the browser...in other words, you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
 
 Instead, it was bundled inside proprietary Microsoft technology called <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx" target="blank" title="Learn more about Microsoft's ActiveXObject">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to use feature-detection code to make sure that your AJAX worked in all browsers.
 
@@ -142,7 +143,7 @@ if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
 {% endprism %}
 The above-example created a variable called `xhr`, then checked to see if `XMLHttpRequest` was attached to the browser's `window` object.  If it was, then `xhr` directly referenced a new instance of `XMLHttpRequest` when it performed AJAX tasks.
 
-The example also checked to see if `ActiveXObject` was attached to the browser via the `window` object. If it was, then `xhr` will directly reference a new instance of `ActiveXObject` when it performed AJAX tasks.
+The example also checked to see if `ActiveXObject` was attached to the browser via the `window` object. If it was, then `xhr` would directly reference a new instance of `ActiveXObject` when it performed AJAX tasks.
 
 Developers later realized that `window.ActiveXObject` was used differently across the older versions of IE. They also realized that some browsers heavily in use at the time didn't support XHR at all.
 
@@ -169,7 +170,7 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code was rewritten to be a reusable function called `getXHR()`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any `getXHR()` instance lets you use XHR without worrying about cross-browser issues.
+The feature detection code was rewritten to be a reusable function called `getXHR()`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any new instance of `getXHR()`  would use XHR without worrying about cross-browser issues.
 
 `getXHR()` checked for `XMLHttpRequest`, but also checked to see of the browser had one of two ActiveXObject builds. It also checked to see if either the `XMLHttpRequest` or `ActiveXObject` existed.
 
@@ -198,11 +199,11 @@ var xhr = new XMLHttpRequest();
 
 <a name="xhr-states"></a>
 <h5 class="h5-guide"> Wait for an XHR state of 4</h5>
-An XHR request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
+An XHR request will be in one of fives states, each with a numerical value of 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
 *(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "Wait for 200 response code from the server"](#200-response "Go to "Wait for 200 response code from the server")".*
 
-There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources refer to the Microsoft one.
+There are two widely-accepted specifications for XHR states: <A href="https://xhr.spec.whatwg.org/#states" target="blank" title="Read the AJAX states definition in official XMLHttpRequest specification">the spec defined by WHATWG</a> and <a href="http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx" target="blank" title="Read the AJAX states definition in Microsoft's XMLHttpRequest specification">the original spec defined by Microsoft</a>.
 
 The WHATWG spec defines five states, each with a numerical value:
 
@@ -254,7 +255,7 @@ When `onreadystatechange` sees that `readyState` is equal to 4, it knows that al
   </body>
 </html>
 {% endprism %}
-We've added a div tag with an id of `textTarget` to "index.html". Our AJAX code will load data into this element.
+We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code will load data into this element.
 
 {% prism javascript %}
 // sample01/scripts.js
@@ -307,7 +308,7 @@ Start building the `loadText()` function that we defined above.
 {% prism javascript %}
 var text = document.getElementById("textTarget");
 {% endprism %}
-Store a variable reference to the `<div id="textTarget">` that we just added to "index.html".
+Store a variable reference to the `<div id="textTarget">` that we just added to `index.html`.
 {% prism javascript %}
 if (getArticleInfo.readyState === 4) {
   if (getArticleInfo.status === 200) {
@@ -630,7 +631,7 @@ The release of jQuery 1.5 was significant because of certain AJAX-related change
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
-The core jQuery library has been added to "index.html" via the jQuery CDN. "index.html" now looks like this:
+The core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -898,7 +899,7 @@ The new div has content: we can now take it and use jQuery `.append()` again to 
 <h5 class="h5-guide">Use jQuery.getScript()</h5>
 `$.getScript()` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
-"index.html" looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
+`index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample16/index.html -->
 ...
@@ -939,7 +940,7 @@ $.getScript("loadFile.js", function() {
 The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
 http://davidwalsh.name/loading-scripts-jquery
 
-If you view "index.html" in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
+If you view `index.html` in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
 {% prism javascript %}
 // Will look different every time the page gets reloaded
 loadFile.js?=1421161342213
@@ -1073,7 +1074,7 @@ The file loaded onto the page but the console message failed to appear. This is 
 <h5 class="h5-guide">The .fail method</h5>
 The `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
 
-"index.html" remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.
+`index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.
 
 `scripts.js` now looks like this:
 {% prism javascript %}
@@ -1144,7 +1145,7 @@ The `.always()` method sets a callback for what to do if the code either resolve
 <div id="textTarget"></div>
 ...
 {% endprism %}
-The `<div id="textTarget02">` element was removed from "index.html".
+The `<div id="textTarget02">` element was removed from `index.html`.
 {% prism javascript %}
 $.getJSON("soccerplayers.json").then(
   function(data) {
