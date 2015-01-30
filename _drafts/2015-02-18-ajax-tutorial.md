@@ -16,6 +16,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
 <a name="table-of-contents"></a>
 <h2 style="clear:both;">Table of Contents</h2>
   <ol>
+    <li><a href="#assumptions">Assumptions</li>
     <li><a href="#how-code-examples-works">How the code examples work</li>
     <li><a href="#what-is-ajax">What Is AJAX</a></li>
     <li><a href="#brief-history-ajax">A brief history of AJAX</a></li>
@@ -69,6 +70,9 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
   </ol>
+<a name="assumptions"></a>
+<h3 class="h3-guide">Assumptions</h3>
+
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
 The code for all the examples is on GitHub and looks similar to this:
