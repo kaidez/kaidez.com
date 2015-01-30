@@ -1,20 +1,14 @@
-(function(){
-    var getPlayerInfo = new XMLHttpRequest();
-
-    getPlayerInfo.open("GET", "soccerplayers.json");
-    getPlayerInfo.send();
-
-    getPlayerInfo.onreadystatechange = function() {
-      if (getPlayerInfo.readyState === 4) {
-        if (getPlayerInfo.status === 200) {
-          var players = JSON.parse(getPlayerInfo.responseText),
-              text = document.getElementById("textTarget");
-          for (i in players) {
-            var newDiv = document.createElement("div");
-            newDiv.innerHTML = players[i].playerOne;
-            text.appendChild(newDiv);
-          }
-        }
-      }
+$.getJSON("soccerplayers.json").then(
+  function(data) {
+    $.each(data, function(i) {
+      var newDiv = $("<div></div>");
+      $(newDiv).append(data[i].playerOne);
+      $("#textTarget").append(newDiv);
+    })
+  }, function(){
+    $("#textTarget").html("The data failed to load.");
+  },
+    function(){
+      $("#textTarget").html("The data is loading...");
     }
-})();
+  );
