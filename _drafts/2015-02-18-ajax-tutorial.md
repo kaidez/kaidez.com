@@ -10,9 +10,9 @@ cat-name: "Tutorials"
 tags: [ajax, javascript, jquery]
 has-home-img: ajax-image.jpg
 ---
-AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
-New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This guide was written with those developers in mind.
+New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of the popular jQuery library. This AJAX tutorial was written with those developers in mind.
 <h2 style="clear:both;">Table of Contents</h2>
   <ol>
     <li><a href="#how-code-examples-works">How the code examples work</li>
