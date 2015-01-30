@@ -92,11 +92,14 @@ All examples run from their own folder using an `index.html` file, which referen
 All examples use some form of the `XMLHttpRequest` browser object. Because of this, they need to run from a web server instead of as a local file in a web browser.
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
-First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title=Read the W3C's XMLHttpRequest specification>the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
+First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
 Simply put, `XMLHttpRequest` fetches, or "requests", information from a server, then places it on a web page. It does this "asynchronously", meaning that __XHR loads the information onto the page without needing to reload it.__
+
+*(Note: at the time of this tutorial's publish date, you can make synchronous request with XHR as well as synchronous requests. But this functionality will likely be removed from browsers in the future: <a href="https://xhr.spec.whatwg.org/#the-open()-method" target="blank" title="Read about disappearing XHR synchronous requests">read about disappearing XHR synchronous requests</a>).*
+
 
 "AJAX" stands for _Asynchronous JavaScript + XML_ but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page.
 
@@ -1191,11 +1194,10 @@ As mentioned, jQuery's `then` method is based on an older version of the Promise
 
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
-AJAX is
+AJAX is something that should be second nature to JavaScript developers so I hope this AJAX tutorial is good start in your understanding how it works.  Understanding how it works internally and how jQuery makes it easier to implement are key things to understand.
 
-Synchronous requests are disappearing from XHR: https://xhr.spec.whatwg.org/#the-open()-method
+Reading <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the  official WHATWG XHR specification</a> should be your next step in understanding AJAX in full. From there, reading <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a> should be your next step.
 
+Also, having a good understanding of JavaScript's asynchronous nature is important. So reading <a href="http://www.amazon.com/gp/product/1937785270/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937785270&linkCode=as2&tag=kaidez-20&linkId=26L4SOXAE3MHODKC" target="blank" title="Get Trevor Burnham's *Async JavaScript* on amazon.com">Trevor Burnham's *Async JavaScript*</a> at some point is a good idea.
 
-
-MDN Promises
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+Feel free to post questions/issues/whatever on this article's GitHub repository.
