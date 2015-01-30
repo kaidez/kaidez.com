@@ -86,7 +86,7 @@ The code for all the examples is located in the GitHub repo and looks similar to
 </html>
 {% endprism %}
 
-All examples run from their own folder using an `index.html` file, which references a `scripts.js` file. Either `index.html` or `scripts.js` will change with each new example, and new files may be added or subtracted to each example.
+All examples run from their own folder using an "index.html" file, which references a `scripts.js` file. Either "index.html" or `scripts.js` will change with each new example, and new files may be added or subtracted to each example.
 
 All examples use some form of the XMLHttpRequest browser object. Because of this, they need to run from a web server instead of as a local file in a web browser.
 <a name="what-is-ajax"></a>
@@ -254,7 +254,7 @@ When `onreadystatechange` sees that `readyState` is equal to 4, it knows that al
   </body>
 </html>
 {% endprism %}
-We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code will load data into this element.
+We've added a div tag with an id of `textTarget` to "index.html". Our AJAX code will load data into this element.
 
 {% prism javascript %}
 // sample01/scripts.js
@@ -307,7 +307,7 @@ Start building the `loadText()` function that we defined above.
 {% prism javascript %}
 var text = document.getElementById("textTarget");
 {% endprism %}
-Store a variable reference to the `<div id="textTarget">` that we just added to `index.html`.
+Store a variable reference to the `<div id="textTarget">` that we just added to "index.html".
 {% prism javascript %}
 if (getArticleInfo.readyState === 4) {
   if (getArticleInfo.status === 200) {
@@ -625,7 +625,7 @@ The release of jQuery 1.5 was significant because of certain AJAX-related change
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
-The core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
+The core jQuery library has been added to "index.html" via the jQuery CDN. "index.html" now looks like this:
 {% prism markup %}
 <!DOCTYPE html>
 <html lang="en">
@@ -893,7 +893,7 @@ The new div has content: we can now take it and use jQuery `.append()` again to 
 <h5 class="h5-guide">Use jQuery.getScript()</h5>
 `$.getScript()` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
-`index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
+"index.html" looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample16/index.html -->
 ...
@@ -934,7 +934,7 @@ $.getScript("loadFile.js", function() {
 The `$.getScript()` method loads `loadFile.js`, then runs a callback function. The callback immediately runs `getHtmlFile()` and loads in "articleName.html", and it also allows the `setText()` to be run when `<div id="textTarget">` is clicked.
 http://davidwalsh.name/loading-scripts-jquery
 
-If you view `index.html` in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
+If you view "index.html" in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for `loadFile.js` as a time stamp appended to it:
 {% prism javascript %}
 // Will look different every time the page gets reloaded
 loadFile.js?=1421161342213
@@ -994,9 +994,9 @@ Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="b
 
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
-Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can use</a>.
+Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can <use> </use></a>.
 
-Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the spec in two ways:
+Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the Promises spec in two ways:
 
 1. The spec calls for Promises to be their own object when implemented: Promises are wrapped in the jQuery's Deffered object.
 
@@ -1019,7 +1019,7 @@ As mentioned, Promises allow for the neater callback implementations. Using thes
 
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
-The `.done` method sets a callback for what to do after the code has fully run, or, fully "resolved" (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):
+The `.done` method sets a callback for what to do after the code has "resolved"...i.e., has fully run. (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample18/index.html -->
 <!DOCTYPE html>
@@ -1068,7 +1068,7 @@ The file loaded onto the page but the console message failed to appear. This is 
 <h5 class="h5-guide">The .fail method</h5>
 The `.fail()` method sets a callback for what to do if the code fails, or if it's "rejected".
 
-`index.html` remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.
+"index.html" remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.
 
 `scripts.js` now looks like this:
 {% prism javascript %}
@@ -1131,7 +1131,33 @@ The first one loads in the existing "article.html" file, so its chained `.done` 
 
 <a name="then-method"></a>
 <h5 class="h5-guide">The .then method</h5>
-The `.always()` method sets a callback for what to do if the code either resolves, is rejected or is still in progress.
+The `.always()` method sets a callback for what to do if the code either resolves, is rejected or is still in progress(<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
+{% prism markup %}
+<!-- sample22/index.html -->
+<!-- Remove <div id="textTarget02"> that was in the previous example -->
+...
+<div id="textTarget"></div>
+...
+{% endprism %}
+The `<div id="textTarget02">` element was removed from "index.html".
+{% prism javascript %}
+$.getJSON("soccerplayers.json").then(
+  function(data) {
+    $.each(data, function(i) {
+      var newDiv = $("<div></div>");
+      $(newDiv).append(data[i].playerOne);
+      $("#textTarget").append(newDiv);
+    })
+  }, function(){
+    $("#textTarget").html("The data failed to load.");
+  },
+    function(){
+      $("#textTarget").html("The data is loading...");
+    }
+  );
+{% endprism %}
+
+
 <a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
