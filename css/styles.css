@@ -2665,6 +2665,19 @@ a:focus {
   padding: 5px;
 }
 
+.toc:link, .toc:visited {
+  font-size: 17px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #121A62;
+  border-radius: 13px;
+  padding: 9px;
+}
+
+.toc-paragraph {
+  margin-bottom: 80px;
+}
+
 .wf-loading h1, .wf-inactive h1,
 .wf-loading h2, .wf-inactive h2,
 .wf-loading h3, .wf-inactive h3,
