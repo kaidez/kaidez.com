@@ -320,25 +320,28 @@ if (getArticleInfo.readyState === 4) {
 {% endprism %}
 We first checked to see if `getArticleInfo.readyState` definitely equaled `4`. If it did, then the data downloaded.
 
-Then check and see if `getArticleInfo.status` equaled `200`. If it did, then the code successfully contacted the server.
+Next, we checked to see if `getArticleInfo.status` equaled `200`. If it did, it meant the code successfully contacted the server.
 
 Our code then found the `<div id="textTarget">` element on our page (which was referenced by the `text` variable) and placed whatever content is inside of `getArticleInfo.responseText`.
 
 `getArticleInfo.responseText` referred to the data we requested in `getArticleInfo.open()`, which was the "articleName.txt" file. The copy in that file was placed in `<div id="textTarget">`.
 
-If the code didn't connect to the server and `getArticleInfo.status`  didn't equal `200`, then the browser console will display a message saying, "There was a problem with the request."  Note that this console message will only appear if `getArticleInfo.status` doesn't equal `200`: the value of `getArticleInfo.readyState` has no effect on whether or not the console message appears.
+If the code didn't connect to the server and `getArticleInfo.status`  didn't equal `200`, then the browser console would have displayed a message saying, "There was a problem with the request."
+
+It's important to note that this console message would only have appeared if `getArticleInfo.status` didn't equal `200` and that __the value of `getArticleInfo.readyState` would have no effect on whether or not the console message appeared__.
 
 As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open()` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample02/scripts.js
 // Update the getArticleInfo.open() method only
+// Replace articleName.txt with articleName.html in the directory
 ...
 getArticleInfo.open("GET", "articleName.html");
 ...
 {% endprism %}
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
-We've had "readyStateChange" request data using a named function called `loadText()`. Using a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
+We've had "readyStateChange" request data using a named function called `loadText()`. Requesting data with a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample03/scripts.js
 var getArticleInfo = new XMLHttpRequest();
@@ -357,10 +360,10 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
-`getArticleInfo.onreadystatechange` now runs the function immediately instead of going out and looking for it in our code, which makes the code run  slightly faster.
+`getArticleInfo.onreadystatechange` immediately ran a callback function instead of going out and named function, making the code run slightly faster.
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Developers still perform checks this way but this guide will not do this...this section is just here as a demonstration of what not to do and has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
+*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Developers still this but this AJAX tutorial does not. This section is a demonstration of what not to do; it has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
 
 Our code checked for the value of `readyState` first, _then_ checked for the server's status code. Some developers like to use the logical "AND" operator (&&) to simultaneously check for these values.
 
@@ -378,19 +381,21 @@ getArticleInfo.onreadystatechange = function() {
   }
 };
 {% endprism %}
-In this example, `XMLHttpRequest` probably requested and displayed data without error, but the console message displayed anyway. This is because it's doing very limited checks.
+In this example, `XMLHttpRequest` probably requested and displayed data without error, but the console message displayed anyway. This is because it did only one very specific check.
 
-The code using logical "AND" will only load the content onto the page if `getArticleInfo.readyState` equals `4` at the same time that `getArticleInfo.status` equals `200`. If `getArticleInfo.readyState` equals `3` (meaning that data is still loading), it won't place content on the page.
+The code using logical "AND" would only "AJAX in" the content if `getArticleInfo.readyState` equaled `4` at the same time that `getArticleInfo.status` equaled `200`. But that wasn't the only scenario that happened in the code.
 
-But since `getArticleInfo.readyState` equals `3`, it doesn't meet the conditions set by the logical "AND" to load in data. So it will return the console error message anyway even though the data's loading...that's (probably) not what you want.
+There were times when `getArticleInfo.readyState` equaled 0 through 3 and there were times when `getArticleInfo.readyState` equaled `2` at the same time that `getArticleInfo.status` equaled `200`. There may have even been a time when `getArticleInfo.status` equaled something other than `200`.
 
-The point is, using `&&` doesn't like this doesn't perform a robust check of the application state so it's best to avoid it.
+We didn't define functionality for those other use cases so as a result, the console message returned for all those use cases. The fact that the data displayed correctly didn't matter: it returned the console error message anyway.
+
+Using `&&` doesn't like this doesn't perform a robust check of the application state in this case, so it's best to avoid it.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read more about the logical "AND" operator on MDN">Read more about the logical "AND" operator on MDN</a>.
 
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
-The previous examples used AJAX to load data automatically, but we can also make it load when events are run. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
+The previous examples used AJAX to load data automatically, but we can also make it load with events. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample05/index.html -->
 <!-- add <button> directly above <div id="textTarget">  -->
@@ -399,7 +404,7 @@ The previous examples used AJAX to load data automatically, but we can also make
 <div id="textTarget"></div>
 {% endprism %}
 
-Add a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button will load the contents of an HTML file inside the div tag.
+We added a button tag with an id of "getHTMLFile" directly above `<div id="textTarget">`. Clicking on this button loaded the contents of an HTML file inside the div tag.
 {% prism javascript %}
 // sample05/scripts.js
 function loadHTML() {
@@ -423,9 +428,9 @@ function loadHTML() {
 // Code that loads the data on a button click
 document.getElementById("getHTMLFile").addEventListener("click", loadHTML);
 {% endprism %}
-All the AJAX code is now inside a `loadHTML()` function and there's also new code at the bottom that loads runs this function with a mouseclick. In the bottom code, the button with the id of `getHTMLFile` has the `addEventListener` method attached to it.
+All the AJAX code was placed in a `loadHTML` function and we added new code at the bottom that ran this function when the button was clicked. At the bottom of the code, the button with the id of `getHTMLFile` had the `addEventListener` method attached to it.
 
-The button is "listening for", or "watching for", whatever event we tell it to watch for...which is `click`. When the code see's that the button has been clicked, it runs the `loadHTML` that processes the AJAX code.
+The button was "listening for", or "watching for", whatever event we told it to watch for...which was `click`. When the code saw that the button has been clicked, it ran the `loadHTML` function and processed the AJAX code.
 
 <a name="multiple-ajax-buttons"></a>
 <h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
@@ -459,7 +464,7 @@ document.getElementById("getTextFile").onclick = function() {
   loadFile("articleName.txt");
 };
 {% endprism %}
-`loadFile()` now requires a parameter that we're calling "file". The parameter will define what file get's loaded onto the page via `getInfo.open()`.
+`loadFile` now requires a parameter that we're calling "file". The parameter will define what file get's loaded onto the page via `getInfo.open()`.
 
 We also updated our button code: it still runs the `loadFile()` function, but that function now needs a parameter in order to work. That parameter is the name of the file we want to load onto the page.
 
