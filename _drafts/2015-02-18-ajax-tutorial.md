@@ -267,13 +267,13 @@ getArticleInfo.send();
 
 function loadText() {
   var text = document.getElementById("textTarget");
-    if (getArticleInfo.readyState === 4) {
-      if (getArticleInfo.status === 200) {
-        text.innerHTML = getArticleInfo.responseText;
-      } else {
-        console.log('There was a problem with the request.');
-      }
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log('There was a problem with the request.');
     }
+  }
 };
 {% endprism %}
 Reviewing the code...
@@ -287,7 +287,7 @@ getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
 getArticleInfo.send();
 {% endprism %}
-`getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that theh function only runs when the state equals `4`.
+For now, `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes. But we'll write code that makes sure that `loadText` only runs when the state equals `4`.
 
 `open` is an XHR method and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
 
