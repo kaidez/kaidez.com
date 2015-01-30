@@ -1156,8 +1156,13 @@ $.getJSON("soccerplayers.json").then(
     }
   );
 {% endprism %}
+We grabbed JSON data with jQuery as we did in a previous example, except we used the `.then` method to grab the info. We passed three functions as parameters:
 
+1. The first function described what to do if the jQuery Promise resolves.
+2. The first function described what to do if the jQuery Promise is rejected.
+3. The first function described what to do if the jQuery Promise is still progressing.
 
+Because 
 <a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
