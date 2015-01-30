@@ -72,7 +72,9 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
   </ol>
 <a name="assumptions"></a>
 <h3 class="h3-guide">Assumptions</h3>
+This AJAX tutorial assumes that you have a firm understanding of HTML. It also assumes that you understand the basic building blocks of JavaScript: variables, functions, arrays, etc.
 
+This AJAX tutorial also takes the position that the <a href="https://xhr.spec.whatwg.org/" target="blank" title="Read the WHAT WG XMLHttpRequest specifcation">the WHAT WG XMLHttpRequest specifcation</a> is the best source for understanding how AJAX works. This tutorial does refer to other sources like <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a>, <A href="https://developer.mozilla.org/" target="blank" title="Go to the MDN home page">Mozilla Developer Network(MDN)</a> and <a href="https://msdn.microsoft.com/" target="blank" title="Go to the MSDN homepage">Microsoft Developer Network(MSDN)</a>, but it ultimately views the WHAT WG spec as the best reference.
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
 The code for all the examples is on GitHub and looks similar to this:
@@ -895,7 +897,7 @@ $.getJSON("soccerplayers.json", function(players) {
   })
 });
 {% endprism %}
-The first parameter for `$.getJSON()` was the JSON file with the content we wanted to load onto the page. The second parameter was a callback function that loaded the data onto the page.
+The first parameter for `.getJSON` was the JSON file with the content we wanted to load onto the page. The second parameter was a callback function that loaded the data onto the page.
 
 That callback function took one parameter we've called `player`, which references the JSON file. Next, we used jQuery's `.each` method to do what the `for...in` loop did before: look for properties in our JSON data.
 
@@ -909,7 +911,7 @@ The new div had content at that point: we then took it and used `.append` again 
 
 <a name="jquery-get-script"></a>
 <h5 class="h5-guide">Use jQuery.getScript</h5>
-`$.getScript()` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
+`.getScript` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
 `index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
 {% prism markup %}
@@ -1176,7 +1178,7 @@ $.getJSON("soccerplayers.json").then(
     }
   );
 {% endprism %}
-We used `$.getJSON` to grab and parse JSON [as we did in a previous example](#jquery-get-json). But the `.then` method is now helping us manage callback functions.
+We used `.getJSON` to grab and parse JSON [as we did in a previous example](#jquery-get-json). But the `.then` method is now helping us manage callback functions.
 
 The callbacks are passed as function parameters...there are three of them:
 
