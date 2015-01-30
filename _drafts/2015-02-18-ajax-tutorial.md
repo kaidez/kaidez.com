@@ -557,8 +557,7 @@ The buttons were removed from the HTML file.
     }
 }
 {% endprism %}
-Instead of using AJAX to load in data from either an HTML or text file, we're now loading it from a `json` file called `soccerplayers.json`.
-
+Instead of using AJAX to load in data from either an HTML or text file, we loaded it in from a JSON file called `soccerplayers.json`.
 {% prism javascript %}
 // sample08/scripts.js
 (function(){
@@ -582,13 +581,13 @@ Instead of using AJAX to load in data from either an HTML or text file, we're no
     }
 })();
 {% endprism %}
-There are only a few changes to `scripts.js` but they're important:
+Breaking down the code:
 {% prism javascript %}
 (function(){
 ...
 })();
 {% endprism %}
-The main change is that the function now runs as soon as the page loads instead of being invoked some place in our code. This is done with an "immediately invoked function expression", or an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/ target="blank" title="learn about the IIFE">"IIFE"</a>.
+The main change is that the function now ran as soon as the page loaded instead of being invoked some place in our code. This was done with an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/ target="blank" title="learn about the IIFE">"immediately invoked function expression", or an "IIFE"</a>.
 {% prism javascript %}
 ...
 var getPlayerInfo = new XMLHttpRequest();
@@ -596,7 +595,7 @@ getPlayerInfo.open("GET", "soccerplayers.json");
 getPlayerInfo.send();
 ...
 {% endprism %}
-The main variable used in the AJAX code is renamed `getPlayerInfo` throughout the code. Also, the code is now fetching `soccerplayers.json`.
+The main variable used in the AJAX code was renamed `getPlayerInfo` throughout the code. Also, the `open` method now fetched our JSON file.
 {% prism javascript %}
 ...
 getPlayerInfo.onreadystatechange = function() {
@@ -614,17 +613,17 @@ getPlayerInfo.onreadystatechange = function() {
 };
 ...
 {% endprism %}
-Once `readyState` equals `4` and our code successfully connects to the server, it creates two variables: `players` and `text`. `players` grabs our data with `responseText` like before and converts it to a readable JSON format with `JSON.parse`.
+Once `readyState` equaled `4` and our code successfully connected to the server, it created two variables: `players` and `text`. `players` grabbed our data with `responseText` like before and converted it to a readable JSON format with `JSON.parse`.
 
-`text` is a reference to the `<div id="textTarget">` element on the HTML page. As before, our data will load into this element.
+`text` referred to the `<div id="textTarget">` element on the HTML page. As before, our data loaded into this element.
 
-Then we're doing a `for...in` loop again that loops through JSON content stored inside the `players` variable. Three steps are performed for every loop iteration:
+Then we did a `for...in` loop that looped through JSON content stored inside the `players` variable. Three steps were performed for every loop iteration:
 
-1. create a div tag using `document.createElement` and store it in a variable called `newDiv`.
-2. look at each item in the `players` variable and find it's `playerOne` property. Then place it inside the div tag created in the `newDiv` variable by accessing the div's `innerHTML` property.
-3. find the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
+1. a div tag was created using `document.createElement` and stored in a variable called `newDiv`.
+2. the loop looked at each item in the `players` variable and found its `playerOne` property. Then placed it inside the div tag created with the `newDiv` variable by accessing the div's `innerHTML` property.
+3. the loop found the `text` variable that references the `<div id="textTarget">` already on the page and load the `newDiv` content inside of it.
 
-Again, this is a basic example of how to use JSON with AJAX...the main takeaway from this is example is that __AJAX can load all different types of content, including JSON__.
+This was a basic example of how to use JSON with AJAX...the main takeaway from this is example is, __AJAX can load all different types of content, including JSON__.
 <a name="ajax-jquery"></a>
 <h3 class="h3-guide">Create AJAX with jQuery</h3>
 <a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
