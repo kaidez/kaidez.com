@@ -53,7 +53,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
             <li><a href="#jquery-get-script">Use jQuery.getScript()</a>
           </ol>
         </li>
-        <li><a href="#jqxhr-promises-deferreds">jqHXR, Promises & Deferreds</a></li>
+        <li><a href="#jqxhr-promises-deferreds">jqHXR & Promises</a></li>
         <li><a href="#what-is-a-javascript-promise">What is a Promise?</a></li>
         <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
         <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
@@ -694,7 +694,7 @@ We've created a configurable object be setting three options:
 2.  success: Defines what to do if the request for the file succeeds. This example would run a function called `isLoaded`.
 3.  statusCode: Defines what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.
 
-`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery promises and deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
+`.ajax()` is chained to the `.done()` method, so it will run next. `.done()` is discussed later when we look at jQuery Promises and deferreds but for now, understand  that `.done()` is a essentially a callback function that ran after `.ajax()` did everything it was supposed to do.
 
 `.done()` had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in `.ajax()`, including the value of the "url" option.
 
@@ -964,18 +964,18 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>
 
 <a name="jqxhr-promises-deferreds"></a>
-<h4 class="h4-guide">jqHXR, Promises & Deferreds</h4>
-When used, both `$.ajax()` and some of the shorthand methods return the jQuery XMLHttpRequest object, which is commonly referred to as "jqHXR". The `.load()` shorthand method does not return jqXHR.
+<h4 class="h4-guide">jqHXR & Promises</h4>
+The `$.ajax()` method and some of the shorthand methods return the "jQuery XMLHttpRequest" object, commonly referred to as "jqHXR". The `.load()` shorthand method does not return jqXHR.
 
-jqXHR is basically the traditional `XMLHttpRequest` object already in the browser, but wrapped in a specific API created by jQuery. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
+jqXHR is basically the traditional `XMLHttpRequest` browser object wrapped in a specific jQuery API. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of the API are jQuery "promises" which are part of the jQuery Deffered object. This guide focuses on using the jQuery Deffered object with AJAX-related functionality, but it can do more than what will be discussed here...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
+An important part of this API are _jQuery Promises_ which are part of jQuery's _Deffered_ object. This guide focuses on using Promises and not Deffereds, but Deffereds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
 
 <a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise?</h4>
 Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.
 
-According to the <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">community-led Promises specification</a>:
+According to the <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">community-led Promises/A+ specification</a>:
 
 > *A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its `then` method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.*
 
@@ -1000,7 +1000,7 @@ Note that jQuery isn't on the list. This is because the current jQuery build doe
 
 Also, jQuery's `.then` method is based on an older version of the Promises spec. This is discussed in <a href="#then-method">the jQuery .then section of this guide</a>.
 
-According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promise as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
+According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
 There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that explains them even further.
 
@@ -1131,7 +1131,7 @@ The first one loads in the existing "article.html" file, so its chained `.done` 
 
 <a name="then-method"></a>
 <h5 class="h5-guide">The .then method</h5>
-
+The `.always()` method sets a callback for what to do if the code either resolves, is rejected or is still in progress.
 <a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
