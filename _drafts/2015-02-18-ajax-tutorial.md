@@ -281,13 +281,13 @@ Reviewing the code...
 {% prism javascript %}
 var getArticleInfo = new XMLHttpRequest();
 {% endprism %}
-Create a new XHR instance called `getArticleInfo`.
+We created a new XHR instance called `getArticleInfo`.
 {% prism javascript %}
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
 getArticleInfo.send();
 {% endprism %}
-`getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that this only happens when the state is set to `4`.
+`getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that theh function only runs when the state equals `4`.
 
 `open` is an XHR method and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
 
@@ -308,7 +308,7 @@ Start building the `loadText()` function that we defined above.
 {% prism javascript %}
 var text = document.getElementById("textTarget");
 {% endprism %}
-Store a variable reference to the `<div id="textTarget">` in `index.html`.
+We stored a variable reference to the `<div id="textTarget">` in `index.html`.
 {% prism javascript %}
 if (getArticleInfo.readyState === 4) {
   if (getArticleInfo.status === 200) {
@@ -318,17 +318,17 @@ if (getArticleInfo.readyState === 4) {
   }
 }
 {% endprism %}
-First, check to see if `getArticleInfo.readyState` definitely equals `4`. If it does, then the data has been fully downloaded.
+We first checked to see if `getArticleInfo.readyState` definitely equaled `4`. If it did, then the data downloaded.
 
-If the code is in the `4` state, then check and see if `getArticleInfo.status` equals `200`. If it does, then the code has successfully contacted the server.
+Then check and see if `getArticleInfo.status` equaled `200`. If it did, then the code successfully contacted the server.
 
-If it has, then find `<div id="textTarget">` on our page and place whatever content is inside of `getArticleInfo.responseText`.
+Our code then found the `<div id="textTarget">` element on our page (which was referenced by the `text` variable) and placed whatever content is inside of `getArticleInfo.responseText`.
 
-`getArticleInfo.responseText` is a reference to the data we requested in `getArticleInfo.open()`, which is the "articleName.txt" file. The copy in that file will be placed in `<div id="textTarget">`.
+`getArticleInfo.responseText` referred to the data we requested in `getArticleInfo.open()`, which was the "articleName.txt" file. The copy in that file was placed in `<div id="textTarget">`.
 
-If the code can't connect to the server and `getArticleInfo.status`  doesn't equal `200`, then the browser console will display a message saying, "There was a problem with the request."  Note that this console message will only appear if `getArticleInfo.status` doesn't equal `200`: the value of `getArticleInfo.readyState` has no effect on whether or not the console message appears.
+If the code didn't connect to the server and `getArticleInfo.status`  didn't equal `200`, then the browser console will display a message saying, "There was a problem with the request."  Note that this console message will only appear if `getArticleInfo.status` doesn't equal `200`: the value of `getArticleInfo.readyState` has no effect on whether or not the console message appears.
 
-As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open)` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
+As mentioned, AJAX can load in all different types of documents...we can tell the `getArticleInfo.open()` to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):
 {% prism javascript %}
 // sample02/scripts.js
 // Update the getArticleInfo.open() method only
