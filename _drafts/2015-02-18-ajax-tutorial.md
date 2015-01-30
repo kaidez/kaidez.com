@@ -255,7 +255,7 @@ When `onreadystatechange` sees that `readyState` is equal to 4, it knows that al
   </body>
 </html>
 {% endprism %}
-We've added a div tag with an id of `textTarget` to `index.html`. Our AJAX code will load data into this element.
+We've added a div tag with an id of "textTarget" to `index.html`. Our AJAX code will load data into this element.
 
 {% prism javascript %}
 // sample01/scripts.js
@@ -281,7 +281,7 @@ Reviewing the code...
 {% prism javascript %}
 var getArticleInfo = new XMLHttpRequest();
 {% endprism %}
-Create a new instance of the `XMLHttpRequest` called `getArticleInfo`.
+Create a new XHR instance called `getArticleInfo`.
 {% prism javascript %}
 getArticleInfo.onreadystatechange = loadText;
 getArticleInfo.open("GET", "articleName.txt");
@@ -289,15 +289,15 @@ getArticleInfo.send();
 {% endprism %}
 `getArticleInfo.onreadystatechange` will run a function called `loadText` any time a state changes, but we'll write code that makes sure that this only happens when the state is set to `4`.
 
-`open()` is a method attached to the XHR object, and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
+`open` is an XHR method and one of the most important parts of an AJAX application. This is because __the `open` method is where you tell your code what data needs to be loaded onto the page.__
 
-In this example, `getArticleInfo.open()` first describes *how* to get the data. That's done with the first parameter, which is `GET`...it tells the server to "get" something from the server.
+`getArticleInfo.open()` first described *how* to get the data. That was done with the first parameter, which was `GET`...it told the server to "get" something from the server.
 
-The second `getArticleInfo.open()` parameter is the file name of the data we're requesting. In this case, that's a file called "articleName.txt" and it contains the name of this article and the name of the author.
+The second `getArticleInfo.open()` parameter described *what* to get...that's the data we're requesting. In this case, that was a file called "articleName.txt" that contained the name of this article and the name of the author.
 
-`getArticleInfo.send()` is the part of the code that actually sends the request through. You can pass a parameter to `send()` but it will be ignored if you do this using `GET`: the parameter will be set to its default value of `null`.
+`getArticleInfo.send()` is the part of the code that actually sent the data request to server. It has a default value of `null` when using `GET`, but you can pass a parameter to `send()` if using `POST`.
 
-`send()` can accept and process parameters when using `POST` instead of `GET`.
+You would use `POST` if you want to send data to the server while in the "1" state, which was discussed in the <a href="#xhr-states">"Wait for an XHR state of 4" section</a>. Discussing this is beyond the scope of this AJAX tutorial.
 
 {% prism javascript %}
 function loadText() {
@@ -308,7 +308,7 @@ Start building the `loadText()` function that we defined above.
 {% prism javascript %}
 var text = document.getElementById("textTarget");
 {% endprism %}
-Store a variable reference to the `<div id="textTarget">` that we just added to `index.html`.
+Store a variable reference to the `<div id="textTarget">` in `index.html`.
 {% prism javascript %}
 if (getArticleInfo.readyState === 4) {
   if (getArticleInfo.status === 200) {
