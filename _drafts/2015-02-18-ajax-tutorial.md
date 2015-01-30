@@ -1131,7 +1131,7 @@ The first one loads in the existing "article.html" file, so its chained `.done` 
 
 <a name="then-method"></a>
 <h5 class="h5-guide">The .then method</h5>
-The `.always()` method sets a callback for what to do if the code either resolves, is rejected or is still in progress(<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
+The `.always()` method sets a callback for what to do if the code either resolves, is rejected or is still in progress (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
 {% prism markup %}
 <!-- sample22/index.html -->
 <!-- Remove <div id="textTarget02"> that was in the previous example -->
@@ -1156,13 +1156,24 @@ $.getJSON("soccerplayers.json").then(
     }
   );
 {% endprism %}
-We grabbed JSON data with jQuery as we did in a previous example, except we used the `.then` method to grab the info. We passed three functions as parameters:
+We used `$.getJSON` to grab and parse JSON [as we did in a previous example](#jquery-get-json). But the `.then` method is now helping us manage callback functions.
+
+The callbacks are passed as function parameters...there are three of them:
 
 1. The first function described what to do if the jQuery Promise resolves.
 2. The first function described what to do if the jQuery Promise is rejected.
 3. The first function described what to do if the jQuery Promise is still progressing.
 
-Because 
+Because `soccerplayers.json` exists, the Promise will resolve. But it could easily reject if it couldn't find the file.
+
+If we removed `soccerplayers.json`, then the function in the second parameter would appear on the page (<a href="/samples/ajax-tutorial-samples/sample23/" target="blank">view the example</a>):
+{% prism markup %}
+The data failed to load.
+{% endprism %}
+Demonstrating the progress function passed in the third parameter is tough with such a small amount of JSON data is tough. But it's important to understand that the function would show "The data is loading..." if the Promise either resolved of rejected.
+
+As mentioned, jQuery's `then` method is based on an older version of the Promises spec, which is <a href="http://wiki.commonjs.org/wiki/Promises/A" target="blank" title="Read the Promises A specification">the Promises A spec maintained by the Common JS community</a>. That spec requires that `then` allow for a progress parameter while newer <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">Promises/A+ spec</a> states that it should not.
+
 <a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
