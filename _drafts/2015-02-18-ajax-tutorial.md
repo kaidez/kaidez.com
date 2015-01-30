@@ -56,7 +56,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#jqxhr-promises-deferreds">jqHXR & Promises</a></li>
         <li><a href="#what-is-a-javascript-promise">What is a Promise?</a></li>
         <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
-        <li><a href="#deffered-methods">Use Deffered methods with jqXHR</a>
+        <li><a href="#differed-methods">Use Deferred methods with jqXHR</a>
           <ol>
             <li><a href="#done-method">The .done method</a></li>
             <li><a href="#fail-method">The .fail method</a></li>
@@ -200,7 +200,7 @@ var xhr = new XMLHttpRequest();
 <h5 class="h5-guide"> Wait for an XHR state of 4</h5>
 An XHR request will be in one of fives states, each with a numerical value that will be 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
-*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "aWit for 200 response code from the server"](#200-response "Go to "Wait for 200 response code from the server")".*
+*(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "Wait for 200 response code from the server"](#200-response "Go to "Wait for 200 response code from the server")".*
 
 There are two widely accepted specifications for AJAX states: [the spec defined by WHATWG](https://xhr.spec.whatwg.org/#states "Read the AJAX states definition in official XMLHttpRequest specification") and [the original spec defined by Microsoft](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx). Many web development sources refer to the Microsoft one.
 
@@ -553,7 +553,7 @@ Instead of using AJAX to load in data from either an HTML or text file, we're no
 (function(){
     var getPlayerInfo = new XMLHttpRequest();
 
-    getPlayerInfo.open("GET", "languages.json");
+    getPlayerInfo.open("GET", "soccerplayers.json");
     getPlayerInfo.send();
 
     getPlayerInfo.onreadystatechange = function() {
@@ -581,7 +581,7 @@ The main change is that the function now runs as soon as the page loads instead 
 {% prism javascript %}
 ...
 var getPlayerInfo = new XMLHttpRequest();
-getPlayerInfo.open("GET", "languages.json");
+getPlayerInfo.open("GET", "soccerplayers.json");
 getPlayerInfo.send();
 ...
 {% endprism %}
@@ -969,7 +969,7 @@ The `$.ajax()` method and some of the shorthand methods return the "jQuery XMLHt
 
 jqXHR is basically the traditional `XMLHttpRequest` browser object wrapped in a specific jQuery API. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
 
-An important part of this API are _jQuery Promises_ which are part of jQuery's _Deffered_ object. This guide focuses on using Promises and not Deffereds, but Deffereds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
+An important part of this API are _jQuery Promises_ which are part of jQuery's _Deferred_ object. This guide focuses on using Promises and not Deferreds, but Deferreds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
 
 <a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise?</h4>
@@ -986,7 +986,7 @@ In other words...
 * Promises have a `then` method that manages the callbacks.
 * Promises have special event handling for situations where any part of the code fails.
 
-At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specifcation">ECMAScript version 6, code-named "Harmony."</a>
+At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specification">ECMAScript version 6, code-named "Harmony."</a>
 
 There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that explains them even further.
 
@@ -998,7 +998,7 @@ Since Promises aren't available in every browser, there are libraries you can ad
 
 Note that jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the Promises spec in two ways:
 
-1. The spec calls for Promises to be their own object when implemented: Promises are wrapped in the jQuery's Deffered object.
+1. The spec calls for Promises to be their own object when implemented: Promises are wrapped in the jQuery's Deferred object.
 
 2. The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.
 
@@ -1006,8 +1006,8 @@ Also, jQuery's `.then` method is based on an older version of the Promises spec.
 
 According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
-<a name="deffered-methods"></a>
-<h4 class="h4-guide">Use Deffered methods with jqXHR</h4>
+<a name="differed-methods"></a>
+<h4 class="h4-guide">Use Deferred methods with jqXHR</h4>
 Because jqXHR is part of jQuery Deferreds, it has access to all of Deferreds methods. The four most commonly-used methods are:
 
 1. `done`
@@ -1175,6 +1175,7 @@ Demonstrating the progress function passed in the third parameter is tough with 
 As mentioned, jQuery's `then` method is based on an older version of the Promises spec, which is <a href="http://wiki.commonjs.org/wiki/Promises/A" target="blank" title="Read the Promises A specification">the Promises A spec maintained by the Common JS community</a>. That spec requires that `then` allow for a progress parameter while newer <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">Promises/A+ spec</a> states that it should not.
 
 <a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()".</a>
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
 
