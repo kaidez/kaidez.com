@@ -10,7 +10,7 @@ cat-name: "Tutorials"
 tags: [ajax, javascript, jquery]
 has-home-img: ajax-image.jpg
 ---
-AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It's described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This AJAX tutorial was written with those developers in mind.
 <a name="table-of-contents"></a>
@@ -72,9 +72,9 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
   </ol>
 <a name="assumptions"></a>
 <h3 class="h3-guide">Assumptions</h3>
-This AJAX tutorial assumes that you have a firm understanding of HTML. It also assumes that you understand the basic building blocks of JavaScript: variables, functions, arrays, etc.
+This AJAX tutorial assumes you understand HTML. It also assumes that you understand the basic building blocks of JavaScript: variables, functions, arrays, etc.
 
-This AJAX tutorial also takes the position that <a href="https://xhr.spec.whatwg.org/" target="blank" title="Read the WHAT WG XMLHttpRequest specification">the WHAT WG XMLHttpRequest specification</a> is the best source for understanding how AJAX works. This tutorial does refer to other sources like <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a>, <A href="https://developer.mozilla.org/" target="blank" title="Go to the MDN home page">Mozilla Developer Network(MDN)</a> and <a href="https://msdn.microsoft.com/" target="blank" title="Go to the MSDN homepage">Microsoft Developer Network(MSDN)</a>, but it ultimately views the WHAT WG spec as the best reference.
+This tutorial also takes the position that <a href="https://xhr.spec.whatwg.org/" target="blank" title="Read the WHAT WG XMLHttpRequest specification">the WHAT WG XMLHttpRequest specification</a> is the best source for understanding how AJAX works. It refers to other sources like <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a>, <A href="https://developer.mozilla.org/" target="blank" title="Go to the MDN home page">Mozilla Developer Network(MDN)</a> and <a href="https://msdn.microsoft.com/" target="blank" title="Go to the MSDN homepage">Microsoft Developer Network(MSDN)</a>, but it ultimately views the WHAT WG spec as the best reference.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="how-code-examples-works"></a>
@@ -89,7 +89,7 @@ The code for all the examples is on GitHub and looks similar to this:
     <title>A Sample</title>
   </head>
   <body>
-
+    <div id="textTarget"></div>
     <script src="scripts.js"></script>
   </body>
 </html>
@@ -97,12 +97,12 @@ The code for all the examples is on GitHub and looks similar to this:
 
 All examples run from their own folder using an `index.html` file, which references a `scripts.js` file. Either `index.html` or `scripts.js` will change with each new example, and new files may be added or subtracted to each example.
 
-All examples use some form of the `XMLHttpRequest` browser object. Because of this, they need to run from a web server instead of as a local file in a web browser.
+Because examples use some form of the `XMLHttpRequest` browser object, they need to run from a web server instead of as a local file in a web browser. Whether it's a browser tool or a desktop server application like <a href="http://www.mamp.info/" target="blank" title="Learn about MAMP">MAMP</a>, it needs to run from a web server.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
-First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. With that in mind, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
+First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. Therefore, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
 
