@@ -186,13 +186,13 @@ function getXHR() {
   return xhr;
 }
 {% endprism %}
-The feature detection code was rewritten to be a reusable function called `getXHR()`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any new instance of `getXHR()`  would use XHR without worrying about cross-browser issues.
+The feature detection code was rewritten to be a reusable function called `getXHR`. The function did the cross-browser checking for `XMLHttpRequest` internally, meaning any new instance of `getXHR`  would use XHR without worrying about cross-browser issues.
 
-`getXHR()` checked for `XMLHttpRequest`, but also checked to see of the browser had one of two ActiveXObject builds. It also checked to see if either the `XMLHttpRequest` or `ActiveXObject` existed.
+`getXHR` checked for `XMLHttpRequest`, but also checked to see of the browser had one of two ActiveXObject builds. It also checked to see if either the `XMLHttpRequest` or `ActiveXObject` existed.
 
 A JavaScript `try...catch` statement looked for the different versions of `ActiveXObject`. If `try...catch` didn't find it and also didn't find `XMLHttpRequest`, then the value of the `xhr` variable was set to `false` and didn't do any AJAX work.
 
-`getXHR()` said `return xhr` at the end of the code, which let us create new instances of `getXHR()` outside the function.
+`getXHR` said `return xhr` at the end of the code, which let us create new instances of `getXHR` outside the function.
 
 Go to MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">learn more about feature-detection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">learn more about "try...catch" on MDN</a>.
 
