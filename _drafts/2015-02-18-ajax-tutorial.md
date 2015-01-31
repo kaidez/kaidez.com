@@ -40,7 +40,7 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
         <li><a href="#load-json-ajax">Load JSON with AJAX</a></a>
       </ol>
     </li>
-    <li><a href="#ajax-jquery">Create AJAX with jQuery</a>
+    <li><a href="#ajax-jquery">AJAX & jQuery</a>
       <ol>
         <li><a href="#add-jquery">Add jQuery to the project</a></li>
         <li><a href="#understanding-jquery-ajax">Understanding $.ajax()</a></li>
@@ -658,7 +658,7 @@ This was a basic example of how to use JSON with AJAX...the main takeaway from t
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="ajax-jquery"></a>
-<h3 class="h3-guide">Create AJAX with jQuery</h3>
+<h3 class="h3-guide">AJAX & jQuery</h3>
 <a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes:
