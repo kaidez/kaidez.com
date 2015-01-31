@@ -659,15 +659,13 @@ This was a basic example of how to use JSON with AJAX...the main takeaway from t
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="ajax-jquery"></a>
 <h3 class="h3-guide">AJAX & jQuery</h3>
-<a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write AJAX functionality we've seen up to this point and, in most cases, with less code.
+<a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write highly-configurable AJAX functionality with less code.
 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes:
 
 * AJAX performed faster in jQuery.
-* deferreds and promises were introduced, making AJAX's asynchronous functionality better.
+* Deferreds and Promises were introduced, making AJAX's asynchronous functionality better.
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
-
-The release of jQuery 1.8 also saw significant changes to Deferreds and Promises.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="add-jquery"></a>
