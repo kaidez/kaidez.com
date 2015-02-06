@@ -1050,7 +1050,7 @@ In other words...
 
 At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specification">ECMAScript version 6, code-named "Harmony."</a>
 
-There is much more to Promises than what's being discussed here. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that explains them even further.
+There is much more to Promises than what's being discussed here, especially when discussing what's the right way to implementing them. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that discusses this.
 
 Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank" title="Read Forbes Lindesay's excellent Promises walk-through">an excellent walk-through on Promises</a>. Really good for beginners.
 
