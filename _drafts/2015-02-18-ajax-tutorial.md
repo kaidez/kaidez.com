@@ -1067,7 +1067,7 @@ jQuery isn't on the list. This is because the current jQuery build doesn't fully
 
 Also, jQuery's `.then` method is based on an older version of the Promises spec. This is discussed in <a href="#then-method">the jQuery `.then` section of this guide</a>.
 
-According to <a href="http://bugs.jquery.com/ticket/11010" target="blank" title="Read the jQuery bug ticket discussing its Promise implementation">a ticket in jQuery's bug tracker</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
+According to <a href="https://esdiscuss.org/topic/a-challenge-problem-for-promise-designers-was-re-futures#content-43" target="blank" title="Read Rick Waldron says about Promises in jQuery">comments from jQuery core committer Rick Waldron</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="differed-methods"></a>
