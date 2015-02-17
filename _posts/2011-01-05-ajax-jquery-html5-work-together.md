@@ -9,14 +9,16 @@ category: tutorials
 cat-name: "Tutorial"
 tags: [ajax, jquery, html5]
 ---
+__(Update: February 15, 2015: This article is outdated and somewhat indicates that AJAX, jQuery and HTML5 need to work together at all times, which simply isn't true. You may want to read my more [thorough tutorial on AJAX and jQuery](/ajax-tutorial/).)__
+
 AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays. While getting these web technologies to work together is exciting, the programming required to do this isn't new.  
-  
+
 AJAX, jQuery and HTML5 work together through the use of *page tags, page IDs* and *page classes* that exist between the two  tags of a web page. The JavaScript functionality embedded in jQuery and AJAX finds these tags , IDs and classes (which we'll now call *page elements*) and "does" something to them; maybe it changes their background color, maybe it's loading copy into them. Either way, it's doing *something* to them.  
-  
+
 This process of "finding and doing something" to these page elements with JavaScript is more commonly known as *"traversing the DOM"*. Simply put, ***traversing the DOM is the key to getting AJAX, jQuery and HTML5 to work together***.  
-  
+
 Web developers have used DOM traversal for years so, again, there really isn't that much new programming involved when it comes to syncing up AJAX, jQuery and HTML5. Still, a layman's description of how all this works may be required, so I'll give it a try.  
-  
+
 <h2>Traversing the DOM The Old School Way With JavaScript</h2>
 
 DOM stands for Document Object Model. All the page elements live within the DOM, which is built into a web page. You find the elements by traversing the DOM with JavaScript, mostly through the use of the `getElementById()` function.
@@ -46,7 +48,7 @@ Let's look at the code and translate it..
 
 The `<script>` tag
 
-{% prism javascript %} 
+{% prism javascript %}
 <script type="text/javascript">
 function loadText() {
 document.getElementById('words').innerHTML = 'Hello World!';
@@ -66,7 +68,7 @@ The `<div>` tag
 TRANSLATION: This empty `<div>` tag is the page element with an id of 'words,' so this is what's affected when the loadText() function runs. Therefore, this is where the Hello World! text will be placed into when the button is clicked.
 
 An ID must be unique on a web page so in our example, there can only be one page element with an ID of "words." If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it's best if you look for tags using the `getElementsByTagName()` function:
-{% prism markup %} 
+{% prism markup %}
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
