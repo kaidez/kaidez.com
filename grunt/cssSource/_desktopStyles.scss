@@ -1,9 +1,9 @@
 
 //  ===================================================================
 //  Desktop styles start:
-// 
-//  These should appear on desktop browsers. Expect this set of styles 
-// to require more bandwidth to render when compared to the others, 
+//
+//  These should appear on desktop browsers. Expect this set of styles
+// to require more bandwidth to render when compared to the others,
 // especially the mobile ones.
 //  ===================================================================
 
@@ -28,7 +28,7 @@
     clear: none;
   }
 
-   
+
 
 
   // ==================================================================
@@ -49,7 +49,7 @@
   .site-title {
     @include transitions (opacity);
   }
-  
+
   // the actual hover style
   .site-title:hover {
     opacity: 0.5;
@@ -120,8 +120,8 @@
   // Apply the Google font to all <nav> links after page load
   .wf-active .site-navigation-list-link a:link,
   .wf-active .site-navigation-list-link a:visited,
-  .wf-active .site-navigation-list-link a:hover { 
-    @include link-styles(18px, 22px, 5px, $base-link-color); // margin-right, font-size, padding, color
+  .wf-active .site-navigation-list-link a:hover {
+    @include link-styles(18px, 19px, 5px, $base-link-color); // margin-right, font-size, padding, color
     background-color: transparent;
     text-shadow: 1px 1px 0 lighten($header-color, 15);
   }
@@ -137,7 +137,7 @@
   // ==================================================================
   //  Search styles start
   //  =================================================================
-  
+
   // add a box-radius to the main search form on the desktop view only
   .searchform-class {
     -webkit-border-radius: $master-border-radius;
@@ -155,7 +155,7 @@
   .searchbox-style {
     text-align: left;
   }
-  
+
   // jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
   #tipue_search_input {
     font: 13px/1.5 'open sans', sans-serif;
@@ -166,18 +166,18 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
-    transition : background-color 200ms ease-out; 
-    -webkit-transition : background-color 200ms ease-out; 
+    transition : background-color 200ms ease-out;
+    -webkit-transition : background-color 200ms ease-out;
     -moz-transition : background-color 200ms ease-out;
     -o-transition : background-color 200ms ease-out;
     -webkit-border-radius: $master-border-radius;
     -moz-border-radius: $master-border-radius;
     border-radius: $master-border-radius;
   }
- 
+
   #tipue_search_input:focus {
     border-color: green;
-    background-color: #f3f3f3; 
+    background-color: #f3f3f3;
   }
 
   #tipue_search_button {
@@ -213,7 +213,7 @@
   .tipue_search_content_title {
     font-size: 32px;
   }
-  
+
   // Styles for post and category <h1> tags
   .wf-active h1.post-title, .wf-active h1.category-title  {
     @include post-category-title(40px, 56px 0 10px);
@@ -242,7 +242,7 @@
   .pageContentPostWrapper {
      @include create-outer-box-shadow;
   }
-  
+
   // breadcrumbs
   .breadcrumb-styles {
     @include breadcrumb-styles(16px, 45px);
@@ -302,7 +302,7 @@
   // <footer> in <article> tags in posts...styles the post's publish
   // date
   .articleFooterClass {
-    line-height: normal; 
+    line-height: normal;
   }
 
   // the post title in the NEWEST ARTICLE section on the home page
@@ -317,7 +317,7 @@
 
   .newestArticleHeaderClass {
     font-size:25px;
-  } 
+  }
 
   .sharedCategoryStyling {
     @include create-outer-box-shadow;
@@ -365,7 +365,7 @@
   .sitemap-container-class {
     @include create-outer-box-shadow;
   }
-  
+
   //big pic of kai on colophon.html
   .colophon-image {
     float:right;
@@ -374,7 +374,7 @@
 
   // =================================================================
   //  Page content styles end
-  //  ================================================================ 
+  //  ================================================================
 
 
 
@@ -389,14 +389,14 @@
     width: 1000px;
     margin: 0 auto 43px;;
   }
-  
+
   // apply background image to <aside>
   .aside-outer-wrapper-class {
     @include create-inner-box-shadow;
     background: $aside-color url('/img/footer-bg.png') no-repeat left;
     padding: 1px 10px 84px;
   }
-  
+
   // create a "letterpress" text-shadow effect on <h3> tags in <aside>
   .aside-section-header {
     width: 250px;
@@ -451,7 +451,7 @@
     text-decoration: none;
     margin-bottom: 12px;
   }
- 
+
   // styles common to the the copy that appears when a social
   // network link is rolled over
   .social-network-title {
@@ -462,7 +462,7 @@
       text-indent: -66px;
       overflow-x: hidden;
       display: inline-block;
-  }  
+  }
 
   // ==================================================================
   //  Aside styles end
@@ -481,7 +481,7 @@
     @include create-inner-box-shadow;
     height: 150px;
   }
-  
+
   // inner wrapper in the <footer>
   .footer-inner-wrapper-class {
     max-width: 1024px;
@@ -495,7 +495,7 @@
     text-align: start;
     float: right;
   }
-  
+
   // <h3> for the colophon
   .colophon-header {
     color: darken($header-color,10);
@@ -541,12 +541,12 @@
   .jekyll-link {
     @include footer-link-hit-area(57px, 151px);
   }
-  
+
   // set height/width for media temple bg link
   .mediaTemple-link {
     @include footer-link-hit-area(44px, 151px);
   }
-  
+
   // set height/width for maxcdn bg link
   .maxcdn-link {
     @include footer-link-hit-area(39px, 151px);
@@ -565,7 +565,7 @@
   // ==================================================================
   // 404 styles start
   // ==================================================================
-  
+
   .wrapper-404-class {
     @include create-outer-box-shadow;
     margin-bottom: 20px;
@@ -575,5 +575,5 @@
   // ==================================================================
   // 404 styles end
   // ==================================================================
- 
+
  }
