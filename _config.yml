@@ -7,7 +7,6 @@ destination: ./_site
 paginate: 10
 paginate_path: "pages/page:num"
 exclude: [
-  2014-09-17-lynda-kaidez.md
   .ftppass,
   assets,
   backbone,
@@ -31,5 +30,6 @@ exclude: [
   old_js,
   r.js,
   repo*.png,
-  terminalShot*.png
+  terminalShot*.png,
+  _posts/2014-09-17-lynda-kaidez.md
 ]
