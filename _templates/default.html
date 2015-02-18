@@ -7,14 +7,10 @@
   <meta name="description" content="{{ page.meta-excerpt }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-  <!--(if target dev)><!-->
-  <link rel="stylesheet" href="/css/styles.css" media="all" />
-  <!--<!(endif)--> 
 
-  <!--(if target prod)>
-  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
-  <!(endif)-->
-  
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
   <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
   <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
@@ -23,12 +19,12 @@
   {% include open_graph_partial.html %}
 
   {% include google_webfont_partial.html %}
-  
+
   <script src="/js/libs/modernizr.min.js"></script>
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
   <div id="container" class="containing-element">
-    
+
     <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
       <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
         <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
@@ -42,14 +38,14 @@
           {% include navigation_partial.html %}
 
           {% include searchbox_partial.html %}
-          
+
         </div>
 
       </div> <!-- header-nav-wrapper-inner -->
 
     </div> <!-- #header-nav-wrapper-outer -->
 
-    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
       {{ content }}
     </main> <!-- #content -->
 
@@ -60,7 +56,7 @@
   </div> <!-- #container -->
 
   {% include scriptFile_partial.html %}
-  
+
   <!--(if target dev)><!--><!--<!(endif)-->
 
   <!--(if target prod)>

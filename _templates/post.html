@@ -7,13 +7,9 @@
   <meta name="description" content="{{ page.meta-excerpt }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-  <!--(if target dev)><!-->
+    
   <link rel="stylesheet" href="/css/styles.css" media="all" />
-  <!--<!(endif)-->
 
-  <!--(if target prod)>
-  <link rel="stylesheet" href="/css/styles.min.css" media="all" />
-  <!(endif)-->
 
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
   <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
@@ -42,19 +38,19 @@
           {% include navigation_partial.html %}
 
           {% include searchbox_partial.html %}
-          
+
         </div>
 
       </div> <!-- header-nav-wrapper-inner -->
 
     </div> <!-- #header-nav-wrapper-outer -->
-    
+
     {% include post_breadcrumbs_partial.html %}
 
-    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">  
-    
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
       <div class="pageContentPostWrapper" style="background-color: #fff;">
-        
+
         <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
           <header class="postHeader">
@@ -113,9 +109,9 @@
     {% include footer_partial.html %}
 
   </div> <!-- #container -->
-  
+
   {% include async_js_partial.html %}
-  
+
   {% include scriptFile_partial.html %}
   <!--(if target dev)><!--><!--<!(endif)-->
 

@@ -7,11 +7,9 @@
   <meta name="description" content="{{ page.meta-excerpt }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-  
-  <link rel="stylesheet" href="/css/styles.css" media="all" />
-  
 
-  
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
 
   <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
   <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
@@ -21,7 +19,7 @@
   {% include open_graph_partial.html %}
 
   {% include google_webfont_partial.html %}
-  
+
   <script src="/js/libs/modernizr.min.js"></script>
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
@@ -40,33 +38,33 @@
           {% include navigation_partial.html %}
 
           {% include searchbox_partial.html %}
-          
+
         </div>
 
       </div> <!-- header-nav-wrapper-inner -->
 
     </div> <!-- #header-nav-wrapper-outer -->
-    
+
     {% include category_breadcrumbs_partial.html %}
-    
+
     <main role="main" id="content" class="page-content" itemscope="itemscope" itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
-      <section class="newestArticleClass"> 
+      <section class="newestArticleClass">
         <h1 class="category-title">Category: {{ page.title }}</h1>
           {{ content }}
-      </section> 
+      </section>
     </main> <!-- #content -->
-    
+
     {% include aside_partial.html %}
 
     {% include footer_partial.html %}
 
   </div> <!-- #container -->
-  
+
   {% include scriptFile_partial.html %}
 
   
 
   
-  
+
 </body>
 </html>
