@@ -44,12 +44,16 @@ All this showed me that it's worth it to rewrite content when the numbers indica
 
 * Focused more on jQuery's excellent AJAX functionality and discussed its (controversial) Promise functionality.
 
-* Included lots of demos that can be viewed as well as [downloaded from Github]().
+* Included lots of demos that can be viewed as well as [downloaded from GitHub](https://github.com/kaidez/ajax-tutorial-samples).
 
 * I'm trying to get the search engines to view this page as "cornerstone content", content that represents the best of the best on my blog. In that scenario, it's best to treat the content as a "page" instead of a "blog post". I tried to do this by changing things around in my site structure as well as link this article in the sites main navigation, all in the hopes of the search engines understanding that this content is top-notch. Yoast has [an excellent post on setting up cornerstone content](https://yoast.com/cornerstone-content-rank/).
 
 * As a sidenote, the site navigation got redone overall. Along with adding a direct link to the AJAX tutorial, the various site categories and are condensed under a single "BLOG" link. I've also directly-linked to my site's newly-created "ARTICLES" section, which contains content that I consider high-quality. For now, this section just contains the AJAX tutorial and the page that discusses my lynda.com courses, which is also placed as a link in the main navigation. These two articles are things I'm trying to monetize so I'm trying to make them as high-profile on my blog as possible.
 
-* Speaking of monetizing things, I farmed myself out with the AJAX tutorial by paying for adds on both Twitter and Facebook. Don't know how this will go but I'll be watching.
+* Speaking of monetizing things, I farmed myself out a little with this tutorial by advertising it on both Twitter and Facebook. Don't know how this will go but I'll be watching.
 
-Finally, if you read this I'm REALLY curious about your feedback. Is it too long? Too short? Is an important part not covered? Or covered too much? Let me know...I'm curious!!!!
+I wanted to discuss jQuery Promises a little more and discuss [XHR2](http://www.w3.org/TR/XMLHttpRequest2/), but all this would make the article longer than it already is and I want to avoid that. If this tutorial is well-received, I'll update things and consider adding those things.
+
+Finally, if you read this I'm REALLY curious about your feedback. Is it too long? Too short? Is an important part not covered? Or covered too much?
+
+Please let me know by either add a comment to this blog post or created an issue in [the tutorial's issue tracker](https://github.com/kaidez/ajax-tutorial-samples/issues).
