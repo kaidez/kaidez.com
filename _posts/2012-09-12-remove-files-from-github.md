@@ -41,17 +41,17 @@ If you moved a committed file named `oldFileAlreadyDeleted.html` to the Trash, y
 
 You now have to delete it with Git via the command line like this:
 
-{% prism bash %}
+{% prism markup %}
 $ git rm oldFileAlreadyDeleted.html
 {% endprism %}
 
 Then commit the delete with a proper `git commit` message:
-{% prism bash %}
+{% prism markup %}
 $ git commit -m 'remove oldFileAlreadyDeleted.html'
 {% endprism %}
 
 If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a subsequent `git push` will remove it:  
-{% prism bash %}
+{% prism markup %}
 $ git push all
 {% endprism %}
 
@@ -59,18 +59,18 @@ $ git push all
 ## How you should *always* delete files from Git
 Moving forward, any already-committed files  you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called `someCommitedFile.html`, you would do so like this:
 
-{% prism bash %}
+{% prism markup %}
 $ git rm someCommittedFile.html
 {% endprism %}
 
 Then write a `git commit` message:
 
-{% prism bash %}
+{% prism markup %}
 $ git commit -m 'remove someCommittedFile.html'
 {% endprism %}
 
 And if `someCommittedFile.html` is viewable on GitHub, doing a `git push` will remove it:  
-{% prism bash %}
+{% prism markup %}
 $ git push all
 {% endprism %}
 
@@ -103,19 +103,21 @@ __Scenario 2:__ Git can track the folder once it has content. But if `someFolder
 {% endprism %}
 
 In either of these two scenarios, `someFolder` can be deleted using the generic `rm` command though, which looks like this:
-{% prism bash %}
+{% prism markup %}
 $ rm -rf someFolder
 {% endprism %}
 
 After a folder has been committed to your repo, *that's* when you can use Git to delete it, and at any time. You use the same remove/commit/push sequence previously discussed:
 
-{% prism bash %}
+{% prism markup %}
 $ git rm someFolder
 {% endprism %}
-{% prism bash %}
+
+{% prism markup %}
 $ git commit -m 'remove someFolder'
 {% endprism %}
-{% prism bash %}
+
+{% prism markup %}
 $ git push
 {% endprism %}
 
@@ -132,13 +134,15 @@ If your only Git education up to this point is doing what GitHub tells you to do
 
 So to recap the previously-discussed command sequence, if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:
 
-{% prism bash %}
+{% prism markup %}
 $ git add 'myFile.html'
 {% endprism %}
-{% prism bash %}
+
+{% prism markup %}
 $ git commit -m 'add myFile.html'
 {% endprism %}
-{% prism bash %}
+
+{% prism markup %}
 $ git push
 {% endprism %}
 
@@ -146,13 +150,13 @@ The sequence for *deleting* files is the same, except for one change: you replac
 
 So if you wanted to remove "myFile.html" from your repo, your typed-in command sequence would look something like this:
 
-{% prism bash %}
+{% prism markup %}
 $ git rm 'myFile.html'
 {% endprism %}
-{% prism bash %}
+{% prism markup %}
 $ git commit -m 'remove myFile.html'
 {% endprism %}
-{% prism bash %}
+{% prism markup %}
 $ git push
 {% endprism %}
 
@@ -165,7 +169,7 @@ The "changes" concept is a central characteristic of Git and is key to understan
 <a name="further-git-github-reading"></a>
 ## Further Git &amp; GitHub Reading
 This post focused on how Git and GitHub handle file and folder deletions but there's more to them than that. From a beginner's level, here are some great learning resources:
-    
+
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
 Obviously your first stop. The site went through a major redesign a while back, greatly improving the UI. Documentation and downloads are much easier to find and read.
 
@@ -182,17 +186,17 @@ Written five years from the time of this post, this Tim Pope article on how to c
 It costs money but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's a thorough, hands-on Git course offered by [lynda.com](http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146) (a kaidez.com affiliate)...definitely worth checking out.
 
 ### [Common Git Commands »](https://gist.GitHub.com/2043530#file_gistfile1.sh "Get an excellent list of Git commands")
-UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it somewhere by your computer. 
+UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it somewhere by your computer.
 
 ### ["Git Is Simpler Than You Think" by Nick Farina »](http://nfarina.com/post/9868516270/git-is-simpler)
 If you want to Git works under the hood, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
 
 ### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/ "Learn about centralized and distributed version control systems")
-I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find. 
+I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.
 
 ### [*Pro Git* by Scott Chacon »](http://git-scm.com/book, "Read the free Pro Git Book")
-*The* Git Book, and it's free! It's a little dense and doesn't flow as easily as these other resources…I'll admit that I haven't read all of it. But I have read enough of it to know that it's an important Git resource.   
-     
-<a name="conclusion"></a>           
-## Conclusion                             
+*The* Git Book, and it's free! It's a little dense and doesn't flow as easily as these other resources…I'll admit that I haven't read all of it. But I have read enough of it to know that it's an important Git resource.
+
+<a name="conclusion"></a>
+## Conclusion
 I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you've come to realize that the title of Farina's post is correct: Git *is* simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you'll discover how bloody useful Git can be, along with a ton of other things.
