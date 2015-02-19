@@ -1,7 +1,7 @@
 ---
 title: AJAX Tutorial for Beginners
 author: Kai Gittens
-layout: page
+layout: page_twitter_conversion
 permalink: /ajax-tutorial/
 meta-excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."
 category: articles
@@ -78,7 +78,7 @@ This tutorial also takes the position that <a href="https://xhr.spec.whatwg.org/
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
-The code for all the examples is on GitHub and looks similar to this:
+[The code for all the examples is on GitHub ](https://github.com/kaidez/ajax-tutorial-samples)and looks similar to this:
 
 {% prism markup %}
 <!DOCTYPE html>
@@ -1254,4 +1254,4 @@ Reading <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title
 
 Also, having a good understanding of JavaScript's asynchronous nature is important. So reading <a href="http://www.amazon.com/gp/product/1937785270/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937785270&linkCode=as2&tag=kaidez-20&linkId=26L4SOXAE3MHODKC" target="blank" title="Get Trevor Burnham's *Async JavaScript* on amazon.com">Trevor Burnham's *Async JavaScript*</a> at some point is a good idea.
 
-Feel free to post questions/issues/whatever on this article's GitHub repository.
+Feel free to post questions/issues/whatever on [this article's GitHub repository](https://github.com/kaidez/ajax-tutorial-samples).
