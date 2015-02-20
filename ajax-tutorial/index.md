@@ -413,7 +413,7 @@ There were times when `getArticleInfo.readyState` equaled 0 through 3 and there 
 
 We didn't define functionality for those other use cases so as a result, the console message returned for all those use cases. The fact that the data displayed correctly didn't matter: it returned the console error message anyway.
 
-Using `&&` doesn't like this doesn't perform a robust check of the application state in this case, so it's best to avoid it.
+Using `&&` like this doesn't perform a robust check of the application state in this case, so it's best to avoid it.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read more about the logical "AND" operator on MDN">Read more about the logical "AND" operator on MDN</a>.
 
