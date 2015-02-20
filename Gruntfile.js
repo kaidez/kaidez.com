@@ -311,6 +311,7 @@ module.exports = function(grunt) {
             '_layouts/categories.html': '_templates/categories.html',
             '_layouts/post.html': '_templates/post.html',
             '_layouts/default.html': '_templates/default.html',
+            '_layouts/page_twitter_conversion.html': '_templates/page_twitter_conversion.html',
           }
         },
         prod: {
@@ -319,6 +320,7 @@ module.exports = function(grunt) {
             '_layouts/categories.html': '_templates/categories.html',
             '_layouts/post.html': '_templates/post.html',
             '_layouts/default.html': '_templates/default.html',
+            '_layouts/page_twitter_conversion.html': '_templates/page_twitter_conversion.html',
           }
         }
       },
