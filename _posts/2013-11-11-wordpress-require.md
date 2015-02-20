@@ -1,5 +1,5 @@
 ---
-title: Using RequireJS In WordPress
+title: 'Using RequireJS In WordPress'
 comments: true
 author: Kai Gittens
 layout: post
@@ -9,7 +9,7 @@ category: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery, AMD, javascript]
----  
+---
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
 The issue: my RequireJS setup needed to treat [jQuery](http://jquery.com/ "Check out the jQuery library") as a dependency for certain code modules. But a default WordPress install includes jQuery, and WP needs to manage it and other internal JS files in a manner that benefits its entire ecosystem: a manner that imposed limits on what I wanted RequireJS to do.
@@ -32,7 +32,7 @@ I'm making a few assumptions:
 
 The main assumption is that you understand WordPress beyond configuring it inside the Dashboard. This post discusses adding code to WordPress files so you should be comfortable doing this. You should also understand that adjusting code in WP is relatively easy when using the [WordPress Codex](http://codex.wordpress.org/) as a reference.
 
-All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done. 
+All my initial RequireJS/WordPress work was done inside a child theme, a well-defined WP best practice, so I'm assuming you know how to implement this. If not, [the Child Theme docs in the WordPress Codex](http://codex.wordpress.org/Child_Themes "How to create a child theme in WordPress") clearly describe how it's done.
 
 RequireJS is relatively new when compared to WordPress so I do walk through the former more that the latter, but it's still only a walk-through. RequireJS can do much more than the tasks discussed in this post so I'm assuming that you're curious about RequireJS and have no problem reading a few things to better understand it, starting with the [RequireJS API docs](http://requirejs.org/docs/api.html "Read the RequireJS API").
 
@@ -77,7 +77,7 @@ In the past, setting up this functionality usually meant placing all these files
 
 First, we  add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
 {% prism markup %}
-<script data-main="scripts/config" src="scripts/require.js"></script> 
+<script data-main="scripts/config" src="scripts/require.js"></script>
 {% endprism %}
 
 The info in the `data-main` attribute refers to a file called `config.js` which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is a JavaScript file.  
@@ -120,7 +120,7 @@ requirejs.config({
 
 Let's break all this down...
 
-{% prism javascript %} 
+{% prism javascript %}
 requirejs.config({
 ...
 });
@@ -128,14 +128,14 @@ requirejs.config({
 
 We wrap our code in a JavaScript object that will pass our configurations to the core RequireJS code.
 
-{% prism javascript %} 
+{% prism javascript %}
 baseUrl: "/",
 {% endprism %}
 
 `baseURL` represents a relative reference to the location of all the JS files that RequireJS must manage. In this case, the location is the `scripts` folder.
 
-*(Side note: I'm using a very simplified file structure in order to keep this post from being too long, but the RequireJS docs do outline some best practices in terms of organizing your code.  The [Load JavaScript Files section in the RequireJS docs](http://requirejs.org/docs/api.html#jsfiles "Go to the Load JavaScript Files section in the RequireJS docs") is the place to read up on this.)* 
-{% prism javascript %} 
+*(Side note: I'm using a very simplified file structure in order to keep this post from being too long, but the RequireJS docs do outline some best practices in terms of organizing your code.  The [Load JavaScript Files section in the RequireJS docs](http://requirejs.org/docs/api.html#jsfiles "Go to the Load JavaScript Files section in the RequireJS docs") is the place to read up on this.)*
+{% prism javascript %}
 deps: ["search"],
 {% endprism %}
 
@@ -154,7 +154,7 @@ paths: {
 
 As you can see, these are the previously-discussed four files that Tipue needs to function properly on our website. Also note that we're using jQuery 1.10.2: this will be important when we start talking about the last part of the configs.
 
-{% prism javascript %} 
+{% prism javascript %}
 shim: {
   tipue: {
     deps: ["jquery"],
@@ -185,7 +185,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
     "showURL": false,
     "highlightEveryTerm": true
   });
-   
+
 });
 {% endprism %}
 
@@ -208,7 +208,7 @@ This was the code that I wanted to integrate into WordPress...and  this was wher
 
 <a name="bring-jquery-into-wordpress"></a>
 ## How I THOUGHT RequireJS Should Bring jQuery Into WordPress
-While TwentyThirteen preloads jQuery and other JavaScript files into the site's HTML, the TwentyTwelve theme I was working with does not. I was fine with this because as the above example illustrates, you only need to load one `script` tag onto the page to get RequireJS working. 
+While TwentyThirteen preloads jQuery and other JavaScript files into the site's HTML, the TwentyTwelve theme I was working with does not. I was fine with this because as the above example illustrates, you only need to load one `script` tag onto the page to get RequireJS working.
 
 As mentioned in the beginning, a default WordPress install contains jQuery other internal JS files. So I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress placed it during install via the `paths` object:
 
@@ -235,7 +235,7 @@ As a result, if I installed a WordPress plugin requiring jQuery, WP would load i
 <a name="jquery-requirejs-wordpress"></a>
 ## How To Use jQuery, RequireJS &amp; WordPress Together
 With the 3.5.2/ TwentyTwelve setup, the safest thing to do was to use `wp_enqueue_script` to bring jQuery into the HTML. The code for this would be placed in the just-mentioned `functions.php` file and would look like this:
-{% prism php %}
+{% prism markup %}
 <?php
 function my_scripts_method() {
   wp_enqueue_script( 'jquery' );
@@ -273,7 +273,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
     "showURL": false,
     "highlightEveryTerm": true
   });
-   
+
 });
 {% endprism %}
 
