@@ -387,7 +387,7 @@ getArticleInfo.onreadystatechange = function() {
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
-*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Developers still this but this AJAX tutorial does not. This section is a demonstration of what not to do; it has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
+*(NOTE: This section describes how NOT to do `readyState` and `status` checks. Developers still do this but this AJAX tutorial does not. This section is a demonstration of what not to do; it has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
 
 Our code checked for the value of `readyState` first, _then_ checked for the server's status code. Some developers like to use the logical "AND" operator (&&) to simultaneously check for these values.
 
