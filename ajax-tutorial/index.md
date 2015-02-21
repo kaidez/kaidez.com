@@ -643,7 +643,7 @@ getPlayerInfo.onreadystatechange = function() {
 };
 ...
 {% endprism %}
-Once `readyState` equaled `4` and our code successfully connected to the server, it created two variables: `players` and `text`. `players` grabbed our data with `responseText` like before and converted it to a readable JSON format with `JSON.parse`.
+Once `readyState` equaled `4` and our code successfully connected to the server, it created two variables: `players` and `text`. `players` grabbed our data with `responseText` like before and converted it to a more-readable JavaScript object format with `JSON.parse`.
 
 `text` referred to the `<div id="textTarget">` element on the HTML page. As before, our data loaded into this element.
 
