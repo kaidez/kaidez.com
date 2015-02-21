@@ -57,3 +57,5 @@ I wanted to discuss jQuery Promises a little more and discuss [XHR2](http://www.
 Finally, if you read this I'm REALLY curious about your feedback. Is it too long? Too short? Is an important part not covered? Or covered too much?
 
 Please let me know by either add a comment to this blog post or created an issue in [the tutorial's issue tracker](https://github.com/kaidez/ajax-tutorial-samples/issues).
+
+Now, please check out the updated [AJAX beginners tutorial](/ajax-tutorial/).
