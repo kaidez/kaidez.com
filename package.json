@@ -16,7 +16,6 @@
   ],
   "devDependencies": {
     "bower": "latest",
-    "glob": "^4.4.0",
     "grunt": "^0.4.5",
     "grunt-cdn": "^0.6.5",
     "grunt-contrib-copy": "^0.8.0",
@@ -31,13 +30,9 @@
     "grunt-jekyll": "^0.4.2",
     "grunt-manifest": "^0.4.0",
     "grunt-modernizr": "^0.6.0",
-    "grunt-penthouse": "^0.1.2",
     "grunt-sftp-deploy": "0.2.2",
     "grunt-shell": "^1.1.1",
     "grunt-targethtml": "^0.2.6",
-    "gulp": "^3.8.11",
-    "gulp-cssshrink": "^0.1.4",
-    "gulp-uncss": "^1.0.0",
     "time-grunt": "^1.0.0"
   },
   "dependencies": {
