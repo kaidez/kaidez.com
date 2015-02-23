@@ -1043,8 +1043,7 @@ In other words...
 
 * Promises wait for your code to COMPLETELY finish what it's doing.
 * Promises let you run callbacks to do things AFTER the code COMPLETELY finishes what it's doing.
-* Promises run callbacks in neater, cleaner ways then in the past.
-* Promises have a `then` method that manages the callbacks.
+* Promises must contain a `then()` method returns a promise...`then()` is used to neatly manage the callbacks.
 * Promises have special event handling for situations where any part of the code fails.
 
 At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specification">ECMAScript version 6, code-named "Harmony."</a>
