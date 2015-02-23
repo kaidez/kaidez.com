@@ -14,7 +14,6 @@ tags: [html5, best practice]
 HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.
 
 This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.
-<img src="/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic">
 
 As awesome as this is, I’ve had a few conversations with non-developers who think HTML5 is a magic bullet. Most talk about it as something that they *should* be doing without fully understanding *what it actually is*.
 
@@ -41,7 +40,6 @@ Here are the topics for this article:
  [7]: #Making-The-Site-Look-Pretty
  [8]: #How-Is-HTML5-Being-Used-As-of-This-Article
  [9]: #How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now
-
 <h2 id="What-Is-HTML5">What Is HTML5 <i>Exactly</i>?</h2>
 
 The 25-word answer is:
@@ -54,7 +52,7 @@ Expanding on this definition, the four key things to know about HTML5 are:
 *   it allows for the creation of more robust *web applications.*
 *   it allows for top-notch *mobile web development.*
 *   creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.
-
+<img src="/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic" style="margin-top:20px; float: right">
 <h2 id="Where-Did-HTML5-Come-From">Where Did HTML5 Come From?</h2>
 
 Created in 1990, HTML has always been a programming language that creates a website’s basic structure. To build a website, HTML “frames” it first, then things like copy and images are added to complete the job.
@@ -67,7 +65,7 @@ The companies felt that the W3C weren’t evolving HTML beyond a structural lang
 
 In 2007, the W3C agreed with WHATWG’s point of view. The two groups remained separate but worked together on creating a new version of HTML, naming it “HTML5.”
 
-The two groups are still working together as the HTML5 specification isn’t finalized as of this article, but it’s still possible to use it to create websites and web applications…as many do. 
+The two groups are still working together as the HTML5 specification isn’t finalized as of this article, but it’s still possible to use it to create websites and web applications…as many do.
 
 <h2 id="Semantic-Markup">Semantic Markup</h2>
 
