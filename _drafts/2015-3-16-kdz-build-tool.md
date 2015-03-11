@@ -16,8 +16,8 @@ After trying a few different approaches, I solved the problem by creating a Node
 
 ## Table of Contents
 1. [This is not a tutorial](#not-a-tutorial)
-2. [he Situation](#the-situation)
-3. [Proper naming of data attributes](#proper-naming-data attributes)
+2. [The Situation](#the-situation)
+3. [The Problem](#the-problem)
 4. [Store the data attributes in a link](#store-data attributes-link)
 5. [Store the data attributes in multiple links](#store-data attributes-multiple-link)
 6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-fallback)
@@ -33,4 +33,16 @@ To be clear, this is not a tutorial. I may do tutorials on certain parts of the 
 <a name="the-situation"></a>
 ## The Situation
 
-I had a project at work where I basically had to create a single page website using the typical HTML/CSS/JavaScript web stack.
+I had a project at work where I basically had to create a single page website using a standard HTML/CSS/JavaScript web stack. Here's how the enviroment was configured:
+
+* [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML pre-processing.
+* [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
+* [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
+* [Bower](http://bower.io/ "Review the Bower web package manager") was used to managed browser-level dependencies via a `bower.json` file.
+* [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to managed development-task dependencies via a `package.json` file.
+* [Grunt](http://gruntjs.com/ "Review the Grunt task runnder") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate processes related to the items above.
+
+While all these things above do different things,
+
+<a name="the-problem"></a>
+## The Problem
