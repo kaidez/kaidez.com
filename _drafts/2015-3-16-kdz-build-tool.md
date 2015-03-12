@@ -39,8 +39,8 @@ I had a project at work where I basically had to create a single page website us
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
 * I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it makes me very productive inside my dev environment with it while building a responsive web design.
-* [Bower](http://bower.io/ "Review the Bower web package manager") was used to managed browser-level dependencies via a `bower.json` file.
-* [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to managed development-level dependencies via a `package.json` file.
+* [Bower](http://bower.io/ "Review the Bower web package manager") was used to manage browser-level dependencies via a `bower.json` file.
+* [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to manage development-level dependencies via a `package.json` file.
 * [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate tasks related to the things above, including building out the final page.
 
 I was at an EXTREMELY high comfort level with these tools when I started the project. I had used them a lot previously and understood what it took to configure them to the point that they worked well as a team.
@@ -98,7 +98,7 @@ Another set of problems soon appeared:
 
 * The template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I've been reading up on [Rework](https://github.com/reworkcss/rework) which lets you build a customizable pre-processor, so there may when I don't even need LESS or Sass.
 
-* The template contained a `.gitignore` that listed some common files that are ignored with Git commits. But my day job requires my working in a .NET environment that contains requirements that have been codified for almost a decade. One of the chief requirements is that we manage version control with [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microft's Team Foundation Server") instead of Git.
+* The template contained a `.gitignore` that listed some common files that are ignored with Git commits. But my day job requires my working in a .NET environment that contains requirements that have been codified for almost a decade. One of the chief requirements is that we manage version control with [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") instead of Git.
 
 * The template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and `.gitignore` needed a few more files added to it.
 
