@@ -87,7 +87,7 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 
 You get the idea...
 
-This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I started redoing the `.less` files like I did with the `.json` files and while redoing the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing procedure.
+Like the `package.json` and `bower.json` files, the LESS files needed to be setup differently for the refactor. I started redoing the `.less` files like I did with the `.json` files and while redoing the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing procedure.
 
 I knew I would use these tools and techniques again and again, so containing them in a reusable template seemed to make sense. I took notes while doing the refactor and when it was finished, I started creating the template.
 
