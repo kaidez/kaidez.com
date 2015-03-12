@@ -10,7 +10,7 @@ cat-name: "Code Tips"
 has-home-img: kdz-header.jpg
 tags: [javascript, node, kaidez]
 ---
-I came up with some cool web development techniques after doing a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I had to find a way to easily set them up at the start of each project.
+I discovered some cool tricks after working on a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I had to find a way to easily set them up at the start of each project.
 
 I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
