@@ -26,19 +26,19 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 <a name="not-a-tutorial"></a>
 ## This is not a tutorial
 
-To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just my documenting my approach to solving a specific problem.
+To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting my approach to solving a specific problem.
 
-[The code is thoroughly commented code on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") where you can review it and also feel free to ask me questions about it either on Twitter or as a post comment. You would want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+[The code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to ask questions/make comments about it either on [Twitter](https://twitter.com/kaidez "Visit kaidez on Twitter") or as a post comment. You would want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
 
 <a name="the-situation"></a>
 ## The Situation
 
-I had a project at work where I basically had to create a single page website using a standard HTML/CSS/JavaScript web stack. The tools in my development environment were configured like this:
+I had a project at work where I had to create a single page website using a standard HTML/CSS/JavaScript web stack. The tools in my development environment were configured like this:
 
 * [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
-* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it makes me very productive inside my dev environment with it while building a responsive web design.
+* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it makes me very productive inside my dev environment while I build a responsive web design.
 * [Bower](http://bower.io/ "Review the Bower web package manager") was used to manage browser-level dependencies via a `bower.json` file.
 * [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to manage development-level dependencies via a `package.json` file.
 * [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate tasks related to the things above, including building out the final page.
@@ -60,7 +60,7 @@ There was no time to refactor it during work hours due to other projects on my t
 ## The Problem
 Recreating this setup was a pain in the a**. Since I was only refactoring parts of the site code and not the whole site itself, not every part was needed.
 
-For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing the listed dependencies.
+For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
 
 OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build again? That sucked.
 
