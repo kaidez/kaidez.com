@@ -98,9 +98,9 @@ The template started off as a bunch files in GitHub repo. It contained the `.les
 
 Another set of problems soon appeared:
 
-* scaffolding this project from the repo wasn't convenient. I could `git clone` it but that would download a folder with the files, not just files themselves. As a result, if I was starting a project from scratch, I would have to rename the folder to match the project. If I already started a project in another folder, I would have to copy the dowloaded repo files to that other folder.  All of this is doable...it's just not convenient.
+* scaffolding this project from the repo wasn't convenient. I could `git clone` it but that would download a folder with the files, not just files themselves. As a result, if I was starting a project from scratch, I would have to rename the folder to match the project. If I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.
 
-* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-proceessor.
+* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor.
 
 * the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment that contains requirements that have been codified for almost a decade. One of the chief requirements is that we manage version control with [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") instead of Git.
 
@@ -180,7 +180,7 @@ Along with `--test` and the standard `--help` and `--version` options, there are
 *  the `--wordpress` option scaffolds out a WordPress-like project. It performs almost the same tasks as `kdz app` with the following differences:
 
   * the `build` folder and its subdirectories are not created.
-  * the `Gruntfile.js`, `gulpfile.js` and `package.jso`n files that are downloaded are more geared toward WordPress development and downloaded from `source-wordpress`.
+  * the `Gruntfile.js`, `gulpfile.js` and `package.json` files that are downloaded are more geared toward WordPress development and downloaded from `source-wordpress`.
   * a `functions.php` file is downloaded.
 	*  The final build looks like this:
 
@@ -267,19 +267,15 @@ A main reason that I didn't write a tutorial was because there are so many good 
 The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read. It's verbose in some spots but after reading various parts through it a few times, I was able to write my own Node code without the use of plugins...GOOD FOR ME!!!
 
 
-<a name="what-i-learned"></a>
-## What I Learned
-Again...a lot!
-
-I was glad to solve my problem but the BEST thing about doing all this was I gained a lot of Node experience. I had played around with Node quite a bit before all this and, for sime reason, using Gulp made me understand it even better.
-
-But this project exposed me to ton of Node stuff. I gained a really good understanding od how Node interacts with a file system and all the quirks that come with exporting and requiring modules.
-
-I also learned about Promises and much they go hand-in-hand with Node. For all the Promise spaghetti code I wrote, I get them and see how they make parts of Node development easier.
-
-I really want to add more "Node stuff" to `kdz` and less "Node modules". I want to add things like `.pipe()` and `process.nextTick()` to the tool and see if they let me do things without requiring a bunch of npm modules.
-
 <a name="conclusion"></a>
 ## Conclusion
 
-i  don’t believe in religious zealotry. I believe in getting stuff done. I want to get it done in whatever tool is available to get me done. If that’s Brackets or Sublime or Visual Studio, I’ll use the tool I want to get [inaudible] is.
+I was glad creating this solve my problem but the BEST thing about doing all this was I gained a lot of Node experience. I had played around with Node quite a bit before all this and, for some reason, using Gulp made me understand it even better.
+
+But this project exposed me to ton of Node stuff. I gained a really good understanding of how Node interacts with a file system and all the quirks that come with exporting and requiring modules.
+
+I also learned about Promises and much they go hand-in-hand with Node. For all the Promise spaghetti code I wrote, I get them and see how they make parts of Node development easier.
+
+ I still have more work to do: I really want to add more "Node stuff" to `kdz` and less "Node modules". By that, I mean that I want to add things like `.pipe()` and `process.nextTick()` to the tool and see if they let me do things without requiring a bunch of npm modules.
+
+But overall, creating `kdz` was one of the best web development experiences I've had in a while and can't wait to continue work on it. If not to solve a problem, then to get Node to bend to my will more and more.
