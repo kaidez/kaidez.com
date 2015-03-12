@@ -58,11 +58,11 @@ There was no time to refactor it during work hours due to other projects on my t
 
 <a name="the-problem"></a>
 ## The Problem
-Recreating this setup was a pain in the a**. Since I was only refactoring parts of the site code and not the whole site itself, not every part was needed.
+Recreating this setup was a pain in the a**. Since I was only refactoring parts of the site code and not the whole site itself, the tooling need to be adjusted in some spots.
 
 For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
 
-OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build again? That sucked.
+OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build process again? That sucked.
 
 Again, I'm a fan of how well Bootstrap does responsive web design and I based my LESS setup around that. My `.less` files were named based on Bootstraps's pre-defined set of media queries.
 
@@ -70,7 +70,7 @@ So since Bootstrap has a media query called `@media (min-width: 1200px)`, I have
 
 {% prism css %}
 @media (min-width: 1200px) {
-  // code is already here
+
 }
 {% endprism %}
 
@@ -78,7 +78,7 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 
 {% prism css %}
 @media screen and (min-width: 768px) {
-  // code is already here
+
 }
 {% endprism %}
 
@@ -86,7 +86,7 @@ You get the idea...
 
 This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I started redoing the `.less` files like I did with the `.json` files and while redoing the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing experience.
 
-I knew I had to create a standard template for all this stuff. So I took notes on the tooling while doing the refactor and when it was finished, I started to create the template.
+I knew I had to create a standard template for all this stuff. So I took notes on the tooling while doing the refactor and when that was finished, I started to create the template.
 
 <a name="more-problems"></a>
 ## More Problems
@@ -94,7 +94,7 @@ The template started off as a bunch files in GitHub repo. It contained the `.les
 
 Another set of problems soon appeared:
 
-* setting up this project from the repo wasn't really convenient. I could `git clone` it but that would download a folder with the files and not just files themselves. I would then either have the rename the folder to match the project or copy the files to another folder...doable but not convenient.
+* scaffolding this project from the repo wasn't convenient. I could `git clone` it but that would download a folder with the files and not just files themselves. If I was starting the project from scratch, I would have the rename the folder to match the project. If I already started the project in another folder, I would have to copy the files to that folder.  All of this is doable...it's just not convenient.
 
 * The template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I've been reading up on [Rework](https://github.com/reworkcss/rework) which lets you build a customizable pre-processor, so there may when I don't even need LESS or Sass.
 
