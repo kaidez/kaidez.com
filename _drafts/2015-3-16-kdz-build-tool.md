@@ -237,25 +237,25 @@ Learn about these variations and rules over on [the "Understand the Basic struct
 <a name="behind-the-scenes"></a>
 ## Behind The Scenes
 
-Some interesting points about how `kdz` works behind the scenes:
+Some interesting points about how kdz works behind the scenes:
 
-* Obviously, `kdz` was built with Node.
-* [commander](https://www.npmjs.com/package/commander "Read about the npm commander module") was the key package used to build the tool. It's what I used to configure the commands and options.
+* Obviously, kdz was built with Node.
+* [commander](https://www.npmjs.com/package/commander "Read about the npm commander module") was the key package used to build this tool. It's what I used to configure the commands and options.
 * [q](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Node runs things asynchronously and I need to make sure that a certain step didn't run until some other steps ran before it. q properly managed that process.
 * The [download](https://www.npmjs.com/package/download "Read about the npm download module") and [download-status](https://www.npmjs.com/package/download-status "Read about the npm download-status module") modules work together to download files from the repo and display how the download is progressing.
-* [chalk](https://www.npmjs.com/package/chalk "Read about the npm chalk module") adds some pretty sweet coloring to outputted console statements.
+* [chalk](https://www.npmjs.com/package/chalk "Read about the npm chalk module") adds some pretty sweet coloring to the outputted console statements.
 
 <a name="todo"></a>
 ## What's Left To Do
 A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list "Read the TODO list on the kdz repo") of things I need/want to do, but here are the main things:
 
-* __get `kdz` working on Windows:__ in this day and age, there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think `kdz` should respect that.
+* __get kdz working on Windows:__ we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think kdz should respect that.
 
-* __make the Promises neater:__ I've played with Promises before but this was the first project that I REALLY used them. I used them primarily to make sure the app logging happens in the proper sequence and while I'm (pretty) sure that I implemented them properly based on the q documentation, the code is spaghetti-like. I'd like to focus on cleaning it up is possible.
+* __make the Promises neater:__ I used Promises primarily to make sure the console logging happened in the proper order and while I'm (pretty) sure I implemented them properly, the code is spaghetti-like. I'd like to try and clean it up.
 
-* __make a small library:__ I spent a day looking at spots where the code was repetitive, then placing that code in a reusable function that all the spots could use. There are other spots that can use this: lots of spots use [Node's fs.open() method](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback "Read about Node fs.open") to check for the existence of a given file or folder. Making that code chunk reusable makes sense.
+* __make a small library of methods:__ I spent a day looking at spots where the code was repetitive, then placing that code in a reusable function that all the spots could use. There are other spots that can use this: lots of spots use [Node's fs.open() method](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback "Read about Node fs.open") to check for the existence of a given file or folder. Placing that chunk in a library with a bunch of other reusable methods makes sense.
 
-* __make the options run on their own:__ Right now, the `--gitignore`, `--less`, `--sass` and `--wordpress` won't run unless they're passed as options to commands. In other words, running `kdz app` will scaffold a basic project but if I want to download Sass files sometime after that, I would have to run `kdz app -s`. Sass files should be able to be download without the `app` command so I'm working on that.
+* __make the options run on their own:__ right now, the `--gitignore`, `--less`, `--sass` and `--wordpress` won't run unless they're passed as options to commands. In other words, running `kdz app` will scaffold a basic project but if I want to download Sass files sometime after that, I would have to run `kdz app -s`. Sass files should be able to be download without the `app` command so I'm working on that.
 
 
 <a name="further-reading"></a>
@@ -263,18 +263,18 @@ A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowis
 
 A main reason that I didn't write a tutorial was because there are so many good ones already out there. I found the [*Command-line utilities with Node.js* article by Glynn Phillips ](http://cruft.io/posts/node-command-line-utilities/) to be the best one...I'd start there.
 
-The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read. It's verbose in some spots but after reading various parts through it a few times, I was able to write my own Node code without the use of plugins...GOOD FOR ME!!!
+The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read. It's verbose in some spots but after pushing through it, I was able to write my own Node code where I would usually use a plugin...GOOD FOR ME!!!
 
 
 <a name="conclusion"></a>
 ## Conclusion
 
-I was glad creating this solve my problem but the BEST thing about doing all this was I gained a lot of Node experience. I had played around with Node quite a bit before all this and, for some reason, using Gulp made me understand it even better.
+I'm glad creating kdz solved my problem but the BEST thing about doing all this was I gained a lot of Node experience. I had played around with Node quite a bit before all this and, for some reason, using Gulp made me understand it even better.
 
-But this project exposed me to ton of Node stuff. I gained a really good understanding of how Node interacts with a file system and all the quirks that come with exporting and requiring modules.
+But this project exposed me to ton of Node stuff. I gained a really good understanding of how Node interacts with a file system and all the quirks that come with exporting and requiring modules, along with some other things.
 
-I also learned about Promises and much they go hand-in-hand with Node. For all the Promise spaghetti code I wrote, I get them and see how they make parts of Node development easier.
+I also learned more about Promises and how they really go hand-in-hand with Node. For all the issues with my Promise code, I better-understand them now and see how they make Node development easier.
 
- I still have more work to do: I really want to add more "Node stuff" to `kdz` and less "Node modules". By that, I mean that I want to add things like `.pipe()` and `process.nextTick()` to the tool and see if they let me do things without requiring a bunch of npm modules.
+ I still have more work to do: I really want to add more "Node stuff" to kdz instead of adding more "Node modules". By that, I mean that I want to add things like `.pipe()` and `process.nextTick()` to the tool and see if they let me do things without requiring a bunch of pre-built npm modules.
 
-But overall, creating `kdz` was one of the best web development experiences I've had in a while and can't wait to continue work on it. If not to solve a problem, then to get Node to bend to my will more and more.
+But overall, creating kdz was one of the best web development experiences I've had in a while and can't wait to continue work on it. If not to solve a problem, then to get Node to bend to my will some more.
