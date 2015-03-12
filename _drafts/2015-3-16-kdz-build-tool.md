@@ -4,7 +4,7 @@ comments: true
 author: Kai Gittens
 layout: post
 meta-excerpt: kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub.
-permalink: /kdz-node-build-tool/
+permalink: /kdz-build-tool/
 category: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: kdz-header.jpg
@@ -20,7 +20,7 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 3. [The Problem](#the-problem)
 4. [More Problems](#more-problems)
 5. [The Tool-Building Process](#tool-building-process)
-6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-fallback)
+6. [The Final Command](#final-command)
 7. [Conclusion](#conclusion)
 
 <a name="not-a-tutorial"></a>
@@ -112,4 +112,103 @@ But what I wanted was too specific so I doubted the generators would help. Plus,
 ## The Tool-Building Process
 I asked around and did some Google searches to figure out the best way to do this.  It took me about two days of working at night after the day job to get the files and folders to be either created or downloaded.
 
-From there, I became ridiculously anal-retentive and spent four weeks (FOUR WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around the logging: what messages were sent to the terminal console as the app progressed.
+From there, I became ridiculously anal-retentive and spent four weeks (FOUR WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around the logging: what messages were sent to the terminal console as the app progressed, what color were they, etc.
+
+<a name="final-command"></a>
+## The Final Command
+The end result of all this was `kdz`: a Node command that downloads files from a GitHub repo and also creates folders.  All in a programmatic way.
+
+After you install it, typing `kdz` from anywhere in the terminal displays the help, which looks like this:
+
+{% prism markup %}
+  Usage: kdz [options] [command]
+
+
+  Commands:
+
+    app   scaffold a basic web application
+    dt    delete "test-build" folder
+
+  Options:
+
+    -h, --help       output usage information
+    -V, --version    output the version number
+    -w, --wordpress  create a WordPress project
+    -g, --gitignore  download ".gitignore" file
+    -l, --less       download LESS files in "css-build"
+    -s, --scss       download Sass files in "css-build"
+    -t, --test       do a test scaffold in "test-build"
+{% endprism %}
+
+Just two commands for now...`app` and `dt`:
+
+* Running `kdz app` scaffolds out a SPA-like by performing the following steps:
+
+  * a `build` folder is created with `css` and `js` subdirectories.
+  * a `coffee` folder is created and includes a `main.coffee` file.
+  * a `css-build` folder is created with an `imports` subdirectory. and empty `image-min` folder is created (images that need to be minified go here)
+  * `bower.json`, `.bowerrc` and `STYLEGUIDE.md` files are downloaded from the `source-shared-files` directory in the `kdz` repo.
+  * SPA-like `Gruntfile.js`, `gulpfile.js` and `package.json` files are downloaded from the `source-spa` directory in the `kdz` repo.
+	* The final build looks like this:
+
+{% prism markup %}
+├── build
+|   ├── css
+|   └── js
+        └── libs
+├── coffee
+|   └── main.coffee
+├── image-min
+├── css-build
+|   └── imports
+├── .bowerrc
+├── bower.json
+├── Gruntfile.js
+├── gulpfile.js
+├── package.json
+└── STYLEGUIDE.md
+{% endprism %}
+
+* If the `--test flag` is passed to `kdz app`, a `test-build` folder is created, then a test scaffold is created in that folder. `kdz dt` is a quick way of deleting `test-build`. This was used more for development than anything else.
+
+Along with `--test` and the standard `--help` and `--version` options, there are set of options:
+
+*  the `--wordpress` option scaffolds out a WordPress-like project. It performs almost the same tasks as `kdz app` with the following differences:
+
+  * the `build` folder and its subdirectories are not created.
+  * the `Gruntfile.js`, `gulpfile.js` and `package.jso`n files that are downloaded are more geared toward WordPress development and downloaded from `source-wordpress`.
+  * a `functions.php` file is downloaded.
+	*  The final build looks like this:
+
+{% prism markup %}
+
+├── coffee
+|   └── main.coffee
+├── image-min
+├── css-build
+|   └── imports
+├── .bowerrc
+├── bower.json
+├── function.php
+├── Gruntfile.js
+├── gulpfile.js
+├── package.json
+└── STYLEGUIDE.md
+{% endprism %}
+
+* the `--gitignore` option downloads a `.gitignore` file from `source-spa` to the root folder by default. But if the `-wordpress` option is passed, `.gitignore` will be WordPress-specific and downloaded from the `source-wordpress` folder in the `kdz` repo .
+
+
+-l, --less
+
+Downloads LESS files from source-spa to css-build and css-build/imports If the -w option is passed, the LESS files will be WordPress-specific and downloaded from the source-wordpress folder.
+
+
+
+-s, --scss
+
+Downloads Sass files from source-spa to css-build and css-build/imports If the -w option is passed, the Sass files will be WordPress-specific and downloaded from the source-wordpress folder.
+
+
+<a name="conclusion"></a>
+## Conclusion
