@@ -21,7 +21,8 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 4. [More Problems](#more-problems)
 5. [The Tool-Building Process](#tool-building-process)
 6. [The Final Command](#final-command)
-7. [Conclusion](#conclusion)
+7. [Behind The Scenes](#behind-the-scenes)
+8. [Conclusion](#conclusion)
 
 <a name="not-a-tutorial"></a>
 ## This is not a tutorial
@@ -189,25 +190,56 @@ Along with `--test` and the standard `--help` and `--version` options, there are
 |   └── imports
 ├── .bowerrc
 ├── bower.json
-├── function.php
+├── functions.php
 ├── Gruntfile.js
 ├── gulpfile.js
 ├── package.json
 └── STYLEGUIDE.md
 {% endprism %}
 
-* the `--gitignore` option downloads a `.gitignore` file from `source-spa` to the root folder by default. But if the `-wordpress` option is passed, `.gitignore` will be WordPress-specific and downloaded from the `source-wordpress` folder in the `kdz` repo .
+* the `--gitignore` option downloads a `.gitignore` file from `source-spa` to the root folder by default. But if the `--wordpress` option is passed, `.gitignore` will be WordPress-specific and downloaded from the `source-wordpress` folder in the `kdz` repo.
 
+* the `--less` option downloads LESS files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the LESS files will be WordPress-specific and downloaded from the `source-wordpress` folder. As mentioned, the `.less` files are named based on Bootstrap-defined media queries so the final build would look like this:
 
--l, --less
+{% prism markup %}
+css-build
+ ├── style.less
+ └── imports
+     ├── all-transform-3d-webkit-transform-3d.less
+     ├── bootstrap-override.less
+     ├── for.less
+     ├── globals.less
+     ├── max-device-width-480-orientation-landscape.less
+     ├── max-width-767.less
+     ├── min-width-1200.less
+     ├── min-width-768-max-width-991.less
+     ├── min-width-768.less
+     ├── min-width-992-max-width-1199.less
+     ├── min-width-992.less
+     ├── mixins.less
+     ├── mobile_first.less
+     ├── retina-media-queries.less
+     ├── screen-and-max-width-767.less
+     ├── screen-and-min-width-768.less
+     ├── screen-webkit-min-device-pixel-ratio-0.less
+     ├── screen-webkit-min-device-pixel-ratio-0
+     └── variables.less
+{% endprism %}
 
-Downloads LESS files from source-spa to css-build and css-build/imports If the -w option is passed, the LESS files will be WordPress-specific and downloaded from the source-wordpress folder.
+* the `--scss` option does pretty much what `--less` does, except it downloads Sass files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the LESS files will be WordPress-specific and downloaded from the `source-wordpress` folder.  
 
+There are slight variations among the LESS and Sass builds and I've also created files like this so the CSS build out based on my self-imposed rules. For example: `globals.less` exists for a reason and while there's a `for.less`, there's no `for.scss`.
 
+Learn about these variations and rules over on [the "Understand the Basic structure" section in repo's style guide](https://github.com/kaidez/kdz/blob/master/source-shared-files/STYLEGUIDE.md#understand-the-basic-structure).
 
--s, --scss
+<a name="behind-the-scene"></a>
+## Behind The Scenes
 
-Downloads Sass files from source-spa to css-build and css-build/imports If the -w option is passed, the Sass files will be WordPress-specific and downloaded from the source-wordpress folder.
+Some interesting point about how `kdz` works behind the scenes:
+
+* Obviously, `kdz` was built with Node.
+* [commander](https://www.npmjs.com/package/commander "Read about the npm commander module") was the key package used to build the tool. It's what I used to configure the commands and options.
+* [q](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Every
 
 
 <a name="conclusion"></a>
