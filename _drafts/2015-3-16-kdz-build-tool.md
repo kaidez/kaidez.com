@@ -15,7 +15,7 @@ I discovered some cool techniques after working on a bunch of web development pr
 I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
 <h2 style="clear:both;">Table of Contents</h2>
-1. [This Is Not a Tutorial](#not-a-tutorial)
+1. [Some Notes](#notes)
 2. [How This Started](#how-this-started)
 3. [The Problem](#the-problem)
 4. [More Problems](#more-problems)
@@ -26,12 +26,16 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 9. [Further Reading](#further-reading)
 10. [Conclusion](#conclusion)
 
-<a name="not-a-tutorial"></a>
-## This Is Not a Tutorial
+<a name="notes"></a>
+## Some Notes
 
-To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I used to solve a specific problem.
+A few notes first...
 
-[The kdz code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to look at it and ask questions/make comments about it as a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+* This is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I used to solve a specific problem.
+
+* [The kdz code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to look at it and ask questions/make comments about it as a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "Review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+
+* This tool will (probably) never be published as an [npm](https://www.npmjs.com/) package so if you want to download it, please [read the repo's "Before you install" section](https://github.com/kaidez/kdz#before-you-install "Read the repo's "Before you install" section") first.
 
 <a name="how-this-started"></a>
 ## How This Started
@@ -48,7 +52,7 @@ I had a project at work where I had to create a single page website using a stan
 
 I was REALLY comfortable with these tools when I started this project. I had used them a lot previously and knew how to get them to work as a team inside my dev environment.
 
-This was especially true of the CSS processing which was (mostly) powered by Gulp. Gulp let me create an efficient process for generating a single, production-ready CSS file...linting it, minifying it, etc.
+This was especially true of the CSS processing, which was (mostly) powered by Gulp. Gulp let me create an efficient process for generating a single, production-ready CSS file...linting it, minifying it, etc.
 
 I actually hit a point where I felt compelled to tweet this...
 
@@ -87,7 +91,7 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 
 You get the idea...
 
-Like the `package.json` and `bower.json` files, the LESS files needed to be setup differently for the refactor. I adjusted the `.less` files and where adjusting the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing sh*t-show.
+Like the `package.json` and `bower.json` files, the LESS files needed to be setup differently for the refactor. I adjusted the `.less` files and where adjusting the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind numbing sh*t-show.
 
 I knew I would use these tools and techniques again and again, so containing them in a reusable template I could use to start projects seemed to make sense. I took notes on this while doing the refactor and when it was finished, I started creating the template.
 
@@ -105,15 +109,17 @@ Another set of problems soon appeared:
 
 * the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and the `.gitignore` needed a few more files added to it.
 
+* Making sure the tool word in .NET and WordPress environments meant Jade didn't need to be add to a project by default.
+
 So a downloadable template wouldn't work because it would be too opinionated. It would assume that every project required the same tooling/dev environment setup...which isn't true.
 
-It was clear that I had to programmatically scaffold each project so I could configure it based on a set of passed (or not-passed) options. [Yeoman](http://yeoman.io/) is the current popular scaffolding app and I could have spent some time searching through [Yeoman's generators](http://yeoman.io/generators/ "Review Yeoman's generators") to find what I needed.
+It was clear that I had to find a way to programmatically scaffold each project so I could configure it based on a set of passed (or not-passed) options. [Yeoman](http://yeoman.io/) is the current popular scaffolding app and I could have spent some time searching through [Yeoman's generators](http://yeoman.io/generators/ "Review Yeoman's generators") to find what I needed.
 
-But what I wanted was too specific so I doubted the generators would help. Plus, I wanted to see if I could use Node to build a tool for this  myself.
+But what I wanted was too specific so I doubted the Yeoman could help. Plus, I wanted to see if I could use Node to build a tool for this  myself.
 
 <a name="tool-building-process"></a>
 ## The Tool-Building Process
-I asked around and did some Google searches, trying to figure out the best way to do this.  It took me two nights to get files and folders to either download or be created with a Node command.
+I asked around and did some Google searches, trying to figure out the best way to do this. It took me two nights to get files and folders to either download or be created with a Node command.
 
 From there, I became ridiculously anal-retentive and spent three weeks (THREE WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around logging: what messages were sent to the terminal console as the app progressed, what it took to get them to appear in the proper order, etc.
 
