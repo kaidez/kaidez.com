@@ -101,11 +101,11 @@ Another set of problems soon appeared:
 
 * the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor.
 
-* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment that contains requirements that have been codified for almost a decade. One of the chief requirements is that we use  [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") for version control with instead of Git.
+* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment built around best practices codified for almost a decade. One of the chief requirements is that we use  [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") for version control with instead of Git.
 
-* the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and `.gitignore` needed a few more files added to it.
+* the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and the `.gitignore` needed a few more files added to it.
 
-So a downloadable template wouldn't work because it's too opinionated. It assumes that every project requires the exact same tooling setup when that obviously isn't true.
+So a downloadable template wouldn't work because it would be too opinionated. It would assume that every project required the same tooling/dev environment setup...which isn't true.
 
 It was clear that I had to programmatically scaffold each project so I could configure it based on a set of passed (or not-passed) options. [Yeoman](http://yeoman.io/) is the current popular scaffolding app and I could have spent some time searching through [Yeoman's generators](http://yeoman.io/generators/ "Review Yeoman's generators") to find what I needed.
 
