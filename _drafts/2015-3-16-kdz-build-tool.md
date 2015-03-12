@@ -48,9 +48,9 @@ I had a project at work where I had to create a single page website using a stan
 
 I was REALLY comfortable with these tools when I started this project. I had used them a lot previously and knew how to get them to work as a team inside my dev environment.
 
-This was especially true of the CSS, which was (mostly) centered around Gulp. I was able to use all the tools to create an efficient process for generating a single CSS file...linting, minifying, concatenating, etc.
+This was especially true of the CSS processing which was (mostly) powered by Gulp. Gulp let me create an efficient process for generating a single, production-ready CSS file...linting it, minifying it, etc.
 
-In fact, I hit a point where I felt compelled to tweet this...
+I actually hit a point where I felt compelled to tweet this...
 
 <blockquote class="twitter-tweet" lang="en" style="margin: 0 auto;"><p>Got my Gulp CSS build-out process working EXACTLY the way I want it to…only took 3 weeks.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/529054310379053056">November 2, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -67,7 +67,7 @@ For example: I didn't need all the dependencies listed in the `package.json` and
 
 OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build process again? That sucked.
 
-Again, I'm a fan of how well Bootstrap does responsive web design and I based my LESS setup around that. My `.less` files were named based on Bootstraps's pre-defined set of media queries.
+Again, I'm a fan of how well Bootstrap does responsive web design and based my LESS setup around that. My `.less` files were named based on Bootstraps's pre-defined set of media queries.
 
 So since Bootstrap has a media query called `@media (min-width: 1200px)`, I have a file called `min-width-1200.less` that contains the following code:
 
@@ -87,9 +87,9 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 
 You get the idea...
 
-This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I started redoing the `.less` files like I did with the `.json` files and while redoing the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing experience.
+This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I started redoing the `.less` files like I did with the `.json` files and while redoing the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing procedure.
 
-I knew I had to create a standard template for all this stuff. So I took notes on the tooling while doing the refactor and when that was finished, I started to create the template.
+I knew I would use these tools and techniques again and again, so containing them in a reusable template seemed to make sense. I took notes while doing the refactor and when it was finished, I started creating the template.
 
 <a name="more-problems"></a>
 ## More Problems
