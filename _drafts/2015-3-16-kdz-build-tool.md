@@ -93,11 +93,11 @@ I knew I would use these tools and techniques again and again, so containing the
 
 <a name="more-problems"></a>
 ## More Problems
-The template started off as a bunch files in GitHub repo. It contained the `.less` and `.json` files, and other things like the Grunt and Gulp files, and a `.gitignore` file.
+The template started off as a bunch of files in a GitHub repo. It contained the `.less` and `.json` files and other things, like the Grunt &amp; Gulp files and a `.gitignore` file.
 
 Another set of problems soon appeared:
 
-* scaffolding this project from the repo wasn't convenient. I could `git clone` it but that would download a folder with the files, not just files themselves. As a result, if I was starting a project from scratch, I would have to rename the folder to match the project. If I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.
+* scaffolding this project from the repo wasn't convenient. I could `git clone` it to my machine, but that would download a folder with the files when I just needed the files themselves. So if I was starting a project from scratch, I would have to rename the folder to match the project. Or, if I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.
 
 * the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor.
 
