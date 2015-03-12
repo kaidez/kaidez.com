@@ -262,8 +262,22 @@ A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowis
 <a name="further-reading"></a>
 ## Further Reading
 
+A main reason that I didn't write a tutorial was because there are so many good ones already out there. I found the [*Command-line utilities with Node.js* article by Glynn Phillips ](http://cruft.io/posts/node-command-line-utilities/) to be the best one...I'd start there.
+
+The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read. It's verbose in some spots but after reading various parts through it a few times, I was able to write my own Node code without the use of plugins...GOOD FOR ME!!!
+
+
 <a name="what-i-learned"></a>
 ## What I Learned
+Again...a lot!
+
+I was glad to solve my problem but the BEST thing about doing all this was I gained a lot of Node experience. I had played around with Node quite a bit before all this and, for sime reason, using Gulp made me understand it even better.
+
+But this project exposed me to ton of Node stuff. I gained a really good understanding od how Node interacts with a file system and all the quirks that come with exporting and requiring modules.
+
+I also learned about Promises and much they go hand-in-hand with Node. For all the Promise spaghetti code I wrote, I get them and see how they make parts of Node development easier.
+
+I really want to add more "Node stuff" to `kdz` and less "Node modules". I want to add things like `.pipe()` and `process.nextTick()` to the tool and see if they let me do things without requiring a bunch of npm modules.
 
 <a name="conclusion"></a>
 ## Conclusion
