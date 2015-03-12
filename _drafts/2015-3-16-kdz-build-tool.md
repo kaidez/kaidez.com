@@ -10,9 +10,9 @@ cat-name: "Code Tips"
 has-home-img: kdz-header.jpg
 tags: [javascript, node, kaidez]
 ---
-After doing a set of web development projects, I came up with some cool techniques based around toolset configuration.  I knew I would use the techniques and toolset over and over again, and also knew that I needed to find a way to easily set them up at the beginning of future projects.
+I came up with some cool web development techniques after doing a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I needed to find a way to set them up easily at the start of each project.
 
-I solved the problem by creating a Node scaffolding tool. I'm also being cute about it and naming the tool based on my hacker alias, calling it "kdz".
+I solved the problem by creating a Node scaffolding tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
 <h2 style="clear:both;">Table of Contents</h2>
 1. [This is not a tutorial](#not-a-tutorial)
@@ -33,15 +33,15 @@ To be clear, this is not a tutorial. I may do tutorials on certain parts of the 
 <a name="the-situation"></a>
 ## The Situation
 
-I had a project at work where I basically had to create a single page website using a standard HTML/CSS/JavaScript web stack. My development environment was configured like this:
+I had a project at work where I basically had to create a single page website using a standard HTML/CSS/JavaScript web stack. The tools in my development environment were configured like this:
 
 * [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
-* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because I find myself to very productive with it while constructing responsive web design.
+* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it makes me very inside my dev environment with it while building a responsive web design.
 * [Bower](http://bower.io/ "Review the Bower web package manager") was used to managed browser-level dependencies via a `bower.json` file.
 * [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to managed development-level dependencies via a `package.json` file.
-* [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate processes related to the items above, including building out the final page.
+* [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate tasks related to the things above, including building out the final page.
 
 I was at an EXTREMELY high comfort level with these tools when I started the project. I had used them a lot previously and understood what it took to configure them to the point that they worked well as a team.
 
