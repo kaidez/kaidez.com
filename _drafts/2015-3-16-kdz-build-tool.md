@@ -10,11 +10,11 @@ cat-name: "Code Tips"
 has-home-img: kdz-header.jpg
 tags: [javascript, node, kaidez]
 ---
-After doing a set of web development projects, I came up with some best practices that I knew I would use over and over again. And I also knew that I needed to come up with an easy way to apply these practices to any future projects.
+After doing a set of web development projects, I came up with some cool techniques based around toolset configuration.  I knew I would use the techniques and toolset over and over again, and also knew that I needed to find a way to easily set them up at the beginning of future projects.
 
-I solved the problem by creating a Node-based scaffolding tool to be used at the command line level. I'm also being cute about all this and naming the tool based on my hacker alias, calling it "kdz".
+I solved the problem by creating a Node scaffolding tool. I'm also being cute about it and naming the tool based on my hacker alias, calling it "kdz".
 
-## Table of Contents
+<h2 style="clear:both;">Table of Contents</h2>
 1. [This is not a tutorial](#not-a-tutorial)
 2. [The Situation](#the-situation)
 3. [The Problem](#the-problem)
@@ -26,9 +26,9 @@ I solved the problem by creating a Node-based scaffolding tool to be used at the
 <a name="not-a-tutorial"></a>
 ## This is not a tutorial
 
-To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, this is just my documenting my approach to solving a problem.
+To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just my documenting my approach to solving a problem.
 
-[The code is thoroughly commented code on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") and you can feel free to ask me questions about it either on Twitter or as a post comment. You would want to look at the npm modules in both the ["config" folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+[The code is thoroughly commented code on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") where you can review it and also feel free to ask me questions about it either on Twitter or as a post comment. You would want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
 
 <a name="the-situation"></a>
 ## The Situation
@@ -43,7 +43,7 @@ I had a project at work where I basically had to create a single page website us
 * [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to managed development-level dependencies via a `package.json` file.
 * [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate processes related to the items above, including building out the final page.
 
-I was at an EXTREMELY high comfort level with these tools when I started the project. I had used them a lot prior to starting and was able to configure them all to the point that they worked well as a team.
+I was at an EXTREMELY high comfort level with these tools when I started the project. I had used them a lot previously and understood what it took to configure them to the point that they worked well as a team.
 
 This was especially true of the CSS, which was (mostly) centered around Gulp. I was able to use all the tools to create an efficient process for generating a single CSS file...linting, minifying, concatenating, etc.
 
@@ -52,7 +52,7 @@ In fact, I felt compelled to tweet this...
 <blockquote class="twitter-tweet" lang="en"><p>Got my Gulp CSS build-out process working EXACTLY the way I want it to…only took 3 weeks.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/529054310379053056">November 2, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-There was a rush to ship this project and as a result, things got deployed when the code was "good enough," but "not as good as it could've been." It was obvious that some things needed refactoring.
+There was a rush to launch this project and as a result, things were launched when the code was "good enough," but "not as good as it could've been." It was obvious that some things needed refactoring.
 
 There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. And since I had already used these tools to create a productive dev environment for the project, I decide to reuse the same tooling/environment setup for the refactor.
 
@@ -60,7 +60,7 @@ There was no time to refactor it during work hours due to other projects on my t
 ## The Problem
 Recreating the setup was a pain in the a**. Since I was only refactoring parts of the site code and not the whole site itself, not every part was needed.
 
-For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time adjusting those files.
+For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing the listed dependencies.
 
 OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build again? That sucked.
 
@@ -83,3 +83,5 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 {% endprism %}
 
 You get the idea...
+
+This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I copied the `.less` files over like I did with the `.json` files, but while removing the `.json` dependencies was annoyingly manageable, removing the styles like this was a mind-numbing experience.
