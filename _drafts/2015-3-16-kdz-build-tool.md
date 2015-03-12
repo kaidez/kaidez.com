@@ -26,7 +26,7 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 <a name="not-a-tutorial"></a>
 ## This is not a tutorial
 
-To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just my documenting my approach to solving a problem.
+To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just my documenting my approach to solving a specific problem.
 
 [The code is thoroughly commented code on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") where you can review it and also feel free to ask me questions about it either on Twitter or as a post comment. You would want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
 
