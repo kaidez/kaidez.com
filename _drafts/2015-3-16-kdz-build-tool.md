@@ -10,13 +10,13 @@ cat-name: "Code Tips"
 has-home-img: kdz-header.jpg
 tags: [javascript, node, kaidez]
 ---
-I discovered some cool tricks after working on a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I had to find a way to easily set them up at the start of each project.
+I discovered some cool techniques after working on a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I had to find a way to easily set them up at the start of each project.
 
 I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
 <h2 style="clear:both;">Table of Contents</h2>
-1. [This is not a tutorial](#not-a-tutorial)
-2. [The Situation](#the-situation)
+1. [This Is Not a Tutorial](#not-a-tutorial)
+2. [How This Started](#how-this-started)
 3. [The Problem](#the-problem)
 4. [More Problems](#more-problems)
 5. [The Tool-Building Process](#tool-building-process)
@@ -24,30 +24,29 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 7. [Behind The Scenes](#behind-the-scenes)
 8. [What's Left To Do](#todo)
 9. [Further Reading](#further-reading)
-10. [What I Learned](#what-i-learned)
-11. [Conclusion](#conclusion)
+10. [Conclusion](#conclusion)
 
 <a name="not-a-tutorial"></a>
-## This is not a tutorial
+## This Is Not a Tutorial
 
-To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting my approach to solving a specific problem.
+To be clear, this is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I used to solve a specific problem.
 
-[The code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to ask questions/make comments about it either on [Twitter](https://twitter.com/kaidez "Visit kaidez on Twitter") or as a post comment. You would want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+[The kdz code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to look at it and ask questions/make comments about it as a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
 
-<a name="the-situation"></a>
-## The Situation
+<a name="how-this-started"></a>
+## How This Started
 
-I had a project at work where I had to create a single page website using a standard HTML/CSS/JavaScript web stack. The tools in my development environment were configured like this:
+I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The tools in my development environment were configured like this:
 
-* [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML pre-processing.
+* [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
-* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it makes me very productive inside my dev environment while I build a responsive web design.
+* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it makes me very productive while building a responsive web design.
 * [Bower](http://bower.io/ "Review the Bower web package manager") was used to manage browser-level dependencies via a `bower.json` file.
 * [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to manage development-level dependencies via a `package.json` file.
 * [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate tasks related to the things above, including building out the final page.
 
-I was at an EXTREMELY high comfort level with these tools when I started the project. I had used them a lot previously and understood what it took to configure them to the point that they worked well as a team.
+I was REALLY comfortable with these tools when I started this project. I had used them a lot previously and knew how to get them to work as a team inside my dev environment.
 
 This was especially true of the CSS, which was (mostly) centered around Gulp. I was able to use all the tools to create an efficient process for generating a single CSS file...linting, minifying, concatenating, etc.
 
