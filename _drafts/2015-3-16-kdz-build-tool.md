@@ -113,15 +113,15 @@ But what I wanted was too specific so I doubted the generators would help. Plus,
 
 <a name="tool-building-process"></a>
 ## The Tool-Building Process
-I asked around and did some Google searches to figure out the best way to do this.  It took me about two days of working at night after the day job to get the files and folders to be either created or downloaded.
+I asked around and did some Google searches, trying to figure out the best way to do this.  It took me two nights to get files and folders to either download or be created with a Node command.
 
-From there, I became ridiculously anal-retentive and spent four weeks (FOUR WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around the logging: what messages were sent to the terminal console as the app progressed, what color were they, etc.
+From there, I became ridiculously anal-retentive and spent three weeks (THREE WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around logging: what messages were sent to the terminal console as the app progressed, what it took to get them to appear in the proper order, etc.
 
 <a name="final-command"></a>
 ## The Final Command
-The end result of all this was `kdz`: a Node command that downloads files from a GitHub repo and also creates folders.  All in a programmatic way.
+The end result of all this was `kdz`: a Node command that downloads my standard project files from a GitHub repo, and it also creates files &amp; folders.  All in a programmatic way.
 
-After you install it, typing `kdz` from anywhere in the terminal displays the help, which looks like this:
+After you install it, typing `kdz` from anywhere in the terminal runs the `--help` command and outputs this:
 
 {% prism markup %}
   Usage: kdz [options] [command]
@@ -145,14 +145,14 @@ After you install it, typing `kdz` from anywhere in the terminal displays the he
 
 Just two commands for now...`app` and `dt`:
 
-* Running `kdz app` scaffolds out a SPA-like by performing the following steps:
+* Running `kdz app` scaffolds out a SPA-like project by performing the following steps:
 
   * a `build` folder is created with `css` and `js` subdirectories.
-  * a `coffee` folder is created and includes a `main.coffee` file.
-  * a `css-build` folder is created with an `imports` subdirectory. and empty `image-min` folder is created (images that need to be minified go here)
+  * a `coffee` folder is created and a `main.coffee` file is created inside of it.
+  * a `css-build` folder is created with an `imports` folder, and an empty `image-min` folder is created (images that need to be minified go here).
   * `bower.json`, `.bowerrc` and `STYLEGUIDE.md` files are downloaded from the `source-shared-files` directory in the `kdz` repo.
   * SPA-like `Gruntfile.js`, `gulpfile.js` and `package.json` files are downloaded from the `source-spa` directory in the `kdz` repo.
-	* The final build looks like this:
+* The final build looks like this:
 
 {% prism markup %}
 ├── build
@@ -172,16 +172,16 @@ Just two commands for now...`app` and `dt`:
 └── STYLEGUIDE.md
 {% endprism %}
 
-* If the `--test flag` is passed to `kdz app`, a `test-build` folder is created, then a test scaffold is created in that folder. `kdz dt` is a quick way of deleting `test-build`. This was used more for development than anything else.
+* If the `--test flag` is passed to `kdz app`, a `test-build` folder is created, then a test scaffold goes into that folder. `kdz dt` is a quick way of deleting `test-build` after the testing is done and was used for `kdz` development purposes only. It plays no role in getting a web dev project done.
 
-Along with `--test` and the standard `--help` and `--version` options, there are set of options:
+Along with `--test` and the standard `--help` and `--version`, there are a small set of options that can be passed to a command:
 
 *  the `--wordpress` option scaffolds out a WordPress-like project. It performs almost the same tasks as `kdz app` with the following differences:
 
-  * the `build` folder and its subdirectories are not created.
-  * the `Gruntfile.js`, `gulpfile.js` and `package.json` files that are downloaded are more geared toward WordPress development and downloaded from `source-wordpress`.
-  * a `functions.php` file is downloaded.
-	*  The final build looks like this:
+    * the `build` folder and its subdirectories are not created.
+    * the `Gruntfile.js`, `gulpfile.js` and `package.json` files that are downloaded are more geared toward WordPress development and downloaded from the `source-wordpress` folder in the kdz repo.
+    * a `functions.php` file is downloaded.
+*  The final build looks like this:
 
 {% prism markup %}
 
@@ -199,9 +199,9 @@ Along with `--test` and the standard `--help` and `--version` options, there are
 └── STYLEGUIDE.md
 {% endprism %}
 
-* the `--gitignore` option downloads a `.gitignore` file from `source-spa` to the root folder by default. But if the `--wordpress` option is passed, `.gitignore` will be WordPress-specific and downloaded from the `source-wordpress` folder in the `kdz` repo.
+* the `--gitignore` option downloads a `.gitignore` file from `source-spa` to the root folder by default. But if the `--wordpress` option is passed, `.gitignore` will be WordPress-specific and downloaded from `source-wordpress`.
 
-* the `--less` option downloads LESS files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the LESS files will be WordPress-specific and downloaded from the `source-wordpress` folder. As mentioned, the `.less` files are named based on Bootstrap-defined media queries so the final build would look like this:
+* the `--less` option downloads LESS files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the LESS files will be WordPress-specific and downloaded from `source-wordpress`. As mentioned, the `.less` files are named based on Bootstrap-defined media queries so the final build would look like this:
 
 {% prism markup %}
 css-build
@@ -228,9 +228,9 @@ css-build
      └── variables.less
 {% endprism %}
 
-* the `--scss` option does pretty much what `--less` does, except it downloads Sass files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the LESS files will be WordPress-specific and downloaded from the `source-wordpress` folder.  
+* the `--scss` option does pretty much what `--less` does, except it downloads Sass files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the Sass files will be WordPress-specific and downloaded from `source-wordpress`.  
 
-There are slight variations among the LESS and Sass builds and I've also created files like this so the CSS build out based on my self-imposed rules. For example: `globals.less` exists for a reason and while there's a `for.less`, there's no `for.scss`.
+There are slight variations among the LESS and Sass builds based on my self-imposed rules. For example: `globals.less` exists for a reason and even though there's a `for.less` file, there's no `for.scss` file.
 
 Learn about these variations and rules over on [the "Understand the Basic structure" section in repo's style guide](https://github.com/kaidez/kdz/blob/master/source-shared-files/STYLEGUIDE.md#understand-the-basic-structure).
 
