@@ -18,7 +18,7 @@ I solved the problem by creating a Node scaffolding tool. I'm also being cute ab
 1. [This is not a tutorial](#not-a-tutorial)
 2. [The Situation](#the-situation)
 3. [The Problem](#the-problem)
-4. [Store the data attributes in a link](#store-data attributes-link)
+4. [More Problems](#more-problems)
 5. [Store the data attributes in multiple links](#store-data attributes-multiple-link)
 6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-fallback)
 7. [Conclusion](#conclusion)
@@ -54,7 +54,7 @@ In fact, I felt compelled to tweet this...
 
 There was a rush to launch this project and as a result, things were launched when the code was "good enough," but "not as good as it could've been." It was obvious that some things needed refactoring.
 
-There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. And since I had already used these tools to create a productive dev environment for the project, I decide to reuse the same tooling/environment setup for the refactor.
+There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. And since I had already used these tools to create a productive dev environment for the actual project, I decide to reuse the same tooling/environment setup for the refactor.
 
 <a name="the-problem"></a>
 ## The Problem
@@ -70,7 +70,7 @@ So since Bootstrap has a media query called `@media (min-width: 1200px)`, I have
 
 {% prism css %}
 @media (min-width: 1200px) {
-
+  // code is already here
 }
 {% endprism %}
 
@@ -78,10 +78,26 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 
 {% prism css %}
 @media screen and (min-width: 768px) {
-
+  // code is already here
 }
 {% endprism %}
 
 You get the idea...
 
-This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I copied the `.less` files over like I did with the `.json` files, but while removing the `.json` dependencies was annoyingly manageable, removing the styles like this was a mind-numbing experience.
+This was the LESS setup for the project and as with the `package.json` and `bower.json` files, they needed to be setup differently for the refactor. I started redoing the `.less` files like I did with the `.json` files and while redoing the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind-numbing experience.
+
+I knew I had to create a standard template for all this stuff. So I took notes on the tooling while doing the refactor and when it was finished, I started to create the template.
+
+<a name="more-problems"></a>
+## More Problems
+The template started off as a bunch files in GitHub repo. It contained the `.less` and `.json` files, and other things like the Grunt and Gulp files, and a `.gitignore` file.
+
+Another set of problems soon appeared:
+
+* setting up this project from the repo wasn't really convenient. I could `git clone` it but that would download a folder with the files and not just files themselves. I would then either have the rename the folder to match the project or copy the files to another folder...doable but not convenient.
+
+* The template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, .[Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I've been reading up on [Rework](https://github.com/reworkcss/rework) which lets you build a customizable pre-processor, so there may when I don't even need LESS or Sass.
+
+* The template contained a `.gitignore` that listed some common files that are ignore with Git commits. But my day job requires my working in a .NET environment that contains almost a decade of codified requirements. One of the chief requirements is that we manage version control with [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microft's Team Foundation Server") instead of Git.
+
+* The template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and `.gitignore` needed a few more files added to it.
