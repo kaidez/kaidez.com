@@ -12,14 +12,14 @@ tags: [javascript, node, kaidez]
 ---
 I came up with some cool web development techniques after doing a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I had to find a way to easily set them up at the start of each project.
 
-I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
+I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
 <h2 style="clear:both;">Table of Contents</h2>
 1. [This is not a tutorial](#not-a-tutorial)
 2. [The Situation](#the-situation)
 3. [The Problem](#the-problem)
 4. [More Problems](#more-problems)
-5. [Store the data attributes in multiple links](#store-data attributes-multiple-link)
+5. [The Tool-Building Process](#tool-building-process)
 6. [Use "getAttribute()" as fallback code for "dataset"](#getattribute-fallback)
 7. [Conclusion](#conclusion)
 
@@ -96,14 +96,20 @@ Another set of problems soon appeared:
 
 * scaffolding this project from the repo wasn't convenient. I could `git clone` it but that would download a folder with the files, not just files themselves. As a result, if I was starting a project from scratch, I would have to rename the folder to match the project. If I already started a project in another folder, I would have to copy the dowloaded repo files to that other folder.  All of this is doable...it's just not convenient.
 
-* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because ot lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-proceessor.
+* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-proceessor.
 
-* the template contained a `.gitignore` that listed some common files that are ignored with Git commits. But my day job requires my working in a .NET environment that contains requirements that have been codified for almost a decade. One of the chief requirements is that we manage version control with [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") instead of Git.
+* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment that contains requirements that have been codified for almost a decade. One of the chief requirements is that we manage version control with [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") instead of Git.
 
 * the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and `.gitignore` needed a few more files added to it.
 
-So a downloadable template wouldn't work because it would be too opinionated. It assumed that every project required the same tooling setup when that obviously wasn't true.
+So a downloadable template wouldn't work because it's too opinionated. It assumes that every project requires the exact same tooling setup when that obviously isn't true.
 
-It was clear that I had to find a way to programmatically scaffold each project so I could configure based on a passed (or not-passed) set of options. [Yeoman](http://yeoman.io/) is the current popular scaffolding app and I could have spent some time searching through [Yeoman's generators](http://yeoman.io/generators/ "Review Yeoman's generators") to find what I need.
+It was clear that I had to programmatically scaffold each project so I could configure it based on a set of passed (or not-passed) options. [Yeoman](http://yeoman.io/) is the current popular scaffolding app and I could have spent some time searching through [Yeoman's generators](http://yeoman.io/generators/ "Review Yeoman's generators") to find what I needed.
 
-But what I wanted was too specific so I doubted the generators would have what I needed. Plus, I wanted to see if I could use Node to build it myself.
+But what I wanted was too specific so I doubted the generators would help. Plus, I wanted to see if I could use Node to build a tool for this  myself.
+
+<a name="tool-building-process"></a>
+## The Tool-Building Process
+I asked around and did some Google searches to figure out the best way to do this.  It took me about two days of working at night after the day job to get the files and folders to be either created or downloaded.
+
+From there, I became ridiculously anal-retentive and spent four weeks (FOUR WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around the logging: what messages were sent to the terminal console as the app progressed.
