@@ -22,7 +22,10 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 5. [The Tool-Building Process](#tool-building-process)
 6. [The Final Command](#final-command)
 7. [Behind The Scenes](#behind-the-scenes)
-8. [Conclusion](#conclusion)
+8. [What's Left To Do](#todo)
+9. [Further Reading](#further-reading)
+10. [What I Learned](#what-i-learned)
+11. [Conclusion](#conclusion)
 
 <a name="not-a-tutorial"></a>
 ## This is not a tutorial
@@ -232,15 +235,37 @@ There are slight variations among the LESS and Sass builds and I've also created
 
 Learn about these variations and rules over on [the "Understand the Basic structure" section in repo's style guide](https://github.com/kaidez/kdz/blob/master/source-shared-files/STYLEGUIDE.md#understand-the-basic-structure).
 
-<a name="behind-the-scene"></a>
+<a name="behind-the-scenes"></a>
 ## Behind The Scenes
 
-Some interesting point about how `kdz` works behind the scenes:
+Some interesting points about how `kdz` works behind the scenes:
 
 * Obviously, `kdz` was built with Node.
 * [commander](https://www.npmjs.com/package/commander "Read about the npm commander module") was the key package used to build the tool. It's what I used to configure the commands and options.
-* [q](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Every
+* [q](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Node runs things asynchronously and I need to make sure that a certain step didn't run until some other steps ran before it. q properly managed that process.
+* The [download](https://www.npmjs.com/package/download "Read about the npm download module") and [download-status](https://www.npmjs.com/package/download-status "Read about the npm download-status module") modules work together to download files from the repo and display how the download is progressing.
+* [chalk](https://www.npmjs.com/package/chalk "Read about the npm chalk module") adds some pretty sweet coloring to outputted console statements.
 
+<a name="todo"></a>
+## What's Left To Do
+A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list "Read the TODO list on the kdz repo") of things I need/want to do, but here are the main things:
+
+* __get `kdz` working on Windows:__ in this day and age, there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think `kdz` should respect that.
+
+* __make the Promises neater:__ I've played with Promises before but this was the first project that I REALLY used them. I used them primarily to make sure the app logging happens in the proper sequence and while I'm (pretty) sure that I implemented them properly based on the q documentation, the code is spaghetti-like. I'd like to focus on cleaning it up is possible.
+
+* __make a small library:__ I spent a day looking at spots where the code was repetitive, then placing that code in a reusable function that all the spots could use. There are other spots that can use this: lots of spots use [Node's fs.open() method](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback "Read about Node fs.open") to check for the existence of a given file or folder. Making that code chunk reusable makes sense.
+
+* __make the options run on their own:__ Right now, the `--gitignore`, `--less`, `--sass` and `--wordpress` won't run unless they're passed as options to commands. In other words, running `kdz app` will scaffold a basic project but if I want to download Sass files sometime after that, I would have to run `kdz app -s`. Sass files should be able to be download without the `app` command so I'm working on that.
+
+
+<a name="further-reading"></a>
+## Further Reading
+
+<a name="what-i-learned"></a>
+## What I Learned
 
 <a name="conclusion"></a>
 ## Conclusion
+
+i  don’t believe in religious zealotry. I believe in getting stuff done. I want to get it done in whatever tool is available to get me done. If that’s Brackets or Sublime or Visual Studio, I’ll use the tool I want to get [inaudible] is.
