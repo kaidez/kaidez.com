@@ -69,9 +69,9 @@ Recreating this setup was a pain in the a**. Since I was only refactoring _parts
 
 For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
 
-OK...that was more of an inconvenience than a pain in the a$$. But setting up the CSS build process again? That sucked.
+OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build process again? That sucked.
 
-Again, I'm a fan of how well Bootstrap does responsive web design and based my LESS setup around that. My `.less` files were named based on Bootstraps's pre-defined set of media queries.
+Again, I'm a fan of how well Bootstrap does responsive web design and based my LESS setup around that. My `.less` files were named based on Bootstraps's pre-defined set of media queries, allowing me to add media query code based Bootstrap's near-perfect setup.
 
 So since Bootstrap has a media query called `@media (min-width: 1200px)`, I have a file called `min-width-1200.less` that contains the following code:
 
@@ -95,7 +95,7 @@ Like the `package.json` and `bower.json` files, the LESS files needed to be setu
 
 Adjusting the `.json` dependencies was a manageable inconvenience...adjusting the `.less` files was a mind numbing sh*t-show.
 
-I knew I would use this setup again and again, so containing it in a reusable template I could use to initialize projects seemed to make sense. When I finished the refactor, I started building the template.
+I knew I would use this setup again and again, so containing it in a reusable template I could start projects with seemed to make sense. So I started building the template when I finished the refactor.
 
 <a name="more-problems"></a>
 ## More Problems
