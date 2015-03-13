@@ -33,14 +33,14 @@ A few notes first...
 
 * This is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I took to solve a specific problem.
 
-* [The kdz code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to look at it and ask questions/make comments about it in a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "Review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+* [The "kdz" code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the "kdz" code on GitHub") for your review: feel free to look at it and ask questions/make comments about it in a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "Review the npm code modules for "kdz"") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
 
 * This tool will (probably) never be published as an [npm](https://www.npmjs.com/) package so if you want to download it, please [read the repo's "Before you install" section](https://github.com/kaidez/kdz#before-you-install "Read the repo's "Before you install" section") first.
 
 <a name="how-this-started"></a>
 ## How This Started
 
-I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The tools in my development environment were configured like this:
+I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The project tooling was set up like this in my dev environment:
 
 * [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
@@ -61,11 +61,11 @@ I actually hit a point where I felt compelled to tweet this...
 
 There was a rush to launch this project and as a result, it launched when the code was "good enough," but "not as good as it could've been." Some things clearly needed refactoring.
 
-There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. And since I had already used these tools to create a productive dev environment for the actual project, I decide to reuse the same tooling/environment setup for the refactor.
+There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. Since I liked with the tooling environment I used for the project, I decided to use it for the refactor.
 
 <a name="the-problem"></a>
 ## The Problem
-Recreating this setup was a pain in the a$$. Since I was only refactoring *parts* of the site code and not the *entire site*, the tooling need to be adjusted in some spots.
+Recreating this setup was a pain in the a**. Since I was only refactoring _parts_ of the site code and not the _entire site_, the tooling need to be adjusted in some spots.
 
 For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
 
@@ -103,13 +103,13 @@ The template started off as a bunch of files in a GitHub repo. It contained the 
 
 Another set of problems soon appeared:
 
-* scaffolding this project from the repo wasn't convenient. I could `git clone` it to my machine, but that would download a folder with the files...I just needed the files. So if I was starting a project from scratch, I would have to rename the downloaded folder to match the project. Or, if I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.
+* scaffolding this project from the repo wasn't convenient. Starting a project with it meant I would need to `git clone` it to my machine.  But that would download a folder with the files and I just needed the files. So if I was starting a project from scratch, I would have to rename the downloaded folder to match the project. Or, if I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.
 
-* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example: [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor.
+* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example: [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  And what if I wanted to use another pre-processor like [Stylus](http://learnboost.github.io/stylus/ "Read more about Stylus") someday? Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor. Either way, the template needed to be flexible enough for me to add/remove pre-processors as I saw fit.
 
-* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment built around best practices codified over the course of a decade. One of the best practices is that we use  [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") for version control, not Git.
+* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment built around best practices codified over the course of a decade. One of these best practices is that we use  [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") for version control, not Git.
 
-* the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work, the CSS would need a slightly difference build-out process and the `.gitignore` would need some files added to it.
+* the template was configured really well for single page applications (SPAs), but I also do a fair amount of WordPress work.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work, the CSS would need a slightly difference build-out process and the `.gitignore` would need some files added to it.
 
 * Making the tool work for .NET and WordPress environments meant Jade didn't need to be add to a project by default.
 
@@ -117,7 +117,7 @@ So a downloadable template wouldn't work because it would be too opinionated. It
 
 It was clear that I had to find a way to programmatically scaffold each project so I could configure it based on a set of passed (or not-passed) options. [Yeoman](http://yeoman.io/) is the current popular scaffolding app and I could have spent some time searching through [Yeoman's generators](http://yeoman.io/generators/ "Review Yeoman's generators") to find what I needed.
 
-But what I wanted was too specific so I doubted the Yeoman could help. Plus, I wanted to see if I could use Node to build a tool for this  myself.
+But what I wanted was too specific so I doubted the Yeoman could help. So I decided to use Node to try and build the tool for this.
 
 <a name="tool-building-process"></a>
 ## The Tool-Building Process
@@ -127,12 +127,12 @@ From there, I became ridiculously anal-retentive and spent three weeks (THREE WE
 
 <a name="final-command"></a>
 ## The Final Command
-The end result of all this was `kdz`: a Node command that downloads my standard project files from a GitHub repo, and it also creates files &amp; folders.  All in a programmatic way.
+The end result of all this is `kdz`: a Node tool that lets me scaffold  a project and add small set of options. It downloads files from a GitHub repo, and it also creates files &amp; folders....all in a programmatic way.
 
 After you install it, typing `kdz` from anywhere in the terminal runs the `--help` command and outputs this:
 
 {% prism markup %}
-  Usage: kdz [options] [command]
+  Usage: "kdz" [options] [command]
 
 
   Commands:
@@ -187,7 +187,7 @@ Along with `--test` and the standard `--help` and `--version`, there are a small
 *  the `--wordpress` option scaffolds out a WordPress-like project. It performs almost the same tasks as `kdz app` with the following differences:
 
     * the `build` folder and its subdirectories are not created.
-    * the `Gruntfile.js`, `gulpfile.js` and `package.json` files that are downloaded are more geared toward WordPress development and downloaded from the `source-wordpress` folder in the kdz repo.
+    * the `Gruntfile.js`, `gulpfile.js` and `package.json` files that are downloaded are more geared toward WordPress development and downloaded from the `source-wordpress` folder in the "kdz" repo.
     * a `functions.php` file is downloaded.
 *  The final build looks like this:
 
@@ -238,16 +238,16 @@ css-build
 
 * the `--scss` option does pretty much what `--less` does, except it downloads Sass files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the Sass files will be WordPress-specific and downloaded from `source-wordpress`.  
 
-There are slight variations among the LESS and Sass builds based on my self-imposed rules. For example: `globals.less` exists for a reason and even though there's a `for.less` file, there's no `for.scss` file.
+There are slight variations among the LESS and Sass builds based on my self-imposed rules. For example: the `globals.less` file exists for a reason and although there's a `for.less` file, there's no `for.scss` file.
 
 Learn about these variations and rules over on [the "Understand the Basic structure" section in repo's style guide](https://github.com/kaidez/kdz/blob/master/source-shared-files/STYLEGUIDE.md#understand-the-basic-structure).
 
 <a name="behind-the-scenes"></a>
 ## Behind The Scenes
 
-Some interesting points about how kdz works behind the scenes:
+Some interesting points about how "kdz" works behind the scenes:
 
-* Obviously, kdz was built with Node.
+* Obviously, "kdz" was built with Node.
 * [commander](https://www.npmjs.com/package/commander "Read about the npm commander module") was the key package used to build this tool. It's what I used to configure the commands and options.
 * [q](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Node runs things asynchronously and I need to make sure that a certain step didn't run until some other steps ran before it. q properly managed that process.
 * The [download](https://www.npmjs.com/package/download "Read about the npm download module") and [download-status](https://www.npmjs.com/package/download-status "Read about the npm download-status module") modules work together to download files from the repo and display how the download is progressing.
@@ -255,9 +255,9 @@ Some interesting points about how kdz works behind the scenes:
 
 <a name="todo"></a>
 ## What's Left To Do
-A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list "Read the TODO list on the kdz repo") of things I need/want to do, but here are the main things:
+A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list "Read the TODO list on the "kdz" repo") of things I need/want to do, but here are the main things:
 
-* __get kdz working on Windows:__ we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think kdz should respect that.
+* __get "kdz" working on Windows:__ we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think "kdz" should respect that.
 
 * __make the Promises neater:__ I used Promises primarily to make sure the console logging happened in the proper order and while I'm (pretty) sure I implemented them properly, the code is spaghetti-like. I'd like to try and clean it up.
 
@@ -276,13 +276,17 @@ The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read
 
 <a name="conclusion"></a>
 ## Conclusion
+"kdz" gives me the flexibility I needed. So back to the pre-processor conversation, I can add LESS and Sass files to a project by passing one of their respective options, but don't have to pass any options if I want to use Rework.
 
-I'm glad creating kdz solved my problem but the BEST thing about doing all this was I gained a lot of Node experience. I had played around with Node quite a bit before all this and, for some reason, using Gulp made me understand it even better.
+And if every want to be able to configure Stylus or Jade for a project, I can just add an option to "kdz".  This will be really easy if I add a method library.
+
+
+I'm glad creating "kdz" solved my problem but the BEST thing about building it was the amount of new Node knowledge I gained in the end. I had used Node before this and I understood it better once I started using Gulp.
 
 But this project exposed me to ton of Node stuff. I gained a really good understanding of how Node interacts with a file system and all the quirks that come with exporting and requiring modules, along with some other things.
 
-I also learned more about Promises and how they really go hand-in-hand with Node. For all the issues with my Promise code, I better-understand them now and see how they make Node development easier.
+I also learned more about Promises and much they go hand-in-hand with Node. For all the issues with my Promise code, I better understand them now and see how they make Node development easier.
 
- I still have more work to do: I really want to add more "Node stuff" to kdz instead of adding more "Node modules". By that, I mean that I want to add things like `.pipe()` and `process.nextTick()` to the tool and see if they let me do things without requiring a bunch of pre-built npm modules.
+ I still have more work to do: I really want to add more "Node stuff" to "kdz" instead of adding more "Node modules". By that, I mean that I want to use things like `.pipe()` and `process.nextTick()` to see if they let me do things without requiring a bunch of pre-built npm modules.
 
-But overall, creating kdz was one of the best web development experiences I've had in a while and can't wait to continue work on it. If not to solve a problem, then to get Node to bend to my will some more.
+But overall, creating "kdz" was one of the best web development experiences I've had in a while and can't wait to continue developing it. If not to continue solving a problem, then to get Node to bend to my will some more.
