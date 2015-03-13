@@ -10,7 +10,7 @@ cat-name: "Code Tips"
 has-home-img: kdz-header.jpg
 tags: [javascript, node, kaidez]
 ---
-I discovered some cool techniques after working on a bunch of web development projects, techniques based mostly around tooling.  I knew I would use the techniques and tools for future projects, and also knew that I had to find a way to easily set them up at the start of each project.
+I came up with some cool techniques after working on a bunch of web development projects, techniques based mostly around front-end tooling.  I knew I would use these techniques and tools in future projects, and also knew that I had to find a way to easily set them up at the start of each project.
 
 I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
@@ -31,9 +31,9 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 
 A few notes first...
 
-* This is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I used to solve a specific problem.
+* This is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I took to solve a specific problem.
 
-* [The kdz code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to look at it and ask questions/make comments about it as a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "Review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+* [The kdz code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the kdz code on GitHub") for your review: feel free to look at it and ask questions/make comments about it in a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "Review the npm code modules for kdz") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
 
 * This tool will (probably) never be published as an [npm](https://www.npmjs.com/) package so if you want to download it, please [read the repo's "Before you install" section](https://github.com/kaidez/kdz#before-you-install "Read the repo's "Before you install" section") first.
 
@@ -45,31 +45,31 @@ I had a project at work where I had to create a single page website using a stan
 * [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
-* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it I'm very productive while while using it to build a responsive web design.
+* I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it I'm very productive when using it to build a responsive web design.
 * [Bower](http://bower.io/ "Review the Bower web package manager") was used to manage browser-level dependencies via a `bower.json` file.
 * [npm](https://www.npmjs.com/ "Review the npm package manager for Node") was used to manage development-level dependencies via a `package.json` file.
-* [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate tasks related to the things above, including building out the final page.
+* [Grunt](http://gruntjs.com/ "Review the Grunt task runner") and [Gulp](http://gulpjs.com/ "Review the Gulp build system") were used to automate various project tasks, especially build-out of the final page.
 
-I was REALLY comfortable with these tools when I started this project. I had used them a lot previously and knew how to get them to work as a team inside my dev environment.
+I had hit a serious comfort zone with the tools well in advance of starting this project. I had used all of them before and knew how to get them to work as a team inside my dev environment.
 
-This was especially true of the CSS processing, which was (mostly) powered by Gulp. Gulp let me create an efficient process for generating a single, production-ready CSS file...linting it, minifying it, etc.
+This was especially true of the CSS processing, which was powered by Gulp...mostly. Gulp let me create an efficient process for generating a single, production-ready CSS file...linting it, minifying it, concatenating it, etc.
 
 I actually hit a point where I felt compelled to tweet this...
 
 <blockquote class="twitter-tweet" lang="en" style="margin: 0 auto;"><p>Got my Gulp CSS build-out process working EXACTLY the way I want it to…only took 3 weeks.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/529054310379053056">November 2, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-There was a rush to launch this project and as a result, things were launched when the code was "good enough," but "not as good as it could've been." It was obvious that some things needed refactoring.
+There was a rush to launch this project and as a result, it launched when the code was "good enough," but "not as good as it could've been." Some things clearly needed refactoring.
 
 There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. And since I had already used these tools to create a productive dev environment for the actual project, I decide to reuse the same tooling/environment setup for the refactor.
 
 <a name="the-problem"></a>
 ## The Problem
-Recreating this setup was a pain in the a**. Since I was only refactoring parts of the site code and not the whole site itself, the tooling need to be adjusted in some spots.
+Recreating this setup was a pain in the a$$. Since I was only refactoring *parts* of the site code and not the *entire site*, the tooling need to be adjusted in some spots.
 
 For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
 
-OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build process again? That sucked.
+OK...that was more of an inconvenience than a pain in the a$$. But setting up the CSS build process again? That sucked.
 
 Again, I'm a fan of how well Bootstrap does responsive web design and based my LESS setup around that. My `.less` files were named based on Bootstraps's pre-defined set of media queries.
 
@@ -91,9 +91,11 @@ And since it also has a media query called `@media screen and (min-width: 768px)
 
 You get the idea...
 
-Like the `package.json` and `bower.json` files, the LESS files needed to be setup differently for the refactor. I adjusted the `.less` files and where adjusting the `.json` dependencies was a manageable inconvenience, redoing the style setup was a mind numbing sh*t-show.
+Like the `package.json` and `bower.json` files, the LESS files needed to be setup differently for the refactor. I only had to adjust two `.json` files...I had to adjust 20 `.less` files.
 
-I knew I would use these tools and techniques again and again, so containing them in a reusable template I could use to start projects seemed to make sense. I took notes on this while doing the refactor and when it was finished, I started creating the template.
+Adjusting the `.json` dependencies was a manageable inconvenience...adjusting the `.less` files was a mind numbing sh*t-show.
+
+I knew I would use this setup again and again, so containing it in a reusable template I could use to initialize projects seemed to make sense. When I finished the refactor, I started building the template.
 
 <a name="more-problems"></a>
 ## More Problems
@@ -103,13 +105,13 @@ Another set of problems soon appeared:
 
 * scaffolding this project from the repo wasn't convenient. I could `git clone` it to my machine, but that would download a folder with the files...I just needed the files. So if I was starting a project from scratch, I would have to rename the downloaded folder to match the project. Or, if I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.
 
-* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example, [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor.
+* the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example: [Jekyll has built-in Sass integration](http://jekyllrb.com/docs/assets/) so using [Sass](http://sass-lang.com/ "Review the Sass pre-processor") in that situation may make more sense.  Plus, I want to use [Rework](https://github.com/reworkcss/rework) at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor.
 
-* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment built around best practices codified for almost a decade. One of the chief requirements is that we use  [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") for version control with instead of Git.
+* the template contained a `.gitignore` that listed some common files that should be ignored from Git commits. But my day job requires my working in a .NET environment built around best practices codified over the course of a decade. One of the best practices is that we use  [TFS](https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx "Review Microsoft's Team Foundation Server") for version control, not Git.
 
-* the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work the way I needed them to, the CSS needed a slightly difference build-out process in some spots and the `.gitignore` needed a few more files added to it.
+* the template was configured really well for single page applications (SPAs), but I do a fair amount of WordPress work as well.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work, the CSS would need a slightly difference build-out process and the `.gitignore` would need some files added to it.
 
-* Making sure the tool word in .NET and WordPress environments meant Jade didn't need to be add to a project by default.
+* Making the tool work for .NET and WordPress environments meant Jade didn't need to be add to a project by default.
 
 So a downloadable template wouldn't work because it would be too opinionated. It would assume that every project required the same tooling/dev environment setup...which isn't true.
 
