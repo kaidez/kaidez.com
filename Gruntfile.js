@@ -174,41 +174,6 @@ module.exports = function(grunt) {
             }
         },
 
-    // properties to be loaded into the application cache (manifest.appcache) file.  they load in via a template in the 'manifest task'
-    site_files: [
-      'js/libs/*.js'
-    ],
-
-    // create application cache (manifest.appcache) file for the whole site
-    manifest: {
-      generate: {
-        options: {
-          basePath: '_site/',
-          cache: [
-            'affiliate-disclaimer.html',
-            'colophon.html',
-            'index.html',
-            'search.html',
-            'search.json',
-            'sitemap.html',
-            'css/styles.min.css',
-            'img/profilepic.jpg',
-            'img/footer-bg.png',
-            'img/homePageDefault.jpg',
-            'img/kaidez-sprite.png',
-            'img/kaidez-sprite@2x.png',
-            'js/scripts.min.js'
-          ],
-          network: ['*'],
-          preferOnline: true,
-          verbose: true,
-          timestamp: true,
-        },
-        src: '<%= site_files %>',
-        dest: '_site/manifest.appcache'
-      }
-    },
-
     // automagically concat/minify site jS based on RequireJS settings
     requirejs: {
       compile: {
@@ -368,7 +333,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-manifest');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-cdn');
   grunt.loadNpmTasks('grunt-targethtml');
@@ -380,5 +344,5 @@ module.exports = function(grunt) {
   grunt.registerTask('md', ['modernizr']);
   grunt.registerTask('rq', ['requirejs']);
   grunt.registerTask('dpush', ['jekyll:dev','sftp-deploy:staging']);
-  grunt.registerTask('ppush', ['targethtml:prod', 'jekyll:prod', 'cdn', 'manifest', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
+  grunt.registerTask('ppush', ['targethtml:prod', 'jekyll:prod', 'cdn', 'sftp-deploy:production', 'targethtml:dev', 'jekyll:dev']);
 };
