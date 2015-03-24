@@ -197,12 +197,7 @@ module.exports = function(grunt) {
             'img/homePageDefault.jpg',
             'img/kaidez-sprite.png',
             'img/kaidez-sprite@2x.png',
-            'js/scripts.min.js',
-            'font/FontAwesome.otf',
-            'font/fontawesome-webfont.eot',
-            'font/fontawesome-webfont.svg',
-            'font/fontawesome-webfont.ttf',
-            'font/fontawesome-webfont.woff'
+            'js/scripts.min.js'
           ],
           network: ['*'],
           preferOnline: true,
