@@ -17,7 +17,8 @@ Times have changed: Flash doesn't work on mobile, is not SEO-friendly, is not ea
 ##Table of Contents
 1. [Client Requirements](#client-requirements)
 2. [A Modern Design](#modern-design)
-2. [Using WordPress](#wordpress)
+3. [Using WordPress](#wordpress)
+4. [Using Bootstrap](#bootstrap)
 
 <a name="client-requirements"></a>
 ###Client Requirements
@@ -27,6 +28,8 @@ The client requirements were very straight-forward:
 * make the design as modern as possible.
 
 * make it easy to update via WordPress.
+
+* make it responsive.
 
 * make it mobile-friendly.
 
@@ -44,4 +47,12 @@ You have to use whitespace, fonts and color in way that conveys an inviting desi
 
 My friend wanted to use WordPress to both contain the design and that was no-brainer. Other content management systems like Joomla and Drupal have their strengths, but WordPress made more sense for this project due to its ease of use and wider swath of community support.
 
-Development-wise, I created [a custom child theme](https://codex.wordpress.org/Child_Themes "Read more about creating a WordPress child theme") against WordPress' stock twentythirteen theme. This meant I could safely duplicate the core WordPress files and customize them as needed to implement the design.
+Development-wise, I created [a custom child theme](https://codex.wordpress.org/Child_Themes "Read more about creating a WordPress child theme") against WordPress' stock twentythirteen theme. This meant I could safely duplicate the core WordPress files and customize them as needed to implement the design...all in all very easy.
+
+That being said, I made a point to NOT duplicate a lot of core files and only did so when I had no choice. I've been in situations where duplicating a lot of files for the sake of child-themes makes updating WordPress a pain.
+
+Plus, customizing a lot of files would make the site harder for my friend to maintain. I didn't want to create core functionality that could only be updated by changing code and not a plugin, so I mostly customized the site by making changes to the core stylesheet.
+<a name="bootstrap"></a>
+###Using Bootstrap
+
+Speaking of stylesheets, I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Read more about Twitter Bootstrap") to make the responsive, which was also pretty easy. I used its [Grid system](http://getbootstrap.com/css/#grid, "Read more about Twitter Bootstrap's Grid system") to create a variety 
