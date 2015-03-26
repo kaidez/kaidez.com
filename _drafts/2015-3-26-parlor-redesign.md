@@ -40,4 +40,6 @@ You have to use whitespace, fonts and color in way that conveys an inviting desi
 
 I did want to use the "design in-browser" principle for mocking up the site, where images mockups are skipped in favor of mocking up a live, prototype site. I spoke about this in [my last post about redesigning this site](/site-redesign-2013/#design-in-browser, "Read how kaidez.com used the design in-browser principle") and find it effective.
 
-But it took some time to set up the webhost so I passed mockups to my friend instead of waiting for the webhost to be up and running.
+But this required getting my friend's webhost properly set up and that took some time. So I passed on design in-browser and did image mockups instead.
+
+Design in-browser has benefites, particular for the developer.
