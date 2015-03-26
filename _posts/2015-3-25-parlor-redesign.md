@@ -88,4 +88,4 @@ As a result of this, I will probably redesign this site using WordPress in the (
 <a name="conclusion"></a>
 ###Conclusion
 
-There are a few post-launch tasks that need to be performed, but none of them are showstoppers for not delivering a site that the client wanted. Everyone was happy when the site was launched so I really can't ask for anything more.
+There are a few post-launch tasks that need to be performed, but none of them are show-stoppers for not delivering a site that the client wanted. Everyone was happy when the site was launched so I really can't ask for anything more.
