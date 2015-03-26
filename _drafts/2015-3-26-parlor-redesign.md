@@ -17,6 +17,7 @@ Times have changed: Flash doesn't work on mobile, is not SEO-friendly, is not ea
 ##Table of Contents
 1. [Client Requirements](#client-requirements)
 2. [A Modern Design](#modern-design)
+2. [Using WordPress](#wordpress)
 
 <a name="client-requirements"></a>
 ###Client Requirements
@@ -38,8 +39,6 @@ My friend requested a clean, minimalist design...which is actually hard to do. T
 
 You have to use whitespace, fonts and color in way that conveys an inviting design. This takes time: it took about three weeks of image mockup iterations before all parties were in agreement with the final look-and-feel.
 
-I did want to use the "design in-browser" principle for mocking up the site, where images mockups are skipped in favor of mocking up a live, prototype site. I spoke about this in [my last post about redesigning this site](/site-redesign-2013/#design-in-browser, "Read how kaidez.com used the design in-browser principle") and find it effective.
-
-But this required getting my friend's webhost properly set up and that took some time. So I passed on design in-browser and did image mockups instead.
-
-Design in-browser has benefites, particular for the developer.
+<a name="wordpress"></a>
+###Using WordPress
+ It was good to get back into WordPress development.
