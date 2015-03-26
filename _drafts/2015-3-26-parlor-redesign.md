@@ -38,4 +38,6 @@ My friend requested a clean, minimalist design...which is actually hard to do. T
 
 You have to use whitespace, fonts and color in way that conveys an inviting design. This takes time: it took about three weeks of image mockup iterations before all parties were in agreement with the final look-and-feel.
 
-I did want to use the "design in-browser" principle for mocking up the site, where images mockups are skipped in favor of mocking up a prototype site in a working website. I spoke about this in [my last personal site redesign post](/site-redesign-2013/#design-in-browser, "Read how kaidez.com used the design in-browser principle") and found it effective, but 
+I did want to use the "design in-browser" principle for mocking up the site, where images mockups are skipped in favor of mocking up a live, prototype site. I spoke about this in [my last post about redesigning this site](/site-redesign-2013/#design-in-browser, "Read how kaidez.com used the design in-browser principle") and find it effective.
+
+But it took some time to set up the webhost so I passed mockups to my friend instead of waiting for the webhost to be up and running.
