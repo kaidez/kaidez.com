@@ -62,4 +62,16 @@ Speaking of stylesheets, I used the core CSS file that comes with [Twitter Boots
 
 Managing search engine optimization is pretty easy with WordPress. It's SEO-ready out of the box and if then install [Yoast's WordPress SEO plugin](https://wordpress.org/plugins/wordpress-seo/ "Read more about Yoast's WordPress SEO plugin"), configuring SEO is a straight-forward process.
 
-But Parlor is a local business and there are other hair salons in the area. 
+But Parlor is a local business and there are other hair salons in the area. So placing higher in search results isn't easy: a local SEO strategy was required.
+
+We spent some time reviewing what other salons were doing for their websites, SEO-wise. And while some where dropping the ball completely, there were much more that were doing things right then wrong.
+
+We looked at their web presence and code to see where we can better them. I'm not going to go into great detail about what we did because, well, competition is competition.
+
+But I will say this...
+
+* code needs to be added to some core WordPress files to make it more local SEO-friendly.
+
+* Google is liking mobile-friendly sites more and more everyday.
+
+* offline SEO is just as important as online SEO.
