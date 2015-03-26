@@ -42,4 +42,6 @@ You have to use whitespace, fonts and color in way that conveys an inviting desi
 <a name="wordpress"></a>
 ###Using WordPress
 
-My friend wanted to use WordPress to both contain the design and that was no-brainer. Other content management systems like Joomla and Drupal have their strengths, but WordPress is immediately easy to use when compared to the others and has a wider swath of community support.
+My friend wanted to use WordPress to both contain the design and that was no-brainer. Other content management systems like Joomla and Drupal have their strengths, but WordPress made more sense for this project due to its ease of use and wider swath of community support.
+
+Development-wise, I created [a custom child theme](https://codex.wordpress.org/Child_Themes "Read more about creating a WordPress child theme") against WordPress' stock twentythirteen theme. This meant I could safely duplicate the core WordPress files and customize them as needed to implement the design.
