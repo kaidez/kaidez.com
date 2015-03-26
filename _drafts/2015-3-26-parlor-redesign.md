@@ -18,6 +18,7 @@ Times have changed: Flash doesn't work on mobile, is not SEO-friendly, is not ea
 1. [Client Requirements](#client-requirements)
 2. [A Modern Design](#modern-design)
 3. [Using WordPress &amp; Bootstrap](#wordpress-bootstrap)
+4. [Local SEO](#local-seo)
 
 <a name="client-requirements"></a>
 ###Client Requirements
@@ -50,8 +51,15 @@ Development-wise, I created [a custom child theme](https://codex.wordpress.org/C
 
 That being said, I made a point to NOT duplicate a lot of core files and only did so when I had no choice. I've been in situations where duplicating a lot of files for the sake of child-themes makes updating WordPress a pain.
 
-Plus, customizing a lot of files would make the site harder for my friend to maintain. I didn't want to create core functionality that could only be updated by changing code and not a plugin, so I mostly customized the site by making changes to the core stylesheet.
+Plus, customizing a lot of files would make the site harder for my friend to maintain. I didn't want to create core functionality that could only be updated by changing code and not a plugin, so I mostly customized the site by making changes to the core stylesheet and installed a small set of plugins.
 
-Speaking of stylesheets, I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Read more about Twitter Bootstrap") to make the site responsive, which was also pretty easy. I used its [Grid system](http://getbootstrap.com/css/#grid "Read more about Twitter Bootstrap's Grid system") to create a variety of responsive layouts.
+Speaking of stylesheets, I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Read more about Twitter Bootstrap") to make the site responsive, which was also pretty easy. I used its [Grid system](http://getbootstrap.com/css/#grid "Read more about Twitter Bootstrap's Grid system") to create a variety of responsive layouts. This helped make the site as mobile-friendly as possible.
 
-*(Side note: this project needed to scaffolded with Bootstrap and a few other WordPress-centric files. I did this using my custom "kdz" tool...[see it on GitHub](https://github.com/kaidez/kdz "See custom kdz scaffolding tool on GitHub") and read my blog post on this).*
+*(Side note: this project needed to be scaffolded with Bootstrap and a few other WordPress-centric files. I did this using my custom "kdz" tool...[see it on GitHub](https://github.com/kaidez/kdz "See custom kdz scaffolding tool on GitHub") and read my blog post on this).*
+
+<a name="local-seo"></a>
+###Local SEO
+
+Managing search engine optimization is pretty easy with WordPress. It's SEO-ready out of the box and if then install [Yoast's WordPress SEO plugin](https://wordpress.org/plugins/wordpress-seo/ "Read more about Yoast's WordPress SEO plugin"), configuring SEO is a straight-forward process.
+
+But Parlor is a local business and there are other hair salons in the area. 
