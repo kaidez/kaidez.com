@@ -17,3 +17,5 @@
 * Use some sort of dependency system to load in the JS...require.js, Browserify, Webpack or something similar.
 
 * Apply uncss and critical path extraction to the CSS build-out process.
+
+* Use Polymer/Web Components to create some kind of widget...maybe something related to social?
