@@ -1,5 +1,5 @@
 ---
-title: "10 CSS Development Trends Resources You Need To Read & Watch"
+title: "10 Key Resources on CSS Development Trends Resources"
 comments: true
 author: Kai Gittens
 layout: post
@@ -22,10 +22,14 @@ As a group, they indicate that how we write and ship CSS is changing and employe
 ## 2. *Custom CSS Preprocessing* by Nicolas Gallagher ([link](http://nicolasgallagher.com/custom-css-preprocessing "Read Custom CSS Preprocessing* by Nicolas Gallagher"/))
 OK...a bit of a rant:
 
-Sass was a CSS preprocessor written in Ruby and was the first preprocessor to become popular. Sass was a CSS preprocessor written in JavaScript and as a result, the JS community started to prefer it over Sass, particularly in the build-out process.
+Sass was a CSS preprocessor written in Ruby and was the first preprocessor to become popular. Less was a CSS preprocessor written in JavaScript and as a result, the JS community started to prefer it over Sass, particularly in the build-out process.
 
 Compass added an extra layer of abstraction and a powerful sprite engine, all of which made non-developers really REALLY happy. And then more preprocessors like Myth and Stylus came out, each garnering their own fans.
 
 As great as all these are, most of us never use all their features. Variables, mixins and color functions are commonplace, but the more unreadable features are pain to use and even forbidden from use in some web shops, particularly `extends`.
 
-A current trend is to create your own (usually) Node-based preprocessing solution, where you write a custom preprocessor bringing in only the features you need.
+A current trend is to create a (usually) Node-based preprocessing solution, writing a custom preprocessor and bringing in only the features you need. Nicolas Gallagher, creator of [Normalize.css](http://necolas.github.io/normalize.css/ "Read more about Normalize.class") wrote a great post on this subject.
+
+The article focuses on the two most popular custom preprocessors: [Rework](https://github.com/reworkcss/rework "Read more about the Rework plugin framework for CSS preprocessing"), which refers to itself as a "plugin framework for CSS preprocessing" and [PostCss](https://github.com/postcss/postcss "Read more about the PostCss CSS-to-Js transformer"), which focuses on "transforming CSS with JS plugins." Each allow you to use Node to run any specific preprocessing rules you write and each one has a set of plugins available to it.
+
+I don't see a majority of developers abandoning Sass, Less similar software for custom preprocessors.
