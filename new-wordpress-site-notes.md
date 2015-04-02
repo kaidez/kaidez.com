@@ -2,7 +2,7 @@
 
 ## MUST-DOS:
 
-* Create a tight, efficient CSS build-out process: uncss, regression testing, etc.
+* Create a tight, efficient CSS build-out process: regression testing, etc.
 
 * Always use plugins that do NOT bring in their own JavaScript and a minimal amount of CSS.
 
@@ -15,3 +15,5 @@
 ## NICE-TO-HAVES:
 
 * Use some sort of dependency system to load in the JS...require.js, Browserify, Webpack or something similar.
+
+* Apply uncss and critical path extraction to the CSS build-out process.
