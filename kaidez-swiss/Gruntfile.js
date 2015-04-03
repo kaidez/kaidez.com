@@ -54,17 +54,10 @@ module.exports = function(grunt) {
           "build/js/main.js": ["coffee/main.coffee"]
         }
       }
-    }, // end "coffee" task
-
-    shell: {
-      lessCoreBuild: {
-        command: "lessc css-build/style.less > css-build/style.css"
-      }
-    }
+    } // end "coffee" task
   });
 
   grunt.loadNpmTasks("grunt-bowercopy");
   grunt.loadNpmTasks("grunt-contrib-coffee");
-  grunt.loadNpmTasks("grunt-shell");
 
 };
