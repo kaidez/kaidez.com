@@ -47,4 +47,4 @@
 
 * [WordPress: Custom Post Types and Taxonomies](http://www.lynda.com/WordPress-tutorials/WordPress-Custom-Post-Types-Taxonomies/163113-2.html)
 
-*[WordPress Plugins: Moving WordPress with WP Migrate DB](http://www.lynda.com/course-tutorials/Plugins-Moving-WordPress-Migrate-DB-Pro/361683-2.html)
+* [WordPress Plugins: Moving WordPress with WP Migrate DB](http://www.lynda.com/course-tutorials/Plugins-Moving-WordPress-Migrate-DB-Pro/361683-2.html)
