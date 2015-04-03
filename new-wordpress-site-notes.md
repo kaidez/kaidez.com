@@ -35,4 +35,11 @@
 
 * `page.php` displays a page. Can have a custom header and pulls in its content from `content-page.php`.
 
-* `content-none.php` manages messages sent on 404 errors.
+* `content-none.php` manages error messages.
+
+## LYNDA STUFF TO WATCH
+* [WordPress Developer Tips: Enqueuing Styles and Scripts &raquo;](http://www.lynda.com/WordPress-tutorials/WordPress-Developer-Tips-Enqueuing-Styles-Scripts/169879-2.html)
+
+* [WordPress: Custom Post Types and Taxonomies](http://www.lynda.com/WordPress-tutorials/WordPress-Custom-Post-Types-Taxonomies/163113-2.html)
+
+*[WordPress Plugins: Moving WordPress with WP Migrate DB](http://www.lynda.com/course-tutorials/Plugins-Moving-WordPress-Migrate-DB-Pro/361683-2.html)
