@@ -55,7 +55,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
 
  // NOTE THAT UNCSS IS NOT HERE RIGHT NOW
 gulp.task("buildcss", ['less'],function () {
-  gulp.src(['css-build/bootstrap.css', 'css-build/style.css'])
+  gulp.src(['css-build/wp-comment-block.css', 'css-build/bootstrap.css','css-build/style.css'])
   .pipe(concatCss("wp-content/themes/kaidez-swiss/style.min.css"))
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
