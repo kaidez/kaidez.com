@@ -23,9 +23,16 @@
 * Write all JS & CSS using preprocessors.
 
 
+## THINGS TO KEEP IN MIND
+
+* Should `! isset( $content_width )` come out of `functions.php` on line 11? It sets a width but having CSS run that instead of the WP Loop may be faster.
+
 ## REMEMBER THAT...
+
 * `single.php` displays single posts...pulls in the post's content using `content.php`. Along with , `header.php`, `sidebar.php` and `footer.php`.
 
 * `index.php` displays a list single posts. Each post has its content in `content.php`....`index.php` loops through each post. Along with , `header.php`, `sidebar.php` and `footer.php`.
 
 * `page.php` displays a page. Can have a custom header and pulls in its content from `content-page.php`.
+
+* `content-none.php` manages messages sent on 404 errors.
