@@ -21,3 +21,11 @@
 * Use Polymer/Web Components to create some kind of widget...maybe something related to social?
 
 * Write all JS & CSS using preprocessors.
+
+
+## REMEMBER THAT...
+* `single.php` displays single posts...pulls in the post's content using `content.php`. Along with , `header.php`, `sidebar.php` and `footer.php`.
+
+* `index.php` displays a list single posts. Each post has its content in `content.php`....`index.php` loops through each post. Along with , `header.php`, `sidebar.php` and `footer.php`.
+
+* `page.php` displays a page. Can have a custom header and pulls in its content from `content-page.php`.
