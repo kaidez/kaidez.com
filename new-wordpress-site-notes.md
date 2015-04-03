@@ -42,6 +42,8 @@
 
 * Check itemscope info for the logo and author
 
+* Make sure .gitignore matches the new site
+
 ## LYNDA STUFF TO WATCH
 * [WordPress Developer Tips: Enqueuing Styles and Scripts &raquo;](http://www.lynda.com/WordPress-tutorials/WordPress-Developer-Tips-Enqueuing-Styles-Scripts/169879-2.html)
 
