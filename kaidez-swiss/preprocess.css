@@ -1,0 +1,12 @@
+:root {
+  --width-button: 200px;
+}
+
+.button {
+  width: var(--width-button);
+}
+
+
+h1 {
+  kaidez: ellipsis;
+}
