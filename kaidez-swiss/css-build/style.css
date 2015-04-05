@@ -107,4 +107,7 @@ a.gl-home-link:hover {
   .site-header {
     padding: 10px 0 0 20px;
   }
+  .site-title {
+    font-size: 65px;
+  }
 }
