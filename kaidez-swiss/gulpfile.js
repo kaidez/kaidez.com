@@ -57,7 +57,8 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
 
 
 gulp.task("buildcss", ['concat'],function () {
-  gulp.src(['wp-content/themes/kaidez-swiss/style.css'])
+  var deferred = Q.defer();
+  setTimeout(function() {gulp.src(['css-build/style.css'])
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
     cascade: false
@@ -73,6 +74,8 @@ gulp.task("buildcss", ['concat'],function () {
     "text-indent": false
   }))
   .pipe(csslint.reporter())
+     }, 4000);
+  return deferred.promise;
 });
 
 
@@ -117,7 +120,7 @@ gulp.task('concat', ['less'], function() {
   setTimeout(function() {
     return gulp.src(['css-build/wp-comment-block.css', 'css-build/bootstrap.css','css-build/style.css'])
     .pipe(concatCss('style.css'))
-    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
+    .pipe(gulp.dest("css-build/"));
     return deferred.promise;
   }, 1000);
 });
