@@ -1,0 +1,39 @@
+// Globally set main link color for the site
+// Color is always a bold black
+// Only the hover pseudo class shows an underline
+a {
+  color: @mainLinkColor;
+  text-decoration: none;
+  font-weight: 900;
+  &:visited {
+    color: @mainLinkColor;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  &:hover {
+    color: @mainLinkColor;
+    text-decoration: underline;
+    font-weight: 900;
+  }
+  &:active {
+    color: @mainLinkColor;
+    text-decoration: none;
+    font-weight: 900;
+  }
+}
+
+// Globally hide the "Skip to content" link
+.screen-reader-text {
+  .hide-element();
+}
+
+// Make the main site header background pink in all views
+.site-header {
+  background-color: @pink;
+}
+
+
+.menu-item {
+  display: inline;
+  list-style-type: none;
+}

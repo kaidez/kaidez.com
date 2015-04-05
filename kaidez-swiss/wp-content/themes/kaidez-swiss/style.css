@@ -1,9 +1,9 @@
 /*!
- Theme Name:   
- Theme URI:   
- Description:  
- Author:       
- Author URI:   
+ Theme Name:   Kaidez Swiss
+ Theme URI:    https://github.com/kaidez/kaidez.com
+ Description:  A Swiss/international-inspired theme by kaidez
+ Author:       Kai "kaidez" Gittens
+ Author URI:   http://kaidez.com/
  Template:     
  Version:      1.0.0
  License:      GNU General Public License v2 or later
@@ -334,7 +334,6 @@ select{background:#fff!important}
 *,:after,:before{box-sizing:border-box}
 body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
-a{color:#337ab7;text-decoration:none}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
 a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
 .carousel-inner>.item>a>img,.carousel-inner>.item>img,.img-responsive,.thumbnail a>img,.thumbnail>img{display:block;max-width:100%;height:auto}
@@ -1360,6 +1359,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
 .affix{position:fixed}
+.hide-element,.screen-reader-text{clip:rect(1px 1px 1px 1px);position:absolute!important}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table}
@@ -1405,11 +1405,18 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 .visible-print-inline-block{display:none!important}
 @media print{.visible-print-inline-block{display:inline-block!important}
 .hidden-print{display:none!important}}
-.hide-element{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.hide-element{clip:rect(1px,1px,1px,1px)}
 .ti{text-indent:-999px}
 .z1{z-index:1}
 .z2{z-index:2}
 .z3{z-index:3}
 .z4{z-index:4}
 .z5{z-index:5}
-@media (max-width:767px){article{background-color:red}}
+h1{margin-top:0;margin-bottom:0}
+a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
+a:hover{color:#000;text-decoration:underline;font-weight:900}
+.screen-reader-text{clip:rect(1px,1px,1px,1px)}
+.site-header{background-color:#ed327f}
+.menu-item{display:inline;list-style-type:none}
+@media (min-width:768px){.menu-toggle{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.site-header{padding:10px 0 0 20px}}
