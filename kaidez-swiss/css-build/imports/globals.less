@@ -1,3 +1,24 @@
+// Globally hide the "Skip to content" link
+.screen-reader-text {
+  .hide-element();
+}
+
+// Make the main site header background pink in all views
+.site-header {
+  background-color: @pink;
+}
+
+.menu-item {
+  display: inline;
+  list-style-type: none;
+}
+
+/*
+ * ====================================================================
+ * LINK STYLES START
+ * ====================================================================
+ */
+
 // Globally set main link color for the site
 // Color is always a bold black
 // Only the hover pseudo class shows an underline
@@ -22,18 +43,14 @@ a {
   }
 }
 
-// Globally hide the "Skip to content" link
-.screen-reader-text {
-  .hide-element();
+// Set specific hover color for the main site link
+a.gl-home-link:hover {
+  color: lighten(@mainLinkColor, 20%);
+  text-decoration: none;
 }
 
-// Make the main site header background pink in all views
-.site-header {
-  background-color: @pink;
-}
-
-
-.menu-item {
-  display: inline;
-  list-style-type: none;
-}
+/*
+ * ====================================================================
+ * LINK STYLES END
+ * ====================================================================
+ */

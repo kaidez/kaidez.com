@@ -50,6 +50,24 @@ h1 {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min-resolution: 192dpi) and (min-width: 1300px), only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
   /* Large screen, retina, stuff to override above media query */
 }
+.screen-reader-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.site-header {
+  background-color: #ed327f;
+}
+.menu-item {
+  display: inline;
+  list-style-type: none;
+}
+/*
+ * ====================================================================
+ * LINK STYLES START
+ * ====================================================================
+ */
 a {
   color: #000000;
   text-decoration: none;
@@ -70,19 +88,15 @@ a:active {
   text-decoration: none;
   font-weight: 900;
 }
-.screen-reader-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+a.gl-home-link:hover {
+  color: #333333;
+  text-decoration: none;
 }
-.site-header {
-  background-color: #ed327f;
-}
-.menu-item {
-  display: inline;
-  list-style-type: none;
-}
+/*
+ * ====================================================================
+ * LINK STYLES END
+ * ====================================================================
+ */
 @media (min-width: 768px) {
   .menu-toggle {
     position: absolute !important;

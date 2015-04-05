@@ -1413,10 +1413,11 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 .z4{z-index:4}
 .z5{z-index:5}
 h1{margin-top:0;margin-bottom:0}
-a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
-a:hover{color:#000;text-decoration:underline;font-weight:900}
 .screen-reader-text{clip:rect(1px,1px,1px,1px)}
 .site-header{background-color:#ed327f}
 .menu-item{display:inline;list-style-type:none}
+a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
+a:hover{color:#000;text-decoration:underline;font-weight:900}
+a.gl-home-link:hover{color:#333;text-decoration:none}
 @media (min-width:768px){.menu-toggle{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-header{padding:10px 0 0 20px}}
