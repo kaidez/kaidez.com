@@ -28,7 +28,7 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-minify-css": "^1.0.0",
     "gulp-uncss": "^1.0.1",
-    "gulp-watch": "^4.2.2",
+    "gulp-watch": "^4.2.3",
     "rework": "^1.0.1",
     "rework-calc": "^1.1.0",
     "rework-mixins": "^2.0.0",
