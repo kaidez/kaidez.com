@@ -1,12 +1,16 @@
 :root {
   --width-button: 200px;
+  --bg-color: #fff;
 }
 
 .button {
   width: var(--width-button);
 }
 
+.box {
+	background: var(--bg-color);
+}
 
 h1 {
-  kaidez: ellipsis;
+  overflow: ellipsis;
 }

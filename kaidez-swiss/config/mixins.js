@@ -1,4 +1,4 @@
-function ellipsis(type) {
+function mixins(type) {
   if ('ellipsis' == type) {
     return {
       'white-space': 'nowrap',
@@ -9,3 +9,4 @@ function ellipsis(type) {
 
   return type;
 }
+

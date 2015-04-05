@@ -4,28 +4,20 @@
 
 // Single var pattern
 var rework = require('rework'), // Bring in Rework
-    mixin = require('rework-plugin-mixin'), // Write Rework mixins
-    calc = require('rework-calc'),
-    vars = require('rework-vars')(),
+    rework_mixin = require('rework-plugin-mixin'),
+    mixins = require('rework-mixins'), // Use some core Rework mixins
+    vars = require('rework-vars')(), // Use CSS variables NOW!!!
+    calc = require('rework-calc'), // Perform math calculations
     autoprefixer = require('autoprefixer'),
+    
     fs = require('fs'), //Bring in Node's fs module
 
-    // File with pre-process code
+    // File with pre-process code...spits out style.css
     css = fs.readFileSync('preprocess.css', 'utf-8'); 
 
 
 
-function ellipsis(type) {
-  if ('ellipsis' == type) {
-    return {
-      'white-space': 'nowrap',
-      'overflow': 'hidden',
-      'text-overflow': 'ellipsis'
-    }
-  }
 
-  return type;
-}
 
 
 
@@ -42,7 +34,7 @@ function ellipsis(type) {
 css = rework(css)
   .use(vars)
   .use(calc)
-  .use(mixin({ kaidez: ellipsis }))
+  .use(rework_mixin(mixins))
   .toString();
 
 css = autoprefixer().process(css);
