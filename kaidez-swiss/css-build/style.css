@@ -1,0 +1,53 @@
+/*
+ * HELPER CLASSES
+ */
+.hide-element {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.ti {
+  text-indent: -999px;
+}
+.z1 {
+  z-index: 1;
+}
+.z2 {
+  z-index: 2;
+}
+.z3 {
+  z-index: 3;
+}
+.z4 {
+  z-index: 4;
+}
+.z5 {
+  z-index: 5;
+}
+/*
+ * HELPER CLASSES END
+ */
+/*
+ * BOOTSTRAP OVERRIDES
+ * ====================================================================
+ * Styles that override core Bootstrap CSS go here. Place them below
+ * core Bootstrap styles and above custom styles inthe build.
+ */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  /* Small screen, retina, stuff to override above media query */
+}
+@media only screen and (min-width: 768px) {
+  /* Medium screen, non-retina */
+}
+@media only screen and (min-width: 1300px) {
+  /* Large screen, non-retina */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min-resolution: 192dpi) and (min-width: 1300px), only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
+  /* Large screen, retina, stuff to override above media query */
+}
+@media (max-width: 767px) {
+  article {
+    background-color: red;
+  }
+}

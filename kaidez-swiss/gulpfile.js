@@ -7,7 +7,9 @@ var gulp = require("gulp"), // "require" gulp
     csslint = require("gulp-csslint"), // Lint CSS
     watch = require("gulp-watch"), // Watch files changes
     imagemin = require('gulp-imagemin'), // Minifying images
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    exec = require('child_process').exec, // Run CLI commands via node
+    Q = require('q'); // Manage promises,;
 
 // End single var pattern
 
@@ -53,10 +55,9 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
  *  ===================================================================
  */
 
- // NOTE THAT UNCSS IS NOT HERE RIGHT NOW
-gulp.task("buildcss", ['less'],function () {
-  gulp.src(['css-build/wp-comment-block.css', 'css-build/bootstrap.css','css-build/style.css'])
-  .pipe(concatCss("wp-content/themes/kaidez-swiss/style.min.css"))
+
+gulp.task("buildcss", ['concat'],function () {
+  gulp.src(['wp-content/themes/kaidez-swiss/style.css'])
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
     cascade: false
@@ -72,7 +73,6 @@ gulp.task("buildcss", ['less'],function () {
     "text-indent": false
   }))
   .pipe(csslint.reporter())
-  .pipe(connect.reload())
 });
 
 
@@ -92,15 +92,41 @@ gulp.task('images', function () {
   .pipe(gulp.dest('build/img'));
 });
 
+
+// "gulp less" task
+// ================
+// Process .less files using node exec
+// Returns a promise with q
+gulp.task("less", function () {
+  var deferred = Q.defer();
+  setTimeout(function() {
+    exec("lessc css-build/style.less > css-build/style.css");
+    return deferred.promise;
+  }, 1000);
+});
+
+
+
+// "gulp concat" task
+// ==================
+// Concatenate "css-build/styles.css" and "css-build/bootstrap.css"
+// Takes "less" as a gulp hint
+// Returns a promise with q
+gulp.task('concat', ['less'], function() {
+  var deferred = Q.defer();
+  setTimeout(function() {
+    return gulp.src(['css-build/wp-comment-block.css', 'css-build/bootstrap.css','css-build/style.css'])
+    .pipe(concatCss('style.css'))
+    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
+    return deferred.promise;
+  }, 1000);
+});
+
 /*
  *  ===================================================================
  *  | "gulp-grunt" TASKS...RUN GRUNT TASKS VIA GULP!!!! |
  *  ===================================================================
  */
-// Run the "grunt less" task
-gulp.task("less", function () {
-  gulp.run("grunt-shell");
-});
 
 // Run the "grunt coffee" task
 gulp.task("coffee", function () {
