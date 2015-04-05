@@ -56,44 +56,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
  */
 
 
-gulp.task("buildcss", ['concat'],function () {
-  var deferred = Q.defer();
-  setTimeout(function() {gulp.src(['css-build/style.css'])
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  .pipe(minifyCSS({
-    keepBreaks: true
-  }))
-  .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"))
-  .pipe(csslint({
-    "important": false,
-    "duplicate-background-images": false,
-    "ids": false,
-    "text-indent": false
-  }))
-  .pipe(csslint.reporter())
-     }, 4000);
-  return deferred.promise;
-});
-
-
-/*
-*  ===================================================================
-*  | IMAGE MINIFICATION TASK |
-*
-*  Take all images in "imagemin/" & minify them out to "build/img/"
-*  ===================================================================
-*/
-gulp.task('images', function () {
-  return gulp.src('image-min/*')
-  .pipe(imagemin({
-    progressive: true,
-    svgoPlugins: [{removeViewBox: false}]
-  }))
-  .pipe(gulp.dest('build/img'));
-});
+gulp.task('buildcss', ['less', 'concat', 'outputcss']);
 
 
 // "gulp less" task
@@ -120,10 +83,56 @@ gulp.task('concat', ['less'], function() {
   setTimeout(function() {
     return gulp.src(['css-build/wp-comment-block.css', 'css-build/bootstrap.css','css-build/style.css'])
     .pipe(concatCss('style.css'))
-    .pipe(gulp.dest("css-build/"));
+    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
     return deferred.promise;
   }, 1000);
 });
+
+
+
+gulp.task("outputcss", ['concat'],function () {
+  var deferred = Q.defer();
+  setTimeout(function() {
+    gulp.src(['wp-content/themes/kaidez-swiss/style.css'])
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(minifyCSS({
+      keepBreaks: true
+    }))
+    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"))
+    .pipe(csslint({
+      "important": false,
+      "duplicate-background-images": false,
+      "ids": false,
+      "text-indent": false
+    }))
+    return deferred.promise;
+    }, 4000);
+  });
+
+
+/*
+*  ===================================================================
+*  | IMAGE MINIFICATION TASK |
+*
+*  Take all images in "imagemin/" & minify them out to "build/img/"
+*  ===================================================================
+*/
+gulp.task('images', function () {
+  return gulp.src('image-min/*')
+  .pipe(imagemin({
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}]
+  }))
+  .pipe(gulp.dest('build/img'));
+});
+
+
+
+
+
 
 /*
  *  ===================================================================
