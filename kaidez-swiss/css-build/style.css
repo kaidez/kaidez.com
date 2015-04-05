@@ -8,7 +8,7 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 .ti {
-  text-indent: -999px;
+  text-indent: -9999px;
 }
 .z1 {
   z-index: 1;
@@ -109,5 +109,16 @@ a.gl-home-link:hover {
   }
   .site-title {
     font-size: 65px;
+  }
+  .site-description {
+    margin: 0;
+    width: 200px;
+    font-size: 18px;
+    color: #000;
+  }
+}
+@media (max-width: 767px) {
+  .site-description {
+    text-indent: -9999px;
   }
 }
