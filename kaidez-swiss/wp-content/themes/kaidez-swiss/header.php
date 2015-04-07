@@ -31,6 +31,14 @@
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'kaidez-swiss' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+
+	  <form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
+	    <div class="blog-search">
+		    <input type="text" class="header-search-field" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+		    <input type="submit" class="header-search-submit" value="search" class="footer-button" />
+	     </div>
+	  </form><!-- #searchform -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
