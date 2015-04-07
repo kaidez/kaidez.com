@@ -62,6 +62,7 @@ h1 {
 .menu-item {
   display: inline;
   list-style-type: none;
+  margin-right: 15px;
 }
 /*
  * ====================================================================
@@ -104,10 +105,14 @@ a.gl-home-link:hover {
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
   }
+  .menu-item {
+    font-size: 16px;
+  }
   .site-header {
     padding: 10px 0 0 20px;
   }
   .site-title {
+    margin-bottom: 5px;
     font-size: 65px;
   }
   .site-description {
@@ -115,6 +120,14 @@ a.gl-home-link:hover {
     width: 200px;
     font-size: 18px;
     color: #000;
+  }
+  .site-branding {
+    display: inline-block;
+  }
+  .main-navigation {
+    display: inline-block;
+    bottom: 46px;
+    position: relative;
   }
 }
 @media (max-width: 767px) {

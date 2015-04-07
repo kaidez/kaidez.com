@@ -5,6 +5,11 @@
     .hide-element();
   }
 
+   // Set font-size on the links
+  .menu-item {
+  	font-size: 16px;
+  }
+
   // Make the main site header background pink in all views
   .site-header {
     padding:10px 0 0 20px;
@@ -13,6 +18,8 @@
 
   // Make the main site link really big on non-handheld views
   .site-title {
+    margin-bottom: 5px;
+
     font-size: 65px;
   }
 
@@ -23,5 +30,17 @@
 
   	font-size: 18px;
   	color: #000;
+  }
+
+  // Inline the ".site-branding" div so it can be v-alignd with the nav
+  .site-branding {
+  	display: inline-block;
+  }
+
+  // Style the main navigation
+  .main-navigation, {
+  	display: inline-block;
+  	bottom: 46px;
+    position: relative;
   }
 }
