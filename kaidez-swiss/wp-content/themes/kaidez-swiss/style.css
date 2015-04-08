@@ -764,12 +764,12 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 @media (min-width:768px){.form-horizontal .control-label{padding-top:7px;margin-bottom:0;text-align:right}
 .form-horizontal .form-group-lg .control-label{padding-top:14.33px}
 .form-horizontal .form-group-sm .control-label{padding-top:6px}}
-.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;border-radius:4px}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;line-height:1.42857143;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent}
 .btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
 .btn.focus,.btn:focus,.btn:hover{color:#333;text-decoration:none}
 .btn.active,.btn:active{outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}
 .btn.disabled,.btn[disabled],fieldset[disabled] .btn{pointer-events:none;cursor:not-allowed;filter:alpha(opacity=65);box-shadow:none;opacity:.65}
-.btn-default{color:#333;background-color:#fff;border-color:#ccc}
+.btn-default{background-color:#fff}
 .btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{color:#333;background-color:#e6e6e6;border-color:#adadad}
 .btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#fff;border-color:#ccc}
 .btn-default .badge{color:#fff;background-color:#333}
@@ -1357,8 +1357,9 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
+.btn,a:hover{font-weight:900}
 .affix{position:fixed}
-.hide-element,.screen-reader-text{clip:rect(1px 1px 1px 1px);position:absolute!important}
+.hide-element,.menu-header,.screen-reader-text{clip:rect(1px 1px 1px 1px);position:absolute!important}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table}
@@ -1412,20 +1413,28 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 .z4{z-index:4}
 .z5{z-index:5}
 h1{margin-top:0;margin-bottom:0}
-.screen-reader-text{clip:rect(1px,1px,1px,1px)}
-.site-header{background-color:#ed327f}
+.btn{border-radius:0;background-color:#000}
+.btn-default:hover,.site-header{background-color:#ed327f}
+.btn-default{border:0;color:#ed327f}
+.btn-default:hover{color:#000}
+.menu-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
 .menu{padding-left:0}
 .menu-item{display:inline;list-style-type:none;margin-right:15px}
 a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
-a:hover{color:#000;text-decoration:underline;font-weight:900}
-a.gl-home-link:hover{color:#333;text-decoration:none}
-@media (min-width:768px){.menu{left:150px;position:relative}
-.menu-toggle{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
-.menu-item{display:block;font-size:16px}
-.menu-item a{min-width:48px;min-height:48px}
-.site-header{height:152px;padding:10px 0 0 20px}
+a:hover{color:#000;text-decoration:underline}
+@media (min-width:768px){a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#ed327f;text-decoration:none;font-weight:900}
+.site-header{height:66px;padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
-.site-description{margin:0;width:200px;position:absolute;top:-47px;font-size:18px;color:#000}
+.site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
 .site-branding{display:inline-block;position:absolute;margin-top:45px}
-.main-navigation{display:inline-block;position:absolute;left:180px}}
-@media (max-width:767px){.site-description{text-indent:-9999px}}
+.searchform-class{width:300px;position:relative;left:350px;top:83px}
+.main-navigation{display:inline-block;position:absolute;left:180px}
+.menu{left:150px;position:relative}
+.menu-toggle{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.menu-item{display:block;margin-bottom:10px;font-size:16px}
+.menu-item-container{display:inline-block}
+.menu-item a{min-width:48px;min-height:48px}
+.glyphicon{color:#000}
+.header-search-field{width:190px;height:31px;border:1px solid #000}
+a.home-link{font-size:81px}}
+@media (max-width:767px){.glyphicon,.site-description{text-indent:-9999px}}

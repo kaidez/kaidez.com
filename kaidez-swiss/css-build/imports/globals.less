@@ -1,5 +1,5 @@
-// Globally hide the "Skip to content" link
-.screen-reader-text {
+// Globally hide the <nav> header & "Skip to content" link
+.menu-header, .screen-reader-text {
   .hide-element();
 }
 
@@ -48,12 +48,6 @@ a {
     text-decoration: none;
     font-weight: 900;
   }
-}
-
-// Set specific hover color for the main site link
-a.gl-home-link:hover {
-  color: lighten(@mainLinkColor, 20%);
-  text-decoration: none;
 }
 
 /*

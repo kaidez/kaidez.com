@@ -32,11 +32,24 @@
  * BOOTSTRAP OVERRIDES
  * ====================================================================
  * Styles that override core Bootstrap CSS go here. Place them below
- * core Bootstrap styles and above custom styles inthe build.
+ * core Bootstrap styles and above custom styles in the build.
  */
 h1 {
   margin-top: 0;
   margin-bottom: 0;
+}
+.btn {
+  border-radius: 0;
+  font-weight: 900;
+  background-color: #000;
+}
+.btn-default {
+  border: 0;
+  color: #ed327f;
+}
+.btn-default:hover {
+  color: #000;
+  background-color: #ed327f;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   /* Small screen, retina, stuff to override above media query */
@@ -50,6 +63,7 @@ h1 {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min-resolution: 192dpi) and (min-width: 1300px), only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
   /* Large screen, retina, stuff to override above media query */
 }
+.menu-header,
 .screen-reader-text {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -92,16 +106,47 @@ a:active {
   text-decoration: none;
   font-weight: 900;
 }
-a.gl-home-link:hover {
-  color: #333333;
-  text-decoration: none;
-}
 /*
  * ====================================================================
  * LINK STYLES END
  * ====================================================================
  */
 @media (min-width: 768px) {
+  .site-header {
+    height: 66px;
+    padding: 3px 0 0 20px;
+  }
+  .site-title {
+    margin-bottom: 5px;
+    position: absolute;
+    font-size: 65px;
+  }
+  .site-description {
+    margin: 0;
+    width: 200px;
+    position: absolute;
+    top: -47px;
+    left: 7px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #000;
+  }
+  .site-branding {
+    display: inline-block;
+    position: absolute;
+    margin-top: 45px;
+  }
+  .searchform-class {
+    width: 300px;
+    position: relative;
+    left: 350px;
+    top: 83px;
+  }
+  .main-navigation {
+    display: inline-block;
+    position: absolute;
+    left: 180px;
+  }
   .menu {
     left: 150px;
     position: relative;
@@ -114,41 +159,48 @@ a.gl-home-link:hover {
   }
   .menu-item {
     display: block;
+    margin-bottom: 10px;
     font-size: 16px;
+  }
+  .menu-item-container {
+    display: inline-block;
   }
   .menu-item a {
     min-width: 48px;
     min-height: 48px;
   }
-  .site-header {
-    height: 152px;
-    padding: 10px 0 0 20px;
-  }
-  .site-title {
-    margin-bottom: 5px;
-    position: absolute;
-    font-size: 65px;
-  }
-  .site-description {
-    margin: 0;
-    width: 200px;
-    position: absolute;
-    top: -47px;
-    font-size: 18px;
+  .glyphicon {
     color: #000;
   }
-  .site-branding {
-    display: inline-block;
-    position: absolute;
-    margin-top: 45px;
+  .header-search-field {
+    width: 190px;
+    height: 31px;
+    border: 1px solid #000;
   }
-  .main-navigation {
-    display: inline-block;
-    position: absolute;
-    left: 180px;
+  a.home-link {
+    color: #ed327f;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 81px;
+  }
+  a.home-link:visited {
+    color: #ed327f;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  a.home-link:hover {
+    color: #ed327f;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  a.home-link:active {
+    color: #ed327f;
+    text-decoration: none;
+    font-weight: 900;
   }
 }
 @media (max-width: 767px) {
+  .glyphicon,
   .site-description {
     text-indent: -9999px;
   }

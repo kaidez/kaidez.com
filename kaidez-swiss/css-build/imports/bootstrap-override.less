@@ -2,11 +2,30 @@
  * BOOTSTRAP OVERRIDES
  * ====================================================================
  * Styles that override core Bootstrap CSS go here. Place them below
- * core Bootstrap styles and above custom styles inthe build.
+ * core Bootstrap styles and above custom styles in the build.
  */
 
 // Bootstrap applies top/bottoms to elements...remove them
 h1 {
 	margin-top: 0;
   margin-bottom: 0;
+}
+
+// Override parts of Bootstrap's .btn class
+.btn {
+	border-radius: 0;
+  
+  font-weight: 900;
+	background-color: #000;	
+}
+
+// Override parts of Bootstrap's .btn-default class
+.btn-default {
+	border: 0;
+	color: @pink;
+}
+
+.btn-default:hover {
+	color: #000;
+	background-color: @pink;
 }
