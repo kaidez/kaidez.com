@@ -1417,6 +1417,7 @@ h1{margin-top:0;margin-bottom:0}
 .btn-default:hover,.site-header{background-color:#ed327f}
 .btn-default{border:0;color:#ed327f}
 .btn-default:hover{color:#000}
+.site,.site-content,body,html{height:100%;min-height:100%}
 .menu-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
 .menu{padding-left:0}
 .menu-item{display:inline;list-style-type:none;margin-right:15px}
