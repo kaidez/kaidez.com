@@ -28,14 +28,32 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+      <h3 class="menu-header">Main Menu</h3>
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'kaidez-swiss' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			
+      <div id="menu-main" class="menu" aria-expanded="false">
+        <ul class="menu-item-container">
+        <li class="menu-item">
+          <a href="/blog/">blog</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+        </li>
+        <li class="menu-item">
+          <a href="/articles/">articles</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+        </li></ul>
+        <ul class="menu-item-container">
+        <li class="menu-item">
+          <a href="/ajax-tutorial/">ajax tutorial</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+        </li>
+        <li class="menu-item">
+          <a href="/lynda-kaidez/">kaidez on lynda</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+        </li></ul>
+      </div> <!-- #menu-main -->
+
 		</nav><!-- #site-navigation -->
 
 	  <form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
 	    <div class="blog-search">
 		    <input type="text" class="header-search-field" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
-		    <input type="submit" class="header-search-submit" value="search" class="footer-button" />
+		    <button type="submit" class="btn btn-default header-search-submit footer-button">Submit</button>
 	     </div>
 	  </form><!-- #searchform -->
 
