@@ -59,6 +59,9 @@ h1 {
 .site-header {
   background-color: #ed327f;
 }
+.menu {
+  padding-left: 0;
+}
 .menu-item {
   display: inline;
   list-style-type: none;
@@ -99,6 +102,10 @@ a.gl-home-link:hover {
  * ====================================================================
  */
 @media (min-width: 768px) {
+  .menu {
+    left: 150px;
+    position: relative;
+  }
   .menu-toggle {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -106,28 +113,39 @@ a.gl-home-link:hover {
     clip: rect(1px, 1px, 1px, 1px);
   }
   .menu-item {
+    display: block;
     font-size: 16px;
   }
+  .menu-item a {
+    min-width: 48px;
+    min-height: 48px;
+  }
   .site-header {
+    height: 152px;
     padding: 10px 0 0 20px;
   }
   .site-title {
     margin-bottom: 5px;
+    position: absolute;
     font-size: 65px;
   }
   .site-description {
     margin: 0;
     width: 200px;
+    position: absolute;
+    top: -47px;
     font-size: 18px;
     color: #000;
   }
   .site-branding {
     display: inline-block;
+    position: absolute;
+    margin-top: 45px;
   }
   .main-navigation {
     display: inline-block;
-    bottom: 46px;
-    position: relative;
+    position: absolute;
+    left: 180px;
   }
 }
 @media (max-width: 767px) {

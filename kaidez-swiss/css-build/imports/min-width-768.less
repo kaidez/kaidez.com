@@ -1,5 +1,11 @@
 @media (min-width: 768px) {
   
+  // Push main nav to the left on wide views
+  .menu {
+  	left: 150px;
+    position: relative;
+  }
+
   // Hide the menu button on desktops/laptops
   .menu-toggle {
     .hide-element();
@@ -7,11 +13,18 @@
 
    // Set font-size on the links
   .menu-item {
+  	display: block;
   	font-size: 16px;
   }
 
-  // Make the main site header background pink in all views
+  .menu-item a {
+  	min-width:48px;
+  	min-height:48px;
+  }
+  
+  // Style the header on wide views
   .site-header {
+  	height: 152px;
     padding:10px 0 0 20px;
   }
   
@@ -19,6 +32,7 @@
   // Make the main site link really big on non-handheld views
   .site-title {
     margin-bottom: 5px;
+    position: absolute;
 
     font-size: 65px;
   }
@@ -27,6 +41,8 @@
   .site-description {
   	margin: 0;
   	width:200px;
+  	position: absolute;
+    top: -47px;
 
   	font-size: 18px;
   	color: #000;
@@ -35,12 +51,14 @@
   // Inline the ".site-branding" div so it can be v-alignd with the nav
   .site-branding {
   	display: inline-block;
+  	position: absolute;
+  	margin-top: 45px;
   }
 
   // Style the main navigation
   .main-navigation, {
   	display: inline-block;
-  	bottom: 46px;
-    position: relative;
+    position: absolute;
+    left: 180px;
   }
 }

@@ -1414,15 +1414,18 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 h1{margin-top:0;margin-bottom:0}
 .screen-reader-text{clip:rect(1px,1px,1px,1px)}
 .site-header{background-color:#ed327f}
+.menu{padding-left:0}
 .menu-item{display:inline;list-style-type:none;margin-right:15px}
 a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
 a:hover{color:#000;text-decoration:underline;font-weight:900}
 a.gl-home-link:hover{color:#333;text-decoration:none}
-@media (min-width:768px){.main-navigation,.site-branding{display:inline-block}
+@media (min-width:768px){.menu{left:150px;position:relative}
 .menu-toggle{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
-.menu-item{font-size:16px}
-.site-header{padding:10px 0 0 20px}
-.site-title{margin-bottom:5px;font-size:65px}
-.site-description{margin:0;width:200px;font-size:18px;color:#000}
-.main-navigation{bottom:46px;position:relative}}
+.menu-item{display:block;font-size:16px}
+.menu-item a{min-width:48px;min-height:48px}
+.site-header{height:152px;padding:10px 0 0 20px}
+.site-title{margin-bottom:5px;position:absolute;font-size:65px}
+.site-description{margin:0;width:200px;position:absolute;top:-47px;font-size:18px;color:#000}
+.site-branding{display:inline-block;position:absolute;margin-top:45px}
+.main-navigation{display:inline-block;position:absolute;left:180px}}
 @media (max-width:767px){.site-description{text-indent:-9999px}}
