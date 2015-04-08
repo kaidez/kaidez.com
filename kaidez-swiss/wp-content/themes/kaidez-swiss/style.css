@@ -1422,11 +1422,12 @@ h1{margin-top:0;margin-bottom:0}
 .menu-item{display:inline;list-style-type:none;margin-right:15px}
 a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
 a:hover{color:#000;text-decoration:underline}
-@media (min-width:768px){a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#ed327f;text-decoration:none;font-weight:900}
+@media (min-width:768px){a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decoration:none;font-weight:900}
 .site-header{height:66px;padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
 .site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
 .site-branding{display:inline-block;position:absolute;margin-top:45px}
+.site-main{margin-top:87px}
 .searchform-class{width:300px;position:relative;left:350px;top:83px}
 .main-navigation{display:inline-block;position:absolute;left:180px}
 .menu{left:150px;position:relative}
@@ -1436,5 +1437,8 @@ a:hover{color:#000;text-decoration:underline}
 .menu-item a{min-width:48px;min-height:48px}
 .glyphicon{color:#000}
 .header-search-field{width:190px;height:31px;border:1px solid #000}
-a.home-link{font-size:81px}}
+a.home-link{color:#ed327f;font-size:81px}
+a.home-link:visited{color:#ed327f}
+a.home-link:hover{color:#d91365}
+a.home-link:active{color:#ed327f}}
 @media (max-width:767px){.glyphicon,.site-description{text-indent:-9999px}}
