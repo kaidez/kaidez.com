@@ -8,8 +8,8 @@ module.exports = function(grunt) {
     bowercopy: {
 
       /*
-       * don"t send messages to saying that Bower components aren"t
-       * configured...ignore them instead. Also, don"t run any bower
+       * don't send messages to saying that Bower components aren't
+       * configured...ignore them instead. Also, don't run any bower
        * tasks when grunt runs this task.
        */
       options: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       // Copy Font Awesome CSS
       bsfafont: {
 
-        // copy to the "css-build" directory
+        // copy to "wp-content/themes/fonts/"
         options: {
           destPrefix: "wp-content/themes/fonts/"
         },
