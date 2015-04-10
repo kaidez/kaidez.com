@@ -49,6 +49,20 @@
     </section>
     <section class="col-md-4">
       <h4 class="aside-section-header">site navigation</h4>
+      <ul class="aside-list">
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read the kaidez blog">blog</a>
+        </li>
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read articles written by blog">articles</a>
+        </li>
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read the AJAX beginner's tutorial written by kaidez">ajax tutorial</a>
+        </li>
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read the lynda.com courses developed by kaidez">kaidez on lynda</a>
+        </li>
+      </ul>
     </section>
   </div>	
 </aside><!-- #aside-id -->

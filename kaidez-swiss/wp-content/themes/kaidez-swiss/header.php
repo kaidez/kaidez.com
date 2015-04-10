@@ -34,17 +34,17 @@
       <div id="menu-main" class="menu" aria-expanded="false">
         <ul class="menu-item-container">
         <li class="menu-item">
-          <a href="/blog/">blog</a></span>
+          <a href="/blog/" alt="read the kaidez blog">blog</a></span>
         </li>
         <li class="menu-item">
-          <a href="/articles/">articles</a></span>
+          <a href="/articles/" alt="read articles written by kaidez">articles</a></span>
         </li></ul>
         <ul class="menu-item-container">
         <li class="menu-item">
-          <a href="/ajax-tutorial/">ajax tutorial</a></span>
+          <a href="/ajax-tutorial/" alt="read the AJAX beginner's tutorial written by kaidez">ajax tutorial</a></span>
         </li>
         <li class="menu-item">
-          <a href="/lynda-kaidez/">kaidez on lynda</a></span>
+          <a href="/lynda-kaidez/" alt="read the lynda.com courses developed by kaidez">kaidez on lynda</a></span>
         </li></ul>
       </div> <!-- #menu-main -->
 
