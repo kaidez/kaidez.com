@@ -101,12 +101,13 @@ a {
 }
 
 .aside-section-header {
-  color: #000;
+  font-weight: 900;
+  color: lighten(@pink, 30%);
 }
 
 // set the width for the <aside> tag's only child element
 .aside-inner {
-  width: 800px;
+  width: 775px;
 }
 
 // Remove left margin from all <ul> tags in <aside>
@@ -121,6 +122,10 @@ a {
   color: #000;
 }
 
+a.aside-link:hover {
+  color: darken(@pink, 20%);
+  text-decoration: none;
+}
 /*
  * ====================================================================
  * ASIDE STYLES END

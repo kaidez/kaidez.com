@@ -1918,7 +1918,6 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
-.btn,a:hover{font-weight:900}
 .affix{position:fixed}
 .aside-header,.hide-element{position:absolute!important}
 @-ms-viewport{width:device-width}
@@ -1974,7 +1973,7 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 .z4{z-index:4}
 .z5{z-index:5}
 h1{margin-top:0;margin-bottom:0}
-.btn{border-radius:0;background-color:#000}
+.btn{border-radius:0;font-weight:900;background-color:#000}
 .aside,.btn-default:hover,.site-header{background-color:#ed327f}
 .btn-default{border:0;color:#ed327f}
 .btn-default:hover{color:#000}
@@ -1983,11 +1982,12 @@ i{width:30px;height:30px}
 .menu-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .menu-item{display:inline;margin-right:15px}
 a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
-a:hover{color:#000;text-decoration:underline}
+a:hover{color:#000;text-decoration:underline;font-weight:900}
 .aside-header{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
-.aside-section-header{color:#000}
-.aside-inner{width:800px}
+.aside-section-header{font-weight:900;color:#f9bfd7}
+.aside-inner{width:775px}
 .aside-list-item{color:#000}
+a.aside-link:hover{color:#aa0f4f;text-decoration:none}
 @media (min-width:768px){a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decoration:none;font-weight:900}
 .site-header{height:66px;padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
@@ -2007,5 +2007,6 @@ a.home-link{color:#ed327f;font-size:81px}
 a.home-link:visited{color:#ed327f}
 a.home-link:hover{color:#d91365}
 a.home-link:active{color:#ed327f}
-.col-md-4{width:230px;vertical-align:top}}
+.col-md-4{width:230px;vertical-align:top}
+.aside-inner{margin-left:25px}}
 @media (max-width:767px){.glyphicon,.site-description{text-indent:-9999px}}

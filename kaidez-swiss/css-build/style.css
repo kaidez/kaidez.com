@@ -147,10 +147,11 @@ a:active {
   clip: rect(1px, 1px, 1px, 1px);
 }
 .aside-section-header {
-  color: #000;
+  font-weight: 900;
+  color: #f9bfd7;
 }
 .aside-inner {
-  width: 800px;
+  width: 775px;
 }
 .aside-list {
   padding-left: 0;
@@ -158,6 +159,10 @@ a:active {
 .aside-list-item {
   list-style-type: none;
   color: #000;
+}
+a.aside-link:hover {
+  color: #aa0f4f;
+  text-decoration: none;
 }
 /*
  * ====================================================================
@@ -258,6 +263,9 @@ a:active {
     width: 230px;
     display: inline-block;
     vertical-align: top;
+  }
+  .aside-inner {
+    margin-left: 25px;
   }
 }
 @media (max-width: 767px) {
