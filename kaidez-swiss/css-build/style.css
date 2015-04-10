@@ -70,6 +70,15 @@ html,
   height: 100%;
   min-height: 100%;
 }
+i {
+  width: 30px;
+  height: 30px;
+}
+/*
+ * ====================================================================
+ * MENU STYLES END
+ * ====================================================================
+ */
 .menu-header,
 .screen-reader-text {
   position: absolute !important;
@@ -88,6 +97,11 @@ html,
   list-style-type: none;
   margin-right: 15px;
 }
+/*
+ * ====================================================================
+ * MENU STYLES END
+ * ====================================================================
+ */
 /*
  * ====================================================================
  * LINK STYLES START
@@ -132,8 +146,18 @@ a:active {
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+.aside-section-header {
+  color: #000;
+}
 .aside-inner {
   width: 800px;
+}
+.aside-list {
+  padding-left: 0;
+}
+.aside-list-item {
+  list-style-type: none;
+  color: #000;
 }
 /*
  * ====================================================================

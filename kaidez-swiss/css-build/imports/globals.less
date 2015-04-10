@@ -4,6 +4,19 @@ body, html, .site, .site-content {
   min-height: 100%;
 }
 
+// Give all Fontawesome icons a firn height & width
+i {
+  width:30px;
+  height: 30px;
+}
+
+
+
+/*
+ * ====================================================================
+ * MENU STYLES END
+ * ====================================================================
+ */
 
 // Globally hide the <nav> header & "Skip to content" link
 .menu-header, .screen-reader-text {
@@ -28,6 +41,14 @@ body, html, .site, .site-content {
 }
 
 /*
+ * ====================================================================
+ * MENU STYLES END
+ * ====================================================================
+ */
+
+
+
+ /*
  * ====================================================================
  * LINK STYLES START
  * ====================================================================
@@ -79,10 +100,27 @@ a {
   .hide-element();
 }
 
+.aside-section-header {
+  color: #000;
+}
+
 // set the width for the <aside> tag's only child element
 .aside-inner {
   width: 800px;
 }
+
+// Remove left margin from all <ul> tags in <aside>
+.aside-list {
+  padding-left: 0;
+}
+
+// Style all <li> tags in <aside>
+.aside-list-item {
+  list-style-type: none;
+
+  color: #000;
+}
+
 /*
  * ====================================================================
  * ASIDE STYLES END
