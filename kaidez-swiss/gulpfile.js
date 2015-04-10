@@ -81,7 +81,7 @@ gulp.task("less", function () {
 gulp.task('concat', ['less'], function() {
   var deferred = Q.defer();
   setTimeout(function() {
-    return gulp.src(['css-build/wp-comment-block.css', 'css-build/font-awesome.min.css', 'css-build/bootstrap.css','css-build/style.css'])
+    return gulp.src(['css-build/wp-comment-block.css', 'css-build/font-awesome.css', 'css-build/bootstrap.css','css-build/style.css'])
     .pipe(concatCss('style.css'))
     .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
     return deferred.promise;
