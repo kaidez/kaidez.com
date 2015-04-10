@@ -61,11 +61,11 @@ module.exports = function(grunt) {
 
            "fontawesome-webfont.otf": "fontawesome/fonts/fontawesome-webfont.otf"
         }
-      }, // end "bowercopy:bsfa" task
+      }, // end "bowercopy:bsfafont" task
       // Copy jQuery over
       jq: {
 
-        // copy to the "css-build" directory
+        // copy to the "build/js/libs/" directory
         options: {
           destPrefix: "build/js/libs/"
         },
