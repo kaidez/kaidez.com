@@ -14,7 +14,7 @@
   	  <h4 class="aside-section-header">social</h4>
   	  <ul>
   	  	<li>
-  	  	  <a href="http://facebook.com/kaidezblog" alt="follow kaidez on facebook">facebook</a>
+  	  	  <a href="http://facebook.com/kaidezblog" alt="follow kaidez on facebook">facebook <i class="fa fa-facebook fa-lg"></i>
   	  	</li>
   	  	<li>
   	  		<a href="http://twitter.com/kaidez" alt="follow kaidez on twitter">twitter</a>

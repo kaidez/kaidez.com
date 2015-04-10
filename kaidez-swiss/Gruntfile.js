@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         runBower: false
       },
 
-      // Copy Bootstrap CCS over
+      // Copy Bootstrap CSS over
       bscss: {
 
         // copy to the "css-build" directory
@@ -29,6 +29,39 @@ module.exports = function(grunt) {
         }
       }, // end "bowercopy:bscss" task
 
+      // Copy Font Awesome CSS
+      bsfa: {
+
+        // copy to the "css-build" directory
+        options: {
+          destPrefix: "css-build/"
+        },
+        files: {
+          "font-awesome.min.css": "fontawesome/css/font-awesome.min.css"
+        }
+      }, // end "bowercopy:bsfa" task
+
+      // Copy Font Awesome CSS
+      bsfafont: {
+
+        // copy to the "css-build" directory
+        options: {
+          destPrefix: "wp-content/themes/fonts/"
+        },
+        files: {
+          "fontawesome-webfont.eot": "fontawesome/fonts/fontawesome-webfont.eot",
+
+          "fontawesome-webfont.svg": "fontawesome/fonts/fontawesome-webfont.svg",
+
+          "fontawesome-webfont.ttf": "fontawesome/fonts/fontawesome-webfont.ttf",
+
+          "fontawesome-webfont.woff": "fontawesome/fonts/fontawesome-webfont.woff",
+
+          "fontawesome-webfont.woff2": "fontawesome/fonts/fontawesome-webfont.woff2",
+
+           "fontawesome-webfont.otf": "fontawesome/fonts/fontawesome-webfont.otf"
+        }
+      }, // end "bowercopy:bsfa" task
       // Copy jQuery over
       jq: {
 

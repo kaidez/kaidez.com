@@ -81,7 +81,7 @@ gulp.task("less", function () {
 gulp.task('concat', ['less'], function() {
   var deferred = Q.defer();
   setTimeout(function() {
-    return gulp.src(['css-build/wp-comment-block.css', 'css-build/bootstrap.css','css-build/style.css'])
+    return gulp.src(['css-build/wp-comment-block.css', 'css-build/font-awesome.min.css', 'css-build/bootstrap.css','css-build/style.css'])
     .pipe(concatCss('style.css'))
     .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
     return deferred.promise;
@@ -159,6 +159,16 @@ gulp.task("bowerbscss", function () {
 // Copy over jQuery v.1.11.x only
 gulp.task("bowerjq", function () {
   gulp.run("grunt-bowercopy:jq");
+});
+
+// Copy over Font Awesome's minified CSS file
+gulp.task("bowerfa", function () {
+  gulp.run("grunt-bowercopy:bsfa");
+});
+
+// Copy over Font Awesome's minified CSS file
+gulp.task("bsfafont", function () {
+  gulp.run("grunt-bowercopy:bsfafont");
 });
 
 
