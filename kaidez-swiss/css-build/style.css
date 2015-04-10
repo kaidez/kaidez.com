@@ -118,6 +118,28 @@ a:active {
  * LINK STYLES END
  * ====================================================================
  */
+/*
+ * ====================================================================
+ * ASIDE STYLES
+ * ====================================================================
+ */
+.aside {
+  background-color: #ed327f;
+}
+.aside-header {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.aside-inner {
+  width: 800px;
+}
+/*
+ * ====================================================================
+ * ASIDE STYLES END
+ * ====================================================================
+ */
 @media (min-width: 768px) {
   .site-header {
     height: 66px;
@@ -207,6 +229,11 @@ a:active {
     color: #ed327f;
     text-decoration: none;
     font-weight: 900;
+  }
+  .col-md-4 {
+    width: 230px;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 @media (max-width: 767px) {
