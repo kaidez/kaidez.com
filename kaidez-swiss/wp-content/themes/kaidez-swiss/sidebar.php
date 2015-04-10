@@ -12,21 +12,21 @@
   <div class="row aside-inner">
   	<section class="col-md-4">
   	  <h4 class="aside-section-header">social</h4>
-  	  <ul>
-  	  	<li>
-  	  	  <a href="http://facebook.com/kaidezblog" alt="follow kaidez on facebook">facebook <i class="fa fa-facebook fa-lg"></i>
+  	  <ul class="aside-list">
+  	  	<li class="aside-list-item">
+  	  	  <a href="http://facebook.com/kaidezblog" alt="follow kaidez on facebook"><i class="fa fa-facebook fa-lg"></i> facebook</a>
   	  	</li>
-  	  	<li>
-  	  		<a href="http://twitter.com/kaidez" alt="follow kaidez on twitter">twitter</a>
+  	  	<li class="aside-list-item">
+  	  		<a href="http://twitter.com/kaidez" alt="follow kaidez on twitter"><i class="fa fa-twitter fa-lg"></i> twitter</a>
   	  	</li>
-  	  	 <li>
-  	  		<a href="http://youtube.com/c/kaidezblog" alt="follow kaidez on YouTube">youtube</a>
+  	  	 <li class="aside-list-item">
+  	  		<i class="fa fa-youtube fa-lg"></i><a href="http://youtube.com/c/kaidezblog" alt="follow kaidez on YouTube">youtube</a>
   	  	</li>
-  	  	<li>
-  	  		<a href="http://github.com/kaidez" alt="follow kaidez on YouTube">github</a>
+  	  	<li class="aside-list-item">
+  	  		<a href="http://github.com/kaidez" alt="follow kaidez on YouTube"><i class="fa fa-github fa-lg"></i> github</a>
   	  	</li>
-  	  	<li>
-  	  		<a href="https://plus.google.com/+KaiGittens" alt="follow kaidez on Google +">google+</a>
+  	  	<li class="aside-list-item">
+  	  		<a href="https://plus.google.com/+KaiGittens" alt="follow kaidez on Google +"><i class="fa fa-google-plus fa-lg"></i> google+</a>
   	  	</li>
   	  </ul>
     </section>
