@@ -157,6 +157,7 @@ a:active {
   padding-left: 0;
 }
 .aside-list-item {
+  height: 34px;
   list-style-type: none;
   color: #000;
 }

@@ -1986,7 +1986,7 @@ a:hover{color:#000;text-decoration:underline;font-weight:900}
 .aside-header{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .aside-section-header{font-weight:900;color:#f9bfd7}
 .aside-inner{width:775px}
-.aside-list-item{color:#000}
+.aside-list-item{height:34px;color:#000}
 a.aside-link:hover{color:#aa0f4f;text-decoration:none}
 @media (min-width:768px){a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decoration:none;font-weight:900}
 .site-header{height:66px;padding:3px 0 0 20px}

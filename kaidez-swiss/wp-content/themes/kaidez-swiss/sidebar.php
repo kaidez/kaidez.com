@@ -20,7 +20,7 @@
   	  		<a href="http://twitter.com/kaidez" class="aside-link" alt="follow kaidez on twitter"><i class="fa fa-twitter fa-lg"></i> twitter</a>
   	  	</li>
   	  	 <li class="aside-list-item">
-  	  		<i class="fa fa-youtube fa-lg"></i><a href="http://youtube.com/c/kaidezblog" class="aside-link" alt="follow kaidez on YouTube">youtube</a>
+  	  		<a href="http://youtube.com/c/kaidezblog" class="aside-link" alt="follow kaidez on YouTube"><i class="fa fa-youtube fa-lg"></i> youtube</a>
   	  	</li>
   	  	<li class="aside-list-item">
   	  		<a href="http://github.com/kaidez" class="aside-link" alt="follow kaidez on YouTube"><i class="fa fa-github fa-lg"></i> github</a>
@@ -32,6 +32,20 @@
     </section>
     <section class="col-md-4">
       <h4 class="aside-section-header">categories</h4>
+      <ul class="aside-list">
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read tutorials on the kaidez blog">tutorials</a>
+        </li>
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read code tips on the kaidez blog">code tips</a>
+        </li>
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read personal posts on the kaidez blog">personal</a>
+        </li>
+        <li class="aside-list-item">
+          <a href="#" class="aside-link" alt="read old reviews on the kaidez blog">reviews</a>
+        </li>
+      </ul>
     </section>
     <section class="col-md-4">
       <h4 class="aside-section-header">site navigation</h4>
