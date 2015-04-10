@@ -34,17 +34,17 @@
       <div id="menu-main" class="menu" aria-expanded="false">
         <ul class="menu-item-container">
         <li class="menu-item">
-          <a href="/blog/">blog</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+          <a href="/blog/">blog</a></span>
         </li>
         <li class="menu-item">
-          <a href="/articles/">articles</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+          <a href="/articles/">articles</a></span>
         </li></ul>
         <ul class="menu-item-container">
         <li class="menu-item">
-          <a href="/ajax-tutorial/">ajax tutorial</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+          <a href="/ajax-tutorial/">ajax tutorial</a></span>
         </li>
         <li class="menu-item">
-          <a href="/lynda-kaidez/">kaidez on lynda</a><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+          <a href="/lynda-kaidez/">kaidez on lynda</a></span>
         </li></ul>
       </div> <!-- #menu-main -->
 
