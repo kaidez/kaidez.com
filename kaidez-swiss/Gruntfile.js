@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           destPrefix: "css-build/"
         },
         files: {
-          "font-awesome.min.css": "fontawesome/css/font-awesome.min.css"
+          "font-awesome.css": "fontawesome/css/font-awesome.css"
         }
       }, // end "bowercopy:bsfa" task
 
