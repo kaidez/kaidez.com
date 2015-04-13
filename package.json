@@ -35,6 +35,6 @@
     "time-grunt": "^1.1.0"
   },
   "dependencies": {
-    "jshint": "^2.6.3"
+    "jshint": "^2.7.0"
   }
 }
