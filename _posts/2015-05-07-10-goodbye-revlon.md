@@ -1,5 +1,5 @@
 ---
-title: "Goodbye Revlon"
+title: "Goodbye, Revlon"
 comments: true
 author: Kai Gittens
 layout: post
