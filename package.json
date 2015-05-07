@@ -32,7 +32,7 @@
     "grunt-sftp-deploy": "0.2.4",
     "grunt-shell": "^1.1.2",
     "grunt-targethtml": "^0.2.6",
-    "time-grunt": "^1.1.1"
+    "time-grunt": "^1.2.0"
   },
   "dependencies": {
     "jshint": "^2.7.0"
