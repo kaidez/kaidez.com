@@ -23,6 +23,8 @@ The biggest "up" was the extended family I found at the company and leaving all 
 
 I've been recounting with Max all week how we went from building web code via emails, instant messages, and web briefs to working practically telepathically. We've completed each other very well over the years as well as become very good friends so I will miss that.
 
-I also need to thank some former bosses, specifically David Giambruno, Piotr Prussak and Erica Homer. Each one backed me up many times while at Revlon so I thank them for that as well.
+I also need to send specific shout-outs to some former bosses, specifically David Giambruno, Piotr Prussak and Erica Homer. Each one backed me up many times while at Revlon so I thank them for that as well.
+
+Finally, I thank the entire Revlon company for becoming my extended family over the past decade. I will miss you all.
 
 I'm simultaneously excited and sad today. :-(
