@@ -3,7 +3,7 @@ title: "Goodbye, Revlon"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: After almost ten years, I'm leaving Revlon to pursue a new, exciting opportunity.
+meta-excerpt: After almost ten years, I'm leaving Revlon to pursue a exciting new opportunity.
 permalink: /revlon/
 category: personal
 cat-name: "Personal"
