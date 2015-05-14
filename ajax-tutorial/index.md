@@ -14,9 +14,9 @@ AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-appro
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This AJAX tutorial was written with those developers in mind.
 <a name="table-of-contents"></a>
 <h2 style="clear:both;">Table of Contents</h2>
-  <ol>
-    <li><a href="#assumptions">Assumptions</li>
-    <li><a href="#how-code-examples-works">How the code examples work</li>
+<ol>
+<li><a href="#assumptions">Assumptions</li>
+<li><a href="#how-code-examples-works">How the code examples work</li>
     <li><a href="#what-is-ajax">What Is AJAX</a></li>
     <li><a href="#brief-history-ajax">A brief history of AJAX</a></li>
     <li>
