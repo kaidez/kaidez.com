@@ -42,4 +42,4 @@ So my skills are better than I'm giving myself credit for.
 I am 100% convinced that all this came to be thanks a decision I made months ago to try write at least one piece of web stack code everyday. I missed as few days as my GitHub contribution map shows, but I've mostly followed through with this decision.
 
 <img src="/img/git-contrib-map.jpg" class="imgBorder" alt="kaidez GitHub Contribution Map" />
-By doing this, 
+By doing this, vk';ngjs
