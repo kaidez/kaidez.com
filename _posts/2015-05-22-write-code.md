@@ -5,6 +5,7 @@ author: Kai Gittens
 layout: post
 meta-excerpt: "Writing code every day,especially JavaScript, teaches you to solve problems: the KEY skill-set needed to be a web developer."
 permalink: /write-code-every-f--king-day/
+has-home-img: git-contrib-map.jpg
 category: personal
 cat-name: "Personal"
 tags: [personal]
@@ -38,4 +39,7 @@ So my skills are better than I'm giving myself credit for.
 
 ## How I did all this
 
-I am 100% convinced that all this came to be thanks a decision I made months ago to try write at least one piece of web stack code everyday. I missed as few days as  
+I am 100% convinced that all this came to be thanks a decision I made months ago to try write at least one piece of web stack code everyday. I missed as few days as my GitHub contribution map shows, but I've mostly followed through with this decision.
+
+<img src="/img/git-contrib-map.jpg" class="imgBorder" alt="kaidez GitHub Contribution Map" />
+By doing this, 
