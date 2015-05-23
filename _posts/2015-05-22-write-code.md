@@ -39,8 +39,12 @@ So my skills are better than I'm giving myself credit for.
 
 ## How I did all this
 
-I am 100% convinced that all this came to be thanks a decision I made months ago to try write at least one piece of web stack code everyday. I missed as few days as my GitHub contribution map shows, but I've mostly followed through with this decision.
+I am 100% convinced that all this came to be thanks a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days as my GitHub contribution map shows, but I've mostly followed through with this decision.
 
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
 
-By doing this, I learned a lot of new
+Some of the code was work-related, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just me firing up a new Git repo and trying out some new concept library or framework.
+
+And in many cases, the code I wrote required I learn something I didn't know before. This included promises, complex JavaScript inheritance, web components and developing code in a Node environment.
+
+Learning new code things almost always requires the need to solve problems, particularly with JS.
