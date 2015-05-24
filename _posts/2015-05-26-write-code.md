@@ -55,6 +55,6 @@ I readily admit to understanding this late: that solving coding problems will al
 
 These incidents were actually the catalyst for my writing code everyday. And by doing just that, by writing specific code just to learn instead of because someone asked me to, I learned a lot about JavaScript code quirks.
 
-I had code around these quirks myself in the position
+My coding around these quirks was
 
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
