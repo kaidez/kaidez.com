@@ -12,9 +12,9 @@ tags: [personal]
 ---
 I've been thinking about this particular post for a while now, editing it in my brain for the past few months. My initial plan was to make this my 100th post where I talk what it's taken for me to grow as a web developer.
 
-But some satisfying events during the first week-and-a-half at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced me to publish it now in the hopes that it will help other web devs, especially beginning ones. The things discussed here have helped me grow as a developer in more ways then I can count.
+But some satisfying events during the first two weeks at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced me to publish it now in the hopes it will help other web devs, especially beginning ones. The things discussed here have helped me grow as a developer in more ways then I can count.
 
-Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have written about these things before, probably more elegantly than I'm about to. But the sentiment has to transcend to all developers, especially those that want a long web dev career.
+Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, probably more elegantly than I'm about to discuss them. But the sentiment has to transcend to all developers, so one more blog post about it won't hurt.
 
 Simply put: write code every day.
 
