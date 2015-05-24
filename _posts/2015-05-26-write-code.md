@@ -47,10 +47,12 @@ And in many cases, the code I wrote required I learn something I didn't know bef
 
 Learning new code things almost always requires the need to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would...you have to figure out why.
 
-Which is good, because if you working in web dev, solving problems is your job.
+Which is good because if you're a web developer, solving problems is part of your job.
 
 ## Your a Web ~~Developer~~ Engineer
 
-Knowing how to build things with HTML, CSS and JavaScript is only part of a web developers job. You also have to know how to solve problems that will inevitably come up when using those languages.
+I readily admit to understanding this late: that solving coding problems will always be part of my job. There were incidents at Revlon in the past where I took too long in solving problems, ticking off my team as a result.
+
+These incidents were actually the catalyst for my writing code everyday. And by doing just that, I   how to build things with HTML, CSS and JavaScript is only part of a web developers job. You also have to know how to solve problems that will inevitably come up when using those languages.
 
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
