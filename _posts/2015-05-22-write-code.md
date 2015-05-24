@@ -10,9 +10,9 @@ category: personal
 cat-name: "Personal"
 tags: [personal]
 ---
-I've been thinking about this particular post for a while now, editing it in my brain for the past few months. My initial plan was to make it my 100th post, treating it as a specific milestone of my web development career.
+I've been thinking about this particular post for a while now, editing it in my brain for the past few months. My initial plan was to make it my 100th post and treat it as a specific milestone of my web development career.
 
-But some satisfying events during the first week-and-a-half at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced my me to publish it now in the hopes that it will help some web devs of all levels. Because the things discussed here have certainly helped me...in more ways then I can count.
+But some satisfying events during the first week-and-a-half at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced my me to publish it now in the hopes that it will help some web devs of all levels. Because the things discussed here have helped me grow as a web developer in more ways then I can count.
 
 Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have written about these things before, probably more elegantly than I'm about to. But the sentiment has to transcend to all developers, especially those that want a long web dev career.
 
@@ -47,4 +47,8 @@ Some of the code was work-related, some of it was for [the lynda.com courses I c
 
 And in many cases, the code I wrote required I learn something I didn't know before. This included promises, complex JavaScript inheritance, web components and developing code in a Node environment.
 
-Learning new code things almost always requires the need to solve problems, particularly with JS.
+Learning new code things almost always requires the need to solve problems, particularly with JS. Something doesn't load up for whatever reason...you have to figure out why.
+
+Which is good, because if you working in web dev, solving problems is your job.
+
+## Your a Web ~~Developer~~ Engineer
