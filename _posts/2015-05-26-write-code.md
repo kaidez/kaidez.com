@@ -14,7 +14,7 @@ I've been thinking about this particular post for a while now, editing it in my 
 
 But some satisfying events during the first two weeks at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced me to publish it now in the hopes it will help other web devs, especially beginning ones. The things discussed here have helped me grow as a developer in more ways then I can count.
 
-Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, probably more elegantly than I'm about to discuss them. But the sentiment has to transcend to all developers, so one more blog post about it won't hurt.
+Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, probably more elegantly than I'm about to discuss them. But these things must transcend to all developers, so one more blog post about them won't hurt.
 
 Simply put: write code every day.
 
@@ -29,27 +29,28 @@ As mentioned in my last post, I took a front end dev job at a health and wellnes
 
 The first tasks I was giving were bug fixes, mostly JavaScript and CSS ones. I also had to rewrite some HTML for the sake of cross-browser/device compliance, but I most dealt with those bugs. 
 
-I've always been a bit insecure about my web stack skills being up to par, specifically the JavaScript one. JS is an anomaly that seemingly goes through changes every minute, especially in recent years, so I went into the new job a little worried about my overall performance.
+I've always been a bit insecure about my web stack skills being up to par, specifically the JavaScript one. JavaScript is an anomaly that seemingly goes through changes every minute, especially in recent years, so I went into the new job a little worried whether or not my JS skills were up-to-date enough to do a specific job.
 
-So I was nervous about how well I would do when I started tackling these bugs but a funny thing happened. I was able to fix them...quickly.
+So I was nervous about how whether or not I could fix these bugs but a funny thing happened. I was able to fix them...quickly.
 
-I don't mean to say that the bugs were so simple that a five-year old could fix them, or that I just realized I'm the world's greatest web developer. I mean to say that I knew what I needed to do to both determine the cause of the problem and then fix it, and never struggled to this.
+I don't mean to say that the bugs were so simple that a five-year old could fix them (they weren't), or that I just realized I'm the world's greatest web developer (I'm not). I mean to say that I knew what I needed to do to both determine the cause of the problems and then fix them, and never struggled to do all this.
 
 So my skills are better than I'm giving myself credit for.
 
 ## How I did all this
 
-I am 100% convinced that all this came to be thanks a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
+I am 100% convinced my skills are better thanks a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
 
-Some of the code was work-related, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just me firing up a new Git repo and trying out some new concept library or framework.
+Some of the code was work-related, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just me firing up a new Git repo and trying out some new library or framework, or a specific part of the JavaScript API.
 
 And in many cases, the code I wrote required I learn something I didn't know before. This included promises, complex JavaScript inheritance, web components and developing code in a Node environment.
 
-Learning new code things almost always requires the need to solve problems, particularly with JS. Something doesn't load up for whatever reason...you have to figure out why.
+Learning new code things almost always requires the need to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would...you have to figure out why.
 
 Which is good, because if you working in web dev, solving problems is your job.
 
 ## Your a Web ~~Developer~~ Engineer
 
+Knowing how to build things with HTML, CSS and JavaScript is only part of a web developers job. You also have to know how to solve problems that will inevitably come up when using those languages.
 
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
