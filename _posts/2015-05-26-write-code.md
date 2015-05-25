@@ -10,7 +10,7 @@ category: personal
 cat-name: "Personal"
 tags: [personal]
 ---
-I've been thinking about this particular post for a while now, editing it in my brain for the past few months. My initial plan was to make this my 100th post where I talk what it's taken for me to grow as a web developer.
+I've been thinking about this particular post for a few months now. My initial plan was to make this my 100th post, marking that milestone as a time to review my growth as a web developer.
 
 But some satisfying events during the first two weeks at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced me to publish it now in the hopes it will help other web devs, especially beginning ones. The things discussed here have helped me grow as a developer in more ways then I can count.
 
@@ -47,6 +47,8 @@ And in many cases, the code I wrote required I learn something I didn't know bef
 
 Learning new code things almost always requires the need to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would...you have to solve a problem.
 
+Here's where I go off on a tangent...
+
 ## You are a Web ~~Developer~~ Engineer
 
 I readily admit to understanding this late: that solving coding problems is part of my job as a web dev. There were incidents at Revlon in the past where I took too long in solving problems, ticking off my team as a result.
@@ -55,5 +57,6 @@ These incidents were actually the catalyst for my writing code everyday. And by 
 
 "Solving problems" is an under-spoken skill for web developers, but it's a must-have skill for engineers of all types...mechanical, electrical, etc.  And it's this "under-spoken-ness" that I have a problem with, because we web dev types really are engineers and not developers.
 
-We are not bug-fixers all the time: we are certainly architects and get to build stuff.
+We are not bug-fixers all the time: we are certainly architects and get to build coll things. But we also have be engineers when we build stuff, meaning we need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place.
+
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
