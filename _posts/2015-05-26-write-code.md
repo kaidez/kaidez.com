@@ -53,8 +53,9 @@ Here's where I go off on a tangent...
 
 Knowing how to solve code problems is an under-spoken skill for web developers...we need to possess it and I readily admit to understanding this late. There were incidents at Revlon in the past where I ticked off my team and took too long in solving problems.
 
-"Solving problems" is an under-spoken skill for web developers, but it's a must-have skill for engineers of all types...mechanical, electrical, etc.  And it's this "under-spoken-ness" that I have a problem with, because we web dev types really are engineers and not developers.
+As under-spoken it is in the web dev world, it's a must-have skill for engineers of all types...mechanical, electrical, etc.  And it's this "under-spoken-ness" that I have a problem with, because we web dev types really are engineers and not developers.
 
-We are not bug-fixers all the time: we are certainly architects and get to build cool things. But we also have be engineers when we build stuff, meaning we need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place.
+We are not _just_ bug-fixers all the time: we arr also architects that get to build cool things. But our jobs require us to be engineers when we build the cool things, meaning we need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place...as engineers do.
 
+As a result, I'm a uncomfortable with the title "web developer" at times and think the "web engineer" or "software engineer" better describes what we do and should be doing.
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
