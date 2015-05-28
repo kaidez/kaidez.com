@@ -57,5 +57,5 @@ As under-spoken it is in the web dev world, it's a must-have skill for engineers
 
 We are not _just_ bug-fixers all the time: we arr also architects that get to build cool things. But our jobs require us to be engineers when we build the cool things, meaning we need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place...as engineers do.
 
-As a result, I'm a uncomfortable with the title "web developer" at times and think the "web engineer" or "software engineer" better describes what we do and should be doing.
+So I'm uncomfortable with the title "web developer" at times and think the "web engineer" or "software engineer" is better for us. t
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
