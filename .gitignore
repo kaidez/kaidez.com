@@ -1,9 +1,9 @@
 
-
-kaidez-swiss/*
-!kaidez-swiss/wp-content/
-kaidez-swiss/themes/twenty*/
-
+wordpress/wp-config.php
+wordpress/wp-admin/
+wordpress/wp-content/themes/
+!wordpress/wp-content/themes/kaidez-swiss/
+wordpress/wp-includes/
 
 
 _site
