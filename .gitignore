@@ -1,11 +1,9 @@
 
-kaidez-swiss/Ex_Files_Underscores.zip
-private-wp-notes-DO-NOT-COMMIT.md
-kaidez-swiss/wp-content/plugins/
-kaidez-swiss/*
-kaidez-swiss/wp-admin/about.php
 
-kaidez-swiss/wp-includes/
+kaidez-swiss/*
+!kaidez-swiss/wp-content/
+kaidez-swiss/themes/twenty*/
+
 
 
 _site
