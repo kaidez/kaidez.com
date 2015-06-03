@@ -1,0 +1,15 @@
+
+
+.button {
+  width: 200px;
+}
+
+.box {
+  background: #fff;
+}
+
+h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

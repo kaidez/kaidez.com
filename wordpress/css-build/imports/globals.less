@@ -1,0 +1,134 @@
+// Globally force the page to stretch all views
+body, html, .site, .site-content {
+  height: 100%;
+  min-height: 100%;
+}
+
+// Give all Fontawesome icons a firn height & width
+i {
+  width:30px;
+  height: 30px;
+}
+
+
+
+/*
+ * ====================================================================
+ * MENU STYLES END
+ * ====================================================================
+ */
+
+// Globally hide the <nav> header & "Skip to content" link
+.menu-header, .screen-reader-text {
+  .hide-element();
+}
+
+// Make the main site header background pink in all views
+.site-header {
+  background-color: @pink;
+}
+
+// Globallyemove left padding from the main menu
+.menu {
+  padding-left:0;
+}
+
+// Style the <li> tags that contain nav links
+.menu-item {
+  display: inline;
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+/*
+ * ====================================================================
+ * MENU STYLES END
+ * ====================================================================
+ */
+
+
+
+ /*
+ * ====================================================================
+ * LINK STYLES START
+ * ====================================================================
+ */
+
+// Globally set main link color for the site
+// Color is always a bold black
+// Only the hover pseudo class shows an underline
+a {
+  color: @mainLinkColor;
+  text-decoration: none;
+  font-weight: 900;
+  &:visited {
+    color: @mainLinkColor;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  &:hover {
+    color: @mainLinkColor;
+    text-decoration: underline;
+    font-weight: 900;
+  }
+  &:active {
+    color: @mainLinkColor;
+    text-decoration: none;
+    font-weight: 900;
+  }
+}
+
+/*
+ * ====================================================================
+ * LINK STYLES END
+ * ====================================================================
+ */
+
+/*
+ * ====================================================================
+ * ASIDE STYLES
+ * ====================================================================
+ */
+
+// Make the <aside> background pink
+.aside {
+  background-color: @pink;
+}
+
+// Hide <aside> header
+.aside-header {
+  .hide-element();
+}
+
+.aside-section-header {
+  font-weight: 900;
+  color: lighten(@pink, 30%);
+}
+
+// set the width for the <aside> tag's only child element
+.aside-inner {
+  width: 775px;
+}
+
+// Remove left margin from all <ul> tags in <aside>
+.aside-list {
+  padding-left: 0;
+}
+
+// Style all <li> tags in <aside>
+.aside-list-item {
+  height: 34px;
+  list-style-type: none;
+
+  color: #000;
+}
+
+a.aside-link:hover {
+  color: darken(@pink, 20%);
+  text-decoration: none;
+}
+/*
+ * ====================================================================
+ * ASIDE STYLES END
+ * ====================================================================
+ */

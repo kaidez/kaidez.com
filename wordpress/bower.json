@@ -1,0 +1,26 @@
+{
+  "name": "kaidez.com",
+  "version": "2.0.0",
+  "homepage": "http://kaidez.com/",
+  "authors": [
+    "Kai \"kaidez\" Gittens <kai.gittens@gmail.com>"
+  ],
+  "description": "WordPress files for the \"kaidez-swiss\" theme used on kaidez.com",
+  "main": "n/a",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "jquery": "1.11.2",
+    "fontawesome": "~4.3.0"
+  },
+  "resolutions": {
+    "jquery": "~1.11.2"
+  }
+}

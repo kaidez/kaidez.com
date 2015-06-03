@@ -1,0 +1,135 @@
+@media (min-width: 768px) {
+
+  // Style the header on wide views
+  .site-header {
+  	height: 66px;
+    padding:3px 0 0 20px;
+  }
+  
+  // Make the main site link really big on non-handheld views
+  .site-title {
+    margin-bottom: 5px;
+    position: absolute;
+
+    font-size: 65px;
+  }
+
+  // Style the tagline on wide views
+  .site-description {
+  	margin: 0;
+  	width:200px;
+  	position: absolute;
+    top: -47px;
+    left: 7px;
+
+  	font-size: 18px;
+  	font-weight: 900;
+  	color: #000;
+  }
+
+  // Inline the ".site-branding" div so it can be v-alignd with <nav>
+  .site-branding {
+  	display: inline-block;
+  	position: absolute;
+  	margin-top: 45px;
+  }
+
+  // push <main> further down the page
+  .site-main {
+    margin-top: 87px;
+  }
+
+  // Style search form
+  .searchform-class {
+    width: 300px;
+    position: relative;
+    left: 350px;
+    top: 83px;
+  }
+
+  // Style the main navigation
+  .main-navigation, {
+  	display: inline-block;
+    position: absolute;
+    left: 180px;
+  }
+
+  // Push main <nav> to the left on wide views
+  .menu {
+  	left: 150px;
+    position: relative;
+  }
+
+  // Hide the menu button on desktops/laptops
+  .menu-toggle {
+    .hide-element();
+  }
+
+   // Set font-size on the links
+  .menu-item {
+  	display: block;
+  	margin-bottom: 10px;
+
+  	font-size: 16px;
+  }
+
+  // Set font-size on the links
+  .menu-item-container {
+  	display: inline-block;
+  }
+
+  // Give a minimum width & heigt to links as per Google's guidelines
+  .menu-item a {
+  	min-width:48px;
+  	min-height:48px;
+  }
+
+  // Make right triangle glyphicon black
+  .glyphicon {
+  	color: #000;
+  }
+
+  // Style the search field
+  .header-search-field {
+    width: 190px;
+    height: 31px;
+
+    border: 1px solid #000;
+  }
+
+  a.home-link {
+  color: @pink;
+  text-decoration: none;
+
+  font-weight: 900;
+  font-size: 81px;
+  &:visited {
+    color: @pink;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  &:hover {
+    color: darken(@pink, 10%);
+    text-decoration: none;
+    font-weight: 900;
+  }
+  &:active {
+    color: @pink;
+    text-decoration: none;
+    font-weight: 900;
+  }
+}
+
+  //set width, position columns in <aside> on wide views
+  .col-md-4 {
+    width: 230px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  // set left margin for <aside> on wide views
+  .aside-inner {
+    margin-left:25px
+  }
+
+}
