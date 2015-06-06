@@ -26,6 +26,11 @@
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+      <button type="button" class="mobile-menu btn-default">
+        <span class="mobile-menu-bar"></span>
+        <span class="mobile-menu-bar"></span>
+        <span class="mobile-menu-bar"></span>
+      </button> <!-- .mobile-menu -->
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
