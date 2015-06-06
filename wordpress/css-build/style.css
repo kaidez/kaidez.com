@@ -269,12 +269,6 @@ a.aside-link:hover {
     margin-left: 25px;
   }
 }
-@media (min-width: 1200px) {
-  .kai {
-    transform: translate3d(0, 10px, 0);
-    -webkit-transform: translate3d(0, 10px, 0);
-  }
-}
 @media (max-width: 767px) {
   /*
    *
