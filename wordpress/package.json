@@ -26,7 +26,7 @@
     "gulp-csslint": "^0.1.5",
     "gulp-grunt": "^0.5.2",
     "gulp-imagemin": "^2.2.1",
-    "gulp-minify-css": "^1.1.5",
+    "gulp-minify-css": "^1.1.6",
     "gulp-uncss": "^1.0.1",
     "gulp-watch": "^4.2.4",
     "q": "^1.4.1",
