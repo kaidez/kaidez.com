@@ -52,8 +52,11 @@ h1 {
 .btn-default {
   border: 1px solid #000;
   color: #ed327f;
+  /* Override some of Bootstrap's .btn-default states */
 }
-.btn-default:hover {
+.btn-default:active,
+.btn-default:hover,
+.btn-default:focus {
   color: #000;
   background-color: #ed327f;
   border-color: #000;
@@ -300,6 +303,7 @@ a.aside-link:hover {
     margin: 8px 15px 8px 0;
     height: 48px;
     width: 48px;
+    z-index: 2;
     background-color: #000;
     border: 1px solid #000;
     border-radius: 4px;
@@ -316,8 +320,11 @@ a.aside-link:hover {
   /*
    * Have the lines in the mobile turn black
    * Give the button a black border
+   * Do this for multiple classes
    */
-  .btn-default:hover span {
+  .btn-default:active span,
+  .btn-default:hover span,
+  .btn-default:focus span {
     background-color: #000;
     border: 1px solid #000;
   }
@@ -344,7 +351,7 @@ a.aside-link:hover {
       opacity: 1;
     }
   }
-  .main-navigation {
+  .kai {
     -webkit-animation-name: menu;
     animation-name: menu;
     -webkit-animation-duration: 1s;
@@ -355,11 +362,9 @@ a.aside-link:hover {
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    position: absolute;
-    top: 0px;
+    position: relative;
     z-index: 1;
     background-color: #ED327F;
-    opacity: 0;
   }
   /* MOBILE MENU STYLES END */
   .site-branding {
@@ -392,5 +397,10 @@ a.aside-link:hover {
   .entry-title {
     font-size: 25px;
     font-size: 2.5rem;
+  }
+  .main-navigation {
+    opacity: 0;
+    position: relative;
+    bottom: 35px;
   }
 }

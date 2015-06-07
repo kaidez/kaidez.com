@@ -2013,9 +2013,9 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .z5{z-index:5}
 h1{margin-top:0;margin-bottom:0}
 .btn{border-radius:0;font-weight:900;background-color:#000}
-.aside,.btn-default:hover,.site-header{background-color:#ed327f}
+.aside,.site-header{background-color:#ed327f}
 .btn-default{border:1px solid #000;color:#ed327f}
-.btn-default:hover{color:#000;border-color:#000}
+.btn-default:active,.btn-default:focus,.btn-default:hover{color:#000;background-color:#ed327f;border-color:#000}
 .site,.site-content,body,html{height:100%;min-height:100%}
 .site{max-width:100%;overflow-x:hidden}
 i{width:30px;height:30px}
@@ -2051,20 +2051,22 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .aside-inner{margin-left:25px}
 .mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
-@media (max-width:767px){.mobile-menu{position:relative;bottom:40px;float:right;padding:5px 8px 1px;margin:8px 15px 8px 0;height:48px;width:48px;background-color:#000;border:1px solid #000;border-radius:4px}
+@media (max-width:767px){.kai,.mobile-menu,.site-branding{position:relative}
+.mobile-menu{bottom:40px;float:right;padding:5px 8px 1px;margin:8px 15px 8px 0;height:48px;width:48px;z-index:2;background-color:#000;border:1px solid #000;border-radius:4px}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin-bottom:6px;background-color:#ed327f;border-radius:1px}
-.btn-default:hover span{background-color:#000;border:1px solid #000}
+.btn-default:active span,.btn-default:focus span,.btn-default:hover span{background-color:#000;border:1px solid #000}
 @-webkit-keyframes menu{0%{-webkit-transform:translateY(0);opacity:0}
 100%{-webkit-transform:translateY(50px);opacity:1}
 }
 @keyframes menu{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:0}
 100%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:1}
 }
-.main-navigation{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;position:absolute;top:0;z-index:1;background-color:#ED327F;opacity:0}
-.site-branding{z-index:2;position:relative}
+.kai{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;z-index:1;background-color:#ED327F}
+.site-branding{z-index:2}
 .glyphicon{text-indent:-9999px}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:70px}
 .searchform-class{position:relative;top:60px}
 .entry-title{font-size:25px;font-size:2.5rem}
+.main-navigation{opacity:0;position:relative;bottom:35px}
 }
