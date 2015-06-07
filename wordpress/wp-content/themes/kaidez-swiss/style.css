@@ -14,12 +14,12 @@
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+.aside-list-item,.fa-ul,.menu-item{list-style-type:none}
 .fa-fw,.fa-li{text-align:center}
 .fa,.fa-stack{display:inline-block}
 .fa,.glyphicon{-moz-osx-font-smoothing:grayscale}
 .btn-group>.btn-group,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu{float:left}
 .navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.pre-scrollable{max-height:340px}
-.aside-list-item,.fa-ul,.menu-item{list-style-type:none}
 @font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-webkit-transform:translate(0,0);transform:translate(0,0)}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
@@ -894,7 +894,7 @@ select{background:#fff!important}
 .glyphicon-menu-down:before{content:"\e259"}
 .glyphicon-menu-up:before{content:"\e260"}
 *,:after,:before{box-sizing:border-box}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
 a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
@@ -918,7 +918,6 @@ hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}
 .h4,h4{font-size:18px}
 .h5,h5{font-size:14px}
 .h6,h6{font-size:12px}
-p{margin:0 0 10px}
 .lead{margin-bottom:20px;font-size:16px;font-weight:300;line-height:1.4}
 address,blockquote .small,blockquote footer,blockquote small,dd,dt,pre{line-height:1.42857143}
 dt,kbd kbd,label{font-weight:700}
@@ -1445,9 +1444,8 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .input-group .form-control,.input-group-addon,.input-group-btn{display:table-cell}
 .nav>li,.nav>li>a{position:relative;display:block}
 .input-group .form-control:not(:first-child):not(:last-child),.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child){border-radius:0}
-.input-group-addon,.popover{font-size:14px;border:1px solid #ccc}
 .input-group-addon,.input-group-btn{width:1%;white-space:nowrap;vertical-align:middle}
-.input-group-addon{padding:6px 12px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border-radius:4px}
+.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}
 .input-group-addon.input-sm{padding:5px 10px;font-size:12px;border-radius:3px}
 .input-group-addon.input-lg{padding:10px 16px;font-size:18px;border-radius:6px}
 .input-group-addon input[type=checkbox],.input-group-addon input[type=radio]{margin-top:0}
@@ -1877,7 +1875,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .tooltip.bottom .tooltip-arrow{left:50%;margin-left:-5px}
 .tooltip.bottom-left .tooltip-arrow{right:5px;margin-top:-5px}
 .tooltip.bottom-right .tooltip-arrow{left:5px;margin-top:-5px}
-.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;line-height:1.42857143;text-align:left;white-space:normal;background-color:#fff;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 5px 10px rgba(0,0,0,.2)}
+.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;font-size:14px;line-height:1.42857143;text-align:left;white-space:normal;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 5px 10px rgba(0,0,0,.2)}
 .popover.top{margin-top:-10px}
 .popover.right{margin-left:10px}
 .popover.bottom{margin-top:10px}
@@ -2011,23 +2009,28 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .z3{z-index:3}
 .z4{z-index:4}
 .z5{z-index:5}
+body{font-size:1.6rem;line-height:24px}
 h1{margin-top:0;margin-bottom:0}
+p{margin:0 0 22px}
 .btn{border-radius:0;font-weight:900;background-color:#000}
 .aside,.site-header{background-color:#ed327f}
 .btn-default{border:1px solid #000;color:#ed327f}
 .btn-default:active,.btn-default:focus,.btn-default:hover{color:#000;background-color:#ed327f;border-color:#000}
-.site,.site-content,body,html{height:100%;min-height:100%}
+.site,.site-content,body,html{min-height:100%}
 .site{max-width:100%;overflow-x:hidden}
 i{width:30px;height:30px}
+.home-link{color:#000}
 .menu-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
 .menu-item{display:inline;margin-right:15px}
-a,a:active,a:visited{color:#000;text-decoration:none;font-weight:900}
-a:hover{color:#000;text-decoration:underline;font-weight:900}
+a,a:visited{color:#ed327f;text-decoration:underline}
+a:active,a:hover{color:#ed327f;text-decoration:none}
+a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;text-decoration:none}
 .aside-header{clip:rect(1px,1px,1px,1px)}
 .aside-section-header{font-weight:900;color:#f9bfd7}
 .aside-inner{width:775px}
 .aside-list-item{height:34px;color:#000}
-a.aside-link:hover{color:#aa0f4f;text-decoration:none}
+a.aside-link,a.aside-link:visited{color:#000;text-decoration:none}
+a.aside-link:hover{color:#7b0b39;text-decoration:underline}
 @media (min-width:768px){.site-header{height:66px;padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
 .site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
@@ -2053,20 +2056,21 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 }
 @media (max-width:767px){.kai,.mobile-menu,.site-branding{position:relative}
 .mobile-menu{bottom:40px;float:right;padding:5px 8px 1px;margin:8px 15px 8px 0;height:48px;width:48px;z-index:2;background-color:#000;border:1px solid #000;border-radius:4px}
-.mobile-menu-bar{display:block;width:31px;height:4px;margin-bottom:6px;background-color:#ed327f;border-radius:1px}
+.mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;background-color:#ed327f;border-radius:1px}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span{background-color:#000;border:1px solid #000}
-@-webkit-keyframes menu{0%{-webkit-transform:translateY(0);opacity:0}
+@-webkit-keyframes menu{0%{-webkit-transform:translateY(0)}
 100%{-webkit-transform:translateY(50px);opacity:1}
 }
-@keyframes menu{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:0}
+@keyframes menu{0%{-webkit-transform:translateY(0);transform:translateY(0)}
 100%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:1}
 }
 .kai{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;z-index:1;background-color:#ED327F}
 .site-branding{z-index:2}
-.glyphicon{text-indent:-9999px}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:70px}
 .searchform-class{position:relative;top:60px}
-.entry-title{font-size:25px;font-size:2.5rem}
+.entry-header{margin-bottom:20px}
+.entry-title{font-size:4px;font-size:4rem}
 .main-navigation{opacity:0;position:relative;bottom:35px}
+.aside,.content-area{padding:0 10px}
 }

@@ -10,6 +10,9 @@
 .ti {
   text-indent: -9999px;
 }
+/* Z-INDEX MIXINS */
+/* 5 or less should be fine, but plugin code may want mord */
+/* WordPress also gets crazy with z-indexes (e.g. "z-index: 9999") */
 .z1 {
   z-index: 1;
 }
@@ -25,6 +28,7 @@
 .z5 {
   z-index: 5;
 }
+/* clearfix */
 /*
  * HELPER CLASSES END
  */
@@ -36,10 +40,25 @@
  * build.
  *
  */
+/*
+ * Bootstrap sets core font size to 14px, but Google suggests 16px 
+ * (see bit.ly/1KO03ER)
+ * Override this
+ */
+body {
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+/* Bootstrap applies top/bottoms to elements...remove them */
 h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
+/* Override Bootstrap's <p> styles...increase the margin-bottom */
+p {
+  margin: 0 0 22px;
+}
+/* Override SOME parts of Bootstrap's .btn class */
 .btn {
   border-radius: 0;
   font-weight: 900;
@@ -78,7 +97,7 @@ body,
 html,
 .site,
 .site-content {
-  height: 100%;
+  /*height: 100%;*/
   min-height: 100%;
 }
 /* Globally force the page to vertically stretch all views*/
@@ -90,6 +109,9 @@ html,
 i {
   width: 30px;
   height: 30px;
+}
+.home-link {
+  color: #000;
 }
 /*
  * ====================================================================
@@ -125,24 +147,30 @@ i {
  * ====================================================================
  */
 a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 900;
+  color: #ed327f;
+  text-decoration: underline;
 }
 a:visited {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 900;
-}
-a:hover {
-  color: #000000;
+  color: #ed327f;
   text-decoration: underline;
-  font-weight: 900;
 }
+a:hover,
 a:active {
-  color: #000000;
+  color: #ed327f;
   text-decoration: none;
-  font-weight: 900;
+}
+a.home-link {
+  color: #000;
+  text-decoration: none;
+}
+a.home-link:visited {
+  color: #000;
+  text-decoration: none;
+}
+a.home-link:hover,
+a.home-link:active {
+  color: #000;
+  text-decoration: none;
 }
 /*
  * ====================================================================
@@ -178,9 +206,17 @@ a:active {
   list-style-type: none;
   color: #000;
 }
-a.aside-link:hover {
-  color: #aa0f4f;
+a.aside-link {
+  color: #000000;
   text-decoration: none;
+}
+a.aside-link:visited {
+  color: #000000;
+  text-decoration: none;
+}
+a.aside-link:hover {
+  color: #7b0b39;
+  text-decoration: underline;
 }
 /*
  * ====================================================================
@@ -313,7 +349,7 @@ a.aside-link:hover {
     display: block;
     width: 31px;
     height: 4px;
-    margin-bottom: 6px;
+    margin: 0 auto 4px;
     background-color: #ed327f;
     border-radius: 1px;
   }
@@ -334,7 +370,6 @@ a.aside-link:hover {
   @-webkit-keyframes menu {
     0% {
       -webkit-transform: translateY(0px);
-      opacity: 0;
     }
     100% {
       -webkit-transform: translateY(50px);
@@ -344,7 +379,6 @@ a.aside-link:hover {
   @keyframes menu {
     0% {
       transform: translateY(0px);
-      opacity: 0;
     }
     100% {
       transform: translateY(50px);
@@ -371,9 +405,14 @@ a.aside-link:hover {
     z-index: 2;
     position: relative;
   }
-  .glyphicon {
-    text-indent: -9999px;
+  /*
+   * Hide some elements on mobile views with .ti() text-indent mixin
+   * May not be needed so it's commented out for now
+   */
+  /*.glyphicon {
+  	.ti()
   }
+  */
   /* Hide the site colophon/description on mobile view */
   .site-description {
     position: absolute !important;
@@ -393,14 +432,25 @@ a.aside-link:hover {
     position: relative;
     top: 60px;
   }
-  /* Make the post title smaller on mobile views */
+  /* Add space between a single post's header & content */
+  .entry-header {
+    margin-bottom: 20px;
+  }
+  /* Style post title smaller on mobile views */
   .entry-title {
-    font-size: 25px;
-    font-size: 2.5rem;
+    font-size: 4px;
+    font-size: 4rem;
   }
   .main-navigation {
     opacity: 0;
     position: relative;
     bottom: 35px;
+  }
+  /* Add left/right space to the blog post content */
+  .content-area {
+    padding: 0 10px;
+  }
+  .aside {
+    padding: 0 10px;
   }
 }

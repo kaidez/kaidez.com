@@ -1,6 +1,6 @@
 /* Globally force the page to horizontally stretch all views*/
 body, html, .site, .site-content {
-  height: 100%;
+  /*height: 100%;*/
   min-height: 100%;
 }
 
@@ -14,6 +14,10 @@ body, html, .site, .site-content {
 i {
   width:30px;
   height: 30px;
+}
+
+.home-link {
+  color: #000;
 }
 
 /*
@@ -59,26 +63,32 @@ i {
  */
 
 // Globally set main link color for the site
-// Color is always a bold black
 // Only the hover pseudo class shows an underline
 a {
-  color: @mainLinkColor;
-  text-decoration: none;
-  font-weight: 900;
+  color: @pink;
+  text-decoration: underline;
   &:visited {
-    color: @mainLinkColor;
-    text-decoration: none;
-    font-weight: 900;
-  }
-  &:hover {
-    color: @mainLinkColor;
+    color: @pink;
     text-decoration: underline;
-    font-weight: 900;
   }
-  &:active {
-    color: @mainLinkColor;
+  &:hover, &:active {
+    color: @pink;
     text-decoration: none;
-    font-weight: 900;
+  }
+}
+
+// Globally set main link color for the site
+// Only the hover pseudo class shows an underline
+a.home-link {
+  color: #000;
+  text-decoration: none;
+  &:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  &:hover, &:active {
+    color: #000;
+    text-decoration: none;
   }
 }
 
@@ -127,9 +137,19 @@ a {
   color: #000;
 }
 
-a.aside-link:hover {
-  color: darken(@pink, 20%);
+a.aside-link {
+  color: darken(@pink, 80%);
   text-decoration: none;
+  
+  &:visited {
+    color: darken(@pink, 80%);
+    text-decoration: none; 
+  }
+
+  &:hover {
+    color: darken(@pink, 30%);
+    text-decoration: underline;  
+  }
 }
 /*
  * ====================================================================

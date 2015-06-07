@@ -7,13 +7,28 @@
  *
  */
 
-// Bootstrap applies top/bottoms to elements...remove them
+/*
+ * Bootstrap sets core font size to 14px, but Google suggests 16px 
+ * (see bit.ly/1KO03ER)
+ * Override this
+ */
+body {
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+/* Bootstrap applies top/bottoms to elements...remove them */
 h1 {
 	margin-top: 0;
   margin-bottom: 0;
 }
 
-// Override SOME parts of Bootstrap's .btn class
+/* Override Bootstrap's <p> styles...increase the margin-bottom */
+p {
+  margin: 0 0 22px;
+}
+
+/* Override SOME parts of Bootstrap's .btn class */
 .btn {
 	border-radius: 0;
   font-weight: 900;

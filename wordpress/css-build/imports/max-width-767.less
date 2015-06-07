@@ -11,6 +11,7 @@
     margin: 8px 15px 8px 0;
     height: 48px;
     width: 48px;
+    .z2();
 
     background-color: #000;
     border: 1px solid #000;
@@ -22,36 +23,42 @@
     display: block;
     width: 31px;
     height: 4px;
-    margin-bottom: 6px;
+    margin: 0 auto 4px;
 
     background-color: @pink;
     border-radius: 1px;
   }
+  
+
 
   /*
    * Have the lines in the mobile turn black
    * Give the button a black border
+   * Do this for multiple classes
    */
-  .btn-default:hover span {
-    background-color: #000;
-    border: 1px solid #000;
+  .btn-default {
+    &:active span, &:hover span, &:focus span {
+      background-color: #000;
+      border: 1px solid #000;
+    }
   }
 
   /*
    *
    */
   @-webkit-keyframes menu {
-    0% {-webkit-transform: translateY(0px); opacity:0; }
+    0% {-webkit-transform: translateY(0px);  }
     100% {-webkit-transform: translateY(50px); opacity:1;}
   }
 
 
 
   @keyframes menu {
-    0% {transform: translateY(0px); opacity:0; }
+    0% {transform: translateY(0px);  }
     100% {transform: translateY(50px); opacity:1;}
   }
-  .main-navigation {
+
+  .kai {
     -webkit-animation-name: menu;
             animation-name: menu;
     -webkit-animation-duration: 1s;
@@ -63,25 +70,26 @@
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
 
-    position: absolute;
-    top: 0px;
+    position: relative;
     .z1();
-
     background-color: #ED327F;
-    opacity: 0;
   }
 
-    /* MOBILE MENU STYLES END */
+  /* MOBILE MENU STYLES END */
 
   .site-branding {
     .z2();
     position: relative;
   }
 
-  // Hide some elements on hand-held views with .ti() text-indent mixin
-  .glyphicon {
+  /*
+   * Hide some elements on mobile views with .ti() text-indent mixin
+   * May not be needed so it's commented out for now
+   */
+  /*.glyphicon {
   	.ti()
   }
+  */
 
   /* Hide the site colophon/description on mobile view */
   .site-description {
@@ -102,10 +110,30 @@
     top: 60px;
   }
 
-  /* Make the post title smaller on mobile views */
+  /* Add space between a single post's header & content */
+  .entry-header {
+    margin-bottom: 20px;
+  }
+
+  /* Style post title smaller on mobile views */
   .entry-title {
-    font-size: 25px;
-    font-size: 2.5rem;
+    font-size: 4px;
+    font-size: 4rem;
+  }
+
+  .main-navigation {
+    opacity: 0;
+    position: relative;
+    bottom: 35px;
+  }
+
+  /* Add left/right space to the blog post content */
+  .content-area {
+    padding: 0 10px;
+  }
+
+  .aside {
+    padding:0 10px;
   }
 
 }
