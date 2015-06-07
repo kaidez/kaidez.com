@@ -70,6 +70,7 @@ h1 {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min-resolution: 192dpi) and (min-width: 1300px), only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
   /* Large screen, retina, stuff to override above media query */
 }
+/* Globally force the page to horizontally stretch all views*/
 body,
 html,
 .site,
@@ -77,13 +78,19 @@ html,
   height: 100%;
   min-height: 100%;
 }
+/* Globally force the page to vertically stretch all views*/
+.site {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* Give all Fontawesome icons a firn height & width */
 i {
   width: 30px;
   height: 30px;
 }
 /*
  * ====================================================================
- * MENU STYLES END
+ * MENU STYLES START
  * ====================================================================
  */
 .menu-header,

@@ -14,12 +14,12 @@
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-.aside-list-item,.fa-ul,.menu-item{list-style-type:none}
 .fa-fw,.fa-li{text-align:center}
 .fa,.fa-stack{display:inline-block}
 .fa,.glyphicon{-moz-osx-font-smoothing:grayscale}
 .btn-group>.btn-group,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu{float:left}
 .navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.pre-scrollable{max-height:340px}
+.aside-list-item,.fa-ul,.menu-item{list-style-type:none}
 @font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-webkit-transform:translate(0,0);transform:translate(0,0)}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
@@ -1445,8 +1445,9 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .input-group .form-control,.input-group-addon,.input-group-btn{display:table-cell}
 .nav>li,.nav>li>a{position:relative;display:block}
 .input-group .form-control:not(:first-child):not(:last-child),.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child){border-radius:0}
+.input-group-addon,.popover{font-size:14px;border:1px solid #ccc}
 .input-group-addon,.input-group-btn{width:1%;white-space:nowrap;vertical-align:middle}
-.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}
+.input-group-addon{padding:6px 12px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border-radius:4px}
 .input-group-addon.input-sm{padding:5px 10px;font-size:12px;border-radius:3px}
 .input-group-addon.input-lg{padding:10px 16px;font-size:18px;border-radius:6px}
 .input-group-addon input[type=checkbox],.input-group-addon input[type=radio]{margin-top:0}
@@ -1507,7 +1508,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .navbar-collapse.in{overflow-y:visible}
 .navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-right:0;padding-left:0}
 }
-.embed-responsive,.modal,.modal-open,.progress{overflow:hidden}
+.carousel-inner,.embed-responsive,.modal,.modal-open,.progress{overflow:hidden}
 @media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse{max-height:200px}
 }
 .container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}
@@ -1829,6 +1830,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
 .close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}
+.carousel-caption,.carousel-control{text-shadow:0 1px 2px rgba(0,0,0,.6)}
 .popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;filter:alpha(opacity=50);opacity:.5}
 button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;border:0}
@@ -1875,7 +1877,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .tooltip.bottom .tooltip-arrow{left:50%;margin-left:-5px}
 .tooltip.bottom-left .tooltip-arrow{right:5px;margin-top:-5px}
 .tooltip.bottom-right .tooltip-arrow{left:5px;margin-top:-5px}
-.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;font-size:14px;line-height:1.42857143;text-align:left;white-space:normal;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 5px 10px rgba(0,0,0,.2)}
+.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;line-height:1.42857143;text-align:left;white-space:normal;background-color:#fff;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 5px 10px rgba(0,0,0,.2)}
 .popover.top{margin-top:-10px}
 .popover.right{margin-left:10px}
 .popover.bottom{margin-top:10px}
@@ -1896,7 +1898,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .popover.bottom>.arrow:after{top:1px;margin-left:-10px;content:" ";border-top-width:0;border-bottom-color:#fff}
 .popover.left>.arrow{top:50%;right:-11px;margin-top:-11px;border-right-width:0;border-left-color:#999;border-left-color:rgba(0,0,0,.25)}
 .popover.left>.arrow:after{right:1px;border-right-width:0;border-left-color:#fff}
-.carousel-inner{width:100%;overflow:hidden}
+.carousel-inner{width:100%}
 .carousel-inner>.item{position:relative;display:none;transition:.6s ease-in-out left}
 .carousel-inner>.item>a>img,.carousel-inner>.item>img{line-height:1}
 @media all and (transform-3d),(-webkit-transform-3d){.carousel-inner>.item{transition:-webkit-transform .6s ease-in-out;transition:transform .6s ease-in-out;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000;perspective:1000}
@@ -1912,7 +1914,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .carousel-inner>.next.left,.carousel-inner>.prev.right{left:0}
 .carousel-inner>.active.left{left:-100%}
 .carousel-inner>.active.right{left:100%}
-.carousel-control{position:absolute;top:0;bottom:0;left:0;width:15%;font-size:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6);filter:alpha(opacity=50);opacity:.5}
+.carousel-control{position:absolute;top:0;bottom:0;left:0;width:15%;font-size:20px;color:#fff;text-align:center;filter:alpha(opacity=50);opacity:.5}
 .carousel-control.left{background-image:linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);background-repeat:repeat-x}
 .carousel-control.right{right:0;left:auto;background-image:linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);background-repeat:repeat-x}
 .carousel-control:focus,.carousel-control:hover{color:#fff;text-decoration:none;filter:alpha(opacity=90);outline:0;opacity:.9}
@@ -1925,7 +1927,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .carousel-indicators{position:absolute;bottom:10px;left:50%;z-index:15;width:60%;padding-left:0;margin-left:-30%;text-align:center;list-style:none}
 .carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;cursor:pointer;background-color:transparent;border:1px solid #fff;border-radius:10px}
 .carousel-indicators .active{width:12px;height:12px;margin:0;background-color:#fff}
-.carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}
 .carousel-caption .btn,.text-hide{text-shadow:none}
 @media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-15px;font-size:30px}
 .carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{margin-left:-15px}
@@ -2015,6 +2017,7 @@ h1{margin-top:0;margin-bottom:0}
 .btn-default{border:1px solid #000;color:#ed327f}
 .btn-default:hover{color:#000;border-color:#000}
 .site,.site-content,body,html{height:100%;min-height:100%}
+.site{max-width:100%;overflow-x:hidden}
 i{width:30px;height:30px}
 .menu-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
 .menu-item{display:inline;margin-right:15px}
