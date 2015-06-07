@@ -46,6 +46,7 @@
  * Override this
  */
 body {
+  font-size: 16px;
   font-size: 1.6rem;
   line-height: 24px;
 }
@@ -69,7 +70,7 @@ p {
  * These affects the mobile hamburger menu & search submit button
  */
 .btn-default {
-  border: 1px solid #000;
+  border: none;
   color: #ed327f;
   /* Override some of Bootstrap's .btn-default states */
 }
@@ -125,8 +126,15 @@ i {
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+/* Style the <header>
+ * Give it a pink background in all views
+ * Make sure it's fixed at the top
+ * It should horizontally stretch as much as it can
+ */
 .site-header {
   background-color: #ed327f;
+  position: fixed;
+  width: 100%;
 }
 .menu {
   padding-left: 0;
@@ -223,6 +231,11 @@ a.aside-link:hover {
  * ASIDE STYLES END
  * ====================================================================
  */
+/*
+  * ===================================================================
+  * MISCELLANOUS STYLES START
+  * ===================================================================
+  */
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -237,6 +250,11 @@ a.aside-link:hover {
   width: 100%;
   height: 100%;
 }
+/*
+  * ===================================================================
+  * MISCELLANOUS STYLES END
+  * ===================================================================
+  */
 @media (min-width: 768px) {
   .site-header {
     height: 66px;
@@ -354,9 +372,8 @@ a.aside-link:hover {
     height: 48px;
     width: 48px;
     z-index: 2;
-    background-color: #000;
-    border: 1px solid #000;
     border-radius: 4px;
+    background-color: transparent;
   }
   /* Mobile menu container lines, i.e., the "hamburger menu" */
   .mobile-menu-bar {
@@ -364,19 +381,17 @@ a.aside-link:hover {
     width: 31px;
     height: 4px;
     margin: 0 auto 4px;
-    background-color: #ed327f;
-    border-radius: 1px;
+    background-color: #000;
+    border-radius: 2px;
   }
   /*
-   * Have the lines in the mobile turn black
-   * Give the button a black border
+   * Have the lines in the mobile turn pink
    * Do this for multiple classes
    */
   .btn-default:active span,
   .btn-default:hover span,
   .btn-default:focus span {
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #000000;
   }
   /*
    *
@@ -452,9 +467,8 @@ a.aside-link:hover {
   }
   /* Style post title on mobile views */
   .entry-title {
-    font-size: 4px;
+    font-size: 40px;
     font-size: 4rem;
-    white-space: pre-wrap;
   }
   .main-navigation {
     opacity: 0;

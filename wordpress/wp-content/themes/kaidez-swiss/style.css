@@ -1944,7 +1944,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
 .affix{position:fixed}
-.aside-header,.hide-element,.menu-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
+.hide-element,.menu-header,.screen-reader-text{clip:rect(1px 1px 1px 1px);position:absolute!important}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table}
@@ -2009,23 +2009,24 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .z3{z-index:3}
 .z4{z-index:4}
 .z5{z-index:5}
-body{font-size:1.6rem;line-height:24px}
+body{font-size:16px;font-size:1.6rem;line-height:24px}
 h1{margin-top:0;margin-bottom:0}
 p{margin:0 0 22px}
 .btn{border-radius:0;font-weight:900;background-color:#000}
 .aside,.site-header{background-color:#ed327f}
-.btn-default{border:1px solid #000;color:#ed327f}
+.btn-default{border:none;color:#ed327f}
 .btn-default:active,.btn-default:focus,.btn-default:hover{color:#000;background-color:#ed327f;border-color:#000}
 .site,.site-content,body,html{min-height:100%}
 .site{max-width:100%;overflow-x:hidden}
 i{width:30px;height:30px}
 .home-link{color:#000}
 .menu-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
+.site-header{position:fixed;width:100%}
 .menu-item{display:inline;margin-right:15px}
 a,a:visited{color:#ed327f;text-decoration:underline}
 a:active,a:hover{color:#ed327f;text-decoration:none}
 a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;text-decoration:none}
-.aside-header{clip:rect(1px,1px,1px,1px)}
+.aside-header{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .aside-section-header{font-weight:900;color:#f9bfd7}
 .aside-inner{width:775px}
 .aside-list-item{height:34px;color:#000}
@@ -2057,9 +2058,9 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
 @media (max-width:767px){.kai,.mobile-menu,.site-branding{position:relative}
-.mobile-menu{bottom:40px;float:right;padding:5px 8px 1px;margin:8px 15px 8px 0;height:48px;width:48px;z-index:2;background-color:#000;border:1px solid #000;border-radius:4px}
-.mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;background-color:#ed327f;border-radius:1px}
-.btn-default:active span,.btn-default:focus span,.btn-default:hover span{background-color:#000;border:1px solid #000}
+.mobile-menu{bottom:40px;float:right;padding:5px 8px 1px;margin:8px 15px 8px 0;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
+.btn-default:active span,.btn-default:focus span,.btn-default:hover span,.mobile-menu-bar{background-color:#000}
+.mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
 @-webkit-keyframes menu{0%{-webkit-transform:translateY(0)}
 100%{-webkit-transform:translateY(50px);opacity:1}
 }
@@ -2072,7 +2073,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .site-content{margin-top:70px}
 .searchform-class{position:relative;top:60px}
 .entry-header{margin-bottom:20px}
-.entry-title{font-size:4px;font-size:4rem;white-space:pre-wrap}
+.entry-title{font-size:40px;font-size:4rem}
 .main-navigation{opacity:0;position:relative;bottom:35px}
 .aside,.content-area{padding:0 15px}
 }

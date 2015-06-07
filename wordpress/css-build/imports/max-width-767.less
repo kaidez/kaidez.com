@@ -13,9 +13,8 @@
     width: 48px;
     .z2();
 
-    background-color: #000;
-    border: 1px solid #000;
     border-radius: 4px;
+    background-color: transparent;
   }
 
   /* Mobile menu container lines, i.e., the "hamburger menu" */ 
@@ -25,22 +24,20 @@
     height: 4px;
     margin: 0 auto 4px;
 
-    background-color: @pink;
-    border-radius: 1px;
+    background-color: #000;
+    border-radius: 2px;
   }
   
 
 
   /*
-   * Have the lines in the mobile turn black
-   * Give the button a black border
+   * Have the lines in the mobile turn pink
    * Do this for multiple classes
    */
-  .btn-default {
-    &:active span, &:hover span, &:focus span {
-      background-color: #000;
-      border: 1px solid #000;
-    }
+  .btn-default:active span,
+  .btn-default:hover span,
+  .btn-default:focus span {
+      background-color: darken(@pink, 80%);
   }
 
   /*
@@ -117,9 +114,8 @@
 
   /* Style post title on mobile views */
   .entry-title {
-    font-size: 4px;
+    font-size: 40px;
     font-size: 4rem;
-    white-space: pre-wrap;
   }
 
   .main-navigation {
