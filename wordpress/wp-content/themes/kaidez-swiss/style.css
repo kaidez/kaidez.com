@@ -2052,13 +2052,13 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
 @media (max-width:767px){.mobile-menu{position:relative;bottom:40px;float:right;padding:5px 8px 1px;margin:8px 15px 8px 0;height:48px;width:48px;background-color:#000;border:1px solid #000;border-radius:4px}
-.mobile-menu-bar{display:block;width:31px;height:3px;margin-bottom:6px;background-color:#ed327f;border-radius:1px}
+.mobile-menu-bar{display:block;width:31px;height:4px;margin-bottom:6px;background-color:#ed327f;border-radius:1px}
 .btn-default:hover span{background-color:#000;border:1px solid #000}
 @-webkit-keyframes menu{0%{-webkit-transform:translateY(0);opacity:0}
 100%{-webkit-transform:translateY(50px);opacity:1}
 }
-@keyframes menu{0%{-webkit-transform:translateY(0);opacity:0}
-100%{-webkit-transform:translateY(50px);opacity:1}
+@keyframes menu{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:0}
+100%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:1}
 }
 .main-navigation{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;position:absolute;top:0;z-index:1;background-color:#ED327F;opacity:0}
 .site-branding{z-index:2;position:relative}
@@ -2066,4 +2066,5 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:70px}
 .searchform-class{position:relative;top:60px}
+.entry-title{font-size:25px;font-size:2.5rem}
 }

@@ -21,7 +21,7 @@
   .mobile-menu-bar {
     display: block;
     width: 31px;
-    height: 3px;
+    height: 4px;
     margin-bottom: 6px;
 
     background-color: @pink;
@@ -41,15 +41,16 @@
    *
    */
   @-webkit-keyframes menu {
-    0% {-webkit-transform: translateY(0px); opacity: 0;}
-    100% {-webkit-transform: translateY(50px); opacity: 1;}
+    0% {-webkit-transform: translateY(0px); opacity:0; }
+    100% {-webkit-transform: translateY(50px); opacity:1;}
   }
+
+
 
   @keyframes menu {
-    0% {-webkit-transform: translateY(0px); opacity: 0;}
-    100% {-webkit-transform: translateY(50px); opacity: 1;}
+    0% {transform: translateY(0px); opacity:0; }
+    100% {transform: translateY(50px); opacity:1;}
   }
-
   .main-navigation {
     -webkit-animation-name: menu;
             animation-name: menu;
@@ -99,6 +100,12 @@
   .searchform-class {
     position: relative;
     top: 60px;
+  }
+
+  /* Make the post title smaller on mobile views */
+  .entry-title {
+    font-size: 25px;
+    font-size: 2.5rem;
   }
 
 }
