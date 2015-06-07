@@ -189,3 +189,12 @@ gulp.task("watch", function () {
   gulp.watch(lessFiles, ["buildcss"]);
   gulp.watch(coffeeFiles, ["coffee"]);
 });
+
+//Uncss task
+gulp.task('test', function() {
+  gulp.src('wp-content/themes/kaidez-swiss/style.css')
+    .pipe(uncss({
+      html: ['http://localhost:8888/']
+    }))
+    .pipe(gulp.dest('lib/bootstrap/css/'));
+});
