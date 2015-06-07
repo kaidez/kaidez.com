@@ -39,10 +39,10 @@
 
 		<form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
       <div class="blog-search">
-        <input id="s" class="header-search-field" type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="header-search-field" />
+        <input id="s" class="header-search-field" name="s" type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" />
         <button class="btn btn-default header-search-submit footer-button" type="submit" id="searchsubmit" />Submit</button>
-      </div>
-    </form>
+      </div><!-- .blog-search -->
+    </form><!-- #searchform -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
