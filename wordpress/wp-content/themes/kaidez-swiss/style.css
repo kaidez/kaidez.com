@@ -2031,6 +2031,8 @@ a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;
 .aside-list-item{height:34px;color:#000}
 a.aside-link,a.aside-link:visited{color:#000;text-decoration:none}
 a.aside-link:hover{color:#7b0b39;text-decoration:underline}
+.videoWrapper{position:relative;padding-bottom:56.25%;padding-top:25px;height:0}
+.videoWrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}
 @media (min-width:768px){.site-header{height:66px;padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
 .site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
@@ -2070,7 +2072,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .site-content{margin-top:70px}
 .searchform-class{position:relative;top:60px}
 .entry-header{margin-bottom:20px}
-.entry-title{font-size:4px;font-size:4rem}
+.entry-title{font-size:4px;font-size:4rem;white-space:pre-wrap}
 .main-navigation{opacity:0;position:relative;bottom:35px}
-.aside,.content-area{padding:0 10px}
+.aside,.content-area{padding:0 15px}
 }

@@ -223,6 +223,20 @@ a.aside-link:hover {
  * ASIDE STYLES END
  * ====================================================================
  */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 768px) {
   .site-header {
     height: 66px;
@@ -436,21 +450,20 @@ a.aside-link:hover {
   .entry-header {
     margin-bottom: 20px;
   }
-  /* Style post title smaller on mobile views */
+  /* Style post title on mobile views */
   .entry-title {
     font-size: 4px;
     font-size: 4rem;
+    white-space: pre-wrap;
   }
   .main-navigation {
     opacity: 0;
     position: relative;
     bottom: 35px;
   }
-  /* Add left/right space to the blog post content */
+  /* Add left/right space to <aside> and single blog post content */
+  .aside,
   .content-area {
-    padding: 0 10px;
-  }
-  .aside {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }

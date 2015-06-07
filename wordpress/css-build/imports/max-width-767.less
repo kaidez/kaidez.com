@@ -115,10 +115,11 @@
     margin-bottom: 20px;
   }
 
-  /* Style post title smaller on mobile views */
+  /* Style post title on mobile views */
   .entry-title {
     font-size: 4px;
     font-size: 4rem;
+    white-space: pre-wrap;
   }
 
   .main-navigation {
@@ -127,13 +128,9 @@
     bottom: 35px;
   }
 
-  /* Add left/right space to the blog post content */
-  .content-area {
-    padding: 0 10px;
-  }
-
-  .aside {
-    padding:0 10px;
+  /* Add left/right space to <aside> and single blog post content */
+  .aside, .content-area {
+    padding: 0 15px;
   }
 
 }
