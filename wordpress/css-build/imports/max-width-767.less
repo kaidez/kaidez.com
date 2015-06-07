@@ -1,4 +1,42 @@
 @media (max-width: 767px) {
+
+  /* MOBILE MENU STYLES START */
+
+  /* Mobile menu containing element */
+  .mobile-menu {
+    position: relative;
+    bottom: 40px;
+    float: right;
+    padding: 5px 8px 1px;
+    margin: 8px 15px 8px 0;
+    height: 48px;
+    width: 48px;
+
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+  }
+
+  /* Mobile menu container lines, i.e., the "hamburger menu" */ 
+  .mobile-menu-bar {
+    display: block;
+    width: 31px;
+    height: 3px;
+    margin-bottom: 6px;
+
+    background-color: @pink;
+    border-radius: 1px;
+  }
+
+  /*
+   * Have the lines in the mobile turn black
+   * Give the button a black border
+   */
+  .btn-default:hover span {
+    background-color: #000;
+    border: 1px solid #000;
+  }
+
   /*
    *
    */
@@ -26,10 +64,13 @@
 
     position: absolute;
     top: 0px;
-    background-color: #ED327F;
     .z1();
+
+    background-color: #ED327F;
     opacity: 0;
   }
+
+    /* MOBILE MENU STYLES END */
 
   .site-branding {
     .z2();
@@ -37,8 +78,27 @@
   }
 
   // Hide some elements on hand-held views with .ti() text-indent mixin
-  .glyphicon, .site-description {
+  .glyphicon {
   	.ti()
+  }
+
+  /* Hide the site colophon/description on mobile view */
+  .site-description {
+    .hide-element()
+  }
+
+  /*
+   * Move the site content down on mobile views on some pages
+   * Do this to make room for the search box
+   */
+  .site-content {
+    margin-top: 70px;
+  }
+
+  /* Move the search box down on some pages */
+  .searchform-class {
+    position: relative;
+    top: 60px;
   }
 
 }

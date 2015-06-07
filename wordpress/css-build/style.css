@@ -31,8 +31,10 @@
 /*
  * BOOTSTRAP OVERRIDES
  * ====================================================================
- * Styles that override core Bootstrap CSS go here. Place them below
- * core Bootstrap styles and above custom styles in the build.
+ * Styles that override core Bootstrap CSS go here. They're placed
+ * below the core Bootstrap styles and above custom styles in the
+ * build.
+ *
  */
 h1 {
   margin-top: 0;
@@ -43,13 +45,18 @@ h1 {
   font-weight: 900;
   background-color: #000;
 }
+/*
+ * Override parts of Bootstrap's .btn-default class
+ * These affects the mobile hamburger menu & search submit button
+ */
 .btn-default {
-  border: 0;
+  border: 1px solid #000;
   color: #ed327f;
 }
 .btn-default:hover {
   color: #000;
   background-color: #ed327f;
+  border-color: #000;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   /* Small screen, retina, stuff to override above media query */
@@ -268,8 +275,45 @@ a.aside-link:hover {
   .aside-inner {
     margin-left: 25px;
   }
+  .mobile-menu {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
 }
 @media (max-width: 767px) {
+  /* MOBILE MENU STYLES START */
+  /* Mobile menu containing element */
+  .mobile-menu {
+    position: relative;
+    bottom: 40px;
+    float: right;
+    padding: 5px 8px 1px;
+    margin: 8px 15px 8px 0;
+    height: 48px;
+    width: 48px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+  }
+  /* Mobile menu container lines, i.e., the "hamburger menu" */
+  .mobile-menu-bar {
+    display: block;
+    width: 31px;
+    height: 3px;
+    margin-bottom: 6px;
+    background-color: #ed327f;
+    border-radius: 1px;
+  }
+  /*
+   * Have the lines in the mobile turn black
+   * Give the button a black border
+   */
+  .btn-default:hover span {
+    background-color: #000;
+    border: 1px solid #000;
+  }
   /*
    *
    */
@@ -306,16 +350,35 @@ a.aside-link:hover {
     animation-fill-mode: both;
     position: absolute;
     top: 0px;
-    background-color: #ED327F;
     z-index: 1;
+    background-color: #ED327F;
     opacity: 0;
   }
+  /* MOBILE MENU STYLES END */
   .site-branding {
     z-index: 2;
     position: relative;
   }
-  .glyphicon,
-  .site-description {
+  .glyphicon {
     text-indent: -9999px;
+  }
+  /* Hide the site colophon/description on mobile view */
+  .site-description {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  /*
+   * Move the site content down on mobile views on some pages
+   * Do this to make room for the search box
+   */
+  .site-content {
+    margin-top: 70px;
+  }
+  /* Move the search box down on some pages */
+  .searchform-class {
+    position: relative;
+    top: 60px;
   }
 }

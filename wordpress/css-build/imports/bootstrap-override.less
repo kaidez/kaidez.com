@@ -1,8 +1,10 @@
 /*
  * BOOTSTRAP OVERRIDES
  * ====================================================================
- * Styles that override core Bootstrap CSS go here. Place them below
- * core Bootstrap styles and above custom styles in the build.
+ * Styles that override core Bootstrap CSS go here. They're placed
+ * below the core Bootstrap styles and above custom styles in the
+ * build.
+ *
  */
 
 // Bootstrap applies top/bottoms to elements...remove them
@@ -11,22 +13,25 @@ h1 {
   margin-bottom: 0;
 }
 
-// Override parts of Bootstrap's .btn class
+// Override SOME parts of Bootstrap's .btn class
 .btn {
 	border-radius: 0;
-  
   font-weight: 900;
 	background-color: #000;	
 }
 
-// Override parts of Bootstrap's .btn-default class
+/*
+ * Override parts of Bootstrap's .btn-default class
+ * These affects the mobile hamburger menu & search submit button
+ */
 .btn-default {
-	border: 0;
+	border: 1px solid #000;
 	color: @pink;
 }
 
-// Override ootstrap's .btn-default hover state
+// Override bootstrap's .btn-default hover state
 .btn-default:hover {
 	color: #000;
 	background-color: @pink;
+  border-color: #000;
 }
