@@ -2035,6 +2035,7 @@ a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;
 .aside-list-item{height:34px;color:#000}
 a.aside-link,a.aside-link:visited{color:#000;text-decoration:none}
 a.aside-link:hover{color:#7b0b39;text-decoration:underline}
+footer{background-color:#7b0b39;color:#fff}
 @media (min-width:768px){.site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
 .site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
