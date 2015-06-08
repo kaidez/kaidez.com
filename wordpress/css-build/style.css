@@ -466,8 +466,20 @@ a.aside-link:hover {
   }
   .main-navigation {
     opacity: 0;
-    position: relative;
+    position: absolute;
     bottom: 35px;
+  }
+  .menu-item a {
+    color: #000;
+    text-decoration: none;
+  }
+  .menu-item a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  .menu-item a:visited {
+    color: #000;
+    text-decoration: none;
   }
   /* Add left/right space to <aside> and single blog post content */
   .aside,
