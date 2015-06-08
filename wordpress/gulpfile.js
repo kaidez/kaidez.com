@@ -194,7 +194,10 @@ gulp.task("watch", function () {
 gulp.task('test', function() {
   gulp.src('wp-content/themes/kaidez-swiss/style.css')
     .pipe(uncss({
-      html: ['http://localhost:8888/']
+      html: [
+        'http://localhost:8888/', // home page
+        'http://localhost:8888/404.php' // 404 page
+      ]
     }))
     .pipe(gulp.dest('lib/bootstrap/css/'));
 });
