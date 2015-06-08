@@ -19,30 +19,30 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kaidez-swiss' ); ?></a>
+  <div id="page" class="hfeed site">
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kaidez-swiss' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-      <button type="button" id="mobile-menu-button" class="mobile-menu btn-default">
-        <span class="mobile-menu-bar"></span>
-        <span class="mobile-menu-bar"></span>
-        <span class="mobile-menu-bar"></span>
-      </button> <!-- .mobile-menu -->
-		</div><!-- .site-branding -->
+    <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+      <div class="site-branding">
+        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <button type="button" id="mobile-menu-button" class="mobile-menu btn-default">
+          <span class="mobile-menu-bar"></span>
+          <span class="mobile-menu-bar"></span>
+          <span class="mobile-menu-bar"></span>
+        </button> <!-- .mobile-menu -->
+      </div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+      </nav><!-- #site-navigation -->
 
-		<form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
-      <div class="blog-search">
-        <input id="s" class="header-search-field" name="s" type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" />
-        <button class="btn btn-default header-search-submit footer-button" type="submit" id="searchsubmit" />Submit</button>
-      </div><!-- .blog-search -->
-    </form><!-- #searchform -->
-	</header><!-- #masthead -->
+      <form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
+        <div class="blog-search">
+          <input id="s" class="header-search-field" name="s" type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" />
+          <button class="btn btn-default header-search-submit footer-button" type="submit" id="searchsubmit" />Submit</button>
+        </div><!-- .blog-search -->
+      </form><!-- #searchform -->
+    </header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+    <div id="content" class="site-content">
