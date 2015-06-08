@@ -69,7 +69,7 @@
     </aside> <!-- #aside-id -->
 
     <footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-      footer goes here
+      &copy; 2008-15 Kai Gittens
     </footer><!-- #colophon -->
     </div><!-- #page -->
 
