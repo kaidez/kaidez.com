@@ -128,13 +128,18 @@ i {
 }
 /* Style the <header>
  * Give it a pink background in all views
- * Make sure it's fixed at the top
  * It should horizontally stretch as much as it can
  */
 .site-header {
   background-color: #ed327f;
-  position: fixed;
   width: 100%;
+  height: 65px;
+}
+a.homepage-title-link {
+  text-decoration: none;
+}
+a.homepage-title-link:hover {
+  color: #f1619c;
 }
 .menu {
   padding-left: 0;
@@ -236,19 +241,8 @@ a.aside-link:hover {
   * MISCELLANOUS STYLES START
   * ===================================================================
   */
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.youtube-iframe {
+  max-width: 100%;
 }
 /*
   * ===================================================================
@@ -257,7 +251,6 @@ a.aside-link:hover {
   */
 @media (min-width: 768px) {
   .site-header {
-    height: 66px;
     padding: 3px 0 0 20px;
   }
   .site-title {
@@ -367,8 +360,6 @@ a.aside-link:hover {
     position: relative;
     bottom: 40px;
     float: right;
-    padding: 5px 8px 1px;
-    margin: 8px 15px 8px 0;
     height: 48px;
     width: 48px;
     z-index: 2;
@@ -430,6 +421,9 @@ a.aside-link:hover {
     background-color: #ED327F;
   }
   /* MOBILE MENU STYLES END */
+  .site-header {
+    position: fixed;
+  }
   .site-branding {
     z-index: 2;
     position: relative;
@@ -454,7 +448,7 @@ a.aside-link:hover {
    * Do this to make room for the search box
    */
   .site-content {
-    margin-top: 70px;
+    margin-top: 120px;
   }
   /* Move the search box down on some pages */
   .searchform-class {
