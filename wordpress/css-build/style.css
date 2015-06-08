@@ -241,8 +241,21 @@ a.aside-link:hover {
  * FOOTER STYLES START
  * ====================================================================
  */
-footer {
+/* Style the main site <footer> */
+.site-footer {
   background-color: #7b0b39;
+  color: #fff;
+}
+.footer-text {
+  display: inline-block;
+}
+a.footer-links {
+  color: #fff;
+}
+a.footer-links:visited {
+  color: #fff;
+}
+a.footer-links:hover {
   color: #fff;
 }
 /*
@@ -360,6 +373,20 @@ footer {
   .aside-inner {
     margin-left: 25px;
   }
+  /*
+   * ==================================================================
+   * FOOTER STYLES START
+   * ==================================================================
+   */
+  /* Style the main site <footer> */
+  .site-footer {
+    height: 100px;
+  }
+  /*
+   * ==================================================================
+   * FOOTER STYLES END
+   * ==================================================================
+   */
   .mobile-menu {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);

@@ -2035,7 +2035,9 @@ a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;
 .aside-list-item{height:34px;color:#000}
 a.aside-link,a.aside-link:visited{color:#000;text-decoration:none}
 a.aside-link:hover{color:#7b0b39;text-decoration:underline}
-footer{background-color:#7b0b39;color:#fff}
+.site-footer{background-color:#7b0b39;color:#fff}
+.footer-text{display:inline-block}
+a.footer-links,a.footer-links:hover,a.footer-links:visited{color:#fff}
 @media (min-width:768px){.site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
 .site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
@@ -2057,6 +2059,7 @@ a.home-link:hover{color:#d91365;text-decoration:none;font-weight:900}
 a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .col-md-4{width:230px;vertical-align:top}
 .aside-inner{margin-left:25px}
+.site-footer{height:100px}
 .mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
 @media (max-width:767px){.kai,.mobile-menu{position:relative}
