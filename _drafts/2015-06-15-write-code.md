@@ -45,17 +45,42 @@ Some of that code was work-related while some of it was for [the lynda.com cours
 
 And in many cases, the code I wrote required I learn something I didn't know before. Promises, complex JavaScript inheritance, web components, developing in a Node environment, etc.
 
-Learning new code like this almost always requires the need to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would...you have to figure out why.
+Doing all this led to the following when I started the new gig:
+
+* parsing a RESTful API to load content onto a page wasn't a problem.
+
+* using jQuery for something other than cool-looking animations wasn't a problem.
+
+* fixing a cross-browser error related to CSS transitions wasn't a problem.
+
+* using feature detection to load in a file with pure JavaScript instead of Modernizr wasn't a problem.
+
+* creating responsive web design code without using something like Bootstrap or Foundation wasn't a problem.
+
+So by learning code on my own time before asking to be paid a lot of money to write it, I was quite prepared for the job. And I wrote a lot of code...here's a quick snapshot of my GitHub commit map that proves it:
+<img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
+
+It's key to note that learning new code like this almost always requires having to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would, you have to figure out why.
 
 Here's where I go off on a tangent...
 
 ## You are a Web ~~Developer~~ Engineer
 
-Knowing how to solve code problems is an under-spoken skill for web developers...we need to possess it and I readily admit to understanding this late. There were incidents at Revlon in the past where I ticked off my team and took too long in solving problems.
+I'm of the opinion knowing how to solve code problems is 90% of a web developer's job. Despite it being 90% of the job, it's the most under-spoken part of it.
 
-As under-spoken it is in the web dev world, it's a must-have skill for engineers of all types...mechanical, electrical, etc.  And it's this "under-spoken-ness" that I have a problem with, because we web dev types really are engineers and not developers.
+However, it's a given skill-set for engineers of all types...mechanical, electrical, etc. The railroads built in the continental United States in the 1800's wouldn't have come to be without engineers.
 
-We are not _just_ bug-fixers: we are also architects that get to build cool things. I was a bug-fixer when IBut our jobs require us to be engineers when we build the cool things, meaning we need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place...as engineers do.
+
+
+[I wrote a blog post May 2012](/learn-javascript-before-jquery/ "Read "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery") where I talked about working with Node for the first time and found it to be not as tough as I thought it would be. I that post, I said:
+
+> _"I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions."_
+
+
+
+
+And it's this "under-spoken-ness" that I have a problem with, because we web dev types really are engineers and not developers.
+
+We are not _just_ bug-fixers: we are also architects that get to build cool things. But our jobs require us to be engineers when we build the cool things, meaning we need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place...as engineers do.
 
 So I'm uncomfortable with the title "web developer" at times and think the "web engineer" or "software engineer" is better for us. t
-<img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
