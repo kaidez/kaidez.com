@@ -190,7 +190,7 @@ gulp.task("watch", function () {
   gulp.watch(coffeeFiles, ["coffee"]);
 });
 
-//Uncss task
+// uncss task
 gulp.task('test', function() {
   gulp.src('wp-content/themes/kaidez-swiss/style.css')
     .pipe(uncss({
