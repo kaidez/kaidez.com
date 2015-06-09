@@ -35,17 +35,17 @@ I've always been a bit insecure about my web stack skills being up to par, speci
 
 I went into the new job with this concern but a funny thing happened. I was able to fix the bugs rather quickly.
 
-I don't mean to say that the bugs were so simple that a five-year old could fix them (they weren't), or that finishing the refactor makes me the world's greatest web developer (It doesn't). I mean to say that I knew how to do the tasks presented to me, and that my skills are better than I'm giving myself credit for.
+I'm not saying that the bugs were so simple that a five-year old could fix them (they weren't), or that finishing the refactor makes me the world's greatest web developer (it doesn't). I saying to say that I wasn't intimidated by tasks I was given because my skills are better than I'm giving myself credit for.
 
-## How did all this come about
+## Why are my skills are better than I'm giving myself credit for?
 
-I am 100% convinced that my skills are better thanks a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
+I am 100% convinced that my ability to do the job is due to a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
 
-Some of that code was work-related, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just me firing up a new Git repo and trying out some new library or framework, or a specific part of the JavaScript core API.
+Some of that code was work-related while some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just my trying out some new library or framework, or playing with a specific part of the JavaScript core API.
 
-And in many cases, the code I wrote required I learn something I didn't know before. Promises, complex JavaScript inheritance, web components, developing in a Node environment.
+And in many cases, the code I wrote required I learn something I didn't know before. Promises, complex JavaScript inheritance, web components, developing in a Node environment, etc.
 
-Learning new code things almost always requires the need to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would...you have to solve a problem.
+Learning new code like this almost always requires the need to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would...you have to figure out why.
 
 Here's where I go off on a tangent...
 
