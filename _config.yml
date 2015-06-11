@@ -6,6 +6,11 @@ permalink: /:title
 destination: ./_site
 paginate: 10
 paginate_path: "pages/page:num"
+defaults:
+    scope:
+      path: ""
+    values:
+      layout: "default"
 exclude: [
   .ftppass,
   assets,
