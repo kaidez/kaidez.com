@@ -53,7 +53,7 @@ But I wrote a lot of code...lots and lots and lots of code. Here's a recent snap
 </figure>
 
 
-As a result of getting my commit map to look this was, here's what happened at the new job:
+As a result of all this, here's what happened at the new job:
 
 * parsing a complex JSON API to load content onto a page wasn't a problem for me.
 
