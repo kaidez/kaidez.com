@@ -1,5 +1,5 @@
 ---
-title: "Write Code Every F#*king Day...And Learn Tooling While You Do It!"
+title: "Write Code Every F#%king Day!"
 comments: true
 author: Kai Gittens
 layout: post
@@ -20,7 +20,7 @@ Simply put: write code every day.
 
 Every.
 
-Fucking.
+F#%king.
 
 Day.
 
@@ -29,17 +29,17 @@ As mentioned in my last post, I took a front end dev job at a health and wellnes
 
 The first tasks I was giving were bug fixes, JavaScript ones and CSS ones. I also had to rewrite some HTML for the sake of cross-browser/device compliance, but I started off by dealing with those bugs. 
 
-Then I was handed a project where I had to refactor some JavaScript related to the redesign of a web form. This project was obviously tougher than the bug fixes.
+Then I was handed a project where I had to refactor some JavaScript related to the redesign of a web form. Obviously tougher than the bug fixes.
 
 I've always been a bit insecure about my web stack skills being up to par, specifically the JavaScript one. JS is an anomaly that seemingly goes through changes every minute,so I've always been a little worried as to whether or not my JS skills were up-to-date.
 
-I went into the new job with this concern but a funny thing happened. I was able to fix the bugs rather quickly.
+And I went into the new job with this concern but a funny thing happened. I was able to do everything I was asked to do.
 
 I'm not saying that the bugs were so simple that a five-year old could fix them (they weren't), or that finishing the refactor makes me the world's greatest web developer (it doesn't). I saying to say that I wasn't intimidated by tasks I was given because my skills are better than I'm giving myself credit for.
 
 ## Why are my skills are better than I'm giving myself credit for?
 
-I am 100% convinced that my ability to do the job with no issues is a result of a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
+I am 100% convinced that my ability to do the job with no issues is a result of a decision I made months ago to try write at least one piece of web stack code a day. I missed some days but I've mostly followed through with this decision.
 
 Some of that code was for work, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just my trying out some new tool or framework, or playing with a specific part of the JavaScript core API.
 
@@ -48,7 +48,7 @@ And in many cases, the daily code I wrote required I learn something I didn't kn
 But I wrote a lot of code...lots and lots and lots of code. Here's a quick snapshot of my GitHub commit map that proves it:
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
 
-The end result of getting my commit map to look this was as follows...
+The end result of getting my commit map to look this was, here's what happened at the new job:
 
 * parsing a complex JSON API to load content onto a page wasn't a problem for me.
 
@@ -60,7 +60,7 @@ The end result of getting my commit map to look this was as follows...
 
 * creating responsive web design code without using something like Bootstrap or Foundation wasn't a problem for me.
 
-By writing code for free before on my own time before asking to be paid a lot of money to do it, I was well-prepared for my new job. Simple as that. 
+By writing code for free before on my own time before asking to be paid to do it, I was well-prepared for my new job. Simple as that. 
 
 ## You are a Web ~~Developer~~ Engineer
 
@@ -68,7 +68,9 @@ By writing code for free before on my own time before asking to be paid a lot of
 
 > _"I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions."_
 
-I somewhat implied that I needed to be The Omniscient Developer&trade;. That it ed to be omniscient devloper knowing the answer
+I somewhat implied that I needed to be The Omniscient Developer&trade;. That I needed to know the answer to every single solitary question about the web stack.
+
+I was wrong.  Really wrong.
 
 It's key to note that learning new code like this almost always requires having to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would, you have to figure out why.
 
