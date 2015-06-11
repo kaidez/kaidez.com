@@ -14,7 +14,7 @@ I've been thinking about this particular post for a few months now. My initial p
 
 But some satisfying events during my first month at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced me to publish it now in the hopes it will help other web devs, especially beginning ones. The things discussed here have helped me grow as a developer in more ways then I can count.
 
-Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, and probably more elegantly than I'm about to discuss them. But these things must transcend to all developers, so one more blog post about them won't hurt.
+Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, and probably more elegantly than I'm about to discuss them here. But these things must transcend to all developers, so one more blog post about them won't hurt.
 
 Simply put: write code every day.
 
@@ -68,9 +68,11 @@ By writing code for free before on my own time before asking to be paid to do it
 
 > _"I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions."_
 
-I somewhat implied that I needed to be The Omniscient Developer&trade;. That I needed to know the answer to every single solitary question about the web stack.
+I was somewhat implying that I needed to be The Omniscient Developer&trade;. That I needed to know the answer to every single solitary question about the web stack if I wanted to have a web dev career.
 
 I was wrong.  Really wrong.
+
+Understanding the questions is what it's all about. 
 
 It's key to note that learning new code like this almost always requires having to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would, you have to figure out why.
 
