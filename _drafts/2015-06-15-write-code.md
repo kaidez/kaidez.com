@@ -47,9 +47,9 @@ And in many cases, the daily code I wrote required I learn something I didn't kn
 
 But I wrote a lot of code...lots and lots and lots of code. Here's a recent snapshot of my GitHub commit map that proves it:
 
-<figure style="text-align: center; margin:20px 0;">
+<figure style="text-align: center; margin:50px 0;">
   <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" /> 
-  <figcaption>Includes private repos...</figcaption>
+  <figcaption style="margin:20px auto 0;"><em>Includes private repos...</em></figcaption>
 </figure>
 
 
