@@ -39,42 +39,50 @@ I'm not saying that the bugs were so simple that a five-year old could fix them 
 
 ## Why are my skills are better than I'm giving myself credit for?
 
-I am 100% convinced that my ability to do the job is due to a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
+I am 100% convinced that my ability to do the job with no issues is a result of a decision I made months ago to try write at least one piece of web stack code a day. I missed as few days but I've mostly followed through with this decision.
 
-Some of that code was work-related while some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just my trying out some new library or framework, or playing with a specific part of the JavaScript core API.
+Some of that code was for work, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). A lot of it was just my trying out some new tool or framework, or playing with a specific part of the JavaScript core API.
 
-And in many cases, the code I wrote required I learn something I didn't know before. Promises, complex JavaScript inheritance, web components, developing in a Node environment, etc.
+And in many cases, the daily code I wrote required I learn something I didn't know before. Promises, complex JavaScript inheritance, web components, developing in a Node environment, etc.
 
-Doing all this led to the following when I started the new gig:
-
-* parsing a RESTful API to load content onto a page wasn't a problem.
-
-* using jQuery for something other than cool-looking animations wasn't a problem.
-
-* fixing a cross-browser error related to CSS transitions wasn't a problem.
-
-* using feature detection to load in a file with pure JavaScript instead of Modernizr wasn't a problem.
-
-* creating responsive web design code without using something like Bootstrap or Foundation wasn't a problem.
-
-So by learning code on my own time before asking to be paid a lot of money to write it, I was quite prepared for the job. And I wrote a lot of code...here's a quick snapshot of my GitHub commit map that proves it:
+But I wrote a lot of code...lots and lots and lots of code. Here's a quick snapshot of my GitHub commit map that proves it:
 <img src="/img/git-contrib-map.jpg" class="imgBorderMaxWidth" alt="kaidez GitHub Contribution Map" />
+
+The end result of getting my commit map to look this was as follows...
+
+* parsing a complex JSON API to load content onto a page wasn't a problem for me.
+
+* using jQuery for something other than animations wasn't a problem for me.
+
+* fixing a cross-browser error related to CSS transitions wasn't a problem for me.
+
+* using feature detection to load in a file with pure JavaScript instead of Modernizr wasn't a problem for me.
+
+* creating responsive web design code without using something like Bootstrap or Foundation wasn't a problem for me.
+
+By writing code for free before on my own time before asking to be paid a lot of money to do it, I was well-prepared for my new job. Simple as that. 
+
+## You are a Web ~~Developer~~ Engineer
+
+[I wrote a blog post May 2012](/learn-javascript-before-jquery/ "Read "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery") where I talked about working with Node for the first time and found it to be not as tough as I thought it would be. I that post, I said:
+
+> _"I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions."_
+
+I somewhat implied that I needed to be The Omniscient Developer&trade;. That it ed to be omniscient devloper knowing the answer
 
 It's key to note that learning new code like this almost always requires having to solve problems, particularly with JS. Something doesn't act in the browser the way you thought it would, you have to figure out why.
 
 Here's where I go off on a tangent...
 
-## You are a Web ~~Developer~~ Engineer
+
 
 I'm of the opinion knowing how to solve code problems is 90% of a web developer's job. Despite it being 90% of the job, it's the most under-spoken part of it.
 
-However, it's a given skill-set for engineers of all types...mechanical, electrical, etc. The railroads built in the continental United States in the 1800's wouldn't have come to be without engineers.
+However, it's a given skill-set for engineers of all types...mechanical, electrical, etc. Case in point: the railroads built in the continental United States in the 1800's wouldn't have come to be without engineers.
 
 
 
-[I wrote a blog post May 2012](/learn-javascript-before-jquery/ "Read "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery") where I talked about working with Node for the first time and found it to be not as tough as I thought it would be. I that post, I said:
 
-> _"I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions."_
 
 
 
