@@ -89,3 +89,4 @@ You go and start coding...this is what helped me:
 * __Learn tooling while you lean code__: I had to understand the web stack to fix those work bugs but also had know about preprocessors like Sass, browser-based package managers like npm and build tools like Gulp. Lots of strides have been made in web stack tooling so it's important that learn them, particularly if you want a long term career in web development.
 
 ## Conclusion
+
