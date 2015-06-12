@@ -35,7 +35,7 @@ I've always been a bit insecure about my web stack skills being up to par, speci
 
 And I went into the new job with this concern but a funny thing happened. I was able to do everything I was asked to do.
 
-I'm not saying that the bugs were so simple that a five-year old could fix them (they weren't), or that finishing the refactor makes me the world's greatest web developer (it doesn't). I saying to say that I wasn't intimidated by tasks I was given because my skills are better than I'm giving myself credit for.
+I'm not saying that the bugs were so easy that a five-year old could fix them (they weren't), or that finishing the refactor makes me the world's greatest web developer (it doesn't). I saying to say that I wasn't intimidated by tasks I was given because my skills are better than I'm giving myself credit for.
 
 ## Why are my skills are better than I'm giving myself credit for?
 
@@ -78,9 +78,12 @@ Since solving problems is a big part of what we do, I'm now uncomfortable with t
 
 We are also architects that get to build cool things with code, but our jobs require us to be engineers when we build the cool things.  We need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place...as engineers do.
 
-By writing code for free before on my own time, I learned (and remembered) how to solve those problems before asking to be paid to do it. 
-
 ## Where do you go from here?
+
+You go and start coding...this is what helped me:
+
+* _try learning HTML and CSS without books_:
+
 
 [I wrote a blog post May 2012](/learn-javascript-before-jquery/ "Read "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery") where I talked about working with Node for the first time and found it to be not as tough as I thought it would be. I that post, I said:
 
@@ -91,12 +94,3 @@ I was somewhat implying that I needed to be The Omniscient Developer&trade;. Tha
 I was wrong.  Really wrong.
 
 Understanding the questions is what it's all about. 
-
-
-
-
-
-
-
-
-
