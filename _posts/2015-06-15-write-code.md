@@ -90,3 +90,18 @@ You go and start coding...this is what helped me:
 
 ## Conclusion
 
+[Alex Sexton](https://twitter.com/SlexAxton "Visit Alex Sexton on Twitter") described the best method ever for learning web development:
+
+> <em>"The only way that I've found that I'm able to stay up to date is by creating. I follow a well-curated list of people on twitter, and read blogs and programming news sites, but when it comes down to it, the only time I'm ever really learning is when I'm doing.
+
+> When I want to learn something, I'll just start a project with it, and along the way I'll figure out the other tools I need to be successful. After a few failed attempts, normally I can create something meaningful (that I usually throw away anyways) that allows me to understand core concepts and/or make quick uninformed jabs about things that I don't like or understand."</em>
+
+When it come to learning new web dev things in the past, I spent too much time reading programming books, taking classes and attending conferences and not enough time "doing." I spent the better part of the last year "doing" and am doing well at a job that I was nervous about at the start.
+
+And it's all because I tried to write code every day.
+
+Every.
+
+F#%king.
+
+Day.
