@@ -14,7 +14,7 @@ I've been thinking about this particular post for a few months now. My initial p
 
 But some satisfying events during my first month at [my new job](/revlon/ "Read about kaidez leaving Revlon") have forced me to publish it now in the hopes it will help other web devs, especially beginning ones. The things discussed here have helped me grow as a developer in more ways then I can count.
 
-Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, and probably more elegantly than I'm about to discuss them here. But these things must transcend to all developers, so one more blog post about them won't hurt.
+Other developers like [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, and probably more elegantly than I'm about to discuss them here. But these things must transcend to all developers, so one more blog post about them won't hurt.
 
 Simply put: write code every day.
 
@@ -82,18 +82,8 @@ We are also architects that get to build cool things with code, but our jobs req
 
 You go and start coding...this is what helped me:
 
-* __Use GitHub or something similar__: building up that above commit map was a nice way to track the progress of my daily coding.  Lengthening my "Current Streak" as much as I could was always a nice pat on the back I gave myself. Also, my code on GitHub acted as a great reference...I used a lot of it to solve code problems I ran into at both Everyday Health and Revlon.
+* __Track your progress with GitHub__: building up that above commit map was a nice way to track the progress of my daily coding.  Lengthening my "Current Streak" as much as I could was always a nice pat on the back I gave myself.
 
-* __Write a lot of code, but make sure you maintain a work/life balance__: [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet, but he's correct. 
+* __Write a lot of code, but make sure you maintain a work/life balance__: [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life.  To be clear I DEFINETLY don't recommend that.
 
-
-
-[I wrote a blog post May 2012](/learn-javascript-before-jquery/ "Read "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery") where I talked about working with Node for the first time and found it to be not as tough as I thought it would be. I that post, I said:
-
-> _"I don’t know all the answers to Node (and still don’t), but thanks to my JavaScript knowledge, I understand all the questions."_
-
-I was somewhat implying that I needed to be The Omniscient Developer&trade;. That I needed to know the answer to every single solitary question about the web stack if I wanted to have a web dev career.
-
-I was wrong.  Really wrong.
-
-Understanding the questions is what it's all about. 
+* __Learn tooling while you lean code__: I had to understand the web stack to fix those work bugs but also had know about preprocessors like Sass, browser-based package managers like npm and build tools like Gulp. And I wouldn't have gotten this job if I didn't know this stuff. Lots of strides have been made in 
