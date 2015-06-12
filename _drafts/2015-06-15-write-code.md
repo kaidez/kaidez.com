@@ -87,3 +87,5 @@ You go and start coding...this is what helped me:
 * __Write a lot of code, but make sure you maintain a work/life balance__: [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life.  To be clear I DEFINETLY don't recommend that.
 
 * __Learn tooling while you lean code__: I had to understand the web stack to fix those work bugs but also had know about preprocessors like Sass, browser-based package managers like npm and build tools like Gulp. Lots of strides have been made in web stack tooling so it's important that learn them, particularly if you want a long term career in web development.
+
+## Conclusion
