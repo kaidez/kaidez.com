@@ -6,7 +6,6 @@ destination: ./_site
 markdown: rdiscount
 permalink: /:title
 destination: ./_site
-gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "pages/page:num"
 exclude: [
