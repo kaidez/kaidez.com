@@ -82,7 +82,10 @@ We are also architects that get to build cool things with code, but our jobs req
 
 You go and start coding...this is what helped me:
 
-* _try learning HTML and CSS without books_:
+* __Use GitHub or something similar__: building up that above commit map was a nice way to track the progress of my daily coding.  Lengthening my "Current Streak" as much as I could was always a nice pat on the back I gave myself. Also, my code on GitHub acted as a great reference...I used a lot of it to solve code problems I ran into at both Everyday Health and Revlon.
+
+* __Write a lot of code, but make sure you maintain a work/life balance__: [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet, but he's correct. 
+
 
 
 [I wrote a blog post May 2012](/learn-javascript-before-jquery/ "Read "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery") where I talked about working with Node for the first time and found it to be not as tough as I thought it would be. I that post, I said:
