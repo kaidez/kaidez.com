@@ -118,5 +118,5 @@ config/deploy.rb
 
 css/styles.css.map
 
-
+.jekyll-metadata
 # Wordpress Stuff
