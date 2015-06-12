@@ -1,16 +1,14 @@
 name: kaidez
 description: kaidez.com / Tutorials and articles about Web Development
 url: http://kaidez.com
+source:      .
+destination: ./_site
 markdown: rdiscount
 permalink: /:title
 destination: ./_site
+gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "pages/page:num"
-defaults:
-    scope:
-      path: ""
-    values:
-      layout: "default"
 exclude: [
   .ftppass,
   assets,
