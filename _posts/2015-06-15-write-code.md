@@ -27,7 +27,7 @@ Day.
 ## About the new job
 As mentioned in my last post, I took a front end dev job at a health and wellness-based digital company called [Everyday Health](http://www.everydayhealth.com/ "Visit Everyday Health") where I perform a variety of web stack-based tasks. By web stack, I mean I work primarily with HTML, CSS and JavaScript.
 
-The first tasks I was giving were bug fixes, JavaScript and CSS ones. I also had to rewrite some HTML for the sake of cross-browser/device compliance, but I started off by dealing with those bugs. 
+The first tasks I was giving were JavaScript and CSS bug fixes. I also had to rewrite some HTML for the sake of cross-browser/device compliance, but I started off by dealing with those bugs. 
 
 Then I was handed a project where I had to refactor some JavaScript related to the redesign of a web form. This was obviously tougher than the bug fixes.
 
@@ -57,26 +57,28 @@ As a result of all this, here's what happened at the new job:
 
 * parsing a complex JSON API to load content onto a page wasn't a problem for me.
 
-* using jQuery to manage state and data instead of using it to make fancy fade-ins wasn't a problem for me.
+* using jQuery to manage state and data and not just for fancy fade-ins wasn't a problem for me.
 
 * fixing a cross-browser error related to CSS transitions wasn't a problem for me.
 
-* writing feature detection in pure JavaScript instead of using Modernizr to do it wasn't a problem for me.
+* writing feature detection in pure JavaScript instead of using Modernizr wasn't a problem for me.
 
-* creating responsive web design code without using something like Bootstrap or Foundation wasn't a problem for me.
+* creating a responsive web site without using something like Bootstrap or Foundation wasn't a problem for me.
 
 By writing code for free before on my own time before asking to be paid to do it, I was well-prepared for my new job. 
 
 ## You are a Web ~~Developer~~ Engineer
-I also learned about a lot of crazy code quirks problems while doing my daily coding. In fact, lots of the previously-mentioned bugs I had to fix were done by remembering what I did to solve these problems.
+I also learned about a lot of quirky code problems while doing my daily coding. In fact, lots of the previously-mentioned bugs I had to fix were done by remembering how I solved those problems.
 
-This is __the__ most important thing I want you take away from this post: _a big part of a web developer's job is solving problems._ I think it's easily 75% of the job while, at the same time, think it's the most under-spoken part of it.
+That's important because __a big part of a web developer's job is solving problems.__ I think it's easily 75% of the job while, at the same time, think it's the most under-spoken part of it.
 
-It's a given skill-set for engineers of all types however...mechanical, electrical, etc. The railroads built in across the continental United States in the mid-1800's wouldn't have come to be without engineers....someone had to solve the problem of laying flat tracks across the the Rocky and Appalachian mountains. 
+It's a given skill-set for engineers of all types however...mechanical, electrical, etc. For example: the railroads built in across the continental United States in the mid-1800's wouldn't have come to be without engineers....someone had to solve the problem of laying flat tracks across the Rocky and Appalachian mountains. 
 
-Since solving problems is a big part of what we do, I'm now uncomfortable with the term "web developer" and think "web engineer" better describes our jobs. But solving problems doesn't mean that we're _just_ bug-fixers.
+Since solving problems is a big part of what we do, I'm a bit uncomfortable with the term "web developer" and think "web engineer" better describes our jobs. But solving problems doesn't mean that we're _just_ bug-fixers.
 
-We are also architects that get to build cool things with code, but our jobs require us to be engineers when we build the cool things.  We need to not only solve problems with the things we build, but we need to anticipate them before we start building in the first place...as engineers do.
+We are also architects that get to build cool things with code, but our jobs require us to be engineers when we build the cool things. We need to not only solve problems with the things we build, but we need to anticipate the problems before we start building in the first place...as engineers do. 
+
+Developing this skill comes about easily when you write code everyday.  You'll to solve the problems by practicing things on your own time instead of trying to solve them while your boss is looking over your shoulder.
 
 ## Where do you go from here?
 
@@ -84,7 +86,7 @@ You go and start coding...this is what helped me:
 
 * __Track your progress with GitHub__: building up that above commit map was a nice way to track the progress of my daily coding.  Lengthening my "Current Streak" as much as I could was always a nice pat on the back I gave myself.
 
-* __Write a lot of code, but make sure you maintain a work/life balance__: [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life.  To be clear I DEFINETLY don't recommend that.
+* __Write a lot of code, but make sure you maintain a work/life balance__: [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life.  To be clear I definitely don't recommend that.
 
 * __Learn tooling while you lean code__: I had to understand the web stack to fix those work bugs but also had know about preprocessors like Sass, browser-based package managers like npm and build tools like Gulp. Lots of strides have been made in web stack tooling so it's important that learn them, particularly if you want a long term career in web development.
 
