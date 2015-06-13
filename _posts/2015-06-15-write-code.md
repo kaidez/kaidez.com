@@ -25,20 +25,20 @@ F#%king.
 Day.
 
 ## About the new job
-As mentioned in my last post, [I left Revlon](/revlon/ "Read about kaidez leaving Revlon") and took a front end developer position at [Everyday Health](http://www.everydayhealth.com/ "Visit Everyday Health") where I perform a variety of web stack-based tasks. By web stack, I mean I work primarily with HTML, CSS and JavaScript.
+As mentioned in my last post, [I left Revlon](/revlon/ "Read about kaidez leaving Revlon") and took a front end developer position at [Everyday Health](http://www.everydayhealth.com/ "Visit Everyday Health") where I perform a variety of web stack-based tasks. By "web stack," I mean I work primarily with HTML, CSS and JavaScript.
 
-The first tasks I was given were JavaScript and CSS bug fixes. I also had to rewrite some HTML to make it cross-browser/device compliant, but I started off by dealing with those bugs. 
+The first tasks I was given were JavaScript and CSS bug fixes. I also had to rewrite some HTML to make it cross-browser/device compliant, but I dealt with these bugs mostly. 
 
-Then I was asked to refactor some JavaScript inside one of the site's key web apps. This was obviously tougher than the bug fixes.
+Then I had to refactor functionality inside one of the company's public-facing web applications. This was a straight-up JavaScript task and was tougher than the bug fixes.
 
 I've always been a bit insecure about my web stack skills being up to par, specifically the JavaScript one. JS goes through changes seemingly every minute and keeping up with the changes takes effort.
 
-So I've always been a little concerned as to whether or not my JS skills are up-to-date and I went into the new job with this concern. But a funny thing happened: I was able to do everything I was asked to do.
+So I've always been a little concerned as to whether or not my JS skills are up-to-date and went into the new job with this concern. But a funny thing happened: I was able to do everything I was asked to do.
 
 I'm not saying that the bugs were so easy to fix that a five-year old could fix them (they weren't), or that my ability to handle the refactor makes me the world's greatest web developer (it doesn't). I saying that I wasn't intimidated by these tasks because, as it turns out, my skills are better than I'm giving myself credit for.
 
-## Why are my skills are better than I'm giving myself credit for?
-I am 100% convinced that my ability to do the job is the direct result of a decision I made months ago to <em>try</em> write at least one piece of web stack code a day. I missed some days but I've mostly followed through with this decision.
+## Why are my skills better than I'm giving myself credit for?
+I am 100% convinced that my ability to do the job is the direct result of a decision I made months ago to <em>try</em> and write at least one piece of web stack code a day. I missed some days during the weekends but I'm still writing code on a consistent basis.
 
 Some of the code was for work, some of it was for [the lynda.com courses I created](/lynda-kaidez/ "Read about the lynda.com courses I created"). Most of it was just my trying out some new framework or tool, or just playing with a certain part of the JavaScript core API.
 
@@ -49,7 +49,9 @@ I ended up writing lots of code...lots and lots and lots of code. Here's a recen
   <figcaption style="margin:20px auto 0;"><em>Includes private repos...</em></figcaption>
 </figure>
 
-As a result of all this, here's what happened at the new job:
+The blank days on the commit map (particularly on the right) don't necessarily indicate that I didn't write code those days. It may mean that I wrote code for my job that but didn't commit to my GitHub repo.
+
+The blank weekend days mean that I took a break from my machine those days, which is fine. We're still seeing that I wrote code pretty consistently and as a result of all this, here's what happened at the new job:
 
 * loading content inside a complex JSON API onto the page wasn't a problem for me.
 
@@ -62,7 +64,7 @@ As a result of all this, here's what happened at the new job:
 * creating a responsive web site without Bootstrap or Foundation wasn't a problem for me.
 
 ## You are a Web ~~Developer~~ Engineer
-As I was doing all this, I learned about the various problems and quirks that can come up in the web stack. In fact, lots of the bugs I had to fix were done by remembering how I solved those problems.
+As I was doing all this, I had to solve and some of the various problems that come up in the web stack. In fact, lots of the bugs I had to fix were done by remembering how I solved those problems.
 
 That's important because __a big part of a web developer's job is solving problems.__ It's easily 70% of the job and, at the same time, is the most under-spoken part of it.
 
@@ -77,9 +79,9 @@ You go and start coding.  Here's how I suggest you do things:
 
 * __Track your progress with GitHub:__ building up that above commit map was a nice way to track the progress of my daily coding.  Lengthening my "Current Streak" as much as I could was always a nice pat on the back I gave myself. Do the same if you can.
 
-* __Write a lot of code, but make sure you maintain a work/life balance:__ [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life. To be clear: I definitely don't recommend that.
+* __Write a lot of code, but make sure you maintain a work/life balance:__ [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life, and I definitely don't recommend that. John Resig highlights the importance of a work/life/side project balance in his blog post and as mentioned above, I took breaks during a few weekends. And the weekends that I did code, it wasn't THAT much as I was with my family. 
 
-* __Share what you learn:__ my next tutorial might be on a well-documented jQuery thing that's been discussed on countless other blogs. But it helped me solve a problem and changed my approach to building web apps. If I share what I learned in an elegant way, I know the tutorial will help someone else. You should do the same: start a blog and write a lot of posts that say, "this was my problem, this is how I solved it, this is what I learned." Write posts with the goal of helping people instead of inciting them to click on ads.
+* __Share what you learn:__ my next tutorial might be on a well-documented part of the jQuery API that's been discussed on countless other blogs. But it helped me solve a problem and changed my approach to building web apps so I should share that in my blog. And if I share what I learned in an elegant way, I know the tutorial will help someone else. You should do the same: start a blog and write a lot of posts that say, "this was my problem, this is how I solved it, this is what I learned." Write posts with the goal of helping people instead of inciting them to click on ads.
 
 ## Conclusion
 [Alex Sexton](https://twitter.com/SlexAxton "Visit Alex Sexton on Twitter") delivered the best statement ever for learning web development:
