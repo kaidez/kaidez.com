@@ -49,13 +49,13 @@ I ended up writing lots of code...lots and lots and lots of code. Here's a recen
   <figcaption style="margin:20px auto 0;"><em>Includes private repos...</em></figcaption>
 </figure>
 
-The blank days on the commit map (particularly on the right) don't necessarily indicate that I didn't write code those days. It may mean that I wrote code for my job that but didn't commit to my GitHub repo.
+The blank days on the commit map (particularly those closest to the right) don't necessarily indicate that I didn't write code on those days. It may mean that I wrote code for my employer that shouldn't be committed to my personal GitHub repos...makes sense.
 
-The blank weekend days mean that I took a break from my machine those days, which is fine. We're still seeing that I wrote code pretty consistently and as a result of all this, here's what happened at the new job:
+The blank <em>weekend</em> days mean that I took a break and had a life, which is awesome! We're still seeing that I wrote code pretty regularly and as a result of that, here's what happened when I got to Everyday Health:
 
-* loading content inside a complex JSON API onto the page wasn't a problem for me.
+* finding content inside a complex JSON API and loading it onto the page wasn't a problem for me.
 
-* using jQuery to manage data and state and not just for fancy fade-ins wasn't a problem for me.
+* using jQuery for managing data and state instead of creating fancy fade-ins wasn't a problem for me.
 
 * fixing cross-browser errors related to CSS transitions wasn't a problem for me.
 
@@ -64,22 +64,22 @@ The blank weekend days mean that I took a break from my machine those days, whic
 * creating a responsive web site without Bootstrap or Foundation wasn't a problem for me.
 
 ## You are a Web ~~Developer~~ Engineer
-As I was doing all this, I had to solve and some of the various problems that come up in the web stack. In fact, lots of the bugs I had to fix were done by remembering how I solved those problems.
+As I was coding daily, I also had to solve some of the various problems that show up in web stack development. In fact, the bugs I worked on at Everyday Health were fixed by remembering how I solved these problems.
 
 That's important because __a big part of a web developer's job is solving problems.__ It's easily 70% of the job and, at the same time, is the most under-spoken part of it.
 
-It's an assumed skill-set for engineers of all types however...mechanical, electrical, etc. For example: the railroads built in across the continental United States in the mid-1800's wouldn't have come to be without engineers....someone had to solve the problem of laying flat tracks among the Rocky and Appalachian mountains. 
+It's an assumed skill-set for engineers of all types however...mechanical, electrical, etc. The railroads built across the continental United States in the 1800's wouldn't have come to be without engineers....someone had to solve the problem of laying flat tracks among the Rocky and Appalachian mountains. 
 
-Like those engineers, we web devs are also architects that build cool things with code, but our jobs require us to be engineers when we build the cool things. Like those engineers, it's our job to not only solve problems with the things we build, but we need to anticipate the problems before we start building in the first place.
+Like those engineers, we web devs are also architects that build cool things with code, but our jobs require us to be engineers as we build the cool things. Like those engineers, it's our job to not only solve problems with the things we create, but we need to anticipate the problems before we start creating.
 
-It's because of this that I'm a bit uncomfortable with the term "web developer" and think "web engineer" better describes our jobs. Writing code with some level of consistency makes us all better engineers. 
+It's because of this that I'm a bit uncomfortable with the term "web developer" and think "web engineer" better describes our jobs. Writing code daily makes you a better engineers...the problem it took you eight hours solve today will teach how to solve it in 10 minutes tomorrow. 
 
 ## Where do you go from here?
 You go and start coding.  Here's how I suggest you do things:
 
 * __Track your progress with GitHub:__ building up that above commit map was a nice way to track the progress of my daily coding.  Lengthening my "Current Streak" as much as I could was always a nice pat on the back I gave myself. Do the same if you can.
 
-* __Write a lot of code, but make sure you maintain a work/life balance:__ [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life, and I definitely don't recommend that. John Resig highlights the importance of a work/life/side project balance in his blog post and as mentioned above, I took breaks during a few weekends. And the weekends that I did code, it wasn't THAT much as I was with my family. 
+* __Write a lot of code, but make sure you maintain a work/life balance:__ [I tweeted about coding everyday once](https://twitter.com/kaidez/status/596670528515104768) but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life, and I definitely don't recommend that. John Resig highlights the importance of a work/life/side project balance in his blog post and as mentioned above, I took breaks during a few weekends. And the weekends that I did code, it wasn't THAT much as I was with family and friends. 
 
 * __Share what you learn:__ my next tutorial might be on a well-documented part of the jQuery API that's been discussed on countless other blogs. But it helped me solve a problem and changed my approach to building web apps so I should share that in my blog. And if I share what I learned in an elegant way, I know the tutorial will help someone else. You should do the same: start a blog and write a lot of posts that say, "this was my problem, this is how I solved it, this is what I learned." Write posts with the goal of helping people instead of inciting them to click on ads.
 
