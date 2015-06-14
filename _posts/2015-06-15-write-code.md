@@ -12,7 +12,7 @@ tags: [personal]
 ---
 I've been planning this post for a few months now. My initial plan was to make it my 100th post, using that milestone to review the things I've done to be best web developer I can be.
 
-But the things I've been doing have led to some very satisfying events during my first month at my new job. So I feel the need to publish it now in the hopes it will help other web devs, especially the beginning ones.
+But the things I've been doing have led to some very satisfying events during my first month at my new job. So I feel the need to publish this post now in the hopes it will help other web devs, especially the beginning ones.
 
 Both [Christian Heilmann](http://christianheilmann.com/2013/05/10/justcode/ "Read '#JUSTCODE' by Christian Heilmann") and [John Resig](http://ejohn.org/blog/write-code-every-day/ "Read 'Write Code Every Day' by John Resig") have discussed these things before, and probably more elegantly than I'm about to discuss them here. But they should transcend to all developers so one more blog post about them won't hurt.
 
