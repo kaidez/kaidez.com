@@ -72,15 +72,20 @@
 </aside> <!-- #aside-id -->
 
 <footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-  <p class="footer-text">&copy; 2008-15 Kai Gittens</p>
+
   <p class="footer-text">
     <a href="" class="footer-links">site map</a>
     <a href="" class="footer-links">affiliate disclaimer</a>
   </p>
 
+  <p class="footer-text footer-text-spaced">made with love by kaidez</p>
+  <p class="footer-text">built with WordPress</p>
+  <p class="footer-text">powered Media Temple and MaxCDN</p>
+  <p class="footer-text footer-text-spaced">&copy; 2008-15 kai gittens</p>
+
   <div class="jump-to-top">
     <a href="#page" class="jump-to-top-link">back to top</a>
-  </div> <!-- .jump-to-top-link -->
+  </div> <!-- .jump-to-top -->
 
 </footer> <!-- #colophon -->
 </div> <!-- #page -->
