@@ -182,7 +182,7 @@ gulp.task("bsfafont", function () {
  */
 
 
-gulp.task("watch", function () {
+gulp.task("default", function () {
 
   // Watch for CSS/JS file changes
 
