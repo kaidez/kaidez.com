@@ -243,11 +243,19 @@ a.aside-link:hover {
  */
 /* Style the main site <footer> */
 .site-footer {
+  padding-bottom: 45px;
   background-color: #7b0b39;
   color: #fff;
 }
+/* Style the footer text */
 .footer-text {
-  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 a.footer-links {
   color: #fff;
@@ -378,10 +386,6 @@ a.footer-links:hover {
    * FOOTER STYLES START
    * ==================================================================
    */
-  /* Style the main site <footer> */
-  .site-footer {
-    height: 100px;
-  }
   /*
    * ==================================================================
    * FOOTER STYLES END
@@ -536,14 +540,18 @@ a.footer-links:hover {
    */
   /* Style the main site <footer> on hand-helds */
   .site-footer {
-    padding-bottom: 45px;
+    padding-top: 15px;
+  }
+  /* Space out some text in the <footer> */
+  .footer-text-spaced {
+    margin-top: 23px;
   }
   /*
    * Style the "Back To Top" button
    * Appears on mobile devices only, so it should be in "media"
    */
   .jump-to-top {
-    margin: 0 auto;
+    margin: 40px auto 0;
     padding: 10px;
     width: 200px;
     color: #fff;
