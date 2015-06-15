@@ -387,7 +387,9 @@ a.footer-links:hover {
    * FOOTER STYLES END
    * ==================================================================
    */
-  .mobile-menu {
+  /* Hide mobile menu & "back-to-top" button on widescreen devices */
+  .mobile-menu,
+  .jump-to-top-link {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
@@ -527,4 +529,46 @@ a.footer-links:hover {
   .content-area {
     padding: 0 15px;
   }
+  /*
+   * ==================================================================
+   * FOOTER STYLES START
+   * ==================================================================
+   */
+  /* Style the main site <footer> on hand-helds */
+  .site-footer {
+    padding-bottom: 45px;
+  }
+  /*
+   * Style the "Back To Top" button
+   * Appears on mobile devices only, so it should be in "media"
+   */
+  .jump-to-top {
+    margin: 0 auto;
+    padding: 10px;
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+  }
+  /*
+   * Globally set main link color for the site
+   * Only the hover pseudo class shows an underline
+   */
+  a.jump-to-top-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a.jump-to-top-link:visited {
+    text-decoration: underline;
+  }
+  a.jump-to-top-link:hover,
+  a.jump-to-top-link:active {
+    text-decoration: underline;
+  }
+  /*
+   * ==================================================================
+   * FOOTER STYLES END
+   * ==================================================================
+   */
 }

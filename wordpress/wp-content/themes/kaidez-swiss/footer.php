@@ -77,8 +77,14 @@
     <a href="" class="footer-links">site map</a>
     <a href="" class="footer-links">affiliate disclaimer</a>
   </p>
+
+  <div class="jump-to-top">
+    <a href="#page" class="jump-to-top-link">back to top</a>
+  </div> <!-- .jump-to-top-link -->
+
 </footer> <!-- #colophon -->
 </div> <!-- #page -->
+
 
 <?php wp_footer(); ?>
 </div> <!-- #content -->

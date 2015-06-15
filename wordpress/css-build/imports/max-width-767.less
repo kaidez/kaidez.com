@@ -145,4 +145,52 @@
     padding: 0 15px;
   }
 
+
+
+  /*
+   * ==================================================================
+   * FOOTER STYLES START
+   * ==================================================================
+   */
+
+  /* Style the main site <footer> on hand-helds */
+  .site-footer {
+    padding-bottom: 45px;
+  }
+
+  /*
+   * Style the "Back To Top" button
+   * Appears on mobile devices only, so it should be in "media"
+   */
+  .jump-to-top {
+    margin: 0 auto;
+    padding:10px;
+    width: 200px;
+
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+  }
+
+  /*
+   * Globally set main link color for the site
+   * Only the hover pseudo class shows an underline
+   */
+  a.jump-to-top-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    &:visited {
+      text-decoration: underline;
+    }
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  /*
+   * ==================================================================
+   * FOOTER STYLES END
+   * ==================================================================
+   */
 }
