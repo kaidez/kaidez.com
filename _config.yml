@@ -31,5 +31,6 @@ exclude: [
   r.js,
   repo*.png,
   terminalShot*.png,
-  _posts/2014-09-17-lynda-kaidez.md
+  _posts/2014-09-17-lynda-kaidez.md,
+  wordpress
 ]
