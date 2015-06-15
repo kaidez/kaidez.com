@@ -51,7 +51,7 @@ I ended up writing lots of code...lots and lots and lots of code. Here's a recen
 
 The blank days on the commit map (particularly those closest to the right) don't necessarily indicate that I didn't write code on those days. It may mean that I wrote code for my employer that shouldn't be committed to my personal GitHub repos...makes sense.
 
-The blank <em>weekend</em> days mean that I took a break and had a life, which is awesome! We're still seeing that I wrote code pretty regularly and as a result of that, here's what happened when I got to Everyday Health:
+The blank <em>weekend</em> days mean that I took a break to have a life, which is awesome! We're still seeing that I wrote code pretty regularly and as a result of that, here's what happened when I got to Everyday Health:
 
 * finding content inside a complex JSON API and loading it onto the page wasn't a problem for me.
 
