@@ -195,9 +195,11 @@ a.home-link:active {
  * ASIDE STYLES
  * ====================================================================
  */
+/* Make the <aside> background pink */
 .aside {
-  background-color: #ed327f;
+  background-color: #d91365;
 }
+/* Hide <aside> header */
 .aside-header {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
