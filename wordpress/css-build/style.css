@@ -464,7 +464,6 @@ a.colophon-link:hover {
     }
     100% {
       -webkit-transform: translateY(50px);
-      opacity: 1;
     }
   }
   @keyframes menu {
@@ -473,14 +472,13 @@ a.colophon-link:hover {
     }
     100% {
       transform: translateY(50px);
-      opacity: 1;
     }
   }
   .kai {
     -webkit-animation-name: menu;
     animation-name: menu;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;
@@ -489,14 +487,12 @@ a.colophon-link:hover {
     animation-fill-mode: both;
     position: relative;
     z-index: 1;
-    background-color: #ED327F;
   }
   /* MOBILE MENU STYLES END */
   .site-header {
     position: fixed;
   }
   .site-branding {
-    z-index: 2;
     position: relative;
   }
   /*

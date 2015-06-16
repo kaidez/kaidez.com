@@ -35,7 +35,7 @@
   .btn-default:active span,
   .btn-default:hover span,
   .btn-default:focus span {
-      background-color: darken(@pink, 80%);
+    background-color: darken(@pink, 80%);
   }
 
   /*
@@ -43,21 +43,21 @@
    */
   @-webkit-keyframes menu {
     0% {-webkit-transform: translateY(0px);  }
-    100% {-webkit-transform: translateY(50px); opacity:1;}
+    100% {-webkit-transform: translateY(50px);}
   }
 
 
 
   @keyframes menu {
     0% {transform: translateY(0px);  }
-    100% {transform: translateY(50px); opacity:1;}
+    100% {transform: translateY(50px);}
   }
 
   .kai {
     -webkit-animation-name: menu;
             animation-name: menu;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;
@@ -67,7 +67,6 @@
 
     position: relative;
     .z1();
-    background-color: #ED327F;
   }
 
   /* MOBILE MENU STYLES END */
@@ -78,7 +77,6 @@
   }
 
   .site-branding {
-    .z2();
     position: relative;
   }
 
