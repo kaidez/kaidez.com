@@ -68,7 +68,7 @@ a.homepage-title-link {
 
 
 
- /*
+/*
  * ====================================================================
  * LINK STYLES START
  * ====================================================================
@@ -194,7 +194,7 @@ a.aside-link {
   font-weight: bold;
   font-size: 14px;
   font-size: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 a.footer-links {
@@ -208,6 +208,21 @@ a.footer-links {
   }
 }
 
+
+a.colophon-link {
+  color: lighten(@pink, 20%);
+  text-decoration: none;
+
+  &:visited {
+    color: lighten(@pink, 20%);
+    text-decoration: none;
+  }
+  &:hover {
+    color: lighten(@pink, 20%);
+    text-decoration: none;
+  }
+}
+
 /*
  * ====================================================================
  * FOOTER STYLES END
@@ -216,16 +231,28 @@ a.footer-links {
 
 
 
- /*
-  * ===================================================================
-  * MISCELLANOUS STYLES START
-  * ===================================================================
-  */
+/*
+ * ===================================================================
+ * MISCELLANOUS STYLES START
+ * ===================================================================
+ */
 
-  .youtube-iframe {
-    max-width: 100%;
-  }
+.youtube-iframe {
+  max-width: 100%;
+}
 
+/* Style the submit button on all posts */
+.submit {
+  padding: 10px;
+  border: none;
+
+  color:#fff;
+  background-color:darken(@pink, 15%);
+}
+
+.comment-label {
+  display: block;
+}
  /*
   * ===================================================================
   * MISCELLANOUS STYLES END

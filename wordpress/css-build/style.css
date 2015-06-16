@@ -255,7 +255,7 @@ a.aside-link:hover {
   font-weight: bold;
   font-size: 14px;
   font-size: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 a.footer-links {
   color: #fff;
@@ -266,18 +266,40 @@ a.footer-links:visited {
 a.footer-links:hover {
   color: #fff;
 }
+a.colophon-link {
+  color: #f590ba;
+  text-decoration: none;
+}
+a.colophon-link:visited {
+  color: #f590ba;
+  text-decoration: none;
+}
+a.colophon-link:hover {
+  color: #f590ba;
+  text-decoration: none;
+}
 /*
  * ====================================================================
  * FOOTER STYLES END
  * ====================================================================
  */
 /*
-  * ===================================================================
-  * MISCELLANOUS STYLES START
-  * ===================================================================
-  */
+ * ===================================================================
+ * MISCELLANOUS STYLES START
+ * ===================================================================
+ */
 .youtube-iframe {
   max-width: 100%;
+}
+/* Style the submit button on all posts */
+.submit {
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #c2115a;
+}
+.comment-label {
+  display: block;
 }
 /*
   * ===================================================================
@@ -535,6 +557,21 @@ a.footer-links:hover {
   }
   /*
    * ==================================================================
+   * ASIDE STYLES START
+   * ==================================================================
+   */
+  /* Style the <textarea> in Comments area */
+  .post-comment {
+    min-width: 300px;
+    max-width: 767px;
+  }
+  /*
+   * ==================================================================
+   * ASIDE STYLES END
+   * ==================================================================
+   */
+  /*
+   * ==================================================================
    * FOOTER STYLES START
    * ==================================================================
    */
@@ -544,7 +581,7 @@ a.footer-links:hover {
   }
   /* Space out some text in the <footer> */
   .footer-text-spaced {
-    margin-top: 23px;
+    margin-top: 25px;
   }
   /*
    * Style the "Back To Top" button
@@ -568,11 +605,11 @@ a.footer-links:hover {
     text-decoration: none;
   }
   a.jump-to-top-link:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
   a.jump-to-top-link:hover,
   a.jump-to-top-link:active {
-    text-decoration: underline;
+    text-decoration: none;
   }
   /*
    * ==================================================================
