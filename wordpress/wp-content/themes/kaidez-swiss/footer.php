@@ -96,7 +96,7 @@
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
   $("#mobile-menu-button").click(function(){
-    $("#site-navigation").addClass("kai");
+    $(".site-content").addClass("kai");
   });
 </script>
 </body>

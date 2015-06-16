@@ -2066,17 +2066,17 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 }
 @media (max-width:767px){.kai,.mobile-menu{position:relative}
 .mobile-menu{bottom:40px;float:right;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
-.btn-default:active span,.btn-default:focus span,.btn-default:hover span,.mobile-menu-bar{background-color:#000}
+.btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
 @-webkit-keyframes menu{0%{-webkit-transform:translateY(0)}
-100%{-webkit-transform:translateY(50px);opacity:1}
+100%{-webkit-transform:translateY(50px)}
 }
 @keyframes menu{0%{-webkit-transform:translateY(0);transform:translateY(0)}
-100%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:1}
+100%{-webkit-transform:translateY(50px);transform:translateY(50px)}
 }
-.kai{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;z-index:1;background-color:#ED327F}
+.kai{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;z-index:1}
 .site-header{position:fixed}
-.site-branding{z-index:2;position:relative}
+.site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:120px}
 .searchform-class{position:relative;top:60px}
@@ -2091,6 +2091,6 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .post-comment{width:100%;max-width:500px}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
-.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;text-align:center;background-color:#000}
+.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;text-align:center}
 a.jump-to-top-link{color:#fff;font-weight:700}
 }
