@@ -197,6 +197,7 @@ a.home-link:active {
  */
 /* Make the <aside> background pink */
 .aside {
+  padding: 14px 15px 0;
   background-color: #d91365;
 }
 /* Hide <aside> header */
@@ -260,6 +261,7 @@ a.aside-link:hover {
   line-height: 1.7;
 }
 a.footer-links {
+  margin-left: 9px;
   color: #fff;
 }
 a.footer-links:visited {
@@ -277,7 +279,7 @@ a.colophon-link:visited {
   text-decoration: none;
 }
 a.colophon-link:hover {
-  color: #f590ba;
+  color: #f7a7c8;
   text-decoration: none;
 }
 /*
@@ -549,7 +551,6 @@ a.colophon-link:hover {
     text-decoration: none;
   }
   /* Add left/right space to <aside> and single blog post content */
-  .aside,
   .content-area {
     padding: 0 15px;
   }

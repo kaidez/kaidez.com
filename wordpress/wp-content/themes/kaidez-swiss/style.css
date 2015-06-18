@@ -1883,7 +1883,6 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .popover.left{margin-left:-10px}
 .popover-title{padding:8px 14px;margin:0;font-size:14px;background-color:#f7f7f7;border-bottom:1px solid #ebebeb;border-radius:5px 5px 0 0}
 .popover-content{padding:9px 14px}
-.aside-list,.menu{padding-left:0}
 .popover>.arrow,.popover>.arrow:after{position:absolute;display:block;width:0;height:0;border-color:transparent;border-style:solid}
 .carousel,.carousel-inner{position:relative}
 .popover>.arrow{border-width:11px}
@@ -2024,21 +2023,25 @@ i{width:30px;height:30px}
 .site-header{background-color:#ed327f;width:100%;height:65px}
 a.homepage-title-link{text-decoration:none}
 a.homepage-title-link:hover{color:#f1619c}
+.menu{padding-left:0}
 .menu-item{display:inline;margin-right:15px}
 a,a:visited{color:#ed327f;text-decoration:underline}
 a:active,a:hover{color:#ed327f;text-decoration:none}
 a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;text-decoration:none}
-.aside{background-color:#d91365}
+.aside{padding:14px 15px 0;background-color:#d91365}
 .aside-header{clip:rect(1px,1px,1px,1px)}
 .aside-section-header{font-weight:900;color:#f9bfd7}
 .aside-inner{width:775px}
+.aside-list{padding-left:0}
 .aside-list-item{height:34px;color:#000}
 a.aside-link,a.aside-link:visited{color:#000;text-decoration:none}
 a.aside-link:hover{color:#7b0b39;text-decoration:underline}
 .site-footer{padding-bottom:45px;background-color:#7b0b39;color:#fff}
 .footer-text{margin-right:10px;margin-bottom:0;text-align:right;font-weight:700;font-size:14px;font-size:1.4rem;line-height:1.7}
-a.footer-links,a.footer-links:hover,a.footer-links:visited{color:#fff}
-a.colophon-link,a.colophon-link:hover,a.colophon-link:visited{color:#f590ba;text-decoration:none}
+a.footer-links{margin-left:9px;color:#fff}
+a.footer-links:hover,a.footer-links:visited{color:#fff}
+a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
+a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
 .comment-label{display:block}
 @media (min-width:768px){.site-header{padding:3px 0 0 20px}
@@ -2087,7 +2090,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .menu-item a:hover{color:#000;text-decoration:underline}
 .menu-item a:visited,a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-top-link:visited{text-decoration:none}
 .menu-item a:visited{color:#000}
-.aside,.content-area{padding:0 15px}
+.content-area{padding:0 15px}
 .post-comment{width:100%;max-width:500px}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
