@@ -432,7 +432,6 @@ a.colophon-link:hover {
   .mobile-menu {
     position: relative;
     bottom: 40px;
-    float: right;
     height: 48px;
     width: 48px;
     z-index: 2;

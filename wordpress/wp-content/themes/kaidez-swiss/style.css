@@ -2068,7 +2068,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .jump-to-top-link,.mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
 @media (max-width:767px){.kai,.mobile-menu{position:relative}
-.mobile-menu{bottom:40px;float:right;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
+.mobile-menu{bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
 @-webkit-keyframes menu{0%{-webkit-transform:translateY(0)}
