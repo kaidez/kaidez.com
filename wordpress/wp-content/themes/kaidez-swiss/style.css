@@ -2020,7 +2020,7 @@ p{margin:0 0 22px}
 i{width:30px;height:30px}
 .home-link{color:#000}
 .menu-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
-.site-header{background-color:#ed327f;width:100%;height:65px}
+.site-header{background-color:#ed327f;width:100%}
 a.homepage-title-link{text-decoration:none}
 a.homepage-title-link:hover{color:#f1619c}
 .menu{padding-left:0}
@@ -2067,7 +2067,8 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .aside-inner{margin-left:25px}
 .jump-to-top-link,.mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
-@media (max-width:767px){.kai,.mobile-menu{position:relative}
+@media (max-width:767px){.kai,.mobile-menu,.site-title{position:relative}
+.site-title{top:1px;right:52px;left:52px}
 .mobile-menu{bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
@@ -2078,10 +2079,10 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 100%{-webkit-transform:translateY(50px);transform:translateY(50px)}
 }
 .kai{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;z-index:1}
-.site-header{position:fixed}
+.site-header{position:fixed;height:51px}
 .site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
-.site-content{margin-top:120px}
+.site-content{margin-top:70px}
 .searchform-class{position:relative;top:60px}
 .entry-header{margin-bottom:20px}
 .entry-title{font-size:40px;font-size:4rem}
