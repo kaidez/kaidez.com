@@ -25,7 +25,7 @@ module.exports = function(grunt) {
           destPrefix: "css-build/"
         },
         files: {
-          "bootstrap.css": "bootstrap/dist/css/bootstrap.css"
+          "css-build/bootstrap.css": "bootstrap/dist/css/bootstrap.css"
         }
       }, // end "bowercopy:bscss" task
 
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
         // copy to the "build/js/libs/" directory
         options: {
-          destPrefix: "build/js/libs/"
+          destPrefix: "wp-content/themes/kaidez-swiss/js/libs/"
         },
         files: {
           "jquery.min.js": "jquery/dist/jquery.min.js"
