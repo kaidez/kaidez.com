@@ -356,17 +356,17 @@ a.colophon-link:hover {
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
   }
+  /* style links on desktop view*/
   .menu-item {
-    display: block;
+    display: inline-block;
     margin-bottom: 10px;
     font-size: 16px;
-  }
-  .menu-item-container {
-    display: inline-block;
   }
   .menu-item a {
     min-width: 48px;
     min-height: 48px;
+    color: black;
+    text-decoration: none;
   }
   .glyphicon {
     color: #000;
