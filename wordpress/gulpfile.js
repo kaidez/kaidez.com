@@ -3,7 +3,8 @@
 var gulp = require("gulp"), // "require" gulp
     uncss = require("gulp-uncss"), // Remove unused css selectors
     minifyCSS = require("gulp-minify-css"), // Minify CSS
-    csslint = require("gulp-csslint"), // Lint CSS
+    csslint = require("gulp-csslint"), // Lint CSS,
+    concatCss = require("gulp-concat-css"), // Concatenate CSS only
     watch = require("gulp-watch"), // Watch files changes
     imagemin = require('gulp-imagemin'), // Minifying images
     autoprefixer = require('gulp-autoprefixer'),
