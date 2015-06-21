@@ -93,7 +93,9 @@
 
 <?php wp_footer(); ?>
 </div> <!-- #content -->
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/libs/prism.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/libs/jquery.min.js"></script>
+
 <script>
   $("#mobile-menu-button").click(function(){
     $(".site-content").addClass("kai");

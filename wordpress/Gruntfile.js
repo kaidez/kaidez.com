@@ -29,6 +29,18 @@ module.exports = function(grunt) {
         }
       }, // end "bowercopy:bscss" task
 
+      // Copy PrismJS over
+      prism: {
+
+        // copy to the theme's "js/libs" directory
+        options: {
+          destPrefix: "wp-content/themes/kaidez-swiss/js/libs/"
+        },
+        files: {
+          "prism.js": "prism/prism.js"
+        }
+      }, // end "bowercopy:bscss" task
+
       // Copy Font Awesome CSS
       bsfa: {
 
