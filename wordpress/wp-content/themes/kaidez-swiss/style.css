@@ -2084,18 +2084,41 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .aside-inner{margin-left:25px}
 .jump-to-top-link,.mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
-@media (max-width:767px){.kai,.mobile-menu,.site-title{position:relative}
-.site-title{top:1px;right:52px;left:52px}
-.mobile-menu{bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
+@media (max-width:767px){.site-title{position:relative;top:1px;right:52px;left:52px}
+.mobile-menu{position:relative;bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
+.hide-menu,.move-content,.reverse-move-content,.show-menu{position:relative;z-index:1}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
-@-webkit-keyframes menu{0%{-webkit-transform:translateY(0)}
+@-webkit-keyframes moveContent{0%{-webkit-transform:translateY(0)}
 100%{-webkit-transform:translateY(50px)}
 }
-@keyframes menu{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+@keyframes moveContent{0%{-webkit-transform:translateY(0);transform:translateY(0)}
 100%{-webkit-transform:translateY(50px);transform:translateY(50px)}
 }
-.kai{-webkit-animation-name:menu;animation-name:menu;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both;z-index:1}
+@-webkit-keyframes revMoveContent{from{-webkit-transform:translateY(50px)}
+to{-webkit-transform:translateY(0)}
+}
+@keyframes revMoveContent{from{-webkit-transform:translateY(50px);transform:translateY(50px)}
+to{-webkit-transform:translateY(0);transform:translateY(0)}
+}
+@-webkit-keyframes showMobileMenu{0%{padding-bottom:0}
+100%{padding-bottom:100px}
+}
+@keyframes showMobileMenu{0%{padding-bottom:0}
+100%{padding-bottom:100px}
+}
+@-webkit-keyframes hideMobileMenu{from{padding-bottom:100px}
+to{padding-bottom:0}
+}
+@keyframes hideMobileMenu{from{padding-bottom:100px}
+to{padding-bottom:0}
+}
+.move-content{-webkit-animation-name:moveContent;animation-name:moveContent;animation-duration:.5s;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;animation-fill-mode:both}
+.move-content,.reverse-move-content{-webkit-animation-duration:.5s;-webkit-animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out}
+.reverse-move-content{-webkit-animation-name:revMoveContent;animation-name:revMoveContent;animation-duration:.5s;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:2;animation-iteration-count:2;animation-fill-mode:both}
+.show-menu{-webkit-animation-name:showMobileMenu;animation-name:showMobileMenu;animation-duration:.5s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
+.hide-menu,.show-menu{-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:.5s}
+.hide-menu{-webkit-animation-name:hideMobileMenu;animation-name:hideMobileMenu;animation-duration:.5s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
 .site-header{position:fixed;height:51px}
 .site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
@@ -2103,7 +2126,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .searchform-class{position:relative;top:60px}
 .entry-header{margin-bottom:20px}
 .entry-title{font-size:38px;font-size:3.8rem;font-weight:700}
-.main-navigation{opacity:0;position:absolute;bottom:35px}
+.main-navigation{opacity:0;position:relative;bottom:42px}
 .menu-item a{color:#000;text-decoration:none}
 .menu-item a:hover{color:#000;text-decoration:underline}
 .menu-item a:visited,a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-top-link:visited{text-decoration:none}

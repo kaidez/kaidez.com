@@ -96,10 +96,7 @@
 <script src="/wp-content/themes/kaidez-swiss/js/libs/prism.js"></script>
 <script src="/wp-content/themes/kaidez-swiss/js/libs/jquery.min.js"></script>
 
-<script>
-  $("#mobile-menu-button").click(function(){
-    $(".site-content").addClass("kai");
-  });
-</script>
+<script src="/wp-content/themes/kaidez-swiss/js/mobileMenu.js"></script>
+
 </body>
 </html>
