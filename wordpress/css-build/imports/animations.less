@@ -1,0 +1,63 @@
+/*
+ * ALL ANIMATION STYLES FOR THE ENTIRE SITE
+ *
+ * Note that all the animations are outside of the media queries
+ * This needs to be done so that they work in IE, version 10 at least
+ */
+
+/* START MOBILE DROP-DOWN STYLES */
+
+@-webkit-keyframes showMobileMenu {
+  0% {padding-bottom:0px;}
+  100% {padding-bottom:100px;}
+}
+
+@keyframes showMobileMenu {
+  0% {padding-bottom:0px;}
+  100% {padding-bottom:100px;}
+}
+
+@-webkit-keyframes hideMobileMenu {
+  from {padding-bottom:100px;}
+  to {padding-bottom:0px;}
+}
+
+@keyframes hideMobileMenu {
+  from {padding-bottom:100px;}
+  to {padding-bottom:0px;}
+}
+
+
+
+.show-menu {
+  -webkit-animation-name: showMobileMenu;
+          animation-name: showMobileMenu;
+  -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+  position: relative;
+  .z1();
+}
+
+.hide-menu {
+  -webkit-animation-name: hideMobileMenu;
+          animation-name: hideMobileMenu;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+
+   position: relative;
+  .z1();
+}
+/* END MOBILE DROP-DOWN STYLES */

@@ -93,6 +93,74 @@ p {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px), only screen and (min-resolution: 192dpi) and (min-width: 1300px), only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
   /* Large screen, retina, stuff to override above media query */
 }
+/*
+ * ALL ANIMATION STYLES FOR THE ENTIRE SITE
+ *
+ * Note that all the animations are outside of the media queries
+ * This needs to be done so that they work in IE, version 10 at least
+ */
+/* START MOBILE DROP-DOWN STYLES */
+@-webkit-keyframes showMobileMenu {
+  0% {
+    padding-bottom: 0px;
+  }
+  100% {
+    padding-bottom: 100px;
+  }
+}
+@keyframes showMobileMenu {
+  0% {
+    padding-bottom: 0px;
+  }
+  100% {
+    padding-bottom: 100px;
+  }
+}
+@-webkit-keyframes hideMobileMenu {
+  from {
+    padding-bottom: 100px;
+  }
+  to {
+    padding-bottom: 0px;
+  }
+}
+@keyframes hideMobileMenu {
+  from {
+    padding-bottom: 100px;
+  }
+  to {
+    padding-bottom: 0px;
+  }
+}
+.show-menu {
+  -webkit-animation-name: showMobileMenu;
+  animation-name: showMobileMenu;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: relative;
+  z-index: 1;
+}
+.hide-menu {
+  -webkit-animation-name: hideMobileMenu;
+  animation-name: hideMobileMenu;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: relative;
+  z-index: 1;
+}
+/* END MOBILE DROP-DOWN STYLES */
 /* Globally force the page to horizontally stretch all views*/
 body,
 html,
@@ -461,129 +529,6 @@ a.colophon-link:hover {
   .btn-default:hover span,
   .btn-default:focus span {
     background-color: #000000;
-  }
-  /*
-   *
-   */
-  @-webkit-keyframes moveContent {
-    0% {
-      -webkit-transform: translateY(0px);
-    }
-    100% {
-      -webkit-transform: translateY(50px);
-    }
-  }
-  @keyframes moveContent {
-    0% {
-      transform: translateY(0px);
-    }
-    100% {
-      transform: translateY(50px);
-    }
-  }
-  @-webkit-keyframes revMoveContent {
-    from {
-      -webkit-transform: translateY(50px);
-    }
-    to {
-      -webkit-transform: translateY(0px);
-    }
-  }
-  @keyframes revMoveContent {
-    from {
-      transform: translateY(50px);
-    }
-    to {
-      transform: translateY(0px);
-    }
-  }
-  @-webkit-keyframes showMobileMenu {
-    0% {
-      padding-bottom: 0px;
-    }
-    100% {
-      padding-bottom: 100px;
-    }
-  }
-  @keyframes showMobileMenu {
-    0% {
-      padding-bottom: 0px;
-    }
-    100% {
-      padding-bottom: 100px;
-    }
-  }
-  @-webkit-keyframes hideMobileMenu {
-    from {
-      padding-bottom: 100px;
-    }
-    to {
-      padding-bottom: 0px;
-    }
-  }
-  @keyframes hideMobileMenu {
-    from {
-      padding-bottom: 100px;
-    }
-    to {
-      padding-bottom: 0px;
-    }
-  }
-  .move-content {
-    -webkit-animation-name: moveContent;
-    animation-name: moveContent;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    position: relative;
-    z-index: 1;
-  }
-  .reverse-move-content {
-    -webkit-animation-name: revMoveContent;
-    animation-name: revMoveContent;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 2;
-    animation-iteration-count: 2;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    position: relative;
-    z-index: 1;
-  }
-  .show-menu {
-    -webkit-animation-name: showMobileMenu;
-    animation-name: showMobileMenu;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    position: relative;
-    z-index: 1;
-  }
-  .hide-menu {
-    -webkit-animation-name: hideMobileMenu;
-    animation-name: hideMobileMenu;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    position: relative;
-    z-index: 1;
   }
   /* MOBILE MENU STYLES END */
   .site-header {
