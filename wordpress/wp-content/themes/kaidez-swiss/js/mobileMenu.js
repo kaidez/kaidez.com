@@ -12,11 +12,7 @@ $( "#mobile-menu-button" ).click( function() {
         return Q.delay( 300 );
       }).then(function() {
         $( "#masthead" ).removeClass( "hide-menu" ).removeClass( "show-menu" );
-      })
-      .catch(function(error){
-      
-      })
-      .done();
+      });
   }
 });
 
