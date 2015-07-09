@@ -30,6 +30,7 @@
     bottom: 29px;
     float: right;
 
+    cursor: pointer;
     color: #000;
   }  
 
@@ -54,7 +55,7 @@
   .btn-default:active span,
   .btn-default:hover span,
   .btn-default:focus span {
-    background-color: darken(@pink, 80%);
+    background-color: darken(@pink, 30%);
   }
 
   /* MOBILE MENU STYLES END */
@@ -83,6 +84,7 @@
     .hide-element()
   }
 
+
   /*
    * Move the site content down on mobile views on some pages
    * Do this to make room for the search box
@@ -98,6 +100,10 @@
     padding: 10px;
 
     background-color: darken(@pink, 10%);
+    opacity:0;
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.18);
+       -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.18);
+            box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.18);
   }
 
   /* Add space between a single post's header & content */
@@ -207,8 +213,5 @@
    * FOOTER STYLES END
    * ==================================================================
    */
-
-  
-
 
 }

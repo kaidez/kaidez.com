@@ -161,6 +161,64 @@ p {
   z-index: 1;
 }
 /* END MOBILE DROP-DOWN STYLES */
+/* START SEARCH BOX ANIMATION STYLES */
+@-webkit-keyframes showSearchbox {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showSearchbox {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes hideSearchbox {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hideSearchbox {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.show-searchbox {
+  -webkit-animation-name: showSearchbox;
+  animation-name: showSearchbox;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.hide-searchbox {
+  -webkit-animation-name: hideSearchbox;
+  animation-name: hideSearchbox;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* END SEARCH BOX ANIMATION STYLES */
 /* Globally force the page to horizontally stretch all views*/
 body,
 html,
@@ -515,6 +573,7 @@ a.colophon-link:hover {
     position: relative;
     bottom: 29px;
     float: right;
+    cursor: pointer;
     color: #000;
   }
   /* Mobile menu container lines, i.e., the "hamburger menu" */
@@ -533,7 +592,7 @@ a.colophon-link:hover {
   .btn-default:active span,
   .btn-default:hover span,
   .btn-default:focus span {
-    background-color: #000000;
+    background-color: #7b0b39;
   }
   /* MOBILE MENU STYLES END */
   .site-header {
@@ -571,6 +630,10 @@ a.colophon-link:hover {
     bottom: 99px;
     padding: 10px;
     background-color: #d91365;
+    opacity: 0;
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
   }
   /* Add space between a single post's header & content */
   .entry-header {
