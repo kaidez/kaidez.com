@@ -1,6 +1,7 @@
 $( "#mobile-menu-button" ).click( function() {
   
-  var isMobileMenu = $( "body" ).hasClass( "show-mobile-menu" );
+  var isMobileMenu = $( "body" ).hasClass( "show-mobile-menu" ),
+      isSearchMenu = $( "body" ).hasClass( "show-mobile-menu" );
 
   if( !isMobileMenu ){
     $( "#masthead" ).addClass( "show-menu" ).removeClass( "hide-menu" );
