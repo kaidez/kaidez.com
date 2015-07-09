@@ -2119,14 +2119,14 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 }
 @media (max-width:767px){.jump-to-top,.site-title{text-align:center}
 .mobile-menu{position:relative;bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
-.btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
+.btn-default:active span,.btn-default:focus span,.btn-default:hover span,.mobile-menu-bar{background-color:#000}
 .mobile-search{position:relative;bottom:29px;float:right;color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
 .site-header{position:fixed;height:51px}
 .site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:70px}
-.searchform-class{position:relative;top:60px}
+.searchform-class{position:relative;bottom:99px;padding:10px;background-color:#d91365}
 .entry-header{margin-bottom:20px}
 .entry-title{font-size:38px;font-size:3.8rem;font-weight:700}
 .main-navigation{opacity:0;position:relative;bottom:42px}
@@ -2138,6 +2138,6 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .post-comment{width:100%;max-width:500px}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
-.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff}
+.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;background-color:#000}
 a.jump-to-top-link{color:#fff;font-weight:700}
 }

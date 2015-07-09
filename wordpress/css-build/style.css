@@ -565,10 +565,12 @@ a.colophon-link:hover {
   .site-content {
     margin-top: 70px;
   }
-  /* Move the search box down on some pages */
+  /* Style the search box on hand-held devices */
   .searchform-class {
     position: relative;
-    top: 60px;
+    bottom: 99px;
+    padding: 10px;
+    background-color: #d91365;
   }
   /* Add space between a single post's header & content */
   .entry-header {
