@@ -32,6 +32,7 @@
           <span class="mobile-menu-bar"></span>
           <span class="mobile-menu-bar"></span>
         </button> <!-- .mobile-menu -->
+        <div class="mobile-search"><i class="fa fa-search fa-lg"></i></div>
       </div><!-- .site-branding -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -44,6 +45,7 @@
           <button class="btn btn-default header-search-submit footer-button" type="submit" id="searchsubmit" />Submit</button>
         </div><!-- .blog-search -->
       </form><!-- #searchform -->
+
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
