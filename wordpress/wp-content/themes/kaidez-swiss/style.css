@@ -2120,7 +2120,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 @media (max-width:767px){.jump-to-top,.site-title{text-align:center}
 .mobile-menu{position:relative;bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
-.mobile-search{position:relative;bottom:58px;left:234px;display:inline-block;color:#000}
+.mobile-search{position:relative;bottom:29px;float:right;color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
 .site-header{position:fixed;height:51px}
 .site-branding{position:relative}

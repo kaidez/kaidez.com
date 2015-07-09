@@ -513,9 +513,8 @@ a.colophon-link:hover {
   /* Mobile search containing element */
   .mobile-search {
     position: relative;
-    bottom: 58px;
-    left: 234px;
-    display: inline-block;
+    bottom: 29px;
+    float: right;
     color: #000;
   }
   /* Mobile menu container lines, i.e., the "hamburger menu" */
