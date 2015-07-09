@@ -2,11 +2,9 @@
 
   /* LOGO CONTAINER STYLES START */
 
+  /* Center the site title on mobile */
   .site-title {
-    position: relative;
-    top: 1px;
-    right: 52px;
-    left: 52px;
+    text-align: center;
   }
 
   /* LOGO CONTAINER STYLES END */
@@ -25,6 +23,16 @@
     border-radius: 4px;
     background-color: transparent;
   }
+
+  /* Mobile search containing element */
+  .mobile-search {
+    position: relative;
+    bottom: 29px;
+    float: right;
+
+    color: #000;
+  }  
+
 
   /* Mobile menu container lines, i.e., the "hamburger menu" */ 
   .mobile-menu-bar {
@@ -47,135 +55,6 @@
   .btn-default:hover span,
   .btn-default:focus span {
     background-color: darken(@pink, 80%);
-  }
-
-  /*
-   *
-   */
-  @-webkit-keyframes moveContent {
-    0% {-webkit-transform: translateY(0px); }
-    100% {-webkit-transform: translateY(50px); }
-  }
-
-
-  @keyframes moveContent {
-    0% {transform: translateY(0px); }
-    100% {transform: translateY(50px); }
-  }
-
-
-
-
-  @-webkit-keyframes revMoveContent {
-    from {
-      -webkit-transform: translateY(50px);
-    }
-    to {
-      -webkit-transform: translateY(0px);
-    }
-  }
-
-
-  @keyframes revMoveContent {
-    from {transform: translateY(50px); }
-    to {transform: translateY(0px); }
-  }
-
-
-
-
-
-
-  @-webkit-keyframes showMobileMenu {
-    0% {padding-bottom:0px;}
-    100% {padding-bottom:100px;}
-  }
-
-
-  @keyframes showMobileMenu {
-    0% {padding-bottom:0px;}
-    100% {padding-bottom:100px;}
-  }
-
-  @-webkit-keyframes hideMobileMenu {
-    from {padding-bottom:100px;}
-    to {padding-bottom:0px;}
-  }
-
-
-  @keyframes hideMobileMenu {
-    from {padding-bottom:100px;}
-    to {padding-bottom:0px;}
-  }
-
-
-
-  .move-content {
-    -webkit-animation-name: moveContent;
-            animation-name: moveContent;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-
-    position: relative;
-    .z1();
-  }
-
-    .reverse-move-content {
-    -webkit-animation-name: revMoveContent;
-            animation-name: revMoveContent;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 2;
-            animation-iteration-count: 2;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-
-    position: relative;
-    .z1();
-  }
-
-
-
-
-
-  .show-menu {
-    -webkit-animation-name: showMobileMenu;
-            animation-name: showMobileMenu;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-
-    position: relative;
-    .z1();
-  }
-
-    .hide-menu {
-    -webkit-animation-name: hideMobileMenu;
-            animation-name: hideMobileMenu;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-
-    position: relative;
-    .z1();
   }
 
   /* MOBILE MENU STYLES END */
@@ -253,7 +132,6 @@
   .content-area {
     padding: 0 15px;
   }
-
 
 
   /*

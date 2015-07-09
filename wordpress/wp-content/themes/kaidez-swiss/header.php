@@ -8,7 +8,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-js">
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +16,7 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   <?php wp_head(); ?>
+  <script src="/wp-content/themes/kaidez-swiss/js/libs/modernizr.js"></script>
 </head>
 
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
@@ -31,6 +32,7 @@
           <span class="mobile-menu-bar"></span>
           <span class="mobile-menu-bar"></span>
         </button> <!-- .mobile-menu -->
+        <div id="mobile-search-button" class="mobile-search"><i class="fa fa-search fa-lg"></i></div>
       </div><!-- .site-branding -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -43,6 +45,7 @@
           <button class="btn btn-default header-search-submit footer-button" type="submit" id="searchsubmit" />Submit</button>
         </div><!-- .blog-search -->
       </form><!-- #searchform -->
+
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">

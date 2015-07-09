@@ -95,7 +95,7 @@
 </div> <!-- #content -->
 <script src="/wp-content/themes/kaidez-swiss/js/libs/prism.js"></script>
 <script src="/wp-content/themes/kaidez-swiss/js/libs/jquery.min.js"></script>
-
+<script src="/wp-content/themes/kaidez-swiss/js/libs/q.js"></script>
 <script src="/wp-content/themes/kaidez-swiss/js/mobileMenu.js"></script>
 
 </body>

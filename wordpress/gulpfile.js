@@ -9,7 +9,8 @@ var gulp = require("gulp"), // "require" gulp
     imagemin = require('gulp-imagemin'), // Minifying images
     autoprefixer = require('gulp-autoprefixer'),
     exec = require('child_process').exec, // Run CLI commands via node
-    Q = require('q'); // Manage promises,;
+    Q = require('q'), // Manage promises;
+    cp = require( "cp" );
 
 // End single var pattern
 
@@ -112,7 +113,10 @@ gulp.task("outputcss", ['concat'],function () {
     }, 4000);
   });
 
-
+// Copy q.js from "node_modules" to the kaidez-swiss theme
+gulp.task("cpq", function(){
+  cp.sync( "node_modules/q/q.js", "wp-content/themes/kaidez-swiss/js/libs/q.js" );
+  });
 /*
 *  ===================================================================
 *  | IMAGE MINIFICATION TASK |

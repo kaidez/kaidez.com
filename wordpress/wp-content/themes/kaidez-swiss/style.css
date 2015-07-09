@@ -1978,7 +1978,6 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
 .affix{position:fixed}
-.aside-header,.hide-element,.menu-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table!important}
@@ -2036,19 +2035,36 @@ td.visible-print,th.visible-print{display:table-cell!important}
 @media print{.visible-print-inline-block{display:inline-block!important}
 .hidden-print{display:none!important}
 }
-.hide-element{clip:rect(1px,1px,1px,1px)}
+.hide-element{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .ti{text-indent:-9999px}
 .z1{z-index:1}
 .z2{z-index:2}
 .z3{z-index:3}
 .z4{z-index:4}
 .z5{z-index:5}
+.hide-menu,.show-menu{position:relative;z-index:1}
 body{font-size:16px;font-size:1.6rem;line-height:24px}
 h1{margin-top:0;margin-bottom:0}
 p{margin:0 0 22px}
 .btn{border-radius:0;font-weight:900;background-color:#000}
 .btn-default{border:none;color:#ed327f}
 .btn-default:active,.btn-default:focus,.btn-default:hover{color:#000;background-color:#ed327f;border-color:#000}
+@-webkit-keyframes showMobileMenu{0%{padding-bottom:0}
+100%{padding-bottom:100px}
+}
+@keyframes showMobileMenu{0%{padding-bottom:0}
+100%{padding-bottom:100px}
+}
+@-webkit-keyframes hideMobileMenu{from{padding-bottom:100px}
+to{padding-bottom:0}
+}
+@keyframes hideMobileMenu{from{padding-bottom:100px}
+to{padding-bottom:0}
+}
+.show-menu{-webkit-animation-name:showMobileMenu;animation-name:showMobileMenu;animation-duration:.5s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
+.hide-menu,.show-menu{-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:.5s}
+.hide-menu{-webkit-animation-name:hideMobileMenu;animation-name:hideMobileMenu;animation-duration:.5s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
+.aside-header,.menu-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 .site,.site-content,body,html{min-height:100%}
 .site{overflow-x:hidden}
 i{width:30px;height:30px}
@@ -2101,41 +2117,11 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .aside-inner{margin-left:25px}
 .jump-to-top-link,.mobile-menu{clip:rect(1px,1px,1px,1px)}
 }
-@media (max-width:767px){.site-title{position:relative;top:1px;right:52px;left:52px}
+@media (max-width:767px){.jump-to-top,.site-title{text-align:center}
 .mobile-menu{position:relative;bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span,.jump-to-top,.mobile-menu-bar{background-color:#000}
-.hide-menu,.move-content,.reverse-move-content,.show-menu{position:relative;z-index:1}
+.mobile-search{position:relative;bottom:29px;float:right;color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;border-radius:2px}
-@-webkit-keyframes moveContent{0%{-webkit-transform:translateY(0)}
-100%{-webkit-transform:translateY(50px)}
-}
-@keyframes moveContent{0%{-webkit-transform:translateY(0);transform:translateY(0)}
-100%{-webkit-transform:translateY(50px);transform:translateY(50px)}
-}
-@-webkit-keyframes revMoveContent{from{-webkit-transform:translateY(50px)}
-to{-webkit-transform:translateY(0)}
-}
-@keyframes revMoveContent{from{-webkit-transform:translateY(50px);transform:translateY(50px)}
-to{-webkit-transform:translateY(0);transform:translateY(0)}
-}
-@-webkit-keyframes showMobileMenu{0%{padding-bottom:0}
-100%{padding-bottom:100px}
-}
-@keyframes showMobileMenu{0%{padding-bottom:0}
-100%{padding-bottom:100px}
-}
-@-webkit-keyframes hideMobileMenu{from{padding-bottom:100px}
-to{padding-bottom:0}
-}
-@keyframes hideMobileMenu{from{padding-bottom:100px}
-to{padding-bottom:0}
-}
-.move-content{-webkit-animation-name:moveContent;animation-name:moveContent;animation-duration:.5s;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;animation-fill-mode:both}
-.move-content,.reverse-move-content{-webkit-animation-duration:.5s;-webkit-animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out}
-.reverse-move-content{-webkit-animation-name:revMoveContent;animation-name:revMoveContent;animation-duration:.5s;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:2;animation-iteration-count:2;animation-fill-mode:both}
-.show-menu{-webkit-animation-name:showMobileMenu;animation-name:showMobileMenu;animation-duration:.5s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
-.hide-menu,.show-menu{-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:.5s}
-.hide-menu{-webkit-animation-name:hideMobileMenu;animation-name:hideMobileMenu;animation-duration:.5s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
 .site-header{position:fixed;height:51px}
 .site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
@@ -2152,6 +2138,6 @@ to{padding-bottom:0}
 .post-comment{width:100%;max-width:500px}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
-.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;text-align:center}
+.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff}
 a.jump-to-top-link{color:#fff;font-weight:700}
 }
