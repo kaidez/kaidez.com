@@ -6,7 +6,7 @@ $( "#mobile-menu-button" ).click( function() {
     Q.fcall( function(){
       $( "#masthead" ).addClass( "hide-menu" );
       $( "body" ).removeClass( "show-mobile-menu" );
-      return Q.delay( 300 );
+      return Q.delay( 500 );
     }).then(function() {
       $( "#masthead" ).removeClass( "hide-menu" ).removeClass( "show-menu" );
     });
@@ -33,7 +33,14 @@ $( "#mobile-search-button" ).click( function() {
 
   } else {
 
-    $( "#searchform" ).addClass( "show-searchbox" ).removeClass( "hide-searchbox" );
-    $( "body" ).addClass( "show-mobile-search" );
+    Q.fcall(function(){
+      if ( $( "body" ).addClass( "show-mobile-menu" ) ) {
+        $( "#masthead" ).addClass( "hide-menu" );
+        $( "body" ).removeClass( "show-mobile-menu" );
+      }
+    }).then(function(){
+      $( "#searchform" ).addClass( "show-searchbox" ).removeClass( "hide-searchbox" );
+      $( "body" ).addClass( "show-mobile-search" );
+    });
   }
 });
