@@ -1,3 +1,5 @@
+var getHeader = document.getElementById( "masthead" );
+
 // Menu button
 $( "#mobile-menu-button" ).click( function() {
 
@@ -13,8 +15,17 @@ $( "#mobile-menu-button" ).click( function() {
 
   } else {
 
-    $( "#masthead" ).addClass( "show-menu" ).removeClass( "hide-menu" );
-    $( "body" ).addClass( "show-mobile-menu" );
+    Q.fcall( function(){
+      if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
+        $( "body" ).removeClass( "show-mobile-search" );
+        $( "#searchform" ).addClass( "hide-searchbox" ).removeClass( "show-searchbox" );    
+      }
+    }).then(function(){
+      $( "#masthead" ).addClass( "show-menu" );
+      $( "body" ).addClass( "show-mobile-menu" );
+      $( "#searchform" ).removeClass( "hide-searchbox" )
+    });
+
   }
 });
 
@@ -27,20 +38,21 @@ $( "#mobile-search-button" ).click( function() {
       $( "#searchform" ).addClass( "hide-searchbox" );
       $( "body" ).removeClass( "show-mobile-search" );
       return Q.delay( 300 );
-    }).then(function() {
+    }).then( function() {
       $( "#searchform" ).removeClass( "hide-searchbox" ).removeClass( "show-searchbox" );
     });
 
   } else {
 
     Q.fcall(function(){
-      if ( $( "body" ).addClass( "show-mobile-menu" ) ) {
-        $( "#masthead" ).addClass( "hide-menu" );
+      if ( $( "body" ).hasClass( "show-mobile-menu" ) ) {
+        $( "#masthead" ).addClass( "hide-menu" ).removeClass( "show-menu" );
         $( "body" ).removeClass( "show-mobile-menu" );
       }
-    }).then(function(){
+    }).then( function(){
       $( "#searchform" ).addClass( "show-searchbox" ).removeClass( "hide-searchbox" );
       $( "body" ).addClass( "show-mobile-search" );
+      $( "#masthead" ).removeClass( "hide-menu" );
     });
   }
 });
