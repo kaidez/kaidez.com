@@ -626,8 +626,10 @@ a.colophon-link:hover {
   }
   /* Style the search box on hand-held devices */
   .searchform-class {
-    position: relative;
-    bottom: 99px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    right: 0;
     padding: 10px;
     background-color: #d91365;
     opacity: 0;

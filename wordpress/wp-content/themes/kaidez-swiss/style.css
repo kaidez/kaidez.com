@@ -2141,7 +2141,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:70px}
-.searchform-class{position:relative;bottom:99px;padding:10px;background-color:#d91365;opacity:0;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
+.searchform-class{width:100%;position:absolute;top:50px;right:0;padding:10px;background-color:#d91365;opacity:0;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
 .entry-header{margin-bottom:20px}
 .entry-title{font-size:38px;font-size:3.8rem;font-weight:700}
 .main-navigation{opacity:0;position:relative;bottom:42px}
