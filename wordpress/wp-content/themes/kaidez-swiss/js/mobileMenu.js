@@ -27,6 +27,7 @@ $( "#mobile-menu-button" ).click( function() {
     });
 
   }
+
 });
 
 // Search button
