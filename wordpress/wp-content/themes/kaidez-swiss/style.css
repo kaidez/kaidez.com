@@ -2137,7 +2137,7 @@ a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .mobile-search{position:relative;bottom:29px;float:right;cursor:pointer;color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;background-color:#000;border-radius:2px}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span{background-color:#7b0b39}
-.site-header{position:fixed;height:51px}
+.site-header{position:fixed;height:51px;top:0;left:0}
 .site-branding{position:relative}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:70px}
