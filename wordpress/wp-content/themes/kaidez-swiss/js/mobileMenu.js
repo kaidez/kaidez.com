@@ -1,20 +1,19 @@
+// nav code
 var nav = {
   bodyClass: "show-mobile-menu",
   targetEl: "#masthead",
   hideClass: "hide-menu",
-  showClass: "show-menu"
-};
-
-function removeMobileClassCheck() {
-  if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
-    $( "body" ).removeClass( "show-mobile-search" );
-    $( "#searchform" ).addClass( "hide-searchbox" ).removeClass( "show-searchbox" );    
+  showClass: "show-menu",
+  removeClassCheck: function(){
+    if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
+      $( "body" ).removeClass( "show-mobile-search" );
+      $( "#searchform" ).addClass( "hide-searchbox" ).removeClass( "show-searchbox" );    
+    }
+  },
+  singleRemoveClass: function() {
+    $( "#searchform" ).removeClass( "hide-searchbox" );
   }
-}
-
-function removeFormClass() {
-  $( "#searchform" ).removeClass( "hide-searchbox" );
-}
+};
 
 function animateNavElement( obj ) {
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
@@ -27,11 +26,11 @@ function animateNavElement( obj ) {
     });
   } else {
     Q.fcall( function(){
-      removeMobileClassCheck();
+      obj.removeClassCheck();
     }).then(function(){
       $( obj.targetEl ).addClass( obj.showClass );
       $( "body" ).addClass( obj.bodyClass );
-      removeFormClass();
+      obj.singleRemoveClass();
     });
   }
 }
@@ -40,7 +39,6 @@ function animateNavElement( obj ) {
 $( "#mobile-menu-button" ).click(function(){
   animateNavElement( nav );
 });
-/*
 
 
 // Search button
