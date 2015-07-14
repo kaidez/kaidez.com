@@ -13,27 +13,22 @@ function removeMobileClass() {
 }
 
 function animateNavElement( obj ) {
-  for ( var key in obj ) {
-    if(obj.hasOwnProperty(key)) {
-      if( $( "body" ).hasClass( obj.bodyClass ) ) {
-
-        Q.fcall( function(){
-          $( obj.targetEl ).addClass( obj.hideClass );
-          $( "body" ).removeClass( obj.bodyClass );
-          return Q.delay( 500 );
-        }).then( function(){
-          $( obj.targetEl ).removeClass( obj.hideClass ).removeClass( obj.showClass );
-        });
-      } else {
-        Q.fcall( function(){
-         removeMobileClass();
-      }).then(function(){
-          $( "#masthead" ).addClass( "show-menu" );
-          $( "body" ).addClass( "show-mobile-menu" );
-          $( "#searchform" ).removeClass( "hide-searchbox" )
-        });
-      }
-    }
+  if( $( "body" ).hasClass( obj.bodyClass ) ) {
+    Q.fcall( function(){
+      $( obj.targetEl ).addClass( obj.hideClass );
+      $( "body" ).removeClass( obj.bodyClass );
+      return Q.delay( 500 );
+    }).then( function(){
+      $( obj.targetEl ).removeClass( obj.hideClass ).removeClass( obj.showClass );
+    });
+  } else {
+    Q.fcall( function(){
+      removeMobileClass();
+    }).then(function(){
+      $( obj.targetEl ).addClass( obj.showClass );
+      $( "body" ).addClass( obj.bodyClass );
+      $( "#searchform" ).removeClass( "hide-searchbox" );
+    });
   }
 }
 
