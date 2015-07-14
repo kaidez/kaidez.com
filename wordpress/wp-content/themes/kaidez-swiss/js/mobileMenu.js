@@ -5,11 +5,15 @@ var nav = {
   showClass: "show-menu"
 };
 
-function removeMobileClass() {
+function removeMobileClassCheck() {
   if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
     $( "body" ).removeClass( "show-mobile-search" );
     $( "#searchform" ).addClass( "hide-searchbox" ).removeClass( "show-searchbox" );    
   }
+}
+
+function removeFormClass() {
+  $( "#searchform" ).removeClass( "hide-searchbox" );
 }
 
 function animateNavElement( obj ) {
@@ -23,49 +27,22 @@ function animateNavElement( obj ) {
     });
   } else {
     Q.fcall( function(){
-      removeMobileClass();
+      removeMobileClassCheck();
     }).then(function(){
       $( obj.targetEl ).addClass( obj.showClass );
       $( "body" ).addClass( obj.bodyClass );
-      $( "#searchform" ).removeClass( "hide-searchbox" );
+      removeFormClass();
     });
   }
 }
 
+// Menu button
 $( "#mobile-menu-button" ).click(function(){
   animateNavElement( nav );
 });
 /*
-// Menu button
-$( "#mobile-menu-button" ).click( function() {
 
-  if( $( "body" ).hasClass( "show-mobile-menu" ) ) {
 
-    Q.fcall( function(){
-      $( "#masthead" ).addClass( "hide-menu" );
-      $( "body" ).removeClass( "show-mobile-menu" );
-      return Q.delay( 500 );
-    }).then(function() {
-      $( "#masthead" ).removeClass( "hide-menu" ).removeClass( "show-menu" );
-    });
-
-  } else {
-
-    Q.fcall( function(){
-      if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
-        $( "body" ).removeClass( "show-mobile-search" );
-        $( "#searchform" ).addClass( "hide-searchbox" ).removeClass( "show-searchbox" );    
-      }
-    }).then(function(){
-      $( "#masthead" ).addClass( "show-menu" );
-      $( "body" ).addClass( "show-mobile-menu" );
-      $( "#searchform" ).removeClass( "hide-searchbox" )
-    });
-
-  }
-
-});
-*/
 // Search button
 $( "#mobile-search-button" ).click( function() {
 
