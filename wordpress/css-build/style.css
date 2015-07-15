@@ -598,8 +598,11 @@ a.colophon-link:hover {
   .site-header {
     position: fixed;
     height: 51px;
+    width: auto;
     top: 0;
+    right: 0;
     left: 0;
+    -webkit-transform: translateZ(0);
   }
   .site-branding {
     position: relative;
