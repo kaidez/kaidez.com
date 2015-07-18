@@ -32,6 +32,12 @@
 /*
  * HELPER CLASSES END
  */
+/* Global drop-shadow setting */
+.drop-shadow {
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+}
 /*
  * BOOTSTRAP OVERRIDES
  * ====================================================================
@@ -145,6 +151,9 @@ p {
   animation-fill-mode: both;
   position: relative;
   z-index: 1;
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.18);
 }
 .hide-menu {
   -webkit-animation-name: hideMobileMenu;
@@ -269,7 +278,6 @@ a.homepage-title-link:hover {
   padding-left: 0;
 }
 .menu-item {
-  display: inline;
   list-style-type: none;
   margin-right: 15px;
 }
@@ -602,6 +610,7 @@ a.colophon-link:hover {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
     -webkit-transform: translateZ(0);
   }
   .site-branding {
@@ -652,20 +661,27 @@ a.colophon-link:hover {
     font-size: 3.8rem;
     font-weight: bold;
   }
+  /* Style main nav on mobile views */
   .main-navigation {
     position: relative;
-    bottom: 35px;
+    bottom: 39px;
+    padding: 5px;
+    z-index: 2;
+    background-color: #f1619c;
     opacity: 0;
   }
-  .menu-item a {
+  a.nav-links {
+    margin: 32px 0;
+    display: block;
     color: #000;
     text-decoration: none;
+    font-weight: 900;
   }
-  .menu-item a:hover {
+  a.nav-links:hover {
     color: #000;
     text-decoration: underline;
   }
-  .menu-item a:visited {
+  a.nav-links:visited {
     color: #000;
     text-decoration: none;
   }

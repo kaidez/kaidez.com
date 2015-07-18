@@ -68,6 +68,7 @@
     top:0;
     right:0;
     left:0;
+    .z1();
 
     -webkit-transform: translateZ(0);
   }
@@ -109,9 +110,8 @@
 
     background-color: darken(@pink, 10%);
     opacity:0;
-    -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.18);
-       -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.18);
-            box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.18);
+
+    .drop-shadow();
   }
 
   /* Add space between a single post's header & content */
@@ -126,16 +126,24 @@
     font-weight:bold;
   }
 
+  /* Style main nav on mobile views */
   .main-navigation {
     position: relative;
-    bottom: 35px;
+    bottom: 39px;
+    padding: 5px;
+    .z2();
 
+    background-color: lighten(@pink, 10%);
     opacity: 0;
   }
 
-  .menu-item a {
+  a.nav-links {
+    margin:32px 0;
+    display: block;
+
     color: #000;
     text-decoration: none;
+    font-weight:900;
     &:hover {
       color: #000;
       text-decoration: underline;
