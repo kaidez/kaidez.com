@@ -36,7 +36,22 @@
       </div><!-- .site-branding -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+        <div class="menu-main-navigation-container">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="/blog" class="nav-links">blog</a>
+            </li>
+            <li class="menu-item">
+              <a href="/articles" class="nav-links">articles</a>
+            </li>
+            <li class="menu-item">
+              <a href="/lynda-kaidez/" class="nav-links">kaidez on lynda</a>
+            </li>
+            <li class="menu-item">
+              <a href="/ajax-tutorial/" class="nav-links">ajax tutorial</a>
+            </li>
+          </ul>
+        </div>
       </nav><!-- #site-navigation -->
 
       <form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
