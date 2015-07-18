@@ -37,7 +37,7 @@ function animateNavElement( obj ) {
     Q.fcall( function(){
       $( obj.targetEl ).addClass( obj.hideClass );
       $( "body" ).removeClass( obj.bodyClass );
-      return Q.delay( 300 );
+      return Q.delay( 500 );
     }).then( function(){
       $( obj.targetEl ).removeClass( obj.hideClass ).removeClass( obj.showClass );
     });
