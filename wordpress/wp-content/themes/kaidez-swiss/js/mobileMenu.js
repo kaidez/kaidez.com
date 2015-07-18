@@ -1,7 +1,7 @@
 // nav code
 var nav = {
   bodyClass: "show-mobile-menu",
-  targetEl: "#masthead",
+  targetEl: "#site-navigation",
   hideClass: "hide-menu",
   showClass: "show-menu",
   removeClassCheck: function() {
@@ -24,11 +24,11 @@ var search = {
   removeClassCheck: function() {
     if ( $( "body" ).hasClass( "show-mobile-menu" ) ) {
       $( "body" ).removeClass( "show-mobile-menu" );
-      $( "#masthead" ).addClass( "hide-menu" ).removeClass( "show-menu" );    
+      $( "#site-navigation" ).addClass( "hide-menu" ).removeClass( "show-menu" );    
     }
   },
   singleRemoveClass: function() {
-    $( "#masthead" ).removeClass( "hide-menu" );
+    $( "#site-navigation" ).removeClass( "hide-menu" );
   }
 };
 
@@ -37,7 +37,7 @@ function animateNavElement( obj ) {
     Q.fcall( function(){
       $( obj.targetEl ).addClass( obj.hideClass );
       $( "body" ).removeClass( obj.bodyClass );
-      return Q.delay( 500 );
+      return Q.delay( 300 );
     }).then( function(){
       $( obj.targetEl ).removeClass( obj.hideClass ).removeClass( obj.showClass );
     });
