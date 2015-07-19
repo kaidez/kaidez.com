@@ -14,8 +14,6 @@
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-*,:after,:before,input[type=search]{box-sizing:border-box}
-.aside-header,.screen-reader-text{clip:rect(1px,1px,1px,1px)}
 h1,h2,h3,h4{margin-bottom:10px}
 .aside-list-item,.menu-item{list-style-type:none}
 @font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
@@ -75,6 +73,7 @@ h2,h3{page-break-after:avoid}
 .site,.youtube-iframe,label{max-width:100%}
 .btn,.btn-default:active,.btn:active{background-image:none}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+*,:after,:before{box-sizing:border-box}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
 a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
 h1,h2,h3,h4{font-weight:500;line-height:1.1}
@@ -94,11 +93,11 @@ pre{overflow:auto;padding:9.5px;margin:0 0 10px;font-size:13px;word-break:break-
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
 .row{margin-right:-15px;margin-left:-15px}
 .col-md-4{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
-.aside-header,.screen-reader-text{position:absolute!important}
+.aside-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @media (min-width:992px){.col-md-4{float:left;width:33.33333333%}
 }
 label{margin-bottom:5px}
-input[type=search]{-webkit-appearance:none}
+input[type=search]{box-sizing:border-box;-webkit-appearance:none}
 .form-control::-moz-placeholder{color:#999;opacity:1}
 .form-control:-ms-input-placeholder{color:#999}
 .btn{padding:6px 12px;font-size:14px;text-align:center;white-space:nowrap;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent}
@@ -119,6 +118,7 @@ p{margin:0 0 22px}
 .site{overflow-x:hidden}
 i{width:30px;height:30px}
 .home-link{color:#000}
+.screen-reader-text{clip:rect(1px,1px,1px,1px)}
 a.homepage-title-link{text-decoration:none}
 a.homepage-title-link:hover{color:#f1619c}
 .menu{padding-left:0}
@@ -126,6 +126,7 @@ a,a:visited{color:#ed327f;text-decoration:underline}
 a:active,a:hover{color:#ed327f;background-color:#f1619c;text-decoration:none}
 a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;text-decoration:none}
 .aside{padding:14px 15px 0;background-color:#d91365}
+.aside-header{clip:rect(1px,1px,1px,1px)}
 .aside-section-header{font-weight:900;color:#f9bfd7}
 .aside-inner{width:775px}
 .aside-list{padding-left:0}
@@ -138,8 +139,7 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
-@media (min-width:768px){a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decoration:none;font-weight:900}
-.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
+@media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
 .site-description{margin:0;width:200px;position:absolute;top:-47px;left:7px;font-size:18px;font-weight:900;color:#000}
@@ -151,11 +151,11 @@ a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
 .menu{left:150px;position:relative}
 .menu-item{margin-bottom:10px;font-size:16px}
 .menu-item a{min-width:48px;min-height:48px;color:#000;text-decoration:none}
-a.home-link,a.home-link:visited{color:#ed327f}
+a.home-link,a.home-link:visited{text-decoration:none;font-weight:900;color:#ed327f}
 .header-search-field{width:190px;height:31px;border:1px solid #000}
 a.home-link{font-size:81px}
-a.home-link:hover{color:#d91365}
-a.home-link:active{color:#ed327f}
+a.home-link:hover{color:#d91365;text-decoration:none;font-weight:900}
+a.home-link:active{color:#ed327f;text-decoration:none;font-weight:900}
 .col-md-4{width:230px;vertical-align:top}
 .aside-inner{margin-left:25px}
 .jump-to-top-link,.mobile-menu{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
