@@ -9,7 +9,7 @@ body, html, .site, .site-content {
   overflow-x: hidden;
 }
 
-/* Give all Fontawesome icons a firm height & width */
+/* Give all Fontawesome icons used on the site a firm height & width */
 i {
   width:30px;
   height: 30px;
@@ -30,15 +30,6 @@ i {
   .hide-element();
 }
 
-/* Style the <header>
- * Give it a pink background in all views
- * It should horizontally stretch as much as it can
- */
-.site-header {
-  background-color: @pink;
-  width: 100%;
-}
-
 a.homepage-title-link {
   text-decoration:none;
   &:hover {
@@ -54,7 +45,6 @@ a.homepage-title-link {
 // Style the <li> tags that contain nav links
 .menu-item {
   list-style-type: none;
-  margin-right: 15px;
 }
 
 /*
@@ -71,7 +61,7 @@ a.homepage-title-link {
  * ====================================================================
  */
 
-// Globally set main link color for the site
+// Globally set the link color that appears in content
 // Only the hover pseudo class shows an underline
 a {
   color: @pink;
@@ -82,12 +72,12 @@ a {
   }
   &:hover, &:active {
     color: @pink;
+    background-color: lighten(@pink, 10%);
     text-decoration: none;
   }
 }
 
-// Globally set main link color for the site
-// Only the hover pseudo class shows an underline
+// Globally set the link color for the header logo
 a.home-link {
   color: #000;
   text-decoration: none;

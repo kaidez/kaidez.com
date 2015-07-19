@@ -8,32 +8,31 @@
 /* START MOBILE DROP-DOWN STYLES */
 
 @-webkit-keyframes showMobileMenu {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {transform: translateY(0px);}
+  to {transform: translateY(351px);}
 }
 
 @keyframes showMobileMenu {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {transform: translateY(0px);}
+  to {transform: translateY(351px);}
 }
 
 @-webkit-keyframes hideMobileMenu {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {transform: translateY(351px);}
+  to {transform: translateY(0px);}
 }
 
 @keyframes hideMobileMenu {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {transform: translateY(351px);}
+  to {transform: translateY(0px);}
 }
-
 
 
 .show-menu {
   -webkit-animation-name: showMobileMenu;
           animation-name: showMobileMenu;
-  -webkit-animation-duration: 0.5s;
-        animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+        animation-duration: 0.3s;
   -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -50,8 +49,8 @@
 .hide-menu {
   -webkit-animation-name: hideMobileMenu;
           animation-name: hideMobileMenu;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;

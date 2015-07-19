@@ -62,7 +62,8 @@
 
    
   .site-header {
-    position: fixed;
+    height: 49px;
+    /*position: fixed;
     height: 51px;
     width: auto;
     top:0;
@@ -70,11 +71,22 @@
     left:0;
     .z1();
 
-    -webkit-transform: translateZ(0);
+    -webkit-transform: translateZ(0);*/
   }
 
   .site-branding {
-    position: relative;
+    /*position: relative;*/
+
+    position: fixed;
+    height: 51px;
+    width: auto;
+    top:0;
+    right:0;
+    left:0;
+    .z2();
+
+    -webkit-transform: translateZ(0);
+    background-color: @pink;
   }
 
   /*
@@ -129,27 +141,30 @@
   /* Style main nav on mobile views */
   .main-navigation {
     position: relative;
-    bottom: 39px;
-    padding: 5px;
-    .z2();
+    bottom: 300px;
+    .z1();
 
     background-color: lighten(@pink, 10%);
-    opacity: 0;
   }
 
   a.nav-links {
-    margin:32px 0;
+    height: 70px;
     display: block;
+    padding-left: 10px;
+    line-height: 4rem;
+    line-height: 4em;
 
     color: #000;
     text-decoration: none;
     font-weight:900;
     &:hover {
-      color: #000;
-      text-decoration: underline;
+      color: #fff;
+      text-decoration: none;
+      background-color: darken(@pink, 10%);
     }
     &:visited {
       color: #000;
+
       text-decoration: none;
     }
   }
@@ -159,10 +174,26 @@
     padding: 0 15px;
   }
 
+  /*
+   * ==================================================================
+   * HEADER STYLES END
+   * ==================================================================
+   */
+
+
+/* Style the <header>
+ * Give it a pink background in all views
+ * It should horizontally stretch as much as it can
+ */
+.site-header {
+  width: 100%;
+}
+
+
 
   /*
    * ==================================================================
-   * ASIDE STYLES START
+   * HEADER STYLES END
    * ==================================================================
    */
 

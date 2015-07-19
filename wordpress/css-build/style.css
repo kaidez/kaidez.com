@@ -108,41 +108,41 @@ p {
 /* START MOBILE DROP-DOWN STYLES */
 @-webkit-keyframes showMobileMenu {
   from {
-    opacity: 0;
+    transform: translateY(0px);
   }
   to {
-    opacity: 1;
+    transform: translateY(351px);
   }
 }
 @keyframes showMobileMenu {
   from {
-    opacity: 0;
+    transform: translateY(0px);
   }
   to {
-    opacity: 1;
+    transform: translateY(351px);
   }
 }
 @-webkit-keyframes hideMobileMenu {
   from {
-    opacity: 1;
+    transform: translateY(351px);
   }
   to {
-    opacity: 0;
+    transform: translateY(0px);
   }
 }
 @keyframes hideMobileMenu {
   from {
-    opacity: 1;
+    transform: translateY(351px);
   }
   to {
-    opacity: 0;
+    transform: translateY(0px);
   }
 }
 .show-menu {
   -webkit-animation-name: showMobileMenu;
   animation-name: showMobileMenu;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -158,8 +158,8 @@ p {
 .hide-menu {
   -webkit-animation-name: hideMobileMenu;
   animation-name: hideMobileMenu;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -240,7 +240,7 @@ html,
   max-width: 100%;
   overflow-x: hidden;
 }
-/* Give all Fontawesome icons a firm height & width */
+/* Give all Fontawesome icons used on the site a firm height & width */
 i {
   width: 30px;
   height: 30px;
@@ -260,14 +260,6 @@ i {
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* Style the <header>
- * Give it a pink background in all views
- * It should horizontally stretch as much as it can
- */
-.site-header {
-  background-color: #ed327f;
-  width: 100%;
-}
 a.homepage-title-link {
   text-decoration: none;
 }
@@ -279,7 +271,6 @@ a.homepage-title-link:hover {
 }
 .menu-item {
   list-style-type: none;
-  margin-right: 15px;
 }
 /*
  * ====================================================================
@@ -302,6 +293,7 @@ a:visited {
 a:hover,
 a:active {
   color: #ed327f;
+  background-color: #f1619c;
   text-decoration: none;
 }
 a.home-link {
@@ -604,17 +596,28 @@ a.colophon-link:hover {
   }
   /* MOBILE MENU STYLES END */
   .site-header {
+    height: 49px;
+    /*position: fixed;
+    height: 51px;
+    width: auto;
+    top:0;
+    right:0;
+    left:0;
+    .z1();
+
+    -webkit-transform: translateZ(0);*/
+  }
+  .site-branding {
+    /*position: relative;*/
     position: fixed;
     height: 51px;
     width: auto;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     -webkit-transform: translateZ(0);
-  }
-  .site-branding {
-    position: relative;
+    background-color: #ed327f;
   }
   /*
    * Hide some elements on mobile views with .ti() text-indent mixin
@@ -664,22 +667,24 @@ a.colophon-link:hover {
   /* Style main nav on mobile views */
   .main-navigation {
     position: relative;
-    bottom: 39px;
-    padding: 5px;
-    z-index: 2;
+    bottom: 300px;
+    z-index: 1;
     background-color: #f1619c;
-    opacity: 0;
   }
   a.nav-links {
-    margin: 32px 0;
+    height: 70px;
     display: block;
+    padding-left: 10px;
+    line-height: 4rem;
+    line-height: 4em;
     color: #000;
     text-decoration: none;
     font-weight: 900;
   }
   a.nav-links:hover {
-    color: #000;
-    text-decoration: underline;
+    color: #fff;
+    text-decoration: none;
+    background-color: #d91365;
   }
   a.nav-links:visited {
     color: #000;
@@ -691,7 +696,19 @@ a.colophon-link:hover {
   }
   /*
    * ==================================================================
-   * ASIDE STYLES START
+   * HEADER STYLES END
+   * ==================================================================
+   */
+  /* Style the <header>
+ * Give it a pink background in all views
+ * It should horizontally stretch as much as it can
+ */
+  .site-header {
+    width: 100%;
+  }
+  /*
+   * ==================================================================
+   * HEADER STYLES END
    * ==================================================================
    */
   .post-comment {
