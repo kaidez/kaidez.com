@@ -99,6 +99,13 @@ gulp.task("outputcss", ['concat'],function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(uncss({
+      html: [
+        'http://localhost:8888/', // home page
+        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/' // A single post psge
+        'http://localhost:8888/404.php' // 404 page
+      ]
+    }))
     .pipe(minifyCSS({
       keepBreaks: true
     }))
@@ -197,16 +204,4 @@ gulp.task("default", function () {
 
   gulp.watch(lessFiles, ["buildcss"]);
   gulp.watch(coffeeFiles, ["coffee"]);
-});
-
-// uncss task
-gulp.task('test', function() {
-  gulp.src('wp-content/themes/kaidez-swiss/style.css')
-    .pipe(uncss({
-      html: [
-        'http://localhost:8888/', // home page
-        'http://localhost:8888/404.php' // 404 page
-      ]
-    }))
-    .pipe(gulp.dest('lib/bootstrap/css/'));
 });
