@@ -461,6 +461,9 @@ a.colophon-link:hover {
   .site-main {
     margin-top: 87px;
   }
+  .fa {
+    text-indent: -9999px;
+  }
   .searchform-class {
     width: 300px;
     position: relative;
