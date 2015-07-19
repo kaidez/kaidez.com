@@ -293,7 +293,6 @@ a:visited {
 a:hover,
 a:active {
   color: #ed327f;
-  background-color: #f1619c;
   text-decoration: none;
 }
 a.home-link {
