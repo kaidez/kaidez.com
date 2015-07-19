@@ -35,7 +35,12 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
      * 2. IDs second
      * 3. Classes third
      */
-     ignoreArray = [];
+     ignoreArray = [
+                     'hide-menu',
+                     'show-menu',
+                     'hide-mobile-menu',
+                     'show-mobile-menu'
+                    ];
 
 
 
