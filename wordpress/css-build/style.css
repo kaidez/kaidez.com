@@ -424,6 +424,13 @@ a.colophon-link:hover {
   line-height: 24px;
   margin-bottom: 20px;
 }
+/* Give the main nav a header, but hide it */
+.main-navigation-header {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
 .youtube-iframe {
   max-width: 100%;
 }

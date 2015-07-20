@@ -136,7 +136,7 @@ to{-webkit-transform:translateY(0);transform:translateY(0)}
 .show-menu{-webkit-animation-name:showMobileMenu;animation-name:showMobileMenu;animation-duration:.3s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
 .hide-menu,.show-menu{-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:.3s}
 .hide-menu{-webkit-animation-name:hideMobileMenu;animation-name:hideMobileMenu;animation-duration:.3s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
-.aside-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
+.aside-header,.main-navigation-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @-webkit-keyframes showSearchbox{0%{opacity:0}
 100%{opacity:1}
 }
@@ -178,6 +178,7 @@ a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
 .post-list-item{line-height:24px;margin-bottom:20px}
+.main-navigation-header{clip:rect(1px,1px,1px,1px)}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
 .comment-label{display:block}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}

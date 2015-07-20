@@ -36,6 +36,7 @@
       </div><!-- .site-branding -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
+        <h3 class="main-navigation-header">Main Menu</h3>
         <div class="menu-main-navigation-container">
           <ul class="menu">
             <li class="menu-item">
