@@ -111,7 +111,7 @@ p {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(351px);
+    transform: translateY(296px);
   }
 }
 @keyframes showMobileMenu {
@@ -119,12 +119,12 @@ p {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(351px);
+    transform: translateY(296px);
   }
 }
 @-webkit-keyframes hideMobileMenu {
   from {
-    transform: translateY(351px);
+    transform: translateY(296px);
   }
   to {
     transform: translateY(0px);
@@ -132,7 +132,7 @@ p {
 }
 @keyframes hideMobileMenu {
   from {
-    transform: translateY(351px);
+    transform: translateY(296px);
   }
   to {
     transform: translateY(0px);
@@ -281,6 +281,10 @@ a.homepage-title-link:hover {
  * ====================================================================
  * LINK STYLES START
  * ====================================================================
+ */
+/* 
+ * Globally set the link color that appears in content
+ * Only the hover pseudo class shows an underline
  */
 a {
   color: #ed327f;
@@ -572,9 +576,9 @@ a.colophon-link:hover {
   }
   /* Mobile search containing element */
   .mobile-search {
-    position: relative;
-    bottom: 29px;
-    float: right;
+    position: absolute;
+    right: 8px;
+    bottom: 7px;
     cursor: pointer;
     color: #000;
   }
@@ -597,28 +601,14 @@ a.colophon-link:hover {
     background-color: #7b0b39;
   }
   /* MOBILE MENU STYLES END */
-  .site-header {
-    height: 49px;
-    /*position: fixed;
-    height: 51px;
-    width: auto;
-    top:0;
-    right:0;
-    left:0;
-    .z1();
-
-    -webkit-transform: translateZ(0);*/
-  }
   .site-branding {
-    /*position: relative;*/
-    position: fixed;
+    position: relative;
     height: 51px;
-    width: auto;
+    width: 100%;
     top: 0;
     right: 0;
     left: 0;
     z-index: 2;
-    -webkit-transform: translateZ(0);
     background-color: #ed327f;
   }
   /*
@@ -668,9 +658,10 @@ a.colophon-link:hover {
   }
   /* Style main nav on mobile views */
   .main-navigation {
-    position: relative;
-    bottom: 300px;
-    z-index: 1;
+    position: absolute;
+    top: -249px;
+    width: 100%;
+    height: 300px;
     background-color: #f1619c;
   }
   a.nav-links {
@@ -701,12 +692,15 @@ a.colophon-link:hover {
    * HEADER STYLES END
    * ==================================================================
    */
-  /* Style the <header>
- * Give it a pink background in all views
- * It should horizontally stretch as much as it can
- */
+  /* Style the <header> */
   .site-header {
     width: 100%;
+    height: 49px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    -webkit-transform: translateZ(0);
   }
   /*
    * ==================================================================
