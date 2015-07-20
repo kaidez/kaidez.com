@@ -177,7 +177,7 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
-.post-list-item{line-height:30px;margin-bottom:20px}
+.post-list-item{line-height:24px;margin-bottom:20px}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
 .comment-label{display:block}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
