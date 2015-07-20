@@ -112,6 +112,7 @@ gulp.task("outputcss", ['concat'],function () {
       html: [
         'http://localhost:8888/', // home page
         'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
+        'http://localhost:8888/affiliate-disclaimer/', // Affiliate
         'http://localhost:8888/404.php' // 404 page
       ],
       ignore: ignoreArray
