@@ -23,7 +23,7 @@ require("gulp-grunt")(gulp);
  *  ===================================================================
  */
 var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
-    coffeeFiles = ["coffee/*.coffee"]; // Coffeescript
+    coffeeFiles = ["coffee/*.coffee"], // Coffeescript
 
     /*
      * IGNORE ARRAY
@@ -36,10 +36,14 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
      * 3. Classes third
      */
      ignoreArray = [
-                     'hide-menu',
-                     'show-menu',
-                     'hide-mobile-menu',
-                     'show-mobile-menu'
+                     '.hide-menu',
+                     '.show-menu',
+                     '.showMobileMenu',
+                     '.hideMobileMenu',
+                     '.showSearchbox',
+                     '.hideSearchbox',
+                     '.hide-searchbox',
+                     '.show-searchbox'
                     ];
 
 
@@ -107,9 +111,10 @@ gulp.task("outputcss", ['concat'],function () {
     .pipe(uncss({
       html: [
         'http://localhost:8888/', // home page
-        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/' // A single post psge
+        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
         'http://localhost:8888/404.php' // 404 page
-      ]
+      ],
+      ignore: ignoreArray
     }))
     .pipe(minifyCSS({
       keepBreaks: true
