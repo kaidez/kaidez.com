@@ -75,12 +75,14 @@
 
   <p class="footer-text">
     <a href="" class="footer-links">site map</a>
-    <a href="" class="footer-links">affiliate disclaimer</a>
+    <a href="/affiliate-disclaimer/" class="footer-links">affiliate disclaimer</a>
   </p>
 
   <p class="footer-text footer-text-spaced">made with love by kaidez</p>
   <p class="footer-text">built with <a href="http://wordpress.org/" class="colophon-link" title="Visit Wordpress">wordpress</a></p>
+
   <p class="footer-text">powered by <a href="http://mediatemple.net/" class="colophon-link" title="Visit Media Temple">media temple</a> and <a href="http://maxcdn.com/" class="colophon-link" title="Visit kaidez on MaxCDN">maxcdn</a></p>
+  
   <p class="footer-text footer-text-spaced">&copy; 2008-15 kai gittens</p>
 
   <div class="jump-to-top">
