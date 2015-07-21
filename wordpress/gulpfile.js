@@ -140,7 +140,7 @@ gulp.task("cpq", function(){
 *  ===================================================================
 *  | IMAGE MINIFICATION TASK |
 *
-*  Take all images in "imagemin/" & minify them out to "build/img/"
+*  Take all images in "image-min/" & minify them out to the theme
 *  ===================================================================
 */
 gulp.task('images', function () {
@@ -149,7 +149,7 @@ gulp.task('images', function () {
     progressive: true,
     svgoPlugins: [{removeViewBox: false}]
   }))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('wp-content/themes/kaidez-swiss/img'));
 });
 
 
