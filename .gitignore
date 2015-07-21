@@ -24,6 +24,7 @@ wordpress/wp-mail.php
 wordpress/wp-settings.php
 wordpress/wp-signup.php
 wordpress/wp-trackback.php
+wordpress/image-min/.gitkeep
 
 
 _site
