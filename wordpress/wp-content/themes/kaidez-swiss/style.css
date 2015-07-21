@@ -73,7 +73,7 @@ img{max-width:100%!important}
 h2,h3,p{orphans:3;widows:3}
 h2,h3{page-break-after:avoid}
 }
-.site,.youtube-iframe,label{max-width:100%}
+.post-pic,.site,.youtube-iframe,label{max-width:100%}
 .btn,.btn-default:active,.btn:active{background-image:none}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 *,:after,:before{box-sizing:border-box}
@@ -114,6 +114,7 @@ input[type=search]{box-sizing:border-box;-webkit-appearance:none}
 .btn-default{background-color:#fff}
 .btn-default:active:focus,.btn-default:active:hover{color:#333;background-color:#d4d4d4;border-color:#8c8c8c}
 .row:after,.row:before{display:table;content:" "}
+.comment-label,.post-pic{display:block}
 .row:after{clear:both}
 @-ms-viewport{width:device-width}
 body{font-size:16px;font-size:1.6rem;line-height:24px}
@@ -177,10 +178,10 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
+.post-pic{margin:0 auto}
 .post-list-item{line-height:24px;margin-bottom:20px}
 .main-navigation-header{clip:rect(1px,1px,1px,1px)}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
-.comment-label{display:block}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}

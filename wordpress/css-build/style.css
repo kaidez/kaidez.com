@@ -7,6 +7,12 @@
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+/* Make images responsive */
+.responsive-image {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
 .ti {
   text-indent: -9999px;
 }
@@ -419,6 +425,11 @@ a.colophon-link:hover {
  * MISCELLANOUS STYLES START
  * ===================================================================
  */
+.post-pic {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
 /* Style <li> tags that appear in single posts */
 .post-list-item {
   line-height: 24px;
