@@ -113,6 +113,7 @@ gulp.task("outputcss", ['concat'],function () {
         'http://localhost:8888/', // home page
         'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
         'http://localhost:8888/personal/', // A category page
+        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A page with a lot of code formatting
         'http://localhost:8888/affiliate-disclaimer/', // Affiliate
         'http://localhost:8888/404.php' // 404 page
       ],
