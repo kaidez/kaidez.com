@@ -16,6 +16,8 @@ wordpress/wp-config-sample.php
 wordpress/wp-content/index.php
 wordpress/wp-content/themes/index.php
 
+wordpress/wp-content/uploads/
+
 wordpress/wp-cron.php
 wordpress/wp-links-opml.php
 wordpress/wp-load.php
