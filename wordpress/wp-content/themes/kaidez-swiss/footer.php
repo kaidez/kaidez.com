@@ -37,10 +37,10 @@
       <h4 class="aside-section-header">categories</h4>
       <ul class="aside-list">
         <li class="aside-list-item">
-          <a href="#" class="aside-link" title="read tutorials on the kaidez blog">tutorials</a>
+          <a href="/tutorials/" class="aside-link" title="read tutorials on the kaidez blog">tutorials</a>
         </li>
         <li class="aside-list-item">
-          <a href="#" class="aside-link" title="read code tips on the kaidez blog">code tips</a>
+          <a href="/coding-best-practices/" class="aside-link" title="read code tips on the kaidez blog">code tips</a>
         </li>
         <li class="aside-list-item">
           <a href="/personal/" class="aside-link" title="read personal posts on the kaidez blog">personal</a>
