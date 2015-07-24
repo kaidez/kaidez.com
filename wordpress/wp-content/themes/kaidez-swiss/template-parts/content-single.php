@@ -15,7 +15,7 @@
       printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'kaidez-swiss' ) . '</span>', $categories_list ); // WPCS: XSS OK.
     }
     ?>
-      <?php the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' ); ?>
+      <?php the_title( '<h1 id="blog-post-title" class="entry-title" itemprop="headline">', '</h1>' ); ?>
   
       <div class="entry-meta">
         <?php kaidez_swiss_posted_on(); ?>
@@ -30,6 +30,8 @@
           'after'  => '</div>',
         ) );
       ?>
+      <a id="tweet-this-post" href="#" target="_blank">Tweet this!</a>
+
     </div><!-- .entry-content -->
   
   </article><!-- #post-## -->
