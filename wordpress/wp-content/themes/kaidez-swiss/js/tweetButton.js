@@ -1,3 +1,4 @@
+// Based on cool-ass code at http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
 
 // We bind a new event to our link
 $("#tweet-this-post").click(function(e){
