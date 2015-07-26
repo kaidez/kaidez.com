@@ -30,7 +30,7 @@
           'after'  => '</div>',
         ) );
       ?>
-      <a id="tweet-this-post" href="#" target="_blank">Tweet this!</a>
+      <a id="tweet-this-post" class="tweet-post-class">would you like to tweet this post?</a>
 
     </div><!-- .entry-content -->
   
