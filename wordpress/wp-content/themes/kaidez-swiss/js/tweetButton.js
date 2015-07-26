@@ -1,5 +1,9 @@
 // Based on cool-ass code at http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
 
+// Cool Regex code:
+// http://stackoverflow.com/questions/4058923/get-all-characters-after-character
+// http://stackoverflow.com/questions/3780696/javascript-string-replace-with-regex-to-strip-off-illegal-characters
+
 (function(){
 
   var linkElement = document.getElementById( "tweet-this-post" ),
@@ -7,12 +11,12 @@
       getPostLink = window.location.href,
       cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
-      linkElement.setAttribute( "href", cleanLink );
+  linkElement.setAttribute( "href", cleanLink );
 
   // Bind jQuery.click() to the Tweet link
   $( linkElement ).on( "click", function( e ){
 
-    //We tell our browser not to follow that link
+    // Don't follow the link...ignore its href
     e.preventDefault();
 
     var tweetedLink = this.getAttribute( "href" );
