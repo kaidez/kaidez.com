@@ -40,7 +40,7 @@ pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#f5f2f0
 .token.property,.token.tag{color:#905}
 .token.attr-name,.token.selector,.token.string{color:#690}
 .language-css .token.string,.token.operator{color:#a67f59;background:hsla(0,0%,100%,.5)}
-.token.attr-value,.token.keyword{color:#07a}
+.token.atrule,.token.attr-value,.token.keyword{color:#07a}
 .token.function{color:#DD4A68}
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -89,7 +89,7 @@ h2{font-size:30px}
 h3{font-size:24px}
 small{font-size:85%}
 .page-header{padding-bottom:9px;margin:40px 0 20px;border-bottom:1px solid #eee}
-.btn,blockquote p:last-child,h1{margin-bottom:0}
+.btn,blockquote p:last-child,h1,ul ul{margin-bottom:0}
 h1,ol,ul{margin-top:0}
 ol,ul{margin-bottom:10px}
 abbr[title]{cursor:help;border-bottom:1px dotted #777}
@@ -114,7 +114,6 @@ input[type=search]{box-sizing:border-box;-webkit-appearance:none}
 .btn-default{background-color:#fff}
 .btn-default:active:focus,.btn-default:active:hover{color:#333;background-color:#d4d4d4;border-color:#8c8c8c}
 .row:after,.row:before{display:table;content:" "}
-.comment-label,.post-pic{display:block}
 .row:after{clear:both}
 @-ms-viewport{width:device-width}
 body{font-size:16px;font-size:1.6rem;line-height:24px}
@@ -178,10 +177,14 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
-.post-pic{margin:0 auto}
+.post-pic{margin:0 auto;display:block}
 .post-list-item{line-height:24px;margin-bottom:20px}
 .main-navigation-header{clip:rect(1px,1px,1px,1px)}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
+.tweet-post-class{display:block;height:auto;width:280px;margin:50px auto 0;padding:10px;border-radius:5px;background-color:#ed327f;color:#fff;text-align:center;cursor:pointer}
+a.tweet-post-class{color:#fff;text-decoration:none}
+a.tweet-post-class:visited{color:#fff}
+a.tweet-post-class:active,a.tweet-post-class:hover{color:#fff;background-color:#55acee}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
@@ -221,7 +224,6 @@ a.nav-links:hover{color:#fff;background-color:#d91365}
 a.nav-links:visited{color:#000}
 .content-area{padding:0 15px}
 .site-header{width:100%;height:49px;position:fixed;top:0;right:0;left:0;-webkit-transform:translateZ(0)}
-.post-comment{width:100%;max-width:500px}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
 .jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;background-color:#000}
