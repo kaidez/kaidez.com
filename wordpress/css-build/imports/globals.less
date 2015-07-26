@@ -47,6 +47,11 @@ a.homepage-title-link {
   list-style-type: none;
 }
 
+/* Give the main nav a header, but hide it */
+.main-navigation-header {
+  .hide-element();
+}
+
 /*
  * ====================================================================
  * MENU STYLES END
@@ -233,16 +238,35 @@ a.colophon-link {
 .post-pic {
   .responsive-image();
 }
+
+.table-of-contents-header {
+  clear: both;
+}
+
 /* Style <li> tags that appear in single posts */
 .post-list-item {
   line-height: 24px;
   margin-bottom: 20px;
 }
 
-/* Give the main nav a header, but hide it */
-.main-navigation-header {
-  .hide-element();
+a.tweet-post-class {
+  color: #fff;
+  text-decoration: none;
+  &:visited {
+    color: #fff;
+  }
+  &:hover, &:active {
+    color: #fff;
+    background-color: #55acee;
+  }
 }
+/*
+ * ===================================================================
+ * MISCELLANOUS STYLES START
+ * ===================================================================
+ */
+
+
 
 .youtube-iframe {
   max-width: 100%;
@@ -275,17 +299,7 @@ a.colophon-link {
   cursor: pointer;
 }
 
-a.tweet-post-class {
-  color: #fff;
-  text-decoration: none;
-  &:visited {
-    color: #fff;
-  }
-  &:hover, &:active {
-    color: #fff;
-    background-color: #55acee;
-  }
-}
+
  /*
   * ===================================================================
   * MISCELLANOUS STYLES END
