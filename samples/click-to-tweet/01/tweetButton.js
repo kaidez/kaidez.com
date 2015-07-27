@@ -1,15 +1,11 @@
 (function(){
 
-  var linkElement = document.getElementById( "tweet-this-post" ),
-      getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
-      getPostLink = window.location.href,
-      cleanLink = getPostLink.replace( /[^/]*$/g, "" );
+  var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
+      linkElement = document.getElementById( "tweet-this-post" );
 
-  linkElement.setAttribute( "href", cleanLink );
+  $( linkElement ).on( "click", function( event ){
 
-  $( linkElement ).on( "click", function( e ){
-
-    e.preventDefault();
+    event.preventDefault();
 
     var tweetedLink = this.getAttribute( "href" );
 
