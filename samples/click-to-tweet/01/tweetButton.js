@@ -1,7 +1,10 @@
 (function(){
 
   var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
-      linkElement = document.getElementById( "tweet-this-post" );
+      linkElement = document.getElementById( "tweet-this-post" ),
+      getPostLink = window.location.href;
+
+  linkElement.setAttribute( "href", getPostLink );
 
   $( linkElement ).on( "click", function( event ){
 
