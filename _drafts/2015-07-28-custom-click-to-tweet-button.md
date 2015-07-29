@@ -220,9 +220,47 @@ Many of posts, including this one, have a Table of Contents section that lets yo
 http://kaidez.com/click-to-tweet-link/#complicated-url
 {% endprism %}
 
-And because of how our Click to Tweet code works, there were times when the URL in the Tweet window looked like this:
+And if, for some reason, you hit the Click to Tweet link from there, the URL in the Tweet window looked like this:
+<div style="margin:0 auto; max-width: 700px;">
+  <img src="/img/click-to-tweet-sample-02.jpg" class="imgBorder" alt="sample of a Tweet Box" />
+</div>
+
+Also, there are times when I use Urchin Traffic Monitor (UTM) codes in my post links to track their social network click-thru rates via Google Analytics. So if you got to this post via a link I posted on Facebook, the link would look like this:
+{% prism markup %}
+http://kaidez.com/click-to-tweet-link/?utm_source=facebook&utm_medium=link&utm_click-to-tweet
+{% endprism %}
+
+And if, for some reason, you hit the Click to Tweet link from there, the URL in the Tweet window looked like this:
+<div style="margin:0 auto; max-width: 700px;">
+  <img src="/img/click-to-tweet-sample-03.jpg" class="imgBorder" alt="sample of a Tweet Box" />
+</div>
+
+Note that the UTM link wasn't truncated so the post is over 140 characters.  All this is a problem.
 <a name="regex"></a>
 ## Clean Up The Link With A Regular Expression
+The solution is to clean up the link with a regular expression. Adding this code to to `tweetButton.js` so it looks like this:
+{% prism javascript %}
+(function(){
+
+  var linkElement = document.getElementById( "tweet-this-post" ),
+      getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
+      getPostLink = window.location.href,
+      cleanLink = getPostLink.replace( /[^/]*$/g, "" );
+
+  linkElement.setAttribute( "href", cleanLink );
+
+  $( linkElement ).on( "click", function( e ){
+
+    e.preventDefault();
+
+    var tweetedLink = this.getAttribute( "href" );
+
+    window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
+
+  });
+
+})();
+{% endprism %}
 
 <a name="utm-tracking"></a>
 ## BONUS: Add Twitter UTM Tracking
