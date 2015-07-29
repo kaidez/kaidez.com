@@ -247,13 +247,15 @@ The solution is to clean up the link in the address bar with a regular expressio
       getPostLink = window.location.href,
       cleanLink = getPostLink.replace( /[^/]*$/g, "" );
   
-  linkElement.setAttribute( "href", getPostLink );
+  linkElement.setAttribute( "href", cleanLink );
   ...
   // The code below this point stays the same
 
 })();
 {% endprism %}
+We've added a `cleanLink` variable to our single var pattern. This variable looks at the characters that make up the `getPostlink` variable (which is the URL in the browser's address bar), finds all the characters that come AFTER the last forward-slash (/) and uses JavaScript's `replace()` method to replace them with whatever is passed to the second parameter ("")...which is absolutely nothing!
 
+Before, we set the `href` value `linkElement` (the `<a>` tag) to just be the complete URL in full...that was represented by the `getPostLink` variable. We now set the `href` to be `cleanLink`, which is our cleaned-up URL.
 <a name="utm-tracking"></a>
 ## BONUS: Add Twitter UTM Tracking
 
