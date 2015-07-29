@@ -249,9 +249,9 @@ The solution is to clean up the link with a regular expression. Adding this code
 
   linkElement.setAttribute( "href", cleanLink );
 
-  $( linkElement ).on( "click", function( e ){
+  $( linkElement ).on( "click", function( event ){
 
-    e.preventDefault();
+    event.preventDefault();
 
     var tweetedLink = this.getAttribute( "href" );
 
