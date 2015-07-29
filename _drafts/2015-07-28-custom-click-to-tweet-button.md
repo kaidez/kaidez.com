@@ -184,7 +184,7 @@ $( linkElement ).on( "click", function( event ){
 
 Once the IIFE runs, we're using `jQuery.on()` to bind click functionality to `linkElement`, our code's reference to the `<a>` tag. That tag has an `href` attribute, meaning that end-users will be forwarded to a web page when clicked.
 
-Because of how our code needs to work, we need to stop that forwarding. We do this by passing an `event` parameter to the function, then run `event.preventDefault()` inside the `jQuery.on()` method.
+This is a link's default behavior and because of how our code needs to works, we need to prevent it. We do this by passing an `event` parameter to the function, then run `event.preventDefault()` inside the `jQuery.on()` method.
 
 {% prism javascript %}
 var tweetedLink = this.getAttribute( "href" );
