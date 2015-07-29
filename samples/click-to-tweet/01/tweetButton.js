@@ -12,7 +12,7 @@
 
     var tweetedLink = this.getAttribute( "href" );
 
-    window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
+    window.open( "http://twitter.com/intent/tweet?url=http://kaidez.com/click-to-tweet-link/#complicated-url" + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 
   });
 

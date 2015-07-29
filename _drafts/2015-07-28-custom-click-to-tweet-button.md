@@ -10,7 +10,7 @@ category: tutorial
 cat-name: "Tutorials"
 tags: [tutorials]
 ---
-"Click to Tweet" links are a highly-recommended method for promoting your site's content. Placing a link at the end of your content that politely asks readers to Tweet it through their personal Twitter accounts has proven to be an effective way of spreading your message.
+"Click to Tweet" links are a highly-recommended way of promoting your site content. Placing a link at the end of your content that politely asks readers to Tweet it through their personal Twitter accounts has proven to be an effective way of spreading your message.
 
 I'm redesigning my blog with WordPress at the time of this post and am adding this functionality to the new design. I want the code optimized to run as fast as possible, so I'm using JavaScript to create this functionality instead of depending on a WordPress plugin...yes, __this code can work outside of WordPress__.
 
@@ -18,26 +18,26 @@ I'm redesigning my blog with WordPress at the time of this post and am adding th
 
 1. [Some Notes](#notes)
 2. [How Is This Code Optimized?](#optimized)
-3. [Build A Simple Click To Tweet Link](#simple-link)
+3. [A Simple Click To Tweet Link](#simple-link)
 4. [Review The HTML & CSS](#html-css)
-5. [What About Complicated URLs?](#complicated-url)
+5. [Dealing with Complicated URLs](#complicated-url)
 6. [Clean Up The Link With A Regular Expression](#regex)
 7. [BONUS: Add Twitter UTM Tracking](#utm-tracking)
 8. [Conclusion](#conclusion)
 
 <a name="notes"></a>
 ## Some Notes
-If you follow along with this tutorial and create this code, it won't work unless it runs on some sort of web server setup. Getting this code to work properly requires loading the link you want to Tweet in a popup Twitter window...that won't happen if you just navigate to `index.html` from a web browser and then open it. So you'll need to either run the code on an actual website or simulate a web server on your local machine using something like [MAMP for Mac](https://www.mamp.info/ "Learn more about MAMP for Mac"), [WAMP for Windows](http://www.wampserver.com/ "Learn more about WAMP for Windows") or [XAMMP, which is cross-platform](https://www.apachefriends.org/index.html, "Learn more about XAMMP for Windows, Mac and Linux").
+When creating the code, you'll can only test it on some sort of web server setup. This code needs to place the link you want to Tweet in a popup Twitter window, which won't happen if you just navigate to `index.html` from a web browser and then open it. So you'll need to either run the code on an actual website or simulate a web server on your local machine using something like [MAMP for Mac](https://www.mamp.info/ "Learn more about MAMP for Mac"), [WAMP for Windows](http://www.wampserver.com/ "Learn more about WAMP for Windows") or [XAMMP, which is cross-platform](https://www.apachefriends.org/index.html, "Learn more about XAMMP for Windows, Mac and Linux").
 
-Because of how I build my blog posts, my final JS code required a regular expression. It's a simple one but it still may be too complex for your needs; therefore, you may want to go directly to [the part of the post with the simple Click to Tweet code](#simple-link). But I do suggest reading the whole tutorial at some point to learn some cool coding tricks.
+Due to how I build my posts, my final JS code requires a regular expression. It's a simple one but it still may be too complex for your needs; therefore, you may want to go directly to [the part of the post with the simple Click to Tweet code](#simple-link). But I do suggest reading the whole tutorial at some point to learn some cool coding tricks.
 
-Also, while this code can work *outside* of WordPress, it's meant to work dynamically. The Click to Tweet functionality discussed here uses JavaScript (and SOME jQuery) to find already-existing web page elements, add attributes to them and set up click events...very dynamic. If you want to hard-code a Click to Tweet link, I suggest reading [Guillaume Piot's excellent tutorial](http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/ "Read Guillaume Piot's Click to Tweet tutorial"), which was the main source of inspiration for my code.
+This code is meant to work dynamically: this Click to Tweet functionality uses JavaScript (and SOME jQuery) to find elements on a web page, add attributes to one of them and set up click events...very dynamic. If you want to hard-code a Click to Tweet link, I suggest reading [Guillaume Piot's excellent tutorial](http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/ "Read Guillaume Piot's Click to Tweet tutorial"), which was the main source of inspiration for my code.
 
-And I'm assuming that you'll be able to apply this Click to Tweet code to whatever you're using to create a site: WordPress, Drupal, Jekyll, etc. In the case of my WordPress site, I'll have to (at the bare minimum) create a custom `footer.php` file for use only on single posts to prevent certain errors on non-post pages. All this requires creating custom WordPress PHP code, which you may not want to do. If this describes your situation, you may want to just use a plugin like [Click To Tweet for WordPress](https://wordpress.org/plugins/click-to-tweet-by-todaymade/ "Review the Click To Tweet plugin for WordPress").
+Lastly, I'm assuming you'll be able to apply this Click to Tweet code to whatever you're using to create a site: WordPress, Drupal, Jekyll, etc. In the case of my WordPress site, I'll have to (at the bare minimum) create a custom `footer.php` file for the single posts different from the one used for the non-post pages. All this requires creating custom WordPress PHP code, which you may not want to do. If this describes your situation, you may want to just use a plugin like [Click To Tweet for WordPress](https://wordpress.org/plugins/click-to-tweet-by-todaymade/ "Review the Click To Tweet plugin for WordPress").
 
 <a name="optimized"></a>
 ## How Is This Code Optimized?
-There are two ways in which this code optimized to run as fast as possible:
+This code optimized to run as fast as possible in two ways:
 
 1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file for creating various kinds of Twitter buttons on a site. Not using it for this code means that my site will make one *less* server request.
 
@@ -73,13 +73,13 @@ The HTML and CSS for this is pretty basic.  Looking at the HTML first...
 </html>
 {% endprism %}
 
-There are two key page elements: the `<h2>` tag with an id of `blog-post-title` and the `<a>` tag with an id of `tweet-this-post`.
+The two key page elements are: 1) the `<h2>` tag with an id of `blog-post-title`, and 2) the `<a>` tag with an id of `tweet-this-post`.
 
-The `<h2>` represents this blog post's title. We'll use the copy inside this tag for the copy of our Tweet.
+The `<h2>` represents the blog post's title. We'll use the copy inside of it for the copy of our Tweet.
 
 The `<a>` tag is our "Click to Tweet" link. We'll use JavaScript to bind functionality to the tag that builds our Tweet whenever it's clicked.
 
-Then we're linking jQuery to our site and are also linking a file called `tweetButton.js`. This file will contain the Click to Tweet code and will be our main focus throughout this tutorial.
+Then we're linking jQuery to our site and are also linking a file called `tweetButton.js`. The latter file will contain the Click to Tweet code, and will be our main focus throughout this tutorial.
 
 Then there's the CSS...
 {% prism markup %}
@@ -100,17 +100,17 @@ body {
   cursor: pointer;
 }
 
-a.tweet-post-class{
+a.tweet-post-class {
   color:#fff;
   text-decoration:none
 }
 
-a.tweet-post-class:visited{
+a.tweet-post-class:visited {
   color:#fff
 }
 
 a.tweet-post-class:active,
-a.tweet-post-class:hover{
+a.tweet-post-class:hover {
   color:#fff;
   background-color:#55acee
 }
@@ -119,11 +119,11 @@ a.tweet-post-class:hover{
 The Click to Tweet link is styled nicely, but there's not much else here.
 
 <a name="simple-link"></a>
-## Build A Simple Click To Tweet Link
+## A Simple Click To Tweet Link
 Again, the final JavaScript code I'm using is a bit complex. There is a simple way to create this link that we'll look at first...it's based on the Guillaume Piot code mentioned above.
 
 {% prism javascript %}
- (function(){
+(function(){
 
   var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
       linkElement = document.getElementById( "tweet-this-post" ),
@@ -159,7 +159,7 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
     getPostLink = window.location.href;
 {% endprism %}
 
-Three variables are defined in a single var pattern. Using the id attributes for bot the `<h2>` and `<a>` tags just discussed, we're referencing them inside the first two JavaScript variables called `getPostTitle` and `linkElement`.
+Three variables are defined in a single var pattern. Using the id attributes for both the `<h2>` and `<a>` tags just discussed, we're referencing each one with the first two JavaScript variables, respectively named `getPostTitle` and `linkElement`.
 
 The third variable, `getPostLink`, stores whatever URL is in the browser's address bar on page-load.
 {% prism javascript %}
@@ -182,7 +182,7 @@ $( linkElement ).on( "click", function( event ){
 })();
 {% endprism %}
 
-Once the IIFE runs, we're using `jQuery.on()` to bind click functionality to `linkElement`, which is how our code references the `<a>` tag. That tag will eventually contain a link, meaning that end-users will be forwarded to that link if it's clicked.
+Once the IIFE runs, we're using `jQuery.on()` to bind click functionality to `linkElement`, our code's reference to the `<a>` tag. That tag has an `href` attribute, meaning that end-users will be forwarded to a web page when clicked.
 
 Because of how our code needs to work, we need to stop that forwarding. We do this by passing an `event` parameter to the function, then run `event.preventDefault()` inside the `jQuery.on()` method.
 
@@ -192,17 +192,17 @@ var tweetedLink = this.getAttribute( "href" );
 window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 {% endprism %}
 
-When the link is clicked, it will get whatever the value is of its `href` attribute and store it in a variable called `tweetedLink`. The click also opens a popup window with a URL built with [Twitter Web Intents](https://dev.twitter.com/web/intents#retweet-intent "Learn more about Twitter Web intents") which, as per its documentation, "provide[s] popup-optimized flows for working with Tweets & Twitter Users: Tweet, Reply, Retweet, Favorite, and Follow."
+When the link is clicked, it will grab whatever the value is of its `href` attribute and store it in a variable called `tweetedLink`. The click also opens a popup window pointing to a page built with [Twitter Web Intents](https://dev.twitter.com/web/intents#retweet-intent "Learn more about Twitter Web intents") which, as per its documentation, "provide[s] popup-optimized flows for working with Tweets & Twitter Users: Tweet, Reply, Retweet, Favorite, and Follow."
 
-There's a lot of things built into this URL, all coming after the query string (`?`). The three main things are:
+A URL is built with important things coming after the query string (`?`). The three main things are:
 
 1. The `url=" + tweetedLink"` value that comes at the start of the query string. Here, the `tweetedLink` variable containing the `href` value of our Click to Tweet is built into the URL.
 
 2. The `"&text=" + getPostTitle` value that comes next. Here, the `getPostTitle` variable we defined at the top of our code is also built into the URL and, again, it stores the name of our blog post.
 
-3. The `&via=kaidez` value that come next. Setting `via` equal to your Twitter handle (or mine in this example) means that the handle will be passed into the Tweet.
+3. The `&via=kaidez` value that come next. Setting `via` equal to your Twitter handle (or mine in this example) means the handle will be passed into the Tweet.
 
-In the rest of the URL, the `twitterwindow` value just creates the popup window with Twitter branding. It then sets its height and width and builds the window without a toolbar, address (location) bar, menu bar, bookmark bar and scrollbar.
+For the rest of the code, the `twitterwindow` value just creates the popup window with Twitter branding. It then sets its height and width and builds the window without a toolbar, address (location) bar, menu bar, bookmark bar and scrollbar.
 
 The `url`, `text` and `via` values are optional. But if you give them values then, using this section's demo code as an example, the popup will look similar to this:
 
@@ -212,8 +212,15 @@ The `url`, `text` and `via` values are optional. But if you give them values the
 
 As mentioned above, this implementation is simple enough to work on your site. But my site had functionality that required a more complex code structure.
 <a name="complicated-url"></a>
-## What About Complicated URLs?
+## Dealing with Complicated URLs
+There are some case with my blog posts where there's extra things after their URLS: For example:
 
+Many of posts, including this one, have a Table of Contents section that lets you jump to certain sections. So if you got to this section of the post by clicking on its anchor link, the browser's address bar would be updated to look like this:
+{% prism markup %}
+http://kaidez.com/click-to-tweet-link/#complicated-url
+{% endprism %}
+
+And because of how our Click to Tweet code works, there were times when the URL in the Tweet window looked like this:
 <a name="regex"></a>
 ## Clean Up The Link With A Regular Expression
 
