@@ -38,7 +38,7 @@ Lastly, if you're using something like WordPress, Drupal or Jekyll to build a si
 ## This Code Is Optimized
 This code optimized to run as fast as possible in two ways:
 
-1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file used to  create various kinds of Twitter buttons on a site. Not needing it for this code means that my site will make one less server request. I should point out that Twitter prefers that you use this file on your site if when creating Tweet functionality, but the code seems to work fine without it.
+1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file used to  create various kinds of Twitter buttons on a site. Not needing it for this code means that my site will make one less server request. I should point out that Twitter prefers that you use this file on your site when creating Tweet functionality, but the code seems to work fine without it.
 
 2. __No need for plugins:__ No need for any jQuery plugins, WordPress plugins, Drupal plugins or whatever. This code creates a very small footprint.
 
@@ -76,7 +76,7 @@ The two key page elements are: 1) the `<h2>` tag with an id of `blog-post-title`
 
 The `<h2>` represents the blog post's title. We'll use the copy inside of it for the copy of our Tweet.
 
-The `<a>` tag is our "Click to Tweet" link. We'll use JavaScript to bind functionality to the tag that builds our Tweet whenever it's clicked.
+The `<a>` tag is our "Click to Tweet" link. We'll use JavaScript to bind functionality to it that builds our Tweet if it's clicked.
 
 Then we're linking jQuery to our site and are also linking a file called `tweetButton.js`. The latter file will contain the Click to Tweet code, and will be our main focus throughout this tutorial.
 
@@ -115,7 +115,7 @@ a.tweet-post-class:hover {
 }
 {% endprism %}
 
-The Click to Tweet link is styled nicely, but there's not much else here.
+The Click to Tweet link is styled nicely...past that, there's not much happening here.
 
 <a name="simple-link"></a>
 ## A Simple Click To Tweet Link
@@ -160,14 +160,14 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
 
 Three variables are defined in a single var pattern. Using the id attributes for both the `<h2>` and `<a>` tags just discussed, we're referencing each one with the first two JavaScript variables, respectively named `getPostTitle` and `linkElement`.
 
-The third variable, `getPostLink`, stores whatever URL is in the browser's address bar on page-load.
+The third variable, `getPostLink`, stores whatever URL is in the browser's address bar after page-load.
 {% prism javascript %}
 linkElement.setAttribute( "href", getPostLink );
 {% endprism %}
 
-Find the `<a>` tag (referenced by the `linkElement` variable) and set its `href` attribute. This attribute's value will be `getPostLink` which is the URL in the address bar we just grabbed.
+Find the `<a>` tag (referenced by the `linkElement` variable) and set its `href` attribute. This attribute's value will be `getPostLink` which, again, is the URL in the address bar.
 
-At this point, the code for the Click to Tweet already on the web page has been updated to look like this:
+At this point in the code, the Click to Tweet link that's already on the web page has been updated to look like this:
 {% prism markup %}
 <!-- An 'href' value has been added -->
 <a id="tweet-this-post" class="tweet-post-class" href="http://kaidez.com/samples/click-to-tweet/01/">would you like to tweet this page?</a>
@@ -181,9 +181,9 @@ $( linkElement ).on( "click", function( event ){
 })();
 {% endprism %}
 
-Once the IIFE runs, we're using `jQuery.on()` to bind click functionality to `linkElement`, our code's reference to the `<a>` tag. That tag has an `href` attribute, meaning that end-users will be forwarded to a web page when clicked.
+Once the IIFE runs, we're using `jQuery.on()` to bind click functionality to `linkElement`, our code's reference to the `<a>` tag. That tag has an `href` attribute, meaning that end-users will be forwarded to a web page if it's clicked.
 
-This is a link's default behavior and because of how our code needs to works, we need to prevent it. We do this by passing an `event` parameter to the function, then run `event.preventDefault()` inside the `jQuery.on()` method.
+This is a link's default behavior and because of how our code needs to works, we need to prevent it from happening. We do this by passing an `event` parameter to the function, then run `event.preventDefault()` inside the `jQuery.on()` method.
 
 {% prism javascript %}
 var tweetedLink = this.getAttribute( "href" );
@@ -193,7 +193,7 @@ window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + g
 
 When the link is clicked, it will grab whatever the value is of its `href` attribute and store it in a variable called `tweetedLink`. The click also opens a popup window pointing to a page built with [Twitter Web Intents](https://dev.twitter.com/web/intents#retweet-intent "Learn more about Twitter Web intents") which, as per its documentation, "provide[s] popup-optimized flows for working with Tweets & Twitter Users: Tweet, Reply, Retweet, Favorite, and Follow."
 
-A URL is built with important things coming after the query string (`?`). The three main things are:
+A URL is built with important things that come after the query string (`?`), which are:
 
 1. The `url=" + tweetedLink"` value that comes at the start of the query string. Here, the `tweetedLink` variable containing the `href` value of our Click to Tweet is built into the URL.
 
