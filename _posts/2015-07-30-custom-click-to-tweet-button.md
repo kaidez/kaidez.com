@@ -10,6 +10,8 @@ category: tutorial
 cat-name: "Tutorials"
 tags: [tutorials]
 ---
+<a href="/samples/click-to-tweet/02/" class="demoLink" target="blank">VIEW THE DEMO</a>
+
 "Click to Tweet" links are a highly-recommended way of promoting your site content. Politely asking readers to Tweet the content through their personal Twitter accounts often leads to them doing so when you give them an easy way to do it: it's proven to be an effective way of spreading your message.
 
 I'm redesigning my blog with WordPress at the time of this post and am adding this functionality to the new design. I want the code optimized to run as fast as possible, so I'm using JavaScript to create this functionality instead of depending on a WordPress plugin...yes, __this code can work outside of WordPress__.
@@ -209,6 +211,8 @@ The `url`, `text` and `via` values are optional. But if you give them values the
   <img src="/img/click-to-tweet-sample-01.jpg" class="imgBorder" alt="sample of a Tweet Box" />
 </div>
 
+<a href="/samples/click-to-tweet/01/" target="blank"><strong>SEE THE DEMO</strong></a>
+
 As mentioned above, this implementation is simple enough to work on your site. But my site had functionality that required a more complex code structure.
 <a name="complicated-url"></a>
 ## Dealing with Complicated URLs
@@ -255,6 +259,8 @@ The solution was to clean up the link in the address bar with a regular expressi
 We've added a `cleanLink` variable to our single var pattern. This variable looks at the characters that make up the `getPostlink` variable (which is the URL in the browser's address bar), finds all the characters that come AFTER the last forward-slash (/) and uses JavaScript's `replace()` method to replace them with whatever is passed to the second parameter (""), which is...absolutely nothing!
 
 Previously, we set the `href` value of `linkElement` (the `<a>` tag) to just be the complete URL in full...that was represented by the `getPostLink` variable. We now set the `href` to be `cleanLink`, which is our cleaned-up URL.
+
+<a href="/samples/click-to-tweet/02/" target="blank"><strong>SEE THE DEMO</strong></a>
 
 <a name="conclusion"></a>
 ## Conclusion
