@@ -212,14 +212,14 @@ The `url`, `text` and `via` values are optional. But if you give them values the
 As mentioned above, this implementation is simple enough to work on your site. But my site had functionality that required a more complex code structure.
 <a name="complicated-url"></a>
 ## Dealing with Complicated URLs
-There are some case with my blog posts where there's extra things after their URLS: For example:
+There are some cases where my blog post URLs contain extra things. For example:
 
-Many of posts, including this one, have a Table of Contents section that lets you jump to certain sections. So if you got to this section of the post by clicking on its anchor link, the browser's address bar would be updated to look like this:
+Many posts, including this one, have a Table of Contents section that lets you jump to certain parts of the post. So if you got to this section of the post by clicking on its anchor link, the browser's address bar would be updated to look like this:
 {% prism markup %}
 http://kaidez.com/click-to-tweet-link/#complicated-url
 {% endprism %}
 
-And if, for some reason, you hit the Click to Tweet link from there, the URL in the Tweet window looked like this:
+And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window looked like this:
 <div style="margin:0 auto; max-width: 700px;">
   <img src="/img/click-to-tweet-sample-02.jpg" class="imgBorder" alt="sample of a Tweet Box" />
 </div>
@@ -229,7 +229,7 @@ Also, there are times when I use Urchin Traffic Monitor (UTM) codes in my post l
 http://kaidez.com/click-to-tweet-link/?utm_source=facebook&utm_medium=link&utm_click-to-tweet
 {% endprism %}
 
-And if, for some reason, you hit the Click to Tweet link from there, the URL in the Tweet window looked like this:
+And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window looked like this:
 <div style="margin:0 auto; max-width: 700px;">
   <img src="/img/click-to-tweet-sample-03.jpg" class="imgBorder" alt="sample of a Tweet Box" />
 </div>
@@ -237,7 +237,7 @@ And if, for some reason, you hit the Click to Tweet link from there, the URL in 
 Note that the UTM link wasn't truncated so the post is over 140 characters.  All this is a problem.
 <a name="regex"></a>
 ## Clean Up The Link With A Regular Expression
-The solution is to clean up the link in the address bar with a regular expression. Update the beginning of `tweetButton.js` so it looks like this:
+The solution was to clean up the link in the address bar with a regular expression. Update the beginning of `tweetButton.js` so it looks like this:
 {% prism javascript %}
 (function(){
 
@@ -252,10 +252,10 @@ The solution is to clean up the link in the address bar with a regular expressio
 
 })();
 {% endprism %}
-We've added a `cleanLink` variable to our single var pattern. This variable looks at the characters that make up the `getPostlink` variable (which is the URL in the browser's address bar), finds all the characters that come AFTER the last forward-slash (/) and uses JavaScript's `replace()` method to replace them with whatever is passed to the second parameter ("")...which is absolutely nothing!
+We've added a `cleanLink` variable to our single var pattern. This variable looks at the characters that make up the `getPostlink` variable (which is the URL in the browser's address bar), finds all the characters that come AFTER the last forward-slash (/) and uses JavaScript's `replace()` method to replace them with whatever is passed to the second parameter (""), which is...absolutely nothing!
 
-Before, we set the `href` value `linkElement` (the `<a>` tag) to just be the complete URL in full...that was represented by the `getPostLink` variable. We now set the `href` to be `cleanLink`, which is our cleaned-up URL.
+Previously, we set the `href` value of `linkElement` (the `<a>` tag) to just be the complete URL in full...that was represented by the `getPostLink` variable. We now set the `href` to be `cleanLink`, which is our cleaned-up URL.
 
 <a name="conclusion"></a>
 ## Conclusion
-I haven't put a "Click to Tweet" link on my live site at the time of this post, but I'm told it works.  It'll be really satisfying if it works but I'm already satisfied by the fact that I coded all this myself with out a plug-in.
+I haven't put a "Click to Tweet" link on my live site at the time of this post, but I'm told it works.  It'll be really satisfying if it works, but I'm already satisfied by the fact that I coded all this myself without needing a plug-in.
