@@ -223,7 +223,7 @@ Many posts, including this one, have a Table of Contents section that lets you j
 http://kaidez.com/click-to-tweet-link/#complicated-url
 {% endprism %}
 
-And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window looked like this:
+And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window will look like this:
 <div style="margin:0 auto; max-width: 700px;">
   <img src="/img/click-to-tweet-sample-02.jpg" class="imgBorder" alt="sample of a Tweet Box" />
 </div>
@@ -233,7 +233,7 @@ Also, there are times when I use Urchin Traffic Monitor (UTM) codes in my post l
 http://kaidez.com/click-to-tweet-link/?utm_source=facebook&utm_medium=link&utm_click-to-tweet
 {% endprism %}
 
-And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window looked like this:
+And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window will look like this:
 <div style="margin:0 auto; max-width: 700px;">
   <img src="/img/click-to-tweet-sample-03.jpg" class="imgBorder" alt="sample of a Tweet Box" />
 </div>
