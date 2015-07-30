@@ -197,7 +197,7 @@ When the link is clicked, it will grab whatever the value is of its `href` attri
 
 A URL is built with important things that come after the query string (`?`), which are:
 
-1. The `url=" + tweetedLink"` value that comes at the start of the query string. Here, the `tweetedLink` variable containing the `href` value of our Click to Tweet is built into the URL.
+1. The `?url=" + tweetedLink"` value that comes at the start of the query string. Here, the `tweetedLink` variable containing the `href` value of our Click to Tweet is built into the URL.
 
 2. The `"&text=" + getPostTitle` value that comes next. Here, the `getPostTitle` variable we defined at the top of our code is also built into the URL and, again, it stores the name of our blog post.
 
@@ -260,7 +260,7 @@ We've added a `cleanLink` variable to our single var pattern. This variable look
 
 Previously, we set the `href` value of `linkElement` (the `<a>` tag) to just be the complete URL in full...that was represented by the `getPostLink` variable. We now set the `href` to be `cleanLink`, which is our cleaned-up URL.
 
-<a href="/samples/click-to-tweet/02/" target="blank"><strong>SEE THE DEMO</strong></a>
+<a href="/samples/click-to-tweet/02/" target="blank"><strong>SEE THE DEMO...different URL than what you saw in the last picture.</strong></a>
 
 <a name="conclusion"></a>
 ## Conclusion
