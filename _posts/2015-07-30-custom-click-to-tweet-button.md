@@ -10,14 +10,14 @@ category: tutorial
 cat-name: "Tutorials"
 tags: [tutorials]
 ---
-"Click to Tweet" links are a highly-recommended way of promoting your site content. Placing a link at the end of your content that politely asks readers to Tweet it through their personal Twitter accounts has proven to be an effective way of spreading your message.
+"Click to Tweet" links are a highly-recommended way of promoting your site content. Politely asking readers to Tweet the content through their personal Twitter accounts often leads to them doing so when you give them an easy way to do it: it's proven to be an effective way of spreading your message.
 
 I'm redesigning my blog with WordPress at the time of this post and am adding this functionality to the new design. I want the code optimized to run as fast as possible, so I'm using JavaScript to create this functionality instead of depending on a WordPress plugin...yes, __this code can work outside of WordPress__.
 
 <h2 style="clear:both;">Table of Contents</h2>
 
 1. [Some Notes](#notes)
-2. [How Is This Code Optimized?](#optimized)
+2. [This Code Is Optimized](#optimized)
 3. [A Simple Click To Tweet Link](#simple-link)
 4. [Review The HTML & CSS](#html-css)
 5. [Dealing with Complicated URLs](#complicated-url)
@@ -26,19 +26,19 @@ I'm redesigning my blog with WordPress at the time of this post and am adding th
 
 <a name="notes"></a>
 ## Some Notes
-When creating the code, you'll can only test it on some sort of web server setup. This code needs to place the link you want to Tweet in a popup Twitter window, which won't happen if you just navigate to `index.html` from a web browser and then open it. So you'll need to either run the code on an actual website or simulate a web server on your local machine using something like [MAMP for Mac](https://www.mamp.info/ "Learn more about MAMP for Mac"), [WAMP for Windows](http://www.wampserver.com/ "Learn more about WAMP for Windows") or [XAMMP, which is cross-platform](https://www.apachefriends.org/index.html, "Learn more about XAMMP for Windows, Mac and Linux").
+This code only works if it runs on some sort of web server setup. So if you want to test it, you'll need to either run it on an actual website or simulate a web server on your local machine using something like [MAMP for Mac](https://www.mamp.info/ "Learn more about MAMP for Mac"), [WAMP for Windows](http://www.wampserver.com/ "Learn more about WAMP for Windows") or [XAMMP, which is cross-platform](https://www.apachefriends.org/index.html, "Learn more about XAMMP for Windows, Mac and Linux").
 
-Due to how I build my posts, my final JS code requires a regular expression. It's a simple one but it still may be too complex for your needs; therefore, you may want to go directly to [the part of the post with the simple Click to Tweet code](#simple-link). But I do suggest reading the whole tutorial at some point to learn some cool coding tricks.
+Due to how I build my posts, my final JS code requires a regular expression. It's a simple one but it still may be too complex for your needs; therefore, you may want to go directly to [the part of the post with the simple Click to Tweet code](#simple-link).
 
-This code is meant to work dynamically: this Click to Tweet functionality uses JavaScript (and SOME jQuery) to find elements on a web page, add attributes to one of them and set up click events...very dynamic. If you want to hard-code a Click to Tweet link, I suggest reading [Guillaume Piot's excellent tutorial](http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/ "Read Guillaume Piot's Click to Tweet tutorial"), which was the main source of inspiration for my code.
+This Click to Tweet is meant to work dynamically: it uses JavaScript (and SOME jQuery) to find elements on a web page, add attributes to one of them and set up click events...very dynamic. If you want to hard-code a Click to Tweet link, I suggest reading [Guillaume Piot's excellent tutorial](http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/ "Read Guillaume Piot's Click to Tweet tutorial"), which was the main source of inspiration for my code.
 
 Lastly, I'm assuming you'll be able to apply this Click to Tweet code to whatever you're using to create a site: WordPress, Drupal, Jekyll, etc. In the case of my WordPress site, I'll have to (at the bare minimum) create a custom `footer.php` file for the single posts different from the one used for the non-post pages. All this requires creating custom WordPress PHP code, which you may not want to do. If this describes your situation, you may want to just use a plugin like [Click To Tweet for WordPress](https://wordpress.org/plugins/click-to-tweet-by-todaymade/ "Review the Click To Tweet plugin for WordPress").
 
 <a name="optimized"></a>
-## How Is This Code Optimized?
+## This Code Is Optimized
 This code optimized to run as fast as possible in two ways:
 
-1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file for creating various kinds of Twitter buttons on a site. Not using it for this code means that my site will make one *less* server request.
+1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file for creating various kinds of Twitter buttons on a site. Not using it for this code means that my site will make one *less* server request. I should point out that Twitter prefers that your site use this file if it has any sort of Tweet sharing functionality, but it seems to work fine without it.
 
 2. __No need for plugins:__ No need for any jQuery plugins, WordPress plugins, Drupal plugins or whatever. This code creates a very small footprint.
 
