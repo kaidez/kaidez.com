@@ -12,9 +12,9 @@ tags: [tutorials]
 ---
 <a href="/samples/click-to-tweet/02/" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-"Click to Tweet" links are a highly-recommended way of promoting your site content. Politely asking readers to Tweet the content through their personal Twitter accounts often leads to them doing so when you give them an easy way to do it: it's proven to be an effective way of spreading your message.
+"Click to Tweet" links are a highly-recommended way of promoting your site content. Politely asking readers to Tweet your content often leads to them doing so if you give them an easy way to do it.
 
-I'm redesigning my blog with WordPress at the time of this post and am adding this functionality to the new design. I want the code optimized to run as fast as possible, so I'm using JavaScript to create this functionality instead of depending on a WordPress plugin...yes, __this code can work outside of WordPress__.
+I'm redesigning my blog with WordPress at the time of this post and this functionality will be part of the new design. I want it optimized to run as fast as possible so I'm creating it with JavaScript instead of depending on a WordPress plugin...yes, <strong>this code can work outside of WordPress</strong>.
 
 <h2 style="clear:both;">Table of Contents</h2>
 
