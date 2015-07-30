@@ -38,7 +38,7 @@ Lastly, if you're using something like WordPress, Drupal or Jekyll to build a si
 ## This Code Is Optimized
 This code optimized to run as fast as possible in two ways:
 
-1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file for creating various kinds of Twitter buttons on a site. Not using it for this code means that my site will make one *less* server request. I should point out that Twitter prefers that your site use this file if it has any sort of Tweet sharing functionality, but it seems to work fine without it.
+1. __No need to use widgets.js:__ `widgets.js` is the core Twitter file used to  create various kinds of Twitter buttons on a site. Not needing it for this code means that my site will make one less server request. I should point out that Twitter prefers that you use this file on your site if when creating Tweet functionality, but the code seems to work fine without it.
 
 2. __No need for plugins:__ No need for any jQuery plugins, WordPress plugins, Drupal plugins or whatever. This code creates a very small footprint.
 
