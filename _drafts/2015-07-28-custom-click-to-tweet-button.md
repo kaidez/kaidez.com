@@ -22,8 +22,7 @@ I'm redesigning my blog with WordPress at the time of this post and am adding th
 4. [Review The HTML & CSS](#html-css)
 5. [Dealing with Complicated URLs](#complicated-url)
 6. [Clean Up The Link With A Regular Expression](#regex)
-7. [BONUS: Add Twitter UTM Tracking](#utm-tracking)
-8. [Conclusion](#conclusion)
+7. [Conclusion](#conclusion)
 
 <a name="notes"></a>
 ## Some Notes
@@ -256,8 +255,7 @@ The solution is to clean up the link in the address bar with a regular expressio
 We've added a `cleanLink` variable to our single var pattern. This variable looks at the characters that make up the `getPostlink` variable (which is the URL in the browser's address bar), finds all the characters that come AFTER the last forward-slash (/) and uses JavaScript's `replace()` method to replace them with whatever is passed to the second parameter ("")...which is absolutely nothing!
 
 Before, we set the `href` value `linkElement` (the `<a>` tag) to just be the complete URL in full...that was represented by the `getPostLink` variable. We now set the `href` to be `cleanLink`, which is our cleaned-up URL.
-<a name="utm-tracking"></a>
-## BONUS: Add Twitter UTM Tracking
 
 <a name="conclusion"></a>
 ## Conclusion
+I haven't put a "Click to Tweet" link on my live site at the time of this post, but I'm told it works.  It'll be really satisfying if it works but I'm already satisfied by the fact that I coded all this myself with out a plug-in.
