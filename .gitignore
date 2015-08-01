@@ -9,6 +9,7 @@ wordpress/wp-includes/
 wordpress/wp-activate.php
 wordpress/xmlrpc.php
 
+wordpress/html-workspace.html
 
 wordpress/wp-blog-header.php
 wordpress/wp-comments-post.php
