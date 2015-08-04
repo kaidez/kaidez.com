@@ -231,7 +231,7 @@ a.colophon-link {
 
 /*
  * ===================================================================
- * MISCELLANOUS STYLES START
+ * POSTS STYLES START
  * ===================================================================
  */
 
@@ -249,6 +249,12 @@ a.colophon-link {
   margin-bottom: 20px;
 }
 
+/*
+ * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
+.post-navigation {
+  .hide-element();
+}
+
 a.tweet-post-class {
   color: #fff;
   text-decoration: none;
@@ -262,12 +268,16 @@ a.tweet-post-class {
 }
 /*
  * ===================================================================
- * MISCELLANOUS STYLES START
+ * POST STYLES END
  * ===================================================================
  */
 
 
-
+/*
+ * ===================================================================
+ * MISCELLANOUS STYLES START
+ * ===================================================================
+ */
 .youtube-iframe {
   max-width: 100%;
 }

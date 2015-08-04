@@ -42,6 +42,7 @@ pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#f5f2f0
 .language-css .token.string,.token.operator{color:#a67f59;background:hsla(0,0%,100%,.5)}
 .token.atrule,.token.attr-value,.token.keyword{color:#07a}
 .token.function{color:#DD4A68}
+.token.regex{color:#e90}
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -136,7 +137,7 @@ to{-webkit-transform:translateY(0);transform:translateY(0)}
 .show-menu{-webkit-animation-name:showMobileMenu;animation-name:showMobileMenu;animation-duration:.3s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
 .hide-menu,.show-menu{-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:.3s}
 .hide-menu{-webkit-animation-name:hideMobileMenu;animation-name:hideMobileMenu;animation-duration:.3s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
-.aside-header,.main-navigation-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
+.aside-header,.main-navigation-header,.post-navigation,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @-webkit-keyframes showSearchbox{0%{opacity:0}
 100%{opacity:1}
 }
@@ -180,6 +181,7 @@ a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
 .post-pic{margin:0 auto;display:block}
 .post-list-item{line-height:24px;margin-bottom:20px}
+.post-navigation{clip:rect(1px,1px,1px,1px)}
 a.tweet-post-class{color:#fff;text-decoration:none}
 a.tweet-post-class:visited{color:#fff}
 a.tweet-post-class:active,a.tweet-post-class:hover{color:#fff;background-color:#55acee}

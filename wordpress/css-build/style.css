@@ -429,7 +429,7 @@ a.colophon-link:hover {
  */
 /*
  * ===================================================================
- * MISCELLANOUS STYLES START
+ * POSTS STYLES START
  * ===================================================================
  */
 .post-pic {
@@ -445,6 +445,13 @@ a.colophon-link:hover {
   line-height: 24px;
   margin-bottom: 20px;
 }
+/* Hide */
+.post-navigation {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
 a.tweet-post-class {
   color: #fff;
   text-decoration: none;
@@ -457,6 +464,11 @@ a.tweet-post-class:active {
   color: #fff;
   background-color: #55acee;
 }
+/*
+ * ===================================================================
+ * POST STYLES END
+ * ===================================================================
+ */
 /*
  * ===================================================================
  * MISCELLANOUS STYLES START
