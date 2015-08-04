@@ -4,25 +4,23 @@
 // http://stackoverflow.com/questions/4058923/get-all-characters-after-character
 // http://stackoverflow.com/questions/3780696/javascript-string-replace-with-regex-to-strip-off-illegal-characters
 
-(function(){
 
-  var linkElement = document.getElementById( "tweet-this-post" ),
-      getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
+var linkElement = document.getElementById( "tweet-this-post" );
+
+$( linkElement ).on( "click", function( event ){
+
+  // Bind jQuery.click() to the Tweet link
+  event.preventDefault();
+  
+  var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
       getPostLink = window.location.href,
-      cleanLink = getPostLink.replace( /[^/]*$/g, "" );
+      cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
+      tweetedLink;
 
   linkElement.setAttribute( "href", cleanLink );
 
-  // Bind jQuery.click() to the Tweet link
-  $( linkElement ).on( "click", function( e ){
+  tweetedLink = this.getAttribute( "href" );
 
-    // Don't follow the link...ignore its href
-    e.preventDefault();
+  window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 
-    var tweetedLink = this.getAttribute( "href" );
-
-    window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
-
-  });
-
-})();
+});
