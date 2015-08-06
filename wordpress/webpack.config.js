@@ -1,7 +1,10 @@
 module.exports = {
-  entry: "./entry-POST.js",
+  entry: {
+    globals: "./webpack/entry_GLOBALS",
+    posts: "./webpack/entry_POSTS"
+  },
   output: {
-    path: "wp-content/themes/kaidez-swiss/js",
-    filename: "posts.js"
+    path: "wp-content/themes/kaidez-swiss/js/",
+    filename: "[name].js"
   }
 };

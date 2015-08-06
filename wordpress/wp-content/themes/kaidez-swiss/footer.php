@@ -96,10 +96,8 @@
 <?php wp_footer(); ?>
 </div> <!-- #content -->
 <script src="/wp-content/themes/kaidez-swiss/js/libs/prism.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/libs/jquery.min.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/libs/q.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/mobileMenu.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/tweetButton.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/globals.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/posts.js"></script>
 
 </body>
 </html>
