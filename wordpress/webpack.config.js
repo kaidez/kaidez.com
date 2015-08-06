@@ -1,3 +1,6 @@
+var webpack = require("webpack"),
+    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin("init.js");
+
 module.exports = {
   entry: {
     globals: "./webpack/entry_GLOBALS",
@@ -6,5 +9,8 @@ module.exports = {
   output: {
     path: "wp-content/themes/kaidez-swiss/js/",
     filename: "[name].js"
-  }
+  },
+  plugins: [
+    commonsChunkPlugin
+  ]
 };
