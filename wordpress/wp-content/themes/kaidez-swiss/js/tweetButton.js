@@ -7,9 +7,8 @@
 
 var linkElement = document.getElementById( "tweet-this-post" );
 
+// Bind jQuery.click() to the Tweet link
 $( linkElement ).on( "click", function( event ){
-
-  // Bind jQuery.click() to the Tweet link
   event.preventDefault();
   
   var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
