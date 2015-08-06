@@ -19,7 +19,7 @@
     "bootstrap": "latest",
     "jquery": "1.11.3",
     "fontawesome": "4.4.0",
-    "prism": "1.0.1"
+    "prism": "~latest"
   },
   "resolutions": {
     "jquery": "~1.11.3"

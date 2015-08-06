@@ -1,4 +1,5 @@
-var $ = require("jquery");
+var $ = require("jquery"),
+    prism = require("./config/prism");
 
 var linkElement = document.getElementById( "tweet-this-post" );
 

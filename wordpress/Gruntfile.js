@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
         // copy to the theme's "js/libs" directory
         options: {
-          destPrefix: "wp-content/themes/kaidez-swiss/js/libs/"
+          destPrefix: "webpack/config/"
         },
         files: {
           "prism.js": "prism/prism.js"
