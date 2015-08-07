@@ -108,8 +108,8 @@ p {
 /*
  * ALL ANIMATION STYLES FOR THE ENTIRE SITE
  *
- * Note that all the animations are outside of the media queries
- * This needs to be done so that they work in IE, version 10 at least
+ * Note that all the animations are outside of the media queries This
+ * needs to be done so that they work in IE, version 10 at least
  */
 /* START MOBILE DROP-DOWN STYLES */
 @-webkit-keyframes showMobileMenu {
@@ -445,7 +445,8 @@ a.colophon-link:hover {
   line-height: 24px;
   margin-bottom: 20px;
 }
-/* Hide */
+/*
+ * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
 .post-navigation {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);

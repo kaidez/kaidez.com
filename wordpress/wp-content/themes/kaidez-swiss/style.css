@@ -14,7 +14,6 @@
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-body,figure{margin:0}
 h1,h2,h3,h4{margin-bottom:10px}
 pre,textarea{overflow:auto}
 .hide-menu,.show-menu{position:relative;z-index:1}
@@ -22,7 +21,7 @@ pre,textarea{overflow:auto}
 .aside-list-item,.menu-item{list-style-type:none}
 @font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-transform:translate(0,0);transform:translate(0,0)}
-article,aside,figcaption,figure,footer,header,main,nav,pre,section{display:block}
+article,aside,footer,header,main,nav,pre,section{display:block}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 .btn,img{vertical-align:middle}
 .fa-search:before{content:"\f002"}
@@ -40,9 +39,8 @@ pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#f5f2f0
 .token.property,.token.tag{color:#905}
 .token.attr-name,.token.selector,.token.string{color:#690}
 .language-css .token.string,.token.operator{color:#a67f59;background:hsla(0,0%,100%,.5)}
-.token.atrule,.token.attr-value,.token.keyword{color:#07a}
+.token.attr-value,.token.keyword{color:#07a}
 .token.function{color:#DD4A68}
-.token.regex{color:#e90}
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -50,10 +48,9 @@ pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#f5f2f0
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;background-color:#fff}
+body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;background-color:#fff}
 a{background-color:transparent}
 a:active,a:hover{outline:0}
-strong{font-weight:700}
 h1{margin:.67em 0}
 img{border:0}
 button,input,select,textarea{margin:0;font:inherit;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit}
@@ -63,18 +60,18 @@ button,input[type=submit]{-webkit-appearance:button;cursor:pointer}
 button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print{code[class*=language-],pre[class*=language-]{text-shadow:none}
-blockquote,img,pre{page-break-inside:avoid}
+img,pre{page-break-inside:avoid}
 *,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important}
 a,a:visited{text-decoration:underline}
 a[href]:after{content:" (" attr(href) ")"}
 abbr[title]:after{content:" (" attr(title) ")"}
 a[href^="#"]:after{content:""}
-blockquote,pre{border:1px solid #999}
+pre{border:1px solid #999}
 img{max-width:100%!important}
 h2,h3,p{orphans:3;widows:3}
 h2,h3{page-break-after:avoid}
 }
-.post-pic,.site,.youtube-iframe,label{max-width:100%}
+.site,label{max-width:100%}
 .btn,.btn-default:active,.btn:active{background-image:none}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 *,:after,:before{box-sizing:border-box}
@@ -90,11 +87,10 @@ h2{font-size:30px}
 h3{font-size:24px}
 small{font-size:85%}
 .page-header{padding-bottom:9px;margin:40px 0 20px;border-bottom:1px solid #eee}
-.btn,blockquote p:last-child,h1,ul ul{margin-bottom:0}
+.btn,h1{margin-bottom:0}
 h1,ol,ul{margin-top:0}
 ol,ul{margin-bottom:10px}
 abbr[title]{cursor:help;border-bottom:1px dotted #777}
-blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}
 code,pre{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}
 pre{padding:9.5px;margin:0 0 10px;font-size:13px;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
@@ -179,8 +175,6 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
-.post-pic{margin:0 auto;display:block}
-.post-list-item{line-height:24px;margin-bottom:20px}
 .post-navigation{clip:rect(1px,1px,1px,1px)}
 a.tweet-post-class{color:#fff;text-decoration:none}
 a.tweet-post-class:visited{color:#fff}

@@ -10,7 +10,7 @@ var gulp = require("gulp"), // "require" gulp
     autoprefixer = require('gulp-autoprefixer'),
     exec = require('child_process').exec, // Run CLI commands via node
     Q = require('q'), // Manage promises;
-    cp = require( "cp" );
+    cp = require( "cp" ); // Copy files over
 
 // End single var pattern
 
