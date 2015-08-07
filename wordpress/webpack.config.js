@@ -11,6 +11,11 @@ module.exports = {
     filename: "[name].js"
   },
   plugins: [
-    commonsChunkPlugin
+    commonsChunkPlugin,
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })  
   ]
 };
