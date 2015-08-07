@@ -17,11 +17,7 @@
   ],
   "dependencies": {
     "bootstrap": "latest",
-    "jquery": "1.11.3",
     "fontawesome": "4.4.0",
     "prism": "~latest"
-  },
-  "resolutions": {
-    "jquery": "~1.11.3"
   }
 }
