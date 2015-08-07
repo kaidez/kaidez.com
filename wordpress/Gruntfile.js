@@ -1,19 +1,19 @@
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
   // Project config
   grunt.initConfig({
-    pkg: grunt.file.readJSON("package.json"),
+    pkg: grunt.file.readJSON( "package.json" ),
 
     // start "bowercopy" task
     bowercopy: {
 
       /*
-       * don't send messages to saying that Bower components aren't
+       * Don't send messages to saying that Bower components aren't
        * configured...ignore them instead. Also, don't run any bower
        * tasks when grunt runs this task.
        */
       options: {
-        ignore: ["gulp", "jquery"],
+        ignore: [ "gulp", "jquery" ],
         runBower: false
       },
 
@@ -73,18 +73,7 @@ module.exports = function(grunt) {
 
            "fontawesome-webfont.otf": "fontawesome/fonts/fontawesome-webfont.otf"
         }
-      }, // end "bowercopy:bsfafont" task
-      // Copy jQuery over
-      jq: {
-
-        // copy to the "build/js/libs/" directory
-        options: {
-          destPrefix: "wp-content/themes/kaidez-swiss/js/libs/"
-        },
-        files: {
-          "jquery.min.js": "jquery/dist/jquery.min.js"
-        }
-      } // end "bowercopy:jq" task
+      } // end "bowercopy:bsfafont" task
     }, // end "bowercopy" task
 
     // start "coffee" task
@@ -102,7 +91,7 @@ module.exports = function(grunt) {
     } // end "coffee" task
   });
 
-  grunt.loadNpmTasks("grunt-bowercopy");
-  grunt.loadNpmTasks("grunt-contrib-coffee");
+  grunt.loadNpmTasks( "grunt-bowercopy" );
+  grunt.loadNpmTasks( "grunt-contrib-coffee" );
 
 };
