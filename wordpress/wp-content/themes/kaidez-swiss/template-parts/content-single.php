@@ -35,11 +35,11 @@
         <ul>
 
           <li id="fb-root">
-            <a id="facebook-share-link" target="blank">Facebook</a>
+            <a id="facebook-share-link" class="share-post-link" target="blank">Facebook</a>
           </li>
 
           <li>
-            <a id="googleplus-share-link" target="blank">Google+</a>
+            <a id="googleplus-share-link" class="share-post-link" target="blank">Google+</a>
           </li>
 
         </ul>
