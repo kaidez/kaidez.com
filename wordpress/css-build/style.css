@@ -93,6 +93,15 @@ p {
   background-color: #ed327f;
   border-color: #000;
 }
+/*
+ * position: relative causes weird issues for this Bootstrap element
+ * Set it to position:static
+ */
+@media (max-width: 767px) {
+  .col-md-4 {
+    position: static;
+  }
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   /* Small screen, retina, stuff to override above media query */
 }
@@ -728,7 +737,7 @@ a.tweet-post-class:active {
   /* Style main nav on mobile views */
   .main-navigation {
     position: absolute;
-    top: -298px;
+    top: -249px;
     width: 100%;
     height: 300px;
     background-color: #f1619c;
@@ -831,4 +840,8 @@ a.tweet-post-class:active {
    * FOOTER STYLES END
    * ==================================================================
    */
+  /* Fix stacking/z-index-like issues on mobile */
+  .fa {
+    display: inline;
+  }
 }

@@ -51,3 +51,13 @@ p {
     border-color: #000;
   }
 }
+
+/*
+ * position: relative causes weird issues for this Bootstrap element
+ * Set it to position:static
+ */
+@media (max-width: 767px) {
+  .col-md-4 {
+    position: static;
+  }
+} 
