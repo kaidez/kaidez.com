@@ -16,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
+    "fontawesome": "latest",
     "bootstrap": "latest",
-    "fontawesome": "4.4.0",
-    "prism": "~latest"
+    "prism": "latest"
   }
 }
