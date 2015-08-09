@@ -96,7 +96,7 @@
 <?php wp_footer(); ?>
 </div> <!-- #content -->
 
-<script src="/wp-content/themes/kaidez-swiss/js/init.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/common.js"></script>
 <script src="/wp-content/themes/kaidez-swiss/js/globals.js"></script>
 <script src="/wp-content/themes/kaidez-swiss/js/posts.js"></script>
 

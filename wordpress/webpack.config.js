@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin("init.js");
+    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin("common.js");
 
 module.exports = {
   entry: {
