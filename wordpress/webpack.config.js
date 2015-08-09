@@ -10,6 +10,12 @@ module.exports = {
     path: "wp-content/themes/kaidez-swiss/js/",
     filename: "[name].js"
   },
+  module: {
+    loaders:[
+      {test: /\.css$/, loader: "style!css"}
+    ]
+  },
+
   plugins: [
     commonsChunkPlugin,
     new webpack.optimize.UglifyJsPlugin({

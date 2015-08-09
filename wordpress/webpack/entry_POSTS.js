@@ -4,7 +4,8 @@ var $ = require("jquery"),
     comment = require("./config/comment-reply");
 
 // Require styles related to single posts ONLY!!!!
-require( "style!css!./posts.css" ); 
+// Loads in via the "loader" module in webpack.config.js
+require( "./posts.css" ); 
 
 
 // START "CLICK-TO-TWEET" CODE
