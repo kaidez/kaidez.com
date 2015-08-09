@@ -10,15 +10,15 @@ require( "style!css!./posts.css" );
 // START "CLICK-TO-TWEET" CODE
 
 var linkElement = document.getElementById( "tweet-this-post" ),
-    getPostLink = window.location.href;
+    getPostLink = window.location.href,
+    getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
 
 // Bind jQuery.click() to the Tweet link
 $( linkElement ).on( "click", function( event ){
   event.preventDefault();
   
-  var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
-      // getPostLink = window.location.href,
-      cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
+  // getPostLink = window.location.href,
+  var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
       tweetedLink;
 
   linkElement.setAttribute( "href", cleanLink );
@@ -37,15 +37,31 @@ $( linkElement ).on( "click", function( event ){
 document.addEventListener("DOMContentLoaded", function(event) {
 
   var socialSiteLinks = {
-    "facebook" : "facebook-share-link",
-    "googlePlus": "googleplus-share-link" 
+    "facebook" : {
+      "getLink": "facebook-share-link",
+      "linkHandle": "http://www.facebook.com/sharer.php?u="
+    },
+    "googlePlus": {
+      "getLink": "googleplus-share-link",
+      "linkHandle": "https://plus.google.com/share?url="
+    } 
   },
-  linkId;
+    linkId,
+    pageLink,
+    pageElement;
 
   Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
-    linkId = socialSiteLinks[value];
-    console.log( getPostLink );
-    var pageElement = document.getElementById( linkId );
+
+    linkId = socialSiteLinks[value].getLink;
+    pageLink = socialSiteLinks[value].linkHandle;
+    pageElement = document.getElementById( linkId );
+    pageElement.setAttribute( "title", getPostTitle );
+
+    if( linkId === "facebook-share-link" ) {
+      pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
+    } else {
+      pageElement.setAttribute( "href", pageLink + getPostLink );  
+    }
   });
 
 });

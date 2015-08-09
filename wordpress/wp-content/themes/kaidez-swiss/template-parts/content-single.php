@@ -33,13 +33,15 @@
         <a id="tweet-this-post" class="tweet-post-class">would you like to tweet this post?</a>
       
         <ul>
-          <li>
-            <a id="facebook-share-link" href="https://plus.google.com/share?url=http://kaidez.com{{ page.permalink }}" target="blank">Google+</a>
+
+          <li id="fb-root">
+            <a id="facebook-share-link" target="blank">Facebook</a>
           </li>
 
           <li>
-            <a id="googleplus-share-link" href="http://www.facebook.com/sharer.php?u=http://kaidez.com{{ page.permalink }}&t={{ page.title }}" target="blank">Facebook</a>
+            <a id="googleplus-share-link" target="blank">Google+</a>
           </li>
+
         </ul>
       </div><!-- #sharing-buttons -->
 
