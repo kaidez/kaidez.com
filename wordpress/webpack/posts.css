@@ -1,0 +1,7 @@
+/* Single post styling ONLY!! Compiled as a dependency via webpack */
+
+/* Style <li> tags that appear in single posts */
+.post-list-item {
+  line-height: 24px;
+  margin-bottom: 20px;
+}

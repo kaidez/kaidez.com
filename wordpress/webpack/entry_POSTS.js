@@ -2,6 +2,8 @@ var $ = require("jquery"),
     prism = require("./config/prism"),
     comment = require("./config/comment-reply");
 
+require( "style!css!./posts.css" ); 
+
 var linkElement = document.getElementById( "tweet-this-post" );
 
 // Bind jQuery.click() to the Tweet link
