@@ -440,11 +440,6 @@ a.colophon-link:hover {
 .table-of-contents-header {
   clear: both;
 }
-/* Style <li> tags that appear in single posts */
-.post-list-item {
-  line-height: 24px;
-  margin-bottom: 20px;
-}
 /*
  * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
 .post-navigation {
@@ -699,7 +694,7 @@ a.tweet-post-class:active {
    * Do this to make room for the search box
    */
   .site-content {
-    margin-top: 70px;
+    margin-top: 95px;
   }
   /* Style the search box on hand-held devices */
   .searchform-class {
@@ -718,6 +713,12 @@ a.tweet-post-class:active {
   .entry-header {
     margin-bottom: 20px;
   }
+  .breadcrumb_last {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
   /* Style post title on mobile views */
   .entry-title {
     font-size: 38px;
@@ -727,7 +728,7 @@ a.tweet-post-class:active {
   /* Style main nav on mobile views */
   .main-navigation {
     position: absolute;
-    top: -249px;
+    top: -298px;
     width: 100%;
     height: 300px;
     background-color: #f1619c;
@@ -757,7 +758,7 @@ a.tweet-post-class:active {
   }
   /*
    * ==================================================================
-   * HEADER STYLES END
+   * HEADER STYLES START
    * ==================================================================
    */
   /* Style the <header> */
