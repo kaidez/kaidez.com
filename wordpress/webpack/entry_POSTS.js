@@ -18,7 +18,6 @@ var linkElement = document.getElementById( "tweet-this-post" ),
 $( linkElement ).on( "click", function( event ){
   event.preventDefault();
   
-  // getPostLink = window.location.href,
   var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
       tweetedLink;
 
