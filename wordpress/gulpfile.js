@@ -43,6 +43,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
                      '.showSearchbox',
                      '.hideSearchbox',
                      '.hide-searchbox',
+                     '.post-pic',
                      '.show-searchbox',
                      '.entry-header > span'
                     ];
