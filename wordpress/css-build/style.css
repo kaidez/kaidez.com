@@ -35,8 +35,13 @@
   z-index: 5;
 }
 /* clearfix */
+/* Remove the common left padding that appears on all <ul> tags*/
 .ul-reset {
   padding-left: 0;
+}
+/* The common border-radius styling*/
+.br {
+  border-radius: 5px;
 }
 /*
  * HELPER CLASSES END
@@ -499,13 +504,13 @@ a.tweet-post-class:active {
   display: block;
   height: auto;
   width: 280px;
-  margin: 50px auto 0;
+  margin: 15px auto 0;
   padding: 10px;
-  border-radius: 5px;
   background-color: #ed327f;
   color: #fff;
   text-align: center;
   cursor: pointer;
+  border-radius: 5px;
 }
 /*
   * ===================================================================

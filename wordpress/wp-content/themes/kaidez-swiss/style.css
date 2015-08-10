@@ -14,6 +14,7 @@
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+hr,img{border:0}
 h1,h2,h3,h4{margin-bottom:10px}
 pre,textarea{overflow:auto}
 .aside-list-item,.menu-item{list-style-type:none}
@@ -51,7 +52,8 @@ a{background-color:transparent}
 a:active,a:hover{outline:0}
 strong{font-weight:700}
 h1{margin:.67em 0}
-img{border:0}
+h1,h2,h3,hr{margin-top:20px}
+hr{height:0;box-sizing:content-box;margin-bottom:20px;border-top:1px solid #eee}
 button,input,select,textarea{margin:0;font:inherit;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit}
 button{overflow:visible}
 button,select{text-transform:none}
@@ -79,7 +81,6 @@ a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-of
 h1,h2,h3,h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}
 h3 small{font-weight:400;line-height:1;color:#777;font-size:65%}
 .btn,pre{line-height:1.42857143}
-h1,h2,h3{margin-top:20px}
 h4{margin-top:10px;font-size:18px}
 h1{font-size:36px}
 h2{font-size:30px}
@@ -183,7 +184,7 @@ a.tweet-post-class{color:#fff;text-decoration:none}
 a.tweet-post-class:visited{color:#fff}
 a.tweet-post-class:active,a.tweet-post-class:hover{color:#fff;background-color:#55acee}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
-.tweet-post-class{display:block;height:auto;width:280px;margin:50px auto 0;padding:10px;border-radius:5px;background-color:#ed327f;color:#fff;text-align:center;cursor:pointer}
+.tweet-post-class{display:block;height:auto;width:280px;margin:15px auto 0;padding:10px;background-color:#ed327f;color:#fff;text-align:center;cursor:pointer;border-radius:5px}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
