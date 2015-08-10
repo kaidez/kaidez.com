@@ -3,16 +3,8 @@
 /*
  * START MIXINS
  */
-/* Remove extra left margin that appears on <ul> tags */
-.ul-reset {
-  padding-left: 0;
-}
 
-/*
- * STOP MIXINS
- */
-
-
+/* Add space between the breadcrumbs and the content */
 .entry-title-margin {
   margin-top: 20px;
 }
@@ -22,11 +14,6 @@
   margin-bottom: 20px;
 }
 
-.sharing-list {
-  text-align: center; 
-
-  .ul-reset();
-}
 /* List items for Facebook & Google+ links for post pages */
 .share-post-list-item {
   display: inline-block;
@@ -43,13 +30,13 @@
 /*  Facebook & Google+ sharing link classes for post pages */
 .share-post-link {
   padding-left: 10px;
-
   font-size: 16px;
   font-weight: bold;
   line-height: 1;
   font-family: sans-serif;
 }
 
+/* Make the single post pics responsive */
 .post-pic {
   max-width: 100%;
   margin: 0 auto;
