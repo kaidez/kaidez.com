@@ -1,5 +1,7 @@
 /* Single post styling ONLY!! Compiled as a dependency via webpack */
 
+@import "../css-build/imports/variables";
+
 /*
  * START MIXINS
  */
@@ -40,4 +42,10 @@
 .post-pic {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.demo-link {
+  padding: 10px;
+  color: #fff;
+  background-color: darken(@pink, 40%);
 }
