@@ -30,19 +30,19 @@
         ) );
       ?>
       <div id="sharing-buttons">
-        <a id="tweet-this-post" class="tweet-post-class">would you like to tweet this post?</a>
+
+        <div>
+          <a id="tweet-this-post" class="tweet-post-class">would you like to tweet this post?</a>
+        </div>
       
-        <ul>
+        <div class="other-sharing-element">
+          <p>other ways to share this post:</p> 
+          <p>
+            <a id="facebook-share-link" class="share-post-link" target="blank">facebook</a> <a id="googleplus-share-link" class="share-post-link" target="blank">Google+</a>
+          </p>
 
-          <li id="fb-root">
-            <a id="facebook-share-link" class="share-post-link" target="blank">Facebook</a>
-          </li>
+        </div>
 
-          <li>
-            <a id="googleplus-share-link" class="share-post-link" target="blank">Google+</a>
-          </li>
-
-        </ul>
       </div><!-- #sharing-buttons -->
 
 
