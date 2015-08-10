@@ -11,8 +11,11 @@ module.exports = {
     filename: "[name].js"
   },
   module: {
-    loaders:[
-      {test: /\.css$/, loader: "style!css"}
+    loaders: [
+      {
+        test: /\.css$/, loader: "style!css",
+        test: /\.less$/, loader: "style!css!less"
+      }
     ]
   },
 
