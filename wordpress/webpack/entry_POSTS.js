@@ -5,7 +5,7 @@ var $ = require("jquery"),
 
 // Require styles related to single posts ONLY!!!!
 // Loads in via the "loader" module in webpack.config.js
-require( "./posts.css" ); 
+require( "./posts.less" ); 
 
 
 // START "CLICK-TO-TWEET" CODE
