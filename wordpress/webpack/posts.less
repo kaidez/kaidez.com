@@ -1,12 +1,16 @@
 /* Single post styling ONLY!! Compiled as a dependency via webpack */
 
-
+/*
+ * START MIXINS
+ */
 /* Remove extra left margin that appears on <ul> tags */
 .ul-reset {
-  margin-left: 0;
+  padding-left: 0;
 }
 
-
+/*
+ * STOP MIXINS
+ */
 
 
 /* Style <li> tags that appear in single posts */
@@ -16,6 +20,8 @@
 }
 
 .sharing-list {
+  text-align: center; 
+
   .ul-reset();
 }
 /* List items for Facebook & Google+ links for post pages */
@@ -25,9 +31,18 @@
   list-style-type: none;
 }
 
+.other-sharing-element {
+  margin-top:10px;
+
+  text-align: center;
+}
+
 /*  Facebook & Google+ sharing link classes for post pages */
 .share-post-link {
+  padding-left: 10px;
+
   font-size: 16px;
+  font-weight: bold;
   line-height: 1;
   font-family: sans-serif;
 }
