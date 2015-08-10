@@ -215,7 +215,7 @@ a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-content{margin-top:95px}
 .searchform-class{width:100%;position:absolute;top:50px;right:0;padding:10px;background-color:#d91365;opacity:0;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
-.entry-header{margin-bottom:20px}
+.entry-header{margin-bottom:42px}
 .breadcrumb_last{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .entry-title{font-size:38px;font-size:3.8rem;font-weight:700}
 .main-navigation{position:absolute;top:-249px;width:100%;height:300px;background-color:#f1619c}
@@ -226,7 +226,7 @@ a.nav-links:visited{color:#000}
 .site-header{width:100%;height:49px;position:fixed;top:0;right:0;left:0;-webkit-transform:translateZ(0)}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
-.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;background-color:#000}
+.jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;cursor:pointer;background-color:#000}
 a.jump-to-top-link{color:#fff;font-weight:700}
 .fa{display:inline}
 }

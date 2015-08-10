@@ -723,7 +723,7 @@ a.tweet-post-class:active {
   }
   /* Add space between a single post's header & content */
   .entry-header {
-    margin-bottom: 20px;
+    margin-bottom: 42px;
   }
   .breadcrumb_last {
     position: absolute !important;
@@ -819,6 +819,7 @@ a.tweet-post-class:active {
     padding: 10px;
     width: 200px;
     color: #fff;
+    cursor: pointer;
     text-align: center;
     background-color: #000;
   }
