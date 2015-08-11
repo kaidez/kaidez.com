@@ -1,5 +1,10 @@
 var webpack = require("webpack"),
-    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin("common.js");
+    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin("common.js"),
+    UglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    });
 
 module.exports = {
   entry: {
@@ -23,10 +28,6 @@ module.exports = {
 
   plugins: [
     commonsChunkPlugin,
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })  
+    UglifyJsPlugin 
   ]
 };
