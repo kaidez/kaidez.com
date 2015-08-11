@@ -34,6 +34,13 @@ $( linkElement ).on( "click", function( event ){
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
+  var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
+
+  $.get(getData)
+    .done(function(data){
+      $("sharing-buttons").load(data);
+    });
+    
   var socialSiteLinks = {
     "facebook" : {
       "getLink": "facebook-share-link",
