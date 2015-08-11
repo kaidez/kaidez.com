@@ -4,7 +4,11 @@ var webpack = require("webpack"),
 module.exports = {
   entry: {
     globals: "./webpack/entry_GLOBALS",
-    posts: "./webpack/entry_POSTS"
+    posts: "./webpack/entry_POSTS",
+    corePosts: [
+      "./webpack/config/prism",
+      "./webpack/config/comment-reply"
+    ]
   },
   output: {
     path: "wp-content/themes/kaidez-swiss/js/",

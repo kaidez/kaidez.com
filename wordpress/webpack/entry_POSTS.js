@@ -1,7 +1,5 @@
 var $ = require("jquery"),
-    prism = require("./config/prism"),
-    sharin = require("./config/async-sharing"),
-    comment = require("./config/comment-reply");
+    sharing = require("./config/async-sharing");
 
 // Require styles related to single posts ONLY!!!!
 // Loads in via the "loader" module in webpack.config.js
