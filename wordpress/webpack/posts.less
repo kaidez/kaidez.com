@@ -3,9 +3,6 @@
 /* Import the site's variables.less & mixins.less files */
 @import "../css-build/imports/variables";
 @import "../css-build/imports/mixins";
-/*
- * START MIXINS
- */
 
 /* Add space between the breadcrumbs and the content */
 .entry-title-margin {
@@ -90,4 +87,24 @@ a.facebook, a.googleplus {
 
 hr {
   border-color: #000;
+}
+
+/* Start related posts styles link */
+.rp4wp-related-posts ul {
+  width:100%;
+  padding:0;
+  margin:0;
+}
+
+.rp4wp-related-posts ul>li {
+  padding:0;
+  margin:0;
+  clear:both;
+
+  list-style:none;
+}
+
+.rp4wp-related-posts ul>li>p {
+  margin:0;
+  padding:0;
 }
