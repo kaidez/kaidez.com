@@ -10,7 +10,7 @@ module.exports = {
   entry: {
     globals: "./webpack/entry_GLOBALS",
     posts: [
-      "./webpack/entry_POSTS",
+      "./webpack/entry_SHARING",
       "./webpack/config/prism",
       "./webpack/config/comment-reply"
     ]
