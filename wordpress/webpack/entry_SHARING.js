@@ -36,11 +36,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
+  // Content needs to load ABOVE the related posts content
   $.get(getData)
     .done(function(data){
       $("sharing-buttons").load(data);
     });
-    
+
   var socialSiteLinks = {
     "facebook" : {
       "getLink": "facebook-share-link",
