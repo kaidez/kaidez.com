@@ -9,8 +9,8 @@ var webpack = require("webpack"),
 module.exports = {
   entry: {
     globals: "./webpack/entry_GLOBALS",
-    posts: "./webpack/entry_POSTS",
-    corePosts: [
+    posts: [
+      "./webpack/entry_POSTS",
       "./webpack/config/prism",
       "./webpack/config/comment-reply"
     ]
