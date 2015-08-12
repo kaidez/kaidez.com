@@ -35,10 +35,9 @@
 
 /*  Facebook & Google+ sharing link classes for post pages */
 .share-post-link {
-  padding-left: 10px;
-  font-size: 16px;
-  font-weight: bold;
   line-height: 1;
+
+  font-size: 16px;
   font-family: sans-serif;
 }
 
@@ -58,29 +57,31 @@
   .br();
 }
 
-.sharing-buttons {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
 /* Style the "view the demo" link regular a state */
 a.demo-link {
   text-decoration: none;
 }
 
-.facebook, .googleplus {
-  padding: 10px;
-
-  color: #737373;
-
-  .br();
+.sharing-buttons {
+  border: 1px solid #000;
 }
 
 .facebook {
+  margin-right: 10px;
+
   background-color: #3b5998;
 }
 
 .googleplus {
+  margin-left: 10px;
+  
   background-color: #dd4b39;
+}
+
+.facebook, .googleplus {
+  padding: 10px;
+
+  .br();
 }
 
 a.facebook, a.googleplus {
@@ -89,8 +90,21 @@ a.facebook, a.googleplus {
   font-weight: normal;
 }
 
-
 /* Start related posts styles link */
+
+/* The related posts container */
+.rp4wp-related-posts {
+  margin-bottom:35px;
+}
+/* "more posts..." text */
+.rp4wp-related-posts h3 {
+  margin: 35px 0 10px;
+
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
 .rp4wp-related-posts ul {
   width:100%;
   padding:0;
