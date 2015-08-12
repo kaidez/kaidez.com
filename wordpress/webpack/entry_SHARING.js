@@ -40,41 +40,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
   return Q($.ajax({
     url: getData, 
     type: "GET"
-})).then(function (data) {
+   })).then(function (data) {
     $(".rp4wp-related-posts").before( data );
+
       var socialSiteLinks = {
-    "facebook" : {
-      "getLink": "facebook-share-link",
-      "linkHandle": "http://www.facebook.com/sharer.php?u="
-    },
-    "googlePlus": {
-      "getLink": "googleplus-share-link",
-      "linkHandle": "https://plus.google.com/share?url="
-    } 
-  },
-    linkId,
-    pageLink,
-    pageElement;
+            "facebook" : {
+              "getLink": "facebook-share-link",
+              "linkHandle": "http://www.facebook.com/sharer.php?u="
+            },
+            "googlePlus": {
+              "getLink": "googleplus-share-link",
+              "linkHandle": "https://plus.google.com/share?url="
+            } 
+        },
+        linkId,
+        pageLink,
+        pageElement;
 
-  Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
+      Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
 
-    linkId = socialSiteLinks[value].getLink;
-    pageLink = socialSiteLinks[value].linkHandle;
-    pageElement = document.getElementById( linkId );
-    pageElement.setAttribute( "title", getPostTitle );
+        linkId = socialSiteLinks[value].getLink;
+        pageLink = socialSiteLinks[value].linkHandle;
+        pageElement = document.getElementById( linkId );
+        pageElement.setAttribute( "title", getPostTitle );
 
-    if( linkId === "facebook-share-link" ) {
-      pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
-    } else {
-      pageElement.setAttribute( "href", pageLink + getPostLink );  
-    }
-  }); 
-}, function (xhr) {
-    console.log("nope");
-});
-
-
-
+        if( linkId === "facebook-share-link" ) {
+          pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
+        } else {
+          pageElement.setAttribute( "href", pageLink + getPostLink );  
+      }
+    }); 
+  }, function (xhr) {
+   console.log("nope");
+  });
 
 });
 // END FACEBOOK & GOOGLE+ SHARING CODE
