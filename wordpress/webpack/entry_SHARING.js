@@ -52,16 +52,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
               "getLink": "googleplus-share-link",
               "linkHandle": "https://plus.google.com/share?url="
             } 
-        },
-        linkId,
-        pageLink,
-        pageElement;
+        };
 
       Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
 
-        linkId = socialSiteLinks[value].getLink;
-        pageLink = socialSiteLinks[value].linkHandle;
-        pageElement = document.getElementById( linkId );
+        var linkId = socialSiteLinks[value].getLink,
+            pageLink = socialSiteLinks[value].linkHandle,
+            pageElement = document.getElementById( linkId );
+
         pageElement.setAttribute( "title", getPostTitle );
 
         if( linkId === "facebook-share-link" ) {
