@@ -271,6 +271,10 @@ i {
 .home-link {
   color: #000;
 }
+/* add space above a post's time/author info */
+.entry-meta {
+  margin-top: 10px;
+}
 /*
  * ====================================================================
  * MENU STYLES START
@@ -443,44 +447,6 @@ a.colophon-link:hover {
  * ====================================================================
  * FOOTER STYLES END
  * ====================================================================
- */
-/*
- * ===================================================================
- * POSTS STYLES START
- * ===================================================================
- */
-.post-pic {
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-.table-of-contents-header {
-  clear: both;
-}
-/*
- * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
-.post-navigation {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-a.tweet-post-class {
-  color: #fff;
-  text-decoration: none;
-}
-a.tweet-post-class:visited {
-  color: #fff;
-}
-a.tweet-post-class:hover,
-a.tweet-post-class:active {
-  color: #fff;
-  background-color: #55acee;
-}
-/*
- * ===================================================================
- * POST STYLES END
- * ===================================================================
  */
 /*
  * ===================================================================

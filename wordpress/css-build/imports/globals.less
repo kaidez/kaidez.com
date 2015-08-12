@@ -19,6 +19,10 @@ i {
   color: #000;
 }
 
+/* add space above a post's time/author info */
+.entry-meta {
+  margin-top: 10px;
+}
 /*
  * ====================================================================
  * MENU STYLES START
@@ -205,7 +209,6 @@ a.footer-links {
   }
 }
 
-
 a.colophon-link {
   color: lighten(@pink, 20%);
   text-decoration: none;
@@ -225,45 +228,6 @@ a.colophon-link {
  * ====================================================================
  * FOOTER STYLES END
  * ====================================================================
- */
-
-
-
-/*
- * ===================================================================
- * POSTS STYLES START
- * ===================================================================
- */
-
-.post-pic {
-  .responsive-image();
-}
-
-.table-of-contents-header {
-  clear: both;
-}
-
-/*
- * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
-.post-navigation {
-  .hide-element();
-}
-
-a.tweet-post-class {
-  color: #fff;
-  text-decoration: none;
-  &:visited {
-    color: #fff;
-  }
-  &:hover, &:active {
-    color: #fff;
-    background-color: #55acee;
-  }
-}
-/*
- * ===================================================================
- * POST STYLES END
- * ===================================================================
  */
 
 

@@ -33,14 +33,6 @@
   margin-bottom:10px;
 }
 
-/*  Facebook & Google+ sharing link classes for post pages */
-.share-post-link {
-  line-height: 1;
-
-  font-size: 16px;
-  font-family: sans-serif;
-}
-
 /* Make the single post pics responsive */
 .post-pic {
   max-width: 100%;
@@ -70,10 +62,6 @@
   margin: 1em 0;
   padding: 0;
 }
-
-
-
-
 
 /* Style the submit button on all posts */
 .submit {
@@ -108,35 +96,71 @@ a.demo-link {
   padding: 10px;
 
   background-color: @pink;
-  color: #fff;
   text-align: center;
   cursor: pointer;
 
   .br();
 }
 
+/* Style the "Click to Tweet" link states */
+a.tweet-post-class {
+  color: #fff;
+  text-decoration: none;
+  &:visited {
+    color: #fff;
+  }
+  &:hover, &:active {
+    color: #fff;
+    background-color: #55acee;
+  }
+}
+
+/* Make pictures in posts responsive */
+.post-pic {
+  .responsive-image();
+}
+
+/* Style the table of contents that appear in single posts */
+.table-of-contents-header {
+  clear: both;
+}
+
+/*
+ * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
+.post-navigation {
+  .hide-element();
+}
+
+/* Facebook share link styles only */
 .facebook {
   margin-right: 10px;
 
   background-color: #3b5998;
 }
 
+/* Google+ share link styles only */
 .googleplus {
   margin-left: 10px;
   
   background-color: #dd4b39;
 }
 
+/* Facebook AND Google+ element styles */
 .facebook, .googleplus {
   padding: 10px;
+  line-height: 1;    
+
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: normal;
 
   .br();
 }
 
+/* Facebook AND Google+ link state styles */
 a.facebook, a.googleplus {
   color: #fff;
   text-decoration: none;
-  font-weight: normal;
 }
 
 /* Start related posts styles link */

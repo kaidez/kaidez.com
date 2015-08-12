@@ -66,7 +66,7 @@ img{max-width:100%!important}
 h2,h3,p{orphans:3;widows:3}
 h2,h3{page-break-after:avoid}
 }
-.post-pic,.site,.youtube-iframe,label{max-width:100%}
+.site,.youtube-iframe,label{max-width:100%}
 .btn,.btn-default:active,.btn:active{background-image:none}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 *,:after,:before{box-sizing:border-box}
@@ -131,7 +131,7 @@ to{-webkit-transform:translateY(0);transform:translateY(0)}
 .show-menu{-webkit-animation-name:showMobileMenu;animation-name:showMobileMenu;animation-duration:.3s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
 .hide-menu,.show-menu{-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:.3s}
 .hide-menu{-webkit-animation-name:hideMobileMenu;animation-name:hideMobileMenu;animation-duration:.3s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
-.aside-header,.main-navigation-header,.post-navigation,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
+.aside-header,.main-navigation-header,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @-webkit-keyframes showSearchbox{0%{opacity:0}
 100%{opacity:1}
 }
@@ -151,6 +151,7 @@ to{opacity:0}
 .site{overflow-x:hidden}
 i{width:30px;height:30px}
 .home-link{color:#000}
+.entry-meta{margin-top:10px}
 .screen-reader-text{clip:rect(1px,1px,1px,1px)}
 a.homepage-title-link{text-decoration:none}
 a.homepage-title-link:hover{color:#f1619c}
@@ -173,8 +174,6 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
-.post-pic{margin:0 auto;display:block}
-.post-navigation{clip:rect(1px,1px,1px,1px)}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
