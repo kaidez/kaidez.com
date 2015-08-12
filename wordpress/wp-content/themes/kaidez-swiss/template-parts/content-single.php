@@ -27,5 +27,6 @@
     </div><!-- .entry-content -->
   
   </article><!-- #post-## -->
+  <hr class="post-hr">
   
   
