@@ -7,13 +7,17 @@
 
 ?>
 
+
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
     <header class="entry-header">
-    <?php
-      if ( function_exists( 'yoast_breadcrumb' ) ) {
-        yoast_breadcrumb();
-      }
-    ?>
+
+    <div class="breadcrumbs">
+      <span><a href="/">Home</a>  » </span>
+      <span><?php the_category(', '); ?></span>
+      <span class="breadcrumb-title">» <?php the_title(''); ?></span>
+    </div>
+
+
       <?php the_title( '<h1 id="blog-post-title" class="entry-title entry-title-margin" itemprop="headline">', '</h1>' ); ?>
   
       <div class="entry-meta">

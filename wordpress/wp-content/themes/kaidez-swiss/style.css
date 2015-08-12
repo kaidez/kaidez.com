@@ -15,12 +15,13 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 hr,img{border:0}
+body,figure{margin:0}
 h1,h2,h3,h4{margin-bottom:10px}
 pre,textarea{overflow:auto}
 .aside-list-item,.menu-item{list-style-type:none}
 @font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-transform:translate(0,0);transform:translate(0,0)}
-article,aside,footer,header,main,nav,pre,section{display:block}
+article,aside,figcaption,figure,footer,header,main,nav,pre,section{display:block}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 .btn,img{vertical-align:middle}
 .fa-search:before{content:"\f002"}
@@ -33,13 +34,6 @@ code[class*=language-],pre[class*=language-]{color:#000;text-shadow:0 1px #fff;f
 code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}
 code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}
 pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#f5f2f0}
-.token.comment,.token.doctype{color:#708090}
-.token.punctuation{color:#999}
-.token.property,.token.tag{color:#905}
-.token.attr-name,.token.selector,.token.string{color:#690}
-.language-css .token.string,.token.operator{color:#a67f59;background:hsla(0,0%,100%,.5)}
-.token.atrule,.token.attr-value,.token.keyword{color:#07a}
-.token.function{color:#DD4A68}
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -47,7 +41,7 @@ pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#f5f2f0
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent}
-body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;background-color:#fff}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;background-color:#fff}
 a{background-color:transparent}
 a:active,a:hover{outline:0}
 strong{font-weight:700}
@@ -72,7 +66,7 @@ img{max-width:100%!important}
 h2,h3,p{orphans:3;widows:3}
 h2,h3{page-break-after:avoid}
 }
-.site,label{max-width:100%}
+.post-pic,.site,.youtube-iframe,label{max-width:100%}
 .btn,.btn-default:active,.btn:active{background-image:none}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 *,:after,:before{box-sizing:border-box}
@@ -179,12 +173,9 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
+.post-pic{margin:0 auto;display:block}
 .post-navigation{clip:rect(1px,1px,1px,1px)}
-a.tweet-post-class{color:#fff;text-decoration:none}
-a.tweet-post-class:visited{color:#fff}
-a.tweet-post-class:active,a.tweet-post-class:hover{color:#fff;background-color:#55acee}
 .submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
-.tweet-post-class{display:block;height:auto;width:280px;margin:15px auto 0;padding:10px;background-color:#ed327f;color:#fff;text-align:center;cursor:pointer;border-radius:5px}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
@@ -217,7 +208,7 @@ a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-
 .site-content{margin-top:95px}
 .searchform-class{width:100%;position:absolute;top:50px;right:0;padding:10px;background-color:#d91365;opacity:0;box-shadow:3px 2px 5px 0 rgba(0,0,0,.18)}
 .entry-header{margin-bottom:42px}
-.breadcrumb_last{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.breadcrumb-title{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .entry-title{font-size:38px;font-size:3.8rem;font-weight:700}
 .main-navigation{position:absolute;top:-249px;width:100%;height:300px;background-color:#f1619c}
 a.nav-links{height:70px;display:block;padding-left:10px;line-height:4rem;line-height:4em;color:#000;font-weight:900}

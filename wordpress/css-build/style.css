@@ -730,7 +730,7 @@ a.tweet-post-class:active {
   .entry-header {
     margin-bottom: 42px;
   }
-  .breadcrumb_last {
+  .breadcrumb-title {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
