@@ -55,6 +55,9 @@
       <h4 class="aside-section-header">site navigation</h4>
       <ul class="aside-list">
         <li class="aside-list-item">
+          <a href="/" class="aside-link" title="go to the kaidez home">home</a>
+        </li>
+        <li class="aside-list-item">
           <a href="#" class="aside-link" title="read the kaidez blog">blog</a>
         </li>
         <li class="aside-list-item">
