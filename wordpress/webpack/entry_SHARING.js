@@ -1,4 +1,5 @@
 var $ = require("jquery"),
+    Q = require("Q"),
     sharing = require("./config/async-sharing");
 
 // Require styles related to single posts ONLY!!!!
@@ -36,13 +37,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
-  // Content needs to load ABOVE the related posts content
-  $.get(getData)
-    .done(function(data){
-      $("sharing-buttons").load(data);
-    });
-
-  var socialSiteLinks = {
+  return Q($.ajax({
+    url: getData, 
+    type: "GET"
+})).then(function (data) {
+    $(".rp4wp-related-posts").before( data );
+      var socialSiteLinks = {
     "facebook" : {
       "getLink": "facebook-share-link",
       "linkHandle": "http://www.facebook.com/sharer.php?u="
@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     } else {
       pageElement.setAttribute( "href", pageLink + getPostLink );  
     }
-  });
+  }); 
+}, function (xhr) {
+    console.log("nope");
+});
+
+
+
 
 });
 // END FACEBOOK & GOOGLE+ SHARING CODE
