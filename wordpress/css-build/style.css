@@ -490,16 +490,6 @@ a.tweet-post-class:active {
 .youtube-iframe {
   max-width: 100%;
 }
-/* Style the submit button on all posts */
-.submit {
-  padding: 10px;
-  border: none;
-  color: #fff;
-  background-color: #c2115a;
-}
-.comment-label {
-  display: block;
-}
 /*
   * ===================================================================
   * MISCELLANOUS STYLES END

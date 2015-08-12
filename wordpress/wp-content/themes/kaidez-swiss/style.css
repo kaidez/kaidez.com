@@ -175,7 +175,6 @@ a.colophon-link,a.colophon-link:visited{color:#f590ba;text-decoration:none}
 a.colophon-link:hover{color:#f7a7c8;text-decoration:none}
 .post-pic{margin:0 auto;display:block}
 .post-navigation{clip:rect(1px,1px,1px,1px)}
-.submit{padding:10px;border:none;color:#fff;background-color:#c2115a}
 @media (min-width:768px){.col-md-4,.main-navigation,.menu-item,.site-branding{display:inline-block}
 .site-header{padding:3px 0 0 20px}
 .site-title{margin-bottom:5px;position:absolute;font-size:65px}
