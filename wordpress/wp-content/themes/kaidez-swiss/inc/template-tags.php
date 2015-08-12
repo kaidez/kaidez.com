@@ -84,7 +84,7 @@ function kaidez_swiss_posted_on() {
 
 	$posted_on = sprintf(
 		esc_html_x( '%s', 'post date', 'kaidez-swiss' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
 	$byline = sprintf(
