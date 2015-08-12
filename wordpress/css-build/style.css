@@ -500,18 +500,6 @@ a.tweet-post-class:active {
 .comment-label {
   display: block;
 }
-.tweet-post-class {
-  display: block;
-  height: auto;
-  width: 280px;
-  margin: 15px auto 0;
-  padding: 10px;
-  background-color: #ed327f;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 5px;
-}
 /*
   * ===================================================================
   * MISCELLANOUS STYLES END
