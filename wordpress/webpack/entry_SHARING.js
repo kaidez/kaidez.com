@@ -1,10 +1,13 @@
-var $ = require("jquery"),
-    Q = require("Q"),
-    sharing = require("./config/async-sharing");
+  
+  var $ = require("jquery"),
+    Q = require("Q");
 
 // Require styles related to single posts ONLY!!!!
 // Loads in via the "loader" module in webpack.config.js
-require( "./posts.less" ); 
+require( "./posts.less" );
+require("./config/prism-styles.css");
+require("./config/async-sharing");
+
 
 
 // START "CLICK-TO-TWEET" CODE
@@ -14,7 +17,7 @@ var linkElement = document.getElementById( "tweet-this-post" ),
     getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
 
 // Bind jQuery.click() to the Tweet link
-$( linkElement ).on( "click", function( event ){
+$( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   event.preventDefault();
   
   var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
