@@ -1,11 +1,12 @@
-  
-  var $ = require("jquery"),
+var $ = require("jquery"),
     Q = require("Q");
 
 // Require styles related to single posts ONLY!!!!
 // Loads in via the "loader" module in webpack.config.js
 require( "./posts.less" );
 require("./config/prism-styles.css");
+
+// Loads in async sharing code for Facebook & Google+
 require("./config/async-sharing");
 
 
