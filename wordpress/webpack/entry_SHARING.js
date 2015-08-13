@@ -74,25 +74,37 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // Set the Twitter links href attribute to be the cleaned up URL
     linkElement.setAttribute( "href", cleanLink );
 
-
-    // Object that contains properties for the Facebook & Google+ links
+    /*
+     * Object that contains properties for the Facebook & Google+ links
+     * These links are already on the web page at this point
+     * "getLink" is the id of the link already on the page
+     */
     var socialSiteLinks = {
       "facebook" : {
-        "getLink": "facebook-share-link",
+        "getLink": "facebook-share-link",  
         "linkHandle": "http://www.facebook.com/sharer.php?u="
       },
       "googlePlus": {
-        "getLink": "googleplus-share-link",
+        "getLink": "googleplus-share-link",  
         "linkHandle": "https://plus.google.com/share?url="
       } 
     };
 
     // Loop through object with the ES5 {}.getOwnPropertyNames() method
     Object.getOwnPropertyNames( socialSiteLinks ).forEach( function( value ) {
+
+      /*
+       * Do the following on each loop iteration:
+       *
+       * -get object's "getLink" property & store it in linkId var
+       * -get object's "linkHandle" property & store it in pageLink var
+       * -let the "getLink" property be the id of the button
+       */
       var linkId = socialSiteLinks[value].getLink,
           pageLink = socialSiteLinks[value].linkHandle,
           pageElement = document.getElementById( linkId );
 
+      // set the "title" property of the link to be the blog post title
       pageElement.setAttribute( "title", getPostTitle );
       
       if( linkId === "facebook-share-link" ) {
@@ -102,7 +114,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       }
     }); 
   }, function ( xhr ) {
-   console.log("The social sharing links failed to load...you may needs refresh the page.");
+   console.log( "The social sharing links failed to load...you may needs refresh the page." );
   });
 
 }); // end "document.addEventListener()"
