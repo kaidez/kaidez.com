@@ -87,7 +87,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       } 
     };
 
-    // Loop through the object with ES5 {}.getOwnPropertyNames() method
+    // Loop through object with the ES5 {}.getOwnPropertyNames() method
     Object.getOwnPropertyNames( socialSiteLinks ).forEach( function( value ) {
       var linkId = socialSiteLinks[value].getLink,
           pageLink = socialSiteLinks[value].linkHandle,
