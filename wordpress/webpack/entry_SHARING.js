@@ -123,20 +123,33 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
 // END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
 
-
-
 /*
  * START CLICK-TO-TWEET CODE
  * ====================================================================
  * 
- * If the "click-to-tweet" link is clicked, create a pop-up interface for Tweeting out the link.
+ * If the "click-to-tweet" link is clicked, create a pop-up interface
+ * for Tweeting out the link.
+ */
+
+/*
+ * The "click-to-tweet" link is not on the page on initial page load,
+ * so $.click() wont work on it. Instead, use $.delegate() to bind a
+ * click event to the link.
  */
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   
+  // Don't load the link in the address bar when clicked.
   event.preventDefault();
   
+  // Grab the "click-to-tweet" link's "href" attribute when clicked.
   var tweetedLink = this.getAttribute( "href" );
 
+  /*
+   * Open the popup window and setup the Tweet-out interface. A link
+   * needs to be built out that contains both the "click-to-tweet"
+   * link's "href" attribute and the title of the blog post. The
+   * latter is stored in the "getPostTitle" variable.
+   */
   window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 
 });
