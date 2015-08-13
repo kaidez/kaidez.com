@@ -69,12 +69,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $( ".rp4wp-related-posts" ).before( data );
     
     // Start setting up the Twitter link
-    var linkElement = document.getElementById( "tweet-this-post" ),
-        socialSiteLinks;
+    var linkElement = document.getElementById( "tweet-this-post" );
 
     linkElement.setAttribute( "href", cleanLink );
 
-    socialSiteLinks = {
+    var socialSiteLinks = {
       "facebook" : {
         "getLink": "facebook-share-link",
         "linkHandle": "http://www.facebook.com/sharer.php?u="
