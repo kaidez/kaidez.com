@@ -8,6 +8,8 @@
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
+
+
 // nav code
 var nav = {
   bodyClass: "show-mobile-menu",
@@ -42,6 +44,34 @@ var search = {
   }
 };
 
+// Menu button
+$( "#mobile-menu-button" ).click( function(){
+  q.fcall( function(){
+    if( $( "#branding" ).attr( "style", "z-index: auto;" ) ) {
+      $( "#branding" ).attr( "style", "z-index: 2;" ); 
+    } else if( $( "#branding" ).attr( "style", "z-index: 2;" ) ){
+      $( "#branding" ).attr( "style", "z-index: auto;" ); 
+    }
+  }).then( function() {
+    animateNavElement( nav );
+  });
+});
+
+// Search button
+$( "#mobile-search-button" ).click( function() {
+
+  q.fcall( function(){
+    if( $( "#branding" ).attr( "style", "z-index: 2;" ) ) {
+      $( "#branding" ).attr( "style", "z-index: auto;" ); 
+    } else if( $( "#branding" ).attr( "style", "z-index: auto;" ) ){
+      $( "#branding" ).attr( "style", "z-index: 2;" ); 
+    }
+  }).then( function() {
+    animateNavElement( search );
+  });
+
+});
+
 function animateNavElement( obj ) {
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
     q.fcall( function(){
@@ -61,13 +91,3 @@ function animateNavElement( obj ) {
     });
   }
 }
-
-// Menu button
-$( "#mobile-menu-button" ).click(function(){
-  animateNavElement( nav );
-});
-
-// Search button
-$( "#mobile-search-button" ).click( function() {
-  animateNavElement( search );
-});
