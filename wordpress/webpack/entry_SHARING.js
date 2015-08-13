@@ -19,7 +19,7 @@ require("./config/async-sharing");
  * then have "prism-styles.css" just load onto those pages 
  */
 require( "./posts.less" );
-require("./config/prism-styles.css");
+require( "./config/prism-styles.css" );
 
 // Set a 
 var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
@@ -29,16 +29,16 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
 
 // START FACEBOOK & GOOGLE+ SHARING CODE
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener( "DOMContentLoaded", function( event ) {
 
   var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
-  return Q($.ajax({
+  return Q( $.ajax({
     url: getData, 
     type: "GET"
-   })).then(function (data) {
+   })).then(function ( data ) {
 
-    $(".rp4wp-related-posts").before( data );
+    $( ".rp4wp-related-posts" ).before( data );
     
     var linkElement = document.getElementById( "tweet-this-post" ),
         socialSiteLinks;
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       } 
     };
 
-    Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
+    Object.getOwnPropertyNames( socialSiteLinks ).forEach( function( value ) {
       var linkId = socialSiteLinks[value].getLink,
           pageLink = socialSiteLinks[value].linkHandle,
           pageElement = document.getElementById( linkId );
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         pageElement.setAttribute( "href", pageLink + getPostLink );  
       }
     }); 
-  }, function (xhr) {
+  }, function ( xhr ) {
    console.log("The social sharing links failed to load...you may needs refresh the page.");
   });
 
