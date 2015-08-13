@@ -9,32 +9,12 @@ require("./config/prism-styles.css");
 // Loads in async sharing code for Facebook & Google+
 require("./config/async-sharing");
 
-
-
-// START "CLICK-TO-TWEET" CODE
-
 var linkElement = document.getElementById( "tweet-this-post" ),
     getPostLink = window.location.href,
     getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
 
-// Bind jQuery.click() to the Tweet link
-$( "body" ).delegate( "#tweet-this-post", "click", function( event ){
-  event.preventDefault();
-  
   var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
       tweetedLink;
-
-  linkElement.setAttribute( "href", cleanLink );
-
-  tweetedLink = this.getAttribute( "href" );
-
-  window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
-
-});
-// END "CLICK-TO-TWEET" CODE
-
-
-
 // START FACEBOOK & GOOGLE+ SHARING CODE
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -46,6 +26,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     type: "GET"
    })).then(function (data) {
     $(".rp4wp-related-posts").before( data );
+
+
+
+  linkElement.setAttribute( "href", cleanLink );
+
+  tweetedLink = this.getAttribute( "href" );
+
+
+
+
 
       var socialSiteLinks = {
             "facebook" : {
@@ -78,3 +68,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 // END FACEBOOK & GOOGLE+ SHARING CODE
+
+
+
+
+
+
+// START "CLICK-TO-TWEET" CODE
+
+
+
+
+
+// Bind jQuery.click() to the Tweet link
+$( "body" ).delegate( "#tweet-this-post", "click", function( event ){
+  event.preventDefault();
+  
+
+
+  window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
+
+});
+// END "CLICK-TO-TWEET" CODE
+
+
+
