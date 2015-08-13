@@ -9,12 +9,7 @@ require("./config/prism-styles.css");
 // Loads in async sharing code for Facebook & Google+
 require("./config/async-sharing");
 
-var linkElement = document.getElementById( "tweet-this-post" ),
-    getPostLink = window.location.href,
-    getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
-
-  var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
-      tweetedLink;
+var getPostTile;
 // START FACEBOOK & GOOGLE+ SHARING CODE
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -27,11 +22,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
    })).then(function (data) {
     $(".rp4wp-related-posts").before( data );
 
+var linkElement = document.getElementById( "tweet-this-post" ),
+    getPostLink = window.location.href;
 
 
+  var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
+      tweetedLink;
+
+    getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
   linkElement.setAttribute( "href", cleanLink );
 
-  tweetedLink = this.getAttribute( "href" );
 
 
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   event.preventDefault();
   
-
+  tweetedLink = this.getAttribute( "href" );
 
   window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 
