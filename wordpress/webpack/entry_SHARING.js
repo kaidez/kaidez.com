@@ -61,8 +61,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   return q( $.ajax({
     url: getData, 
     type: "GET"
-   })).then( function ( data ) {
 
+  // Do things after the Promise resolves
+  })).then( function ( data ) {
+
+    // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
     
     var linkElement = document.getElementById( "tweet-this-post" ),
@@ -107,6 +110,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 // START "CLICK-TO-TWEET" CODE
 // Bind jQuery.click() to the Tweet link
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
+  
   event.preventDefault();
   
   var tweetedLink = this.getAttribute( "href" );
