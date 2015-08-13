@@ -104,9 +104,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           pageLink = socialSiteLinks[value].linkHandle,
           pageElement = document.getElementById( linkId );
 
-      // set the "title" property of the link to be the blog post title
+      // Set the "title" property of the link to be the blog post title
       pageElement.setAttribute( "title", getPostTitle );
       
+      // Let the href property look one way for FB and another for G+
       if( linkId === "facebook-share-link" ) {
         pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
       } else {
@@ -114,6 +115,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       }
     }); 
   }, function ( xhr ) {
+    // If the Promise fails, send a certain console message
    console.log( "The social sharing links failed to load...you may needs refresh the page." );
   });
 
@@ -123,7 +125,12 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
 
 
-// START "CLICK-TO-TWEET" CODE
+/*
+ * START CLICK-TO-TWEET CODE
+ * ====================================================================
+ * 
+ * If the "click-to-tweet" link is clicked, create a pop-up interface for Tweeting out the link.
+ */
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   
   event.preventDefault();
@@ -133,4 +140,4 @@ $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 
 });
-// END "CLICK-TO-TWEET" CODE
+// END CLICK-TO-TWEET CODE
