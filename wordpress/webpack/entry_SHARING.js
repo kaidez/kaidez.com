@@ -33,6 +33,7 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
      */
     cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
+
 /*
  * LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
  * ====================================================================
@@ -44,7 +45,6 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
  * element) and sharing elements are constructed on the page from
  * there.
  */
-
 
 // Wait for the DOM to be ready to co
 document.addEventListener( "DOMContentLoaded", function( event ) {
@@ -68,11 +68,14 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
     
-    // Start setting up the Twitter link
+    // Reference the Twitter link that's on the web page by this point
     var linkElement = document.getElementById( "tweet-this-post" );
 
+    // Set the Twitter links href attribute to be the cleaned up URL
     linkElement.setAttribute( "href", cleanLink );
 
+
+    // Object that contains properties for the Facebook & Google+ links
     var socialSiteLinks = {
       "facebook" : {
         "getLink": "facebook-share-link",
@@ -84,6 +87,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       } 
     };
 
+    // Loop through the object with ES5 {}.getOwnPropertyNames() method
     Object.getOwnPropertyNames( socialSiteLinks ).forEach( function( value ) {
       var linkId = socialSiteLinks[value].getLink,
           pageLink = socialSiteLinks[value].linkHandle,
@@ -108,7 +112,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
 
 // START "CLICK-TO-TWEET" CODE
-// Bind jQuery.click() to the Tweet link
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   
   event.preventDefault();
