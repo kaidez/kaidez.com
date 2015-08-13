@@ -8,8 +8,6 @@
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
-
-
 // nav code
 var nav = {
   bodyClass: "show-mobile-menu",
