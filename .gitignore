@@ -9,6 +9,10 @@ wordpress/wp-includes/
 wordpress/wp-activate.php
 wordpress/xmlrpc.php
 
+wordpress/wp-content/themes/kaidez-swiss/js/common.js
+wordpress/wp-content/themes/kaidez-swiss/js/globals.js
+wordpress/wp-content/themes/kaidez-swiss/js/posts.js
+
 wordpress/html-workspace.html
 
 wordpress/wp-blog-header.php

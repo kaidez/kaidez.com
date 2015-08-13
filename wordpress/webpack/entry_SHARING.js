@@ -68,6 +68,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
     
+    // Start setting up the Twitter link
     var linkElement = document.getElementById( "tweet-this-post" ),
         socialSiteLinks;
 
