@@ -1,17 +1,32 @@
-var $ = require("jquery"),
-    Q = require("Q");
+/**
+ * entry_SHARING.js
+ *
+ * Module for loading styles and scripts related to single posts only
+ *
+ */
 
-// Loads in async sharing code for Facebook & Google+
+ var $ = require( "jquery" ), // require jQuery
+     Q = require( "Q" ); // require the Q Promise library
+
+// Load in asynchronous code for Facebook and Google+ sharing
 require("./config/async-sharing");
 
-
-// Require styles related to single posts ONLY!!!!
-// Loads in via the "loader" module in webpack.config.js
+/* Load in styles related to single posts only
+ * "posts.less" contains styles for all posts
+ * "prism-styles.css" is only for posts with code samples
+ *
+ * TODO: see if there's away to distinguish posts without code samples,
+ * then have "prism-styles.css" just load onto those pages 
+ */
 require( "./posts.less" );
 require("./config/prism-styles.css");
 
+// Set a 
+var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
+    getPostLink = window.location.href,
+    cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
-var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
+
 // START FACEBOOK & GOOGLE+ SHARING CODE
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -26,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".rp4wp-related-posts").before( data );
     
     var linkElement = document.getElementById( "tweet-this-post" ),
-        getPostLink = window.location.href,
-        cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
         socialSiteLinks;
 
     linkElement.setAttribute( "href", cleanLink );
