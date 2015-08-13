@@ -5,8 +5,8 @@
  *
  */
 
- var $ = require( "jquery" ), // require jQuery
-     Q = require( "Q" ); // require the Q Promise library
+var $ = require( "jquery" ), // require jQuery
+    Q = require( "Q" ); // require the Q Promise library
 
 // Load in asynchronous code for Facebook and Google+ sharing
 require("./config/async-sharing");
@@ -15,15 +15,19 @@ require("./config/async-sharing");
  * "posts.less" contains styles for all posts
  * "prism-styles.css" is only for posts with code samples
  *
- * TODO: see if there's away to distinguish posts without code samples,
- * then have "prism-styles.css" just load onto those pages 
+ * TODO: see if posts without code samples can be recognized,
+ * then have "prism-styles.css" load onto JUST those pages 
  */
 require( "./posts.less" );
 require( "./config/prism-styles.css" );
 
-// Set a 
+// Set a reference for the copy blog post's title currently on the page
 var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
+
+    // Set a reference for the URL currently in the address bar
     getPostLink = window.location.href,
+
+    // Remove any characters a reference for the URL already in the address bar
     cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
 
