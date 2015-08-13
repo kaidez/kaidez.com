@@ -6,7 +6,7 @@
  */
 
 var $ = require( "jquery" ), // require jQuery
-    Q = require( "Q" ); // require the Q Promise library
+    q = require( "Q" ); // require the Q Promise library
 
 // Load in asynchronous code for Facebook and Google+ sharing
 require("./config/async-sharing");
@@ -37,7 +37,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
   var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
-  return Q( $.ajax({
+  return q( $.ajax({
     url: getData, 
     type: "GET"
    })).then(function ( data ) {
