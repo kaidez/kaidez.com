@@ -1,13 +1,15 @@
 var $ = require("jquery"),
     Q = require("Q");
 
+// Loads in async sharing code for Facebook & Google+
+require("./config/async-sharing");
+
+
 // Require styles related to single posts ONLY!!!!
 // Loads in via the "loader" module in webpack.config.js
 require( "./posts.less" );
 require("./config/prism-styles.css");
 
-// Loads in async sharing code for Facebook & Google+
-require("./config/async-sharing");
 
 var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
 // START FACEBOOK & GOOGLE+ SHARING CODE
@@ -55,23 +57,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }); 
   }, function (xhr) {
-   console.log("nope");
+   console.log("The social sharing links failed to load...you may needs refresh the page.");
   });
 
 });
 // END FACEBOOK & GOOGLE+ SHARING CODE
 
-
-
-
-
-
 // START "CLICK-TO-TWEET" CODE
-
-
-
-
-
 // Bind jQuery.click() to the Tweet link
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   event.preventDefault();
@@ -82,6 +74,3 @@ $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
 
 });
 // END "CLICK-TO-TWEET" CODE
-
-
-
