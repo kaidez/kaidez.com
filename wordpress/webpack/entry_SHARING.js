@@ -9,7 +9,7 @@ require("./config/prism-styles.css");
 // Loads in async sharing code for Facebook & Google+
 require("./config/async-sharing");
 
-var getPostTile;
+var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
 // START FACEBOOK & GOOGLE+ SHARING CODE
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -20,46 +20,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
     url: getData, 
     type: "GET"
    })).then(function (data) {
+
     $(".rp4wp-related-posts").before( data );
+    
+    var linkElement = document.getElementById( "tweet-this-post" ),
+        getPostLink = window.location.href,
+        cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
+        socialSiteLinks;
 
-var linkElement = document.getElementById( "tweet-this-post" ),
-    getPostLink = window.location.href;
+    linkElement.setAttribute( "href", cleanLink );
 
+    socialSiteLinks = {
+      "facebook" : {
+        "getLink": "facebook-share-link",
+        "linkHandle": "http://www.facebook.com/sharer.php?u="
+      },
+      "googlePlus": {
+        "getLink": "googleplus-share-link",
+        "linkHandle": "https://plus.google.com/share?url="
+      } 
+    };
 
-  var cleanLink = getPostLink.replace( /[^/]*$/g, "" ),
-      tweetedLink;
+    Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
+      var linkId = socialSiteLinks[value].getLink,
+          pageLink = socialSiteLinks[value].linkHandle,
+          pageElement = document.getElementById( linkId );
 
-    getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
-  linkElement.setAttribute( "href", cleanLink );
-
-
-
-
-
-
-      var socialSiteLinks = {
-            "facebook" : {
-              "getLink": "facebook-share-link",
-              "linkHandle": "http://www.facebook.com/sharer.php?u="
-            },
-            "googlePlus": {
-              "getLink": "googleplus-share-link",
-              "linkHandle": "https://plus.google.com/share?url="
-            } 
-        };
-
-      Object.getOwnPropertyNames( socialSiteLinks ).forEach(function( value ) {
-
-        var linkId = socialSiteLinks[value].getLink,
-            pageLink = socialSiteLinks[value].linkHandle,
-            pageElement = document.getElementById( linkId );
-
-        pageElement.setAttribute( "title", getPostTitle );
-
-        if( linkId === "facebook-share-link" ) {
-          pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
-        } else {
-          pageElement.setAttribute( "href", pageLink + getPostLink );  
+      pageElement.setAttribute( "title", getPostTitle );
+      
+      if( linkId === "facebook-share-link" ) {
+        pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
+      } else {
+        pageElement.setAttribute( "href", pageLink + getPostLink );  
       }
     }); 
   }, function (xhr) {
@@ -84,7 +76,7 @@ var linkElement = document.getElementById( "tweet-this-post" ),
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   event.preventDefault();
   
-  tweetedLink = this.getAttribute( "href" );
+  var tweetedLink = this.getAttribute( "href" );
 
   window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
 
