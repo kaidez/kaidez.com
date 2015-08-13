@@ -27,20 +27,41 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
     // Set a reference for the URL currently in the address bar
     getPostLink = window.location.href,
 
-    // Remove any characters a reference for the URL already in the address bar
+    /*
+     * Remove any characters that come after the URL's last slash
+     * UTM code, in-page anchor links, etc.
+     */
     cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
+/*
+ * LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
+ * ====================================================================
+ * 
+ * Once all content has been completely loaded and parsed in the DOM,
+ * the social sharing element loads via an AJAX call wrapped in a Q
+ * Promise. Once the Promise resolves, the element is placed above the
+ * "more posts like this" section (the $( ".rp4wp-related-posts" ) 
+ * element) and sharing elements are constructed on the page from
+ * there.
+ */
 
-// START FACEBOOK & GOOGLE+ SHARING CODE
 
+// Wait for the DOM to be ready to co
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
+  // Set a reference for the sharing element
   var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
+  /*
+   * kaidez.com uses jQuery 2.1.4, which use Promises that don't
+   * conform to the Promises/A+ spec. wrap it in a Q return makes
+   * jQuery spec-complaint. Note that Promises in jQuery 3.x are
+   * Promises/A+ compliant.
+   */
   return q( $.ajax({
     url: getData, 
     type: "GET"
-   })).then(function ( data ) {
+   })).then( function ( data ) {
 
     $( ".rp4wp-related-posts" ).before( data );
     
@@ -77,8 +98,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    console.log("The social sharing links failed to load...you may needs refresh the page.");
   });
 
-});
-// END FACEBOOK & GOOGLE+ SHARING CODE
+}); // end "document.addEventListener()"
+
+// END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
+
+
 
 // START "CLICK-TO-TWEET" CODE
 // Bind jQuery.click() to the Tweet link
