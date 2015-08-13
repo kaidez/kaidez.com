@@ -1,5 +1,12 @@
-var $ = require("jquery"),
-    Q = require("Q");
+/**
+ * entry_GLOBALS.js
+ *
+ * Module for loading styles and scripts related to the entire site
+ *
+ */
+
+var $ = require( "jquery" ), // require jQuery
+    q = require( "Q" ); // require the Q Promise library
 
 // nav code
 var nav = {
@@ -37,15 +44,15 @@ var search = {
 
 function animateNavElement( obj ) {
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
-    Q.fcall( function(){
+    q.fcall( function(){
       $( obj.targetEl ).addClass( obj.hideClass );
       $( "body" ).removeClass( obj.bodyClass );
-      return Q.delay( 300 );
+      return q.delay( 300 );
     }).then( function(){
       $( obj.targetEl ).removeClass( obj.hideClass ).removeClass( obj.showClass );
     });
   } else {
-    Q.fcall( function(){
+    q.fcall( function(){
       obj.removeClassCheck();
     }).then(function(){
       $( obj.targetEl ).addClass( obj.showClass );
