@@ -134,6 +134,8 @@ function animateNavElement( obj ) {
    * exists on the <body> tag...
    */
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
+
+    // Enclose some code that returns a promise
     q.fcall( function(){
       $( obj.targetEl ).addClass( obj.hideClass );
       $( "body" ).removeClass( obj.bodyClass );
