@@ -17,7 +17,11 @@ var $ = require( "jquery" ), // require jQuery
  * hiding/showing the site nav and search box. To make this
  * functionality reusable, create separate objects for each element
  * which contains unique element parameters, then pass the object as a
- * parameter to the "animateNavElement()" method. 
+ * parameter to the "animateNavElement()" method.
+ *
+ * TODO:
+ * =====
+ * Can the removeClassCheck() method be more dynamic? 
  */
 
 // Data object for the nav "hamburger" menu
