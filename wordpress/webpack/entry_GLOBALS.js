@@ -128,6 +128,11 @@ function testBranding( currentStyle, newStyle ) {
 
  // "obj" will be either the "nav" or "search" variable defined up top
 function animateNavElement( obj ) {
+
+  /*
+   * Get the "bodyClass" property from the given object and if it
+   * exists on the <body> tag...
+   */
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
     q.fcall( function(){
       $( obj.targetEl ).addClass( obj.hideClass );
