@@ -63,11 +63,6 @@ $( "#mobile-menu-button" ).click( function(){
     var thisTest = testBranding( "z-index: auto;", "z-index: 2;" );
     thisTest();
 
-    // if( $( "#branding" ).attr( "style", "z-index: auto;" ) ) {
-    //   $( "#branding" ).attr( "style", "z-index: 2;" ); 
-    // } else if( $( "#branding" ).attr( "style", "z-index: 2;" ) ){
-    //   $( "#branding" ).attr( "style", "z-index: auto;" ); 
-    // }
   }).then( function() {
     animateNavElement( nav );
   });
@@ -81,11 +76,6 @@ $( "#mobile-search-button" ).click( function() {
     var thisTest = testBranding( "z-index: 2;", "z-index: auto;");
     thisTest();
 
-    // if( $( "#branding" ).attr( "style", "z-index: 2;" ) ) {
-    //   $( "#branding" ).attr( "style", "z-index: auto;" ); 
-    // } else if( $( "#branding" ).attr( "style", "z-index: auto;" ) ){
-    //   $( "#branding" ).attr( "style", "z-index: 2;" ); 
-    // }
   }).then( function() {
     animateNavElement( search );
   });
