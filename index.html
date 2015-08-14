@@ -265,9 +265,7 @@ a variable called 'isCategory' and set it equal to 4.
     
       {% if isCategory == 4 %}
 
-      {% for post in site.categories.personal limit:3 %}
-
-      {% comment %}  for post in site.categories.personal limit:3 offset:1  {% endcomment %}
+      {% for post in site.categories.personal limit:3 offset:1 %}
 
       <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
