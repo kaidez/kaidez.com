@@ -130,25 +130,45 @@ function testBranding( currentStyle, newStyle ) {
 function animateNavElement( obj ) {
 
   /*
-   * Get the "bodyClass" property from the given object and if it
-   * exists on the <body> tag...
+   * Get the "bodyClass" property from the given object. If it's on
+   * the <body> tag, it means the given element, the nav or the
+   * searchbox, is currently in view. Then do stuff if it exists.
    */
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
 
-    // Enclose some code that returns a promise
-    q.fcall( function(){
+    // Enclose some code that returns a Promise
+    q.fcall( function() {
 
       /*
-      * Get the both "targetEl" and "hideClass" properties from the
-      * given object.
-      */
+       * Get the both "targetEl" and "hideClass" properties from the
+       * given object. "targetEl" is the element being looked at...the
+       * nav or the searchbox. "hideClass" is the class that hides the
+       * element from view....so remove the element adding a class to
+       * the <body> tag that hides it.
+       */
       $( obj.targetEl ).addClass( obj.hideClass );
+
+      // Reset the element's state by removing whatever "bodyClass" is
       $( "body" ).removeClass( obj.bodyClass );
+      
+      /*
+       * Wait 3 milliseconds after the Promise resolves, but before
+       * doing stuff
+       */
       return q.delay( 300 );
     }).then( function(){
+      
+      /*
+       * Remove the class that hid the target element, the nav or the
+       * searchbox. Also, grab the "showClass" property from the given
+       * object, which is a class that element visible initially and is
+       * DEFINETLY attached it at this point. Remove it as well.
+       */
       $( obj.targetEl ).removeClass( obj.hideClass ).removeClass( obj.showClass );
     });
   } else {
+    
+    // Enclose some code that returns a Promise
     q.fcall( function(){
       obj.removeClassCheck();
     }).then(function(){
