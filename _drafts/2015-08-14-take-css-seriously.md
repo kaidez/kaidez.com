@@ -1,10 +1,10 @@
 ---
-title: "10 Key Resources on CSS Development Trends Resources"
+title: "Start Taking CSS Seriously"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: A list of links to articles & videos that discuss exciting trends in CSS development. 10 core links and many honorable mention links.
-permalink: /css-trends-list/
+meta-excerpt: Web developers should always optimize their CSS code but far too many don’t. The rise of the mobile web has now forced them to change.
+permalink: /take-css-seriously/
 category: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: css-trends.jpg
