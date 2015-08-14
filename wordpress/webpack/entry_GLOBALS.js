@@ -8,7 +8,17 @@
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
-// nav code
+/*
+ * START MOBILE NAVIGATION CODE
+ * ====================================================================
+ * 
+ * On mobile, both the nav "hamburger" menu and search button elements
+ * share the same functionality in terms of, respectively,
+ * hiding/showing the nav and searchbox. To make this functionality
+ * reusable, create separate objects for each element which contains
+ * unique element parameters, then pass the object as a parameter to
+ * the "animateNavElement()" method. 
+ */
 var nav = {
   bodyClass: "show-mobile-menu",
   targetEl: "#site-navigation",
