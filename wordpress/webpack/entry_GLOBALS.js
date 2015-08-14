@@ -42,12 +42,15 @@ var search = {
   }
 };
 
-function testBrandingStyle( currentStyle, newStyle ) {
+function testBranding( currentStyle, newStyle ) {
   
-  var isBrandingClass = $( "#branding" ).attr( currentStyle );
+  var isBrandingClass = $( "#branding" ).attr( "style", currentStyle ),
+      isNotBrandingClass = $( "#branding" ).attr( "style", newStyle );
+
   function getBrandingClass() {
-    isBrandingClass ? console.log("yes") : console.log("no");
+    isBrandingClass ? isNotBrandingClass : isBrandingClass;
   }
+
   return getBrandingClass;
 }
 
@@ -57,14 +60,14 @@ $( "#mobile-menu-button" ).click( function(){
 
   q.fcall( function(){
 
-    var thisTest = testBrandingStyle( "style", "z-index: auto;" );
+    var thisTest = testBranding( "z-index: auto;", "z-index: 2;" );
     thisTest();
 
-    if( $( "#branding" ).attr( "style", "z-index: auto;" ) ) {
-      $( "#branding" ).attr( "style", "z-index: 2;" ); 
-    } else if( $( "#branding" ).attr( "style", "z-index: 2;" ) ){
-      $( "#branding" ).attr( "style", "z-index: auto;" ); 
-    }
+    // if( $( "#branding" ).attr( "style", "z-index: auto;" ) ) {
+    //   $( "#branding" ).attr( "style", "z-index: 2;" ); 
+    // } else if( $( "#branding" ).attr( "style", "z-index: 2;" ) ){
+    //   $( "#branding" ).attr( "style", "z-index: auto;" ); 
+    // }
   }).then( function() {
     animateNavElement( nav );
   });
@@ -74,11 +77,15 @@ $( "#mobile-menu-button" ).click( function(){
 $( "#mobile-search-button" ).click( function() {
 
   q.fcall( function(){
-    if( $( "#branding" ).attr( "style", "z-index: 2;" ) ) {
-      $( "#branding" ).attr( "style", "z-index: auto;" ); 
-    } else if( $( "#branding" ).attr( "style", "z-index: auto;" ) ){
-      $( "#branding" ).attr( "style", "z-index: 2;" ); 
-    }
+
+    var thisTest = testBranding( "z-index: 2;", "z-index: auto;");
+    thisTest();
+
+    // if( $( "#branding" ).attr( "style", "z-index: 2;" ) ) {
+    //   $( "#branding" ).attr( "style", "z-index: auto;" ); 
+    // } else if( $( "#branding" ).attr( "style", "z-index: auto;" ) ){
+    //   $( "#branding" ).attr( "style", "z-index: 2;" ); 
+    // }
   }).then( function() {
     animateNavElement( search );
   });
