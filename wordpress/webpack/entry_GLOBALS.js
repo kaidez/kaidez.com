@@ -192,6 +192,12 @@ function animateNavElement( obj ) {
        * element, saying it's visible.
        */
       $( "body" ).addClass( obj.bodyClass );
+      
+      /*
+       * The "removeClassCheck()" in the Promise-enclosed code
+       * block added a class to the opposite element to help hide it.
+       * Remove that class.
+       */
       obj.singleRemoveClass();
     });
   }
