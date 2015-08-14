@@ -17,7 +17,7 @@ var $ = require( "jquery" ), // require jQuery
  * hiding/showing the site nav and search box. To make this
  * functionality reusable, create separate objects for each element
  * which contains unique element parameters, then pass the object as a
- * parameter to the "animateNavElement()" method.
+ * parameter to the "animateNavElement()" method at the bottom.
  *
  * TODO:
  * =====
@@ -144,7 +144,8 @@ function animateNavElement( obj ) {
        * given object. "targetEl" is the element being looked at...the
        * nav or the searchbox. "hideClass" is the class that hides the
        * element from view....so remove the element adding a class to
-       * the <body> tag that hides it.
+       * the <body> tag that hides it. Adding this class to the
+       * element also defines its state.
        */
       $( obj.targetEl ).addClass( obj.hideClass );
 
@@ -179,8 +180,17 @@ function animateNavElement( obj ) {
        * remove it if it is.  
        */ 
       obj.removeClassCheck();
+    
+    // Do stuff after the Promise resolves
     }).then(function(){
+      
+      // Add a class to the element making it visible, state is defined
       $( obj.targetEl ).addClass( obj.showClass );
+      
+      /*
+       * Add a class to <body> that help define the state of the
+       * element, saying it's visible.
+       */
       $( "body" ).addClass( obj.bodyClass );
       obj.singleRemoveClass();
     });
