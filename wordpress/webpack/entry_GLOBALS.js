@@ -139,8 +139,8 @@ function animateNavElement( obj ) {
     q.fcall( function(){
 
       /*
-      * Get the "targetEl" and "hideClass" properties from the given 
-      * object
+      * Get the both "targetEl" and "hideClass" properties from the
+      * given object.
       */
       $( obj.targetEl ).addClass( obj.hideClass );
       $( "body" ).removeClass( obj.bodyClass );
