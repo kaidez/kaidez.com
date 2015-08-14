@@ -42,9 +42,24 @@ var search = {
   }
 };
 
+function testBrandingStyle( currentStyle, newStyle ) {
+  
+  var isBrandingClass = $( "#branding" ).attr( currentStyle );
+  function getBrandingClass() {
+    isBrandingClass ? console.log("yes") : console.log("no");
+  }
+  return getBrandingClass;
+}
+
+
 // Menu button
 $( "#mobile-menu-button" ).click( function(){
+
   q.fcall( function(){
+
+    var thisTest = testBrandingStyle( "style", "z-index: auto;" );
+    thisTest();
+
     if( $( "#branding" ).attr( "style", "z-index: auto;" ) ) {
       $( "#branding" ).attr( "style", "z-index: 2;" ); 
     } else if( $( "#branding" ).attr( "style", "z-index: 2;" ) ){
