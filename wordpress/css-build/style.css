@@ -740,11 +740,10 @@ a.colophon-link:hover {
     width: 100%;
     max-width: 500px;
   }
-  /*
-   * ==================================================================
-   * ASIDE STYLES END
-   * ==================================================================
-   */
+  /* Make the comment textarea's width a certain width */
+  .comment-textarea {
+    width: 290px;
+  }
   /*
    * ==================================================================
    * FOOTER STYLES START
