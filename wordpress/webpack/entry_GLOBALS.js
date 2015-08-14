@@ -117,6 +117,10 @@ function testBranding( currentStyle, newStyle ) {
   return getBrandingClass;
 }
 
+/*
+ * "animateNavElement()": show/hide nav & search
+ * ====================================================================
+ */
 function animateNavElement( obj ) {
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
     q.fcall( function(){
