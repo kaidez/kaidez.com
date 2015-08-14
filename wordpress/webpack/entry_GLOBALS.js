@@ -125,6 +125,8 @@ function testBranding( currentStyle, newStyle ) {
  * "animateNavElement()": show/hide nav & search
  * ====================================================================
  */
+
+ // "obj" will be either the "nav" or "search" variable defined up top
 function animateNavElement( obj ) {
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
     q.fcall( function(){
