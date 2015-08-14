@@ -54,31 +54,6 @@ var search = {
   }
 };
 
-/*
- * I had to write a crazy hack that toggled the z-index of the
- * "#branding" element so the main nav could stack properly and the
- * search box could be focused :-\ To redeem myself for writing a
- * crazy hack, I wrote cool code that executes the hack with a
- * closure. It runs in the "animateNavElement()" element. and the
- * "currentStyle" and "newStyle" parameters are the z-index styles
- * that get toggled.
- */
-function testBranding( currentStyle, newStyle ) {
-  
-  // Store the toggled states in variables
-  var isBrandingClass = $( "#branding" ).attr( "style", currentStyle ),
-      isNotBrandingClass = $( "#branding" ).attr( "style", newStyle );
-
-  // An inner function toggles the states with a ternary function check
-  function getBrandingClass() {
-    isBrandingClass ? isNotBrandingClass : isBrandingClass;
-  }
-
-  // Return the inner function so it's accessible when called
-  return getBrandingClass;
-}
-
-
 // Menu button
 $( "#mobile-menu-button" ).click( function(){
 
@@ -105,6 +80,30 @@ $( "#mobile-search-button" ).click( function() {
   });
 
 });
+
+/*
+ * I had to write a crazy hack that toggled the z-index of the
+ * "#branding" element so the main nav could stack properly and the
+ * search box could be focused :-\ To redeem myself for writing a
+ * crazy hack, I wrote cool code that executes the hack with a
+ * closure. It runs in the "animateNavElement()" element. and the
+ * "currentStyle" and "newStyle" parameters are the z-index styles
+ * that get toggled.
+ */
+function testBranding( currentStyle, newStyle ) {
+  
+  // Store the toggled states in variables
+  var isBrandingClass = $( "#branding" ).attr( "style", currentStyle ),
+      isNotBrandingClass = $( "#branding" ).attr( "style", newStyle );
+
+  // An inner function toggles the states with a ternary function check
+  function getBrandingClass() {
+    isBrandingClass ? isNotBrandingClass : isBrandingClass;
+  }
+
+  // Return the inner function so it's accessible when called
+  return getBrandingClass;
+}
 
 function animateNavElement( obj ) {
   if( $( "body" ).hasClass( obj.bodyClass ) ) {
