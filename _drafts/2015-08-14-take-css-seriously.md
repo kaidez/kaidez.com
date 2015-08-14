@@ -10,8 +10,10 @@ cat-name: "Code Tips"
 has-home-img: css-trends.jpg
 tags: [css]
 ---
-I've always tried to avoid rants about code on my blog because I've felt my opinion didn't matter. I know how to write client-side code and know that I'm <em>pretty</em> good at it, but I'm not a "leader in the web development community."
+I've always tried to avoid rants on my blog because I've felt my opinion didn't matter. I know how to write client-side code and know that I'm <em>pretty</em> good at it, but I'm not a "leader in the web development community."
 
-But <a href="/write-code-every-f--king-day/">I've ranted about code before</a>. And I've shipped quality production code to some high-profile sites so, unlike many people around me, I'll have no problem being well-paid and gainfully employed up to my retirement because of it.
+But <a href="/write-code-every-f--king-day/">I've ranted before</a> and have created enough quality code for well-established companies to insure that, until I retire, I'll be well-paid and gainfully employed because of it. So I feel I've earned the right to rant about things I <em>know</em> we web developers should be doing.
 
-So I'm going to use this post to rant about what I think we as developers 
+And I <em>know</em> we need to do a better job of shipping high-quality CSS.
+
+<h2>We've Got The JavaScript Thing Covered</h2>
