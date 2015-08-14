@@ -170,6 +170,14 @@ function animateNavElement( obj ) {
     
     // Enclose some code that returns a Promise
     q.fcall( function(){
+      
+      /*
+       * The opposite element MIGHT be visible now so run the
+       * "removeClassCheck()" method for the given object to remove it.
+       * So if the "nav" element is what's currently being focused 
+       * on, check to see if the "search" element is visible and
+       * remove it if it is.  
+       */ 
       obj.removeClassCheck();
     }).then(function(){
       $( obj.targetEl ).addClass( obj.showClass );
