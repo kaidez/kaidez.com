@@ -54,6 +54,18 @@ var search = {
   }
 };
 
+/*
+ * CLICK METHODS FOR THE MENU & SEARCH BUTTONS
+ * ====================================================================
+ * 
+ * When clicked, each button:
+ *
+ * 1. runs testBranding() which toggles the #branding elements z-index
+ * 2. returns a Promise
+ * 3. runs animateNavElement() & the parameter is one of two vars above
+ *
+ */
+
 // Menu button
 $( "#mobile-menu-button" ).click( function(){
 
