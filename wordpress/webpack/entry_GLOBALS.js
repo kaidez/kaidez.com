@@ -14,11 +14,13 @@ var $ = require( "jquery" ), // require jQuery
  * 
  * On mobile, both the nav "hamburger" menu and search button elements
  * share the same functionality in terms of, respectively,
- * hiding/showing the nav and searchbox. To make this functionality
- * reusable, create separate objects for each element which contains
- * unique element parameters, then pass the object as a parameter to
- * the "animateNavElement()" method. 
+ * hiding/showing the site nav and search box. To make this
+ * functionality reusable, create separate objects for each element
+ * which contains unique element parameters, then pass the object as a
+ * parameter to the "animateNavElement()" method. 
  */
+
+// Data object for the nav "hamburger" menu
 var nav = {
   bodyClass: "show-mobile-menu",
   targetEl: "#site-navigation",
@@ -35,7 +37,7 @@ var nav = {
   }
 };
 
-// search code
+// Data object for the nav "seachbox" menu
 var search = {
   bodyClass: "show-mobile-search",
   targetEl: "#searchform",
@@ -52,6 +54,12 @@ var search = {
   }
 };
 
+/*
+ * I had to write a crazy hack that adjusted the z-index of the
+ * "#branding" element so the main nav could stack properly and the
+ * search box could be focused :-\ To redeem myself for writing a
+ * crazy hack, I wrote cool code that used a closure to run it.
+ */
 function testBranding( currentStyle, newStyle ) {
   
   var isBrandingClass = $( "#branding" ).attr( "style", currentStyle ),
