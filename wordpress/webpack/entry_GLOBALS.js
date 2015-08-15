@@ -31,7 +31,7 @@ var nav = {
   hideClass: "hide-menu",
   showClass: "show-menu",
   removeClassCheck: function() {
-    if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
+   if ( $( "body" ).hasClass( "show-mobile-search" ) ) {
       $( "body" ).removeClass( "show-mobile-search" );
       $( "#searchform" ).addClass( "hide-searchbox" ).removeClass( "show-searchbox" );    
     }
@@ -71,7 +71,9 @@ var search = {
  */
 
 // Menu button
-$( "#mobile-menu-button" ).click( function(){
+$( "#mobile-menu-button" ).on("click", function( event ) {
+  
+  event.stopPropagation();
 
   q.fcall( function(){
 
@@ -84,7 +86,9 @@ $( "#mobile-menu-button" ).click( function(){
 });
 
 // Search button
-$( "#mobile-search-button" ).click( function() {
+$( "#mobile-search-button" ).on("click", function( event ) {
+
+  event.stopPropagation();
 
   q.fcall( function(){
 
@@ -202,3 +206,20 @@ function animateNavElement( obj ) {
     });
   }
 }
+
+$( "body" ).delegate( "#page", "click", function() {
+
+  var getSearchbox = $( "#s" );
+
+  if( getSearchbox.is( ":focus" ) ) {
+    return false;
+  } else {
+    [nav, search].forEach(function( index ){
+      q.fcall( function(){
+        index.removeClassCheck.call( this );
+      }).then( function() {
+        index.singleRemoveClass.call( this );
+      })
+    });
+  }
+});
