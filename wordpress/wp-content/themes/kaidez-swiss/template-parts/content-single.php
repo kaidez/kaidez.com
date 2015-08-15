@@ -12,8 +12,8 @@
     <header class="entry-header">
 
     <div class="breadcrumbs">
-      <span><a href="/">Home</a>  » </span>
-      <span><?php the_category(', '); ?></span>
+      <span><a href="/">home</a>  » </span>
+      <span class="breadcrumb-category-name"><?php the_category(', '); ?></span>
       <span class="breadcrumb-title">» <?php the_title(''); ?></span>
     </div>
 
