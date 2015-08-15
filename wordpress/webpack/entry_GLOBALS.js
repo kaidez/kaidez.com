@@ -236,9 +236,9 @@ $( "body" ).delegate( "#page", "click", function() {
      */
     [nav, search].forEach(function( index ){
       q.fcall( function(){
-        index.removeClassCheck.call( this );
+        index.removeClassCheck();
       }).then( function() {
-        index.singleRemoveClass.call( this );
+        index.singleRemoveClass();
       })
     });
   }
