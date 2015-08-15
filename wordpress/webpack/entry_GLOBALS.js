@@ -207,13 +207,31 @@ function animateNavElement( obj ) {
   }
 }
 
+/*
+ * If either the nav "hamburger" menu or search button are visible and
+ * the some clicks out side of them, remove them from view.
+ */
+
+/*
+ * Make sure this hiding only happens when you click on the main,
+ * containing "#page" element.
+ */
 $( "body" ).delegate( "#page", "click", function() {
 
+  // Store the search box's <input> field in variable
   var getSearchbox = $( "#s" );
 
+  /*
+   * With this code, focusing on the <input> field makes the search
+   * box disappear, Stop that from happening.
+   */
   if( getSearchbox.is( ":focus" ) ) {
     return false;
   } else {
+
+    /*
+     *
+     */
     [nav, search].forEach(function( index ){
       q.fcall( function(){
         index.removeClassCheck.call( this );
