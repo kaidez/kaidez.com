@@ -12,9 +12,10 @@
     <header class="entry-header">
 
     <div class="breadcrumbs">
-      <span><a href="/">home</a>  » </span>
+      <span><a href="/">home</a></span> &rsaquo;
       <span class="breadcrumb-category-name"><?php the_category(', '); ?></span>
-      <span class="breadcrumb-title">» <?php the_title(''); ?></span>
+      <span class="breadcrumb-title">
+        &rsaquo; <?php the_title(''); ?></span>
     </div>
 
 
