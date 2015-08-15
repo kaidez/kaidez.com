@@ -214,7 +214,8 @@ function animateNavElement( obj ) {
 
 /*
  * Make sure this hiding ONLY happens when you click on the main,
- * containing "#page" element.
+ * containing "#page" element. This may be not be needed, but better
+ * safe than sorry. 
  */
 $( "body" ).delegate( "#page", "click", function() {
 
@@ -227,6 +228,8 @@ $( "body" ).delegate( "#page", "click", function() {
    */
   if( getSearchbox.is( ":focus" ) ) {
     return false;
+
+  // If the <input> tag is not focused on, do stuff
   } else {
     function removeClasses(el) {
       q.fcall( function(){
