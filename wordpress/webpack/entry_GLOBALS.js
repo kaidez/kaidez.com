@@ -219,26 +219,37 @@ function animateNavElement( obj ) {
  */
 $( "body" ).delegate( "#page", "click", function() {
 
-  // Store the search box's <input> field in variable
-  var getSearchbox = $( "#s" );
+  /*
+   * "getSearchbox": the searchbox's <input> field
+   * "removeClasses": resusable fn() that removes nav/search elements
+   */
+  var getSearchbox = $( "#s" ), 
+      removeClasses = function(el) {
+        q.fcall( function(){
+          // Run fn() that checks/adds/removes classes from <body>
+          // Return a promise
+          el.removeClassCheck(); 
+        }).then( function() {
+          // Run fn() that removes classes from <body>
+          el.singleRemoveClass();
+        });
+       };
 
   /*
-   * With this code, focusing on the <input> field makes the search
-   * box disappear. Stop that from happening.
+   * With this code, focusing on the searchbox's <input> field makes
+   * the searchbox disappear. Stop that from happening.
    */
   if( getSearchbox.is( ":focus" ) ) {
     return false;
 
   // If the <input> tag is not focused on, do stuff
   } else {
-    function removeClasses(el) {
-      q.fcall( function(){
-        el.removeClassCheck();
-      }).then( function() {
-        el.singleRemoveClass();
-      })
-     }
 
+    /*
+     * Loop through the nav & search variables in the array. Remove
+     * either the mobile nav or searchbox, depending on which 
+     * iteration of the loop is hit
+     */
     [nav, search].forEach(function( index ){
       index == nav ? removeClasses(nav) : removeClasses(search);
     });
