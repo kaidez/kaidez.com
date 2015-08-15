@@ -213,51 +213,32 @@ function animateNavElement( obj ) {
  */
 
 /*
- * Make sure this hiding only happens when you click on the main,
+ * Make sure this hiding ONLY happens when you click on the main,
  * containing "#page" element.
  */
-$( "body" ).delegate( "#page", "click", function( event ) {
+$( "body" ).delegate( "#page", "click", function() {
+
+  // Store the search box's <input> field in variable
+  var getSearchbox = $( "#s" );
 
   /*
-   * Store reference checks for the <body> classes that show the nav & 
-   * elements
+   * With this code, focusing on the <input> field makes the search
+   * box disappear. Stop that from happening.
    */
-  var isNavClass = $( "body" ).hasClass( nav.bodyClass );
-      isSearchClass = $( "body" ).hasClass( search.bodyClass );
-
-  /*
-   * If those classes aren't on <body>, do nothing...stop arbitrary
-   * events from firing if there are arbitrary clicks on "#page"
-   */
-  if( !isNavClass || !isSearchClass ) {
-    event.stopPropagation();
+  if( getSearchbox.is( ":focus" ) ) {
+    return false;
   } else {
+    function removeClasses(el) {
+      q.fcall( function(){
+        el.removeClassCheck();
+      }).then( function() {
+        el.singleRemoveClass();
+      })
+     }
 
-    // Store the search box's <input> field in variable
-    var getSearchbox = $( "#s" );
+    [nav, search].forEach(function( index ){
+      index == nav ? removeClasses(nav) : removeClasses(search);
+    });
 
-    /*
-     * With this code, focusing on the <input> field makes the search
-     * box disappear, Stop that from happening.
-     */
-    if( getSearchbox.is( ":focus" ) ) {
-      return false;
-    } else {
-
-      /*
-       * 
-       *
-       *
-       */
-
-      [nav, search].forEach(function( index ){
-
-        q.fcall( function(){
-          index.removeClassCheck();
-        }).then( function() {
-          index.singleRemoveClass();
-        })
-      });
-    } // end the inner if/else statement
-  }  // end the outer if/else statement
+  }
 });
