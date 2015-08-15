@@ -230,6 +230,8 @@ $( "body" ).delegate( "#page", "click", function() {
   } else {
 
     /*
+     * 
+     *
      *
      */
     [nav, search].forEach(function( index ){
