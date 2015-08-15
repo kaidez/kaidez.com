@@ -218,9 +218,17 @@ function animateNavElement( obj ) {
  */
 $( "body" ).delegate( "#page", "click", function( event ) {
 
+  /*
+   * Store reference checks for the <body> classes that show the nav & 
+   * elements
+   */
   var isNavClass = $( "body" ).hasClass( nav.bodyClass );
       isSearchClass = $( "body" ).hasClass( search.bodyClass );
 
+  /*
+   * If those classes aren't on <body>, do nothing...stop arbitrary
+   * events from firing if there are arbitrary clicks on "#page"
+   */
   if( !isNavClass || !isSearchClass ) {
     event.stopPropagation();
   } else {
@@ -243,8 +251,6 @@ $( "body" ).delegate( "#page", "click", function( event ) {
        */
 
       [nav, search].forEach(function( index ){
-        
-        var getBodyClass = $( "body" ).hasClass( index.bodyClass );
 
         q.fcall( function(){
           index.removeClassCheck();
