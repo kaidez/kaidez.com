@@ -565,6 +565,9 @@ a.colophon-link:hover {
    * FOOTER STYLES START
    * ==================================================================
    */
+  .footer-text {
+    display: inline-block;
+  }
   /*
    * ==================================================================
    * FOOTER STYLES END
