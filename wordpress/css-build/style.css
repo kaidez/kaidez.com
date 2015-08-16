@@ -464,6 +464,7 @@ a.colophon-link:hover {
 @media (min-width: 768px) {
   .site-header {
     padding: 3px 0 0 20px;
+    background-color: #f9bfd7;
   }
   .site-title {
     font-size: 65px;
@@ -475,12 +476,21 @@ a.colophon-link:hover {
     color: #000;
   }
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
+  .site-branding {
+    width: 300px;
+    display: inline-block;
+  }
   /* push <main> further down the page */
   .site-main {
     margin-top: 87px;
   }
   /* Style searchform */
   /* Style the main navigation */
+  .main-navigation {
+    display: inline-block;
+    position: relative;
+    top: -116px;
+  }
   /* Push main <nav> to the left on wide views */
   /* Hide the menu button on desktops/laptops */
   .menu-toggle {
@@ -506,10 +516,18 @@ a.colophon-link:hover {
   .glyphicon {
     color: #000;
   }
+  /* Style the search field */
   .header-search-field {
     width: 190px;
     height: 31px;
     border: 1px solid #000;
+  }
+  /* Hide the search button on desktop view */
+  .header-search-submit {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
   }
   .fa-search {
     position: relative;

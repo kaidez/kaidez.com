@@ -3,6 +3,8 @@
   // Style the header on wide views
   .site-header {
     padding:3px 0 0 20px;
+
+    background-color: lighten(@pink, 30%);
   }
   
   // Make the main site link really big on non-handheld views
@@ -20,7 +22,8 @@
 
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
   .site-branding {
-
+    width: 300px;
+    display: inline-block;
   }
 
   /* push <main> further down the page */
@@ -35,7 +38,9 @@
 
   /* Style the main navigation */
   .main-navigation {
-
+    display: inline-block;
+    position: relative;
+    top: -116px;
   }
 
   /* Push main <nav> to the left on wide views */
@@ -70,13 +75,20 @@
   	color: #000;
   }
 
-  // Style the search field
+  /* Style the search field */
   .header-search-field {
     width: 190px;
     height: 31px;
 
     border: 1px solid #000;
   }
+
+
+  /* Hide the search button on desktop view */
+  .header-search-submit {
+    .hide-element();
+  }
+
 
   .fa-search {
     position: relative;
