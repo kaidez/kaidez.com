@@ -1,0 +1,1 @@
+webpackJsonp([1],[function(e,t,n){var r=n(4);n(5);document.addEventListener("DOMContentLoaded",function(e){r.getJSON("/wp-json",function(e){console.log("getting!")}).then(function(){console.log("got it!")})})}]);
