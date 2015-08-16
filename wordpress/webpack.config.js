@@ -9,6 +9,7 @@ var webpack = require("webpack"),
 module.exports = {
   entry: {
     globals: "./webpack/entry_GLOBALS",
+    home: "./webpack/entry_HOMEPAGE",
     posts: [
       "./webpack/entry_SHARING",
       "./webpack/config/prism",
