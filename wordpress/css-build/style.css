@@ -673,7 +673,8 @@ a.colophon-link:hover {
   .entry-header {
     margin-bottom: 42px;
   }
-  .breadcrumb-title {
+  /* Hide certain breadcrumb elements */
+  .hide-breadcrumb-element {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */

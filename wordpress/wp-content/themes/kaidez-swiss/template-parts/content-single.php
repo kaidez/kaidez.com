@@ -12,14 +12,17 @@
     <header class="entry-header">
 
     <div class="breadcrumbs">
-      <span><a href="/">home</a></span> &rsaquo;
-      <span class="breadcrumb-category-name"><?php the_category(', '); ?></span>
-      <span class="breadcrumb-title">
-        &rsaquo; <?php the_title(''); ?></span>
+      <span><a href="/">home</a></span>
+      <span>&rsaquo;</span>
+      <span class="breadcrumb-category-name">
+        <?php the_category(', '); ?>
+      </span>
+      <span class="hide-breadcrumb-element">&rsaquo;</span>
+      <span class="hide-breadcrumb-element">
+        <?php the_title(''); ?></span>
     </div>
 
-
-      <?php the_title( '<h1 id="blog-post-title" class="entry-title entry-title-margin" itemprop="headline">', '</h1>' ); ?>
+    <?php the_title( '<h1 id="blog-post-title" class="entry-title entry-title-margin" itemprop="headline">', '</h1>' ); ?>
   
       <div class="entry-meta">
         <?php kaidez_swiss_posted_on(); ?>
