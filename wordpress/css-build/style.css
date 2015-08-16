@@ -466,16 +466,10 @@ a.colophon-link:hover {
     padding: 3px 0 0 20px;
   }
   .site-title {
-    margin-bottom: 5px;
-    position: absolute;
     font-size: 65px;
   }
+  /* Style the tagline on wide views */
   .site-description {
-    margin: 0;
-    width: 200px;
-    position: absolute;
-    top: -47px;
-    left: 7px;
     font-size: 18px;
     font-weight: 900;
     color: #000;
@@ -486,23 +480,8 @@ a.colophon-link:hover {
     margin-top: 87px;
   }
   /* Style searchform */
-  .searchform-class {
-    width: 300px;
-    position: relative;
-    left: 350px;
-    top: 83px;
-  }
   /* Style the main navigation */
-  .main-navigation {
-    display: inline-block;
-    position: absolute;
-    left: 180px;
-  }
   /* Push main <nav> to the left on wide views */
-  .menu {
-    left: 150px;
-    position: relative;
-  }
   /* Hide the menu button on desktops/laptops */
   .menu-toggle {
     position: absolute !important;
