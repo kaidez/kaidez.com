@@ -487,9 +487,6 @@ a.colophon-link:hover {
   .site-main {
     margin-top: 87px;
   }
-  .fa {
-    text-indent: -9999px;
-  }
   .searchform-class {
     width: 300px;
     position: relative;
@@ -798,9 +795,7 @@ a.colophon-link:hover {
    * Fix stacking/z-index-like issues on mobile
    * Commented out for now but it may come back
    */
-  /*
   .fa {
     display: inline;
   }
-  */
 }
