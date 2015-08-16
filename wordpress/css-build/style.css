@@ -511,6 +511,12 @@ a.colophon-link:hover {
     height: 31px;
     border: 1px solid #000;
   }
+  .fa-search {
+    position: relative;
+    top: 81px;
+    left: 162px;
+    z-index: 2;
+  }
   a.home-link {
     color: #ed327f;
     text-decoration: none;
@@ -774,11 +780,4 @@ a.colophon-link:hover {
    * FOOTER STYLES END
    * ==================================================================
    */
-  /*
-   * Fix stacking/z-index-like issues on mobile
-   * Commented out for now but it may come back
-   */
-  .fa {
-    display: inline;
-  }
 }
