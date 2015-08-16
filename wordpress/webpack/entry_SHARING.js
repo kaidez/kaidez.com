@@ -19,7 +19,6 @@ require("./config/async-sharing");
  * then have "prism-styles.css" load onto JUST those pages 
  */
 require( "./posts.less" );
-require( "./config/prism-styles.css" );
 
 // Set a reference for the copy blog post's title currently on the page
 var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
