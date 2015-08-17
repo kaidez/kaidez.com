@@ -493,11 +493,11 @@ a.colophon-link:hover {
   /* Style searchform */
   .searchform-class {
     position: relative;
-    bottom: 89px;
-    right: -303px;
   }
   /* Style the main navigation */
   .main-navigation {
+    position: relative;
+    bottom: 53px;
     display: inline-block;
   }
   /* Hide the menu button on desktops/laptops */
