@@ -1,23 +1,26 @@
 @media (min-width: 768px) {
 
-  // Style the header on wide views
+  /* Style the header on wide views */
   .site-header {
     padding:3px 0 0 20px;
 
     background-color: lighten(@pink, 30%);
   }
   
-  // Make the main site link really big on non-handheld views
+  /* Make the main site link really big on non-handheld views */
   .site-title {
-    font-size: 65px;
+    font-size: 30px;
+    font-size: 3.0rem;
   }
 
   /* Style the tagline on wide views */
   .site-description {
+    width:244px;
+    margin: 0;
 
   	font-size: 18px;
-  	font-weight: 900;
   	color: #000;
+    border-top: 1px solid #000;
   }
 
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
@@ -33,17 +36,16 @@
 
   /* Style searchform */
   .searchform-class {
-  
+    position: relative;
+    bottom: 89px;
+    right: -303px;
   }
 
   /* Style the main navigation */
   .main-navigation {
     display: inline-block;
-    position: relative;
-    top: -116px;
   }
 
-  /* Push main <nav> to the left on wide views */
   .menu {
 
   }
@@ -56,9 +58,10 @@
   /* style links on desktop view*/
   .menu-item {
   	display: inline-block;
-  	margin-bottom: 10px;
+  	margin: 0  20px 10px 0;
 
   	font-size: 16px;
+    .bold();
   }
 
   /* Give a minimum width height to links as per Google's guidelines */
@@ -66,9 +69,16 @@
   	min-width:48px;
   	min-height:48px;
 
-    color: black;
+    color: darken(@pink, 15%);
     text-decoration: none;
-  }
+
+      &:hover {
+        color: lighten(@pink, 10%);
+        text-decoration: underline;
+    
+        .bolder();
+      }
+    }
 
   /* Make right triangle glyphicon black */
   .glyphicon {
@@ -98,26 +108,31 @@
   }
 
   a.home-link {
-  color: @pink;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 81px;
-  &:visited {
     color: @pink;
     text-decoration: none;
-    font-weight: 900;
+    font-size: 35px;
+    font-size: 3.5rem;
+
+    .bolder();
+    &:visited {
+      color: @pink;
+      text-decoration: none;
+    
+      .bolder();
+    }
+    &:hover {
+      color: darken(@pink, 10%);
+      text-decoration: none;
+    
+      .bolder();
+    }
+    &:active {
+      color: @pink;
+      text-decoration: none;
+    
+      .bolder();
+    }
   }
-  &:hover {
-    color: darken(@pink, 10%);
-    text-decoration: none;
-    font-weight: 900;
-  }
-  &:active {
-    color: @pink;
-    text-decoration: none;
-    font-weight: 900;
-  }
-}
 
   //set width, position columns in <aside> on wide views
   .col-md-4 {

@@ -16,6 +16,7 @@
 .ti {
   text-indent: -9999px;
 }
+/* Font weights */
 /* Z-INDEX MIXINS */
 /* 5 or less should be fine, but plugin code may want mord */
 /* WordPress also gets crazy with z-indexes (e.g. "z-index: 9999") */
@@ -462,18 +463,23 @@ a.colophon-link:hover {
   * ===================================================================
   */
 @media (min-width: 768px) {
+  /* Style the header on wide views */
   .site-header {
     padding: 3px 0 0 20px;
     background-color: #f9bfd7;
   }
+  /* Make the main site link really big on non-handheld views */
   .site-title {
-    font-size: 65px;
+    font-size: 30px;
+    font-size: 3.0rem;
   }
   /* Style the tagline on wide views */
   .site-description {
+    width: 244px;
+    margin: 0;
     font-size: 18px;
-    font-weight: 900;
     color: #000;
+    border-top: 1px solid #000;
   }
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
   .site-branding {
@@ -485,13 +491,15 @@ a.colophon-link:hover {
     margin-top: 87px;
   }
   /* Style searchform */
+  .searchform-class {
+    position: relative;
+    bottom: 89px;
+    right: -303px;
+  }
   /* Style the main navigation */
   .main-navigation {
     display: inline-block;
-    position: relative;
-    top: -116px;
   }
-  /* Push main <nav> to the left on wide views */
   /* Hide the menu button on desktops/laptops */
   .menu-toggle {
     position: absolute !important;
@@ -502,15 +510,21 @@ a.colophon-link:hover {
   /* style links on desktop view*/
   .menu-item {
     display: inline-block;
-    margin-bottom: 10px;
+    margin: 0  20px 10px 0;
     font-size: 16px;
+    font-weight: 700;
   }
   /* Give a minimum width height to links as per Google's guidelines */
   .menu-item a {
     min-width: 48px;
     min-height: 48px;
-    color: black;
+    color: #c2115a;
     text-decoration: none;
+  }
+  .menu-item a:hover {
+    color: #f1619c;
+    text-decoration: underline;
+    font-weight: 900;
   }
   /* Make right triangle glyphicon black */
   .glyphicon {
@@ -538,8 +552,9 @@ a.colophon-link:hover {
   a.home-link {
     color: #ed327f;
     text-decoration: none;
+    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: 900;
-    font-size: 81px;
   }
   a.home-link:visited {
     color: #ed327f;
