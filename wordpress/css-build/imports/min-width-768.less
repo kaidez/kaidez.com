@@ -6,7 +6,7 @@
 
     background-color: lighten(@pink, 30%);
   }
-  
+
   /* Make the main site link really big on non-handheld views */
   .site-title {
     font-size: 30px;
@@ -37,8 +37,8 @@
   /* Style searchform */
   .searchform-class {
     position: absolute;
-    top:50px;
-    right:430px;
+    top: 50px;
+    right: 915px;
   }
 
   /* Style the main navigation */
@@ -89,13 +89,23 @@
 
   /* Style the search field */
   .header-search-field {
-    width: 305px;
+    width: 376px;
     height: 31px;
-
+    right: -38px;
+    position: relative;
+    
     border: 1px solid #000;
   }
 
-  .fa-search {
+  .header-search-submit {
+    position: relative;
+    right: 8px;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  .btn-mobile-search {
     .hide-element();
   }
 
@@ -144,10 +154,7 @@
    * FOOTER STYLES START
    * ==================================================================
    */
-  
-  .footer-text {
-    display: inline-block;
-  }
+
 
 
   /*

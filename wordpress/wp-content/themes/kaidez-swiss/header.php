@@ -32,7 +32,9 @@
           <span class="mobile-menu-bar"></span>
           <span class="mobile-menu-bar"></span>
         </button> <!-- .mobile-menu -->
-        <div id="mobile-search-button" class="mobile-search"><i class="fa fa-search fa-lg"></i></div>
+        <div id="mobile-search-button" class="mobile-search">
+          <i class="fa fa-search fa-lg btn-mobile-search"></i>
+        </div>
       </div><!-- .site-branding -->
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -58,7 +60,9 @@
       <form method="get" id="searchform" class="searchform-class" action="<?php bloginfo('home'); ?>/">
         <div class="blog-search">
           <input id="s" class="header-search-field" name="s" type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" />
-          <button class="btn btn-default header-search-submit footer-button" type="submit" id="searchsubmit" />Submit</button>
+          <button class="header-search-submit" type="submit" id="searchsubmit" />
+            <i class="fa fa-search fa-lg"></i>
+          </button>
         </div><!-- .blog-search -->
       </form><!-- #searchform -->
 
