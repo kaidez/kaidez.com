@@ -475,9 +475,10 @@ a.colophon-link:hover {
   }
   /* Style the tagline on wide views */
   .site-description {
-    width: 244px;
+    width: 221px;
     margin: 0;
-    font-size: 18px;
+    font-size: 17px;
+    font-size: 1.7rem;
     color: #000;
     border-top: 1px solid #000;
   }
@@ -492,14 +493,15 @@ a.colophon-link:hover {
   }
   /* Style searchform */
   .searchform-class {
-    position: absolute;
-    top: 50px;
-    right: 915px;
+    position: relative;
+    top: -25px;
+    right: 33px;
+    display: inline-block;
   }
   /* Style the main navigation */
   .main-navigation {
     position: relative;
-    bottom: 36px;
+    top: -25px;
     display: inline-block;
   }
   /* Hide the menu button on desktops/laptops */
@@ -540,12 +542,14 @@ a.colophon-link:hover {
     position: relative;
     border: 1px solid #000;
   }
+  /* Style the search button */
   .header-search-submit {
     position: relative;
     right: 8px;
     background-color: transparent;
     border: none;
   }
+  /* Hide the mobile search button on desktop view */
   .btn-mobile-search {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
