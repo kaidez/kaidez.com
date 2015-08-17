@@ -492,12 +492,14 @@ a.colophon-link:hover {
   }
   /* Style searchform */
   .searchform-class {
-    position: relative;
+    position: absolute;
+    top: 50px;
+    right: 430px;
   }
   /* Style the main navigation */
   .main-navigation {
     position: relative;
-    bottom: 53px;
+    bottom: 36px;
     display: inline-block;
   }
   /* Hide the menu button on desktops/laptops */
@@ -532,22 +534,15 @@ a.colophon-link:hover {
   }
   /* Style the search field */
   .header-search-field {
-    width: 190px;
+    width: 305px;
     height: 31px;
     border: 1px solid #000;
   }
-  /* Hide the search button on desktop view */
-  .header-search-submit {
+  .fa-search {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
-  }
-  .fa-search {
-    position: relative;
-    top: 81px;
-    left: 162px;
-    z-index: 2;
   }
   a.home-link {
     color: #ed327f;
