@@ -64,10 +64,10 @@
           <a href="#" class="aside-link" title="read articles written by blog">articles</a>
         </li>
         <li class="aside-list-item">
-          <a href="#" class="aside-link" title="read the AJAX beginner's tutorial written by kaidez">ajax tutorial</a>
+          <a href="#" class="aside-link" title="read the lynda.com courses developed by kaidez">kaidez on lynda</a>
         </li>
         <li class="aside-list-item">
-          <a href="#" class="aside-link" title="read the lynda.com courses developed by kaidez">kaidez on lynda</a>
+          <a href="#" class="aside-link" title="read the AJAX beginner's tutorial written by kaidez">ajax tutorial</a>
         </li>
       </ul>
     </section> <!-- #footer-navigation -->
