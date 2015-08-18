@@ -58,7 +58,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    * Promises/A+ compliant.
    */
   return q( $.ajax({
-    url: "/wp-content/themes/kaidez-swiss/js/aside-code.html", 
+    // Load in the sharing module
+    url: getSharingModule, 
     type: "GET"
 
   // Do things after the Promise resolves
