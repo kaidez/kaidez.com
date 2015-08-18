@@ -113,6 +113,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         pageElement.setAttribute( "href", pageLink + getPostLink );  
       }
     }); 
+  }).then(function(){
+    console.log("test promise call!");
   }, function ( xhr ) {
     // If the Promise fails, send a certain console message
    console.log( "The social sharing links failed to load...you may needs refresh the page." );
