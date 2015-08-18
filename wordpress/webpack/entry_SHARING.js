@@ -45,11 +45,11 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
  * there.
  */
 
-// Wait for the DOM to be ready to co
+// Wait for the DOM to be ready before loading content
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
   // Set a reference for the sharing element
-  var getData = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
+  var getSharingModule = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
   /*
    * kaidez.com uses jQuery 2.1.4, which use Promises that don't
@@ -58,7 +58,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    * Promises/A+ compliant.
    */
   return q( $.ajax({
-    url: getData, 
+    url: "/wp-content/themes/kaidez-swiss/js/aside-code.html", 
     type: "GET"
 
   // Do things after the Promise resolves
@@ -113,16 +113,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         pageElement.setAttribute( "href", pageLink + getPostLink );  
       }
     }); 
-  }).then(function(){
-    console.log("test promise call!");
   }, function ( xhr ) {
     // If the Promise fails, send a certain console message
-   console.log( "The social sharing links failed to load...you may needs refresh the page." );
+    console.log( "The social sharing links failed to load...you may needs refresh the page." );
   });
 
 }); // end "document.addEventListener()"
 
 // END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
+
 
 /*
  * START CLICK-TO-TWEET CODE

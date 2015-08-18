@@ -8,7 +8,10 @@ var webpack = require("webpack"),
 
 module.exports = {
   entry: {
-    globals: "./webpack/entry_GLOBALS",
+    globals: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE"
+    ],
     home: "./webpack/entry_HOMEPAGE",
     posts: [
       "./webpack/entry_SHARING",
