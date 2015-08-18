@@ -588,6 +588,14 @@ a.colophon-link:hover {
   .aside-inner {
     margin-left: 25px;
   }
+  /* Style AJAX loading animated loading .gif for the <aside> */
+  .loading {
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    padding-bottom: 22px;
+    background: url("/wp-content/themes/kaidez-swiss/js/ajax-loader.gif") no-repeat;
+  }
   /*
    * ==================================================================
    * FOOTER STYLES START
