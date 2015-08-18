@@ -7,20 +7,41 @@
 
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ), // require the Q Promise library
-    enquire = require( "enquire.js" ); // require the Q Promise library
+    enquire = require("enquire.js"); // require.js media query library
+
+  var getAside = "/wp-content/themes/kaidez-swiss/js/aside-code.html";
 
 // Wait for the DOM to be ready before loading content
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
-  var getAside = "/wp-content/themes/kaidez-swiss/js/aside-code.html";
-
-  return q( $.ajax({
-    url: getAside, 
-    type: "GET"
-  })).then(function(){
-    $( ".loading" ).remove();
+  return q( $( ".loading" ).remove() )
+  .then(function(){
+    getSidebar();
   }, function ( xhr ) {
     // If the Promise fails, send a certain console message
    console.log( "The aside failed to load...you may needs refresh the page." );
   });
 });
+
+function getSidebar() {
+
+  enquire.register( "(min-width: 768px)", {
+    setup : function() {
+      // Load in content via AJAX (just the once)
+      
+    },
+
+    match : function() {
+
+      // Show sidebar
+      $( "#aside-id" ).load( getSidebar );
+      $( "body" ).addClass( "isSidebar" );
+      
+    },
+
+    unmatch : function() {
+     
+    }
+  });
+
+}
