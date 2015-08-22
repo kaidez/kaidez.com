@@ -136,6 +136,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
  * The "click-to-tweet" link is not on the page on initial page load,
  * so $.click() wont work on it. Instead, use $.delegate() to bind a
  * click event to the link.
+ * Based on cool-ass code at:
+ * http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
+ * Cool Regex code:
+ * http://stackoverflow.com/questions/4058923/get-all-characters-after-character
+ * http://stackoverflow.com/questions/3780696/javascript-string-replace-with-regex-to-strip-off-illegal-characters
  */
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
   
