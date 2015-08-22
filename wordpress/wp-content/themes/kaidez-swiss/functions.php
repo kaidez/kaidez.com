@@ -168,7 +168,6 @@ function qod_remove_extra_data( $data, $post, $context ) {
   unset( $data['status'] );
   unset( $data['content'] );
   unset( $data['sticky'] );
-  unset( $data['date'] );
   unset( $data['modified'] );
   unset( $data['format'] );
   unset( $data['type'] );
