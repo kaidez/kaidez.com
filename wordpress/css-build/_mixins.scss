@@ -4,3 +4,8 @@
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+@mixin show-element {
+  position: static;
+  clip: auto;
+}

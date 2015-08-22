@@ -39,14 +39,18 @@ function getSidebar() {
     match : function() {
       
       // Show sidebar
-      $( "#aside-id" ).attr("style", "display: block;");
+      $( "#aside-id" )
+        .addClass( "aside-show" )
+        .removeClass( "aside-hide" );
           
     },
 
     unmatch : function() {
       
       // Hide sidebar
-      $( "#aside-id" ).attr("style", "display: none;");
+      $( "#aside-id" )
+        .removeClass( "aside-show" )
+        .addClass( "aside-hide" );
       
     }
 
