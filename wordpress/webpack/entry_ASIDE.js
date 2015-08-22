@@ -32,7 +32,7 @@ function getSidebar() {
     setup : function() {
 
       // Load in content via AJAX (just the once)
-      $( "#aside-id" ).load( getAside );  
+      $( "#aside-id" ).load( getAside ).addClass( "aside-hide" )
       
     },
 
@@ -49,8 +49,8 @@ function getSidebar() {
       
       // Hide sidebar
       $( "#aside-id" )
-        .removeClass( "aside-show" )
-        .addClass( "aside-hide" );
+        .addClass( "aside-hide" )
+        .removeClass( "aside-show" );
       
     }
 
