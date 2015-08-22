@@ -1,0 +1,5 @@
+@import "../../css-build/_mixins";
+
+.aside {
+   @include hide-element;
+}

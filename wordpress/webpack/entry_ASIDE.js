@@ -10,6 +10,8 @@ var $ = require( "jquery" ), // require jQuery
     enquire = require("enquire.js"), // require.js media query library
     getAside = "/wp-content/themes/kaidez-swiss/js/aside-code.html";
 
+require("./config/aside.scss");
+
 // Wait for the DOM to be ready before loading content
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
