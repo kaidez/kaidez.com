@@ -10,11 +10,5 @@ var $ = require( "jquery" ), // require jQuery
 
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
-  $.getJSON( "/wp-json", function( data ) {
-    console.log("getting!");
-  }).then(function(){
-    console.log("got it!");
-  });
 
 }); // end addEventListener call
-

@@ -4,16 +4,19 @@ var webpack = require("webpack"),
       compress: {
         warnings: false
       }
-    });
+    }),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    globals: [
+    home: [
       "./webpack/entry_GLOBALS",
-      "./webpack/entry_ASIDE"
-    ],
-    home: "./webpack/entry_HOMEPAGE",
+      "./webpack/entry_ASIDE",
+      "./webpack/entry_HOMEPAGE",
+      ],
     posts: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE",
       "./webpack/entry_SHARING",
       "./webpack/config/prism",
       "./webpack/config/comment-reply"
@@ -33,6 +36,9 @@ module.exports = {
 
   plugins: [
     commonsChunkPlugin,
-    UglifyJsPlugin 
+    UglifyJsPlugin,
+    new ExtractTextPlugin("styles.css", {
+        allChunks: true
+      })
   ]
 };
