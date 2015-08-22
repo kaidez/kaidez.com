@@ -187,4 +187,4 @@ function qod_remove_extra_data( $data, $post, $context ) {
   return $data;
 }
 
-add_filter( 'json_prepare_post', 'qod_remove_extra_data', 12, 3 );
+add_filter( 'json_prepare_post', 'qod_remove_extra_data', 1, 3 );
