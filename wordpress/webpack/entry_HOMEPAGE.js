@@ -10,12 +10,13 @@ var $ = require( "jquery" ), // require jQuery
 
 // Wait for the DOM to be ready before loading in JSON
 document.addEventListener( "DOMContentLoaded", function( event ) {
-
+  var getURL = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
   /*
    * Load in post content with $.getJSON()
    * Refer to the post content as "posts" inside the $.getJSON call
    */
-  $.getJSON( "/wp-json/posts" ).done( function( posts ) {
+  $.getJSON( getURL ).done( function( posts ) {
+
     console.log( posts[0].excerpt );
   });
 
