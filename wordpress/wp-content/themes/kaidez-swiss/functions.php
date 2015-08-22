@@ -151,3 +151,40 @@ require get_template_directory() . '/inc/jetpack.php';
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+
+
+
+
+
+function qod_remove_extra_data( $data, $post, $context ) {
+  // We only want to modify the 'view' context, for reading posts
+  if ( $context !== 'view' || is_wp_error( $data ) ) {
+    return $data;
+  }
+  
+  // Here, we unset any data we don't want to see on the front end:
+  unset( $data['author'] );
+  unset( $data['status'] );
+  unset( $data['content'] );
+  unset( $data['sticky'] );
+  unset( $data['date'] );
+  unset( $data['modified'] );
+  unset( $data['format'] );
+  unset( $data['type'] );
+  unset( $data['parent'] );
+  unset( $data['slug'] );
+  unset( $data['guid'] );
+  unset( $data['meta'] );
+  unset( $data['comment_status'] );
+  unset( $data['ping_status'] );
+  unset( $data['date_tz'] );
+  unset( $data['menu_order'] );
+  unset( $data['date_gmt'] );
+  unset( $data['modified_tz'] );
+  unset( $data['modified_gmt'] );
+
+  return $data;
+}
+
+add_filter( 'json_prepare_post', 'qod_remove_extra_data', 12, 3 );
