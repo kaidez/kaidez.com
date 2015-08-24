@@ -1,0 +1,7 @@
+.aside-hide {
+   @include hide-element;
+}
+
+.aside-show {
+   @include show-element;
+}
