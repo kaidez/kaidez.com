@@ -29,7 +29,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    */
   $.getJSON( getAPI ).done( function( posts ) {
 
+    // var reference to <section id="all-articles" /> on the home page
     var articleSection = document.getElementById( "all-articles" ),
+        
+        // Create document fragment to batch-load content onto the page
         sectionDocFragment = document.createDocumentFragment();
 
     for( var key in posts ) {
