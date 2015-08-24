@@ -12,7 +12,6 @@ var $ = require( "jquery" ), // require jQuery
     
 
 // Load <aside>-specific CSS, which is preprocessed out with SASS.
-require("./config/aside.scss");
 
 // Wait for the DOM to be ready before loading content
 document.addEventListener( "DOMContentLoaded", function( event ) {
