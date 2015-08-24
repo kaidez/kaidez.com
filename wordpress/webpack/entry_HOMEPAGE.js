@@ -40,7 +40,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // jQuery-style single var pattern
       var postLink, postTitle, postExcerpt,
           articlePost = document.createElement( "article" ),
-          articleHeader = document.createElement( "h1" ),
+          articleHeader = document.createElement( "h2" ),
           articleExcerpt = document.createElement( "p" ),
           articleLink = document.createElement( "a" );
       
