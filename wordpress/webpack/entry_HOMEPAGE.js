@@ -7,6 +7,8 @@
 
 var $ = require( "jquery" ); // require jQuery
 
+require("./homepage.scss");
+
 // Wait for the DOM to be ready before loading in JSON
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
@@ -104,6 +106,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load <article> with the title & excerpt into the doc fragment
       sectionDocFragment.appendChild( articlePost );
 
+      var postCategory = posts[key].terms["category"];
+
+      for (var key in postCategory) {
+        console.log(postCategory[key].slug);
+      }
 
     } // end for...in loop
 
