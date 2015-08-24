@@ -40,7 +40,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // jQuery-style single var pattern
       var postLink, postTitle, postExcerpt,
           articlePost = document.createElement( "article" ),
-          articleTitle = document.createElement( "h1" ),
+          articleHeader = document.createElement( "h1" ),
           articleExcerpt = document.createElement( "p" ),
           articleLink = document.createElement( "a" );
       
@@ -56,10 +56,13 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       articleLink.setAttribute( "href", postLink ); 
 
       // Load post title copy in the <a> tag
-      articleLink.innerHTML = postTitle; 
+      articleLink.innerHTML = postTitle;
+
+      // Load link into the post header
+      articleHeader.appendChild( articleLink ); 
       
-      // Load title in the <article>
-      articlePost.appendChild( articleLink ); 
+      // Load post header in the <article>
+      articlePost.appendChild( articleHeader ); 
       
 
 
