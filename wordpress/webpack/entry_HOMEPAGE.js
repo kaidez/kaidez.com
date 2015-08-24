@@ -46,6 +46,9 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           articleImage = document.createElement( "img" );
           imageDiv = document.createElement( "div" );
 
+      // Each <article> tag gets the "homepage-post-snippet" class
+      articlePost.setAttribute("class", "homepage-post-snippet");
+
       /*
        * SET UP SINGLE BLOG POST IMAGES!!!!
        * The first 10 blog posts MUST have a Featured Image or the site
