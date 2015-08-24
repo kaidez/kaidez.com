@@ -42,7 +42,9 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           articlePost = document.createElement( "article" ),
           articleHeader = document.createElement( "h2" ),
           articleExcerpt = document.createElement( "p" ),
-          articleLink = document.createElement( "a" );
+          articleLink = document.createElement( "a" ),
+          articleImage = document.createElement( "img" ),
+          images = posts[key].featured_image["source"];
       
       // SET UP SINGLE BLOG LINK & HEADER!!!!
 
