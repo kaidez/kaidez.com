@@ -457,6 +457,12 @@ a.colophon-link:hover {
 .youtube-iframe {
   max-width: 100%;
 }
+/* Make post-related images responsive */
+.post-pic {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
 /*
   * ===================================================================
   * MISCELLANOUS STYLES END
@@ -780,6 +786,22 @@ a.colophon-link:hover {
   .comment-textarea {
     width: 290px;
   }
+  /*
+   * ==================================================================
+   * ASIDE STYLES START
+   * ==================================================================
+   */
+  .loading {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  /*
+   * ==================================================================
+   * ASIDE STYLES END
+   * ==================================================================
+   */
   /*
    * ==================================================================
    * FOOTER STYLES START
