@@ -6,9 +6,6 @@
  */
 
 var $ = require( "jquery" ); // require jQuery
-    
-    // Remove q library for now...it may come back
-    //q = require( "Q" ); // require the Q Promise library
 
 // Wait for the DOM to be ready before loading in JSON
 document.addEventListener( "DOMContentLoaded", function( event ) {
