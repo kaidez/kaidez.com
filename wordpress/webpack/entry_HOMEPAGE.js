@@ -5,11 +5,25 @@
  *
  */
 
-var $ = require( "jquery" ), // require jQuery
-    q = require( "Q" ); // require the Q Promise library
+var $ = require( "jquery" ); // require jQuery
+    
+    // Remove q library for now...it may come back
+    //q = require( "Q" ); // require the Q Promise library
 
 // Wait for the DOM to be ready before loading in JSON
 document.addEventListener( "DOMContentLoaded", function( event ) {
+
+  /*
+   * ==================================================================
+   * FIND THE FIRST TEN POSTS IN THE WP REST API AND PLACE THEM ON THE
+   * HOME PAGE ON A CERTAIN WAY
+   * ==================================================================
+   */
+
+  /*
+   * Grab the first 10 single posts from the WordPress API & sort them 
+   * by date.
+   */
   var getURL = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
 
   /*
@@ -19,10 +33,46 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   $.getJSON( getURL ).done( function( posts ) {
 
     var articleSection = document.getElementById( "all-articles" ),
-        articlePost = document.createElement( "article" ),
-        articleTitle = document.createElement( "h1" ),
-        articleExcerpt = document.createElement( "p" );
-        
-  });
+        sectionDocFragment = document.createDocumentFragment();
 
-}); // end addEventListener call
+    for( var key in posts ) {
+
+      var postTitle, postExcerpt,
+          articlePost = document.createElement( "article" ),
+          articleTitle = document.createElement( "h1" ),
+          articleExcerpt = document.createElement( "p" );
+      
+      // SET UP SINGLE BLOG POST!!!!
+
+      // Get post title copy
+      postTitle = posts[key].title;
+
+      // Load post title copy in the <h1> tag
+      articleTitle.innerHTML = postTitle; 
+      
+      // Load title in the <article>
+      articlePost.appendChild( articleTitle ); 
+      
+
+      // SET UP SINGLE BLOG POST EXCERPT!!!!
+      
+      // Get post excerpt copy
+      postExcerpt = posts[key].excerpt;
+
+      // Load post excerpt copy in the <p> tag
+      articleExcerpt.innerHTML = postExcerpt;
+
+      // Load post title copy in the <article>
+      articlePost.appendChild(articleExcerpt);
+
+
+      // Load <article> with the title & excerpt into the doc fragment
+      sectionDocFragment.appendChild(articlePost);
+    } // end for...in loop
+  
+    // Exit the loop & load the doc fragment into the "all-articles" el
+    articleSection.appendChild(sectionDocFragment);
+
+  }); // end $.getJSON()
+
+}); // end addEventListener
