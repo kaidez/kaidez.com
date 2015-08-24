@@ -21,13 +21,13 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    * Grab the first 10 single posts from the WordPress API & sort them 
    * by date.
    */
-  var getAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
+  var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
 
   /*
    * Load in post content with $.getJSON()
    * Refer to the content as "posts" inside the $.getJSON call
    */
-  $.getJSON( getAPI ).done( function( posts ) {
+  $.getJSON( getPostsAPI ).done( function( posts ) {
 
     // var reference to <section id="all-articles" /> on the home page
     var articleSection = document.getElementById( "all-articles" ),
