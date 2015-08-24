@@ -38,13 +38,12 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     for( var key in posts ) {
 
       // jQuery-style single var pattern
-      var postLink, postTitle, postExcerpt,
+      var postLink, postTitle, postExcerpt, postImages,
           articlePost = document.createElement( "article" ),
           articleHeader = document.createElement( "h2" ),
           articleExcerpt = document.createElement( "p" ),
           articleLink = document.createElement( "a" ),
-          articleImage = document.createElement( "img" ),
-          images = posts[key].featured_image["source"];
+          articleImage = document.createElement( "img" );
       
       // SET UP SINGLE BLOG LINK & HEADER!!!!
 
@@ -82,8 +81,17 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load <article> with the title & excerpt into the doc fragment
       sectionDocFragment.appendChild( articlePost );
 
+      
+
+      /*
+       * SET UP SINGLE BLOG POST IMAGES!!!!
+       * The first 10 blog posts MUST have a Featured Image or the site
+       * will crash.
+       */
+      postImages = posts[key].featured_image["source"];
+
     } // end for...in loop
-  
+
     // Exit loop, load the doc fragment into the "all-articles" element
     articleSection.appendChild( sectionDocFragment );
 
