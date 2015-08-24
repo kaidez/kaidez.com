@@ -37,22 +37,31 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     for( var key in posts ) {
 
-      var postTitle, postExcerpt,
+      // jQuery-style single var pattern
+      var postLink, postTitle, postExcerpt,
           articlePost = document.createElement( "article" ),
           articleTitle = document.createElement( "h1" ),
-          articleExcerpt = document.createElement( "p" );
+          articleExcerpt = document.createElement( "p" ),
+          articleLink = document.createElement( "a" );
       
-      // SET UP SINGLE BLOG POST!!!!
+      // SET UP SINGLE BLOG LINK!!!!
+
+      // Get post title link
+      postLink = posts[key].link;
 
       // Get post title copy
       postTitle = posts[key].title;
 
-      // Load post title copy in the <h1> tag
-      articleTitle.innerHTML = postTitle; 
+      // Set the article link's "href" to be the post link
+      articleLink.setAttribute( "href", postLink ); 
+
+      // Load post title copy in the <a> tag
+      articleLink.innerHTML = postTitle; 
       
       // Load title in the <article>
-      articlePost.appendChild( articleTitle ); 
+      articlePost.appendChild( articleLink ); 
       
+
 
       // SET UP SINGLE BLOG POST EXCERPT!!!!
       
@@ -65,9 +74,9 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load post title copy in the <article>
       articlePost.appendChild(articleExcerpt);
 
-
       // Load <article> with the title & excerpt into the doc fragment
       sectionDocFragment.appendChild(articlePost);
+
     } // end for...in loop
   
     // Exit the loop & load the doc fragment into the "all-articles" el
