@@ -44,7 +44,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           articleExcerpt = document.createElement( "p" ),
           articleLink = document.createElement( "a" );
       
-      // SET UP SINGLE BLOG LINK!!!!
+      // SET UP SINGLE BLOG LINK & HEADER!!!!
 
       // Get post title link
       postLink = posts[key].link;
@@ -75,15 +75,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       articleExcerpt.innerHTML = postExcerpt;
 
       // Load post title copy in the <article>
-      articlePost.appendChild(articleExcerpt);
+      articlePost.appendChild( articleExcerpt );
 
       // Load <article> with the title & excerpt into the doc fragment
-      sectionDocFragment.appendChild(articlePost);
+      sectionDocFragment.appendChild( articlePost );
 
     } // end for...in loop
   
-    // Exit the loop & load the doc fragment into the "all-articles" el
-    articleSection.appendChild(sectionDocFragment);
+    // Exit loop, load the doc fragment into the "all-articles" element
+    articleSection.appendChild( sectionDocFragment );
 
   }); // end $.getJSON()
 
