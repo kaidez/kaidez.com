@@ -1,1 +1,20 @@
+@import "config/sass/_variables";
 @import "config/sass/_mixins";
+@import "config/sass/_aside";
+
+
+.homepage-post-snippet {
+  padding: 11px;
+
+  background-color: lighten($pink, 35%);
+  text-transform: lowercase;
+}
+
+@media (max-width: 767px) {
+
+  /* Space out each post snippet on home page when in mobile view */
+  .homepage-post-snippet {
+    margin-bottom: 90px;
+  }
+
+}
