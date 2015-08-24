@@ -38,7 +38,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     for( var key in posts ) {
 
       // jQuery-style single var pattern
-      var postLink, postTitle, postExcerpt, postImage,
+      var postImage, postLink, postTitle, postExcerpt,
           articlePost = document.createElement( "article" ),
           articleHeader = document.createElement( "h2" ),
           articleExcerpt = document.createElement( "p" ),
@@ -52,15 +52,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        * will crash.
        */
       postImage = posts[key].featured_image["source"];
-      $(articleImage).attr({
+      $( articleImage ).attr({
         "src": postImage,
         "class": "post-pic"
       });
 
-      // Load post header in the <article>
+      // Load post image in a <div>
       imageDiv.appendChild( articleImage ); 
 
-      // Load post header in the <article>
+      // Load the <div> with an image in the <article>
       articlePost.appendChild( imageDiv ); 
 
 
