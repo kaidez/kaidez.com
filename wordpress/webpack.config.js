@@ -8,6 +8,7 @@ var webpack = require("webpack"),
     ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
+
   entry: {
     
     // Create a file called "home.js" with specific modules
@@ -24,7 +25,14 @@ module.exports = {
       "./webpack/entry_SHARING",
       "./webpack/config/prism",
       "./webpack/config/comment-reply"
+    ],
+
+    // Create a file called "regular.js" with specific modules
+    regular: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE"
     ]
+
   },
   output: {
     path: "wp-content/themes/kaidez-swiss/js/",
@@ -33,7 +41,6 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.css$/, loader: "style-loader!css-loader"},
-      {test: /\.less$/, loader: "style!css!less"},
       {
         test: /\.scss$/,
         loader: 'style!css!sass'
