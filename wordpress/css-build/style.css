@@ -608,6 +608,12 @@ a.colophon-link:hover {
    * FOOTER STYLES START
    * ==================================================================
    */
+  .load-footer-content {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
   /*
    * ==================================================================
    * FOOTER STYLES END
@@ -828,6 +834,16 @@ a.colophon-link:hover {
     cursor: pointer;
     text-align: center;
     background-color: #000;
+  }
+  .load-footer-content {
+    height: 40px;
+    margin-top: 85px;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    background-color: #ef498e;
+    cursor: pointer;
+    font-weight: 900;
   }
   /*
    * Globally set main link color for the site
