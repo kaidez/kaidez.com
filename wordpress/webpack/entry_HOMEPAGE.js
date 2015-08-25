@@ -57,9 +57,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        * will crash.
        */
       postImage = posts[key].featured_image["source"];
+
+      // Add styles and s "src" attribute to the image 
       $( articleImage ).attr({
         "src": postImage,
-        "class": "post-pic"
+        "class": "post-pic post-pic-border"
       });
 
       // Load post image in a <div>
