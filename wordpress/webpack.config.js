@@ -9,11 +9,15 @@ var webpack = require("webpack"),
 
 module.exports = {
   entry: {
+    
+    // Create a file called "home.js" with specific modules
     home: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_HOMEPAGE",
       ],
+    
+    // Create a file called "posts.js" with specific modules
     posts: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
