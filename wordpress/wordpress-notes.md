@@ -5,4 +5,6 @@ index.php: the posts file. calls the header, the sidebar and the footer. Also ca
 BEFORE DEPLOYING
 * webpack-i-fy `comment-reply.js`
 
-webpack setupo can cause FOUT/FOUC.
+webpack setup can cause FOUT/FOUC.
+
+webpack can chunk out AJAX code, meaning that the code will be called twice under the right set of circumstances.
