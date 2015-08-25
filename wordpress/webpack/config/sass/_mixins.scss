@@ -9,3 +9,15 @@
   position: static;
   clip: auto;
 }
+
+@mixin bold {
+  font-weight:700;
+}
+
+@mixin bolder {
+  font-weight:900; 
+}
+
+@mixin br {
+  border-radius:5px;
+}
