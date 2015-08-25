@@ -10,12 +10,15 @@ var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ), // require the Q Promise library
     enquire = require("enquire.js"); // enquire.js media query library
     
+require("./posts.scss");
 
 // Load <aside>-specific CSS, which is preprocessed out with SASS.
 
 // Wait for the DOM to be ready before loading content
-document.addEventListener( "DOMContentLoaded", function( event ) {
+$("#load-footer-btn").click( function( event ) {
 
+  event.preventDefault();
+  $( this ).hide();
   /*
    * kaidez.com uses jQuery 2.1.4, which use Promises that don't
    * conform to the Promises/A+ spec. wrap it in a Q return makes
@@ -52,7 +55,7 @@ function getSidebar() {
     // On pageload, load in content via AJAX just once & hide it
     setup : function() {
 
-      $( "#aside-id" ).load( getAside ).addClass( "aside-hide" );
+      $( "#aside-footer" ).load( getAside ).addClass( "aside-hide" );
       
     },
 
@@ -62,7 +65,7 @@ function getSidebar() {
      */
     match : function() {
       
-      $( "#aside-id" )
+      $( "#aside-footer" )
         .addClass( "aside-show" )
         .removeClass( "aside-hide" );
           
@@ -74,7 +77,7 @@ function getSidebar() {
      */
     unmatch : function() {
 
-      $( "#aside-id" )
+      $( "#aside-footer" )
         .addClass( "aside-hide" )
         .removeClass( "aside-show" );
       
