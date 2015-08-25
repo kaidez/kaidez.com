@@ -74,24 +74,10 @@ module.exports = function( grunt ) {
            "fontawesome-webfont.otf": "fontawesome/fonts/fontawesome-webfont.otf"
         }
       } // end "bowercopy:bsfafont" task
-    }, // end "bowercopy" task
+    } // end "bowercopy" task
 
-    // start "coffee" task
-    coffee: {
-      compile: {
-        options: {
-          bare: true
-        },
-        files: {
-          // compile & concat .coffee files to a single file called
-          // "build/js/main.js"
-          "build/js/main.js": ["coffee/main.coffee"]
-        }
-      }
-    } // end "coffee" task
   });
 
   grunt.loadNpmTasks( "grunt-bowercopy" );
-  grunt.loadNpmTasks( "grunt-contrib-coffee" );
 
 };
