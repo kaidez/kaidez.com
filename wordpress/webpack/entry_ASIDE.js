@@ -14,11 +14,18 @@ require("./posts.scss");
 
 // Load <aside>-specific CSS, which is preprocessed out with SASS.
 
+// Variable reference to the footer content that gets AJAX'ed in
+var getAside = "/wp-content/themes/kaidez-swiss/js/aside-code.html";
+
 // Wait for the DOM to be ready before loading content
 $("#load-footer-btn").click( function( event ) {
 
   event.preventDefault();
   $( this ).hide();
+
+
+
+
   /*
    * kaidez.com uses jQuery 2.1.4, which use Promises that don't
    * conform to the Promises/A+ spec. wrap it in a Q return makes
@@ -32,9 +39,12 @@ $("#load-footer-btn").click( function( event ) {
    */
   return q( $( ".loading" ).remove() )
   .then(function(){
-    
-    // Run "getSidebar()", which loads the footer content
-    getSidebar();
+      // Define the state of the sidebar, saying it's visible
+  $("body").addClass( "isSidebar" );
+  $( "#aside-footer" ).load( getAside );
+  document.getElementById("aside-footer").style.display = "block";
+
+  // Run "getSidebar()", which loads the footer content
   }, function ( xhr ) {
 
     // If the Promise fails, send a certain console message
@@ -43,43 +53,43 @@ $("#load-footer-btn").click( function( event ) {
 
 });
 
+getSidebar();
+
+
+
 // getSidebar(): loads sidebar on all pages using enquire.js
 function getSidebar() {
-
-  // Variable reference to the footer content that gets AJAX'ed in
-  var getAside = "/wp-content/themes/kaidez-swiss/js/aside-code.html";
+  $( ".loading" ).remove();
 
   // Set a base media query value that enquire.js always checks
   enquire.register( "(min-width: 768px)", {
 
-    // On pageload, load in content via AJAX just once & hide it
-    setup : function() {
-
-      $( "#aside-footer" ).load( getAside ).addClass( "aside-hide" );
-      
-    },
+    // Do nothing on pageload...for now
+    setup : function() {},
 
     /*
      * If the viewport matches the base media query value, toggle
-     * show/hide so the <aside> is SHOWN
+     * load the aside/footer content
      */
     match : function() {
       
-      $( "#aside-footer" )
-        .addClass( "aside-show" )
-        .removeClass( "aside-hide" );
+      $( "#aside-footer" ).load( getAside );
           
     },
 
     /*
-     * If the viewport matches the base media query value, toggle
-     * show/hide so the <aside> is HIDDEN
+     * If the viewport does NOT match the base media query value,
+     * check to see if <body> has the "isSidebar" class. If it does
+     * NOT, it means that "click to see the footer content" element
+     * hasn't been clicked on to show the sidebar. So let's assume
+     * that it should remain hidden.  
      */
     unmatch : function() {
-
-      $( "#aside-footer" )
-        .addClass( "aside-hide" )
-        .removeClass( "aside-show" );
+      
+      var sidebarIsVisible = $( "body" ).hasClass( "isSidebar" );
+      if( !sidebarIsVisible ) {
+        document.getElementById("aside-footer").style.display = "none";
+      }
       
     }
 
