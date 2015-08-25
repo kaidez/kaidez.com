@@ -2,12 +2,17 @@
 @import "config/sass/_mixins";
 @import "config/sass/_aside";
 
-
+/* Global styles for the post snippets on the home page */
 .homepage-post-snippet {
   padding: 11px;
 
   background-color: lighten($pink, 35%);
   text-transform: lowercase;
+}
+
+/* Add a black border to all pics on the home page */
+.post-pic-border {
+  border: 1px solid #000;
 }
 
 @media (max-width: 767px) {
