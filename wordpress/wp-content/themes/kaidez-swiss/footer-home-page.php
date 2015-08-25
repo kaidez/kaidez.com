@@ -8,29 +8,11 @@
  */
 
 ?>
-<aside id="aside-id" class="aside">
+<div id="load-footer-btn" class="load-footer-content-message">click to see the footer content</div>
+
+<div id="aside-footer">
   <div class="loading"></div>
-</aside> <!-- #aside-id -->
-
-<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-
-  <p class="footer-text">
-    <a href="" class="footer-links">site map</a>
-    <a href="/affiliate-disclaimer/" class="footer-links">affiliate disclaimer</a>
-  </p>
-
-  <p class="footer-text footer-text-spaced">made with love by kaidez</p>
-  <p class="footer-text">built with <a href="http://wordpress.org/" class="colophon-link" title="Visit Wordpress">wordpress</a></p>
-
-  <p class="footer-text">powered by <a href="http://mediatemple.net/" class="colophon-link" title="Visit Media Temple">media temple</a> and <a href="http://maxcdn.com/" class="colophon-link" title="Visit kaidez on MaxCDN">maxcdn</a></p>
-  
-  <p class="footer-text footer-text-spaced">&copy; 2008-15 kai gittens</p>
-
-  <div class="jump-to-top">
-    <a href="#page" class="jump-to-top-link" title="Go back to the top of the page">back to top</a>
-  </div> <!-- .jump-to-top -->
-
-</footer> <!-- #colophon -->
+</div>
 </div> <!-- #page -->
 
 
