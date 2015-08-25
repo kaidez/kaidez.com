@@ -81,7 +81,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       postTitle = posts[key].title;
 
       // Set the article link's "href" to be the post link
-      articleLink.setAttribute( "href", postLink ); 
+      $(articleLink).attr({
+        "href": postLink,
+        class: "post-link"
+      }); 
 
       // Load post title copy in the <a> tag
       articleLink.innerHTML = postTitle;
