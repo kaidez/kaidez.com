@@ -39,12 +39,14 @@ $("#load-footer-btn").click( function( event ) {
    */
   return q( $( ".loading" ).remove() )
   .then(function(){
-      // Define the state of the sidebar, saying it's visible
-  $("body").addClass( "isSidebar" );
-  $( "#aside-footer" ).load( getAside );
-  document.getElementById("aside-footer").style.display = "block";
+  
+    // Define the state of the sidebar, saying it's visible
+    $("body").addClass( "isSidebar" );
 
-  // Run "getSidebar()", which loads the footer content
+    // Load footer content via AJAX and make sure it's visible
+    $( "#aside-footer" ).load( getAside );
+    document.getElementById("aside-footer").style.display = "block";
+
   }, function ( xhr ) {
 
     // If the Promise fails, send a certain console message
@@ -53,12 +55,10 @@ $("#load-footer-btn").click( function( event ) {
 
 });
 
-getSidebar();
 
+// An IIFE that loads sidebar using enquire.js to check certain states
+(function(){
 
-
-// getSidebar(): loads sidebar on all pages using enquire.js
-function getSidebar() {
   $( ".loading" ).remove();
 
   // Set a base media query value that enquire.js always checks
@@ -95,4 +95,4 @@ function getSidebar() {
 
   });
 
-}
+})();
