@@ -8,13 +8,11 @@
  */
 
 ?>
-<div class="load-footer-content">click to see the footer content</div>
+<div id="load-footer-btn" class="load-footer-content-message">click to see the footer content</div>
 
 <div id="aside-footer">
   <div class="loading"></div>
 </div>
-
-
 
 </div> <!-- #page -->
 
