@@ -30,7 +30,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    * Refer to the content as "posts" inside the $.getJSON call
    */
   $.getJSON( getPostsAPI ).done( function( posts ) {
-
+    
     // var reference to <section id="all-articles" /> on the home page
     var articleSection = document.getElementById( "all-articles" ),
         
