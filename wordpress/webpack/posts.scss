@@ -1,9 +1,9 @@
 /* Single post styling ONLY!! Compiled as a dependency via webpack */
 
 /* Import the site's variables.less & mixins.less files */
-@import "../css-build/imports/variables";
-@import "../css-build/imports/mixins";
-@import "config/prism-styles";
+@import "config/sass/_variables";
+@import "config/sass/_mixins";
+@import "config/sass/_aside";
 
 /* Add space between the breadcrumbs and the content */
 .entry-title-margin {
@@ -44,9 +44,9 @@
   padding: 10px;
 
   color: #fff;
-  background-color: darken(@pink, 45%);
+  background-color: darken(#800, 20%);
  
-  .br();
+  @include br;
 }
 
 /*
@@ -58,7 +58,7 @@
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid darken(@pink, 45%);
+  border-top: 1px solid darken($pink, 45%);
   margin: 1em 0;
   padding: 0;
 }
@@ -69,7 +69,7 @@
   border: none;
 
   color:#fff;
-  background-color:darken(@pink, 15%);
+  background-color:darken($pink, 15%);
 }
 
 /* Place Comment labels above the form fields */
@@ -95,11 +95,11 @@ a.demo-link {
   margin: 15px auto 0;
   padding: 10px;
 
-  background-color: @pink;
+  background-color: $pink;
   text-align: center;
   cursor: pointer;
 
-  .br();
+  @include br;
 }
 
 /* Style the "Click to Tweet" link states */
@@ -123,7 +123,7 @@ a.tweet-post-class {
 /*
  * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
 .post-navigation {
-  .hide-element();
+  @include hide-element;
 }
 
 /* Facebook share link styles only */
@@ -149,7 +149,7 @@ a.tweet-post-class {
   font-family: sans-serif;
   font-weight: normal;
 
-  .br();
+  @include br;
 }
 
 /* Facebook AND Google+ link state styles */
