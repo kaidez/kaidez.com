@@ -608,7 +608,7 @@ a.colophon-link:hover {
    * FOOTER STYLES START
    * ==================================================================
    */
-  .load-footer-content {
+  .load-footer-content-message {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
@@ -835,7 +835,7 @@ a.colophon-link:hover {
     text-align: center;
     background-color: #000;
   }
-  .load-footer-content {
+  .load-footer-content-message {
     height: 40px;
     margin-top: 85px;
     vertical-align: middle;
