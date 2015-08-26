@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-My WordPress theme was built with `_s`, or `underscores` and this is the README that it came with.  I'll update this eventually but for now, learn about _s. 
+My WordPress theme was built with `_s`, or `underscores` and this is the README that it came with it at the first download.  I'll update this eventually but for now, learn about _s. 
 
 _s
 ===
