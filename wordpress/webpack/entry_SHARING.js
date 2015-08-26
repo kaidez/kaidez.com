@@ -8,16 +8,6 @@
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
-// Load in asynchronous code for Facebook and Google+ sharing
-require("./config/async-sharing");
-
-/* Load in styles related to single posts only
- * "posts.less" contains styles for all posts
- * "prism-styles.css" is only for posts with code samples
- *
- * TODO: see if posts without code samples can be recognized,
- * then have "prism-styles.css" load onto JUST those pages 
- */
 
 // Set a reference for the copy blog post's title currently on the page
 var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,

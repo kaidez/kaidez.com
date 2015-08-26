@@ -22,6 +22,7 @@ module.exports = {
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_SHARING",
+      "./webpack/config/async-sharing",
       "./webpack/config/prism",
       "./webpack/config/comment-reply"
     ],
