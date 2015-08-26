@@ -23,7 +23,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    * Grab the first 10 single posts from the WordPress API & sort them 
    * by date.
    */
-  var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
+  var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=11";
 
   /*
    * Load in post content with $.getJSON()
@@ -48,8 +48,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           articleImage = document.createElement( "img" );
           imageDiv = document.createElement( "div" );
 
-      // Each <article> tag gets the "homepage-post-snippet" class
-      articlePost.setAttribute("class", "homepage-post-snippet");
+      if( posts[key] == posts[0] ) {
+        // Each <article> tag gets the "homepage-post-snippet" class
+        articlePost.setAttribute( "class", "first-homepage-post-snippet" );
+      } else {
+        // Each <article> tag gets the "homepage-post-snippet" class
+        articlePost.setAttribute( "class", "homepage-post-snippet" );        
+      }
+
+
 
       /*
        * SET UP SINGLE BLOG POST IMAGES!!!!
@@ -95,7 +102,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load post header in the <article>
       articlePost.appendChild( articleHeader ); 
       
-
+      articleHeader.setAttribute("class", "post-link-homepage");
 
       // SET UP SINGLE BLOG POST EXCERPT!!!!
       
@@ -111,11 +118,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load <article> with the title & excerpt into the doc fragment
       sectionDocFragment.appendChild( articlePost );
 
-      var postCategory = posts[key].terms["category"];
+      // var postCategory = posts[key].terms["category"];
 
-      for (var key in postCategory) {
-        console.log(postCategory[key].slug);
-      }
+      // for (var key in postCategory) {
+      //   console.log(postCategory[key].slug);
+      // }
 
     } // end for...in loop
 
