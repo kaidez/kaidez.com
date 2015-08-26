@@ -46,6 +46,9 @@ module.exports = {
     ]
   },
 
+  /* Output the files to the WordPress /js folder & name them based on
+   * their array name
+   */
   output: {
     path: "wp-content/themes/kaidez-swiss/js/",
     filename: "[name].js"
