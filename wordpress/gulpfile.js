@@ -7,7 +7,6 @@ var gulp = require("gulp"), // "require" gulp
     concatCss = require("gulp-concat-css"), // Concatenate CSS only
     watch = require("gulp-watch"), // Watch files changes
     imagemin = require('gulp-imagemin'), // Minifying images
-    autoprefixer = require('gulp-autoprefixer'),
     exec = require('child_process').exec, // Run CLI commands via node
     Q = require('q'), // Manage promises;
     cp = require( "cp" ); // Copy files over
@@ -38,6 +37,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
      ignoreArray = [
                       /aside/,
                       /aside-/,
+                      ".cf",
                       /fa/,
                       /fa-/,
                       /hide-/,
@@ -112,16 +112,11 @@ gulp.task("outputcss", ['concat'],function () {
   var deferred = Q.defer();
   setTimeout(function() {
     gulp.src(['wp-content/themes/kaidez-swiss/style.css'])
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
     .pipe(uncss({
       html: [
         'http://localhost:8888/', // home page
         'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
         'http://localhost:8888/personal/', // A category page
-        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A page with a lot of code formatting
         'http://localhost:8888/kdz-build-tool/',
         'http://localhost:8888/affiliate-disclaimer/', // Affiliate
         'http://localhost:8888/404.php' // 404 page
