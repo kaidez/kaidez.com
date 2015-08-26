@@ -4,9 +4,25 @@
 
 /* Global styles for the post snippets on the home page */
 .homepage-post-snippet {
-  padding: 11px;
+  max-width: 270px;
+  min-height: 374px;
+  display: inline-block;
+  vertical-align: top;
 
   background-color: lighten($pink, 35%);
+}
+
+.first-homepage-post-snippet {
+  width: 700px;
+
+  background-color: #ffdfdf;
+}
+
+.homepage-post-snippet,
+.first-homepage-post-snippet {
+  margin: 0 10px 20px;
+  padding: 11px;
+
   text-transform: lowercase;
 }
 
@@ -15,11 +31,24 @@
   border: 1px solid #000;
 }
 
+.post-link-homepage {
+  font-size: 22px;
+  @include bold;
+}
+
 @media (max-width: 767px) {
 
   /* Space out each post snippet on home page when in mobile view */
-  .homepage-post-snippet {
-    margin-bottom: 90px;
+  .homepage-post-snippet,
+  .first-homepage-post-snippet {
+    width: auto;
+    min-height: 0;
+    padding: 15px;
+    margin-bottom: 70px;
+    display: block;
+    vertical-align: baseline;
+
+    text-transform: lowercase;
   }
 
 }
