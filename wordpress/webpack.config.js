@@ -1,11 +1,10 @@
-var webpack = require("webpack"),
-    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin("common.js"),
+var webpack = require( "webpack" ),
+    commonsChunkPlugin = new webpack.optimize.CommonsChunkPlugin( "common.js" ),
     UglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       }
-    }),
-    ExtractTextPlugin = require("extract-text-webpack-plugin");
+    });
 
 module.exports = {
 
@@ -32,27 +31,22 @@ module.exports = {
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE"
     ]
-
   },
+
   output: {
     path: "wp-content/themes/kaidez-swiss/js/",
     filename: "[name].js"
   },
+
   module: {
     loaders: [
       {test: /\.css$/, loader: "style-loader!css-loader"},
-      {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
-      }
+      {test: /\.scss$/,loader: 'style!css!sass'}
     ]
   },
 
   plugins: [
     commonsChunkPlugin,
-    UglifyJsPlugin,
-    new ExtractTextPlugin("styles.css", {
-        allChunks: true
-      })
+    UglifyJsPlugin
   ]
 };
