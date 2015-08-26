@@ -14,8 +14,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
   /*
    * ==================================================================
-   * FIND THE FIRST TEN POSTS IN THE WP REST API AND PLACE THEM ON THE
-   * HOME PAGE ON A CERTAIN WAY
+   * LOOK FOR THE FIRST 11 POSTS VIA THE WP REST API AND PLACE THEM ON * THE HOME PAGE ON A CERTAIN WAY
    * ==================================================================
    */
 
@@ -26,16 +25,16 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=11";
 
   /*
-   * Load in post content with $.getJSON()
-   * Refer to the content as "posts" inside the $.getJSON call
+   * Load in post content data with $.getJSON()
+   * Refer to this data as "posts" inside the $.getJSON call
    */
   $.getJSON( getPostsAPI ).done( function( posts ) {
     
     // var reference to <section id="all-articles" /> on the home page
     var articleSection = document.getElementById( "all-articles" ),
         
-        // Create document fragment to batch-load content onto the page
-        sectionDocFragment = document.createDocumentFragment();
+      // Create document fragment to batch-load content onto the page
+      sectionDocFragment = document.createDocumentFragment();
 
     for( var key in posts ) {
 
@@ -48,24 +47,37 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           articleImage = document.createElement( "img" );
           imageDiv = document.createElement( "div" );
 
+      // SET UP THE <article> TAG!!!!
+
+      // Check if we're working with the first post
       if( posts[key] == posts[0] ) {
-        // Each <article> tag gets the "homepage-post-snippet" class
+        /* 
+         * If it's the first post, apply the
+         * "first-homepage-post-snippet" class to the <article> tag
+         */
         articlePost.setAttribute( "class", "first-homepage-post-snippet" );
       } else {
-        // Each <article> tag gets the "homepage-post-snippet" class
+        /* 
+         * If it's NOT the first post, apply the
+         * "homepage-post-snippet" class to the <article> tag
+         */
         articlePost.setAttribute( "class", "homepage-post-snippet" );        
       }
+      // STOP <article> TAG SETUP!!!!
 
 
+
+      // SET UP SINGLE BLOG POST IMAGES!!!!
 
       /*
-       * SET UP SINGLE BLOG POST IMAGES!!!!
-       * The first 10 blog posts MUST have a Featured Image or the site
-       * will crash.
+       * Featured images are defined by "Featured Image" section of a
+       * single WordPress post's page. If it's not defined, a
+       * default image is loaded via the Default featured image
+       * WordPress plugin.
        */
       postImage = posts[key].featured_image["source"];
 
-      // Add styles and s "src" attribute to the image 
+      // Add styles and a "src" attribute to the image 
       $( articleImage ).attr({
         "src": postImage,
         "class": "post-pic post-pic-border"
@@ -76,6 +88,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
       // Load the <div> with an image in the <article>
       articlePost.appendChild( imageDiv ); 
+
+      // STOP SINGLE BLOG POST IMAGES SETUP!!!!
 
 
 
@@ -104,6 +118,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       
       articleHeader.setAttribute("class", "post-link-homepage");
 
+      // STOP SINGLE BLOG LINK & HEADER SETUP!!!!
+
+
+
       // SET UP SINGLE BLOG POST EXCERPT!!!!
       
       // Get post excerpt copy
@@ -115,8 +133,12 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load post title copy in the <article>
       articlePost.appendChild( articleExcerpt );
 
-      // Load <article> with the title & excerpt into the doc fragment
+      // Load article with title, image & excerpt into the doc fragment
       sectionDocFragment.appendChild( articlePost );
+
+      // STOP SINGLE BLOG POST EXCERPT SETUP!!!!
+
+
 
       // var postCategory = posts[key].terms["category"];
 
@@ -126,7 +148,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     } // end for...in loop
 
-    // Exit loop, load the doc fragment into the "all-articles" element
+    /* 
+     * Exit loop, then load the doc fragment with all the content into
+     * the "all-articles" element that's already on the page
+     */
     articleSection.appendChild( sectionDocFragment );
 
   }); // end $.getJSON()
