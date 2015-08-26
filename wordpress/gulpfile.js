@@ -36,14 +36,21 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"], // LESS
      * 3. Classes third
      */
      ignoreArray = [
-                     '.hide-menu',
-                     '.show-menu',
+                      /aside/,
+                      /aside-/,
+                      /fa/,
+                      /fa-/,
+                      /hide-/,
+                      /jump-to-top/,
+                      /footer-/,
+                     ".row",
+                      /show-/,
+                      ".col-md-4",
+                     ".site-footer",
                      '.showMobileMenu',
                      '.hideMobileMenu',
                      '.showSearchbox',
                      '.hideSearchbox',
-                     '.hide-searchbox',
-                     '.show-searchbox',
                      '.entry-header > span'
                     ];
 
@@ -166,10 +173,6 @@ gulp.task('images', function () {
  *  ===================================================================
  */
 
-// Run the "grunt coffee" task
-gulp.task("coffee", function () {
-  gulp.run("grunt-coffee");
-});
 
 // BOWERCOPY TASKS
 // Copy over ALL the Bower Components!!!
@@ -215,8 +218,8 @@ gulp.task("bsfafont", function () {
 
 gulp.task("default", function () {
 
-  // Watch for CSS/JS file changes
+  // Watch for CSS file changes
 
   gulp.watch(lessFiles, ["buildcss"]);
-  gulp.watch(coffeeFiles, ["coffee"]);
+
 });
