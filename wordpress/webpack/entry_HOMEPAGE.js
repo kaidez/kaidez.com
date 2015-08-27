@@ -38,14 +38,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     for( var key in posts ) {
 
-      // jQuery-style single var pattern
-      var postImage, postLink, postTitle, postExcerpt,
+      // jQuery-styled single var pattern
+      var postImage, postLink, postTitle, postExcerpt, postCategory,
           articlePost = document.createElement( "article" ),
           articleHeader = document.createElement( "h2" ),
           articleExcerpt = document.createElement( "p" ),
           articleLink = document.createElement( "a" ),
-          articleImage = document.createElement( "img" );
-          imageDiv = document.createElement( "div" );
+          articleImage = document.createElement( "img" ),
+          imageDiv = document.createElement( "div" ),
+          categoryDiv = document.createElement( "div" );
 
       // SET UP THE <article> TAG!!!!
 
@@ -64,6 +65,24 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         articlePost.setAttribute( "class", "homepage-post-snippet" );        
       }
       // STOP <article> TAG SETUP!!!!
+
+
+
+      /*
+       * SET UP THE CATEGORY !!!!
+       *
+       * The category name object is nested deeper in the WP-API than
+       * the other info, so we have to do a an inner for...in loop.
+       * Also, it needs to be appended to the <article> tag first, so
+       * we're running this code first.
+       */
+      postCategory = posts[key].terms["category"];
+
+      for ( var key in postCategory ) {
+        categoryDiv.innerHTML = postCategory[key].slug;
+        articlePost.appendChild( categoryDiv ); 
+      }
+      // STOP CATEGORY SETUP !!!!
 
 
 
@@ -139,12 +158,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // STOP SINGLE BLOG POST EXCERPT SETUP!!!!
 
 
-
-      // var postCategory = posts[key].terms["category"];
-
-      // for (var key in postCategory) {
-      //   console.log(postCategory[key].slug);
-      // }
 
     } // end for...in loop
 
