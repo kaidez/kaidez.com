@@ -19,7 +19,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    */
 
   /*
-   * Grab the first 10 single posts from the WordPress API & sort them 
+   * Grab the first 9 single posts from the WordPress API & sort them 
    * by date.
    */
   var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=9";
