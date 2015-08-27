@@ -6,6 +6,19 @@
   @include bold;
 }
 
+/* Style link text for homepage snippets */
+a.post-link {
+  text-decoration: none;
+
+  &:hover {
+    color: darken($pink, 10%);
+    text-decoration: underline;  
+  }
+
+}
+
+
+
 @media (max-width: 767px) {
 
   /* Space out each post snippet on home page when in mobile view */
