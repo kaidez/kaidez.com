@@ -33,7 +33,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // var reference to <section id="all-articles" /> on the home page
     var articleSection = document.getElementById( "all-articles" ),
         
-      // Create document fragment to batch-load content onto the page
+      /*
+       * Create document fragment to batch-load a single snippet onto
+       * the page
+       */
       sectionDocFrag = document.createDocumentFragment();
 
     for( var key in posts ) {
@@ -152,9 +155,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        * SET UP THE CATEGORY !!!!
        *
        * The category name object is nested deeper in the WP-API than
-       * the other info, so we have to do a an inner for...in loop.
-       * This code needs to run last; otherwise, it breaks the process
-       * of grabbing certain data from the WP-API for all the posts.
+       * the other info, so we have to do a an inner for...in loop to
+       * find it. This code needs to run last; otherwise, it breaks
+       * the process of grabbing certain data from the WP-API for all
+       * the posts.
        */
       
       // Grab the "category" value in the WP-API
