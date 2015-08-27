@@ -43,11 +43,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
       // jQuery-styled single var pattern
       var postImage, postLink, postTitle, postExcerpt, postCategory,
-          singlePostContainer = document.createElement( "article" ),
-          singlePostHeader = document.createElement( "h2" ),
+          snippetContainer = document.createElement( "article" ),
+          snippetHeader = document.createElement( "h2" ),
           singleExcerpt = document.createElement( "p" ),
-          singlePostLink = document.createElement( "a" ),
-          singlePostImage = document.createElement( "img" ),
+          snippetLink = document.createElement( "a" ),
+          snippetImage = document.createElement( "img" ),
           imageDiv = document.createElement( "div" ),
           categoryDiv = document.createElement( "div" );
 
@@ -59,13 +59,13 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
          * If it's the first post, apply the
          * "first-homepage-post-snippet" class to the <article> tag
          */
-        singlePostContainer.setAttribute( "class", "first-homepage-post-snippet" );
+        snippetContainer.setAttribute( "class", "first-homepage-post-snippet" );
       } else {
         /* 
          * If it's NOT the first post, apply the
          * "homepage-post-snippet" class to the <article> tag
          */
-        singlePostContainer.setAttribute( "class", "homepage-post-snippet" );        
+        snippetContainer.setAttribute( "class", "homepage-post-snippet" );        
       }
       // STOP <article> TAG SETUP!!!!
 
@@ -82,13 +82,13 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       postImage = posts[key].featured_image["source"];
 
       // Add styles and a "src" attribute to the image 
-      $( singlePostImage ).attr({
+      $( snippetImage ).attr({
         "src": postImage,
         "class": "post-pic post-pic-border"
       });
 
       // Load post image in a <div>
-      imageDiv.appendChild( singlePostImage ); 
+      imageDiv.appendChild( snippetImage ); 
 
 
 
@@ -105,18 +105,18 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       postTitle = posts[key].title;
 
       // Set the article link's "href" to be the post link
-      $(singlePostLink).attr({
+      $(snippetLink).attr({
         "href": postLink,
         class: "post-link"
       }); 
 
       // Load post title copy in the <a> tag
-      singlePostLink.innerHTML = postTitle;
+      snippetLink.innerHTML = postTitle;
 
       // Load link into the post header
-      singlePostHeader.appendChild( singlePostLink ); 
+      snippetHeader.appendChild( snippetLink ); 
       
-      singlePostHeader.setAttribute("class", "post-link-homepage");
+      snippetHeader.setAttribute("class", "post-link-homepage");
 
       // STOP SINGLE BLOG LINK & HEADER SETUP!!!!
 
@@ -141,13 +141,13 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        */
 
       // First, append the post image to the <article>...
-      singlePostContainer.appendChild( imageDiv );
+      snippetContainer.appendChild( imageDiv );
 
       // Second, append the post header to the <article>...
-      singlePostContainer.appendChild( singlePostHeader ); 
+      snippetContainer.appendChild( snippetHeader ); 
 
       // Third, append the post excerpt to the <article>.
-      singlePostContainer.appendChild( singleExcerpt );
+      snippetContainer.appendChild( singleExcerpt );
 
 
 
@@ -174,7 +174,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         categoryDiv.setAttribute( "class", "category-name" );
         
         // Use $.prepend() to put "categoryDiv" at the TOP of <article>
-        $( singlePostContainer ).prepend( categoryDiv ); 
+        $( snippetContainer ).prepend( categoryDiv ); 
       }
 
       // STOP CATEGORY SETUP !!!!
@@ -185,7 +185,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        * Load article with title, image, excerpt and category into the
        * document fragment
        */
-      sectionDocFrag.appendChild( singlePostContainer );
+      sectionDocFrag.appendChild( snippetContainer );
 
     } // end for...in loop
 
