@@ -74,6 +74,7 @@ $("#load-footer-btn").click( function( event ) {
     match : function() {
       
       $( "#aside-footer" ).load( getAside );
+      document.getElementById("aside-footer").style.display = "block";
           
     },
 
