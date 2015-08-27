@@ -36,6 +36,16 @@
   @include bold;
 }
 
+  .category-name {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-size: 1.4rem;
+
+    @include show-element;
+    @include bold;
+  }
+
 @media (max-width: 767px) {
 
   /* Space out each post snippet on home page when in mobile view */
@@ -50,6 +60,10 @@
 
     background-color: lighten($pink, 35%);
     text-transform: lowercase;
+  }
+
+  .category-name {
+    @include hide-element;
   }
 
 }
