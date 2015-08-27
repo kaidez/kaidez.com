@@ -7,7 +7,7 @@
 
 var $ = require( "jquery" ); // require jQuery
 
-require("./homepage.scss");
+require( "./homepage.scss" ); // styles for the homepage only
 
 // Wait for the DOM to be ready before loading in JSON
 document.addEventListener( "DOMContentLoaded", function( event ) {
@@ -34,7 +34,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     var articleSection = document.getElementById( "all-articles" ),
         
       // Create document fragment to batch-load content onto the page
-      sectionDocFragment = document.createDocumentFragment();
+      sectionDocFrag = document.createDocumentFragment();
 
     for( var key in posts ) {
 
@@ -65,24 +65,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         articlePost.setAttribute( "class", "homepage-post-snippet" );        
       }
       // STOP <article> TAG SETUP!!!!
-
-
-
-      /*
-       * SET UP THE CATEGORY !!!!
-       *
-       * The category name object is nested deeper in the WP-API than
-       * the other info, so we have to do a an inner for...in loop.
-       * Also, it needs to be appended to the <article> tag first, so
-       * we're running this code first.
-       */
-      postCategory = posts[key].terms["category"];
-
-      for ( var key in postCategory ) {
-        categoryDiv.innerHTML = postCategory[key].slug;
-        articlePost.appendChild( categoryDiv ); 
-      }
-      // STOP CATEGORY SETUP !!!!
 
 
 
@@ -152,20 +134,44 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load post title copy in the <article>
       articlePost.appendChild( articleExcerpt );
 
-      // Load article with title, image & excerpt into the doc fragment
-      sectionDocFragment.appendChild( articlePost );
+
 
       // STOP SINGLE BLOG POST EXCERPT SETUP!!!!
 
 
 
+      /*
+       * SET UP THE CATEGORY !!!!
+       *
+       * The category name object is nested deeper in the WP-API than
+       * the other info, so we have to do a an inner for...in loop.
+       * This code needs to run last; otherwise, it breaks the process
+       * of grabbing certain data from the WP-API for all the posts.
+       */
+      postCategory = posts[key].terms["category"];
+
+      for ( var key in postCategory ) {
+        categoryDiv.innerHTML = postCategory[key].name;
+        categoryDiv.setAttribute( "class", "category-name" );
+        $( articlePost ).prepend( categoryDiv ); 
+      }
+      // STOP CATEGORY SETUP !!!!
+
+
+
+      /*
+       * Load article with title, image, excerpt and category into the
+       * document fragment
+       */
+      sectionDocFrag.appendChild( articlePost );
+
     } // end for...in loop
 
     /* 
-     * Exit loop, then load the doc fragment with all the content into
-     * the "all-articles" element that's already on the page
+     * Exit loop, then load the document fragment with all the content
+     * into the "all-articles" element that's already on the page
      */
-    articleSection.appendChild( sectionDocFragment );
+    articleSection.appendChild( sectionDocFrag );
 
   }); // end $.getJSON()
 
