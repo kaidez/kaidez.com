@@ -143,7 +143,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Second, append the post header to the <article>...
       articlePost.appendChild( articleHeader ); 
 
-      // Third, append the post excerpt to the <article>...
+      // Third, append the post excerpt to the <article>.
       articlePost.appendChild( articleExcerpt );
 
 
