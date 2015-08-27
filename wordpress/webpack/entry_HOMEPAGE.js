@@ -115,8 +115,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
       // Load link into the post header
       snippetHeader.appendChild( snippetLink ); 
-      
-      snippetHeader.setAttribute("class", "post-link-homepage");
 
       // STOP SINGLE BLOG LINK & HEADER SETUP!!!!
 
