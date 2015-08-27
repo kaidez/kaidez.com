@@ -722,6 +722,7 @@ a.colophon-link:hover {
    */
   .site-content {
     margin-top: 95px;
+    margin: 0 14px;
   }
   /* Style the search box on hand-held devices */
   .searchform-class {
