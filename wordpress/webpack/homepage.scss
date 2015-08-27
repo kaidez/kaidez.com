@@ -19,6 +19,19 @@ a.post-link {
 
 
 
+/* Style link text for homepage snippets */
+a.category-name {
+  text-decoration: none;
+  color: $mainLinkColor;
+
+  &:hover {
+    text-decoration: underline; 
+  }
+
+}
+
+
+
 @media (max-width: 767px) {
 
   /* Space out each post snippet on home page when in mobile view */
