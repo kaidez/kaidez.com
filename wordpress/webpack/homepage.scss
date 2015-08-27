@@ -2,17 +2,17 @@
 @import "config/sass/_mixins";
 @import "config/sass/_aside";
 
-.post-link-homepage {
-  @include bold;
-}
+
 
 /* Style link text for homepage snippets */
 a.post-link {
   text-decoration: none;
+  font-size: 8px;
+  font-size: 0.8em;
 
   &:hover {
     color: darken($pink, 10%);
-    text-decoration: underline;  
+    text-decoration: underline; 
   }
 
 }
@@ -52,7 +52,7 @@ a.post-link {
 
   .homepage-post-snippet {
     max-width: 270px;
-    min-height: 400px;
+    min-height: 430px;
     display: inline-block;
     vertical-align: top;
 
