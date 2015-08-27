@@ -46,7 +46,8 @@ module.exports = {
     ]
   },
 
-  /* Output the files to the WordPress /js folder & name them based on
+  /*
+   * Output the files to the WordPress /js folder & name them based on
    * their array name
    */
   output: {
