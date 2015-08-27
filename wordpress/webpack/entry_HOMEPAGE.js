@@ -87,8 +87,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load post image in a <div>
       imageDiv.appendChild( articleImage ); 
 
-      // Load the <div> with an image in the <article>
-      articlePost.appendChild( imageDiv ); 
+
 
       // STOP SINGLE BLOG POST IMAGES SETUP!!!!
 
@@ -114,9 +113,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load link into the post header
       articleHeader.appendChild( articleLink ); 
       
-      // Load post header in the <article>
-      articlePost.appendChild( articleHeader ); 
-      
       articleHeader.setAttribute("class", "post-link-homepage");
 
       // STOP SINGLE BLOG LINK & HEADER SETUP!!!!
@@ -131,12 +127,24 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // Load post excerpt copy in the <p> tag
       articleExcerpt.innerHTML = postExcerpt;
 
-      // Load post title copy in the <article>
-      articlePost.appendChild( articleExcerpt );
-
-
-
       // STOP SINGLE BLOG POST EXCERPT SETUP!!!!
+
+
+      /*
+       * APPEND EVERYTHING WE HAVE AT THIS POINT TO THE <article>
+       *
+       * We have all the post snippet elements...EXCEPT for the
+       * category. Append those elements to the <article> tag.
+       */
+
+      // First, append the post image to the <article>...
+      articlePost.appendChild( imageDiv );
+
+      // Second, append the post header to the <article>...
+      articlePost.appendChild( articleHeader ); 
+
+      // Third, append the post excerpt to the <article>...
+      articlePost.appendChild( articleExcerpt );
 
 
 
@@ -148,13 +156,23 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        * This code needs to run last; otherwise, it breaks the process
        * of grabbing certain data from the WP-API for all the posts.
        */
+      
+      // Grab the "category" value in the WP-API
       postCategory = posts[key].terms["category"];
 
+      // Loop through the category object
       for ( var key in postCategory ) {
+
+        // Find category name and put it in the "categoryDiv" element
         categoryDiv.innerHTML = postCategory[key].name;
+
+        // Give "categoryDiv" element a class name of "category-name"
         categoryDiv.setAttribute( "class", "category-name" );
+        
+        // Use $.prepend() to put "categoryDiv" at the TOP of <article>
         $( articlePost ).prepend( categoryDiv ); 
       }
+
       // STOP CATEGORY SETUP !!!!
 
 
