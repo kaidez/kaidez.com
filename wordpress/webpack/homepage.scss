@@ -2,17 +2,20 @@
 @import "config/sass/_mixins";
 @import "config/sass/_aside";
 
-
+.post-link-homepage {
+  @include bold;
+}
 
 @media (max-width: 767px) {
 
   /* Space out each post snippet on home page when in mobile view */
   .homepage-post-snippet,
   .first-homepage-post-snippet {
-    width: 320px;
+    min-width: 300px;
+    max-width: 760px;
     min-height: 374px;
     padding: 15px;
-    margin-bottom: 70px;
+    margin: 0 10px 70px;
     display: inline-block;
     vertical-align: top;
 
@@ -20,8 +23,13 @@
     text-transform: lowercase;
   }
 
+  /* Hide the category name on mobile views*/
   .category-name {
     @include hide-element;
+  }
+
+  .post-link-homepage {
+    font-size: 20px;
   }
 
 }
@@ -29,7 +37,6 @@
 
 @media (min-width: 768px) {
 
-  /* Global styles for the post snippets on the home page */
   .homepage-post-snippet {
     max-width: 270px;
     min-height: 400px;
@@ -59,8 +66,7 @@
   }
 
   .post-link-homepage {
-    font-size: 22px;
-    @include bold;
+    font-size: 21px;
   }
 
   .category-name {
@@ -72,5 +78,5 @@
     @include show-element;
     @include bold;
   }
-  
+
 }

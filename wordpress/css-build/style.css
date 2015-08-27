@@ -277,6 +277,10 @@ i {
 .entry-meta {
   margin-top: 10px;
 }
+/* Globally center the content area */
+.content-area {
+  margin: 0 auto;
+}
 /*
  * ====================================================================
  * MENU STYLES START
@@ -498,6 +502,10 @@ a.colophon-link:hover {
   .site-main {
     margin-top: 30px;
   }
+  /* Define width for the content area in tablet-like views*/
+  .content-area {
+    max-width: 768px;
+  }
   /* Style searchform */
   .searchform-class {
     position: relative;
@@ -628,6 +636,12 @@ a.colophon-link:hover {
     clip: rect(1px, 1px, 1px, 1px);
   }
 }
+@media (min-width: 1200px) {
+  /* Define width for the content area in large desktop views */
+  .content-area {
+    max-width: 1220px;
+  }
+}
 @media (max-width: 767px) {
   /* LOGO CONTAINER STYLES START */
   /* Center the site title on mobile */
@@ -697,6 +711,11 @@ a.colophon-link:hover {
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
   }
+  /* define width/center <main> element on mobile view */
+  .site-main {
+    width: auto;
+    margin: 0 auto;
+  }
   /*
    * Move the site content down on mobile views on some pages
    * Do this to make room for the search box
@@ -760,10 +779,6 @@ a.colophon-link:hover {
   a.nav-links:visited {
     color: #000;
     text-decoration: none;
-  }
-  /* Add left/right space to <aside> and single blog post content */
-  .content-area {
-    padding: 0 15px;
   }
   /*
    * ==================================================================
