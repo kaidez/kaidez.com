@@ -73,7 +73,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       /*
        * Featured images are defined by "Featured Image" section of a
        * single WordPress post's page. If it's not defined, a
-       * default image is loaded via the Default featured image
+       * default image is loaded via the "Default featured image"
        * WordPress plugin.
        */
       postImage = posts[key].featured_image["source"];
