@@ -15,11 +15,17 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-    <section id="all-articles"></section>
 
+    <section id="all-articles">
+
+      <h2 class="all-article-header">Read articles</h2>
+      <div id="newest-article"></div>
+      <div id="other-articles"></div>
+
+    </section><!-- #all-articles -->
 
   </main><!-- #main -->
-  </div><!-- #primary -->
+</div><!-- #primary -->
 
   <?php get_sidebar(); ?>
   <?php get_footer( 'home-page' ); ?>
