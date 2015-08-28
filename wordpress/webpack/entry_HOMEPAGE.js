@@ -55,23 +55,23 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
           // jQuery-styled single var pattern
           var postImage,
-          postLink,
-          postTitle,
-          postExcerpt,
-          postCategory,
-          categoryHref,
-          snippetContainer = document.createElement( "article" ),
-          snippetHeader = document.createElement( "h2" ),
-          singleExcerpt = document.createElement( "p" ),
-          snippetLink = document.createElement( "a" ),
-          snippetImage = document.createElement( "img" ),
-          imageDiv = document.createElement( "div" ),
-          categoryLink = document.createElement( "a" ),
+              postLink,
+              postTitle,
+              postExcerpt,
+              postCategory,
+              categoryHref,
+              snippetContainer = document.createElement( "article" ),
+              snippetHeader = document.createElement( "h2" ),
+              singleExcerpt = document.createElement( "p" ),
+              snippetLink = document.createElement( "a" ),
+              snippetImage = document.createElement( "img" ),
+              imageDiv = document.createElement( "div" ),
+              categoryLink = document.createElement( "a" ),
 
           // Boolean check for the first post
           isFirstPost = posts[outerKey] == posts[0];
 
-          // SET UP THE <article> TAG!!!!
+        // SET UP THE <article> TAG!!!!
 
         // Check if we're working with the first post
         if( isFirstPost ) {
