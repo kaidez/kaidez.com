@@ -59,12 +59,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
               snippetLink = document.createElement( "a" ),
               snippetImage = document.createElement( "img" ),
               imageDiv = document.createElement( "div" ),
-              categoryLink = document.createElement( "a" );
+              categoryLink = document.createElement( "a" ),
+              
+              // Boolean check for the first post
+              isFirstPost = posts[outerKey] == posts[0];
 
           // SET UP THE <article> TAG!!!!
 
           // Check if we're working with the first post
-          if( posts[outerKey] == posts[0] ) {
+          if( isFirstPost ) {
             /* 
              * If it's the first post, apply the
              * "first-homepage-post-snippet" class to the <article> tag
