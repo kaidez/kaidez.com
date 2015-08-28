@@ -47,8 +47,7 @@ module.exports = {
 
     // Compile a "frontpageAds.js" file with specific modules with AMD
     frontpageAds: [
-      "./webpack/entry_GLOBALS",
-      "./webpack/entry_ASIDE"
+      "./webpack/entry_FRONTPAGE_ADS"
     ]
   },
 
