@@ -21,6 +21,7 @@
 
 <script src="/wp-content/themes/kaidez-swiss/js/common.js"></script>
 <script src="/wp-content/themes/kaidez-swiss/js/home.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/frontpageAds.js"></script>
 
 </body>
 </html>

@@ -5,4 +5,6 @@
  *
  */
 
-var $ = require( "jquery" ); // require jQuery
+define(['./config/js/ads'], function ( ads ) {
+  ads.showTopAd();
+});
