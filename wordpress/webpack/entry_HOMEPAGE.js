@@ -39,7 +39,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
        * Create document fragment to batch-load a single snippet onto
        * the page
        */
-      sectionDocFrag = document.createDocumentFragment();
+      olderPosts = document.createDocumentFragment();
 
       for( var outerKey in posts ) {
 
@@ -203,7 +203,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
          * Load article with title, image, excerpt and category into
          * the document fragment
          */
-        sectionDocFrag.appendChild( snippetContainer );
+        olderPosts.appendChild( snippetContainer );
       }
     } // end for...in loop
 
@@ -211,7 +211,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
      * Exit loop, then load the document fragment with all the content
      * into the "all-articles" element that's already on the page
      */
-    articleSection.appendChild( sectionDocFrag );
+    articleSection.appendChild( olderPosts );
 
   }); // end $.getJSON()
 
