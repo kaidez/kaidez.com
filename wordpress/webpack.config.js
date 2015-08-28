@@ -22,14 +22,14 @@ module.exports = {
   // Define multiple entry points to build out multiple files
   entry: {
     
-    // Compile out a "home.js" file with specific modules
+    // Compile out a "home.js" file with specific modules with CommonJS
     home: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_HOMEPAGE",
     ],
     
-    // Compile out a "posts.js" file with specific modules
+    // Compile a "posts.js" file with specific modules with CommonJS
     posts: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -39,8 +39,14 @@ module.exports = {
       "./webpack/config/comment-reply"
     ],
 
-    // Compile out a "regular.js" file with specific modules
+    // Compile a "regular.js" file with specific modules with CommonJS
     regular: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE"
+    ],
+
+    // Compile a "frontpageAds.js" file with specific modules with AMD
+    frontpageAds: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE"
     ]
