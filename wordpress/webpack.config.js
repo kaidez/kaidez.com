@@ -27,7 +27,7 @@ module.exports = {
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_HOMEPAGE",
-      ],
+    ],
     
     // Compile out a "posts.js" file with specific modules
     posts: [
