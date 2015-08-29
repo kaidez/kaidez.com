@@ -1,7 +1,13 @@
 define(function () {
   return {
     showTopAd: function() {
-       console.log('Hello from firstScript');
+
+      if ( window.matchMedia ) {
+        console.log("yes");
+      } else {
+        console.log("no");
+      }
+
     }
   }
 });
