@@ -16,8 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "latest",
     "bootstrap": "latest",
+    "fontawesome": "latest",
+    "matchMedia": "~0.2.0",
     "prism": "latest"
   }
 }
