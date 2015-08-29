@@ -37,7 +37,7 @@ module.exports = function( grunt ) {
         },
 
         files: {
-          "wp-content/themes/kaidez-swiss/js/libs/matchMedia/matchMedia.js": "matchMedia/matchMedia.js",
+          "wp-content/themes/kaidez-swiss/js/libs/matchMedia.js": "matchMedia/matchMedia.js",
           "wp-content/themes/kaidez-swiss/js/libs/matchMedia.addListener.js": "matchMedia/matchMedia.addListener.js"
         }
       },
