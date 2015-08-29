@@ -19,7 +19,10 @@ get_header(); ?>
     <section id="all-articles">
 
       <h2 class="all-article-header">Read articles</h2>
-      <div id="newest-article"></div>
+      <div id="top-articlerow" class="row">
+        <div id="newest-article" class="col-md-8"></div>
+        <div class="col-md-4"></div>
+      </div>
       <div id="other-articles"></div>
 
     </section><!-- #all-articles -->
