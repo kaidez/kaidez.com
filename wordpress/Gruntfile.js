@@ -29,6 +29,19 @@ module.exports = function( grunt ) {
         }
       }, // end "bowercopy:bscss" task
 
+      matchmedia : {
+
+        // copy to the themes "js/libs/" directory
+        options: {
+          destPrefix: "wp-content/themes/kaidez-swiss/js/libs/"
+        },
+
+        files: {
+          "wp-content/themes/kaidez-swiss/js/libs/matchMedia/matchMedia.js": "matchMedia/matchMedia.js",
+          "wp-content/themes/kaidez-swiss/js/libs/matchMedia.addListener.js": "matchMedia/matchMedia.addListener.js"
+        }
+      },
+
       // Copy PrismJS over
       prism: {
 

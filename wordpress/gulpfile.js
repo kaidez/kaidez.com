@@ -180,16 +180,6 @@ gulp.task("bowerbscss", function () {
   gulp.run("grunt-bowercopy:bscss");
 });
 
-// Copy over jQuery only
-gulp.task("bowerjq", function () {
-  gulp.run("grunt-bowercopy:jq");
-});
-
-// Copy over prism.js only
-gulp.task("prism", function () {
-  gulp.run("grunt-bowercopy:prism");
-});
-
 // Copy over Font Awesome's minified CSS file
 gulp.task("bowerfa", function () {
   gulp.run("grunt-bowercopy:bsfa");
@@ -198,6 +188,16 @@ gulp.task("bowerfa", function () {
 // Copy over Font Awesome's minified CSS file
 gulp.task("bsfafont", function () {
   gulp.run("grunt-bowercopy:bsfafont");
+});
+
+// Copy over matchMedia files only
+gulp.task("match", function () {
+  gulp.run("grunt-bowercopy:matchmedia");
+});
+
+// Copy over prism.js only
+gulp.task("prism", function () {
+  gulp.run("grunt-bowercopy:prism");
 });
 
 
