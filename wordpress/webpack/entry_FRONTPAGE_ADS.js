@@ -5,7 +5,7 @@
  *
  */
 
-define(["jquery"], function( $ ) {
+define( ["jquery"], function( $ ) {
 
   // matchMedia() polyfill files
   var matchMediaArray = [
