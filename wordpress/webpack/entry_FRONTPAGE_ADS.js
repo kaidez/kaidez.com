@@ -40,7 +40,8 @@ define( ["jquery"], function( $ ) {
       }
     };
 
-  var buildAd = function(){
+  var buildAd = function() {
+
     for (var keys in ads) {
       return console.log(ads);
     }
