@@ -5,6 +5,17 @@
  *
  */
 
-define(['./config/js/ads'], function ( ads ) {
-  ads.showTopAd();
+define(["jquery"], function($) {
+
+  var matchMediaArray = [
+        "/wp-content/themes/kaidez-swiss/js/libs/matchMedia.addListener.js",
+        "/wp-content/themes/kaidez-swiss/js/libs/matchMedia.js"
+      ];
+
+  if ( !window.matchMedia ) {
+    matchMediaArray.forEach( function( index ){
+      $.getScript( index );
+    });
+  }
+
 });
