@@ -16,6 +16,7 @@ var webpack = require( "webpack" ),
       }
     });
 
+
 // Configure webpack
 module.exports = {
 
@@ -60,7 +61,7 @@ module.exports = {
     filename: "[name].js"
   },
 
-  // Setup modules, which are basically plugins for webpack
+  // Setup loaders, which are basically plugins for webpack
   module: {
     loaders: [
       
@@ -68,7 +69,10 @@ module.exports = {
       {test: /\.css$/, loader: "style-loader!css-loader"},
       
       // Preprocess SASS files
-      {test: /\.scss$/,loader: 'style!css!sass'}
+      {test: /\.scss$/,loader: 'style!css!sass'}, 
+
+      // Expose jQuery to the window object with expose-loader
+      { test: /jquery\.js$/, loader: 'expose?jQuery' }
     ]
   },
 
