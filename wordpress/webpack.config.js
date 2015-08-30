@@ -72,7 +72,10 @@ module.exports = {
       {test: /\.scss$/,loader: 'style!css!sass'}, 
 
       // Expose jQuery to the window object with expose-loader
-      { test: /jquery\.js$/, loader: 'expose?jQuery' }
+      { test: /jquery\.js$/, loader: 'expose?jQuery' },
+
+      // Expose enquire.js to the window object with expose-loader
+      { test: /enquire\.js$/, loader: 'expose?enquire' }
     ]
   },
 
