@@ -61,15 +61,15 @@ module.exports = {
     filename: "[name].js"
   },
 
-  // Setup loaders, which are basically plugins for webpack
+  // Set up loaders, which are basically plugins for webpack
   module: {
     loaders: [
       
       // Load style modules into a <style> tag
-      {test: /\.css$/, loader: "style-loader!css-loader"},
+      { test: /\.css$/, loader: "style-loader!css-loader" },
       
       // Preprocess SASS files
-      {test: /\.scss$/,loader: 'style!css!sass'}, 
+      { test: /\.scss$/,loader: 'style!css!sass' }, 
 
       // Expose jQuery to the window object with expose-loader
       { test: /jquery\.js$/, loader: 'expose?jQuery' },
