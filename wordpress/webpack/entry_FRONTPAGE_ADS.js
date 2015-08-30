@@ -5,7 +5,7 @@
  *
  */
 
-define(["jquery"], function($) {
+define(["jquery"], function( $ ) {
 
   var matchMediaArray = [
         "/wp-content/themes/kaidez-swiss/js/libs/matchMedia.addListener.js",
