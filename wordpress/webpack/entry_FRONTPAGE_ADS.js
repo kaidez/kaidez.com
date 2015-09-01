@@ -41,13 +41,40 @@ define( ["jquery"], function( $ ) {
         alt: "Give lynda.com"
   };
 
-  function buildAd( obj ) {
+  function buildAd( obj, opts ) {
 
-    var adPageTarget = obj.pageElement,
-        adLink = obj.link,
-        adImageSource = obj.imageSource,
-        adAltTag = obj.alt;
+    this.adPageTarget = obj.pageElement,
+    this.adLink = obj.link;
+    this.adImageSource = obj.imageSource;
+    this.adAltTag = obj.alt;
+
+    var setAnchor = document.createElement( "a" ),
+        setImage = document.createElement( "img" );
+
+    setAnchor.setAttribute( "href", this.adLink );
+
+    $(setImage).attr({
+      "src": this.adImageSource,
+      "alt": this.adAltTag
+    });
+
+    setAnchor.appendChild( setImage );
+    
+
+    // START CONFIGURING ANY PASSED OPTIONS
+    opts = opts || {};
+
+   if( opts.getTarget === "img" ) {
+    $(setImage).attr(opts.getAttr, opts.setAttr);
+   }
+
   };
+
+  buildAd(lyndaPromo, {
+    getTarget: "img",
+    getAttr: "border",
+    setAttr: 0
+  });
 
 
   // Set a base media query value that enquire.js always checks
