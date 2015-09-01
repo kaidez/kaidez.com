@@ -28,6 +28,7 @@ module.exports = {
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_HOMEPAGE",
+      "./webpack/entry_FRONTPAGE_ADS"
     ],
     
     // Compile a "posts.js" file with specific modules with CommonJS
@@ -44,11 +45,6 @@ module.exports = {
     regular: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE"
-    ],
-
-    // Compile a "frontpageAds.js" file with specific modules with AMD
-    frontpageAds: [
-      "./webpack/entry_FRONTPAGE_ADS"
     ]
   },
 
