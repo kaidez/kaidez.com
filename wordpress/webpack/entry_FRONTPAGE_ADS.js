@@ -23,8 +23,6 @@ define( ["jquery"], function( $ ) {
     });
   }
 
-  // TODO: all lynda ads need "border='0'" applied to the <img> tag
-  
   // Lynda promo ad
   var lyndaPromo = {
         pageElement: "ad-spot-one",
@@ -43,7 +41,7 @@ define( ["jquery"], function( $ ) {
 
   function buildAd( obj, opts ) {
 
-    var adPageTarget = document.getElementById(obj.pageElement),
+    var adPageTarget = document.getElementById( obj.pageElement ),
         adLink = obj.link,
         adImageSource = obj.imageSource,
         adAltTag = obj.alt;
@@ -54,7 +52,7 @@ define( ["jquery"], function( $ ) {
 
     setAnchor.setAttribute( "href", adLink );
 
-    $(setImage).attr({
+    $( setImage ).attr({
       "src": adImageSource,
       "alt": adAltTag
     });
@@ -74,13 +72,13 @@ define( ["jquery"], function( $ ) {
 
   }; // end buildAd()
 
-  buildAd(lyndaPromo, {
+  buildAd( lyndaPromo, {
     getTarget: "img",
     getAttr: "border",
     setAttr: 0
   });
 
-    buildAd(lyndaGift, {
+    buildAd( lyndaGift, {
     getTarget: "img",
     getAttr: "border",
     setAttr: 0
