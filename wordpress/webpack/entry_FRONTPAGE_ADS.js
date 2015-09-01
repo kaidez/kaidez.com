@@ -138,7 +138,14 @@ define( ["jquery"], function( $ ) {
   }; // end buildAd()
 
 
-  // START BUILDING ADS
+
+
+
+  // Set a base media query value that enquire.js always checks
+  enquire.register( "( min-width: 768px )", {
+
+    match : function() {
+        // START BUILDING ADS
 
   // Lynda 10-day promo
   buildAd( lyndaPromo, {
@@ -153,12 +160,7 @@ define( ["jquery"], function( $ ) {
     getAttr: "border",
     setAttr: 0
   });
-
-
-  // Set a base media query value that enquire.js always checks
-  enquire.register( "( min-width: 768px )", {
-
-    match : function() {},
+    },
 
     unmatch : function() {},
 
