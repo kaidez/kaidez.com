@@ -8,7 +8,7 @@
 define( ["jquery"], function( $ ) {
 
   "use strict";
-  
+
   // matchMedia() polyfill files
   var matchMediaArray = [
         "/wp-content/themes/kaidez-swiss/js/libs/matchMedia.addListener.js",
@@ -147,21 +147,23 @@ define( ["jquery"], function( $ ) {
   enquire.register( "( min-width: 768px )", {
 
     match : function() {
-        // START BUILDING ADS
+    
+      // START BUILDING ADS
 
-  // Lynda 10-day promo
-  buildAd( lyndaPromo, {
-    getTarget: "image",
-    getAttr: "border",
-    setAttr: 0
-  });
+      // Lynda 10-day promo
+      buildAd( lyndaPromo, {
+        getTarget: "image",
+        getAttr: "border",
+        setAttr: 0
+      });
 
-  // Lynda gift
-  buildAd( lyndaGift, {
-    getTarget: "image",
-    getAttr: "border",
-    setAttr: 0
-  });
+      // Lynda gift
+      buildAd( lyndaGift, {
+        getTarget: "image",
+        getAttr: "border",
+        setAttr: 0
+      });
+      
     },
 
     unmatch : function() {},
