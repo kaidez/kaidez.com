@@ -40,7 +40,28 @@ define( ["jquery"], function( $ ) {
   };
 
   /*
-   * buildAd(): Dynamically build and place ads on the front page.
+   * buildAd(): Dynamically build and place ads on the front page. 
+   * "obj" is an object with 4 values:
+   * 
+   * 1) "pageElement": the element already on the homepage where the 
+   * ad will load into.
+   *
+   * 2) "link": the link for the ad
+   *
+   * 3) "imageSource": the ad's image
+   *
+   * 4) "alt": the ad's alt tag
+   *
+   * "opts" is an optional object where extra attribute can be added
+   * to either the ad's link or image tag. So if obj is called "myAd"
+   * and a "title" attribute called "Acme Co." needs to be added to
+   * the link tag, this is the configuration:
+   *
+   *   buildAd( myAd, {
+   *     getTarget: "link",
+   *     getAttr: "title",
+   *     setAttr: "Acme Co."
+   *   });
    */
   function buildAd( obj, opts ) {
 
@@ -68,8 +89,6 @@ define( ["jquery"], function( $ ) {
 
     if( opts.getTarget === "img" ) {
       $( setImage ).attr( opts.getAttr, opts.setAttr );
-    } else {
-      if( opts.getTarget === "link" ) {
     }
 
    adFragment.appendChild( setAnchor );
