@@ -43,19 +43,20 @@ define( ["jquery"], function( $ ) {
 
   function buildAd( obj, opts ) {
 
-    this.adPageTarget = obj.pageElement,
-    this.adLink = obj.link;
-    this.adImageSource = obj.imageSource;
-    this.adAltTag = obj.alt;
+    var adPageTarget = document.getElementById(obj.pageElement),
+        adLink = obj.link,
+        adImageSource = obj.imageSource,
+        adAltTag = obj.alt;
 
     var setAnchor = document.createElement( "a" ),
-        setImage = document.createElement( "img" );
+        setImage = document.createElement( "img" ),
+        frag = document.createDocumentFragment();
 
-    setAnchor.setAttribute( "href", this.adLink );
+    setAnchor.setAttribute( "href", adLink );
 
     $(setImage).attr({
-      "src": this.adImageSource,
-      "alt": this.adAltTag
+      "src": adImageSource,
+      "alt": adAltTag
     });
 
     setAnchor.appendChild( setImage );
@@ -65,12 +66,21 @@ define( ["jquery"], function( $ ) {
     opts = opts || {};
 
    if( opts.getTarget === "img" ) {
-    $(setImage).attr(opts.getAttr, opts.setAttr);
+    $( setImage ).attr( opts.getAttr, opts.setAttr );
    }
 
-  };
+   frag.appendChild( setAnchor );
+   adPageTarget.appendChild( frag );
+
+  }; // end buildAd()
 
   buildAd(lyndaPromo, {
+    getTarget: "img",
+    getAttr: "border",
+    setAttr: 0
+  });
+
+    buildAd(lyndaGift, {
     getTarget: "img",
     getAttr: "border",
     setAttr: 0
