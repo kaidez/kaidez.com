@@ -41,7 +41,7 @@ define( ["jquery"], function( $ ) {
 
   /*
    * buildAd(): Dynamically build and place ads on the front page. 
-   * "obj" is an object with 4 values:
+   * The "obj" parameter is an object with 4 values:
    * 
    * 1) "pageElement": the element already on the homepage where the 
    * ad will load into.
@@ -52,10 +52,10 @@ define( ["jquery"], function( $ ) {
    *
    * 4) "alt": the ad's alt tag
    *
-   * "opts" is an optional object where extra attribute can be added
-   * to either the ad's link or image tag. So if obj is called "myAd"
-   * and a "title" attribute called "Some Company" needs to be added to
-   * the obj's link tag, this is the configuration:
+   * The "opts" parameter is an optional object where extra attributes
+   * can be added to either the ad's link or image tag. So if obj is
+   * called "myAd" and a "title" attribute called "Some Company" needs
+   * to be added to the obj's link tag, this is the configuration:
    *
    *       buildAd( myAd, {
    *         getTarget: "link",
