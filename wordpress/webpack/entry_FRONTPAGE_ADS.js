@@ -55,7 +55,7 @@ define( ["jquery"], function( $ ) {
    * "opts" is an optional object where extra attribute can be added
    * to either the ad's link or image tag. So if obj is called "myAd"
    * and a "title" attribute called "Acme Co." needs to be added to
-   * the link tag, this is the configuration:
+   * the obj's link tag, this is the configuration:
    *
    *   buildAd( myAd, {
    *     getTarget: "link",
@@ -66,36 +66,36 @@ define( ["jquery"], function( $ ) {
   function buildAd( obj, opts ) {
 
     var adPageTarget = document.getElementById( obj.pageElement ),
-        adLink = obj.link,
+        getAdLink = obj.link,
         adImageSource = obj.imageSource,
         adAltTag = obj.alt;
 
-    var setAnchor = document.createElement( "a" ),
-        setImage = document.createElement( "img" ),
+    var setLinkTag = document.createElement( "a" ),
+        setLinkImage = document.createElement( "img" ),
         adFragment = document.createDocumentFragment();
 
-    setAnchor.setAttribute( "href", adLink );
+    setLinkTag.setAttribute( "href", getAdLink );
 
-    $( setImage ).attr({
+    $( setLinkImage ).attr({
       "src": adImageSource,
       "alt": adAltTag
     });
 
-    setAnchor.appendChild( setImage );
+    setLinkTag.appendChild( setLinkImage );
     
 
     // START CONFIGURING ANY PASSED OPTIONS
     opts = opts || {};
 
     if( opts.getTarget === "img" ) {
-      $( setImage ).attr( opts.getAttr, opts.setAttr );
+      $( setLinkImage ).attr( opts.getAttr, opts.setAttr );
     } else {
       if( opts.getTarget === "link" ) {
-        $( setAnchor ).attr( opts.getAttr, opts.setAttr );
+        $( setLinkTag ).attr( opts.getAttr, opts.setAttr );
       }
     }
 
-   adFragment.appendChild( setAnchor );
+   adFragment.appendChild( setLinkTag );
    adPageTarget.appendChild( adFragment );
 
   }; // end buildAd()
