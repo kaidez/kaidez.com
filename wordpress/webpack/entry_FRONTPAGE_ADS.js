@@ -116,10 +116,10 @@ define( ["jquery"], function( $ ) {
     opts = opts || {};
 
     if( opts.getTarget === "img" ) {
-      $( setLinkImage ).attr( opts.getAttr, opts.setAttr );
+      setLinkImage.setAttribute( opts.getAttr, opts.setAttr );
     } else {
       if( opts.getTarget === "link" ) {
-        $( setLinkTag ).attr( opts.getAttr, opts.setAttr );
+        setLinkTag.setAttribute( opts.getAttr, opts.setAttr );
       }
     }
 
