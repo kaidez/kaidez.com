@@ -7,6 +7,8 @@
 
 define( ["jquery"], function( $ ) {
 
+  "use strict";
+  
   // matchMedia() polyfill files
   var matchMediaArray = [
         "/wp-content/themes/kaidez-swiss/js/libs/matchMedia.addListener.js",
@@ -135,7 +137,7 @@ define( ["jquery"], function( $ ) {
    //put document fragment in page element
    adPageTarget.appendChild( adFragment );
 
-  }; // end buildAd()
+  } // end buildAd()
 
 
 
