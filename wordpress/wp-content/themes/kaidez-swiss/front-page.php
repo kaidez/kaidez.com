@@ -21,7 +21,10 @@ get_header(); ?>
       <h2 class="all-article-header">Read articles</h2>
       <div id="top-articlerow" class="row">
         <div id="newest-article" class="col-md-8"></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div id="ad-spot-one"></div>
+          <div id="ad-spot-two"></div>
+        </div>
       </div>
       <div id="other-articles"></div>
 
