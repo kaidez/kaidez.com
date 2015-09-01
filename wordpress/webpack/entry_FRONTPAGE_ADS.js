@@ -39,6 +39,9 @@ define( ["jquery"], function( $ ) {
         alt: "Give lynda.com"
   };
 
+  /*
+   * buildAd(): Dynamically build and place ads on the front page.
+   */
   function buildAd( obj, opts ) {
 
     var adPageTarget = document.getElementById( obj.pageElement ),
@@ -48,7 +51,7 @@ define( ["jquery"], function( $ ) {
 
     var setAnchor = document.createElement( "a" ),
         setImage = document.createElement( "img" ),
-        frag = document.createDocumentFragment();
+        adFragment = document.createDocumentFragment();
 
     setAnchor.setAttribute( "href", adLink );
 
@@ -63,12 +66,14 @@ define( ["jquery"], function( $ ) {
     // START CONFIGURING ANY PASSED OPTIONS
     opts = opts || {};
 
-   if( opts.getTarget === "img" ) {
-    $( setImage ).attr( opts.getAttr, opts.setAttr );
-   }
+    if( opts.getTarget === "img" ) {
+      $( setImage ).attr( opts.getAttr, opts.setAttr );
+    } else {
+      if( opts.getTarget === "link" ) {
+    }
 
-   frag.appendChild( setAnchor );
-   adPageTarget.appendChild( frag );
+   adFragment.appendChild( setAnchor );
+   adPageTarget.appendChild( adFragment );
 
   }; // end buildAd()
 
