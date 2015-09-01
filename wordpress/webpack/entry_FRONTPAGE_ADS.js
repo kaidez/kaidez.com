@@ -54,19 +54,20 @@ define( ["jquery"], function( $ ) {
    *
    * "opts" is an optional object where extra attribute can be added
    * to either the ad's link or image tag. So if obj is called "myAd"
-   * and a "title" attribute called "Acme Co." needs to be added to
+   * and a "title" attribute called "Some Company" needs to be added to
    * the obj's link tag, this is the configuration:
    *
    *   buildAd( myAd, {
    *     getTarget: "link",
    *     getAttr: "title",
-   *     setAttr: "Acme Co."
+   *     setAttr: "Some Company"
    *   });
    */
   function buildAd( obj, opts ) {
 
     // Get ad parts from obj
     var
+
       // The home page element where the ad will load into
       adPageTarget = document.getElementById( obj.pageElement ),
       
@@ -79,22 +80,39 @@ define( ["jquery"], function( $ ) {
       // The ad image's alt tag value
       getAdAltTag = obj.alt;
 
-    var setLinkTag = document.createElement( "a" ),
-        setLinkImage = document.createElement( "img" ),
-        adFragment = document.createDocumentFragment();
 
-    setLinkTag.setAttribute( "href", getAdLink );
-    setLinkTag.appendChild( setLinkImage );
+    // Dynamically create elements to build the ad
+    var
     
+      // Create an anchor tag
+      setLinkTag = document.createElement( "a" ),
+      
+      // Create an image tag
+      setLinkImage = document.createElement( "img" ),
+
+      // Create a document fragment to batch load these elements
+      adFragment = document.createDocumentFragment(); 
+
+    // Set the link tags's href attribute
+    setLinkTag.setAttribute( "href", getAdLink );
+    
+    // Set the link tags image's src and alt attributes
     $( setLinkImage ).attr({
       "src": getAdImage,
       "alt": getAdAltTag
     });
 
 
-    
+    /*
+     * Build functionality where extra attributes can be added to
+     * either an ad's image or link attribute. All this gets done via
+     * the "opts" parameter for "buildAd".
+     */
 
-    // START CONFIGURING ANY PASSED OPTIONS
+    /*
+     * If no options are passed, let "opts" be an empty object. This
+     * means that "opts" is completely optional
+     */
     opts = opts || {};
 
     if( opts.getTarget === "img" ) {
@@ -105,6 +123,7 @@ define( ["jquery"], function( $ ) {
       }
     }
 
+   setLinkTag.appendChild( setLinkImage );
    adFragment.appendChild( setLinkTag );
    adPageTarget.appendChild( adFragment );
 
