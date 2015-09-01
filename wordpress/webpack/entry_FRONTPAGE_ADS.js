@@ -57,11 +57,11 @@ define( ["jquery"], function( $ ) {
    * and a "title" attribute called "Some Company" needs to be added to
    * the obj's link tag, this is the configuration:
    *
-   *   buildAd( myAd, {
-   *     getTarget: "link",
-   *     getAttr: "title",
-   *     setAttr: "Some Company"
-   *   });
+   *       buildAd( myAd, {
+   *         getTarget: "link",
+   *         getAttr: "title",
+   *         setAttr: "Some Company"
+   *       });
    */
   function buildAd( obj, opts ) {
 
@@ -119,26 +119,36 @@ define( ["jquery"], function( $ ) {
     if( opts.getTarget === "image" ) {
       setLinkImage.setAttribute( opts.getAttr, opts.setAttr );
     } else {
-      
+
       // If "getTarget" equals "link", add attributes to the link
       if( opts.getTarget === "link" ) {
         setLinkTag.setAttribute( opts.getAttr, opts.setAttr );
       }
     }
 
+   // put image in link tag
    setLinkTag.appendChild( setLinkImage );
+
+   // put link in document fragment
    adFragment.appendChild( setLinkTag );
+
+   //put document fragment in page element
    adPageTarget.appendChild( adFragment );
 
   }; // end buildAd()
 
+
+  // START BUILDING ADS
+
+  // Lynda 10-day promo
   buildAd( lyndaPromo, {
     getTarget: "image",
     getAttr: "border",
     setAttr: 0
   });
 
-    buildAd( lyndaGift, {
+  // Lynda gift
+  buildAd( lyndaGift, {
     getTarget: "image",
     getAttr: "border",
     setAttr: 0
