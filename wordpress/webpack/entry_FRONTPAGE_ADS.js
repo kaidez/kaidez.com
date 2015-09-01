@@ -115,7 +115,8 @@ define( ["jquery"], function( $ ) {
      */
     opts = opts || {};
 
-    if( opts.getTarget === "img" ) {
+    // If 
+    if( opts.getTarget === "image" ) {
       setLinkImage.setAttribute( opts.getAttr, opts.setAttr );
     } else {
       if( opts.getTarget === "link" ) {
@@ -130,13 +131,13 @@ define( ["jquery"], function( $ ) {
   }; // end buildAd()
 
   buildAd( lyndaPromo, {
-    getTarget: "img",
+    getTarget: "image",
     getAttr: "border",
     setAttr: 0
   });
 
     buildAd( lyndaGift, {
-    getTarget: "img",
+    getTarget: "image",
     getAttr: "border",
     setAttr: 0
   });
