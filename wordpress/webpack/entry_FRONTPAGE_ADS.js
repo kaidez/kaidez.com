@@ -67,8 +67,8 @@ define( ["jquery"], function( $ ) {
 
     var adPageTarget = document.getElementById( obj.pageElement ),
         getAdLink = obj.link,
-        adImageSource = obj.imageSource,
-        adAltTag = obj.alt;
+        getAdImage = obj.imageSource,
+        getAdAltTag = obj.alt;
 
     var setLinkTag = document.createElement( "a" ),
         setLinkImage = document.createElement( "img" ),
@@ -77,8 +77,8 @@ define( ["jquery"], function( $ ) {
     setLinkTag.setAttribute( "href", getAdLink );
 
     $( setLinkImage ).attr({
-      "src": adImageSource,
-      "alt": adAltTag
+      "src": getAdImage,
+      "alt": getAdAltTag
     });
 
     setLinkTag.appendChild( setLinkImage );
