@@ -65,23 +65,33 @@ define( ["jquery"], function( $ ) {
    */
   function buildAd( obj, opts ) {
 
-    var adPageTarget = document.getElementById( obj.pageElement ),
-        getAdLink = obj.link,
-        getAdImage = obj.imageSource,
-        getAdAltTag = obj.alt;
+    // Get ad parts from obj
+    var
+      // The home page element where the ad will load into
+      adPageTarget = document.getElementById( obj.pageElement ),
+      
+      // The ad's link
+      getAdLink = obj.link,
+      
+      // The ad's image
+      getAdImage = obj.imageSource,
+
+      // The ad image's alt tag value
+      getAdAltTag = obj.alt;
 
     var setLinkTag = document.createElement( "a" ),
         setLinkImage = document.createElement( "img" ),
         adFragment = document.createDocumentFragment();
 
     setLinkTag.setAttribute( "href", getAdLink );
-
+    setLinkTag.appendChild( setLinkImage );
+    
     $( setLinkImage ).attr({
       "src": getAdImage,
       "alt": getAdAltTag
     });
 
-    setLinkTag.appendChild( setLinkImage );
+
     
 
     // START CONFIGURING ANY PASSED OPTIONS
