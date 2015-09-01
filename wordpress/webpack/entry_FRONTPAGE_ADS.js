@@ -89,6 +89,10 @@ define( ["jquery"], function( $ ) {
 
     if( opts.getTarget === "img" ) {
       $( setImage ).attr( opts.getAttr, opts.setAttr );
+    } else {
+      if( opts.getTarget === "link" ) {
+        $( setAnchor ).attr( opts.getAttr, opts.setAttr );
+      }
     }
 
    adFragment.appendChild( setAnchor );
