@@ -115,10 +115,12 @@ define( ["jquery"], function( $ ) {
      */
     opts = opts || {};
 
-    // If 
+    // If "getTarget" equals "image", add attributes to the link image
     if( opts.getTarget === "image" ) {
       setLinkImage.setAttribute( opts.getAttr, opts.setAttr );
     } else {
+      
+      // If "getTarget" equals "link", add attributes to the link
       if( opts.getTarget === "link" ) {
         setLinkTag.setAttribute( opts.getAttr, opts.setAttr );
       }
