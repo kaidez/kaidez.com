@@ -22,8 +22,8 @@ get_header(); ?>
       <div id="top-articlerow" class="row">
         <div id="newest-article" class="col-md-8"></div>
         <div class="col-md-4">
-          <div id="ad-spot-one"></div>
-          <div id="ad-spot-two"></div>
+          <div id="ad-spot-one" class="ad-spots"></div>
+          <div id="ad-spot-two" class="ad-spots"></div>
         </div>
       </div>
       <div id="other-articles"></div>
