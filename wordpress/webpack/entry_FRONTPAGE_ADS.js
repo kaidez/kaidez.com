@@ -64,6 +64,7 @@ define( ["jquery"], function( $ ) {
    *         getAttr: "title",
    *         setAttr: "Some Company"
    *       });
+   *
    */
   function buildAd( obj, opts ) {
 
@@ -163,7 +164,7 @@ define( ["jquery"], function( $ ) {
         getAttr: "border",
         setAttr: 0
       });
-      
+
     },
 
     unmatch : function() {},
