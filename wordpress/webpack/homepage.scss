@@ -65,6 +65,11 @@ a.category-name {
 
 @media (min-width: 768px) {
 
+  /* Set width for container with the newest article */
+  .col-md-8{
+    width:700px;
+  }
+
   .homepage-post-snippet {
     max-width: 270px;
     min-height: 430px;
@@ -97,6 +102,7 @@ a.category-name {
     font-size: 21px;
   }
 
+  /* Style category name that appears at top of homepage ad snippets */
   .category-name {
     margin-bottom: 5px;
 
@@ -107,9 +113,16 @@ a.category-name {
     @include bold;
   }
 
-  /* Style ads */
-  .ad-spots {
-    margin: 0 10px 10px 0;
+  /* Style the container with ads */
+  .ad-container {
+    width: 500px;
+  }
+
+  /* Style a single homepage ad */
+  .single-homepage-ad {
+    width: 200px;
+    margin: 0 5px 5px;
+    display: inline-block;
   }
 
 }
