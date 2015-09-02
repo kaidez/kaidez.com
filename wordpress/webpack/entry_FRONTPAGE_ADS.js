@@ -33,14 +33,29 @@ define( ["jquery"], function( $ ) {
         alt: "10-day free trial"
   };
 
+  // Lynda Creative Cloud
+  var lyndaCC = {
+        pageElement: "ad-spot-two",
+        link: "http://lynda.directtrack.com/z/11891/CD2146/",
+        imageSource: "http://lynda.directtrack.com/42/2146/11891/",
+        alt: "Learn Creative Cloud"
+  };
+
   // Lynda gift ad 
   var lyndaGift = {
-        pageElement: "ad-spot-two",
+        pageElement: "ad-spot-three",
         link: "https://www.lynda.com/giftsubscription/index.aspx?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11900&utm_campaign=CD2146&cid=l0:en:pt:le:prosb:s0:0:ind:ssprc:CD2146&bid=11900&aid=CD2146",
         imageSource : "http://lynda.directtrack.com/42/2146/11900/",
         alt: "Give lynda.com"
   };
 
+  // Lynda JavaScript
+  var lyndaJS = {
+        pageElement: "ad-spot-four",
+        link: "http://www.lynda.com/JavaScript-training-tutorials/244-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=596&utm_campaign=CD2146&cid=l0:en:pt:le:prosc:s88:244:ind:ssprc:CD2146&bid=596&aid=CD2146",
+        imageSource: "http://lynda.directtrack.com/42/2146/596/",
+        alt: "Learn Javascript"
+  };
   /*
    * buildAd(): Dynamically build and place ads on the front page. 
    * The "obj" parameter is an object with 4 values:
@@ -151,22 +166,6 @@ define( ["jquery"], function( $ ) {
 
     // Don't run code if the base media query matches
     match : function() {
-    
-      // START BUILDING ADS
-
-      // Lynda 10-day promo
-      buildAd( lyndaPromo, {
-        getTarget: "image",
-        getAttr: "border",
-        setAttr: 0
-      });
-
-      // Lynda gift
-      buildAd( lyndaGift, {
-        getTarget: "image",
-        getAttr: "border",
-        setAttr: 0
-      });
 
       // Set state by adding "show-homepage-ads" to <body>
       $( "body" ).addClass( "show-homepage-ads" );
@@ -178,7 +177,7 @@ define( ["jquery"], function( $ ) {
        */
       if( $( "body" ).hasClass( "hide-homepage-ads" ) ) {
         $( "body" ).removeClass( "hide-homepage-ads" );
-        $( ".ad-spots" ).attr( "style", "" )
+        $( ".single-homepage-ad" ).attr( "style", "" )
       }
     },
 
@@ -196,9 +195,56 @@ define( ["jquery"], function( $ ) {
 
         $( "body" ).addClass( "hide-homepage-ads" );
         $( "body" ).removeClass( "show-homepage-ads" );
-        $( ".ad-spots" ).attr( "style", "display:none;" )
+        $( ".single-homepage-ad" ).attr( "style", "display:none;" )
       }
-    }
+    },
+
+    setup : function() {
+      // START BUILDING ADS
+
+      // Lynda 10-day promo
+      buildAd( lyndaPromo, {
+        getTarget: "image",
+        getAttr: "border",
+        setAttr: 0
+      });
+
+      // Lynda Creative CLoud
+      buildAd( lyndaCC, {
+        getTarget: "image",
+        getAttr: "border",
+        setAttr: 0
+      });
+
+      // Lynda gift
+      buildAd( lyndaGift, {
+        getTarget: "image",
+        getAttr: "border",
+        setAttr: 0
+      });
+
+      // Lynda JavaScript
+      buildAd( lyndaJS, {
+        getTarget: "image",
+        getAttr: "border",
+        setAttr: 0
+      });
+
+      // Set state by adding "show-homepage-ads" to <body>
+      $( "body" ).addClass( "show-homepage-ads" );
+
+      /*
+       * If the <body> tag has the "hide-homepage-ads" class, it means
+       * the ads are hidden via an inline "display:block" style.
+       * Remove that class & style.
+       */
+      if( $( "body" ).hasClass( "hide-homepage-ads" ) ) {
+        $( "body" ).removeClass( "hide-homepage-ads" );
+        $( ".single-homepage-ad" ).attr( "style", "" )
+      }
+    },
+
+    deferSetup : true
 
   });
 
