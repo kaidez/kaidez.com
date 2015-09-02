@@ -7,6 +7,7 @@
  *
  */
 
+// An AMD anonymous module
 define( ["jquery"], function( $ ) {
 
   "use strict";

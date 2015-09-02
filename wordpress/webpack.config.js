@@ -28,7 +28,7 @@ module.exports = {
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_HOMEPAGE",
-      "./webpack/entry_FRONTPAGE_ADS"
+      "./webpack/entry_FRONTPAGE_ADS_AMD"
     ],
     
     // Compile a "posts.js" file with specific modules with CommonJS
