@@ -142,11 +142,14 @@ define( ["jquery"], function( $ ) {
 
 
 
-
+  /*
+   * Build ads based on JS-detected media query values via enquire.js
+   */
 
   // Set a base media query value that enquire.js always checks
   enquire.register( "( min-width: 768px )", {
 
+    // Don't run code if the base media query matches
     match : function() {
     
       // START BUILDING ADS
@@ -165,13 +168,37 @@ define( ["jquery"], function( $ ) {
         setAttr: 0
       });
 
+      // Set state by adding "show-homepage-ads" to <body>
+      $( "body" ).addClass( "show-homepage-ads" );
+
+      /*
+       * If the <body> tag has the "hide-homepage-ads" class, it means
+       * the ads are hidden via an inline "display:block" style.
+       * Remove that class & style.
+       */
+      if( $( "body" ).hasClass( "hide-homepage-ads" ) ) {
+        $( "body" ).removeClass( "hide-homepage-ads" );
+        $( ".ad-spots" ).attr( "style", "" )
+      }
     },
 
-    unmatch : function() {},
+   // Run code if the base media query doesn't match
+    unmatch : function() {
 
-    setup : function() {},
+      /*
+       * If the <body> tag has the "show-homepage-ads" class, it means
+       * the ads are visible. Set the invisible ad state by adding
+       * "hide-homepage-ads" and removing "show-homepage-ads". Then
+       * hide all the ads from view by adding an inline 
+       * "display:block" style.
+       */
+      if( $( "body" ).hasClass( "show-homepage-ads" ) ) {
 
-    deferSetup : true
+        $( "body" ).addClass( "hide-homepage-ads" );
+        $( "body" ).removeClass( "show-homepage-ads" );
+        $( ".ad-spots" ).attr( "style", "display:none;" )
+      }
+    }
 
   });
 
