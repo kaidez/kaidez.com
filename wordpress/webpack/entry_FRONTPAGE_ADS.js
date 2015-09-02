@@ -1,7 +1,9 @@
 /*
  * entry_FRONTPAGE_ADS.js
  *
- * Module for loading styles and scripts related to front page ads only
+ * Module for loading styles and scripts related to front page ads
+ * only. Ads should load after the DOMContentLoaded event, so the load
+ * in using AMD instead of CommonJS. 
  *
  */
 
