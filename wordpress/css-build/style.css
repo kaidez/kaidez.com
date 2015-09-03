@@ -477,7 +477,7 @@ a.colophon-link:hover {
 @media (min-width: 768px) {
   /* Style the header on wide views */
   .site-header {
-    padding: 3px 0 0 20px;
+    padding: 20px 0 0 20px;
     background-color: #f9bfd7;
   }
   /* Make the main site link really big on non-handheld views */
