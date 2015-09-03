@@ -19,6 +19,7 @@
     "bootstrap": "latest",
     "fontawesome": "latest",
     "matchMedia": "~0.2.0",
+    "placeholders": "~4.0.1",
     "prism": "latest"
   }
 }

@@ -86,7 +86,21 @@ module.exports = function( grunt ) {
 
            "fontawesome-webfont.otf": "fontawesome/fonts/fontawesome-webfont.otf"
         }
-      } // end "bowercopy:bsfafont" task
+      }, // end "bowercopy:bsfafont" task
+
+      placeholder : {
+
+        // copy to the themes "js/vendor/" directory
+        options: {
+          destPrefix: "wp-content/themes/kaidez-swiss/js/vendor/"
+        },
+
+        files: {
+          "placeholders.min.js": "placeholders/dist/placeholders.min.js"
+        }
+
+      } // end "bowercopy:placeholder" task
+
     } // end "bowercopy" task
 
   });

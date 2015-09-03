@@ -200,6 +200,11 @@ gulp.task("prism", function () {
   gulp.run("grunt-bowercopy:prism");
 });
 
+// Copy over placeholders.js only
+gulp.task("placeholder", function () {
+  gulp.run("grunt-bowercopy:placeholder");
+});
+
 
 /*
  *  ===================================================================
