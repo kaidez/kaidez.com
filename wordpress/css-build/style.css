@@ -617,6 +617,10 @@ a.colophon-link:hover {
    * FOOTER STYLES START
    * ==================================================================
    */
+  /* Style <footer> */
+  .site-footer {
+    padding-right: 20px;
+  }
   .load-footer-content-message {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -641,6 +645,13 @@ a.colophon-link:hover {
   /* Define width for the content area in large desktop views */
   .content-area {
     max-width: 1220px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Style searchform */
+  .searchform-class {
+    right: -267px;
+    display: inline;
   }
 }
 @media (max-width: 767px) {
@@ -883,4 +894,11 @@ a.colophon-link:hover {
    * FOOTER STYLES END
    * ==================================================================
    */
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Style searchform */
+  .searchform-class {
+    right: -267px;
+    display: inline;
+  }
 }
