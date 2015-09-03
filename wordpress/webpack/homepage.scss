@@ -36,14 +36,14 @@ a.category-name {
 
 @media (max-width: 767px) {
 
-  /* Space out each post snippet on home page when in mobile view */
+  /* Style all post snippets on mobile view */
   .homepage-post-snippet,
   .first-homepage-post-snippet {
     min-width: 300px;
     max-width: 760px;
     min-height: 374px;
     padding: 15px;
-    margin: 0 10px 70px;
+    margin: 0 0 70px;
     display: inline-block;
     vertical-align: top;
 
