@@ -59,12 +59,15 @@ a.category-name {
 }
 
 
+
+
+
 @media (min-width: 768px) {
 
   /* Set width for container with the newest article */
   .col-md-8{
     width:700px;
-  }
+  } 
 
   .homepage-post-snippet {
     max-width: 270px;
@@ -115,6 +118,40 @@ a.category-name {
     width: 200px;
     margin: 0 5px 5px;
     display: inline-block;
+  }
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /* position homepage ads on tablet/desktop view */
+  .front-page-ad-column {
+    display: table;
+    margin: 0 auto;
+    float: none;
+  }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* position homepage ads on tablet/desktop view */
+  .col-md-4 {
+    display: table;
+    margin: 0 auto;
   }
 
 }
