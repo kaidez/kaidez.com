@@ -277,9 +277,10 @@ i {
 .entry-meta {
   margin-top: 10px;
 }
-/* Globally center the content area */
+/* Globally center the content area...add space to the sides */
 .content-area {
   margin: 0 auto;
+  padding: 0 15px;
 }
 /*
  * ====================================================================

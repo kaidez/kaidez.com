@@ -56,10 +56,6 @@ a.category-name {
     @include hide-element;
   }
 
-  .post-link-homepage {
-    font-size: 20px;
-  }
-
 }
 
 
@@ -96,10 +92,6 @@ a.category-name {
   /* Add a black border to all pics on the home page */
   .post-pic-border {
     border: 1px solid #000;
-  }
-
-  .post-link-homepage {
-    font-size: 21px;
   }
 
   /* Style category name that appears at top of homepage ad snippets */
