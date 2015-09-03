@@ -8,6 +8,8 @@
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
+require("./posts.scss");
+
 
 // Set a reference for the copy blog post's title currently on the page
 var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,

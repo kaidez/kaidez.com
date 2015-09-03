@@ -9,8 +9,6 @@
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ), // require the Q Promise library
     enquire = require("enquire.js"); // enquire.js media query library
-    
-require("./posts.scss");
 
 // Load <aside>-specific CSS, which is preprocessed out with SASS.
 
