@@ -61,7 +61,7 @@ module.exports = {
   module: {
     loaders: [
       
-      // Load style modules into a <style> tag
+      // Inject style modules into a <style> tag
       { test: /\.css$/, loader: "style-loader!css-loader" },
       
       // Preprocess SASS files
