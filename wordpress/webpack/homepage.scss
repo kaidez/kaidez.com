@@ -66,7 +66,7 @@ a.category-name {
 
   /* Set width for container with the newest article */
   .col-md-8{
-    width:700px;
+    width:768px;
   } 
 
   .homepage-post-snippet {
@@ -79,8 +79,6 @@ a.category-name {
   }
 
   .first-homepage-post-snippet {
-    max-width: 700px;
-
     background-color: lighten($pink, 30%);
   }
 
@@ -110,7 +108,7 @@ a.category-name {
 
   /* Style the container with ads */
   .ad-container {
-    width: 500px;
+    width: 425px;
   }
 
   /* Style a single homepage ad */
@@ -118,6 +116,10 @@ a.category-name {
     width: 200px;
     margin: 0 5px 5px;
     display: inline-block;
+  }
+
+  .site-main {
+    margin: 30px auto 0;
   }
 
 }
@@ -139,13 +141,6 @@ a.category-name {
 
 
 
-
-
-
-
-
-
-
 @media (min-width: 768px) and (max-width: 991px) {
 
   /* position homepage ads on tablet/desktop view */
@@ -154,4 +149,17 @@ a.category-name {
     margin: 0 auto;
   }
 
+  /* center the newest article on tablet view */
+  .center-new-article {
+    margin: 0 auto;
+    width: auto;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .ad-container {
+    position: relative;
+    right: 39px;
+  }
 }

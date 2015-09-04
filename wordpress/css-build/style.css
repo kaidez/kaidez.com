@@ -505,7 +505,7 @@ a.colophon-link:hover {
   }
   /* Define width for the content area in tablet-like views*/
   .content-area {
-    max-width: 768px;
+    min-width: 768px;
   }
   /* Style searchform */
   .searchform-class {
@@ -604,6 +604,10 @@ a.colophon-link:hover {
   .aside-inner {
     margin-left: 25px;
   }
+  .center-new-article {
+    margin: 0 auto;
+    float: none;
+  }
   /* Style AJAX loading animated loading .gif for the <aside> */
   .loading {
     width: 16px;
@@ -644,7 +648,10 @@ a.colophon-link:hover {
 @media (min-width: 1200px) {
   /* Define width for the content area in large desktop views */
   .content-area {
-    max-width: 1220px;
+    max-width: 1191px;
+  }
+  .center-new-article {
+    float: left;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
