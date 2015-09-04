@@ -30,7 +30,7 @@ get_header(); ?>
           </div>
         </div>
       </div>
-      <div id="other-articles"></div>
+      <div id="other-articles" class="other-articles-class"></div>
 
     </section><!-- #all-articles -->
 
