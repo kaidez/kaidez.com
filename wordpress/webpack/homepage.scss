@@ -76,7 +76,7 @@ a.category-name {
   } 
 
   .homepage-post-snippet {
-    max-width: 270px;
+    max-width: 313px;
     min-height: 430px;
     display: inline-block;
     vertical-align: top;
@@ -147,6 +147,10 @@ a.category-name {
     text-align: center;
   }
 
+  .first-homepage-post-snippet {
+    min-height: 505px;
+  }
+
 } 
 
 
@@ -175,6 +179,10 @@ a.category-name {
   .ad-container {
     position: relative;
     right: 39px;
+  }
+
+  .first-homepage-post-snippet {
+    min-height: 505px;
   }
 
 }
