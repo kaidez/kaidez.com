@@ -1,10 +1,10 @@
 /* Single post styling ONLY!! Compiled as a dependency via webpack */
 
-/* Import the site's variables.less & mixins.less files */
-@import "config/sass/_variables";
-@import "config/sass/_mixins";
-@import "config/sass/_prism-styles";
-@import "config/sass/_aside";
+/* Import .scss files */
+@import "config/sass/_variables"; /* import variables */
+@import "config/sass/_mixins"; /* import mixins */
+@import "config/sass/_prism-styles"; /* import code highlight styles */
+@import "config/sass/_aside"; /* import <aside>/<footer> styles  */
 
 /* Add space between the breadcrumbs and the content */
 .entry-title-margin {
