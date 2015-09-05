@@ -25,6 +25,7 @@
 
     <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
       <div class="site-branding" id="branding" style="z-index: 2;">
+        <span style="font-size:13px; font-weight:bolder; position: absolute; top:2px;">web developer. queens, ny.</span>
         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
         <button type="button" id="mobile-menu-button" class="mobile-menu btn-default">
