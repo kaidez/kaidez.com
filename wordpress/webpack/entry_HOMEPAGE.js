@@ -1,4 +1,4 @@
-/**
+1/**
  * entry_HOMEPAGE.js
  *
  * Module for loading styles and scripts related to the home page only
@@ -24,7 +24,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    * Grab the first 9 single posts from the WordPress API & sort them 
    * by date.
    */
-   var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=9";
+   var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
 
   /*
    * Load in post content data with $.getJSON()
