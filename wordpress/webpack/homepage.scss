@@ -76,8 +76,8 @@ a.category-name {
   } 
 
   .homepage-post-snippet {
-    max-width: 313px;
-    min-height: 430px;
+    max-width: 311px;
+    min-height: 415px;
     display: inline-block;
     vertical-align: top;
 
@@ -176,13 +176,26 @@ a.category-name {
 }
 
 @media (min-width: 1200px) {
+
+
+  /* Set a minimum height for the first homepage post snippet */
+  .first-homepage-post-snippet {
+    min-height: 505px;
+  }
+
+  /* Space out all the post snippets EXCEPT for the first one */
+  .homepage-post-snippet {
+    /*margin: 30px;*/
+  }
+
+  .all-articles-class {
+    max-width: 995px;
+    margin: 0 auto;
+  }
+
   .ad-container {
     position: relative;
     right: 39px;
-  }
-
-  .first-homepage-post-snippet {
-    min-height: 505px;
   }
 
 }
