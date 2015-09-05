@@ -25,8 +25,6 @@ get_header(); ?>
           <div class="ad-container">
             <div id="ad-spot-one" class="single-homepage-ad"></div>
             <div id="ad-spot-two" class="single-homepage-ad"></div>    
-            <div id="ad-spot-three" class="single-homepage-ad"></div>
-            <div id="ad-spot-four" class="single-homepage-ad"></div>
           </div>
         </div>
       </div>
