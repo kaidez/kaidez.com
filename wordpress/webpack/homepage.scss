@@ -1,8 +1,9 @@
-@import "config/sass/_variables";
-@import "config/sass/_mixins";
-@import "config/sass/_aside";
+/* Home page styling ONLY!! Compiled as a dependency via webpack */
 
-
+/* Import .scss files */
+@import "config/sass/_variables"; /* import variables */
+@import "config/sass/_mixins"; /* import mixins */
+@import "config/sass/_aside"; /* import <aside>/<footer> styles  */
 
 /* Style link text for homepage snippets */
 a.post-link {
@@ -119,7 +120,7 @@ a.category-name {
   /* Style a single homepage ad */
   .single-homepage-ad {
     width: 200px;
-    margin: 0 5px 5px;
+    margin: 0 6px 5px;
     display: inline-block;
   }
 
