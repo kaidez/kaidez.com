@@ -604,10 +604,6 @@ a.colophon-link:hover {
   .aside-inner {
     margin-left: 25px;
   }
-  .center-new-article {
-    margin: 0 auto;
-    float: none;
-  }
   /* Style AJAX loading animated loading .gif for the <aside> */
   .loading {
     width: 16px;

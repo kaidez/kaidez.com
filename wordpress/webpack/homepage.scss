@@ -66,14 +66,16 @@ a.category-name {
 
 
 
-
-
 @media (min-width: 768px) {
 
   /* Set width for container with the newest article */
   .col-md-8{
     width:768px;
-  } 
+  }
+
+  .center-new-article {
+    margin: 0 auto;
+  }
 
   .homepage-post-snippet {
     max-width: 311px;
@@ -121,7 +123,6 @@ a.category-name {
   .single-homepage-ad {
     width: 200px;
     margin: 0 6px 5px;
-    display: inline-block;
   }
 
   .site-main {
@@ -137,7 +138,6 @@ a.category-name {
 
   /* position homepage ads on tablet/desktop view */
   .front-page-ad-column {
-    display: table;
     margin: 0 auto;
     float: none;
   }
@@ -149,6 +149,10 @@ a.category-name {
 
   .first-homepage-post-snippet {
     min-height: 505px;
+  }
+
+  .ad-container {
+    width: 500px;
   }
 
 } 
