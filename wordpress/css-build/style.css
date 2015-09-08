@@ -469,6 +469,17 @@ a.colophon-link:hover {
   margin: 0 auto;
   display: block;
 }
+a.demo-link {
+  text-decoration: none;
+}
+/* Style the "view the demo" link */
+.demo-link {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #220000;
+  border-radius: 5px;
+}
 /*
   * ===================================================================
   * MISCELLANOUS STYLES END

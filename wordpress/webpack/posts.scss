@@ -40,15 +40,6 @@
   margin-bottom:10px;
 }
 
-/* Style the "view the demo" link */
-.demo-link {
-  padding: 10px;
-
-  color: #fff;
-  background-color: darken(#800, 20%);
- 
-  @include br;
-}
 
 /*
  * Style the <hr> tag above post comments
@@ -78,10 +69,7 @@
   display: block;
 }
 
-/* Style the "view the demo" link regular a state */
-a.demo-link {
-  text-decoration: none;
-}
+  
 
 /* Style the Facebook & Google+ links on single post pages */
 .sharing-buttons {
