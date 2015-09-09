@@ -16,7 +16,7 @@
   "devDependencies": {
     "cp": "^0.2.0",
     "css": "^2.2.1",
-    "css-loader": "0.17.0",
+    "css-loader": "^0.17.0",
     "enquire.js": "^2.1.1",
     "expose-loader": "^0.7.0",
     "extract-text-webpack-plugin": "^0.8.2",
@@ -35,7 +35,6 @@
     "gulp-watch": "^4.3.5",
     "jquery": "^2.1.4",
     "less": "^2.5.1",
-    "node-sass": "^3.3.2",
     "q": "^1.4.1",
     "sass-loader": "^2.0.1",
     "style-loader": "^0.12.3",
