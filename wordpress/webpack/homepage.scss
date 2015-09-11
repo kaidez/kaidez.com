@@ -136,11 +136,6 @@ a.category-name {
     margin-left: 74px;
   }
 
-  /* A hack to center all the older post homepage snippets */
-  .other-articles-class {
-    text-align: center;
-  }
-
   .ad-container {
     width: 500px;
   }
@@ -171,6 +166,9 @@ a.category-name {
 
 @media (min-width: 1200px) {
 
+  .content-area {
+    margin: 0;
+  }
   .front-page-ad-column{
     margin-left: 74px;
   }
