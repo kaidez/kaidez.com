@@ -68,11 +68,6 @@ a.category-name {
 
 @media (min-width: 768px) {
 
-  /* Set width for container with the newest article */
-  .col-md-8{
-    width:768px;
-  }
-
   .center-new-article {
     margin: 0 auto;
   }
@@ -138,17 +133,12 @@ a.category-name {
 
   /* position homepage ads on tablet/desktop view */
   .front-page-ad-column {
-    margin: 0 auto;
-    float: none;
+    margin-left: 74px;
   }
 
   /* A hack to center all the older post homepage snippets */
   .other-articles-class {
     text-align: center;
-  }
-
-  .first-homepage-post-snippet {
-    min-height: 505px;
   }
 
   .ad-container {
@@ -181,6 +171,9 @@ a.category-name {
 
 @media (min-width: 1200px) {
 
+  .front-page-ad-column{
+    margin-left: 74px;
+  }
 
   /* Set a minimum height for the first homepage post snippet */
   .first-homepage-post-snippet {
@@ -200,6 +193,11 @@ a.category-name {
   .ad-container {
     position: relative;
     right: 39px;
+  }
+
+  /* Remove default margins that Bootstrap sets on the .row class */
+  .row {
+    margin: 0;
   }
 
 }

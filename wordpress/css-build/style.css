@@ -657,9 +657,6 @@ a.demo-link {
   .content-area {
     max-width: 1191px;
   }
-  .center-new-article {
-    float: left;
-  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Style searchform */
