@@ -125,7 +125,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         postTitle = posts[outerKey].title;
 
         // Set the article link's "href" to be the post link
-        $(snippetLink).attr({
+        $( snippetLink ).attr({
           "href": postLink,
           class: "post-link"
         }); 
