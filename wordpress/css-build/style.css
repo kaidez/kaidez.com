@@ -501,7 +501,7 @@ a.demo-link {
   }
   /* Style the tagline on wide views */
   .site-description {
-    width: 221px;
+    width: 147px;
     margin: 0;
     font-size: 17px;
     font-size: 1.7rem;
@@ -546,6 +546,7 @@ a.demo-link {
     display: inline-block;
     margin: 0  20px 10px 0;
     font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
   }
   /* Give a minimum width height to links as per Google's guidelines */
