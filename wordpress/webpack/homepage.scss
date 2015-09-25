@@ -18,6 +18,20 @@ a.post-link {
 
 }
 
+
+/* Style link text for homepage snippets */
+a.newest-post-link {
+  text-decoration: none;
+  font-size: 10px;
+  font-size: 1em;
+
+  &:hover {
+    color: darken($pink, 10%);
+    text-decoration: underline; 
+  }
+
+}
+
 .all-article-header {
   @include hide-element;
 }
@@ -131,6 +145,11 @@ a.category-name {
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
+  .first-homepage-post-snippet {
+    min-height: 508px;
+    max-height: 508px;
+  }
+
   /* position homepage ads on tablet/desktop view */
   .front-page-ad-column {
     margin-left: 74px;
@@ -186,11 +205,6 @@ a.category-name {
   /* Set a minimum height for the first homepage post snippet */
   .first-homepage-post-snippet {
     min-height: 505px;
-  }
-
-  /* Space out all the post snippets EXCEPT for the first one */
-  .homepage-post-snippet {
-    /*margin: 30px;*/
   }
 
   .all-articles-class {
