@@ -486,9 +486,8 @@ a.demo-link {
   * ===================================================================
   */
 @media (min-width: 768px) {
-  /* Style the header on wide views */
+  /* Style the header on tablet views */
   .site-header {
-    padding: 20px 0 0 122px;
     background-color: #f9bfd7;
   }
   /* Make the main site link really big on non-handheld views */
@@ -657,12 +656,20 @@ a.demo-link {
   .content-area {
     max-width: 1191px;
   }
+  /* Style the header on desktop views */
+  .site-header {
+    padding: 20px 0 0 122px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Style searchform */
   .searchform-class {
     right: -267px;
     display: inline;
+  }
+  /* Style the header on wide views */
+  .site-header {
+    padding: 20px 0 0 20px;
   }
 }
 @media (max-width: 767px) {
@@ -911,5 +918,9 @@ a.demo-link {
   .searchform-class {
     right: -267px;
     display: inline;
+  }
+  /* Style the header on tablet views */
+  .site-header {
+    padding: 20px 0 0 20px;
   }
 }
