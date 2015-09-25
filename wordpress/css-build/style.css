@@ -40,6 +40,10 @@
 .ul-reset {
   padding-left: 0;
 }
+/* Set padding on the header for tablets */
+.tablet-header-padding {
+  padding: 20px 0 0 25px;
+}
 /* The common border-radius styling*/
 .br {
   border-radius: 5px;
@@ -669,7 +673,7 @@ a.demo-link {
   }
   /* Style the header on wide views */
   .site-header {
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 25px;
   }
 }
 @media (max-width: 767px) {
@@ -921,6 +925,6 @@ a.demo-link {
   }
   /* Style the header on tablet views */
   .site-header {
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 25px;
   }
 }
