@@ -3,7 +3,7 @@
 /**
  * Template Name: Site Map
  *
- * The template for displaying all pages.
+ * The template for displaying The Site Map.
  *
  * @package Kaidez Swiss
  */
