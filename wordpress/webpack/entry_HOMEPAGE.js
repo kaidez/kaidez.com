@@ -124,11 +124,12 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         // Get post title copy
         postTitle = posts[outerKey].title;
 
-        // Set the article link's "href" to be the post link
-        $( snippetLink ).attr({
-          "href": postLink,
-          class: "post-link"
-        }); 
+        snippetLink.setAttribute( "href", postLink );
+        if ( isFirstPost ) {
+          snippetLink.setAttribute( "class", "newest-post-link" );
+        } else {
+          snippetLink.setAttribute( "class", "post-link" );
+        }
 
         // Load post title copy in the <a> tag
         snippetLink.innerHTML = postTitle;
