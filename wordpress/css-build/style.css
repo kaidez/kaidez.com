@@ -286,6 +286,16 @@ i {
   margin: 0 auto;
   padding: 0 15px;
 }
+a.demo-link {
+  text-decoration: none;
+}
+/* Style the "view the demo" link */
+.demo-link {
+  padding: 10px;
+  color: #fff;
+  background-color: #930d44;
+  border-radius: 5px;
+}
 /*
  * ====================================================================
  * MENU STYLES START
@@ -473,17 +483,6 @@ a.colophon-link:hover {
   margin: 0 auto;
   display: block;
 }
-a.demo-link {
-  text-decoration: none;
-}
-/* Style the "view the demo" link */
-.demo-link {
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-  background-color: #220000;
-  border-radius: 5px;
-}
 /*
   * ===================================================================
   * MISCELLANOUS STYLES END
@@ -507,6 +506,16 @@ a.demo-link {
     font-size: 1.7rem;
     color: #000;
     border-top: 1px solid #000;
+  }
+  /* Style the demo link*/
+  .demo-link {
+    display: block;
+    width: 173px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-size: 2.2em;
+    font-size: 2.2rem;
+    font-weight: bold;
   }
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
   .site-branding {
