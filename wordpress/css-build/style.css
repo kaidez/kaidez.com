@@ -18,7 +18,7 @@
 }
 /* Font weights */
 /* Z-INDEX MIXINS */
-/* 5 or less should be fine, but plugin code may want mord */
+/* 5 or less should be fine, but plugin code may want more */
 /* WordPress also gets crazy with z-indexes (e.g. "z-index: 9999") */
 .z1 {
   z-index: 1;
