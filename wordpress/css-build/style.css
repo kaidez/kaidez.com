@@ -641,6 +641,7 @@ a.colophon-link:hover {
    * POST STYLES START
    * ==================================================================
    */
+  /* Set a max-width of 768px for posts & general pages */
   .entry-content {
     max-width: 768px;
   }
