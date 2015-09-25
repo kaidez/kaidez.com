@@ -645,6 +645,11 @@ a.colophon-link:hover {
   .entry-content {
     max-width: 768px;
   }
+  /* Style the title on pages, had no choice but to create a cascade */
+  .page .entry-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
   /*
    * ==================================================================
    * POST STYLES END
