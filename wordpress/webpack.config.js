@@ -41,6 +41,12 @@ module.exports = {
       "./webpack/config/comment-reply"
     ],
 
+    // Compile a "sitemap.js" file with specific modules with CommonJS
+    sitemap: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE"
+    ],
+
     // Compile a "regular.js" file with specific modules with CommonJS
     regular: [
       "./webpack/entry_GLOBALS",
