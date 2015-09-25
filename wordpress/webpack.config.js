@@ -44,7 +44,8 @@ module.exports = {
     // Compile a "sitemap.js" file with specific modules with CommonJS
     sitemap: [
       "./webpack/entry_GLOBALS",
-      "./webpack/entry_ASIDE"
+      "./webpack/entry_ASIDE",
+      "./webpack/entry_SITEMAP"
     ],
 
     // Compile a "regular.js" file with specific modules with CommonJS
