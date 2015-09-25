@@ -79,15 +79,19 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           /* 
            * If it's the first post, apply the
            * "first-homepage-post-snippet" class to the <article> tag
+           * and set its snippet link class
            */
           snippetContainer.setAttribute( "class", "first-homepage-post-snippet" );
+          snippetLink.setAttribute( "class", "newest-post-link" );
         } else {
         
           /* 
            * If it's NOT the first post, apply the
-           * "homepage-post-snippet" class to the <article> tag
+           * "homepage-post-snippet" class to the <article> tag and set
+           * its snippet link class
            */
-          snippetContainer.setAttribute( "class", "homepage-post-snippet" );        
+          snippetContainer.setAttribute( "class", "homepage-post-snippet" );
+          snippetLink.setAttribute( "class", "post-link" );      
         }
         // STOP <article> TAG SETUP!!!!
 
@@ -124,12 +128,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         // Get post title copy
         postTitle = posts[outerKey].title;
 
+        // Set the href attribute for all links
         snippetLink.setAttribute( "href", postLink );
-        if ( isFirstPost ) {
-          snippetLink.setAttribute( "class", "newest-post-link" );
-        } else {
-          snippetLink.setAttribute( "class", "post-link" );
-        }
 
         // Load post title copy in the <a> tag
         snippetLink.innerHTML = postTitle;
