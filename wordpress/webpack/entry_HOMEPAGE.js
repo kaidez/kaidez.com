@@ -215,8 +215,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
          * ============================================================
          * Load article with title, image, excerpt and category into
          * two different document fragments, then load the fragment
-         * onto the page. The most-recent post older posts loads into
-         * another spot.
+         * onto the page. The first post loads in one spot while the 
+         * most-recent post older posts loads into another spot.
          */
         if( isFirstPost ) {
           newestPostFragment.appendChild( snippetContainer );
