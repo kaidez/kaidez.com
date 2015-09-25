@@ -214,8 +214,9 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
          * LOAD ALL ARTICLES ONTO THE PAGE
          * ============================================================
          * Load article with title, image, excerpt and category into
-         * two different document fragments. The most-recent post
-         * older posts loads into another spot.
+         * two different document fragments, then load the fragment
+         * onto the page. The most-recent post older posts loads into
+         * another spot.
          */
         if( isFirstPost ) {
           newestPostFragment.appendChild( snippetContainer );
