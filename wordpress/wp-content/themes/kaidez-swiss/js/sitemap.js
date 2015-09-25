@@ -1,1 +1,1 @@
-webpackJsonp([3],[function(e,t,n){n(1),e.exports=n(7)}]);
+webpackJsonp([3],{0:function(e,t,n){n(1),n(7),e.exports=n(22)},22:function(e,t,n){function r(e){o.getJSON(e).done(function(e){var t,n;for(var r in e)e.hasOwnProperty(r)&&(n=e[r].title,t=e[r].link,console.log(n),console.log(t))})}var o=n(2);document.addEventListener("DOMContentLoaded",function(e){var t="/wp-json/posts",n="/wp-json/pages";r(t),r(n)})}});
