@@ -29,15 +29,12 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
      * Selectors NOT to be removed when "gulp uncss" task runs.
      * Some are listed via a RegEx,
      *
-     * Try to list them alphabetically and in the following order:
-     *
-     * 1. Page elements first (<nav>, <aside>, etc.)
-     * 2. IDs second
-     * 3. Classes third
+     * Try to list them alphabetically.
      */
      ignoreArray = [
                       /aside/,
                       /aside-/,
+                      /demo-link/,
                       /fa/,
                       /fa-/,
                       /hide-/,
