@@ -492,6 +492,7 @@ a.colophon-link:hover {
  * MISCELLANOUS STYLES START
  * ===================================================================
  */
+/* Make all category pages lowercase */
 .category .page-title {
   text-transform: lowercase;
 }
