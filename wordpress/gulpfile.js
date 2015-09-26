@@ -37,6 +37,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
                       /demo-link/,
                       /fa/,
                       /fa-/,
+                      /guide-link/,
                       /hide-/,
                       /jump-to-top/,
                       /footer-/,

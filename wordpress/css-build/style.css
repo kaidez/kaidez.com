@@ -286,11 +286,13 @@ i {
   margin: 0 auto;
   padding: 0 15px;
 }
-a.demo-link {
+a.demo-link,
+a.guide-link {
   text-decoration: none;
 }
 /* Style the "view the demo" link */
-.demo-link {
+a.demo-link,
+a.guide-link {
   padding: 10px;
   color: #fff;
   background-color: #930d44;
@@ -507,8 +509,9 @@ a.colophon-link:hover {
     color: #000;
     border-top: 1px solid #000;
   }
-  /* Style the demo link*/
-  .demo-link {
+  /* Style the demo/guide link*/
+  .demo-link,
+  .guide-link {
     display: block;
     width: 173px;
     margin-top: 20px;
@@ -516,6 +519,14 @@ a.colophon-link:hover {
     font-size: 2.2em;
     font-size: 2.2rem;
     font-weight: bold;
+  }
+  /* Set the demo link width */
+  .demo-link {
+    width: 173px;
+  }
+  /* Set the guide link width */
+  .guide-link {
+    width: 333px;
   }
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
   .site-branding {
