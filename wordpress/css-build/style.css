@@ -1,3 +1,4 @@
+/* main site color */
 /*
  * HELPER CLASSES
  */
@@ -283,8 +284,7 @@ i {
 }
 /* Globally center the content area...add space to the sides */
 .content-area {
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-left: 122px;
 }
 a.demo-link,
 a.guide-link {
@@ -379,6 +379,7 @@ a.home-link:active {
  * POST STYLES START
  * ====================================================================
  */
+/* Set code snippet font size */
 pre[class*="language-"] {
   font-size: 16px;
   font-size: 1.6em;
