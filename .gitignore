@@ -5,7 +5,8 @@ wordpress/wp-content/plugins/
 wordpress/wp-content/themes/twentythirteen/
 wordpress/wp-content/themes/twentyfourteen/
 wordpress/wp-content/themes/twentyfifteen/
-wordpress/wp-includes/
+wordpress/wp-includes/*
+!general-template.php
 wordpress/wp-activate.php
 wordpress/xmlrpc.php
 

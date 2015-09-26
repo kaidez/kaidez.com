@@ -27,9 +27,26 @@ i {
 
 /* Globally center the content area...add space to the sides */
 .content-area {
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-left: @contentLeftMargin;
 }
+
+a.demo-link,
+a.guide-link {
+  text-decoration: none;
+}
+
+/* Style the "view the demo" link */
+a.demo-link,
+a.guide-link {
+  padding: 10px;
+
+  color: #fff;
+  background-color: darken(@pink, 25%);
+ 
+  .br();
+}
+
+
 /*
  * ====================================================================
  * MENU STYLES START
@@ -114,6 +131,26 @@ a.home-link {
  * ====================================================================
  */
 
+
+
+/*
+ * ====================================================================
+ * POST STYLES START
+ * ====================================================================
+ */
+
+/* Set code snippet font size */ 
+pre[class*="language-"] {
+  font-size: 16px;
+  font-size: 1.6em;
+  font-size: 1.6rem;
+}
+
+/*
+ * ====================================================================
+ * POST STYLES END
+ * ====================================================================
+ */
 /*
  * ====================================================================
  * ASIDE STYLES
@@ -244,6 +281,11 @@ a.colophon-link {
  * ===================================================================
  */
 
+/* Make all category pages lowercase */
+.category .page-title {
+  text-transform: lowercase;
+}
+
 .youtube-iframe {
   max-width: 100%;
 }
@@ -251,20 +293,6 @@ a.colophon-link {
 /* Make post-related images responsive */
 .post-pic {
   .responsive-image();
-}
-
-a.demo-link {
-    text-decoration: none;
-}
-/* Style the "view the demo" link */
-.demo-link {
-  padding: 10px;
-
-  color: #fff;
-  text-decoration: none;
-  background-color: darken(#800, 20%);
- 
-  .br();
 }
 
  /*

@@ -21,7 +21,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
    */
 
   /*
-   * Grab the first 9 single posts from the WordPress API & sort them 
+   * Grab the first 10 single posts from the WordPress API & sort them 
    * by date.
    */
    var getPostsAPI = "/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=10";
@@ -79,15 +79,19 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           /* 
            * If it's the first post, apply the
            * "first-homepage-post-snippet" class to the <article> tag
+           * and set its snippet link class
            */
           snippetContainer.setAttribute( "class", "first-homepage-post-snippet" );
+          snippetLink.setAttribute( "class", "newest-post-link" );
         } else {
         
           /* 
            * If it's NOT the first post, apply the
-           * "homepage-post-snippet" class to the <article> tag
+           * "homepage-post-snippet" class to the <article> tag and set
+           * its snippet link class
            */
-          snippetContainer.setAttribute( "class", "homepage-post-snippet" );        
+          snippetContainer.setAttribute( "class", "homepage-post-snippet" );
+          snippetLink.setAttribute( "class", "post-link" );      
         }
         // STOP <article> TAG SETUP!!!!
 
@@ -124,11 +128,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         // Get post title copy
         postTitle = posts[outerKey].title;
 
-        // Set the article link's "href" to be the post link
-        $(snippetLink).attr({
-          "href": postLink,
-          class: "post-link"
-        }); 
+        // Set the href attribute for all links
+        snippetLink.setAttribute( "href", postLink );
 
         // Load post title copy in the <a> tag
         snippetLink.innerHTML = postTitle;
@@ -214,8 +215,9 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
          * LOAD ALL ARTICLES ONTO THE PAGE
          * ============================================================
          * Load article with title, image, excerpt and category into
-         * two different document fragments. The most-recent post
-         * older posts loads into another spot.
+         * two different document fragments, then load the fragment
+         * onto the page. The first post loads in one spot while the 
+         * most-recent post older posts loads into another spot.
          */
         if( isFirstPost ) {
           newestPostFragment.appendChild( snippetContainer );

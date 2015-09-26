@@ -1,3 +1,4 @@
+/* main site color */
 /*
  * HELPER CLASSES
  */
@@ -39,6 +40,10 @@
 /* Remove the common left padding that appears on all <ul> tags*/
 .ul-reset {
   padding-left: 0;
+}
+/* Set padding on the header for tablets */
+.tablet-header-padding {
+  padding: 20px 0 0 25px;
 }
 /* The common border-radius styling*/
 .br {
@@ -279,8 +284,19 @@ i {
 }
 /* Globally center the content area...add space to the sides */
 .content-area {
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-left: 122px;
+}
+a.demo-link,
+a.guide-link {
+  text-decoration: none;
+}
+/* Style the "view the demo" link */
+a.demo-link,
+a.guide-link {
+  padding: 10px;
+  color: #fff;
+  background-color: #930d44;
+  border-radius: 5px;
 }
 /*
  * ====================================================================
@@ -356,6 +372,22 @@ a.home-link:active {
 /*
  * ====================================================================
  * LINK STYLES END
+ * ====================================================================
+ */
+/*
+ * ====================================================================
+ * POST STYLES START
+ * ====================================================================
+ */
+/* Set code snippet font size */
+pre[class*="language-"] {
+  font-size: 16px;
+  font-size: 1.6em;
+  font-size: 1.6rem;
+}
+/*
+ * ====================================================================
+ * POST STYLES END
  * ====================================================================
  */
 /*
@@ -460,6 +492,10 @@ a.colophon-link:hover {
  * MISCELLANOUS STYLES START
  * ===================================================================
  */
+/* Make all category pages lowercase */
+.category .page-title {
+  text-transform: lowercase;
+}
 .youtube-iframe {
   max-width: 100%;
 }
@@ -469,26 +505,14 @@ a.colophon-link:hover {
   margin: 0 auto;
   display: block;
 }
-a.demo-link {
-  text-decoration: none;
-}
-/* Style the "view the demo" link */
-.demo-link {
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-  background-color: #220000;
-  border-radius: 5px;
-}
 /*
   * ===================================================================
   * MISCELLANOUS STYLES END
   * ===================================================================
   */
 @media (min-width: 768px) {
-  /* Style the header on wide views */
+  /* Style the header on tablet views */
   .site-header {
-    padding: 20px 0 0 20px;
     background-color: #f9bfd7;
   }
   /* Make the main site link really big on non-handheld views */
@@ -498,12 +522,31 @@ a.demo-link {
   }
   /* Style the tagline on wide views */
   .site-description {
-    width: 221px;
+    width: 147px;
     margin: 0;
     font-size: 17px;
     font-size: 1.7rem;
     color: #000;
     border-top: 1px solid #000;
+  }
+  /* Style the demo/guide link*/
+  .demo-link,
+  .guide-link {
+    display: block;
+    width: 173px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-size: 2.2em;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  /* Set the demo link width */
+  .demo-link {
+    width: 173px;
+  }
+  /* Set the guide link width */
+  .guide-link {
+    width: 333px;
   }
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
   .site-branding {
@@ -512,7 +555,7 @@ a.demo-link {
   }
   /* push <main> further down the page */
   .site-main {
-    margin-top: 30px;
+    margin-top: 70px;
   }
   /* Define width for the content area in tablet-like views*/
   .content-area {
@@ -543,6 +586,7 @@ a.demo-link {
     display: inline-block;
     margin: 0  20px 10px 0;
     font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
   }
   /* Give a minimum width height to links as per Google's guidelines */
@@ -563,7 +607,7 @@ a.demo-link {
   }
   /* Style the search field */
   .header-search-field {
-    width: 376px;
+    width: 300px;
     height: 40px;
     right: -38px;
     position: relative;
@@ -625,6 +669,25 @@ a.demo-link {
   }
   /*
    * ==================================================================
+   * POST STYLES START
+   * ==================================================================
+   */
+  /* Set a max-width of 768px for posts & general pages */
+  .entry-content {
+    max-width: 768px;
+  }
+  /* Style the title on pages, had no choice but to create a cascade */
+  .page .entry-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  /*
+   * ==================================================================
+   * POST STYLES END
+   * ==================================================================
+   */
+  /*
+   * ==================================================================
    * FOOTER STYLES START
    * ==================================================================
    */
@@ -657,12 +720,20 @@ a.demo-link {
   .content-area {
     max-width: 1191px;
   }
+  /* Style the header on desktop views */
+  .site-header {
+    padding: 20px 0 0 122px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Style searchform */
   .searchform-class {
     right: -267px;
     display: inline;
+  }
+  /* Style the header on wide views */
+  .site-header {
+    padding: 20px 0 0 25px;
   }
 }
 @media (max-width: 767px) {
@@ -746,6 +817,10 @@ a.demo-link {
   .site-content {
     margin-top: 95px;
   }
+  /* Center/gutter site content on mobile devices */
+  .content-area {
+    margin: 0 18px;
+  }
   /* Style the search box on hand-held devices */
   .searchform-class {
     width: 100%;
@@ -824,6 +899,11 @@ a.demo-link {
    * HEADER STYLES END
    * ==================================================================
    */
+  /*
+   * ==================================================================
+   * POST STYLES END
+   * ==================================================================
+   */
   .post-comment {
     width: 100%;
     max-width: 500px;
@@ -832,6 +912,25 @@ a.demo-link {
   .comment-textarea {
     width: 290px;
   }
+  /*
+   * ==================================================================
+   * POST STYLES END
+   * ==================================================================
+   */
+  /*
+   * ==================================================================
+   * CATEGORY PAGE STYLES START
+   * ==================================================================
+   */
+  .blog .homepage-title-link,
+  .category .homepage-title-link {
+    font-size: 27px;
+  }
+  /*
+   * ==================================================================
+   * CATEGORY PAGE STYLES END
+   * ==================================================================
+   */
   /*
    * ==================================================================
    * ASIDE STYLES START
@@ -911,5 +1010,9 @@ a.demo-link {
   .searchform-class {
     right: -267px;
     display: inline;
+  }
+  /* Style the header on tablet views */
+  .site-header {
+    padding: 20px 0 0 25px;
   }
 }

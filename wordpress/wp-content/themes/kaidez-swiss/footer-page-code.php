@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer on posts only!!!!
+ * The template for displaying the footer.
  *
  * Contains the closing of the #content div and all content after
  *
@@ -13,7 +13,6 @@
 <div id="aside-footer">
   <div class="loading"></div>
 </div>
-
 </div> <!-- #page -->
 
 
@@ -21,7 +20,7 @@
 </div> <!-- #content -->
 
 <script src="/wp-content/themes/kaidez-swiss/js/common.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/posts.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/codePage.js"></script>
 
 </body>
 </html>

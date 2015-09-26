@@ -41,6 +41,21 @@ module.exports = {
       "./webpack/config/comment-reply"
     ],
 
+    // Compile a "codePage.js" file with specific modules with CommonJS
+    codePage: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE",
+      "./webpack/entry_PAGECODE",
+      "./webpack/config/prism"
+    ],
+
+    // Compile a "sitemap.js" file with specific modules with CommonJS
+    sitemap: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE",
+      "./webpack/entry_SITEMAP"
+    ],
+
     // Compile a "regular.js" file with specific modules with CommonJS
     regular: [
       "./webpack/entry_GLOBALS",

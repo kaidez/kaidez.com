@@ -29,17 +29,15 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
      * Selectors NOT to be removed when "gulp uncss" task runs.
      * Some are listed via a RegEx,
      *
-     * Try to list them alphabetically and in the following order:
-     *
-     * 1. Page elements first (<nav>, <aside>, etc.)
-     * 2. IDs second
-     * 3. Classes third
+     * Try to list them alphabetically.
      */
      ignoreArray = [
                       /aside/,
                       /aside-/,
+                      /demo-link/,
                       /fa/,
                       /fa-/,
+                      /guide-link/,
                       /hide-/,
                       /jump-to-top/,
                       /footer-/,
@@ -117,6 +115,7 @@ gulp.task("outputcss", ['concat'],function () {
         'http://localhost:8888/', // home page
         'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
         'http://localhost:8888/personal/', // A category page
+        'http://localhost:8888/blog/', // The blog page
         'http://localhost:8888/kdz-build-tool/',
         'http://localhost:8888/affiliate-disclaimer/', // Affiliate
         'http://localhost:8888/404.php' // 404 page

@@ -1,9 +1,7 @@
 @media (min-width: 768px) {
 
-  /* Style the header on wide views */
+  /* Style the header on tablet views */
   .site-header {
-    padding: 20px 0 0 20px;
-
     background-color: lighten(@pink, 30%);
   }
 
@@ -15,13 +13,36 @@
 
   /* Style the tagline on wide views */
   .site-description {
-    width:221px;
+    width:147px;
     margin: 0;
 
   	font-size: 17px;
     font-size: 1.7rem;
   	color: #000;
     border-top: 1px solid #000;
+  }
+
+  /* Style the demo/guide link*/
+  .demo-link,
+  .guide-link {
+    display: block;
+    width: 173px;
+    margin-top: 20px;
+
+    font-size: 22px;
+    font-size: 2.2em;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  /* Set the demo link width */
+  .demo-link {
+    width: 173px;
+  }
+
+  /* Set the guide link width */
+  .guide-link {
+    width: 333px;
   }
 
   /* Inline the ".site-branding" so it can be v-alignd with <nav> */
@@ -32,7 +53,7 @@
 
   /* push <main> further down the page */
   .site-main {
-    margin-top: 30px;
+    margin-top: 70px;
   }
 
   /* Define width for the content area in tablet-like views*/
@@ -55,10 +76,6 @@
     display: inline-block;
   }
 
-  .menu {
-
-  }
-
   /* Hide the menu button on desktops/laptops */
   .menu-toggle {
     .hide-element();
@@ -70,6 +87,7 @@
   	margin: 0  20px 10px 0;
 
   	font-size: 16px;
+    font-size: 1.6rem;
     .bold();
   }
 
@@ -96,7 +114,7 @@
 
   /* Style the search field */
   .header-search-field {
-    width: 376px;
+    width: 300px;
     height: 40px;
     right: -38px;
     position: relative;
@@ -167,6 +185,33 @@
 
     background: url("/wp-content/themes/kaidez-swiss/js/ajax-loader.gif") no-repeat;
   }
+
+
+  /*
+   * ==================================================================
+   * POST STYLES START
+   * ==================================================================
+   */
+
+  /* Set a max-width of 768px for posts & general pages */
+  .entry-content {
+    max-width: 768px;
+  }
+
+  /* Style the title on pages, had no choice but to create a cascade */
+  .page .entry-title {
+    margin-bottom: 10px;
+
+    .bold();
+  }
+
+  /*
+   * ==================================================================
+   * POST STYLES END
+   * ==================================================================
+   */
+
+
 
   /*
    * ==================================================================
