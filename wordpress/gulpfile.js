@@ -1,7 +1,7 @@
 // Single var pattern of gulp (require) stuff in full effect!!!
 
 var gulp = require("gulp"), // "require" gulp
-    uncss = require("gulp-uncss"), // Remove unused css selectors
+    uncss = require('gulp-uncss-task'), // Remove unused css selectors
     minifyCSS = require("gulp-minify-css"), // Minify CSS
     csslint = require("gulp-csslint"), // Lint CSS,
     concatCss = require("gulp-concat-css"), // Concatenate CSS only
@@ -72,7 +72,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
  */
 
 
-gulp.task('buildcss', ['less', 'concat', 'outputcss']);
+gulp.task('buildcss', ['less', 'concat', 'outputcss', 'uncss']);
 
 
 // "gulp less" task
@@ -110,18 +110,6 @@ gulp.task("outputcss", ['concat'],function () {
   var deferred = Q.defer();
   setTimeout(function() {
     gulp.src(['wp-content/themes/kaidez-swiss/style.css'])
-    .pipe(uncss({
-      html: [
-        'http://localhost:8888/', // home page
-        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
-        'http://localhost:8888/personal/', // A category page
-        'http://localhost:8888/blog/', // The blog page
-        'http://localhost:8888/kdz-build-tool/',
-        'http://localhost:8888/affiliate-disclaimer/', // Affiliate
-        'http://localhost:8888/404.php' // 404 page
-      ],
-      ignore: ignoreArray
-    }))
     .pipe(minifyCSS({
       keepBreaks: true
     }))
@@ -134,6 +122,24 @@ gulp.task("outputcss", ['concat'],function () {
     }))
     return deferred.promise;
     }, 4000);
+  })
+
+gulp.task("uncss", function(){
+  gulp.src('css-build/style.css')
+    .pipe(uncss({
+      html: [
+        'http:\/\/localhost:8888\/', // home page
+        'http:\/\/localhost:8888\/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
+        'http:\/\/localhost:8888\/personal/', // A category page
+        'http:\/\/localhost:8888\/blog/', // The blog page
+        'http:\/\/localhost:8888\/kdz-build-tool/',
+        'http:\/\/localhost:8888\/affiliate-disclaimer/', // Affiliate
+        'http:\/\/localhost:8888\/404.php' // 404 page
+      ],
+      ignore: ignoreArray
+    }))
+    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
+
   });
 
 // Copy q.js from "node_modules" to the kaidez-swiss theme
@@ -219,6 +225,6 @@ gulp.task("default", function () {
 
   // Watch for CSS file changes
 
-  gulp.watch(lessFiles, ["buildcss"]);
+  gulp.watch(lessFiles, ["uncss"]);
 
 });
