@@ -90,17 +90,19 @@ a.category-name {
     min-height: 415px;
     display: inline-block;
     vertical-align: top;
+    margin: 0 10px 20px;
 
     background-color: lighten($pink, 45%);
   }
 
   .first-homepage-post-snippet {
+    margin: 0 auto 20px;
+
     background-color: lighten($pink, 30%);
   }
 
   .homepage-post-snippet,
   .first-homepage-post-snippet {
-    margin: 0 10px 20px;
     padding: 11px;
 
     text-transform: lowercase;
@@ -188,6 +190,10 @@ a.category-name {
   .single-homepage-ad {
     margin: 31px;
     display: inline-block;
+  }
+
+  .first-homepage-post-snippet {
+    width: 768px;
   }
 
 }

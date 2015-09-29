@@ -11057,12 +11057,6 @@ i {
   margin-top: 10px;
 }
 
-/* Globally center the content area...add space to the sides */
-
-.content-area {
-  margin-left: 122px;
-}
-
 a.demo-link,
 a.guide-link {
   text-decoration: none;
@@ -11614,6 +11608,7 @@ a.colophon-link:hover {
 
   .content-area {
     max-width: 1191px;
+    margin-left: 122px;
   }
 
   /* Style the header on desktop views */
@@ -11981,9 +11976,17 @@ a.colophon-link:hover {
     display: inline;
   }
 
+  .content-area {
+    margin-left: 0;
+  }
+
   /* Style the header on tablet views */
 
   .site-header {
     padding: 20px 0 0 25px;
+  }
+
+  .first-homepage-post-snippet .content-area {
+    margin-left: auto;
   }
 }
