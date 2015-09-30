@@ -147,6 +147,16 @@ a.facebook, a.googleplus {
   text-decoration: none;
 }
 
+/* Add space to the bottom of the header */
+.entry-header {
+  margin-bottom: 25px;
+}
+
+/* Bold the time & author info on the posts */
+.entry-meta {
+  @include bold;
+}
+
 /* Start related posts styles link */
 
 /* The related posts container */
