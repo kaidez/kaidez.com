@@ -44,5 +44,15 @@ get_header(); ?>
     </main><!-- #main -->
   </div><!-- #primary -->
 
+  <!-- Start pagination code -->
+  <?php if(function_exists('wp_paginate')) {
+    wp_paginate();
+  }
+  else {
+    kaidez_swiss_content_nav( 'nav-below' );
+  }
+  ?> 
+  <!-- End pagination code -->
+
   <?php get_sidebar(); ?>
   <?php get_footer(); ?>
