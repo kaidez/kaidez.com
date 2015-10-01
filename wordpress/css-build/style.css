@@ -11402,10 +11402,11 @@ a.colophon-link:hover {
     margin-top: 70px;
   }
 
-  /* Define width for the content area in tablet-like views*/
+  /* Define width & height for the content area in tablet-like views*/
 
   .content-area {
     min-width: 768px;
+    min-height: 375px;
   }
 
   /* Style searchform */
