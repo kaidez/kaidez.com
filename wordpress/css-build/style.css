@@ -10842,6 +10842,12 @@ p {
   border-color: #000;
 }
 
+/* Override border that Bootstrap places on a WP element */
+
+.page-header {
+  border-bottom: none;
+}
+
 /*
  * position: relative causes weird issues for this Bootstrap element
  * Set it to position:static

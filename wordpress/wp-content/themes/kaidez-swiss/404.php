@@ -11,12 +11,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found row">
-				<header class="page-header col-md-6">
+				<header class="page-header col-md-6" style="margin: 0;">
 					<h1 class="page-title">
 					  <?php esc_html_e( '404 error not found', 'kaidez-swiss' ); ?>
 					</h1>
-					<iframe src="//giphy.com/embed/dB2svH5EJ646s" width="480" height="362" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-				  <p style="font-size: 32px; font-weight: 500; margin-top: 0; margin-bottom: 0;">
+					<img src="http://i.giphy.com/dB2svH5EJ646s.gif" />
+				  <p style="font-size: 20px; font-weight: 500; margin: 15px 0;">
 				    Can't help ya...I still have Pluto problems to deal with.
 				  </p>
 				</header><!-- .page-header -->
