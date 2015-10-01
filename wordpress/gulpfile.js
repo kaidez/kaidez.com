@@ -34,6 +34,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
      ignoreArray = [
                       /aside/,
                       /aside-/,
+                      ".aside-inner",
                       /demo-link/,
                       '.fa-facebook',
                       '.fa-google-plus',
@@ -44,6 +45,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
                       /hide-/,
                       /jump-to-top/,
                       /footer-/,
+                      ".row .aside-inner",
                      ".row",
                       /show-/,
                       ".col-md-4",
