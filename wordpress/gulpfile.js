@@ -49,6 +49,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
                      ".row",
                       /show-/,
                       ".col-md-4",
+                      ".col-md-6",
                      ".site-footer",
                      '.showMobileMenu',
                      '.hideMobileMenu',
