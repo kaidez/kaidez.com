@@ -18,7 +18,6 @@ a.post-link {
 
 }
 
-
 /* Style link text for homepage snippets */
 a.newest-post-link {
   text-decoration: none;
@@ -222,9 +221,12 @@ a.category-name {
     right: 39px;
   }
 
+  /* Commented out for now but may be needed later */
   /* Remove default margins that Bootstrap sets on the .row class */
+  /*
   .row {
     margin: 0;
   }
+  */
 
 }

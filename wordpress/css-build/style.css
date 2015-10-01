@@ -11088,6 +11088,7 @@ a.guide-link {
 
 a.homepage-title-link {
   text-decoration: none;
+  font-size: 23px;
 }
 
 a.homepage-title-link:hover {
@@ -11615,6 +11616,12 @@ a.colophon-link:hover {
 
   .site-header {
     padding: 20px 0 0 122px;
+  }
+
+  /* Push the <aside> content to the right */
+
+  .aside-inner {
+    margin-left: 106px;
   }
 }
 
