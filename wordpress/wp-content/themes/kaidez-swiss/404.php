@@ -10,13 +10,20 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'kaidez-swiss' ); ?></h1>
+			<section class="error-404 not-found row">
+				<header class="page-header col-md-6">
+					<h1 class="page-title">
+					  <?php esc_html_e( '404 error not found', 'kaidez-swiss' ); ?>
+					</h1>
+					<iframe src="//giphy.com/embed/dB2svH5EJ646s" width="480" height="362" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				  <p style="font-size: 32px; font-weight: 500; margin-top: 0; margin-bottom: 0;">
+				    Can't help ya...I still have Pluto problems to deal with.
+				  </p>
 				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'kaidez-swiss' ); ?></p>
+        
+				<div class="page-content col-md-6">
+					
+					<p><?php esc_html_e( 'Would you like to search for something else using this searchbox?', 'kaidez-swiss' ); ?></p>
 
 					<?php get_search_form(); ?>
 
@@ -38,14 +45,6 @@ get_header(); ?>
 						</ul>
 					</div><!-- .widget -->
 					<?php endif; ?>
-
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'kaidez-swiss' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
