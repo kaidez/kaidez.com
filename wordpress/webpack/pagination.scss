@@ -1,4 +1,4 @@
-/* PAGINATION CODE ONLY!! Compiled as a dependency via webpack */
+/* PAGINATION STYLES ONLY!! Compiled as a dependency via webpack */
 
 /*
  * WP-Paginate - WordPress Pagination Function
@@ -6,12 +6,70 @@
  * emartin24 $
  * Copyright 2014 Studio Fuel (http://www.studiofuel.com)
  */
-.wp-paginate {padding:0; margin:0;}
-.wp-paginate li {display:inline; list-style:none;}
-.wp-paginate a {background:#ddd; border:1px solid #ccc; color:#666; margin-right:4px; padding:4px 8px; text-align:center; text-decoration:none;}
-.wp-paginate a:hover, .wp-paginate a:active {background:#ccc; color:#888;}
-.wp-paginate .title {color:#555; margin-right:4px;}
-.wp-paginate .gap {color:#999; margin-right:4px;}
-.wp-paginate .current {color:#fff; background:#5f87ae; border:1px solid #89adcf; margin-right:4px; padding:4px 8px;}
-.wp-paginate .page {}
-.wp-paginate .prev, .wp-paginate .next {}
+
+/* Import .scss files */
+@import "config/sass/_variables"; /* import variables */
+@import "config/sass/_mixins"; /* import mixins */
+
+/* Style the core pagination element */
+.pagination {
+  margin: 40px 0 40px 122px;
+
+  text-transform: lowercase;
+}
+
+/* Style the pagination title...i.e. "pages" */
+.wp-paginate .title {
+  margin-right: 4px;
+
+  color:#555;
+  @include bold();
+}
+
+/* Style the section that contains the pagination links */
+.wp-paginate {
+  padding:0;
+  margin:0;
+}
+
+/* Style the currently-highlighted pagination element */
+.wp-paginate .current {
+  margin-right:4px;
+  padding: 4px 8px;
+
+  color: #fff;
+  background-color: darken($pink, 5%);
+  border: 1px solid darken($pink, 15%);
+}
+
+/* Style various link states */
+.wp-paginate a {
+  margin-right: 4px;
+  padding: 4px 8px;
+  text-align: center;
+
+  background: lighten($pink, 17%);
+  border: 1px solid lighten($pink, 27%);
+  color: #fff;
+  text-decoration: none;
+
+
+  &:hover,
+  &:hover:active {
+    background: lighten($pink, 22%);
+    color: #666;
+  }
+}
+
+/* Style the <li> tags that contain the pagination links */
+.wp-paginate li {
+  display: inline;
+  list-style: none;
+}
+
+/* This style is not being used now...delete it later? */
+.wp-paginate .gap {
+  margin-right:4px;
+
+  color:#999;
+}
