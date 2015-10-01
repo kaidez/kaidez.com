@@ -23,7 +23,7 @@ module.exports = {
   // Define multiple entry points to build out multiple files
   entry: {
     
-    // Compile out a "home.js" file with specific modules with CommonJS
+    // Compile out a "home.js" file with specific CommonJS modules
     home: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -31,7 +31,7 @@ module.exports = {
       "./webpack/entry_FRONTPAGE_ADS_AMD"
     ],
     
-    // Compile a "posts.js" file with specific modules with CommonJS
+    // Compile a "posts.js" file with specific CommonJS modules
     posts: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -41,7 +41,7 @@ module.exports = {
       "./webpack/config/comment-reply"
     ],
 
-    // Compile a "codePage.js" file with specific modules with CommonJS
+    // Compile a "codePage.js" file with specific CommonJS modules
     codePage: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -49,21 +49,21 @@ module.exports = {
       "./webpack/config/prism"
     ],
 
-    // Compile a "sitemap.js" file with specific modules with CommonJS
+    // Compile a "sitemap.js" file with specific CommonJS modules
     sitemap: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_SITEMAP"
     ],
 
-    // Compile a "regular.js" file with specific modules with CommonJS
+    // Compile a "pagination.js" file with specific CommonJS modules
     pagination: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
       "./webpack/entry_PAGINATION"
     ],
 
-    // Compile a "regular.js" file with specific modules with CommonJS
+    // Compile a "regular.js" file with specific CommonJS modules
     regular: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE"
