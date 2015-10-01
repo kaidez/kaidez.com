@@ -57,6 +57,13 @@ module.exports = {
     ],
 
     // Compile a "regular.js" file with specific modules with CommonJS
+    pagination: [
+      "./webpack/entry_GLOBALS",
+      "./webpack/entry_ASIDE",
+      "./webpack/entry_PAGINATION"
+    ],
+
+    // Compile a "regular.js" file with specific modules with CommonJS
     regular: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE"
