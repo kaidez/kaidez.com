@@ -5,7 +5,7 @@
  * @package Kaidez Swiss
  */
 
-get_header(); ?>
+get_header( "404" ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -16,7 +16,7 @@ get_header(); ?>
 					  <?php esc_html_e( '404 error not found', 'kaidez-swiss' ); ?>
 					</h1>
 					<img src="http://i.giphy.com/dB2svH5EJ646s.gif" />
-				  <p style="font-size: 20px; font-weight: 500; margin: 15px 0;">
+				  <p class="404-pluto-text">
 				    Can't help ya...I still have Pluto problems to deal with.
 				  </p>
 				</header><!-- .page-header -->
@@ -27,24 +27,17 @@ get_header(); ?>
 
 					<?php get_search_form(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+          <p>Here are the last five posts</p>
 
-					<?php if ( kaidez_swiss_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'kaidez-swiss' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+          <ul>
+          	<?php
+	            $args = array( 'numberposts' => '5' );
+	            $recent_posts = wp_get_recent_posts( $args );
+	            foreach( $recent_posts as $recent ){
+		            echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></li>';
+	            }
+            ?>
+          </ul>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
