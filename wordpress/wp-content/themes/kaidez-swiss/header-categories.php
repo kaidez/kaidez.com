@@ -20,9 +20,12 @@
     /* Style the descriptions on category pages */
     .taxonomy-description {
       margin: 15px 0;
+      padding-bottom: 10px;
+
       font-size:18px;
       font-size:1.8em;
       font-size:1.8rem;
+      border-bottom: 1px solid #EAEAEA;
     }
   </style>
   <script src="/wp-content/themes/kaidez-swiss/js/libs/modernizr.js"></script>
