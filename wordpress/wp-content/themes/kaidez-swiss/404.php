@@ -26,13 +26,13 @@ get_header( "404" ); ?>
 
 					<?php get_search_form(); ?>
 
-					<p>You can also <a href="/site-map/">view the sitemap</a>.</p>
+					<p class="sitemap">You can also <a href="/site-map/">view the sitemap</a>.</p>
 				</div><!-- .page-div -->
 
 				<div class="page-content col-md-6">
 					
           <!-- Last five posts -->
-          <p>These are the last five posts</p>
+          <p>Read the last five posts</p>
 
           <ul>
           	<?php

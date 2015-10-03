@@ -31,6 +31,10 @@
 
       border-top: 1px solid #D4D4D4;
     }
+
+    .sitemap {
+      margin-top:30px;
+    }
   </style>
   
   <script src="/wp-content/themes/kaidez-swiss/js/libs/modernizr.js"></script>
