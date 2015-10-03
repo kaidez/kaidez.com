@@ -20,7 +20,7 @@ get_header( "categories" ); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
         <div class="taxonomy-description">
-          Tutorials on kaidez.com are detailed posts that walk the reader through a particular web development task. Many posts include links to demos and code repositories.
+          "Tutorials" on kaidez.com are detailed posts that walk the reader through a particular web development task. Many posts include links to demos and code repositories.
         </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
