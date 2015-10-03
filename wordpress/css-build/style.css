@@ -11346,19 +11346,6 @@ a.colophon-link:hover {
   */
 
 @media (min-width: 768px) {
-  /* Style the header on tablet views */
-
-  .site-header {
-    background-color: #f9bfd7;
-  }
-
-  /* Make the main site link really big on non-handheld views */
-
-  .site-title {
-    font-size: 30px;
-    font-size: 3.0rem;
-  }
-
   /* Style the tagline on wide views */
 
   .site-description {
@@ -11494,11 +11481,12 @@ a.colophon-link:hover {
     clip: rect(1px, 1px, 1px, 1px);
   }
 
+  /* style the main site link */
+
   a.home-link {
     color: #ed327f;
     text-decoration: none;
-    font-size: 35px;
-    font-size: 3.5rem;
+    font-size: 71px;
     font-weight: 900;
   }
 
