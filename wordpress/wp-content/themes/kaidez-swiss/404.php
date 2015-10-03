@@ -27,7 +27,8 @@ get_header( "404" ); ?>
 
 					<?php get_search_form(); ?>
 
-          <p>Here are the last five posts</p>
+          <!-- Last five posts -->
+          <p>These are the last five posts</p>
 
           <ul>
           	<?php
@@ -38,7 +39,27 @@ get_header( "404" ); ?>
 	            }
             ?>
           </ul>
+      
+          <!-- Must-read-->
+          <p>These blog posts are considered "the best of kaidez.com":</p>
 
+          <ul>
+          	<li>
+          	  <a href="/load-data-attributes-mouseclicks/">TUTORIAL: Load data attributes with Mouse Clicks</a>
+          	</li>
+          	<li>
+          	  <a href="/requirejs-wordpress/">Using RequireJS In WordPress</a>
+          	</li>
+          	<li>
+          	  <a href="/javascript-closures-tutorial/">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+          	</li>
+          	<li>
+          	  <a href="/javascript-off-dom/">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+          	</li>
+          	<li>
+          	  <a href="/media-queries-important/">Media Queries Are Important</a>
+          	</li>
+          </ul>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
