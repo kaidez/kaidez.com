@@ -18,7 +18,6 @@ a.post-link {
 
 }
 
-
 /* Style link text for homepage snippets */
 a.newest-post-link {
   text-decoration: none;
@@ -63,7 +62,6 @@ a.category-name {
     min-height: 374px;
     padding: 15px;
     margin: 0 0 70px;
-    display: inline-block;
     vertical-align: top;
 
     background-color: lighten($pink, 35%);
@@ -90,17 +88,19 @@ a.category-name {
     min-height: 415px;
     display: inline-block;
     vertical-align: top;
+    margin: 0 10px 20px;
 
     background-color: lighten($pink, 45%);
   }
 
   .first-homepage-post-snippet {
+    margin-left: 24px;
+
     background-color: lighten($pink, 30%);
   }
 
   .homepage-post-snippet,
   .first-homepage-post-snippet {
-    margin: 0 10px 20px;
     padding: 11px;
 
     text-transform: lowercase;
@@ -133,8 +133,9 @@ a.category-name {
     margin: 0 6px 5px;
   }
 
+  /* push <main> further down the page */
   .site-main {
-    margin: 30px auto 0;
+    margin-top: 70px;
   }
 
 }
@@ -190,6 +191,10 @@ a.category-name {
     display: inline-block;
   }
 
+  .first-homepage-post-snippet {
+    width: 768px;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -216,9 +221,12 @@ a.category-name {
     right: 39px;
   }
 
+  /* Commented out for now but may be needed later */
   /* Remove default margins that Bootstrap sets on the .row class */
+  /*
   .row {
     margin: 0;
   }
+  */
 
 }

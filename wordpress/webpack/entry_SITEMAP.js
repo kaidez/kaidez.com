@@ -33,31 +33,31 @@ function getSitemapData( getdata, linkElement ) {
 
         var
             // Get post/page link
-            getLink = data[dataKey].link;
+            getLink = data[dataKey].link,
 
             // Get post/page title
-            getTitle = data[dataKey].title;
+            getTitle = data[dataKey].title,
 
             // create an <a> tag for the sitemap link
-            sitemapLink = document.createElement( "a" );
+            sitemapLink = document.createElement( "a" ),
 
             // create a <p> tag for the sitemap link
-            sitemapLinkParagragh = document.createElement( "p" );
+            sitemapLinkParagragh = document.createElement( "p" ),
 
             // create a <p> tag for the sitemap link 
-            targetElement = document.getElementById( linkElement );
+            targetElement = document.getElementById( linkElement ),
 
             // create a document fragment tag for the sitemap link
             docFrag = document.createDocumentFragment();
 
-            if( getTitle !== "Front Page" && getTitle !== "Site Map" )   {
+        if( getTitle !== "Front Page" && getTitle !== "Site Map" )   {
 
-              sitemapLink.setAttribute( "href", getLink );
-              sitemapLink.innerHTML = getTitle;
+          sitemapLink.setAttribute( "href", getLink );
+          sitemapLink.innerHTML = getTitle;
 
-              sitemapLinkParagragh.appendChild( sitemapLink );
-              docFrag.appendChild( sitemapLinkParagragh );
-            }
+          sitemapLinkParagragh.appendChild( sitemapLink );
+          docFrag.appendChild( sitemapLinkParagragh );
+        }
 
       } // end "for...in" loop's hasOwnProperty() check
 

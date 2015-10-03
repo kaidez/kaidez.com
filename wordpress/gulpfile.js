@@ -1,7 +1,7 @@
 // Single var pattern of gulp (require) stuff in full effect!!!
 
 var gulp = require("gulp"), // "require" gulp
-    uncss = require("gulp-uncss"), // Remove unused css selectors
+    uncss = require('gulp-uncss'), // Remove unused css selectors
     minifyCSS = require("gulp-minify-css"), // Minify CSS
     csslint = require("gulp-csslint"), // Lint CSS,
     concatCss = require("gulp-concat-css"), // Concatenate CSS only
@@ -34,20 +34,27 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
      ignoreArray = [
                       /aside/,
                       /aside-/,
+                      ".aside-inner",
                       /demo-link/,
-                      /fa/,
-                      /fa-/,
+                      '.fa-facebook',
+                      '.fa-google-plus',
+                      '.fa-github',
+                      '.fa-twitter',
+                      '.fa-youtube',
                       /guide-link/,
                       /hide-/,
                       /jump-to-top/,
                       /footer-/,
+                      ".row .aside-inner",
                      ".row",
                       /show-/,
                       ".col-md-4",
+                      ".col-md-6",
                      ".site-footer",
                      '.showMobileMenu',
                      '.hideMobileMenu',
                      '.showSearchbox',
+                     /post-pic/,
                      '.hideSearchbox',
                      '.entry-header > span'
                     ];
@@ -72,7 +79,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
  */
 
 
-gulp.task('buildcss', ['less', 'concat', 'outputcss']);
+gulp.task('buildcss', ['less', 'concat', 'outputcss', 'uncss' ]);
 
 
 // "gulp less" task
@@ -99,7 +106,7 @@ gulp.task('concat', ['less'], function() {
   setTimeout(function() {
     return gulp.src(['css-build/wp-comment-block.css', 'css-build/font-awesome.css', 'css-build/bootstrap.css','css-build/style.css'])
     .pipe(concatCss('style.css'))
-    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
+    .pipe(gulp.dest("css-build/"));
     return deferred.promise;
   }, 1000);
 });
@@ -109,31 +116,37 @@ gulp.task('concat', ['less'], function() {
 gulp.task("outputcss", ['concat'],function () {
   var deferred = Q.defer();
   setTimeout(function() {
-    gulp.src(['wp-content/themes/kaidez-swiss/style.css'])
-    .pipe(uncss({
-      html: [
-        'http://localhost:8888/', // home page
-        'http://localhost:8888/tutorial-filter-content-with-jquery-filter-jquery-selectors/', // A single post page
-        'http://localhost:8888/personal/', // A category page
-        'http://localhost:8888/blog/', // The blog page
-        'http://localhost:8888/kdz-build-tool/',
-        'http://localhost:8888/affiliate-disclaimer/', // Affiliate
-        'http://localhost:8888/404.php' // 404 page
-      ],
-      ignore: ignoreArray
-    }))
-    .pipe(minifyCSS({
-      keepBreaks: true
-    }))
-    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"))
+    gulp.src(['css-build/style.css'])
     .pipe(csslint({
       "important": false,
       "duplicate-background-images": false,
       "ids": false,
       "text-indent": false
     }))
+    .pipe(gulp.dest("css-build/"))
     return deferred.promise;
     }, 4000);
+  })
+
+gulp.task("uncss", ['outputcss'], function(){
+  gulp.src("css-build/style.css")
+    .pipe(uncss({
+      html: [
+        "http:\/\/localhost:8888\/", // home page
+        "http:\/\/localhost:8888\/tutorial-filter-content-with-jquery-filter-jquery-selectors/", // A single post page
+        "http:\/\/localhost:8888\/personal/", // A category page
+        "http:\/\/localhost:8888\/blog/", // The blog page
+        "http:\/\/localhost:8888\/kdz-build-tool/",
+        "http:\/\/localhost:8888\/affiliate-disclaimer/", // Affiliate
+        "http:\/\/localhost:8888\/404.php" // 404 page
+      ],
+      ignore: ignoreArray
+    }))
+    .pipe(minifyCSS({
+      keepBreaks: true
+    }))
+    .pipe(gulp.dest("wp-content/themes/kaidez-swiss/"));
+
   });
 
 // Copy q.js from "node_modules" to the kaidez-swiss theme
@@ -219,6 +232,6 @@ gulp.task("default", function () {
 
   // Watch for CSS file changes
 
-  gulp.watch(lessFiles, ["buildcss"]);
+  gulp.watch(lessFiles, ["uncss"]);
 
 });

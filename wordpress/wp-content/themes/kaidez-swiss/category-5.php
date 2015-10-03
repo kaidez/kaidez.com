@@ -1,13 +1,14 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying the customized "Tutorial" category 
+ * page.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Kaidez Swiss
  */
 
-get_header(); ?>
+get_header( "categories" ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -17,8 +18,10 @@ get_header(); ?>
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+        <div class="taxonomy-description">
+          Reviews posts on kaidez.com review web development based books, events and websites. Almost all the reviews are positive as the site is interested in suggestively highlighting good work.
+        </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -58,4 +61,4 @@ get_header(); ?>
   <!-- End pagination code -->
   
 <?php get_sidebar(); ?>
-<?php get_footer( "pagination" ); ?>
+<?php get_footer( "categories" ); ?>

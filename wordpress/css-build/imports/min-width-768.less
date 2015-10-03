@@ -1,16 +1,5 @@
 @media (min-width: 768px) {
 
-  /* Style the header on tablet views */
-  .site-header {
-    background-color: lighten(@pink, 30%);
-  }
-
-  /* Make the main site link really big on non-handheld views */
-  .site-title {
-    font-size: 30px;
-    font-size: 3.0rem;
-  }
-
   /* Style the tagline on wide views */
   .site-description {
     width:147px;
@@ -51,14 +40,10 @@
     display: inline-block;
   }
 
-  /* push <main> further down the page */
-  .site-main {
-    margin-top: 70px;
-  }
-
-  /* Define width for the content area in tablet-like views*/
+  /* Define width & height for the content area in tablet-like views*/
   .content-area {
     min-width: 768px;
+    min-height: 375px;
   }
 
   /* Style searchform */
@@ -136,11 +121,11 @@
     .hide-element();
   }
 
+  /* style the main site link */
   a.home-link {
     color: @pink;
     text-decoration: none;
-    font-size: 35px;
-    font-size: 3.5rem;
+    font-size: 71px;
 
     .bolder();
     &:visited {

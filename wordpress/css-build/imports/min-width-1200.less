@@ -3,11 +3,17 @@
   /* Define width for the content area in large desktop views */
   .content-area {
     max-width: 1191px;
+    margin-left: @contentLeftMargin;
   }
 
   /* Style the header on desktop views */
   .site-header {
     padding: 20px 0 0 @contentLeftMargin;
-  }  
+  }
+
+  /* Push the <aside> content to the right */
+  .aside-inner {
+    margin-left: 106px;
+  }
 
 }

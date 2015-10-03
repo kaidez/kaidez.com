@@ -11,6 +11,14 @@
   margin-top: 20px;
 }
 
+/* add space above a post's time/author info */
+.entry-content {
+  font-size: 18px;
+  font-size: 1.8em;
+  font-size: 1.8rem;
+  line-height: 26px;
+}
+
 /* Lowercase the breadcrumb category so it looks Swiss-style */
 .breadcrumb-category-name {
   text-transform: lowercase;
@@ -147,11 +155,21 @@ a.facebook, a.googleplus {
   text-decoration: none;
 }
 
+/* Add space to the bottom of the header */
+.entry-header {
+  margin-bottom: 25px;
+}
+
+/* Bold the time & author info on the posts */
+.entry-meta {
+  @include bold;
+}
+
 /* Start related posts styles link */
 
 /* The related posts container */
 .rp4wp-related-posts {
-  margin: 20px 0 68px;
+  margin: 30px 0 68px;
 }
 /* "more posts..." text */
 .rp4wp-related-posts h3 {
@@ -179,4 +197,27 @@ a.facebook, a.googleplus {
 .rp4wp-related-posts ul>li>p {
   margin:0;
   padding:0;
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* Style the Facebook & Google+ links on single post pages */
+  .sharing-buttons {
+    max-width:768px;
+
+    text-align: center;
+  }
+  
+}
+
+
+@media (min-width: 1200px) {
+
+  /* Style the Facebook & Google+ links on single post pages */
+  .sharing-buttons {
+    max-width:310px;
+  }
+
 }

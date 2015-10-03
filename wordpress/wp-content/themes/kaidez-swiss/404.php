@@ -5,48 +5,65 @@
  * @package Kaidez Swiss
  */
 
-get_header(); ?>
+get_header( "404" ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'kaidez-swiss' ); ?></h1>
-				</header><!-- .page-header -->
+			<section class="error-404 not-found row">
+			<header>
+			  <h1 class="page-title">
+				  <?php esc_html_e( '404 error not found', 'kaidez-swiss' ); ?>
+				</h1>
+			</header>
+			<div class="page-header col-md-6" style="margin: 0;">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'kaidez-swiss' ); ?></p>
+			  <img src="http://i.giphy.com/dB2svH5EJ646s.gif" />
+				<p class="pluto-text">
+				  Can't help ya...I still have Pluto problems to deal with.
+				</p>
+				<p class="searchbox"><?php esc_html_e( 'Would you like to search for something else using this searchbox?', 'kaidez-swiss' ); ?></p>
 
 					<?php get_search_form(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+					<p class="sitemap">You can also <a href="/site-map/">view the sitemap</a>.</p>
+				</div><!-- .page-div -->
 
-					<?php if ( kaidez_swiss_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'kaidez-swiss' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+				<div class="page-content col-md-6">
+					
+          <!-- Last five posts -->
+          <p>Read the last five posts</p>
 
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'kaidez-swiss' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
+          <ul>
+          	<?php
+	            $args = array( 'numberposts' => '5' );
+	            $recent_posts = wp_get_recent_posts( $args );
+	            foreach( $recent_posts as $recent ){
+		            echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></li>';
+	            }
+            ?>
+          </ul>
+      
+          <!-- Must-read-->
+          <p>These blog posts are considered "the best of kaidez.com":</p>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
+          <ul>
+          	<li>
+          	  <a href="/load-data-attributes-mouseclicks/">TUTORIAL: Load data attributes with Mouse Clicks</a>
+          	</li>
+          	<li>
+          	  <a href="/requirejs-wordpress/">Using RequireJS In WordPress</a>
+          	</li>
+          	<li>
+          	  <a href="/javascript-closures-tutorial/">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+          	</li>
+          	<li>
+          	  <a href="/javascript-off-dom/">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+          	</li>
+          	<li>
+          	  <a href="/media-queries-important/">Media Queries Are Important</a>
+          	</li>
+          </ul>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
