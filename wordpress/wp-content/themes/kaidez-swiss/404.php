@@ -11,22 +11,26 @@ get_header( "404" ); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found row">
-				<header class="page-header col-md-6" style="margin: 0;">
-					<h1 class="page-title">
-					  <?php esc_html_e( '404 error not found', 'kaidez-swiss' ); ?>
-					</h1>
-					<img src="http://i.giphy.com/dB2svH5EJ646s.gif" />
-				  <p class="404-pluto-text">
-				    Can't help ya...I still have Pluto problems to deal with.
-				  </p>
-				</header><!-- .page-header -->
-        
-				<div class="page-content col-md-6">
-					
-					<p><?php esc_html_e( 'Would you like to search for something else using this searchbox?', 'kaidez-swiss' ); ?></p>
+			<header>
+			  <h1 class="page-title">
+				  <?php esc_html_e( '404 error not found', 'kaidez-swiss' ); ?>
+				</h1>
+			</header>
+			<div class="page-header col-md-6" style="margin: 0;">
+
+			  <img src="http://i.giphy.com/dB2svH5EJ646s.gif" />
+				<p class="pluto-text">
+				  Can't help ya...I still have Pluto problems to deal with.
+				</p>
+				<p class="searchbox"><?php esc_html_e( 'Would you like to search for something else using this searchbox?', 'kaidez-swiss' ); ?></p>
 
 					<?php get_search_form(); ?>
 
+					<p>You can also <a href="/site-map/">view the sitemap</a>.</p>
+				</div><!-- .page-div -->
+
+				<div class="page-content col-md-6">
+					
           <!-- Last five posts -->
           <p>These are the last five posts</p>
 

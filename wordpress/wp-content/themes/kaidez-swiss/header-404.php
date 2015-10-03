@@ -1,4 +1,4 @@
-<?php
+  <?php
 /**
  * The header for our theme.
  *
@@ -17,12 +17,19 @@
 
   <?php wp_head(); ?>
 
-  <style>
-    .404-pluto-text {
+  <style type="text/css">
+    .pluto-text {
       margin: 15px 0;
 
       font-size: 20px;
       font-weight: 500;
+    }
+
+    .searchbox {
+      margin-top:30px;
+      padding-top: 5px;
+
+      border-top: 1px solid #D4D4D4;
     }
   </style>
   
