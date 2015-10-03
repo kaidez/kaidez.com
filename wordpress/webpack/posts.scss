@@ -81,6 +81,7 @@
 
 /* Style the Facebook & Google+ links on single post pages */
 .sharing-buttons {
+  padding: 13px;
   border: 1px solid #000;
 }
 
@@ -205,11 +206,15 @@ a.facebook, a.googleplus {
 
   /* Style the Facebook & Google+ links on single post pages */
   .sharing-buttons {
-    max-width:768px;
+    max-width:768px;  
 
     text-align: center;
   }
   
+}
+
+.post-ads {
+  display:inline-block;
 }
 
 
@@ -218,6 +223,7 @@ a.facebook, a.googleplus {
   /* Style the Facebook & Google+ links on single post pages */
   .sharing-buttons {
     max-width:310px;
+    display: inline-block;
   }
 
 }
