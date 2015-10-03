@@ -11,6 +11,14 @@
   margin-top: 20px;
 }
 
+/* add space above a post's time/author info */
+.entry-content {
+  font-size: 18px;
+  font-size: 1.8em;
+  font-size: 1.8rem;
+  line-height: 26px;
+}
+
 /* Lowercase the breadcrumb category so it looks Swiss-style */
 .breadcrumb-category-name {
   text-transform: lowercase;
