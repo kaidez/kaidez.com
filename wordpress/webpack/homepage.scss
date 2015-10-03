@@ -133,8 +133,9 @@ a.category-name {
     margin: 0 6px 5px;
   }
 
+  /* push <main> further down the page */
   .site-main {
-    margin: 30px auto 0;
+    margin-top: 70px;
   }
 
 }
