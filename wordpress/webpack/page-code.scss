@@ -2,3 +2,23 @@
 
 /* import code highlight styles */
 @import "config/sass/_prism-styles";
+
+/* Start header tag styles for AJAX Tutorial page */
+
+.h3-guide {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.h4-guide {
+    font-size: 24px;
+}
+
+.h5-guide {
+    font-size: 22px;
+}
+
+.toc-paragraph {
+  margin-bottom: 80px;
+}
+/* Stop header tag styles for AJAX Tutorial page */

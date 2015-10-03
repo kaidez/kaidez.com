@@ -22050,10 +22050,9 @@ a.colophon-link:hover {
   /* Style the tagline on wide views */
 
   .site-description {
-    width: 147px;
+    width: 219px;
     margin: 0;
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 25px;
     color: #000;
     border-top: 1px solid #000;
   }
@@ -22299,6 +22298,7 @@ a.colophon-link:hover {
 
   .content-area {
     max-width: 1191px;
+    margin-top: 45px;
     margin-left: 122px;
   }
 
