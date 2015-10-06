@@ -10821,6 +10821,12 @@ p {
   margin: 0 0 22px;
 }
 
+/* Make <label> display:block to fix bug in WP comment section */
+
+label {
+  display: block;
+}
+
 /* Override SOME parts of Bootstrap's .btn class */
 
 .btn {
