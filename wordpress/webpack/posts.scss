@@ -37,6 +37,10 @@
   list-style-type: none;
 }
 
+
+
+
+
 .other-sharing-element {
   margin-top:30px;
 
@@ -124,6 +128,10 @@ a.tweet-post-class {
   @include hide-element;
 }
 
+/* Add top space to sharing/ad element at the end of single posts */
+.sharing-ad-element {
+  padding-top: 70px;
+}
 /* Facebook share link styles only */
 .facebook {
   margin-right: 10px;
@@ -202,6 +210,12 @@ a.facebook, a.googleplus {
 
 @media (min-width: 768px) {
 
+  /* Add a border to sharing/ad element at the end of single posts */
+  .sharing-ad-element {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+
   /* Style the sharing module on single post pages */
   .sharing-buttons {
     display: inline-block;
@@ -220,6 +234,11 @@ a.facebook, a.googleplus {
 }
 
 @media (max-width: 767px) {
+
+  /* Add a border to sharing/ad element at the end of single posts */
+  .sharing-ad-element {
+    border: none;
+  }
 
   /* Style the Facebook & Google+ links on single post pages */
   .sharing-buttons {
