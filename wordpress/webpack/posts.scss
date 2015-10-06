@@ -213,17 +213,22 @@ a.facebook, a.googleplus {
   
 }
 
+/* Style the add at the end of a single post */
 .post-ads {
   display:inline-block;
+  margin-left:20px;
+  position: relative;
+  bottom: 56px;
 }
 
 
 @media (min-width: 1200px) {
 
-  /* Style the Facebook & Google+ links on single post pages */
+  /* Style the sharing module on single post pages */
   .sharing-buttons {
-    max-width:310px;
     display: inline-block;
+    width: 300px;
+    height: 250px;
   }
 
 }
