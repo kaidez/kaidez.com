@@ -208,6 +208,14 @@ a.facebook, a.googleplus {
     width: 300px;
     height: 250px;
   }
+
+  /* Style the add at the end of a single post */
+  .post-ads {
+    display:inline-block;
+    margin-left:20px;
+    position: relative;
+    bottom: 56px;
+  }
   
 }
 
@@ -219,20 +227,13 @@ a.facebook, a.googleplus {
 
     text-align: center;
   }
+
+  .post-ads {
+    display: none;
+  }
   
 }
 
-/* Style the add at the end of a single post */
-.post-ads {
-  display:inline-block;
-  margin-left:20px;
-  position: relative;
-  bottom: 56px;
-}
-
-
 @media (min-width: 1200px) {
-
-
 
 }
