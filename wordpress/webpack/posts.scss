@@ -200,7 +200,16 @@ a.facebook, a.googleplus {
   padding:0;
 }
 
+@media (min-width: 768px) {
 
+  /* Style the sharing module on single post pages */
+  .sharing-buttons {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+  }
+  
+}
 
 @media (max-width: 767px) {
 
@@ -224,11 +233,6 @@ a.facebook, a.googleplus {
 
 @media (min-width: 1200px) {
 
-  /* Style the sharing module on single post pages */
-  .sharing-buttons {
-    display: inline-block;
-    width: 300px;
-    height: 250px;
-  }
+
 
 }
