@@ -10769,6 +10769,12 @@ button.close {
   border-radius: 5px;
 }
 
+/* Lowercase text */
+
+.lower {
+  text-transform: lowercase;
+}
+
 /*
  * HELPER CLASSES END
  */
@@ -11337,6 +11343,10 @@ a.colophon-link:hover {
   max-width: 100%;
   margin: 0 auto;
   display: block;
+}
+
+.submit {
+  text-transform: lowercase;
 }
 
 /*
