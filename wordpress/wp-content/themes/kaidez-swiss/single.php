@@ -27,7 +27,7 @@ get_header(); ?>
 
     </main><!-- #main -->
     <div id="sidebar" class="sidebar-class col-md-4">
-
+      
     </div> <!-- #sidebar -->
   </div><!-- #primary -->
 
