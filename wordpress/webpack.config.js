@@ -35,6 +35,7 @@ module.exports = {
     posts: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
+      "./webpack/entry_SIDEBAR",
       "./webpack/entry_SHARING",
       "./webpack/config/async-sharing",
       "./webpack/config/prism",
@@ -45,6 +46,7 @@ module.exports = {
     codePage: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
+      "./webpack/entry_SIDEBAR",
       "./webpack/entry_PAGECODE",
       "./webpack/config/prism"
     ],
@@ -53,6 +55,7 @@ module.exports = {
     sitemap: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
+      "./webpack/entry_SIDEBAR",
       "./webpack/entry_SITEMAP"
     ],
 
@@ -66,7 +69,8 @@ module.exports = {
     // Compile a "regular.js" file with specific CommonJS modules
     regular: [
       "./webpack/entry_GLOBALS",
-      "./webpack/entry_ASIDE"
+      "./webpack/entry_ASIDE",
+      "./webpack/entry_SIDEBAR"
     ]
   },
 

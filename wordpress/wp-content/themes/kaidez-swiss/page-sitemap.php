@@ -10,8 +10,8 @@
 
 get_header(); ?>
 
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+  <div id="primary" class="content-area row">
+    <main id="main" class="site-main col-md-8" role="main">
 
     <div id="posts">
       <h2>Posts</h2>
