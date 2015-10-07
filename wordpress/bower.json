@@ -20,6 +20,6 @@
     "fontawesome": "latest",
     "matchMedia": "~0.2.0",
     "placeholders": "~4.0.1",
-    "prism": "latest"
+    "prism": "1.1.0"
   }
 }
