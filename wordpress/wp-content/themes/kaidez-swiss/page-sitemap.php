@@ -22,6 +22,9 @@ get_header(); ?>
     </div><!-- #pages -->
 
     </main><!-- #main -->
+    <div id="sidebar" class="sidebar-class col-md-4">
+
+    </div> <!-- #sidebar -->
   </div><!-- #primary -->
 
 <?php get_sidebar(); ?>

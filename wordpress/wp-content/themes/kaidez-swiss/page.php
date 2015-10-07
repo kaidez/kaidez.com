@@ -29,6 +29,9 @@ get_header(); ?>
       <?php endwhile; // End of the loop. ?>
 
     </main><!-- #main -->
+    <div id="sidebar" class="sidebar-class col-md-4">
+
+    </div> <!-- #sidebar -->
   </div><!-- #primary -->
 
 <?php get_sidebar(); ?>
