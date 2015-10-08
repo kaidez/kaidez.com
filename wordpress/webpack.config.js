@@ -59,11 +59,12 @@ module.exports = {
       "./webpack/entry_SITEMAP"
     ],
 
-    // Compile a "pagination.js" file with specific CommonJS modules
-    pagination: [
+    // Compile a "blog.js" file with specific CommonJS modules
+    blog: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
-      "./webpack/entry_PAGINATION"
+      "./webpack/entry_PAGINATION",
+      "./webpack/entry_SIDEBAR"
     ],
 
     // Compile a "regular.js" file with specific CommonJS modules
