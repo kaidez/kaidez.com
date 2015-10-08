@@ -25,20 +25,27 @@ i {
   margin-top: 50px;
 }
 
-a.demo-link,
-a.guide-link {
-  text-decoration: none;
-}
-
 /* Style the "view the demo" link */
 a.demo-link,
-a.guide-link {
+a.guide-link,
+a.view-more-link {
   padding: 10px;
 
+  text-decoration: none;
   color: #fff;
   background-color: darken(@pink, 25%);
  
   .br();
+
+  &:visited {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  &:hover, &:active {
+    color: @pink;
+    text-decoration: none;
+  }
 }
 
 

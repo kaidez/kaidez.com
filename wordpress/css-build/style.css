@@ -11075,19 +11075,33 @@ i {
   margin-top: 50px;
 }
 
-a.demo-link,
-a.guide-link {
-  text-decoration: none;
-}
-
 /* Style the "view the demo" link */
 
 a.demo-link,
-a.guide-link {
+a.guide-link,
+a.view-more-link {
   padding: 10px;
+  text-decoration: none;
   color: #fff;
   background-color: #930d44;
   border-radius: 5px;
+}
+
+a.demo-link:visited,
+a.guide-link:visited,
+a.view-more-link:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a.demo-link:hover,
+a.guide-link:hover,
+a.view-more-link:hover,
+a.demo-link:active,
+a.guide-link:active,
+a.view-more-link:active {
+  color: #ed327f;
+  text-decoration: none;
 }
 
 /*
@@ -11374,10 +11388,10 @@ a.colophon-link:hover {
 
   /* Style the demo/guide link*/
 
-  .demo-link,
-  .guide-link {
+  a.demo-link,
+  a.guide-link,
+  a.view-more-link {
     display: block;
-    width: 173px;
     margin-top: 20px;
     font-size: 22px;
     font-size: 2.2em;

@@ -221,6 +221,15 @@ a.category-name {
     right: 39px;
   }
 
+  /* Style the "view more..." link below the article listing */
+  a.view-more-link {
+    width: 230px;
+    display: block;
+    margin:10px auto 30px;
+
+    text-align: center;
+  }
+
   /* Commented out for now but may be needed later */
   /* Remove default margins that Bootstrap sets on the .row class */
   /*
