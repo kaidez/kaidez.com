@@ -11382,6 +11382,14 @@ a.colophon-link:hover {
  */
 
 @media (min-width: 768px) {
+  /* Style the <header> tag*/
+
+  .site-header {
+    z-index: 3;
+    width: 100%;
+    background-color: #fff;
+  }
+
   /* Style the tagline on wide views */
 
   .site-description {
