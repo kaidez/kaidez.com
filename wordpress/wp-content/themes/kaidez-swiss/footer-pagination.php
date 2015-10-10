@@ -21,7 +21,7 @@
 </div> <!-- #content -->
 
 <script src="/wp-content/themes/kaidez-swiss/js/common.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/pagination.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/blog.js"></script>
 
 </body>
 </html>

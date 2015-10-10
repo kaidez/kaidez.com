@@ -21470,6 +21470,12 @@ button.close {
   border-radius: 5px;
 }
 
+/* Lowercase text */
+
+.lower {
+  text-transform: lowercase;
+}
+
 /*
  * HELPER CLASSES END
  */
@@ -21514,6 +21520,12 @@ h1 {
 
 p {
   margin: 0 0 22px;
+}
+
+/* Make <label> display:block to fix bug in WP comment section */
+
+label {
+  display: block;
 }
 
 /* Override SOME parts of Bootstrap's .btn class */
@@ -21747,6 +21759,12 @@ html,
   max-width: 100%;
 }
 
+/**/
+
+.site-header {
+  position: fixed;
+}
+
 /* Give all Fontawesome icons used on the site a firm height & width */
 
 i {
@@ -21761,22 +21779,36 @@ i {
 /* add space above a post's time/author info */
 
 .entry-meta {
-  margin-top: 10px;
-}
-
-a.demo-link,
-a.guide-link {
-  text-decoration: none;
+  margin-top: 50px;
 }
 
 /* Style the "view the demo" link */
 
 a.demo-link,
-a.guide-link {
+a.guide-link,
+a.view-more-link {
   padding: 10px;
+  text-decoration: none;
   color: #fff;
   background-color: #930d44;
   border-radius: 5px;
+}
+
+a.demo-link:visited,
+a.guide-link:visited,
+a.view-more-link:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a.demo-link:hover,
+a.guide-link:hover,
+a.view-more-link:hover,
+a.demo-link:active,
+a.guide-link:active,
+a.view-more-link:active {
+  color: #ed327f;
+  text-decoration: none;
 }
 
 /*
@@ -22040,13 +22072,25 @@ a.colophon-link:hover {
   display: block;
 }
 
+.submit {
+  text-transform: lowercase;
+}
+
 /*
-  * ===================================================================
-  * MISCELLANOUS STYLES END
-  * ===================================================================
-  */
+ * ===================================================================
+ * MISCELLANOUS STYLES END
+ * ===================================================================
+ */
 
 @media (min-width: 768px) {
+  /* Style the <header> tag*/
+
+  .site-header {
+    z-index: 3;
+    width: 100%;
+    background-color: #fff;
+  }
+
   /* Style the tagline on wide views */
 
   .site-description {
@@ -22059,10 +22103,10 @@ a.colophon-link:hover {
 
   /* Style the demo/guide link*/
 
-  .demo-link,
-  .guide-link {
+  a.demo-link,
+  a.guide-link,
+  a.view-more-link {
     display: block;
-    width: 173px;
     margin-top: 20px;
     font-size: 22px;
     font-size: 2.2em;
@@ -22254,6 +22298,18 @@ a.colophon-link:hover {
   /*
    * ==================================================================
    * POST STYLES END
+   * ==================================================================
+   */
+
+  /*
+   * ==================================================================
+   * SIDEBAR STYLES START
+   * ==================================================================
+   */
+
+  /*
+   * ==================================================================
+   * SIDEBAR STYLES END
    * ==================================================================
    */
 
@@ -22674,7 +22730,7 @@ a.colophon-link:hover {
   }
 
   .content-area {
-    margin-left: 0;
+    margin: 0;
   }
 
   /* Style the header on tablet views */

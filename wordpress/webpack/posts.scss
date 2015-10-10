@@ -37,6 +37,10 @@
   list-style-type: none;
 }
 
+
+
+
+
 .other-sharing-element {
   margin-top:30px;
 
@@ -55,6 +59,7 @@
  * Read more at: http://bit.ly/html5bp-hr
  */
 .post-hr {
+  max-width: 787px;
   display: block;
   height: 1px;
   border: 0;
@@ -81,6 +86,7 @@
 
 /* Style the Facebook & Google+ links on single post pages */
 .sharing-buttons {
+  padding: 13px;
   border: 1px solid #000;
 }
 
@@ -88,7 +94,6 @@
 .tweet-post-class {
   display: block;
   height: auto;
-  width: 266px;
   margin: 15px auto 0;
   padding: 10px;
 
@@ -123,6 +128,10 @@ a.tweet-post-class {
   @include hide-element;
 }
 
+/* Add top space to sharing/ad element at the end of single posts */
+.sharing-ad-element {
+  padding-top: 70px;
+}
 /* Facebook share link styles only */
 .facebook {
   margin-right: 10px;
@@ -199,25 +208,51 @@ a.facebook, a.googleplus {
   padding:0;
 }
 
+@media (min-width: 768px) {
 
+  /* Add a border to sharing/ad element at the end of single posts */
+  .sharing-ad-element {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
 
-@media (max-width: 768px) {
-
-  /* Style the Facebook & Google+ links on single post pages */
+  /* Style the sharing module on single post pages */
   .sharing-buttons {
-    max-width:768px;
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+  }
 
-    text-align: center;
+  /* Style the add at the end of a single post */
+  .post-ads {
+    display:inline-block;
+    margin-left:20px;
+    position: relative;
+    bottom: 56px;
   }
   
 }
 
+@media (max-width: 767px) {
 
-@media (min-width: 1200px) {
+  /* Add a border to sharing/ad element at the end of single posts */
+  .sharing-ad-element {
+    border: none;
+  }
 
   /* Style the Facebook & Google+ links on single post pages */
   .sharing-buttons {
-    max-width:310px;
+    max-width:768px;  
+
+    text-align: center;
   }
+
+  .post-ads {
+    display: none;
+  }
+  
+}
+
+@media (min-width: 1200px) {
 
 }

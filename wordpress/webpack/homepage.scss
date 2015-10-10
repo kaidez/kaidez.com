@@ -138,6 +138,16 @@ a.category-name {
     margin-top: 70px;
   }
 
+  .site-content {
+    margin-top: 160px;
+  }
+
+  /* Add top margin to other articles section, give it a top border */
+  .other-articles-class {
+    margin-top: 60px;
+    border-top: 1px solid #B7b7B7;
+  }
+
 }
 
 
@@ -219,6 +229,15 @@ a.category-name {
   .ad-container {
     position: relative;
     right: 39px;
+  }
+
+  /* Style the "view more..." link below the article listing */
+  a.view-more-link {
+    width: 230px;
+    display: block;
+    margin:10px auto 30px;
+
+    text-align: center;
   }
 
   /* Commented out for now but may be needed later */

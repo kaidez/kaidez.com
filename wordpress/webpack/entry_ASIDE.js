@@ -10,8 +10,6 @@ var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ), // require the Q Promise library
     enquire = require("enquire.js"); // enquire.js media query library
 
-// Load <aside>-specific CSS, which is preprocessed out with SASS.
-
 // Variable reference to the footer content that gets AJAX'ed in
 var getAside = "/wp-content/themes/kaidez-swiss/js/aside-code.html";
 

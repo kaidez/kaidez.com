@@ -10,6 +10,11 @@ body, html, .site, .site-content {
   max-width: 100%;
 }
 
+/**/
+.site-header {
+  position: fixed;
+}
+
 /* Give all Fontawesome icons used on the site a firm height & width */
 i {
   width:30px;
@@ -22,23 +27,30 @@ i {
 
 /* add space above a post's time/author info */
 .entry-meta {
-  margin-top: 10px;
-}
-
-a.demo-link,
-a.guide-link {
-  text-decoration: none;
+  margin-top: 50px;
 }
 
 /* Style the "view the demo" link */
 a.demo-link,
-a.guide-link {
+a.guide-link,
+a.view-more-link {
   padding: 10px;
 
+  text-decoration: none;
   color: #fff;
   background-color: darken(@pink, 25%);
  
   .br();
+
+  &:visited {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  &:hover, &:active {
+    color: @pink;
+    text-decoration: none;
+  }
 }
 
 
@@ -279,7 +291,7 @@ a.colophon-link {
 
 /* Make all category pages lowercase */
 .category .page-title {
-  text-transform: lowercase;
+  .lower();
 }
 
 .youtube-iframe {
@@ -291,8 +303,12 @@ a.colophon-link {
   .responsive-image();
 }
 
- /*
-  * ===================================================================
-  * MISCELLANOUS STYLES END
-  * ===================================================================
-  */
+.submit {
+  .lower();
+}
+
+/*
+ * ===================================================================
+ * MISCELLANOUS STYLES END
+ * ===================================================================
+ */

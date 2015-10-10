@@ -30,8 +30,10 @@ get_header(); ?>
       </div>
       <div id="other-articles" class="other-articles-class"></div>
 
-    </section><!-- #all-articles -->
+      <a href="/blog/" class="view-more-link">view all articles &rsaquo;</a>
 
+    </section><!-- #all-articles -->
+    
   </main><!-- #main -->
 </div><!-- #primary -->
 
