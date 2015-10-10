@@ -154,7 +154,7 @@ define( ["jquery"], function( $ ) {
   // Set a base media query value that enquire.js always checks
   enquire.register( "( min-width: 768px )", {
 
-    // Don't run code if the base media query matches
+    // Run code if the base media query matches
     match : function() {
 
       // Set state by adding "show-homepage-ads" to <body>
