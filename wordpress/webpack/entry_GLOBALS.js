@@ -6,7 +6,8 @@
  */
 
 var $ = require( "jquery" ), // require jQuery
-    q = require( "Q" ); // require the Q Promise library
+    q = require( "Q" ), // require the Q Promise library
+    enquire = require( "enquire.js" ); // enquire media query library
 
 /*
  * START MOBILE NAVIGATION CODE
@@ -257,44 +258,90 @@ $( "body" ).delegate( "#page", "click", function() {
   }
 });
 
+
+
+
 /*
  * Scroll functionality: dynamically detect scroll positions to
  * dynamically affect the header.
  * ====================================================================
  * This code goes out and finds offsets and scroll positions, which 
  * causes layout thrash. The thrash is small so things SHOULD be ok,
- * but watch for issues.  Read more at: http://bit.ly/1jjjope and
- * http://bit.ly/1jjjr4z.
- * ====================================================================
+ * but watch for issues.
+ * Read more at: http://bit.ly/1jjjope and http://bit.ly/1jjjr4z.
  */
 
-// Get the <header> tag
-var siteHeader = document.getElementById( "masthead" );
-    getNewestArticleTop = $("#newest-article").offset().top;
 
-// Use jQuery.scroll() to run a function every time the window's
-// vertical scroll position changes.
-$(window).scroll(function() {
+var
+    // Get a reference to the <header> tag
+    siteHeader = document.getElementById( "masthead" );
+
+    // Get a reference to the "#newest-article" element's top position
+    getNewestArticleTop = $( "#newest-article" ).offset().top;
+
+
+
+// Set a base media query value that enquire.js always checks
+enquire.register( "( min-width: 768px )", {
 
   /*
-   * Store a reference to the window's vertical scroll position every
-   * time the position changes.
+   * What code to run if the base media query does matches...i.e.
+   * views with a min-width of at least 768px
    */
-  var getWindowVerticalPosition = window.scrollY;
+  match : function() {
+    
+    /*
+     * Use jQuery.scroll() to run a function every time the window's
+     * vertical scroll position changes.
+     */
+    $( window ).scroll( function() {
 
-  if( getWindowVerticalPosition > getNewestArticleTop ) {
-    $( siteHeader ).css({
-      "background-color": "#FFE1E1",
-      "border-bottom": "1px solid #000"
+      /*
+       * Store a reference to the window's vertical scroll position
+       * every time the position changes. Doing it outside of the
+       * function doesn't works.
+       */
+      var getWindowVerticalPosition = window.scrollY;
+
+      /*
+       * If the value of the window's vertical scroll position is
+       * greater than or equal to the value of the newest article's
+       * top position, change the <header> background color and give
+       * it a border by adding stuff via a <style> tag.
+       */
+      if( getWindowVerticalPosition >= getNewestArticleTop ) {
+        $( siteHeader ).attr( "style", "background-color: #FFE1E1; border-bottom: 1px solid #000;"
+        );
+
+      /*
+       * Otherwise, remove all <header> styles by clearing out the
+       * <style> tag
+       */
+      } else {
+        $( siteHeader ).attr( "style", "" );
+      }
     });
-  } else {
-    $( siteHeader ).css({
-      "background-color": "#fff",
-      "border-bottom": "currentColor"
-    });
+
+  },
+
+  /*
+   * What code to run if the base media query does matches...i.e.
+   * views with a min-width below 768px
+   */
+  unmatch: function(){
+    
+    /*
+     * Remove all <header> styles that MIGHT exist by clearing out the 
+     * <style> tag
+     */
+    $( siteHeader ).attr( "style", "" );
+    
+    /*
+     * The scrolling functionality that changes the header will run on
+     * mobile views, which shouldn't happen. Use jQuery.unbind()
+     * against the window to prevent this.
+     */
+    $( window ).unbind( "scroll" );
   }
 
-  // console.log("window.scrollY is: " + window.scrollY);
-  // console.log("getNewestArticleTop is: " + getNewestArticleTop);
-  // console.log("your var: " + getWindowVerticalPosition);
-});
+}); // end enquire();
