@@ -219,7 +219,7 @@ a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-
 a.nav-links{height:70px;display:block;padding-left:10px;line-height:4rem;line-height:4em;color:#000;font-weight:900}
 a.nav-links:hover{color:#fff;background-color:#d91365}
 a.nav-links:visited{color:#000}
-.site-header{width:100%;height:49px;position:fixed;top:0;right:0;left:0;-webkit-transform:translateZ(0);z-index:1}
+.site-header{width:100%;height:49px;top:0;right:0;left:0;-webkit-transform:translateZ(0);z-index:1}
 .blog .homepage-title-link,.category .homepage-title-link{font-size:27px}
 .loading{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-footer{padding-top:15px}
