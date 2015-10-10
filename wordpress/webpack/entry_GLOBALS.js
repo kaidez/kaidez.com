@@ -59,77 +59,6 @@ var search = {
   }
 };
 
-/*
- * CLICK METHODS FOR THE MENU & SEARCH BUTTONS
- * ====================================================================
- * 
- * When clicked, each button:
- *
- * 1. runs testBranding() which toggles the #branding elements z-index
- * 2. returns a Promise
- * 3. runs animateNavElement() & the parameter is one of two vars above
- *
- */
-
-// Menu button
-$( "#mobile-menu-button" ).on("click", function( event ) {
-  
-  event.stopPropagation();
-
-  q.fcall( function(){
-
-    var thisTest = testBranding( "z-index: auto;", "z-index: 2;" );
-    thisTest();
-
-  }).then( function() {
-    animateNavElement( nav );
-  });
-});
-
-// Search button
-$( "#mobile-search-button" ).on("click", function( event ) {
-
-  event.stopPropagation();
-
-  q.fcall( function(){
-
-    var thisTest = testBranding( "z-index: 2;", "z-index: auto;");
-    thisTest();
-
-  }).then( function() {
-    animateNavElement( search );
-  });
-
-});
-
-/*
- * I had to write a crazy hack that toggled the z-index of the
- * "#branding" element so the main nav could stack properly and the
- * search box could be focused :-\ To redeem myself for writing a
- * crazy hack, I wrote cool code that executes the hack with a
- * closure. It runs in the "animateNavElement()" element. and the
- * "currentStyle" and "newStyle" parameters are the z-index styles
- * that get toggled.
- */
-function testBranding( currentStyle, newStyle ) {
-  
-  // Store the toggled states in variables
-  var isBrandingClass = $( "#branding" ).attr( "style", currentStyle ),
-      isNotBrandingClass = $( "#branding" ).attr( "style", newStyle );
-
-  // An inner function toggles the states with a ternary function check
-  function getBrandingClass() {
-    isBrandingClass ? isNotBrandingClass : isBrandingClass;
-  }
-
-  // Return the inner function so it's accessible when called
-  return getBrandingClass;
-}
-
-/*
- * "animateNavElement()": show/hide nav & search
- * ====================================================================
- */
 
  // "obj" will be either the "nav" or "search" variable defined up top
 function animateNavElement( obj ) {
@@ -207,6 +136,81 @@ function animateNavElement( obj ) {
     });
   }
 }
+
+
+/*
+ * CLICK METHODS FOR THE MENU & SEARCH BUTTONS
+ * ====================================================================
+ * 
+ * When clicked, each button:
+ *
+ * 1. runs testBranding() which toggles the #branding elements z-index
+ * 2. returns a Promise
+ * 3. runs animateNavElement() & the parameter is one of two vars above
+ *
+ */
+
+// Menu button
+$( "#mobile-menu-button" ).on("click", function( event ) {
+  
+  event.stopPropagation();
+
+  q.fcall( function(){
+
+    var thisTest = testBranding( "z-index: auto;", "z-index: 2;" );
+    thisTest();
+
+  }).then( function() {
+    animateNavElement( nav );
+  });
+});
+
+// Search button
+$( "#mobile-search-button" ).on("click", function( event ) {
+
+  event.stopPropagation();
+
+  q.fcall( function(){
+
+    var thisTest = testBranding( "z-index: 2;", "z-index: auto;");
+    thisTest();
+
+  }).then( function() {
+    animateNavElement( search );
+  });
+
+});
+
+/*
+ * I had to write a crazy hack that toggled the z-index of the
+ * "#branding" element so the main nav could stack properly and the
+ * search box could be focused :-\ To redeem myself for writing a
+ * crazy hack, I wrote cool code that executes the hack with a
+ * closure. It runs in the "animateNavElement()" element. and the
+ * "currentStyle" and "newStyle" parameters are the z-index styles
+ * that get toggled.
+ */
+function testBranding( currentStyle, newStyle ) {
+  
+  // Store the toggled states in variables
+  var isBrandingClass = $( "#branding" ).attr( "style", currentStyle ),
+      isNotBrandingClass = $( "#branding" ).attr( "style", newStyle );
+
+  // An inner function toggles the states with a ternary function check
+  function getBrandingClass() {
+    isBrandingClass ? isNotBrandingClass : isBrandingClass;
+  }
+
+  // Return the inner function so it's accessible when called
+  return getBrandingClass;
+}
+
+/*
+ * "animateNavElement()": show/hide nav & search
+ * ====================================================================
+ */
+
+
 
 /*
  * If either the nav "hamburger" menu or search button are visible and
