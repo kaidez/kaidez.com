@@ -282,10 +282,10 @@ $(window).scroll(function() {
    */
   var getWindowVerticalPosition = window.scrollY;
 
-  if(getWindowVerticalPosition > getNewestArticleTop) {
-    $(siteHeader).css("background-color", "red");
+  if( getWindowVerticalPosition > getNewestArticleTop ) {
+    $( siteHeader ).css("background-color", "red");
   } else {
-    $(siteHeader).css("background-color", "transparent");
+    $( siteHeader ).css( "background-color", "transparent" );
   }
 
   console.log("window.scrollY is: " + window.scrollY);
