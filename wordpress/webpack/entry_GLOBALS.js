@@ -256,3 +256,33 @@ $( "body" ).delegate( "#page", "click", function() {
 
   }
 });
+
+/*
+ * Scroll functionality: dynamically detect scroll positions to
+ * dynamically affect the header.
+ * ====================================================================
+ * This code goes out and finds offsets and scroll positions, which 
+ * causes layout thrash. The thrash is small so things SHOULD be ok,
+ * but watch for issues.  Read more at: http://bit.ly/1jjjope and
+ * http://bit.ly/1jjjr4z.
+ * ====================================================================
+ */
+
+// Get the <header> tag
+var siteHeader = document.getElementById( "masthead" );
+    getNewestArticleTop = $("#newest-article").offset().top;
+
+// Use jQuery.scroll() to run a function every time the window's
+// vertical scroll position changes.
+$(window).scroll(function() {
+
+  /*
+   * Store a reference to the window's vertical scroll position every
+   * time the position changes.
+   */
+  var getWindowVerticalPosition = window.scrollY;
+
+  console.log(window.scrollY);
+  console.log(getNewestArticleTop);
+  console.log("your var: " + getWindowVerticalPosition);
+});
