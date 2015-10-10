@@ -283,12 +283,18 @@ $(window).scroll(function() {
   var getWindowVerticalPosition = window.scrollY;
 
   if( getWindowVerticalPosition > getNewestArticleTop ) {
-    $( siteHeader ).css("background-color", "red");
+    $( siteHeader ).css({
+      "background-color": "#FFE1E1",
+      "border-bottom": "1px solid #000"
+    });
   } else {
-    $( siteHeader ).css( "background-color", "transparent" );
+    $( siteHeader ).css({
+      "background-color": "#fff",
+      "border-bottom": "currentColor"
+    });
   }
 
-  console.log("window.scrollY is: " + window.scrollY);
-  console.log("getNewestArticleTop is: " + getNewestArticleTop);
-  console.log("your var: " + getWindowVerticalPosition);
+  // console.log("window.scrollY is: " + window.scrollY);
+  // console.log("getNewestArticleTop is: " + getNewestArticleTop);
+  // console.log("your var: " + getWindowVerticalPosition);
 });
