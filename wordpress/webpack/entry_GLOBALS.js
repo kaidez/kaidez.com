@@ -282,7 +282,13 @@ $(window).scroll(function() {
    */
   var getWindowVerticalPosition = window.scrollY;
 
-  console.log(window.scrollY);
-  console.log(getNewestArticleTop);
+  if(getWindowVerticalPosition > getNewestArticleTop) {
+    $(siteHeader).css("background-color", "red");
+  } else {
+    $(siteHeader).css("background-color", "transparent");
+  }
+
+  console.log("window.scrollY is: " + window.scrollY);
+  console.log("getNewestArticleTop is: " + getNewestArticleTop);
   console.log("your var: " + getWindowVerticalPosition);
 });
