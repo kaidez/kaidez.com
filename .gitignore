@@ -12,12 +12,7 @@ wordpress/xmlrpc.php
 
 
 # Ignore .js source files compiled by webpack
-wordpress/wp-content/themes/kaidez-swiss/js/common.js
-wordpress/wp-content/themes/kaidez-swiss/js/regular.js
-wordpress/wp-content/themes/kaidez-swiss/js/home.js
-wordpress/wp-content/themes/kaidez-swiss/js/posts.js
-wordpress/wp-content/themes/kaidez-swiss/style.css
-wordpress/wp-content/themes/kaidez-swiss/js/frontpageAds.js
+wordpress/wp-content/themes/kaidez-swiss/js/*.js
 
 wordpress/html-workspace.html
 
