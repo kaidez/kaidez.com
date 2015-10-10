@@ -165,7 +165,7 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 .post-pic{margin:0 auto}
 @media (min-width:768px){.main-navigation,.searchform-class{top:-25px;position:relative}
-.site-header{background-color:#fff;z-index:3;width:100%}
+.site-header{z-index:3;width:100%;background-color:#fff}
 .site-description{width:219px;margin:0;font-size:25px;color:#000;border-top:1px solid #000}
 a.demo-link,a.guide-link,a.view-more-link{display:block;margin-top:20px;font-size:22px;font-size:2.2em;font-size:2.2rem;font-weight:700}
 .col-md-4,.main-navigation,.menu-item,.searchform-class,.site-branding{display:inline-block}
