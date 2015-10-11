@@ -1,7 +1,7 @@
 /**
  * entry_PAGECODE.js
  *
- * Module for loading styles and scripts related to single posts only
+ * Module for loading styles and scripts related to pages
  *
  */
 
