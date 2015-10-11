@@ -11416,6 +11416,7 @@ a.colophon-link:hover {
     font-size: 2.2em;
     font-size: 2.2rem;
     font-weight: bold;
+    text-align: center;
   }
 
   /* Set the demo link width */
