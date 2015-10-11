@@ -135,7 +135,6 @@ to{opacity:0}
 .show-searchbox{-webkit-animation-name:showSearchbox;animation-name:showSearchbox;-webkit-animation-duration:.2s;animation-duration:.2s;animation-timing-function:ease-in-out;animation-iteration-count:1;animation-fill-mode:both}
 .hide-searchbox{-webkit-animation-name:hideSearchbox;animation-name:hideSearchbox;-webkit-animation-duration:.2s;animation-duration:.2s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .site,.site-content,body,html{height:auto;min-height:100%;overflow-x:hidden}
-.site-header{position:fixed}
 i{width:30px;height:30px}
 .home-link{color:#000}
 .entry-meta{margin-top:50px}
@@ -202,6 +201,7 @@ a.home-link:active{color:#ed327f}
 }
 @media (max-width:767px){.jump-to-top,.site-title{text-align:center}
 a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-top-link:visited,a.nav-links,a.nav-links:hover,a.nav-links:visited{text-decoration:none}
+.site-header{position:fixed}
 .mobile-menu{position:relative;bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .mobile-search{position:absolute;right:8px;bottom:7px;cursor:pointer;color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;background-color:#000;border-radius:2px}

@@ -11058,12 +11058,6 @@ html,
   max-width: 100%;
 }
 
-/**/
-
-.site-header {
-  position: fixed;
-}
-
 /* Give all Fontawesome icons used on the site a firm height & width */
 
 i {
@@ -11687,6 +11681,12 @@ a.colophon-link:hover {
 
 @media (max-width: 767px) {
   /* LOGO CONTAINER STYLES START */
+
+  /* Fix the site header on mobile */
+
+  .site-header {
+    position: fixed;
+  }
 
   /* Center the site title on mobile */
 
