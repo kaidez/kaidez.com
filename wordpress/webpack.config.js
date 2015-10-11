@@ -37,6 +37,7 @@ module.exports = {
       "./webpack/entry_ASIDE",
       "./webpack/entry_SIDEBAR",
       "./webpack/entry_SHARING",
+      "./webpack/entry_POSTS",
       "./webpack/config/async-sharing",
       "./webpack/config/prism",
       "./webpack/config/comment-reply"
