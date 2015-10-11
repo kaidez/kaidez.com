@@ -46,6 +46,19 @@ a.category-name {
 
 }
 
+/* Style the "view more..." link on the homepage */
+a.view-more-link {
+  display: block;
+  margin: 10px auto 30px;
+
+  font-size: 22px;
+  font-size: 2.2em;
+  font-size: 2.2rem;
+  text-align: center;
+
+  @include bold;
+}
+
 /* A hack that aligns all older snippets text to the left */
 .first-homepage-post-snippet,
 .homepage-post-snippet {

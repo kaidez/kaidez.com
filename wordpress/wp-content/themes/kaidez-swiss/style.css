@@ -138,7 +138,7 @@ to{opacity:0}
 i{width:30px;height:30px}
 .home-link{color:#000}
 .entry-meta{margin-top:50px}
-a.demo-link,a.guide-link,a.view-more-link{padding:10px;text-decoration:none;color:#fff;background-color:#930d44;border-radius:5px}
+a.demo-link,a.guide-link,a.view-more-link{width:230px;padding:10px;text-decoration:none;color:#fff;background-color:#930d44;border-radius:5px}
 a.demo-link:visited,a.guide-link:visited,a.view-more-link:visited{color:#fff;text-decoration:underline}
 a.demo-link:active,a.demo-link:hover,a.guide-link:active,a.guide-link:hover,a.view-more-link:active,a.view-more-link:hover{color:#ed327f;text-decoration:none}
 .screen-reader-text{clip:rect(1px,1px,1px,1px)}
@@ -166,7 +166,7 @@ a.footer-links:hover,a.footer-links:visited{color:#fff}
 @media (min-width:768px){.main-navigation,.searchform-class{top:-25px;position:relative}
 .site-header{z-index:3;width:100%;background-color:#fff}
 .site-description{width:219px;margin:0;font-size:25px;color:#000;border-top:1px solid #000}
-a.demo-link,a.guide-link,a.view-more-link{display:block;margin-top:20px;font-size:22px;font-size:2.2em;font-size:2.2rem;font-weight:700}
+a.demo-link,a.guide-link{display:block;margin-top:20px;font-size:22px;font-size:2.2em;font-size:2.2rem;font-weight:700}
 .col-md-4,.main-navigation,.menu-item,.searchform-class,.site-branding{display:inline-block}
 .demo-link{width:173px}
 .guide-link{width:333px}

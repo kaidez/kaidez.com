@@ -11080,6 +11080,7 @@ i {
 a.demo-link,
 a.guide-link,
 a.view-more-link {
+  width: 230px;
   padding: 10px;
   text-decoration: none;
   color: #fff;
@@ -11109,6 +11110,8 @@ a.view-more-link:active {
  * MENU STYLES START
  * ====================================================================
  */
+
+/* Globally hide the <nav> header & "Skip to content" link */
 
 .menu-header,
 .screen-reader-text {
@@ -11397,8 +11400,7 @@ a.colophon-link:hover {
   /* Style the demo/guide link*/
 
   a.demo-link,
-  a.guide-link,
-  a.view-more-link {
+  a.guide-link {
     display: block;
     margin-top: 20px;
     font-size: 22px;
