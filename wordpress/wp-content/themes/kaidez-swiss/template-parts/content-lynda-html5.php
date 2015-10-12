@@ -31,7 +31,7 @@
 
 
     <div class="entry-content">
-      <div id="lynda-html5" class="post-ad"></div>
+      <div id="lyndaHtml5" class="post-ad"></div>
     <?php the_content(); ?>
     </div><!-- .entry-content -->
     
