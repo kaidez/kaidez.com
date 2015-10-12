@@ -31,9 +31,7 @@
 
 
     <div class="entry-content">
-        <div class="post-ad">
-      <a href="http://www.lynda.com/HTML-training-tutorials/224-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11866&utm_campaign=CD2146&cid=l0:en:pt:le:prosc:s88:224:ind:ssprc:CD2146&bid=11866&aid=CD2146"><img src="http://lynda.directtrack.com/42/2146/11866/" alt="Learn HTML5" border="0"></a>
-    </div>
+      <div id="lynda-html5" class="post-ad"></div>
     <?php the_content(); ?>
     </div><!-- .entry-content -->
     
