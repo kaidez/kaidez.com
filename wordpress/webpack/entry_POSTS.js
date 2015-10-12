@@ -45,7 +45,7 @@ if ( getDemoButton ) {
  */
 for ( key in PostAds ) {
 
-  // Perform a standard hasOwnProperty check against the object
+  // Perform a standard hasOwnProperty() check against the object
   if( PostAds.hasOwnProperty( key ) ) {
 
     var targetElement = document.getElementById( key );
@@ -56,6 +56,6 @@ for ( key in PostAds ) {
       targetElement.innerHTML = PostAds[key];
     }
 
-  } // end the hasOwnProperty check
+  } // end the hasOwnProperty() check
 
 } // end the for/in loop
