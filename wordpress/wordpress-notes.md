@@ -8,3 +8,5 @@ BEFORE DEPLOYING
 webpack setup can cause FOUT/FOUC.
 
 webpack can chunk out AJAX code, meaning that the code will be called twice under the right set of circumstances.
+
+Go to http://v2.wp-api.org/guide/discovery/ to see if this is a better way of calling the WP API.
