@@ -1,6 +1,7 @@
 <?php
 /**
- * Template part for displaying single posts.
+ * Template part for displaying single posts, BUT WITH A LYNDA HTML5
+ * AD.
  *
  * @package Kaidez Swiss
  */
