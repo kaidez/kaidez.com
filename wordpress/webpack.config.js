@@ -71,8 +71,7 @@ module.exports = {
     // Compile a "regular.js" file with specific CommonJS modules
     regular: [
       "./webpack/entry_GLOBALS",
-      "./webpack/entry_ASIDE",
-      "./webpack/entry_SIDEBAR"
+      "./webpack/entry_ASIDE"
     ]
   },
 
