@@ -24,6 +24,8 @@ label,strong{font-weight:700}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 button,input,pre code,textarea{font-size:inherit;color:inherit}
 .fa-search:before{content:"\f002"}
+.fa-search-plus:before{content:"\f00e"}
+.fa-search-minus:before{content:"\f010"}
 .fa-twitter:before{content:"\f099"}
 .fa-facebook:before{content:"\f09a"}
 .fa-github:before{content:"\f09b"}
@@ -46,6 +48,7 @@ button{overflow:visible;text-transform:none}
 .category .page-title,.comment-notes,.comment-reply-title,.rp4wp-related-posts,.submit,label{text-transform:lowercase}
 button,input[type=submit]{-webkit-appearance:button;cursor:pointer}
 button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print{blockquote,img,pre{page-break-inside:avoid}
 *,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}
@@ -162,6 +165,9 @@ a.aside-link:hover{color:#7b0b39;text-decoration:underline}
 .footer-text{margin-right:10px;margin-bottom:0;text-align:right;font-weight:700;font-size:14px;font-size:1.4rem;line-height:1.7}
 a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
+.search-result-title{font-size:25px}
+.search-entry-summary{margin-bottom:40px}
+.search-entry-meta{margin-top:20px}
 .post-pic{margin:0 auto}
 @media (min-width:768px){.main-navigation,.searchform-class{top:-25px;position:relative}
 .site-header{z-index:3;width:100%;background-color:#fff}
