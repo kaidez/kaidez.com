@@ -36,6 +36,7 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
                       /aside-/,
                       ".aside-inner",
                       /demo-link/,
+                      ".entry-title-small",
                       '.fa-facebook',
                       '.fa-google-plus',
                       '.fa-github',
@@ -46,17 +47,18 @@ var lessFiles = ["css-build/*.less", "css-build/**/*.less"];
                       /jump-to-top/,
                       /footer-/,
                       ".row .aside-inner",
-                     ".row",
+                      ".row",
                       /show-/,
                       ".col-md-4",
                       ".col-md-6",
-                     ".site-footer",
-                     '.showMobileMenu',
-                     '.hideMobileMenu',
-                     '.showSearchbox',
-                     /post-pic/,
-                     '.hideSearchbox',
-                     '.entry-header > span'
+                      /search-/,
+                      ".site-footer",
+                      '.showMobileMenu',
+                      '.hideMobileMenu',
+                      '.showSearchbox',
+                      /post-pic/,
+                      '.hideSearchbox',
+                      '.entry-header > span'
                     ];
 
 
