@@ -40,22 +40,46 @@ if ( getDemoButton ) {
  * it does, the key's value is what gets load into this element
  */
 
-/*
- * Use a for/in loop against the object in "PostAds"
- */
-for ( key in PostAds ) {
+enquire.register( "only screen and (min-width: 768px)", {
 
-  // Perform a standard hasOwnProperty() check against the object
-  if( PostAds.hasOwnProperty( key ) ) {
+  setup : function() {
+    var targetElement;
+  },
 
-    var targetElement = document.getElementById( key );
+  match : function() {
+    
+    /*
+     * Use a for/in loop against the object in "PostAds"
+     */
+    for ( key in PostAds ) {
 
-    if( !targetElement ) {
-      null;
-    } else {
-      targetElement.innerHTML = PostAds[key];
-    }
+      // Perform a standard hasOwnProperty() check against the object
+      if( PostAds.hasOwnProperty( key ) ) {
 
-  } // end the hasOwnProperty() check
+        targetElement = document.getElementById( key );        
 
-} // end the for/in loop
+          // If the target element doesn't exist, return null
+          if( !targetElement ) {
+            null;
+          } else {
+            // If it does, load the ad into the target element
+            targetElement.innerHTML = PostAds[key];
+            
+            /*
+             * A "return this" needs to happen to get this code to
+             * work. Why? I don't know.
+             */
+            return this;
+          }
+
+      } // end the hasOwnProperty() check
+
+    } // end the for/in loop
+
+  },
+
+  unmatch : function() {
+    targetElement.innerHTML = "";
+  }
+
+});});
