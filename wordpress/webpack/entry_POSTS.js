@@ -82,4 +82,4 @@ enquire.register( "only screen and (min-width: 768px)", {
     targetElement.innerHTML = "";
   }
 
-});});
+});

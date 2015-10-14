@@ -56,6 +56,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   // Do things after the Promise resolves
   })).then( function ( data ) {
 
+    loadSharingAd(); 
+
     // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
     
@@ -104,6 +106,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       } else {
         pageElement.setAttribute( "href", pageLink + getPostLink );  
       }
+
     }); 
   }, function ( xhr ) {
     // If the Promise fails, send a certain console message
@@ -111,6 +114,14 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
 }); // end "document.addEventListener()"
+
+
+
+// Start loading the big WP ad by the sharing code
+// Need an enquire function...can I start making a reusable one?
+function loadSharingAd() {
+  var sharingAdCode = $( "#sharing-ad" );
+}
 
 // END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
 
