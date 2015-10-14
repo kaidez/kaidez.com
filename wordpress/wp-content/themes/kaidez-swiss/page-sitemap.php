@@ -11,14 +11,14 @@
 get_header(); ?>
 
   <div id="primary" class="content-area row">
-    <main id="main" class="site-main col-md-8" role="main">
+    <main id="main" class="site-main col-md-8 sitemap-text" role="main">
 
     <div id="posts">
-      <h2>Posts</h2>
+      <h2>posts</h2>
     </div><!-- #posts -->
 
     <div id="pages">
-      <h2>Pages</h2>
+      <h2>pages</h2>
     </div><!-- #pages -->
 
     </main><!-- #main -->
