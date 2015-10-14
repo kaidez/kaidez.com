@@ -167,7 +167,7 @@ a.footer-links{margin-left:9px;color:#fff}
 a.footer-links:hover,a.footer-links:visited{color:#fff}
 .search-result-title{font-size:25px}
 .search-entry-summary{margin-bottom:40px}
-.search-entry-meta{margin-top:20px}
+.search-entry-meta{margin-top:8px}
 .post-pic{margin:0 auto}
 @media (min-width:768px){.main-navigation,.searchform-class{top:-25px;position:relative}
 .site-header{z-index:3;width:100%;background-color:#fff}

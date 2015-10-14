@@ -21,3 +21,7 @@
 @mixin br {
   border-radius:5px;
 }
+
+@mixin lowercase {
+  text-transform: lowercase; 
+}
