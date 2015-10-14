@@ -11726,6 +11726,10 @@ a.colophon-link:hover {
   .site-header {
     padding: 20px 0 0 25px;
   }
+
+  .site-main {
+    padding: 0 0 0 43px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -12084,6 +12088,10 @@ a.colophon-link:hover {
 
   .site-header {
     padding: 20px 0 0 25px;
+  }
+
+  .site-main {
+    padding: 0 0 0 43px;
   }
 
   .first-homepage-post-snippet .content-area {
