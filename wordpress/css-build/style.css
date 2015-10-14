@@ -10865,6 +10865,14 @@ label {
  * Set it to position:static
  */
 
+/* Remove padding that Bootstrap always applies to col-md-* classes */
+
+.col-md-4,
+.col-md-6,
+.col-md-8 {
+  padding: 0;
+}
+
 @media (max-width: 767px) {
   .col-md-4 {
     position: static;
@@ -11402,6 +11410,12 @@ a.colophon-link:hover {
 }
 
 .submit {
+  text-transform: lowercase;
+}
+
+/* Style the paginated blog page */
+
+.blog .site-main {
   text-transform: lowercase;
 }
 
