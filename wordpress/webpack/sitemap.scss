@@ -1,0 +1,10 @@
+/* Sitemap page styling ONLY!! Compiled as a dependency via webpack */
+
+/* Import .scss files */
+@import "config/sass/_mixins"; /* import mixins */
+
+
+/* Make sitemap main content lowercase */
+.sitemap-text {
+  @include lowercase;
+}

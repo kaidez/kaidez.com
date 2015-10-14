@@ -7,6 +7,8 @@
 
 var $ = require( "jquery" ); // require jQuery
 
+require( "./sitemap.scss" ); // styles for the homepage only
+
 // Wait for the DOM to be ready before loading in JSON
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
