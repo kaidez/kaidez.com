@@ -20,7 +20,7 @@
 </div> <!-- #content -->
 
 <script src="/wp-content/themes/kaidez-swiss/js/common.js"></script>
-<script src="/wp-content/themes/kaidez-swiss/js/regular.js"></script>
+<script src="/wp-content/themes/kaidez-swiss/js/categories.js"></script>
 
 </body>
 </html>
