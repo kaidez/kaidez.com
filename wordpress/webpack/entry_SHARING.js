@@ -5,6 +5,8 @@
  *
  */
 
+"use strict";
+
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
@@ -23,22 +25,18 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
      */
     cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
-
 /*
- * LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
+ * "getSharingElements()"
+ * LOAD/CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
  * ====================================================================
  * 
- * Once all content has been completely loaded and parsed in the DOM,
- * the social sharing element loads via an AJAX call wrapped in a Q
- * Promise. Once the Promise resolves, the element is placed above the
- * "more posts like this" section (the $( ".rp4wp-related-posts" ) 
+ * Load the social sharing element loads via an AJAX call wrapped in a
+ * Q Promise. Once the Promise resolves, the element is placed above
+ * the "more posts like this" section (the $( ".rp4wp-related-posts" ) 
  * element) and sharing elements are constructed on the page from
  * there.
  */
-
-// Wait for the DOM to be ready before loading content
-document.addEventListener( "DOMContentLoaded", function( event ) {
-
+function getSharingElements() {
   // Set a reference for the sharing element
   var getSharingModule = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
@@ -66,18 +64,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     // Set the Twitter links href attribute to be the cleaned up URL
     linkElement.setAttribute( "href", cleanLink );
-
-
-
-    var windowVerticalPosition,
-        sharingElementVerticalPosition = $( ".sharing-ad-element" ).offset().top;
-      
-    $( window ).scroll( function(){
-      var windowVerticalPosition = $( window ).scrollTop();
-      console.log(windowVerticalPosition, sharingElementVerticalPosition);
-    });
-
-
 
     /*
      * Object that contains properties for the Facebook & Google+ links
@@ -124,7 +110,32 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // If the Promise fails, send a certain console message
     console.log( "The social sharing links failed to load...you may needs refresh the page." );
   });
+} // end "getSharingElements()"
 
+
+// Wait for the DOM to be ready before loading content
+document.addEventListener( "DOMContentLoaded", function( event ) {
+  
+  var
+    
+      // The browser's top position...no value yet
+      windowTopPosition,
+      
+      // The sharing element's top position...has value
+      sharingElementTopPosition = $( ".rp4wp-related-posts" ).offset().top,
+
+      // How much to subtract from the sharing element's top position
+      reduceSharingElementTopPosition = 500;
+ 
+  $( window ).scroll( function(){
+    var windowTopPosition = $( window ).scrollTop();
+
+    if( windowTopPosition >= sharingElementTopPosition - reduceSharingElementTopPosition ) {
+      getSharingElements();
+      $( window ).off( 'scroll' );
+    }
+  });
+        
 }); // end "document.addEventListener()"
 
 
@@ -174,8 +185,3 @@ $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
 
 });
 // END CLICK-TO-TWEET CODE
-
-
-
-
-
