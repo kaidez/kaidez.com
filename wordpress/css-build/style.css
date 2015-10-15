@@ -11066,6 +11066,10 @@ html,
   max-width: 100%;
 }
 
+.page .entry-title {
+  text-transform: lowercase;
+}
+
 /* Give all Fontawesome icons used on the site a firm height & width */
 
 i {
@@ -11417,6 +11421,10 @@ a.colophon-link:hover {
 
 .blog .site-main {
   text-transform: lowercase;
+}
+
+.error404 label {
+  float: left;
 }
 
 /*
@@ -12092,6 +12100,10 @@ a.colophon-link:hover {
 
   .site-main {
     padding: 0 0 0 43px;
+  }
+
+  .site-main {
+    padding: 0 0 0 27px;
   }
 
   .first-homepage-post-snippet .content-area {
