@@ -11066,7 +11066,10 @@ html,
   max-width: 100%;
 }
 
-.page .entry-title {
+/* Lowercase title/breadcrumb category so it looks Swiss-style */
+
+.breadcrumb-category-name,
+.entry-title {
   text-transform: lowercase;
 }
 
