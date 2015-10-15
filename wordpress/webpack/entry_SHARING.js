@@ -149,8 +149,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     if( windowTopPosition >= sharingElementTopPosition - reduceSharingElementTopPosition ) {
       
       /*
-       * If it is, AJAX in the sharing element using the
-       * getSharingElements() function
+       * If it is, AJAX the sharing buttons into the sharing element 
+       * using the above-created getSharingElements() function.
        */
       getSharingElements();
 
