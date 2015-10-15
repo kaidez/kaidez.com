@@ -115,7 +115,18 @@ function getSharingElements() {
 } // end "getSharingElements()"
 
 
-// Wait for the DOM to be ready before loading content
+/* Single posts have a "sharing buttons" component at the bottom of
+ * the article text. This isn't needed right away because people
+ * (probably) won't share the article until they get to the end of it.
+ * So if the DOM is done loading content, AJAX's this component into
+ * its containing element already on the page, which is
+ * ".rp4wp-related-posts". The buttons will load in when the window's
+ * current top position is equal to 500 pixels less of whatever the
+ * sharing containing element current top position is, which a little
+ * before one gets to the end of the article.
+ */
+
+// Wait for the DOM to be done loading content before running code...
 document.addEventListener( "DOMContentLoaded", function( event ) {
 
   "use strict";
@@ -125,7 +136,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       // jQuery reference to the window object
       $window = $( window ),
 
-      // The sharing element's top position...has value
+      // The sharing button containing element's top position
       sharingElementTopPosition = $( ".rp4wp-related-posts" ).offset().top,
 
       // How much to subtract from the sharing element's top position
@@ -143,14 +154,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     /*
      * Check if the window's current top position is greater than or
-     * equal to 500 pixels LESS of whatever the sharing element's
-     * current top position is.
+     * equal to 500 pixels LESS of whatever the sharing button
+     * containing element's current top position is.
      */
     if( windowTopPosition >= sharingElementTopPosition - reduceSharingElementTopPosition ) {
       
       /*
-       * If it is, AJAX the sharing buttons into the sharing element 
-       * using the above-created getSharingElements() function.
+       * If it is, AJAX the sharing buttons into the sharing button
+       * containing element using the above-created 
+       * getSharingElements() function.
        */
       getSharingElements();
 
