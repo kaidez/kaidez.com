@@ -37,6 +37,7 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
  * there.
  */
 function getSharingElements() {
+  
   // Set a reference for the sharing element
   var getSharingModule = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
