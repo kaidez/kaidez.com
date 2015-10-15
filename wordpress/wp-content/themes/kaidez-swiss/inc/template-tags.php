@@ -72,7 +72,7 @@ if ( ! function_exists( 'kaidez_swiss_posted_on' ) ) :
 function kaidez_swiss_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+		$time_string = '<time class="entry-date published" itemprop="datePublished" datetime="%1$s">%2$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,

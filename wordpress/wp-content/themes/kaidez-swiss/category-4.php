@@ -20,7 +20,7 @@ get_header( "categories" ); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
         <div class="taxonomy-description">
-          "Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
+          "Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/" itemprop="url">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
         </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 

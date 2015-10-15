@@ -26,7 +26,7 @@ get_header( "404" ); ?>
 
 					<?php get_search_form(); ?>
 
-					<p class="sitemap">You can also <a href="/site-map/">view the sitemap</a>.</p>
+					<p class="sitemap">You can also <a href="/site-map/" itemprop="url">view the sitemap</a>.</p>
 				</div><!-- .page-div -->
 
 				<div class="page-content col-md-6">
@@ -39,7 +39,7 @@ get_header( "404" ); ?>
 	            $args = array( 'numberposts' => '5' );
 	            $recent_posts = wp_get_recent_posts( $args );
 	            foreach( $recent_posts as $recent ){
-		            echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></li>';
+		            echo '<li><a href="' . get_permalink($recent["ID"]) . '" itemprop="url">' .   $recent["post_title"].'</a></li>';
 	            }
             ?>
           </ul>
@@ -49,19 +49,19 @@ get_header( "404" ); ?>
 
           <ul>
           	<li>
-          	  <a href="/load-data-attributes-mouseclicks/">TUTORIAL: Load data attributes with Mouse Clicks</a>
+          	  <a href="/load-data-attributes-mouseclicks/" itemprop="url">TUTORIAL: Load data attributes with Mouse Clicks</a>
           	</li>
           	<li>
-          	  <a href="/requirejs-wordpress/">Using RequireJS In WordPress</a>
+          	  <a href="/requirejs-wordpress/" itemprop="url">Using RequireJS In WordPress</a>
           	</li>
           	<li>
-          	  <a href="/javascript-closures-tutorial/">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+          	  <a href="/javascript-closures-tutorial/" itemprop="url">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
           	</li>
           	<li>
-          	  <a href="/javascript-off-dom/">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+          	  <a href="/javascript-off-dom/" itemprop="url">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
           	</li>
           	<li>
-          	  <a href="/media-queries-important/">Media Queries Are Important</a>
+          	  <a href="/media-queries-important/" itemprop="url">Media Queries Are Important</a>
           	</li>
           </ul>
 				</div><!-- .page-content -->

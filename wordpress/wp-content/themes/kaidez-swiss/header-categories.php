@@ -37,7 +37,7 @@
 
     <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
       <div class="site-branding" id="branding" style="z-index: 2;">
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-link" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
         <button type="button" id="mobile-menu-button" class="mobile-menu btn-default">
           <span class="mobile-menu-bar"></span>
@@ -54,16 +54,16 @@
         <div class="menu-main-navigation-container">
           <ul class="menu">
             <li class="menu-item">
-              <a href="/blog" class="nav-links">blog</a>
+              <a href="/blog" class="nav-links" itemprop="url">blog</a>
             </li>
             <li class="menu-item">
-              <a href="/articles" class="nav-links">articles</a>
+              <a href="/articles" class="nav-links" itemprop="url">articles</a>
             </li>
             <li class="menu-item">
-              <a href="/lynda-kaidez/" class="nav-links">kaidez on lynda</a>
+              <a href="/lynda-kaidez/" class="nav-links" itemprop="url">kaidez on lynda</a>
             </li>
             <li class="menu-item">
-              <a href="/ajax-tutorial/" class="nav-links">ajax tutorial</a>
+              <a href="/ajax-tutorial/" class="nav-links" itemprop="url">ajax tutorial</a>
             </li>
           </ul>
         </div>

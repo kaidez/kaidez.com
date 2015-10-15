@@ -12,7 +12,7 @@
     <header class="entry-header">
 
     <div class="breadcrumbs">
-      <span><a href="/">home</a></span>
+      <span><a href="/" itemprop="url">home</a></span>
       <span>&rsaquo;</span>
       <span class="breadcrumb-category-name">
         <?php the_category(', '); ?>
