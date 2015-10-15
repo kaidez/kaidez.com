@@ -5,8 +5,6 @@
  *
  */
 
-"use strict";
-
 var $ = require( "jquery" ), // require jQuery
     q = require( "Q" ); // require the Q Promise library
 
@@ -54,7 +52,7 @@ function getSharingElements() {
   // Do things after the Promise resolves
   })).then( function ( data ) {
 
-      loadSharingAd(); 
+    loadSharingAd(); 
 
     // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
@@ -115,11 +113,14 @@ function getSharingElements() {
 
 // Wait for the DOM to be ready before loading content
 document.addEventListener( "DOMContentLoaded", function( event ) {
-  
+
+  "use strict";
+
   var
   
       // jQuery reference to the window object
       $window = $( window ),
+
       // The sharing element's top position...has value
       sharingElementTopPosition = $( ".rp4wp-related-posts" ).offset().top,
 
@@ -160,6 +161,9 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         
 }); // end "document.addEventListener()"
 
+// END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
+
+
 
 
 // Start loading the big WP ad by the sharing code
@@ -168,7 +172,10 @@ function loadSharingAd() {
   var sharingAdCode = $( "#sharing-ad" );
 }
 
-// END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
+
+
+
+
 
 
 /*
