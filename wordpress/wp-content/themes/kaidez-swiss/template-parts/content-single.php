@@ -8,7 +8,7 @@
 ?>
 
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/Blog" itemprop="blogPost">
     <header class="entry-header">
 
     <div class="breadcrumbs">
