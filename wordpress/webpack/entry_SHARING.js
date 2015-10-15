@@ -34,10 +34,11 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
  * Q Promise. Once the Promise resolves, the element is placed above
  * the "more posts like this" section (the $( ".rp4wp-related-posts" ) 
  * element) and sharing elements are constructed on the page from
- * there.
+ * there. This function will run in the "DOMContentLoaded" element
+ * below it.
  */
 function getSharingElements() {
-  
+
   // Set a reference for the sharing element
   var getSharingModule = "/wp-content/themes/kaidez-swiss/js/sharing-code.html";
 
