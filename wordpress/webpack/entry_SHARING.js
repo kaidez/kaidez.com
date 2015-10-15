@@ -117,22 +117,44 @@ function getSharingElements() {
 document.addEventListener( "DOMContentLoaded", function( event ) {
   
   var
-    
-      // The browser's top position...no value yet
-      windowTopPosition,
-      
+  
+      // jQuery reference to the window object
+      $window = $( window ),
       // The sharing element's top position...has value
       sharingElementTopPosition = $( ".rp4wp-related-posts" ).offset().top,
 
       // How much to subtract from the sharing element's top position
       reduceSharingElementTopPosition = 500;
  
-  $( window ).scroll( function(){
-    var windowTopPosition = $( window ).scrollTop();
+  /*
+   * Use jQuery.scroll() to do stuff as the browser window's top
+   * position changes
+   */
+  $window.scroll( function(){
+    // Start doing stuff...
+    
+    // Get the browser window's top position with jQuery.scrollTop()
+    var windowTopPosition = $window.scrollTop();
 
+    /*
+     * Check if the window's current top position is greater than or
+     * equal to 500 pixels LESS of whatever the sharing element's
+     * current top position is.
+     */
     if( windowTopPosition >= sharingElementTopPosition - reduceSharingElementTopPosition ) {
+      
+      /*
+       * If it is, AJAX in the sharing element using the
+       * getSharingElements() function
+       */
       getSharingElements();
-      $( window ).off( 'scroll' );
+
+      /*
+       * We're still watching window scrolling at this point, so the
+       * sharing element will load in again and again if we keep
+       * scrolling. Stop watching window scrolling with jQuery.off().
+       */
+      $window.off( "scroll" );
     }
   });
         
