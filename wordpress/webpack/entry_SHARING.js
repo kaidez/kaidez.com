@@ -56,7 +56,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   // Do things after the Promise resolves
   })).then( function ( data ) {
 
-    loadSharingAd(); 
+      loadSharingAd(); 
 
     // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
@@ -66,6 +66,18 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     // Set the Twitter links href attribute to be the cleaned up URL
     linkElement.setAttribute( "href", cleanLink );
+
+
+
+    var windowVerticalPosition,
+        sharingElementVerticalPosition = $( ".sharing-ad-element" ).offset().top;
+      
+    $( window ).scroll( function(){
+      var windowVerticalPosition = $( window ).scrollTop();
+      console.log(windowVerticalPosition, sharingElementVerticalPosition);
+    });
+
+
 
     /*
      * Object that contains properties for the Facebook & Google+ links
@@ -162,3 +174,8 @@ $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
 
 });
 // END CLICK-TO-TWEET CODE
+
+
+
+
+
