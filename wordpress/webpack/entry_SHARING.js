@@ -23,6 +23,8 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
      */
     cleanLink = getPostLink.replace( /[^/]*$/g, "" );
 
+
+
 /*
  * "getSharingElements()"
  * LOAD/CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
