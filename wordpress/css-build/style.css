@@ -11440,6 +11440,10 @@ a.colophon-link:hover {
   float: left;
 }
 
+.post-image-caption {
+  font-style: italic;
+}
+
 /*
  * ===================================================================
  * MISCELLANOUS STYLES END

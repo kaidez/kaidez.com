@@ -20,7 +20,7 @@ pre,textarea{overflow:auto}
 .error404 label,.post-pic{float:left}
 @font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0,0)}
-article,aside,footer,header,main,nav,pre,section{display:block}
+article,aside,figcaption,footer,header,main,nav,pre,section{display:block}
 label,strong{font-weight:700}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 button,input,pre code,textarea{font-size:inherit;color:inherit}
@@ -171,6 +171,7 @@ a.footer-links:hover,a.footer-links:visited{color:#fff}
 .search-entry-meta{margin-top:8px}
 .img-border,.post-pic{max-width:100%;margin:0 auto;display:block}
 .post-pic{padding:0 10px 10px 0}
+.post-image-caption{font-style:italic}
 @media (min-width:768px){.main-navigation,.searchform-class{top:-25px;position:relative}
 .site-header{z-index:3;width:100%;background-color:#fff}
 .site-description{width:219px;margin:0;font-size:25px;color:#000;border-top:1px solid #000}

@@ -139,6 +139,7 @@ gulp.task("uncss", ['outputcss'], function(){
         "http://localhost:8888/html5-project-series-1-homepage-wireframe/", // May be removed
         "http:\/\/localhost:8888\/personal/", // A category page
         "http:\/\/localhost:8888\/blog/", // The blog page
+        "http://localhost:8888/nyc-social-media-week-event-recap-social-listening/",
         "http:\/\/localhost:8888\/kdz-build-tool/",
         "http:\/\/localhost:8888\/affiliate-disclaimer/", // Affiliate
         "http:\/\/localhost:8888\/404.php" // 404 page
