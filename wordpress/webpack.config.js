@@ -72,7 +72,7 @@ module.exports = {
     categories: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
-       "./webpack/entry_PAGINATION",
+       "./webpack/entry_PAGINATION"
     ],
 
     // Compile a "regular.js" file with specific CommonJS modules
