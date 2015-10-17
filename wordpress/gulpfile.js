@@ -136,6 +136,7 @@ gulp.task("uncss", ['outputcss'], function(){
       html: [
         "http:\/\/localhost:8888\/", // home page
         "http:\/\/localhost:8888\/tutorial-filter-content-with-jquery-filter-jquery-selectors/", // A single post page
+        "http://localhost:8888/html5-project-series-1-homepage-wireframe/", // May be removed
         "http:\/\/localhost:8888\/personal/", // A category page
         "http:\/\/localhost:8888\/blog/", // The blog page
         "http:\/\/localhost:8888\/kdz-build-tool/",
