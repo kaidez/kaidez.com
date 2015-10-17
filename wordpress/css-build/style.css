@@ -11408,11 +11408,19 @@ a.colophon-link:hover {
   max-width: 100%;
 }
 
-/* Make post-related images responsive */
+/* Make post-related images responsive & wrap around copy */
 
 .post-pic {
   float: left;
   padding: 0 10px 10px 0;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Make post-related images responsive. but NOT wrap around copy */
+
+.img-border {
   max-width: 100%;
   margin: 0 auto;
   display: block;

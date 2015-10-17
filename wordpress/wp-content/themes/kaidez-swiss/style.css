@@ -61,7 +61,7 @@ img{max-width:100%!important}
 h2,h3,p{orphans:3;widows:3}
 h2,h3{page-break-after:avoid}
 }
-.post-pic,.site,label{max-width:100%}
+.site,label{max-width:100%}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;background-color:#fff;font-size:16px;font-size:1.6rem;line-height:24px}
@@ -74,7 +74,7 @@ h3{font-size:24px}
 small{font-size:85%}
 .page-header{padding-bottom:9px;margin:40px 0 20px}
 ol,ul{margin-top:0;margin-bottom:10px}
-blockquote p:last-child,ul ul{margin-bottom:0}
+blockquote p:last-child,blockquote ul:last-child,ul ul{margin-bottom:0}
 blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}
 code,pre{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}
@@ -96,13 +96,13 @@ input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-
 .btn-default:active{background-image:none}
 .pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}
 .row:after,.row:before{display:table;content:" "}
-.post-pic,label{display:block}
 .row:after{clear:both}
 @-ms-viewport{width:device-width}
 .hide-element{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .main-navigation-header,.screen-reader-text{clip:rect(1px 1px 1px 1px);position:absolute!important}
 h1{font-size:36px;margin-top:0;margin-bottom:0}
 p{margin:0 0 22px}
+label{display:block}
 .btn-default{border:none;color:#ed327f}
 .btn-default:active,.btn-default:focus,.btn-default:hover{color:#000;background-color:#ed327f;border-color:#000}
 .page-header{border-bottom:none}
@@ -169,7 +169,8 @@ a.footer-links:hover,a.footer-links:visited{color:#fff}
 .search-result-title{font-size:25px}
 .search-entry-summary{margin-bottom:40px}
 .search-entry-meta{margin-top:8px}
-.post-pic{padding:0 10px 10px 0;margin:0 auto}
+.img-border,.post-pic{max-width:100%;margin:0 auto;display:block}
+.post-pic{padding:0 10px 10px 0}
 @media (min-width:768px){.main-navigation,.searchform-class{top:-25px;position:relative}
 .site-header{z-index:3;width:100%;background-color:#fff}
 .site-description{width:219px;margin:0;font-size:25px;color:#000;border-top:1px solid #000}

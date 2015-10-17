@@ -339,12 +339,17 @@ a.colophon-link {
   max-width: 100%;
 }
 
-/* Make post-related images responsive */
+/* Make post-related images responsive & wrap around copy */
 .post-pic {
   float: left;
   padding: 0 10px 10px 0;
 
   .responsive-image();  
+}
+
+/* Make post-related images responsive. but NOT wrap around copy */
+.img-border {
+  .responsive-image();
 }
 
 .submit {
