@@ -28,7 +28,7 @@
       border-bottom: 1px solid #EAEAEA;
     }
   </style>
-  <script src="/wp-content/themes/kaidez-swiss/js/libs/modernizr.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
