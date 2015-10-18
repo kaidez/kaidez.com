@@ -222,11 +222,9 @@ a.facebook, a.googleplus {
   }
 
   /* Style the add at the end of a single post */
-  .post-ads {
-    display:inline-block;
-    margin-left:20px;
-    position: relative;
-    bottom: 56px;
+  .post-ad {
+    float: left;
+    margin: 0 20px 20px 0;
   }
   
 }
@@ -245,7 +243,7 @@ a.facebook, a.googleplus {
     text-align: center;
   }
 
-  .post-ads {
+  .post-ad {
     display: none;
     float: none;
     margin: 0;
