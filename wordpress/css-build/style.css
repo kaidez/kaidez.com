@@ -11444,6 +11444,15 @@ a.colophon-link:hover {
   font-style: italic;
 }
 
+/* Globally hide older/fewer post links */
+
+.posts-navigation {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 /*
  * ===================================================================
  * MISCELLANOUS STYLES END
