@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer on category pages only!!!!
+ * The template for displaying the footer on posts only!!!!
  *
  * Contains the closing of the #content div and all content after
  *
@@ -13,6 +13,7 @@
 <div id="aside-footer">
   <div class="loading"></div>
 </div>
+
 </div> <!-- #page -->
 
 
