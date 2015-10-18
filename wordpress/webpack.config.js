@@ -68,8 +68,8 @@ module.exports = {
       "./webpack/entry_SIDEBAR"
     ],
 
-    // Compile a "categories.js" file with specific CommonJS modules
-    categories: [
+    // Compile a "categoriesSearch.js" file with specific CommonJS modules
+    categoriesSearch: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
        "./webpack/entry_PAGINATION"
