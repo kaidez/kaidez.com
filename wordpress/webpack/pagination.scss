@@ -11,10 +11,8 @@
 @import "config/sass/_variables"; /* import variables */
 @import "config/sass/_mixins"; /* import mixins */
 
-/* Style the core pagination element */
+/* Style the copy shpuld ALWAYS be lowercased */
 .pagination {
-  margin: 40px 0 40px 122px;
-
   text-transform: lowercase;
 }
 
@@ -72,4 +70,19 @@
   margin-right:4px;
 
   color:#999;
+}
+
+/* Pagination for the mobile view */
+@media (max-width: 767px) {
+  .pagination {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Pagination for the desktop view */
+@media (min-width: 768px) {
+  .pagination {
+    margin: 40px 0 40px 122px;
+  }
 }

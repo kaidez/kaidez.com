@@ -63,7 +63,10 @@
   padding: 0;
 }
 
-
+.post-ad {
+  float: left;
+  margin: 0 10px 10px 0;
+}
 /* Style the submit button on all posts */
 .submit {
   padding: 10px;
@@ -226,6 +229,14 @@ a.facebook, a.googleplus {
     float: left;
     margin: 0 20px 20px 0;
   }
+
+  /* Style the add at the end of a single post */
+  .wordpress-post-ad {
+    display:inline-block;
+    margin-left:20px;
+    position: relative;
+    bottom: 56px;
+  }
   
 }
 
@@ -247,6 +258,10 @@ a.facebook, a.googleplus {
     display: none;
     float: none;
     margin: 0;
+  }
+
+  .wordpress-post-ad {
+    display: none;
   }
   
 }
