@@ -23,7 +23,7 @@ module.exports = {
   // Define multiple entry points to build out multiple files
   entry: {
     
-    // Compile out a "home.js" file with specific CommonJS modules
+    // Compile out a "home.js" file w/ specific CommonJS modules
     home: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -31,7 +31,7 @@ module.exports = {
       "./webpack/entry_FRONTPAGE_ADS_AMD"
     ],
     
-    // Compile a "posts.js" file with specific CommonJS modules
+    // Compile a "posts.js" file w/ specific CommonJS modules
     posts: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -43,7 +43,7 @@ module.exports = {
       "./webpack/config/comment-reply"
     ],
 
-    // Compile a "codePage.js" file with specific CommonJS modules
+    // Compile a "codePage.js" file w/ specific CommonJS modules
     codePage: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -52,7 +52,7 @@ module.exports = {
       "./webpack/config/prism"
     ],
 
-    // Compile a "sitemap.js" file with specific CommonJS modules
+    // Compile a "sitemap.js" file w/ specific CommonJS modules
     sitemap: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -60,7 +60,7 @@ module.exports = {
       "./webpack/entry_SITEMAP"
     ],
 
-    // Compile a "blog.js" file with specific CommonJS modules
+    // Compile a "blog.js" file w/ specific CommonJS modules
     blog: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
@@ -68,14 +68,14 @@ module.exports = {
       "./webpack/entry_SIDEBAR"
     ],
 
-    // Compile a "categoriesSearch.js" file with specific CommonJS modules
+    // Compile a "categoriesSearch.js" file w/ specific CommonJS modules
     categoriesSearch: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE",
        "./webpack/entry_PAGINATION"
     ],
 
-    // Compile a "regular.js" file with specific CommonJS modules
+    // Compile a "regular.js" file w/ specific CommonJS modules
     regular: [
       "./webpack/entry_GLOBALS",
       "./webpack/entry_ASIDE"
