@@ -61,7 +61,7 @@
         <div class="blog-search">
           <input id="s" class="header-search-field" name="s" type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" />
           <button class="header-search-submit" type="submit" id="searchsubmit" />
-            <i class="fa fa-search fa-lg"></i>
+            <i class="fa fa-search fa-lg mobile-search-btn-color"></i>
           </button>
         </div><!-- .blog-search -->
       </form><!-- #searchform -->
