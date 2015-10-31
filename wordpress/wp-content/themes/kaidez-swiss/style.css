@@ -217,6 +217,9 @@ a.jump-to-top-link,a.jump-to-top-link:active,a.jump-to-top-link:hover,a.jump-to-
 .mobile-menu{position:relative;bottom:40px;height:48px;width:48px;z-index:2;border-radius:4px;background-color:transparent}
 .mobile-search{position:absolute;right:8px;bottom:7px;cursor:pointer;color:#000}
 .mobile-menu-bar{display:block;width:31px;height:4px;margin:0 auto 4px;background-color:#000;border-radius:2px}
+.header-search-field{width:233px;padding:0 7px}
+.header-search-submit{background-color:transparent;border:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
+.mobile-search-btn-color{color:#f9bfd7;font-weight:bolder}
 .btn-default:active span,.btn-default:focus span,.btn-default:hover span{background-color:#7b0b39}
 .site-branding{position:relative;height:51px;width:100%;top:0;right:0;left:0;background-color:#ed327f}
 .site-description{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
