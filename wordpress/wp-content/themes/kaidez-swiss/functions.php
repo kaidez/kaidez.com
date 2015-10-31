@@ -78,6 +78,9 @@ function kaidez_swiss_setup() {
 endif; // kaidez_swiss_setup
 add_action( 'after_setup_theme', 'kaidez_swiss_setup' );
 
+// Remove the generator meta tag
+remove_action('wp_head', 'wp_generator');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
