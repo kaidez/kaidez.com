@@ -260,10 +260,12 @@ a.facebook, a.googleplus {
     margin: 0;
   }
 
+  /* Hide the WordPress ad on mobile*/
   .wordpress-post-ad {
     display: none;
   }
 
+  /* Style the tweet button for single posts on mobile */
   .tweet-post-class {
     max-width: 300px;
 
