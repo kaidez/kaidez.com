@@ -11069,7 +11069,8 @@ html,
 /* Lowercase title/breadcrumb category so it looks Swiss-style */
 
 .breadcrumb-category-name,
-.entry-title {
+.entry-title,
+.sitemap-text {
   text-transform: lowercase;
 }
 
