@@ -80,7 +80,6 @@ code,pre{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}
 pre{padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
 pre code{padding:0;white-space:pre-wrap;background-color:transparent;border-radius:0}
-.row{margin-right:-15px;margin-left:-15px}
 .col-md-4,.col-md-6,.col-md-8{position:relative;min-height:1px;padding:0}
 .hide-element,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @media (min-width:992px){.col-md-4,.col-md-6,.col-md-8{float:left}
@@ -106,6 +105,7 @@ label{display:block}
 .btn-default{border:none;color:#ed327f}
 .btn-default:active,.btn-default:focus,.btn-default:hover{color:#000;background-color:#ed327f;border-color:#000}
 .page-header{border-bottom:none}
+.row{margin-right:0;margin-left:0}
 @media (max-width:767px){.col-md-4{position:static}
 }
 .hide-menu,.show-menu{position:relative;z-index:1}
