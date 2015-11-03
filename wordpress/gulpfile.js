@@ -142,7 +142,8 @@ gulp.task("uncss", ['outputcss'], function(){
         "http://localhost:8888/nyc-social-media-week-event-recap-social-listening/",
         "http:\/\/localhost:8888\/kdz-build-tool/",
         "http:\/\/localhost:8888\/affiliate-disclaimer/", // Affiliate
-        "http:\/\/localhost:8888\/404.php" // 404 page
+        "http:\/\/localhost:8888\/404.php", // 404 page
+        "http:\/\/localhost:8888\/site-map/" // 404 page
       ],
       ignore: ignoreArray
     }))
