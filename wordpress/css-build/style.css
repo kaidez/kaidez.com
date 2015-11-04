@@ -10873,7 +10873,7 @@ label {
   padding: 0;
 }
 
-/* Override */
+/* Override the default "-15px" margin that Bootstrap puts on ".row" */
 
 .row {
   margin-right: 0;
@@ -11260,7 +11260,7 @@ pre[class*="language-"] {
  * ====================================================================
  */
 
-/* Make the <aside> background pink */
+/* Padding for the <aside> */
 
 .aside {
   padding: 14px 27px 0;
@@ -11642,6 +11642,12 @@ a.colophon-link:hover {
     width: 230px;
     display: inline-block;
     vertical-align: top;
+  }
+
+  /* Padding for the <aside> */
+
+  .aside {
+    background: url("/wp-content/themes/kaidez-swiss/img/kaidez-profile.png") no-repeat right top;
   }
 
   /* set left margin for <aside> on wide views */

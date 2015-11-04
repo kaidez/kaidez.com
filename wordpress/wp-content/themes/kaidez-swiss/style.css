@@ -196,6 +196,7 @@ a.home-link{font-size:71px}
 a.home-link:hover{color:#d91365}
 a.home-link:active{color:#ed327f}
 .col-md-4{width:230px;vertical-align:top}
+.aside{background:url(/wp-content/themes/kaidez-swiss/img/kaidez-profile.png) right top no-repeat}
 .aside-inner{margin-left:25px}
 .loading{width:16px;height:16px;margin:0 auto;padding-bottom:22px;background:url(/wp-content/themes/kaidez-swiss/js/ajax-loader.gif) no-repeat}
 .entry-content{max-width:768px}
