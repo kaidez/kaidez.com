@@ -155,7 +155,7 @@ a,a:visited{color:#ed327f;text-decoration:underline}
 a:active,a:hover{outline:0;color:#ed327f;text-decoration:none}
 a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{color:#000;text-decoration:none}
 pre[class*=language-]{font-size:16px;font-size:1.6em;font-size:1.6rem}
-.aside{padding:14px 27px 0;background-color:#d91365}
+.aside{padding:14px 27px 0;background:#d91365}
 .aside-header{clip:rect(1px,1px,1px,1px)}
 .aside-section-header{font-weight:900;color:#f9bfd7}
 .aside-inner{width:775px}
@@ -192,12 +192,16 @@ a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decora
 .header-search-field{width:300px;height:40px;right:-38px;position:relative;border:1px solid #000}
 .header-search-submit{position:relative;right:8px;background-color:transparent;border:none}
 .btn-mobile-search{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.bio-class,.bio-copy,.bio-image{position:absolute}
 a.home-link{font-size:71px}
 a.home-link:hover{color:#d91365}
 a.home-link:active{color:#ed327f}
 .col-md-4{width:230px;vertical-align:top}
-.aside{background:url(/wp-content/themes/kaidez-swiss/img/kaidez-profile.png) right top no-repeat}
+.aside{background:#d91365}
 .aside-inner{margin-left:25px}
+.bio-class{width:282px;right:100px;color:#fff}
+.bio-copy{width:300px;z-index:2;top:81px;left:42px}
+.bio-image{top:-14px;z-index:1}
 .loading{width:16px;height:16px;margin:0 auto;padding-bottom:22px;background:url(/wp-content/themes/kaidez-swiss/js/ajax-loader.gif) no-repeat}
 .entry-content{max-width:768px}
 .page .entry-title{margin-bottom:10px;font-weight:700}

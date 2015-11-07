@@ -11264,7 +11264,7 @@ pre[class*="language-"] {
 
 .aside {
   padding: 14px 27px 0;
-  background-color: #d91365;
+  background: #d91365;
 }
 
 /* Hide <aside> header */
@@ -11647,13 +11647,40 @@ a.colophon-link:hover {
   /* Padding for the <aside> */
 
   .aside {
-    background: url("/wp-content/themes/kaidez-swiss/img/kaidez-profile.png") no-repeat right top;
+    background: #d91365;
   }
 
   /* set left margin for <aside> on wide views */
 
   .aside-inner {
     margin-left: 25px;
+  }
+
+  /* Style the kaidez bio section */
+
+  .bio-class {
+    width: 282px;
+    position: absolute;
+    right: 100px;
+    color: #fff;
+  }
+
+  /* Style the kaidez bio copy */
+
+  .bio-copy {
+    position: absolute;
+    width: 300px;
+    z-index: 2;
+    top: 81px;
+    left: 42px;
+  }
+
+  /* Style the kaidez bio image */
+
+  .bio-image {
+    position: absolute;
+    top: -14px;
+    z-index: 1;
   }
 
   /* Style AJAX loading animated loading .gif for the <aside> */
