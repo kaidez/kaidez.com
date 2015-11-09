@@ -192,21 +192,21 @@ a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decora
 .header-search-field{width:300px;height:40px;right:-38px;position:relative;border:1px solid #000}
 .header-search-submit{position:relative;right:8px;background-color:transparent;border:none}
 .btn-mobile-search{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
-.bio-class,.bio-copy,.bio-image{position:absolute}
 a.home-link{font-size:71px}
 a.home-link:hover{color:#d91365}
 a.home-link:active{color:#ed327f}
 .col-md-4{width:230px;vertical-align:top}
 .aside{background:#d91365}
 .aside-inner{margin-left:25px}
-.bio-class{width:282px;right:100px;color:#fff}
-.bio-copy{width:300px;z-index:2;top:81px;left:42px}
-.bio-image{top:-14px;z-index:1}
+.bio-copy{position:absolute;width:300px;z-index:2;top:81px;left:42px}
+.bio-image{position:absolute;top:-14px;z-index:1}
 .loading{width:16px;height:16px;margin:0 auto;padding-bottom:22px;background:url(/wp-content/themes/kaidez-swiss/js/ajax-loader.gif) no-repeat}
 .entry-content{max-width:768px}
 .page .entry-title{margin-bottom:10px;font-weight:700}
 .site-footer{padding-right:20px}
 .jump-to-top-link,.load-footer-content-message,.mobile-menu{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+}
+@media (min-width:992px){.bio-class{width:282px;position:absolute;right:100px;color:#fff}
 }
 @media (min-width:1200px){.content-area{max-width:1191px;margin-top:45px;margin-left:122px}
 .site-header{padding:20px 0 0 122px}
