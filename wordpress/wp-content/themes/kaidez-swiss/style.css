@@ -163,6 +163,7 @@ pre[class*=language-]{font-size:16px;font-size:1.6em;font-size:1.6rem}
 .aside-list-item{height:34px;color:#000}
 a.aside-link,a.aside-link:visited{color:#000;text-decoration:none}
 a.aside-link:hover{color:#7b0b39;text-decoration:underline}
+.bio-class{width:282px;color:#fff}
 .site-footer{padding-bottom:45px;background-color:#7b0b39;color:#fff}
 .footer-text{margin-right:10px;margin-bottom:0;text-align:right;font-weight:700;font-size:14px;font-size:1.4rem;line-height:1.7}
 a.footer-links{margin-left:9px;color:#fff}
@@ -198,7 +199,6 @@ a.home-link:active{color:#ed327f}
 .col-md-4{width:230px;vertical-align:top}
 .aside{background:#d91365}
 .aside-inner{margin-left:25px}
-.bio-copy{position:absolute;width:300px;z-index:2;top:81px;left:42px}
 .bio-image{position:absolute;top:-14px;z-index:1}
 .loading{width:16px;height:16px;margin:0 auto;padding-bottom:22px;background:url(/wp-content/themes/kaidez-swiss/js/ajax-loader.gif) no-repeat}
 .entry-content{max-width:768px}
@@ -206,7 +206,8 @@ a.home-link:active{color:#ed327f}
 .site-footer{padding-right:20px}
 .jump-to-top-link,.load-footer-content-message,.mobile-menu{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 }
-@media (min-width:992px){.bio-class{width:282px;position:absolute;right:100px;color:#fff}
+@media (min-width:992px){.bio-class{width:282px;position:absolute;right:100px}
+.bio-copy{position:absolute;width:300px;z-index:2;top:81px;left:42px}
 }
 @media (min-width:1200px){.content-area{max-width:1191px;margin-top:45px;margin-left:122px}
 .site-header{padding:20px 0 0 122px}
@@ -241,7 +242,7 @@ a.nav-links:hover{color:#fff;background-color:#d91365}
 a.nav-links:visited{color:#000}
 .site-header{width:100%;height:49px;top:0;right:0;left:0;-webkit-transform:translateZ(0);z-index:1}
 .blog .homepage-title-link,.category .homepage-title-link{font-size:27px}
-.loading{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.bio-image,.loading{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 .site-footer{padding-top:15px}
 .footer-text-spaced{margin-top:25px}
 .jump-to-top{margin:40px auto 0;padding:10px;width:200px;color:#fff;cursor:pointer;background-color:#000}
@@ -252,4 +253,6 @@ a.jump-to-top-link{color:#fff;font-weight:700}
 .content-area{margin:0}
 .site-header{padding:20px 0 0 25px}
 .site-main{padding:0 0 0 27px}
+.bio-copy{position:static}
+.bio-image{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
 }
