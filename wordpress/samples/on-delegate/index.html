@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About $.on() and $.delegate()</title>
+
+  <style>
+    button {
+      display: inline-block;
+    }
+
+    .target-elements {
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>About $.on() and $.delegate()</h1>
+
+  <!-- The <button> elements-->
+  <div class="buttons">
+
+    <button id="click-btn-onpage">The "$.click" button</button>
+    <button id="on-btn-onpage">The "$.on" button</button>
+    <button id="delegate-btn-onpage">The "$.delegate" button</button>
+    <button id="load">load</button>
+    <button id="load-ajax">load-ajax</button>
+
+  </div>
+
+  <!-- The target elements-->
+  <div class="target-elements">
+
+    <div id="click-btn-element"></div>
+    <div id="on-btn-element"></div>
+    <div id="delegate-btn-element"></div>
+  
+    <div id="load-element">
+      <h2>Load content here</h2>
+    </div>
+
+    <div id="load-element-append">
+      <h2>Append content here</h2>
+    </div>
+
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
