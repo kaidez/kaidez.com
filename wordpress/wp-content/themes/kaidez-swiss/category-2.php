@@ -20,7 +20,7 @@ get_header( "categories" ); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
         <div class="taxonomy-description">
-          "Personal" posts on kaidez.com include work that I've done, rants, conference experiences and a few random posts that are uncategorized and don't fit anywhere else.
+          "Code Tips" posts on kaidez.com discuss tips for certain web development topics. The reader should have a little better than basic knowledge of the topics.
         </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
