@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the customized "Tutorial" category 
+ * The template for displaying the customized "Personal" category 
  * page.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy

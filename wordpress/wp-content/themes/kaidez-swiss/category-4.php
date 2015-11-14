@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the customized "Tutorial" category 
+ * The template for displaying the customized "Reviews" category 
  * page.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
@@ -20,7 +20,8 @@ get_header( "categories" ); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
         <div class="taxonomy-description">
-          "Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/" itemprop="url">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
+          Reviews posts on kaidez.com review web development based books, events and websites. Almost all the reviews are positive as the site is interested in suggestively highlighting good work.
+          <em>Note: this category is currently NOT active</em>
         </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
