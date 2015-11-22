@@ -11468,6 +11468,12 @@ a.colophon-link:hover {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+/* Remove padding from <figure> */
+
+figure {
+  margin: 0;
+}
+
 /*
  * ===================================================================
  * MISCELLANOUS STYLES END
