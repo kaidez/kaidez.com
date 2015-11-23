@@ -1,0 +1,255 @@
+/* Home page styling ONLY!! Compiled as a dependency via webpack */
+
+/* Import .scss files */
+@import "config/sass/_variables"; /* import variables */
+@import "config/sass/_mixins"; /* import mixins */
+@import "config/sass/_aside"; /* import <aside>/<footer> styles  */
+
+/* Style link text for homepage snippets */
+a.post-link {
+  text-decoration: none;
+  font-size: 8px;
+  font-size: 0.8em;
+
+  &:hover {
+    color: darken($pink, 10%);
+    text-decoration: underline; 
+  }
+
+}
+
+/* Style link text for homepage snippets */
+a.newest-post-link {
+  text-decoration: none;
+  font-size: 10px;
+  font-size: 1em;
+
+  &:hover {
+    color: darken($pink, 10%);
+    text-decoration: underline; 
+  }
+
+}
+
+.all-article-header {
+  @include hide-element;
+}
+
+/* Style link text for homepage snippets */
+a.category-name {
+  text-decoration: none;
+  color: $mainLinkColor;
+
+  &:hover {
+    text-decoration: underline; 
+  }
+
+}
+
+/* Style the "view more..." link on the homepage */
+a.view-more-link {
+  display: block;
+  margin: 10px auto 30px;
+
+  font-size: 22px;
+  font-size: 2.2em;
+  font-size: 2.2rem;
+  text-align: center;
+
+  @include bold;
+}
+
+/* A hack that aligns all older snippets text to the left */
+.first-homepage-post-snippet,
+.homepage-post-snippet {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+
+  /* Style all post snippets on mobile view */
+  .homepage-post-snippet,
+  .first-homepage-post-snippet {
+    min-width: 300px;
+    max-width: 760px;
+    min-height: 374px;
+    padding: 15px;
+    margin: 0 0 70px;
+    vertical-align: top;
+
+    background-color: lighten($pink, 35%);
+    text-transform: lowercase;
+  }
+
+  /* Hide the category name on mobile views*/
+  .category-name {
+    @include hide-element;
+  }
+
+}
+
+
+
+@media (min-width: 768px) {
+
+  .center-new-article {
+    margin: 0 auto;
+  }
+
+  .homepage-post-snippet {
+    max-width: 311px;
+    min-height: 415px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px 20px;
+
+    background-color: lighten($pink, 45%);
+  }
+
+  .first-homepage-post-snippet {
+    margin-left: 24px;
+
+    background-color: lighten($pink, 30%);
+  }
+
+  .homepage-post-snippet,
+  .first-homepage-post-snippet {
+    padding: 11px;
+
+    text-transform: lowercase;
+  }
+
+  /* Style category name that appears at top of homepage ad snippets */
+  .category-name {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-size: 1.4rem;
+
+    @include show-element;
+    @include bold;
+  }
+
+  /* Style the container with ads */
+  .ad-container {
+    width: 425px;
+  }
+
+  /* Style a single homepage ad */
+  .single-homepage-ad {
+    width: 200px;
+    margin: 0 6px 5px;
+  }
+
+  /* push <main> further down the page */
+  .site-main {
+    margin-top: 70px;
+  }
+
+  /* Add top margin to other articles section, give it a top border */
+  .other-articles-class {
+    margin-top: 60px;
+    border-top: 1px solid #B7b7B7;
+  }
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .first-homepage-post-snippet {
+    min-height: 508px;
+    max-height: 508px;
+  }
+
+  /* position homepage ads on tablet/desktop view */
+  .front-page-ad-column {
+    margin-left: 74px;
+  }
+
+  .ad-container {
+    position: relative;
+    right: 39px;
+  }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* position homepage ads on tablet/desktop view */
+  .col-md-4 {
+    margin: 0 auto;
+  }
+
+  /* A hack to center all the older post homepage snippets */
+  .other-articles-class {
+    text-align: center;
+  }
+
+  .front-page-ad-column {
+    display: table;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .ad-container {
+    width:530px;
+  }
+
+  .single-homepage-ad {
+    margin: 31px;
+    display: inline-block;
+  }
+
+  .first-homepage-post-snippet {
+    width: 768px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .content-area {
+    margin: 0;
+  }
+  .front-page-ad-column{
+    margin-left: 74px;
+  }
+
+  /* Set a minimum height for the first homepage post snippet */
+  .first-homepage-post-snippet {
+    min-height: 505px;
+  }
+
+  .all-articles-class {
+    max-width: 995px;
+    margin: 0 auto;
+  }
+
+  .ad-container {
+    position: relative;
+    right: 39px;
+  }
+
+  /* Style the "view more..." link below the article listing */
+  a.view-more-link {
+    width: 230px;
+    display: block;
+    margin:10px auto 30px;
+
+    text-align: center;
+  }
+
+  /* Commented out for now but may be needed later */
+  /* Remove default margins that Bootstrap sets on the .row class */
+  /*
+  .row {
+    margin: 0;
+  }
+  */
+
+}

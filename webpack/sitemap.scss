@@ -1,0 +1,18 @@
+/* Sitemap page styling ONLY!! Compiled as a dependency via webpack */
+
+/* Import .scss files */
+@import "config/sass/_mixins";
+
+
+.wsp-category-title {
+  padding-top: 36px;
+  display: block;
+}
+
+.wsp-posts-list li {
+  list-style-type: none;
+}
+
+li.wsp-post {
+  list-style-type: disc;
+}

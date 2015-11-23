@@ -1,0 +1,350 @@
+@media (max-width: 767px) {
+
+  /* LOGO CONTAINER STYLES START */
+
+  /* Fix the site header on mobile */
+  .site-header {
+    position: fixed;
+  }
+  
+  /* Center the site title on mobile */
+  .site-title {
+    text-align: center;
+  }
+
+  /* LOGO CONTAINER STYLES END */
+
+
+  /* MOBILE MENU STYLES START */
+
+  /* Mobile menu containing element */
+  .mobile-menu {
+    position: relative;
+    bottom: 40px;
+    height: 48px;
+    width: 48px;
+    .z2();
+
+    border-radius: 4px;
+    background-color: transparent;
+  }
+
+  /* Mobile search containing element */
+  .mobile-search {
+    position: absolute;
+    right: 8px;
+    bottom: 7px;
+
+    cursor: pointer;
+    color: #000;
+  }  
+
+
+  /* Mobile menu container lines, i.e., the "hamburger menu" */ 
+  .mobile-menu-bar {
+    display: block;
+    width: 31px;
+    height: 4px;
+    margin: 0 auto 4px;
+
+    background-color: #000;
+    border-radius: 2px;
+  }
+
+  /* Style the search box input on mobile devices */
+  .header-search-field {
+    width: 233px;
+    padding: 0 7px;
+  }
+
+  /* Style the search submit button on mobile devices */
+  .header-search-submit {
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;;
+    -moz-box-shadow: none;;
+    box-shadow: none;;
+  }
+  
+  /* Style the icon in the search submit button on mobile devices */
+  .mobile-search-btn-color {
+    color: lighten(@pink, 30%);
+    font-weight: bolder;
+  }
+
+  /*
+   * Have the lines in the mobile turn pink
+   * Do this for multiple classes
+   */
+  .btn-default:active span,
+  .btn-default:hover span,
+  .btn-default:focus span {
+    background-color: darken(@pink, 30%);
+  }
+
+  /* MOBILE MENU STYLES END */
+
+  .site-branding {
+    position: relative;
+    height: 51px;
+    width: 100%;
+    top:0;
+    right:0;
+    left:0;
+
+    background-color: @pink;
+  }
+
+  /*
+   * Hide some elements on mobile views with .ti() text-indent mixin
+   * May not be needed so it's commented out for now
+   */
+  /*.glyphicon {
+  	.ti()
+  }
+  */
+
+  /* Hide the site colophon/description on mobile view */
+  .site-description {
+    .hide-element()
+  }
+
+  /* define width/center <main> element on mobile view */
+  .site-main {
+    width: auto;
+    margin: 0 auto
+  }
+  /*
+   * Move the site content down on mobile views on some pages
+   * Do this to make room for the search box
+   */
+  .site-content {
+    margin-top: 95px;
+  }
+
+  /* Center/gutter site content on mobile devices */
+  .content-area {
+    margin: 0 18px;
+  }
+
+  /* Style the search box on hand-held devices */
+  .searchform-class {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    right:0;
+    padding: 10px;
+
+    background-color: darken(@pink, 10%);
+    opacity:0;
+
+    .drop-shadow();
+  }
+
+  /* Add space between a single post's header & content */
+  .entry-header {
+    margin-bottom: 42px;
+  }
+
+  /* Hide certain breadcrumb elements */
+  .hide-breadcrumb-element {
+    .hide-element();
+  }
+
+  /* Style post title on mobile views */
+  .entry-title {
+    font-size: 38px;
+    font-size: 3.8rem;
+    font-weight:bold;
+  }
+
+  /* Style main nav on mobile views */
+  .main-navigation {
+    position: absolute;
+    top: -301px;
+    width: 100%;
+    height: 300px;
+    
+    background-color: lighten(@pink, 10%);
+  }
+
+  a.nav-links {
+    height: 70px;
+    display: block;
+    padding-left: 10px;
+    line-height: 4rem;
+    line-height: 4em;
+
+    color: #000;
+    text-decoration: none;
+    font-weight:900;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: darken(@pink, 10%);
+    }
+    &:visited {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  
+
+  /*
+   * ==================================================================
+   * HEADER STYLES START
+   * ==================================================================
+   */
+
+
+/* Style the <header> */
+.site-header {
+  width: 100%;
+  height: 49px;
+  top:0;
+  right: 0;
+  left: 0;
+  -webkit-transform: translateZ(0);
+
+  .z1();
+}
+
+  /*
+   * ==================================================================
+   * HEADER STYLES END
+   * ==================================================================
+   */
+
+
+
+  /*
+   * ==================================================================
+   * POST STYLES END
+   * ==================================================================
+   */
+
+  .post-comment {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Make the comment textarea's width a certain width */
+  .comment-textarea {
+    width: 290px;
+  }
+
+  /*
+   * ==================================================================
+   * POST STYLES END
+   * ==================================================================
+   */
+
+
+  /*
+   * ==================================================================
+   * CATEGORY PAGE STYLES START
+   * ==================================================================
+   */
+
+  .blog .homepage-title-link,
+  .category .homepage-title-link {
+    font-size: 27px;
+  }
+
+  /*
+   * ==================================================================
+   * CATEGORY PAGE STYLES END
+   * ==================================================================
+   */
+
+
+
+  /*
+   * ==================================================================
+   * ASIDE STYLES START
+   * ==================================================================
+   */
+
+    .loading {
+      .hide-element();
+    }
+
+    .bio-image {
+      .hide-element();
+    }
+  /*
+   * ==================================================================
+   * ASIDE STYLES END
+   * ==================================================================
+   */
+
+
+  /*
+   * ==================================================================
+   * FOOTER STYLES START
+   * ==================================================================
+   */
+
+  /* Style the main site <footer> on hand-helds */
+  .site-footer {
+    padding-top: 15px;
+  }
+
+  /* Space out some text in the <footer> */
+  .footer-text-spaced {
+    margin-top: 25px;
+  }
+
+  /*
+   * Style the "Back To Top" button
+   * Appears on mobile devices only, so it should be in "media"
+   */
+  .jump-to-top {
+    margin: 40px auto 0;
+    padding:10px;
+    width: 200px;
+
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    background-color: #000;
+  }
+
+  .load-footer-content-message {
+    height: 40px;
+    margin-top: 85px;
+    vertical-align: middle;
+
+    color: #fff;
+    text-align: center;
+    background-color: lighten(@pink, 5%);
+    cursor: pointer;
+
+    .bolder();
+  }
+
+
+  /*
+   * Globally set main link color for the site
+   * Only the hover pseudo class shows an underline
+   */
+  a.jump-to-top-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+
+
+  /*
+   * ==================================================================
+   * FOOTER STYLES END
+   * ==================================================================
+   */
+
+}

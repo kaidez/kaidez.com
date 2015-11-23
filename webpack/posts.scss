@@ -1,0 +1,280 @@
+/* Single post styling ONLY!! Compiled as a dependency via webpack */
+
+/* Import .scss files */
+@import "config/sass/_variables"; /* import variables */
+@import "config/sass/_mixins"; /* import mixins */
+@import "config/sass/_prism-styles"; /* import code highlight styles */
+@import "config/sass/_aside"; /* import <aside>/<footer> styles  */
+
+/* Add space between the breadcrumbs and the content */
+.entry-title-margin {
+  margin-top: 20px;
+}
+
+/* add space above a post's time/author info */
+.entry-content {
+  font-size: 18px;
+  font-size: 1.8em;
+  font-size: 1.8rem;
+  line-height: 26px;
+}
+  
+/* Style <li> tags that appear in single posts */
+.post-list-item {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+/* List items for Facebook & Google+ links for post pages */
+.share-post-list-item {
+  display: inline-block;
+
+  list-style-type: none;
+}
+
+/* Style the Table of Contents header on single posts */
+.table-of-contents {
+  clear: both;
+}
+
+.other-sharing-element {
+  margin-top:30px;
+
+  text-align: center;
+}
+
+.other-ways-text {
+  display:block;
+  margin-bottom:10px;
+}
+
+
+/*
+ * Style the <hr> tag above post comments
+ * Old-school trick stolen from HTML5 Boilerplate
+ * Read more at: http://bit.ly/html5bp-hr
+ */
+.post-hr {
+  max-width: 787px;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid darken($pink, 45%);
+  margin: 1em 0;
+  padding: 0;
+}
+
+.post-ad {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+/* Style the submit button on all posts */
+.submit {
+  padding: 10px;
+  border: none;
+
+  color:#fff;
+  background-color:darken($pink, 15%);
+}
+
+/* Place Comment labels above the form fields */
+.comment-label {
+  display: block;
+}
+
+  
+
+/* Style the Facebook & Google+ links on single post pages */
+.sharing-buttons {
+  padding: 13px;
+  border: 1px solid #000;
+}
+
+/* Style the "Click to Tweet" link on single post pages */
+.tweet-post-class {
+  display: block;
+  height: auto;
+  margin: 15px auto 0;
+  padding: 10px;
+
+  background-color: $pink;
+  text-align: center;
+  cursor: pointer;
+
+  @include br;
+}
+
+/* Style the "Click to Tweet" link states */
+a.tweet-post-class {
+  color: #fff;
+  text-decoration: none;
+  &:visited {
+    color: #fff;
+  }
+  &:hover, &:active {
+    color: #fff;
+    background-color: #55acee;
+  }
+}
+
+/* Style the table of contents that appear in single posts */
+.table-of-contents-header {
+  clear: both;
+}
+
+/*
+ * Hide rel/prev links. Watch for WP 4.3 update to not use this (maybe)*/
+.post-navigation {
+  @include hide-element;
+}
+
+/* Add top space to sharing/ad element at the end of single posts */
+.sharing-ad-element {
+  padding-top: 70px;
+  clear: both;
+}
+/* Facebook share link styles only */
+.facebook {
+  margin-right: 10px;
+
+  background-color: #3b5998;
+}
+
+/* Google+ share link styles only */
+.googleplus {
+  margin-left: 10px;
+  
+  background-color: #dd4b39;
+}
+
+/* Facebook AND Google+ element styles */
+.facebook, .googleplus {
+  padding: 10px;
+  line-height: 1;    
+
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: normal;
+
+  @include br;
+}
+
+/* Facebook AND Google+ link state styles */
+a.facebook, a.googleplus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Add space to the bottom of the header */
+.entry-header {
+  margin-bottom: 25px;
+}
+
+/* Bold the time & author info on the posts */
+.entry-meta {
+  @include bold;
+}
+
+/* Start related posts styles link */
+
+/* The related posts container */
+.rp4wp-related-posts {
+  margin: 30px 0 68px;
+}
+
+/* "more posts..." text */
+.rp4wp-related-posts h3 {
+  margin: 53px 0 10px;
+
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.rp4wp-related-posts ul {
+  width:100%;
+  padding:0;
+  margin:0;
+}
+
+.rp4wp-related-posts ul>li {
+  padding:0;
+  margin:0;
+  clear:both;
+
+  list-style:none;
+}
+
+.rp4wp-related-posts ul>li>p {
+  margin:0;
+  padding:0;
+}
+
+@media (min-width: 768px) {
+
+  /* Add a border to sharing/ad element at the end of single posts */
+  .sharing-ad-element {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+
+  /* Style the sharing module on single post pages */
+  .sharing-buttons {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+  }
+
+  /* Style the add at the end of a single post */
+  .post-ad {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+
+  /* Style the add at the end of a single post */
+  .wordpress-post-ad {
+    display:inline-block;
+    margin-left:20px;
+    position: relative;
+    bottom: 56px;
+  }
+  
+}
+
+@media (max-width: 767px) {
+
+  /* Add a border to sharing/ad element at the end of single posts */
+  .sharing-ad-element {
+    border: none;
+  }
+
+  /* Style the Facebook & Google+ links on single post pages */
+  .sharing-buttons {
+    max-width:768px;  
+
+    text-align: center;
+  }
+
+  .post-ad {
+    display: none;
+    float: none;
+    margin: 0;
+  }
+
+  /* Hide the WordPress ad on mobile*/
+  .wordpress-post-ad {
+    display: none;
+  }
+
+  /* Style the tweet button for single posts on mobile */
+  .tweet-post-class {
+    max-width: 300px;
+
+    font-size: 15px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+
+}

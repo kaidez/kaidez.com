@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Results</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="css/tipuesearch.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/detect.js"></script>
+</head>
+<body>
+  <div id="container" class="containerClass">
+  <h1>Search Results</h1>
+    <div id="searchbox"><div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <!-- change the "value" attribute below to point to your site -->
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div>
+    <p>
+      This is the demo page for the <a href="/custom-jekyll-search/">Custom Jekyll Search Tutorial</a> over on <a href="http://kaidez.com/">kaidez.com</a>
+    </p>
+    <p>
+      To properly test it:<br />
+      -Do a search for the word "javascript" or "tipue".<br />
+      -Disable JavaScript and/or CSS in your browser, then do a search again...it should return the result in a Google Search page.
+    </p>
+  </div>
+
+  <div id="tipue_search_content"></div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/tipuesearch_content.js"></script>
+  <script src="js/tipuesearch_set.js"></script>
+  <script src="js/tipuesearch.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
