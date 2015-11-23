@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>New Site I Worked On: RevlonProBrands.com &laquo; Personal &laquo; kaidez</title>
+  <meta name="description" content="kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/revlon-pro-brands/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="New Site I Worked On: RevlonProBrands.com" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/revlon-pro-brands/" property="og:url">
+
+
+
+  <meta content="2014-09-12T00:00:00-04:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/revlon-pro-brands.jpg" property="og:image">
+
+
+
+  
+  <meta content="personal" property="article:section">
+  
+
+
+
+  
+  <meta content="revlon" property="article:tag">
+  
+  <meta content="atom" property="article:tag">
+  
+  <meta content="jade" property="article:tag">
+  
+  <meta content="oocss" property="article:tag">
+  
+  <meta content="gulp" property="article:tag">
+  
+  <meta content="grunt" property="article:tag">
+  
+  <meta content="Modernizr" property="article:tag">
+  
+  <meta content="yepnope" property="article:tag">
+  
+  <meta content="GitHub" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="New Site I Worked On: RevlonProBrands.com">
+  <meta name="twitter:description" content="kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/revlon-pro-brands.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/personal/" title="More Personal posts on kaidez.com">Personal</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">New Site I Worked On: RevlonProBrands.com</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">New Site I Worked On: RevlonProBrands.com</h1>
+
+            <time datetime="2014-09-12" itemprop="datePublished" pubdate>September 12, 2014</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p>Revlon, my employer, recently launched <a href="http://www.revlonprobrands.com/us" title="visit RevlonProBrands.com">RevlonProBrands.com</a>, a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a <a href="http://www.sitecore.net/" title="visit Sitecore: a .NET based content management system">Sitecore</a> environment.</p>
+
+<p>There wasn't a need for lots complicated client-side code, but working on this project gave me the chance to use certain web development tools and code techniques. Let's discuss them:</p>
+
+<h2 class="tableOfContentsHeader">Table of Contents</h2>
+
+
+<ol>
+<li><a href="#atom">GitHub Atom</a></li>
+<li><a href="#jade">Jade</a></li>
+<li><a href="#oocss">OOCSS</a></li>
+<li><a href="#modernizr-yepnope">Modernizr &amp; yepnope</a></li>
+<li><a href="#grunt-gulp">Grunt &amp; Gulp</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+
+<p><a name="atom"></a></p>
+
+<h3>GitHub Atom</h3>
+
+<p><a href="http://www.sublimetext.com/" title="visit Sublime Text">Sublime Text</a> was my primary development environment for this project, but there were a few instances when I switched to <a href="https://atom.io/" title="visit Atom">Atom</a>. Which is a web editor that <a href="https://github.com/" title="visit GitHub">GitHub</a> released to beta a few months ago from this blog post.</p>
+
+<p>Atom definitely "takes inspiration" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom.</p>
+
+<p>This includes Git and GitHub integration, which is obvious when you consider Atom's creator. If your project is already Git-configured (i.e., if you've already done a full <code>git init</code> inside of it and it's been pushed up to GitHub at least once), the configs can communicate with Atom and perform lots of Git-related tasks.</p>
+
+<p>Here are a few of the tasks...</p>
+
+<ul>
+<li>Atom can read a project's <code>.gitignore</code> file  and tell you which files are ignored by greying them out in your project tree.
+<figure class="postFigure">
+<img src="/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore works with Atom">
+<figcaption class="postFigureCaption">Greyed-out files are in .gitignore</figcaption>
+</figure></li>
+<li>Atom tells you what branch you're currently working on.
+<figure class="postFigure">
+<img src="/img/atom_02.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+<figcaption class="postFigureCaption">Current Git branch appears in the bottom-left corner of your editor</figcaption>
+</figure></li>
+<li>Atom uses color-coding to indicate that files need to be commited to your git repo.
+<figure class="postFigure">
+<img src="/img/atom_03.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+<figcaption class="postFigureCaption">Orange indicates that an already-existing file has been updated while green indicates that a new file has been added to the project, but hasn't been committed yet</figcaption>
+</figure></li>
+</ul>
+
+
+<p>This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-installed nonetheless.</p>
+
+<p>That these features are installed as packages is key to Atom's design. Atom adopts a modularized architecture as a result, making it easy to configure and adjust the architecture if needed.</p>
+
+<p>This highly configurable setup is mostly thanks to Atom's deep Node integration. Peek at most of Atom's pre-installed plugins and you'll see a basic Node architectural pattern...if you're a regular Node hacker then adding Atom to your toolkit is close to a no-brainer.</p>
+
+<p>Managing settings in Atom is done using a nice user interface, something that Atom has over Sublime Text (at least I think so). Adding themes, installing/removing packages and creating custom settings is a breeze in Atom.</p>
+
+<p>Again, Atom is in beta at the time of this post but it a version 1.o release is looming.  GitHub once said that there would be both free and paid versions of the editor, but it appears that it's now <em>100% free!!!</em>.</p>
+
+<p>I'm not yet ready to leave Sublime Text for Atom...I've gotten extremely comfortable with Sublime Text over the years and have it setup just how I want it. Keystrokes are memorized, bash scripts are synced up, themes are picked, etc.</p>
+
+<p>But this may change.  Will probably go full-on Atom for next project and put to the test.
+<a name="jade"></a></p>
+
+<h3>Jade</h3>
+
+<p>RevlonProBrands.com is a <em>responsive/adaptive/insert-another-buzzword-here</em> website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.</p>
+
+<p>I chose <a href="http://jade-lang.com/" title="visit the Jade templating">Jade</a> for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like <a href="http://lesscss.org/" title="visit LESS, a JavaScript-based CSS processor">LESS</a> and <a href="http://haml.info/" title="visit Haml, an HTML abstraction markup language">Haml</a> in the sense that indentation defines block structure.</p>
+
+<p>So you <a href="https://www.npmjs.org/package/jade" title="install Jade with npm">use npm to install Jade</a> on your machine. Then create <code>.jade</code> files like this...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>doctype html
+html
+  head
+    title kaidez.com
+  body
+    h1 My Page Header</code></pre>
+</div>
+
+
+<p>And with a few keystrokes, this file will output an <code>.html</code> file like this</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;kaidez.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Page Header&lt;/h1&gt;
+    &lt;p&gt;My Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>I went with Jade because I've been playing with the <a href="http://mean.io/" title="review the MEAN stack">MEAN stack</a> lately and <a href="http://expressjs.com/" title="visit Express, the Node-based web server framework">Express</a> (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.</p>
+
+<p>Jade has "includes" functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.</p>
+
+<p>So in other words, these two <code>.jade</code> files...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>//index.jade
+doctype html
+html
+  include includes/header //this is an include file
+  body
+    h1 My Page Header
+    p My Content</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>//includes/header.jade
+head
+  title kaidez.com</code></pre>
+</div>
+
+
+<p>...<em>SHOULD</em> output a single <code>.html</code> file like this...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;kaidez.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Page Header&lt;/h1&gt;
+    &lt;p&gt;My Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>The indentation didn't QUITE work out the way I wanted to when I used a <code>&lt;header&gt;</code> tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.</p>
+
+<p>That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer, so I couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use <a href="http://jekyllrb.com/" title="visit Jekyll">Jekyll</a>, which has an incredibly straightforward templating system.
+<a name="oocss"></a></p>
+
+<h3>OOCSS</h3>
+
+<p>As mentioned in my <a href="http://kaidez.com/site-redesign-2013/" title="read 'kaidez.com 2013 Site Redesign' on kaidez.com">2013 site redesign post</a>, I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.</p>
+
+<p>There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: an object-oriented method for writing CSS using some common best practices.</p>
+
+<p>OOCSS is a beautifully crafted set of ideas by <a href="https://twitter.com/stubbornella/" title="stubbornella at Twitter">Nicole Sullivan</a>. The central ideas include:</p>
+
+<ul>
+<li>placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.</li>
+<li>separating these classes into two formats...one for style and one for structure.</li>
+<li>in true object-oriented style, reusing these classes across your page elements as needed.</li>
+<li>avoid inefficient CSS selectors, such as descendant selectors.</li>
+<li>always <a href="http://csslint.net/" title="lint you CSS with CSS Lint">linting your CSS</a> to test for bugs and confirm that CSS best practices are being followed.</li>
+</ul>
+
+
+<p>I applied these ideas to my Pro Brands page code, specifically the individual product image module. Each module contains lots and lots of shared CSS classes among the various page elements it contains.  Some of the module elements contain IDs; however, none of these elements have CSS styles applied on the ID level.</p>
+
+<p>OOCSS definitely takes some getting used to and takes more work.  Quite a few people have personally told me they disagree with it as a practice and don't use it.  But I have noticed that the CSS parses faster than if I hadn't used it so I'm not going to give up on it.</p>
+
+<p><a name="modernizr-yepnope"></a></p>
+
+<h3>Modernizr &amp; yepnope</h3>
+
+<p><em>(Author's note: Yepnope has sorta/kinda been deprecated (<a href="https://github.com/SlexAxton/yepnope.js#deprecation-notice">read more about this</a>) so this part of the post is here for historical purposes.)</em></p>
+
+<p>Sitecore loads one version of the site for desktops and a (slightly) different version of the site handheldz.</p>
+
+<p>Each product image reacts to a jQuery-powered <code>mouseover</code> on desktops and a jQuery-powered <code>click</code> on handhelds. The image reaction is, when one of those events happens, a window scrolls up over it displaying some product info using <code>jQuery.animate()</code>.</p>
+
+<p>The group of images is placed in a JS array where a <code>forEach</code> method loops over it, but <code>forEach</code> isn't supported in legacy Internet Explorer. That meant building a feature-detect for <code>forEach</code> and, if the site loaded into a browser that didn't support that, loading in a polyfill that would apply <code>forEach</code> support in such browsers.</p>
+
+<p>This whole process was managed by <a href="http://modernizr.com" title="Read more about Modernizr">Modernizr</a> and its <a href="http://modernizr.com/docs/#load" title="Read more about Modernizr.load()">Modernizr.load() method</a>.  And it's a pretty straightforward process when keeping a few things in mind...</p>
+
+<ul>
+<li>Note that <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill" title="Get the 'forEach' polyfill code at Mozilla Developer Network">MDN provides a great piece of polyfill code<sup>1</sup></a>...I copied it into a file called <code>forEachPolyfill.js</code>.</li>
+<li>Remember that a full Modernizr build performs features detects for many things by default, but not everything.</li>
+<li>Remember that you can <a href="http://modernizr.com/download/" title="Create a custom Modernizr build">create a custom Modernizr build</a> with only the features-detects you want, and can also create your own custom features-detects for the things that Modernizr doesn't look for by default...this is done with Modernizr's sorely under-used <code>addTest()</code> method.</li>
+<li>Note that Modernizr provides a well-stocked list of <a href="https://github.com/Modernizr/Modernizr/tree/master/feature-detects" title="See some Modernizr pre-written feature detects">pre-written feature-detects in its GitHub repo</a>.</li>
+</ul>
+
+
+<p><small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small></p>
+
+<p>But most importantly, remember that Modernizr has a <code>Modernizr.load()</code> method that's based on yepnope.js
+I applied a custom feature-detect based on one of these pre-written pieces of code: <a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js" title="See Modernizer's ES5 feature-detect polyfill">the ECMAScript 5.1 array feature-detects</a>. I then placed the code in a file called <code>forEachTest.js</code>.</p>
+
+<p>There are two versions of <code>app.js</code>: one for desktops and one for mobiles &amp; handhelds. Sitecore uses device detection to decide which one to load.</p>
+
+<p>The .js files look like this:</p>
+
+<p><strong>forEachTest.js</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>/*
+ * Make Modernizr test for &quot;Array.prototype.forEach&quot; so it can work
+ * cross-browser when building out the single product modules. When
+ * the test passes, &quot;Modernizr.foreach&quot; is attached to the list of
+ * Modernizr classes in the &lt;html&gt; tag.
+ */
+Modernizr.addTest(&quot;foreach&quot;, function(){
+  var forEachFunc = Array.prototype.forEach;
+  return typeof forEachFunc === &quot;function&quot;
+});
+
+Modernizr.load({
+  test: Modernizr.foreach,
+  yep: &quot;js/app.js&quot;,
+  nope: [&quot;forEachPolyfill.js&quot;, &quot;app.js&quot;]
+});</code></pre>
+</div>
+
+
+<p><strong>app.js (Mobile/Handheld Version)</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>function ScrollContent() {}
+
+/*
+ * &quot;buildScrolls&quot; method: runs faster if it&#39;s attached to core
+ * function&#39;s prototype and not inside core function.
+ */
+ScrollContent.prototype.buildScrolls = function(element) {
+
+  /*
+   * scroll up code/down for mobile/handhelds using &quot;jQuery.click()&quot;
+   * below since this is the mobile/handheld version. In the desktop
+   * version, &quot;jQuery.click()&quot; is replaced by &quot;jQuery.mouseover()&quot;.
+   */
+
+   // scroll up
+  $(&quot;#&quot; + element + &quot;Id&quot;).click(function() {
+    $(&quot;#&quot; + element + &quot;Content&quot;).animate({
+      top: &quot;-=434px&quot;
+    }, &quot;fast&quot;);
+  });
+
+  // scroll down
+  $(&quot;#&quot; + element + &quot;Content&quot;).click(function() {
+    $(this).animate({
+      top: &quot;+=434px&quot;
+    }, &quot;fast&quot;);
+  });
+
+};
+
+var products = new ScrollContent();
+[&quot;productOne&quot;,&quot;productTwo&quot;,&quot;productThree&quot;,&quot;productFour&quot;,&quot;productFive&quot;,&quot;productSix&quot;,&quot;productSeven&quot;].forEach(products.buildScrolls);</code></pre>
+</div>
+
+
+<p>And the HTML code for each scroll looks somewhat like this...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;div id=&quot;productOneId&quot;&gt;
+  &lt;div id=&quot;productOneContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;productTwoId&quot;&gt;
+  &lt;div id=&quot;productTwoContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;productThreeId&quot;&gt;
+  &lt;div id=&quot;productThreeContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;productFourId&quot;&gt;
+  &lt;div id=&quot;productFourContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;productFiveId&quot;&gt;
+  &lt;div id=&quot;productFiveContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;productSixId&quot;&gt;
+  &lt;div id=&quot;productSixContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;productSevenId&quot;&gt;
+  &lt;div id=&quot;productSevenContent&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>The divs that end in "Id" are buttons that run one of the mouse events while the divs that end in "Content" contain the  product images that appear on the mouse events.</p>
+
+<p>So on page-load, everything works as follows...</p>
+
+<ol>
+<li>Inside <code>forEachTest.js</code>, Modernizr tests for the existence of <code>forEach</code> in the browser.</li>
+<li>If <code>forEach</code> exists, the "yep" part of the code runs and loads <code>app.js</code> into the browser.</li>
+<li>If <code>forEach</code> does NOT exist, the "nope" part of the code runs and adds both the polyfill code and <code>app.js</code> into the browser.</li>
+<li>When one of the divs ending in id receives one of the mouse events, the <code>ScrollContent.buildScrolls()</code> method in <code>app.js</code> runs.</li>
+<li><code>ScrollContent.buildScrolls()</code> takes an array of text strings, and each array item in the array is  passed as the <code>element</code> parameter in <code>buildScrolls()</code>.</li>
+<li><p>The parameters are text strings that get passed to the <code>element</code> reference in the jQuery event calls. So for example:</p>
+
+<ul>
+<li>the value of <code>element</code> in the forEach loop is "productOne".</li>
+<li>two text strings are built as a result: "#productOneId" and "#productOneContent".</li>
+<li>both text strings match the name of the div in the HTML code, synchronizing with the jQuery event calls</li>
+</ul>
+</li>
+</ol>
+
+
+<p><a name="grunt-gulp"></a></p>
+
+<h3>Grunt &amp; Gulp</h3>
+
+<p>I can't see task tools like <a href="http://gruntjs.com" title="Learn more about the Grunt task runner">Grunt</a> being omitted from my workflow and as discussed in my last site redesign post, <a href="/site-redesign-2013/#grunt-deployment-workflow" title="Read about kaidez.com's 2013 site redesign">Grunt ruled my workflow</a>. But <a href="http://gulpjs.com/," title="Learn more about Gulp">Gulp</a> has emerged as formidable challenger to Grunt.</p>
+
+<p>Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarities but these are the two that stick out to me the most.</p>
+
+<p>The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I think that the streaming system makes parts of it easier. Gulp streams allow for the easy chaining of tasks as well as requiring less configuration, and I like that.</p>
+
+<p>I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.</p>
+
+<p>The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the <a href="http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/" title="Listen to Eric Schoffstall on JavaScript Jabber">JavaScript Jabber Podcast</a>...give it a listen.</p>
+
+<p><a name="conclusion"></a></p>
+
+<h3>Conclusion</h3>
+
+<p>There weren't REALLY a lot of code challenges for me in this project...a simple one-pager like this doesn't bring any. But I pushed myself with code a little and played with some new tools. I accomplished what I wanted to and as a developer, that's enough.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share New Site I Worked On: RevlonProBrands.com on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/revlon-pro-brands/" title="Share New Site I Worked On: RevlonProBrands.com on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/revlon-pro-brands/&t=New Site I Worked On: RevlonProBrands.com" class="share-post-link fb" title="Share New Site I Worked On: RevlonProBrands.com on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

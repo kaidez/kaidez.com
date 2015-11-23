@@ -1,0 +1,17 @@
+---
+layout: default
+title: Liquid Variable Output
+meta-excerpt: Web development tutorials for beginners, product reviews, rants and more from kaidez
+---
+
+{% for post in site.categories.tutorials limit:2 offset:3 %}
+<span>{{ forloop.index }}: {{ post.title }}</span>
+<br />
+{% endfor %}
+
+<br /><br />
+{% assign name = 'freestyle' %}
+
+{% for t in collections.tags %}{% if t == name %}
+  <p>Freestyle!</p>
+{% endif %}{% endfor %}

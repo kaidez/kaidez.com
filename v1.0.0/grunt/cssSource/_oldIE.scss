@@ -1,0 +1,396 @@
+/*
+ * ====================================================================
+ * oldIE styles start:
+ *
+ * The 'mobile first' styles load first because they're not inside of a 
+ * '@media' call.  As a result, they are the styles that will render in IE8 
+ * and lower, which we don't want: the desktop styles should load first.  
+ * Therefore, 'oldIE.scss' is created to to hold styles that should render in 
+ * these browsers and load after the "mobileLandscape" styles.
+ * ====================================================================
+ */
+
+
+.lt-ie9 {
+
+  body {
+    @include fonts($openSans);
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    content: none;
+    display: block;
+  }
+
+  .clearfix:after {
+    clear: none;
+  }
+
+   
+
+
+  // =========================================================================
+  //  Header styles start
+  //  ========================================================================
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link(65px, 209px);
+  }
+
+  // <header> tag
+  .site-header {
+    @include site-header;
+  }
+
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    @include inner-wrapper-nav-header;
+  }
+
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outer-wrapper-nav-header {
+    @include outer-wrapper-nav-header;
+    @include gradient-bg;
+    min-height: 130px;
+  }
+
+  // <h2> tag...the "closing tags...wrapping functions" text
+  .site-description {
+    display: block;
+    position: static;
+    font-size: 16px;
+    margin: 0;
+    width: 270px;
+    line-height: 2.5;
+  }
+
+  // =========================================================================
+  //  Header styles start
+  //  ========================================================================
+
+
+
+
+
+  // =========================================================================
+  //  Navigation styles start
+  //  ========================================================================
+
+  // <nav> tag
+  .main-navigation {
+    width: auto;
+    border: none;
+  }
+
+  // wrapper for the <nav> and searchbox tag
+  .nav-search-style {
+     @include nav-search-style;
+  }
+
+  // <ul> for main nav
+  .site-navigation-list-styles {
+    @include show-menu;
+    margin: 11px auto 0 auto;
+    padding: 0; 
+  }
+
+
+  // Apply the Google font to all <nav> links after page load
+  .site-navigation-list-link a:link,
+  .site-navigation-list-link a:visited { 
+    @include fonts($robo, visible);
+    @include master-center;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+    float: left;
+    padding: 9px 0;
+    display: block;
+    color: $base-link-color;
+  }
+
+  // =========================================================================
+  //  Navigation styles end
+  //  ========================================================================
+
+
+
+
+
+  // =========================================================================
+  //  Search styles start
+  //  ========================================================================
+  
+  // add a box-radius to the main search form on the desktop view only
+  .searchform-class {
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+    margin-top: 13px;
+  }
+
+  // The div that contains the search box...either show it or hide it
+  .searchbox-display {
+    display: block;
+  }
+
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+  }
+  
+  // jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
+  #tipue_search_input {
+    font: 13px/1.5 'open sans', sans-serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    transition : background-color 200ms ease-out; 
+    -webkit-transition : background-color 200ms ease-out; 
+    -moz-transition : background-color 200ms ease-out;
+    -o-transition : background-color 200ms ease-out;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+  }
+ 
+  #tipue_search_input:focus {
+    border-color: green;
+    background-color: #f3f3f3; 
+  }
+
+  #tipue_search_button {
+    width: 60px;
+    height: 33px;
+    margin-top: 1px;
+    border: 1px solid #dcdcdc;
+    border-radius: $master-border-radius;
+    background: #f1f1f1 url('../img/search.gif') no-repeat center;
+    outline: none;
+  }
+
+  #tipue_search_button:hover {
+    border: 1px solid #c3c3c3;
+    -moz-box-shadow: 1px 1px 2px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+    box-shadow: 1px 1px 2px #e3e3e3;
+  }
+
+  // =========================================================================
+  //  Search styles end
+  //  ========================================================================
+
+
+
+
+
+  // =========================================================================
+  // Page content styles start
+  // =========================================================================
+
+  // header font-size on search results page
+  .tipue_search_content_title {
+    font-size: 32px;
+  }
+  
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
+    @include post-category-title(40px, 56px 0 11px);
+  }
+
+  // title tag for post snippets
+  .post-snippet-title {
+    font-size: 34px;
+  }
+
+  .page-content {
+    @include page-content($inner-content-width, #F5F5F5);
+  }
+  
+  // breadcrumbs
+  .breadcrumb-styles {
+    @include breadcrumb-styles(16px, 45px);
+  }
+
+  .breadcrumb-styles a:link,
+  .breadcrumb-styles a:visited  {
+    text-decoration: underline;
+    color: darken($header-color, 20);
+  }
+
+  .breadcrumb-styles a:hover  {
+    text-decoration: none;
+    color: darken($header-color, 20);
+  }
+
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(10px);
+  }
+
+  // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
+  .breadcrumb-last {
+    display:inline;
+  }
+
+  // styling for pictures with captions on posts pages
+  .post-image-box {
+    margin:60px auto;
+    text-align: center;
+  }
+
+  // styling for captions copy
+  .post-image-caption {
+    font-style: italic;
+  }
+
+  // link styling for the 'share link' area of the post pages
+  .share-post-link {
+    @include share-post-link;
+  }
+
+  // =========================================================================
+  //  Page content styles end
+  //  ======================================================================== 
+
+
+
+
+
+  // ==========================================================================
+  //  Aside styles start
+  // ==========================================================================
+
+  // the inner wrapper for the <aside>
+  .aside-inner-wrapper-class {
+    width: 1000px;
+    margin: 0 auto 53px;
+  }
+  
+  // apply background image to <aside>
+  .aside-outer-wrapper-class {
+    background: $aside-color url('/img/footer-bg.png') no-repeat left;
+    @include create-inner-box-shadow;
+    padding: 35px 10px;
+  }
+  
+  // create a "letterpress" text-shadow effect on <h3> tags in <aside>
+  .aside-section-header {
+    width: 250px;
+  }
+
+  // for the 3 columns in the <aside>
+  .aside-column-class {
+    width: 250px;
+    float: left;
+  }
+
+  // add left/right margin to the middle column so aside columns are evenly
+  // spaced on desktop view
+  .mid-aside-margin {
+    margin:0 125px
+  }
+
+  // the <aside> nav links
+  .aside-nav-link {
+    @include transitions(color);
+  }
+
+  // for the contact form fields in <aside>
+  .contact-form-field {
+    @include contact-form-field;
+  }
+
+  // ==========================================================================
+  //  Aside styles end
+  // ==========================================================================
+
+
+
+
+  // ==========================================================================
+  // Footer styles start
+  // ==========================================================================
+
+  // styling hook for <footer>
+  .footer-outer-wrapper-class {
+    @include create-inner-box-shadow;
+    height: 150px;
+  }
+  
+  // inner wrapper in the <footer>
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .copyright-style {
+    display:block;
+    clear: both;
+    padding: 59px 0;
+    margin: 0 auto;
+    text-align: start;
+    float: left;
+  }
+  
+  // <h3> for the colophon
+  .colophon-header {
+    color: darken($header-color,10);
+    display: block;
+    float: left;
+    margin-top: 16px;
+  }
+
+  //  the colophon containing element
+  .colophon-class {
+    background-color: darken($aside-color, 11);
+    @include site-border-radius;
+    height: 58px;
+    max-width: 700px;
+    float: right;
+    display: block;
+    padding:12px;
+    margin: 32px 0;
+  }
+
+  // <ol> element for Jekyll, AWS & MaxCDN links
+  .colophon-list-class {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  // individual <li> tags for footer image links
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    text-indent: -9999px;
+  }
+
+  // set height/width for jekyll bg link
+  .jekyll-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for aws bg link
+  .aws-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for maxcdn bg link
+  .maxcdn-link {
+    @include footer-link-hit-area(39px, 151px);
+  }
+
+}
+/* oldIE styles end */
+
+

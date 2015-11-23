@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title }} &laquo; kaidez</title>
+  <meta name="description" content="{{ page.meta-excerpt }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+  {% include open_graph_partial.html %}
+
+  {% include google_webfont_partial.html %}
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link" title="kaidez.com home page">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+          {% include navigation_partial.html %}
+
+          {% include searchbox_partial.html %}
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+    {% include category_breadcrumbs_partial.html %}
+
+    <main role="main" id="content" class="page-content" itemscope="itemscope" itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+      <section class="newestArticleClass">
+        <h1 class="category-title">Category: {{ page.title }}</h1>
+          {{ content }}
+      </section>
+    </main> <!-- #content -->
+
+    {% include aside_partial.html %}
+
+    {% include footer_partial.html %}
+
+  </div> <!-- #container -->
+
+  {% include scriptFile_partial.html %}
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+---
+layout: categories
+title: Code Tips
+meta-excerpt: Code Tips posts on kaidez.com discuss tips for certain web development topics. The reader should have a little better than basic knowledge of the topics.
+---
+
+  <div id="about-description" class="category-description-page">
+  	"Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/" title="Tutorials on kaidez.com">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
+  </div> <!-- #about-description -->
+
+  {% for post in site.categories.coding-best-practices %}
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      <p itemprop="text">{{ post.meta-excerpt }}</p>
+    </article>
+  {% endfor %}

@@ -1,0 +1,16 @@
+---
+layout: categories
+title: Personal
+meta-excerpt: Personal posts on kaidez.com include work that I've done, rants, conference experiences and a few random posts that are uncategorized.
+---
+
+  <div id="personal-description" class="category-description-page">
+  	"Personal" posts on kaidez.com include work that I've done, rants, conference experiences and a few random posts that are uncategorized and don't fit anywhere else.
+  </div> <!-- #personal-description -->
+
+  {% for post in site.categories.personal %}
+    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title"><a href="{{ post.url }}" title="{{ post.title }}" class="post-snippet-link" rel="bookmark">{{ post.title }}</a></h1>
+      {{ post.meta-excerpt }}
+    </article>
+  {% endfor %}

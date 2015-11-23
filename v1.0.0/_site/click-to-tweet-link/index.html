@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>TUTORIAL: Create A 'Click to Tweet' link with JavaScript &laquo; Tutorials &laquo; kaidez</title>
+  <meta name="description" content="Create an optimized, dynamic Click to Tweet link with JavaScript. Includes a demo." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/click-to-tweet-link/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="TUTORIAL: Create A 'Click to Tweet' link with JavaScript" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="Create an optimized, dynamic Click to Tweet link with JavaScript. Includes a demo." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/click-to-tweet-link/" property="og:url">
+
+
+
+  <meta content="2015-07-30T00:00:00-04:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/click-to-tweet.jpg" property="og:image">
+
+
+
+  
+  <meta content="tutorials" property="article:section">
+  
+
+
+
+  
+  <meta content="tutorials" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">
+  <meta name="twitter:description" content="Create an optimized, dynamic Click to Tweet link with JavaScript. Includes a demo.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/click-to-tweet.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/tutorials/" title="More Tutorials posts on kaidez.com">Tutorials</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">TUTORIAL: Create A 'Click to Tweet' link with JavaScript</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">TUTORIAL: Create A 'Click to Tweet' link with JavaScript</h1>
+
+            <time datetime="2015-07-30" itemprop="datePublished" pubdate>July 30, 2015</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p><a href="/samples/click-to-tweet/02/" class="demoLink" target="blank">VIEW THE DEMO</a></p>
+
+<p>"Click to Tweet" links are a highly-recommended way of promoting your site content. Politely asking readers to Tweet your content often leads to them doing so if you give them an easy way to do it.</p>
+
+<p>I'm redesigning my blog with WordPress at the time of this post and this functionality will be part of the new design. I want it optimized to run as fast as possible so I'm creating it with JavaScript instead of depending on a WordPress plugin...yes, <strong>this code can work outside of WordPress</strong>.</p>
+
+<h2 style="clear:both;">Table of Contents</h2>
+
+
+<ol>
+<li><a href="#notes">Some Notes</a></li>
+<li><a href="#optimized">This Code Is Optimized</a></li>
+<li><a href="#simple-link">A Simple Click To Tweet Link</a></li>
+<li><a href="#html-css">Review The HTML &amp; CSS</a></li>
+<li><a href="#complicated-url">Dealing with Complicated URLs</a></li>
+<li><a href="#regex">Clean Up The Link With A Regular Expression</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+
+<p><a name="notes"></a></p>
+
+<h2>Some Notes</h2>
+
+<p>This code only works if it runs on some sort of web server setup. So if you want to test it, you'll need to either run it on an actual website or simulate a web server on your local machine using something like <a href="https://www.mamp.info/" title="Learn more about MAMP for Mac">MAMP for Mac</a>, <a href="http://www.wampserver.com/" title="Learn more about WAMP for Windows">WAMP for Windows</a> or <a href="https://www.apachefriends.org/index.html," title="Learn more about XAMMP for Windows, Mac and Linux">XAMMP, which is cross-platform</a>.</p>
+
+<p>Due to how I build my posts, my final JS code requires a regular expression. It's a simple one but it still may be too complex for your needs; therefore, you may want to go directly to <a href="#simple-link">the part of the post with the simple Click to Tweet code</a>.</p>
+
+<p>This Click to Tweet code is meant to work dynamically: it uses JavaScript (and SOME jQuery) to find elements on a web page, add attributes to one of them and set up click events...very dynamic. If you want to hard-code a Click to Tweet link, I suggest reading <a href="http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/" title="Read Guillaume Piot's Click to Tweet tutorial">Guillaume Piot's excellent tutorial</a>, which was the main source of inspiration for my code.</p>
+
+<p>Lastly, if you're using something like WordPress, Drupal or Jekyll to build a site, I'm assuming you can figure out how to use this code within it. In the case of my WordPress site, I'll have to (at the bare minimum) create a custom <code>footer.php</code> file for the single posts that's different from the one used for the non-post pages. All this requires creating custom WordPress PHP code, which you may not want to do. If this describes your situation, you may want to just use a plugin like <a href="https://wordpress.org/plugins/click-to-tweet-by-todaymade/" title="Review the Click To Tweet plugin for WordPress">Click To Tweet for WordPress</a>.</p>
+
+<p><a name="optimized"></a></p>
+
+<h2>This Code Is Optimized</h2>
+
+<p>This code optimized to run as fast as possible in two ways:</p>
+
+<ol>
+<li><strong>No need to use widgets.js:</strong> <code>widgets.js</code> is the core Twitter file used to  create various kinds of Twitter buttons on a site. Not needing it for this code means that my site will make one less server request. I should point out that Twitter prefers that you use this file on your site when creating Tweet functionality and you can add it if you want to, but this code seems to work fine without it.</li>
+<li><strong>No need for plugins:</strong> No need for any jQuery plugins, WordPress plugins, Drupal plugins or whatever. This code creates a very small footprint.</li>
+</ol>
+
+
+<p><a name="html-css"></a></p>
+
+<h2>Review The HTML &amp; CSS</h2>
+
+<p>The HTML and CSS for this is pretty basic.  Looking at the HTML first...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Click to Tweet Link - Sample 1&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Click to Tweet Link&lt;/h1&gt;
+  &lt;h2 id=&quot;blog-post-title&quot;&gt;Click to Tweet Link Tutorial - Sample 1&lt;/h2&gt;
+
+  &lt;div&gt;
+    This is an example for building a really simple &quot;Click To Tweet&quot; link. Learn how to build it &lt;a href=&quot;/click-to-tweet/&quot;&gt;here&lt;/a&gt;.
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;a id=&quot;tweet-this-post&quot; class=&quot;tweet-post-class&quot;&gt;would you like to tweet this page?&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;https://code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;tweetButton.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>The two key page elements are: 1) the <code>&lt;h2&gt;</code> tag with an id of <code>blog-post-title</code>, and 2) the <code>&lt;a&gt;</code> tag with an id of <code>tweet-this-post</code>.</p>
+
+<p>The <code>&lt;h2&gt;</code> represents the blog post's title. We'll use the copy inside of it for the copy of our Tweet.</p>
+
+<p>The <code>&lt;a&gt;</code> tag is our "Click to Tweet" link. We'll use JavaScript to bind functionality to it that builds our Tweet if it's clicked.</p>
+
+<p>Then we're linking jQuery to our site and are also linking a file called <code>tweetButton.js</code>. The latter file will contain the Click to Tweet code, and will be our main focus throughout this tutorial.</p>
+
+<p>Then there's the CSS...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.tweet-post-class {
+  display: block;
+  height: auto;
+  width: 280px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color: #ED327F;
+  text-align: center;
+  cursor: pointer;
+}
+
+a.tweet-post-class {
+  color:#fff;
+  text-decoration:none
+}
+
+a.tweet-post-class:visited {
+  color:#fff
+}
+
+a.tweet-post-class:active,
+a.tweet-post-class:hover {
+  color:#fff;
+  background-color:#55acee
+}</code></pre>
+</div>
+
+
+<p>The Click to Tweet link is styled nicely...past that, there's not much happening here.</p>
+
+<p><a name="simple-link"></a></p>
+
+<h2>A Simple Click To Tweet Link</h2>
+
+<p>Again, the final JavaScript code I'm using is a bit complex. There is a simple way to create this link that we'll look at first...it's based on the Guillaume Piot code mentioned above.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+
+  var getPostTitle = document.getElementById( &quot;blog-post-title&quot; ).innerHTML,
+      linkElement = document.getElementById( &quot;tweet-this-post&quot; ),
+      getPostLink = window.location.href;
+
+  linkElement.setAttribute( &quot;href&quot;, getPostLink );
+
+  $( linkElement ).on( &quot;click&quot;, function( event ){
+
+    event.preventDefault();
+
+    var tweetedLink = this.getAttribute( &quot;href&quot; );
+
+    window.open( &quot;http://twitter.com/intent/tweet?url=&quot; + tweetedLink + &quot;&amp;text=&quot; + getPostTitle + &quot;&amp;via=kaidez&amp;&quot;, &quot;twitterwindow&quot;, &quot;height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0&quot; );
+
+  });
+
+})();</code></pre>
+</div>
+
+
+<p>Breaking down the code...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+...
+})();</code></pre>
+</div>
+
+
+<p>All the code is wrapped in an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" title="Learn more about Immediately-Invoked Function Expressions">Immediately-Invoked Function Expression (IIFE)</a>, meaning it will run as soon as <code>tweetButton.js</code> loads in the browser.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var getPostTitle = document.getElementById( &quot;blog-post-title&quot; ).innerHTML,
+    linkElement = document.getElementById( &quot;tweet-this-post&quot; ),
+    getPostLink = window.location.href;</code></pre>
+</div>
+
+
+<p>Three variables are defined in a single var pattern. Using the id attributes for both the <code>&lt;h2&gt;</code> and <code>&lt;a&gt;</code> tags just discussed, we're referencing each one with the first two JavaScript variables, respectively named <code>getPostTitle</code> and <code>linkElement</code>.</p>
+
+<p>The third variable, <code>getPostLink</code>, stores whatever URL is in the browser's address bar after page-load.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>linkElement.setAttribute( &quot;href&quot;, getPostLink );</code></pre>
+</div>
+
+
+<p>Find the <code>&lt;a&gt;</code> tag (referenced by the <code>linkElement</code> variable) and set its <code>href</code> attribute. This attribute's value will be <code>getPostLink</code> which, again, is the URL in the address bar.</p>
+
+<p>At this point in the code, the Click to Tweet link that's already on the web page has been updated to look like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- An &#39;href&#39; value has been added --&gt;
+&lt;a id=&quot;tweet-this-post&quot; class=&quot;tweet-post-class&quot; href=&quot;http://kaidez.com/samples/click-to-tweet/01/&quot;&gt;would you like to tweet this page?&lt;/a&gt;</code></pre>
+</div>
+
+
+<p>Looking at the rest of the JavaScript...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$( linkElement ).on( &quot;click&quot;, function( event ){
+  event.preventDefault();
+  ...
+})();</code></pre>
+</div>
+
+
+<p>Once the IIFE runs, we're using <code>jQuery.on()</code> to bind click functionality to <code>linkElement</code>, our code's reference to the <code>&lt;a&gt;</code> tag. That tag has an <code>href</code> attribute, meaning that end-users will be forwarded to a web page if it's clicked.</p>
+
+<p>This is a link's default behavior and because of how our code needs to works, we need to prevent it from happening. We do this by passing an <code>event</code> parameter to the function, then run <code>event.preventDefault()</code> inside the <code>jQuery.on()</code> method.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var tweetedLink = this.getAttribute( &quot;href&quot; );
+
+window.open( &quot;http://twitter.com/intent/tweet?url=&quot; + tweetedLink + &quot;&amp;text=&quot; + getPostTitle + &quot;&amp;via=kaidez&amp;&quot;, &quot;twitterwindow&quot;, &quot;height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0&quot; );</code></pre>
+</div>
+
+
+<p>When the link is clicked, it will grab whatever the value is of its <code>href</code> attribute and store it in a variable called <code>tweetedLink</code>. The click also opens a popup window pointing to a page built with <a href="https://dev.twitter.com/web/intents#retweet-intent" title="Learn more about Twitter Web intents">Twitter Web Intents</a> which, as per its documentation, "provide[s] popup-optimized flows for working with Tweets &amp; Twitter Users: Tweet, Reply, Retweet, Favorite, and Follow."</p>
+
+<p>A URL is built with important things that come after the query string (<code>?</code>), which are:</p>
+
+<ol>
+<li><p>The <code>?url=" + tweetedLink"</code> value that comes at the start of the query string. Here, the <code>tweetedLink</code> variable containing the <code>href</code> value of our Click to Tweet is built into the URL.</p></li>
+<li><p>The <code>"&amp;text=" + getPostTitle</code> value that comes next. Here, the <code>getPostTitle</code> variable we defined at the top of our code is also built into the URL and, again, it stores the name of our blog post.</p></li>
+<li><p>The <code>&amp;via=kaidez</code> value that come next. Setting <code>via</code> equal to your Twitter handle (or mine in this example) means the handle will be passed into the Tweet.</p></li>
+</ol>
+
+
+<p>For the rest of the code, the <code>twitterwindow</code> value just creates the popup window with Twitter branding. It then sets its height and width and builds the window without a toolbar, address (location) bar, menu bar, bookmark bar and scrollbar.</p>
+
+<p>The <code>url</code>, <code>text</code> and <code>via</code> values are optional. But if you give them values then, using this section's demo code as an example, the popup will look similar to this:</p>
+
+<div style="margin:0 auto; max-width: 700px;">
+  <img src="/img/click-to-tweet-sample-01.jpg" class="imgBorder" alt="sample of a Tweet Box" />
+</div>
+
+
+<p><a href="/samples/click-to-tweet/01/" target="blank"><strong>SEE THE DEMO</strong></a></p>
+
+<p>As mentioned above, this implementation is simple enough to work on your site. But my site had functionality that required a more complex code structure.
+<a name="complicated-url"></a></p>
+
+<h2>Dealing with Complicated URLs</h2>
+
+<p>There are some cases where my blog post URLs contain extra things. For example:</p>
+
+<p>Many posts, including this one, have a Table of Contents section that lets you jump to certain parts of the post. So if you got to this section of the post by clicking on its anchor link, the browser's address bar would be updated to look like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>http://kaidez.com/click-to-tweet-link/#complicated-url</code></pre>
+</div>
+
+
+<p>And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window will look like this:</p>
+
+<div style="margin:0 auto; max-width: 700px;">
+  <img src="/img/click-to-tweet-sample-02.jpg" class="imgBorder" alt="sample of a Tweet Box" />
+</div>
+
+
+<p>Also, there are times when I use Urchin Traffic Monitor (UTM) codes in my post links to track their social network click-thru rates via Google Analytics. So if you got to this post via a link I posted on Facebook, the link would look like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>http://kaidez.com/click-to-tweet-link/?utm_source=facebook&amp;utm_medium=link&amp;utm_click-to-tweet</code></pre>
+</div>
+
+
+<p>And if, for some reason, you hit the Click to Tweet link from there, there were instances where the URL in the Tweet window will look like this:</p>
+
+<div style="margin:0 auto; max-width: 700px;">
+  <img src="/img/click-to-tweet-sample-03.jpg" class="imgBorder" alt="sample of a Tweet Box" />
+</div>
+
+
+<p>Note that the UTM link wasn't truncated so the post is over 140 characters.  All this is a problem.
+<a name="regex"></a></p>
+
+<h2>Clean Up The Link With A Regular Expression</h2>
+
+<p>The solution was to clean up the link in the address bar with a regular expression. Update the beginning of <code>tweetButton.js</code> so it looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+
+  var linkElement = document.getElementById( &quot;tweet-this-post&quot; ),
+      getPostTitle = document.getElementById( &quot;blog-post-title&quot; ).innerHTML,
+      getPostLink = window.location.href,
+      cleanLink = getPostLink.replace( /[^/]*$/g, &quot;&quot; );
+  
+  linkElement.setAttribute( &quot;href&quot;, cleanLink );
+  ...
+  // The code below this point stays the same
+
+})();</code></pre>
+</div>
+
+
+<p>We've added a <code>cleanLink</code> variable to our single var pattern. This variable looks at the characters that make up the <code>getPostlink</code> variable (which is the URL in the browser's address bar), finds all the characters that come AFTER the last forward-slash (/) and uses JavaScript's <code>replace()</code> method to replace them with whatever is passed to the second parameter (""), which is...absolutely nothing!</p>
+
+<p>Previously, we set the <code>href</code> value of <code>linkElement</code> (the <code>&lt;a&gt;</code> tag) to just be the complete URL in full...that was represented by the <code>getPostLink</code> variable. We now set the <code>href</code> to be <code>cleanLink</code>, which is our cleaned-up URL.</p>
+
+<p><a href="/samples/click-to-tweet/02/" target="blank"><strong>SEE THE DEMO...different URL than what you saw in the last picture.</strong></a></p>
+
+<p><a name="conclusion"></a></p>
+
+<h2>Conclusion</h2>
+
+<p>I haven't put a "Click to Tweet" link on my live site at the time of this post, but I'm told it works.  It'll be really satisfying if it works, but I'm already satisfied by the fact that I coded all this myself without needing a plug-in.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share TUTORIAL: Create A 'Click to Tweet' link with JavaScript on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/click-to-tweet-link/" title="Share TUTORIAL: Create A 'Click to Tweet' link with JavaScript on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/click-to-tweet-link/&t=TUTORIAL: Create A 'Click to Tweet' link with JavaScript" class="share-post-link fb" title="Share TUTORIAL: Create A 'Click to Tweet' link with JavaScript on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/revlon/" title="Goodbye, Revlon">Goodbye, Revlon &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

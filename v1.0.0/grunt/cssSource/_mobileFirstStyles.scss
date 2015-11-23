@@ -1,0 +1,406 @@
+
+// ====================================================================
+// 'Mobile First' styles start:
+//
+// These are styles which should appear on mobile devices only. They
+// are placed outside of a media query, meaning that they are the
+// first styles to be called on page load: i.e. "mobile first." oldIE
+// does not support media queries so it can only read code outside of
+// them...like this code. We don't want this so we've taken care of
+// this by creating '_oldIE.scss' which contains CSS that works in IE 8
+// ...kaidez.com doesn't care about IE7 and older.
+// ====================================================================
+
+
+
+
+
+// ====================================================================
+// Header styles start
+// ====================================================================
+
+
+// ====================================================================
+// Logo link :provides a large enough space for a click area. These
+// styles will also be applied to the '_mobileLandscape' view.
+// ====================================================================
+.homepage-link {
+  @include homepage-link(44px, 166px);
+}
+
+// <header> tag
+.site-header {
+  width: auto;
+}
+
+// outer wrapper for the <header> which wraps the link, nav & search elements
+.outer-wrapper-nav-header {
+  width: 100%;
+}
+
+// hide the <h2> tag in <header> on page load
+.site-description {
+  @include hide-element;
+}
+
+.adsClass {
+  display: none;
+}
+
+  .category-title {
+    margin-left: 0;
+  }
+
+// ====================================================================
+// Header styles end
+// ====================================================================
+
+
+
+
+// ====================================================================
+// Navigation styles start...these styles will also be applied to the
+// '_mobileLandscape' view.
+// ====================================================================
+
+.nav-search-style {
+  float: none;
+}
+
+.site-navigation-list-styles {
+  @include site-navigation-list(none);
+}
+
+// ====================================================================
+// Navigation styles end
+// ====================================================================
+
+
+
+
+// ====================================================================
+// Search box-related styles start
+// ====================================================================
+
+// The div that contains the search box...either show it or hide it
+.searchbox-display {
+  display: none;
+}
+
+// style the main searchbox
+.searchbox-style {
+  @include master-center;
+  padding:15px 0;
+  position: static;
+}
+
+// widen the searchbox a little on handheld devicwes
+.searchfield-style {
+  width: 260px;
+}
+
+// jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/)
+// Set to appear on browsers with JavaScript turned on.
+.tipue_search_content_title {
+  font-size: 32px;
+}
+
+// ====================================================================
+// Search box-related styles end
+// ====================================================================
+
+
+
+
+
+// ====================================================================
+// Home page box-related styles start
+// ====================================================================
+
+.topSectionWrapperClass {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 529px;
+ }
+
+
+// style the <h1> in the 'NEWEST ARTICLE' part of the home page
+.newestArticleHeaderClass {
+  font-size:25px;
+}
+
+// style the <h1> tags in home page category sections
+.homePageSectionHeaderClass {
+  color: #929292;
+  font-size:22px;
+  min-width: 280px;
+}
+
+// style the <h1> tags in home page category sections
+.homePageSectionHeaderText {
+  background-color: #fff;
+}
+
+.homePageCategoryFooterLinkSection {
+  height: 59px;
+  text-align: center;
+}
+
+.homePageCategoryFooterLink:link,
+.homePageCategoryFooterLink:visited {
+  display: block;
+}
+
+// Post snippet that displays on both the home page and search results.
+.post-snippet-title {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+}
+.postSnippetNewArticle {
+  max-width: 701px;
+  text-align: left;
+  padding: 13px;
+}
+
+.post-snippet-link:link,
+.post-snippet-link:visited {
+  font-size: 25px;
+}
+
+.newestArticleHeaderClass {
+  font-size:21px;
+}
+
+// the post title in the NEWEST ARTICLE section on the home page
+.newestArticlePostTitle {
+  font-size: 32px;
+}
+
+// the post title in the NEWEST ARTICLE section on the home page
+.newestArticlePostContainer {
+  padding: 8px;
+}
+
+// ====================================================================
+// Home page box-related styles end
+// ====================================================================
+
+
+
+
+
+// ====================================================================
+// Page content styles start
+// ====================================================================
+
+// styles for post and category <h1> tags
+.wf-active h1.post-title, .wf-active h1.category-title  {
+  @include post-category-title(27px);
+  margin-left: 10px;
+  line-height: 1.1;
+}
+
+// style the <main> element
+.page-content {
+  @include full-height;
+  background-color: #fff;
+  margin: 0 auto;
+  line-height: 30px;
+}
+
+// pad stuff on the post and category pages
+.nonHomePagePadding {
+  padding: 17px;
+}
+
+// breadcrumb container
+.breadcrumb-styles {
+  @include breadcrumb-styles(18px, 19px);
+  background-color: #BDF2FF;
+}
+
+// the breadcrumb-separator
+.breadcrumb-separator {
+  @include breadcrumb-separator(4px, 14px);
+}
+
+// breadcrumb link
+.breadcrumb-styles a:link,
+.breadcrumb-styles a:visited  {
+  text-decoration: underline;
+  color: darken($header-color, 20);
+}
+
+// hover class for breadcrumb link
+.breadcrumb-styles a:hover  {
+  text-decoration: none;
+  color: darken($header-color, 20);
+}
+
+// on handhelds, hide the page title value and &raqou; with this class
+// on single post page's breadcrumb.
+.breadcrumb-last {
+  display:none
+}
+
+// the "Read post" link on the home, category and search pages
+.read-post-link:link {
+  color: $post-link-color;
+}
+
+// <h1> title on the category page...hides the 'Roboto' font on load. These
+// styles will also be applied to the '_mobileLandscape' view.
+.wf-loading .category-header,
+.wf-inactive .category-header {
+  @include fonts($srf, hidden);
+}
+
+// <h1> title on the category page...loads the 'Roboto'. These styles will
+// also be applied to the '_mobileLandscape' view.
+.wf-active .category-header {
+  @include fonts($robo, visible);
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+// <h1> title on the category page.These styles will also be applied to the
+// '_mobileLandscape' view.
+.category-description-page {
+  padding:12px;
+  margin-bottom: 35px;
+}
+
+// <ul> in the item in the "share post" posts section
+.social-sharing-list-post-class {
+  padding: 0;
+  width: 245px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// <footer> in <article> tags in posts...styles the post's publish date
+.articleFooterClass {
+  line-height: 1.2;
+}
+
+  .googleAdsenceContainer {
+    float: none;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .postFigure {
+    width:100%;
+    max-width: 364px;
+    margin: 27px auto;
+    text-align: center;
+
+  }
+
+  .postFigureCaption {
+    font-style: italic;
+    color: #858081;
+  }
+
+// ====================================================================
+// Page content styles end
+// ====================================================================
+
+
+
+
+
+// ====================================================================
+// Home page pagination styles start
+// ====================================================================
+
+// Unordered list in the homepage pagination
+.pages {
+  @include pagUL
+}
+
+// Individual list item
+.page {
+  @include floatListItem;
+  @include pagButtonItem;
+}
+
+// Inner part of the pagination button
+a.pagination-link {
+  @include pagButtonInner;
+}
+
+// Inner part of the pagination button
+.pagination-link:hover, .pagination-link:visited {
+  color: #fff;
+}
+
+// ====================================================================
+// Home page pagination styles end
+// ====================================================================
+
+
+
+
+
+// ====================================================================
+// Aside styles start...These styles will also be applied to the
+// '_mobileLandscape' view.
+// ====================================================================
+
+.aside-paragraph {
+  font-size:15px;
+}
+
+.aside-section-header {
+  width: 250px;
+}
+
+// remove box-shadow from handheld view
+.aside-outer-wrapper-class {
+  box-shadow: none;
+  padding: 1px 10px 200px;
+}
+
+// all the fields in the contact form
+.aside-contact-fields {
+  width:152px;
+}
+
+// apply this height to the <input> fields
+.inputFieldHeight {
+  min-height: 71px;
+}
+
+// apply this height to the <textarea> field
+.textareaHeight {
+  min-height: 230px;
+}
+
+// ====================================================================
+// Aside styles end
+// ====================================================================
+
+
+
+
+
+// ====================================================================
+// Footer styles start
+// ====================================================================
+
+// <p> in the footer
+.copyright-style {
+  padding: 20px 0;
+  text-align: center;
+}
+
+// hide "Powered by" links on handhelds
+.colophon-class {
+  display: none;
+}
+
+// ====================================================================
+// Footer styles end
+// ====================================================================

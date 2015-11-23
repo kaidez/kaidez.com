@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title }} &laquo; {{ page.cat-name }} &laquo; kaidez</title>
+  <meta name="description" content="{{ page.meta-excerpt }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+
+
+  <link rel="canonical" href="http://kaidez.com{{ page.url | canonical }}" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+  {% include open_graph_partial.html %}
+
+  {% include google_webfont_partial.html %}
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+          {% include navigation_partial.html %}
+
+          {% include searchbox_partial.html %}
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+    {% include page_breadcrumbs_partial.html %}
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">{{ page.title }}</h1>
+
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished" pubdate>{{ page.date | date: "%B %d, %Y" }}</time>&nbsp;by&nbsp;<span class="author" itemprop="name" rel="author">Kai "kaidez" Gittens</span>
+          </header>
+
+          {% include google_ad_post_partial.html %}
+
+          <div itemprop="text">{{ content }}</div>
+
+        </article>
+
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+    {% include aside_partial.html %}
+
+    {% include footer_partial.html %}
+
+  </div> <!-- #container -->
+
+  {% include async_js_partial.html %}
+
+  {% include scriptFile_partial.html %}
+
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5549541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type =   'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :   'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+
+</body>
+</html>

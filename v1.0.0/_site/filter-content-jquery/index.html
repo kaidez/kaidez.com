@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors &laquo; Tutorials &laquo; kaidez</title>
+  <meta name="description" content="Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/filter-content-jquery/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/filter-content-jquery/" property="og:url">
+
+
+
+  <meta content="2015-01-02T00:00:00-05:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/jquery-filter.jpg" property="og:image">
+
+
+
+  
+  <meta content="tutorials" property="article:section">
+  
+
+
+
+  
+  <meta content="jquery" property="article:tag">
+  
+  <meta content="javascript" property="article:tag">
+  
+  <meta content="data attributes" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors">
+  <meta name="twitter:description" content="Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/jquery-filter.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/tutorials/" title="More Tutorials posts on kaidez.com">Tutorials</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors</h1>
+
+            <time datetime="2015-01-02" itemprop="datePublished" pubdate>January 02, 2015</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p><a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a></p>
+
+<p>I had a project where I needed to create functionality that filtered out specific page content on a link click. So if the page had three different content groups, clicking on a link had to display one group while removing the other two from view.</p>
+
+<p>I built the functionality using data attributes, jQuery's .filter() method, and some jQuery selector methods. There are certainly different ways to filter page content, but this is how I did it.</p>
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li><a href="#brief-look-css">A (very) brief look at the CSS</a></li>
+<li><a href="#html-first-look">A first look at the HTML</a></li>
+<li><a href="#2-html-sections">The 2 sections of the HTML</a></li>
+<li><a href="#html-section-binding">The binding of the two HTML sections</a></li>
+<li><a href="#javascript-first-look">A first look at the JavaScript</a></li>
+<li><a href="#feature-detect-data-attributes">Feature-detect for data attributes</a></li>
+<li><a href="#jquery-attribute-selectors">Using jQuery attribute selectors</a></li>
+<li><a href="#add-remove-content">Adding &amp; removing content</a></li>
+<li><a href="#show-all-content">Show all the content with a click</a></li>
+<li><a href="#notes">Some notes</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+
+<p><a name="brief-look-css"></a></p>
+
+<h3>A (very) brief look at the CSS</h3>
+
+<p>We're using three files for our code: <code>index.html</code>, <code>styles.css</code> and <code>main.js</code>.  All the files are in the same directory.</p>
+
+<p>The things in <code>styles.css</code> are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:</p>
+
+<div>
+  <pre data-line=''><code class='language-css'>body {
+  background-color: rgba(60, 105, 145, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: &#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif;
+  font-size: 20px;
+}
+
+a {
+  margin:0 5px;
+}
+
+a:link {
+  color: rgba(100, 255, 0, 1);
+}
+
+a:visited {
+  color: rgba(100, 255, 0, 1);
+}
+
+a:hover {
+  color: rgba(0, 255, 193, 1);
+  text-decoration: none;
+}</code></pre>
+</div>
+
+
+<p><a name="html-first-look"></a></p>
+
+<h3>A first look at the HTML</h3>
+
+<p>The <code>index.html</code> file looks like this...</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Filter Content On A Click With jQuery&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; media=&quot;all&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Filter by team&lt;/h1&gt;
+
+    &lt;!-- The Teams --&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn-player&quot; data-team=&quot;chelsea&quot;&gt;Chelsea&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn-player&quot; data-team=&quot;psg&quot;&gt;Paris St-Germain&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn-player&quot; data-team=&quot;real-madrid&quot;&gt;Real Madrid&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn-player&quot; data-team=&quot;barcelona&quot;&gt;Barcelona&lt;/a&gt;
+    &lt;a href=&quot;#&quot; id=&quot;btn-show-all&quot;&gt;SHOW ALL PLAYERS&lt;/a&gt;
+
+    &lt;!-- The Players --&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;chelsea&quot;&gt;Cesc Fabregas&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;psg&quot;&gt;Zlatan Ibrahimović&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;real-madrid&quot;&gt;Cristiano Ronaldo&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;chelsea&quot;&gt;Didier Drogba&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;chelsea&quot;&gt;John Terry&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;barcelona&quot;&gt;Lionel Messi&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;real-madrid&quot;&gt;Sergio Ramos&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;chelsea&quot;&gt;Thibault Courtois&lt;/div&gt;
+    &lt;div class=&quot;player&quot; data-players-team=&quot;psg&quot;&gt;Thiago Motta&lt;/div&gt;
+
+    &lt;!-- Note that we&#39;re using the oldIE-friendly version of jQuery --&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p><a name="2-html-sections"></a></p>
+
+<h3>The 2 sections of the HTML</h3>
+
+<p>The page has two distinct sections: a list of <code>&lt;a&gt;</code> tags at the top and a list of <code>&lt;div&gt;</code> tags at the bottom. Except for the last one, every item in the top list has a class name of <code>btn-player</code> and a data attribute called <code>data-team</code>.</p>
+
+<p>Notice that the values of the <code>data-team</code> attribute differ across the links that have it. There are four different values: 1) <code>chelsea</code>, 2) <code>psg</code>, 3) <code>real-madrid</code> and 4) <code>barcelona</code>.</p>
+
+<p>At the bottom of this list is a link with an ID of <code>#btn-show-all</code>. We'll build functionality where clicking on this link will add back any content that has been removed.</p>
+
+<p>Every item in the bottom list is a <code>&lt;div&gt;</code> with a class name of <code>player</code> and a data attribute called <code>data-players-team</code>. The <code>player</code> class name is important and will be discussed but for now, notice that the values of the <code>data-players-team</code> attribute is shared across some of the <code>&lt;div&gt;</code> tags.</p>
+
+<p>For example: four tags have their <code>data-players-team</code> value set to <code>chelsea</code>, two of them have their attribute set <code>psg</code>. And so on and so on.
+<a name="html-section-binding"></a></p>
+
+<h3>The binding of the two HTML sections</h3>
+
+<p>The values of the <code>data-players-team</code> attribute in the section below matches the value of one of the <code>data-team</code> attributes in the section above. So the four tags with a <code>data-players-team</code> attribute with a value of <code>chelsea</code> match the value of the <code>data-team</code> attribute in the first <code>&lt;a&gt;</code> tag: it's value is also <code>chelsea</code>.</p>
+
+<p>These shared values create a binding between the two sections, As a result, when of a link is clicked, it will understand that it's their bound <code>&lt;div&gt;</code> tags that should be visible.
+<a name="javascript-first-look"></a></p>
+
+<h3>A first look at the JavaScript</h3>
+
+<p>But this is only a small part of the binding process...jQuery does a lot here, too.  That code is in <code>main.js</code> and looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$( &quot;.btn-player&quot; ).click(function(){
+
+  var getLinkType, getElType, getElNotType;
+
+  // Feature-detect for dataset support
+  if( !this.dataset ) { // If IE 10 or lower
+    getLinkType = this.getAttribute( &quot;data-team&quot; );
+   } else { // For other browsers
+     getLinkType = this.dataset.team;
+   }
+
+  getElType = $( &quot;div[data-players-team~=&quot;+getLinkType+&quot;]&quot; );
+
+  getElNotType = $( &quot;div[data-players-team!=&quot;+getLinkType+&quot;]&quot; );
+
+   $( &quot;.player&quot; ).filter( getElNotType ).css( &quot;display&quot;, &quot;none&quot; );
+   $( &quot;.player&quot; ).filter( getElType ).css( &quot;display&quot;, &quot;block&quot; );
+
+});
+
+$( &quot;#btn-show-all&quot; ).click(function() {
+  $( &quot;.player&quot; ).css( &quot;display&quot;, &quot;block&quot; );
+});</code></pre>
+</div>
+
+
+<p>Quite a bit to discuss here...let's break it down:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$( &quot;.btn-player&quot; ).click(function(){
+  ...
+});</code></pre>
+</div>
+
+
+<p>There are four links at the top with a class name of <code>btn-player</code>. Whenever one of those buttons is clicked, a function performs some tasks.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var getLinkType, getElType, getElNotType;</code></pre>
+</div>
+
+
+<p>List three variables in a single var pattern for future use.
+<a name="feature-detect-data-attributes"></a></p>
+
+<h3>Feature-detect for data attributes</h3>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// Feature-detect for dataset support
+if( !this.dataset ) { // If IE 10 or lower
+  getLinkType = this.getAttribute( &quot;data-team&quot; );
+} else { // For other browsers
+  getLinkType = this.dataset.team;
+}</code></pre>
+</div>
+
+
+<p>All the links with a <code>btn-player</code> class have a <code>data-team</code> attribute. When one of those links gets clicked, we need to find that attribute's value and store it in the previously-created <code>getLinkType</code> variable.</p>
+
+<p>We can find the value by looking directly at link's dataset property by saying <code>this.dataset</code>. But dataset isn't supported in Internet Explorer 10 and lower, so we need to provide fallback code for those browsers by applying feature detection.</p>
+
+<p>We'll start by checking to see if the clicked-on link does NOT have a <code>dataset</code> property and if it doesn't, we'll use the <code>getAttribute()</code> method to find the value of <code>data-team</code> and store it in the <code>getLinkType</code> variable. But for other browsers, we can use <code>dataset</code> to do the finding and storing.</p>
+
+<p>For a more in-depth discussion about data attributes and <code>getAttribute()</code>, <a href="/load-data-attributes-mouseclicks/" title="Read kaidez's blog post on loading in page content with data attributes">read my data attributes post</a>.
+<a name="jquery-attribute-selectors"></a></p>
+
+<h3>Using jQuery attribute selectors</h3>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>getElType = $( &quot;div[data-players-team~=&quot;+getLinkType+&quot;]&quot; );</code></pre>
+</div>
+
+
+<p>jQuery's "Attribute Contains" selector functionality can help us here. jQuery has a lot of uses for this selector but in this case, we're using the <a href="http://api.jquery.com/attribute-contains-word-selector/">Attribute Contains Word Selector</a>.</p>
+
+<p>In this case, "Attribute Contains" uses <code>~</code> to look any <code>&lt;div&gt;</code> whose <code>data-players-team</code> value EXACTLY matches the value of <code>getLinkType</code>. The total <code>&lt;div&gt;</code> tags that match this criteria are stored in the previously-created <code>getElType</code> variable.</p>
+
+<p>In other words, if the <code>.btn-player</code> button that gets clicked has a <code>data-team</code> value of <code>chelsea</code>, then <code>chelsea</code> gets stored in <code>getLinkType</code>. Then, the "Attribute Contains" code will look for any <code>&lt;div&gt;</code> whose <code>data-players-team</code> value matches <code>chelsea</code>...it will find four <code>&lt;div&gt;</code> tags in this case.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>getElNotType = $( &quot;div[data-players-team!=&quot;+getLinkType+&quot;]&quot; );</code></pre>
+</div>
+
+
+<p>Almost the same code as just-discussed except we're now using jQuery's <a href="http://api.jquery.com/attribute-not-equal-selector/">Attribute Not Equal Selector</a> (note the "!" that's now before the "=" in the code instead of "~"). As you've may have guessed, this code is looking for all the <code>&lt;div&gt;</code> tags that have <code>data-players-team</code> values that do NOT match <code>getLinkType</code>, then stores them in a variable called <code>getElNotType</code>.
+<a name="add-remove-content"></a></p>
+
+<h3>Adding &amp; removing content</h3>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$( &quot;.player&quot; ).filter( getElNotType ).css( &quot;display&quot;, &quot;none&quot; );</code></pre>
+</div>
+
+
+<p>Lots jQuery chaining now...</p>
+
+<p>All the <code>&lt;div&gt;</code> tags at the bottom have a class called <code>.player</code> and we're finding them in the DOM with jQuery. Plus, they're all contained in either the <code>getElType</code> or the <code>getElNotType</code> variable.</p>
+
+<p>We first, use jQuery's <code>.filter()</code> method to "filter", or "pick out" all the <code>.player</code> elements that are contained in <code>getElNotType</code>, which are the ones we DON'T want to display. From there, we use jQuery's <code>.css()</code> method to apply an inline style of <code>display:none;</code> to these particular <code>&lt;div&gt;</code> tags, removing them from view if they're not removed already.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$( &quot;.player&quot; ).filter( getElType ).css( &quot;display&quot;, &quot;block&quot; );</code></pre>
+</div>
+
+
+<p>Next, we do the opposite: we look for any <code>&lt;div&gt;</code> with a <code>.player</code> class and use <code>.filter()</code> to filter out those stored in <code>getElType</code>, which are the ones we DO want to display. Then use <code>css()</code> to apply an inline style of <code>display:block;</code> to these particular <code>&lt;div&gt;</code> tags, making them visible if they're not visible already.
+<a name="show-all-content"></a></p>
+
+<h3>Show all the content with a click</h3>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$( &quot;#btn-show-all&quot; ).click(function() {
+  $( &quot;.player&quot; ).css( &quot;display&quot;, &quot;block&quot; );
+});</code></pre>
+</div>
+
+
+<p>We'll end our code with functionality that makes any hidden <code>&lt;div&gt;</code> tags visible. The very last link at the top of the page has an ID of <code>#btn-show-all</code>: when clicked, it uses jQuery to find all the <code>.player</code> elements and if any are set to <code>display:none;</code> they'll be set to <code>display:block;</code>.
+<a name="notes"></a></p>
+
+<h3>Some Notes</h3>
+
+<p>That's it for the code....here are a few interesting things to note:</p>
+
+<ul>
+<li><p>This code does not work on IE 8 and lower...and I don't care.</p></li>
+<li><p>We only used two jQuery attribute selectors here but there are many more and they're all useful. <a href="http://api.jquery.com/category/selectors/" title="Read about jQuery Selectors on the jQuery API site">Read about the jQuery Selector API</a>.</p></li>
+<li><p>While we had to do <code>dataset</code> feature detection for the <code>data-team</code> attribute, take note that we didn't have to do that for <code>data-players-team</code>. This is because we had to find the exact value of <code>data-team</code> but with <code>data-players-team</code>, we just need to see if it existed in the DOM.</p></li>
+<li><p>The part of the code that uses <code>$.filter()</code> could be more elegant. It's written in a way that automatically assumes that all the <code>.player</code> elements aren't in view, which isn't the case. So it's probably neater to use something like <code>if/else</code> to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit so it's left out of the code for that reason.</p></li>
+</ul>
+
+
+<p><a name="conclusion"></a></p>
+
+<h3>Conclusion</h3>
+
+<p>I may or may not do some performance tests to see how much of a hit I'll take doing an <code>if/else</code> check but either way, I found this code to be a neater way of doing things when compared to some other implementations I commonly use. I like what I did here and will probably use the pattern again.</p>
+
+<p>Again, there may be other ways to do this...feel free to share alternatives.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/filter-content-jquery/" title="Share TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/filter-content-jquery/&t=TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors" class="share-post-link fb" title="Share TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

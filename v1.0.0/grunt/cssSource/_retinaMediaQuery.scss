@@ -1,0 +1,274 @@
+
+
+
+
+
+
+// ===========================================================================
+// The entire retina/non-retina media query styles start
+// ===========================================================================
+//
+//   ====================
+//   HOW THIS STUFF WORKS
+//   ====================
+//
+// There is a background image attached to the <body> tag and a sprite that's
+// used throughout the site. For these two images, there is both a 
+// retina and non-retina version....four images altogether. Here are there
+// filenames:
+//
+//    THE BACKGROUND IMAGE
+//    ====================
+//     -'white_carbon@2x.png': the retina version.
+//     -'white_carbon.png': the non-retina version.
+// 
+//    THE SPRITE
+//    ==========
+//     -'snSprite@2x.png': the retina version.
+//     -'snSprite.png': the non-retina version.
+// 
+// Media queries ensure that the right versions load based on screen 
+// dimension & resolution. The values of the media queries are defined by
+// variables whose values are defined in '_base.scss'.
+// 
+//   -$desktop-tablet-non-retina: (non-retina-based devices w/ a 569px
+//    min-width).
+// 
+//   -$mobile-non-retina: (non-retina-based devices w/ a 320px min-width).
+// 
+//   -$desktop-tablet-retina: (retina-based devices w/ a 569px min-width).
+// 
+//   -$mobile-retina: (retina-based devices w/ a 320px min-width).
+// 
+// The retina media queries are placed below the non-retina media queries. 
+// If this isn't done, the non-retina code MIGHT overwrite the retina code by 
+// the CSS cascade on SOME devices.  
+// 
+// More info on the sprite...in terms what images it contains, they are:
+// 
+//     -the site logo
+//     -the menu image in the header on mobile
+//     -the search icon in the header on mobile devices
+//     -the search icon that appears in the search bar
+//     -the Jekyll logo
+//     -the Media Temple logo
+//     -the MaxCDN logo
+// 
+// The logo and the two mobile-based images appear differently across all
+// devices and resolutions.
+// 
+// ============================================================================
+ 
+
+
+// Desktop/tablet non-retina media query.
+ 
+@media #{$desktop-tablet-non-retina} { 
+
+  body {
+    background: url(/img/white_carbon.png);
+  }
+
+ // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('/img/kaidez-sprite.png',  -10px -42px, 62px, 221px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+  
+ // Menu bg image for mobile
+  .mobile-menu-btn-class {
+    @include hide-element;
+  }
+
+ // Search bg image for mobile
+  .search-btn-class {
+    @include hide-element;
+  }
+
+ // Search button by the search field
+  .btnSearch {
+    @include sprite-images('/img/kaidez-sprite.png', -88px -4px, 27px, 44px);
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px;
+  }
+
+  .jekyll {
+    @include sprite-images('/img/kaidez-sprite.png', -10px -169px, 58px, 151px);
+  }
+
+  .mediaTemple {
+    @include sprite-images('/img/kaidez-sprite.png', -14px -228px, 57px, 151px);
+  }
+
+  .maxcdn {
+    @include sprite-images('/img/kaidez-sprite.png', -4px -286px, 58px, 151px);
+  }
+}
+
+
+
+
+
+
+// Mobile non-retina media query
+ 
+@media #{$mobile-non-retina} {
+
+  body {
+    background: url(../img/white_carbon.png);
+  }
+
+ // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('/img/kaidez-sprite.png', 0px -107px, 60px, 176px);
+    @include desktop-logo-sprite-add-on;
+  }
+
+ // Menu bg image for mobile
+  .mobile-menu-btn-class {
+    @include sprite-images('/img/kaidez-sprite.png', -2px 8px, 44px, 44px);
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+ // Search bg image for mobile
+  .search-btn-class {
+    @include sprite-images('/img/kaidez-sprite.png', -41px 8px, 44px, 44px);
+    display: block;
+    margin-right:10px;
+    cursor: pointer;
+    float: right;
+  }
+
+ // Search button by the search field
+  .btnSearch {
+    @include sprite-images('/img/kaidez-sprite.png', -88px -4px, 27px, 28px);
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px;
+  }
+}
+
+
+
+
+
+
+// Desktop/tablet retina media query.
+ 
+@media #{$desktop-tablet-retina} {
+
+  body {
+    background: url(/img/white_carbon@2X.png);
+  } 
+
+ // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('/img/kaidez-sprite@2x.png',  -10px -42px, 62px, 221px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+  
+ // Menu bg image for mobile
+  .mobile-menu-btn-class {
+    @include hide-element;
+  }
+
+ // Search bg image for mobile
+  .search-btn-class {
+    @include hide-element;
+  }
+
+ // Search button by the search field
+  .btnSearch {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -79px -4px, 27px, 44px);
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px;
+  }
+
+  .jekyll {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -10px -169px, 58px, 151px);
+  }
+
+  .mediaTemple {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -14px -228px, 57px, 151px);
+  }
+
+  .maxcdn {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -4px -286px, 58px, 151px);
+  }
+}
+
+
+
+
+
+
+// Mobile retina media query: needs to be placed last or it gets over-ridden 
+// by the non-retina version on some retina-enabled handhelds.
+ 
+@media #{$mobile-retina} { 
+
+   body {
+    background: url(/img/white_carbon@2X.png);
+  } 
+
+  // <h1> tag in the <header>
+  .site-title {
+    @include sprite-images('/img/kaidez-sprite@2x.png', 0px -107px, 60px, 176px);
+    text-indent: -999px;
+    margin: 0;
+    float: left;
+  }
+
+ // Menu bg image for mobile
+  .mobile-menu-btn-class {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -2px 8px, 44px, 44px);
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+ // Search bg image for mobile
+  .search-btn-class {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -41px 8px, 44px, 44px);
+    display: block;
+    margin-right:10px;
+    cursor: pointer;
+    float: right;
+  }
+
+ // Search button by the search field
+  .btnSearch {
+    @include sprite-images('/img/kaidez-sprite@2x.png', -88px -4px, 27px, 28px);
+    border: 0;
+    text-indent: -999px;
+    padding: 0;
+    position: relative;
+    left: -42px;
+    top: -3px;
+  }
+}
+
+
+// ====================================================================
+// The entire retina/non-retina media query styles ends
+// ====================================================================
+ 

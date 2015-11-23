@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>TUTORIAL: Remove Files From GitHub &laquo; Tutorials &laquo; kaidez</title>
+  <meta name="description" content="Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/remove-files-from-github/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="TUTORIAL: Remove Files From GitHub" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/remove-files-from-github/" property="og:url">
+
+
+
+  <meta content="2012-09-12T00:00:00-04:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/gitTutorial.jpg" property="og:image">
+
+
+
+  
+  <meta content="tutorials" property="article:section">
+  
+
+
+
+  
+  <meta content="git" property="article:tag">
+  
+  <meta content="github" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="TUTORIAL: Remove Files From GitHub">
+  <meta name="twitter:description" content="Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/gitTutorial.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/tutorials/" title="More Tutorials posts on kaidez.com">Tutorials</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">TUTORIAL: Remove Files From GitHub</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">TUTORIAL: Remove Files From GitHub</h1>
+
+            <time datetime="2012-09-12" itemprop="datePublished" pubdate>September 12, 2012</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p>If you've every tried to remove files from a <a href="http://github.com/" title="Go to GitHub">GitHub</a> repository by putting them in the Trash/Recycle Bin and then doing a <code>git push</code>, you know that this doesn't work.</p>
+
+<p>After making this mistake too many times, I read up on <a href="http://git-scm.com/" title="Read about the Git source code management system">Git</a>, the distributed version control system that GitHub's built on top of. In the process, I gained a clear understanding how the two interact with each other: this is key in understand how to properly delete files as well as walking the path towards "GitHub guru-ness".</p>
+
+<p>Let's get started on all this guru stuff by walk through the proper methods for deleting files.</p>
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li><a href="#files-already-deleted" title="If you deleted an already-committed file outside of the command line">If you deleted an already-committed file outside of the command line</a></li>
+<li><a href="#how-to-delete-files" title="How you should always delete files from Git">How you should <em>always</em> delete files from Git</a></li>
+<li><a href="#delete-uncommitted-files" title="How to delete files that are NOT checked into Git">How to delete files that are NOT checked into Git</a></li>
+<li><a href="#delete-folders" title="How to delete folders in Git">How to delete folders</a></li>
+<li><a href="#simple-git-explanation" title="A simple explanation of how Git &amp; GitHub work">A simple explanation of how Git &amp; GitHub work</a></li>
+<li><a href="#further-git-github-reading" title="Further Git and GitHub Reading">Further Git &amp; GitHub Reading</a></li>
+<li><a href="#conclusion" title="Conslusion">Conslusion</a></li>
+</ol>
+
+
+<p><a name="files-already-deleted"></a></p>
+
+<h2>If you deleted an already-committed file outside of the command line</h2>
+
+<p>A file that's already been committed to Git can only be deleted from a repo via the command line. Trying to delete repo files by dragging them to the Trash/Recycle Bin (or something similar) is one of the most common Git newbie mistakes.</p>
+
+<p>If you moved a committed file named <code>oldFileAlreadyDeleted.html</code> to the Trash, your terminal would return this message when you type <code>git status</code>:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'># Changes not staged for commit:
+#   (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#   deleted:    oldFileAlreadyDeleted.html</code></pre>
+</div>
+
+
+<p>You now have to delete it with Git via the command line like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git rm oldFileAlreadyDeleted.html</code></pre>
+</div>
+
+
+<p>Then commit the delete with a proper <code>git commit</code> message:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git commit -m &#39;remove oldFileAlreadyDeleted.html&#39;</code></pre>
+</div>
+
+
+<p>If <code>oldFileAlreadyDeleted.html</code> is viewable on GitHub, doing a subsequent <code>git push</code> will remove it:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git push all</code></pre>
+</div>
+
+
+<p><a name="how-to-delete-files"></a></p>
+
+<h2>How you should <em>always</em> delete files from Git</h2>
+
+<p>Moving forward, any already-committed files  you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called <code>someCommitedFile.html</code>, you would do so like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git rm someCommittedFile.html</code></pre>
+</div>
+
+
+<p>Then write a <code>git commit</code> message:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git commit -m &#39;remove someCommittedFile.html&#39;</code></pre>
+</div>
+
+
+<p>And if <code>someCommittedFile.html</code> is viewable on GitHub, doing a <code>git push</code> will remove it:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git push all</code></pre>
+</div>
+
+
+<p><a name="delete-uncommitted-files"></a></p>
+
+<h2>How to delete files that are NOT checked into Git</h2>
+
+<p>Say you want to delete <code>oldFile.html</code> and you get this message when you typed <code>git status</code>:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'># Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#   oldFile.html</code></pre>
+</div>
+
+
+<p>This means that <code>oldFile.html</code> hasn't been checked into Git yet, so just use <code>rm</code> to delete it and you're done:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ rm oldFile.html</code></pre>
+</div>
+
+
+<p><a name="delete-folders"></a></p>
+
+<h2>How to delete folders</h2>
+
+<p><strong>Scenario 1:</strong> An empty folder (let's call it <code>someFolder</code>) cannot be tracked by Git, so it can't be checked into Git as well. It also can't be pushed up to GitHub.</p>
+
+<p><strong>Scenario 2:</strong> Git can track the folder once it has content. But if <code>someFolder</code> hasn't been committed to the repo yet, you get this message after typing <code>git status</code>:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'># Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#   someFolder/</code></pre>
+</div>
+
+
+<p>In either of these two scenarios, <code>someFolder</code> can be deleted using the generic <code>rm</code> command though, which looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ rm -rf someFolder</code></pre>
+</div>
+
+
+<p>After a folder has been committed to your repo, <em>that's</em> when you can use Git to delete it, and at any time. You use the same remove/commit/push sequence previously discussed:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git rm someFolder</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git commit -m &#39;remove someFolder&#39;</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git push</code></pre>
+</div>
+
+
+<p>Why do things need to be done this way? First, we need to be clear about the difference between Git and GitHub, as well as how they work together.</p>
+
+<p><a name="simple-git-explanation"></a></p>
+
+<h2>A simple explanation of how Git &amp; GitHub work</h2>
+
+<p><em>Git</em> is version control software that tracks changes to your code repository on your local machine. It also retains the entire change history that's also on your local machine.</p>
+
+<p>You upload your code repo's changes and change history to <em>GitHub</em>, the online web service that provides a feature-rich graphical user interface to manage the repo. Most of these features are centered around project managment.</p>
+
+<p>If your only Git education up to this point is doing what GitHub tells you to do when you creating a repo, you should be familiar with <code>git add</code>. You use it as part of a command sequence in Terminal when you either add new files to GitHub or update existing ones.</p>
+
+<p>So to recap the previously-discussed command sequence, if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git add &#39;myFile.html&#39;</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git commit -m &#39;add myFile.html&#39;</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git push</code></pre>
+</div>
+
+
+<p>The sequence for <em>deleting</em> files is the same, except for one change: you replace <code>add</code> with <code>rm</code>, which is the UNIX command for removing things.</p>
+
+<p>So if you wanted to remove "myFile.html" from your repo, your typed-in command sequence would look something like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git rm &#39;myFile.html&#39;</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git commit -m &#39;remove myFile.html&#39;</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>$ git push</code></pre>
+</div>
+
+
+<p>Why is all this necessary? Because Git views any type of update to your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's <em>your</em> job to tell Git what to do with them.</p>
+
+<p>We just deleted a file from our project folder in the last command sequence with <code>git rm</code>, meaning we made a change to our repo. Then, by "committing" this change with <code>git commit</code>, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with <code>git push</code>. After the push was completed, GitHub saw that a delete was performed against on our local machine's repo; therefore, GitHub deleted <code>myFile.html</code> from the its brower-based view.</p>
+
+<p>The "changes" concept is a central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use <code>git rm</code> to tell Git to remove a file, Git can't tell GitHub to remove it after you do a <code>git push</code>.</p>
+
+<p><a name="further-git-github-reading"></a></p>
+
+<h2>Further Git &amp; GitHub Reading</h2>
+
+<p>This post focused on how Git and GitHub handle file and folder deletions but there's more to them than that. From a beginner's level, here are some great learning resources:</p>
+
+<h3><a href="http://git-scm.com/" title="Read about the Git source code management system">The Git Site »</a></h3>
+
+<p>Obviously your first stop. The site went through a major redesign a while back, greatly improving the UI. Documentation and downloads are much easier to find and read.</p>
+
+<h3><a href="http://try.GitHub.com/" title="A hands-on Git tutorial from Code School">Try Git »</a></h3>
+
+<p>If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by <a href="http://codeschool.com/" title="Visit Code School">Code School</a>, Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.</p>
+
+<h3><a href="https://GitHub.com/training/" title="Review Git/GitHub traing course from GitHub">GitHub Training »</a></h3>
+
+<p>One of the reasons that GitHub has become popular is the same reason that <a href="http://css-tricks.com/" title="Visit Chris Coyier's CSS Tricks site">Chris Coyier</a> and <a href="http://paulirish.com/" title="vist Paul Irish's site">Paul Irish</a> have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their <a href="https://GitHub.com/training/free" title="Review free GitHub training courses">Free Resources</a> section as well as their <a href="https://GitHub.com/training/online" title="Review GitHub online training offerings">Online Training</a> and <a href="https://GitHub.com/training/events" title="Review GitHub events">Events</a> sections. For the last two, some things are free and some are not, but I think they're reasonably priced.</p>
+
+<h3><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" title="Read Tim Pope's well-known article on proper Git commits">A Note About Git Commit Messages »</a></h3>
+
+<p>Written five years from the time of this post, this Tim Pope article on how to create a proper Git commit has become required reading for developers. Rarely will you find a software pro NOT follow these rules so it's best to include them in your workflow.</p>
+
+<h3><a href="http://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=CD2146&amp;bid=524&amp;aid=CD2146'" title="Get thorough Git training on lynda.com: a kaidez.com affiliate">Git Essential Training Course on lynda.com (premium) »</a></h3>
+
+<p>It costs money but is worth it. Taught by <a href="http://www.kevinskoglund.com/">Kevin Skoglund</a>, it's a thorough, hands-on Git course offered by <a href="http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&amp;utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=655&amp;utm_campaign=CD2146&amp;bid=655&amp;aid=CD2146">lynda.com</a> (a kaidez.com affiliate)...definitely worth checking out.</p>
+
+<h3><a href="https://gist.GitHub.com/2043530#file_gistfile1.sh" title="Get an excellent list of Git commands">Common Git Commands »</a></h3>
+
+<p>UK-based developer <a href="http://www.kerrygallagher.co.uk/" title="Visit Kerry Gallagher's website">Kerry Gallagher</a> put together a really useful list of Git commands. Print it out and tape it somewhere by your computer.</p>
+
+<h3><a href="http://nfarina.com/post/9868516270/git-is-simpler">"Git Is Simpler Than You Think" by Nick Farina »</a></h3>
+
+<p>If you want to Git works under the hood, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.</p>
+
+<h3><a href="https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/" title="Learn about centralized and distributed version control systems">"What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »</a></h3>
+
+<p>I <em>really</em> want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.</p>
+
+<h3><a href="http://git-scm.com/book," title="Read the free Pro Git Book"><em>Pro Git</em> by Scott Chacon »</a></h3>
+
+<p><em>The</em> Git Book, and it's free! It's a little dense and doesn't flow as easily as these other resources…I'll admit that I haven't read all of it. But I have read enough of it to know that it's an important Git resource.</p>
+
+<p><a name="conclusion"></a></p>
+
+<h2>Conclusion</h2>
+
+<p>I hope you understand all the various ways to remove files from GitHub and learned some new Git stuff in the process. At the same time, I hope you've come to realize that the title of Farina's post is correct: Git <em>is</em> simpler than you think. The only thing that will keep you from learning Git is any fears you have of the command line. Get rid of that and you'll discover how bloody useful Git can be, along with a ton of other things.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share TUTORIAL: Remove Files From GitHub on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/remove-files-from-github/" title="Share TUTORIAL: Remove Files From GitHub on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/remove-files-from-github/&t=TUTORIAL: Remove Files From GitHub" class="share-post-link fb" title="Share TUTORIAL: Remove Files From GitHub on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

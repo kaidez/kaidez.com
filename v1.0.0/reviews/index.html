@@ -1,0 +1,18 @@
+---
+layout: categories
+title: Reviews
+meta-excerpt: Reviews posts on kaidez.com review web development based books, events and websites.
+---
+
+  <div id="reviews-description" class="category-description-page">
+  	<p itemprop="text">
+  		Reviews posts on kaidez.com review web development based books, events and websites. Almost all the reviews are positive as the site is interested in suggestively highlighting good work. 
+  	</p>
+  </div> <!-- #reviews-description -->
+
+  {% for post in site.categories.reviews %}
+    <article class="post-snippet" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark" class="post-snippet-link">{{ post.title }}</a></h1>
+      <p itemprop="text">{{ post.meta-excerpt }}</p>
+    </article>
+  {% endfor %}

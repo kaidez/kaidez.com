@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>AJAX Tutorial Update &laquo; Personal &laquo; kaidez</title>
+  <meta name="description" content="kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/update-ajax-tutorial/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="AJAX Tutorial Update" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/update-ajax-tutorial/" property="og:url">
+
+
+
+  <meta content="2015-02-18T00:00:00-05:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/ajax-image.jpg" property="og:image">
+
+
+
+  
+  <meta content="personal" property="article:section">
+  
+
+
+
+  
+  <meta content="ajax" property="article:tag">
+  
+  <meta content="javascript" property="article:tag">
+  
+  <meta content="kaidez" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="AJAX Tutorial Update">
+  <meta name="twitter:description" content="kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/ajax-image.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/personal/" title="More Personal posts on kaidez.com">Personal</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">AJAX Tutorial Update</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">AJAX Tutorial Update</h1>
+
+            <time datetime="2015-02-18" itemprop="datePublished" pubdate>February 18, 2015</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p>Happy 10th Birthday AJAX!!!!</p>
+
+<p>Ten years ago today, web developer <a href="http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/">Jesse James Garrett wrote his ground-breaking AJAX article</a> and changed the world in the process. At least the world of web development.</p>
+
+<p>If you're reading this and are a non-technical person, understand that AJAX described an efficient method to load content onto a web page.  This method <em>would</em> come about eventually...the Internet was evolving towards it.</p>
+
+<p>But <em>if</em> AJAX didn't happen for some bizarre reason, then the growth of the Internet would have stagnated. And Facebook, Twitter, Instagram, Foursquare, Pinterest, Apple and Google (<em>especially</em> Google) wouldn't have enjoyed the success they're enjoying today.</p>
+
+<p>I have a really old AJAX tutorial that's in need of a serious update. So in honor of this birthday, I'm releasing <a href="/ajax-tutorial/">an updated new, in-depth AJAX tutorial</a>.</p>
+
+<p>A preamble...</p>
+
+<p>Every January 1st, I review my site's traffic for the previous year. For the past two years, my tutorial titled <a href="/ajax-jquery-html5-work-together/">"How AJAX, HTML5 and jQuery Work Together"</a> is always close to the top.</p>
+
+<p>Again, this article is old...it was published on January 11th, 2011. Looking at it from that point a view, the article has some issues:</p>
+
+<ul>
+<li><p>I readily admit to doing some keyword stuffing for this post. I didn't need to mention "HTML5" in the article because you can do AJAX stuff without it. HTML5 was a hot topic at the time and although I did tie it to AJAX, I didn't need to.</p></li>
+<li><p>The old post discussed jQuery's AJAX functionality when jQuery was at version 1.4.4. But when jQuery went to 1.5, its AJAX engine got a major rewrite. It was made to be faster and also introduced the concept of Promises via its AJAX-based jqXHR object.  jQuery's use of Promises is controversial, but still worth knowing.</p></li>
+</ul>
+
+
+<p>Another issue: Google Analytics showed that this post received little engagement despite the high traffic it was getting. People were staying on for a few seconds at most, no one shared it on social networks or linked to it.</p>
+
+<p>My tutorial on <a href="/remove-files-from-github/">removing files from GitHub</a> was in the exact same position and I rewrote it in the hopes of increasing engagement...<a href="/github-tutorial-update/">read about that here</a>. I got to the point of the tutorial much quicker, made the content more "scannable", removed the images and used shorter words where possible.</p>
+
+<p><strong>The result of all this was an average of 1.5+ minutes more spent on the page and more Twitter shares</strong>.</p>
+
+<p>I'm happy with that.</p>
+
+<p>All this showed me that it's worth it to rewrite a post when the numbers indicate it, so I rewrote the AJAX post as a direct result. There are a few significant changes:</p>
+
+<ul>
+<li><p>Where I shorten the GitHub post's content, the new AJAX page's content is longer...much, much longer. I'll concede this is a bit of a risk so in order to make things as easy to read as possible, I included a very scannable in-page navigation, added links throughout the post which jump back to the navigation, performed readability tests with <a href="https://readability-score.com/">Readability Score</a> and used as many short words as possible.  All told, it took me a month to rewrite this tutorial to the point that I was 100% comfortable with its content.</p></li>
+<li><p>Focused more on jQuery's excellent AJAX functionality and discussed its (controversial) Promise functionality.</p></li>
+<li><p>Included lots of demos that can be viewed as well as <a href="https://github.com/kaidez/ajax-tutorial-samples">downloaded from GitHub</a>.</p></li>
+<li><p>I'm trying to get the search engines to view this page as "cornerstone content", content that represents the best of the best on my blog. In that scenario, it's best to treat the content as a "page" and not a "blog post". I did this by changing things around in my site structure as well as link to this article in the site's main navigation, all in the hopes of the search engines understanding that this content is top-notch. Yoast has <a href="https://yoast.com/cornerstone-content-rank/">an excellent post on setting up cornerstone content</a>.</p></li>
+<li><p>As a sidenote, the site navigation was redone overall. Along with adding a direct link to the AJAX tutorial, the various site categories and are condensed under a single "BLOG" link. I've also directly-linked to my site's newly-created "ARTICLES" section, which contains content that I consider high-quality. For now, this section just contains the AJAX tutorial and the page that discusses my lynda.com courses, which is also placed as a link in the main navigation. These two articles are things I'm trying to monetize so I'm trying to make them as high-profile on my blog as possible.</p></li>
+<li><p>Speaking of monetizing things, I farmed myself out a little with this tutorial by advertising it on both Twitter and Facebook. Don't know how this will go but I'll be watching.</p></li>
+</ul>
+
+
+<p>I wanted to discuss jQuery Promises a little more and discuss <a href="http://www.w3.org/TR/XMLHttpRequest2/">XHR2</a>, but all this would make the article longer than it already is and I want to avoid that. If this tutorial is well-received, I'll update things and consider adding those things.</p>
+
+<p>Finally, if you read this I'm REALLY curious about your feedback. Is it too long? Too short? Is an important part not covered? Or covered too much?</p>
+
+<p>Please let me know by either add a comment to this blog post or created an issue in <a href="https://github.com/kaidez/ajax-tutorial-samples/issues">the tutorial's issue tracker</a>.</p>
+
+<p>Now, please check out the updated <a href="/ajax-tutorial/">AJAX beginners tutorial</a>.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share AJAX Tutorial Update on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/update-ajax-tutorial/" title="Share AJAX Tutorial Update on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/update-ajax-tutorial/&t=AJAX Tutorial Update" class="share-post-link fb" title="Share AJAX Tutorial Update on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

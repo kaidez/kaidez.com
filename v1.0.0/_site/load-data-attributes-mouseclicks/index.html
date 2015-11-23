@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>TUTORIAL: Load data attributes with Mouse Clicks &laquo; Tutorials &laquo; kaidez</title>
+  <meta name="description" content="Use mouse clicks to load information stored in data attributes onto a web page in a cross-browser compatible way. Contains lots of demos." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/load-data-attributes-mouseclicks/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="TUTORIAL: Load data attributes with Mouse Clicks" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="Use mouse clicks to load information stored in data attributes onto a web page in a cross-browser compatible way. Contains lots of demos." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/load-data-attributes-mouseclicks/" property="og:url">
+
+
+
+  <meta content="2014-12-01T00:00:00-05:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/data-attribute.jpg" property="og:image">
+
+
+
+  
+  <meta content="tutorials" property="article:section">
+  
+
+
+
+  
+  <meta content="html5" property="article:tag">
+  
+  <meta content="javascript" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="TUTORIAL: Load data attributes with Mouse Clicks">
+  <meta name="twitter:description" content="Use mouse clicks to load information stored in data attributes onto a web page in a cross-browser compatible way. Contains lots of demos.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/data-attribute.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/tutorials/" title="More Tutorials posts on kaidez.com">Tutorials</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">TUTORIAL: Load data attributes with Mouse Clicks</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">TUTORIAL: Load data attributes with Mouse Clicks</h1>
+
+            <time datetime="2014-12-01" itemprop="datePublished" pubdate>December 01, 2014</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p>A recent project at work <em>almost</em> required my creating functionality that loaded content stored in HTML5 data attributes onto a web page with mouse clicks. At that point, I had used data attributes in practice code a bit, but readily admitted to not knowing everything about them.</p>
+
+<p>I did some web searches on data attributes and was shocked at the lack of good, descriptive tutorials on the subject. Although I ended up not using them in the work project, I still spent a few days hacking some related code together (all while taking note of the quirks and cross-browser issues), leading to this tutorial where I use info about my favorite footie teams as a data structure.</p>
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li><a href="#how-data%20attributes-work">How data attributes work</a></li>
+<li><a href="#simple-example">A simple example</a></li>
+<li><a href="#proper-naming-data%20attributes">Proper naming of data attributes</a></li>
+<li><a href="#store-data%20attributes-link">Store the data attributes in a link</a></li>
+<li><a href="#store-data%20attributes-multiple-link">Store the data attributes in multiple links</a></li>
+<li><a href="#getattribute-fallback">Use "getAttribute()" as fallback code for "dataset"</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+
+<p><a name="how-data attributes-work"></a></p>
+
+<h2>How data attributes work</h2>
+
+<p>Data attributes are attributes that store data in page elements:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;div id=&quot;teamInfo&quot;
+     data-team=&quot;Chelsea FC&quot;
+     data-manager=&quot;José Mourinho&quot;
+     data-home-pitch=&quot;Stanford Bridge&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>The element that contains these data attributes (<code>&lt;div id="teamInfo"&gt;</code> in the above-example) has an internal property called <code>dataset</code> that stores these attributes in an object called <code>DOMStringMap</code> (an API introduced with HTML5):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>console.log(teamInfo.dataset);
+// logs &quot;DOMStringMap {team: &quot;Chelsea FC&quot;, manager: &quot;José Mourinho&quot;, homePitch: &quot;Stanford Bridge&quot;}&quot;</code></pre>
+</div>
+
+
+<p>The values in an element's <code>dataset</code> property can be accessed individually:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>console.log(teamInfo.dataset.team); // logs &quot;Chelsea FC&quot;
+console.log(teamInfo.dataset.manager); // logs &quot;José Mourinho&quot;
+console.log(teamInfo.dataset.homePitch); // logs &quot;Stanford Bridge&quot;</code></pre>
+</div>
+
+
+<p>All of this means we use JavaScript to find these properties and display them on a web page. But <a href="http://caniuse.com/#search=dataset">data attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower</a>, so we need to write fallback code for those situations.</p>
+
+<p>Before we create our final-production-ready code with fallbacks, we'll create some incremental examples to gain a better understanding of how all this works.</p>
+
+<p><a name="simple-example"></a></p>
+
+<h2>A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the  demo</a>)</h2>
+
+<p>We'll start by creating code that changes just one set of data attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:</p>
+
+<div>
+  <pre data-line=''><code class='language-css'>body {
+  background: grey;
+  color: #000;
+  font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+a:link {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.teamListItem {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+.dataTarget {
+  padding-left: 40px;
+  margin: 10px 0;
+}</code></pre>
+</div>
+
+
+<p>The HTML for this example looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;TUTORIAL: Change &quot;data&quot; Attributes with Mouse Clicks&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=&quot;#&quot; id=&quot;chelsea&quot;&gt;Load Chelsea FC Info »&lt;/a&gt;
+
+  &lt;div id=&quot;teamInfo&quot;
+       data-team=&quot;Chelsea FC&quot;
+       data-manager=&quot;José Mourinho&quot;
+       data-home-pitch=&quot;Stanford Bridge&quot;&gt;
+  &lt;/div&gt;  
+
+  &lt;div id=&quot;team&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;manager&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;homePitch&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+
+  &lt;!-- Note that we&#39;re using the oldIE-friendly version of jQuery --&gt;
+  &lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>And the JavaScript for this example looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var team = document.querySelector(&quot;#team&quot;),
+    manager = document.querySelector(&quot;#manager&quot;),
+    homePitch = document.querySelector(&quot;#homePitch&quot;);
+
+$(&quot;#chelsea&quot;).click(function(event){
+
+  event.preventDefault();
+
+  // Use the dataset property
+  team.innerHTML = teamInfo.dataset.team;
+  manager.innerHTML = teamInfo.dataset.manager;
+  homePitch.innerHTML = teamInfo.dataset.homePitch;
+
+});</code></pre>
+</div>
+
+
+<p>Breaking down the HTML first:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;a href=&quot;#&quot; id=&quot;chelsea&quot;&gt;Load Chelsea FC Info »&lt;/a&gt;</code></pre>
+</div>
+
+
+<p>In the HTML, clicking on the <code>id="chelsea</code> element will load the content stored in the data attributes.</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;div id=&quot;teamInfo&quot;
+     data-team=&quot;Chelsea FC&quot;
+     data-manager=&quot;José Mourinho&quot;
+     data-home-pitch=&quot;Stanford Bridge&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>Those attributes are listed inside <code>&lt;div id="teamInfo"&gt;</code> and named <code>data-team</code>, <code>data-home-pitch</code> and <code>data-manager</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;div id=&quot;team&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;manager&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;homePitch&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>On mouse clicks, those attribute values will be placed inside the three <code>div</code> tags at the bottom. Their ids are: <code>team</code>, <code>manager</code> and <code>homePitch</code>.</p>
+
+<p>Breaking down the JavaScript next...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var team = document.querySelector(&quot;#team&quot;),
+    manager = document.querySelector(&quot;#manager&quot;),
+    homePitch = document.querySelector(&quot;#homePitch&quot;);</code></pre>
+</div>
+
+
+<p>For those <code>div</code> tags that we're placing the data attribute values inside of , we're using <code>document.querySelector()</code> to store references to them. This will make them easier to find when I start referring to them in this next function...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$(&quot;#chelsea&quot;).click(function(event){
+
+  event.preventDefault();
+
+  // Use the dataset property
+  team.innerHTML = teamInfo.dataset.team;
+  manager.innerHTML = teamInfo.dataset.manager;
+  homePitch.innerHTML = teamInfo.dataset.homePitch;
+
+});</code></pre>
+</div>
+
+
+<p>The <code>$</code> tells us that we're using jQuery to bind the <code>jQuery.click</code> method to the link on the web page which, again, is the one with an id of <code>#chelsea</code>. It has a parameter called <code>event</code> passed to it, which we'll discuss a little later.</p>
+
+<p>When <code>#chelsea</code> is clicked, it accesses the previously-mentioned <code>dataset</code> property of the <code>#teamInfo</code> element and sees the value of all its data attributes.  So for example: after it's clicked, <code>#chelsea</code> sees that <code>teamInfo.dataset.team</code> is direct reference to the value of the <code>data-team</code> attribute in <code>#teamInfo</code>, and that the value is "Chelsea FC".</p>
+
+<p>The link will then take that value and place it inside the <code>&lt;div&gt;</code> tags that we referenced with <code>querySelector()</code>, all with help of the <code>innerHTML</code> property. So for example: that value of "Chelsea FC" will be placed inside of <code>&lt;div id="team"&gt;</code>, which is referenced by the previously-created <code>team</code> variable.</p>
+
+<p>OK...back to the function's <code>event</code> parameter...</p>
+
+<p>We have to do this so we can use the <code>event.PreventDefault()</code> method in the link. If we don't use this and the link's <code>href</code> attribute is set to <code>#</code> (which is what's happening with <code>#chelsea</code>), then the <code>#</code> will be passed to the URL.</p>
+
+<p>Depending on the page layout, this will force the page to jump to the top. Which we don't want.</p>
+
+<p><em>(Side note: read more about <a href="https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault">event.PreventDefault() on MDN</a>. There's also the similar <a href="https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation">event.stopPropagation() on MDN</a>, but that blocks events a little more obtrusively then <code>event.PreventDefault()</code>.)</em></p>
+
+<p><a name="proper-naming-data attributes"></a></p>
+
+<h2>Proper naming of data attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the  demo</a>)</h2>
+
+<p>Here's one of the quirks of data attributes...</p>
+
+<p>As just mentioned, <code>teamInfo.dataset.team</code> is a direct reference to the <code>data-team</code> attribute...that makes sense. It's also the same thing with the manager information: <code>teamInfo.dataset.manager</code> is a direct reference to the <code>data-manager</code> attribute.</p>
+
+<p>But those are one-word attributes and our <code>data-home-pitch</code> attribute is two words. So the syntax is different:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>homePitch.innerHTML = teamInfo.dataset.homePitch;</code></pre>
+</div>
+
+
+<p>It needs to be this way for two-word data attributes due to how   <code>dataset</code> works behind the scenes. Specifically, <code>dataset</code> will look at the data attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.</p>
+
+<p>To better understand this, look at the HTML for this section's demo and note that it has a <code>data-homePitch</code> attribute.  Click on the <em>"Load Chelsea FC Info »"</em> link and notice that the pitch content loads in as <code>undefined</code> instead of the expected "Stanford Bridge".</p>
+
+<p>Adjust the code so it says <code>data-home-pitch</code> and it will work fine.  But from there, go to the JavaScript and change <code>teamInfo.dataset.homePitch</code> to <code>teamInfo.dataset.home-pitch</code>...you'll get a browser console reference error saying "pitch is not defined".</p>
+
+<p>Because of this, I suggest keeping your data attributes and <code>dataset</code> properties at a two-word minimum.  <code>data-home-pitch</code> and <code>teamInfo.dataset.homePitch</code> are fine...<code>data-home-team-pitch</code> and <code>teamInfo.dataset.homeTeamPitch</code> may work, but are too verbose.</p>
+
+<p><a name="store-data attributes-link"></a></p>
+
+<h2>Store the data attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the  demo</a>)</h2>
+
+<p>The first example separated the link and the data attribute content for the sake of a clearer explanation, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:</p>
+
+<p><strong>The HTML</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>...
+&lt;a href=&quot;#&quot;
+   id=&quot;chelsea&quot;
+   data-team=&quot;Chelsea FC&quot;
+   data-manager=&quot;José Mourinho&quot;
+   data-home-pitch=&quot;Stanford Bridge&quot;&gt;
+   Load Chelsea FC Info »
+&lt;/a&gt;
+
+&lt;div id=&quot;team&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;manager&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;homePitch&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p><strong>The JavaScript</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var team = document.querySelector(&quot;#team&quot;),
+    manager = document.querySelector(&quot;#manager&quot;),
+    homePitch = document.querySelector(&quot;#homePitch&quot;);
+
+$(&quot;#chelsea&quot;).click(function(event){
+
+  event.preventDefault();
+
+  team.innerHTML = this.dataset.team;
+  manager.innerHTML = this.dataset.manager;
+  homePitch.innerHTML = this.dataset.homePitch;
+
+});</code></pre>
+</div>
+
+
+<p>In the HTML, we've taken the data attributes listed in <code>&lt;div id="teamInfo"&gt;</code> and placed them inside the <code>#chelsea</code> link. This means that <code>&lt;div id="teamInfo"&gt;</code> is no longer needed so we can get rid of it.</p>
+
+<p>In the JavaScript, we've replaced all the <code>teamInfo.dataset</code> references to <code>this.dataset</code>. <code>this</code> is a direct reference to the <code>#chelsea</code> link context, meaning it sees everything connected to it...including the data attributes.</p>
+
+<p><a name="store-data attributes-multiple-link"></a></p>
+
+<h2>Store the data attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the  demo</a>)</h2>
+
+<p>In the previous example, we could have used <code>chelsea.dataset</code> instead of <code>this.dataset</code>. But by using <code>this</code>, our code is reusable and lets us create multiple links that use the same functionality.</p>
+
+<p>Still keeping the CSS the same, we can add a few more links to our HTML while slightly adjusting our JavaScript.  Clicking on each link will load different info onto our page.</p>
+
+<p><strong>The HTML</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>...
+&lt;ul&gt;
+  &lt;li class=&quot;teamListItem&quot;&gt;
+    &lt;a href=&quot;#&quot;
+       class=&quot;teamLink&quot;
+       data-team=&quot;Chelsea FC&quot;
+       data-manager=&quot;José Mourinho&quot;
+       data-home-pitch=&quot;Stanford Bridge&quot;&gt;
+       Load Chelsea FC Info »
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;teamListItem&quot;&gt;
+    &lt;a href=&quot;#&quot;
+      class=&quot;teamLink&quot;
+      data-team=&quot;Real Madrid&quot;
+      data-manager=&quot;Carlo Ancelotti&quot;
+      data-home-pitch=&quot;Santiago Bernabéu&quot;&gt;
+      Load Real Madrid Info »
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;teamListItem&quot;&gt;
+    &lt;a href=&quot;#&quot;
+       class=&quot;teamLink&quot;
+      data-team=&quot;AC Milan&quot;
+      data-manager=&quot;Filippo Inzaghi&quot;
+      data-home-pitch=&quot;San Siro&quot;&gt;
+      Load AC Milan Info »
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;teamListItem&quot;&gt;
+    &lt;a href=&quot;#&quot;
+      class=&quot;teamLink&quot;
+      data-team=&quot;Paris Saint-Germain&quot;
+      data-manager=&quot;Laurent Blanc&quot;
+      data-home-pitch=&quot;Parc des Princes&quot;&gt;
+      Load Paris Saint-Germain Info »
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;team&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;manager&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;homePitch&quot; class=&quot;dataTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p><strong>The JavaScript</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var team = document.querySelector(&quot;#team&quot;),
+    manager = document.querySelector(&quot;#manager&quot;),
+    homePitch = document.querySelector(&quot;#homePitch&quot;);
+
+ $(&quot;.teamLink&quot;).click(function(event){
+
+  event.preventDefault();
+
+  team.innerHTML = this.dataset.team;
+  manager.innerHTML = this.dataset.manager;
+  homePitch.innerHTML = this.dataset.homePitch;
+
+});</code></pre>
+</div>
+
+
+<p>In the HTML we've removed the id property while adding a class called <code>teamLink</code> for each of our links.  We're also no longer targeting the id in the <code>jQuery.click</code> method and, instead, targeting this new <code>teamLink</code> class.</p>
+
+<p>So every time a link with the <code>teamLink</code> class gets clicked, the <code>this</code> keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.</p>
+
+<p><a name="getattribute-fallback"></a></p>
+
+<h2>Use <code>getAttribute()</code> as fallback code for <code>dataset</code> (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the  demo</a>)</h2>
+
+<p><code>dateset</code> is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the <code>getAttribute()</code> method for those browsers, specifically IE 10 and lower.</p>
+
+<p>The CSS and HTML stay the same while the JavaScript goes through some changes...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var team = document.querySelector(&quot;#team&quot;),
+    manager = document.querySelector(&quot;#manager&quot;),
+    homePitch = document.querySelector(&quot;#homePitch&quot;),
+    teamValue,
+    managerValue,
+    homePitchValue;
+
+$(&quot;.teamLink&quot;).click(function(event){
+  event.preventDefault();
+
+  // if &quot;this.dataset&quot; does NOT exist, do this
+  if(!this.dataset) {
+    teamValue = this.getAttribute(&quot;data-team&quot;);
+    managerValue = this.getAttribute(&quot;data-manager&quot;);
+    homePitchValue = this.getAttribute(&quot;data-home-pitch&quot;);
+
+  // if but if it does, do this
+  } else {
+    teamValue = this.dataset.team;
+    managerValue = this.dataset.manager;
+    homePitchValue = this.dataset.homePitch;
+  };
+
+  team.innerHTML = teamValue;
+  manager.innerHTML = managerValue;
+  homePitch.innerHTML = homePitchValue;
+
+});</code></pre>
+</div>
+
+
+<p>We've add three new variables without giving them a value: <code>teamValue</code>, <code>managerValue</code> and <code>homePitchValue.</code> From there, we make sure that every time a link is clicked, it first checks to see if our links have a <code>dataset</code> property.</p>
+
+<p>We do this using a JavaScript <code>if/else</code> statement and first check to see  <code>dataset</code> does NOT exist by saying <code>if(!this.dataset)</code>. If it doesn't exist, we'll use the <code>getAttribute()</code> method to find all the data attribute values and store them in the three new variables we just created.</p>
+
+<p>But if the <code>dataset</code> property DOES exist, we'll just say that those new variables should use <code>dataset</code> to access and store those values like we've been doing up to this point.</p>
+
+<p>We've made sure that the <code>teamValue</code>, <code>managerValue</code> and <code>homePitchValue</code> variables are properly storing the data attributes values, regardless of whether or not the browser supports <code>dataset</code>. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with <code>document.querySelector()</code>.</p>
+
+<p><a name="conclusion"></a></p>
+
+<h2>Conclusion</h2>
+
+<p>This was a very basic data attribute implementation and, quite frankly, data attribute implementations should be simple. Each link isn't overloaded with data attributes that have over 100 character lines of copy.</p>
+
+<p>Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That was my opinion at the start of this but reading well-respected developer <a href="https://dev.opera.com/articles/introduction-to-datasets/">Divya Manian's excellent <code>dataset</code> post</a> justifies my feelings.</p>
+
+<p>But for simple data structures, using data attributes will certainly fit your simpler use cases, especially if you need to load them with a mouse event. So there are many reasons to add them to your production code, and I hope this tutorial helps you.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share TUTORIAL: Load data attributes with Mouse Clicks on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/load-data-attributes-mouseclicks/" title="Share TUTORIAL: Load data attributes with Mouse Clicks on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/load-data-attributes-mouseclicks/&t=TUTORIAL: Load data attributes with Mouse Clicks" class="share-post-link fb" title="Share TUTORIAL: Load data attributes with Mouse Clicks on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

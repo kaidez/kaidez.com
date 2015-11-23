@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>Code Tips &laquo; kaidez</title>
+  <meta name="description" content="Code Tips posts on kaidez.com discuss tips for certain web development topics. The reader should have a little better than basic knowledge of the topics." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/coding-best-practices/index.html" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="Code Tips" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="Code Tips posts on kaidez.com discuss tips for certain web development topics. The reader should have a little better than basic knowledge of the topics." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/coding-best-practices/index.html" property="og:url">
+
+
+
+
+
+  <meta content="http://kaidez.com/img/homePageDefault.jpg" property="og:image">
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="Code Tips">
+  <meta name="twitter:description" content="Code Tips posts on kaidez.com discuss tips for certain web development topics. The reader should have a little better than basic knowledge of the topics.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/homePageDefault.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" class="homepage-link" title="kaidez.com home page">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> Code Tips
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope="itemscope" itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+      <section class="newestArticleClass">
+        <h1 class="category-title">Category: Code Tips</h1>
+            <div id="about-description" class="category-description-page">
+  	"Code Tips" posts discuss tips and tricks for a certain web development topic. Unlike the "<a href="/tutorials/" title="Tutorials on kaidez.com">Tutorials</a>" posts which teach from the ground up, code Tips assume that the reader has a little better than basic understanding of the topics discussed.
+  </div> <!-- #about-description -->
+
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/take-css-seriously/" title="Start Taking CSS Seriously" rel="bookmark" class="post-snippet-link">Start Taking CSS Seriously</a></h1>
+      <p itemprop="text">Web developers should always optimize their CSS code but far too many don't. The rise of the mobile web has now forced them to change.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/css-build-demo/" title="SCREENCAST: CSS Build Demo" rel="bookmark" class="post-snippet-link">SCREENCAST: CSS Build Demo</a></h1>
+      <p itemprop="text">A demo of how to optimize CSS with Gulp, Grunt and tasks like uncss and critical path css. Has a link to fully-commented code on GitHub.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/kdz-build-tool/" title="kdz - My Personal Scaffolding Tool" rel="bookmark" class="post-snippet-link">kdz - My Personal Scaffolding Tool</a></h1>
+      <p itemprop="text">kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/web-components-demo/" title="Web Components Demo: Templates and (some) Shadow DOM" rel="bookmark" class="post-snippet-link">Web Components Demo: Templates and (some) Shadow DOM</a></h1>
+      <p itemprop="text">A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/requirejs-wordpress/" title="Using RequireJS In WordPress" rel="bookmark" class="post-snippet-link">Using RequireJS In WordPress</a></h1>
+      <p itemprop="text">Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/media-queries-important/" title="Media Queries Are Important" rel="bookmark" class="post-snippet-link">Media Queries Are Important</a></h1>
+      <p itemprop="text">CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/learn-javascript-before-jquery/" title="5 Reasons Why You Need To Learn To Use JavaScript Before jQuery" rel="bookmark" class="post-snippet-link">5 Reasons Why You Need To Learn To Use JavaScript Before jQuery</a></h1>
+      <p itemprop="text">A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/simple-html5-explanation/" title="A Simple Explanation of HTML5" rel="bookmark" class="post-snippet-link">A Simple Explanation of HTML5</a></h1>
+      <p itemprop="text">A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/mobile-web-development-best-practice-resources/" title="5 Mobile Web Development Best Practice Resources" rel="bookmark" class="post-snippet-link">5 Mobile Web Development Best Practice Resources</a></h1>
+      <p itemprop="text">Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/2-bad-facebook-app-things/" title="2 Bad Things About the Facebook App Setup" rel="bookmark" class="post-snippet-link">2 Bad Things About the Facebook App Setup</a></h1>
+      <p itemprop="text">Creating a Facebook app is easy but doing so generates CSS expressions and creates page reflows, all of which reduce page optimization</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/mobile-web-development-best-practices-starting-tips/" title="Mobile Web Development Best Practices &#8211; Starting Tips" rel="bookmark" class="post-snippet-link">Mobile Web Development Best Practices &#8211; Starting Tips</a></h1>
+      <p itemprop="text">Starter mobile web development best practices including YSlow & Page Speed tests and minifying pages with HTML5 Boilerplate's build script</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/new-york-times-article-html5-html5-site/" title="New York Times Article On HTML5 &#038; Their New HTML5 Site" rel="bookmark" class="post-snippet-link">New York Times Article On HTML5 &#038; Their New HTML5 Site</a></h1>
+      <p itemprop="text">A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-boilerplate-version-1/" title="HTML5 Boilerplate Goes To Version 1.0" rel="bookmark" class="post-snippet-link">HTML5 Boilerplate Goes To Version 1.0</a></h1>
+      <p itemprop="text">A quick review of HTML5 Boilerplate version 1.0, discussing the new build script for site optimization and custom site template build</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-project-update-responsive-web-design/" title="HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries" rel="bookmark" class="post-snippet-link">HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries</a></h1>
+      <p itemprop="text">An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/easy-to-read-html5-spec/" title="Easy-To-Read Version of The HTML5 Specification" rel="bookmark" class="post-snippet-link">Easy-To-Read Version of The HTML5 Specification</a></h1>
+      <p itemprop="text">Ben Schwarz gives us HTML5-A technical specification for Web developers, translating WHATWG's HTML5 arduous spec into layman's terms</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-project-boilerplate-theme-wordpress/" title="HTML5 Project: Boilerplate WordPress Theme" rel="bookmark" class="post-snippet-link">HTML5 Project: Boilerplate WordPress Theme</a></h1>
+      <p itemprop="text">Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/yoast-awesome-wordpress-seo-speech/" title="Yoast&#8217;s Awesome WordPress SEO Speech" rel="bookmark" class="post-snippet-link">Yoast&#8217;s Awesome WordPress SEO Speech</a></h1>
+      <p itemprop="text">A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-boilerplate-video/" title="The HTML5 Boilerplate Video is AWESOME!!!!!!" rel="bookmark" class="post-snippet-link">The HTML5 Boilerplate Video is AWESOME!!!!!!</a></h1>
+      <p itemprop="text">Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/coolsite-html5-readiness/" title="HTML5 Readiness -  NEW COOLSITE!" rel="bookmark" class="post-snippet-link">HTML5 Readiness -  NEW COOLSITE!</a></h1>
+      <p itemprop="text">HTML5 Readiness neatly displays browser support for HTML5 and CSS3</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/update-html5seomicrodata-post/" title="Update to My HTML5/SEO/Microdata Post" rel="bookmark" class="post-snippet-link">Update to My HTML5/SEO/Microdata Post</a></h1>
+      <p itemprop="text">Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/wordpress-webmatrix/" title="WordPress &#038; WebMatrix" rel="bookmark" class="post-snippet-link">WordPress &#038; WebMatrix</a></h1>
+      <p itemprop="text">Using WebMatrix to create a WordPress development site</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-seo-microdata/" title="HTML5, <del>SEO</del> and Microdata" rel="bookmark" class="post-snippet-link">HTML5, <del>SEO</del> and Microdata</a></h1>
+      <p itemprop="text">HTML5's Microdata feature is a good tactic if properly formatted</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/video-lecture-wordpress-usability-analytics/" title="Great Video Lecture on WordPress Usability &#038; Analytics" rel="bookmark" class="post-snippet-link">Great Video Lecture on WordPress Usability &#038; Analytics</a></h1>
+      <p itemprop="text">Stefanos Kofopoulos from pestaola.gr shares some excellent usability & analytics tips that he applied to his Wordpress-based blog.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-video-tips-january-2011/" title="10 Things To Remember About HTML5 Video" rel="bookmark" class="post-snippet-link">10 Things To Remember About HTML5 Video</a></h1>
+      <p itemprop="text">HTML5 Video Tips from kaidez</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/two-javascript-tasks-jquery-does-not-replace/" title="Two JavaScript Tasks That jQuery Does Not Replace" rel="bookmark" class="post-snippet-link">Two JavaScript Tasks That jQuery Does Not Replace</a></h1>
+      <p itemprop="text">Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/reasons-design-websites-internet-explorer-6/" title="5 Reasons To Design Websites For Internet Explorer 6" rel="bookmark" class="post-snippet-link">5 Reasons To Design Websites For Internet Explorer 6</a></h1>
+      <p itemprop="text">HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/10-wordpress-tips-12-01-10/" title="10 WordPress Tips For Web Designers" rel="bookmark" class="post-snippet-link">10 WordPress Tips For Web Designers</a></h1>
+      <p itemprop="text">10 great tips that can help you with WordPress development, such as creating child themes, page templates and how to approach security.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/kaidez-html5-apps/" title="My HTML5 Applications" rel="bookmark" class="post-snippet-link">My HTML5 Applications</a></h1>
+      <p itemprop="text">I'm starting to narrow down what my favorite HTML5 tools are.</p>
+    </article>
+  
+    <article class="post-snippet" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h1 class="post-snippet-title" itemprop="headline"><a href="/html5-resources-nov-17-2010/" title="2 HTML5 Resources I Like" rel="bookmark" class="post-snippet-link">2 HTML5 Resources I Like</a></h1>
+      <p itemprop="text">Great HTML5 learning resources</p>
+    </article>
+  
+      </section>
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+      <script src="/js/scripts.min.js"></script>
+
+
+  
+
+  
+
+</body>
+</html>

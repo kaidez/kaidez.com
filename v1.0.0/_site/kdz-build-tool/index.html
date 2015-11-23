@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>kdz - My Personal Scaffolding Tool &laquo; Code Tips &laquo; kaidez</title>
+  <meta name="description" content="kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/kdz-build-tool/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="kdz - My Personal Scaffolding Tool" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/kdz-build-tool/" property="og:url">
+
+
+
+  <meta content="2015-03-13T00:00:00-04:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/kdz-header.jpg" property="og:image">
+
+
+
+  
+  <meta content="coding-best-practices" property="article:section">
+  
+
+
+
+  
+  <meta content="javascript" property="article:tag">
+  
+  <meta content="node" property="article:tag">
+  
+  <meta content="kaidez" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="kdz - My Personal Scaffolding Tool">
+  <meta name="twitter:description" content="kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/kdz-header.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/coding-best-practices/" title="More Code Tips posts on kaidez.com">Code Tips</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">kdz - My Personal Scaffolding Tool</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">kdz - My Personal Scaffolding Tool</h1>
+
+            <time datetime="2015-03-13" itemprop="datePublished" pubdate>March 13, 2015</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p>I came up with some cool techniques after working on a bunch of web development projects, techniques based mostly around front-end tooling.  I knew I would use these techniques and tools in future projects, and also knew that I had to find a way to easily set them up at the start of each project.</p>
+
+<p>I solved the problem by creating a <a href="https://nodejs.org/" title="Go to the Node site">Node</a> scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".</p>
+
+<h2 style="clear:both;">Table of Contents</h2>
+
+
+<ol>
+<li><a href="#notes">Some Notes</a></li>
+<li><a href="#how-this-started">How This Started</a></li>
+<li><a href="#the-problem">The Problem</a></li>
+<li><a href="#more-problems">More Problems</a></li>
+<li><a href="#tool-building-process">The Tool-Building Process</a></li>
+<li><a href="#final-command">The Final Command</a></li>
+<li><a href="#behind-the-scenes">Behind The Scenes</a></li>
+<li><a href="#todo">What's Left To Do</a></li>
+<li><a href="#further-reading">Further Reading</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+
+<p><a name="notes"></a></p>
+
+<h2>Some Notes</h2>
+
+<p>A few notes first...</p>
+
+<ul>
+<li><p>This is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I took to solve a specific problem.</p></li>
+<li><p><a href="https://github.com/kaidez/kdz" title="See the &quot;kdz&quot; code on GitHub">The "kdz" code is thoroughly commented on GitHub</a> for your review: feel free to look at it and ask questions/make comments about it in a post comment. When reviewing the code, you want to look at the modules in the <a href="https://github.com/kaidez/kdz/tree/master/config" title="Review the npm code modules for &quot;kdz&quot;"><code>config</code> folder</a> as well as <a href="https://github.com/kaidez/kdz/blob/master/kdz.js" title="Review the core &quot;kdz.js&quot; file">the core <code>kdz.js</code> file</a>.</p></li>
+<li><p>This tool will (probably) never be published as an <a href="https://www.npmjs.com/">npm</a> package so if you want to download it, please <a href="https://github.com/kaidez/kdz#before-you-install" title="Read the repo's &quot;Before you install&quot; section">read the repo's "Before you install" section</a> first.</p></li>
+</ul>
+
+
+<p><a name="how-this-started"></a></p>
+
+<h2>How This Started</h2>
+
+<p>I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The project tooling was set up like this in my dev environment:</p>
+
+<ul>
+<li><a href="http://jade-lang.com/" title="Review the Jade HTML template engine">Jade</a> was used for HTML5 pre-processing.</li>
+<li><a href="http://lesscss.org/" title="Review the LESS pre-processor">LESS</a> was used for CSS pre-processing.</li>
+<li><a href="http://coffeescript.org/" title="Review the CoffeeScript JS pre-processor">CoffeeScript</a> was used for JavaScript pre-processing.</li>
+<li>I used the core CSS file that comes with <a href="http://getbootstrap.com/" title="Review Twitter Bootstrap">Twitter Bootstrap</a> because it I'm very productive when using it to build a responsive web design.</li>
+<li><a href="http://bower.io/" title="Review the Bower web package manager">Bower</a> was used to manage browser-level dependencies via a <code>bower.json</code> file.</li>
+<li><a href="https://www.npmjs.com/" title="Review the npm package manager for Node">npm</a> was used to manage development-level dependencies via a <code>package.json</code> file.</li>
+<li><a href="http://gruntjs.com/" title="Review the Grunt task runner">Grunt</a> and <a href="http://gulpjs.com/" title="Review the Gulp build system">Gulp</a> were used to automate various project tasks, especially build-out of the final page.</li>
+</ul>
+
+
+<p>I had hit a serious comfort zone with the tools well in advance of starting this project. I had used all of them before and knew how to get them to work as a team inside my dev environment.</p>
+
+<p>This was especially true of the CSS processing, which was powered by Gulp...mostly. Gulp let me create an efficient process for generating a single, production-ready CSS file...linting it, minifying it, concatenating it, etc.</p>
+
+<p>I actually hit a point where I felt compelled to tweet this...</p>
+
+<blockquote class="twitter-tweet" lang="en" style="margin: 0 auto;"><p>Got my Gulp CSS build-out process working EXACTLY the way I want it to…only took 3 weeks.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/529054310379053056">November 2, 2014</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>There was a rush to launch this project and as a result, it launched when the code was "good enough," but "not as good as it could've been." Some things clearly needed refactoring.</p>
+
+<p>There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. Since I liked with the tooling environment I used for the project, I decided to use it for the refactor.</p>
+
+<p><a name="the-problem"></a></p>
+
+<h2>The Problem</h2>
+
+<p>Recreating this setup was a pain in the a**. Since I was only refactoring <em>parts</em> of the site code and not the <em>entire site</em>, the tooling need to be adjusted in some spots.</p>
+
+<p>For example: I didn't need all the dependencies listed in the <code>package.json</code> and <code>bower.json</code> files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.</p>
+
+<p>OK...that was more of an inconvenience than a pain in the a**. But setting up the CSS build process again? That sucked.</p>
+
+<p>Again, I'm a fan of how well Bootstrap does responsive web design and based my LESS setup around that. My <code>.less</code> files were named based on Bootstraps's pre-defined set of media queries, allowing me to add media query code based Bootstrap's near-perfect setup.</p>
+
+<p>So since Bootstrap has a media query called <code>@media (min-width: 1200px)</code>, I have a file called <code>min-width-1200.less</code> that contains the following code:</p>
+
+<div>
+  <pre data-line=''><code class='language-css'>@media (min-width: 1200px) {
+
+}</code></pre>
+</div>
+
+
+<p>And since it also has a media query called <code>@media screen and (min-width: 768px)</code>, I have a file called <code>screen-and-min-width-768.less</code> that contains the following code:</p>
+
+<div>
+  <pre data-line=''><code class='language-css'>@media screen and (min-width: 768px) {
+
+}</code></pre>
+</div>
+
+
+<p>You get the idea...</p>
+
+<p>Like the <code>package.json</code> and <code>bower.json</code> files, the LESS files needed to be setup differently for the refactor. I only had to adjust two <code>.json</code> files...I had to adjust 20 <code>.less</code> files.</p>
+
+<p>Adjusting the <code>.json</code> dependencies was a manageable inconvenience...adjusting the <code>.less</code> files was a mind numbing sh*t-show.</p>
+
+<p>I knew I would use this setup again and again, so containing it in a template I could use to start my projects seemed to make sense. I started building the template when I finished the refactor.</p>
+
+<p><a name="more-problems"></a></p>
+
+<h2>More Problems</h2>
+
+<p>The template started off as a bunch of files in a GitHub repo. It contained the <code>.less</code> and <code>.json</code> files and other things, like the Grunt &amp; Gulp files and a <code>.gitignore</code> file.</p>
+
+<p>Another set of problems soon appeared:</p>
+
+<ul>
+<li><p>scaffolding this project from the repo wasn't convenient. Starting a project with it meant I would need to <code>git clone</code> it to my machine.  But that would download a folder with the files and I just needed the files. So if I was starting a project from scratch, I would have to rename the downloaded folder to match the project. Or, if I already started a project in another folder, I would have to copy the downloaded repo files to that other folder.  All of this is doable...it's just not convenient.</p></li>
+<li><p>the template contained LESS files but I knew there would be instances where I would need to use another pre-processor. For example: <a href="http://jekyllrb.com/docs/assets/">Jekyll has built-in Sass integration</a> so using <a href="http://sass-lang.com/" title="Review the Sass pre-processor">Sass</a> in that situation may make more sense.  And what if I wanted to use another pre-processor like <a href="http://learnboost.github.io/stylus/" title="Read more about Stylus">Stylus</a> someday? Plus, I want to use <a href="https://github.com/reworkcss/rework">Rework</a> at some point because it lets you build a customizable pre-processor. So there may be times in the future when I don't need LESS, Sass or another CSS pre-processor. Either way, the template needed to be flexible enough for me to add/remove pre-processors as I saw fit.</p></li>
+<li><p>the template contained a <code>.gitignore</code> that listed some common files that should be ignored from Git commits. But my day job requires my working in a Microsoft .NET environment built around best practices codified over the course of a decade. One of these best practices is using  <a href="https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx" title="Review Microsoft's Team Foundation Server">Microsoft TFS</a> for version control, not Git.</p></li>
+<li><p>the template was configured really well for single page applications (SPAs), but I also do a fair amount of WordPress work.  The template wasn't really set up for that: some Gulp/Grunt plugins wouldn't work, the CSS would need a slightly difference build-out process and the <code>.gitignore</code> would need some files added to it.</p></li>
+<li><p>Making the tool work for .NET and WordPress environments meant Jade didn't need to be add to a project by default.</p></li>
+</ul>
+
+
+<p>So a downloadable template wouldn't work because it would be too opinionated. It would assume that every project required the same tooling/dev environment setup...which isn't true.</p>
+
+<p>It was clear that I had to find a way to programmatically scaffold each project so I could configure it based on a set of passed (or not-passed) options. <a href="http://yeoman.io/">Yeoman</a> is the current popular scaffolding app and I could have spent some time searching through <a href="http://yeoman.io/generators/" title="Review Yeoman's generators">Yeoman's generators</a> to find what I needed.</p>
+
+<p>But what I wanted was too specific so I doubted the Yeoman could help. So I decided to use Node to try and build the tool for this.</p>
+
+<p><a name="tool-building-process"></a></p>
+
+<h2>The Tool-Building Process</h2>
+
+<p>I asked around and did some Google searches, trying to figure out the best way to do this. It took me two nights to get files and folders to either download or be created with a Node command.</p>
+
+<p>From there, I became ridiculously anal-retentive and spent three weeks (THREE WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around logging: what messages were sent to the terminal console as the app progressed, what it took to get them to appear in the proper order, etc.</p>
+
+<p><a name="final-command"></a></p>
+
+<h2>The Final Command</h2>
+
+<p>The end result of all this is <code>kdz</code>: a Node tool that lets me scaffold  a project and add small set of options. It downloads files from a GitHub repo, and it also creates files &amp; folders....all in a programmatic way.</p>
+
+<p>After you install it, typing <code>kdz</code> from anywhere in the terminal runs the <code>--help</code> command and outputs this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>Usage: &quot;kdz&quot; [options] [command]
+
+
+  Commands:
+
+    app   scaffold a basic web application
+    dt    delete &quot;test-build&quot; folder
+
+  Options:
+
+    -h, --help       output usage information
+    -V, --version    output the version number
+    -w, --wordpress  create a WordPress project
+    -g, --gitignore  download &quot;.gitignore&quot; file
+    -l, --less       download LESS files in &quot;css-build&quot;
+    -s, --scss       download Sass files in &quot;css-build&quot;
+    -t, --test       do a test scaffold in &quot;test-build&quot;</code></pre>
+</div>
+
+
+<p>Just two commands for now...<code>app</code> and <code>dt</code>:</p>
+
+<ul>
+<li><p>Running <code>kdz app</code> scaffolds out a SPA-like project by performing the following steps:</p>
+
+<ul>
+<li>a <code>build</code> folder is created with <code>css</code> and <code>js</code> subdirectories.</li>
+<li>a <code>coffee</code> folder is created and a <code>main.coffee</code> file is created inside of it.</li>
+<li>a <code>css-build</code> folder is created with an <code>imports</code> folder, and an empty <code>image-min</code> folder is created (images that need to be minified go here).</li>
+<li><code>bower.json</code>, <code>.bowerrc</code> and <code>STYLEGUIDE.md</code> files are downloaded from the <code>source-shared-files</code> directory in the <code>kdz</code> repo.</li>
+<li>SPA-like <code>Gruntfile.js</code>, <code>gulpfile.js</code> and <code>package.json</code> files are downloaded from the <code>source-spa</code> directory in the <code>kdz</code> repo.</li>
+</ul>
+</li>
+<li>The final build looks like this:</li>
+</ul>
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>├── build
+|   ├── css
+|   └── js
+        └── libs
+├── coffee
+|   └── main.coffee
+├── image-min
+├── css-build
+|   └── imports
+├── .bowerrc
+├── bower.json
+├── Gruntfile.js
+├── gulpfile.js
+├── package.json
+└── STYLEGUIDE.md</code></pre>
+</div>
+
+
+<ul>
+<li>If the <code>--test flag</code> is passed to <code>kdz app</code>, a <code>test-build</code> folder is created, then a test scaffold goes into that folder. <code>kdz dt</code> is a quick way of deleting <code>test-build</code> after the testing is done and was used for <code>kdz</code> development purposes only. It plays no role in getting a web dev project done.</li>
+</ul>
+
+
+<p>Along with <code>--test</code> and the standard <code>--help</code> and <code>--version</code>, there are a small set of options that can be passed to a command:</p>
+
+<ul>
+<li><p>the <code>--wordpress</code> option scaffolds out a WordPress-like project. It performs almost the same tasks as <code>kdz app</code> with the following differences:</p>
+
+<ul>
+<li>the <code>build</code> folder and its subdirectories are not created.</li>
+<li>the <code>Gruntfile.js</code>, <code>gulpfile.js</code> and <code>package.json</code> files that are downloaded are more geared toward WordPress development and downloaded from the <code>source-wordpress</code> folder in the "kdz" repo.</li>
+<li>a <code>functions.php</code> file is downloaded.</li>
+</ul>
+</li>
+<li>The final build looks like this:</li>
+</ul>
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>├── coffee
+|   └── main.coffee
+├── image-min
+├── css-build
+|   └── imports
+├── .bowerrc
+├── bower.json
+├── functions.php
+├── Gruntfile.js
+├── gulpfile.js
+├── package.json
+└── STYLEGUIDE.md</code></pre>
+</div>
+
+
+<ul>
+<li><p>the <code>--gitignore</code> option downloads a <code>.gitignore</code> file from <code>source-spa</code> to the root folder by default. But if the <code>--wordpress</code> option is passed, <code>.gitignore</code> will be WordPress-specific and downloaded from <code>source-wordpress</code>.</p></li>
+<li><p>the <code>--less</code> option downloads LESS files from <code>source-spa</code> to <code>css-build</code> and <code>css-build/imports</code> by default. But if the <code>--wordpress</code> option is passed, the LESS files will be WordPress-specific and downloaded from <code>source-wordpress</code>. As mentioned, the <code>.less</code> files are named based on Bootstrap-defined media queries so the final build would look like this:</p></li>
+</ul>
+
+
+<div>
+  <pre data-line=''><code class='language-markup'>css-build
+ ├── style.less
+ └── imports
+     ├── all-transform-3d-webkit-transform-3d.less
+     ├── bootstrap-override.less
+     ├── for.less
+     ├── globals.less
+     ├── max-device-width-480-orientation-landscape.less
+     ├── max-width-767.less
+     ├── min-width-1200.less
+     ├── min-width-768-max-width-991.less
+     ├── min-width-768.less
+     ├── min-width-992-max-width-1199.less
+     ├── min-width-992.less
+     ├── mixins.less
+     ├── mobile_first.less
+     ├── retina-media-queries.less
+     ├── screen-and-max-width-767.less
+     ├── screen-and-min-width-768.less
+     ├── screen-webkit-min-device-pixel-ratio-0.less
+     ├── screen-webkit-min-device-pixel-ratio-0
+     └── variables.less</code></pre>
+</div>
+
+
+<ul>
+<li>the <code>--scss</code> option does pretty much what <code>--less</code> does, except it downloads Sass files from <code>source-spa</code> to <code>css-build</code> and <code>css-build/imports</code> by default. But if the <code>--wordpress</code> option is passed, the Sass files will be WordPress-specific and downloaded from <code>source-wordpress</code>.</li>
+</ul>
+
+
+<p>There are slight variations among the LESS and Sass builds based on my self-imposed rules. For example: the <code>globals.less</code> file exists for a reason and although there's a <code>for.less</code> file, there's no <code>for.scss</code> file.</p>
+
+<p>Learn about these variations and rules over on <a href="https://github.com/kaidez/kdz/blob/master/source-shared-files/STYLEGUIDE.md#understand-the-basic-structure">the "Understand the Basic structure" section in repo's style guide</a>.</p>
+
+<p><a name="behind-the-scenes"></a></p>
+
+<h2>Behind The Scenes</h2>
+
+<p>Some interesting points about how "kdz" works behind the scenes:</p>
+
+<ul>
+<li>Obviously, "kdz" was built with Node.</li>
+<li><a href="https://www.npmjs.com/package/commander" title="Read about the npm commander module">commander</a> was the key package used to build this tool. It's what I used to configure the commands and options. Thanks to <a href="https://twitter.com/rogden83" title="Visit Ryan Ogden on Twitter">Ryan Ogden at Expand The Room</a> for turning me on to it.</li>
+<li><a href="https://www.npmjs.com/package/q" title="Read about the npm q module">q</a> was used to manage <a href="https://promisesaplus.com/" title="Read the Promises/A+ specification">JS Promises</a>. Node runs things asynchronously and I had to make sure that a certain step didn't run until some other steps ran before it. q properly managed that process.</li>
+<li>The <a href="https://www.npmjs.com/package/download" title="Read about the npm download module">download</a> and <a href="https://www.npmjs.com/package/download-status" title="Read about the npm download-status module">download-status</a> modules work together to download files from the repo and display how the download is progressing.</li>
+<li><a href="https://www.npmjs.com/package/chalk" title="Read about the npm chalk module">chalk</a> adds some pretty sweet coloring to the outputted console statements.</li>
+</ul>
+
+
+<p><a name="todo"></a></p>
+
+<h2>What's Left To Do</h2>
+
+<p>A lot. The repo's README has a <a href="https://github.com/kaidez/kdz#todowish-list" title="Read the TODO list on the &quot;kdz&quot; repo">TODO list</a> of things I need/want to do, but here are the main things:</p>
+
+<ul>
+<li><p><strong>get "kdz" working on Windows:</strong> we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think "kdz" should respect that.</p></li>
+<li><p><strong>make the Promises neater:</strong> I used Promises primarily to make sure the console logging happened in the proper order and while I'm (pretty) sure I implemented them properly, the code is spaghetti-like. This is the main reason why "kdz" is at v0.0.1 and I'd like to try and clean up the Promises before bumping a lot versions.</p></li>
+<li><p><strong>make a small library of methods:</strong> I spent a day looking at spots where the code was repetitive, then placing that code in a reusable function that all the spots could use. There are other spots that can use this: lots of spots use <a href="https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback" title="Read about Node fs.open">Node's fs.open() method</a> to check for the existence of a given file or folder. Placing that chunk in a library with a bunch of other reusable methods makes sense.</p></li>
+<li><p><strong>make the options run on their own:</strong> right now, the <code>--gitignore</code>, <code>--less</code>, <code>--sass</code> and <code>--wordpress</code> won't run unless they're passed as options to commands. In other words, running <code>kdz app</code> will scaffold a basic project but if I want to download Sass files sometime after that, I would have to run <code>kdz app -s</code>. Sass files should be able to be downloaded without the <code>app</code> command so I'm working on that.</p></li>
+</ul>
+
+
+<p><a name="further-reading"></a></p>
+
+<h2>Further Reading</h2>
+
+<p>A main reason that I didn't write a tutorial was because there are so many good ones already out there. I found the <a href="http://cruft.io/posts/node-command-line-utilities/"><em>Command-line utilities with Node.js</em> article by Glynn Phillips </a> to be the best one...I'd start there.</p>
+
+<p>The <a href="https://nodejs.org/api/" title="Read the Node API">Node API docs</a> are also a read. It's verbose in some spots but after pushing through it, I was able to write my own Node code where I would usually use a plugin...GOOD FOR ME!!!</p>
+
+<p><a name="conclusion"></a></p>
+
+<h2>Conclusion</h2>
+
+<p>"kdz" gives me the flexibility I needed. So back to the pre-processor conversation, I can add LESS and Sass files to a project by passing one of their respective options, but don't have to pass any options if I want to use Rework.</p>
+
+<p>And if every want to be able to configure Stylus or Jade for a project, I can just add an option to "kdz".  This will be really easy if I add a method library.</p>
+
+<p>I'm glad creating "kdz" solved my problem but the BEST thing about building it was the amount of new Node knowledge I gained in the end. I had used Node before this and I understood it better once I started using Gulp.</p>
+
+<p>But this project exposed me to ton of Node stuff. I gained a really good understanding of how Node interacts with a file system and all the quirks that come with exporting and requiring modules, along with some other things.</p>
+
+<p>I also learned more about Promises and much they go hand-in-hand with Node. For all the issues with my Promise code, I better understand them now and see how they make Node development easier.</p>
+
+<p> I still have more work to do: I really want to add more "Node stuff" to "kdz" instead of adding more "Node modules". By that, I mean that I want to use things like <code>.pipe()</code> and <code>process.nextTick()</code> to see if they let me do things without requiring a bunch of pre-built npm modules.</p>
+
+<p>But overall, creating "kdz" was one of the best web development experiences I've had in a while and can't wait to continue developing it. If not to continue solving a problem, then to get Node to bend to my will some more.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share kdz - My Personal Scaffolding Tool on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/kdz-build-tool/" title="Share kdz - My Personal Scaffolding Tool on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/kdz-build-tool/&t=kdz - My Personal Scaffolding Tool" class="share-post-link fb" title="Share kdz - My Personal Scaffolding Tool on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

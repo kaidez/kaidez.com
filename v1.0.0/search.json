@@ -1,0 +1,7 @@
+---
+---
+var tipuesearch = {"pages": [
+  {% for post in site.posts %}
+    {% include post.json %},
+  {% endfor %} false
+]};

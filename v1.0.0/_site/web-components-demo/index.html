@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>Web Components Demo: Templates and (some) Shadow DOM &laquo; Code Tips &laquo; kaidez</title>
+  <meta name="description" content="A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+  <link rel="canonical" href="http://kaidez.com/web-components-demo/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="Web Components Demo: Templates and (some) Shadow DOM" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/web-components-demo/" property="og:url">
+
+
+
+  <meta content="2014-08-13T00:00:00-04:00" property="article:published_time">
+  <meta content="http://kaidez.com/colophon.html" property="article:author">
+
+
+
+  <meta content="http://kaidez.com/img/web-components-demo.jpg" property="og:image">
+
+
+
+  
+  <meta content="coding-best-practices" property="article:section">
+  
+
+
+
+  
+  <meta content="web components" property="article:tag">
+  
+  <meta content="shadow DOM" property="article:tag">
+  
+  <meta content="templates" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="Web Components Demo: Templates and (some) Shadow DOM">
+  <meta name="twitter:description" content="A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/web-components-demo.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/coding-best-practices/" title="More Code Tips posts on kaidez.com">Code Tips</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">Web Components Demo: Templates and (some) Shadow DOM</span>
+    </div>
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">Web Components Demo: Templates and (some) Shadow DOM</h1>
+
+            <time datetime="2014-08-13" itemprop="datePublished" pubdate>August 13, 2014</time>&nbsp;by&nbsp;<span class="author" itemprop="name">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p class="clearfix">
+  <ul>
+  <li style="display: inline-block; margin: 10px;"><a href="/samples/template-shadowdom-practice/" class="demoLink" target="blank">VIEW THE DEMO</a></li>
+  <li style="display: inline-block; margin: 10px;"><a href="https://github.com/kaidez/template-shadowdom-practice" class="demoLink">GRAB THE CODE ON GITHUB</a></li>
+</ul>
+</p>
+
+
+<p><em>Author's Note: it's best to review this code in Google Chrome 36+. Also, open up the Dev Tools and under "General" and then "Settings," make sure that the "Show user agent shadow DOM" box is checked.</em></p>
+
+<p>I spent some time hacking Web Components during a long flight layover and it was time well spent. I put together a small demo, just so I could better understand Web Components as a whole.</p>
+
+<p>Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like <a href="http://www.polymer-project.org/" title="visit the Polymer Web Components Library">Polymer</a> or <a href="http://x-tags.org/" title="visit the X-tag Web Components Library">X-Tag</a>, but I wanted to study the internal workings of each sub-concept before diving into the polyfills.</p>
+
+<h3>A quick Web Components description</h3>
+
+<p>Web Components are a set of emerging technologies working their way towards a firm specification, thanks to the hard work of the W3C. The goal of Web Components is to allow developers to create custom elements with HTML, CSS and JavaScript...these elements can also be thought of as widgets.</p>
+
+<p>An great example of this is the <code>&lt;github-card&gt;</code> custom element. If you have a GitHub account, <a href="http://pazguille.github.io/github-card/" title="go to &lt;github-card&gt; demo page">check out the &lt;github-card> demo page</a>, add your GH username in the field to review the end result, then <a href="https://github.com/pazguille/github-card" title="go to &lt;github-card&gt; GitHub documentation">go to the &lt;github-card> documentation</a> to download the code and see how to apply it to your page using a simple tag.</p>
+
+<p>The four sub-concepts that make up Web Components are:</p>
+
+<ol>
+<li><em><strong>Templates</strong></em>: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. <a href="http://www.html5rocks.com/en/tutorials/webcomponents/template/" title="Read more about Web Component templates">Read more &raquo;</a></li>
+<li><em><strong>Shadow DOM</strong></em>: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." <a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/" title="Read more about Web Component Shadow DOM">Read more &raquo;</a></li>
+<li><em><strong>Custom Elements</strong></em>: the ability to create custom page tags, such as <code>&lt;github-card&gt;</code>. <a href="http://www.html5rocks.com/en/tutorials/webcomponents/customelements/">Read more &raquo;</a></li>
+<li><em><strong>HTML Imports</strong></em>: the ability to load in small pieces of HTML code into your page when needed via <code>&lt;link&gt;</code> tags. <a href="http://www.html5rocks.com/en/tutorials/webcomponents/imports/" title="Read more about Web Component HTML Imports">Read more&raquo;</a></li>
+</ol>
+
+
+<p> <em>(all the above "Read more &raquo;" links courtesy of <a href="http://www.html5rocks.com/" title="Go to HTML5 Rocks">HTML5 Rocks</a>):</em></p>
+
+<p>While things like &lt;github-card> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.</p>
+
+<p><em>(Side note: there's another sub-concept called "decorators" but lots of developers don't like it, so there's not a lot of focus in terms of finalizing its specification. It may disappear.)</em></p>
+
+<h3>Started out by focusing on templates...mostly</h3>
+
+<p>I've read about all of these sub-concepts (including decorators) but  played with the actual code just a little, and the best way to learn is by doing instead of reading. So I'm in the middle of hacking out code for each sub-concept, starting with templates.</p>
+
+<p>For the templates, I wanted to display a simple list of books based on a small JavaScript data object. Things started out like this...</p>
+
+<p><strong>index.html</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;JavaScript Books&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/normalize.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/styles.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;container&quot;&gt;
+    &lt;header&gt;
+      &lt;h1 class=&quot;page-header&quot;&gt;JavaScript Books&lt;/h1&gt;
+      &lt;h2&gt;Built with templates &amp; Shadow DOM&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;template id=&quot;singleBook&quot;&gt;
+      &lt;style&gt;
+        .templateArticle {
+          display: inline-block;
+          margin: 6px;
+        }
+        .btn {
+          margin: 10px;
+          float: right;
+        }
+        .thumbnail {
+          margin-bottom: 0;
+        }
+        .bookTitleClass {
+          text-align: left;
+        }
+        #bookTitle {
+          font-style: italic;
+        }
+      &lt;/style&gt;
+      &lt;article class=&quot;templateArticle panel panel-default&quot;&gt;
+        &lt;header class=&quot;panel-heading&quot;&gt;
+          &lt;h2 class=&quot;panel-title bookTitleClass&quot;&gt;
+            &lt;span id=&quot;bookTitle&quot;&gt;&lt;/span&gt;
+            &lt;br /&gt;
+            by &lt;span id=&quot;bookAuthor&quot;&gt;&lt;/span&gt;
+          &lt;/h2&gt;
+        &lt;/header&gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+        &lt;a href=&quot;&quot; id=&quot;btnPurchase&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot; target=&quot;blank&quot;&gt;Buy at Amazon&lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/template&gt;
+    &lt;section id=&quot;allBooks&quot; class=&quot;allBooksClass&quot;&gt;&lt;/section&gt;
+    &lt;script src=&quot;scripts/main.js&quot;&gt;&lt;/script&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p><strong>css/styles.css</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-css'>body {
+  margin: 20px;
+}
+h1, h2 {
+  text-align: center;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.allBooksClass {
+  margin-top: 30px;
+  text-align: center;
+}</code></pre>
+</div>
+
+
+<p><strong>scripts/main.js</strong></p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+
+  var jsBooks = {
+    &quot;book1&quot; : {
+      &quot;title&quot;: &quot;Object-Oriented Javascript&quot;,
+      &quot;author&quot;: &quot;Stoyan Stefanov&quot;,
+      &quot;image&quot;: &quot;images/ooj.jpg&quot;,
+      &quot;amazonLink&quot;: &quot;http://amzn.to/1sRFbEC&quot;
+    },
+    &quot;book2&quot; : {
+      &quot;title&quot;: &quot;Effective Javascript&quot;,
+      &quot;author&quot;: &quot;David Herman&quot;,
+      &quot;image&quot;: &quot;images/effectivejs.jpg&quot;,
+      &quot;amazonLink&quot;: &quot;http://amzn.to/1pLu1A5&quot;
+    },
+    &quot;book3&quot; : {
+      &quot;title&quot;: &quot;JavaScript: The Good Parts&quot;,
+      &quot;author&quot;: &quot;Douglas Crockford&quot;,
+      &quot;image&quot;: &quot;images/goodparts.jpg&quot;,
+      &quot;amazonLink&quot;: &quot;http://amzn.to/1ukjoIN&quot;
+    },
+    &quot;book4&quot; : {
+      &quot;title&quot;: &quot;Eloquent Javascript&quot;,
+      &quot;author&quot;: &quot;Marijn Haverbeke&quot;,
+      &quot;image&quot;: &quot;images/eloquentjavascript.jpg&quot;,
+      &quot;amazonLink&quot;: &quot;http://amzn.to/1lPP6pn&quot;
+    }
+  };
+  
+  var template = document.querySelector(&quot;#singleBook&quot;),
+    templateContent = template.content,
+    host = document.querySelector(&quot;#allBooks&quot;),
+    root = host.createShadowRoot();
+
+  for (key in jsBooks) {
+    var title = jsBooks[key].title,
+      author = jsBooks[key].author,
+      image = jsBooks[key].image,
+      amazonLink = jsBooks[key].amazonLink;
+
+    templateContent.querySelector(&quot;img&quot;).src = image;
+    templateContent.querySelector(&quot;img&quot;).alt 
+    = templateContent.querySelector(&quot;#bookTitle&quot;).innerHTML
+    = title;
+    templateContent.querySelector(&quot;#bookAuthor&quot;).innerHTML = author;
+    templateContent.querySelector(&quot;#btnPurchase&quot;).href = amazonLink;
+    root.appendChild(document.importNode(templateContent, true));
+  }
+})();</code></pre>
+</div>
+
+
+<p><code>index.html</code> contains both <code>normalize.css</code> and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. <code>styles.css</code> adds extra styling to some page elements and has a very small role in the project.</p>
+
+<p>Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of <code>singleBook</code>. The code inside of <code>&lt;template&gt;</code> contains HTML and some CSS in a <code>&lt;style&gt;</code> tag.</p>
+
+<p>The template contains an <code>&lt;article&gt;</code> tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.</p>
+
+<p>Note that some parts of <code>&lt;article&gt;</code> are empty:</p>
+
+<ul>
+<li>the two <code>&lt;span&gt;</code> tags.</li>
+<li>the <code>src</code> and <code>alt</code> attributes for the only <code>&lt;img&gt;</code> tag.</li>
+<li>the <code>href</code> attribute for the only <code>&lt;a&gt;</code> tag.</li>
+</ul>
+
+
+<p>This empty parts will be populated with our object data...let's look at that...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+...
+})();</code></pre>
+</div>
+
+
+<p>Everything's wrapped in an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" title="Read more about IIFEs">IIFE</a>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var jsBooks = {
+  &quot;book1&quot; : {
+    &quot;title&quot;: &quot;Object-Oriented Javascript&quot;,
+    &quot;author&quot;: &quot;Stoyan Stefanov&quot;,
+    &quot;image&quot;: &quot;images/ooj.jpg&quot;,
+    &quot;amazonLink&quot;: &quot;http://amzn.to/1sRFbEC&quot;
+  },
+...
+};</code></pre>
+</div>
+
+
+<p>The JavaScript data object. There's only one item one listed here but it contains four items altogether, each about a particular JavaScript book.  Each item has a <code>title</code>, <code>author</code>, <code>image</code> and <code>amazonLink</code> property.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var template = document.querySelector(&quot;#singleBook&quot;),
+  templateContent = template.content,
+  host = document.querySelector(&quot;#allBooks&quot;),
+  root = host.createShadowRoot();</code></pre>
+</div>
+
+
+<p>Starting to create the Shadow DOM. I'm creating a single var pattern to define four variables...</p>
+
+<ul>
+<li><code>template</code> is a direct reference to the template, which has an ID of <code>singleBook</code>.</li>
+<li><code>templateContent</code> is a direct reference to value of the template's <code>content</code> attribute at the time of page-load...the page tags, their attributes. Everything. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" title="Read about the &lt;template&gt; tag on MDN">Read more over on MDN</a>.</li>
+<li><code>host</code> is a direct reference to what's known as the "shadow host" and it's the page element where template content gets load into.  That's the <code>&lt;section id="allBooks"&gt;</code> page element in this case. This is commonly referred to as the "shadow host" and it can have any variable name you want, but it's convention to name it "host."</li>
+<li><code>root</code> is a direct reference to what's known as the "shadow root" and it's referring to the content that that gets generated <em>INSIDE</em> the template. Thanks to the <code>host.createShadowRoot()</code> line, I'm placing this content inside of <code>host</code>, which, again, is the <code>&lt;section id="allBooks"&gt;</code> element...it may be easier to think of it as the actual Shadow DOM. When the content has fully loaded into the root, it gets returned to the web page as a document fragment...<a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment" title="Read about document fragments">read more about document fragments</a> It also can also have any variable name you want to give it, but it's convention to name it "root."</li>
+</ul>
+
+
+<div>
+  <pre data-line=''><code class='language-javascript'>for (key in jsBooks) {
+...
+};</code></pre>
+</div>
+
+
+<p>A for...in loop will populate the template with the content in the "jsBooks" object. That code needs to be broken down...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var title = jsBooks[key].title,
+  author = jsBooks[key].author,
+  image = jsBooks[key].image,
+  amazonLink = jsBooks[key].amazonLink;</code></pre>
+</div>
+
+
+<p>Assign simple variable references to all the single item properties in the <code>jsBooks</code> object.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>templateContent.querySelector(&quot;img&quot;).src = image;</code></pre>
+</div>
+
+
+<p>Look for the <code>&lt;img&gt;</code> tag in the template and populate its <code>src</code> attribute with whatever the value is of the "image" property at the time of the loop.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>templateContent.querySelector(&quot;img&quot;).alt 
+  = templateContent.querySelector(&quot;#bookTitle&quot;).innerHTML
+  = title;</code></pre>
+</div>
+
+
+<p>Look for the <code>&lt;img&gt;</code> tag in the template and populate its <code>alt</code> attribute with whatever the value is of the "title" property at the time of the loop.</p>
+
+<p>At the same time, look for the <code>#bookTitle</code> element in the template (one of the <code>&lt;span&gt;</code> tags) and populate it with whatever the value is of the "title" property is at the time of the loop.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>templateContent.querySelector(&quot;#bookAuthor&quot;).innerHTML = author;</code></pre>
+</div>
+
+
+<p>Look for the <code>#bookAuthor</code> element in the template (the other <code>&lt;span&gt;</code> tag) and populate it with whatever the value is of the "author" property at the time of the loop.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>templateContent.querySelector(&quot;#btnPurchase&quot;).href = amazonLink;</code></pre>
+</div>
+
+
+<p>Look for the <code>#btnPurchase</code> element in the template (the only <code>a</code> tag) and populate its "href" attribute with whatever the value is of the current <code>amazonLink</code> property at the time of the loop.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>root.appendChild(document.importNode(templateContent, true));</code></pre>
+</div>
+
+
+<p>Okay, we need to spend some time talking about this line of code...</p>
+
+<p>At this point in the code, all my object data has populated the template and is represented by the <code>templateContent</code> variable. But this is what was returned as a document fragment.</p>
+
+<p>The document fragment isn't part of the page DOM and, in this case, needs to be treated as an external document. The <code>document.importNode()</code> method can duplicate content from external documents, and by passing the <code>true</code> parameter, we're doing a deep copy of the content and copying <em>everything</em> inside of it.</p>
+
+<p>From there, we're treating the <code>root</code> as a parent element and appending (i.e., "adding") a child inside of it. The child we're adding is the template content we just brought over with <code>document.importNode()</code>.</p>
+
+<p><em>(Side note: <code>document.importNode()</code> is cool...<a href="https://developer.mozilla.org/en-US/docs/Web/API/document.importNode" title="&quot;Read about document.importNode() on MDN">read more about it over on MDN</a>).</em></p>
+
+<p>And if we review index.html in Chrome 36 or higher with the "Show user agent shadow DOM" box checked, it should look (almost) like the demo. And if we then do an "Inspect Element" check and look in the <code>&lt;section&gt;</code> tag (which is the shadow host), you'll see the template content (which is the shadow root).</p>
+
+<p><img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root"></p>
+
+<p>But there's a problem: Bootstrap styles that are applied to certain elements inside of <code>&lt;template&gt;</code> are being ignored.  Anything class names containing the word <code>panel</code> or <code>btn</code> should have well-recognized Bootstrap styles, especially the buttons...</p>
+
+<p><img src="/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling"></p>
+
+<p>This is happening because, as mentioned above, the code inside the template can't communicate with any outside code and, technically speaking, <code>&lt;template&gt;</code> is in the Shadow DOM, which is naturally-encapsulated. So none of the page's three stylesheets (<code>normalize.min.css</code>, <code>bootstrap.min.css</code> and <code>styles.css</code>) can affect the template's layout. And for now, adding stylesheets to the Shadow DOM with <code>&lt;link&gt;</code> isn't allowed.</p>
+
+<h3>Import the styles</h3>
+
+<p><code>styles.css</code> doesn't need to interact with the layout but the other two have to.  The solution is to use <code>@import</code> inside the template's <code>&lt;style&gt;</code> tag to bring both of them in:</p>
+
+<div>
+  <pre data-line=''><code class='language-css'>&lt;style&gt;
+  @import url(&quot;css/normalize.min.css&quot;);
+  @import url(&quot;css/bootstrap.min.css&quot;);
+...
+&lt;/style&gt;</code></pre>
+</div>
+
+
+<p>Using <code>@import</code> is frowned upon from a performance standpoint, but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his <a href="http://css-tricks.com/modular-future-web-components/" title="Read Rob Dodson's great Web Component article on CSS Tricks">excellent Web Components article</a>, using Polymer avoids doing this by bringing in the stylesheets with XHR requests.</p>
+
+<p>But there's another problem: by doing deep clones of template content at each loop iteration, the style tag is getting added four times when it really only needs to be added once.</p>
+
+<p><img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root"></p>
+
+<h3>Adjust the loop</h3>
+
+<p>This can be fixed by changing the loop procedure: every time the loop runs, deep-copy <em>just</em> the article tag by referring to its "templateArticle" class, then append it to the section tag. Leave the loop after it's ended, then append the style tag to section, which is the shadow host.</p>
+
+<p>This requires changing the end of the JavaScript from this...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+...
+    root.appendChild(document.importNode(templateContent, true));
+  }
+})();</code></pre>
+</div>
+
+
+<p>...to this</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+...
+    root.appendChild(document.importNode(templateContent.querySelector(&quot;.templateArticle&quot;), true));
+  }
+  root.appendChild(document.importNode(templateContent.querySelector(&quot;style&quot;), true));
+})();</code></pre>
+</div>
+
+
+<p>And now there's only one style tag inside the shadow root and it's properly applying the styles.</p>
+
+<p><img src="/img/shadow-root-03.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root"></p>
+
+<p>Because <code>&lt;style&gt;</code> gets added to <code>&lt;section&gt;</code> with <code>appendChild()</code>, it gets placed at the bottom.  Were this live production code, I would (probably) use something like <code>jQuery.prepend()</code> to place it at the top.</p>
+
+<p>But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about <code>jQuery.prepend()</code> <a href="http://api.jquery.com/prepend/" title="Read about jQuery.prepend()">here</a>.</p>
+
+<h3>Further reading</h3>
+
+<p>There are links above to a Rob Dodson article and a group of links to various articles over on HTML5 Rocks. The Dodson article provides a great high-level view of Web Components so if you're at the early stages of discovering them, I would read that one first...the HTML5 Rocks articles next.</p>
+
+<p>The W3C has an older article called <a href="http://www.w3.org/TR/2013/WD-components-intro-20130606/" title="Read Introduction to Web Components">Introduction to Web Components</a>. It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it while keeping in mind it's old and hasn't been updated in a while.</p>
+
+<p>Truthfully, the W3C has been referring people to the <a href="http://www.w3.org/wiki/WebComponents/" title="Read the Web Components Wiki">Web Components Wiki</a> lately so you should review that.  It points to the HTML5 Rocks links and the specs for <a href="http://w3c.github.io/webcomponents/spec/shadow/" title="Read the Shadow DOM specification">Shadow DOM</a>, <a href="http://w3c.github.io/webcomponents/spec/custom/" title="Read the Shadow Custom Elements specification">Custom Elements</a> and <a href="http://w3c.github.io/webcomponents/spec/imports/" title="Read the HTML Imports specification">HTML Imports</a>. The WHATWG has the proper version of <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element" title="Read about Web Component template specification">the Template spec</a>.</p>
+
+<p>Specs may be verbose to read at times, but it's always a good idea to read them.</p>
+
+<p>Most profoundly, Microsoft has made no firm decision on what Web Component features Internet Explorer will and will not support at the time of this post's publish date. I'm assuming that will change in the future though...read more on the <a href="http://status.modern.ie/?iestatuses=underconsideration&amp;browserstatuses=notsupported,indevelopment,implemented&amp;browsers=chrome,firefox,opera,safari&amp;ieversion=11" title="Read about Web Component support in Internet Explorer">modern.ie status page</a>.</p>
+
+<p>Pointing out the IE issues makes a nice segue to polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on <a href="http://www.polymer-project.org/resources/compatibility.html" title="Read about browser compatibility for Polymer">Polymer's Browser Compatibility page</a>.</p>
+
+<p>X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on <a href="http://x-tags.org/docs" title="Read about browser compatibility for X-Tags">X-Tag's Docs page</a>.</p>
+
+<h3>Conclusion</h3>
+
+<p>Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code right now, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.</p>
+
+<p>I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough.</p>
+</div>
+
+        </article>
+
+        <div id="share-post-container" class="share-post-container-class clearfix">
+          <h3 id="share-post-container-header" class="share-post-container-header-class sharePostStructure">SHARE THIS POST:</h3>
+          <ul id="social-sharing-list-post" class="social-sharing-list-post-class sharePostStructure">
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://twitter.com/share" title="Share Web Components Demo: Templates and (some) Shadow DOM on Twitter" target="blank" class="share-post-link">Twitter</a></li>
+
+            <li class="social-sharing-list-item fb-post-share-match"><a href="https://plus.google.com/share?url=http://kaidez.com/web-components-demo/" title="Share Web Components Demo: Templates and (some) Shadow DOM on Facebook" target="blank" class="share-post-link">Google+</a></li>
+
+            <li id="fb-root" class="social-sharing-list-item" style="margin-bottom:15px;"><a href="http://www.facebook.com/sharer.php?u=http://kaidez.com/web-components-demo/&t=Web Components Demo: Templates and (some) Shadow DOM" class="share-post-link fb" title="Share Web Components Demo: Templates and (some) Shadow DOM on Google Plus" target="blank">Facebook</a></li>
+
+          </ul> <!-- #social-sharing-list-post -->
+
+        </div> <!-- #share-post-container -->
+
+        <div id="related-posts" class="related-posts-style">
+
+          <h3 class="related-posts-header">MORE POSTS LIKE THIS:</h3>
+
+          <ul id="related-posts-list">
+
+            
+
+            <li class="related-posts-list-item"><a href="/take-css-seriously/" title="Start Taking CSS Seriously">Start Taking CSS Seriously &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/click-to-tweet-link/" title="TUTORIAL: Create A 'Click to Tweet' link with JavaScript">TUTORIAL: Create A 'Click to Tweet' link with JavaScript &raquo;</a></li>
+
+            
+
+            <li class="related-posts-list-item"><a href="/write-code-every-f--king-day/" title="Write Code Every F#%king Day!">Write Code Every F#%king Day! &raquo;</a></li>
+
+            
+
+          </ul>
+
+          <!-- Start Disqus Code -->
+
+            
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kaidez'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+  
+
+          <!-- End Disqus Code -->
+
+        </div> <!-- #related-posts -->
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+  
+
+  
+</body>
+</html>

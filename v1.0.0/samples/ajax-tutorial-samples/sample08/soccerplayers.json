@@ -1,0 +1,17 @@
+{
+    "chelsea": {
+        "playerOne": "Didier Drogba",
+        "playerTwo": "Thibault Courtois",
+        "playerThree": "Cesc Fabregas"
+    },
+    "realMadrid": {
+        "playerOne": "Cristiano Ronaldo",
+        "playerTwo": "Sergio Ramos",
+        "playerThree": "Iker Casillas"
+    },
+    "psg": {
+        "playerOne": "Zlatan Ibrahimović",
+        "playerTwo": "Thiago Motta",
+        "playerThree": "Marquinhos"
+    }
+}

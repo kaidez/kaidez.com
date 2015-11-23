@@ -1,0 +1,104 @@
+---
+layout: default
+title: Page not found &laquo; kaidez.com &laquo; Tutorials &amp; articles about  Web Development
+meta-excerpt: Sorry but we are unable to find what you are looking for / kaidez.com
+---
+
+  <div id="wrapper-404" class="wrapper-404-class">
+
+  	<div id="not-found-box" class="not-found-box-class">
+
+      <p>Cristiano suggests that you...</p>
+      <p class="large-404-page-copy">"TALK TO THE HAND!!"</p>
+      <img src="/img/404.jpg" alt="File not found image on kaidez.com">
+      <p class="large-404-page-copy">(404 error not found)</p>
+
+    </div> <!-- #not-found-box -->
+
+    <div id="form-container-404-page" class="not-found-box-class">
+
+  	  <p class="form-container-404-page-copy">
+  	  	Would you like to search for something else using this searchbox?
+  	  </p>
+
+  	  <form action="http://google.com/search" method="get" id="not-found-searchbox">
+        <fieldset role="search" class="fieldset-404-page">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> <!-- #not-found-searchbox -->
+
+			<hr>
+
+       <div class="not-found-box-class">
+
+      <p class="form-container-404-page-copy">
+        Here are the last five blog posts published on kaidez.com:
+      </p>
+
+      <ul>
+
+      {% for post in site.posts limit:5 %}
+
+        <li class="links-list-404">
+          <a href="{{ post.url }}" title="{{ post.title }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a>
+        </li>
+
+      {% endfor %}
+
+      </ul>
+
+    </div>
+
+      <hr>
+
+      <p class="form-container-404-page-copy">
+      	<a href="/" title="kaidez.com home page">Go to the home page</a> to view the most recent site information.
+      </p>
+
+      <hr>
+
+      <p class="form-container-404-page-copy">
+        <a href="sitemap.html" title="Site map: review all page links on kaidez.com">Visit the Site Map</a> to view a complete list of all the site content.
+      </p>
+
+    </div> <!-- #form-container-404-page -->
+
+    <div class="not-found-box-class">
+      <p class="form-container-404-page-copy">
+        Read in-depth articles written by kaidez:
+      </p>
+      <ul>
+        <li class="links-list-404">
+          <a href="/ajax-tutorial/" title="AJAX Tutorial for Beginners">AJAX Tutorial for Beginners</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/lynda-kaidez/" title="kaidez courses on lynda.com">kaidez courses on lynda.com</a>
+        </li>
+      </ul>
+      <p class="form-container-404-page-copy">
+        These blog posts are considered "the best of kaidez.com":
+      </p>
+
+      <ul>
+        <li class="links-list-404">
+          <a href="/remove-files-from-github/" title="TUTORIAL: Remove Files From GitHub">TUTORIAL: Remove Files From GitHub</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/requirejs-wordpress/" title="Using RequireJS In WordPress">Using RequireJS In WordPress</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/javascript-closures-tutorial/" title="TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/media-queries-important/" title="Media Queries Are Important">Media Queries Are Important</a>
+        </li>
+        <li class="links-list-404">
+          <a href="/javascript-off-dom/" title="SCREENCAST TUTORIAL: Using JavaScript Off-DOM">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+  </div> <!-- #wrapper-404 -->

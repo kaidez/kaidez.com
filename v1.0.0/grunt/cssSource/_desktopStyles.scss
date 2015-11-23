@@ -1,0 +1,579 @@
+
+//  ===================================================================
+//  Desktop styles start:
+//
+//  These should appear on desktop browsers. Expect this set of styles
+// to require more bandwidth to render when compared to the others,
+// especially the mobile ones.
+//  ===================================================================
+
+
+
+
+
+ @media only screen and (min-width: 1025px) {
+
+  // <body> tag
+  body {
+    @include fonts($openSans);
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    content: none;
+    display: block;
+  }
+
+  .clearfix:after {
+    clear: none;
+  }
+
+
+
+
+  // ==================================================================
+  //  Header styles start
+  //  =================================================================
+
+  // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link(65px, 209px);
+  }
+
+  // <header> tag
+  .site-header {
+    @include site-header;
+  }
+
+  // Set up opacity hover on the logo
+  .site-title {
+    @include transitions (opacity);
+  }
+
+  // the actual hover style
+  .site-title:hover {
+    opacity: 0.5;
+  }
+
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    @include inner-wrapper-nav-header;
+  }
+
+  // outer wrapper for the <header> which wraps the link, nav & search elements
+  .outer-wrapper-nav-header {
+    @include outer-wrapper-nav-header;
+    @include gradient-bg;
+    min-height: 130px;
+  }
+
+  // <h2> tag...the "closing tags...wrapping functions" text
+  .site-description {
+    display: block;
+    position: static;
+    font-size: 16px;
+    margin: 0;
+    width: 270px;
+    line-height: 2.5;
+  }
+
+  .adsClass {
+    display:block;
+    min-width: 650px;
+    padding-bottom: 52px;
+  }
+
+  .category-title {
+    margin-left: 10px;
+  }
+
+  // =========================================================================
+  //  Header styles start
+  //  ========================================================================
+
+
+
+
+
+  // =========================================================================
+  //  Navigation styles start
+  //  ========================================================================
+
+  // <nav> tag
+  .main-navigation {
+    @include main-navigation;
+  }
+
+  // wrapper for the <nav> and searchbox tag
+  .nav-search-style {
+     @include nav-search-style;
+  }
+
+  // <ul> for main nav
+  .site-navigation-list-styles {
+    @include show-menu;
+    margin: 11px auto 0 auto;
+    padding: 0;
+    width: auto;
+  }
+
+  // Apply the Google font to all <nav> links after page load
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover {
+    @include link-styles(18px, 19px, 5px, $base-link-color); // margin-right, font-size, padding, color
+    background-color: transparent;
+    text-shadow: 1px 1px 0 lighten($header-color, 15);
+  }
+
+  // ==================================================================
+  //  Navigation styles end
+  //  =================================================================
+
+
+
+
+
+  // ==================================================================
+  //  Search styles start
+  //  =================================================================
+
+  // add a box-radius to the main search form on the desktop view only
+  .searchform-class {
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+    margin-top: 13px;
+  }
+
+  // The div that contains the search box...either show it or hide it
+  .searchbox-display {
+    display: block;
+  }
+
+  // searchbox
+  .searchbox-style {
+    text-align: left;
+  }
+
+  // jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
+  #tipue_search_input {
+    font: 13px/1.5 'open sans', sans-serif;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 250px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    transition : background-color 200ms ease-out;
+    -webkit-transition : background-color 200ms ease-out;
+    -moz-transition : background-color 200ms ease-out;
+    -o-transition : background-color 200ms ease-out;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+  }
+
+  #tipue_search_input:focus {
+    border-color: green;
+    background-color: #f3f3f3;
+  }
+
+  #tipue_search_button {
+    width: 60px;
+    height: 33px;
+    margin-top: 1px;
+    border: 1px solid #dcdcdc;
+    border-radius: $master-border-radius;
+    background: #f1f1f1 url('../img/search.gif') no-repeat center;
+    outline: none;
+  }
+
+  #tipue_search_button:hover {
+    border: 1px solid #c3c3c3;
+    -moz-box-shadow: 1px 1px 2px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+    box-shadow: 1px 1px 2px #e3e3e3;
+  }
+
+  // ==================================================================
+  //  Search styles end
+  //  =================================================================
+
+
+
+
+
+  // ==================================================================
+  // Page content styles start
+  // ==================================================================
+
+  // header font-size on search results page
+  .tipue_search_content_title {
+    font-size: 32px;
+  }
+
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
+    @include post-category-title(40px, 56px 0 10px);
+  }
+
+  // title tag for post snippets
+  .post-snippet-title {
+    font-size: 30px;
+  }
+
+  // link embedded in post snippets
+  .postSnippetLinkHeader:link,
+  .postSnippetLinkHeader:visited {
+    font-size: 50px;
+  }
+
+  .postSnippetNewArticle {
+    padding: 13px 0 40px 0;
+  }
+
+  .page-content {
+    @include page-content($inner-content-width, #fff);
+    padding: 15px 45px 1px;
+  }
+
+  .pageContentPostWrapper {
+     @include create-outer-box-shadow;
+  }
+
+  // breadcrumbs
+  .breadcrumb-styles {
+    @include breadcrumb-styles(16px, 45px);
+  }
+
+  .breadcrumb-styles a:link,
+  .breadcrumb-styles a:visited  {
+    text-decoration: underline;
+    color: darken($header-color, 20);
+  }
+
+  .breadcrumb-styles a:hover  {
+    text-decoration: none;
+    color: darken($header-color, 20);
+  }
+
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(10px);
+  }
+
+  // make sure the breadcrumb is visible since it's being overridden by the mobileFirst view's reference.
+  .breadcrumb-last {
+    display:inline;
+  }
+
+  // the "Read post" link on the home, category and search pages
+  .read-post-link:link {
+    color: #3285A5;
+  }
+
+  // styling for pictures with captions on posts pages
+  .post-image-box {
+    margin:60px auto;
+    text-align: center;
+  }
+
+  // styling for captions copy
+  .post-image-caption {
+    font-style: italic;
+  }
+
+  // link styling for the 'share link' area of the post pages
+  .share-post-link {
+    @include share-post-link;
+  }
+
+  .share-post-container-class {
+    @include site-border-radius;
+    margin: 0 auto 33px;
+  }
+
+  .sharePostStructure {
+    display: inline-block;
+  }
+
+  // <footer> in <article> tags in posts...styles the post's publish
+  // date
+  .articleFooterClass {
+    line-height: normal;
+  }
+
+  // the post title in the NEWEST ARTICLE section on the home page
+  .newestArticlePostTitle {
+    font-size: 40px;
+  }
+
+  .newestArticleClass {
+     @include create-outer-box-shadow;
+     padding-top: 15px;
+  }
+
+  .newestArticleHeaderClass {
+    font-size:25px;
+  }
+
+  .sharedCategoryStyling {
+    @include create-outer-box-shadow;
+  }
+
+  .homePageSectionHeaderText {
+    font-size: 33px;
+    text-shadow: 1px 1px 0 #EAEEF1;
+  }
+
+  .homePageCategoryFooterLinkSection {
+    height: 34px;
+    text-align: right;
+    padding-right:30px;
+  }
+
+  .homePageCategoryFooterLink:link,
+  .homePageCategoryFooterLink:visited {
+    @include transitions (color);
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline;
+  }
+
+  .homePageCategoryFooterLink:hover {
+    color: #6987FF;
+  }
+
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    min-width: 1004px;
+    max-width: 0;
+  }
+
+  .googleAdsenceContainer {
+    float: left;
+    margin: 15px 15px 15px 0;
+  }
+
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    @include create-outer-box-shadow;
+  }
+
+  //big pic of kai on colophon.html
+  .colophon-image {
+    float:right;
+    margin: 0 0 37px 31px;
+  }
+
+  // =================================================================
+  //  Page content styles end
+  //  ================================================================
+
+
+
+
+
+  // ==================================================================
+  //  Aside styles start
+  // ==================================================================
+
+  // the inner wrapper for the <aside>
+  .aside-inner-wrapper-class {
+    width: 1000px;
+    margin: 0 auto 43px;;
+  }
+
+  // apply background image to <aside>
+  .aside-outer-wrapper-class {
+    @include create-inner-box-shadow;
+    background: $aside-color url('/img/footer-bg.png') no-repeat left;
+    padding: 1px 10px 84px;
+  }
+
+  // create a "letterpress" text-shadow effect on <h3> tags in <aside>
+  .aside-section-header {
+    width: 250px;
+  }
+
+  // for the 3 columns in the <aside>
+  .aside-column-class {
+    width: 250px;
+    float: left;
+  }
+
+  // add left/right margin to the middle column so aside columns are
+  // evenly spaced on desktop view
+  .mid-aside-margin {
+    margin:0 125px
+  }
+
+  // the <aside> nav links
+  .aside-nav-link,
+  .kaidez-social-link  {
+    @include transitions(color);
+  }
+
+  // hover state for the <aside> nav links
+  .kaidez-social-link:hover, .kaidez-social-link:focus,
+  .aside-nav-link:hover, .aside-nav-link:focus {
+    color: darken($header-color,20);
+  }
+
+  // for the contact form fields in <aside>
+  .contact-form-field {
+    @include contact-form-field;
+  }
+
+  .related-posts-header {
+    @include site-border-radius;
+    text-align: center;
+    font-size: 21px;
+  }
+
+  .related-posts-list-item {
+    font-size: 18px;
+  }
+
+  // the <li> that contains all the individual links
+  .kaidez-social-sharing-list-item,
+  .kaidez-social-sharing-list-item:visited {
+    font-size: 22px;
+    list-style-type: none;
+    text-align: left;
+    clear: both;
+    text-decoration: none;
+    margin-bottom: 12px;
+  }
+
+  // styles common to the the copy that appears when a social
+  // network link is rolled over
+  .social-network-title {
+      text-decoration: none;
+      border-bottom: 0;
+      position: relative;
+      width: 125px;
+      text-indent: -66px;
+      overflow-x: hidden;
+      display: inline-block;
+  }
+
+  // ==================================================================
+  //  Aside styles end
+  // ==================================================================
+
+
+
+
+
+  // ==================================================================
+  // Footer styles start
+  // ==================================================================
+
+  // styling hook for <footer>
+  .footer-outer-wrapper-class {
+    @include create-inner-box-shadow;
+    height: 150px;
+  }
+
+  // inner wrapper in the <footer>
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .copyright-style {
+    display:block;
+    padding: 45px 0;
+    margin: 0 auto;
+    text-align: start;
+    float: right;
+  }
+
+  // <h3> for the colophon
+  .colophon-header {
+    color: darken($header-color,10);
+    display: block;
+    float: left;
+    margin-top: 16px;
+  }
+
+  //  the colophon containing element
+  .colophon-class {
+    background-color: darken($aside-color, 11);
+    @include site-border-radius;
+    height: 58px;
+    max-width: 700px;
+    float: left;
+    display: block;
+    padding:12px;
+    margin: 32px 0;
+  }
+
+  // <ol> element for Jekyll, AWS & MaxCDN links
+  .colophon-list-class {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  // individual <li> tags for footer image links
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    text-indent: -9999px;
+    @include transitions (opacity);
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
+  }
+
+  // set height/width for jekyll bg link
+  .jekyll-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+
+  // set height/width for media temple bg link
+  .mediaTemple-link {
+    @include footer-link-hit-area(44px, 151px);
+  }
+
+  // set height/width for maxcdn bg link
+  .maxcdn-link {
+    @include footer-link-hit-area(39px, 151px);
+  }
+
+.jumpToTopText {
+  @include hide-element;
+}
+
+  // ==================================================================
+  // Footer styles end
+  // ==================================================================
+
+
+
+  // ==================================================================
+  // 404 styles start
+  // ==================================================================
+
+  .wrapper-404-class {
+    @include create-outer-box-shadow;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+
+  // ==================================================================
+  // 404 styles end
+  // ==================================================================
+
+ }

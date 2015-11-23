@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="LTR" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>AJAX Tutorial for Beginners &laquo; Articles &laquo; kaidez</title>
+  <meta name="description" content="Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+  <link rel="stylesheet" href="/css/styles.css" media="all" />
+
+
+
+
+  <link rel="canonical" href="http://kaidez.com/ajax-tutorial/" />
+  <link rel="publisher" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="author" href="https://plus.google.com/u/0/+KaiGittens/posts"/>
+  <link rel="alternate" type="application/rss+xml" href="http://kaidez.com/feed.xml" title="kaidez.com News Feed">
+
+    <meta content="kaidez" property="og:site_name">
+
+
+  <meta content="AJAX Tutorial for Beginners" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+
+  <meta content="Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded." property="og:description">
+
+
+
+  <meta content="http://kaidez.com/ajax-tutorial/" property="og:url">
+
+
+
+
+
+  <meta content="http://kaidez.com/img/ajax-image.jpg" property="og:image">
+
+
+
+
+
+  
+  <meta content="ajax" property="article:tag">
+  
+  <meta content="javascript" property="article:tag">
+  
+  <meta content="jquery" property="article:tag">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@kaidez">
+  <meta name="twitter:title" content="AJAX Tutorial for Beginners">
+  <meta name="twitter:description" content="Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded.">
+  <meta name="twitter:creator" content="@kaidez">
+
+  
+  <meta name="twitter:image:src" content="http://kaidez.com/img/ajax-image.jpg">
+  
+
+  <meta name="twitter:domain" content="kaidez">
+  
+  
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: [
+        'Roboto Condensed:Book 300',
+        'Open Sans:Normal 400',
+        'Open Sans:Bold 700' ] 
+      }
+    });
+  </script>
+
+  <script src="/js/libs/modernizr.min.js"></script>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <div id="container" class="containing-element">
+
+    <div id="header-nav-wrapper-outer" class="outer-wrapper-nav-header">
+      <div id="header-nav-wrapper-inner" class="inner-wrapper-nav-header">
+        <header id="masthead" class="site-header clearfix" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+          <div id="header-tag-wrapper" class="top-level-header-wrapper">
+            <h1 id="main-site-header" class="site-title"><a href="/" title="kaidez.com home page" class="homepage-link">kaidez</a></h1>
+            <h2 class="site-description">closing tags...wrapping functions</h2>
+        </header> <!-- #masthead -->
+
+        <div id="nav-search" class="nav-search-style">
+
+                  <nav id="site-navigation" class="main-navigation header-element-margin" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+          <h3 id="menu-heading" class="menu-toggle">Main Menu</h3>
+          <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+          <div class="menu-toggle">Here is a description of the links in the main menu</div>
+          <ul id="site-navigation-list" class="site-navigation-list-styles">
+            <li class="site-navigation-list-link"><a href="/pages/" title="Tutorials on kaidez.com">BLOG</a></li>
+            <li class="site-navigation-list-link"><a href="/articles/" title="Tutorials on kaidez.com">ARTICLES</a></li>
+            <li class="site-navigation-list-link"><a href="/ajax-tutorial/" title="Coding Tips and Coding Best Practices posts on kaidez.com">AJAX TUTORIAL</a></li>
+            <li class="site-navigation-list-link"><a href="/lynda-kaidez/" title="Product and Book Reviews on kaidez.com">KAIDEZ ON LYNDA</a></li>
+          </ul> <!-- #site-navigation-list -->
+
+        </nav> <!-- #site-navigation -->
+
+
+              <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:kaidez.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox -->
+
+        </div>
+
+      </div> <!-- header-nav-wrapper-inner -->
+
+    </div> <!-- #header-nav-wrapper-outer -->
+
+        <div id="breadcrumbs" class="breadcrumb-styles" itemprop="breadcrumb">
+      <a href="/" title="kaidez.com home page">Home</a> <span class="breadcrumb-separator">&raquo;</span> <a href="/articles/" title="More Articles posts on kaidez.com">Articles</a> <span class="breadcrumb-separator breadcrumb-last">&raquo;</span> <span class="breadcrumb-last">AJAX Tutorial for Beginners</span>
+    </div>
+
+
+    <main role="main" id="content" class="page-content" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage">
+
+      <div class="pageContentPostWrapper" style="background-color: #fff;">
+
+        <article class="pageCopy" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+
+          <header class="postHeader">
+            <h1 class="post-title" class="entry-title" itemprop="headline">AJAX Tutorial for Beginners</h1>
+
+            <time datetime="" itemprop="datePublished" pubdate></time>&nbsp;by&nbsp;<span class="author" itemprop="name" rel="author">Kai "kaidez" Gittens</span>
+          </header>
+
+          <div class="googleAdsenceContainer">
+
+    <style>
+
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+      
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
+
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <!-- kaidezPostAd -->
+      <ins class="adsbygoogle kaidezpostad"
+          style="display:inline-block"
+          data-ad-client="ca-pub-7363372172009273"
+          data-ad-slot="6054182915"></ins>
+
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+          <div itemprop="text"><p>AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.</p>
+
+<p>New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This AJAX tutorial was written with those developers in mind.
+<a name="table-of-contents"></a></p>
+
+<h2 style="clear:both;">Table of Contents</h2>
+
+
+<ol>
+<li><a href="#assumptions">Assumptions</li>
+<li><a href="#how-code-examples-works">How the code examples work</li>
+    <li><a href="#what-is-ajax">What Is AJAX</a></li>
+    <li><a href="#brief-history-ajax">A brief history of AJAX</a></li>
+    <li>
+      <a href="#ajax-javascript">Create AJAX with Regular JavaScript</a>
+      <ol>
+        <li><a href="#xhr-feature-detection">XHR feature detection</a></li>
+        <li><a href="#load-content">Load content onto a page with AJAX</a></li>
+          <ol>
+            <li><a href="#new-xhr-instance">Create a new instance of the XHR object</a></li>
+            <li><a href="#xhr-states">Wait for an XHR state of 4</a></li>
+            <li><a href="#200-response">Wait for 200 response code from the server</a></li>
+            <li><a href="#readystatechange">Bring everything together using "onreadystatechange"</a></li>
+          </ol>
+        </li>
+        <li><a href="#callback-function">Have "readyStateChange" run a callback function</a></li>
+        <li><a href="#logical-and-error">Using "&&" generates an error</a></li>
+        <li><a href="#ajax-request-mouseclick">Make an AJAX request with mouseclick</a></li>
+        <li><a href="#multiple-ajax-buttons">Multiple buttons with AJAX functionality</a></li>
+        <li><a href="#reusable-button-code">Create reusable code for multiple buttons</a></li>
+        <li><a href="#load-json-ajax">Load JSON with AJAX</a></a>
+      </ol>
+    </li>
+    <li><a href="#ajax-jquery">AJAX & jQuery</a>
+      <ol>
+        <li><a href="#add-jquery">Add jQuery to the project</a></li>
+        <li><a href="#understanding-jquery-ajax">Understanding $.ajax()</a></li>
+        <li><a href="#ajax-shorthand">jQuery AJAX Shorthand methods</a>
+          <ol>
+            <li><a href="#jquery-load">.load: the easiest way to use AJAX with jQuery</a></li>
+            <li><a href="#jquery-ajax-request-mouseclick">Use .load to make an AJAX request with mouseclick</a></li>
+            <li><a href="#jquery-reusable-button-code">Create reusable code for multiple buttons with .load</a></li>
+            <li><a href="#load-fragments">Load in fragments with .load</a></li>
+            <li><a href="#jquery-get">Use jQuery.get</a></li>
+            <li><a href="#jquery-get-json">Use jQuery.getJSON</a></li>
+            <li><a href="#jquery-get-script">Use jQuery.getScript</a>
+          </ol>
+        </li>
+        <li><a href="#jqxhr-promises-deferreds">jqHXR & Promises</a></li>
+        <li><a href="#what-is-a-javascript-promise">What is a Promise?</a></li>
+        <li><a href="#jquery-promises">An important note about jQuery Promises</a></li>
+        <li><a href="#differed-methods">Use Deferred methods with jqXHR</a>
+          <ol>
+            <li><a href="#done-method">The .done method</a></li>
+            <li><a href="#fail-method">The .fail method</a></li>
+            <li><a href="#always-method">The .always method</a></li>
+            <li><a href="#then-method">The .then method</a>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+
+
+<p><a name="assumptions"></a></p>
+
+<h3 class="h3-guide">Assumptions</h3>
+
+
+<p>This AJAX tutorial assumes you understand HTML. It also assumes that you understand the basic building blocks of JavaScript: variables, functions, arrays, etc.</p>
+
+<p>This tutorial also takes the position that <a href="https://xhr.spec.whatwg.org/" target="blank" title="Read the WHAT WG XMLHttpRequest specification">the WHAT WG XMLHttpRequest specification</a> is the best source for understanding how AJAX works. It refers to other sources like <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a>, <A href="https://developer.mozilla.org/" target="blank" title="Go to the MDN home page">Mozilla Developer Network(MDN)</a> and <a href="https://msdn.microsoft.com/" target="blank" title="Go to the MSDN homepage">Microsoft Developer Network(MSDN)</a>, but it ultimately views the WHAT WG spec as the best reference.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="how-code-examples-works"></a></p>
+
+<h3 class="h3-guide">How the code examples work</h3>
+
+
+<p><a href="https://github.com/kaidez/ajax-tutorial-samples">The code for all the examples is on GitHub </a>and looks similar to this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;A Sample&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>All examples run from their own folder using an <code>index.html</code> file, which references a <code>scripts.js</code> file. Either <code>index.html</code> or <code>scripts.js</code> will change with each new example, and new files may be added or subtracted to each example.</p>
+
+<p>Because examples use some form of the <code>XMLHttpRequest</code> browser object, they need to run from a web server instead of as a local file in a web browser. Whether it's a browser tool or a desktop server application like <a href="http://www.mamp.info/" target="blank" title="Learn about MAMP">MAMP</a>, it needs to run from a web server.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="what-is-ajax"></a></p>
+
+<h3 class="h3-guide">What Is AJAX</h3>
+
+
+<p>First, understand that <code>XMLHttpRequest</code>, or "XHR", is the heart of any AJAX code. Therefore, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:</p>
+
+<blockquote><p><em>"The XMLHttpRequest object is an API for fetching resources."</em></p></blockquote>
+
+<p>Simply put, <code>XMLHttpRequest</code> fetches, or "requests", information from a server, then places it on a web page. It does this "asynchronously", meaning that <strong>XHR loads the information onto the page without needing to reload it.</strong></p>
+
+<p><em>(Note: at the time of this tutorial's publish date, XHR can make both synchronous and asynchronous requests. XHR synchronous requests will likely be removed from browsers in the future: <a href="https://xhr.spec.whatwg.org/#the-open()-method" target="blank" title="Read about disappearing XHR synchronous requests">read about disappearing XHR synchronous requests</a>).</em></p>
+
+<p>"AJAX" stands for <em>Asynchronous JavaScript + XML</em> but other technologies are used besides JavaScript and XML.  The original definition described it as a group of technologies working together to manage XHR requests inside a web page.</p>
+
+<p>The technologies were: XHR, JavaScript, XML/XSLT, XHTML, CSS and the Document Object Model (or, "the DOM"). XML was the recommended data type but other data types can be used...text files, HTML files, images and (more so than anything else), JSON.</p>
+
+<p>XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of XHTML is recommended at the time of this guide's initial publish date.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="brief-history-ajax"></a></p>
+
+<h3 class="h3-guide">A brief history of AJAX</h3>
+
+
+<p><em>(NOTE: This section provides some historically perspective on AJAX but has nothing to do with the code in this guide. To start looking at code, you can <a href="#ajax-javascript">skip this section and go to "Create AJAX with Regular JavaScript"</a>.)</em></p>
+
+<p>The roots of AJAX goes back to roughly late 1988/early 1999: <a href="http://www.stitcher.com/podcast/ruby-rogues/javascript-jabber/e/124-jsj-the-origin-of-javascript-with-brendan-eich-35282918" target="blank" title="Listen to Brendan Eich on the JavaScript Jabber Podcast">according to JavaScript creator, Brendan Eich</a>, Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application (OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.</p>
+
+<p>OWA still needed to make asynchronous requests, or, "async" requests. Because of this, Microsoft developers created the <a href="http://msdn.microsoft.com/en-us/library/ie/ms537505%28v=vs.85%29.aspx" target="blank" title=""Read more about the XMLHTTP Object"">XMLHTTP object</a> to do just that, bundling it into Internet Explorer 5 when it was released in March 1999.</p>
+
+<p>Other browsers added the object as well, but with a different implementation and called it <code>XMLHttpRequest</code>. Microsoft would copy the other implementation and also name their object <code>XMLHttpRequest</code> when they released Internet Explorer 7.</p>
+
+<p>The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and <a href="http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/" target="blank" title="Read about Google Suggest">Google Suggest</a>..</p>
+
+<p>These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005 when <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original AJAX article">Jesse James Garrett wrote his influential AJAX article</a>.</p>
+
+<p>Garret's article defined AJAX and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="ajax-javascript"></a></p>
+
+<h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
+
+
+<p><a name="xhr-feature-detection"></a></p>
+
+<h4 class="h4-guide">XHR feature detection</h4>
+
+
+<p><em>(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective only. It's primarily needed for Internet Explorer versions 6 and lower, but usage for those browsers has dropped significantly. Plus, jQuery version 1.x takes care of the feature detection for you if you use it. If you're not coding for those browsers and/or using jQuery version 1.x, <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)</em></p>
+
+<p>As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, <code>XMLHTTP</code> was not directly accessible in the browser...in other words, you couldn't access it by using <code>window.XMLHTTP</code> somewhere in your JavaScript code.</p>
+
+<p>Instead, it was bundled inside proprietary Microsoft technology called <a href="http://msdn.microsoft.com/en-us/library/aa751972(VS.85).aspx" target="blank" title="Learn more about Microsoft's ActiveXObject">"ActiveXObject"</a>. Since AJAX became popular while the old Microsoft implementation was still in wide use, you had to use feature-detection code to make sure that your AJAX worked in all browsers.</p>
+
+<p>The simplest version of this feature-detection code looked similar to this:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// Feature-detect XMLHttpRequest implementation
+var xhr;
+if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
+  xhr = new XMLHttpRequest();
+} else {
+  if (window.ActiveXObject) { // For IE 6 and lower
+    xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+  }
+}</code></pre>
+</div>
+
+
+<p>The above-example created a variable called <code>xhr</code>, then checked to see if <code>XMLHttpRequest</code> was attached to the browser's <code>window</code> object.  If it was, then <code>xhr</code> directly referenced a new instance of <code>XMLHttpRequest</code> when it performed AJAX tasks.</p>
+
+<p>The example also checked to see if <code>ActiveXObject</code> was attached to the browser via the <code>window</code> object. If it was, then <code>xhr</code> would directly reference a new instance of <code>ActiveXObject</code> when it performed AJAX tasks.</p>
+
+<p>Developers later realized that <code>window.ActiveXObject</code> was used differently across the older versions of IE. They also realized that some browsers heavily in use at the time didn't support XHR at all.</p>
+
+<p>As a result, they updated the feature detection code:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// Feature-detect XMLHttpRequest implementation
+// More robust detecting of ActiveX
+function getXHR() {
+  var xhr;
+  if (window.XMLHttpRequest) { // Browsers other than IE 6 and lower
+    xhr = new XMLHttpRequest();
+  } else {
+    try { // Browsers with one type of ActiveXObject build
+      xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+    } catch (e) {
+      try { // Browsers with another type of ActiveXObject build
+        xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+      } catch (e) {
+        // Browsers that don&#39;t support either XMLHttpRequest or ActiveXObject
+        xhr = false;
+      }
+    }
+  }
+  return xhr;
+}</code></pre>
+</div>
+
+
+<p>The feature detection code was rewritten to be a reusable function called <code>getXHR</code>. The function did the cross-browser checking for <code>XMLHttpRequest</code> internally, meaning any new instance of <code>getXHR</code>  would use XHR without worrying about cross-browser issues.</p>
+
+<p><code>getXHR</code> checked for <code>XMLHttpRequest</code>, but also checked to see of the browser had one of two ActiveXObject builds. It also checked to see if either the <code>XMLHttpRequest</code> or <code>ActiveXObject</code> existed.</p>
+
+<p>A JavaScript <code>try...catch</code> statement looked for the different versions of <code>ActiveXObject</code>. If <code>try...catch</code> didn't find it and also didn't find <code>XMLHttpRequest</code>, then the value of the <code>xhr</code> variable was set to <code>false</code> and didn't do any AJAX work.</p>
+
+<p><code>getXHR</code> said <code>return xhr</code> at the end of the code, which let us create new instances of <code>getXHR</code> outside the function.</p>
+
+<p>Go to MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">learn more about feature-detection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">learn more about "try...catch" on MDN</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="load-content"></a></p>
+
+<h4 class="h4-guide">Load content onto a page with AJAX</h4>
+
+
+<p>Loading content with XHR is a four-step process:</p>
+
+<ol>
+<li>Create a new instance of the XHR object.</li>
+<li>Wait for an XHR state of 4.</li>
+<li>Wait for a 200 response code from the server.</li>
+<li>Bring everything together using "onreadystatechange".</li>
+</ol>
+
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="new-xhr-instance"></a></p>
+
+<h5 class="h5-guide">Create a new instance of the XHR object</h5>
+
+
+<p>There are use cases for including XHR feature detection in your code, but it's primarily required if your AJAX code needs to run in Internet Explorer versions 6 and lower. These browsers are in use less and less so it may make sense to keep this out of your code and just create a direct instance of the XHR:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var xhr = new XMLHttpRequest();</code></pre>
+</div>
+
+
+
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="xhr-states"></a></p>
+
+<h5 class="h5-guide"> Wait for an XHR state of 4</h5>
+
+
+<p>An XHR request will be in one of fives states, each with a numerical value of 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.</p>
+
+<p><em>(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can <a href="#200-response" title="Go to &quot;Wait for 200 response code from the server">skip this section and go to "Wait for 200 response code from the server"</a>".</em></p>
+
+<p>There are two widely-accepted specifications for XHR states: <A href="https://xhr.spec.whatwg.org/#states" target="blank" title="Read the AJAX states definition in official XMLHttpRequest specification">the spec defined by WHATWG</a> and <a href="http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx" target="blank" title="Read the AJAX states definition in Microsoft's XMLHttpRequest specification">the original spec defined by Microsoft</a>.</p>
+
+<p>The WHATWG spec defines five states, each with a numerical value:</p>
+
+<ul>
+<li><p><strong>0</strong>: meaning that things are in the <strong>UNSENT</strong> state...the code understands that instance of <code>xhr</code> has been created, but it's not doing anything.</p></li>
+<li><p><strong>1</strong>: meaning that things are in the <strong>OPEN</strong> state...the <code>open()</code> method has been invoked somewhere in our code and if you want to send any data to the server, you can do that with the <code>send()</code> method. This guide focuses more on getting things with <code>xhr</code> instead of sending things...<a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_5_.E2.80.93_Working_with_data" title="Go to MDN to learn about setting headers in an XMLHttpRequest">read about setting headers over on MDN </a>.</p></li>
+<li><p><strong>2</strong>: meaning that things are in the <strong>HEADERS_RECEIVED</strong> state...if you're downloading headers, the state will be set to 2 after they're finished downloading.</p></li>
+<li><p><strong>3</strong>: meaning that things are in the <strong>LOADING</strong> state...the data is loading.</p></li>
+<li><p><strong>4</strong>: meaning that things are in the <strong>DONE</strong> state...either the data has downloaded in full or there was an error during the download process.</p></li>
+</ul>
+
+
+<p>Microsoft's definition also attaches numbers to states, but the definition is shorter:</p>
+
+<ul>
+<li><p><strong>0</strong> (uninitialized)</p></li>
+<li><p><strong>1</strong> (loading)</p></li>
+<li><p><strong>2</strong> (loaded)</p></li>
+<li><p><strong>3</strong> (interactive)</p></li>
+<li><p><strong>4</strong> (complete)</p></li>
+</ul>
+
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="200-response"></a></p>
+
+<h5 class="h5-guide">Wait for 200 response code from the server</h5>
+
+
+<p>A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is <code>200 OK</code>.</p>
+
+<p>When your AJAX code sees a <code>200 OK</code> response, it knows that your XHR has made a successful server request.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="readystatechange"></a></p>
+
+<h5 class="h5-guide">Bring everything together using "onreadystatechange"</h5>
+
+
+<p><code>onreadystatechange</code> is an event handler that watches for when <code>readystate</code> changes...again, <code>readyState</code> will always have a numerical value of 0 through 4. There are use cases for knowing all the times that this value changes but with AJAX, knowing when it changes to 4 (the <code>done</code> state) is the most important.</p>
+
+<p>When <code>onreadystatechange</code> sees that <code>readyState</code> is equal to 4, it knows that all the data has fully downloaded and is ready to be used in our code. It also could mean that the data didn't download, but this guide assumes that your final code will be written in a way that keeps that from happening: (<a href="/samples/ajax-tutorial-samples/sample01/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample01/index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Sample 03&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>We've added a div tag with an id of "textTarget" to <code>index.html</code>. Our AJAX code will load data into this element.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample01/scripts.js
+var getArticleInfo = new XMLHttpRequest();
+
+getArticleInfo.onreadystatechange = loadText;
+getArticleInfo.open(&quot;GET&quot;, &quot;articleName.txt&quot;);
+getArticleInfo.send();
+
+function loadText() {
+  var text = document.getElementById(&quot;textTarget&quot;);
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log(&#39;There was a problem with the request.&#39;);
+    }
+  }
+};</code></pre>
+</div>
+
+
+<p>Reviewing the code...</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var getArticleInfo = new XMLHttpRequest();</code></pre>
+</div>
+
+
+<p>We created a new XHR instance called <code>getArticleInfo</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>getArticleInfo.onreadystatechange = loadText;
+getArticleInfo.open(&quot;GET&quot;, &quot;articleName.txt&quot;);
+getArticleInfo.send();</code></pre>
+</div>
+
+
+<p>For now, <code>getArticleInfo.onreadystatechange</code> will run a function called <code>loadText</code> any time a state changes. But we'll write code that makes sure that <code>loadText</code> only runs when the state equals <code>4</code>.</p>
+
+<p><code>open</code> is an XHR method and one of the most important parts of an AJAX application. This is because <strong>the <code>open</code> method is where you tell your code what data needs to be loaded onto the page.</strong></p>
+
+<p><code>getArticleInfo.open()</code> first described <em>how</em> to get the data. That was done with the first parameter, which was <code>GET</code>...it told the server to "get" something from the server.</p>
+
+<p>The second <code>getArticleInfo.open()</code> parameter described <em>what</em> to get...that's the data we're requesting. In this case, that was a file called "articleName.txt" that contained the name of this article and the name of the author.</p>
+
+<p><code>getArticleInfo.send()</code> is the part of the code that actually sent the data request to server. It has a default value of <code>null</code> when using <code>GET</code>, but you can pass a parameter to <code>send()</code> if using <code>POST</code>.</p>
+
+<p>You would use <code>POST</code> if you want to send data to the server while in the "1" state, which was discussed in the <a href="#xhr-states">"Wait for an XHR state of 4" section</a>. Discussing this is beyond the scope of this AJAX tutorial.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>function loadText() {
+...
+};</code></pre>
+</div>
+
+
+<p>Start building the <code>loadText()</code> function that we defined above.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>var text = document.getElementById(&quot;textTarget&quot;);</code></pre>
+</div>
+
+
+<p>We stored a variable reference to the <code>&lt;div id="textTarget"&gt;</code> in <code>index.html</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>if (getArticleInfo.readyState === 4) {
+  if (getArticleInfo.status === 200) {
+    text.innerHTML = getArticleInfo.responseText;
+  } else {
+    console.log(&quot;There was a problem with the request.&quot;);
+  }
+}</code></pre>
+</div>
+
+
+<p>We first checked to see if <code>getArticleInfo.readyState</code> definitely equaled <code>4</code>. If it did, then the data downloaded.</p>
+
+<p>Next, we checked to see if <code>getArticleInfo.status</code> equaled <code>200</code>. If it did, it meant the code successfully contacted the server.</p>
+
+<p>Our code then found the <code>&lt;div id="textTarget"&gt;</code> element on our page (which was referenced by the <code>text</code> variable) and placed whatever content is inside of <code>getArticleInfo.responseText</code>.</p>
+
+<p><code>getArticleInfo.responseText</code> referred to the data we requested in <code>getArticleInfo.open()</code>, which was the "articleName.txt" file. The copy in that file was placed in <code>&lt;div id="textTarget"&gt;</code>.</p>
+
+<p>If the code didn't connect to the server and <code>getArticleInfo.status</code>  didn't equal <code>200</code>, then the browser console would have displayed a message saying, "There was a problem with the request."</p>
+
+<p>It's important to note that this console message would only have appeared if <code>getArticleInfo.status</code> didn't equal <code>200</code> and that <strong>the value of <code>getArticleInfo.readyState</code> would have no effect on whether or not the console message appeared</strong>.</p>
+
+<p>As mentioned, AJAX can load in all different types of documents...we can tell the <code>getArticleInfo.open()</code> to load in an HTML document instead of a text one (<a href="/samples/ajax-tutorial-samples/sample02/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample02/scripts.js
+// Update the getArticleInfo.open() method only
+// Replace articleName.txt with articleName.html in the directory
+...
+getArticleInfo.open(&quot;GET&quot;, &quot;articleName.html&quot;);
+...</code></pre>
+</div>
+
+
+
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="callback-function"></a></p>
+
+<h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
+
+
+<p>We've had "readyStateChange" request data using a named function called <code>loadText()</code>. Requesting data with a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample03/scripts.js
+var getArticleInfo = new XMLHttpRequest();
+
+getArticleInfo.open(&quot;GET&quot;, &quot;articleName.html&quot;);
+getArticleInfo.send();
+
+getArticleInfo.onreadystatechange = function() {
+  var text = document.getElementById(&quot;textTarget&quot;);
+  if (getArticleInfo.readyState === 4) {
+    if (getArticleInfo.status === 200) {
+      text.innerHTML = getArticleInfo.responseText;
+    } else {
+      console.log(&#39;There was a problem with the request.&#39;);
+    }
+  }
+};</code></pre>
+</div>
+
+
+<p><code>getArticleInfo.onreadystatechange</code> immediately ran a callback function instead of going out and named function, making the code run slightly faster.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="logical-and-error"></a></p>
+
+<h4 class="h4-guide">Using "&&" generates an error</h4>
+
+
+<p><em>(NOTE: This section describes how NOT to do <code>readyState</code> and <code>status</code> checks. Developers still do this but this AJAX tutorial does not. This section is a demonstration of what not to do; it has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)</em></p>
+
+<p>Our code checked for the value of <code>readyState</code> first, <em>then</em> checked for the server's status code. Some developers like to use the logical "AND" operator (&amp;&amp;) to simultaneously check for these values.</p>
+
+<p>The code for this looks similar to this (<a href="/samples/ajax-tutorial-samples/sample04/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample04/scripts.js
+// Update the getArticleInfo.onreadystatechange callback function only
+...
+getArticleInfo.onreadystatechange = function() {
+  var text = document.getElementById(&quot;textTarget&quot;);
+  if ((getArticleInfo.readyState === 4) &amp;&amp; (getArticleInfo.status === 200)) {
+      text.innerHTML = getArticleInfo.responseText;
+  } else {
+    console.log(&quot;There was a problem with the request.&quot;);
+  }
+};</code></pre>
+</div>
+
+
+<p>In this example, <code>XMLHttpRequest</code> probably requested and displayed data without error, but the console message displayed anyway. This is because it did only one very specific check.</p>
+
+<p>The code using logical "AND" would only "AJAX in" the content if <code>getArticleInfo.readyState</code> equaled <code>4</code> at the same time that <code>getArticleInfo.status</code> equaled <code>200</code>. But that wasn't the only scenario that happened in the code.</p>
+
+<p>There were times when <code>getArticleInfo.readyState</code> equaled 0 through 3 and there were times when <code>getArticleInfo.readyState</code> equaled <code>2</code> at the same time that <code>getArticleInfo.status</code> equaled <code>200</code>. There may have even been a time when <code>getArticleInfo.status</code> equaled something other than <code>200</code>.</p>
+
+<p>We didn't define functionality for those other use cases so as a result, the console message returned for all those use cases. The fact that the data displayed correctly didn't matter: it returned the console error message anyway.</p>
+
+<p>Using <code>&amp;&amp;</code> like this doesn't perform a robust check of the application state in this case, so it's best to avoid it.</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read more about the logical "AND" operator on MDN">Read more about the logical "AND" operator on MDN</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="ajax-request-mouseclick"></a></p>
+
+<h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
+
+
+<p>The previous examples used AJAX to load data automatically, but we can also make it load with events. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample05/index.html --&gt;
+&lt;!-- add &lt;button&gt; directly above &lt;div id=&quot;textTarget&quot;&gt;  --&gt;
+...
+&lt;button id=&quot;getHTMLFile&quot;&gt;Load the HTML file&lt;/button&gt;
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>We added a button tag with an id of "getHTMLFile" above <code>&lt;div     id="textTarget"&gt;</code>. Clicking on this button loaded the contents of an HTML file inside the div tag.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample05/scripts.js
+function loadHTML() {
+  var getInfo = new XMLHttpRequest();
+
+  getInfo.open(&quot;GET&quot;, &quot;articleName.html&quot;);
+  getInfo.send();
+
+  getInfo.onreadystatechange = function() {
+    var text = document.getElementById(&quot;textTarget&quot;);
+    if (getInfo.readyState === 4) {
+      if (getInfo.status === 200) {
+        text.innerHTML = getInfo.responseText;
+      } else {
+        console.log(&#39;There was a problem with the request.&#39;);
+      }
+    }
+  }
+}
+
+// Code that loads the data on a button click
+document.getElementById(&quot;getHTMLFile&quot;).addEventListener(&quot;click&quot;, loadHTML);</code></pre>
+</div>
+
+
+<p>All the AJAX code was placed in a <code>loadHTML</code> function and we added new code at the bottom that ran this function when the button was clicked. At the bottom of the code, the button with the id of <code>getHTMLFile</code> had the <code>addEventListener</code> method attached to it.</p>
+
+<p>The button was "listening for", or "watching for", whatever event we told it to watch for...which was <code>click</code>. When the code saw that the button was been clicked, it ran the <code>loadHTML</code> function and processed the AJAX code.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="multiple-ajax-buttons"></a></p>
+
+<h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
+
+
+<p>We can create multiple buttons that load different data with AJAX (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample06/index.html --&gt;
+&lt;!-- add a new &lt;button&gt; directly above &lt;div id=&quot;textTarget&quot;&gt;  --&gt;
+...
+&lt;button id=&quot;getHTMLFile&quot;&gt;Load the HTML file&lt;/button&gt;
+&lt;button id=&quot;getTextFile&quot;&gt;Load the text file&lt;/button&gt;
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>We added a new button tag with an id of "getTextFile" directly above <code>&lt;div id="textTarget"&gt;</code>. Clicking on this button will load the contents of a text file inside the div tag.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample06/scripts.js
+// Pass a parameter to loadFile and refer to it in getInfo.open()
+function loadFile(file) {
+  var getInfo = new XMLHttpRequest();
+
+  getInfo.open(&quot;GET&quot;, file);
+  ...
+}
+...
+// Add a new button to the bottom of scripts.js
+// Have each button run loadFile() to load in a different file
+document.getElementById(&quot;getHTMLFile&quot;).onclick = function() {
+  loadFile(&quot;articleName.html&quot;);
+};
+
+document.getElementById(&quot;getTextFile&quot;).onclick = function() {
+  loadFile(&quot;articleName.txt&quot;);
+};</code></pre>
+</div>
+
+
+<p><code>loadFile</code> now requires a parameter that we're calling "file". The parameter will define what file get's loaded onto the page via <code>getInfo.open</code>.</p>
+
+<p>We also updated our button code: it still ran the <code>loadFile</code> function, but that function needed a parameter in order to work. That parameter was the name of the file we want to load onto the page.</p>
+
+<p>The new button loaded in a text file while the old button loaded in an HTML file.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="reusable-button-code"></a></p>
+
+<h4 class="h4-guide">Create reusable code for multiple buttons</h4>
+
+
+<p>The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create <code>onclick</code> functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample07/index.html --&gt;
+&lt;!-- update the &lt;button&gt; tags directly above &lt;div id=&quot;textTarget&quot;&gt; --&gt;
+...
+&lt;button class=&quot;btn&quot; data-file=&quot;articleName.html&quot;&gt;Load the HTML file&lt;/button&gt;
+&lt;button class=&quot;btn&quot; data-file=&quot;articleName.txt&quot;&gt;Load the text file&lt;/button&gt;
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p>We updated the two buttons already on our HTML page. For each one, we removed the ids, added a class called <code>btn</code> and added a data-attribute called <code>data-file</code>.</p>
+
+<p>The values of the data-attributes were unique for each button: each value was the name of the file that needed be loaded with AJAX.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample07/scripts.js
+// Don&#39;t change the loadFile() function
+// Remove the button code for the two buttons at the bottom
+// Add this new code
+...
+var getButtons = document.querySelectorAll(&quot;.btn&quot;);
+
+for (key in getButtons) {
+
+  var singleButton = getButtons[key];
+
+  singleButton.onclick = function() {
+    if(!this.dataset) {
+      loadFile(this.getAttribute(&quot;data-file&quot;));
+    } else {
+      loadFile(this.dataset.file);
+    }
+  }
+
+}</code></pre>
+</div>
+
+
+<p>The button code for the two buttons was replaced with new code. That code first used <code>document.querySelectorAll</code> to find all the buttons with the <code>btn</code> class name and store them as a group in a variable called <code>getButtons</code>.</p>
+
+<p>Then a <code>for...in</code> loop ran for whatever the total amount of buttons  were inside of <code>getButtons</code>...which was two. Every time the loop ran, it created a variable called <code>singleButton</code> that stored a reference to one button at a time: that reference was the <code>getButtons[key]</code> line of code.</p>
+
+<p>Next, our code told each <code>singleButton</code> what to do when it got clicked. What it did was, looked at the value of the button's data attribute (which is one of two files) and passed it as a parameter to the <code>loadFile</code> function to load onto the page.</p>
+
+<p>Data attributes aren't supported in IE 10 and lower so we had to feature-detect for them, then provide fallback code for those browsers. We looked for the <code>dataset</code> property of the button being clicked by saying <code>this.dataset</code>.</p>
+
+<p>We first checked to see if <code>dataset</code> did NOT exist in the browser by saying <code>if(!this.dataset)</code>...if it didn't, we got the value of the data attribute with the <code>getAttribute()</code> method.</p>
+
+<p>But if <code>dataset</code> DID exist, we used it to get the value of the data attribute using <code>this.dataset</code>.</p>
+
+<p><em>(Note: To learn more about data attributes, read my <a href="/load-data-attributes-mouseclicks/" target="blank" title="Read my 'Load data attributes with Mouse Clicks' tutorial">"Load data attributes with Mouse Clicks" tutorial</a> or my <a href="/filter-content-jquery/" target="blank" target="blank" title="Read my 'Filter Content With jQuery.filter() & jQuery Selectors' tutorial">"Filter Content With jQuery.filter() &amp; jQuery Selectors" tutorial</a>.</em></p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="load-json-ajax"></a></p>
+
+<h4 class="h4-guide">Load JSON with AJAX</h4>
+
+
+<p>AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample08/index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Sample 08&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>The buttons were removed from the HTML file.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample08/soccerplayers.json
+{
+    &quot;chelsea&quot;: {
+        &quot;playerOne&quot;: &quot;Didier Drogba&quot;,
+        &quot;playerTwo&quot;: &quot;Thibault Courtois&quot;,
+        &quot;playerThree&quot;: &quot;Cesc Fabregas&quot;
+    },
+    &quot;realMadrid&quot;: {
+        &quot;playerOne&quot;: &quot;Cristiano Ronaldo&quot;,
+        &quot;playerTwo&quot;: &quot;Sergio Ramos&quot;,
+        &quot;playerThree&quot;: &quot;Iker Casillas&quot;
+    },
+    &quot;psg&quot;: {
+        &quot;playerOne&quot;: &quot;Zlatan Ibrahimović&quot;,
+        &quot;playerTwo&quot;: &quot;Thiago Motta&quot;,
+        &quot;playerThree&quot;: &quot;Marquinhos&quot;
+    }
+}</code></pre>
+</div>
+
+
+<p>Instead of using AJAX to load in data from either an HTML or text file, we loaded it in from a JSON file called <code>soccerplayers.json</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample08/scripts.js
+(function(){
+    var getPlayerInfo = new XMLHttpRequest();
+
+    getPlayerInfo.open(&quot;GET&quot;, &quot;soccerplayers.json&quot;);
+    getPlayerInfo.send();
+
+    getPlayerInfo.onreadystatechange = function() {
+      if (getPlayerInfo.readyState === 4) {
+        if (getPlayerInfo.status === 200) {
+          var players = JSON.parse(getPlayerInfo.responseText),
+              text = document.getElementById(&quot;textTarget&quot;);
+          for (i in players) {
+            var newDiv = document.createElement(&quot;div&quot;);
+            newDiv.innerHTML = players[i].playerOne;
+            text.appendChild(newDiv);
+          }
+        }
+      }
+    }
+})();</code></pre>
+</div>
+
+
+<p>Breaking down the code:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>(function(){
+...
+})();</code></pre>
+</div>
+
+
+<p>The main change is that the function now ran as soon as the page loaded instead of being invoked some place in our code. This was done with an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="blank" title="Learn about the IIFE">"immediately-invoked function expression", or an "IIFE"</a>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>...
+var getPlayerInfo = new XMLHttpRequest();
+getPlayerInfo.open(&quot;GET&quot;, &quot;soccerplayers.json&quot;);
+getPlayerInfo.send();
+...</code></pre>
+</div>
+
+
+<p>The main variable used in the AJAX code was renamed <code>getPlayerInfo</code> throughout the code. The <code>open</code> method now fetched our JSON file.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>...
+getPlayerInfo.onreadystatechange = function() {
+  if (getPlayerInfo.readyState === 4) {
+    if (getPlayerInfo.status === 200) {
+      var players = JSON.parse(getPlayerInfo.responseText),
+          text = document.getElementById(&quot;textTarget&quot;);
+      for (i in players) {
+        var newDiv = document.createElement(&quot;div&quot;);
+        newDiv.innerHTML = players[i].playerOne;
+        text.appendChild(newDiv);
+      }
+    }
+  }
+};
+...</code></pre>
+</div>
+
+
+<p>Once <code>readyState</code> equaled <code>4</code> and our code successfully connected to the server, it created two variables: <code>players</code> and <code>text</code>. <code>players</code> grabbed our data with <code>responseText</code> like before and converted it to a more-readable JavaScript object format with <code>JSON.parse</code>.</p>
+
+<p><code>text</code> referred to the <code>&lt;div id="textTarget"&gt;</code> element on the HTML page. As before, our data loaded into this element.</p>
+
+<p>Then we did a <code>for...in</code> loop that looped through JSON content stored inside the <code>players</code> variable. Three steps were performed for every loop iteration:</p>
+
+<ol>
+<li>the loop created a div tag using <code>document.createElement</code> and stored in a variable called <code>newDiv</code>.</li>
+<li>the loop looked at each item in the <code>players</code> variable and found its <code>playerOne</code> property. Then placed it inside the div tag created with the <code>newDiv</code> variable by accessing the div's <code>innerHTML</code> property.</li>
+<li>the loop found the <code>text</code> variable that referenced the <code>&lt;div id="textTarget"&gt;</code> element already on the page and loaded the <code>newDiv</code> content inside of it.</li>
+</ol>
+
+
+<p>This was a basic example of how to use JSON with AJAX...the main takeaway from this is example is, <strong>AJAX can load all different types of content, including JSON</strong>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="ajax-jquery"></a></p>
+
+<h3 class="h3-guide">AJAX & jQuery</h3>
+
+
+<p><a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write highly-configurable AJAX functionality with less code.</p>
+
+<p>The release of jQuery 1.5 was significant because of certain AJAX-related changes:</p>
+
+<ul>
+<li>AJAX performed faster in jQuery.</li>
+<li>Deferreds and Promises were introduced, making AJAX's asynchronous functionality better.</li>
+<li>the already-existing jqXHR object added new functionality to AJAX in jQuery.</li>
+</ul>
+
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="add-jquery"></a></p>
+
+<h4 class="h4-guide">Add jQuery to the project</h4>
+
+
+<p>For the rest of the examples, the core jQuery library has been added to <code>index.html</code> via the jQuery CDN. <code>index.html</code> now looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;A Sample with the jQuery code attached to it&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>Note that jQuery comes before <code>scripts.js</code> and that we're using a 1.x version of the library instead of a 2.x version. This means that jQuery is optimized to work in Internet Explorer versions 6 and higher...2.x versions only work in IE versions 9 and higher.</p>
+
+<p>If you use jQuery 1.x, it will perform the ActiveX Object feature detection we reviewed earlier.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="understanding-jquery-ajax"></a></p>
+
+<h4 class="h4-guide">Understanding $.ajax</h4>
+
+
+<p><code>$.ajax</code> is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.</p>
+
+<p>There are many ways to configure <code>$.ajax</code> and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample09/" target="blank">View the example</a>:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample09/scripts.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Sample 09&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;isLoadedTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>The same HTML code as before except we've added a div with an id of "isLoadedTarget" and the core jQuery library.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample09/scripts.js
+$.ajax({
+  url: &quot;articleName.html&quot;,
+  success: isLoaded,
+  statusCode: {
+    200: function() {
+      console.log(&quot;Everything is loaded!!!&quot;);
+    }
+  }
+}).done(function(data) {
+  $(&quot;#textTarget&quot;).html(data);
+});
+
+function isLoaded() {
+  $(&quot;#isLoadedTarget&quot;).html(&quot;&lt;p&gt;The articleName.html file has loaded...check the console for a message returned by the statusCode property!!!&lt;/p&gt;&quot;);
+}</code></pre>
+</div>
+
+
+<p>You can use <code>$.ajax</code> either with or without passing parameters to it. If you do pass parameters, you can pass more than one using a configurable object.</p>
+
+<p>We've created a configurable object be setting three options:</p>
+
+<ol>
+<li>url: defined which file is being loaded into the page via AJAX. This example loaded in the "articleName.html" file.</li>
+<li>success: defined what to do if the request for the file succeeds. This example would run a function called <code>isLoaded</code>.</li>
+<li>statusCode: defined what to do when a certain server status code has been called. This example sent a message to the browser console when the server gets to a 200 status.</li>
+</ol>
+
+
+<p>We chained <code>.ajax</code>to the <code>.done</code> method, so it will run next. <code>.done</code> is discussed later when we look at <a href="#jqxhr-promises-deferreds" title="Read about Promises and Deferreds in AJAX">jQuery Promises and Deferreds</a> but for now, understand  that <code>.done</code> is a callback function that ran after <code>.ajax</code> did everything it was supposed to do.</p>
+
+<p><code>.done</code> had its own callback function and for it, we passed a parameter of "data" to it. "data" represents all the options configured in <code>.ajax</code>, including the value of the "url" option.</p>
+
+<p>The callback used the <code>html</code> method to load "articleName.html" into <code>&lt;div id="textTarget"&gt;</code> like it did before except this time, we passed the "data" parameter to <code>.html</code> instead of the file name. <code>.done</code> is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="ajax-shorthand"></a></p>
+
+<h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
+
+
+<p><code>$.ajax</code> is powerful, but not needed for every project. According to <a href="http://api.jquery.com/jQuery.ajax/" target="blank" title="Read the jQuery.ajax documentation">the current version of the $.ajax documentation</a>:</p>
+
+<blockquote><p><em>"The <code>$.ajax()</code> function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like <code>$.get()</code> and <code>.load()</code> are available and are easier to use. If less common options are required, though, <code>$.ajax()</code> can be used more flexibly."</em></p></blockquote>
+
+<p>In jQuery, these higher-level functions are commonly referred to as "<a href="http://api.jquery.com/category/ajax/shorthand-methods/" title="Read more about jQuery AJAX shorthand methods">shorthand methods</a>." All of them use core <code>.ajax</code> method internally.</p>
+
+<p>jQuery currently offers five AJAX shorthand methods:</p>
+
+<ol>
+<li><code>.load</code></li>
+<li><code>jQuery.get</code></li>
+<li><code>jQuery.getJSON</code></li>
+<li><code>jQuery.getScript</code></li>
+<li><code>jQuery.post</code></li>
+</ol>
+
+
+<p><code>jQuery.post</code> deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-load"></a></p>
+
+<h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
+
+
+<p>If you want to use jQuery to load in file with AJAX like we've been doing, the <code>.load</code> function is the easiest way to do this. This is the jQuery version of <a href="#readystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.</p>
+
+<p><a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample10/index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Sample 10&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>An HTML page like we've used in previous examples...it contains <code>&lt;div id="textTarget"&gt;</code> where we loaded in content on page-load.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample10/scripts.js
+$(&quot;#textTarget&quot;).load(&quot;articleName.html&quot;);</code></pre>
+</div>
+
+
+<p>jQuery looked for the <code>&lt;div id="textTarget"&gt;</code> element on the page and ran it against the <code>.load</code> function. That function used AJAX to "load" content inside of the div...that content was defined as "articleName.html" in the <code>.load</code> parameter.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-ajax-request-mouseclick"></a></p>
+
+<h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
+
+
+<p>We used a mouseclick to <a href="#ajax-request-mouseclick" title="Make an AJAX request with mouseclick">load content "AJAX in" content in a previous example</a>...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample11/index.html --&gt;
+&lt;!-- add &lt;button&gt; directly above &lt;div id=&quot;textTarget&quot;&gt;  --&gt;
+...
+&lt;button id=&quot;getHTMLFile&quot;&gt;Load the HTML file&lt;/button&gt;
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>We added a button tag with an id of "getHTMLFile" directly above <code>&lt;div id="textTarget"&gt;</code>. Clicking on this button loaded the contents of an HTML file inside the div tag.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample11/scripts.js
+$(&quot;#getHTMLFile&quot;).click(function(){
+  $(&quot;#textTarget&quot;).load(&quot;articleName.html&quot;);
+});</code></pre>
+</div>
+
+
+<p>We bound the jQuery <code>.click</code> method to the button we just added and had it run a callback function when clicked. The function ran the <code>.load</code> code in the previous example.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-reusable-button-code"></a></p>
+
+<h5 class="h5-guide">Create reusable code for multiple buttons with .load</h5>
+
+
+<p>We used <a href="#multiple-ajax-buttons" title="Go to &quot;Multiple buttons with AJAX functionality">plain JavaScript to create separate buttons to "AJAX in" different content</a>. But <a href="#reusable-button-code" title="Go to &quot;Create reusable code for multiple buttons">using plain JavaScript to create a shared function to load in content</a> was more efficient (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample12/index.html --&gt;
+&lt;!-- add two &lt;button&gt; tags directly above &lt;div id=&quot;textTarget&quot;&gt; --&gt;
+...
+&lt;button class=&quot;btn&quot; data-file=&quot;articleName.html&quot;&gt;Load the HTML file&lt;/button&gt;
+&lt;button class=&quot;btn&quot; data-file=&quot;articleName.txt&quot;&gt;Load the text file&lt;/button&gt;
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p>We created two buttons with a class called <code>btn</code> and a data-attribute called <code>data-file</code>. <code>data-file</code> stored the name of the file that had to be loaded with AJAX.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample12/scripts.js
+$(&quot;.btn&quot;).click(function(){
+  var getData = $(this).data(&quot;file&quot;);
+  $(&quot;#textTarget&quot;).load(getData);
+});</code></pre>
+</div>
+
+
+<p>As before, we had all the buttons with the <code>btn</code> class share the same <code>.click</code> function for loading in content. As before, the buttons simultaneously performed two tasks: find the file stored in the <code>data-file</code> attribute, and load that file into the <code>&lt;div id="textTarget"&gt;</code> element.</p>
+
+<p>To get the file stored in <code>data-file</code>, we used <code>$(this).data()</code>. We still used the JavaScript <code>this</code> keyword to reference the button being clicked, but wrapped in the jQuery object so we could use it with other jQuery methods.</p>
+
+<p>We passed the name of data attribute we want to find as a parameter to the <code>.data</code> method. The name we wanted was <code>data-file</code> so we just needed to call our parameter "file".</p>
+
+<p>All that was stored in a variable called <code>getData</code>. Because <code>getData</code> refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the <code>.load</code> method that loads files inside of <code>&lt;div id="textTarget"&gt;</code>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="load-fragments"></a></p>
+
+<h5 class="h5-guide">Load in fragments with .load</h5>
+
+
+<p>The <code>.load</code> method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample13/index.html --&gt;
+&lt;!-- No &lt;button&gt; tags in this example --&gt;
+...
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p>Use a page with just <code>&lt;div id="textTarget"&gt;</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample13/article.html --&gt;
+&lt;div id=&quot;title&quot;&gt;AJAX Tutorial for Beginners&lt;/div&gt;
+&lt;div id=&quot;author&quot;&gt;Kai &quot;kaidez&quot; Gittens&lt;/div&gt;</code></pre>
+</div>
+
+
+<p>Create a page called <code>article.html</code> that contains two elements: <code>&lt;div id="title"&gt;</code> and <code>&lt;div id="author"&gt;</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample13/scripts.js
+$(&quot;#textTarget&quot;).load(&quot;article.html #author&quot;);</code></pre>
+</div>
+
+
+<p>Use load to "AJAX in" the <code>article.html</code> but instead of loading in the entire file, just load in the content in the <code>&lt;div id="author"&gt;</code> element.</p>
+
+<p><a href="http://api.jquery.com/load/" target="blank" "title"=Read more about jQuery's '.load' method>Read more about jQuery's ".load()" method</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-get"></a></p>
+
+<h5 class="h5-guide">Use jQuery.get</h5>
+
+
+<p>The <code>.get</code> method is different from <code>.load</code> in a few important ways:</p>
+
+<ul>
+<li><p><code>.get</code> is a global function while <code>.load</code> is a method. This means that you would use <code>.get</code> to start a jQuery code block but use <code>.load</code> as a chainable method inside a code block.</p></li>
+<li><p>Because of the last difference, it makes sense to use <code>.load</code> to "AJAX in" HTML documents only. <code>.get</code> was created to "AJAX in" all types of documents.</p></li>
+<li><p><code>.get</code> manages GET server requests only while <code>.load</code> can manage both GET and POST requests.</p></li>
+</ul>
+
+
+<p>Using the same HTML as in the previous example, using <code>.get</code> to bring content via AJAX looks like this (<a href="/samples/ajax-tutorial-samples/sample14/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample14/scripts.js
+$.get(&quot;articleName.html&quot;, function(data) {
+  $(&quot;#textTarget&quot;).html(data);
+});</code></pre>
+</div>
+
+
+<p>Where we used <code>.load</code> as a chainable method inside a code block, <code>.get</code> started the code block in this example. The first parameter told us what content gets loaded onto the page, which is "articleName.html".</p>
+
+<p>The second parameter was a callback function that defined where the content got loaded. The function took a parameter called "data" which represented the content that got loaded onto the page.</p>
+
+<p>The inside of the function loaded the content inside the "textTarget" page element with the help of jQuery's <code>.html</code> method.</p>
+
+<p>The "data" parameter (which represented the content) was passed to the <code>.html</code> method so the method knew what to load. The function parameter  can be anything you want, but naming it "data" is a common practice.</p>
+
+<p><a href="http://api.jquery.com/jQuery.get/" target="blank">Read more about "jQuery.get"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-get-json"></a></p>
+
+<h5 class="h5-guide">Use jQuery.getJSON</h5>
+
+
+<p>We can use jQuery's <code>.getJSON</code> method to load in JSON content <a href="#load-json-ajax">as we did before with plain JavaScript</a> (<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>).</p>
+
+<p>As a reminder, here's our JSON file</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample15/soccerplayers.json
+{
+  &quot;chelsea&quot;: {
+    &quot;playerOne&quot;: &quot;Didier Drogba&quot;,
+    &quot;playerTwo&quot;: &quot;Thibault Courtois&quot;,
+    &quot;playerThree&quot;: &quot;Cesc Fabregas&quot;
+  },
+  &quot;realMadrid&quot;: {
+    &quot;playerOne&quot;: &quot;Cristiano Ronaldo&quot;,
+    &quot;playerTwo&quot;: &quot;Sergio Ramos&quot;,
+    &quot;playerThree&quot;: &quot;Iker Casillas&quot;
+  },
+  &quot;psg&quot;: {
+    &quot;playerOne&quot;: &quot;Zlatan Ibrahimović&quot;,
+    &quot;playerTwo&quot;: &quot;Thiago Motta&quot;,
+    &quot;playerThree&quot;: &quot;Marquinhos&quot;
+  }
+}</code></pre>
+</div>
+
+
+<p>And our <code>scripts.js</code> file looks like this</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample15/scripts.js
+$.getJSON(&quot;soccerplayers.json&quot;, function(players) {
+  $.each(players, function(i) {
+    var newDiv = $(&quot;&lt;div&gt;&lt;/div&gt;&quot;);
+    $(newDiv).append(players[i].playerOne);
+    $(&quot;#textTarget&quot;).append(newDiv);
+  })
+});</code></pre>
+</div>
+
+
+<p>The first parameter for <code>.getJSON</code> was the JSON file with the content we wanted to load onto the page. The second parameter was a callback function that loaded the data onto the page.</p>
+
+<p>That callback function took one parameter we've called <code>player</code>, which references the JSON file. Next, we used jQuery's <code>.each</code> method to do what the <code>for...in</code> loop did before: look for properties in our JSON data.</p>
+
+<p><code>.each</code> also took parameters: the first one was <code>players</code> parameter, which, again, pointed to our JSON data. The second parameter was another callback function that loaded the data onto the page, and inside particular page elements we created.</p>
+
+<p>In the function, we created a variable called <code>newDiv</code> that used jQuery to create a new div tag. Then we used jQuery's <code>.append</code> method to look for any <code>playerOne</code> properties in the items of the JSON object, and place them inside of the newly created div tag.</p>
+
+<p>The new div had content at that point: we then took it and used <code>.append</code> again to load it into the "textTarget" element already on the page.</p>
+
+<p><a href="http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-get-script"></a></p>
+
+<h5 class="h5-guide">Use jQuery.getScript</h5>
+
+
+<p><code>.getScript</code> loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.</p>
+
+<p><code>index.html</code> looks the same as before, but we're adding a file called <code>loadFile.js</code> while updating <code>scripts.js</code> (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample16/index.html --&gt;
+...
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p>The same HTML structure we used in the last few examples.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample16/loadFile.js
+function getHtmlFile() {
+
+  $(&quot;#textTarget&quot;).load(&quot;articleName.html&quot;);
+
+};
+
+function setText() {
+
+  $(&quot;#textTarget&quot;).css({
+    &quot;color&quot;: &quot;red&quot;,
+    &quot;font-weight&quot;: &quot;bold&quot;
+  });
+
+};</code></pre>
+</div>
+
+
+<p>We created two functions in <code>loadFile.js</code>: <code>getHtmlFile</code> and <code>setText</code>.</p>
+
+<p><code>getHtmlFile()</code> loads the <code>articleName.html</code> into the <code>&lt;div id="textTarget"&gt;</code> as was done in other examples, <code>setText</code> changes the copy in <code>&lt;div id="textTarget"&gt;</code> by making it red and bolding it.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample16/scripts.js
+$.getScript(&quot;loadFile.js&quot;, function() {
+
+  getHtmlFile();
+
+  $(&quot;#textTarget&quot;).click(function(){
+    setText();
+  });
+
+});</code></pre>
+</div>
+
+
+<p>Inside of <code>scripts.js</code>, the <code>getScript</code> method loaded <code>loadFile.js</code>, then ran a callback function. The callback immediately ran <code>getHtmlFile</code> and loaded in "articleName.html", and it also ran <code>setText</code> when <code>&lt;div id="textTarget"&gt;</code> was clicked.</p>
+
+<p>If you view <code>index.html</code> in a web browser with a good developer tool (Firebug, Chrome Developer Tools, etc.), open up its Network panel. You'll see that the filename for <code>loadFile.js</code> as a time stamp appended to it:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// Will look different every time the page gets reloaded
+loadFile.js?=1421161342213</code></pre>
+</div>
+
+
+<p>This is because <code>.getScript</code> always "cache-busts" the scripts it loads in. This forces the browser to download a new version of the file instead of looking for a cached one.</p>
+
+<p>If you want to avoid this, you can use <code>.ajaxSetup</code> to allow caching (<a href="/samples/ajax-tutorial-samples/sample17/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample17/scripts.js
+$.ajaxSetup({
+  cache: true
+});
+
+$.getScript(&quot;loadFile.js&quot;, function() {
+
+  getHtmlFile();
+
+  $(&quot;#textTarget&quot;).click(function(){
+    setText();
+  });
+
+});</code></pre>
+</div>
+
+
+<p>If you look at the Network panel in the developer tools now, you'll notice that no time stamp as been append to the filename.</p>
+
+<p><a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jqxhr-promises-deferreds"></a></p>
+
+<h4 class="h4-guide">jqHXR & Promises</h4>
+
+
+<p>The <code>$.ajax</code> method and some of the shorthand methods return the "jQuery XMLHttpRequest" object, commonly referred to as "jqHXR". The <code>.load</code> shorthand method does not return jqXHR.</p>
+
+<p>jqXHR is basically the traditional <code>XMLHttpRequest</code> browser object wrapped in a specific jQuery API. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.</p>
+
+<p>An important part of this API are <em>jQuery Promises</em> which are part of jQuery's <em>Deferred</em> object. This guide focuses on using Promises with AJAX and not Deferreds, but Deferreds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="what-is-a-javascript-promise"></a></p>
+
+<h4 class="h4-guide">What is a Promise?</h4>
+
+
+<p>Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.</p>
+
+<p>According to the <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">community-led Promises/A+ specification</a>:</p>
+
+<blockquote><p><em>A promise represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its <code>then</code> method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.</em></p></blockquote>
+
+<p>In other words...</p>
+
+<ul>
+<li>Promises wait for your code to COMPLETELY finish what it's doing.</li>
+<li>Promises let you run callbacks to do things AFTER the code COMPLETELY finishes what it's doing.</li>
+<li>Promises must contain a <code>then()</code> method returns a promise...<code>then()</code> is used to neatly manage the callbacks.</li>
+<li>Promises have special event handling for situations where any part of the code fails.</li>
+</ul>
+
+
+<p>At the time of this guide's publish date, Promises haven't been implemented in all browsers. The current plan to achieve this is to make them part of a future version of JavaScript, specifically <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="blank" title="Read the ECMAScript 6/Harmony specification">ECMAScript version 6, code-named "Harmony."</a></p>
+
+<p>There is much more to Promises than what's being discussed here, especially when discussing what's the right way to implementing them. Domenic Denicola, a very active member of the Promises community, has written <a href="https://gist.github.com/Domenic/3889970" target="blank" title="Read Domenic Denicola's excellent explanation of Promises">an excellent Promises post on GitHub</a> that discusses this.</p>
+
+<p>Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank" title="Read Forbes Lindesay's excellent Promises walk-through">an excellent walk-through on Promises</a>. Really good for beginners.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="jquery-promises"></a></p>
+
+<h4 class="h4-guide">An important note about jQuery Promises</h4>
+
+
+<p>Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can use to implement Promise functionality in your code</a>.</p>
+
+<p>jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the Promises spec in two ways:</p>
+
+<ol>
+<li><p>The spec calls for Promises to be their own object when implemented: Promises are wrapped in the jQuery's Deferred object.</p></li>
+<li><p>The spec calls for Promises to manage errors in a specific way: the current jQuery build doesn't do this.</p></li>
+</ol>
+
+
+<p>Also, jQuery's <code>.then</code> method is based on an older version of the Promises spec. This is discussed in <a href="#then-method">the jQuery <code>.then</code> section of this guide</a>.</p>
+
+<p>According to <a href="https://esdiscuss.org/topic/a-challenge-problem-for-promise-designers-was-re-futures#content-43" target="blank" title="Read Rick Waldron says about Promises in jQuery">comments from jQuery core committer Rick Waldron</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="differed-methods"></a></p>
+
+<h4 class="h4-guide">Use Deferred methods with jqXHR</h4>
+
+
+<p>Because jqXHR is part of jQuery Deferreds, it has access to all of Deferreds methods. The four most commonly-used methods are:</p>
+
+<ol>
+<li><code>done</code></li>
+<li><code>fail</code></li>
+<li><code>always</code></li>
+<li><code>then</code></li>
+</ol>
+
+
+<p>As mentioned, Promises allow for the neater callback implementations. Using these four methods for callback implementation is considered a best practice in jQuery.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="done-method"></a></p>
+
+<h5 class="h5-guide">The .done method</h5>
+
+
+<p>The <code>.done</code> method sets a callback for what to do after the code has "resolved"...i.e., has fully run. (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample18/index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Sample 18&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+
+<p>The HTML required for this code sample.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample18/scripts.js
+$.get(&quot;article.html&quot;).done(function(data) {
+  $(&quot;#textTarget&quot;).html(data);
+  console.log(&quot;The file has loaded!&quot;);
+});</code></pre>
+</div>
+
+
+<p><code>.get</code> requested "article.html" from the server and had a <code>.done</code> method chained to it. If the request was successful, <code>.done</code> ran a callback function.</p>
+
+<p>The callback loaded the contents of "article.html" onto the page and returned a console message.</p>
+
+<p>We were able to do this with <code>.get</code> because it returned the <code>jqXHR</code> object. As a reminder: <code>.load</code> doesn't return <code>jqXHR</code> and is unable to do this.</p>
+
+<p>The HTML remains the same but the JavaScript gets updated (<a href="/samples/ajax-tutorial-samples/sample19/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample19/scripts.js
+$(&quot;#textTarget&quot;).load(&quot;article.html&quot;)
+  .done(function(data) {
+    // Won&#39;t run because &quot;load&quot; doesn&#39;t understand &quot;done&quot;
+    // &quot;done&quot; will return as an undefined function
+    console.log(&quot;The file has loaded!&quot;);
+});</code></pre>
+</div>
+
+
+<p>The file loaded onto the page but the console message failed to appear. This is because <code>.load</code> doesn't automatically return <code>jqXHR</code>; therefore, <code>.done</code> didn't work in our code.</p>
+
+<p><a href="http://api.jquery.com/deferred.done/" target="blank" title="Read more about the jQuery 'deferred.done()'">Read more about the jQuery "deferred.done()"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="fail-method"></a></p>
+
+<h5 class="h5-guide">The .fail method</h5>
+
+
+<p>The <code>.fail</code> method sets a callback for what to do if the code fails, or if it's "rejected".</p>
+
+<p><code>index.html</code> remains the same but we've deleted "article.html" from this sample's directory...<a href="/samples/ajax-tutorial-samples/sample20/" target="blank">view the example</a>.</p>
+
+<p><code>scripts.js</code> now looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample20/scripts.js
+$.get(&quot;article.html&quot;)
+  .done(function(data) {
+    $(&quot;#textTarget&quot;).html(data);
+  })
+  .fail(function() {
+    $(&quot;#textTarget&quot;).html(&quot;The file didn&#39;t load!&quot;);
+  });</code></pre>
+</div>
+
+
+<p>Since <code>article.html</code> was removed from the directory, the code failed. The <code>.fail</code> method was called as a result, so it loaded a message into the "textTarget" into the message saying so.</p>
+
+<p><a href="http://api.jquery.com/deferred.fail/" target="blank" title="Read more about the jQuery 'deferred.fail()'">"Read more about the jQuery "deferred.fail()"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="always-method"></a></p>
+
+<h5 class="h5-guide">The .always method</h5>
+
+
+<p>The <code>.always</code> method sets a callback for what to do if the code either resolves or is rejected <a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>:</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample21/index.html --&gt;
+&lt;!-- Add &lt;div id=&quot;textTarget02&quot;&gt; directly below &lt;div id=&quot;textTarget&quot;&gt;--&gt;
+...
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;textTarget02&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p> A div tag with an id of "textTarget02" was added below the div tag with an id of "textTarget."</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>// sample21/scripts.js
+// Try &amp; load &quot;article.html&quot; into &quot;&lt;div id=&quot;textTarget&quot;&gt;&quot;
+$.get(&quot;article.html&quot;)
+  .done(function(data) {
+    $(&quot;#textTarget&quot;).html(data);
+  })
+  .fail(function() {
+    $(&quot;#textTarget&quot;).html(&quot;The file didn&#39;t load!&quot;);
+  })
+  .always(function(){
+    console.log(&quot;The &#39;article.html&#39; file either did or didn&#39;t load!&quot;);
+  });
+
+// Try &amp; load &quot;article02.html&quot; into &quot;&lt;div id=&quot;textTarget02&quot;&gt;&quot;
+$.get(&quot;article02.html&quot;)
+  .done(function(data) {
+    $(&quot;#textTarget02&quot;).html(data);
+  })
+  .fail(function() {
+    $(&quot;#textTarget02&quot;).html(&quot;The &#39;article02.html&#39; file didn&#39;t load!&quot;);
+  })
+  .always(function(){
+    console.log(&quot;The &#39;article02.html&#39; file either did or didn&#39;t load!&quot;);
+  });</code></pre>
+</div>
+
+
+<p>There were two functions in our code: one that loads in "article.html", which does exist, and one that loads in "article02.html", which does <strong>NOT</strong> exist. Each one is chaining the <code>.done</code>, <code>.fail</code> and <code>.always</code> methods.</p>
+
+<p>The first one loads in the existing "article.html" file, so its chained <code>.done</code> method will run...as will its chained <code>.always</code> method. The second one loads in the non-existing "article02.html" file, so its chained <code>.fail</code> method will run...as will its chained <code>.always</code> method.</p>
+
+<p><a href="http://api.jquery.com/deferred.always/" target="blank" title="Read more about the jQuery 'deferred.always()'">Read more about the jQuery "deferred.always()"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="then-method"></a></p>
+
+<h5 class="h5-guide">The .then method</h5>
+
+
+<p>The <code>.then</code> method sets a callback for what to do if the code either resolves, is rejected or is still in progress (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>&lt;!-- sample22/index.html --&gt;
+&lt;!-- Remove &lt;div id=&quot;textTarget02&quot;&gt; that was in the previous example --&gt;
+...
+&lt;div id=&quot;textTarget&quot;&gt;&lt;/div&gt;
+...</code></pre>
+</div>
+
+
+<p>The <code>&lt;div id="textTarget02"&gt;</code> element was removed from <code>index.html</code>.</p>
+
+<div>
+  <pre data-line=''><code class='language-javascript'>$.getJSON(&quot;soccerplayers.json&quot;).then(
+  function(data) {
+    $.each(data, function(i) {
+      var newDiv = $(&quot;&lt;div&gt;&lt;/div&gt;&quot;);
+      $(newDiv).append(data[i].playerOne);
+      $(&quot;#textTarget&quot;).append(newDiv);
+    })
+  }, function(){
+    $(&quot;#textTarget&quot;).html(&quot;The data failed to load.&quot;);
+  },
+    function(){
+      $(&quot;#textTarget&quot;).html(&quot;The data is loading...&quot;);
+    }
+  );</code></pre>
+</div>
+
+
+<p>We used <code>.getJSON</code> to grab and parse JSON <a href="#jquery-get-json">as we did in a previous example</a>. But the <code>.then</code> method is now helping us manage callback functions.</p>
+
+<p>The callbacks are passed as function parameters...there are three of them:</p>
+
+<ol>
+<li>The first function described what to do if the jQuery Promise resolves.</li>
+<li>The first function described what to do if the jQuery Promise is rejected.</li>
+<li>The first function described what to do if the jQuery Promise is still progressing.</li>
+</ol>
+
+
+<p>Because <code>soccerplayers.json</code> exists, the Promise will resolve. But it could easily reject if it couldn't find the file.</p>
+
+<p>If we removed <code>soccerplayers.json</code>, then the function in the second parameter would appear on the page (<a href="/samples/ajax-tutorial-samples/sample23/" target="blank">view the example</a>):</p>
+
+<div>
+  <pre data-line=''><code class='language-markup'>The data failed to load.</code></pre>
+</div>
+
+
+<p>Demonstrating the progress function passed in the third parameter is tough with such a small amount of JSON data is tough. But it's important to understand that the function would show "The data is loading..." if the Promise either resolved of rejected.</p>
+
+<p>As mentioned, jQuery's <code>then</code> method is based on an older version of the Promises spec, which is <a href="http://wiki.commonjs.org/wiki/Promises/A" target="blank" title="Read the Promises A specification">the Promises A spec maintained by the Common JS community</a>. That spec requires that <code>then</code> allow for a progress parameter while newer <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">Promises/A+ spec</a> states that it should not.</p>
+
+<p><a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()"</a>.</p>
+
+<p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
+
+<p><a name="conclusion"></a></p>
+
+<h3 class="h3-guide">Conclusion</h3>
+
+
+<p>AJAX is something that should be second nature to JavaScript developers so I hope this AJAX tutorial is good start in your understanding how it works.  Understanding how it works internally and how jQuery makes it easier to implement are key things to understand.</p>
+
+<p>Reading <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the  official WHATWG XHR specification</a> should be your next step in understanding AJAX in full. From there, reading <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a> should be your next step.</p>
+
+<p>Also, having a good understanding of JavaScript's asynchronous nature is important. So reading <a href="http://www.amazon.com/gp/product/1937785270/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937785270&linkCode=as2&tag=kaidez-20&linkId=26L4SOXAE3MHODKC" target="blank" title="Get Trevor Burnham's *Async JavaScript* on amazon.com">Trevor Burnham's <em>Async JavaScript</em></a> at some point is a good idea.</p>
+
+<p>Feel free to post questions/issues/whatever on <a href="https://github.com/kaidez/ajax-tutorial-samples">this article's GitHub repository</a>.</p>
+</div>
+
+        </article>
+
+      </div> <!-- .pageContentPostWrapper -->
+
+    </main> <!-- #content -->
+
+        <aside id="aside-outer-wrapper" class="aside-outer-wrapper-class clearfix">
+      <h3 id="menu-heading" class="menu-toggle">Other site information</h3>
+      <div id="aside-inner-wrapper" class="aside-inner-wrapper-class">
+
+        <div id="aside-column-one" class="aside-column-class clearfix">
+
+          <section id="aside-about-section" class="aside-about-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">ABOUT ME</h3>
+
+            <img src="/img/profilepic.jpg" height="100" width="100" id="author-image" class="author-image-class" alt="picture of Kai'kaidez' Gittens">
+
+            <p class="aside-paragraph">
+              I'm a web developer for Everyday Health and have written code for Revlon, the United Nations and Trump Magazine. I try to over communicate in my tutorials so beginners can better understand the topics being discussed.
+            </p>
+
+          </section> <!-- #-aside-about-section -->
+
+          <section id="aside-ad-section" class="aside-ad-section-class all-aside-sections">
+
+            <h3 class="aside-section-header ad-title-margin">ADVERTISMENT</h3>
+
+          </section> <!-- #aside-ad-section -->
+
+        </div> <!-- #aside-column-one -->
+
+        <div id="aside-column-two" class="aside-column-class mid-aside-margin clearfix">
+
+          <section id="aside-nav-section" class="aside-nav-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">NAVIGATION</h3>
+
+            <ul id="aside-navigation" class="aside-nav-class">
+
+              <li class="aside-nav-list-item"><a href="/" title="kaidez.com home page" class="aside-nav-link">HOME</a></li>
+
+              <li class="aside-nav-list-item"><a href="/tutorials/" title="Tutorials on kaidez.com" class="aside-nav-link">TUTORIALS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/coding-best-practices/" title="Coding Tips and Coding Best Practices posts on kaidez.com" class="aside-nav-link">CODE TIPS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/reviews/" title="Product and Book Reviews on kaidez.com" class="aside-nav-link">REVIEWS</a></li>
+
+              <li class="aside-nav-list-item"><a href="/personal/" title="Personal and Random posts on kaidez.com" class="aside-nav-link">PERSONAL</a></li>
+
+              <li class="aside-nav-list-item"><a href="/articles/" title="In depth articles from kaidez" class="aside-nav-link">ARTICLES</a></li>
+            </ul> <!-- #aside-navigation -->
+
+          </section> <!-- #aside-nav-section -->
+
+          <section id="aside-social-network-section" class="aside-social-network-section-class all-aside-sections">
+
+            <h3 class="aside-section-header">CONNECT WITH ME</h3>
+
+            <ul id="kaidez-social-network-list" class="kaidez-social-network-list-styles">
+
+              <!-- twitter link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://twitter.com/kaidez" title="Visit kaidez on Twitter" class="kaidez-social-link"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+
+              <!-- google+ link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="https://plus.google.com/109412257237874861202?
+   rel=author" title="Visit kaidez on Google Plus" class="kaidez-social-link"><i class="fa fa-google-plus"></i> google+</a>
+              </li>
+
+              <!-- github link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://github.com/kaidez" title="Visit kaidez on GitHub" class="kaidez-social-link"><i class="fa fa-github"></i> github</a>
+              </li>
+
+              <!-- youtube link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://www.youtube.com/user/kaidezblog/videos" title="Visit kaidez on YouTube" class="kaidez-social-link"><i class="fa fa-youtube"></i>  youtube</a>
+              </li>
+
+              <!-- feedburner link -->
+              <li class="kaidez-social-sharing-list-item clearfix">
+                <a href="http://feeds.feedburner.com/kaidez-blog" title="Subscribe to kaidez.com's RSS Feed" class="kaidez-social-link"><i class="fa fa-rss"></i>  rss</a>
+              </li>
+
+            </ul> <!-- #social-network-list -->
+
+          </section> <!-- #aside-social-network-section -->
+
+        </div> <!-- #aside-column-two -->
+
+        <div id="aside-column-three" class="aside-column-class clearfix">
+
+          <section id="aside-contact-form-section" class="all-aside-sections aside-form-height">
+
+            <h3 class="aside-section-header">CONTACT</h3>
+
+            <p id="successMsg" class="successMsgClass">Your message has been sent successfully.</p>
+
+            <form id="contact" name="contactForm" method="post">
+
+              <span id="allFieldRequiredText"><i>*all fields are required</i></span>
+
+              <fieldset id="aside-contact-fieldset" class="aside-contact-fieldset-styles">
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formNameField">YOUR NAME</label>
+                  <input name="name" type="text" id="formNameField" class="contact-form-field" aria-required="true" required>
+                  <span id="nameError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields inputFieldHeight">
+                  <label for="formEmailField">YOUR EMAIL</label>
+                  <input name="email" type="email" id="formEmailField" class="contact-form-field" aria-required="true" required>
+                  <span id="emailError" class="error"></span>
+                </p>
+
+                <p class="aside-contact-fields textareaHeight">
+                  <label for="messageField">YOUR MESSAGE</label>
+                  <textarea tabindex="-8" rows="10" name="text" id="formMessageField" class="contact-form-field" aria-required="true" required></textarea>
+                  <span id="textError" class="error"></span>
+                </p>
+                <p class="clearfix">
+                  <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+                </p>
+
+              </fieldset> <!-- #aside-contact-fieldset -->
+
+            </form> <!-- #contact -->
+
+          </section> <!-- #aside-contact-form-section -->
+
+        </div> <!-- #aside-column-three -->
+
+      </div> <!-- #aside-nav-wrapper-inner -->
+
+    </aside> <!-- #aside-outer-wrapper -->
+
+
+        <footer id="footer-outer-wrapper" class="footer-outer-wrapper-class" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
+
+      <div class="footer-inner-wrapper-class clearfix">
+
+        <div id="colophon" class="colophon-class clearfix">
+      	  <h3 class="colophon-header">POWERED BY:</h3 class="colophon-header">
+          <ol id="colophon-list" class="colophon-list-class">
+            <li class="jekyll colophon-list-item-class"><a href="http://jekyllrb.com/" title="Visit Jekyll: a static site generator" class="jekyll-link">Jekyll</a></li>
+            <li class="mediaTemple colophon-list-item-class"><a href="http://www.mediatemple.net#a_aid=5068b81963acf " title="Visit Media Temple: an excellent web host" class="mediaTemple-link">Media Temple</a></li>
+            <li class="maxcdn colophon-list-item-class"><a href="http://tracking.maxcdn.com/c/72639/3968/378" title="Visit MaxCDN: a content delievery network provider" class="maxcdn-link">MaxCDN</a></li>
+          </ol> <!-- #colophon-list -->
+        </div> <!-- #colophon -->
+
+        <div id="copyright" class="copyright-style clearfix">
+          Copyright &copy; 2008-2015 Kai Gittens
+          <p>
+            <a href="/affiliate-disclaimer.html" title="kaidez.com affiliate disclaimer" class="footer-links">Affiliate Disclaimer</a> <span class="footerLinkDivider">|</span> <a href="/colophon.html" title="kaidez.com colophon" class="footer-links">Colophon</a> <span class="footerLinkDivider">|</span> <a href="/sitemap.html" title="Site map: review all page links on kaidez.com" class="footer-links">Site Map</a>
+          </p>
+        </div> <!-- #copyright -->
+
+      </div> <!-- footer-inner-wrapper-class -->
+        <a class="jumpToTopText" href="#container" title="Go back to the top">BACK TO TOP</a>
+        <img height="1" width="1" src="http://tracking.maxcdn.com/i/72639/3968/378" border="0" />
+    </footer> <!-- #footer-outer-wrapper -->
+
+
+  </div> <!-- #container -->
+
+    <script>
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+          if (doc.getElementById(id)) {return;}
+          js = doc.createElement(script);
+          js.src = url;
+          id && (js.id = id);
+          frag.appendChild( js );
+        };
+      
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
+        
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
+
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
+
+      <script src="/js/scripts.min.js"></script>
+
+    <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+twttr.conversion.trackPid('l5jvm');</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l5jvm&p_id=Twitter" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l5jvm&p_id=Twitter" /></noscript>
+
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5549541-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type =   'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' :   'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+
+</body>
+</html>

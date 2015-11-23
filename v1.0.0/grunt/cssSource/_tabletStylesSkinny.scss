@@ -1,0 +1,470 @@
+@media only screen and (min-width: 569px) and (max-width:728px) {
+  
+   // Handhelds and tablets get the helvetica-type
+   // Google font. Too many fonts applied to handhelds
+   // will slow down their page load.
+  
+  body {
+    @include fonts($openSans);
+  }
+
+  // apply the Google font to all <header> tags  
+  .wf-active h1,
+  .wf-active h2,
+  .wf-active h3,
+  .wf-active h4,
+  .wf-active h5,
+  .wf-active h6 {
+    @include fonts($robo, visible);
+  }
+
+  // the "Read post" link on the home, category and search pages
+  .read-post-link:link {
+    color: $post-link-color;
+  }
+
+  // ==========================================================================
+  // Header styles start
+  // ==========================================================================
+
+  .outer-wrapper-nav-header {
+    @include gradient-bg;
+  }
+    // Logo link...provides a large enough space for a click area
+  .homepage-link {
+    @include homepage-link(65px, 209px);
+  }
+
+  // <header> tag
+  .site-header {
+    margin-bottom: 37px;
+  }
+
+  // styling for the logo link...unique to tablet view
+  .site-title {
+    margin: 0 auto;
+    float: none;
+  }
+
+  // the inner wrapper for the <header>
+  .inner-wrapper-nav-header {
+    padding: 8px 15px 15px 15px;
+  }
+
+  // <h2> tag...the 'closing tags...wrapping functions text'
+  .site-description {
+    @include hide-element;
+  }
+
+  // Shared class for nav and searchbox elements
+  .header-element-margin {
+    @include header-element-margin-tablet  
+  }
+
+  .category-title {
+    margin-left: 10px;
+  }
+
+  // ==========================================================================
+  // Header styles start
+  // ==========================================================================
+   
+
+
+
+  
+   // =========================================================================
+   // Navigation styles start
+   // =========================================================================
+   
+  
+  // <nav>
+  .main-navigation {
+    border-top: none;
+    margin: 0 auto;
+    display: table;
+  }
+  
+  // <nav> list items
+  .main-navigation-list {
+  	@include show-menu;
+  	@include master-center;
+  }
+
+  .nav-search-style {
+    margin-top: 7px;
+  }
+
+  // <ul> container for the main nav  
+  .site-navigation-list-styles {
+    @include site-navigation-list(block);
+  }
+  
+  // for the <li> tag that contains the links
+  .site-navigation-list-link {
+    float:left;
+  }
+
+  // for the link in the above-mentioned <li> tag...can these two styles be combined at a later date?
+  .wf-active .site-navigation-list-link a:link,
+  .wf-active .site-navigation-list-link a:visited,
+  .wf-active .site-navigation-list-link a:hover { 
+    @include link-styles(29px, 13px, 5px, $header-color);
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+  }
+
+  
+   // =========================================================================
+   // Navigation styles end
+   // =========================================================================
+   
+
+
+
+  // =========================================================================
+  // Search styles start
+  // =========================================================================
+  
+  // The div that contains the search box...either show it or hide it
+  .searchbox-display {
+    display: block;
+  }
+
+  // styles the main searchbox
+  .searchbox-style {
+    padding: 19px 0 0 0;
+  }
+
+  // jQuery-powered searchbox courtesy of Tipue (http://www.tipue.com/search/).// Set to appear on browsers with JavaScript turned on.
+  #tipue_search_input{
+    font: 13px/1.5 'open sans', $srf;
+    color: #333;
+    padding: 7px;
+    margin: 0;
+    width: 199px;
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: $master-border-radius;
+    -moz-border-radius: $master-border-radius;
+    border-radius: $master-border-radius;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+  }
+ 
+  #tipue_search_input:focus {
+    border-color: #c3c3c3;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);     
+  }
+
+  #tipue_search_button {
+    width: 60px;
+    height: 33px;
+    margin-top: 1px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    background: #f1f1f1 url('../img/search.gif') no-repeat center;
+    outline: none;
+  }
+
+  #tipue_search_button:hover {
+    border: 1px solid #c3c3c3;
+    -moz-box-shadow: 1px 1px 2px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 2px #e3e3e3;
+    box-shadow: 1px 1px 2px #e3e3e3;
+  }
+
+  // =========================================================================
+  // Search styles end
+  // =========================================================================
+
+ 
+
+
+
+  // ==========================================================================
+  // Page content styles start
+  // ==========================================================================
+ 
+  // Styles for post and category <h1> tags
+  .wf-active h1.post-title, .wf-active h1.category-title  {
+    @include post-category-title(40px);
+  }
+  
+  .post-snippet {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  // title tag for post snippets
+  .post-snippet-title {
+    font-size: 30px;
+    padding: 0;
+    margin-bottom: 13px;
+  }
+  
+  // For the "main" id element
+  .page-content {
+    @include page-content($inner-content-width, #fff);
+    padding: 15px 10px 1px;
+  }
+  
+  // breadcrumbs
+  .breadcrumb-styles {
+    @include breadcrumb-styles(16px, 45px);
+    padding-top: 10px;
+  }
+
+  // the breadcrumb-separator
+  .breadcrumb-separator {
+    @include breadcrumb-separator(10px);
+  }
+
+  // make sure the breadcrumb is visible since it's being hidden by the
+  // mobileFirst styles...over-ride it.
+  .breadcrumb-last {
+    display:inline;
+  }
+
+  .share-post-container-class {
+    @include site-border-radius;
+    margin-bottom: 40px;
+  }
+
+  // <h3> in the sharing post section in post pages
+  .share-post-container-header-class {
+    display: block;
+    margin: 4px 0 0 31px;
+    float: left;
+  }
+
+  // <ul> in the item in the "share post" posts section
+  .social-sharing-list-post-class {
+    width: auto;
+  }
+
+  .social-sharing-list-item {
+    padding-right: 20px;
+  }
+
+  .newestArticleClass {
+     @include create-outer-box-shadow;
+    padding: 10px;
+  }
+
+
+  // the post title in the NEWEST ARTICLE section on the home page
+  .newestArticlePostTitle {
+    font-size: 40px;
+  }
+
+  .newestArticleHeaderClass {
+    font-size:25px;
+  }  
+
+  .sharedCategoryStyling {
+    @include create-outer-box-shadow;
+  }
+
+  .homePageSectionHeaderClass {
+    margin-top: 13px;
+  }
+
+  .homePageSectionHeaderText {
+    font-size: 33px;
+  }
+
+  .homePageCategoryFooterLinkSection {
+    height: 34px;
+    text-align: right;
+    padding-right:30px;
+  }
+
+  .homePageCategoryFooterLink:link,
+  .homePageCategoryFooterLink:visited {
+    @include transitions (color);
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline;
+  }
+
+  .homePageCategoryFooterLink:hover {
+    color: #6987FF;
+  }
+
+  .topSectionWrapperClass {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  // post copy spot 
+  .pageCopy {
+    margin: 0 15px;
+  }
+
+  .googleAdsenceContainer {
+    float: left;
+    margin: 15px 15px 15px 0;
+  }
+
+  .affiliate-disclaimer-container-class,
+  .colophon-container-class,
+  .pages-container-class,
+  .sitemap-container-class {
+    @include create-outer-box-shadow;
+  }
+
+  //big pic of kai on colophon.html
+  .colophon-image {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+
+  // ==================================================================
+  // Page content styles end
+  // ==================================================================
+  
+
+
+
+ 
+  // ==================================================================
+  // Aside styles start
+  // ==================================================================
+  
+  // apply background image to the <aside>
+  .aside-outer-wrapper-class {
+    background: $aside-color url('/img/footer-bg.png') no-repeat left;
+    min-height: 1056px;
+  }
+  
+  // applied to all <sections> in <aside>
+  .all-aside-sections {
+    float: left;
+    padding: 0 10px;
+  }
+  
+  // empty as of now in '_base.scss'..can it be deleted
+  .contact-form-field {
+    @include contact-form-field;
+  }
+
+  // ==================================================================
+  // Aside styles end
+  // ==================================================================
+
+
+
+
+
+  // ==================================================================
+  // Footer styles start
+  // ==================================================================
+
+  // styling hook for <footer>
+  .footer-outer-wrapper-class {
+    @include create-inner-box-shadow;
+  }
+  
+  // inner wrapper in the <footer>
+  .footer-inner-wrapper-class {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .copyright-style {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  // <h3> for the colophon
+  .colophon-header {
+    color: darken($header-color,10);
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  //  the colophon containing element
+  .colophon-class {
+    background-color: darken($aside-color, 11);
+    @include site-border-radius;
+    max-width: 528px;
+    display: block;
+    padding:12px;
+    margin: 0 auto;
+  }
+
+  // <ol> element for Jekyll, AWS & MaxCDN links
+  .colophon-list-class {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  // individual <li> tags for footer image links
+  .colophon-list-item-class {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    text-indent: -9999px;
+    @include transitions (opacity);
+  }
+
+  .colophon-list-item-class:hover {
+    opacity: 0.5;
+  }
+
+  // set height/width for jekyll bg link
+  .jekyll-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for aws bg link
+  .mediaTemple-link {
+    @include footer-link-hit-area(57px, 151px);
+  }
+  
+  // set height/width for maxcdn bg link
+  .maxcdn-link {
+    @include footer-link-hit-area(39px, 151px);
+  }
+
+
+  // ==================================================================
+  // Footer styles end
+  // ==================================================================
+
+
+
+
+
+  // ==================================================================
+  // 404 page styles start
+  //===================================================================
+
+  // elements on the 404 page
+  .not-found-box-class {
+    min-height: 300px;
+    float: none;
+    display: table;
+    padding:0 20px;
+    width: 529px;
+  }
+
+  
+  .wrapper-404-class {
+    @include create-outer-box-shadow;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+
+
+  // ==================================================================
+  // 404 page styles end
+  // ==================================================================
+}
