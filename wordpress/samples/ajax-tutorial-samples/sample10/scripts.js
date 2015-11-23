@@ -1,1 +1,0 @@
-$("#textTarget").load("articleName.html");
