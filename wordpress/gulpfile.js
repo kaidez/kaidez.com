@@ -146,7 +146,8 @@ gulp.task("uncss", ['outputcss'], function(){
         "http:\/\/localhost:8888\/kdz-build-tool/",
         "http:\/\/localhost:8888\/affiliate-disclaimer/", // Affiliate
         "http:\/\/localhost:8888\/404.php", // 404 page
-        "http:\/\/localhost:8888\/site-map/" // 404 page
+        "http:\/\/localhost:8888\/site-map/", // Site map
+        "http:\/\/localhost:8888\/write-code-every-f-king-day/"
       ],
       ignore: ignoreArray
     }))
