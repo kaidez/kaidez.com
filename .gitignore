@@ -1,63 +1,44 @@
-wordpress/index.php
-wordpress/wp-config.php
-wordpress/wp-admin/
-wordpress/wp-content/plugins/
-wordpress/wp-content/themes/twentythirteen/
-wordpress/wp-content/themes/twentyfourteen/
-wordpress/wp-content/themes/twentyfifteen/
-wordpress/wp-includes/*
+index.php
+wp-config.php
+wp-admin/
+wp-content/plugins/
+wp-content/themes/twentythirteen/
+wp-content/themes/twentyfourteen/
+wp-content/themes/twentyfifteen/
+wp-includes/*
 !general-template.php
-wordpress/wp-activate.php
-wordpress/xmlrpc.php
+wp-activate.php
+xmlrpc.php
 
 
 # Ignore .js source files compiled by webpack
-wordpress/wp-content/themes/kaidez-swiss/js/*.js
+wp-content/themes/kaidez-swiss/js/*.js
 
-wordpress/html-workspace.html
+html-workspace.html
 
-wordpress/wp-blog-header.php
-wordpress/wp-comments-post.php
-wordpress/wp-config-sample.php
-wordpress/wp-content/index.php
-wordpress/wp-content/themes/index.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-content/index.php
+wp-content/themes/index.php
 
-wordpress/wp-content/uploads/
+wp-content/uploads/
 
-wordpress/wp-cron.php
-wordpress/wp-links-opml.php
-wordpress/wp-load.php
-wordpress/wp-login.php
-wordpress/wp-mail.php
-wordpress/wp-settings.php
-wordpress/wp-signup.php
-wordpress/wp-trackback.php
-wordpress/image-min/.gitkeep
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+image-min/.gitkeep
 
-
-_site
-./_site
-
-_deploy
-./_deploy
 
 # Site assets
 #------------
 assets/
-old_img/
-jekyllOutput.html
-prototypeTest/
-kaidezcom.WPExport.xml
-email.php
 
-# Backbone code drafts
-#---------------------
-backbone/
-
-
-# Application cache manifest
-#---------------------------
-manifest.appcache
 
 
 
@@ -78,9 +59,7 @@ manifest.appcache
 # ---------------
 bower_components/
 
-# old require build script
-# ------------------------
-jsBuildOut/jsBuild.js
+
 
 *.htaccess
 
@@ -92,7 +71,7 @@ robots.txt
 readme.html
 
 *.ftppass
-grunt/cssSource/_oldIE.scss
+
 
 
 
@@ -117,15 +96,8 @@ pids
 logs
 results
 npm-debug.log
-tmp
 
-#Capistrano stuff
-
-
-Capfile
-config/deploy.rb
 
 css/styles.css.map
 
-.jekyll-metadata
-# Wordpress Stuff
+
