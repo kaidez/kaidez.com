@@ -62,7 +62,7 @@ module.exports = function( grunt ) {
           destPrefix: "css-build/"
         },
         files: {
-          "font-awesome.css": "fontawesome/css/font-awesome.css"
+          "font-awesome.css": "font-awesome/css/font-awesome.css"
         }
       }, // end "bowercopy:bsfa" task
 
