@@ -22,6 +22,9 @@ get_header( "categories" ); ?>
         <div class="taxonomy-description">
           "Code Tips" posts on kaidez.com discuss tips for certain web development topics. The reader should have a little better than basic knowledge of the topics.
         </div><!-- .taxonomy-description -->
+        <div class="taxonomy-description">
+          While "Code Tips" posts are geared towards readers with some level of knowledge on a subject, these posts usually contain lots of links that new developers may find helpful.
+        </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
