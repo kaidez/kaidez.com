@@ -11,19 +11,20 @@
  Text Domain:  
 */
 /*!
- *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 hr,img{border:0}
 pre,textarea{overflow:auto}
+body,pre{color:#333}
+button,h1,h2,h3,input,textarea{color:inherit;font-family:inherit}
+a,pre code{background-color:transparent}
 .aside-list-item,.menu-item{list-style-type:none}
 .error404 label,.post-pic{float:left}
-@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
-.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0,0)}
+@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.5.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 article,aside,figcaption,figure,footer,header,main,nav,pre,section{display:block}
-label,strong{font-weight:700}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
-button,input,pre code,textarea{font-size:inherit;color:inherit}
 .fa-search:before{content:"\f002"}
 .fa-search-plus:before{content:"\f00e"}
 .fa-search-minus:before{content:"\f010"}
@@ -38,13 +39,13 @@ button,input,pre code,textarea{font-size:inherit;color:inherit}
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent}
-a{background-color:transparent}
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+strong{font-weight:700}
 h1{margin:.67em 0}
 h1,h2,h3,hr{margin-top:20px}
 img{vertical-align:middle}
 hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;margin-bottom:20px;border-top:1px solid #eee}
-button,input,textarea{margin:0;font:inherit;font-family:inherit;line-height:inherit}
+button,input,textarea{margin:0;font:inherit;color:inherit}
 button{overflow:visible;text-transform:none}
 .blog .site-main,.breadcrumb-category-name,.category .page-title,.comment-notes,.comment-reply-title,.entry-title,.rp4wp-related-posts,.sitemap-text,.submit,label{text-transform:lowercase}
 button,input[type=submit]{-webkit-appearance:button;cursor:pointer}
@@ -64,11 +65,14 @@ h2,h3{page-break-after:avoid}
 .site,label{max-width:100%}
 @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;background-color:#fff;font-size:16px;font-size:1.6rem;line-height:24px}
+html{font-size:10px;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background-color:#fff}
+button,input,textarea{font-size:inherit;line-height:inherit}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
 a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}
-h1,h2,h3{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;margin-bottom:10px}
+h1,h2,h3{font-weight:500;line-height:1.1;margin-bottom:10px}
 h3 small{font-weight:400;line-height:1;color:#777;font-size:65%}
+h1{font-size:36px}
 h2{font-size:30px}
 h3{font-size:24px}
 small{font-size:85%}
@@ -78,8 +82,8 @@ blockquote p:last-child,blockquote ul:last-child,ul ul{margin-bottom:0}
 blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}
 code,pre{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}
-pre{padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
-pre code{padding:0;white-space:pre-wrap;background-color:transparent;border-radius:0}
+pre{padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
+pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;border-radius:0}
 .col-md-4,.col-md-6,.col-md-8{position:relative;min-height:1px;padding:0}
 .hide-element,.screen-reader-text{position:absolute!important;clip:rect(1px 1px 1px 1px)}
 @media (min-width:992px){.col-md-4,.col-md-6,.col-md-8{float:left}
@@ -87,7 +91,7 @@ pre code{padding:0;white-space:pre-wrap;background-color:transparent;border-radi
 .col-md-6{width:50%}
 .col-md-4{width:33.33333333%}
 }
-label{margin-bottom:5px}
+label{margin-bottom:5px;font-weight:700}
 input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:none}
 .form-control::-moz-placeholder{color:#999;opacity:1}
 .form-control:-ms-input-placeholder{color:#999}
@@ -99,7 +103,8 @@ input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-
 .row:after{clear:both}
 @-ms-viewport{width:device-width}
 .hide-element{clip:rect(1px,1px,1px,1px)}
-h1{font-size:36px;margin-top:0;margin-bottom:0}
+body{font-size:16px;font-size:1.6rem;line-height:24px}
+h1{margin-top:0;margin-bottom:0}
 p{margin:0 0 22px}
 label{display:block}
 .btn-default{border:none;color:#ed327f}
