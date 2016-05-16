@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the customized "Tutorial" category 
+ * The template for displaying the customized "Tutorial" category
  * page.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
@@ -23,10 +23,6 @@ get_header( "categories" ); ?>
           <p>
             "Reviews" posts on kaidez.com review web development based books, events and websites. Almost all the reviews are positive as the site is interested in suggestively highlighting good work.
           </p>
-          <p>
-            <em>NOTE: this category is currently inactive and there are no planned additions to it.</em>
-          </p>
-
         </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
@@ -66,8 +62,8 @@ get_header( "categories" ); ?>
   else {
     kaidez_swiss_content_nav( 'nav-below' );
   }
-  ?> 
+  ?>
   <!-- End pagination code -->
-  
+
 <?php get_sidebar(); ?>
 <?php get_footer( "categories" ); ?>
