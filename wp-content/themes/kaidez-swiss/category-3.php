@@ -21,8 +21,9 @@ get_header( "categories" ); ?>
 				?>
         <div class="taxonomy-description">
           <p>
-            "Reviews" posts on kaidez.com review web development based books, events and websites. Almost all the reviews are positive as the site is interested in suggestively highlighting good work.
+            "Personal" posts on kaidez.com review my personal web development growth, recent projects I've done, and rants.
           </p>
+
         </div><!-- .taxonomy-description -->
 			</header><!-- .page-header -->
 
