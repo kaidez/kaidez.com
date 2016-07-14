@@ -2,9 +2,9 @@
 
   var linkElement = document.getElementById( "tweet-this-post" ),
       getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
-      getPostLink = window.location.href,
+      getPostLink = window.location.origin + window.location.pathname,
       cleanLink = getPostLink.replace( /[^/]*$/g, "" );
-  
+
   linkElement.setAttribute( "href", cleanLink );
 
   $( linkElement ).on( "click", function( event ){
