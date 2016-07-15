@@ -1,19 +1,15 @@
-(function(){
+var getPostTitle = document.getElementById("blog-post-title").innerHTML,
+  linkElement = document.getElementById("tweet-this-post"),
+  getPostLink = window.location.href;
 
-  var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
-      linkElement = document.getElementById( "tweet-this-post" ),
-      getPostLink = window.location.href;
+ linkElement.setAttribute( "href", getPostLink );
 
-  linkElement.setAttribute( "href", getPostLink );
+$(linkElement).click(function(event){
 
-  $( linkElement ).on( "click", function( event ){
+  event.preventDefault();
 
-    event.preventDefault();
+  var tweetedLink = this.getAttribute("href");
 
-    var tweetedLink = this.getAttribute( "href" );
+  window.open("http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0");
 
-    window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&text=" + getPostTitle + "&via=kaidez&", "twitterwindow", "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0" );
-
-  });
-
-})();
+});
