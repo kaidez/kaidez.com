@@ -3,9 +3,9 @@ body {
 }
 
 .tweet-post-class {
-  display: block;
   height: auto;
   width: 280px;
+  display: block;
   margin: 50px auto 0;
   padding: 10px;
   border-radius: 5px;
@@ -15,16 +15,17 @@ body {
   cursor: pointer;
 }
 
-a.tweet-post-class{
+a.tweet-post-class {
   color:#fff;
   text-decoration:none
 }
 
-a.tweet-post-class:visited{
+a.tweet-post-class:visited {
   color:#fff
 }
+
 a.tweet-post-class:active,
-a.tweet-post-class:hover{
+a.tweet-post-class:hover {
   color:#fff;
   background-color:#55acee
 }
