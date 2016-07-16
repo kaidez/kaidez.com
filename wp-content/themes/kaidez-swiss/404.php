@@ -55,9 +55,9 @@ get_header( "404" ); ?>
           	  <a href="/click-to-tweet-link/" itemprop="url">Click to Tweet Link Created Dynamically With JS</a>
           	</li>
           	<li>
-          	<li>
           	  <a href="/javascript-closures-tutorial/" itemprop="url">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
           	</li>
+          	<li>
           	  <a href="/load-data-attributes-mouseclicks/" itemprop="url">TUTORIAL: Load data attributes with Mouse Clicks</a>
           	</li>
           	<li>
