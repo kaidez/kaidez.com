@@ -45,7 +45,7 @@ get_header( "404" ); ?>
           </ul>
 
           <!-- Must-read-->
-          <p>These blog posts are considered "the best of kaidez.com":</p>
+          <p>These posts are considered "the best" of kaidez.com:</p>
 
           <ul>
           	<li>
