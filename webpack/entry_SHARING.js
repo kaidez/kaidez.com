@@ -12,16 +12,7 @@ require("./posts.scss");
 
 
 // Set a reference for the copy blog post's title currently on the page
-var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
-
-    // Set a reference for the URL currently in the address bar
-    getPostLink = window.location.href,
-
-    /*
-     * Remove any characters that come after the URL's last slash
-     * UTM code, in-page anchor links, etc.
-     */
-    cleanLink = getPostLink.replace( /[^/]*$/g, "" );
+var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML;
 
 
 
@@ -29,10 +20,10 @@ var getPostTitle = document.getElementById( "blog-post-title" ).innerHTML,
  * "getSharingElements()"
  * LOAD/CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
  * ====================================================================
- * 
+ *
  * Load the social sharing element loads via an AJAX call wrapped in a
  * Q Promise. Once the Promise resolves, the element is placed above
- * the "more posts like this" section (the $( ".rp4wp-related-posts" ) 
+ * the "more posts like this" section (the $( ".rp4wp-related-posts" )
  * element) and sharing elements are constructed on the page from
  * there. This function will run in the "DOMContentLoaded" element
  * below it.
@@ -50,22 +41,16 @@ function getSharingElements() {
    */
   return q( $.ajax({
     // Load in the sharing module
-    url: getSharingModule, 
+    url: getSharingModule,
     type: "GET"
 
   // Do things after the Promise resolves
   })).then( function ( data ) {
 
-    loadSharingAd(); 
+    loadSharingAd();
 
     // Load sharing element above the "more posts like this" section
     $( ".rp4wp-related-posts" ).before( data );
-    
-    // Reference the Twitter link that's on the web page by this point
-    var linkElement = document.getElementById( "tweet-this-post" );
-
-    // Set the Twitter links href attribute to be the cleaned up URL
-    linkElement.setAttribute( "href", cleanLink );
 
     /*
      * Object that contains properties for the Facebook & Google+ links
@@ -74,13 +59,13 @@ function getSharingElements() {
      */
     var socialSiteLinks = {
       "facebook" : {
-        "getLink": "facebook-share-link",  
+        "getLink": "facebook-share-link",
         "linkHandle": "http://www.facebook.com/sharer.php?u="
       },
       "googlePlus": {
-        "getLink": "googleplus-share-link",  
+        "getLink": "googleplus-share-link",
         "linkHandle": "https://plus.google.com/share?url="
-      } 
+      }
     };
 
     // Loop through object with the ES5 {}.getOwnPropertyNames() method
@@ -99,15 +84,15 @@ function getSharingElements() {
 
       // Set the "title" property of the link to be the blog post title
       pageElement.setAttribute( "title", getPostTitle );
-      
+
       // Let the href property look one way for FB and another for G+
       if( linkId === "facebook-share-link" ) {
-        pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );  
+        pageElement.setAttribute( "href", pageLink + getPostLink + "&t=" + getPostTitle );
       } else {
-        pageElement.setAttribute( "href", pageLink + getPostLink );  
+        pageElement.setAttribute( "href", pageLink + getPostLink );
       }
 
-    }); 
+    });
   }, function ( xhr ) {
     // If the Promise fails, send a certain console message
     console.log( "The social sharing links failed to load...you may needs refresh the page." );
@@ -132,7 +117,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   "use strict";
 
   var
-  
+
       // jQuery reference to the window object
       $window = $( window ),
 
@@ -141,14 +126,14 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
       // How much to subtract from the sharing element's top position
       reduceSharingElementTopPosition = 500;
- 
+
   /*
    * Use jQuery.scroll() to do stuff as the browser window's top
    * position changes
    */
   $window.scroll( function(){
     // Start doing stuff...
-    
+
     // Get the browser window's top position with jQuery.scrollTop()
     var windowTopPosition = $window.scrollTop();
 
@@ -158,10 +143,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
      * containing element's current top position is.
      */
     if( windowTopPosition >= sharingElementTopPosition - reduceSharingElementTopPosition ) {
-      
+
       /*
        * If it is, AJAX the sharing buttons into the sharing button
-       * containing element using the above-created 
+       * containing element using the above-created
        * getSharingElements() function.
        */
       getSharingElements();
@@ -174,7 +159,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       $window.off( "scroll" );
     }
   });
-        
+
 }); // end "document.addEventListener()"
 
 // END LOAD & CONFIGURE SOCIAL SHARING ELEMENT FOR SINGLE POSTS
@@ -197,7 +182,7 @@ function loadSharingAd() {
 /*
  * START CLICK-TO-TWEET CODE
  * ====================================================================
- * 
+ *
  * If the "click-to-tweet" link is clicked, create a pop-up interface
  * for Tweeting out the link.
  */
@@ -205,20 +190,14 @@ function loadSharingAd() {
 /*
  * The "click-to-tweet" link is not on the page on initial page load,
  * so $.click() wont work on it. Instead, use $.delegate() to bind a
- * click event to the link.
- * Based on cool-ass code at:
- * http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
- * Cool Regex code:
- * http://stackoverflow.com/questions/4058923/get-all-characters-after-character
- * http://stackoverflow.com/questions/3780696/javascript-string-replace-with-regex-to-strip-off-illegal-characters
  */
 $( "body" ).delegate( "#tweet-this-post", "click", function( event ){
-  
+
   // Don't load the link in the address bar when clicked.
   event.preventDefault();
-  
+
   // Grab the "click-to-tweet" link's "href" attribute when clicked.
-  var tweetedLink = this.getAttribute( "href" );
+  var tweetedLink = window.location.protocol + "//" + window.location.host + window.location.pathname;
 
   /*
    * Open the popup window and setup the Tweet-out interface. A link
