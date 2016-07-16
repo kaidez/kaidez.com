@@ -30,7 +30,7 @@ get_header( "404" ); ?>
 				</div><!-- .page-div -->
 
 				<div class="page-content col-md-6">
-					
+
           <!-- Last five posts -->
           <p>Read the last five posts</p>
 
@@ -43,22 +43,22 @@ get_header( "404" ); ?>
 	            }
             ?>
           </ul>
-      
+
           <!-- Must-read-->
           <p>These blog posts are considered "the best of kaidez.com":</p>
 
           <ul>
           	<li>
-          	  <a href="/load-data-attributes-mouseclicks/" itemprop="url">TUTORIAL: Load data attributes with Mouse Clicks</a>
-          	</li>
-          	<li>
           	  <a href="/requirejs-wordpress/" itemprop="url">Using RequireJS In WordPress</a>
           	</li>
           	<li>
-          	  <a href="/javascript-closures-tutorial/" itemprop="url">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+          	  <a href="/click-to-tweet-link/" itemprop="url">Click to Tweet Link Created Dynamically With JS</a>
           	</li>
           	<li>
-          	  <a href="/javascript-off-dom/" itemprop="url">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a>
+          	<li>
+          	  <a href="/javascript-closures-tutorial/" itemprop="url">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a>
+          	</li>
+          	  <a href="/load-data-attributes-mouseclicks/" itemprop="url">TUTORIAL: Load data attributes with Mouse Clicks</a>
           	</li>
           	<li>
           	  <a href="/media-queries-important/" itemprop="url">Media Queries Are Important</a>
