@@ -8,7 +8,7 @@ $(linkElement).click(function(event){
   var tweetedLink;
 
   if(!window.location.origin) {
-  	tweetedLink = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  	tweetedLink = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
   } else {
   	tweetedLink = window.location.origin + window.location.pathname;
   }
