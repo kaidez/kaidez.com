@@ -4,11 +4,11 @@
  Description:  A Swiss/international-inspired theme by kaidez
  Author:       Kai "kaidez" Gittens
  Author URI:   http://kaidez.com/
- Template:     
+ Template:
  Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  
+ Text Domain:
 */
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -193,7 +193,7 @@ a.demo-link,a.guide-link{display:block;font-size:22px;font-size:2.2em;font-size:
 .searchform-class{right:33px}
 .menu-item{margin:0 20px 10px 0;font-size:16px;font-size:1.6rem;font-weight:700}
 .menu-item a{min-width:48px;min-height:48px;color:#c2115a;text-decoration:none}
-.menu-item a:hover{color:#f1619c;text-decoration:underline;font-weight:900}
+.menu-item a:hover{color:#f1619c;text-decoration:underline;}
 a.home-link,a.home-link:visited{color:#ed327f}
 a.home-link,a.home-link:active,a.home-link:hover,a.home-link:visited{text-decoration:none;font-weight:900}
 .header-search-field{width:300px;height:40px;right:-38px;position:relative;border:1px solid #000}
