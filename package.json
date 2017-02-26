@@ -16,10 +16,10 @@
   "devDependencies": {
     "cp": "^0.2.0",
     "css": "^2.2.1",
-    "css-loader": "0.26.1",
+    "css-loader": "0.26.2",
     "enquire.js": "^2.1.1",
-    "expose-loader": "^0.7.1",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "expose-loader": "^0.7.3",
+    "extract-text-webpack-plugin": "^2.0.0",
     "grunt": "^1.0.1",
     "grunt-bowercopy": "^1.2.4",
     "gulp": "^3.9.1",
@@ -36,7 +36,7 @@
     "jquery": "^3.1.1",
     "node-sass": "^4.5.0",
     "q": "^1.4.1",
-    "sass-loader": "^6.0.0",
-    "style-loader": "0.13.1"
+    "sass-loader": "^6.0.2",
+    "style-loader": "0.13.2"
   }
 }
